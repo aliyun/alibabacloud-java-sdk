@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDSEntityRequest extends TeaModel {
     /**
-     * <p>The key for the business space. If omitted, the default business space is used. You can find this key on the Business Management page of your primary account.</p>
+     * <p>The business space key. If this parameter is not set, the default business space is accessed. Obtain the key value from the business management page of the main account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -24,7 +24,7 @@ public class DescribeDSEntityRequest extends TeaModel {
     public Long entityId;
 
     /**
-     * <p>The robot ID.</p>
+     * <p>The chatbot ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDSEntityValueRequest extends TeaModel {
     /**
-     * <p>The key for the business space. If omitted, the default business space is used. You can get this key from the Business Management page of your primary account.</p>
+     * <p>The business space key. If not specified, the default business space is accessed. Obtain the key value from the business management page of the primary account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,7 +14,7 @@ public class ListDSEntityValueRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The ID of the entity.</p>
+     * <p>The entity ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListDSEntityValueRequest extends TeaModel {
     public Long entityId;
 
     /**
-     * <p>The ID of the entity value.</p>
+     * <p>The entity member ID.</p>
      * 
      * <strong>example:</strong>
      * <p>234</p>
@@ -33,7 +33,7 @@ public class ListDSEntityValueRequest extends TeaModel {
     public Long entityValueId;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The chatbot ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,16 +43,16 @@ public class ListDSEntityValueRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The keyword used to search for entity values and their synonyms.</p>
+     * <p>The search keyword for the entity member name.</p>
      * 
      * <strong>example:</strong>
-     * <p>书</p>
+     * <p>Book</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
-     * <p>The page number. Defaults to 1.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -61,7 +61,7 @@ public class ListDSEntityValueRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page size. Defaults to 10.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

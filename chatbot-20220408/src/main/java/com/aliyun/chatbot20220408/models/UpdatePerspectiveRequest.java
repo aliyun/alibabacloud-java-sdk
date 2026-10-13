@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePerspectiveRequest extends TeaModel {
     /**
-     * <p>The business space key. If not specified, the default business space is used. You can get the key from the Business Management page of your main account.</p>
+     * <p>The business space key. If not specified, the default business space is accessed. Obtain the key value from the business management page of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,10 +14,10 @@ public class UpdatePerspectiveRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The name of the perspective. The name must be 50 characters or fewer.</p>
+     * <p>The perspective name. The name can be up to 50 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>客户端视角</p>
+     * <p>Client perspective</p>
      */
     @NameInMap("Name")
     public String name;

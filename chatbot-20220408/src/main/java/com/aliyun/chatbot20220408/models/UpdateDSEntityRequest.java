@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDSEntityRequest extends TeaModel {
     /**
-     * <p>The business space key. If you do not specify this parameter, the system uses the default business space. You can get this key from the business management page of your Alibaba Cloud account.</p>
+     * <p>The business space key. If this parameter is not set, the default business space is accessed. You can obtain the key value from the business management page of the main account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,7 +14,7 @@ public class UpdateDSEntityRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The ID of the entity.</p>
+     * <p>The entity ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,17 +24,17 @@ public class UpdateDSEntityRequest extends TeaModel {
     public Long entityId;
 
     /**
-     * <p>The new name for the entity. The name can contain only Chinese characters, letters, digits, and underscores (_).</p>
+     * <p>The entity name. Only Chinese characters, uppercase and lowercase letters, digits, and underscores are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>实体名称</p>
+     * <p>EntityName</p>
      */
     @NameInMap("EntityName")
     public String entityName;
 
     /**
-     * <p>The type of the entity. This parameter cannot be modified. Valid values: <code>synonyms</code> and <code>regex</code>.</p>
+     * <p>The entity type. Valid values: synonyms (synonym) and regex (regular expression).</p>
      * 
      * <strong>example:</strong>
      * <p>synonyms</p>
@@ -43,7 +43,7 @@ public class UpdateDSEntityRequest extends TeaModel {
     public String entityType;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The chatbot ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

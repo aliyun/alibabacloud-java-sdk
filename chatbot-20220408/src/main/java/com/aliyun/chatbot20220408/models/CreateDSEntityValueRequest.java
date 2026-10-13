@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDSEntityValueRequest extends TeaModel {
     /**
-     * <p>The business space key. If omitted, the default business space is used. You can obtain the key from the Business Management page of your primary account.</p>
+     * <p>The key of the workspace. If this parameter is not specified, the default workspace is accessed. You can obtain the key value on the business management page of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,17 +14,17 @@ public class CreateDSEntityValueRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The entity value (or regular expression).</p>
+     * <p>The entity value or regular expression.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>书类型</p>
+     * <p>BookType</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
-     * <p>The entity ID.</p>
+     * <p>The entity ID. This parameter can be left empty when you modify an entity member.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class CreateDSEntityValueRequest extends TeaModel {
     public Long entityId;
 
     /**
-     * <p>The robot ID.</p>
+     * <p>The chatbot ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class CreateDSEntityValueRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>A list of synonyms for the entity value.</p>
+     * <p>The synonym list.</p>
      */
     @NameInMap("Synonyms")
     public java.util.List<String> synonyms;

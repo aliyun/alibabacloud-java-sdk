@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSimQuestionRequest extends TeaModel {
     /**
-     * <p>The key of the workspace. If you do not specify this parameter, the default workspace is used. You can find the key on the Business Management page of your master account.</p>
+     * <p>The key of the business space. If this parameter is not specified, the default business space is accessed. You can obtain the key on the business management page of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,7 +14,7 @@ public class UpdateSimQuestionRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The ID of the similar question that you want to update.</p>
+     * <p>The ID of the similar question.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,11 +24,11 @@ public class UpdateSimQuestionRequest extends TeaModel {
     public Long simQuestionId;
 
     /**
-     * <p>The new title of the similar question. The title can be up to 120 characters long.</p>
+     * <p>The title of the similar question. The maximum length is 120 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试相似问标题</p>
+     * <p>Test similar question title</p>
      */
     @NameInMap("Title")
     public String title;

@@ -14,7 +14,7 @@ public class UpdateUserSayResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the updated user say.</p>
+     * <p>The utterance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>34512323</p>

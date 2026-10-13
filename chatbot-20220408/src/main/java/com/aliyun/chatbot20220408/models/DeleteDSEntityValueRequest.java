@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDSEntityValueRequest extends TeaModel {
     /**
-     * <p>The Agent key. If omitted, the system uses the default Agent. You can get this key from the Business Management page of your main account.</p>
+     * <p>The key of the workspace. If this parameter is not specified, the default workspace is accessed. You can obtain the key on the business management page of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,7 +14,7 @@ public class DeleteDSEntityValueRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The unique identifier of the entity.</p>
+     * <p>The entity ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DeleteDSEntityValueRequest extends TeaModel {
     public Long entityId;
 
     /**
-     * <p>The unique identifier of the entity value.</p>
+     * <p>The entity member ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class DeleteDSEntityValueRequest extends TeaModel {
     public Long entityValueId;
 
     /**
-     * <p>The unique identifier of the instance.</p>
+     * <p>The robot ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

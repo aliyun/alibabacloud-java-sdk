@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAsyncResultRequest extends TeaModel {
     /**
-     * <p>The key for the business space. If unspecified, the default business space is used. This key is available on the Business Management page of your Alibaba Cloud account.</p>
+     * <p>The workspace key. If not specified, the default workspace is accessed. Obtain the key value from the business management page of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,11 +14,11 @@ public class GetAsyncResultRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The ID of the asynchronous task.</p>
+     * <p>The task ID of the asynchronous service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>从Chat接口中获取TASK_ID</p>
+     * <p>Obtain TASK_ID from the Chat operation</p>
      */
     @NameInMap("TaskId")
     public String taskId;

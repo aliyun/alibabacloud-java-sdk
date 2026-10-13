@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLgfRequest extends TeaModel {
     /**
-     * <p>The key of the business space. If you do not specify this parameter, the default business space is used. You can obtain the key from the Business Management page of your main account.</p>
+     * <p>The business space key. If not specified, the default business space is accessed. You can obtain the key value from the business management page of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,7 +14,7 @@ public class ListLgfRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The ID of the chatbot.</p>
+     * <p>The chatbot ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListLgfRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the intent.</p>
+     * <p>The intent ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ListLgfRequest extends TeaModel {
     public Long intentId;
 
     /**
-     * <p>The text used to filter the advanced semantic configurations.</p>
+     * <p>The semantic configuration content to filter.</p>
      * 
      * <strong>example:</strong>
      * <p>.{0,5}北京天气</p>
@@ -43,7 +43,7 @@ public class ListLgfRequest extends TeaModel {
     public String lgfText;
 
     /**
-     * <p>The number of the page to return. Defaults to 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -52,7 +52,7 @@ public class ListLgfRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Defaults to 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

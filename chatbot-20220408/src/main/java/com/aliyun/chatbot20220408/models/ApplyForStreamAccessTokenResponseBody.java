@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ApplyForStreamAccessTokenResponseBody extends TeaModel {
     /**
-     * <p>Request token for the service.</p>
+     * <p>The request token of the service.</p>
      * 
      * <strong>example:</strong>
      * <p>63ba97b4f18a4a04f715c81e8e643938</p>
@@ -14,7 +14,7 @@ public class ApplyForStreamAccessTokenResponseBody extends TeaModel {
     public String accessToken;
 
     /**
-     * <p>Channel ID</p>
+     * <p>The channel ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cc9e88c0-4f41-4f1d-a1a9-91a72d2aa27d</p>
@@ -32,7 +32,7 @@ public class ApplyForStreamAccessTokenResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Key of the workspace, used to add signature to stream requests</p>
+     * <p>The secret key of the business space, which is used to sign streaming requests.</p>
      * 
      * <strong>example:</strong>
      * <p>cc9e88c0-4f41-4f1d-a1a9-91a72d2aa27d</p>

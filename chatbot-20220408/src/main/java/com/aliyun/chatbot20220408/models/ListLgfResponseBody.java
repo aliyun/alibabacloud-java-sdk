@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListLgfResponseBody extends TeaModel {
     /**
-     * <p>A list of advanced semantic configurations.</p>
+     * <p>The list of LGF configurations.</p>
      */
     @NameInMap("Lgfs")
     public java.util.List<ListLgfResponseBodyLgfs> lgfs;
 
     /**
-     * <p>The returned page number.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListLgfResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class ListLgfResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total count of matching entries.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,7 +93,7 @@ public class ListLgfResponseBody extends TeaModel {
 
     public static class ListLgfResponseBodyLgfs extends TeaModel {
         /**
-         * <p>The creation time, in UTC.</p>
+         * <p>The creation time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-08-12T16:00:01Z</p>
@@ -102,7 +102,7 @@ public class ListLgfResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The ID of the intent.</p>
+         * <p>The intent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>256756734345</p>
@@ -111,7 +111,7 @@ public class ListLgfResponseBody extends TeaModel {
         public Long intentId;
 
         /**
-         * <p>The LGF ID.</p>
+         * <p>LGF ID</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -120,7 +120,7 @@ public class ListLgfResponseBody extends TeaModel {
         public Long lgfId;
 
         /**
-         * <p>The modification time, in UTC.</p>
+         * <p>The modification time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-08-12T16:00:01Z</p>

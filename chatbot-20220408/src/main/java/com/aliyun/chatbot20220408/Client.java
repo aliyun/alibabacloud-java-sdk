@@ -9,9 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-shanghai", "chatbot.cn-shanghai.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("chatbot", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -31,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtain the Connection information for stream invocation.</p>
+     * <p>Retrieves the connection information for streaming calls.</p>
      * 
      * @param request ApplyForStreamAccessTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -63,7 +60,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtain the Connection information for stream invocation.</p>
+     * <p>Retrieves the connection information for streaming calls.</p>
      * 
      * @param request ApplyForStreamAccessTokenRequest
      * @return ApplyForStreamAccessTokenResponse
@@ -75,7 +72,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Suggests FAQs from the knowledge base based on a user\&quot;s utterance.</p>
+     * <p>Suggests FAQs from the knowledge base based on a user query.</p>
      * 
      * @param tmpReq AssociateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -133,7 +130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Suggests FAQs from the knowledge base based on a user\&quot;s utterance.</p>
+     * <p>Suggests FAQs from the knowledge base based on a user query.</p>
      * 
      * @param request AssociateRequest
      * @return AssociateResponse
@@ -145,7 +142,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Initiates a session and retrieves a welcome message.</p>
+     * <p>Retrieves the welcome message.</p>
      * 
      * @param request BeginSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -195,7 +192,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Initiates a session and retrieves a welcome message.</p>
+     * <p>Retrieves the welcome message.</p>
      * 
      * @param request BeginSessionRequest
      * @return BeginSessionResponse
@@ -207,10 +204,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation supports only the new version of chatbots. You can query data only from the last 90 days.</p>
+     * <p>Only new version chatbots are supported. Only data within the last 90 days can be queried.</p>
      * 
      * <b>summary</b> : 
-     * <p>Cancels or interrupts an ongoing chat.</p>
+     * <p>Cancels or interrupts a specified conversation.</p>
      * 
      * @param request CancelChatRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -262,10 +259,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation supports only the new version of chatbots. You can query data only from the last 90 days.</p>
+     * <p>Only new version chatbots are supported. Only data within the last 90 days can be queried.</p>
      * 
      * <b>summary</b> : 
-     * <p>Cancels or interrupts an ongoing chat.</p>
+     * <p>Cancels or interrupts a specified conversation.</p>
      * 
      * @param request CancelChatRequest
      * @return CancelChatResponse
@@ -277,7 +274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels a publishing task for a chatbot.</p>
+     * <p>Cancels a chatbot publish task during the publishing process.</p>
      * 
      * @param request CancelInstancePublishTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -317,7 +314,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels a publishing task for a chatbot.</p>
+     * <p>Cancels a chatbot publish task during the publishing process.</p>
      * 
      * @param request CancelInstancePublishTaskRequest
      * @return CancelInstancePublishTaskResponse
@@ -377,7 +374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts a conversation with a bot by specifying its Bot ID. This applies only to Chatbot (Legacy).</p>
+     * <p>Initiates a conversation with a chatbot by using the unique chatbot identifier (chatbot ID). This operation is applicable only to Chatbot (legacy).</p>
      * 
      * @param tmpReq ChatRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -455,7 +452,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts a conversation with a bot by specifying its Bot ID. This applies only to Chatbot (Legacy).</p>
+     * <p>Initiates a conversation with a chatbot by using the unique chatbot identifier (chatbot ID). This operation is applicable only to Chatbot (legacy).</p>
      * 
      * @param request ChatRequest
      * @return ChatResponse
@@ -467,7 +464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Ignores an alarm and continues a chatbot publish task.</p>
+     * <p>Ignores alerts and continues publishing when the chatbot triggers a publish alert.</p>
      * 
      * @param request ContinueInstancePublishTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -507,7 +504,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Ignores an alarm and continues a chatbot publish task.</p>
+     * <p>Ignores alerts and continues publishing when the chatbot triggers a publish alert.</p>
      * 
      * @param request ContinueInstancePublishTaskRequest
      * @return ContinueInstancePublishTaskResponse
@@ -581,7 +578,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a connected question for a knowledge item.</p>
+     * <p>Adds associated knowledge to a knowledge entry.</p>
      * 
      * @param request CreateConnQuestionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -623,7 +620,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a connected question for a knowledge item.</p>
+     * <p>Adds associated knowledge to a knowledge entry.</p>
      * 
      * @param request CreateConnQuestionRequest
      * @return CreateConnQuestionResponse
@@ -635,7 +632,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an <code>entity</code> and its metadata, such as the <code>entity name</code> and <code>entity type</code>.</p>
+     * <p>Creates an entity, specifically the meta information of the entity, such as the entity name and entity type.</p>
      * 
      * @param request CreateDSEntityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -679,7 +676,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an <code>entity</code> and its metadata, such as the <code>entity name</code> and <code>entity type</code>.</p>
+     * <p>Creates an entity, specifically the meta information of the entity, such as the entity name and entity type.</p>
      * 
      * @param request CreateDSEntityRequest
      * @return CreateDSEntityResponse
@@ -691,7 +688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds an entity member to a specified entity. An entity member includes an entity value and a synonym list. All entity values and synonyms must be unique within the same entity.</p>
+     * <p>Adds entity member information for a specified entity, including the entity value and the corresponding synonym list. Entity values and synonyms must be unique within the same entity.</p>
      * 
      * @param tmpReq CreateDSEntityValueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -747,7 +744,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds an entity member to a specified entity. An entity member includes an entity value and a synonym list. All entity values and synonyms must be unique within the same entity.</p>
+     * <p>Adds entity member information for a specified entity, including the entity value and the corresponding synonym list. Entity values and synonyms must be unique within the same entity.</p>
      * 
      * @param request CreateDSEntityValueRequest
      * @return CreateDSEntityValueResponse
@@ -853,7 +850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a knowledge item.</p>
+     * <p>Creates a knowledge entry.</p>
      * 
      * @param tmpReq CreateFaqRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -921,7 +918,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a knowledge item.</p>
+     * <p>Creates a knowledge entry.</p>
      * 
      * @param request CreateFaqRequest
      * @return CreateFaqResponse
@@ -933,7 +930,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a robot in the sandbox environment.</p>
+     * <p>Creates a chatbot in a sandbox environment.</p>
      * 
      * @param request CreateInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -981,7 +978,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a robot in the sandbox environment.</p>
+     * <p>Creates a chatbot in a sandbox environment.</p>
      * 
      * @param request CreateInstanceRequest
      * @return CreateInstanceResponse
@@ -993,7 +990,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Publishes a sandbox robot to the production environment.</p>
+     * <p>Publishes a sandbox chatbot to the production environment.</p>
      * 
      * @param request CreateInstancePublishTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1029,7 +1026,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Publishes a sandbox robot to the production environment.</p>
+     * <p>Publishes a sandbox chatbot to the production environment.</p>
      * 
      * @param request CreateInstancePublishTaskRequest
      * @return CreateInstancePublishTaskResponse
@@ -1041,7 +1038,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an intent. This operation defines an intent\&quot;s metadata, such as its name, alias, and associated slots. It does not include utterances or LGF.</p>
+     * <p>Creates an intent. The intent includes meta information such as the intent name, intent alias, and associated slot information, but does not include intent utterances or LGF.</p>
      * 
      * @param tmpReq CreateIntentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1087,7 +1084,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an intent. This operation defines an intent\&quot;s metadata, such as its name, alias, and associated slots. It does not include utterances or LGF.</p>
+     * <p>Creates an intent. The intent includes meta information such as the intent name, intent alias, and associated slot information, but does not include intent utterances or LGF.</p>
      * 
      * @param request CreateIntentRequest
      * @return CreateIntentResponse
@@ -1209,7 +1206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a publish task in the publishing center.</p>
+     * <p>Creates a publish task in the publish center.</p>
      * 
      * @param tmpReq CreatePublishTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1255,7 +1252,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a publish task in the publishing center.</p>
+     * <p>Creates a publish task in the publish center.</p>
      * 
      * @param request CreatePublishTaskRequest
      * @return CreatePublishTaskResponse
@@ -1505,7 +1502,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a user say to a specified intent.</p>
+     * <p>Adds utterance information to a specified intent.</p>
      * 
      * @param tmpReq CreateUserSayRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1551,7 +1548,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a user say to a specified intent.</p>
+     * <p>Adds utterance information to a specified intent.</p>
      * 
      * @param request CreateUserSayRequest
      * @return CreateUserSayResponse
@@ -1563,7 +1560,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a category. A published category is marked as deleted and unpublished, while an unpublished category is deleted permanently.</p>
+     * <p>Deletes a category. A published category changes to the deleted and unpublished state, while an unpublished category is deleted directly.</p>
      * 
      * @param request DeleteCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1601,7 +1598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a category. A published category is marked as deleted and unpublished, while an unpublished category is deleted permanently.</p>
+     * <p>Deletes a category. A published category changes to the deleted and unpublished state, while an unpublished category is deleted directly.</p>
      * 
      * @param request DeleteCategoryRequest
      * @return DeleteCategoryResponse
@@ -1613,7 +1610,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a knowledge association.</p>
+     * <p>Deletes the associated knowledge of a knowledge item.</p>
      * 
      * @param request DeleteConnQuestionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1651,7 +1648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a knowledge association.</p>
+     * <p>Deletes the associated knowledge of a knowledge item.</p>
      * 
      * @param request DeleteConnQuestionRequest
      * @return DeleteConnQuestionResponse
@@ -1663,7 +1660,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an entity. This operation also cascade-deletes all associated entity members, synonyms, and regular expressions.</p>
+     * <p>Deletes an entity. This operation cascade deletes all entity members, synonyms, and regular expressions under the entity.</p>
      * 
      * @param request DeleteDSEntityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1703,7 +1700,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an entity. This operation also cascade-deletes all associated entity members, synonyms, and regular expressions.</p>
+     * <p>Deletes an entity. This operation cascade deletes all entity members, synonyms, and regular expressions under the entity.</p>
      * 
      * @param request DeleteDSEntityRequest
      * @return DeleteDSEntityResponse
@@ -1715,7 +1712,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a specific entity value from an entity. If the entity is a standard entity, its synonyms (if any) are also deleted.</p>
+     * <p>Deletes a member of a specified entity. If the entity is a standard entity, the synonyms of the member are also deleted, if any.</p>
      * 
      * @param request DeleteDSEntityValueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1759,7 +1756,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a specific entity value from an entity. If the entity is a standard entity, its synonyms (if any) are also deleted.</p>
+     * <p>Deletes a member of a specified entity. If the entity is a standard entity, the synonyms of the member are also deleted, if any.</p>
      * 
      * @param request DeleteDSEntityValueRequest
      * @return DeleteDSEntityValueResponse
@@ -1819,7 +1816,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a knowledge item.</p>
+     * <p>Deletes a knowledge entry.</p>
      * 
      * @param request DeleteFaqRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1857,7 +1854,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a knowledge item.</p>
+     * <p>Deletes a knowledge entry.</p>
      * 
      * @param request DeleteFaqRequest
      * @return DeleteFaqResponse
@@ -1869,7 +1866,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an instance from the sandbox and online environments.</p>
+     * <p>Deletes a chatbot from both the sandbox and production environments.</p>
      * 
      * @param request DeleteInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1905,7 +1902,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an instance from the sandbox and online environments.</p>
+     * <p>Deletes a chatbot from both the sandbox and production environments.</p>
      * 
      * @param request DeleteInstanceRequest
      * @return DeleteInstanceResponse
@@ -1917,7 +1914,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a specified intent and its associated user utterances and advanced semantic configurations (LGF).</p>
+     * <p>Deletes an intent and cascade deletes all intent utterances and advanced semantic configurations (LGF) under the intent.</p>
      * 
      * @param request DeleteIntentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1957,7 +1954,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a specified intent and its associated user utterances and advanced semantic configurations (LGF).</p>
+     * <p>Deletes an intent and cascade deletes all intent utterances and advanced semantic configurations (LGF) under the intent.</p>
      * 
      * @param request DeleteIntentRequest
      * @return DeleteIntentResponse
@@ -1969,7 +1966,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the specified LGF configuration.</p>
+     * <p>Deletes a specified advanced semantic configuration.</p>
      * 
      * @param request DeleteLgfRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2013,7 +2010,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the specified LGF configuration.</p>
+     * <p>Deletes a specified advanced semantic configuration.</p>
      * 
      * @param request DeleteLgfRequest
      * @return DeleteLgfResponse
@@ -2123,7 +2120,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the specified solution.</p>
+     * <p>Deletes an answer.</p>
      * 
      * @param request DeleteSolutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2161,7 +2158,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the specified solution.</p>
+     * <p>Deletes an answer.</p>
      * 
      * @param request DeleteSolutionRequest
      * @return DeleteSolutionResponse
@@ -2285,7 +2282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a user say from a specified intent.</p>
+     * <p>Modifies the utterance information of an intent.</p>
      * 
      * @param request DeleteUserSayRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2329,7 +2326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a user say from a specified intent.</p>
+     * <p>Modifies the utterance information of an intent.</p>
      * 
      * @param request DeleteUserSayRequest
      * @return DeleteUserSayResponse
@@ -2341,7 +2338,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets information about a specific category.</p>
+     * <p>Queries the information of a single category.</p>
      * 
      * @param request DescribeCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2379,7 +2376,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets information about a specific category.</p>
+     * <p>Queries the information of a single category.</p>
      * 
      * @param request DescribeCategoryRequest
      * @return DescribeCategoryResponse
@@ -2391,7 +2388,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves metadata for a specified entity associated with a robot, such as the entity type, entity name, creation time, and modification time.</p>
+     * <p>Queries the metadata of a specified entity under a specified chatbot, such as entity type, entity name, creation time, and modification time.</p>
      * 
      * @param request DescribeDSEntityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2431,7 +2428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves metadata for a specified entity associated with a robot, such as the entity type, entity name, creation time, and modification time.</p>
+     * <p>Queries the metadata of a specified entity under a specified chatbot, such as entity type, entity name, creation time, and modification time.</p>
      * 
      * @param request DescribeDSEntityRequest
      * @return DescribeDSEntityResponse
@@ -2443,7 +2440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Document details.</p>
+     * <p>Queries the details of a document.</p>
      * 
      * @param request DescribeDocRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2483,7 +2480,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Document details.</p>
+     * <p>Queries the details of a document.</p>
      * 
      * @param request DescribeDocRequest
      * @return DescribeDocResponse
@@ -2495,7 +2492,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves knowledge details.</p>
+     * <p>Queries the details of a knowledge entry.</p>
      * 
      * @param request DescribeFaqRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2533,7 +2530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves knowledge details.</p>
+     * <p>Queries the details of a knowledge entry.</p>
      * 
      * @param request DescribeFaqRequest
      * @return DescribeFaqResponse
@@ -2545,7 +2542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a robot.</p>
+     * <p>Queries the details of a chatbot.</p>
      * 
      * @param request DescribeInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2581,7 +2578,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a robot.</p>
+     * <p>Queries the details of a chatbot.</p>
      * 
      * @param request DescribeInstanceRequest
      * @return DescribeInstanceResponse
@@ -2593,7 +2590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns metadata for a specified intent, including its type, name, creation time, and modification time.</p>
+     * <p>Returns the metadata of a specified intent, such as the intent type, intent name, creation time, and modification time.</p>
      * 
      * @param request DescribeIntentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2635,7 +2632,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns metadata for a specified intent, including its type, name, creation time, and modification time.</p>
+     * <p>Returns the metadata of a specified intent, such as the intent type, intent name, creation time, and modification time.</p>
      * 
      * @param request DescribeIntentRequest
      * @return DescribeIntentResponse
@@ -2647,7 +2644,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified perspective.</p>
+     * <p>Queries the details of a perspective.</p>
      * 
      * @param request DescribePerspectiveRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2683,7 +2680,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified perspective.</p>
+     * <p>Queries the details of a perspective.</p>
      * 
      * @param request DescribePerspectiveRequest
      * @return DescribePerspectiveResponse
@@ -2807,7 +2804,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Saves user feedback on chatbot responses.</p>
+     * <p>Saves user feedback on Q&amp;A results.</p>
      * 
      * @param request FeedbackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2859,7 +2856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Saves user feedback on chatbot responses.</p>
+     * <p>Saves user feedback on Q&amp;A results.</p>
      * 
      * @param request FeedbackRequest
      * @return FeedbackResponse
@@ -2871,10 +2868,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For security, each generated token is single-use and must be used before it expires. If a user signs in from multiple browsers, you must call this operation for each session to get a unique token.</p>
+     * <p>For security reasons, the generated token is valid only for the first use within the expiration period. If the same user logs on from multiple browsers, call this operation multiple times.</p>
      * 
      * <b>summary</b> : 
-     * <p>Generates a user access token to enable single sign-on for a chat window. The token associates the user with their corporate identity.</p>
+     * <p>Retrieves a token for passwordless logon in the chat window, which carries the enterprise identity of the user.</p>
      * 
      * @param request GenerateUserAccessTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2932,10 +2929,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For security, each generated token is single-use and must be used before it expires. If a user signs in from multiple browsers, you must call this operation for each session to get a unique token.</p>
+     * <p>For security reasons, the generated token is valid only for the first use within the expiration period. If the same user logs on from multiple browsers, call this operation multiple times.</p>
      * 
      * <b>summary</b> : 
-     * <p>Generates a user access token to enable single sign-on for a chat window. The token associates the user with their corporate identity.</p>
+     * <p>Retrieves a token for passwordless logon in the chat window, which carries the enterprise identity of the user.</p>
      * 
      * @param request GenerateUserAccessTokenRequest
      * @return GenerateUserAccessTokenResponse
@@ -2947,7 +2944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves details for a specified agent.</p>
+     * <p>Retrieves the business space ID.</p>
      * 
      * @param request GetAgentInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2979,7 +2976,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves details for a specified agent.</p>
+     * <p>Retrieves the business space ID.</p>
      * 
      * @param request GetAgentInfoRequest
      * @return GetAgentInfoResponse
@@ -2991,10 +2988,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the execution result of an asynchronous service.</p>
+     * <p>Retrieves the result of an asynchronous service execution.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the execution result of an asynchronous service. This API is used in conjunction with the Chat API.</p>
+     * <p>Retrieves the result of an asynchronous service execution. This operation is used together with the Chat operation.</p>
      * 
      * @param request GetAsyncResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3030,10 +3027,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the execution result of an asynchronous service.</p>
+     * <p>Retrieves the result of an asynchronous service execution.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the execution result of an asynchronous service. This API is used in conjunction with the Chat API.</p>
+     * <p>Retrieves the result of an asynchronous service execution. This operation is used together with the Chat operation.</p>
      * 
      * @param request GetAsyncResultRequest
      * @return GetAsyncResultResponse
@@ -3045,10 +3042,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation retrieves data for the previous day (T-1) only. Data for the current day is not available.</p>
+     * <p>Only data from T-1 (excluding the current day) can be queried.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves overview metrics for a bot.</p>
+     * <p>Queries the overview metrics of chatbot Q&amp;A.</p>
      * 
      * @param request GetBotSessionDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3092,10 +3089,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation retrieves data for the previous day (T-1) only. Data for the current day is not available.</p>
+     * <p>Only data from T-1 (excluding the current day) can be queried.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves overview metrics for a bot.</p>
+     * <p>Queries the overview metrics of chatbot Q&amp;A.</p>
      * 
      * @param request GetBotSessionDataRequest
      * @return GetBotSessionDataResponse
@@ -3107,7 +3104,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks the status of a bot publishing task.</p>
+     * <p>Queries the publish progress of a chatbot.</p>
      * 
      * @param request GetInstancePublishTaskStateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3147,7 +3144,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks the status of a bot publishing task.</p>
+     * <p>Queries the publish progress of a chatbot.</p>
      * 
      * @param request GetInstancePublishTaskStateRequest
      * @return GetInstancePublishTaskStateResponse
@@ -3159,7 +3156,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the progress of a publish task.</p>
+     * <p>Queries the publish progress.</p>
      * 
      * @param request GetPublishTaskStateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3195,7 +3192,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the progress of a publish task.</p>
+     * <p>Queries the publish progress.</p>
      * 
      * @param request GetPublishTaskStateRequest
      * @return GetPublishTaskStateResponse
@@ -3207,7 +3204,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Initializes the Instant Messaging (IM) connection using the <code>From</code> value configured in the channel console. This operation lets you pass a user authentication token during initialization.</p>
+     * <p>Initializes an IM connection with custom settings by using the from value generated from the channel backend configuration. Supports passing a user authentication token during initialization.</p>
      * 
      * @param request InitIMConnectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3249,7 +3246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Initializes the Instant Messaging (IM) connection using the <code>From</code> value configured in the channel console. This operation lets you pass a user authentication token during initialization.</p>
+     * <p>Initializes an IM connection with custom settings by using the from value generated from the channel backend configuration. Supports passing a user authentication token during initialization.</p>
      * 
      * @param request InitIMConnectRequest
      * @return InitIMConnectResponse
@@ -3261,7 +3258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Links knowledge categories to a chatbot.</p>
+     * <p>Associates knowledge categories with a chatbot.</p>
      * 
      * @param request LinkInstanceCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3307,7 +3304,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Links knowledge categories to a chatbot.</p>
+     * <p>Associates knowledge categories with a chatbot.</p>
      * 
      * @param request LinkInstanceCategoryRequest
      * @return LinkInstanceCategoryResponse
@@ -3319,7 +3316,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the business spaces for your Alibaba Cloud account.</p>
+     * <p>Retrieves the list of business spaces for the current Alibaba Cloud account.</p>
      * 
      * @param request ListAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3363,7 +3360,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the business spaces for your Alibaba Cloud account.</p>
+     * <p>Retrieves the list of business spaces for the current Alibaba Cloud account.</p>
      * 
      * @param request ListAgentRequest
      * @return ListAgentResponse
@@ -3375,7 +3372,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists categories.</p>
+     * <p>Retrieves the list of categories.</p>
      * 
      * @param request ListCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3417,7 +3414,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists categories.</p>
+     * <p>Retrieves the list of categories.</p>
      * 
      * @param request ListCategoryRequest
      * @return ListCategoryResponse
@@ -3429,7 +3426,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the connected questions for a knowledge item.</p>
+     * <p>Queries the list of associated questions for a knowledge item.</p>
      * 
      * @param request ListConnQuestionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3467,7 +3464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the connected questions for a knowledge item.</p>
+     * <p>Queries the list of associated questions for a knowledge item.</p>
      * 
      * @param request ListConnQuestionRequest
      * @return ListConnQuestionResponse
@@ -3479,7 +3476,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the entities for a specified robot. This operation returns only entity metadata, such as the entity type, name, creation time, and update time.</p>
+     * <p>Queries the list of entities under a specified chatbot. Only the metadata of each entity is returned, such as entity type, entity name, creation time, and modification time.</p>
      * 
      * @param request ListDSEntityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3531,7 +3528,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the entities for a specified robot. This operation returns only entity metadata, such as the entity type, name, creation time, and update time.</p>
+     * <p>Queries the list of entities under a specified chatbot. Only the metadata of each entity is returned, such as entity type, entity name, creation time, and modification time.</p>
      * 
      * @param request ListDSEntityRequest
      * @return ListDSEntityResponse
@@ -3543,7 +3540,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of entity values for a specified entity. You can filter by keyword using a <code>contains</code> match. The search covers both entity values and their synonyms.</p>
+     * <p>Queries the list and details of entity members for a specified entity. Keyword filtering (contains) is supported. The filtering scope includes entity values and synonyms.</p>
      * 
      * @param request ListDSEntityValueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3601,7 +3598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of entity values for a specified entity. You can filter by keyword using a <code>contains</code> match. The search covers both entity values and their synonyms.</p>
+     * <p>Queries the list and details of entity members for a specified entity. Keyword filtering (contains) is supported. The filtering scope includes entity values and synonyms.</p>
      * 
      * @param request ListDSEntityValueRequest
      * @return ListDSEntityValueResponse
@@ -3613,7 +3610,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of instances.</p>
+     * <p>Queries the list of chatbots.</p>
      * 
      * @param request ListInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3665,7 +3662,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of instances.</p>
+     * <p>Queries the list of chatbots.</p>
      * 
      * @param request ListInstanceRequest
      * @return ListInstanceResponse
@@ -3677,7 +3674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves metadata for all intents in a specified bot, including the intent type, intent name, creation time, and modification time.</p>
+     * <p>Queries the list of intents under a specified chatbot. Only the metadata of each intent is returned, such as the intent type, intent name, creation time, and modification time.</p>
      * 
      * @param request ListIntentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3725,7 +3722,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves metadata for all intents in a specified bot, including the intent type, intent name, creation time, and modification time.</p>
+     * <p>Queries the list of intents under a specified chatbot. Only the metadata of each intent is returned, such as the intent type, intent name, creation time, and modification time.</p>
      * 
      * @param request ListIntentRequest
      * @return ListIntentResponse
@@ -3737,7 +3734,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the advanced semantic configurations (LGF) for a specified intent.</p>
+     * <p>Queries the advanced semantic configuration (LGF) of a specified intent.</p>
      * 
      * @param request ListLgfRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3789,7 +3786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the advanced semantic configurations (LGF) for a specified intent.</p>
+     * <p>Queries the advanced semantic configuration (LGF) of a specified intent.</p>
      * 
      * @param request ListLgfRequest
      * @return ListLgfResponse
@@ -3801,7 +3798,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists SaaS integration information.</p>
+     * <p>Retrieves the list of SaaS integration information.</p>
      * 
      * @param request ListSaasInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3841,7 +3838,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists SaaS integration information.</p>
+     * <p>Retrieves the list of SaaS integration information.</p>
      * 
      * @param request ListSaasInfoRequest
      * @return ListSaasInfoResponse
@@ -3853,7 +3850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the permission groups for integrated SaaS applications. Use these groups to grant permissions to users.</p>
+     * <p>Retrieves the list of permission integration information. You can use the permission groups returned in this list to grant permissions to users.</p>
      * 
      * @param request ListSaasPermissionGroupInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3885,7 +3882,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the permission groups for integrated SaaS applications. Use these groups to grant permissions to users.</p>
+     * <p>Retrieves the list of permission integration information. You can use the permission groups returned in this list to grant permissions to users.</p>
      * 
      * @param request ListSaasPermissionGroupInfosRequest
      * @return ListSaasPermissionGroupInfosResponse
@@ -3947,7 +3944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the solutions for a knowledge entry.</p>
+     * <p>Queries the list of answers for a knowledge item.</p>
      * 
      * @param request ListSolutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3985,7 +3982,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the solutions for a knowledge entry.</p>
+     * <p>Queries the list of answers for a knowledge item.</p>
      * 
      * @param request ListSolutionRequest
      * @return ListSolutionResponse
@@ -4125,7 +4122,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves chat history details.</p>
+     * <p>Retrieves the session history details.</p>
      * 
      * @param request ListTongyiChatHistorysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4173,7 +4170,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves chat history details.</p>
+     * <p>Retrieves the session history details.</p>
      * 
      * @param request ListTongyiChatHistorysRequest
      * @return ListTongyiChatHistorysResponse
@@ -4185,10 +4182,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation retrieves conversation logs generated within the past two hours.</p>
+     * <p>Only conversation records from the last 2 hours can be queried.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the conversation logs for a single session of a Tongyi chatbot.</p>
+     * <p>Queries the conversation records of a single session for Chatbot Tongyi Edition.</p>
      * 
      * @param request ListTongyiConversationLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4228,10 +4225,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation retrieves conversation logs generated within the past two hours.</p>
+     * <p>Only conversation records from the last 2 hours can be queried.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the conversation logs for a single session of a Tongyi chatbot.</p>
+     * <p>Queries the conversation records of a single session for Chatbot Tongyi Edition.</p>
      * 
      * @param request ListTongyiConversationLogsRequest
      * @return ListTongyiConversationLogsResponse
@@ -4243,7 +4240,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the user says and their associated slot information for a specified intent. You can filter the results by keywords.</p>
+     * <p>Queries the utterance content and associated slot information of a specified intent. Supports filtering utterances by keyword (contains).</p>
      * 
      * @param request ListUserSayRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4295,7 +4292,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the user says and their associated slot information for a specified intent. You can filter the results by keywords.</p>
+     * <p>Queries the utterance content and associated slot information of a specified intent. Supports filtering utterances by keyword (contains).</p>
      * 
      * @param request ListUserSayRequest
      * @return ListUserSayResponse
@@ -4307,7 +4304,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns the natural language understanding (NLU) results for a user query. Currently, this feature only supports NLU from Conversation Factory and Central Control. Support for other engines will be added as needed.</p>
+     * <p>Returns the natural language understanding (NLU) result of a chatbot for a user query. Currently, only NLU information from dialog flow and the central controller is supported. Other engines will be supported as needed.</p>
      * 
      * @param request NluRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4347,7 +4344,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns the natural language understanding (NLU) results for a user query. Currently, this feature only supports NLU from Conversation Factory and Central Control. Support for other engines will be added as needed.</p>
+     * <p>Returns the natural language understanding (NLU) result of a chatbot for a user query. Currently, only NLU information from dialog flow and the central controller is supported. Other engines will be supported as needed.</p>
      * 
      * @param request NluRequest
      * @return NluResponse
@@ -4359,7 +4356,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of perspectives.</p>
+     * <p>Queries the list of perspectives.</p>
      * 
      * @param request QueryPerspectivesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4391,7 +4388,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of perspectives.</p>
+     * <p>Queries the list of perspectives.</p>
      * 
      * @param request QueryPerspectivesRequest
      * @return QueryPerspectivesResponse
@@ -4403,7 +4400,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retries a document processing task.</p>
+     * <p>Retries document processing.</p>
      * 
      * @param request RetryDocRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4439,7 +4436,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retries a document processing task.</p>
+     * <p>Retries document processing.</p>
      * 
      * @param request RetryDocRequest
      * @return RetryDocResponse
@@ -4451,7 +4448,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Search the documentation.</p>
+     * <p>Searches for documents.</p>
      * 
      * @param tmpReq SearchDocRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4565,7 +4562,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Search the documentation.</p>
+     * <p>Searches for documents.</p>
      * 
      * @param request SearchDocRequest
      * @return SearchDocResponse
@@ -4577,7 +4574,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Search the knowledge base.</p>
+     * <p>Searches for knowledge.</p>
      * 
      * @param tmpReq SearchFaqRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4681,7 +4678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Search the knowledge base.</p>
+     * <p>Searches for knowledge.</p>
      * 
      * @param request SearchFaqRequest
      * @return SearchFaqResponse
@@ -4693,10 +4690,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only supported for new version chatbots. Only data within the last 90 days can be queried.</p>
+     * <p>Supports only new-version chatbots. You can query only data generated within the last 90 days.</p>
      * 
      * <b>summary</b> : 
-     * <p>Debugging information for large language model Q&amp;A.</p>
+     * <p>Retrieves the debugging information for large language model Q&amp;A.</p>
      * 
      * @param request TongyiChatDebugInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4736,10 +4733,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only supported for new version chatbots. Only data within the last 90 days can be queried.</p>
+     * <p>Supports only new-version chatbots. You can query only data generated within the last 90 days.</p>
      * 
      * <b>summary</b> : 
-     * <p>Debugging information for large language model Q&amp;A.</p>
+     * <p>Retrieves the debugging information for large language model Q&amp;A.</p>
      * 
      * @param request TongyiChatDebugInfoRequest
      * @return TongyiChatDebugInfoResponse
@@ -4809,7 +4806,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a connection.</p>
+     * <p>Updates an association.</p>
      * 
      * @param request UpdateConnQuestionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4851,7 +4848,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a connection.</p>
+     * <p>Updates an association.</p>
      * 
      * @param request UpdateConnQuestionRequest
      * @return UpdateConnQuestionResponse
@@ -4863,7 +4860,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the metadata of an entity. You can modify the entity name, but not the entity type.</p>
+     * <p>Modifies the meta information of an entity. Only the entity name can be modified. The entity type cannot be modified.</p>
      * 
      * @param request UpdateDSEntityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4911,7 +4908,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the metadata of an entity. You can modify the entity name, but not the entity type.</p>
+     * <p>Modifies the meta information of an entity. Only the entity name can be modified. The entity type cannot be modified.</p>
      * 
      * @param request UpdateDSEntityRequest
      * @return UpdateDSEntityResponse
@@ -4923,7 +4920,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies an entity value. This applies to entity values that use synonyms or regular expressions. Note: You cannot add a regular expression to a standard entity, and vice versa.</p>
+     * <p>Modifies a member of a specified entity. Two types of data can be modified: entity values with synonyms, and regular expressions. Note: Adding a regular expression to a standard entity is not allowed, and vice versa.</p>
      * 
      * @param tmpReq UpdateDSEntityValueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4983,7 +4980,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies an entity value. This applies to entity values that use synonyms or regular expressions. Note: You cannot add a regular expression to a standard entity, and vice versa.</p>
+     * <p>Modifies a member of a specified entity. Two types of data can be modified: entity values with synonyms, and regular expressions. Note: Adding a regular expression to a standard entity is not allowed, and vice versa.</p>
      * 
      * @param request UpdateDSEntityValueRequest
      * @return UpdateDSEntityValueResponse
@@ -5093,7 +5090,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates an existing knowledge entry.</p>
+     * <p>Edits a knowledge entry.</p>
      * 
      * @param tmpReq UpdateFaqRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5157,7 +5154,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates an existing knowledge entry.</p>
+     * <p>Edits a knowledge entry.</p>
      * 
      * @param request UpdateFaqRequest
      * @return UpdateFaqResponse
@@ -5169,7 +5166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a chatbot\&quot;s name and description.</p>
+     * <p>Updates the name and description of a chatbot.</p>
      * 
      * @param request UpdateInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5213,7 +5210,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a chatbot\&quot;s name and description.</p>
+     * <p>Updates the name and description of a chatbot.</p>
      * 
      * @param request UpdateInstanceRequest
      * @return UpdateInstanceResponse
@@ -5225,7 +5222,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the metadata of a specified intent, including the intent name, alias name, and associated slots. This operation does not modify the intent\&quot;s utterances or LGF.</p>
+     * <p>Modifies an intent, including the meta information of the intent, such as the intent name, intent alias, and slot information associated with the intent. This operation does not include intent utterances or LGF.</p>
      * 
      * @param tmpReq UpdateIntentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5275,7 +5272,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the metadata of a specified intent, including the intent name, alias name, and associated slots. This operation does not modify the intent\&quot;s utterances or LGF.</p>
+     * <p>Modifies an intent, including the meta information of the intent, such as the intent name, intent alias, and slot information associated with the intent. This operation does not include intent utterances or LGF.</p>
      * 
      * @param request UpdateIntentRequest
      * @return UpdateIntentResponse
@@ -5287,7 +5284,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the advanced semantic feature (LGF) for a specified intent.</p>
+     * <p>Creates an advanced semantic configuration (LGF) for a specified intent.</p>
      * 
      * @param tmpReq UpdateLgfRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5337,7 +5334,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the advanced semantic feature (LGF) for a specified intent.</p>
+     * <p>Creates an advanced semantic configuration (LGF) for a specified intent.</p>
      * 
      * @param request UpdateLgfRequest
      * @return UpdateLgfResponse
@@ -5349,7 +5346,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a perspective\&quot;s name and description.</p>
+     * <p>Updates the name and description of a perspective.</p>
      * 
      * @param request UpdatePerspectiveRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5389,7 +5386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a perspective\&quot;s name and description.</p>
+     * <p>Updates the name and description of a perspective.</p>
      * 
      * @param request UpdatePerspectiveRequest
      * @return UpdatePerspectiveResponse
@@ -5455,7 +5452,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a solution.</p>
+     * <p>Updates an answer.</p>
      * 
      * @param tmpReq UpdateSolutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5515,7 +5512,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a solution.</p>
+     * <p>Updates an answer.</p>
      * 
      * @param request UpdateSolutionRequest
      * @return UpdateSolutionResponse
@@ -5647,7 +5644,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies an existing user say.</p>
+     * <p>Modifies the utterance information of an intent.</p>
      * 
      * @param tmpReq UpdateUserSayRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5697,7 +5694,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies an existing user say.</p>
+     * <p>Modifies the utterance information of an intent.</p>
      * 
      * @param request UpdateUserSayRequest
      * @return UpdateUserSayResponse

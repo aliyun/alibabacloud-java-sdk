@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDSEntityResponseBody extends TeaModel {
     /**
-     * <p>The <code>entity ID</code>.</p>
+     * <p>The entity ID.</p>
      * 
      * <strong>example:</strong>
      * <p>23436345</p>
@@ -14,7 +14,7 @@ public class CreateDSEntityResponseBody extends TeaModel {
     public Long entityId;
 
     /**
-     * <p>The <code>request ID</code>.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>adfad2343f1f2r</p>

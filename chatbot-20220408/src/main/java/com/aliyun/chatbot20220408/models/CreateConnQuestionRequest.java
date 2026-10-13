@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateConnQuestionRequest extends TeaModel {
     /**
-     * <p>The agent key. If you do not specify this parameter, the default agent is used. You can obtain the key from the Business Management page of your main account.</p>
+     * <p>The key of the business space. If this parameter is not specified, the default business space is accessed. You can obtain the key on the business management page of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,7 +14,7 @@ public class CreateConnQuestionRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The connected question ID.</p>
+     * <p>The ID of the associated knowledge.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

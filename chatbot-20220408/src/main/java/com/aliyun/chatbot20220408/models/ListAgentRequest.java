@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListAgentRequest extends TeaModel {
     /**
-     * <p>The name of the business space. Use this parameter to filter the results.</p>
+     * <p>The business space name. You can use this parameter to search by name.</p>
      * 
      * <strong>example:</strong>
-     * <p>业务空间_001</p>
+     * <p>BusinessSpace_001</p>
      */
     @NameInMap("AgentName")
     public String agentName;
 
     /**
-     * <p>The commodity code. Filters the results to return only business spaces associated with a specific commodity code.</p>
+     * <p>The commodity code. You can use this parameter to filter by commodity code and query instance information.</p>
      * 
      * <strong>example:</strong>
      * <p>G_cloudBeeBot_public</p>
@@ -23,7 +23,7 @@ public class ListAgentRequest extends TeaModel {
     public String goodsCodes;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The current page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class ListAgentRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+     * <p>The number of records per page in the response. Maximum value: 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

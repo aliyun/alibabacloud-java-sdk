@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
     /**
-     * <p>The permission details for integrated SaaS pages.</p>
+     * <p>The list of permissions for each SaaS integration page.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListSaasPermissionGroupInfosResponseBodyData> data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>8AD9FA10-7780-5E12-B701-13C928524F32</p>
@@ -42,7 +42,7 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
 
     public static class ListSaasPermissionGroupInfosResponseBodyDataPgInfos extends TeaModel {
         /**
-         * <p>The unique permission group code.</p>
+         * <p>The code of the SaaS permission group.</p>
          * 
          * <strong>example:</strong>
          * <p>FAQ</p>
@@ -51,7 +51,7 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
         public String pgCode;
 
         /**
-         * <p>The English name of the permission group.</p>
+         * <p>The English name of the SaaS permission group.</p>
          * 
          * <strong>example:</strong>
          * <p>FAQ</p>
@@ -60,7 +60,7 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
         public String pgEnName;
 
         /**
-         * <p>The name of the permission group.</p>
+         * <p>The Chinese name of the SaaS permission group.</p>
          * 
          * <strong>example:</strong>
          * <p>FAQ管理</p>
@@ -101,7 +101,7 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
 
     public static class ListSaasPermissionGroupInfosResponseBodyData extends TeaModel {
         /**
-         * <p>The name of the page in English.</p>
+         * <p>The English name of the atomic page.</p>
          * 
          * <strong>example:</strong>
          * <p>Release Center</p>
@@ -110,7 +110,7 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
         public String enName;
 
         /**
-         * <p>The name of the page.</p>
+         * <p>The Chinese name of the atomic page.</p>
          * 
          * <strong>example:</strong>
          * <p>发布中心</p>
@@ -119,13 +119,13 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The SaaS permission groups.</p>
+         * <p>The list of SaaS permission groups.</p>
          */
         @NameInMap("PgInfos")
         public java.util.List<ListSaasPermissionGroupInfosResponseBodyDataPgInfos> pgInfos;
 
         /**
-         * <p>The unique code for the SaaS page.</p>
+         * <p>The unique identifier of the SaaS atomic page.</p>
          * 
          * <strong>example:</strong>
          * <p>FAQ</p>

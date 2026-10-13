@@ -14,7 +14,7 @@ public class DeleteUserSayResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the user say.</p>
+     * <p>The utterance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4562121234</p>

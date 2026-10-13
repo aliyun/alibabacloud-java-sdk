@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCategoryResponseBody extends TeaModel {
     /**
-     * <p>An array of categories.</p>
+     * <p>The list of categories.</p>
      */
     @NameInMap("Categories")
     public java.util.List<ListCategoryResponseBodyCategories> categories;
@@ -63,7 +63,7 @@ public class ListCategoryResponseBody extends TeaModel {
          * <p>The category name.</p>
          * 
          * <strong>example:</strong>
-         * <p>类目名称</p>
+         * <p>CategoryName</p>
          */
         @NameInMap("Name")
         public String name;
@@ -78,7 +78,11 @@ public class ListCategoryResponseBody extends TeaModel {
         public Long parentCategoryId;
 
         /**
-         * <p>The status of the category. Valid values: <code>0</code> (Normal) and <code>-1</code> (Deleted).</p>
+         * <p>The category status. Valid values:</p>
+         * <ul>
+         * <li>-1: Deleted but not published.</li>
+         * <li>0: Normal.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>

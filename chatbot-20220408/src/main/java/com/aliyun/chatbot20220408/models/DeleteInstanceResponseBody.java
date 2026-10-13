@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteInstanceResponseBody extends TeaModel {
     /**
-     * <p>A list of business types.</p>
+     * <p>The list of business types.</p>
      */
     @NameInMap("BizTypeList")
     public java.util.List<String> bizTypeList;
@@ -20,7 +20,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The ID of the user who created the task.</p>
+     * <p>The ID of the task creator.</p>
      * 
      * <strong>example:</strong>
      * <p>9052</p>
@@ -29,7 +29,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
     public Long createUserId;
 
     /**
-     * <p>The username of the user who created the task.</p>
+     * <p>The name of the task creator.</p>
      * 
      * <strong>example:</strong>
      * <p>xuqiang_test</p>
@@ -41,7 +41,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>检查待发布模块是否空闲发生错误，faq</p>
+     * <p>An error occurred while checking whether the module to be published is idle, faq</p>
      */
     @NameInMap("Error")
     public String error;
@@ -65,7 +65,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task ID. This parameter is an alias for <code>Id</code>.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8521</p>
@@ -74,7 +74,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
     public Long response;
 
     /**
-     * <p>The task status. For more information about possible states, see the GetInstancePublishTaskState API operation.</p>
+     * <p>The task status. You can call the GetInstancePublishTaskState operation to learn more about the status.</p>
      * 
      * <strong>example:</strong>
      * <p>FE_RUNNING</p>

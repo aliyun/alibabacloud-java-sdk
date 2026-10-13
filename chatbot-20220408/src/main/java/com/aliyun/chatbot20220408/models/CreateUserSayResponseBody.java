@@ -14,7 +14,7 @@ public class CreateUserSayResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The unique ID of the intent-user say pair.</p>
+     * <p>The unique ID of the intent utterance.</p>
      * 
      * <strong>example:</strong>
      * <p>46456176856</p>

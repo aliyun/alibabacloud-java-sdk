@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConnQuestionResponseBody extends TeaModel {
     /**
-     * <p>A list of connected questions.</p>
+     * <p>The list of associated questions.</p>
      */
     @NameInMap("Outlines")
     public java.util.List<ListConnQuestionResponseBodyOutlines> outlines;
@@ -42,7 +42,7 @@ public class ListConnQuestionResponseBody extends TeaModel {
 
     public static class ListConnQuestionResponseBodyOutlines extends TeaModel {
         /**
-         * <p>The ID of the connected question.</p>
+         * <p>The associated knowledge ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30001979424</p>
@@ -51,7 +51,7 @@ public class ListConnQuestionResponseBody extends TeaModel {
         public Long connQuestionId;
 
         /**
-         * <p>The creation time, in UTC.</p>
+         * <p>The creation time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-02-25T02:47:18Z</p>
@@ -60,7 +60,7 @@ public class ListConnQuestionResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The last modification time, in UTC.</p>
+         * <p>The modification time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-05-26T10:18:15Z</p>
@@ -69,7 +69,7 @@ public class ListConnQuestionResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>The relation ID.</p>
+         * <p>The association ID.</p>
          * 
          * <strong>example:</strong>
          * <p>797</p>
@@ -78,10 +78,10 @@ public class ListConnQuestionResponseBody extends TeaModel {
         public Long outlineId;
 
         /**
-         * <p>The title of the connected question.</p>
+         * <p>The title of the associated knowledge item.</p>
          * 
          * <strong>example:</strong>
-         * <p>关联问</p>
+         * <p>Associated question</p>
          */
         @NameInMap("Title")
         public String title;

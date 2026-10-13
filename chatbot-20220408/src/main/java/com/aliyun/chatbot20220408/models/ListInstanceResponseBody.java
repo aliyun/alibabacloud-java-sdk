@@ -102,7 +102,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public String avatar;
 
         /**
-         * <p>The time when the chatbot was created. The time is in the UTC format.</p>
+         * <p>The UTC time when the chatbot was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-08-12T16:00:01Z</p>
@@ -111,7 +111,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The unique ID of the chatbot.</p>
+         * <p>The unique identifier of the chatbot.</p>
          * 
          * <strong>example:</strong>
          * <p>chatbot-cn-mp90s2lrk00050</p>
@@ -120,16 +120,16 @@ public class ListInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The remarks on the chatbot.</p>
+         * <p>The description of the chatbot.</p>
          * 
          * <strong>example:</strong>
-         * <p>用于C端问答的机器人</p>
+         * <p>A chatbot for consumer Q&amp;A</p>
          */
         @NameInMap("Introduction")
         public String introduction;
 
         /**
-         * <p>The language of the chatbot, such as zh-cn and en-us. For more information, see http\://www\.lingoes.net/en/translator/langcode.htm.</p>
+         * <p>The language of the chatbot service, such as zh-cn or en-us. For more information, see <a href="http://www.lingoes.net/zh/translator/langcode.htm">http://www.lingoes.net/zh/translator/langcode.htm</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-cn</p>
@@ -141,7 +141,7 @@ public class ListInstanceResponseBody extends TeaModel {
          * <p>The name of the chatbot.</p>
          * 
          * <strong>example:</strong>
-         * <p>智能客服-小C</p>
+         * <p>Intelligent Customer Service - Bot C</p>
          */
         @NameInMap("Name")
         public String name;

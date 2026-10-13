@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchDocRequest extends TeaModel {
     /**
-     * <p>The workspace key. If omitted, the default workspace is used. You can obtain this key from the Business Management page of your main account.</p>
+     * <p>The business space key. If not specified, the default business space is accessed. You can obtain the key value from the business management page of the primary account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,7 +14,7 @@ public class SearchDocRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>A list of category IDs.</p>
+     * <p>The list of category IDs.</p>
      */
     @NameInMap("CategoryIds")
     public java.util.List<Long> categoryIds;
@@ -41,7 +41,7 @@ public class SearchDocRequest extends TeaModel {
      * <p>The name of the creator.</p>
      * 
      * <strong>example:</strong>
-     * <p>张三</p>
+     * <p>John</p>
      */
     @NameInMap("CreateUserName")
     public String createUserName;
@@ -65,10 +65,10 @@ public class SearchDocRequest extends TeaModel {
     public String endTimeEnd;
 
     /**
-     * <p>The search keyword.</p>
+     * <p>The keyword.</p>
      * 
      * <strong>example:</strong>
-     * <p>搜索关键字</p>
+     * <p>SearchKeyword</p>
      */
     @NameInMap("Keyword")
     public String keyword;
@@ -92,16 +92,16 @@ public class SearchDocRequest extends TeaModel {
     public String modifyTimeEnd;
 
     /**
-     * <p>The name of the last modifier.</p>
+     * <p>The name of the modifier.</p>
      * 
      * <strong>example:</strong>
-     * <p>李四</p>
+     * <p>Jane</p>
      */
     @NameInMap("ModifyUserName")
     public String modifyUserName;
 
     /**
-     * <p>The page number to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,7 +110,7 @@ public class SearchDocRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -119,7 +119,14 @@ public class SearchDocRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The task status.<br>Valid values:<br>• -1: Queued<br>• 0: Succeeded<br>• 1: Parsing<br>• 2: Processing<br>• 3: Failed<br><br><br><br><br><br></p>
+     * <p>The task status. Valid values:</p>
+     * <ul>
+     * <li>-1: queued</li>
+     * <li>0: succeeded</li>
+     * <li>1: parsing</li>
+     * <li>2: processing</li>
+     * <li>3: processing failed</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -128,7 +135,11 @@ public class SearchDocRequest extends TeaModel {
     public Integer processStatus;
 
     /**
-     * <p>The search scope.<br>Valid values:<br>• 1: Search titles<br>• 2: Search content<br><br><br></p>
+     * <p>The search scope. Valid values: </p>
+     * <ul>
+     * <li>1: search by title</li>
+     * <li>2: search by content</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -155,7 +166,12 @@ public class SearchDocRequest extends TeaModel {
     public String startTimeEnd;
 
     /**
-     * <p>The edit status.<br>Valid values:<br>• 1: Unpublished<br>• 2: Published<br>• 3: Updated but not published<br><br><br><br></p>
+     * <p>The editing status. Valid values:</p>
+     * <ul>
+     * <li>1: unpublished</li>
+     * <li>2: published</li>
+     * <li>3: updated but not published</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -164,7 +180,7 @@ public class SearchDocRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>A list of tag IDs. If you provide multiple IDs, the operation returns documents that match at least one of the specified tags (logical OR).</p>
+     * <p>The list of label IDs. When multiple labels are specified, the union logic is used for filtering.</p>
      */
     @NameInMap("TagIds")
     public java.util.List<Long> tagIds;

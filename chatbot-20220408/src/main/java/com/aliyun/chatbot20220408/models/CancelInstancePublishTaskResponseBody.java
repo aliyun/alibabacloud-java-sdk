@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CancelInstancePublishTaskResponseBody extends TeaModel {
     /**
-     * <p>A list of business types.</p>
+     * <p>The list of business types.</p>
      */
     @NameInMap("BizTypeList")
     public java.util.List<String> bizTypeList;
 
     /**
-     * <p>The creation time of the task in UTC.</p>
+     * <p>The UTC time when the task was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-04-12T06:30:17Z</p>
@@ -20,10 +20,10 @@ public class CancelInstancePublishTaskResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The error message if the task fails.</p>
+     * <p>The job failure information.</p>
      * 
      * <strong>example:</strong>
-     * <p>检查待发布模块是否空闲发生错误，faq</p>
+     * <p>An error occurred while checking whether the module to be published is idle, faq</p>
      */
     @NameInMap("Error")
     public String error;
@@ -38,7 +38,7 @@ public class CancelInstancePublishTaskResponseBody extends TeaModel {
     public Long id;
 
     /**
-     * <p>The last modification time of the task in UTC.</p>
+     * <p>The UTC time when the task was last modified.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-04-12T06:30:33Z</p>
@@ -56,7 +56,7 @@ public class CancelInstancePublishTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task ID, returned as a string.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8522</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateUserAccessTokenRequest extends TeaModel {
     /**
-     * <p>The key of the business space. If you do not specify this parameter, the system accesses the default business space. You can obtain the key from the Business Management page of your main account.</p>
+     * <p>The key of the business space. If you do not specify this parameter, the default business space is accessed. You can obtain the key value on the business management page of the primary account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -13,14 +13,11 @@ public class GenerateUserAccessTokenRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
-    /**
-     * <p>The user\&quot;s email address.</p>
-     */
     @NameInMap("Email")
     public String email;
 
     /**
-     * <p>This parameter is reserved. You do not need to specify it.</p>
+     * <p>Reserved parameter. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -29,7 +26,7 @@ public class GenerateUserAccessTokenRequest extends TeaModel {
     public Integer expireTime;
 
     /**
-     * <p>Additional information formatted as a JSON string.</p>
+     * <p>The additional information in JSON string format.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -37,15 +34,15 @@ public class GenerateUserAccessTokenRequest extends TeaModel {
      *     &quot;yy&quot;: 22332,
      *     &quot;customerNameCard&quot;: [
      *         {
-     *             &quot;key&quot;: &quot;姓名&quot;,
-     *             &quot;value&quot;: &quot;张三&quot;
+     *             &quot;key&quot;: &quot;Name&quot;,
+     *             &quot;value&quot;: &quot;John&quot;
      *         },
      *         {
-     *             &quot;key&quot;: &quot;等级&quot;,
+     *             &quot;key&quot;: &quot;Level&quot;,
      *             &quot;value&quot;: &quot;v2&quot;
      *         },
      *         {
-     *             &quot;key&quot;: &quot;联系方式&quot;,
+     *             &quot;key&quot;: &quot;Contact&quot;,
      *             &quot;value&quot;: &quot;123&quot;
      *         }
      *     ]
@@ -65,18 +62,15 @@ public class GenerateUserAccessTokenRequest extends TeaModel {
     public String foreignId;
 
     /**
-     * <p>The visitor\&quot;s nickname.</p>
+     * <p>The nickname of the visitor.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>张三</p>
+     * <p>John</p>
      */
     @NameInMap("Nick")
     public String nick;
 
-    /**
-     * <p>The user\&quot;s telephone number.</p>
-     */
     @NameInMap("Telephone")
     public String telephone;
 

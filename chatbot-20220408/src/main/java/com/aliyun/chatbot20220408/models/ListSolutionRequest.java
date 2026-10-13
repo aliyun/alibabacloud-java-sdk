@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSolutionRequest extends TeaModel {
     /**
-     * <p>The agent key. If omitted, the default agent is used. You can find the key on the agent management page of your main account.</p>
+     * <p>The key of the business space. If not specified, the default business space is accessed. Obtain the key value from the business management page of the primary account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>

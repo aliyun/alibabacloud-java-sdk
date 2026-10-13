@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
     /**
-     * <p>The key of the agent. If you omit this parameter, the default agent is used. You can find the key on the Business Management page of your Alibaba Cloud account.</p>
+     * <p>The workspace key. If this parameter is not specified, the default workspace is accessed. Obtain the key value from the business management page of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,16 +14,16 @@ public class CreateInstanceRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>A description of the robot. The description can be up to 50 characters long.</p>
+     * <p>The description of the chatbot. The description can be up to 50 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>用于手机app的小蜜机器人</p>
+     * <p>A sample chatbot for the mobile app</p>
      */
     @NameInMap("Introduction")
     public String introduction;
 
     /**
-     * <p>The language of the robot, such as <code>zh-cn</code> or <code>en-us</code>. The language must be supported by the agent. If you omit this parameter, the agent\&quot;s default language is used.</p>
+     * <p>The language of the chatbot service, such as zh-cn or en-us. Default value: the default language of the workspace. Valid values: the languages supported by the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>zh-cn</p>
@@ -32,16 +32,16 @@ public class CreateInstanceRequest extends TeaModel {
     public String languageCode;
 
     /**
-     * <p>The name of the robot. The maximum length is 50 characters.</p>
+     * <p>The name of the chatbot. The name can be up to 50 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>小蜜机器人</p>
+     * <p>SampleChatbot</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The robot type. The default value is <code>scenario_im</code>.</p>
+     * <p>The type of the chatbot. Default value: scenario_im.</p>
      * 
      * <strong>example:</strong>
      * <p>scenario_im</p>

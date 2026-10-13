@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ContinueInstancePublishTaskResponseBody extends TeaModel {
     /**
-     * <p>The business types associated with the publish task.</p>
+     * <p>The list of business types.</p>
      */
     @NameInMap("BizTypeList")
     public java.util.List<String> bizTypeList;
@@ -20,16 +20,16 @@ public class ContinueInstancePublishTaskResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The error message if the task fails.</p>
+     * <p>The job failure information.</p>
      * 
      * <strong>example:</strong>
-     * <p>检查待发布模块是否空闲发生错误，faq</p>
+     * <p>An error occurred while checking whether the module to be published is idle, faq</p>
      */
     @NameInMap("Error")
     public String error;
 
     /**
-     * <p>A key-value map of errors. Keys are the submodule names, and values are arrays of error messages.</p>
+     * <p>The fault information for each sub-publish module. The key is the sub-publish module and the value is the fault information.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -38,7 +38,7 @@ public class ContinueInstancePublishTaskResponseBody extends TeaModel {
     public java.util.Map<String, ?> errors;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8522</p>
@@ -56,7 +56,7 @@ public class ContinueInstancePublishTaskResponseBody extends TeaModel {
     public String modifyTime;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5CBF0581-EAE7-1DC4-95C6-A089656A1E2D</p>
@@ -65,7 +65,7 @@ public class ContinueInstancePublishTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the task, returned as a string.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8522</p>
@@ -74,7 +74,7 @@ public class ContinueInstancePublishTaskResponseBody extends TeaModel {
     public String response;
 
     /**
-     * <p>The status of the task.</p>
+     * <p>The task status.</p>
      * 
      * <strong>example:</strong>
      * <p>FE_RUNNING</p>
@@ -83,12 +83,12 @@ public class ContinueInstancePublishTaskResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>A key-value map of warnings. Keys are the submodule names, and values are arrays of warning messages.</p>
+     * <p>The warning information for each sub-publish module. The key is the sub-publish module and the value is the warning information.</p>
      * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;category_bind_faq&quot;: [
-     *         &quot;以下类目没有发布到正式环境: 项目交付信息汇总&quot;
+     *         &quot;The following categories have not been published to the production environment: Project Delivery Information Summary&quot;
      *     ]
      * }</p>
      */

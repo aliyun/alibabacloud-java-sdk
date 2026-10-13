@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateUserSayRequest extends TeaModel {
     /**
-     * <p>The workspace key. If you omit this parameter, the default workspace is used. You can find this key on the Workspace Management page in your main account.</p>
+     * <p>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value from the business management page of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,7 +14,7 @@ public class UpdateUserSayRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The ID of the bot.</p>
+     * <p>The robot ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,13 +24,13 @@ public class UpdateUserSayRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The definition of the user say.</p>
+     * <p>The definition of the user utterance.</p>
      */
     @NameInMap("UserSayDefinition")
     public UpdateUserSayRequestUserSayDefinition userSayDefinition;
 
     /**
-     * <p>The ID of the user say.</p>
+     * <p>The user utterance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class UpdateUserSayRequest extends TeaModel {
 
     public static class UpdateUserSayRequestUserSayDefinitionSlotInfos extends TeaModel {
         /**
-         * <p>The zero-based end index (exclusive) of the slot within the content of the user say.</p>
+         * <p>The end index of the slot in the intent utterance (exclusive).</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -87,7 +87,7 @@ public class UpdateUserSayRequest extends TeaModel {
         public Integer endIndex;
 
         /**
-         * <p>The ID of the slot.</p>
+         * <p>The slot ID.</p>
          * 
          * <strong>example:</strong>
          * <p>346ffg3q23dv</p>
@@ -96,7 +96,7 @@ public class UpdateUserSayRequest extends TeaModel {
         public String slotId;
 
         /**
-         * <p>The zero-based start index of the slot within the content of the user say.</p>
+         * <p>The start index of the slot in the intent utterance.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -137,17 +137,17 @@ public class UpdateUserSayRequest extends TeaModel {
 
     public static class UpdateUserSayRequestUserSayDefinition extends TeaModel {
         /**
-         * <p>The content of the user say.</p>
+         * <p>The user utterance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>做核酸了吗您</p>
+         * <p>Have you taken a COVID test?</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
-         * <p>The ID of the intent.</p>
+         * <p>The intent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class UpdateUserSayRequest extends TeaModel {
         public Long intentId;
 
         /**
-         * <p>An array that contains information for each slot.</p>
+         * <p>The slot information.</p>
          */
         @NameInMap("SlotInfos")
         public java.util.List<UpdateUserSayRequestUserSayDefinitionSlotInfos> slotInfos;

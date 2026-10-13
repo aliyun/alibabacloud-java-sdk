@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchFaqResponseBody extends TeaModel {
     /**
-     * <p>The list of matching FAQs.</p>
+     * <p>The knowledge search results.</p>
      */
     @NameInMap("FaqHits")
     public java.util.List<SearchFaqResponseBodyFaqHits> faqHits;
@@ -38,7 +38,7 @@ public class SearchFaqResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of matched entries.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1075</p>
@@ -102,7 +102,7 @@ public class SearchFaqResponseBody extends TeaModel {
         public Long categoryId;
 
         /**
-         * <p>The creation time (UTC).</p>
+         * <p>The creation time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-04-02T03:09:30Z</p>
@@ -111,7 +111,7 @@ public class SearchFaqResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The creator ID.</p>
+         * <p>The ID of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>18453</p>
@@ -120,7 +120,7 @@ public class SearchFaqResponseBody extends TeaModel {
         public Long createUserId;
 
         /**
-         * <p>The creator\&quot;s username.</p>
+         * <p>The name of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>test01</p>
@@ -129,7 +129,12 @@ public class SearchFaqResponseBody extends TeaModel {
         public String createUserName;
 
         /**
-         * <p>The effective status of the FAQ. This status is determined by the StartDate and EndDate parameters.</p>
+         * <p>The effective status of the knowledge, calculated based on StartDate and EndDate. Valid values:</p>
+         * <ul>
+         * <li>20: Active.</li>
+         * <li>21: Expired.</li>
+         * <li>22: Pending.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -138,19 +143,19 @@ public class SearchFaqResponseBody extends TeaModel {
         public Integer effectStatus;
 
         /**
-         * <p>A list of matched similar titles.</p>
+         * <p>The list of hit similar questions.</p>
          */
         @NameInMap("HitSimilarTitles")
         public java.util.List<String> hitSimilarTitles;
 
         /**
-         * <p>A list of matched answers.</p>
+         * <p>The list of hit solutions.</p>
          */
         @NameInMap("HitSolutions")
         public java.util.List<String> hitSolutions;
 
         /**
-         * <p>The FAQ ID.</p>
+         * <p>The knowledge ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30002145804</p>
@@ -159,7 +164,7 @@ public class SearchFaqResponseBody extends TeaModel {
         public Long knowledgeId;
 
         /**
-         * <p>The modification time (UTC).</p>
+         * <p>The modification time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-04-02T03:09:30Z</p>
@@ -168,7 +173,7 @@ public class SearchFaqResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>The modifier ID.</p>
+         * <p>The ID of the modifier.</p>
          * 
          * <strong>example:</strong>
          * <p>18453</p>
@@ -177,7 +182,7 @@ public class SearchFaqResponseBody extends TeaModel {
         public Long modifyUserId;
 
         /**
-         * <p>The modifier\&quot;s username.</p>
+         * <p>The name of the modifier.</p>
          * 
          * <strong>example:</strong>
          * <p>test01</p>
@@ -186,7 +191,13 @@ public class SearchFaqResponseBody extends TeaModel {
         public String modifyUserName;
 
         /**
-         * <p>The FAQ status.</p>
+         * <p>The knowledge status. Valid values:</p>
+         * <ul>
+         * <li>-1: deleted and unpublished.</li>
+         * <li>1: unpublished.</li>
+         * <li>2: published.</li>
+         * <li>3: updated and unpublished.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -195,10 +206,10 @@ public class SearchFaqResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The title of the FAQ.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试标题</p>
+         * <p>Test title</p>
          */
         @NameInMap("Title")
         public String title;

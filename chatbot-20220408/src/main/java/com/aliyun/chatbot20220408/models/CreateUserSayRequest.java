@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateUserSayRequest extends TeaModel {
     /**
-     * <p>The key of the business space. If you do not specify this parameter, the default business space is used. You can find the key on the Business Management page of your Alibaba Cloud account.</p>
+     * <p>The business space key. If not specified, the default business space is accessed. You can obtain the key value from the business management page of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,7 +14,7 @@ public class CreateUserSayRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The ID of the chatbot instance.</p>
+     * <p>The chatbot ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CreateUserSayRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The definition of the user say.</p>
+     * <p>The user utterance definition information.</p>
      */
     @NameInMap("UserSayDefinition")
     public CreateUserSayRequestUserSayDefinition userSayDefinition;
@@ -60,7 +60,7 @@ public class CreateUserSayRequest extends TeaModel {
 
     public static class CreateUserSayRequestUserSayDefinitionSlotInfos extends TeaModel {
         /**
-         * <p>The zero-based end index of the slot in the user say content. This index is exclusive.</p>
+         * <p>The end index of the slot in the intent utterance (exclusive).</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -69,7 +69,7 @@ public class CreateUserSayRequest extends TeaModel {
         public Integer endIndex;
 
         /**
-         * <p>The ID of the slot.</p>
+         * <p>The slot ID.</p>
          * 
          * <strong>example:</strong>
          * <p>fb34adf2fv43f2</p>
@@ -78,7 +78,7 @@ public class CreateUserSayRequest extends TeaModel {
         public String slotId;
 
         /**
-         * <p>The zero-based start index of the slot in the user say content.</p>
+         * <p>The start index of the slot in the intent utterance.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -119,17 +119,17 @@ public class CreateUserSayRequest extends TeaModel {
 
     public static class CreateUserSayRequestUserSayDefinition extends TeaModel {
         /**
-         * <p>The content of the user say.</p>
+         * <p>The user utterance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>请问明天北京的天气</p>
+         * <p>What is the weather in Beijing tomorrow?</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
-         * <p>The ID of the intent.</p>
+         * <p>The intent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class CreateUserSayRequest extends TeaModel {
         public Long intentId;
 
         /**
-         * <p>An array of objects, each containing information about a slot.</p>
+         * <p>The slot information.</p>
          */
         @NameInMap("SlotInfos")
         public java.util.List<CreateUserSayRequestUserSayDefinitionSlotInfos> slotInfos;

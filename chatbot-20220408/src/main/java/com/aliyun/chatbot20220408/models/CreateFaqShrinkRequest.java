@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFaqShrinkRequest extends TeaModel {
     /**
-     * <p>The agent key. If omitted, the default agent is used. Find this key on the Agent Management page.</p>
+     * <p>The key of the business space. If this parameter is not set, the default business space is accessed. You can obtain the key value from the business management page of the main account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,7 +14,7 @@ public class CreateFaqShrinkRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The ID of the knowledge category.</p>
+     * <p>The category ID of the knowledge entry.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CreateFaqShrinkRequest extends TeaModel {
     public Long categoryId;
 
     /**
-     * <p>The knowledge end time. The time is in UTC and in ISO 8601 format.</p>
+     * <p>The expiration time.</p>
      * 
      * <strong>example:</strong>
      * <p>2030-12-31T16:00:00Z</p>
@@ -33,16 +33,20 @@ public class CreateFaqShrinkRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>The content of the default solution. Required if the fallback feature is enabled.</p>
+     * <p>The default answer content. This parameter is required if the fallback perspective is enabled.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试答案</p>
+     * <p>Test answer</p>
      */
     @NameInMap("SolutionContent")
     public String solutionContent;
 
     /**
-     * <p>The type of the default solution. Valid values: <code>0</code> (plain text) and <code>1</code> (rich text).</p>
+     * <p>The type of the default answer. Valid values:</p>
+     * <ul>
+     * <li>0: plain text.</li>
+     * <li>1: rich text.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -51,7 +55,7 @@ public class CreateFaqShrinkRequest extends TeaModel {
     public Integer solutionType;
 
     /**
-     * <p>The knowledge start time. The time is in UTC and in ISO 8601 format.</p>
+     * <p>The effective period.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-05-25T16:28:36Z</p>
@@ -60,17 +64,17 @@ public class CreateFaqShrinkRequest extends TeaModel {
     public String startDate;
 
     /**
-     * <p>A list of tag IDs to associate with the knowledge.</p>
+     * <p>The list of label IDs.</p>
      */
     @NameInMap("TagIdList")
     public String tagIdListShrink;
 
     /**
-     * <p>The knowledge title. Max length: 120 characters.</p>
+     * <p>The title of the knowledge entry. Maximum length: 120 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试标题</p>
+     * <p>Test title</p>
      */
     @NameInMap("Title")
     public String title;

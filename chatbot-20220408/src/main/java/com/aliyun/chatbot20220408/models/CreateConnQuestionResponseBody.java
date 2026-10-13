@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateConnQuestionResponseBody extends TeaModel {
     /**
-     * <p>The outline ID.</p>
+     * <p>The association ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1000002123</p>

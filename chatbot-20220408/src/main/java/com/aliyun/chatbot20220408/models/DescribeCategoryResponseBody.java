@@ -51,7 +51,7 @@ public class DescribeCategoryResponseBody extends TeaModel {
         public String bizCode;
 
         /**
-         * <p>The ID of the category.</p>
+         * <p>The category ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30000049006</p>
@@ -60,16 +60,16 @@ public class DescribeCategoryResponseBody extends TeaModel {
         public Long categoryId;
 
         /**
-         * <p>The name of the category.</p>
+         * <p>The category name.</p>
          * 
          * <strong>example:</strong>
-         * <p>类目名称</p>
+         * <p>CategoryName</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The ID of the parent category. A value of -1 indicates the root directory.</p>
+         * <p>The parent category ID. Default value: -1, which indicates the root directory.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -78,7 +78,11 @@ public class DescribeCategoryResponseBody extends TeaModel {
         public Long parentCategoryId;
 
         /**
-         * <p>The status of the category. Valid values: 0 (Normal) or -1 (Deleted).</p>
+         * <p>The category status. Valid values:</p>
+         * <ul>
+         * <li>-1: deleted and unpublished.</li>
+         * <li>0: Normal.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>

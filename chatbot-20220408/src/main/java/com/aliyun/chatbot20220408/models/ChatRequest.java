@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChatRequest extends TeaModel {
     /**
-     * <p>The key for the business space. If omitted, the request is routed to the default business space. You can get this key from the <strong>Business Management</strong> page of your main account.</p>
+     * <p>The business space key. If this parameter is not specified, the default business space is accessed. Obtain the key value from the business management page of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,7 +14,7 @@ public class ChatRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The unique ID of the chatbot instance. To get this ID, log in to the Alibaba Cloud Chatbot console and go to <strong>Chatbot Details</strong> &gt; <strong>Session API</strong>.</p>
+     * <p>The unique chatbot identifier (chatbot ID). Log on to the Chatbot console and navigate to Chatbot Details &gt; Session Interface to view the chatbot instance information and obtain the instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>chatbot-cn-mp90s2lrk00050</p>
@@ -23,16 +23,16 @@ public class ChatRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The name of an intent within a dialog flow. If specified, the chatbot directly activates this intent to process the user\&quot;s request.</p>
+     * <p>The intent name in the dialog flow. If this name is specified, the chatbot directly enters this intent for Q&amp;A.</p>
      * 
      * <strong>example:</strong>
-     * <p>查天气意图</p>
+     * <p>CheckWeatherIntent</p>
      */
     @NameInMap("IntentName")
     public String intentName;
 
     /**
-     * <p>The ID of an entry in the knowledge base. If you specify this ID, the chatbot directly returns the corresponding answer.</p>
+     * <p>The ID of a knowledge title in the knowledge base. If this ID is specified, the chatbot directly returns the answer for the specified knowledge title.</p>
      * 
      * <strong>example:</strong>
      * <p>30002406051</p>
@@ -41,18 +41,16 @@ public class ChatRequest extends TeaModel {
     public String knowledgeId;
 
     /**
-     * <p>An array of perspective codes. Use these codes to retrieve answers from different perspectives for the same knowledge entry. Example: <code>Perspective=[&quot;FZJBY3raWr&quot;]</code>. When using an SDK, refer to its parameter definitions.</p>
+     * <p>The array of perspective codes, which is used to call answers from different perspectives under the same knowledge title. Example: Perspective=[&quot;FZJBY3raWr&quot;]. When using the SDK, use the parameters defined in the SDK.</p>
      */
     @NameInMap("Perspective")
     public java.util.List<String> perspective;
 
     /**
-     * <p>Specifies the environment to use. The default value is <code>false</code>, which indicates the production environment.</p>
+     * <p>Specifies whether to use the test or production environment. Default value: false (production environment). Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: The test environment. This environment is for testing only. Do not use it in production due to potential instability and QPS limitations.</p>
-     * </li>
-     * <li><p><code>false</code>: The production environment.</p>
-     * </li>
+     * <li>true: Test environment. This is for testing only. Using it in production may cause instability and QPS throttling.</li>
+     * <li>false: Production environment.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,7 +60,7 @@ public class ChatRequest extends TeaModel {
     public Boolean sandBox;
 
     /**
-     * <p>The unique ID of the user in the current session.</p>
+     * <p>The visitor ID, which identifies the user in the current session.</p>
      * 
      * <strong>example:</strong>
      * <p>custumer_123456</p>
@@ -71,16 +69,16 @@ public class ChatRequest extends TeaModel {
     public String senderId;
 
     /**
-     * <p>The nickname of the user in the current session.</p>
+     * <p>The nickname of the visitor in the current session.</p>
      * 
      * <strong>example:</strong>
-     * <p>用户123456</p>
+     * <p>User123456</p>
      */
     @NameInMap("SenderNick")
     public String senderNick;
 
     /**
-     * <p>The session ID, used to identify a user session and maintain context. For a new user, omit this parameter in the first call to the <code>Chat</code> API. The chatbot automatically starts a session and returns the <code>SessionId</code> in the response. To continue the conversation, include this <code>SessionId</code> in all subsequent requests. The maximum length is 64 characters.</p>
+     * <p>The session ID, which identifies a visitor\&quot;s session and maintains context information. For a new visitor, you do not need to pass this field when calling the Chat operation for the first time. The chatbot starts a session and returns the SessionId in the response of the Chat operation. For subsequent conversation turns of the visitor, pass the SessionId of the current session when calling the Chat operation so that the chatbot can continue the conversation based on the SessionId. Maximum length: 64 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>9c6ebdc6e66f46ecadab3434314f6959</p>
@@ -89,16 +87,16 @@ public class ChatRequest extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>The user\&quot;s input text.</p>
+     * <p>The input from the chatbot visitor.</p>
      * 
      * <strong>example:</strong>
-     * <p>今天天气怎么样？</p>
+     * <p>How is the weather today?</p>
      */
     @NameInMap("Utterance")
     public String utterance;
 
     /**
-     * <p>A JSON-formatted string containing custom parameters to pass to various dialog engines.</p>
+     * <p>A JSON-formatted set of user-defined parameters that can be passed to various dialog engines.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;phone&quot;:123456789}</p>

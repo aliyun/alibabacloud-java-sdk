@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteIntentResponseBody extends TeaModel {
     /**
-     * <p>The ID of the deleted intent.</p>
+     * <p>The intent ID.</p>
      * 
      * <strong>example:</strong>
      * <p>12345</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class NluResponseBody extends TeaModel {
     /**
-     * <p>The ID of the natural language understanding response.</p>
+     * <p>The ID of the NLU response message.</p>
      * 
      * <strong>example:</strong>
      * <p>2828708A-2C7A-1BAE-B810-87DB9DA9C661</p>
@@ -143,7 +143,7 @@ public class NluResponseBody extends TeaModel {
 
     public static class NluResponseBodyMessagesDialogHubNluInfo extends TeaModel {
         /**
-         * <p>The list of global dictionary entries.</p>
+         * <p>The list of global nouns.</p>
          */
         @NameInMap("GlobalDictList")
         public java.util.List<NluResponseBodyMessagesDialogHubNluInfoGlobalDictList> globalDictList;
@@ -179,7 +179,7 @@ public class NluResponseBody extends TeaModel {
 
     public static class NluResponseBodyMessagesDsNluInfoEntityList extends TeaModel {
         /**
-         * <p>The name of the entity.</p>
+         * <p>The entity name.</p>
          * 
          * <strong>example:</strong>
          * <p>@城市</p>
@@ -188,7 +188,7 @@ public class NluResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The original word for the entity, also known as an entity member.</p>
+         * <p>The original word of the entity (entity member).</p>
          * 
          * <strong>example:</strong>
          * <p>北京</p>
@@ -197,7 +197,7 @@ public class NluResponseBody extends TeaModel {
         public String origin;
 
         /**
-         * <p>The type of the entity. Currently, only the <code>text</code> type is supported.</p>
+         * <p>The entity type. Currently, only the text type is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>text</p>
@@ -206,7 +206,7 @@ public class NluResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The entity\&quot;s synonym.</p>
+         * <p>The synonym of the entity.</p>
          * 
          * <strong>example:</strong>
          * <p>首都</p>
@@ -255,7 +255,7 @@ public class NluResponseBody extends TeaModel {
 
     public static class NluResponseBodyMessagesDsNluInfoIntentListSlotList extends TeaModel {
         /**
-         * <p>The name of the entity.</p>
+         * <p>The entity name.</p>
          * 
          * <strong>example:</strong>
          * <p>@城市</p>
@@ -264,7 +264,7 @@ public class NluResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The original word for the entity, also known as an entity member.</p>
+         * <p>The original word of the entity (entity member).</p>
          * 
          * <strong>example:</strong>
          * <p>北京</p>
@@ -273,7 +273,7 @@ public class NluResponseBody extends TeaModel {
         public String origin;
 
         /**
-         * <p>The type of the entity. Currently, only the <code>text</code> type is supported.</p>
+         * <p>The entity type. Currently, only the text type is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>text</p>
@@ -282,7 +282,7 @@ public class NluResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The entity\&quot;s synonym.</p>
+         * <p>The synonym of the entity.</p>
          * 
          * <strong>example:</strong>
          * <p>首都</p>
@@ -340,16 +340,23 @@ public class NluResponseBody extends TeaModel {
         public Long intentId;
 
         /**
-         * <p>The details of the matching process.</p>
+         * <p>The match details (matching process).</p>
          * 
          * <strong>example:</strong>
-         * <p>classifierType=Fewshot,from=Fewshot,content=[我要查北京的天气, 帮我查北京的天气, 北京天气怎么样, 北京今天下雨吗, 北京今天多少度]</p>
+         * <p>classifierType=Fewshot,from=Fewshot,content=[I want to check the weather in Beijing, Help me check the weather in Beijing, How is the weather in Beijing, Is it raining in Beijing today, What is the temperature in Beijing today]</p>
          */
         @NameInMap("MatchDetail")
         public String matchDetail;
 
         /**
-         * <p>The match type. Valid values are <code>Similarity</code> (match by utterance similarity), <code>Lgf</code> (match by LGF), <code>Classify</code> (match by model training), <code>FewShotLearning</code> (match by the built-in few-shot learning model), and <code>BuildIn</code> (match with a built-in intent).</p>
+         * <p>The match type. Valid values:</p>
+         * <ul>
+         * <li>Similarity: The query matches the intent through intent utterance similarity.</li>
+         * <li>Lgf: The query matches the intent through LGF.</li>
+         * <li>Classify: The query matches the intent through model training.</li>
+         * <li>FewShotLearning: The query matches the intent through the built-in few-shot model.</li>
+         * <li>BuildIn: The query matches a built-in system intent.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>FewShotLearning</p>
@@ -358,16 +365,16 @@ public class NluResponseBody extends TeaModel {
         public String matchType;
 
         /**
-         * <p>The name of the intent.</p>
+         * <p>The intent name.</p>
          * 
          * <strong>example:</strong>
-         * <p>查天气意图</p>
+         * <p>CheckWeatherIntent</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The confidence score of the match.</p>
+         * <p>The score.</p>
          * 
          * <strong>example:</strong>
          * <p>0.995</p>
@@ -474,13 +481,13 @@ public class NluResponseBody extends TeaModel {
 
     public static class NluResponseBodyMessages extends TeaModel {
         /**
-         * <p>The natural language understanding information from DialogHub.</p>
+         * <p>The NLU information from the dialog central controller.</p>
          */
         @NameInMap("DialogHubNluInfo")
         public NluResponseBodyMessagesDialogHubNluInfo dialogHubNluInfo;
 
         /**
-         * <p>The natural language understanding information from Dialog Studio.</p>
+         * <p>The NLU information from the dialog flow.</p>
          */
         @NameInMap("DsNluInfo")
         public NluResponseBodyMessagesDsNluInfo dsNluInfo;

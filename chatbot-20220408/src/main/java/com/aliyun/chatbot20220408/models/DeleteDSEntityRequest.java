@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDSEntityRequest extends TeaModel {
     /**
-     * <p>If unspecified, the default agent is used. You can get the key from the agent management page of your main account.</p>
+     * <p>Business space key. If not specified, the default business space is accessed. Obtain the key value from the business management page of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>

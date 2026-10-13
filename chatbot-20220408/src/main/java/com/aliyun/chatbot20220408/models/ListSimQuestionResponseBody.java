@@ -42,7 +42,7 @@ public class ListSimQuestionResponseBody extends TeaModel {
 
     public static class ListSimQuestionResponseBodySimQuestions extends TeaModel {
         /**
-         * <p>The creation time of the similar question, in UTC.</p>
+         * <p>The creation time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-05-30T02:08:33Z</p>
@@ -51,7 +51,7 @@ public class ListSimQuestionResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The modification time of the similar question, in UTC.</p>
+         * <p>The modification time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-05-13T03:49:28Z</p>
@@ -72,7 +72,7 @@ public class ListSimQuestionResponseBody extends TeaModel {
          * <p>The title of the similar question.</p>
          * 
          * <strong>example:</strong>
-         * <p>相似问</p>
+         * <p>Similar question</p>
          */
         @NameInMap("Title")
         public String title;

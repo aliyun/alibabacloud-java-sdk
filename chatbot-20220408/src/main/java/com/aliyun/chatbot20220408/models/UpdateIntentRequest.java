@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateIntentRequest extends TeaModel {
     /**
-     * <p>The key for the business space. If you omit this parameter, the system uses the default business space. You can find this key on the Business Management page of your primary account.</p>
+     * <p>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value on the business management page of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,7 +14,7 @@ public class UpdateIntentRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The ID of the chatbot instance.</p>
+     * <p>The chatbot ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,13 +24,13 @@ public class UpdateIntentRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The intent definition object.</p>
+     * <p>The intent definition struct.</p>
      */
     @NameInMap("IntentDefinition")
     public UpdateIntentRequestIntentDefinition intentDefinition;
 
     /**
-     * <p>The ID of the intent.</p>
+     * <p>The intent ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class UpdateIntentRequest extends TeaModel {
 
     public static class UpdateIntentRequestIntentDefinitionSlotInfos extends TeaModel {
         /**
-         * <p>Specifies whether the slot can contain an array of values.</p>
+         * <p>Specifies whether the slot is an array.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -87,7 +87,7 @@ public class UpdateIntentRequest extends TeaModel {
         public Boolean array;
 
         /**
-         * <p>Specifies whether to enable data masking for the slot value.</p>
+         * <p>Specifies whether the slot value is masked.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -96,7 +96,7 @@ public class UpdateIntentRequest extends TeaModel {
         public Boolean encrypt;
 
         /**
-         * <p>Specifies whether the slot is interactive. If true, the chatbot prompts the user for a value if the user does not provide one.</p>
+         * <p>Specifies whether the slot is interactive.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -105,17 +105,17 @@ public class UpdateIntentRequest extends TeaModel {
         public Boolean interactive;
 
         /**
-         * <p>The name of the slot.</p>
+         * <p>The slot name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>天气</p>
+         * <p>Weather</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The ID of the slot.</p>
+         * <p>The slot ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class UpdateIntentRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>天气</p>
+         * <p>Weather</p>
          */
         @NameInMap("Value")
         public String value;
@@ -191,26 +191,26 @@ public class UpdateIntentRequest extends TeaModel {
 
     public static class UpdateIntentRequestIntentDefinition extends TeaModel {
         /**
-         * <p>The alias for the intent.</p>
+         * <p>The intent alias.</p>
          * 
          * <strong>example:</strong>
-         * <p>查天气意图</p>
+         * <p>CheckWeatherIntent</p>
          */
         @NameInMap("AliasName")
         public String aliasName;
 
         /**
-         * <p>The name of the intent.</p>
+         * <p>The intent name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>查天气意图</p>
+         * <p>CheckWeatherIntent</p>
          */
         @NameInMap("IntentName")
         public String intentName;
 
         /**
-         * <p>A list of slot objects.</p>
+         * <p>The slot information.</p>
          */
         @NameInMap("SlotInfos")
         public java.util.List<UpdateIntentRequestIntentDefinitionSlotInfos> slotInfos;

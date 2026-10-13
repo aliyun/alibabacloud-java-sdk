@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBotSessionDataRequest extends TeaModel {
     /**
-     * <p>The key for the workspace. If you omit this parameter, the operation uses the default workspace. You can find the key on the business management page of your main account.</p>
+     * <p>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value on the business management page of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,7 +14,7 @@ public class GetBotSessionDataRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The end time for the query. The format must be <code>yyyyMMdd</code>. For example: <code>20240605</code>.</p>
+     * <p>The end time of the query. The time format is yyyyMMdd, such as 20240605.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class GetBotSessionDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the bot instance.</p>
+     * <p>The ID of the chatbot instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class GetBotSessionDataRequest extends TeaModel {
     public String robotInstanceId;
 
     /**
-     * <p>The start time for the query. The format must be <code>yyyyMMdd</code>. For example: <code>20240505</code>.</p>
+     * <p>The start time of the query. The time format is yyyyMMdd, such as 20240505.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

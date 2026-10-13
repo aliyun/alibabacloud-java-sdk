@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CancelPublishTaskResponseBody extends TeaModel {
     /**
-     * <p>A list of business types.</p>
+     * <p>The list of business types.</p>
      */
     @NameInMap("BizTypeList")
     public java.util.List<String> bizTypeList;
 
     /**
-     * <p>The time when the task was created, in UTC.</p>
+     * <p>The UTC time when the task was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-04-12T06:30:17Z</p>
@@ -20,16 +20,16 @@ public class CancelPublishTaskResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The error message returned if the task fails.</p>
+     * <p>The task failure information.</p>
      * 
      * <strong>example:</strong>
-     * <p>检查待发布模块是否空闲发生错误，faq</p>
+     * <p>An error occurred while checking whether the module to be published is idle, faq</p>
      */
     @NameInMap("Error")
     public String error;
 
     /**
-     * <p>The ID of the publish task.</p>
+     * <p>The publish task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8522</p>
@@ -38,7 +38,7 @@ public class CancelPublishTaskResponseBody extends TeaModel {
     public Long id;
 
     /**
-     * <p>The time when the task was last modified, in UTC.</p>
+     * <p>The UTC time when the task was last modified.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-04-12T06:30:33Z</p>
@@ -56,7 +56,7 @@ public class CancelPublishTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the publish task. This is a redundant field. We recommend that you use the <code>Id</code> field instead.</p>
+     * <p>The publish task ID. This is a redundant field. Use the publish task ID instead.</p>
      * 
      * <strong>example:</strong>
      * <p>8522</p>
@@ -65,8 +65,14 @@ public class CancelPublishTaskResponseBody extends TeaModel {
     public String response;
 
     /**
-     * <p>The task status. Valid values:</p>
-     * <p><code>FE_RUNNING</code>: in progress, <code>FE_SUCCESS</code>: succeeded, <code>FE_FAILED</code>: failed, <code>FE_ABORTED</code>: aborted.</p>
+     * <p>The task status.
+     * Valid values:</p>
+     * <ul>
+     * <li>FE_RUNNING: Publishing in progress.</li>
+     * <li>FE_SUCCESS: Published successfully.</li>
+     * <li>FE_FAILED: Publishing failed.</li>
+     * <li>FE_ABORTED: Publishing canceled.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>FE_ABORTED</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTongyiChatHistorysResponseBody extends TeaModel {
     /**
-     * <p>The request duration, in milliseconds.</p>
+     * <p>The time consumed by the request.</p>
      * 
      * <strong>example:</strong>
      * <p>116</p>
@@ -14,7 +14,7 @@ public class ListTongyiChatHistorysResponseBody extends TeaModel {
     public String costTime;
 
     /**
-     * <p>A list of chat history entries.</p>
+     * <p>The data details.</p>
      */
     @NameInMap("Datas")
     public java.util.List<java.util.Map<String, ?>> datas;

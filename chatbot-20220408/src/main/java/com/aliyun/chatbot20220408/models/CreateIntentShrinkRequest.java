@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateIntentShrinkRequest extends TeaModel {
     /**
-     * <p>The key of the business space. If you do not specify this parameter, the default business space is used. You can get the key from the business management page of your main account.</p>
+     * <p>The business space key. If this parameter is not set, the default business space is accessed. You can obtain the key value on the business management page of the main account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,7 +14,7 @@ public class CreateIntentShrinkRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The chatbot ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CreateIntentShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The intent definition.</p>
+     * <p>The intent definition struct.</p>
      */
     @NameInMap("IntentDefinition")
     public String intentDefinitionShrink;

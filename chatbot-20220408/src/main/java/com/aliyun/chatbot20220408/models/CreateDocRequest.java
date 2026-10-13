@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDocRequest extends TeaModel {
     /**
-     * <p>The key for the business space. If this parameter is not specified, the default business space is used. You can obtain the key from the Business Management page of your primary account.</p>
+     * <p>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value on the business management page of the primary account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -24,10 +24,27 @@ public class CreateDocRequest extends TeaModel {
     public Long categoryId;
 
     /**
-     * <p>The configuration for document splitting. Set the key to <code>Splitter</code>. Valid values are <code>paragraphSplitter</code> (identifies content hierarchy) and <code>treeSplitter</code> (uses a rule-based hierarchy).</p>
-     * <p>The document chunk size. Set the key to <code>ChunkSize</code>. The default value is 500. The value must be in the range of 200 to 800.</p>
-     * <p>The patterns for the rule-based hierarchy. Set the key to <code>TreePatterns</code>. The default value is an empty array (<code>[]</code>).</p>
-     * <p>The document title source. Set the key to <code>TitleSource</code>. Valid values are <code>ocrTitle</code> (default), which uses the title recognized by Optical Character Recognition (OCR), and <code>docName</code>, which uses the document name as the title.</p>
+     * <p>The document parsing and chunking configuration.</p>
+     * <p>Configuration item: Splitter
+     * KEY: Splitter
+     * Valid values:</p>
+     * <ul>
+     * <li>ParagraphSplitter: recognition-based hierarchy.</li>
+     * <li>TreeSplitter: rule-based hierarchy.</li>
+     * </ul>
+     * <p>Configuration item: Document chunk size
+     * KEY: ChunkSize
+     * VALUE: Default value: 500. Value range: [200, 800].</p>
+     * <p>Configuration item: Rule-based hierarchy
+     * KEY: TreePatterns
+     * VALUE: Default value: [].</p>
+     * <p>Configuration item: Document title source
+     * KEY: TitleSource
+     * Valid values:</p>
+     * <ul>
+     * <li>ocrTitle: OCR-recognized title. This is the default value.</li>
+     * <li>docName: the document name is used as the title.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Splitter&quot;:&quot;treeSplitter&quot;,&quot;ChunkSize&quot;:500,&quot;TreePatterns&quot;:[&quot;^# .<em>&quot;,&quot;^## .</em>&quot;,&quot;^### .<em>&quot;,&quot;^#### .</em>&quot;],&quot;TitleSource&quot;:&quot;&quot;}</p>
@@ -36,10 +53,10 @@ public class CreateDocRequest extends TeaModel {
     public String config;
 
     /**
-     * <p>The document content. You must specify either this parameter or <code>Url</code>.</p>
+     * <p>The document content. Specify either this parameter or URL.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试内容</p>
+     * <p>Test content</p>
      */
     @NameInMap("Content")
     public String content;
@@ -48,7 +65,7 @@ public class CreateDocRequest extends TeaModel {
     public java.util.List<CreateDocRequestDocMetadata> docMetadata;
 
     /**
-     * <p>The time when the document expires. The time is in UTC.</p>
+     * <p>The effective end time in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2032-05-25T16:28:36Z</p>
@@ -57,7 +74,7 @@ public class CreateDocRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>The passthrough data of the document.</p>
+     * <p>The document metadata.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;code&quot;:&quot;xxx&quot;}</p>
@@ -66,7 +83,7 @@ public class CreateDocRequest extends TeaModel {
     public String meta;
 
     /**
-     * <p>The time when the document takes effect. The time is in UTC.</p>
+     * <p>The effective start time in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-05-25T16:28:36Z</p>
@@ -75,7 +92,7 @@ public class CreateDocRequest extends TeaModel {
     public String startDate;
 
     /**
-     * <p>A list of tag IDs.</p>
+     * <p>The list of tag IDs.</p>
      */
     @NameInMap("TagIds")
     public java.util.List<Long> tagIds;
@@ -85,13 +102,13 @@ public class CreateDocRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试标题</p>
+     * <p>Test title</p>
      */
     @NameInMap("Title")
     public String title;
 
     /**
-     * <p>The URL of the document. You must specify either this parameter or <code>Content</code>. Supported formats include .txt, .pdf, .markdown, .doc, and .docx. The following limits apply to a single file: a maximum of 100 pages, less than 200 KB for .txt and .markdown files, and less than 100 MB for .pdf, .doc, and .docx files.</p>
+     * <p>The URL of the document. Specify either this parameter or Content. Supported formats: txt, pdf, markdown, doc, and docx. Limits for a single file: up to 100 pages, txt files smaller than 200 KB, pdf files smaller than 100 MB, markdown files smaller than 200 KB, doc files smaller than 100 MB, and docx files smaller than 100 MB.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/example.pdf">https://example.com/example.pdf</a></p>

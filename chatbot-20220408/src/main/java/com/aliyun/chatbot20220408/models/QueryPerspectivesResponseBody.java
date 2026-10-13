@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryPerspectivesResponseBody extends TeaModel {
     /**
-     * <p>A list of perspectives.</p>
+     * <p>The list of perspectives.</p>
      */
     @NameInMap("Perspectives")
     public java.util.List<QueryPerspectivesResponseBodyPerspectives> perspectives;
@@ -63,13 +63,13 @@ public class QueryPerspectivesResponseBody extends TeaModel {
          * <p>The perspective name.</p>
          * 
          * <strong>example:</strong>
-         * <p>移动端视角</p>
+         * <p>Mobile perspective</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The perspective code (used for the Q\&amp;A API).</p>
+         * <p>The perspective code, which is used for the Q&amp;A API.</p>
          * 
          * <strong>example:</strong>
          * <p>FZJBY3raWr</p>
@@ -96,7 +96,11 @@ public class QueryPerspectivesResponseBody extends TeaModel {
         public Boolean selfDefine;
 
         /**
-         * <p>The status of the perspective. Valid values are 3 (enabled) and 1 (disabled).</p>
+         * <p>The data status. Valid values:</p>
+         * <ul>
+         * <li>3: Enabled.</li>
+         * <li>1: Not enabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelChatRequest extends TeaModel {
     /**
-     * <p>The agent key. If unspecified, the default agent is used. You can obtain the key on the Business Management page of your Alibaba Cloud account.</p>
+     * <p>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value on the business management page of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,16 +14,16 @@ public class CancelChatRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The content of the answer.</p>
+     * <p>The answer content.</p>
      * 
      * <strong>example:</strong>
-     * <p>&lt;这个答案被打&gt;</p>
+     * <This answer was inter>
      */
     @NameInMap("Answer")
     public String answer;
 
     /**
-     * <p>The ID that identifies a single chat turn.</p>
+     * <p>The ID that identifies a single conversation.</p>
      * 
      * <strong>example:</strong>
      * <p>7105a351-b2e7-4c9e-8437-c43a043c0a4e</p>
@@ -32,7 +32,7 @@ public class CancelChatRequest extends TeaModel {
     public String chatId;
 
     /**
-     * <p>The ID of the chatbot instance.</p>
+     * <p>The chatbot ID.</p>
      * 
      * <strong>example:</strong>
      * <p>chatbot-cn-yjzbyrEvqd</p>
@@ -41,7 +41,7 @@ public class CancelChatRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The session ID is used to identify a visitor\&quot;s session and maintain context. For a new visitor, omit this parameter in the first call to the chat operation. The chatbot starts a session and returns the session ID in the response. For subsequent turns, you must pass the session ID to maintain context. The value can be up to 64 characters in length.</p>
+     * <p>The session ID, which is used to identify a visitor\&quot;s session and maintain context information. For a new visitor, you do not need to specify this parameter when calling the Chat operation for the first time. The chatbot starts a session and returns the SessionId in the response of the Chat operation. For subsequent conversation turns of the visitor, pass the SessionId of the current session when calling the Chat operation so that the chatbot can continue the conversation based on the SessionId. Maximum length: 64 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>c1187530338311ebade7cf3eaeb3668a</p>
@@ -50,7 +50,7 @@ public class CancelChatRequest extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>The cancellation type.</p>
+     * <p>The interruption type.</p>
      * 
      * <strong>example:</strong>
      * <p>Canceled</p>

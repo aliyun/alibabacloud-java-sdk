@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class NluRequest extends TeaModel {
     /**
-     * <p>The agent key. If not specified, the default agent is used. Find the key on the Business Management page of your Alibaba Cloud account.</p>
+     * <p>The business space key. If not specified, the default business space is accessed. You can obtain the key on the business management page of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,7 +14,7 @@ public class NluRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The unique identifier of the bot instance.</p>
+     * <p>The unique identifier of the chatbot.</p>
      * 
      * <strong>example:</strong>
      * <p>chatbot-cn-mp90s2lrk00050</p>
@@ -23,10 +23,10 @@ public class NluRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The user\&quot;s text input.</p>
+     * <p>The user utterance.</p>
      * 
      * <strong>example:</strong>
-     * <p>北京的天气怎么样</p>
+     * <p>How is the weather in Beijing</p>
      */
     @NameInMap("Utterance")
     public String utterance;

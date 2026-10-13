@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetAsyncResultResponseBody extends TeaModel {
     /**
-     * <p>The task result, returned as a JSON-formatted string.</p>
+     * <p>The execution result data of the customer service.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;message&quot;:&quot;执行完成&quot;}</p>
+     * <p>{&quot;message&quot;:&quot;Execution completed&quot;}</p>
      */
     @NameInMap("Data")
     public String data;
@@ -23,7 +23,7 @@ public class GetAsyncResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task\&quot;s execution status. Valid values:</p>
+     * <p>The execution status.</p>
      * <table>
      * <thead>
      * <tr>
@@ -33,15 +33,15 @@ public class GetAsyncResultResponseBody extends TeaModel {
      * </thead>
      * <tbody><tr>
      * <td>Success</td>
-     * <td>The task completed successfully.</td>
+     * <td>The task is executed.</td>
      * </tr>
      * <tr>
-     * <td>Running</td>
-     * <td>The task is running.</td>
+     * <td>Runninig</td>
+     * <td>The task is being executed.</td>
      * </tr>
      * <tr>
      * <td>Fail</td>
-     * <td>The task failed.</td>
+     * <td>The task failed to be executed.</td>
      * </tr>
      * </tbody></table>
      * 

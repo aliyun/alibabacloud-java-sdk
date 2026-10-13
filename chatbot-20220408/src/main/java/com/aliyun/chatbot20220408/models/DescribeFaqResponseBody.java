@@ -14,7 +14,7 @@ public class DescribeFaqResponseBody extends TeaModel {
     public Long categoryId;
 
     /**
-     * <p>The time the knowledge was created, in UTC.</p>
+     * <p>The creation time in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-11-30T03:03:37Z</p>
@@ -23,7 +23,7 @@ public class DescribeFaqResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The creator of the knowledge.</p>
+     * <p>The user who created the knowledge.</p>
      * 
      * <strong>example:</strong>
      * <p>test01</p>
@@ -32,7 +32,12 @@ public class DescribeFaqResponseBody extends TeaModel {
     public String createUserName;
 
     /**
-     * <p>The validity status of the knowledge, calculated based on <code>StartDate</code> and <code>EndDate</code>. Valid values: <code>20</code> (Active), <code>21</code> (Expired), and <code>22</code> (Pending).</p>
+     * <p>The knowledge effective status, calculated based on StartDate and EndDate. Valid values:</p>
+     * <ul>
+     * <li>20: effective.</li>
+     * <li>21: expired.</li>
+     * <li>22: pending.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -41,7 +46,7 @@ public class DescribeFaqResponseBody extends TeaModel {
     public Integer effectStatus;
 
     /**
-     * <p>The expiration time of the knowledge, in UTC.</p>
+     * <p>The expiration time in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-04-27T06:08:54Z</p>
@@ -59,7 +64,7 @@ public class DescribeFaqResponseBody extends TeaModel {
     public Long knowledgeId;
 
     /**
-     * <p>The time the knowledge was last modified, in UTC.</p>
+     * <p>The modification time in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-12-02T06:35:50Z</p>
@@ -77,7 +82,7 @@ public class DescribeFaqResponseBody extends TeaModel {
     public String modifyUserName;
 
     /**
-     * <p>A list of related questions.</p>
+     * <p>The list of related questions.</p>
      */
     @NameInMap("Outlines")
     public java.util.List<DescribeFaqResponseBodyOutlines> outlines;
@@ -92,19 +97,19 @@ public class DescribeFaqResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of similar questions.</p>
+     * <p>The list of similar questions.</p>
      */
     @NameInMap("SimQuestions")
     public java.util.List<DescribeFaqResponseBodySimQuestions> simQuestions;
 
     /**
-     * <p>A list of solutions.</p>
+     * <p>The list of solutions.</p>
      */
     @NameInMap("Solutions")
     public java.util.List<DescribeFaqResponseBodySolutions> solutions;
 
     /**
-     * <p>The effective start time of the knowledge, in UTC.</p>
+     * <p>The effective period in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-04-27T07:04:39Z</p>
@@ -113,7 +118,13 @@ public class DescribeFaqResponseBody extends TeaModel {
     public String startDate;
 
     /**
-     * <p>The knowledge status. Valid values: <code>-1</code> (Deleted and unpublished), <code>1</code> (Unpublished), <code>2</code> (Published), and <code>3</code> (Updated and unpublished).</p>
+     * <p>The knowledge status. Valid values:</p>
+     * <ul>
+     * <li>-1: deleted but not published.</li>
+     * <li>1: not published.</li>
+     * <li>2: published.</li>
+     * <li>3: updated but not published.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -122,16 +133,16 @@ public class DescribeFaqResponseBody extends TeaModel {
     public Integer status;
 
     /**
-     * <p>A list of tag IDs associated with the knowledge.</p>
+     * <p>The list of label IDs.</p>
      */
     @NameInMap("TagIdList")
     public java.util.List<Long> tagIdList;
 
     /**
-     * <p>The knowledge title.</p>
+     * <p>The title.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试标题</p>
+     * <p>Test title</p>
      */
     @NameInMap("Title")
     public String title;
@@ -280,7 +291,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         public Long connQuestionId;
 
         /**
-         * <p>The time the related question was created, in UTC.</p>
+         * <p>The creation time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-05-26T10:24:00Z</p>
@@ -289,7 +300,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The time the related question was last modified, in UTC.</p>
+         * <p>The modification time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-05-26T18:12:02Z</p>
@@ -298,7 +309,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>The relationship ID.</p>
+         * <p>The relation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>797</p>
@@ -310,7 +321,7 @@ public class DescribeFaqResponseBody extends TeaModel {
          * <p>The related knowledge title.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试关联问标题</p>
+         * <p>Test related question title</p>
          */
         @NameInMap("Title")
         public String title;
@@ -364,7 +375,7 @@ public class DescribeFaqResponseBody extends TeaModel {
 
     public static class DescribeFaqResponseBodySimQuestions extends TeaModel {
         /**
-         * <p>The time the similar question was created, in UTC.</p>
+         * <p>The creation time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-05-26T10:24:00Z</p>
@@ -373,7 +384,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The time the similar question was last modified, in UTC.</p>
+         * <p>The modification time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-05-29T03:55:07Z</p>
@@ -394,7 +405,7 @@ public class DescribeFaqResponseBody extends TeaModel {
          * <p>The similar question title.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试相似问标题</p>
+         * <p>Test similar question title</p>
          */
         @NameInMap("Title")
         public String title;
@@ -443,13 +454,17 @@ public class DescribeFaqResponseBody extends TeaModel {
          * <p>The solution content.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试答案内容</p>
+         * <p>Test solution content</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
-         * <p>The solution content type. Valid values: <code>0</code> (plain text) and <code>1</code> (rich text).</p>
+         * <p>The solution type. Valid values:</p>
+         * <ul>
+         * <li>0: plain text.</li>
+         * <li>1: rich text.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -458,7 +473,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         public Integer contentType;
 
         /**
-         * <p>The time the solution was created, in UTC.</p>
+         * <p>The creation time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-05-26T10:24:00Z</p>
@@ -467,7 +482,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The time the solution was last modified, in UTC.</p>
+         * <p>The modification time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-05-29T07:07:13Z</p>
@@ -476,7 +491,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>A list of perspective codes.</p>
+         * <p>The list of perspective codes.</p>
          */
         @NameInMap("PerspectiveCodes")
         public java.util.List<String> perspectiveCodes;
@@ -485,7 +500,7 @@ public class DescribeFaqResponseBody extends TeaModel {
          * <p>The plain text content of the solution.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试答案内容</p>
+         * <p>Test solution content</p>
          */
         @NameInMap("PlainText")
         public String plainText;
@@ -500,7 +515,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         public Long solutionId;
 
         /**
-         * <p>A list of tag IDs.</p>
+         * <p>The list of label IDs.</p>
          */
         @NameInMap("TagIdList")
         public java.util.List<Long> tagIdList;

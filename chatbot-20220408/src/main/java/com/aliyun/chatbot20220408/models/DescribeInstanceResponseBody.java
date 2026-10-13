@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceResponseBody extends TeaModel {
     /**
-     * <p>The URL of the robot\&quot;s avatar.</p>
+     * <p>The URL of the chatbot avatar.</p>
      * 
      * <strong>example:</strong>
      * <p>/alimefe/meebot/robot/0.0.5/img/xxx-90-97.png</p>
@@ -14,13 +14,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public String avatar;
 
     /**
-     * <p>A list of categories.</p>
+     * <p>The list of categories.</p>
      */
     @NameInMap("Categories")
     public java.util.List<DescribeInstanceResponseBodyCategories> categories;
 
     /**
-     * <p>The UTC time when the robot was created.</p>
+     * <p>The UTC time when the chatbot was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-08-12T16:00:01Z</p>
@@ -29,7 +29,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The status of the robot.</p>
+     * <p>The status of the chatbot.</p>
      * 
      * <strong>example:</strong>
      * <p>PUBLISHED</p>
@@ -38,7 +38,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public String editStatus;
 
     /**
-     * <p>The unique identifier of the robot instance.</p>
+     * <p>The unique identifier of the chatbot.</p>
      * 
      * <strong>example:</strong>
      * <p>chatbot-cn-mp90s2lrk00050</p>
@@ -47,16 +47,16 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The robot\&quot;s introduction.</p>
+     * <p>The remarks of the chatbot.</p>
      * 
      * <strong>example:</strong>
-     * <p>用于C端问答的机器人</p>
+     * <p>A chatbot for consumer Q&amp;A</p>
      */
     @NameInMap("Introduction")
     public String introduction;
 
     /**
-     * <p>The language of the robot, such as zh-cn and en-us.</p>
+     * <p>The language of the chatbot service, such as zh-cn or en-us.</p>
      * 
      * <strong>example:</strong>
      * <p>zh-cn</p>
@@ -65,10 +65,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public String languageCode;
 
     /**
-     * <p>The robot name.</p>
+     * <p>The name of the chatbot.</p>
      * 
      * <strong>example:</strong>
-     * <p>智能客服-小C</p>
+     * <p>Intelligent Customer Service - Bot C</p>
      */
     @NameInMap("Name")
     public String name;
@@ -83,7 +83,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The robot type.</p>
+     * <p>The type of the chatbot.</p>
      * 
      * <strong>example:</strong>
      * <p>scenario_im</p>
@@ -92,7 +92,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public String robotType;
 
     /**
-     * <p>The time zone of the robot. For more information, see Time zone codes.</p>
+     * <p>The time zone of the chatbot. For more information, see the common time zone codes.</p>
      * 
      * <strong>example:</strong>
      * <p>Asia/Chongqing</p>
@@ -195,7 +195,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     public static class DescribeInstanceResponseBodyCategories extends TeaModel {
         /**
-         * <p>The ability type of the category, such as FAQ or MRC.</p>
+         * <p>The ability type of the category, such as FAQ (frequently asked questions) or MRC (document).</p>
          * 
          * <strong>example:</strong>
          * <p>FAQ</p>
@@ -213,10 +213,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Long categoryId;
 
         /**
-         * <p>The category name.</p>
+         * <p>The name of the category.</p>
          * 
          * <strong>example:</strong>
-         * <p>杭州市防疫政策</p>
+         * <p>Pandemic Prevention Policy</p>
          */
         @NameInMap("Name")
         public String name;

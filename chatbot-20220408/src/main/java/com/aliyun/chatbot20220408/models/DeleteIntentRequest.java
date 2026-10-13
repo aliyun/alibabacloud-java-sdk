@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteIntentRequest extends TeaModel {
     /**
-     * <p>The key that identifies the business space. If you omit this parameter, the service uses the default business space. You can get this key from the Business Management page of your primary account.</p>
+     * <p>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value from the business management page of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLgfResponseBody extends TeaModel {
     /**
-     * <p>The ID of the LGF configuration.</p>
+     * <p>LGF ID</p>
      * 
      * <strong>example:</strong>
      * <p>2342424</p>

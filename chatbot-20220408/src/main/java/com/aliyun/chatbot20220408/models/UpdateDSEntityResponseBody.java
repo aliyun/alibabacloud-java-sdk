@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDSEntityResponseBody extends TeaModel {
     /**
-     * <p>The ID of the updated entity.</p>
+     * <p>The entity ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>

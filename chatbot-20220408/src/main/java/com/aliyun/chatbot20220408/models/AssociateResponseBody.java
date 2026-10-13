@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AssociateResponseBody extends TeaModel {
     /**
-     * <p>A list of suggested FAQs.</p>
+     * <p>The list of associated suggestions.</p>
      */
     @NameInMap("Associate")
     public java.util.List<AssociateResponseBodyAssociate> associate;
 
     /**
-     * <p>The response message ID.</p>
+     * <p>The ID of the response message in the current session.</p>
      * 
      * <strong>example:</strong>
      * <p>5ADF0EBD-7C50-1922-A28B-43215B47CC1A</p>
@@ -29,7 +29,7 @@ public class AssociateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The session ID.</p>
+     * <p>The ID of the current session.</p>
      * 
      * <strong>example:</strong>
      * <p>1531ded6b3df4afca4be63943f708bb7</p>
@@ -76,7 +76,7 @@ public class AssociateResponseBody extends TeaModel {
 
     public static class AssociateResponseBodyAssociate extends TeaModel {
         /**
-         * <p>Additional information.</p>
+         * <p>The additional information.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -85,10 +85,10 @@ public class AssociateResponseBody extends TeaModel {
         public String meta;
 
         /**
-         * <p>The title of the suggested FAQ.</p>
+         * <p>The title of the associated question.</p>
          * 
          * <strong>example:</strong>
-         * <p>公积金提取的政策</p>
+         * <p>Housing fund withdrawal policy</p>
          */
         @NameInMap("Title")
         public String title;

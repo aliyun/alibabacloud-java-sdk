@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSaasInfoRequest extends TeaModel {
     /**
-     * <p>The key for the business space. If this parameter is omitted, the default business space is used. You can obtain the key from the Business Management page of your primary account.</p>
+     * <p>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value from the business management page of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,7 +14,7 @@ public class ListSaasInfoRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The codes of the user\&quot;s SaaS permission groups. Separate multiple codes with a comma.</p>
+     * <p>The SaaS permission group codes owned by the user. Separate multiple codes with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>DS,FAQ</p>
@@ -23,7 +23,7 @@ public class ListSaasInfoRequest extends TeaModel {
     public String saasGroupCodes;
 
     /**
-     * <p>The username of the business user.</p>
+     * <p>The username of the business party.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

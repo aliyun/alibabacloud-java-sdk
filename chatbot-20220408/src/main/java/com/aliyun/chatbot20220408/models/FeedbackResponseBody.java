@@ -5,8 +5,12 @@ import com.aliyun.tea.*;
 
 public class FeedbackResponseBody extends TeaModel {
     /**
-     * <p>The feedback rating.</p>
-     * <p>Enumerated values: \&quot;good\&quot; (a positive rating) or \&quot;bad\&quot; (a negative rating).</p>
+     * <p>The feedback type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>good: Like.</li>
+     * <li>bad: Dislike.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>good</p>
@@ -15,7 +19,7 @@ public class FeedbackResponseBody extends TeaModel {
     public String feedback;
 
     /**
-     * <p>The unique identifier of a single message within the session.</p>
+     * <p>The ID that uniquely identifies a single message in a session window.</p>
      * 
      * <strong>example:</strong>
      * <p>5ca40988-4f99-47ad-ac96-9060d0f81db9</p>
@@ -24,7 +28,7 @@ public class FeedbackResponseBody extends TeaModel {
     public String messageId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4e5eea71-f326-450c-8849-49515473ef64</p>

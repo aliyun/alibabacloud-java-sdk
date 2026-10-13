@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetAgentInfoResponseBody extends TeaModel {
     /**
-     * <p>The agent details.</p>
+     * <p>The business space data.</p>
      */
     @NameInMap("Data")
     public GetAgentInfoResponseBodyData data;
 
     /**
-     * <p>The error message returned if the request fails.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Parameter.Invalid</p>
@@ -20,7 +20,7 @@ public class GetAgentInfoResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>FC384CE1-8D42-1900-84E1-F33F990F2B5E</p>
@@ -76,7 +76,7 @@ public class GetAgentInfoResponseBody extends TeaModel {
 
     public static class GetAgentInfoResponseBodyData extends TeaModel {
         /**
-         * <p>The agent key. It is used to specify the agent in Platform as a Service (PaaS) API calls.</p>
+         * <p>The signature of the business space, used to specify the business space when calling PaaS API operations.</p>
          * 
          * <strong>example:</strong>
          * <p>4e7400028e6f4a7393ed3acf6a7b8927_p_beebot_public</p>
@@ -85,10 +85,10 @@ public class GetAgentInfoResponseBody extends TeaModel {
         public String agentKey;
 
         /**
-         * <p>The agent name.</p>
+         * <p>The name of the business space.</p>
          * 
          * <strong>example:</strong>
-         * <p>业务空间_881</p>
+         * <p>BusinessSpace_881</p>
          */
         @NameInMap("AgentName")
         public String agentName;

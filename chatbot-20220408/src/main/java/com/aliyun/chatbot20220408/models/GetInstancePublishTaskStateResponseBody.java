@@ -20,16 +20,16 @@ public class GetInstancePublishTaskStateResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The error message if the task fails.</p>
+     * <p>The job failure information.</p>
      * 
      * <strong>example:</strong>
-     * <p>检查待发布模块是否空闲发生错误，faq</p>
+     * <p>An error occurred while checking whether the module to be published is idle, faq</p>
      */
     @NameInMap("Error")
     public String error;
 
     /**
-     * <p>A map of error messages for each submodule, where the key is the submodule and the value is an array of errors.</p>
+     * <p>The fault information for each sub-publish module. The key is the sub-publish module and the value is the fault information.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -69,7 +69,7 @@ public class GetInstancePublishTaskStateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task ID, returned as a string.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8522</p>
@@ -78,7 +78,7 @@ public class GetInstancePublishTaskStateResponseBody extends TeaModel {
     public String response;
 
     /**
-     * <p>The status of the task.</p>
+     * <p>The task status.</p>
      * 
      * <strong>example:</strong>
      * <p>FE_RUNNING</p>
@@ -87,12 +87,12 @@ public class GetInstancePublishTaskStateResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>A map of warning messages for each submodule, where the key is the submodule and the value is an array of warnings.</p>
+     * <p>The warning information for each sub-publish module. The key is the sub-publish module and the value is the warning information.</p>
      * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;category_bind_faq&quot;: [
-     *         &quot;以下类目没有发布到正式环境：项目交付类目&quot;
+     *         &quot;The following categories have not been published to the production environment: Project Delivery category&quot;
      *     ]
      * }</p>
      */

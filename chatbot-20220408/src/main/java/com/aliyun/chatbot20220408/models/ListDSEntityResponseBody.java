@@ -11,7 +11,7 @@ public class ListDSEntityResponseBody extends TeaModel {
     public java.util.List<ListDSEntityResponseBodyEntities> entities;
 
     /**
-     * <p>The current page number. Default value: 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class ListDSEntityResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total count of matching entries.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,7 +93,7 @@ public class ListDSEntityResponseBody extends TeaModel {
 
     public static class ListDSEntityResponseBodyEntities extends TeaModel {
         /**
-         * <p>The creation time in UTC.</p>
+         * <p>The creation time (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-08-12T16:00:01Z</p>
@@ -120,7 +120,7 @@ public class ListDSEntityResponseBody extends TeaModel {
         public String createUserName;
 
         /**
-         * <p>The ID of the entity.</p>
+         * <p>The entity ID.</p>
          * 
          * <strong>example:</strong>
          * <p>234564567445</p>
@@ -132,13 +132,13 @@ public class ListDSEntityResponseBody extends TeaModel {
          * <p>The entity name.</p>
          * 
          * <strong>example:</strong>
-         * <p>书实体</p>
+         * <p>BookEntity</p>
          */
         @NameInMap("EntityName")
         public String entityName;
 
         /**
-         * <p>The entity type. Valid values: <code>synonyms</code>, <code>regex</code>, and <code>system</code>.</p>
+         * <p>The entity type (synonyms | regex | system).</p>
          * 
          * <strong>example:</strong>
          * <p>synonyms</p>
@@ -147,7 +147,7 @@ public class ListDSEntityResponseBody extends TeaModel {
         public String entityType;
 
         /**
-         * <p>The update time in UTC.</p>
+         * <p>The modification time (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-08-12T16:00:01Z</p>
@@ -174,7 +174,7 @@ public class ListDSEntityResponseBody extends TeaModel {
         public String modifyUserName;
 
         /**
-         * <p>The code for the system entity, such as <code>sys_date</code>. This parameter is blank for custom entities.</p>
+         * <p>The system entity code, such as sys.date. This parameter is empty for user entities.</p>
          * 
          * <strong>example:</strong>
          * <p>sys_date</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUserSayRequest extends TeaModel {
     /**
-     * <p>The key of the business space. If you omit this parameter, the default business space is used. You can obtain the key from the Business Management page of your Alibaba Cloud account.</p>
+     * <p>The business space key. If not specified, the default business space is accessed. You can obtain the key value from the business management page of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,16 +14,16 @@ public class ListUserSayRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The keywords used to filter user says. The query returns only user says that contain these keywords.</p>
+     * <p>The keyword used to filter user utterances.</p>
      * 
      * <strong>example:</strong>
-     * <p>您做核酸了嘛</p>
+     * <p>Have you taken a COVID test</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
-     * <p>The ID of the bot.</p>
+     * <p>The chatbot ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class ListUserSayRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the intent.</p>
+     * <p>The intent ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class ListUserSayRequest extends TeaModel {
     public Long intentId;
 
     /**
-     * <p>The page number. The default value is 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -52,7 +52,7 @@ public class ListUserSayRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. The default value is 10. The maximum value is 1000.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 1000.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

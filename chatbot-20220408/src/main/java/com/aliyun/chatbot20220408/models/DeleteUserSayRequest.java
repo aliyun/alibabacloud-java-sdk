@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteUserSayRequest extends TeaModel {
     /**
-     * <p>The key of the business space. If omitted, the default business space is used. You can obtain the key from the Business Management page of your primary account.</p>
+     * <p>The business space key. If this parameter is not set, the default business space is accessed. You can obtain the key value on the business management page of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,7 +14,7 @@ public class DeleteUserSayRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The instance ID of the bot.</p>
+     * <p>The robot ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DeleteUserSayRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the intent.</p>
+     * <p>The intent ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class DeleteUserSayRequest extends TeaModel {
     public Long intentId;
 
     /**
-     * <p>The ID of the user say.</p>
+     * <p>The utterance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

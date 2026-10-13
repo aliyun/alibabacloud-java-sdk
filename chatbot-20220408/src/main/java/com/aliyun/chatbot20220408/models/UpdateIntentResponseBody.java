@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateIntentResponseBody extends TeaModel {
     /**
-     * <p>The ID of the updated intent.</p>
+     * <p>The intent ID.</p>
      * 
      * <strong>example:</strong>
      * <p>234234234534</p>

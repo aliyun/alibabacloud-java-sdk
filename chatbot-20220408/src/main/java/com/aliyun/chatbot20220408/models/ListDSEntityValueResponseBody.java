@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDSEntityValueResponseBody extends TeaModel {
     /**
-     * <p>A list of entity values.</p>
+     * <p>The entity list.</p>
      */
     @NameInMap("EntityValues")
     public java.util.List<ListDSEntityValueResponseBodyEntityValues> entityValues;
 
     /**
-     * <p>The page number of the returned results.</p>
+     * <p>The current page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListDSEntityValueResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries on the returned page.</p>
+     * <p>The page size. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class ListDSEntityValueResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total count of matching entries.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,16 +93,16 @@ public class ListDSEntityValueResponseBody extends TeaModel {
 
     public static class ListDSEntityValueResponseBodyEntityValues extends TeaModel {
         /**
-         * <p>The content of the entity value, which can be a standard value or a regular expression.</p>
+         * <p>The entity member name (entity value or regular expression).</p>
          * 
          * <strong>example:</strong>
-         * <p>书类型</p>
+         * <p>Book type</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
-         * <p>The creation time of the entity value in UTC.</p>
+         * <p>The creation time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-08-12T16:00:01Z</p>
@@ -111,7 +111,7 @@ public class ListDSEntityValueResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The ID of the entity.</p>
+         * <p>The entity ID.</p>
          * 
          * <strong>example:</strong>
          * <p>34313785463</p>
@@ -120,7 +120,7 @@ public class ListDSEntityValueResponseBody extends TeaModel {
         public Long entityId;
 
         /**
-         * <p>The ID of the entity value.</p>
+         * <p>The entity member ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3467858234534534532</p>
@@ -129,7 +129,7 @@ public class ListDSEntityValueResponseBody extends TeaModel {
         public Long entityValueId;
 
         /**
-         * <p>The last modification time of the entity value in UTC.</p>
+         * <p>The modification time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-08-12T16:00:01Z</p>
@@ -138,7 +138,7 @@ public class ListDSEntityValueResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>A list of synonyms for the entity value.</p>
+         * <p>The synonym list.</p>
          */
         @NameInMap("Synonyms")
         public java.util.List<String> synonyms;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConnQuestionRequest extends TeaModel {
     /**
-     * <p>The key for the workspace. If omitted, the default workspace is used. You can find this key on the Business Management page of your main account.</p>
+     * <p>The business space key. If not specified, the default business space is accessed. You can obtain the key value from the business management page of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,7 +14,7 @@ public class ListConnQuestionRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The ID of the knowledge item.</p>
+     * <p>The knowledge ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

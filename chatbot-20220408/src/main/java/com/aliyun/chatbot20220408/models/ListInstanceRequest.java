@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstanceRequest extends TeaModel {
     /**
-     * <p>The key of the business space. You can obtain the key on the Business Management page of the primary account. If you do not set this parameter, the default business space is accessed.</p>
+     * <p>The business space key. If not specified, the default business space is accessed. Obtain the key value from the business management page of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,16 +14,16 @@ public class ListInstanceRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The name of the chatbot. A fuzzy search is supported.</p>
+     * <p>Performs a fuzzy match by chatbot name.</p>
      * 
      * <strong>example:</strong>
-     * <p>售前客服</p>
+     * <p>Pre-sales Customer Service</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number for pagination. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class ListInstanceRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of instances to return on each page. Default value: 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,7 +41,7 @@ public class ListInstanceRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The type of the chatbot.</p>
+     * <p>Filters chatbots by type.</p>
      * 
      * <strong>example:</strong>
      * <p>scenario_im</p>

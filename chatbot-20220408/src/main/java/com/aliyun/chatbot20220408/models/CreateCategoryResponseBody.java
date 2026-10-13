@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCategoryResponseBody extends TeaModel {
     /**
-     * <p>Details of the created category.</p>
+     * <p>The category information.</p>
      */
     @NameInMap("Category")
     public CreateCategoryResponseBodyCategory category;
@@ -63,13 +63,13 @@ public class CreateCategoryResponseBody extends TeaModel {
          * <p>The category name.</p>
          * 
          * <strong>example:</strong>
-         * <p>类目名称</p>
+         * <p>Category name</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The ID of the parent category.</p>
+         * <p>The parent category ID.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -78,7 +78,11 @@ public class CreateCategoryResponseBody extends TeaModel {
         public Long parentCategoryId;
 
         /**
-         * <p>The category status. A value of -1 indicates that the category has been deleted, but this change has not been published. A value of 0 indicates Normal.</p>
+         * <p>The category status. Valid values:</p>
+         * <ul>
+         * <li>-1: deleted but not published.</li>
+         * <li>0: Normal.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceResponseBody extends TeaModel {
     /**
-     * <p>The instance ID of the robot.</p>
+     * <p>The unique identifier of the chatbot.</p>
      * 
      * <strong>example:</strong>
      * <p>chatbot-cn-mp90s2lrk00050</p>
@@ -14,7 +14,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F2E2C40D-AB09-45A1-B5C5-EB9F5C4E4E4A</p>

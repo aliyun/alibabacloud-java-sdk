@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePublishTaskRequest extends TeaModel {
     /**
-     * <p>The key of the business space. If you omit this parameter, the default business space is used. You can obtain the key from the Business Management page of your main account.</p>
+     * <p>The workspace key. If not specified, the default workspace is accessed. Obtain the key value from the business management page of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,7 +14,7 @@ public class CreatePublishTaskRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The type of content to publish. To publish a bot, use the <code>CreateInstancePublishTask</code> API.</p>
+     * <p>The publish unit type. To publish a chatbot, use the CreateInstancePublishTask API.</p>
      * 
      * <strong>example:</strong>
      * <p>faq</p>
@@ -23,7 +23,7 @@ public class CreatePublishTaskRequest extends TeaModel {
     public String bizType;
 
     /**
-     * <p>Specifies data to publish by ID. This parameter is used only when <code>BizType</code> is set to <code>faq</code>. In this case, provide one or more category IDs to publish knowledge exclusively from the specified categories.</p>
+     * <p>Additional publish information. Currently supported: if BizType is faq, this field specifies category IDs, indicating that only knowledge under these categories is published.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;8521&quot;]</p>

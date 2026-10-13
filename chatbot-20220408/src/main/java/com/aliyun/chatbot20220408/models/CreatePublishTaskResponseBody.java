@@ -11,7 +11,7 @@ public class CreatePublishTaskResponseBody extends TeaModel {
     public java.util.List<String> bizTypeList;
 
     /**
-     * <p>The time when the task was created, in UTC.</p>
+     * <p>The UTC time when the task was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-04-12T06:30:17Z</p>
@@ -20,10 +20,10 @@ public class CreatePublishTaskResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The error message if the task fails.</p>
+     * <p>The task failure information.</p>
      * 
      * <strong>example:</strong>
-     * <p>检查待发布模块是否空闲发生错误，faq</p>
+     * <p>An error occurred while checking whether the module to be published is idle, faq</p>
      */
     @NameInMap("Error")
     public String error;
@@ -38,7 +38,7 @@ public class CreatePublishTaskResponseBody extends TeaModel {
     public Long id;
 
     /**
-     * <p>The time when the task was last modified, in UTC.</p>
+     * <p>The UTC time when the task was last modified.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-04-12T06:30:33Z</p>
@@ -56,7 +56,7 @@ public class CreatePublishTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The publish task ID. This parameter is redundant. Use the <code>Id</code> parameter instead.</p>
+     * <p>The publish task ID. This is a redundant field. Use the publish task ID from the Id field instead.</p>
      * 
      * <strong>example:</strong>
      * <p>8522</p>
@@ -65,8 +65,14 @@ public class CreatePublishTaskResponseBody extends TeaModel {
     public String response;
 
     /**
-     * <p>The task status. Valid values:</p>
-     * <p><code>FE_RUNNING</code>: Publishing<br><br><code>FE_SUCCESS</code>: Published<br><br><code>FE_FAILED</code>: Failed<br><br><code>FE_ABORTED</code>: Canceled<br><br><br><br><br><br></p>
+     * <p>The task status.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>FE_RUNNING: Publishing in progress.</li>
+     * <li>FE_SUCCESS: Published.</li>
+     * <li>FE_FAILED: Publish failed.</li>
+     * <li>FE_ABORTED: Publish canceled.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>FE_RUNNING</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ContinueInstancePublishTaskRequest extends TeaModel {
     /**
-     * <p>The key for the business space. If you omit this parameter, the default business space is used. You can find this key on the Business Management page of your Alibaba Cloud account.</p>
+     * <p>The key of the business space. If this parameter is not specified, the default business space is accessed. You can obtain the key on the business management page of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,7 +14,7 @@ public class ContinueInstancePublishTaskRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8521</p>

@@ -14,7 +14,7 @@ public class CreateSolutionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the knowledge answer.</p>
+     * <p>The answer ID.</p>
      * 
      * <strong>example:</strong>
      * <p>100001089003</p>

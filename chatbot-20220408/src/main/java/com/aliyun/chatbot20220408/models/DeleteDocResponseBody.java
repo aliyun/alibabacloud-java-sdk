@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDocResponseBody extends TeaModel {
     /**
-     * <p>The ID of the knowledge.</p>
+     * <p>The knowledge ID.</p>
      * 
      * <strong>example:</strong>
      * <p>30002406051</p>
@@ -14,7 +14,7 @@ public class DeleteDocResponseBody extends TeaModel {
     public Long knowledgeId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DFB71B34-4188-4EA2-9988-EF3014E75910</p>

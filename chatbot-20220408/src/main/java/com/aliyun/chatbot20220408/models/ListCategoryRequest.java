@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCategoryRequest extends TeaModel {
     /**
-     * <p>The business space key. If you omit this parameter, the default business space is used. You can obtain the key on the Business Management page of your primary account.</p>
+     * <p>The key of the business space. If not specified, the default business space is accessed. Obtain the key value from the business management page of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,7 +14,12 @@ public class ListCategoryRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The knowledge type. Valid values: <code>1</code> (FAQ category) and <code>3</code> (document category). The default value is <code>1</code>.</p>
+     * <p>The knowledge type. Valid values:</p>
+     * <ul>
+     * <li>1: FAQ category.</li>
+     * <li>3: Document category.</li>
+     * </ul>
+     * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +28,7 @@ public class ListCategoryRequest extends TeaModel {
     public Integer knowledgeType;
 
     /**
-     * <p>The parent category ID.</p>
+     * <p>The ID of the parent category.</p>
      * 
      * <strong>example:</strong>
      * <p>-1</p>

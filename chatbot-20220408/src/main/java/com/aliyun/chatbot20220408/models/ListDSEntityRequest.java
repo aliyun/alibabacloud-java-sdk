@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDSEntityRequest extends TeaModel {
     /**
-     * <p>The key of the business space. If this parameter is not set, the default business space is used. You can find this key on the Business Management page of your main account.</p>
+     * <p>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value on the business management page of the primary account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,7 +14,7 @@ public class ListDSEntityRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The entity type. If you omit this parameter, all custom entities are returned.</p>
+     * <p>If left empty, all custom entities are returned (default).</p>
      * 
      * <strong>example:</strong>
      * <p>synonyms
@@ -25,7 +25,7 @@ public class ListDSEntityRequest extends TeaModel {
     public String entityType;
 
     /**
-     * <p>The robot ID.</p>
+     * <p>The chatbot ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,16 +35,16 @@ public class ListDSEntityRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>A keyword to filter entities by name using a \&quot;contains\&quot; match. Future releases will also support searching by entity member and synonym.</p>
+     * <p>The filter keyword. Uses contains matching. Scope: entity name (future expansion: entity members, synonyms).</p>
      * 
      * <strong>example:</strong>
-     * <p>实体</p>
+     * <p>entity</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
-     * <p>The current page number. Default value: 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -53,7 +53,7 @@ public class ListDSEntityRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page. The default value is 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

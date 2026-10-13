@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDSEntityValueShrinkRequest extends TeaModel {
     /**
-     * <p>The key for the business space. If you omit this parameter, the default business space is used. You can find this key on the Business Management page of your primary account.</p>
+     * <p>The business space key. If this parameter is not set, the default business space is accessed. Obtain the key value from the business management page of the main account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,17 +14,17 @@ public class UpdateDSEntityValueShrinkRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The new content for the entity value. For an entity type of <code>synonyms</code>, this is the normalized value. For an entity type of <code>regex</code>, this is the regular expression.</p>
+     * <p>When the entity type is synonyms, this parameter specifies the normalized value of the entity. When the entity type is regex, this parameter specifies the regular expression text.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>书本类型</p>
+     * <p>Book type</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
-     * <p>The entity ID. You can leave this parameter empty when modifying an entity value.</p>
+     * <p>The entity ID. This parameter can be left empty when you modify an entity member.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class UpdateDSEntityValueShrinkRequest extends TeaModel {
     public Long entityId;
 
     /**
-     * <p>The ID of the entity value to update.</p>
+     * <p>The entity member ID. This parameter is left empty when you create an entity member.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class UpdateDSEntityValueShrinkRequest extends TeaModel {
     public Long entityValueId;
 
     /**
-     * <p>The bot ID.</p>
+     * <p>The chatbot ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class UpdateDSEntityValueShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The synonym list for the normalized value.</p>
+     * <p>The list of synonyms.</p>
      */
     @NameInMap("Synonyms")
     public String synonymsShrink;

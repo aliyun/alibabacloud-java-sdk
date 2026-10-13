@@ -23,16 +23,16 @@ public class DescribePerspectiveResponseBody extends TeaModel {
     public String modifyTime;
 
     /**
-     * <p>The name of the perspective.</p>
+     * <p>The perspective name.</p>
      * 
      * <strong>example:</strong>
-     * <p>移动端视角</p>
+     * <p>Mobile perspective</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The perspective code (used for the Q\&amp;A API).</p>
+     * <p>The perspective code, which is used for the Q&amp;A API.</p>
      * 
      * <strong>example:</strong>
      * <p>FZJBY3raWr</p>
@@ -41,7 +41,7 @@ public class DescribePerspectiveResponseBody extends TeaModel {
     public String perspectiveCode;
 
     /**
-     * <p>The ID of the perspective.</p>
+     * <p>The perspective ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3001</p>
@@ -59,7 +59,7 @@ public class DescribePerspectiveResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the perspective is user-defined.</p>
+     * <p>Indicates whether the perspective is custom-defined.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -68,7 +68,11 @@ public class DescribePerspectiveResponseBody extends TeaModel {
     public Boolean selfDefine;
 
     /**
-     * <p>The status of the perspective. Valid values: 3 (Enabled) and 1 (Disabled).</p>
+     * <p>The data status. Valid values:</p>
+     * <ul>
+     * <li>3: Enabled.</li>
+     * <li>1: Not enabled.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>

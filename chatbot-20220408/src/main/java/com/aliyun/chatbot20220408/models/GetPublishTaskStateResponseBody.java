@@ -20,21 +20,21 @@ public class GetPublishTaskStateResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The error message returned if the task fails.</p>
+     * <p>The failure information of the task.</p>
      * 
      * <strong>example:</strong>
-     * <p>检查待发布模块是否空闲发生错误，faq</p>
+     * <p>An error occurred while checking whether the module to be published is idle, faq</p>
      */
     @NameInMap("Error")
     public String error;
 
     /**
-     * <p>A map of error messages for each submodule, where the key is the submodule name and the value is the error message.</p>
+     * <p>The fault information of each sub-publish module. The key is the sub-publish module and the value is the fault information.</p>
      * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;faq&quot;: [
-     *         &quot;答案资源未发布，资源类型：全局服务，名称：动态答案服务&quot;
+     *         &quot;Answer resource not published. Resource type: global service. Name: dynamic answer service&quot;
      *     ]
      * }</p>
      */
@@ -42,7 +42,7 @@ public class GetPublishTaskStateResponseBody extends TeaModel {
     public java.util.Map<String, ?> errors;
 
     /**
-     * <p>The publish task ID.</p>
+     * <p>The ID of the publish task.</p>
      * 
      * <strong>example:</strong>
      * <p>8522</p>
@@ -69,7 +69,7 @@ public class GetPublishTaskStateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The publish task ID. This field is redundant. Use the <code>Id</code> field instead.</p>
+     * <p>The ID of the publish task. This is a redundant field. Use the publish task ID instead.</p>
      * 
      * <strong>example:</strong>
      * <p>8522</p>
@@ -78,16 +78,13 @@ public class GetPublishTaskStateResponseBody extends TeaModel {
     public String response;
 
     /**
-     * <p>The task status. Valid values:</p>
+     * <p>The task status.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li><p><code>FE_RUNNING</code>: Publishing</p>
-     * </li>
-     * <li><p><code>FE_SUCCESS</code>: Success</p>
-     * </li>
-     * <li><p><code>FE_FAILED</code>: Failed</p>
-     * </li>
-     * <li><p><code>FE_ABORTED</code>: Aborted</p>
-     * </li>
+     * <li>FE_RUNNING: Publishing in progress.</li>
+     * <li>FE_SUCCESS: Published.</li>
+     * <li>FE_FAILED: Publish failed.</li>
+     * <li>FE_ABORTED: Publish canceled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,12 +94,12 @@ public class GetPublishTaskStateResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>A map of warning messages for each submodule, where the key is the submodule name and the value is the warning message.</p>
+     * <p>The warning information of each sub-publish module. The key is the sub-publish module and the value is the warning information.</p>
      * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;faq&quot;: [
-     *         &quot;答案资源未发布，类型：service，名称：null，答案资源未发布，类型：service，名称：null&quot;
+     *         &quot;Answer resource not published. Type: service. Name: null. Answer resource not published. Type: service. Name: null&quot;
      *     ]
      * }</p>
      */

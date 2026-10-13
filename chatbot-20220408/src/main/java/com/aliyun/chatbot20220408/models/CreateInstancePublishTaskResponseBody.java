@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateInstancePublishTaskResponseBody extends TeaModel {
     /**
-     * <p>A list of business types.</p>
+     * <p>The list of business types.</p>
      */
     @NameInMap("BizTypeList")
     public java.util.List<String> bizTypeList;
@@ -20,10 +20,10 @@ public class CreateInstancePublishTaskResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The error message for the publish task.</p>
+     * <p>The error message of the job failure.</p>
      * 
      * <strong>example:</strong>
-     * <p>检查待发布模块是否空闲发生错误,faq</p>
+     * <p>An error occurred while checking whether the module to be published is idle, faq</p>
      */
     @NameInMap("Error")
     public String error;
@@ -56,7 +56,7 @@ public class CreateInstancePublishTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task ID, returned as a string.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8522</p>

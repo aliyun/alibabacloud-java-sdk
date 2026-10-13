@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BeginSessionResponseBody extends TeaModel {
     /**
-     * <p>The ASR end-pointing detection time, in milliseconds.</p>
+     * <p>The Automatic Speech Recognition (ASR) end-of-speech detection time. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>700</p>
@@ -14,7 +14,7 @@ public class BeginSessionResponseBody extends TeaModel {
     public Integer asrMaxEndSilence;
 
     /**
-     * <p>Indicates whether voice playback is interruptible.</p>
+     * <p>Indicates whether the voice broadcast can be interrupted.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -32,7 +32,7 @@ public class BeginSessionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The silence timeout, in seconds.</p>
+     * <p>The silence timeout period. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -44,7 +44,7 @@ public class BeginSessionResponseBody extends TeaModel {
      * <p>The welcome message.</p>
      * 
      * <strong>example:</strong>
-     * <p>智能对话机器人为您服务，请问有什么可以帮您？</p>
+     * <p>The intelligent chatbot is at your service. How can I help you?</p>
      */
     @NameInMap("WelcomeMessage")
     public String welcomeMessage;

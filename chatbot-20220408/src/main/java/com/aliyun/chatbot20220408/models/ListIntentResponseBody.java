@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIntentResponseBody extends TeaModel {
     /**
-     * <p>A list of intents.</p>
+     * <p>The list of intents.</p>
      */
     @NameInMap("Intents")
     public java.util.List<ListIntentResponseBodyIntents> intents;
@@ -20,7 +20,7 @@ public class ListIntentResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of intents per page. Default value: 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class ListIntentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of intents.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,7 +93,7 @@ public class ListIntentResponseBody extends TeaModel {
 
     public static class ListIntentResponseBodyIntentsSlotInfos extends TeaModel {
         /**
-         * <p>Indicates whether the slot can accept multiple values.</p>
+         * <p>Indicates whether the slot is an array.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -102,7 +102,7 @@ public class ListIntentResponseBody extends TeaModel {
         public Boolean array;
 
         /**
-         * <p>Indicates whether the slot contains sensitive data.</p>
+         * <p>Indicates whether the slot is sensitive.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -111,7 +111,7 @@ public class ListIntentResponseBody extends TeaModel {
         public Boolean encrypt;
 
         /**
-         * <p>Indicates whether the slot value is collected interactively.</p>
+         * <p>Indicates whether the slot is collected interactively.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -123,7 +123,7 @@ public class ListIntentResponseBody extends TeaModel {
          * <p>The slot name.</p>
          * 
          * <strong>example:</strong>
-         * <p>天气</p>
+         * <p>Weather</p>
          */
         @NameInMap("Name")
         public String name;
@@ -141,7 +141,7 @@ public class ListIntentResponseBody extends TeaModel {
          * <p>The slot value (entity name).</p>
          * 
          * <strong>example:</strong>
-         * <p>天气</p>
+         * <p>Weather</p>
          */
         @NameInMap("Value")
         public String value;
@@ -203,16 +203,16 @@ public class ListIntentResponseBody extends TeaModel {
 
     public static class ListIntentResponseBodyIntents extends TeaModel {
         /**
-         * <p>The intent alias.</p>
+         * <p>The alias of the intent.</p>
          * 
          * <strong>example:</strong>
-         * <p>查天气意图</p>
+         * <p>CheckWeatherIntent</p>
          */
         @NameInMap("AliasName")
         public String aliasName;
 
         /**
-         * <p>The time at which the intent was created, in UTC.</p>
+         * <p>The creation time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-08-12T16:00:01Z</p>
@@ -221,7 +221,7 @@ public class ListIntentResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The ID of the user who created the intent.</p>
+         * <p>The unique identifier of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>123231</p>
@@ -230,7 +230,7 @@ public class ListIntentResponseBody extends TeaModel {
         public String createUserId;
 
         /**
-         * <p>The name of the user who created the intent.</p>
+         * <p>The name of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -251,13 +251,13 @@ public class ListIntentResponseBody extends TeaModel {
          * <p>The intent name.</p>
          * 
          * <strong>example:</strong>
-         * <p>查天气意图</p>
+         * <p>CheckWeatherIntent</p>
          */
         @NameInMap("IntentName")
         public String intentName;
 
         /**
-         * <p>The time at which the intent was last modified, in UTC.</p>
+         * <p>The modification time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-08-12T16:00:01Z</p>
@@ -266,7 +266,7 @@ public class ListIntentResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>The ID of the user who last modified the intent.</p>
+         * <p>The unique identifier of the user who last modified the intent.</p>
          * 
          * <strong>example:</strong>
          * <p>123231</p>
@@ -284,7 +284,7 @@ public class ListIntentResponseBody extends TeaModel {
         public String modifyUserName;
 
         /**
-         * <p>A list of slots associated with the intent.</p>
+         * <p>The slot information associated with the intent.</p>
          */
         @NameInMap("SlotInfos")
         public java.util.List<ListIntentResponseBodyIntentsSlotInfos> slotInfos;

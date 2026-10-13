@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InitIMConnectRequest extends TeaModel {
     /**
-     * <p>The key for the business space. Omit this parameter to use the default business space. You can get the key from the business management page of your main account.</p>
+     * <p>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value on the business management page of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,15 +14,11 @@ public class InitIMConnectRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The identifier for the connection source. You can obtain this value from the channel console.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("From")
     public String from;
 
-    /**
-     * <p>The access token for user authentication.</p>
-     */
     @NameInMap("UserAccessToken")
     public String userAccessToken;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteInstanceRequest extends TeaModel {
     /**
-     * <p>The key for the business space. If you omit this parameter, the default business space is used. You can find the key on the Business Management page of your main account.</p>
+     * <p>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value on the business management page of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,7 +14,7 @@ public class DeleteInstanceRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The unique ID of the instance.</p>
+     * <p>The unique identifier of the chatbot.</p>
      * 
      * <strong>example:</strong>
      * <p>chatbot-cn-mp90s2lrk00050</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchFaqRequest extends TeaModel {
     /**
-     * <p>The key for the workspace. If this parameter is not specified, the default workspace is used. You can get the key on the Business Management page of your main account.</p>
+     * <p>The business space key. If not specified, the default business space is accessed. Obtain the key value from the business management page of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -14,13 +14,13 @@ public class SearchFaqRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>An array of category IDs to filter the search results.</p>
+     * <p>The unique identifier of the category.</p>
      */
     @NameInMap("CategoryIds")
     public java.util.List<Long> categoryIds;
 
     /**
-     * <p>The start of the creation period.</p>
+     * <p>The start of the creation time range.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-04-02T03:09:30Z</p>
@@ -29,7 +29,7 @@ public class SearchFaqRequest extends TeaModel {
     public String createTimeBegin;
 
     /**
-     * <p>The end of the creation period.</p>
+     * <p>The end of the creation time range.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-05-02T03:09:30Z</p>
@@ -38,7 +38,7 @@ public class SearchFaqRequest extends TeaModel {
     public String createTimeEnd;
 
     /**
-     * <p>The creator\&quot;s username.</p>
+     * <p>The name of the creator.</p>
      * 
      * <strong>example:</strong>
      * <p>test01</p>
@@ -47,7 +47,7 @@ public class SearchFaqRequest extends TeaModel {
     public String createUserName;
 
     /**
-     * <p>The start of the expiration period.</p>
+     * <p>The start of the expiration time range.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-04-02T03:09:30Z</p>
@@ -56,7 +56,7 @@ public class SearchFaqRequest extends TeaModel {
     public String endTimeBegin;
 
     /**
-     * <p>The end of the expiration period.</p>
+     * <p>The end of the expiration time range.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-05-02T03:09:30Z</p>
@@ -65,16 +65,16 @@ public class SearchFaqRequest extends TeaModel {
     public String endTimeEnd;
 
     /**
-     * <p>The search keyword.</p>
+     * <p>The keyword.</p>
      * 
      * <strong>example:</strong>
-     * <p>搜索标题</p>
+     * <p>Search title</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
-     * <p>The start of the modification period.</p>
+     * <p>The start of the modification time range.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-04-02T03:09:30Z</p>
@@ -83,7 +83,7 @@ public class SearchFaqRequest extends TeaModel {
     public String modifyTimeBegin;
 
     /**
-     * <p>The end of the modification period.</p>
+     * <p>The end of the modification time range.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-05-02T03:09:30Z</p>
@@ -92,7 +92,7 @@ public class SearchFaqRequest extends TeaModel {
     public String modifyTimeEnd;
 
     /**
-     * <p>The modifier\&quot;s username.</p>
+     * <p>The name of the modifier.</p>
      * 
      * <strong>example:</strong>
      * <p>test01</p>
@@ -101,7 +101,7 @@ public class SearchFaqRequest extends TeaModel {
     public String modifyUserName;
 
     /**
-     * <p>The number of the page to return. The default value is 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,7 +110,7 @@ public class SearchFaqRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. The default value is 10, and the maximum value is 100.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -119,7 +119,12 @@ public class SearchFaqRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The search scope.</p>
+     * <p>The search scope. Valid values:</p>
+     * <ul>
+     * <li>1: Search titles and similar questions.</li>
+     * <li>2: Search answers.</li>
+     * <li>3: Search all.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -128,7 +133,7 @@ public class SearchFaqRequest extends TeaModel {
     public Integer searchScope;
 
     /**
-     * <p>The start of the effective period.</p>
+     * <p>The start of the effective time range.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-04-02T03:09:30Z</p>
@@ -137,7 +142,7 @@ public class SearchFaqRequest extends TeaModel {
     public String startTimeBegin;
 
     /**
-     * <p>The end of the effective period.</p>
+     * <p>The end of the effective time range.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-04-03T03:09:30Z</p>
@@ -146,7 +151,13 @@ public class SearchFaqRequest extends TeaModel {
     public String startTimeEnd;
 
     /**
-     * <p>The status of the knowledge item.</p>
+     * <p>The knowledge status. Valid values:</p>
+     * <ul>
+     * <li>-1: deleted and unpublished.</li>
+     * <li>1: unpublished.</li>
+     * <li>2: published.</li>
+     * <li>3: updated and unpublished.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>

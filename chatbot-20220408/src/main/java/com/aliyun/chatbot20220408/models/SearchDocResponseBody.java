@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class SearchDocResponseBody extends TeaModel {
     /**
-     * <p>A list of matching documents.</p>
+     * <p>The list of documents.</p>
      */
     @NameInMap("DocHits")
     public java.util.List<SearchDocResponseBodyDocHits> docHits;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,7 @@ public class SearchDocResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>E3E5C779-A630-45AC-B0F2-A4506A4212F1</p>
@@ -38,7 +38,7 @@ public class SearchDocResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of matching entries.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>141</p>
@@ -93,7 +93,7 @@ public class SearchDocResponseBody extends TeaModel {
 
     public static class SearchDocResponseBodyDocHitsDocTags extends TeaModel {
         /**
-         * <p>Indicates whether this is a default tag.</p>
+         * <p>Indicates whether this is the default label that represents all labels.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -102,7 +102,7 @@ public class SearchDocResponseBody extends TeaModel {
         public Boolean defaultTag;
 
         /**
-         * <p>The tag group ID.</p>
+         * <p>The label group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3610</p>
@@ -111,16 +111,16 @@ public class SearchDocResponseBody extends TeaModel {
         public Long groupId;
 
         /**
-         * <p>The tag group name.</p>
+         * <p>The label group name.</p>
          * 
          * <strong>example:</strong>
-         * <p>文章</p>
+         * <p>Article</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
-         * <p>The tag ID.</p>
+         * <p>The label ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1201</p>
@@ -129,10 +129,10 @@ public class SearchDocResponseBody extends TeaModel {
         public Long tagId;
 
         /**
-         * <p>The tag name.</p>
+         * <p>The label name.</p>
          * 
          * <strong>example:</strong>
-         * <p>小说</p>
+         * <p>Novel</p>
          */
         @NameInMap("TagName")
         public String tagName;
@@ -204,10 +204,27 @@ public class SearchDocResponseBody extends TeaModel {
         public Long categoryId;
 
         /**
-         * <p>The splitter for the document. Key: <code>Splitter</code>. Valid values:<br>• <code>paragraphSplitter</code> (default): Splits the document by paragraph.<br>• <code>treeSplitter</code>: Splits the document based on a rule-based hierarchy.<br><br></p>
-         * <p>The size of each document chunk. Key: <code>ChunkSize</code>. Default value: 500. Value range: [200, 800].</p>
-         * <p>The patterns for the rule-based hierarchy. Key: <code>TreePatterns</code>. Default value: <code>[]</code>.</p>
-         * <p>The source of the document title. Key: <code>TitleSource</code>. Valid values:<br>• <code>ocrTitle</code> (default): Uses the OCR-identified title.<br>• <code>docName</code>: Uses the document name as the title.<br><br></p>
+         * <p>The document parsing and chunking configuration.</p>
+         * <p>Configuration item: Splitter
+         * KEY: Splitter
+         * Valid values:</p>
+         * <ul>
+         * <li>paragraphSplitter: hierarchy recognition (default)</li>
+         * <li>treeSplitter: rule-based hierarchy</li>
+         * </ul>
+         * <p>Configuration item: Document chunk size
+         * KEY: ChunkSize
+         * VALUE: Default value: 500. Value range: [200, 800].</p>
+         * <p>Configuration item: Rule-based hierarchy
+         * KEY: TreePatterns
+         * VALUE: Default value: [].</p>
+         * <p>Configuration item: Document title source
+         * KEY: TitleSource
+         * Valid values:</p>
+         * <ul>
+         * <li>ocrTitle: OCR-recognized title (default)</li>
+         * <li>docName: document name as title</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Splitter&quot;:&quot;treeSplitter&quot;,&quot;ChunkSize&quot;:500,&quot;TreePatterns&quot;:[&quot;^# .<em>&quot;,&quot;^## .</em>&quot;,&quot;^### .<em>&quot;,&quot;^#### .</em>&quot;],&quot;TitleSource&quot;:&quot;docName&quot;}</p>
@@ -216,7 +233,7 @@ public class SearchDocResponseBody extends TeaModel {
         public String config;
 
         /**
-         * <p>The time the document was created (UTC).</p>
+         * <p>The creation time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-06-22T03:53:41Z</p>
@@ -225,7 +242,7 @@ public class SearchDocResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The creator ID.</p>
+         * <p>The ID of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>111111111</p>
@@ -237,7 +254,7 @@ public class SearchDocResponseBody extends TeaModel {
          * <p>The name of the creator.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>John</p>
          */
         @NameInMap("CreateUserName")
         public String createUserName;
@@ -246,19 +263,24 @@ public class SearchDocResponseBody extends TeaModel {
          * <p>The document name.</p>
          * 
          * <strong>example:</strong>
-         * <p>文档名称</p>
+         * <p>DocumentName</p>
          */
         @NameInMap("DocName")
         public String docName;
 
         /**
-         * <p>A list of the document\&quot;s tags.</p>
+         * <p>The list of label details.</p>
          */
         @NameInMap("DocTags")
         public java.util.List<SearchDocResponseBodyDocHitsDocTags> docTags;
 
         /**
-         * <p>The knowledge\&quot;s effective status, calculated based on <code>StartDate</code> and <code>EndDate</code>. Valid values:<br>• 20: Active<br>• 21: Expired<br>• 22: Pending<br><br><br></p>
+         * <p>The knowledge effective status, calculated based on StartDate and EndDate. Valid values:</p>
+         * <ul>
+         * <li>20: effective</li>
+         * <li>21: expired</li>
+         * <li>22: pending effective</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -267,7 +289,7 @@ public class SearchDocResponseBody extends TeaModel {
         public Integer effectStatus;
 
         /**
-         * <p>The time the knowledge expires (UTC).</p>
+         * <p>The expiration time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2099-12-31T16:00:00Z</p>
@@ -285,7 +307,7 @@ public class SearchDocResponseBody extends TeaModel {
         public Long knowledgeId;
 
         /**
-         * <p>The document metadata.</p>
+         * <p>The metadata associated with the document.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;code&quot;:&quot;xxx&quot;}</p>
@@ -294,7 +316,7 @@ public class SearchDocResponseBody extends TeaModel {
         public String meta;
 
         /**
-         * <p>The time the document was last modified (UTC).</p>
+         * <p>The modification time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-06-25T02:27:42Z</p>
@@ -303,7 +325,7 @@ public class SearchDocResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>The modifier ID.</p>
+         * <p>The ID of the modifier.</p>
          * 
          * <strong>example:</strong>
          * <p>222222222</p>
@@ -312,16 +334,20 @@ public class SearchDocResponseBody extends TeaModel {
         public Long modifyUserId;
 
         /**
-         * <p>The name of the last modifier.</p>
+         * <p>The name of the modifier.</p>
          * 
          * <strong>example:</strong>
-         * <p>李四</p>
+         * <p>Jane</p>
          */
         @NameInMap("ModifyUserName")
         public String modifyUserName;
 
         /**
-         * <p>Indicates whether the task can be retried.<br>• <code>true</code>: The task can be retried.<br>• <code>false</code>: The task cannot be retried.<br><br></p>
+         * <p>Indicates whether the task can be retried. Valid values:</p>
+         * <ul>
+         * <li>true: The task can be retried.</li>
+         * <li>false: The task cannot be retried.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -330,16 +356,23 @@ public class SearchDocResponseBody extends TeaModel {
         public Boolean processCanRetry;
 
         /**
-         * <p>The processing message for the task.</p>
+         * <p>The task processing message.</p>
          * 
          * <strong>example:</strong>
-         * <p>任务处理成功</p>
+         * <p>Task processing succeeded</p>
          */
         @NameInMap("ProcessMessage")
         public String processMessage;
 
         /**
-         * <p>The task\&quot;s processing status. Valid values:<br>• -1: Queued<br>• 0: Succeeded<br>• 1: Parsing<br>• 2: Processing<br>• 3: Failed<br><br><br><br><br></p>
+         * <p>The task processing status. Valid values:</p>
+         * <ul>
+         * <li>-1: queued</li>
+         * <li>0: succeeded</li>
+         * <li>1: parsing</li>
+         * <li>2: processing</li>
+         * <li>3: processing failed</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -348,7 +381,7 @@ public class SearchDocResponseBody extends TeaModel {
         public Integer processStatus;
 
         /**
-         * <p>The time the knowledge takes effect (UTC).</p>
+         * <p>The effective period in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-02-28T11:40:18Z</p>
@@ -357,7 +390,12 @@ public class SearchDocResponseBody extends TeaModel {
         public String startDate;
 
         /**
-         * <p>The editing status of the document. Valid values:<br>• 1: Unpublished<br>• 2: Published<br>• 3: Updated but not published<br><br><br></p>
+         * <p>The editing status. Valid values:</p>
+         * <ul>
+         * <li>1: unpublished</li>
+         * <li>2: published</li>
+         * <li>3: updated but not published</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -366,7 +404,7 @@ public class SearchDocResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The OSS URL of the object.</p>
+         * <p>The OSS URL where the document is stored.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://doc2bot-bucket-cloud.oss-cn-shanghai.aliyuncs.com/doc2bot/input/%E6%96%87%E6%A1%A3%E9%97%AE%E7%AD%94%E8%AF%B4%E6%98%8E%E4%B9%A6_V1.pdf">https://doc2bot-bucket-cloud.oss-cn-shanghai.aliyuncs.com/doc2bot/input/文档问答说明书_V1.pdf</a></p>

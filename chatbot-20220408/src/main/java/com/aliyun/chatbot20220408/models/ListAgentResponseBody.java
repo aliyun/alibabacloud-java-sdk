@@ -11,7 +11,7 @@ public class ListAgentResponseBody extends TeaModel {
     public java.util.List<ListAgentResponseBodyData> data;
 
     /**
-     * <p>The page number of the returned results.</p>
+     * <p>The current page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListAgentResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on the current page.</p>
+     * <p>The number of records per page in the response. Maximum value: 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class ListAgentResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>F55D90C1-31BE-4B2A-AA3F-25EFC36F9419</p>
@@ -38,7 +38,7 @@ public class ListAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total count of business spaces that match the query.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -102,7 +102,7 @@ public class ListAgentResponseBody extends TeaModel {
         public Long agentId;
 
         /**
-         * <p>The business space signature, used to identify the business space in Platform-as-a-Service (PaaS) API calls.</p>
+         * <p>The business space signature, which is used to specify the business space when calling PaaS API operations.</p>
          * 
          * <strong>example:</strong>
          * <p>4e7400028e6f4a7393ed3acf6a7b8927_p_beebot_public</p>
@@ -111,16 +111,16 @@ public class ListAgentResponseBody extends TeaModel {
         public String agentKey;
 
         /**
-         * <p>The name of the business space.</p>
+         * <p>The business space name.</p>
          * 
          * <strong>example:</strong>
-         * <p>业务空间_881</p>
+         * <p>BusinessSpace_881</p>
          */
         @NameInMap("AgentName")
         public String agentName;
 
         /**
-         * <p>Details of the associated commodity instance. The object keys are commodity codes.</p>
+         * <p>The commodity instance information.</p>
          */
         @NameInMap("InstanceInfos")
         public java.util.Map<String, ?> instanceInfos;

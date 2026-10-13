@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCategoryRequest extends TeaModel {
     /**
-     * <p>The key of the business space. If this parameter is not specified, the default business space is used. You can obtain the key from the Business Management page of your main account.</p>
+     * <p>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value from the business management page of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -23,7 +23,12 @@ public class CreateCategoryRequest extends TeaModel {
     public String bizCode;
 
     /**
-     * <p>The knowledge type. Valid values are 1 for an FAQ category and 3 for a document category. The default value is 1.</p>
+     * <p>The knowledge type. Valid values:</p>
+     * <ul>
+     * <li>1: FAQ category.</li>
+     * <li>3: Document category.</li>
+     * </ul>
+     * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,13 +41,13 @@ public class CreateCategoryRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试1</p>
+     * <p>Test1</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The ID of the parent category. Defaults to -1, which indicates the root category.</p>
+     * <p>The parent category ID. Default value: -1, which indicates the root directory.</p>
      * 
      * <strong>example:</strong>
      * <p>-1</p>
