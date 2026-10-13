@@ -223,6 +223,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Attachment upload</p>
+     * <ul>
+     * <li>Use a presigned URL to upload the file. For more information, see the OSS documentation.
+     * After you obtain the temporary upload URL, you can upload the file as follows:</li>
+     * </ul>
+     * </blockquote>
+     * <details>
+     * <summary>
+     * Sample
+     * </summary>
+     * curl -X PUT -H "Content-Type:application/octet-stream" -H "x-oss-meta-author:aliy" -T /home/admin/file.png "https\\://xx.oss-cn-zhangjiakou.aliyuncs.com/xx/xx.png"
+     * </details>
+     * 
      * <b>summary</b> : 
      * <p>Queries the Object Storage Service (OSS) URL that is used to upload attachments.</p>
      * 
@@ -255,6 +270,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Attachment upload</p>
+     * <ul>
+     * <li>Use a presigned URL to upload the file. For more information, see the OSS documentation.
+     * After you obtain the temporary upload URL, you can upload the file as follows:</li>
+     * </ul>
+     * </blockquote>
+     * <details>
+     * <summary>
+     * Sample
+     * </summary>
+     * curl -X PUT -H "Content-Type:application/octet-stream" -H "x-oss-meta-author:aliy" -T /home/admin/file.png "https\\://xx.oss-cn-zhangjiakou.aliyuncs.com/xx/xx.png"
+     * </details>
+     * 
      * <b>summary</b> : 
      * <p>Queries the Object Storage Service (OSS) URL that is used to upload attachments.</p>
      * 
@@ -267,7 +297,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @param request GetMqConsumerTagRequest
+     * <b>summary</b> : 
+     * <p>Retrieves the tag for a ticket\&quot;s RocketMQ message listener.</p>
+     * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetMqConsumerTagResponse
      */
@@ -288,6 +320,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the tag for a ticket\&quot;s RocketMQ message listener.</p>
      * @return GetMqConsumerTagResponse
      */
     public GetMqConsumerTagResponse getMqConsumerTag() throws Exception {
@@ -297,7 +331,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query tickets.</p>
+     * <p>Queries a ticket.</p>
      * 
      * @param request GetTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -333,7 +367,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query tickets.</p>
+     * <p>Queries a ticket.</p>
      * 
      * @param request GetTicketRequest
      * @return GetTicketResponse
@@ -447,7 +481,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the ticket communication records.</p>
+     * <p>Retrieves the communication records for a ticket.</p>
      * 
      * @param request ListTicketNotesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -483,7 +517,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the ticket communication records.</p>
+     * <p>Retrieves the communication records for a ticket.</p>
      * 
      * @param request ListTicketNotesRequest
      * @return ListTicketNotesResponse
@@ -495,7 +529,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to obtain the list of my tickets.</p>
+     * <p>Retrieves a list of your tickets.</p>
      * 
      * @param tmpReq ListTicketsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -567,7 +601,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to obtain the list of my tickets.</p>
+     * <p>Retrieves a list of your tickets.</p>
      * 
      * @param request ListTicketsRequest
      * @return ListTicketsResponse
@@ -579,7 +613,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reopens a ticket</p>
+     * <p>Reopens a ticket.</p>
      * 
      * @param request ReopenTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -619,7 +653,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reopens a ticket</p>
+     * <p>Reopens a ticket.</p>
      * 
      * @param request ReopenTicketRequest
      * @return ReopenTicketResponse
@@ -631,7 +665,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reply to the ticket. You can call the ListTicketNotes operation to obtain the content of the reply.</p>
+     * <p>Replies to a ticket. You can call the ListTicketNotes operation to retrieve the reply.</p>
      * 
      * @param tmpReq ReplyTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -687,7 +721,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reply to the ticket. You can call the ListTicketNotes operation to obtain the content of the reply.</p>
+     * <p>Replies to a ticket. You can call the ListTicketNotes operation to retrieve the reply.</p>
      * 
      * @param request ReplyTicketRequest
      * @return ReplyTicketResponse

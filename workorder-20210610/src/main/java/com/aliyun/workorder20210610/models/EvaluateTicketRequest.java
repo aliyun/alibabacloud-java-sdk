@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class EvaluateTicketRequest extends TeaModel {
     /**
-     * <p>Comment</p>
+     * <p>The content of the evaluation.</p>
      * 
      * <strong>example:</strong>
-     * <p>The engineer solved my issue.</p>
+     * <p>Very satisfactory support experience</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
-     * <p>Rating star 1-5 stars</p>
+     * <p>The rating, from 1 to 5 stars.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class EvaluateTicketRequest extends TeaModel {
     public String score;
 
     /**
-     * <p>Whether to resolve</p>
+     * <p>Indicates whether the issue was resolved.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class EvaluateTicketRequest extends TeaModel {
     public Boolean solved;
 
     /**
-     * <p>The ID of the ticket.</p>
+     * <p>The ticket ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class EvaluateTicketRequest extends TeaModel {
     public String ticketId;
 
     /**
-     * <p>UID</p>
+     * <p>The UID.</p>
      * 
      * <strong>example:</strong>
      * <p>1902070573958003</p>

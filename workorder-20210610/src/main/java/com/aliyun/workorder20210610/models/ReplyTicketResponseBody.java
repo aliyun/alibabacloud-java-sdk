@@ -4,11 +4,17 @@ package com.aliyun.workorder20210610.models;
 import com.aliyun.tea.*;
 
 public class ReplyTicketResponseBody extends TeaModel {
+    /**
+     * <p>The detailed information about the permission error. If you have the required permissions, an empty string is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;AuthAction\&quot;:\&quot;ram:ReplyTicket\&quot;,\&quot;AuthPrincipalDisplayName\&quot;:\&quot;2146216584788xxxxx\&quot;,\&quot;AuthPrincipalOwnerId\&quot;:\&quot;1135850448xxxxx\&quot;,\&quot;AuthPrincipalType\&quot;:\&quot;SubUser\&quot;,\&quot;NoPermissionType\&quot;:\&quot;ImplicitDeny\&quot;,\&quot;PolicyType\&quot;:\&quot;AccountLevelIdentityBasedPolicy\&quot;}</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
-     * <p>The response code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -17,7 +23,7 @@ public class ReplyTicketResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned value is the dialogID of the response to the ticket.</p>
+     * <p>The dialog ID of the ticket reply.</p>
      * 
      * <strong>example:</strong>
      * <p>46434030</p>
@@ -26,16 +32,16 @@ public class ReplyTicketResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The error message. If success is set to false, the message is returned.</p>
+     * <p>The error message. This parameter is returned when the value of Success is false.</p>
      * 
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>Invalid input parameters</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The unique ID of the API request. The requestid is unique for each call.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>C1DA4C6F-963E-5741-AB57-67A554D102FD</p>
@@ -44,7 +50,7 @@ public class ReplyTicketResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. A value of true indicates that the call is normal.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

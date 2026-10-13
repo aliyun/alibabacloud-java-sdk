@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class ReplyTicketRequest extends TeaModel {
     /**
-     * <p>Content of the ticket reply</p>
+     * <p>The content of the reply to the ticket.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Why ECS backup failed?</p>
+     * <p>OK, the renewal was successful on my end.</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
-     * <p>Encryption status</p>
+     * <p>Specifies whether to encrypt the content.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,13 +25,13 @@ public class ReplyTicketRequest extends TeaModel {
     public Boolean encrypt;
 
     /**
-     * <p>The list of attachment names, GetAttachmentUploadUrl the ObjectKey field returned by the interface.</p>
+     * <p>A list of attachment names. This is the ObjectKey field returned by the GetAttachmentUploadUrl operation.</p>
      */
     @NameInMap("FileNameList")
     public java.util.List<String> fileNameList;
 
     /**
-     * <p>The ID of the ticket.</p>
+     * <p>The ticket ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class ReplyTicketRequest extends TeaModel {
     public String ticketId;
 
     /**
-     * <p>Alibaba Cloud UID</p>
+     * <p>The Alibaba Cloud account ID (UID).</p>
      * 
      * <strong>example:</strong>
      * <p>1289427240739141</p>

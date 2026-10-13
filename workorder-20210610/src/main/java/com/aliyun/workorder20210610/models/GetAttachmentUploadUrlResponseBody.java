@@ -96,8 +96,8 @@ public class GetAttachmentUploadUrlResponseBody extends TeaModel {
          * <p>Query the signed URL of an OSS object</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="https://gts-workorder-pre.oss-cn-beijing.aliyuncs.com">https://gts-workorder-pre.oss-cn-beijing.aliyuncs.com</a>
-         * /20220314/cabb80c3-430b-4079-a9f2-d2a0d1c2a587.png?Expires=1647328689&amp;OSSAccessKeyId=LTAI****************&amp;Signature=AbSEh26G3oYrJ8ivr4B0xzF89zk%3D</p>
+         * <p><a href="https://workorder.oss-cn-beijing.aliyuncs.com">https://workorder.oss-cn-beijing.aliyuncs.com</a>
+         * /20220314/cabb80c3-430b-4079-a9f2-d2a0d1c2a587.png?Expires=1647328689&amp;OSSAccessKeyId=LTAI**************&amp;Signature=AbSEh26G3oYrJ8ivr4B0xzF89zk%3D</p>
          */
         @NameInMap("GetSignedUrl")
         public String getSignedUrl;
@@ -115,8 +115,8 @@ public class GetAttachmentUploadUrlResponseBody extends TeaModel {
          * <p>The signed URL used to upload the object to OSS.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="https://gts-workorder-pre.oss-cn-beijing.aliyuncs.com">https://gts-workorder-pre.oss-cn-beijing.aliyuncs.com</a>
-         * /20220314/cabb80c3-430b-4079-a9f2-d2a0d1c2a587.png?Expires=1647328689&amp;OSSAccessKeyId=LTAI****************&amp;Signature=AbSEh26G3oYrJ8ivr4B0xzF89zk%3D</p>
+         * <p><a href="https://workorder.oss-cn-beijing.aliyuncs.com">https://workorder.oss-cn-beijing.aliyuncs.com</a>
+         * /20220314/cabb80c3-430b-4079-a9f2-d2a0d1c2a587.png?Expires=1647328689&amp;OSSAccessKeyId=LTAI***************&amp;Signature=AbSEh26G3oYrJ8ivr4B0xzF89zk%3D</p>
          */
         @NameInMap("PutSignedUrl")
         public String putSignedUrl;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTicketsShrinkRequest extends TeaModel {
     /**
-     * <p>The deadline for ticket creation. This parameter is used in conjunction with StartDate to query tickets submitted within the specified start and end time ranges.</p>
+     * <p>The end time when the ticket was created. Use this parameter with StartDate to query tickets created within a specific time range.</p>
      * 
      * <strong>example:</strong>
      * <p>1623396736000</p>
@@ -14,7 +14,7 @@ public class ListTicketsShrinkRequest extends TeaModel {
     public Long endDate;
 
     /**
-     * <p>The ticket keyword, which is used for fuzzy search to match the content of the Description field when a ticket is created.</p>
+     * <p>The keyword for a fuzzy search. The keyword is used to match the content of the Description field of the ticket.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs</p>
@@ -23,7 +23,7 @@ public class ListTicketsShrinkRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>Paging query page number parameters</p>
+     * <p>The page number for a paged query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class ListTicketsShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries queried by page parameter</p>
+     * <p>The number of entries to return on each page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class ListTicketsShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The time when the ticket was created. This parameter is used with EndDate to query tickets that are created within the specified start and end time ranges.</p>
+     * <p>The start time when the ticket was created. Use this parameter with EndDate to query tickets created within a specific time range.</p>
      * 
      * <strong>example:</strong>
      * <p>1623396736000</p>
@@ -52,7 +52,7 @@ public class ListTicketsShrinkRequest extends TeaModel {
     public Long startDate;
 
     /**
-     * <p>Multiple ticket statuses</p>
+     * <p>A list of ticket statuses.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -61,7 +61,7 @@ public class ListTicketsShrinkRequest extends TeaModel {
     public java.util.List<String> statusList;
 
     /**
-     * <p>Work Order Number</p>
+     * <p>The ticket ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0005PYGCW</p>
@@ -70,13 +70,13 @@ public class ListTicketsShrinkRequest extends TeaModel {
     public String ticketId;
 
     /**
-     * <p>Multiple job numbers</p>
+     * <p>A list of ticket IDs.</p>
      */
     @NameInMap("TicketIdList")
     public String ticketIdListShrink;
 
     /**
-     * <p>UID</p>
+     * <p>The UID.</p>
      * 
      * <strong>example:</strong>
      * <p>1902070573958003</p>

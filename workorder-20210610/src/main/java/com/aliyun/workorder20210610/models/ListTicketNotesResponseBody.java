@@ -4,11 +4,17 @@ package com.aliyun.workorder20210610.models;
 import com.aliyun.tea.*;
 
 public class ListTicketNotesResponseBody extends TeaModel {
+    /**
+     * <p>The details of the permission error. An empty string is returned if you have the required permissions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;AuthAction\&quot;:\&quot;ram:ListTicketNotes\&quot;,\&quot;AuthPrincipalDisplayName\&quot;:\&quot;2146216584788xxxxx\&quot;,\&quot;AuthPrincipalOwnerId\&quot;:\&quot;1135850448xxxxx\&quot;,\&quot;AuthPrincipalType\&quot;:\&quot;SubUser\&quot;,\&quot;NoPermissionType\&quot;:\&quot;ImplicitDeny\&quot;,\&quot;PolicyType\&quot;:\&quot;AccountLevelIdentityBasedPolicy\&quot;}</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
-     * <p>The return code of the request result.</p>
+     * <p>The return code for the API request.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -17,22 +23,22 @@ public class ListTicketNotesResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>Return value, that is, the dialog record list data of the specified ticket</p>
+     * <p>The return value, which is a list of communication records for the specified ticket.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListTicketNotesResponseBodyData> data;
 
     /**
-     * <p>The error message. If success is set to false, the message is returned.</p>
+     * <p>The error message. This parameter is returned when \<code>Success\\</code> is \<code>false\\</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>Invalid input parameter</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The unique ID of the API request. The requestID is unique for each call.</p>
+     * <p>The unique ID of the request. Each request has a unique ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AC0AB2EC-AFBC-44BA-AE77-132A5A1EC0AD</p>
@@ -41,7 +47,7 @@ public class ListTicketNotesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. A value of true indicates that the call is normal.</p>
+     * <p>Indicates whether the call was successful. A value of \<code>true\\</code> indicates a successful call.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -104,7 +110,7 @@ public class ListTicketNotesResponseBody extends TeaModel {
 
     public static class ListTicketNotesResponseBodyDataAttachments extends TeaModel {
         /**
-         * <p>Attachment Name</p>
+         * <p>The name of the attachment.</p>
          * 
          * <strong>example:</strong>
          * <p>003.jpg</p>
@@ -113,7 +119,7 @@ public class ListTicketNotesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Temporary Accessible Attachment Address</p>
+         * <p>A temporary URL to access the attachment.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://gts-workorder.oss-cn-beijing.aliyuncs.com/20221003/cbc00fb0-b612-4d89-a75b-8d535f750f9f/image.png">https://gts-workorder.oss-cn-beijing.aliyuncs.com/20221003/cbc00fb0-b612-4d89-a75b-8d535f750f9f/image.png</a></p>
@@ -146,16 +152,16 @@ public class ListTicketNotesResponseBody extends TeaModel {
 
     public static class ListTicketNotesResponseBodyDataDialog extends TeaModel {
         /**
-         * <p>Work order communication content</p>
+         * <p>The content of the ticket communication.</p>
          * 
          * <strong>example:</strong>
-         * <p>ECS backup failed</p>
+         * <p>Hello, my ECS renewal failed. What is the reason?</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
-         * <p>The ticket communication record system card will be used when the system card docking capability is opened in the future. At present, the content can be used to obtain plain text content.</p>
+         * <p>The system card for the ticket communication record. This parameter is reserved for future use. Currently, you can use the \<code>Content\\</code> parameter to retrieve the plain text.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -188,20 +194,19 @@ public class ListTicketNotesResponseBody extends TeaModel {
 
     public static class ListTicketNotesResponseBodyDataUser extends TeaModel {
         /**
-         * <p>Dialog User Name</p>
+         * <p>The name of the user.</p>
          * 
          * <strong>example:</strong>
-         * <p>agent</p>
+         * <p>John</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>Dialogue user role, distinguish between agent and user.
-         * 2 represents agent, 3 represents user.</p>
+         * <p>The role of the user in the communication. This parameter distinguishes between customer service agents and customers. Valid values: \<code>2\\</code>: Customer service agent. \<code>3\\</code>: Customer.</p>
          * 
          * <strong>example:</strong>
-         * <p>2</p>
+         * <p>3</p>
          */
         @NameInMap("Role")
         public Integer role;
@@ -231,13 +236,13 @@ public class ListTicketNotesResponseBody extends TeaModel {
 
     public static class ListTicketNotesResponseBodyData extends TeaModel {
         /**
-         * <p>Attachment List</p>
+         * <p>The list of attachments.</p>
          */
         @NameInMap("Attachments")
         public java.util.List<ListTicketNotesResponseBodyDataAttachments> attachments;
 
         /**
-         * <p>The timestamp when the communication message was created.</p>
+         * <p>The UNIX timestamp when the communication message was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1623396736000</p>
@@ -246,13 +251,13 @@ public class ListTicketNotesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>Work order communication record object</p>
+         * <p>The ticket communication record object.</p>
          */
         @NameInMap("Dialog")
         public ListTicketNotesResponseBodyDataDialog dialog;
 
         /**
-         * <p>The unique ID of the conversation record.</p>
+         * <p>The unique ID of the communication record.</p>
          * 
          * <strong>example:</strong>
          * <p>9999</p>
@@ -261,7 +266,7 @@ public class ListTicketNotesResponseBody extends TeaModel {
         public Long dialogId;
 
         /**
-         * <p>Communication message status field, reference value Unread=1, Read=2</p>
+         * <p>The status of the communication message. Valid values: \<code>1\\</code>: Unread. \<code>2\\</code>: Read.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -270,7 +275,7 @@ public class ListTicketNotesResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>Fields Not Used</p>
+         * <p>This parameter is not in use.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -279,7 +284,7 @@ public class ListTicketNotesResponseBody extends TeaModel {
         public String tip;
 
         /**
-         * <p>Conversation Type 1 card, that is, schema 2 Text, that is, content</p>
+         * <p>The type of communication. Valid values: \<code>1\\</code>: Card, which corresponds to \<code>Schema\\</code>. \<code>2\\</code>: Text, which corresponds to \<code>Content\\</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -288,7 +293,7 @@ public class ListTicketNotesResponseBody extends TeaModel {
         public Integer type;
 
         /**
-         * <p>Conversation of users</p>
+         * <p>The user in the communication.</p>
          */
         @NameInMap("User")
         public ListTicketNotesResponseBodyDataUser user;

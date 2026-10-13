@@ -4,11 +4,17 @@ package com.aliyun.workorder20210610.models;
 import com.aliyun.tea.*;
 
 public class ListTicketsResponseBody extends TeaModel {
+    /**
+     * <p>The details of the permission error. If you have the required permissions, an empty string is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;AuthAction\&quot;:\&quot;ram:ListTickets\&quot;,\&quot;AuthPrincipalDisplayName\&quot;:\&quot;2146216584788xxxxx\&quot;,\&quot;AuthPrincipalOwnerId\&quot;:\&quot;1135850448xxxxx\&quot;,\&quot;AuthPrincipalType\&quot;:\&quot;SubUser\&quot;,\&quot;NoPermissionType\&quot;:\&quot;ImplicitDeny\&quot;,\&quot;PolicyType\&quot;:\&quot;AccountLevelIdentityBasedPolicy\&quot;}</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
-     * <p>The return code of the request result.</p>
+     * <p>The return code of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -17,22 +23,22 @@ public class ListTicketsResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The return value is my ticket list data.</p>
+     * <p>The list of your tickets.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListTicketsResponseBodyData> data;
 
     /**
-     * <p>The error message. If success is set to false, the message is returned.</p>
+     * <p>The error message. This parameter is returned only when the value of success is false.</p>
      * 
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>入参解析失败</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Page number of the paging query parameter</p>
+     * <p>The page number of the paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +47,7 @@ public class ListTicketsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in a pagination query parameter.</p>
+     * <p>The number of entries returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -50,7 +56,7 @@ public class ListTicketsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The unique ID of the API request. The requestID is unique for each call.</p>
+     * <p>The unique ID of the request. A unique ID is returned for each request.</p>
      * 
      * <strong>example:</strong>
      * <p>AC0AB2EC-AFBC-44BA-AE77-132A5A1EC0AD</p>
@@ -59,7 +65,7 @@ public class ListTicketsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. A value of true indicates that the call is normal.</p>
+     * <p>Indicates whether the call was successful. A value of true indicates that the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -68,7 +74,7 @@ public class ListTicketsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of query results, that is, the total number of my ticket records.</p>
+     * <p>The total number of query results, which is the total number of your tickets.</p>
      * 
      * <strong>example:</strong>
      * <p>99</p>
@@ -155,7 +161,7 @@ public class ListTicketsResponseBody extends TeaModel {
 
     public static class ListTicketsResponseBodyDataStatus extends TeaModel {
         /**
-         * <p>Status description, if completed</p>
+         * <p>The description of the status. Example: Completed.</p>
          * 
          * <strong>example:</strong>
          * <p>Completed</p>
@@ -164,7 +170,7 @@ public class ListTicketsResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>A status value, such as 6, represents completed</p>
+         * <p>The value of the status. For example, a value of 6 indicates that the ticket is completed.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -197,13 +203,13 @@ public class ListTicketsResponseBody extends TeaModel {
 
     public static class ListTicketsResponseBodyData extends TeaModel {
         /**
-         * <p>The status of the ticket. The reference values are as follows 1, &quot;assigned&quot;, &quot;Pending Response&quot;, 2, &quot;handling&quot;, &quot;handling&quot;, 3, &quot;wait_feedback&quot;, &quot;Pending feedback&quot;, 4: &quot;feedback&quot;, &quot;Feedback&quot;, 5, &quot;wait_confirm&quot;, &quot;To be confirmed&quot;, 6, &quot;confirmed&quot;, &quot;Completed&quot;</p>
+         * <p>The ticket status. Valid values: assigned (Pending response), dealing (In progress), wait_feedback (Waiting for feedback), feedback (Feedback received), wait_confirm (Pending confirmation), and confirmed (Completed).</p>
          */
         @NameInMap("Status")
         public ListTicketsResponseBodyDataStatus status;
 
         /**
-         * <p>Work Order Number</p>
+         * <p>The ticket ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0005PYGCW</p>
@@ -212,10 +218,10 @@ public class ListTicketsResponseBody extends TeaModel {
         public String ticketId;
 
         /**
-         * <p>The title of the ticket.</p>
+         * <p>The ticket title.</p>
          * 
          * <strong>example:</strong>
-         * <p>Why ECS backup failed?</p>
+         * <p>Why did ECS renewal fail?</p>
          */
         @NameInMap("Title")
         public String title;

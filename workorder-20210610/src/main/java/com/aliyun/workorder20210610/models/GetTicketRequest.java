@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTicketRequest extends TeaModel {
     /**
-     * <p>Work Order Number</p>
+     * <p>The ticket ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

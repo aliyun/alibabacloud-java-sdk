@@ -8,7 +8,7 @@ public class ListProductsRequest extends TeaModel {
      * <p>The language that you use, supporting English, Chinese, and Japanese. Valid values: en, zh, and jp, which indicate English, Chinese, and Japanese, respectively.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn</p>
+     * <p>zh</p>
      */
     @NameInMap("Language")
     public String language;

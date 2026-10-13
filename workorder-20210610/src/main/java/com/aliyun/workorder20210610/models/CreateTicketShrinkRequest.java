@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateTicketShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the problem category. You can obtain the returned value from the ListCategories operation by using the CategoryId parameter.</p>
+     * <p>The ID of the issue category. Obtain this ID from the ListCategories operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>7161</p>
+     * <p>53812</p>
      */
     @NameInMap("CategoryId")
     public String categoryId;
 
     /**
-     * <p>Submit the Alibaba Cloud UID of the account, which is required for the MPK virtual market scene.</p>
+     * <p>The Alibaba Cloud UID of the account that submits the ticket. This parameter is required for Marketplace reseller scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>1289427240739141</p>
@@ -24,43 +24,38 @@ public class CreateTicketShrinkRequest extends TeaModel {
     public String creatorId;
 
     /**
-     * <p>The description of the ticket. Only pure text format is supported.</p>
+     * <p>The description of the issue in the ticket. Only plain text is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Why ECS backup failed?</p>
+     * <p>ECS backup failed</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p><a href="mailto:sdahkjdshga@qq.com">sdahkjdshga@qq.com</a></p>
+     * <p>The contact email address for the ticket.</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="mailto:163@163.com">163@163.com</a></p>
+     * <p><a href="mailto:sdahkjdshga@qq.com">sdahkjdshga@qq.com</a></p>
      */
     @NameInMap("Email")
     public String email;
 
     /**
-     * <p>The list of attachment names, GetAttachmentUploadUrl the ObjectKey field returned by the interface.</p>
+     * <p>A list of attachment names. Use the ObjectKey value returned by the GetAttachmentUploadUrl operation.</p>
      */
     @NameInMap("FileNameList")
     public String fileNameListShrink;
 
     /**
-     * <p>Sensitive information</p>
+     * <p>Sensitive information.</p>
      */
     @NameInMap("SecretInfo")
     public String secretInfoShrink;
 
     /**
-     * <p>Enumeration value, 1 for general problem, 2 for urgent problem</p>
-     * <p>Enumeration values:</p>
-     * <ul>
-     * <li>1: regular.</li>
-     * <li>2: emergency.</li>
-     * </ul>
+     * <p>An enumeration value. A value of 1 indicates a normal issue. A value of 2 indicates an urgent issue.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +68,7 @@ public class CreateTicketShrinkRequest extends TeaModel {
      * <p>The title of the ticket.</p>
      * 
      * <strong>example:</strong>
-     * <p>Why ECS backup failed?</p>
+     * <p>ECS backup failed</p>
      */
     @NameInMap("Title")
     public String title;
