@@ -31,6 +31,18 @@ public class ListDomainsRequest extends TeaModel {
     @NameInMap("parent_domain_id")
     public String parentDomainId;
 
+    /**
+     * <p>Service code. Default is pds.</p>
+     * <ul>
+     * <li><p>edm (Enterprise Edition)</p>
+     * </li>
+     * <li><p>pds (Developer Edition)</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>pds</p>
+     */
     @NameInMap("service_code")
     public String serviceCode;
 

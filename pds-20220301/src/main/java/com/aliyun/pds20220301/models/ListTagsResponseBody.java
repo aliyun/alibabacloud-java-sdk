@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagsResponseBody extends TeaModel {
     /**
-     * <p>The information about the tags.</p>
+     * <p>The list of tag groups.</p>
      */
     @NameInMap("tags")
     public java.util.List<ImageTag> tags;

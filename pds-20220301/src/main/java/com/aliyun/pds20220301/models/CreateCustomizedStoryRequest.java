@@ -4,11 +4,15 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class CreateCustomizedStoryRequest extends TeaModel {
+    /**
+     * <p>The custom labels. You can specify a maximum of 20 labels.</p>
+     */
     @NameInMap("custom_labels")
     @Deprecated
     public java.util.Map<String, String> customLabels;
 
     /**
+     * <p>The ID of the drive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,18 +22,21 @@ public class CreateCustomizedStoryRequest extends TeaModel {
     public String driveId;
 
     /**
+     * <p>The file to use as the story cover. This file must be in the story file list.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("story_cover")
     public CreateCustomizedStoryRequestStoryCover storyCover;
 
     /**
+     * <p>The list of files to include in the story.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("story_files")
     public java.util.List<CreateCustomizedStoryRequestStoryFiles> storyFiles;
 
     /**
+     * <p>The story name. The name must not exceed 1,024 bytes.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +46,7 @@ public class CreateCustomizedStoryRequest extends TeaModel {
     public String storyName;
 
     /**
+     * <p>The story subtype. This value is user-defined.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +56,7 @@ public class CreateCustomizedStoryRequest extends TeaModel {
     public String storySubType;
 
     /**
+     * <p>The story type. This value is user-defined.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -120,6 +129,7 @@ public class CreateCustomizedStoryRequest extends TeaModel {
 
     public static class CreateCustomizedStoryRequestStoryCover extends TeaModel {
         /**
+         * <p>The ID of the file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +139,8 @@ public class CreateCustomizedStoryRequest extends TeaModel {
         public String fileId;
 
         /**
+         * <p>The ID of the revision.</p>
+         * 
          * <strong>example:</strong>
          * <p>642a88d4aff041ee68fd4fc89beb80e1119da343</p>
          */
@@ -160,6 +172,7 @@ public class CreateCustomizedStoryRequest extends TeaModel {
 
     public static class CreateCustomizedStoryRequestStoryFiles extends TeaModel {
         /**
+         * <p>The ID of the file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,6 +182,8 @@ public class CreateCustomizedStoryRequest extends TeaModel {
         public String fileId;
 
         /**
+         * <p>The ID of the revision.</p>
+         * 
          * <strong>example:</strong>
          * <p>642a88d4aff041ee68fd4fc89beb80e1119da343</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateFacegroupResponseBody extends TeaModel {
     /**
-     * <p>The drive ID.</p>
+     * <p>The ID of the drive.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class UpdateFacegroupResponseBody extends TeaModel {
     public String driveId;
 
     /**
-     * <p>The group ID.</p>
+     * <p>The ID of the face group.</p>
      * 
      * <strong>example:</strong>
      * <p>group-abc</p>

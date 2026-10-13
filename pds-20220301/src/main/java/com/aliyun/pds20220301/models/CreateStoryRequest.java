@@ -4,14 +4,21 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class CreateStoryRequest extends TeaModel {
+    /**
+     * <p>The address information.</p>
+     */
     @NameInMap("address")
     public Address address;
 
+    /**
+     * <p>Custom tags for the story. You can specify a maximum of 20.</p>
+     */
     @NameInMap("custom_labels")
     @Deprecated
     public java.util.Map<String, String> customLabels;
 
     /**
+     * <p>The drive ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +28,8 @@ public class CreateStoryRequest extends TeaModel {
     public String driveId;
 
     /**
+     * <p>The maximum number of files to include. Must be ≤ 100 and ≥ min_image_count. Default: 30.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      * 
@@ -31,6 +40,8 @@ public class CreateStoryRequest extends TeaModel {
     public Long maxImageCount;
 
     /**
+     * <p>The minimum number of files to include. Must be &gt; 0 and ≤ max_image_count. Default: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      * 
@@ -41,6 +52,8 @@ public class CreateStoryRequest extends TeaModel {
     public Long minImageCount;
 
     /**
+     * <p>The end time for files to be included in the story. The value must be in RFC 3339 format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-12-30T16:00:00Z</p>
      */
@@ -48,16 +61,26 @@ public class CreateStoryRequest extends TeaModel {
     public String storyEndTime;
 
     /**
+     * <p>A user-specified ID for the story.</p>
+     * 
      * <strong>example:</strong>
      * <p>9132e0d8-fe92-4e56-86c3-f5f112308003</p>
      */
     @NameInMap("story_id")
     public String storyId;
 
+    /**
+     * <p>The name for the story, up to 1,024 bytes in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Food</p>
+     */
     @NameInMap("story_name")
     public String storyName;
 
     /**
+     * <p>The start time for files to be included in the story. The value must be in RFC 3339 format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2016-12-30T16:00:00Z</p>
      */
@@ -65,6 +88,8 @@ public class CreateStoryRequest extends TeaModel {
     public String storyStartTime;
 
     /**
+     * <p>The story subtype, which depends on the story_type. For more information, see the list of subtypes below.</p>
+     * 
      * <strong>example:</strong>
      * <p>Food</p>
      */
@@ -72,6 +97,7 @@ public class CreateStoryRequest extends TeaModel {
     public String storySubType;
 
     /**
+     * <p>The story type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

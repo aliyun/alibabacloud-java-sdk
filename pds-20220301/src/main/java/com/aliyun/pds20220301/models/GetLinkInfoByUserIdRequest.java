@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLinkInfoByUserIdRequest extends TeaModel {
     /**
-     * <p>The user ID.</p>
+     * <p>User ID to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

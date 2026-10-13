@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTaskStatusRequest extends TeaModel {
     /**
-     * <p>The drive ID.</p>
+     * <p>The ID of the drive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

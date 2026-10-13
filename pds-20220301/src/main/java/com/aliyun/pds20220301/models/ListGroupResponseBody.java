@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListGroupResponseBody extends TeaModel {
     /**
-     * <p>The information about the groups.</p>
+     * <p>A list of group objects.</p>
      */
     @NameInMap("items")
     public java.util.List<Group> items;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If next_marker is empty, no next page exists.</p>
+     * <p>The token that you can use to retrieve the next page of results. This parameter is not returned if all results have been retrieved.</p>
      * 
      * <strong>example:</strong>
      * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>

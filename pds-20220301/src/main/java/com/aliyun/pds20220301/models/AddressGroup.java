@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AddressGroup extends TeaModel {
     /**
-     * <p>The information about the site.</p>
+     * <p>Address details</p>
      */
     @NameInMap("address_detail")
     public Address addressDetail;
 
     /**
-     * <p>The number of files in the site group.</p>
+     * <p>Number of files in the address group</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -20,19 +20,19 @@ public class AddressGroup extends TeaModel {
     public Long count;
 
     /**
-     * <p>The ID of the cover image of the site.</p>
+     * <p>The ID of the location\&quot;s thumbnail file.</p>
      */
     @NameInMap("cover_file_id")
     public String coverFileId;
 
     /**
-     * <p>The URL of the cover image of the site.</p>
+     * <p>Address thumbnail image URL</p>
      */
     @NameInMap("cover_url")
     public String coverUrl;
 
     /**
-     * <p>The latitude and longitude of the site.</p>
+     * <p>Latitude and longitude</p>
      * 
      * <strong>example:</strong>
      * <p>30.12231,120.1212</p>
@@ -41,7 +41,7 @@ public class AddressGroup extends TeaModel {
     public String location;
 
     /**
-     * <p>The name of the site.</p>
+     * <p>Name of the location</p>
      */
     @NameInMap("name")
     public String name;

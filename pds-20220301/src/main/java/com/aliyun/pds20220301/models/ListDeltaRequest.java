@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDeltaRequest extends TeaModel {
     /**
-     * <p>The cursor of the incremental information.</p>
+     * <p>The cursor.</p>
      * 
      * <strong>example:</strong>
      * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
@@ -14,7 +14,7 @@ public class ListDeltaRequest extends TeaModel {
     public String cursor;
 
     /**
-     * <p>The drive ID.</p>
+     * <p>The space ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,8 +24,8 @@ public class ListDeltaRequest extends TeaModel {
     public String driveId;
 
     /**
-     * <p>The maximum number of results to return. Valid values: 0 to 100. Default value: 100.</p>
-     * <p>The number of returned results must be less than or equal to the specified number.</p>
+     * <p>The maximum number of resources to return. Valid values: 0 to 100. Default value: 100.</p>
+     * <p>The number of returned results can be less than the specified number but cannot exceed it.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -34,7 +34,7 @@ public class ListDeltaRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The ID of the root file of the synced folder.</p>
+     * <p>The file ID of the root node of the sync folder.</p>
      * 
      * <strong>example:</strong>
      * <p>622fb09598ae66777c7040109a16f49381f6abe1</p>

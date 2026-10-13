@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateGroupRequest extends TeaModel {
     /**
-     * <p>The description of the group after modification.</p>
+     * <p>The new description of the group.</p>
      * 
      * <strong>example:</strong>
      * <p>test group description</p>
@@ -14,7 +14,7 @@ public class UpdateGroupRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the group that you want to modify.</p>
+     * <p>The ID of the group to update.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class UpdateGroupRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The name of the group after modification.</p>
+     * <p>The new name of the group.</p>
      * 
      * <strong>example:</strong>
      * <p>test group</p>

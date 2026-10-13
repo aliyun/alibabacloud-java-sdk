@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteUserRequest extends TeaModel {
     /**
-     * <p>The user ID.</p>
+     * <p>The ID of the user to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

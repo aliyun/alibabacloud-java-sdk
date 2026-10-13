@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDownloadUrlResponseBody extends TeaModel {
     /**
-     * <p>The download URL of a file that is downloaded by using Alibaba Cloud CDN.</p>
+     * <p>The Content Delivery Network (CDN) download URL. This field is not used if you enable intelligent data endpoints. In that case, the system automatically returns the appropriate URL in the url field. To use this field, contact PDS technical support.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://data-cdn.aliyunpds.com/hz22%2F5d79219b0aa9a7c995a94a96993ba3205cd91c5a%2F5d79219bf3261a5d38744da0834ed489b677a27a?Expires=xxxOSSAccessKeyId=xxx&Signature=xxx&response-content-disposition=attachment%3Bfilename%3DtBiZAoJPC2c8b13450eda4292b7f5f8010618e078.txt">https://data-cdn.aliyunpds.com/hz22%2F5d79219b0aa9a7c995a94a96993ba3205cd91c5a%2F5d79219bf3261a5d38744da0834ed489b677a27a?Expires=xxxOSSAccessKeyId=xxx&amp;Signature=xxx&amp;response-content-disposition=attachment%3Bfilename%3DtBiZAoJPC2c8b13450eda4292b7f5f8010618e078.txt</a></p>
@@ -14,7 +14,7 @@ public class GetDownloadUrlResponseBody extends TeaModel {
     public String cdnUrl;
 
     /**
-     * <p>The hash value of the file content.</p>
+     * <p>The hash of the file content.</p>
      * 
      * <strong>example:</strong>
      * <p>EA4942AA8761213890A5C386F88E6464D2C31CA1</p>
@@ -23,7 +23,7 @@ public class GetDownloadUrlResponseBody extends TeaModel {
     public String contentHash;
 
     /**
-     * <p>The name of the algorithm that is used to calculate the hash value of the file content.</p>
+     * <p>The name of the hash algorithm for the file content.</p>
      * 
      * <strong>example:</strong>
      * <p>sha1</p>
@@ -32,7 +32,7 @@ public class GetDownloadUrlResponseBody extends TeaModel {
     public String contentHashName;
 
     /**
-     * <p>The hash value calculated by using 64-bit cyclic redundancy check (CRC-64).</p>
+     * <p>The CRC-64 value.</p>
      * 
      * <strong>example:</strong>
      * <p>5498595269368962671</p>
@@ -41,7 +41,7 @@ public class GetDownloadUrlResponseBody extends TeaModel {
     public String crc64Hash;
 
     /**
-     * <p>The time when the download URL expires.</p>
+     * <p>The expiration time of the download URL.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-01-02T15:04:05.999Z07:00</p>
@@ -50,7 +50,7 @@ public class GetDownloadUrlResponseBody extends TeaModel {
     public String expiration;
 
     /**
-     * <p>The download URL of a file that is downloaded over a virtual private cloud (VPC).</p>
+     * <p>The download URL for use within a Virtual Private Cloud (VPC). This field is not used if you enable intelligent data endpoints. In that case, the system automatically returns the appropriate URL in the url field. To use this field, contact PDS technical support.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://data-vpc.aliyunpds.com/hz22%2F5d79219b0aa9a7c995a94a96993ba3205cd91c5a%2F5d79219bf3261a5d38744da0834ed489b677a27a?Expires=xxxOSSAccessKeyId=xxx&Signature=xxx&response-content-disposition=attachment%3Bfilename%3DtBiZAoJPC2c8b13450eda4292b7f5f8010618e078.txt">https://data-vpc.aliyunpds.com/hz22%2F5d79219b0aa9a7c995a94a96993ba3205cd91c5a%2F5d79219bf3261a5d38744da0834ed489b677a27a?Expires=xxxOSSAccessKeyId=xxx&amp;Signature=xxx&amp;response-content-disposition=attachment%3Bfilename%3DtBiZAoJPC2c8b13450eda4292b7f5f8010618e078.txt</a></p>
@@ -59,7 +59,7 @@ public class GetDownloadUrlResponseBody extends TeaModel {
     public String internalUrl;
 
     /**
-     * <p>The size of the file. Unit: bytes.</p>
+     * <p>The file size, in bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -68,7 +68,7 @@ public class GetDownloadUrlResponseBody extends TeaModel {
     public Long size;
 
     /**
-     * <p>The download URL of a file that is downloaded over the Internet.</p>
+     * <p>The public download URL. If you enable intelligent data endpoints, the system selects the best network line for the customer and returns a download URL with the corresponding domain name.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://data.aliyunpds.com/hz22%2F5d79219b0aa9a7c995a94a96993ba3205cd91c5a%2F5d79219bf3261a5d38744da0834ed489b677a27a?Expires=xxxOSSAccessKeyId=xxx&Signature=xxx&response-content-disposition=attachment%3Bfilename%3DtBiZAoJPC2c8b13450eda4292b7f5f8010618e078.txt">https://data.aliyunpds.com/hz22%2F5d79219b0aa9a7c995a94a96993ba3205cd91c5a%2F5d79219bf3261a5d38744da0834ed489b677a27a?Expires=xxxOSSAccessKeyId=xxx&amp;Signature=xxx&amp;response-content-disposition=attachment%3Bfilename%3DtBiZAoJPC2c8b13450eda4292b7f5f8010618e078.txt</a></p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIdentityToBenefitPkgMappingResponseBody extends TeaModel {
     /**
-     * <p>The information about the benefit packages that are associated with an entity.</p>
+     * <p>A list of benefit packages bound to the identity.</p>
      */
     @NameInMap("items")
     public java.util.List<IdentityToBenefitPkgMapping> items;

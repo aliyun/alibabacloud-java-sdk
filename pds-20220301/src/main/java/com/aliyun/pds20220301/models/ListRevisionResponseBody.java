@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListRevisionResponseBody extends TeaModel {
     /**
-     * <p>The information about the versions.</p>
+     * <p>An array of revision objects.</p>
      */
     @NameInMap("items")
     public java.util.List<Revision> items;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If next_marker is empty, no next page exists.</p>
+     * <p>The pagination marker for the next page of results. If this parameter is empty, it indicates that all results have been returned.</p>
      * 
      * <strong>example:</strong>
      * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>

@@ -15,8 +15,8 @@ public class GetRevisionRequest extends TeaModel {
     public String driveId;
 
     /**
-     * <p>Specifies the returned fields.</p>
-     * <p>By default, this parameter is left empty. If you set this parameter to \*, all fields are returned. If you leave this parameter empty, the creator of the file is not returned.</p>
+     * <p>Specifies the fields to return.</p>
+     * <p>By default, this parameter is empty. If you set this parameter to an asterisk (\*), all fields are returned, including the creator name.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -37,7 +37,7 @@ public class GetRevisionRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The version ID.</p>
+     * <p>The revision ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,8 +47,8 @@ public class GetRevisionRequest extends TeaModel {
     public String revisionId;
 
     /**
-     * <p>The validity period of the file download or preview. Valid values: 10 to 86400.</p>
-     * <p>Default value: 900. Unit: seconds.</p>
+     * <p>The URL expiration time in seconds. The value must be between 10 and 86400.</p>
+     * <p>The default value is 900 seconds (15 minutes).</p>
      * 
      * <strong>example:</strong>
      * <p>900</p>

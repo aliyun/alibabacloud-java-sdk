@@ -7,6 +7,9 @@ public class KnowledgeFile extends TeaModel {
     @NameInMap("creator_id")
     public String creatorId;
 
+    /**
+     * <p>The ID of the drive where the file is located.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
@@ -22,6 +25,9 @@ public class KnowledgeFile extends TeaModel {
     @NameInMap("file_creator_id")
     public String fileCreatorId;
 
+    /**
+     * <p>The ID of the file.</p>
+     */
     @NameInMap("file_id")
     public String fileId;
 
@@ -46,15 +52,27 @@ public class KnowledgeFile extends TeaModel {
     @NameInMap("file_updated_at")
     public Long fileUpdatedAt;
 
+    /**
+     * <p>The time the file was added to the knowledge base, represented as a Unix timestamp in seconds.</p>
+     */
     @NameInMap("joined_at")
     public Long joinedAt;
 
+    /**
+     * <p>The ID of the knowledge base that contains the file.</p>
+     */
     @NameInMap("knowledge_base_id")
     public String knowledgeBaseId;
 
+    /**
+     * <p>The ID of the knowledge base category assigned to the file.</p>
+     */
     @NameInMap("knowledge_category_id")
     public String knowledgeCategoryId;
 
+    /**
+     * <p>The ID of the file revision.</p>
+     */
     @NameInMap("revision_id")
     public String revisionId;
 

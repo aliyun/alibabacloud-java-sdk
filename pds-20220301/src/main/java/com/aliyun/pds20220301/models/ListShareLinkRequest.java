@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListShareLinkRequest extends TeaModel {
     /**
-     * <p>The creator of the share.</p>
+     * <p>The user ID of the creator.</p>
      * 
      * <strong>example:</strong>
      * <p>c9b7a5aa04d14ae3867fdc886fa01da4</p>
@@ -14,7 +14,7 @@ public class ListShareLinkRequest extends TeaModel {
     public String creator;
 
     /**
-     * <p>Specifies whether to return the shares that are canceled.</p>
+     * <p>Specifies whether to include canceled shares in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,8 +23,8 @@ public class ListShareLinkRequest extends TeaModel {
     public Boolean includeCancelled;
 
     /**
-     * <p>The maximum number of results to return. Valid values: 0 to 100.</p>
-     * <p>The number of returned results must be less than or equal to the specified number.</p>
+     * <p>The maximum number of shares to return. The value must be in the range of [0, 100].</p>
+     * <p>The number of results returned can be less than the specified value.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -33,8 +33,7 @@ public class ListShareLinkRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.\
-     * By default, this parameter is left empty.</p>
+     * <p>A token for paginating results. To retrieve the next page, provide the <code>next_marker</code> value from the previous response. Omit this parameter to query from the beginning.<br>Default: none<br></p>
      * 
      * <strong>example:</strong>
      * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
@@ -43,12 +42,18 @@ public class ListShareLinkRequest extends TeaModel {
     public String marker;
 
     /**
-     * <p>The field by which to sort the returned results. Default value: created_at. Valid values:</p>
+     * <p>The field to sort results by.
+     * By default, results are sorted by creation time in descending order.
+     * Valid values:</p>
      * <ul>
-     * <li>share_name: sorts the results by the name of the share.</li>
-     * <li>updated_at: sorts the results by the time when the share was modified.</li>
-     * <li>description: sorts the results by the description of the share.</li>
-     * <li>created_at: sorts the results by the time when the share was created.</li>
+     * <li><p><code>share_name</code>: share name</p>
+     * </li>
+     * <li><p><code>updated_at</code>: modification time</p>
+     * </li>
+     * <li><p><code>description</code>: share description</p>
+     * </li>
+     * <li><p><code>created_at</code>: creation time</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,10 +63,14 @@ public class ListShareLinkRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The order in which you want to sort the returned results. By default, order_direction is set to DESC if order_by is set to created_at or updated_at, and is set to ASC if order_by is set to other values. Valid values:</p>
+     * <p>The sort order.
+     * If the sort field is <code>created_at</code> or <code>updated_at</code>, the default order is descending. For other sort fields, the default is ascending.
+     * Valid values:</p>
      * <ul>
-     * <li>ASC: sorts the results in ascending order.</li>
-     * <li>DESC: sorts the results in descending order.</li>
+     * <li><p><code>ASC</code>: ascending order</p>
+     * </li>
+     * <li><p><code>DESC</code>: descending order</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

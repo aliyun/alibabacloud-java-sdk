@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDriveResponseBody extends TeaModel {
     /**
-     * <p>The queried drives.</p>
+     * <p>A list of drives.</p>
      */
     @NameInMap("items")
     public java.util.List<Drive> items;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If next_marker is empty, no next page exists.</p>
+     * <p>The marker for retrieving the next page of results. If no more results are available, this parameter is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>

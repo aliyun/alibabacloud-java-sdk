@@ -10,6 +10,12 @@ public class QueryOrderPriceRequest extends TeaModel {
     @NameInMap("code")
     public String code;
 
+    @NameInMap("commodity_code")
+    public String commodityCode;
+
+    @NameInMap("from_app")
+    public String fromApp;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -63,6 +69,22 @@ public class QueryOrderPriceRequest extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public QueryOrderPriceRequest setCommodityCode(String commodityCode) {
+        this.commodityCode = commodityCode;
+        return this;
+    }
+    public String getCommodityCode() {
+        return this.commodityCode;
+    }
+
+    public QueryOrderPriceRequest setFromApp(String fromApp) {
+        this.fromApp = fromApp;
+        return this;
+    }
+    public String getFromApp() {
+        return this.fromApp;
     }
 
     public QueryOrderPriceRequest setInstanceId(String instanceId) {

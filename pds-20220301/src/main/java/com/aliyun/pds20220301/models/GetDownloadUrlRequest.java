@@ -14,7 +14,7 @@ public class GetDownloadUrlRequest extends TeaModel {
     public String driveId;
 
     /**
-     * <p>The validity period of the download URL. Maximum value: 115200. Default value: 900. Unit: seconds.</p>
+     * <p>The time-to-live (TTL) of the download URL, in seconds. The maximum value is 115200. The default value is 900.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -33,7 +33,7 @@ public class GetDownloadUrlRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The name of the file. The name can be up to 1,024 characters in length.</p>
+     * <p>The file name. The maximum length is 1,024 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>1.txt</p>
@@ -49,7 +49,9 @@ public class GetDownloadUrlRequest extends TeaModel {
     public String responseContentType;
 
     /**
-     * <p>The share ID. If you want to manage a file by using a sharing link, carry the <code>x-share-token</code> header in the request and specify share_id. In this case, <code>drive_id</code> is invalid. Otherwise, use an <code>AccessKey pair</code> or <code>access token</code> for authentication and specify <code>drive_id</code>. You must specify at least either <code>share_id</code> or <code>drive_id</code>.</p>
+     * <p>The share ID.
+     * If you access the file through a share, include the <code>x-share-token</code> header for authentication and provide this field. In that case, the <code>drive_id</code> field is ignored. Otherwise, use an AccessKey pair or an access token for authentication and provide the <code>drive_id</code> field.
+     * You must specify either <code>share_id</code> or <code>drive_id</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>7JQX1FswpQ8</p>

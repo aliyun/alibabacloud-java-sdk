@@ -60,6 +60,9 @@ public class ImageTag extends TeaModel {
 
     /**
      * <p>The name of the tag.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>动物</p>
      */
     @NameInMap("name")
     public String name;

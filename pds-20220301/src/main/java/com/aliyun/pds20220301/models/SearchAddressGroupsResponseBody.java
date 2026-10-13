@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchAddressGroupsResponseBody extends TeaModel {
     /**
-     * <p>The location-based groups.</p>
+     * <p>The list of address groups.</p>
      */
     @NameInMap("items")
     public java.util.List<AddressGroup> items;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AuditLogExportResponseBody extends TeaModel {
     /**
-     * <p>The ID of the asynchronous task used to export audit logs.</p>
+     * <p>The ID of the asynchronous export task.</p>
      * 
      * <strong>example:</strong>
      * <p>4221bf6e6ab43c255edc4463bf3a6f5f5d31****</p>

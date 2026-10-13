@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class TrashFileResponseBody extends TeaModel {
     /**
-     * <p>The ID of the asynchronous task.</p>
-     * <p>If an empty string is returned, the file or folder is moved to the recycle bin.</p>
-     * <p>If a non-empty string is returned, an asynchronous task is required. You can call the GetAsyncTask operation to obtain the information about an asynchronous task based on the task ID.</p>
+     * <p>The asynchronous task ID.</p>
+     * <p>An empty string indicates that the operation completed synchronously.</p>
+     * <p>A non-empty string indicates that the operation is asynchronous. Call the GetAsyncTask operation with this ID to query the task status.</p>
      * 
      * <strong>example:</strong>
      * <p>13ebd3a24dba4166b1527add676ef2866051b4d5dele16</p>
@@ -34,7 +34,7 @@ public class TrashFileResponseBody extends TeaModel {
     public String driveId;
 
     /**
-     * <p>The ID of the file or folder.</p>
+     * <p>The file or folder ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4221bf6e6ab43c255edc4463bf3a6f5f5d317406</p>

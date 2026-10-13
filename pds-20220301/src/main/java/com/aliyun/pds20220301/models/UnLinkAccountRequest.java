@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnLinkAccountRequest extends TeaModel {
     /**
-     * <p>Additional information for the unique account identifier. For example, when the account is a phone number, this field should be filled with the area code of the phone, such as 86 for Mainland China. If not provided, it defaults to 86.</p>
+     * <p>Additional information about the identity. For <code>mobile</code> accounts, this parameter specifies the country code. The default value is <code>86</code> (mainland China).</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class UnLinkAccountRequest extends TeaModel {
     public String extra;
 
     /**
-     * <p>Unique identifier of the account, such as a phone number</p>
+     * <p>The account\&quot;s unique identifier, such as a mobile number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,14 +24,14 @@ public class UnLinkAccountRequest extends TeaModel {
     public String identity;
 
     /**
-     * <p>Account type</p>
-     * <p>mobile: Phone number</p>
-     * <p>email: Email address</p>
-     * <p>ding: DingTalk</p>
-     * <p>ram: Alibaba Cloud RAM User</p>
-     * <p>wechat: WeCom</p>
-     * <p>ldap: LDAP account</p>
-     * <p>custom: Custom account</p>
+     * <p>The account type. Valid values:</p>
+     * <p><code>mobile</code>: Mobile number</p>
+     * <p><code>email</code>: Email address</p>
+     * <p><code>ding</code>: DingTalk account</p>
+     * <p><code>ram</code>: Alibaba Cloud RAM sub-account</p>
+     * <p><code>wechat</code>: WeCom account</p>
+     * <p><code>ldap</code>: LDAP account</p>
+     * <p><code>custom</code>: Custom account</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class UnLinkAccountRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>User identifier</p>
+     * <p>The user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

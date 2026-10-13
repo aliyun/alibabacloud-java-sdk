@@ -14,13 +14,16 @@ public class GetFileRequest extends TeaModel {
     public String driveId;
 
     /**
-     * <p>The fields to return.</p>
+     * <p>Specifies which fields to return:</p>
      * <ol>
-     * <li>If this parameter is set to \*, all fields of the file except the fields that must be specified are returned.</li>
-     * <li>If only specific fields are required, you can specify the following fields: url, thumbnail, exif, cropping_suggestion, characteristic_hash, video_metadata, and video_preview_metadata. If multiple fields are required, separate them with commas (,). Example: url,thumbnail.</li>
-     * <li>The investigation_info field is returned only if it is specified.</li>
+     * <li><p>If you set this parameter to <code>*</code>, this operation returns all file fields, except for those that must be explicitly requested.</p>
+     * </li>
+     * <li><p>To return specific fields, provide a comma-separated list, such as <code>url,thumbnail</code>. Supported fields include <code>url</code>, <code>thumbnail</code>, <code>exif</code>, <code>cropping_suggestion</code>, <code>characteristic_hash</code>, <code>video_metadata</code>, and <code>video_preview_metadata</code>.</p>
+     * </li>
+     * <li><p>You must include <code>investigation_info</code> in the value to retrieve the <code>investigation_info</code> field.</p>
+     * </li>
      * </ol>
-     * <p>By default, all fields except the fields that must be specified are returned.</p>
+     * <p>By default, this operation returns all file fields, except for those that require an explicit request.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -41,7 +44,7 @@ public class GetFileRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The share ID. If you want to share a file, carry the <code>x-share-token</code> header for authentication in the request and specify share_id. In this case, <code>drive_id</code> is invalid. Otherwise, use an <code>AccessKey pair</code> or <code>access token</code> for authentication and specify <code>drive_id</code>. You must specify one of <code>share_id</code> and <code>drive_id</code>.</p>
+     * <p>The share ID. To access a file in a share, provide this parameter and authenticate with the <code>x-share-token</code> header, in which case <code>drive_id</code> is ignored. Otherwise, provide <code>drive_id</code> and authenticate with an AccessKey pair or an <code>access_token</code>. You must specify either <code>share_id</code> or <code>drive_id</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>7JQX1FswpQ8</p>
@@ -50,13 +53,13 @@ public class GetFileRequest extends TeaModel {
     public String shareId;
 
     /**
-     * <p>The thumbnail configurations. Up to five thumbnails can be returned at a time. The value contains key-value pairs. You can customize the keys. The URL of a thumbnail is returned based on the key.</p>
+     * <p>Specifies the thumbnail configuration. Request up to five thumbnails in a single call by defining custom keys for the map. The response returns the URL for each requested thumbnail under its corresponding key.</p>
      */
     @NameInMap("thumbnail_processes")
     public java.util.Map<String, ImageProcess> thumbnailProcesses;
 
     /**
-     * <p>The time when the file expires. Unit: seconds. Valid values: 10 to 14400.</p>
+     * <p>The expiration time in seconds. The value must be an integer from 10 to 14,400, inclusive.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

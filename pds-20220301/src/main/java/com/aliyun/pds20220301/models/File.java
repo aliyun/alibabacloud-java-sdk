@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class File extends TeaModel {
     /**
-     * <p>The permissions.</p>
+     * <p>The list of permissions.</p>
      */
     @NameInMap("action_list")
     public java.util.List<String> actionList;
 
     /**
-     * <p>The remaining time until the file is automatically deleted from the recycle bin (if in it).</p>
+     * <p>The remaining time in seconds before the file is automatically deleted from the recycle bin.</p>
      */
     @NameInMap("auto_delete_left_sec")
     public Long autoDeleteLeftSec;
 
     /**
-     * <p>The category. Drive and Photo Service (PDS) classifies files based on their extensions and mime-type. The supported categories include doc, image, audio, and video.</p>
+     * <p>The category. The service categorizes files based on their file name extensions and MIME types. The main categories are doc, image, audio, and video.</p>
      * 
      * <strong>example:</strong>
      * <p>image</p>
@@ -26,7 +26,7 @@ public class File extends TeaModel {
     public String category;
 
     /**
-     * <p>The hash value of the content.</p>
+     * <p>The content hash.</p>
      * 
      * <strong>example:</strong>
      * <p>EA4942AA8761213890A5C386F88E6464D2C31CA3</p>
@@ -35,7 +35,7 @@ public class File extends TeaModel {
     public String contentHash;
 
     /**
-     * <p>The name of the hash algorithm. Set the value to sha1.</p>
+     * <p>The name of the content hash algorithm. Currently, only sha1 is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>sha1</p>
@@ -44,7 +44,7 @@ public class File extends TeaModel {
     public String contentHashName;
 
     /**
-     * <p>The type of the content.</p>
+     * <p>The content type.</p>
      * 
      * <strong>example:</strong>
      * <p>application/json</p>
@@ -53,7 +53,7 @@ public class File extends TeaModel {
     public String contentType;
 
     /**
-     * <p>crc64</p>
+     * <p>The CRC-64 hash.</p>
      * 
      * <strong>example:</strong>
      * <p>3574582125365864471</p>
@@ -71,7 +71,7 @@ public class File extends TeaModel {
     public String createdAt;
 
     /**
-     * <p>The description of the file.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>image file</p>
@@ -80,7 +80,7 @@ public class File extends TeaModel {
     public String description;
 
     /**
-     * <p>The information about the folder structure. This parameter is returned only if you include the dir_size field in the fields parameter by calling the ListFile or GetFile operation.</p>
+     * <p>The statistics information of the folder. This parameter is returned when you call the list file or get file operation and include dir_size in the fields parameter.</p>
      */
     @NameInMap("dir_size_info")
     public FileDirSizeInfo dirSizeInfo;
@@ -95,7 +95,7 @@ public class File extends TeaModel {
     public String domainId;
 
     /**
-     * <p>The download URL. The default validity period of the download URL is 15 minutes. If the URL expires, you can obtain the URL by calling the GetFile operation.</p>
+     * <p>The download URL. The URL is valid for 15 minutes by default. If the URL expires, call the GetFile operation to obtain a new one.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899eff525?Expires=xxx&OSSAccessKeyId=xxx&Signature=xxx">https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899eff525?Expires=xxx&amp;OSSAccessKeyId=xxx&amp;Signature=xxx</a></p>
@@ -131,7 +131,7 @@ public class File extends TeaModel {
     public String fileId;
 
     /**
-     * <p>Specifies whether to hide the file.</p>
+     * <p>Indicates whether the file is hidden.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -140,7 +140,7 @@ public class File extends TeaModel {
     public Boolean hidden;
 
     /**
-     * <p>The file ID path.</p>
+     * <p>The path of file IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>id1/id2</p>
@@ -149,13 +149,13 @@ public class File extends TeaModel {
     public String idPath;
 
     /**
-     * <p>The image metadata. This parameter takes effect only if the value-added image processing feature is enabled.</p>
+     * <p>The image information. This parameter is returned only if the image processing value-added service is enabled.</p>
      */
     @NameInMap("image_media_metadata")
     public ImageMediaMetadata imageMediaMetadata;
 
     /**
-     * <p>The labels of the file.</p>
+     * <p>The tags.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;label1:1&quot;, &quot;label2:2&quot;]</p>
@@ -164,7 +164,7 @@ public class File extends TeaModel {
     public java.util.List<String> labels;
 
     /**
-     * <p>The time when the local file was created. The time refers to the local time when the file was uploaded. This parameter helps identify the local upload time.</p>
+     * <p>The local creation time of the file. This is the local time on the client at the moment of upload, which helps the client identify the local upload time.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-08-20T06:51:27.292Z</p>
@@ -173,7 +173,7 @@ public class File extends TeaModel {
     public String localCreatedAt;
 
     /**
-     * <p>The time when the local file was modified. The time refers to the local time when the modified file was uploaded. This parameter helps identify the local update time.</p>
+     * <p>The local modification time of the file. This is the local time on the client at the moment of upload, which helps the client identify the local update time.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-08-20T06:51:27.292Z</p>
@@ -182,7 +182,7 @@ public class File extends TeaModel {
     public String localModifiedAt;
 
     /**
-     * <p>The file name.</p>
+     * <p>The name.</p>
      * 
      * <strong>example:</strong>
      * <p>1.mov</p>
@@ -200,7 +200,7 @@ public class File extends TeaModel {
     public String namePath;
 
     /**
-     * <p>The parent folder ID.</p>
+     * <p>The ID of the parent folder.</p>
      * 
      * <strong>example:</strong>
      * <p>3d5b846942cf94fa72324c8a4bda34e81da635a</p>
@@ -209,7 +209,7 @@ public class File extends TeaModel {
     public String parentFileId;
 
     /**
-     * <p>The version ID. If a file that has the same file ID with an existing one is uploaded, a new version ID is generated for the file.</p>
+     * <p>The revision ID. A new revision ID is generated when a file with the same file ID is overwritten.</p>
      * 
      * <strong>example:</strong>
      * <p>5d5b846942cf94fa72324c14a4bda34e81da635d</p>
@@ -218,8 +218,8 @@ public class File extends TeaModel {
     public String revisionId;
 
     /**
-     * <p>The file size</p>
-     * <p>or folder size. The folder size is calculated based on all descendant files and folders in the folder. Note: The folder size can be returned only when you call the ListFile or GetFile operation and include the dir_size field in the fields parameter.</p>
+     * <p>If the object is a file, this parameter indicates the file size.</p>
+     * <p>If the object is a folder, this parameter indicates the total size of all files within it. The size is calculated recursively. Note: The folder size is returned only when you include dir_size in the fields parameter of a list file or get file request.</p>
      * 
      * <strong>example:</strong>
      * <p>1024</p>
@@ -228,7 +228,7 @@ public class File extends TeaModel {
     public Long size;
 
     /**
-     * <p>Specifies whether to add the file to favorites.</p>
+     * <p>Indicates whether the file is starred.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -237,7 +237,7 @@ public class File extends TeaModel {
     public Boolean starred;
 
     /**
-     * <p>The status of the file. Only files and directories in the available state can be accessed. If you call the GetFile operation to obtain a file that is in the uploading state, a response indicating that the file does not exist is returned. If you call the ListFile operation to query files, files in the uploading state are not returned.</p>
+     * <p>The status. Only files and folders in the available state can be accessed. If a file is in the uploading state, the GetFile operation returns a &quot;file not found&quot; error, and the ListFile operation does not return the file.</p>
      * 
      * <strong>example:</strong>
      * <p>available</p>
@@ -246,7 +246,7 @@ public class File extends TeaModel {
     public String status;
 
     /**
-     * <p>The URL of the thumbnail. This parameter is deprecated and we recommend that you use thumbnail_urls.</p>
+     * <p>The thumbnail URL. This parameter is deprecated. Use thumbnail_urls instead.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899eff525?Expires=xxx&OSSAccessKeyId=xxx&Signature=xxx">https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899eff525?Expires=xxx&amp;OSSAccessKeyId=xxx&amp;Signature=xxx</a></p>
@@ -255,13 +255,13 @@ public class File extends TeaModel {
     public String thumbnail;
 
     /**
-     * <p>The information about the returned thumbnail. The value corresponds to the key that is specified by thumbnail_processes.</p>
+     * <p>The returned thumbnail information. The keys in this object correspond to the keys passed in the thumbnail_processes request parameter.</p>
      */
     @NameInMap("thumbnail_urls")
     public java.util.Map<String, String> thumbnailUrls;
 
     /**
-     * <p>The time when the file was put into the recycle bin.</p>
+     * <p>The time when the file was moved to the recycle bin.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-08-20T06:51:27.292Z</p>
@@ -270,12 +270,7 @@ public class File extends TeaModel {
     public String trashedAt;
 
     /**
-     * <p>The file type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>file</li>
-     * <li>folder</li>
-     * </ul>
+     * <p>The type.</p>
      * 
      * <strong>example:</strong>
      * <p>file</p>
@@ -284,7 +279,7 @@ public class File extends TeaModel {
     public String type;
 
     /**
-     * <p>The time when the file was modified.</p>
+     * <p>The time when the file was last modified.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-08-20T06:51:27.292Z</p>
@@ -608,7 +603,7 @@ public class File extends TeaModel {
 
     public static class FileDirSizeInfo extends TeaModel {
         /**
-         * <p>The number of all descendant folders in the folder, which is calculated recursively.</p>
+         * <p>The total number of subfolders in the folder, calculated recursively.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -617,7 +612,7 @@ public class File extends TeaModel {
         public Long dirCount;
 
         /**
-         * <p>The number of all descendant files in the folder, which is calculated recursively.</p>
+         * <p>The total number of files in the folder, calculated recursively.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

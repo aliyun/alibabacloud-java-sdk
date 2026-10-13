@@ -15,7 +15,7 @@ public class DeleteFileRequest extends TeaModel {
     public String driveId;
 
     /**
-     * <p>The file ID or folder ID.</p>
+     * <p>The file or folder ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

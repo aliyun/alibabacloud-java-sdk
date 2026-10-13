@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class AccountLinkInfo extends TeaModel {
     /**
-     * <p>The type of the account. Valid values:</p>
+     * <p>The account type. Valid values:</p>
      * <ul>
-     * <li>mobile: mobile number</li>
+     * <li>mobile: mobile phone number</li>
      * <li>email: email address</li>
-     * <li>ding: DingTalk account</li>
-     * <li>ram: Alibaba Cloud Resource Access Management (RAM) user</li>
-     * <li>wechat: WeCom account</li>
-     * <li>ldap: Lightweight Directory Access Protocol (LDAP) account</li>
+     * <li>ding: DingTalk</li>
+     * <li>ram: Alibaba Cloud RAM user</li>
+     * <li>wechat: WeCom</li>
+     * <li>ldap: LDAP account</li>
      * <li>custom: custom account</li>
      * </ul>
      * 
@@ -23,7 +23,7 @@ public class AccountLinkInfo extends TeaModel {
     public String authenticationType;
 
     /**
-     * <p>The time when the account was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The time when the account was created. The value is a millisecond-level UNIX timestamp starting from January 1, 1970, 00:00:00.</p>
      * 
      * <strong>example:</strong>
      * <p>1639762579768</p>
@@ -32,7 +32,7 @@ public class AccountLinkInfo extends TeaModel {
     public Long createdAt;
 
     /**
-     * <p>The display name of the account. For example, the unique identifier of an LDAP account is its UID, but the account display name can be the job number or other information.</p>
+     * <p>The display name of the account. This name is displayed on the user interface. For example, the unique identifier of an LDAP account is the UID, but the name displayed to the user can be an employee ID or other information.</p>
      * 
      * <strong>example:</strong>
      * <p>001</p>
@@ -50,7 +50,7 @@ public class AccountLinkInfo extends TeaModel {
     public String domainId;
 
     /**
-     * <p>The additional information about the account. If the account type is a mobile number, the value of this parameter indicates the country code. For example, the country code in the Chinese mainland is 86 and a value of 86 is returned only if authentication_type is set to mobile.</p>
+     * <p>The additional information of the account. When the account type is mobile phone number, this field indicates the country code. For example, the country code for the Chinese mainland is 86. Currently, this field is returned only for mobile phone numbers.</p>
      * 
      * <strong>example:</strong>
      * <p>86</p>
@@ -67,14 +67,26 @@ public class AccountLinkInfo extends TeaModel {
     @NameInMap("identity")
     public String identity;
 
+    /**
+     * <p>The last time the account was used to log on. The value is a millisecond-level UNIX timestamp starting from January 1, 1970, 00:00:00.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1639762579769</p>
+     */
     @NameInMap("last_login_time")
     public Long lastLoginTime;
 
+    /**
+     * <p>The account status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
+     */
     @NameInMap("status")
     public String status;
 
     /**
-     * <p>The user ID of the account.</p>
+     * <p>The user ID that corresponds to the account.</p>
      * 
      * <strong>example:</strong>
      * <p>00016a587b62b50003deea299a4f5b50</p>

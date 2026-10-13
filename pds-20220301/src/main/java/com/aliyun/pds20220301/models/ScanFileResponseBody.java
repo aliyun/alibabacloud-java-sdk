@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ScanFileResponseBody extends TeaModel {
     /**
-     * <p>The information about the files.</p>
+     * <p>List of files</p>
      */
     @NameInMap("items")
     public java.util.List<File> items;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If next_marker is empty, no next page exists.</p>
+     * <p>Identifier of the first resource on the next page. This value is empty on the last page.</p>
      * 
      * <strong>example:</strong>
      * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>

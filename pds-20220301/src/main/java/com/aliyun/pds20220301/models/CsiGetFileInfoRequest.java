@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CsiGetFileInfoRequest extends TeaModel {
     /**
+     * <p>The ID of the drive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CsiGetFileInfoRequest extends TeaModel {
     public String driveId;
 
     /**
+     * <p>The ID of the file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class CsiGetFileInfoRequest extends TeaModel {
     public String fileId;
 
     /**
+     * <p>The validity period of the download URL in seconds, with a valid range of 10 to 14,400. By default, a download URL is not returned. Set this parameter to include one in the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */

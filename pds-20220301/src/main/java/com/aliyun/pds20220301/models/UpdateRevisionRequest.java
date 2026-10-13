@@ -25,8 +25,8 @@ public class UpdateRevisionRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>Specifies whether to permanently retain a version.</p>
-     * <p>By default, this parameter is not specified, which indicates that you do not modify the permanent retention configuration of the version.</p>
+     * <p>Specifies whether to keep the revision forever.</p>
+     * <p>If you omit this parameter, the current value remains unchanged.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -35,8 +35,8 @@ public class UpdateRevisionRequest extends TeaModel {
     public Boolean keepForever;
 
     /**
-     * <p>The description of the version. The description can be up to 1,024 characters in length.</p>
-     * <p>By default, this parameter is not specified, which indicates that you do not modify the description of the version.</p>
+     * <p>The revision description, with a maximum length of 1,024 characters.</p>
+     * <p>If you omit this parameter, the current value remains unchanged.</p>
      * 
      * <strong>example:</strong>
      * <p>aaa</p>
@@ -45,7 +45,7 @@ public class UpdateRevisionRequest extends TeaModel {
     public String revisionDescription;
 
     /**
-     * <p>The version ID.</p>
+     * <p>The revision ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

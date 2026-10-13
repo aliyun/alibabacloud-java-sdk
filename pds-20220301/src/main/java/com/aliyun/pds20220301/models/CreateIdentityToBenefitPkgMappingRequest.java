@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateIdentityToBenefitPkgMappingRequest extends TeaModel {
     /**
-     * <p>The number of benefit packages.</p>
-     * <p>This parameter takes effect only for the benefit packages of the resource type. Default value: 1.</p>
+     * <p>The quantity of the benefit package.</p>
+     * <p>This parameter applies only to resource-type benefit packages. It is optional and defaults to 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -15,7 +15,7 @@ public class CreateIdentityToBenefitPkgMappingRequest extends TeaModel {
     public Long amount;
 
     /**
-     * <p>The unique identifier of the benefit package.</p>
+     * <p>The unique identifier for the benefit package.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,8 +25,8 @@ public class CreateIdentityToBenefitPkgMappingRequest extends TeaModel {
     public String benefitPkgId;
 
     /**
-     * <p>The time when the benefit package expires. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-     * <p>By default, the benefit package never expires.</p>
+     * <p>The expiration time of the benefit package. This is a Unix timestamp representing the number of milliseconds that have elapsed since 00:00:00 on January 1, 1970, UTC.</p>
+     * <p>If this parameter is not specified, the benefit package never expires.</p>
      * 
      * <strong>example:</strong>
      * <p>1633167071000</p>
@@ -35,8 +35,8 @@ public class CreateIdentityToBenefitPkgMappingRequest extends TeaModel {
     public Long expireTime;
 
     /**
-     * <p>The unique identifier of the entity.</p>
-     * <p>If you want to manage the benefits of a user, set this parameter to a user ID.</p>
+     * <p>The unique identifier for the entity.</p>
+     * <p>To manage benefits for a user, provide the user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class CreateIdentityToBenefitPkgMappingRequest extends TeaModel {
 
     /**
      * <p>The type of the entity.</p>
-     * <p>If you want to manage the benefits of a user, set this parameter to user.</p>
+     * <p>To manage benefits for a user, set this parameter to <code>user</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

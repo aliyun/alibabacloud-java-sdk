@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchSimilarImageClustersRequest extends TeaModel {
     /**
+     * <p>The drive ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class SearchSimilarImageClustersRequest extends TeaModel {
     public String driveId;
 
     /**
+     * <p>The image thumbnail processing style.</p>
+     * 
      * <strong>example:</strong>
      * <p>image/resize,m_fill,h_128,w_128,limit_0/format,jpg</p>
      */
@@ -22,6 +25,8 @@ public class SearchSimilarImageClustersRequest extends TeaModel {
     public String imageThumbnailProcess;
 
     /**
+     * <p>The maximum number of results to return. Valid values: 1 to 100. Default value: 50. The number of results returned may be less than the specified limit.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -29,6 +34,8 @@ public class SearchSimilarImageClustersRequest extends TeaModel {
     public Long limit;
 
     /**
+     * <p>The pagination marker. To retrieve the next page of results, set this parameter to the <code>next_marker</code> value from the previous response. If you leave this parameter empty, the query starts from the beginning.</p>
+     * 
      * <strong>example:</strong>
      * <p>YWRzX3VzZXJfcHJvZmlsZV9je1bnQh***</p>
      */
@@ -36,6 +43,8 @@ public class SearchSimilarImageClustersRequest extends TeaModel {
     public String marker;
 
     /**
+     * <p>The sort order.</p>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteStoryResponseBody extends TeaModel {
     /**
+     * <p>The ID of the drive.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

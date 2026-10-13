@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AuthorizeShrinkRequest extends TeaModel {
     /**
-     * <p>The application ID returned when the application was created.</p>
+     * <p>The client ID assigned when you create an app.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class AuthorizeShrinkRequest extends TeaModel {
     public String clientId;
 
     /**
-     * <p>Specifies whether to hide the consent page.</p>
+     * <p>Specifies whether to hide the consent page. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -26,12 +26,18 @@ public class AuthorizeShrinkRequest extends TeaModel {
     /**
      * <p>The authentication method. Valid values:</p>
      * <ul>
-     * <li>default: all logon methods that are integrated on the default logon page provided by Drive and Photo Service.</li>
-     * <li>ding: logs on by scanning a DingTalk QR code.</li>
-     * <li>ding_sns: logs on by entering a DingTalk account and its password.</li>
-     * <li>ram: logs on as an Alibaba Cloud Resource Access Management (RAM) user.</li>
-     * <li>wechat: logs on by scanning a WeCom QR code.</li>
-     * <li>wechat_app: logs on without authentication in WeCom.</li>
+     * <li><p>default (The default PDS login page that integrates all authentication methods)</p>
+     * </li>
+     * <li><p>ding (Log in on a PC by scanning a QR code with DingTalk)</p>
+     * </li>
+     * <li><p>ding_sns (Log in on a mobile phone with a DingTalk username and password)</p>
+     * </li>
+     * <li><p>ram (Log in with an Alibaba Cloud RAM user)</p>
+     * </li>
+     * <li><p>wechat (Log in with WeCom by scanning a QR code)</p>
+     * </li>
+     * <li><p>wechat_app (Single Sign-On (SSO) within the WeCom app)</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -42,17 +48,17 @@ public class AuthorizeShrinkRequest extends TeaModel {
     public String loginType;
 
     /**
-     * <p>The callback URL specified when the application was created.</p>
+     * <p>The redirect URI specified when you created the app. This URI must be URL-encoded.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="https://www.aliyunpds.com/sign/callback">https://www.aliyunpds.com/sign/callback</a></p>
+     * <p>https%3A%2F%2F<a href="http://www.aliyunpds.com%2Fsign%2Fcallback">www.aliyunpds.com%2Fsign%2Fcallback</a></p>
      */
     @NameInMap("redirect_uri")
     public String redirectUri;
 
     /**
-     * <p>The format in which to return the response. Set the value to code.</p>
+     * <p>The response type. This parameter must be set to code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,13 +68,13 @@ public class AuthorizeShrinkRequest extends TeaModel {
     public String responseType;
 
     /**
-     * <p>The requested permissions. By default, all permissions are requested.</p>
+     * <p>The requested permissions. If omitted, the request defaults to all permissions.</p>
      */
     @NameInMap("scope")
     public String scopeShrink;
 
     /**
-     * <p>The user-defined parameter to return in the callback URL after the requested permissions are granted.</p>
+     * <p>A value to maintain state between the request and callback. This value is returned to your redirect URI. We recommend using this parameter to prevent cross-site request forgery (CSRF) attacks.</p>
      * 
      * <strong>example:</strong>
      * <p>customdata</p>

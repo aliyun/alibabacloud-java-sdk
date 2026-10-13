@@ -5,23 +5,30 @@ import com.aliyun.tea.*;
 
 public class BatchRequest extends TeaModel {
     /**
-     * <p>The child requests.</p>
-     * <p>The number of child requests. Valid value: 1 to 100.</p>
+     * <p>A collection of subrequests.</p>
+     * <p>A batch request can contain 1 to 100 subrequests.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("requests")
     public java.util.List<BatchRequestRequests> requests;
 
     /**
-     * <p>The type of the resource that you want to manage. Valid values:</p>
+     * <p>The resource type of the subrequests. Supported resource types include:</p>
      * <ul>
-     * <li>file: a file.</li>
-     * <li>drive: an individual drive or a team drive.</li>
-     * <li>user: a user.</li>
-     * <li>group: a group.</li>
-     * <li>membership: a group member.</li>
-     * <li>share_link: a share.</li>
-     * <li>async_task: an asynchronous task.</li>
+     * <li><p><code>file</code>: A file.</p>
+     * </li>
+     * <li><p><code>drive</code>: A drive.</p>
+     * </li>
+     * <li><p><code>user</code>: A user.</p>
+     * </li>
+     * <li><p><code>group</code>: A group.</p>
+     * </li>
+     * <li><p><code>membership</code>: A group membership.</p>
+     * </li>
+     * <li><p><code>share_link</code>: A share link.</p>
+     * </li>
+     * <li><p><code>async_task</code>: An asynchronous task.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -54,20 +61,20 @@ public class BatchRequest extends TeaModel {
 
     public static class BatchRequestRequests extends TeaModel {
         /**
-         * <p>The request parameters of a child request. The parameter value must be a JSON string. For more information, see the topic of the corresponding child request.</p>
-         * <p>Before you specify the request body, you must specify a header by using Content-Type. Content-Type can only be set to application/json.</p>
+         * <p>The request body for the subrequest. For details, refer to the documentation for the specific API operation.</p>
+         * <p>If you specify the <code>body</code> parameter, you must also set the <code>Content-Type</code> request header to <code>application/json</code>.</p>
          */
         @NameInMap("body")
         public java.util.Map<String, ?> body;
 
         /**
-         * <p>The header of a child request, which indicates the type of the data specified in the request body.</p>
+         * <p>The request headers for the subrequest.</p>
          */
         @NameInMap("headers")
         public java.util.Map<String, String> headers;
 
         /**
-         * <p>The ID of the child request. The ID is used to associate a child request with a response. The ID of a child request must be unique.</p>
+         * <p>The unique ID of the subrequest. This ID is used to correlate the subrequest with its response. IDs must be unique within a batch request.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -77,13 +84,18 @@ public class BatchRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The method of a child request. Valid values:</p>
+         * <p>The HTTP method of the subrequest. Supported methods include:</p>
          * <ul>
-         * <li>POST</li>
-         * <li>GET</li>
-         * <li>PUT</li>
-         * <li>DELETE</li>
-         * <li>HEAD</li>
+         * <li><p>POST</p>
+         * </li>
+         * <li><p>GET</p>
+         * </li>
+         * <li><p>PUT</p>
+         * </li>
+         * <li><p>DELETE</p>
+         * </li>
+         * <li><p>HEAD</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -94,30 +106,52 @@ public class BatchRequest extends TeaModel {
         public String method;
 
         /**
-         * <p>The API path of a child request. Valid values:</p>
+         * <p>The API path of the subrequest. Supported paths include:</p>
          * <ul>
-         * <li>/file/get: queries the information about a file.</li>
-         * <li>/file/update: modifies the information about a file.</li>
-         * <li>/file/search: searches for a file.</li>
-         * <li>/file/copy: copies a file or folder.</li>
-         * <li>/file/move: moves a file or folder.</li>
-         * <li>/file/delete: deletes a file or folder.</li>
-         * <li>/file/get_download_url: queries the download URL of a file.</li>
-         * <li>/file/get_share_link_download_url: queries the download URL of a file in a share.</li>
-         * <li>/recyclebin/trash: moves a file or folder to the recycle bin.</li>
-         * <li>/recyclebin/restore: restores a file or folder.</li>
-         * <li>/file/put_usertags: adds tags to a user.</li>
-         * <li>/file/delete_usertags: removes tags from a user.</li>
-         * <li>/drive/get: queries the information about a drive.</li>
-         * <li>/user/get: queries the information about a user.</li>
-         * <li>/group/get: queries the information about a group.</li>
-         * <li>/share_link/create: creates a share.</li>
-         * <li>/share_link/update: modifies a share.</li>
-         * <li>/share_link/cancel: cancels a share.</li>
-         * <li>/share_link/list: queries shares.</li>
-         * <li>/share_link/get: queries the information about a share.</li>
-         * <li>/share_link/get_share_token: queries an access token of a share.</li>
-         * <li>/async_task/get: queries the information about an asynchronous task.</li>
+         * <li><p><code>/file/get</code>: Get file details.</p>
+         * </li>
+         * <li><p><code>/file/update</code>: Update file information.</p>
+         * </li>
+         * <li><p><code>/file/search</code>: Search for files.</p>
+         * </li>
+         * <li><p><code>/file/copy</code>: Copy a file or folder.</p>
+         * </li>
+         * <li><p><code>/file/move</code>: Move a file or folder.</p>
+         * </li>
+         * <li><p><code>/file/delete</code>: Delete a file or folder.</p>
+         * </li>
+         * <li><p><code>/file/get_download_url</code>: Get the download URL for a file.</p>
+         * </li>
+         * <li><p><code>/file/get_share_link_download_url</code>: Get the download URL from a share link.</p>
+         * </li>
+         * <li><p><code>/recyclebin/trash</code>: Move a file or folder to the recycle bin.</p>
+         * </li>
+         * <li><p><code>/recyclebin/restore</code>: Restore a file or folder from the recycle bin.</p>
+         * </li>
+         * <li><p><code>/file/put_usertags</code>: Set user tags.</p>
+         * </li>
+         * <li><p><code>/file/delete_usertags</code>: Delete user tags.</p>
+         * </li>
+         * <li><p><code>/drive/get</code>: Get drive information.</p>
+         * </li>
+         * <li><p><code>/user/get</code>: Get user information.</p>
+         * </li>
+         * <li><p><code>/group/get</code>: Get group information.</p>
+         * </li>
+         * <li><p><code>/share_link/create</code>: Create a share link.</p>
+         * </li>
+         * <li><p><code>/share_link/update</code>: Update a share link.</p>
+         * </li>
+         * <li><p><code>/share_link/cancel</code>: Cancel a share link.</p>
+         * </li>
+         * <li><p><code>/share_link/list</code>: List share links.</p>
+         * </li>
+         * <li><p><code>/share_link/get</code>: Get share link information.</p>
+         * </li>
+         * <li><p><code>/share_link/get_share_token</code>: Get a share token.</p>
+         * </li>
+         * <li><p><code>/async_task/get</code>: Get asynchronous task information.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

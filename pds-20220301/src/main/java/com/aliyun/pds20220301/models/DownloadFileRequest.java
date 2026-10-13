@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DownloadFileRequest extends TeaModel {
     /**
-     * <p>The drive ID.</p>
+     * <p>The ID of the drive.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DownloadFileRequest extends TeaModel {
     public String driveId;
 
     /**
-     * <p>The file ID.</p>
+     * <p>The ID of the file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DownloadFileRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The method used to generate the thumbnail of an image. If this parameter is specified, you are redirected to the URL of the generated thumbnail.</p>
+     * <p>The image processing style. Specifying this parameter redirects the request to the URL of the processed thumbnail.</p>
      * 
      * <strong>example:</strong>
      * <p>image/resize,m_fill,h_128,w_128,limit_0</p>
@@ -33,16 +33,16 @@ public class DownloadFileRequest extends TeaModel {
     public String imageThumbnailProcess;
 
     /**
-     * <p>The method used to generate the thumbnail of a document. If this parameter is specified, you are redirected to the URL of the generated thumbnail.</p>
+     * <p>The document processing style. Specifying this parameter redirects the request to the URL of the processed thumbnail.</p>
      * 
      * <strong>example:</strong>
-     * <p>image/resize,w_200</p>
+     * <p>image/resize,m_lfit,w_256,limit_0/format,jpg|image/format,webp</p>
      */
     @NameInMap("office_thumbnail_process")
     public String officeThumbnailProcess;
 
     /**
-     * <p>The share ID. If you want to manage a file by using a share link, carry the <code>x-share-token</code> header for authentication in the request and specify share_id. In this case, <code>drive_id</code> is invalid. Otherwise, use an <code>AccessKey pair</code> or <code>access token</code> for authentication and specify <code>drive_id</code>. You must specify one of <code>share_id</code> and <code>drive_id</code>.</p>
+     * <p>The ID of the share. If you access a file by using a share link, you must authenticate with the <code>x-share-token</code> header and specify this parameter. In this case, the <code>drive_id</code> parameter is not applicable. Otherwise, you must authenticate by using <code>AK/SK</code> or an <code>access_token</code> and specify the <code>drive_id</code> parameter. You must specify either <code>share_id</code> or <code>drive_id</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>7JQX1FswpQ8</p>
@@ -51,7 +51,7 @@ public class DownloadFileRequest extends TeaModel {
     public String shareId;
 
     /**
-     * <p>The method used to generate the thumbnail of a video. If this parameter is specified, you are redirected to the URL of the generated thumbnail.</p>
+     * <p>The video processing style. Specifying this parameter redirects the request to the URL of the processed thumbnail.</p>
      * 
      * <strong>example:</strong>
      * <p>video/snapshot,t_7000,f_jpg,w_800,h_600,m_fast</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ScanFileRequest extends TeaModel {
     /**
-     * <p>The drive ID.</p>
+     * <p>Drive ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,11 +15,26 @@ public class ScanFileRequest extends TeaModel {
     public String driveId;
 
     /**
-     * <p>The file properties to return.</p>
+     * <p>File properties to include in the scan response.</p>
      * <ul>
-     * <li>If you want to return all file properties, set this parameter to \*.</li>
-     * <li>By default, if you do not specify this parameter, the following properties of a file are returned: - file_id, - drive_id, - parent_file_id, - type, - created_at, - updated_at, - file_extention, - size, - starred, - status, - category, and - permissions.</li>
-     * <li>You can also specify properties to return. Separate multiple properties with commas (,).</li>
+     * <li><p>Use \&quot;\*\&quot; to get all properties.</p>
+     * </li>
+     * <li><p>If not specified, the following properties are returned by default:
+     * \- file_id,
+     * \- drive_id,
+     * \- parent_file_id,
+     * \- type,
+     * \- created_at,
+     * \- updated_at,
+     * \- file_extension,
+     * \- size,
+     * \- starred,
+     * \- status,
+     * \- category,
+     * \- permissions.</p>
+     * </li>
+     * <li><p>You can also specify individual properties. Separate multiple properties with commas.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,8 +46,8 @@ public class ScanFileRequest extends TeaModel {
     public String fields;
 
     /**
-     * <p>The maximum number of results to return. Valid values: 1 to 100.</p>
-     * <p>The number of returned results must be less than or equal to the specified number.</p>
+     * <p>Limit the number of resources returned in this response. Valid values: [1, 100].</p>
+     * <p>The actual number of results may be less than the specified limit but never more.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -41,8 +56,7 @@ public class ScanFileRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.\
-     * By default, this parameter is left empty.</p>
+     * <p>Return results starting from the first item after the marker, sorted alphabetically. If not set, return results from the beginning.<br>Default value: none<br></p>
      * 
      * <strong>example:</strong>
      * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>

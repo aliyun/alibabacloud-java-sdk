@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAddressGroupsResponseBody extends TeaModel {
     /**
-     * <p>The information about the location-based groups.</p>
+     * <p>A list of address groups.</p>
      */
     @NameInMap("items")
     public java.util.List<AddressGroup> items;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If next_marker is empty, no next page exists.</p>
+     * <p>The pagination token to use in a subsequent request to retrieve the next page of results. If this field is empty, all results have been returned.</p>
      * 
      * <strong>example:</strong>
      * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>

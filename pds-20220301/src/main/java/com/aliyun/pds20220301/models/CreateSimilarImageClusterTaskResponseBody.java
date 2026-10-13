@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateSimilarImageClusterTaskResponseBody extends TeaModel {
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>i:SimilarImageClustering-b67d53e7-2fe8-460f-9b95-1e93636923eb</p>
      */

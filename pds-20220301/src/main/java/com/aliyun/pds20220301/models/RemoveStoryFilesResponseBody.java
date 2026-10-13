@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RemoveStoryFilesResponseBody extends TeaModel {
     /**
+     * <p>The drive ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class RemoveStoryFilesResponseBody extends TeaModel {
     public String driveId;
 
     /**
+     * <p>The story ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9132e0d8-fe92-4e56-86c3-f5f112308003</p>
      */

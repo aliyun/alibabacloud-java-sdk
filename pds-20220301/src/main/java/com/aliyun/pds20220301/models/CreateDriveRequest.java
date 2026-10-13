@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDriveRequest extends TeaModel {
     /**
-     * <p>Specifies whether the drive is the default drive. Default value: false.</p>
+     * <p>Specifies whether the drive is the default drive. The default value is <code>false</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,26 +14,26 @@ public class CreateDriveRequest extends TeaModel {
     public Boolean _default;
 
     /**
-     * <p>The description of the drive. The description can be up to 1,024 characters in length.</p>
+     * <p>The description. The description can be up to 1024 characters long.</p>
      * 
      * <strong>example:</strong>
-     * <p>drive for test</p>
+     * <p>VIP space</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The name of the drive. The name can be up to 128 characters in length.</p>
+     * <p>The name of the drive. The name can be up to 128 characters long.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test_drive</p>
+     * <p>My personal space</p>
      */
     @NameInMap("drive_name")
     public String driveName;
 
     /**
-     * <p>The type of the drive. Set the value to normal.</p>
+     * <p>The drive type. Currently, only <code>normal</code> is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>normal</p>
@@ -42,7 +42,7 @@ public class CreateDriveRequest extends TeaModel {
     public String driveType;
 
     /**
-     * <p>The owner of the drive.</p>
+     * <p>The ID of the owner.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,8 +52,8 @@ public class CreateDriveRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The type of the owner. Valid values:</p>
-     * <p>user and group.</p>
+     * <p>The owner type. Valid values:</p>
+     * <p>user<br>group<br></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,9 +63,9 @@ public class CreateDriveRequest extends TeaModel {
     public String ownerType;
 
     /**
-     * <p>The state of the drive. Valid values:</p>
-     * <p>enabled and disabled.</p>
-     * <p>Default value: enabled.</p>
+     * <p>The status. Valid values:</p>
+     * <p>enabled: The drive is available.<br>disabled: The drive is unavailable.<br></p>
+     * <p>The default value is <code>enabled</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>enabled</p>
@@ -74,7 +74,7 @@ public class CreateDriveRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The total size of the drive. Unit: bytes. By default, the size is unlimited.</p>
+     * <p>The total size of the drive in bytes. By default, the size is unlimited.</p>
      * 
      * <strong>example:</strong>
      * <p>1024</p>

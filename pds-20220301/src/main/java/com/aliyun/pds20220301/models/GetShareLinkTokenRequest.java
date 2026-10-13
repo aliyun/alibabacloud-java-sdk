@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetShareLinkTokenRequest extends TeaModel {
     /**
-     * <p>The validity period of the token. Valid values: (0,7200]. Default value: 7200. Unit: seconds.</p>
+     * <p>The requested validity period for the share token, in seconds. Valid values range from 1 to 7,200. If this parameter is omitted or set to 0, it defaults to 7,200.</p>
      * 
      * <strong>example:</strong>
      * <p>7200</p>
@@ -24,7 +24,7 @@ public class GetShareLinkTokenRequest extends TeaModel {
     public String shareId;
 
     /**
-     * <p>The access code.</p>
+     * <p>The share password.</p>
      * 
      * <strong>example:</strong>
      * <p>abcF123x</p>

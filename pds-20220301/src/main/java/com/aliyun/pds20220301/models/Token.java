@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Token extends TeaModel {
     /**
-     * <p>The access token.</p>
+     * <p>Access credential</p>
      * 
      * <strong>example:</strong>
      * <p>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjOWI3YTVhYTA0ZDE0YWUzODY3ZmRjODg2ZmEwMWRhNCIsImN1c3RvbUpzb24iOiJ7XCJjbGllbnRJZFwiOlwiMjVkelgzdmJZcWt0Vnh5WFwiLFwiZG9tYWluSWRcIjpcImJqMjlcIixcInNjb3BlXCI6W1wiRFJJVkUuQUxMXCIsXCJTSEFSRS5BTExcIixcIkZJTEUuQUxMXCIsXCJVU0VSLkFMTFwiLFwiVklFVy5BTExcIixcIlNUT1JBR0UuQUxMXCIsXCJTVE9SQUdFRklMRS5MSVNUXCIsXCJCQVRDSFwiLFwiT0FVVEguQUxMXCIsXCJJTUFHRS5BTExcIixcIklOVklURS5BTExcIixcIkFDQ09VTlQuQUxMXCJdLFwicm9sZVwiOlwidXNlclwiLFwicmVmXCI6XCJodHRwczovL3d3dy5hbGl5dW5kcml2ZS5jb20vXCIsXCJkZXZpY2VfaWRcIjpcImIyODIwNWU1YzU5NzRjY2JiODI3MDNiNjhkYjhjNDUxXCJ9IiwiZXhwIjoxNjQ4NjE0NDkzLCJpYXQiOjE2NDg2MDcyMzN9.d3HVLvv_LFw2QhPrhvjH_kICWQJX9sKKt7NjQEqI_xE2JO_b7D8rPsFTZz93PLvZ7MhCmudTjGImUpd-ehFnI4Go-1S7BGaKaHFILvP-sWy18Wpikowjxx9mSbzBM_cO6D1LI-kyYhXKWHgVdADfVIPniTDA7-ffhUpi7cAebEs</p>
@@ -14,7 +14,7 @@ public class Token extends TeaModel {
     public String accessToken;
 
     /**
-     * <p>The profile picture of the user.</p>
+     * <p>Profile picture</p>
      * 
      * <strong>example:</strong>
      * <p>aliyunpds.com/a.jpg</p>
@@ -23,7 +23,7 @@ public class Token extends TeaModel {
     public String avatar;
 
     /**
-     * <p>The ID of the default space of the user.</p>
+     * <p>User default drive ID</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -31,11 +31,17 @@ public class Token extends TeaModel {
     @NameInMap("default_drive_id")
     public String defaultDriveId;
 
+    /**
+     * <p>User default safe box ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("default_sbox_drive_id")
     public String defaultSboxDriveId;
 
     /**
-     * <p>The name of the device that is bound to OAuth 2.0 Device Authorization Grant.</p>
+     * <p>Device name bound through OAuth device flow.</p>
      * 
      * <strong>example:</strong>
      * <p>4683C25F</p>
@@ -44,7 +50,7 @@ public class Token extends TeaModel {
     public String deviceName;
 
     /**
-     * <p>The domain ID.</p>
+     * <p>Domain ID</p>
      * 
      * <strong>example:</strong>
      * <p>bj1</p>
@@ -52,11 +58,14 @@ public class Token extends TeaModel {
     @NameInMap("domain_id")
     public String domainId;
 
+    /**
+     * <p>Existing logon methods for the current user.</p>
+     */
     @NameInMap("exist_link")
     public java.util.List<LinkInfo> existLink;
 
     /**
-     * <p>The time when the credential expires.</p>
+     * <p>Credential expiration time</p>
      * 
      * <strong>example:</strong>
      * <p>2019-09-01T06:57:48.813Z</p>
@@ -65,7 +74,7 @@ public class Token extends TeaModel {
     public String expireTime;
 
     /**
-     * <p>The validity period of the token.</p>
+     * <p>Credential validity period</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -74,7 +83,7 @@ public class Token extends TeaModel {
     public Long expiresIn;
 
     /**
-     * <p>Indicates whether this is the first logon of the user.</p>
+     * <p>Indicates whether it is the first logon.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -82,14 +91,26 @@ public class Token extends TeaModel {
     @NameInMap("is_first_login")
     public Boolean isFirstLogin;
 
+    /**
+     * <p>Indicates whether account binding is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("need_link")
     public Boolean needLink;
 
+    /**
+     * <p>Indicates whether the user needs ID Verification.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("need_rp_verify")
     public Boolean needRpVerify;
 
     /**
-     * <p>The nickname of the user.</p>
+     * <p>Nickname</p>
      * 
      * <strong>example:</strong>
      * <p>pdsuser</p>
@@ -97,11 +118,17 @@ public class Token extends TeaModel {
     @NameInMap("nick_name")
     public String nickName;
 
+    /**
+     * <p>Indicates whether the user has set a safe box password.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("pin_setup")
     public Boolean pinSetup;
 
     /**
-     * <p>The refresh token.</p>
+     * <p>Refresh token</p>
      * 
      * <strong>example:</strong>
      * <p>060e78d36afb4879b51e4264e9541c16</p>
@@ -110,7 +137,7 @@ public class Token extends TeaModel {
     public String refreshToken;
 
     /**
-     * <p>The role of the user.</p>
+     * <p>Role</p>
      * 
      * <strong>example:</strong>
      * <p>admin</p>
@@ -118,11 +145,17 @@ public class Token extends TeaModel {
     @NameInMap("role")
     public String role;
 
+    /**
+     * <p>Temporary permission, used to set a password after successful logon.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>klafhjas-asdasd-asd-as-d-asd-asd-asdasd</p>
+     */
     @NameInMap("state")
     public String state;
 
     /**
-     * <p>The status of the user.</p>
+     * <p>User status</p>
      * 
      * <strong>example:</strong>
      * <p>enabled</p>
@@ -131,10 +164,7 @@ public class Token extends TeaModel {
     public String status;
 
     /**
-     * <p>The type of the token.</p>
-     * <ul>
-     * <li>Only Bearer is supported.</li>
-     * </ul>
+     * <p>Credential type</p>
      * 
      * <strong>example:</strong>
      * <p>Bearer</p>
@@ -142,11 +172,14 @@ public class Token extends TeaModel {
     @NameInMap("token_type")
     public String tokenType;
 
+    /**
+     * <p>User-defined data</p>
+     */
     @NameInMap("user_data")
     public java.util.Map<String, String> userData;
 
     /**
-     * <p>The user ID.</p>
+     * <p>User ID</p>
      * 
      * <strong>example:</strong>
      * <p>DING-xxxxx</p>
@@ -155,7 +188,7 @@ public class Token extends TeaModel {
     public String userId;
 
     /**
-     * <p>The name of the user.</p>
+     * <p>Username</p>
      * 
      * <strong>example:</strong>
      * <p>pdsuser</p>

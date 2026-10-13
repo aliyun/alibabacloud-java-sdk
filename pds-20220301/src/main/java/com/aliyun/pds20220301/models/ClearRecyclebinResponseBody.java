@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ClearRecyclebinResponseBody extends TeaModel {
     /**
-     * <p>The ID of the asynchronous task.</p>
-     * <p>You can call the GetAsyncTask operation to query the information about the asynchronous task based on the task ID.</p>
+     * <p>The asynchronous task ID.</p>
+     * <p>Call the GetAsyncTask operation with this ID to query the task\&quot;s status.</p>
      * 
      * <strong>example:</strong>
      * <p>13ebd3a24dba4166b1527add676ef2866051b4d5dele16</p>

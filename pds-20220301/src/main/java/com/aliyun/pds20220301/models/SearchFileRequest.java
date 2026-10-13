@@ -14,23 +14,21 @@ public class SearchFileRequest extends TeaModel {
     public String driveId;
 
     /**
-     * <p>The field that is used to return additional information about files. Valid values:</p>
-     * <ul>
-     * <li>dir_size: returns the statistics on each subfolder in the response.</li>
-     * <li>id_path: returns the id_path value of each child subject in the response.</li>
-     * <li>name_path: returns the name_path value of each child subject in the response.</li>
-     * </ul>
-     * <p>You can specify multiple fields by separating them with commas (,). Example: &quot;id_path,name_path,dir_size&quot;.</p>
+     * <p>The field that is used to return additional information about files. Valid values:
+     * \* dir_size: returns the statistics on each subfolder in the response.
+     * \* id_path: returns the id_path value of each child subject in the response.
+     * \* name_path: returns the name_path value of each child subject in the response.
+     * You can specify multiple fields by separating them with commas (,). Example: &quot;id_path,name_path,dir_size&quot;.</p>
      * 
      * <strong>example:</strong>
-     * <p>url,thumbnail</p>
+     * <p>id_path,name_path</p>
      */
     @NameInMap("fields")
     public String fields;
 
     /**
-     * <p>The maximum number of entries to return. Valid values: 1 to 100.</p>
-     * <p>The number of returned entries must be less than or equal to the value of this parameter.</p>
+     * <p>The maximum number of entries to return. Valid values: 1 to 100.
+     * The number of returned entries must be less than or equal to the value of this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -49,27 +47,21 @@ public class SearchFileRequest extends TeaModel {
     public String marker;
 
     /**
-     * <p>The field by which to sort the returned entries. Default value: created_at. Valid values:</p>
-     * <ul>
-     * <li>created_at: sorts the entries by creation time.</li>
-     * <li>updated_at: sorts the entries by update time.</li>
-     * <li>size: sorts the entries by file size.</li>
-     * <li>name: sorts the entries by file name.</li>
-     * </ul>
-     * <p>The order in which you want to sort the returned entries. Valid values:</p>
-     * <ul>
-     * <li>ASC: ascending order</li>
-     * <li>DESC: descending order</li>
-     * </ul>
-     * <p>You must specify this parameter in the \<field> \<ASC or DESC> format. Separate multiple fields with commas (,). A preceding field has a higher priority than a following field. Examples:</p>
-     * <ul>
-     * <li>If you want to sort the entries by file name in ascending order, set this parameter to &quot;name ASC&quot;.</li>
-     * <li>If you want to sort the entries by creation time in descending order, set this parameter to &quot;created_at DESC&quot;.</li>
-     * <li>If you want to sort the entries by creation time in descending order and sort the entries by file name in ascending order in case of the same creation time, set this parameter to &quot;created_at DESC,name ASC&quot;.</li>
-     * </ul>
+     * <p>The field by which to sort the returned entries. Default value: created_at. Valid values:
+     * \* created_at: sorts the entries by creation time.
+     * \* updated_at: sorts the entries by update time.
+     * \* size: sorts the entries by file size.
+     * \* name: sorts the entries by file name.
+     * The order in which you want to sort the returned entries. Valid values:
+     * \* ASC: ascending order
+     * \* DESC: descending order
+     * You must specify this parameter in the <field> <asc> format. Separate multiple fields with commas (,). A preceding field has a higher priority than a following field. Examples:
+     * \* If you want to sort the entries by file name in ascending order, set this parameter to &quot;name ASC&quot;.
+     * \* If you want to sort the entries by creation time in descending order, set this parameter to &quot;created_at DESC&quot;.
+     * \* If you want to sort the entries by creation time in descending order and sort the entries by file name in ascending order in case of the same creation time, set this parameter to &quot;created_at DESC,name ASC&quot;.</p>
      * 
      * <strong>example:</strong>
-     * <p>name</p>
+     * <p>name ASC</p>
      */
     @NameInMap("order_by")
     public String orderBy;
@@ -79,7 +71,7 @@ public class SearchFileRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>not name=123</p>
+     * <p>name=&quot;123&quot;</p>
      */
     @NameInMap("query")
     public String query;

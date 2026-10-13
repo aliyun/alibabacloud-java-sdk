@@ -25,7 +25,7 @@ public class GetUploadUrlRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The information about the file parts.</p>
+     * <p>A list of file parts.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("part_info_list")
@@ -41,7 +41,7 @@ public class GetUploadUrlRequest extends TeaModel {
     public String shareId;
 
     /**
-     * <p>The ID of the upload task.</p>
+     * <p>The upload ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -97,13 +97,13 @@ public class GetUploadUrlRequest extends TeaModel {
 
     public static class GetUploadUrlRequestPartInfoListParallelSha1Ctx extends TeaModel {
         /**
-         * <p>The first to fifth 32-bit variables of the SHA-1 hash value of the file content before the file part. This parameter takes effect only if the parallel upload feature is enabled.</p>
+         * <p>The five 32-bit state variables of the SHA1 context for all data preceding this part. This parameter applies only to parallel uploads.</p>
          */
         @NameInMap("h")
         public java.util.List<Long> h;
 
         /**
-         * <p>The size of the file part. Unit: bytes. The value must be a multiple of 64. This parameter takes effect only if the parallel upload feature is enabled.</p>
+         * <p>The total size in bytes of all preceding parts. The value must be a multiple of 64. This parameter applies only to parallel uploads.</p>
          * 
          * <strong>example:</strong>
          * <p>10240</p>
@@ -172,7 +172,7 @@ public class GetUploadUrlRequest extends TeaModel {
         public String contentType;
 
         /**
-         * <p>The SHA-1 hash value of the file content before the file part. This parameter takes effect only if the parallel upload feature is enabled.</p>
+         * <p>The SHA1 context for all data preceding this part. This parameter applies only to parallel uploads.</p>
          */
         @NameInMap("parallel_sha1_ctx")
         public GetUploadUrlRequestPartInfoListParallelSha1Ctx parallelSha1Ctx;
@@ -181,7 +181,7 @@ public class GetUploadUrlRequest extends TeaModel {
         public GetUploadUrlRequestPartInfoListParallelSha256Ctx parallelSha256Ctx;
 
         /**
-         * <p>The serial number of a part.</p>
+         * <p>The part number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

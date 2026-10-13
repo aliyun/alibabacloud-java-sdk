@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveFaceGroupFileRequest extends TeaModel {
     /**
+     * <p>The drive ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RemoveFaceGroupFileRequest extends TeaModel {
     public String driveId;
 
     /**
+     * <p>The face group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class RemoveFaceGroupFileRequest extends TeaModel {
     public String faceGroupId;
 
     /**
+     * <p>The ID of the file to remove.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

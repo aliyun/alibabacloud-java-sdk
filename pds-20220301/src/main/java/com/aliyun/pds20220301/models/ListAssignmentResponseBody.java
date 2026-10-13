@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAssignmentResponseBody extends TeaModel {
     /**
-     * <p>The assigned roles.</p>
+     * <p>A list of assignments.</p>
      */
     @NameInMap("assignment_list")
     public java.util.List<ListAssignmentResponseBodyAssignmentList> assignmentList;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If next_marker is empty, no next page exists.</p>
+     * <p>The marker for retrieving the next page of results. This field is empty when there are no more results.</p>
      * 
      * <strong>example:</strong>
      * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
@@ -42,7 +42,7 @@ public class ListAssignmentResponseBody extends TeaModel {
 
     public static class ListAssignmentResponseBodyAssignmentList extends TeaModel {
         /**
-         * <p>The time when the role was assigned. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The creation time, in milliseconds since 00:00:00 UTC on January 1, 1970.</p>
          * 
          * <strong>example:</strong>
          * <p>1622682267564</p>
@@ -51,7 +51,7 @@ public class ListAssignmentResponseBody extends TeaModel {
         public Long createdAt;
 
         /**
-         * <p>The ID of the user who assigned the role.</p>
+         * <p>The creator ID.</p>
          * 
          * <strong>example:</strong>
          * <p>216***c83</p>
@@ -69,7 +69,7 @@ public class ListAssignmentResponseBody extends TeaModel {
         public String domainId;
 
         /**
-         * <p>The identity to whom the role is assigned, which is a user or a group.</p>
+         * <p>The assigned identity, which can be a user or a group.</p>
          */
         @NameInMap("identity")
         public Identity identity;
@@ -84,7 +84,7 @@ public class ListAssignmentResponseBody extends TeaModel {
         public String manageResourceId;
 
         /**
-         * <p>The type of the managed resource. For example, a value of RT_Group indicates group.</p>
+         * <p>The type of the managed resource. For example, RT_Group indicates a group.</p>
          * 
          * <strong>example:</strong>
          * <p>RT_Group</p>
@@ -93,7 +93,7 @@ public class ListAssignmentResponseBody extends TeaModel {
         public String manageResourceType;
 
         /**
-         * <p>The ID of the role assigned to the identity.</p>
+         * <p>The assigned role ID.</p>
          * 
          * <strong>example:</strong>
          * <p>SystemGroupAdmin</p>

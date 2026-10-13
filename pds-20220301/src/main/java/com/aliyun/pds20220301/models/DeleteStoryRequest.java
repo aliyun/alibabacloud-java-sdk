@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteStoryRequest extends TeaModel {
     /**
+     * <p>The ID of the drive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteStoryRequest extends TeaModel {
     public String driveId;
 
     /**
+     * <p>The ID of the story.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

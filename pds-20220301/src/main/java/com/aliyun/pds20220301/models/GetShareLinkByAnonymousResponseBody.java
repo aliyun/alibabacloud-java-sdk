@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetShareLinkByAnonymousResponseBody extends TeaModel {
     /**
-     * <p>The number of times that the shared files are visited.</p>
+     * <p>The total number of times the share link has been accessed.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -14,7 +14,7 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
     public Long accessCount;
 
     /**
-     * <p>The profile picture of the user who created the share link.</p>
+     * <p>The URL of the creator\&quot;s avatar.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://aliyunpds.com/a.jpg">https://aliyunpds.com/a.jpg</a></p>
@@ -23,7 +23,7 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
     public String avatar;
 
     /**
-     * <p>The ID of the user who created the share link.</p>
+     * <p>The ID of the share\&quot;s creator.</p>
      * 
      * <strong>example:</strong>
      * <p>c9b7a5aa04d14ae3867fdc886fa01da4</p>
@@ -32,7 +32,7 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
     public String creatorId;
 
     /**
-     * <p>The name of the user who created the share link. The value is masked.</p>
+     * <p>The desensitized name of the share\&quot;s creator.</p>
      * 
      * <strong>example:</strong>
      * <p>AB***CD</p>
@@ -41,7 +41,7 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
     public String creatorName;
 
     /**
-     * <p>The mobile number of the user who created the share link. The value is masked.</p>
+     * <p>The desensitized phone number of the share\&quot;s creator.</p>
      * 
      * <strong>example:</strong>
      * <p>136****00</p>
@@ -50,7 +50,7 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
     public String creatorPhone;
 
     /**
-     * <p>Indicates whether the downloads of the shared files are prohibited.</p>
+     * <p>Specifies whether downloading is disabled. If <code>true</code>, the shared content cannot be downloaded.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -59,7 +59,7 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
     public Boolean disableDownload;
 
     /**
-     * <p>Indicates whether the previews of the shared files are prohibited.</p>
+     * <p>Specifies whether previews are disabled. If <code>true</code>, the shared content cannot be previewed.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -68,7 +68,7 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
     public Boolean disablePreview;
 
     /**
-     * <p>Indicates whether the saves of the shared files are prohibited.</p>
+     * <p>Specifies whether saving is disabled. If <code>true</code>, the shared content cannot be saved.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -77,7 +77,7 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
     public Boolean disableSave;
 
     /**
-     * <p>The number of times that the shared files are downloaded.</p>
+     * <p>The total number of times the shared content has been downloaded.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -86,7 +86,7 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
     public Long downloadCount;
 
     /**
-     * <p>The maximum number of times that the shared files can be downloaded.</p>
+     * <p>The maximum number of downloads allowed for the shared content.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -95,7 +95,7 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
     public Long downloadLimit;
 
     /**
-     * <p>The time when the share link expires.</p>
+     * <p>The expiration time of the share link, specified in UTC and formatted according to RFC 3339.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-08-20T06:51:27.292Z</p>
@@ -104,7 +104,7 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
     public String expiration;
 
     /**
-     * <p>Indicates whether a password is specified for the share link.</p>
+     * <p>Specifies whether the share is protected by an access code.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -113,7 +113,7 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
     public Boolean hasPwd;
 
     /**
-     * <p>The number of times that the shared files are previewed.</p>
+     * <p>The total number of times the shared content has been previewed.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -122,7 +122,7 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
     public Long previewCount;
 
     /**
-     * <p>The maximum number of times that the shared files can be previewed.</p>
+     * <p>The maximum number of previews allowed for the shared content.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -131,7 +131,7 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
     public Long previewLimit;
 
     /**
-     * <p>The number of times that the shared files are reported.</p>
+     * <p>The total number of times the share has been reported.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -140,7 +140,7 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
     public Long reportCount;
 
     /**
-     * <p>The number of times that the shared files are saved.</p>
+     * <p>The total number of times the shared content has been saved.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -149,7 +149,7 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
     public Long saveCount;
 
     /**
-     * <p>The maximum number of times that the shared files can be saved and downloaded.</p>
+     * <p>The maximum total number of saves and downloads allowed for the shared content.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -158,7 +158,7 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
     public Long saveDownloadLimit;
 
     /**
-     * <p>The maximum number of times that the shared files can be saved.</p>
+     * <p>The maximum number of saves allowed for the shared content.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -167,13 +167,16 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
     public Long saveLimit;
 
     /**
-     * <p>The name of the share link.</p>
+     * <p>The name of the share.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LectureRoom-1.MP4</p>
      */
     @NameInMap("share_name")
     public String shareName;
 
     /**
-     * <p>The time when the share link was last modified.</p>
+     * <p>The time when the share link was last modified, specified in UTC and formatted according to RFC 3339.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-08-20T06:51:27.292Z</p>
@@ -182,7 +185,7 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
     public String updatedAt;
 
     /**
-     * <p>The number of times that the videos are previewed in the shared files.</p>
+     * <p>The total number of times a video in the share has been previewed.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>

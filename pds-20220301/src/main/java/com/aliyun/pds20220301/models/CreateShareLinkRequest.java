@@ -4,20 +4,32 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class CreateShareLinkRequest extends TeaModel {
+    /**
+     * <p>Set to <code>true</code> to allow users to create files in shared folders. Setting this to <code>true</code> also requires specifying <code>creatable_file_id_list</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("creatable")
     public Boolean creatable;
 
+    /**
+     * <p>A list of folder IDs where users can upload files.</p>
+     */
     @NameInMap("creatable_file_id_list")
     public java.util.List<String> creatableFileIdList;
 
     /**
-     * <p>The description of the share. The description must be 0 to 1,024 characters in length.</p>
+     * <p>A description for the share link, 0 to 1,024 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Lecture collection</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>Specifies whether to disable the download feature.</p>
+     * <p>Set to <code>true</code> to prevent users from downloading the shared files.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -26,7 +38,7 @@ public class CreateShareLinkRequest extends TeaModel {
     public Boolean disableDownload;
 
     /**
-     * <p>Specifies whether to disable the preview feature.</p>
+     * <p>Set to <code>true</code> to prevent users from previewing the shared files.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -35,7 +47,7 @@ public class CreateShareLinkRequest extends TeaModel {
     public Boolean disablePreview;
 
     /**
-     * <p>Specifies whether to disable the dump feature.</p>
+     * <p>Set to <code>true</code> to prevent users from saving the shared files to their own drive.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -44,7 +56,7 @@ public class CreateShareLinkRequest extends TeaModel {
     public Boolean disableSave;
 
     /**
-     * <p>The limit on the number of times that the shared files can be downloaded. The value of this parameter must be equal to or greater than 0. A value of 0 indicates no limit.</p>
+     * <p>The maximum number of times users can download the shared files. The value must be 0 or greater. A value of 0 means there is no limit.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -53,7 +65,7 @@ public class CreateShareLinkRequest extends TeaModel {
     public Long downloadLimit;
 
     /**
-     * <p>The drive ID.</p>
+     * <p>The ID of the drive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,7 +75,7 @@ public class CreateShareLinkRequest extends TeaModel {
     public String driveId;
 
     /**
-     * <p>The time when the share URL expires. The value of this parameter follows the RFC 3339 standard. Example: &quot;2020-06-28T11:33:00.000+08:00&quot;. If expiration is set to &quot;&quot;, the share URL never expires.</p>
+     * <p>The expiration time for the share link, specified in RFC 3339 format (for example, &quot;2020-06-28T11:33:00.000+08:00&quot;). To create a share link that never expires, set this parameter to an empty string (&quot;&quot;).</p>
      * 
      * <strong>example:</strong>
      * <p>2020-06-28T11:33:00.000+08:00</p>
@@ -72,7 +84,7 @@ public class CreateShareLinkRequest extends TeaModel {
     public String expiration;
 
     /**
-     * <p>The IDs of the files to share in the parent path. The number of files in the parent path ranges from 1 to 100. If share_all_files is set to true, this parameter does not take effect. Otherwise, you must specify this parameter.``</p>
+     * <p>A list of 1 to 100 file IDs to share. This parameter is required when <code>share_all_files</code> is <code>false</code> and is ignored when it is <code>true</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;520b217f13adf4fc24f2191991b1664ce045b393&quot;]</p>
@@ -80,11 +92,17 @@ public class CreateShareLinkRequest extends TeaModel {
     @NameInMap("file_id_list")
     public java.util.List<String> fileIdList;
 
+    /**
+     * <p>Set to <code>true</code> to allow online editing of the shared documents.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("office_editable")
     public Boolean officeEditable;
 
     /**
-     * <p>The limit on the number of times that the shared files can be previewed. The value of this parameter must be equal to or greater than 0. A value of 0 indicates no limit.</p>
+     * <p>The maximum number of times users can preview the shared files. The value must be 0 or greater. A value of 0 means there is no limit.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -92,11 +110,17 @@ public class CreateShareLinkRequest extends TeaModel {
     @NameInMap("preview_limit")
     public Long previewLimit;
 
+    /**
+     * <p>If <code>true</code>, users must log in to access the share link.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("require_login")
     public Boolean requireLogin;
 
     /**
-     * <p>The limit on the number of times that the shared files can be dumped. The value of this parameter must be equal to or greater than 0. A value of 0 indicates no limit.</p>
+     * <p>The maximum number of times users can save the shared files. The value must be 0 or greater. A value of 0 means there is no limit.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -105,7 +129,7 @@ public class CreateShareLinkRequest extends TeaModel {
     public Long saveLimit;
 
     /**
-     * <p>Specifies whether to share all files in the drive.</p>
+     * <p>Set to <code>true</code> to share all files in the drive.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -114,13 +138,16 @@ public class CreateShareLinkRequest extends TeaModel {
     public Boolean shareAllFiles;
 
     /**
-     * <p>The name of the share. If you leave this parameter empty, the file name that corresponds to the first ID in the file ID list is used. The name must be 0 to 128 characters in length.</p>
+     * <p>The share name. The length must be between 0 and 128 characters. If not specified, the system uses the name of the file corresponding to the first ID in <code>file_id_list</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LectureRoom-1.MP4</p>
      */
     @NameInMap("share_name")
     public String shareName;
 
     /**
-     * <p>The access code. An access code must be 0 to 64 bytes in length. If you do not specify this parameter or leave this parameter empty, the files can be accessed without an access code. In this case, you do not need to specify the share_pwd parameter when you call an operation to query the share URL. The access code can contain only visible ASCII characters.</p>
+     * <p>The password for the share link. It must be between 0 and 64 printable ASCII characters. If this parameter is not set or is an empty string, the share link does not require a password.</p>
      * 
      * <strong>example:</strong>
      * <p>abcF123x</p>
@@ -129,7 +156,7 @@ public class CreateShareLinkRequest extends TeaModel {
     public String sharePwd;
 
     /**
-     * <p>The user ID.</p>
+     * <p>The user ID. This parameter is required when authenticating the request with an AccessKey (AK).</p>
      * 
      * <strong>example:</strong>
      * <p>u123</p>

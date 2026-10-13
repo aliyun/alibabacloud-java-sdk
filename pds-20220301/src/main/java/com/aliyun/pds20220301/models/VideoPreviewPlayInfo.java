@@ -5,28 +5,28 @@ import com.aliyun.tea.*;
 
 public class VideoPreviewPlayInfo extends TeaModel {
     /**
-     * <p>Category</p>
+     * <p>The category to which the video belongs.</p>
      * 
      * <strong>example:</strong>
-     * <p>live_transcoding</p>
+     * <p>quick_video</p>
      */
     @NameInMap("category")
     public String category;
 
     /**
-     * <p>Live transcoding subtitle information.</p>
+     * <p>The live transcoding subtitle information.</p>
      */
     @NameInMap("live_transcoding_subtitle_task_list")
     public java.util.List<VideoPreviewSubtitleInfo> liveTranscodingSubtitleTaskList;
 
     /**
-     * <p>The information about video playback.</p>
+     * <p>The playback information.</p>
      */
     @NameInMap("live_transcoding_task_list")
     public java.util.List<VideoPreviewPlayInfoLiveTranscodingTaskList> liveTranscodingTaskList;
 
     /**
-     * <p>Playback URL of master m3u8.</p>
+     * <p>The master M3U8 playback URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://pds-xxx-valueadd.oss-xxx.aliyuncs.com/qv/xxx/master.m3u8">https://pds-xxx-valueadd.oss-xxx.aliyuncs.com/qv/xxx/master.m3u8</a></p>
@@ -35,31 +35,31 @@ public class VideoPreviewPlayInfo extends TeaModel {
     public String masterUrl;
 
     /**
-     * <p>Video meta information.</p>
+     * <p>The video metadata.</p>
      */
     @NameInMap("meta")
     public VideoPreviewPlayInfoMeta meta;
 
     /**
-     * <p>Offline transcoding playback information.</p>
+     * <p>The offline transcoding playback information.</p>
      */
     @NameInMap("offline_video_transcoding_list")
     public java.util.List<VideoPreviewPlayInfoOfflineVideoTranscodingList> offlineVideoTranscodingList;
 
     /**
-     * <p>Offline transcoding subtitle information.</p>
+     * <p>The offline transcoding subtitle information.</p>
      */
     @NameInMap("offline_video_transcoding_subtitle_list")
     public java.util.List<VideoPreviewSubtitleInfo> offlineVideoTranscodingSubtitleList;
 
     /**
-     * <p>The information about video playback.</p>
+     * <p>The playback information.</p>
      */
     @NameInMap("quick_video_list")
     public java.util.List<VideoPreviewPlayInfoQuickVideoList> quickVideoList;
 
     /**
-     * <p>Quick transcoding subtitle information.</p>
+     * <p>The quick transcoding subtitle information.</p>
      */
     @NameInMap("quick_video_subtitle_list")
     public java.util.List<VideoPreviewSubtitleInfo> quickVideoSubtitleList;
@@ -143,12 +143,7 @@ public class VideoPreviewPlayInfo extends TeaModel {
 
     public static class VideoPreviewPlayInfoLiveTranscodingTaskList extends TeaModel {
         /**
-         * <p>Whether the original resolution is maintained.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>Indicates whether the original resolution is retained.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -159,9 +154,9 @@ public class VideoPreviewPlayInfo extends TeaModel {
         /**
          * <p>The status. Valid values:</p>
          * <ul>
-         * <li>finished: The index is complete, and the url can be obtained.</li>
-         * <li>running: Indexing in progress. Wait a moment and try again.</li>
-         * <li>failed: Transcoding failed. Check the media file. If you have any questions, contact customer service.</li>
+         * <li>finished: Indexing is complete and the URL can be retrieved.</li>
+         * <li>running: Indexing is in progress. Retry after a short while.</li>
+         * <li>failed: Transcoding failed. Check whether the file is a valid media file. If you have questions, contact customer service.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,7 +166,7 @@ public class VideoPreviewPlayInfo extends TeaModel {
         public String status;
 
         /**
-         * <p>Template ID.</p>
+         * <p>The template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>264_480p</p>
@@ -180,7 +175,7 @@ public class VideoPreviewPlayInfo extends TeaModel {
         public String templateId;
 
         /**
-         * <p>Playback URL.</p>
+         * <p>The playback URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.data.aliyunpds.com/lt/xxx/media.m3u8">https://example.data.aliyunpds.com/lt/xxx/media.m3u8</a></p>
@@ -229,7 +224,7 @@ public class VideoPreviewPlayInfo extends TeaModel {
 
     public static class VideoPreviewPlayInfoMeta extends TeaModel {
         /**
-         * <p>Video length.</p>
+         * <p>The video duration.</p>
          * 
          * <strong>example:</strong>
          * <p>4.2898</p>
@@ -238,7 +233,7 @@ public class VideoPreviewPlayInfo extends TeaModel {
         public Double duration;
 
         /**
-         * <p>Height of the video</p>
+         * <p>The video height.</p>
          * 
          * <strong>example:</strong>
          * <p>1080</p>
@@ -247,7 +242,7 @@ public class VideoPreviewPlayInfo extends TeaModel {
         public Long height;
 
         /**
-         * <p>Width of the video.</p>
+         * <p>The video width.</p>
          * 
          * <strong>example:</strong>
          * <p>1920</p>
@@ -288,12 +283,7 @@ public class VideoPreviewPlayInfo extends TeaModel {
 
     public static class VideoPreviewPlayInfoOfflineVideoTranscodingList extends TeaModel {
         /**
-         * <p>Whether the transcoded video has the same resolution as the source video.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>Indicates whether the transcoded video has the same resolution as the source video.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -311,7 +301,7 @@ public class VideoPreviewPlayInfo extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the template.</p>
+         * <p>The template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>264_1080p</p>
@@ -320,7 +310,7 @@ public class VideoPreviewPlayInfo extends TeaModel {
         public String templateId;
 
         /**
-         * <p>Playback URL.</p>
+         * <p>The playback URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.data.aliyunpds.com/xxx/master.mp4">https://example.data.aliyunpds.com/xxx/master.mp4</a></p>
@@ -371,9 +361,9 @@ public class VideoPreviewPlayInfo extends TeaModel {
         /**
          * <p>Valid values:</p>
          * <ul>
-         * <li>finished: The index is complete, and the url can be obtained.</li>
-         * <li>running: Indexing in progress. Wait a moment and try again.</li>
-         * <li>failed: Transcoding failed. Check the media file. If you have any questions, contact customer service.</li>
+         * <li>finished: Indexing is complete and the URL can be retrieved.</li>
+         * <li>running: Indexing is in progress. Retry after a short while.</li>
+         * <li>failed: Transcoding failed. Check whether the file is a valid media file. If you have questions, contact customer service.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -383,7 +373,7 @@ public class VideoPreviewPlayInfo extends TeaModel {
         public String status;
 
         /**
-         * <p>Template ID</p>
+         * <p>The template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>264_480p</p>
@@ -392,7 +382,7 @@ public class VideoPreviewPlayInfo extends TeaModel {
         public String templateId;
 
         /**
-         * <p>Playback URL.</p>
+         * <p>The playback URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.data.aliyunpds.com/qv/xxx/media.m3u8">https://example.data.aliyunpds.com/qv/xxx/media.m3u8</a></p>

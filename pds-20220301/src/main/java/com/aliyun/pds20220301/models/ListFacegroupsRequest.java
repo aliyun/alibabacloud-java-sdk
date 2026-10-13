@@ -24,7 +24,7 @@ public class ListFacegroupsRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker. By default, this parameter is left empty.</p>
+     * <p>The pagination token. The results are returned in alphabetical order, starting from the item that follows the specified token. If you omit this parameter, the query starts from the beginning.<br>Default value: None<br></p>
      * 
      * <strong>example:</strong>
      * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
@@ -33,11 +33,20 @@ public class ListFacegroupsRequest extends TeaModel {
     public String marker;
 
     /**
-     * <p>The filter condition that is used to query groups. The value can be up to 128 characters in length. An exact match is used.</p>
+     * <p>Filters query results by exactly matching the remarks. The maximum length is 128 characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>John Doe</p>
      */
     @NameInMap("remarks")
     public String remarks;
 
+    /**
+     * <p>Specifies whether to return the total count of face groups found.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("return_total_count")
     public Boolean returnTotalCount;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadPartInfo extends TeaModel {
     /**
-     * <p>This parameter is discontinued.</p>
+     * <p>This field is deprecated. Do not use it.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;0CC175B9C0F1B6A831C399E269772661&quot;</p>
@@ -14,7 +14,7 @@ public class UploadPartInfo extends TeaModel {
     public String etag;
 
     /**
-     * <p>The internal upload URL that is used for internal access over a virtual private cloud (VPC). If the intelligent domain name feature is enabled, this parameter is not required. This parameter is returned in the upload_url parameter based on the request. If you want to use this parameter, contact Photo and Drive Service (PDS) technical support.</p>
+     * <p>The internal upload URL, which is used for access from within a VPC network. After you enable the intelligent data domain feature, this field is no longer used. The value of this parameter is adaptively returned in the upload_url field based on the request. If you need to use this field, contact PDS technical support.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://data-vpc.aliyunpds.com/xxx/xxx?Expires=xxx&OSSAccessKeyId=xxx&Signature=xxx&partNumber=1&uploadId=0CC175B9C0F1B6A831C399E269772661">https://data-vpc.aliyunpds.com/xxx/xxx?Expires=xxx&amp;OSSAccessKeyId=xxx&amp;Signature=xxx&amp;partNumber=1&amp;uploadId=0CC175B9C0F1B6A831C399E269772661</a></p>
@@ -23,7 +23,7 @@ public class UploadPartInfo extends TeaModel {
     public String internalUploadUrl;
 
     /**
-     * <p>The Secure Hash Algorithm 1 (SHA-1) context of the previous part. This parameter takes effect only if the parallel upload feature is enabled.</p>
+     * <p>The SHA-1 context of the previous part. This field is valid only for parallel upload of multiple parts.</p>
      */
     @NameInMap("parallel_sha1_ctx")
     public UploadPartInfoParallelSha1Ctx parallelSha1Ctx;
@@ -35,7 +35,7 @@ public class UploadPartInfo extends TeaModel {
     public UploadPartInfoParallelSha256Ctx parallelSha256Ctx;
 
     /**
-     * <p>The serial number of the file part.</p>
+     * <p>The part number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class UploadPartInfo extends TeaModel {
     public Integer partNumber;
 
     /**
-     * <p>This parameter is discontinued.</p>
+     * <p>This field is deprecated. Do not use it.</p>
      * 
      * <strong>example:</strong>
      * <p>1024</p>
@@ -53,11 +53,14 @@ public class UploadPartInfo extends TeaModel {
     @NameInMap("part_size")
     public Long partSize;
 
+    /**
+     * <p>The form upload information.</p>
+     */
     @NameInMap("upload_form_info")
     public UploadFormInfo uploadFormInfo;
 
     /**
-     * <p>The upload URL. By default, the validity period of the URL is 15 minutes. If the URL expires, you must call the GetUploadUrl operation to obtain another URL. If the intelligent domain name feature is enabled, the internal_upload_url value is returned within the parameter based on the request.</p>
+     * <p>The upload URL. The URL is valid for 15 minutes by default. If the URL expires, you must call the GetUploadUrl operation again to obtain a new one. If you enable the intelligent data domain feature, the value of internal_upload_url is adaptively returned in this field based on the request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -137,13 +140,13 @@ public class UploadPartInfo extends TeaModel {
 
     public static class UploadPartInfoParallelSha1Ctx extends TeaModel {
         /**
-         * <p>The first to fifth 32-bit variables in the SHA-1 context of the previous part. This parameter takes effect only if the parallel upload feature is enabled.</p>
+         * <p>The first five 32-bit variables of the SHA-1 hash of the previous data block. This field is valid only for parallel upload of multiple parts.</p>
          */
         @NameInMap("h")
         public java.util.List<Long> h;
 
         /**
-         * <p>The total size of all the previous parts. Unit: bytes. The value must be a multiple of 64. This parameter takes effect only if the parallel upload feature is enabled.</p>
+         * <p>The total length of data up to the previous data block, in bytes. The value must be a multiple of 64. This field is valid only for parallel upload of multiple parts.</p>
          * 
          * <strong>example:</strong>
          * <p>10240</p>
@@ -176,13 +179,13 @@ public class UploadPartInfo extends TeaModel {
 
     public static class UploadPartInfoParallelSha256Ctx extends TeaModel {
         /**
-         * <p>The first to eighth 32-bit variables in the SHA-256 context of the previous part.</p>
+         * <p>The first eight 32-bit variables of the SHA-256 hash of the previous data block.</p>
          */
         @NameInMap("h")
         public java.util.List<Long> h;
 
         /**
-         * <p>The total size of all the previous parts. Unit: bytes. The value must be a multiple of 64.</p>
+         * <p>The total length of data up to the previous data block, in bytes. The value must be a multiple of 64.</p>
          */
         @NameInMap("part_offset")
         public Long partOffset;

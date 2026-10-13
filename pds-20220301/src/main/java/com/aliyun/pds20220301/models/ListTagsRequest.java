@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagsRequest extends TeaModel {
     /**
-     * <p>The drive ID.</p>
+     * <p>The ID of the drive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListTagsRequest extends TeaModel {
     public String driveId;
 
     /**
-     * <p>The method that is used to generate the thumbnail of an image.</p>
+     * <p>Specifies the processing style for image thumbnails.</p>
      * 
      * <strong>example:</strong>
      * <p>image/resize,w_200</p>
@@ -24,7 +24,7 @@ public class ListTagsRequest extends TeaModel {
     public String imageThumbnailProcess;
 
     /**
-     * <p>The method that is used to generate the thumbnail of a video.</p>
+     * <p>Specifies the processing style for video thumbnails.</p>
      * 
      * <strong>example:</strong>
      * <p>video/snapshot,t_7000,f_jpg,w_800,h_600,m_fast</p>

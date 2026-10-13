@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUploadUrlResponseBody extends TeaModel {
     /**
-     * <p>The time when the upload task was created.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-09-11T16:34:36.977Z</p>
@@ -41,13 +41,13 @@ public class GetUploadUrlResponseBody extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The information about the file parts.</p>
+     * <p>The list of upload parts.</p>
      */
     @NameInMap("part_info_list")
     public java.util.List<UploadPartInfo> partInfoList;
 
     /**
-     * <p>The ID of the upload task.</p>
+     * <p>The upload ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10166D06127B413BA1EC8ABB1144D111</p>

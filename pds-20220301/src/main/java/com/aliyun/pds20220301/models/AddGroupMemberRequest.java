@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddGroupMemberRequest extends TeaModel {
     /**
-     * <p>The ID of the destination group to which the member is added.</p>
+     * <p>The ID of the group to add a member to.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class AddGroupMemberRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The member ID. If member_type is set to user, set this parameter to a user ID.</p>
+     * <p>The user ID of the member to add.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,11 +25,11 @@ public class AddGroupMemberRequest extends TeaModel {
     public String memberId;
 
     /**
-     * <p>The type of the member. Set the value to user. When you create a group, you can directly add the group to a parent group.</p>
+     * <p>The type of member to add. For this operation, the only valid value is <code>user</code>. To add a group as a member of another group, you must specify the parent group when creating that group.</p>
      * <ul>
      * <li>user</li>
      * </ul>
-     * <p>Note: A group can be added to only one group. A user can be added to multiple groups.</p>
+     * <p>Note: A group can belong to only one parent group, but a user can belong to multiple groups.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

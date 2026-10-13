@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAssignmentRequest extends TeaModel {
     /**
-     * <p>The maximum number of results to return. Valid values: 1 to 100.</p>
-     * <p>The number of returned results must be less than or equal to the specified number.</p>
+     * <p>The maximum number of resources to return. Value range: [1, 100].</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -25,7 +24,15 @@ public class ListAssignmentRequest extends TeaModel {
     public String manageResourceId;
 
     /**
-     * <p>The type of the managed resource. Set the value to RT_Group, which specifies that the administrators of a group are queried.</p>
+     * <p>The type of the managed resource. Supported values include:</p>
+     * <ul>
+     * <li><p>RT_Group (group)</p>
+     * </li>
+     * <li><p>RT_KnowledgeBase (knowledge base)</p>
+     * </li>
+     * <li><p>RT_KnowledgeCategory (knowledge category)</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +42,7 @@ public class ListAssignmentRequest extends TeaModel {
     public String manageResourceType;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker. By default, this parameter is empty.</p>
+     * <p>The pagination marker. The response lists items in alphabetical order, starting after the specified marker. If you omit this parameter, the list starts from the beginning. Default: none.</p>
      * 
      * <strong>example:</strong>
      * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>

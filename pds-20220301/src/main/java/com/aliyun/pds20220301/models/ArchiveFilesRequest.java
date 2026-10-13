@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ArchiveFilesRequest extends TeaModel {
     /**
+     * <p>The ID of the drive that contains the files. You must specify either this parameter or <code>share_id</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,12 +14,14 @@ public class ArchiveFilesRequest extends TeaModel {
     public String driveId;
 
     /**
+     * <p>The list of files to be archived.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("file_ids")
     public java.util.List<String> fileIds;
 
     /**
+     * <p>The name of the generated archive file. The name must be UTF-8 encoded.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +31,8 @@ public class ArchiveFilesRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The share ID. This parameter is required when archiving files from a share.</p>
+     * 
      * <strong>example:</strong>
      * <p>7JQX1FswpQ8</p>
      */

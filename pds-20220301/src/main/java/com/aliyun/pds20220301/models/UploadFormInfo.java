@@ -4,9 +4,15 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class UploadFormInfo extends TeaModel {
+    /**
+     * <p>The request endpoint for the upload.</p>
+     */
     @NameInMap("endpoint")
     public String endpoint;
 
+    /**
+     * <p>The form fields for the upload.</p>
+     */
     @NameInMap("form_data")
     public java.util.Map<String, String> formData;
 

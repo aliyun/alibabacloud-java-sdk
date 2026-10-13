@@ -14,6 +14,12 @@ public class GetDomainRequest extends TeaModel {
     @NameInMap("domain_id")
     public String domainId;
 
+    /**
+     * <p>The domain property fields to obtain, separated by commas. An empty value indicates that no enumeration fields are obtained.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>file_category</p>
+     */
     @NameInMap("fields")
     public String fields;
 

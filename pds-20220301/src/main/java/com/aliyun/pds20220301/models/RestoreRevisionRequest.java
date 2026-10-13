@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RestoreRevisionRequest extends TeaModel {
     /**
-     * <p>The drive ID.</p>
+     * <p>The ID of the drive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class RestoreRevisionRequest extends TeaModel {
     public String driveId;
 
     /**
-     * <p>The file ID.</p>
+     * <p>The ID of the file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class RestoreRevisionRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The version ID.</p>
+     * <p>The ID of the revision.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

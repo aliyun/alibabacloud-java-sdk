@@ -15,7 +15,7 @@ public class ListAddressGroupsRequest extends TeaModel {
     public String driveId;
 
     /**
-     * <p>The method that is used to generate a thumbnail of an image.</p>
+     * <p>The image thumbnail processing style.</p>
      * 
      * <strong>example:</strong>
      * <p>image/resize,w_200</p>
@@ -24,7 +24,7 @@ public class ListAddressGroupsRequest extends TeaModel {
     public String imageThumbnailProcess;
 
     /**
-     * <p>The maximum number of results to return. Valid values: 1 to 100. Default value: 100.</p>
+     * <p>The maximum number of address groups to return. The default is 100. The value cannot exceed 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -33,7 +33,7 @@ public class ListAddressGroupsRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker. By default, this parameter is left empty.</p>
+     * <p>The pagination token that specifies the starting point of the query. The response returns results that are sorted alphabetically and appear after the token. If you do not specify this parameter, the query starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
@@ -42,7 +42,7 @@ public class ListAddressGroupsRequest extends TeaModel {
     public String marker;
 
     /**
-     * <p>The method that is used to generate a thumbnail of a video.</p>
+     * <p>The video thumbnail processing style.</p>
      * 
      * <strong>example:</strong>
      * <p>video_thumbnail_process</p>

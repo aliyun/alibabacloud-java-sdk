@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class User extends TeaModel {
     /**
-     * <p>The profile picture.</p>
+     * <p>The user\&quot;s avatar URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://aa.com/1.jpg">http://aa.com/1.jpg</a></p>
@@ -14,7 +14,7 @@ public class User extends TeaModel {
     public String avatar;
 
     /**
-     * <p>The time when the user was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The creation time, expressed in milliseconds since the Unix epoch (00:00:00 UTC on January 1, 1970).</p>
      * 
      * <strong>example:</strong>
      * <p>1639762579768</p>
@@ -23,7 +23,7 @@ public class User extends TeaModel {
     public Long createdAt;
 
     /**
-     * <p>The user who created the user.</p>
+     * <p>The creator of the user.</p>
      * 
      * <strong>example:</strong>
      * <p>user1</p>
@@ -32,7 +32,7 @@ public class User extends TeaModel {
     public String creator;
 
     /**
-     * <p>The default drive ID.</p>
+     * <p>The ID of the user\&quot;s default drive.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class User extends TeaModel {
     public String defaultDriveId;
 
     /**
-     * <p>The description of the user.</p>
+     * <p>A description of the user.</p>
      * 
      * <strong>example:</strong>
      * <p>vipuser</p>
@@ -59,7 +59,7 @@ public class User extends TeaModel {
     public String domainId;
 
     /**
-     * <p>The email address of the user.</p>
+     * <p>The user\&quot;s email address.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:a@aliyunpds.com">a@aliyunpds.com</a></p>
@@ -67,14 +67,20 @@ public class User extends TeaModel {
     @NameInMap("email")
     public String email;
 
+    /**
+     * <p>The user\&quot;s last login time, expressed in milliseconds since the Unix epoch (00:00:00 UTC on January 1, 1970).</p>
+     */
     @NameInMap("last_login_time")
     public Long lastLoginTime;
 
+    /**
+     * <p>The time the refresh token was last used, expressed in milliseconds since the Unix epoch (00:00:00 UTC on January 1, 1970).</p>
+     */
     @NameInMap("last_refresh_token_time")
     public Long lastRefreshTokenTime;
 
     /**
-     * <p>The nickname of the user.</p>
+     * <p>The user\&quot;s nickname.</p>
      * 
      * <strong>example:</strong>
      * <p>001</p>
@@ -83,7 +89,7 @@ public class User extends TeaModel {
     public String nickName;
 
     /**
-     * <p>The mobile number of the user.</p>
+     * <p>The user\&quot;s phone number.</p>
      * 
      * <strong>example:</strong>
      * <p>13900001111</p>
@@ -92,11 +98,14 @@ public class User extends TeaModel {
     public String phone;
 
     /**
-     * <p>The role of the user. Valid values:</p>
+     * <p>The user\&quot;s role. Valid values:</p>
      * <ul>
-     * <li>superadmin</li>
-     * <li>admin</li>
-     * <li>user</li>
+     * <li><p><code>superadmin</code>: A super administrator.</p>
+     * </li>
+     * <li><p><code>admin</code>: An administrator.</p>
+     * </li>
+     * <li><p><code>user</code>: A standard user.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -106,10 +115,12 @@ public class User extends TeaModel {
     public String role;
 
     /**
-     * <p>The status of the user. Valid values:</p>
+     * <p>The user\&quot;s status. Valid values:</p>
      * <ul>
-     * <li>disabled: The user is prohibited from logon.</li>
-     * <li>enabled: The user is in a normal state.</li>
+     * <li><p><code>disabled</code>: The user is disabled.</p>
+     * </li>
+     * <li><p><code>enabled</code>: The user is enabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -119,7 +130,7 @@ public class User extends TeaModel {
     public String status;
 
     /**
-     * <p>The time when the user was modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The update time, expressed in milliseconds since the Unix epoch (00:00:00 UTC on January 1, 1970).</p>
      * 
      * <strong>example:</strong>
      * <p>1639762579768</p>
@@ -128,7 +139,7 @@ public class User extends TeaModel {
     public Long updatedAt;
 
     /**
-     * <p>The custom data of the user.</p>
+     * <p>Custom user data, stored as a collection of key-value pairs.</p>
      */
     @NameInMap("user_data")
     public java.util.Map<String, String> userData;
@@ -143,7 +154,7 @@ public class User extends TeaModel {
     public String userId;
 
     /**
-     * <p>The name of the user.</p>
+     * <p>The user\&quot;s username.</p>
      * 
      * <strong>example:</strong>
      * <p>pds</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDeltaResponseBody extends TeaModel {
     /**
-     * <p>The cursor of the incremental information.</p>
+     * <p>The cursor.</p>
      * 
      * <strong>example:</strong>
      * <p>1WQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
@@ -14,7 +14,7 @@ public class ListDeltaResponseBody extends TeaModel {
     public String cursor;
 
     /**
-     * <p>Indicates whether more information is returned.</p>
+     * <p>Indicates whether more information is available.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class ListDeltaResponseBody extends TeaModel {
     public Boolean hasMore;
 
     /**
-     * <p>The incremental information returned.</p>
+     * <p>The list of incremental information.</p>
      */
     @NameInMap("items")
     public java.util.List<ListDeltaResponseBodyItems> items;
@@ -59,7 +59,7 @@ public class ListDeltaResponseBody extends TeaModel {
 
     public static class ListDeltaResponseBodyItems extends TeaModel {
         /**
-         * <p>The information about the file.</p>
+         * <p>The information about the involved file.</p>
          */
         @NameInMap("file")
         public File file;
@@ -74,7 +74,7 @@ public class ListDeltaResponseBody extends TeaModel {
         public String fileId;
 
         /**
-         * <p>The operation that is performed. Valid values: Valid values:</p>
+         * <p>The operation that was performed. Valid values:</p>
          * <ul>
          * <li>create</li>
          * <li>overwrite</li>

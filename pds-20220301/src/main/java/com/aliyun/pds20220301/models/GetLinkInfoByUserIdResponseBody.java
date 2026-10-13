@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLinkInfoByUserIdResponseBody extends TeaModel {
     /**
-     * <p>The information about the users.</p>
+     * <p>List of user account information.</p>
      */
     @NameInMap("items")
     public java.util.List<AccountLinkInfo> items;

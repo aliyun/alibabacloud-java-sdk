@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLinkInfoRequest extends TeaModel {
     /**
-     * <p>The additional information about the unique identifier of the account. For example, if type is set to mobile, set the value of extra to a country code.</p>
+     * <p>Additional information for the unique identifier. For example, if the account type is <code>mobile</code>, this is the country calling code.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class GetLinkInfoRequest extends TeaModel {
     public String extra;
 
     /**
-     * <p>The unique identifier of the account, such as a mobile number.</p>
+     * <p>The account\&quot;s unique identifier, such as a mobile number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,13 +26,20 @@ public class GetLinkInfoRequest extends TeaModel {
     /**
      * <p>The account type. Valid values:</p>
      * <ul>
-     * <li>mobile: a mobile number.</li>
-     * <li>email: an email address.</li>
-     * <li>ding: a DingTalk account.</li>
-     * <li>ram: an Alibaba Cloud Resource Access Management (RAM) user.</li>
-     * <li>wechat: a WeCom account.</li>
-     * <li>ldap: a Lightweight Directory Access Protocol (LDAP) account.</li>
-     * <li>custom: a custom account.</li>
+     * <li><p><code>mobile</code>: A mobile number.</p>
+     * </li>
+     * <li><p><code>email</code>: An email address.</p>
+     * </li>
+     * <li><p><code>ding</code>: A DingTalk account.</p>
+     * </li>
+     * <li><p><code>ram</code>: An Alibaba Cloud RAM user.</p>
+     * </li>
+     * <li><p><code>wechat</code>: A WeCom account.</p>
+     * </li>
+     * <li><p><code>ldap</code>: An LDAP account.</p>
+     * </li>
+     * <li><p><code>custom</code>: A custom account.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

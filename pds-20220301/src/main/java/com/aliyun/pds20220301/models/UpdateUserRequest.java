@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdateUserRequest extends TeaModel {
     /**
-     * <p>The URL of the profile picture.</p>
-     * <p>If you specify the parameter in the HTTP URL format, the URL must start with http:// or https:// and can be up to 4 KB in size.</p>
-     * <p>If you specify the parameter in the DATA URL format, the URL must start with data:// and be encoded in Base64. The URL can be up to 300 KB in size.</p>
+     * <p>The URL of the avatar.</p>
+     * <p>HTTP URLs must start with <code>http://</code> or <code>https://</code> and be 4 KB or smaller.</p>
+     * <p>Data URLs must start with <code>data://</code>, be Base64-encoded, and be 300 KB or smaller.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://a.b.c/pds.jpg">http://a.b.c/pds.jpg</a></p>
@@ -16,13 +16,16 @@ public class UpdateUserRequest extends TeaModel {
     public String avatar;
 
     /**
-     * <p>The description of the user. The description can be up to 1,024 characters in length.</p>
+     * <p>The description. The maximum length is 1,024 characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Vip user</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The email address of the user.</p>
+     * <p>The email address.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:a@aliyunpds.com">a@aliyunpds.com</a></p>
@@ -31,13 +34,13 @@ public class UpdateUserRequest extends TeaModel {
     public String email;
 
     /**
-     * <p>The information about the group.</p>
+     * <p>The group list.</p>
      */
     @NameInMap("group_info_list")
     public java.util.List<UpdateUserRequestGroupInfoList> groupInfoList;
 
     /**
-     * <p>The nickname of the user. The nickname can be up to 128 characters in length.</p>
+     * <p>The nickname. The maximum length is 128 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>pdsuer</p>
@@ -46,7 +49,7 @@ public class UpdateUserRequest extends TeaModel {
     public String nickName;
 
     /**
-     * <p>The mobile number of the user.</p>
+     * <p>The mobile number.</p>
      * 
      * <strong>example:</strong>
      * <p>13900001111</p>
@@ -55,11 +58,14 @@ public class UpdateUserRequest extends TeaModel {
     public String phone;
 
     /**
-     * <p>The role of the user. Valid values:</p>
+     * <p>The role. Valid values:</p>
      * <ul>
-     * <li>superadmin</li>
-     * <li>admin</li>
-     * <li>user</li>
+     * <li><p><code>superadmin</code>: super administrator</p>
+     * </li>
+     * <li><p><code>admin</code>: administrator</p>
+     * </li>
+     * <li><p><code>user</code>: regular user</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,10 +75,12 @@ public class UpdateUserRequest extends TeaModel {
     public String role;
 
     /**
-     * <p>The state of the user. Valid values:</p>
+     * <p>The user status. Valid values:</p>
      * <ul>
-     * <li>disabled: The user is prohibited from logon.</li>
-     * <li>enabled: The user is in a normal state.</li>
+     * <li><p><code>disabled</code></p>
+     * </li>
+     * <li><p><code>enabled</code></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,13 +90,13 @@ public class UpdateUserRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The custom data. The data can be up to 1,024 characters in length.</p>
+     * <p>The custom user data. The maximum length is 1,024 characters.</p>
      */
     @NameInMap("user_data")
     public java.util.Map<String, String> userData;
 
     /**
-     * <p>The user ID. The ID can be up to 64 characters in length and cannot contain a number sign (#).</p>
+     * <p>The user ID. The maximum length is 64 characters. The value cannot contain the <code>#</code> character.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

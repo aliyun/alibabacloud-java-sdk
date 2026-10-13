@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListMyGroupDriveResponseBody extends TeaModel {
     /**
-     * <p>The information about the team drives.</p>
+     * <p>A list of group drives.</p>
      */
     @NameInMap("items")
     public java.util.List<Drive> items;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If next_marker is empty, no next page exists.</p>
+     * <p>The pagination token to retrieve the next page of results. If this parameter is empty, no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
@@ -19,6 +19,9 @@ public class ListMyGroupDriveResponseBody extends TeaModel {
     @NameInMap("next_marker")
     public String nextMarker;
 
+    /**
+     * <p>The root group drive.</p>
+     */
     @NameInMap("root_group_drive")
     public Drive rootGroupDrive;
 

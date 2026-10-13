@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class LinkAccountRequest extends TeaModel {
     /**
-     * <p>The additional information about the unique identifier of the account. For example, if type is set to mobile, set the value of extra to a country code. For example, a value of 86 specifies a mobile number in the Chinese mainland. If you do not specify this parameter, 86 is used by default.</p>
+     * <p>Additional information for the unique identifier. For example, if the account uses a mobile phone number, this field contains the region code. The default value is 86 for the Chinese mainland.</p>
      * 
      * <strong>example:</strong>
      * <p>86</p>
@@ -14,7 +14,7 @@ public class LinkAccountRequest extends TeaModel {
     public String extra;
 
     /**
-     * <p>The unique identifier of the account, such as a mobile number.</p>
+     * <p>Unique identifier for the account, such as a mobile phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,15 +24,22 @@ public class LinkAccountRequest extends TeaModel {
     public String identity;
 
     /**
-     * <p>The account type. Valid values:</p>
+     * <p>Account type.</p>
      * <ul>
-     * <li>mobile: a mobile number.</li>
-     * <li>email: an email address.</li>
-     * <li>ding: a DingTalk account.</li>
-     * <li>ram: an Alibaba Cloud Resource Access Management (RAM) user.</li>
-     * <li>wechat: a WeCom account.</li>
-     * <li>ldap: a Lightweight Directory Access Protocol (LDAP) account.</li>
-     * <li>custom: a custom account.</li>
+     * <li><p>mobile: mobile phone number</p>
+     * </li>
+     * <li><p>email: email address</p>
+     * </li>
+     * <li><p>ding: DingTalk</p>
+     * </li>
+     * <li><p>ram: Alibaba Cloud RAM sub-account</p>
+     * </li>
+     * <li><p>wechat: WeCom</p>
+     * </li>
+     * <li><p>ldap: LDAP account</p>
+     * </li>
+     * <li><p>custom: custom account</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -43,7 +50,7 @@ public class LinkAccountRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The ID of the user with which you want to associate an account.</p>
+     * <p>User ID to attach.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

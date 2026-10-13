@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CopyFileRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically rename the file if the file name already exists in the destination folder. Default value: false.</p>
+     * <p>Specifies whether to automatically rename the file if a file with the same name already exists in the destination folder. Default: false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -33,7 +33,7 @@ public class CopyFileRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The share ID. If you want to manage a file by using a share link, carry the <code>x-share-token</code> header for authentication in the request and specify share_id. In this case, <code>drive_id</code> is invalid. Otherwise, use an <code>AccessKey pair</code> or <code>access token</code> for authentication and specify <code>drive_id</code>. You must specify one of <code>share_id</code> and <code>drive_id</code>.</p>
+     * <p>The share ID. If you access a file through a share, include the <code>x-share-token</code> header for authentication and specify this parameter. In this case, the <code>drive_id</code> parameter is ignored. Alternatively, authenticate with an AccessKey pair or an access token and specify the <code>drive_id</code> parameter. You must specify either the <code>share_id</code> or <code>drive_id</code> parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>7JQX1FswpQ8</p>
@@ -42,7 +42,7 @@ public class CopyFileRequest extends TeaModel {
     public String shareId;
 
     /**
-     * <p>The ID of the drive to which you want to copy the file or folder. Default value: the value of drive_id.</p>
+     * <p>The ID of the destination drive. By default, this parameter is set to the value of <code>drive_id</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,7 +51,7 @@ public class CopyFileRequest extends TeaModel {
     public String toDriveId;
 
     /**
-     * <p>The ID of the destination parent folder. If you want to copy the file or folder to a root directory, set this parameter to root.</p>
+     * <p>The ID of the destination parent folder. To copy a file or folder to the root directory, set this parameter to <code>root</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

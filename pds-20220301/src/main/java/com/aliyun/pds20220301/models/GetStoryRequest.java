@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetStoryRequest extends TeaModel {
     /**
+     * <p>The processing parameters for the cover image thumbnail.</p>
+     * 
      * <strong>example:</strong>
      * <p>image/resize,m_fill,h_128,w_128,limit_0/format,jpg</p>
      */
@@ -13,6 +15,8 @@ public class GetStoryRequest extends TeaModel {
     public String coverImageThumbnailProcess;
 
     /**
+     * <p>The processing parameters for the cover video thumbnail.</p>
+     * 
      * <strong>example:</strong>
      * <p>video/snapshot,t_1000,f_jpg,w_0,h_0,m_fast,ar_auto</p>
      */
@@ -21,6 +25,7 @@ public class GetStoryRequest extends TeaModel {
     public String coverVideoThumbnailProcess;
 
     /**
+     * <p>The ID of the drive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +35,8 @@ public class GetStoryRequest extends TeaModel {
     public String driveId;
 
     /**
+     * <p>The processing parameters for the thumbnails of images in the story.</p>
+     * 
      * <strong>example:</strong>
      * <p>image/resize,m_fill,h_128,w_128,limit_0/format,jpg</p>
      */
@@ -38,6 +45,8 @@ public class GetStoryRequest extends TeaModel {
     public String imageThumbnailProcess;
 
     /**
+     * <p>The processing parameters for the URLs of images in the story.</p>
+     * 
      * <strong>example:</strong>
      * <p>image/resize,m_fill,h_128,w_128,limit_0/format,jpg</p>
      */
@@ -46,6 +55,7 @@ public class GetStoryRequest extends TeaModel {
     public String imageUrlProcess;
 
     /**
+     * <p>The ID of the story.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +65,9 @@ public class GetStoryRequest extends TeaModel {
     public String storyId;
 
     /**
+     * <p>The expiration time of the thumbnail URL in seconds. The value must be an integer from 10 to 86,400.</p>
+     * <p>Default value: 900.</p>
+     * 
      * <strong>example:</strong>
      * <p>900</p>
      */
@@ -63,6 +76,8 @@ public class GetStoryRequest extends TeaModel {
     public Long urlExpireSec;
 
     /**
+     * <p>The processing parameters for the thumbnails of videos in the story.</p>
+     * 
      * <strong>example:</strong>
      * <p>video/snapshot,t_1000,f_jpg,w_0,h_0,m_fast,ar_auto</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchResponseBody extends TeaModel {
     /**
-     * <p>All responses of the child requests.</p>
+     * <p>A collection of responses to the subrequests.</p>
      */
     @NameInMap("responses")
     public java.util.List<BatchResponseBodyResponses> responses;
@@ -25,13 +25,13 @@ public class BatchResponseBody extends TeaModel {
 
     public static class BatchResponseBodyResponses extends TeaModel {
         /**
-         * <p>The response parameters of a child request. For more information, see the topic of the corresponding child request.</p>
+         * <p>The response body of the subrequest. For details, refer to the documentation for the specific API operation.</p>
          */
         @NameInMap("body")
         public java.util.Map<String, ?> body;
 
         /**
-         * <p>The ID of the child request. The ID is used to associate a child request with a response.</p>
+         * <p>The ID of the subrequest that this response corresponds to.</p>
          * 
          * <strong>example:</strong>
          * <p>93433894994ad2e1</p>
@@ -40,7 +40,7 @@ public class BatchResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The returned HTTP status code of a child request. For more information, see the topic of the corresponding child request.</p>
+         * <p>The HTTP status code of the subrequest. For details, refer to the documentation for the specific API operation.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>

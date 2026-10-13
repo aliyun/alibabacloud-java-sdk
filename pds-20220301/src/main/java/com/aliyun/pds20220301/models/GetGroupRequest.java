@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetGroupRequest extends TeaModel {
     /**
-     * <p>The group ID.</p>
+     * <p>The ID of the group to retrieve.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

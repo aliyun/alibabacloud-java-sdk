@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Domain extends TeaModel {
     /**
-     * <p>The time when the domain was created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+     * <p>The time when the domain was created. The time is in the ISO 8601 format. Example: 2019-03-28T13:03:29.298Z.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-08-20T06:51:27.292Z</p>
@@ -14,7 +14,7 @@ public class Domain extends TeaModel {
     public String createdAt;
 
     /**
-     * <p>The method used to calculate the hash value of the data.</p>
+     * <p>The name of the algorithm that is used to calculate the data hash value.</p>
      * 
      * <strong>example:</strong>
      * <p>sha1</p>
@@ -32,7 +32,7 @@ public class Domain extends TeaModel {
     public String description;
 
     /**
-     * <p>domain ID</p>
+     * <p>The ID of the domain.</p>
      * 
      * <strong>example:</strong>
      * <p>bj2</p>
@@ -50,7 +50,7 @@ public class Domain extends TeaModel {
     public String domainName;
 
     /**
-     * <p>Specifies whether to enable the default drive feature. Valid values: true and false. A value of true specifies that all users are assigned a drive by default on the first logon. Default value: false.</p>
+     * <p>Specifies whether to automatically create a default drive for each user when they first log on. The default value is false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -59,7 +59,7 @@ public class Domain extends TeaModel {
     public Boolean initDriveEnable;
 
     /**
-     * <p>The size of the default drive. Unit: bytes. This parameter is required if you set init_drive_enable to true. Default value: 0. A value of 0 indicates that the size of the default drive is 0 byte and you cannot upload files to the drive. To initialize the default drive, set init_drive_size to a positive number or -1. A value of -1 indicates that the size is unlimited.</p>
+     * <p>The size of the default drive in bytes. This parameter is required if <code>init_drive_enable</code> is set to <code>true</code>. The default value is <code>0</code>, which specifies that the drive is 0 bytes in size and files cannot be uploaded. To initialize the drive, set this parameter to a non-zero value. A value of -1 indicates an unlimited size.</p>
      * 
      * <strong>example:</strong>
      * <p>1073741824</p>
@@ -68,7 +68,7 @@ public class Domain extends TeaModel {
     public Long initDriveSize;
 
     /**
-     * <p>The ID of the parent domain. If the parent domain exists, the current domain is a child domain. Otherwise, the current domain is a common domain.</p>
+     * <p>The ID of the parent domain. If specified, the domain is a child domain. Otherwise, it is a standard domain.</p>
      * 
      * <strong>example:</strong>
      * <p>bj1</p>
@@ -77,19 +77,19 @@ public class Domain extends TeaModel {
     public String parentDomainId;
 
     /**
-     * <p>The access policy of the application.</p>
+     * <p>The access policy of applications.</p>
      */
     @NameInMap("published_app_access_strategy")
     public AppAccessStrategy publishedAppAccessStrategy;
 
     /**
-     * <p>Specifies whether to enable sharing.</p>
+     * <p>Indicates whether sharing is enabled.</p>
      */
     @NameInMap("sharable")
     public Boolean sharable;
 
     /**
-     * <p>The total storage quota for all drives in the domain. A value of 0 indicates that the quota is unlimited.</p>
+     * <p>The total quota of all drives in the domain. A value of 0 indicates that the quota is unlimited.</p>
      * 
      * <strong>example:</strong>
      * <p>1099511627776</p>
@@ -98,7 +98,7 @@ public class Domain extends TeaModel {
     public Long sizeQuota;
 
     /**
-     * <p>The used storage quota of all drives in the domain.</p>
+     * <p>The used quota of all drives.</p>
      * 
      * <strong>example:</strong>
      * <p>1099511627776</p>
@@ -107,7 +107,7 @@ public class Domain extends TeaModel {
     public Long sizeQuotaUsed;
 
     /**
-     * <p>The status of the domain. 1: The domain runs normally. 2: The domain is being created. 6: The domain has expired.</p>
+     * <p>The status of the domain. Valid values: 1: enabled. 2: being created. 6: expired.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -116,6 +116,8 @@ public class Domain extends TeaModel {
     public Long status;
 
     /**
+     * <p>The storage redundancy type.</p>
+     * 
      * <strong>example:</strong>
      * <p>LRS</p>
      */
@@ -123,7 +125,7 @@ public class Domain extends TeaModel {
     public String storeRedundancyType;
 
     /**
-     * <p>The time when the domain was last modified. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+     * <p>The time when the domain was last modified. The time is in the ISO 8601 format. Example: 2019-04-08T07:05:18.825Z.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-08-20T06:51:27.292Z</p>
@@ -132,7 +134,7 @@ public class Domain extends TeaModel {
     public String updatedAt;
 
     /**
-     * <p>The usage of the logic space. Unit: bytes.</p>
+     * <p>The used logical space in bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>1099511627776</p>
@@ -141,7 +143,7 @@ public class Domain extends TeaModel {
     public Long usedSize;
 
     /**
-     * <p>The maximum allowed number of users.</p>
+     * <p>The quota of users.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>

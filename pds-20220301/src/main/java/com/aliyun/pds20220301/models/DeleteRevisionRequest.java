@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteRevisionRequest extends TeaModel {
     /**
-     * <p>The drive ID.</p>
+     * <p>Drive ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteRevisionRequest extends TeaModel {
     public String driveId;
 
     /**
-     * <p>The file ID.</p>
+     * <p>File ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DeleteRevisionRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The version ID.</p>
+     * <p>Revision ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

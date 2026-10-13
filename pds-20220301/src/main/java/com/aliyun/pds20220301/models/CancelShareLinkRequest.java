@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelShareLinkRequest extends TeaModel {
     /**
-     * <p>The share ID.</p>
+     * <p>The ID of the share link.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

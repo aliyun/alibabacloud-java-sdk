@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class MoveFileResponseBody extends TeaModel {
     /**
-     * <p>The ID of the asynchronous task.</p>
-     * <p>If an empty string is returned, the file is moved.</p>
-     * <p>If a non-empty string is returned, an asynchronous task is required. You can call the GetAsyncTask operation to obtain the information about an asynchronous task based on the task ID.</p>
+     * <p>The asynchronous task ID.</p>
+     * <p>If an empty string is returned, the file or folder is moved directly.</p>
+     * <p>If a non-empty string is returned, the move requires asynchronous processing. Call GetAsyncTask and pass the asynchronous task ID to retrieve the task information.</p>
      * 
      * <strong>example:</strong>
      * <p>23ebd1a24dba4166b1527add476ef2866051b4d5del106</p>
@@ -34,7 +34,7 @@ public class MoveFileResponseBody extends TeaModel {
     public String driveId;
 
     /**
-     * <p>Indicates whether the file already exists in the destination directory.</p>
+     * <p>Indicates whether the file already exists.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

@@ -50,7 +50,7 @@ public class CreateFileResponseBody extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The ID of the parent directory.</p>
+     * <p>The parent folder ID.</p>
      * 
      * <strong>example:</strong>
      * <p>fileid5</p>
@@ -59,13 +59,13 @@ public class CreateFileResponseBody extends TeaModel {
     public String parentFileId;
 
     /**
-     * <p>The information about the file parts.</p>
+     * <p>The list of part information.</p>
      */
     @NameInMap("part_info_list")
     public java.util.List<UploadPartInfo> partInfoList;
 
     /**
-     * <p>Indicates whether the file is instantly uploaded.</p>
+     * <p>Indicates whether the file was rapidly uploaded.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -74,7 +74,7 @@ public class CreateFileResponseBody extends TeaModel {
     public Boolean rapidUpload;
 
     /**
-     * <p>The state of the file.</p>
+     * <p>The file status.</p>
      * 
      * <strong>example:</strong>
      * <p>uploading</p>
@@ -83,7 +83,7 @@ public class CreateFileResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The type of the file.</p>
+     * <p>The file type.</p>
      * 
      * <strong>example:</strong>
      * <p>file</p>
@@ -92,7 +92,7 @@ public class CreateFileResponseBody extends TeaModel {
     public String type;
 
     /**
-     * <p>The ID of the upload task.</p>
+     * <p>The upload ID.</p>
      * 
      * <strong>example:</strong>
      * <p>uploadid1</p>

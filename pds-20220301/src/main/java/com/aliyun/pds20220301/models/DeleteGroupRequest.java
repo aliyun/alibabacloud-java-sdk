@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteGroupRequest extends TeaModel {
     /**
-     * <p>The group ID.</p>
+     * <p>The ID of the group to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

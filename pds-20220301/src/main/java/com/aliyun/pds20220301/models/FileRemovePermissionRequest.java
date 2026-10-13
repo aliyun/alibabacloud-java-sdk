@@ -25,7 +25,7 @@ public class FileRemovePermissionRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The identities with whom the file is shared.</p>
+     * <p>The members whose permissions you want to remove.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("member_list")
@@ -62,27 +62,27 @@ public class FileRemovePermissionRequest extends TeaModel {
 
     public static class FileRemovePermissionRequestMemberList extends TeaModel {
         /**
-         * <p>The identity to whom the permissions are granted, which is a user or a group.</p>
+         * <p>The identity from which to revoke the permission. An identity can be a user or a user group.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("identity")
         public Identity identity;
 
         /**
-         * <p>The role ID. You can grant permissions by assigning roles to identities, or you can customize the permissions. To grant permissions by assigning roles to identities, specify role_id. role_id and action_list are mutually exclusive. If both parameters are specified, role_id has a higher priority.</p>
+         * <p>The ID of the role to remove. This parameter is mutually exclusive with <code>action_list</code>. If both are specified, <code>role_id</code> takes precedence.</p>
          * <p>Valid values:</p>
-         * <p>SystemFileOwner: collaborator.</p>
-         * <p>SystemFileDownloader: downloader.</p>
-         * <p>SystemFileEditor: editor.</p>
-         * <p>SystemFileEditorWithoutDelete: editor without permissions to delete the file.</p>
-         * <p>SystemFileEditorWithoutShareLink: editor without permissions to share the file.</p>
-         * <p>SystemFileMetaViewer: viewer of lists.</p>
-         * <p>SystemFileUploader: uploader. SystemFileUploaderAndDownloader: uploader and downloader.</p>
-         * <p>SystemFileDownloaderWithShareLink: downloader and sharer.</p>
-         * <p>SystemFileUploaderAndDownloaderWithShareLink: uploader, downloader, and sharer.</p>
-         * <p>SystemFileUploaderAndViewer: viewer and uploader.</p>
-         * <p>SystemFileUploaderWithShareLink: uploader and sharer.</p>
-         * <p>SystemFileViewer: viewer.</p>
+         * <p><code>SystemFileOwner</code> (file collaborator)</p>
+         * <p><code>SystemFileDownloader</code> (downloader)</p>
+         * <p><code>SystemFileEditor</code> (editor)</p>
+         * <p><code>SystemFileEditorWithoutDelete</code> (editor without delete permission)</p>
+         * <p><code>SystemFileEditorWithoutShareLink</code> (editor without share permission)</p>
+         * <p><code>SystemFileMetaViewer</code> (list viewer)</p>
+         * <p><code>SystemFileUploader</code> (uploader), and <code>SystemFileUploaderAndDownloader</code> (uploader/downloader)</p>
+         * <p><code>SystemFileDownloaderWithShareLink</code> (downloader/sharer)</p>
+         * <p><code>SystemFileUploaderAndDownloaderWithShareLink</code> (uploader/downloader/sharer)</p>
+         * <p><code>SystemFileUploaderAndViewer</code> (viewer/uploader)</p>
+         * <p><code>SystemFileUploaderWithShareLink</code> (uploader/sharer)</p>
+         * <p><code>SystemFileViewer</code> (viewer)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

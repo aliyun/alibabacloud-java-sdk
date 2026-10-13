@@ -14,7 +14,7 @@ public class GetVideoPreviewPlayMetaResponseBody extends TeaModel {
     public String domainId;
 
     /**
-     * <p>The drive ID.</p>
+     * <p>The ID of the drive.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class GetVideoPreviewPlayMetaResponseBody extends TeaModel {
     public String driveId;
 
     /**
-     * <p>The file ID.</p>
+     * <p>The ID of the file.</p>
      * 
      * <strong>example:</strong>
      * <p>fileid1</p>
@@ -32,7 +32,7 @@ public class GetVideoPreviewPlayMetaResponseBody extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The share ID.</p>
+     * <p>The ID of the share.</p>
      * 
      * <strong>example:</strong>
      * <p>7JQX1FswpQ8</p>
@@ -41,7 +41,7 @@ public class GetVideoPreviewPlayMetaResponseBody extends TeaModel {
     public String shareId;
 
     /**
-     * <p>The preview metadata of the video.</p>
+     * <p>The playback metadata.</p>
      */
     @NameInMap("video_preview_play_meta")
     public VideoPreviewPlayMeta videoPreviewPlayMeta;

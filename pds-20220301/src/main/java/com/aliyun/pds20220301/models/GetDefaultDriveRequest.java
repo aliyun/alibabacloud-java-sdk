@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDefaultDriveRequest extends TeaModel {
     /**
-     * <p>The user ID. If you use an AccessKey pair for authentication, you must specify this parameter. If you use an access token for authentication, this parameter is optional. By default, the user ID associated with the access token is used.</p>
+     * <p>The user ID. This parameter is required when you use an AK but optional when you use an access token. If omitted, the ID of the user associated with the access token is used.</p>
      * 
      * <strong>example:</strong>
      * <p>c9b7a5aa04d14ae3867fdc886fa01da4</p>

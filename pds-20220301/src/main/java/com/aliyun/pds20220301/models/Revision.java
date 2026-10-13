@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Revision extends TeaModel {
     /**
-     * <p>The hash value of the content.</p>
+     * <p>The content hash.</p>
      * 
      * <strong>example:</strong>
      * <p>EA4942AA8761213890A5C386F88E6464D2C31CA3</p>
@@ -14,7 +14,7 @@ public class Revision extends TeaModel {
     public String contentHash;
 
     /**
-     * <p>The name of the hash algorithm.</p>
+     * <p>The content hash algorithm name.</p>
      * 
      * <strong>example:</strong>
      * <p>sha1</p>
@@ -23,7 +23,7 @@ public class Revision extends TeaModel {
     public String contentHashName;
 
     /**
-     * <p>The CRC64 value of the version.</p>
+     * <p>crc64</p>
      * 
      * <strong>example:</strong>
      * <p>3574582125365864471</p>
@@ -32,7 +32,7 @@ public class Revision extends TeaModel {
     public String crc64Hash;
 
     /**
-     * <p>The time when the version was created.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-08-20T06:51:27.292Z</p>
@@ -40,15 +40,9 @@ public class Revision extends TeaModel {
     @NameInMap("created_at")
     public String createdAt;
 
-    /**
-     * <p>The ID of the user who created the version.</p>
-     */
     @NameInMap("creator_id")
     public String creatorId;
 
-    /**
-     * <p>The name of the user who created the version.</p>
-     */
     @NameInMap("creator_name")
     public String creatorName;
 
@@ -62,7 +56,7 @@ public class Revision extends TeaModel {
     public String domainId;
 
     /**
-     * <p>The download URL. The ListRevision operation does not return this value. The GetRevision, UpdateRevision, and RestoreRevision operations return this value.</p>
+     * <p>The download URL. This field is not returned by ListRevision, but is returned by GetRevision, UpdateRevision, and RestoreRevision.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899eff525?Expires=xxx&OSSAccessKeyId=xxx&Signature=xxx">https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899eff525?Expires=xxx&amp;OSSAccessKeyId=xxx&amp;Signature=xxx</a></p>
@@ -80,7 +74,7 @@ public class Revision extends TeaModel {
     public String driveId;
 
     /**
-     * <p>The file extension.</p>
+     * <p>The file name extension.</p>
      * 
      * <strong>example:</strong>
      * <p>mov</p>
@@ -98,7 +92,7 @@ public class Revision extends TeaModel {
     public String fileId;
 
     /**
-     * <p>Indicates whether it is the latest version.</p>
+     * <p>Indicates whether the revision is the latest version.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -107,7 +101,7 @@ public class Revision extends TeaModel {
     public Boolean isLatestVersion;
 
     /**
-     * <p>Indicates whether the version is permanently retained.</p>
+     * <p>Indicates whether the revision is permanently retained.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -116,7 +110,7 @@ public class Revision extends TeaModel {
     public Boolean keepForever;
 
     /**
-     * <p>The description of the version.</p>
+     * <p>The revision description.</p>
      * 
      * <strong>example:</strong>
      * <p>aaa</p>
@@ -125,7 +119,7 @@ public class Revision extends TeaModel {
     public String revisionDescription;
 
     /**
-     * <p>The version ID.</p>
+     * <p>The revision ID.</p>
      * 
      * <strong>example:</strong>
      * <p>40CB7794C929</p>
@@ -134,7 +128,7 @@ public class Revision extends TeaModel {
     public String revisionId;
 
     /**
-     * <p>The version name.</p>
+     * <p>The revision name.</p>
      * 
      * <strong>example:</strong>
      * <p>1.mov</p>
@@ -152,7 +146,7 @@ public class Revision extends TeaModel {
     public Long revisionVersion;
 
     /**
-     * <p>The version size.</p>
+     * <p>The revision size.</p>
      * 
      * <strong>example:</strong>
      * <p>1024</p>
@@ -161,7 +155,7 @@ public class Revision extends TeaModel {
     public Long size;
 
     /**
-     * <p>The URL of the thumbnail.</p>
+     * <p>The thumbnail URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899eff525?Expires=xxx&OSSAccessKeyId=xxx&Signature=xxx">https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899eff525?Expires=xxx&amp;OSSAccessKeyId=xxx&amp;Signature=xxx</a></p>
@@ -170,7 +164,7 @@ public class Revision extends TeaModel {
     public String thumbnail;
 
     /**
-     * <p>The time when the version was modified.</p>
+     * <p>The modification time.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-08-20T06:51:27.292Z</p>

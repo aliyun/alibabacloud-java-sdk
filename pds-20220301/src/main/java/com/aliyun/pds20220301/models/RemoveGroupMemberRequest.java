@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveGroupMemberRequest extends TeaModel {
     /**
-     * <p>The ID of the group from which you want to remove a member.</p>
+     * <p>The ID of the group to remove the member from.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class RemoveGroupMemberRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The ID of the member. If member_type is set to user, set this parameter to the ID of the corresponding user.</p>
+     * <p>The member ID. If <code>member_type</code> is <code>user</code>, this is the <code>userID</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,11 +25,11 @@ public class RemoveGroupMemberRequest extends TeaModel {
     public String memberId;
 
     /**
-     * <p>The type of the member that you want to remove from the group. Only common users can be removed. If you want to remove all members from a group, you can directly delete the group. Valid value:</p>
+     * <p>The member type. This operation only removes users. To remove a member that is a group, delete the group instead.</p>
      * <ul>
      * <li>user</li>
      * </ul>
-     * <p>Note: A group can be a member of only one group. It cannot be a member of multiple groups. A user can be a member of multiple groups.</p>
+     * <p>Note: A group can be a member of only one other group. A user can be a member of multiple groups.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

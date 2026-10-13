@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddStoryFilesRequest extends TeaModel {
     /**
+     * <p>The drive ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,14 @@ public class AddStoryFilesRequest extends TeaModel {
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>The files to add to the story.</p>
+     */
     @NameInMap("files")
     public java.util.List<AddStoryFilesRequestFiles> files;
 
     /**
+     * <p>The story ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,6 +61,7 @@ public class AddStoryFilesRequest extends TeaModel {
 
     public static class AddStoryFilesRequestFiles extends TeaModel {
         /**
+         * <p>The file ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -65,6 +71,8 @@ public class AddStoryFilesRequest extends TeaModel {
         public String fileId;
 
         /**
+         * <p>The revision ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>642a88dd06e49d9c0a14411ebae606f70edd9a59</p>
          */

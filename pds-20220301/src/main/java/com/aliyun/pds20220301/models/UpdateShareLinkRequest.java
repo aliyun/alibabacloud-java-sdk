@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdateShareLinkRequest extends TeaModel {
     /**
-     * <p>The description of the share link. The description can be up to 1,024 characters in length.</p>
+     * <p>The description of the share link, which can be up to 1,024 characters long.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Complete lecture series</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>Specifies whether to prohibit the downloads of the shared files.</p>
+     * <p>Whether to prevent users from downloading files from the share.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -20,7 +23,7 @@ public class UpdateShareLinkRequest extends TeaModel {
     public Boolean disableDownload;
 
     /**
-     * <p>Specifies whether to prohibit the previews of the shared files.</p>
+     * <p>Whether to disable previews for the share.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -29,7 +32,7 @@ public class UpdateShareLinkRequest extends TeaModel {
     public Boolean disablePreview;
 
     /**
-     * <p>Specifies whether to prohibit the saves of the shared files.</p>
+     * <p>Whether to prevent users from saving files from the share.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -38,7 +41,7 @@ public class UpdateShareLinkRequest extends TeaModel {
     public Boolean disableSave;
 
     /**
-     * <p>The number of times that the shared files are downloaded. The value must be greater than or equal to 0.</p>
+     * <p>The download count. The value must be greater than or equal to 0.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -47,7 +50,7 @@ public class UpdateShareLinkRequest extends TeaModel {
     public Long downloadCount;
 
     /**
-     * <p>The maximum number of times that the shared files can be downloaded. The value must be greater than or equal to 0. A value of 0 specifies that the number is unlimited.</p>
+     * <p>The maximum number of times the shared content can be downloaded. The value must be greater than or equal to 0. A value of 0 indicates no limit.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -56,7 +59,7 @@ public class UpdateShareLinkRequest extends TeaModel {
     public Long downloadLimit;
 
     /**
-     * <p>The time when the share link expires. The time follows the RFC 3339 standard. Example: 2020-06-28T11:33:00.000+08:00. If you leave this parameter empty, the share link never expires.</p>
+     * <p>The expiration time. The value must be in RFC 3339 format, for example, <code>2020-06-28T11:33:00.000+08:00</code>. An empty string (&quot;&quot;) indicates that the share link never expires.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-06-28T11:33:00.000+08:00</p>
@@ -64,11 +67,17 @@ public class UpdateShareLinkRequest extends TeaModel {
     @NameInMap("expiration")
     public String expiration;
 
+    /**
+     * <p>Whether to allow online editing of the shared documents.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("office_editable")
     public Boolean officeEditable;
 
     /**
-     * <p>The number of times that the shared files are previewed. The value must be greater than or equal to 0.</p>
+     * <p>The preview count. The value must be greater than or equal to 0.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -77,7 +86,7 @@ public class UpdateShareLinkRequest extends TeaModel {
     public Long previewCount;
 
     /**
-     * <p>The maximum number of times that the shared files can be previewed. The value must be greater than or equal to 0. A value of 0 specifies that the number is unlimited.</p>
+     * <p>The maximum number of times the shared content can be previewed. The value must be greater than or equal to 0. A value of 0 indicates no limit.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -86,7 +95,7 @@ public class UpdateShareLinkRequest extends TeaModel {
     public Long previewLimit;
 
     /**
-     * <p>The number of times that the shared files are reported. The value must be greater than or equal to 0.</p>
+     * <p>The report count. The value must be greater than or equal to 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -95,7 +104,7 @@ public class UpdateShareLinkRequest extends TeaModel {
     public Long reportCount;
 
     /**
-     * <p>The number of times that the shared files are saved. The value must be greater than or equal to 0.</p>
+     * <p>The save count. The value must be greater than or equal to 0.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -104,7 +113,7 @@ public class UpdateShareLinkRequest extends TeaModel {
     public Long saveCount;
 
     /**
-     * <p>The maximum number of times that the shared files can be saved. The value must be greater than or equal to 0. A value of 0 specifies that the number is unlimited.</p>
+     * <p>The maximum number of times the shared content can be saved. The value must be greater than or equal to 0. A value of 0 indicates no limit.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -123,13 +132,16 @@ public class UpdateShareLinkRequest extends TeaModel {
     public String shareId;
 
     /**
-     * <p>The name of the share link. By default, the name of the first file is used. The name can be up to 128 characters in length.</p>
+     * <p>The share name. If not specified, the name of the first file is used by default. The name must be 0 to 128 characters long.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Lecture-1.mp4</p>
      */
     @NameInMap("share_name")
     public String shareName;
 
     /**
-     * <p>The access code. The access code can be up to 64 characters in length. A value of 0 specifies an empty string.</p>
+     * <p>The share password. The password must be 0 to 64 characters long. An empty string (&quot;&quot;) indicates no password is required.</p>
      * 
      * <strong>example:</strong>
      * <p>abcF123x</p>
@@ -138,10 +150,12 @@ public class UpdateShareLinkRequest extends TeaModel {
     public String sharePwd;
 
     /**
-     * <p>The state of the share link. Valid values:</p>
+     * <p>The status of the share link. Valid values:</p>
      * <ul>
-     * <li>disabled: The share link is canceled.</li>
-     * <li>enabled: The share link is effective.</li>
+     * <li><p><code>disabled</code>: The share is canceled.</p>
+     * </li>
+     * <li><p><code>enabled</code>: The share is active.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -151,7 +165,7 @@ public class UpdateShareLinkRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The number of times that the videos are previewed in the shared files. The value must be greater than or equal to 0.</p>
+     * <p>The video preview count. The value must be greater than or equal to 0.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

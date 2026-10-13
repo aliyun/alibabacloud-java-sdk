@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateUserRequest extends TeaModel {
     /**
-     * <p>The URL of the profile picture.</p>
-     * <p>If you specify the parameter in the HTTP URL format, the URL must start with http:// or https:// and can be up to 4 KB in size.</p>
-     * <p>If you specify the parameter in the data URL format, the URL must start with data:// and be encoded in Base64. The URL can be up to 300 KB in size.</p>
+     * <p>The user\&quot;s avatar.</p>
+     * <p>HTTP URLs must start with <code>http://</code> or <code>https://</code> and must not exceed 4 KB.</p>
+     * <p>Data URIs must start with <code>data://</code>, be Base64-encoded, and must not exceed 300 KB.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://a.b.c/pds.jpg">http://a.b.c/pds.jpg</a></p>
@@ -16,16 +16,16 @@ public class CreateUserRequest extends TeaModel {
     public String avatar;
 
     /**
-     * <p>The description of the user. The description can be up to 1,024 characters in length.</p>
+     * <p>The user description. It can be up to 1,024 characters long.</p>
      * 
      * <strong>example:</strong>
-     * <p>The VIP user</p>
+     * <p>VIP user</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The email address.</p>
+     * <p>The user\&quot;s email address.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:123@pds.com">123@pds.com</a></p>
@@ -34,13 +34,13 @@ public class CreateUserRequest extends TeaModel {
     public String email;
 
     /**
-     * <p>The information about the group.</p>
+     * <p>The group information.</p>
      */
     @NameInMap("group_info_list")
     public java.util.List<CreateUserRequestGroupInfoList> groupInfoList;
 
     /**
-     * <p>The nickname of the user. The nickname can be up to 128 characters in length.</p>
+     * <p>The user\&quot;s nickname. The nickname cannot exceed 128 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>pdsuer</p>
@@ -49,7 +49,7 @@ public class CreateUserRequest extends TeaModel {
     public String nickName;
 
     /**
-     * <p>The phone number.</p>
+     * <p>The user\&quot;s phone number.</p>
      * 
      * <strong>example:</strong>
      * <p>13900001111</p>
@@ -58,50 +58,16 @@ public class CreateUserRequest extends TeaModel {
     public String phone;
 
     /**
-     * <p>The role of the user. Default value: user. Valid values:</p>
+     * <p>The user\&quot;s role. The default value is <code>user</code>.</p>
      * <ul>
-     * <li>superadmin</li>
-     * <li>admin</li>
-     * <li>user</li>
+     * <li><p><code>superadmin</code>: The super administrator.</p>
+     * </li>
+     * <li><p><code>admin</code>: An administrator.</p>
+     * </li>
+     * <li><p><code>user</code>: A standard user.</p>
+     * </li>
      * </ul>
-     * <p>If the domain can be divided into subdomains, the subdomain_super_admin and subdomain_admin roles are also supported.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>subdomain_super_admin</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>subdomain_admin</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>superadmin</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>admin</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>user</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>If the current domain supports subdomains, the <code>subdomain_super_admin</code> and <code>subdomain_admin</code> roles are also available.</p>
      * 
      * <strong>example:</strong>
      * <p>user</p>
@@ -110,10 +76,12 @@ public class CreateUserRequest extends TeaModel {
     public String role;
 
     /**
-     * <p>The state of the user. Default value: enabled. Valid values:</p>
+     * <p>The user status. The default value is <code>enabled</code>.</p>
      * <ul>
-     * <li>enabled: The user is in a normal state.</li>
-     * <li>disabled: The user is prohibited from logon.</li>
+     * <li><p><code>enabled</code> (The user is active)</p>
+     * </li>
+     * <li><p><code>disabled</code> (The user cannot log in)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -123,7 +91,7 @@ public class CreateUserRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The custom data. The data can be up to 1,024 characters in length.</p>
+     * <p>User-defined data, which can be up to 1,024 characters long.</p>
      * 
      * <strong>example:</strong>
      * <p>md</p>
@@ -132,7 +100,7 @@ public class CreateUserRequest extends TeaModel {
     public java.util.Map<String, ?> userData;
 
     /**
-     * <p>The user ID. The ID can be up to 64 characters in length and cannot contain number signs (#).</p>
+     * <p>The user ID. The ID can be up to 64 characters long and must not contain the &quot;#&quot; character.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -142,7 +110,7 @@ public class CreateUserRequest extends TeaModel {
     public String userId;
 
     /**
-     * <p>The username. The username can be up to 128 characters in length.</p>
+     * <p>The username. The maximum length is 128 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>pdsusername</p>

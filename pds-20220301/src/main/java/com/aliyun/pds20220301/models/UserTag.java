@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UserTag extends TeaModel {
     /**
-     * <p>The tag key. This parameter must be specified and the tag key cannot contain number signs (#). The tag key and tag value cannot exceed 2,000 bytes in length in total.</p>
+     * <p>Key. Required. Must not contain the # character. The combined length of key and value in a single tag must not exceed 2000 bytes.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,7 @@ public class UserTag extends TeaModel {
     public String key;
 
     /**
+     * <p>Value</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("value")

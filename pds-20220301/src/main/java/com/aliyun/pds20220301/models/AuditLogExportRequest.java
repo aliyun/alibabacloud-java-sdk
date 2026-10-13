@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AuditLogExportRequest extends TeaModel {
     /**
-     * <p>The name of the exported file. The name can be up to 1,024 characters in length. The default name suffix is log.csv.</p>
+     * <p>The name of the exported file. The name can be up to 1,024 characters in length. The default value is <code>log.csv</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-log.csv</p>
@@ -14,10 +14,12 @@ public class AuditLogExportRequest extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The export language. Default value: zh-CN. Valid values:</p>
+     * <p>The language of the exported file. Default: zh_CN (Chinese). Valid values:</p>
      * <ul>
-     * <li>zh-CN: Chinese</li>
-     * <li>en_US: English</li>
+     * <li><p><code>zh_CN</code>: Chinese</p>
+     * </li>
+     * <li><p><code>en_US</code>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,10 +29,12 @@ public class AuditLogExportRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The sort order based on the operation time. If you leave this parameter empty, the value acted_at DESC is used. Valid values:</p>
+     * <p>The sort field. You can sort by the operation time (<code>acted_at</code>). If this parameter is not specified, the results are sorted by operation time in descending order. Valid values:</p>
      * <ul>
-     * <li>acted_at DESC: sorts the entries by operation time in descending order</li>
-     * <li>acted_at ASC: sorts the entries by operation time in ascending order</li>
+     * <li><p><code>acted_at DESC</code>: Sorts by operation time in descending order.</p>
+     * </li>
+     * <li><p><code>acted_at ASC</code>: Sorts by operation time in ascending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,12 +44,16 @@ public class AuditLogExportRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The fields used for query. You can specify one or more of the following fields:</p>
+     * <p>Query audit logs by using a combination of the following fields:</p>
      * <ul>
-     * <li>drive_id (space ID, in the form of a string)</li>
-     * <li>actor_id (operator ID, in the form of a string)</li>
-     * <li>acted_at (operation time, in the yyyy-MM-ddTHH:mm:ssZ format in UTC, for example, 2006-01-02T00:00:00)</li>
-     * <li>action_type (operation type, in the form of a string)</li>
+     * <li><p><code>drive_id</code> (string): The drive ID.</p>
+     * </li>
+     * <li><p><code>actor_id</code> (string): The actor ID.</p>
+     * </li>
+     * <li><p><code>acted_at</code> (date): The operation time. The time must be in UTC and specified in the <code>YYYY-MM-DDTHH:mm:ss</code> format.</p>
+     * </li>
+     * <li><p><code>action_type</code> (string): The operation type.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

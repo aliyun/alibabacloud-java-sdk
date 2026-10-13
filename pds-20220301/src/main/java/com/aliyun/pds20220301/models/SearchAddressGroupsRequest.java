@@ -5,56 +5,25 @@ import com.aliyun.tea.*;
 
 public class SearchAddressGroupsRequest extends TeaModel {
     /**
-     * <p>The level of the location.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>country</p>
-     * <!-- -->
+     * <p>The address level for the query.</p>
      * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>province</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>city</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>district</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>township</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <strong>example:</strong>
+     * <p>city</p>
      */
     @NameInMap("address_level")
     public String addressLevel;
 
     /**
-     * <p>The locations.</p>
+     * <p>A list of address names.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;Hangzhou&quot;,&quot;Beijing&quot;]</p>
      */
     @NameInMap("address_names")
     public java.util.List<String> addressNames;
 
     /**
-     * <p>The coordinates of the bottom right vertex of the rectangle. Set the value in the format of latitude,longitude.</p>
+     * <p>The bottom-right point of the rectangle (latitude, longitude).</p>
      * 
      * <strong>example:</strong>
      * <p>40.121,105.2121</p>
@@ -73,7 +42,7 @@ public class SearchAddressGroupsRequest extends TeaModel {
     public String driveId;
 
     /**
-     * <p>The method used to generate the thumbnail of an image.</p>
+     * <p>The processing style for image thumbnails.</p>
      * 
      * <strong>example:</strong>
      * <p>image/resize,w_200</p>
@@ -82,7 +51,7 @@ public class SearchAddressGroupsRequest extends TeaModel {
     public String imageThumbnailProcess;
 
     /**
-     * <p>The coordinates of the top left vertex of the rectangle. Set the value in the format of latitude,longitude.</p>
+     * <p>The top-left point of the rectangle (latitude, longitude).</p>
      * 
      * <strong>example:</strong>
      * <p>39.121,101.2121</p>
@@ -91,7 +60,7 @@ public class SearchAddressGroupsRequest extends TeaModel {
     public String tlGeoPoint;
 
     /**
-     * <p>The method used to generate the thumbnail of a video.</p>
+     * <p>The processing style for video thumbnails.</p>
      * 
      * <strong>example:</strong>
      * <p>video/snapshot,t_7000,f_jpg,w_800,h_600,m_fast</p>

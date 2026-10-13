@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SearchStoriesRequest extends TeaModel {
     /**
+     * <p>The parameters for processing the thumbnail of the cover image.</p>
+     * 
      * <strong>example:</strong>
      * <p>image/resize,m_fill,h_128,w_128,limit_0/format,jpg</p>
      */
@@ -13,6 +15,8 @@ public class SearchStoriesRequest extends TeaModel {
     public String coverImageThumbnailProcess;
 
     /**
+     * <p>The parameters for processing the thumbnail of the cover video.</p>
+     * 
      * <strong>example:</strong>
      * <p>video/snapshot,t_1000,f_jpg,w_0,h_0,m_fast,ar_auto</p>
      */
@@ -21,6 +25,8 @@ public class SearchStoriesRequest extends TeaModel {
     public String coverVideoThumbnailProcess;
 
     /**
+     * <p>The time range when the story was created.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -28,6 +34,8 @@ public class SearchStoriesRequest extends TeaModel {
     public SearchStoriesRequestCreateTimeRange createTimeRange;
 
     /**
+     * <p>Custom labels. You can query multiple fields separated by commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>key1=value1,key2!=value2</p>
      */
@@ -36,6 +44,7 @@ public class SearchStoriesRequest extends TeaModel {
     public String customLabels;
 
     /**
+     * <p>The drive ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,10 +53,15 @@ public class SearchStoriesRequest extends TeaModel {
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>The list of face groups. This parameter is used to query people stories.</p>
+     */
     @NameInMap("face_group_ids")
     public java.util.List<String> faceGroupIds;
 
     /**
+     * <p>The maximum number of resources to return. Valid values: 1 to 100. Default value: 100. The number of returned resources can be less than the specified number, but cannot be greater than the specified number.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -55,6 +69,8 @@ public class SearchStoriesRequest extends TeaModel {
     public Long limit;
 
     /**
+     * <p>The pagination marker. If this parameter is empty, the query starts from the beginning.</p>
+     * 
      * <strong>example:</strong>
      * <p>NWQ1Yjk4YmI1ZDODBhNDQ2Nzhl***</p>
      */
@@ -62,6 +78,8 @@ public class SearchStoriesRequest extends TeaModel {
     public String marker;
 
     /**
+     * <p>The sort order.</p>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -69,6 +87,8 @@ public class SearchStoriesRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The sort field.</p>
+     * 
      * <strong>example:</strong>
      * <p>CreateTime</p>
      */
@@ -76,6 +96,8 @@ public class SearchStoriesRequest extends TeaModel {
     public String sort;
 
     /**
+     * <p>The time range of the end time of the photos or videos in a story.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -83,16 +105,26 @@ public class SearchStoriesRequest extends TeaModel {
     public SearchStoriesRequestStoryEndTimeRange storyEndTimeRange;
 
     /**
+     * <p>The story ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9132e0d8-fe92-4e56-86c3-f5f112308003</p>
      */
     @NameInMap("story_id")
     public String storyId;
 
+    /**
+     * <p>The name of the story. The name can be up to 1,024 bytes in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Food</p>
+     */
     @NameInMap("story_name")
     public String storyName;
 
     /**
+     * <p>The time range of the start time of the photos or videos in a story.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -100,6 +132,8 @@ public class SearchStoriesRequest extends TeaModel {
     public SearchStoriesRequestStoryStartTimeRange storyStartTimeRange;
 
     /**
+     * <p>The type of the story. You can specify this parameter when you create a story.</p>
+     * 
      * <strong>example:</strong>
      * <p>PeopleMemory</p>
      */
@@ -107,6 +141,8 @@ public class SearchStoriesRequest extends TeaModel {
     public String storyType;
 
     /**
+     * <p>The validity period of the thumbnail URL. Unit: seconds. Valid values: 10 to 86400.</p>
+     * 
      * <strong>example:</strong>
      * <p>900</p>
      */
@@ -115,6 +151,8 @@ public class SearchStoriesRequest extends TeaModel {
     public Long urlExpireSec;
 
     /**
+     * <p>Specifies whether to return empty stories. Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      * 
@@ -271,6 +309,8 @@ public class SearchStoriesRequest extends TeaModel {
 
     public static class SearchStoriesRequestCreateTimeRange extends TeaModel {
         /**
+         * <p>The end time in RFC 3339 format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-12-31T00:00:00+08:00</p>
          */
@@ -278,6 +318,8 @@ public class SearchStoriesRequest extends TeaModel {
         public String end;
 
         /**
+         * <p>The start time in RFC 3339 format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2016-12-31T00:00:00+08:00</p>
          */
@@ -309,6 +351,8 @@ public class SearchStoriesRequest extends TeaModel {
 
     public static class SearchStoriesRequestStoryEndTimeRange extends TeaModel {
         /**
+         * <p>The end time in RFC 3339 format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-12-31T00:00:00+08:00</p>
          */
@@ -316,6 +360,8 @@ public class SearchStoriesRequest extends TeaModel {
         public String end;
 
         /**
+         * <p>The start time in RFC 3339 format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2016-12-31T00:00:00+08:00</p>
          */
@@ -347,6 +393,8 @@ public class SearchStoriesRequest extends TeaModel {
 
     public static class SearchStoriesRequestStoryStartTimeRange extends TeaModel {
         /**
+         * <p>The end time in RFC 3339 format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-12-31T00:00:00+08:00</p>
          */
@@ -354,6 +402,8 @@ public class SearchStoriesRequest extends TeaModel {
         public String end;
 
         /**
+         * <p>The start time in RFC 3339 format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2016-12-31T00:00:00+08:00</p>
          */

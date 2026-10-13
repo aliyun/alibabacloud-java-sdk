@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateFacegroupRequest extends TeaModel {
     /**
-     * <p>The drive ID.</p>
+     * <p>The ID of the drive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateFacegroupRequest extends TeaModel {
     public String driveId;
 
     /**
-     * <p>The face ID of the thumbnail of the face-based group. You can obtain the face ID from the <strong>image_media_metadata</strong> parameter in the returned results of the GetFile, ListFile, or SearchFile operation.</p>
+     * <p>The ID of the group cover face. You can obtain this ID from the <strong>ImageMediaMetadata</strong> field in the response from the file/get, file/list, or file/search operations.</p>
      * 
      * <strong>example:</strong>
      * <p>face1</p>
@@ -24,7 +24,7 @@ public class UpdateFacegroupRequest extends TeaModel {
     public String groupCoverFaceId;
 
     /**
-     * <p>The ID of the face-based group. You can call the ListFacegroups operation to query the group ID.</p>
+     * <p>The ID of the face group. You can obtain this ID in the response from the list face groups operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,13 +34,19 @@ public class UpdateFacegroupRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The name of the face-based group. The name can be up to 128 characters in length.</p>
+     * <p>The name of the face group. The name can be up to 128 characters long.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Face of John</p>
      */
     @NameInMap("group_name")
     public String groupName;
 
     /**
-     * <p>The remarks. The remarks can be up to 128 characters in length.</p>
+     * <p>Remarks about the face group. The remarks can be up to 128 characters long.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>John Doe</p>
      */
     @NameInMap("remarks")
     public String remarks;

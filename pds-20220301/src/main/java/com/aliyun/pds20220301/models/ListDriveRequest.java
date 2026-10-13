@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDriveRequest extends TeaModel {
     /**
-     * <p>The maximum number of results to return. Valid values: 1 to 100. Default value: 100.</p>
+     * <p>The maximum number of drives to return. Valid values: 1 to 100. Default: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -14,7 +14,7 @@ public class ListDriveRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker. By default, this parameter is empty.</p>
+     * <p>The pagination marker. If specified, the query starts from the drive that follows the marker in alphabetical order. If omitted, the query starts from the beginning of the list.</p>
      * 
      * <strong>example:</strong>
      * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
@@ -23,7 +23,7 @@ public class ListDriveRequest extends TeaModel {
     public String marker;
 
     /**
-     * <p>The owner of the drive. If this parameter is not specified, all drives are returned.</p>
+     * <p>The ID of the owner. If omitted, drives of all owners are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>c9b7a5aa04d14ae3867fdc886fa01da4</p>
@@ -32,9 +32,9 @@ public class ListDriveRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The type of the owner. Valid values:</p>
-     * <p>user and group.</p>
-     * <p>By default, drives of all owner types are returned.</p>
+     * <p>The owner type. Valid values:</p>
+     * <p>user: An individual user.<br>group: A user group.<br></p>
+     * <p>If omitted, drives of all owner types are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>user</p>

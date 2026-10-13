@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetShareLinkByAnonymousRequest extends TeaModel {
     /**
-     * <p>The share ID.</p>
+     * <p>The ID of the share.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

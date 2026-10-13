@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImportUserRequest extends TeaModel {
     /**
-     * <p>The display name of the authentication type.</p>
+     * <p>The display name of the authentication method.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -14,15 +14,22 @@ public class ImportUserRequest extends TeaModel {
     public String authenticationDisplayName;
 
     /**
-     * <p>The authentication type. Valid values:</p>
+     * <p>The authentication type. Valid values are:</p>
      * <ul>
-     * <li>mobile: mobile number.</li>
-     * <li>email: email address.</li>
-     * <li>ding: DingTalk account.</li>
-     * <li>ram: Alibaba Cloud Resource Access Management (RAM) user.</li>
-     * <li>wechat: WeCom account.</li>
-     * <li>ldap: Lightweight Directory Access Protocol (LDAP) account.</li>
-     * <li>custom: custom account.</li>
+     * <li><p><code>mobile</code>: a mobile number.</p>
+     * </li>
+     * <li><p><code>email</code>: an email address.</p>
+     * </li>
+     * <li><p><code>ding</code>: a DingTalk account.</p>
+     * </li>
+     * <li><p><code>ram</code>: an Alibaba Cloud RAM sub-account.</p>
+     * </li>
+     * <li><p><code>wechat</code>: a WeCom account.</p>
+     * </li>
+     * <li><p><code>ldap</code>: an LDAP account.</p>
+     * </li>
+     * <li><p><code>custom</code>: a custom account.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -33,7 +40,7 @@ public class ImportUserRequest extends TeaModel {
     public String authenticationType;
 
     /**
-     * <p>Specifies whether to automatically create a drive.</p>
+     * <p>Specifies whether to automatically create a drive for the user.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -42,7 +49,7 @@ public class ImportUserRequest extends TeaModel {
     public Boolean autoCreateDrive;
 
     /**
-     * <p>The size of the drive. The value cannot be smaller than -1. A value of -1 specifies that the size is unlimited.</p>
+     * <p>The total size of the drive. The value must be an integer that is greater than or equal to <code>-1</code>. A value of <code>-1</code> indicates an unlimited size.</p>
      * 
      * <strong>example:</strong>
      * <p>10240</p>
@@ -51,8 +58,8 @@ public class ImportUserRequest extends TeaModel {
     public Long driveTotalSize;
 
     /**
-     * <p>The additional information.</p>
-     * <p>If authentication_type is set to mobile, set this parameter to a country code. If you do not specify this parameter, 86 is used by default.</p>
+     * <p>Extra information.</p>
+     * <p>If <code>authentication_type</code> is <code>mobile</code>, this parameter specifies the country code. The default is <code>86</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -61,7 +68,7 @@ public class ImportUserRequest extends TeaModel {
     public String extra;
 
     /**
-     * <p>The unique identifier.</p>
+     * <p>The unique identifier for the user.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,7 +88,7 @@ public class ImportUserRequest extends TeaModel {
     public String nickName;
 
     /**
-     * <p>The ID of the group to which the user is added.</p>
+     * <p>The ID of the group to add the user to.</p>
      * 
      * <strong>example:</strong>
      * <p>g12</p>

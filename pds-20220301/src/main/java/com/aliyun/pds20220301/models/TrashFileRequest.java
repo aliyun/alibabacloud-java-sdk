@@ -15,7 +15,7 @@ public class TrashFileRequest extends TeaModel {
     public String driveId;
 
     /**
-     * <p>The ID of the file or folder.</p>
+     * <p>The file or folder ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

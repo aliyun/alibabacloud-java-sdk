@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateFileRequest extends TeaModel {
     /**
-     * <p>The processing method that is used if the file that you want to modify has the same name as an existing file on the cloud. Valid values:</p>
-     * <p>ignore: allows you to modify the file by using the same name as an existing file on the cloud.</p>
-     * <p>auto_rename: automatically renames the file that has the same name on the cloud. By default, the current point in time is added to the end of the file name. Example: xxx_20060102_150405.</p>
-     * <p>refuse: does not modify the file that you want to modify but returns the information about the file that has the same name on the cloud.</p>
-     * <p>Default value: ignore.</p>
+     * <p>The naming policy to apply when a file with the same name already exists. Valid values:</p>
+     * <p><code>ignore</code>: Allow the duplicate file name.</p>
+     * <p><code>auto_rename</code>: Automatically rename the file by appending a timestamp. Example: <code>xxx_20060102_150405</code>.</p>
+     * <p><code>refuse</code>: Reject the request and return the details of the existing file.</p>
+     * <p>Default value: <code>ignore</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>ignore</p>
@@ -18,7 +18,10 @@ public class UpdateFileRequest extends TeaModel {
     public String checkNameMode;
 
     /**
-     * <p>The description of the file. The description can be up to 1,024 characters in length.</p>
+     * <p>The description of the file. Maximum length: 1,024 characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VIP user</p>
      */
     @NameInMap("description")
     public String description;
@@ -44,7 +47,7 @@ public class UpdateFileRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>Specifies whether to hide the file.</p>
+     * <p>Specifies whether the file is hidden.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -53,13 +56,13 @@ public class UpdateFileRequest extends TeaModel {
     public Boolean hidden;
 
     /**
-     * <p>The tags of the file. You can specify up to 100 tags.</p>
+     * <p>The labels of the file. A maximum of 100 labels are allowed.</p>
      */
     @NameInMap("labels")
     public java.util.List<String> labels;
 
     /**
-     * <p>The local time when the file was modified. The time is in the yyyy-MM-ddTHH:mm:ssZ format based on the UTC+0 time zone.</p>
+     * <p>The modification time of the file on the local device. Specify a UTC timestamp in ISO 8601 format: <code>YYYY-MM-DDTHH:mm:ssZ</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-08-20T06:51:27.292Z</p>
@@ -68,7 +71,7 @@ public class UpdateFileRequest extends TeaModel {
     public String localModifiedAt;
 
     /**
-     * <p>The name of the file. The name can be up to 1,024 bytes in length based on the UTF-8 encoding rule.</p>
+     * <p>The name of the file. The value must be UTF-8 encoded and no longer than 1,024 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>a.jpg</p>
@@ -77,7 +80,7 @@ public class UpdateFileRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Specifies whether to add the file to favorites.</p>
+     * <p>Specifies whether the file is starred.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -10,6 +10,9 @@ public class CreateOrderRequest extends TeaModel {
     @NameInMap("auto_renew")
     public Boolean autoRenew;
 
+    @NameInMap("auto_use_coupon")
+    public Boolean autoUseCoupon;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -77,6 +80,14 @@ public class CreateOrderRequest extends TeaModel {
     }
     public Boolean getAutoRenew() {
         return this.autoRenew;
+    }
+
+    public CreateOrderRequest setAutoUseCoupon(Boolean autoUseCoupon) {
+        this.autoUseCoupon = autoUseCoupon;
+        return this;
+    }
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
     }
 
     public CreateOrderRequest setCode(String code) {

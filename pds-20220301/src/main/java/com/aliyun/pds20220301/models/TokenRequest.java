@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TokenRequest extends TeaModel {
     /**
-     * <p>The JWT assertion that is signed by using the JWT private key. The JWT assertion contains the information about the user to be authorized and the authorization parameters. For more information about the structure of the JWT assertion, see JWTPayload. This parameter is required if grant_type is set to urn:ietf:params:oauth:grant-type:jwt-bearer.</p>
+     * <p>A JWT-signed string that contains user information and authorization parameters to be granted. For the structure, see JWTPayload. This parameter is required when <code>grant_type</code> is <code>urn:ietf:params:oauth:grant-type:jwt-bearer</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>ey***asd</p>
@@ -14,7 +14,7 @@ public class TokenRequest extends TeaModel {
     public String assertion;
 
     /**
-     * <p>The AppId of the application that is created in the Drive and Photo Service console.</p>
+     * <p>The ID of the app you create in the Alibaba Cloud PDS console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class TokenRequest extends TeaModel {
     public String clientId;
 
     /**
-     * <p>The AppSecret of the application that is created in the Drive and Photo Service console. This parameter is required if the application is of the WebServer type.</p>
+     * <p>The secret of the app you create in the Alibaba Cloud PDS console. This parameter is required for WebServer applications.</p>
      * 
      * <strong>example:</strong>
      * <p>80D***3i5</p>
@@ -33,7 +33,7 @@ public class TokenRequest extends TeaModel {
     public String clientSecret;
 
     /**
-     * <p>The authorization code in the redirect URI that is specified after the authorization process is complete. This parameter is required if grant_type is set to authorization_code.</p>
+     * <p>The authorization code returned in the redirect URI after successful authentication. This parameter is required when <code>grant_type</code> is <code>authorization_code</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>0045157fa8e24f4f9a0d9e3ff158c1e0</p>
@@ -42,10 +42,10 @@ public class TokenRequest extends TeaModel {
     public String code;
 
     /**
-     * <p>The method that is used to generate an access token. Valid values:</p>
-     * <p>authorization_code: generates an access token by using the authorization code that is returned after the authorization process is complete.</p>
-     * <p>refresh_token: generates an access token by using the refresh token that is returned after the authorization process is complete.</p>
-     * <p>urn:ietf:params:oauth:grant-type:jwt-bearer: generates an access token by using a JWT assertion.</p>
+     * <p>The grant type. Valid values:</p>
+     * <p><code>authorization_code</code>: Exchanges an authorization code, returned after successful authentication, for an access token.</p>
+     * <p><code>refresh_token</code>: Uses a refresh token from a previous authorization to obtain a new access token.</p>
+     * <p><code>urn:ietf:params:oauth:grant-type:jwt-bearer</code>: Obtains an access token by using a JWT.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class TokenRequest extends TeaModel {
     public String grantType;
 
     /**
-     * <p>The redirect URI that is specified when you initiate the authorization request. This parameter is required if grant_type is set to authorization_code.</p>
+     * <p>The redirect URI used in the authorization request. This parameter is required when <code>grant_type</code> is <code>authorization_code</code>.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://aliyun.com/pds">https://aliyun.com/pds</a></p>
@@ -64,7 +64,7 @@ public class TokenRequest extends TeaModel {
     public String redirectUri;
 
     /**
-     * <p>The refresh token that is used to refresh the access token. This parameter is required if grant_type is set to refresh_token.</p>
+     * <p>The token used to refresh an access token. This parameter is required when <code>grant_type</code> is <code>refresh_token</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>399623e13353490391266c7d48a13ed1</p>

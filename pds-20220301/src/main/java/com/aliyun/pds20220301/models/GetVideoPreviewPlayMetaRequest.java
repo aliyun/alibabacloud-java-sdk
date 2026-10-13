@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetVideoPreviewPlayMetaRequest extends TeaModel {
     /**
-     * <p>The preview type. You must enable the corresponding video transcoding feature. Valid values:</p>
+     * <p>You must enable the corresponding transcoding feature. Valid values are:</p>
      * <ul>
-     * <li>live_transcoding: previews a live stream while transcoding is in progress.</li>
-     * <li>quick_video: previews a video while transcoding is in progress.</li>
-     * <li>offline_audio: previews a piece of audio after the audio is transcoded offline.</li>
-     * <li>offline_video: previews a video after the video is transcoded offline.</li>
+     * <li><p><code>live_transcoding</code> (live transcoding)</p>
+     * </li>
+     * <li><p><code>quick_video</code> (quick video transcoding)</p>
+     * </li>
+     * <li><p><code>offline_audio</code> (offline audio transcoding)</p>
+     * </li>
+     * <li><p><code>offline_video</code> (offline video transcoding)</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -21,7 +25,7 @@ public class GetVideoPreviewPlayMetaRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>The drive ID.</p>
+     * <p>The ID of the drive.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -30,7 +34,7 @@ public class GetVideoPreviewPlayMetaRequest extends TeaModel {
     public String driveId;
 
     /**
-     * <p>The file ID.</p>
+     * <p>The ID of the file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +44,7 @@ public class GetVideoPreviewPlayMetaRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The share ID. If you want to manage a file by using a sharing link, carry the <code>x-share-token</code> header in the request and specify share_id. In this case, <code>drive_id</code> is invalid. Otherwise, use an <code>AccessKey pair</code> or <code>access token</code> for authentication and specify <code>drive_id</code>. You must specify at least either <code>share_id</code> or <code>drive_id</code>.</p>
+     * <p>The ID of the share. To access a file from a share, specify this parameter and include the <code>x-share-token</code> header for authentication. In this case, <code>drive_id</code> is ignored. Alternatively, to access a file in a drive, specify <code>drive_id</code> and authenticate by using an AccessKey pair (<code>aksk</code>) or an access token (<code>access_token</code>). You must specify either <code>share_id</code> or <code>drive_id</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>7JQX1FswpQ8</p>

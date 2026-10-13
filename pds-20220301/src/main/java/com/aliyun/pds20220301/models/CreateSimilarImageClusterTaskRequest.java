@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSimilarImageClusterTaskRequest extends TeaModel {
     /**
+     * <p>The drive ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

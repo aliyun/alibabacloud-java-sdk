@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class FaceGroup extends TeaModel {
     /**
-     * <p>The time when the face-based group was generated.</p>
+     * <p>Time when the face group was created</p>
      * 
      * <strong>example:</strong>
      * <p>2022-01-14T10:10:52.83948013+08:00</p>
@@ -14,13 +14,13 @@ public class FaceGroup extends TeaModel {
     public String createdAt;
 
     /**
-     * <p>The border of the image used as the cover the face-based group.</p>
+     * <p>Face boundary of the face group thumbnail</p>
      */
     @NameInMap("group_cover_face_boundary")
     public FaceGroupGroupCoverFaceBoundary groupCoverFaceBoundary;
 
     /**
-     * <p>The ID of the file used as the cover of the face-based group.</p>
+     * <p>File ID of the face group thumbnail</p>
      * 
      * <strong>example:</strong>
      * <p>6549c959640fbd517c9b4d93b3b36aecc45xxxxx</p>
@@ -29,7 +29,7 @@ public class FaceGroup extends TeaModel {
     public String groupCoverFileId;
 
     /**
-     * <p>The height of the image used as the cover of the face-based group.</p>
+     * <p>Height of the face group thumbnail, in pixels</p>
      * 
      * <strong>example:</strong>
      * <p>1080</p>
@@ -38,7 +38,7 @@ public class FaceGroup extends TeaModel {
     public Long groupCoverHeight;
 
     /**
-     * <p>The URL of the image used as the cover of the face-based group.</p>
+     * <p>URL of the face group thumbnail</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://xxx">https://xxx</a></p>
@@ -47,7 +47,7 @@ public class FaceGroup extends TeaModel {
     public String groupCoverUrl;
 
     /**
-     * <p>The width of the image used as the cover of the face-based group.</p>
+     * <p>Width of the face group thumbnail, in pixels</p>
      * 
      * <strong>example:</strong>
      * <p>1920</p>
@@ -56,7 +56,7 @@ public class FaceGroup extends TeaModel {
     public Long groupCoverWidth;
 
     /**
-     * <p>The ID of the face-based group.</p>
+     * <p>Face group ID</p>
      * 
      * <strong>example:</strong>
      * <p>Cluster-ae6e3472-999e-410b-b54e-cd5dba****</p>
@@ -65,7 +65,7 @@ public class FaceGroup extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The name of the face-based group.</p>
+     * <p>Face group name</p>
      * 
      * <strong>example:</strong>
      * <p>name</p>
@@ -74,7 +74,7 @@ public class FaceGroup extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The number of photos in the face-based group.</p>
+     * <p>Number of images in the face group</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -83,13 +83,13 @@ public class FaceGroup extends TeaModel {
     public Long imageCount;
 
     /**
-     * <p>The remarks.</p>
+     * <p>Remarks</p>
      */
     @NameInMap("remarks")
     public String remarks;
 
     /**
-     * <p>The time when the face-based group was modified.</p>
+     * <p>Time when the face group was last updated</p>
      * 
      * <strong>example:</strong>
      * <p>2022-01-14T10:10:52.83948013+08:00</p>
@@ -192,7 +192,7 @@ public class FaceGroup extends TeaModel {
 
     public static class FaceGroupGroupCoverFaceBoundary extends TeaModel {
         /**
-         * <p>The height of the border. Unit: pixel.</p>
+         * <p>Height, in pixels</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -201,7 +201,7 @@ public class FaceGroup extends TeaModel {
         public Integer height;
 
         /**
-         * <p>The distance from the left side of the photo to the border. Unit: pixel.</p>
+         * <p>Distance from the left edge of the image, in pixels</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -210,7 +210,7 @@ public class FaceGroup extends TeaModel {
         public Integer left;
 
         /**
-         * <p>The distance from the top of the photo to the border. Unit: pixel.</p>
+         * <p>Distance from the top edge of the image, in pixels</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -219,7 +219,7 @@ public class FaceGroup extends TeaModel {
         public Integer top;
 
         /**
-         * <p>The width of the border. Unit: pixel.</p>
+         * <p>Width, in pixels</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>

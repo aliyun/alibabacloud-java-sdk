@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BenefitPkgDeliveryInfo extends TeaModel {
     /**
-     * <p>Number of benefit packages delivered.</p>
+     * <p>The quantity of the distributed privilege quota.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class BenefitPkgDeliveryInfo extends TeaModel {
     public Long amount;
 
     /**
-     * <p>The creation time of the benefit package delivery.</p>
+     * <p>The creation time of the distributed privilege quota.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-08-20T06:51:27.292Z</p>
@@ -23,8 +23,8 @@ public class BenefitPkgDeliveryInfo extends TeaModel {
     public String createdAt;
 
     /**
-     * <p>The expiration time of the benefit package delivery.</p>
-     * <p>If is_permit is set to false, a valid value is returned.</p>
+     * <p>The expiration time of the distributed privilege quota.</p>
+     * <p>A valid value is returned only when is_permanent is set to false.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-08-20T06:51:27.292Z</p>
@@ -33,7 +33,7 @@ public class BenefitPkgDeliveryInfo extends TeaModel {
     public String expireTime;
 
     /**
-     * <p>Whether it is permanently valid.</p>
+     * <p>Indicates whether the privilege quota is permanently valid.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

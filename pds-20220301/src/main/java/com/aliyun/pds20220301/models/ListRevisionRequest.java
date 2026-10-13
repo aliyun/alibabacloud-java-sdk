@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRevisionRequest extends TeaModel {
     /**
-     * <p>The drive ID.</p>
+     * <p>The ID of the drive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,8 @@ public class ListRevisionRequest extends TeaModel {
     public String driveId;
 
     /**
-     * <p>Specifies the returned fields.</p>
-     * <p>By default, this parameter is left empty. If you set this parameter to \*, all fields are returned. If you leave this parameter empty, the creator of the file is not returned.</p>
+     * <p>Specifies the fields to return.</p>
+     * <p>By default, this parameter is empty. If you set this parameter to <code>*</code>, all fields are returned, including the name of the creator.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -27,7 +27,7 @@ public class ListRevisionRequest extends TeaModel {
     public String fields;
 
     /**
-     * <p>The file ID.</p>
+     * <p>The ID of the file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,9 +37,9 @@ public class ListRevisionRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The maximum number of results to return. Valid values: 1 to 100.</p>
-     * <p>Default value: 50.</p>
-     * <p>The number of returned results must be less than or equal to the specified number.</p>
+     * <p>The maximum number of revisions to return. The value must be an integer from 1 to 100.</p>
+     * <p>The default value is 50.</p>
+     * <p>The actual number of returned revisions may be less than the specified value.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -48,8 +48,8 @@ public class ListRevisionRequest extends TeaModel {
     public Long limit;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.</p>
-     * <p>By default, this parameter is left empty.</p>
+     * <p>A pagination marker. The response includes only revisions that occur alphabetically after the specified value. If you do not specify this parameter, the query starts from the beginning of the collection.</p>
+     * <p>Default value: None</p>
      * 
      * <strong>example:</strong>
      * <p>40CB7794C929</p>

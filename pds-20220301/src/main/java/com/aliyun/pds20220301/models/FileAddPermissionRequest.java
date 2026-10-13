@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class FileAddPermissionRequest extends TeaModel {
     /**
-     * <p>The drive ID.</p>
+     * <p>The ID of the drive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class FileAddPermissionRequest extends TeaModel {
     public String driveId;
 
     /**
-     * <p>The ID of the folder. If you want to authorize a user or group to access a team drive, set this parameter to root. If you want to authorize a user or group to access an individual drive, you cannot set this parameter to root.</p>
+     * <p>The ID of the folder. To authorize an entire team drive, set this parameter to root. Setting this parameter to root is not supported for personal drive sharing.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class FileAddPermissionRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The members that are authorized to access files.</p>
+     * <p>The list of members to be authorized.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("member_list")

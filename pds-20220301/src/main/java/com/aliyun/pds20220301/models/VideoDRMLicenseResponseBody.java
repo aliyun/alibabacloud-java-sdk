@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VideoDRMLicenseResponseBody extends TeaModel {
     /**
-     * <p>The returned DRM license.</p>
+     * <p>The DRM license.</p>
      * 
      * <strong>example:</strong>
      * <p>cb9swCy8P50H9KePsxET3jZ1tm41bDs9HTsxbWnsjf3bsf6QGdiS4kZPhDaskimbNyAfNjmhQRmWFt3AhwNF3</p>
@@ -14,7 +14,7 @@ public class VideoDRMLicenseResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The information about the device from which the DRM request was initiated.</p>
+     * <p>Information about the device that made the license request.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -23,7 +23,7 @@ public class VideoDRMLicenseResponseBody extends TeaModel {
     public String deviceInfo;
 
     /**
-     * <p>The request state returned by the DRM server.</p>
+     * <p>The request status returned by the DRM server.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class AddStoryFile extends TeaModel {
     /**
-     * <p>Error codes when adding a single file.</p>
+     * <p>Error code for adding a single file</p>
      */
     @NameInMap("error_code")
     public String errorCode;
 
     /**
-     * <p>Error message when adding a single file.</p>
+     * <p>Error message for adding a single file</p>
      */
     @NameInMap("error_message")
     public String errorMessage;
 
     /**
-     * <p>The file ID.</p>
+     * <p>File ID</p>
      * 
      * <strong>example:</strong>
      * <p>63e5e4340f76cb3ead5f40f68163f0f967c1a7bf</p>
@@ -26,7 +26,7 @@ public class AddStoryFile extends TeaModel {
     public String fileId;
 
     /**
-     * <p>File version.</p>
+     * <p>File version number</p>
      * 
      * <strong>example:</strong>
      * <p>642a88dd06e49d9c0a14411ebae606f70edd9a59</p>

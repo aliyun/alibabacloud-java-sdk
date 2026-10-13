@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListFacegroupsResponseBody extends TeaModel {
     /**
-     * <p>The information about the face-based groups.</p>
+     * <p>The list of face groups.</p>
      */
     @NameInMap("items")
     public java.util.List<FaceGroup> items;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If next_marker is empty, no next page exists.</p>
+     * <p>The pagination token for the next page of results. This parameter is empty on the last page.</p>
      * 
      * <strong>example:</strong>
      * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
@@ -19,6 +19,12 @@ public class ListFacegroupsResponseBody extends TeaModel {
     @NameInMap("next_marker")
     public String nextMarker;
 
+    /**
+     * <p>The total count of matched face groups. This parameter is returned only when <code>return_total_count</code> in the request is set to <code>true</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("total_count")
     public Long totalCount;
 

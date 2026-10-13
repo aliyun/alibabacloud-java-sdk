@@ -4,12 +4,30 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class CreateDriveResponseBody extends TeaModel {
+    /**
+     * <p>The creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-08-14T03:14:28.109Z</p>
+     */
     @NameInMap("created_at")
     public String createdAt;
 
+    /**
+     * <p>The ID of the creator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c9b7a5aa04d14ae3867fdc886fa01da4</p>
+     */
     @NameInMap("creator")
     public String creator;
 
+    /**
+     * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VIP space</p>
+     */
     @NameInMap("description")
     public String description;
 
@@ -31,24 +49,66 @@ public class CreateDriveResponseBody extends TeaModel {
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>The drive name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>My personal space</p>
+     */
     @NameInMap("drive_name")
     public String driveName;
 
+    /**
+     * <p>The drive type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
+     */
     @NameInMap("drive_type")
     public String driveType;
 
+    /**
+     * <p>The owner ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3b3d7245c159488da17d081ad6c64687</p>
+     */
     @NameInMap("owner")
     public String owner;
 
+    /**
+     * <p>The owner type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user</p>
+     */
     @NameInMap("owner_type")
     public String ownerType;
 
+    /**
+     * <p>The status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>enabled</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The total size of the drive in bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1024</p>
+     */
     @NameInMap("total_size")
     public Long totalSize;
 
+    /**
+     * <p>The used space in bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1024</p>
+     */
     @NameInMap("used_size")
     public Long usedSize;
 

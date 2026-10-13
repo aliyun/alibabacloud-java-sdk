@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMyDrivesRequest extends TeaModel {
     /**
-     * <p>The maximum number of results to return. Default value: 100. Valid values: 1 to 100.</p>
+     * <p>The maximum number of results to return. Valid values: 1 to 100. Default: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -14,7 +14,7 @@ public class ListMyDrivesRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker. By default, this parameter is empty.</p>
+     * <p>The pagination token used to retrieve the next page of results. This parameter is not required for the first request. For subsequent requests, set this parameter to the <code>next_marker</code> value from the previous response. If this parameter is omitted, the query starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>

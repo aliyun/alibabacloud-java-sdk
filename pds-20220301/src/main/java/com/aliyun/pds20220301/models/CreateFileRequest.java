@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateFileRequest extends TeaModel {
     /**
-     * <p>The processing method that is used if the file that you want to create has the same name as an existing file in the cloud. Valid values:</p>
-     * <p>ignore: allows you to create the file by using the same name as an existing file in the cloud.</p>
-     * <p>auto_rename: automatically renames the file that you want to create. By default, the current point in time is added to the end of the file name. Example: xxx_20060102_150405.</p>
-     * <p>refuse: does not create the file that you want to create but returns the information about the file that has the same name in the cloud.</p>
+     * <p>The mode for handling files with duplicate names. Valid values:</p>
+     * <ul>
+     * <li>ignore: allows files with duplicate names.</li>
+     * <li>auto_rename: automatically renames the file when a file with the same name exists. By default, the current timestamp is appended, such as xxx_20060102_150405.</li>
+     * <li>refuse: rejects the creation of a new file when a file with the same name exists on the server, and returns the details of the existing file to the client.</li>
+     * </ul>
      * <p>Default value: ignore.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +35,7 @@ public class CreateFileRequest extends TeaModel {
     public String contentHash;
 
     /**
-     * <p>The name of the algorithm that is used to calculate the hash value of the file content. Only SHA1 is supported.</p>
+     * <p>The hash algorithm name for the file content. Currently, only sha1 is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>sha1</p>
@@ -45,7 +47,7 @@ public class CreateFileRequest extends TeaModel {
     public String contentHashName;
 
     /**
-     * <p>The type of the file content. Default value: application/oct-stream.</p>
+     * <p>The file content type. Default value: application/oct-stream.&lt;props=&quot;china&quot;&gt; For common content_type values, refer to OSS <a href="https://help.aliyun.com/document_detail/39522.htm?spm=a2c4g.11186623.0.0.5a0b7dbb1TPnWF#concept-5041">How do I set Content-Type (MIME)?</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>application/json</p>
@@ -57,10 +59,10 @@ public class CreateFileRequest extends TeaModel {
     public String contentType;
 
     /**
-     * <p>The description of the file. The description can be up to 1,024 characters in length. By default, this parameter is left empty.</p>
+     * <p>The file description. The description can be up to 1024 characters. Default value: empty.</p>
      * 
      * <strong>example:</strong>
-     * <p>重要文件</p>
+     * <p>Team file.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -69,7 +71,7 @@ public class CreateFileRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The drive ID. This parameter is required if the file is not uploaded by using the share URL of the file.</p>
+     * <p>The drive ID. This parameter is required unless the upload is performed through a share link.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -78,7 +80,7 @@ public class CreateFileRequest extends TeaModel {
     public String driveId;
 
     /**
-     * <p>The file ID. This parameter is required if check_name_mode is set to ignore.</p>
+     * <p>The file ID. This parameter is required for overwrite operations.</p>
      * 
      * <strong>example:</strong>
      * <p>9520943DC264</p>
@@ -90,7 +92,7 @@ public class CreateFileRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>Specifies whether to hide the file or folder. By default, the file or folder is not hidden.</p>
+     * <p>Specifies whether the file is hidden. Default value: not hidden.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -102,10 +104,10 @@ public class CreateFileRequest extends TeaModel {
     public Boolean hidden;
 
     /**
-     * <p>The time when the local file was created. By default, this parameter is left empty. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format based on the UTC+0 time zone.</p>
+     * <p>The local creation time of the file. Default value: empty. Format: yyyy-MM-ddTHH:mm:ssZ, in UTC+0 time zone.</p>
      * 
      * <strong>example:</strong>
-     * <p>2019-08-20T06:51:27.292Z</p>
+     * <p>2023-10-04T14:30:00Z</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -114,16 +116,16 @@ public class CreateFileRequest extends TeaModel {
     public String localCreatedAt;
 
     /**
-     * <p>The time when the local file was modified. By default, this parameter is left empty. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format based on the UTC+0 time zone.</p>
+     * <p>The local modification time of the file. Default value: empty. Format: yyyy-MM-ddTHH:mm:ssZ, in UTC+0 time zone.</p>
      * 
      * <strong>example:</strong>
-     * <p>2019-08-20T06:51:27.292Z</p>
+     * <p>2023-10-04T14:30:00Z</p>
      */
     @NameInMap("local_modified_at")
     public String localModifiedAt;
 
     /**
-     * <p>The name of the file. The name can be up to 1,024 bytes in length based on the UTF-8 encoding rule and cannot contain forward slash (/).</p>
+     * <p>The file name. The name can be up to 1024 bytes in UTF-8 encoding and cannot contain forward slashes (/).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -136,7 +138,7 @@ public class CreateFileRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Specifies whether to enable the parallel upload feature.</p>
+     * <p>Specifies whether to enable the parallel part upload feature.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -148,7 +150,7 @@ public class CreateFileRequest extends TeaModel {
     public Boolean parallelUpload;
 
     /**
-     * <p>The ID of the parent directory. If you want to create a file or folder in the root directory, set this parameter to root.</p>
+     * <p>The parent folder ID. Set this parameter to root to upload to the root directory.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -158,13 +160,13 @@ public class CreateFileRequest extends TeaModel {
     public String parentFileId;
 
     /**
-     * <p>The information about the file parts. You can specify up to 10,000 parts. By default, if you do not specify this parameter, only one part is returned.</p>
+     * <p>The list of part information. A maximum of 10000 parts are supported. If this parameter is not specified, one part is returned by default.</p>
      */
     @NameInMap("part_info_list")
     public java.util.List<CreateFileRequestPartInfoList> partInfoList;
 
     /**
-     * <p>The SHA-1 hash value of the first 1 KB data of the file. This parameter is required if you perform instant file upload by using the pre-hashing feature. If the SHA-1 hash value is not matched on the cloud, the client does not need to calculate the SHA-1 hash value of the entire file.</p>
+     * <p>The SHA1 value of the first 1 KB of the file. Specify this parameter when using the pre-rapid-upload feature. If no match is found on the server, the client does not need to calculate the full SHA1 of the file for rapid upload.</p>
      * 
      * <strong>example:</strong>
      * <p>7C4A8D09CA3762AF61E59520943DC26494F89411</p>
@@ -176,7 +178,7 @@ public class CreateFileRequest extends TeaModel {
     public String preHash;
 
     /**
-     * <p>The share ID. This parameter is required if the file is uploaded by using the share URL of the file.</p>
+     * <p>The share ID. This parameter is required when uploading through a share link.</p>
      * 
      * <strong>example:</strong>
      * <p>7JQX1FswpQ8</p>
@@ -188,7 +190,7 @@ public class CreateFileRequest extends TeaModel {
     public String shareId;
 
     /**
-     * <p>The size of the file. Unit: bytes.</p>
+     * <p>The file size, in bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>1024</p>
@@ -200,8 +202,11 @@ public class CreateFileRequest extends TeaModel {
     public Long size;
 
     /**
-     * <p>The type of the file. Valid values:</p>
-     * <p>file folder</p>
+     * <p>The file type. Valid values:</p>
+     * <ul>
+     * <li>file: file.</li>
+     * <li>folder: folder.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -214,6 +219,8 @@ public class CreateFileRequest extends TeaModel {
     public String type;
 
     /**
+     * <p>The upload type. Valid values: multipart and form. Default value: multipart.</p>
+     * 
      * <strong>example:</strong>
      * <p>multipart</p>
      */
@@ -221,7 +228,7 @@ public class CreateFileRequest extends TeaModel {
     public String uploadType;
 
     /**
-     * <p>The custom tags. You can specify up to 1,000 tags.</p>
+     * <p>The custom user tags. A maximum of 1000 tags are supported.</p>
      */
     @NameInMap("user_tags")
     public java.util.List<UserTag> userTags;
@@ -393,13 +400,13 @@ public class CreateFileRequest extends TeaModel {
 
     public static class CreateFileRequestPartInfoListParallelSha1Ctx extends TeaModel {
         /**
-         * <p>The first to fifth 32-bit variables of the SHA-1 hash value of the file content before the file part. This parameter takes effect only if the parallel upload feature is enabled.</p>
+         * <p>The first through fifth 32-bit variables of the contextual SHA1 value of all data before this part. This field is valid only in the concurrent multi-part upload pattern.</p>
          */
         @NameInMap("h")
         public java.util.List<Long> h;
 
         /**
-         * <p>The size of the file content before the file part. Unit: bytes. The value must be a multiple of 64. This parameter takes effect only if the parallel upload feature is enabled.</p>
+         * <p>The total length in bytes up to the previous data block. The value must be a multiple of 64. This field is valid only in the concurrent multi-part upload mode.</p>
          * 
          * <strong>example:</strong>
          * <p>10240</p>
@@ -432,7 +439,7 @@ public class CreateFileRequest extends TeaModel {
 
     public static class CreateFileRequestPartInfoList extends TeaModel {
         /**
-         * <p>The MD5 hash value of the file part. This parameter is required when the MD5 hash value of the file part needs to be verified during part upload.</p>
+         * <p>The MD5 value of the part. Specify this parameter when you need to verify the MD5 of the part during upload.</p>
          * 
          * <strong>example:</strong>
          * <p>ASKJDJSKDJJSJDJS</p>
@@ -441,6 +448,8 @@ public class CreateFileRequest extends TeaModel {
         public String contentMd5;
 
         /**
+         * <p>The Content-Type value that the client must set when uploading a part by using PUT. If the Content-Type specified by the client during upload does not match this value, a signature error occurs. Default value: empty. The client does not need to specify Content-Type during PUT.</p>
+         * 
          * <strong>example:</strong>
          * <p>application/json</p>
          */
@@ -448,13 +457,13 @@ public class CreateFileRequest extends TeaModel {
         public String contentType;
 
         /**
-         * <p>The SHA-1 hash value of the file content before the file part. This parameter takes effect only if the parallel upload feature is enabled.</p>
+         * <p>The SHA1 context of all data before this part. This field is valid only in the concurrent multi-part upload mode.</p>
          */
         @NameInMap("parallel_sha1_ctx")
         public CreateFileRequestPartInfoListParallelSha1Ctx parallelSha1Ctx;
 
         /**
-         * <p>The serial number of a file part. The number starts from 1.</p>
+         * <p>The part sequence number, starting from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

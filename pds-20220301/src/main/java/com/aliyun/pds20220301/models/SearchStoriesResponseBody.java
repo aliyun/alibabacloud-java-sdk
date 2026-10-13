@@ -4,10 +4,15 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class SearchStoriesResponseBody extends TeaModel {
+    /**
+     * <p>A list of <code>Story</code> objects.</p>
+     */
     @NameInMap("items")
     public java.util.List<Story> items;
 
     /**
+     * <p>The token to retrieve the next page of results. This field is null or omitted if no more results are available.</p>
+     * 
      * <strong>example:</strong>
      * <p>Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJ***</p>
      */

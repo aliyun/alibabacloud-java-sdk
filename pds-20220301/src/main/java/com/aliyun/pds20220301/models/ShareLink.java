@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ShareLink extends TeaModel {
     /**
-     * <p>The number of times that the shared files are visited.</p>
+     * <p>The number of times the share has been accessed.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -23,7 +23,7 @@ public class ShareLink extends TeaModel {
     public String createdAt;
 
     /**
-     * <p>The user who created the share.</p>
+     * <p>The creator of the share.</p>
      * 
      * <strong>example:</strong>
      * <p>c9b7a5aa04d14ae3867fdc886fa01da4</p>
@@ -41,7 +41,7 @@ public class ShareLink extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to disable the download feature.</p>
+     * <p>Specifies whether to disable downloading of files in the share.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -50,7 +50,7 @@ public class ShareLink extends TeaModel {
     public Boolean disableDownload;
 
     /**
-     * <p>Specifies whether to disable the preview feature.</p>
+     * <p>Specifies whether to disable previewing of files in the share.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -59,7 +59,7 @@ public class ShareLink extends TeaModel {
     public Boolean disablePreview;
 
     /**
-     * <p>Specifies whether to disable the save feature.</p>
+     * <p>Specifies whether to disable saving of files in the share.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -68,7 +68,7 @@ public class ShareLink extends TeaModel {
     public Boolean disableSave;
 
     /**
-     * <p>The number of times that the shared files are downloaded.</p>
+     * <p>The number of times the share has been downloaded.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -77,7 +77,7 @@ public class ShareLink extends TeaModel {
     public Long downloadCount;
 
     /**
-     * <p>The limit on the number of times that the shared files can be downloaded.</p>
+     * <p>The maximum number of times the share can be downloaded.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -95,7 +95,7 @@ public class ShareLink extends TeaModel {
     public String driveId;
 
     /**
-     * <p>The time when the share URL expires. The value of this parameter follows the RFC 3339 standard. Example: &quot;2020-06-28T11:33:00.000+08:00&quot;. If you set the value to &quot;&quot;, the share URL never expires.</p>
+     * <p>The expiration time. The value is in RFC 3339 format, for example, &quot;2020-06-28T11:33:00.000+08:00&quot;. An empty string (&quot;&quot;) indicates that the share never expires.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-06-28T11:33:00.000+08:00</p>
@@ -104,7 +104,7 @@ public class ShareLink extends TeaModel {
     public String expiration;
 
     /**
-     * <p>Specifies whether the share is expired.</p>
+     * <p>Indicates whether the share has expired.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -113,7 +113,7 @@ public class ShareLink extends TeaModel {
     public Boolean expired;
 
     /**
-     * <p>The IDs of the files to share in the parent path.</p>
+     * <p>The list of file IDs in the shared parent path.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;520b217f13adf4fc24f2191991b1664ce045b393&quot;]</p>
@@ -121,11 +121,17 @@ public class ShareLink extends TeaModel {
     @NameInMap("file_id_list")
     public java.util.List<String> fileIdList;
 
+    /**
+     * <p>Specifies whether online editing of shared documents is allowed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("office_editable")
     public Boolean officeEditable;
 
     /**
-     * <p>The number of times that the shared files are previewed.</p>
+     * <p>The number of times the share has been previewed.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -134,7 +140,7 @@ public class ShareLink extends TeaModel {
     public Long previewCount;
 
     /**
-     * <p>The limit on the number of times that the shared files can be previewed.</p>
+     * <p>The maximum number of times the share can be previewed.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -143,7 +149,7 @@ public class ShareLink extends TeaModel {
     public Long previewLimit;
 
     /**
-     * <p>The number of times that the shared files are reported.</p>
+     * <p>The number of times the share has been reported.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -152,7 +158,7 @@ public class ShareLink extends TeaModel {
     public Long reportCount;
 
     /**
-     * <p>The number of times that the shared files are saved.</p>
+     * <p>The number of times the share has been saved.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -160,11 +166,17 @@ public class ShareLink extends TeaModel {
     @NameInMap("save_count")
     public Long saveCount;
 
+    /**
+     * <p>The maximum total number of times the share can be saved and downloaded.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("save_download_limit")
     public Long saveDownloadLimit;
 
     /**
-     * <p>The limit on the number of times that the shared files can be saved.</p>
+     * <p>The maximum number of times the share can be saved.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -173,7 +185,7 @@ public class ShareLink extends TeaModel {
     public Long saveLimit;
 
     /**
-     * <p>Specifies whether to share all files in the drive.</p>
+     * <p>Indicates whether all files in the drive are shared.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -191,7 +203,7 @@ public class ShareLink extends TeaModel {
     public String shareId;
 
     /**
-     * <p>The name of the share. By default, the file name that corresponds to the first ID in the file ID list is used.</p>
+     * <p>The share name. By default, the name of the first file is used.</p>
      * 
      * <strong>example:</strong>
      * <p>video-1.MP4</p>
@@ -200,7 +212,7 @@ public class ShareLink extends TeaModel {
     public String shareName;
 
     /**
-     * <p>The access code. An access code can be up to 64 characters in length. If you do not specify a value, files can be accessed without an access code.</p>
+     * <p>The extraction code, which is 0 to 64 characters in length. A length of 0 indicates that no extraction code is set.</p>
      * 
      * <strong>example:</strong>
      * <p>abcF123x</p>
@@ -211,8 +223,8 @@ public class ShareLink extends TeaModel {
     /**
      * <p>The status of the share. Valid values:</p>
      * <ul>
-     * <li>disabled: The share is canceled.</li>
-     * <li>enabled: The share is effective.</li>
+     * <li>disabled: Canceled.</li>
+     * <li>enabled: Active.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -231,7 +243,7 @@ public class ShareLink extends TeaModel {
     public String updatedAt;
 
     /**
-     * <p>The number of times that the shared audio and video files are played.</p>
+     * <p>The number of times audio and video files in the share have been played.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

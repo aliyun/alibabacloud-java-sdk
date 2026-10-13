@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VideoMediaVideoStream extends TeaModel {
     /**
-     * <p>The bitrate of the video stream. Unit: bit/s.</p>
+     * <p>The bit rate of the video stream, in bits per second (bps).</p>
      * 
      * <strong>example:</strong>
      * <p>108420</p>
@@ -23,7 +23,7 @@ public class VideoMediaVideoStream extends TeaModel {
     public String codeName;
 
     /**
-     * <p>The duration of the video stream. Unit: seconds.</p>
+     * <p>The duration of the video stream, in seconds (s).</p>
      * 
      * <strong>example:</strong>
      * <p>22.88</p>

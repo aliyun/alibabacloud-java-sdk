@@ -5,15 +5,19 @@ import com.aliyun.tea.*;
 
 public class SearchShareLinkRequest extends TeaModel {
     /**
-     * <p>The creators of shares. Set this parameter to a user ID. If you do not specify this parameter, Drive and Photo Service automatically queries shares based on your permissions. If you are a drive administrator or the super administrator, the shares created by all members are queried. If you are a team administrator, the shares created by all team members are queried. If you are a common user, only the shares created by yourself are queried.</p>
-     * <p>If you specify this parameter, this parameter must be set to the ID of the super administrator, a drive administrator, or a team administrator.</p>
+     * <p>The IDs of the creators.
+     * <br>1) If this parameter is not specified, the search scope depends on the user\&quot;s role:
+     * <br>    - A drive administrator or super administrator can search for shares from all members.
+     * <br>    - A team administrator can search for shares from team members.
+     * <br>    - A regular user can only search for their own shares.<br><br><br><br></p>
+     * <p>2\) You can only specify user IDs that are within your role\&quot;s search scope, as described in point 1).</p>
      */
     @NameInMap("creators")
     public java.util.List<String> creators;
 
     /**
-     * <p>The maximum number of results to return. Valid values: 1 to 100. Default value: 100.</p>
-     * <p>The number of returned results must be less than or equal to the specified number.</p>
+     * <p>The maximum number of shares to return. Valid values: 1-100. Default: 100.</p>
+     * <p>The number of shares returned may be less than the specified limit.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -22,8 +26,7 @@ public class SearchShareLinkRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.\
-     * By default, this parameter is left empty.</p>
+     * <p>Use the <code>next_marker</code> value from a previous response to retrieve the next page of results.<br>If this parameter is not specified, the first page of results is returned.<br></p>
      * 
      * <strong>example:</strong>
      * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
@@ -32,12 +35,18 @@ public class SearchShareLinkRequest extends TeaModel {
     public String marker;
 
     /**
-     * <p>The field by which to sort the returned results. Default value: created_at. Valid values:</p>
+     * <p>The sort field.
+     * By default, results are sorted by creation time in descending order.
+     * Valid values:</p>
      * <ul>
-     * <li>share_name: sorts the results by the name of the share.</li>
-     * <li>updated_at: sorts the results by the time when the share was modified.</li>
-     * <li>description: sorts the results by the description of the share.</li>
-     * <li>created_at: sorts the results by the time when the share was created.</li>
+     * <li><p><code>share_name</code>: The share name.</p>
+     * </li>
+     * <li><p><code>updated_at</code>: The update time.</p>
+     * </li>
+     * <li><p><code>description</code>: The description.</p>
+     * </li>
+     * <li><p><code>created_at</code>: The creation time.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,10 +56,14 @@ public class SearchShareLinkRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The order in which you want to sort the returned results. By default, order_direction is set to DESC if order_by is set to created_at or updated_at, and is set to ASC if order_by is set to other values. Valid values:</p>
+     * <p>The sort order.
+     * If the sort field is <code>created_at</code> or <code>updated_at</code>, the default order is descending. For other sort fields, the default order is ascending.
+     * Valid values:</p>
      * <ul>
-     * <li>ASC: sorts the results in ascending order.</li>
-     * <li>DESC: sorts the results in descending order.</li>
+     * <li><p><code>ASC</code>: ascending</p>
+     * </li>
+     * <li><p><code>DESC</code>: descending</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,7 +73,15 @@ public class SearchShareLinkRequest extends TeaModel {
     public String orderDirection;
 
     /**
-     * <p>The query condition that is used to search for share URLs. You can use the following fields to specify query conditions: created_at: queries a share URL based on the time when the share URL was created. updated_at: queries a share URL based on the time when the share URL was modified. share_name_for_fuzzy: queries a share URL based on the name of the share. A fuzzy match is supported. status: queries a share URL based on the status of the share. Valid values: enabled and disabled. A value of enabled indicates that the share is valid. A value of disabled indicates that the share is canceled. expired_time: queries a share URL based on the expiration time of the share. If the share never expires, set this field to 1970-01-01T00:00:00. Otherwise, set this field to 1970-01-02T00:00:00.</p>
+     * <p>The query conditions.
+     * <br>1) Supported fields:
+     * <br>    1.1 <code>created_at</code>: The creation time.
+     * <br>    1.2 <code>updated_at</code>: The update time.
+     * <br>    1.3 <code>share_name_for_fuzzy</code>: The share name. Fuzzy search (<code>match</code>) is supported.
+     * <br>    1.4 <code>status</code>: The share status. Valid values: <code>enabled</code> (active) or <code>disabled</code> (canceled).
+     * <br>    1.5 <code>expired_time</code>: The expiration time.
+     * <br>    To search for shares that never expire, set <code>expired_time=\\&quot;1970-01-01T00:00:00\\&quot;</code>. For these shares, the <code>expiration</code> field in the response is an empty string.
+     * <br>    The time range <code>expired_time&lt;\\&quot;1970-01-02T00:00:00\\&quot;</code> is reserved for system use and does not represent a valid expiration time.<br><br><br><br><br><br><br><br></p>
      * 
      * <strong>example:</strong>
      * <p>created_at&gt;=\&quot;2022-01-18T02:50:00\&quot; and created_at&lt;\&quot;2022-01-19T09:45:28\&quot; and share_name_for_fuzzy match \&quot;HD.mp4\&quot; and status in [\&quot;enabled\&quot;, \&quot;disabled\&quot;] and expired_time=\&quot;1970-01-01T00:00:00\&quot;</p>
@@ -69,7 +90,7 @@ public class SearchShareLinkRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>Specifies whether to return the total number of returned results.</p>
+     * <p>Specifies whether to return the total count of matched shares.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

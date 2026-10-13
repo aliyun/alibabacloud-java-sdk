@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListFileRequest extends TeaModel {
     /**
-     * <p>The file category. Valid values:</p>
-     * <p>app: installation package zip: compressed package image doc: document video audio others</p>
-     * <p>By default, files of all categories are returned.</p>
+     * <p>The file category. Valid values:
+     * app: installation package zip: compressed package image doc: document video audio others
+     * By default, files of all categories are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>image</p>
@@ -25,31 +25,27 @@ public class ListFileRequest extends TeaModel {
     public String driveId;
 
     /**
-     * <p>The field that is used to return additional information about a child subject. Valid values:</p>
-     * <ul>
-     * <li>url: returns the URL of the thumbnail of a file in the response.</li>
-     * <li>exif: returns the Exchangeable Image File Format (EXIF) data of a file in the response.</li>
-     * <li>cropping_suggestion: returns the cropping suggestion on a file in the response.</li>
-     * <li>characteristic_hash: returns the characteristic hash value of a file in the response.</li>
-     * <li>video_metadata: returns the metadata of a video file, such as the video duration, bitrate, height, and width, in the response.</li>
-     * <li>video_preview_metadata: returns the transcoding information of a video file, such as the transcoding specification for each definition, in the response.</li>
-     * <li>investigation_info: returns the investigation information in the response.</li>
-     * <li>dir_size: returns the statistics on each subfolder in the response.</li>
-     * <li>user_tags: returns the user tags of each child subject in the response.</li>
-     * </ul>
-     * <p>You can specify multiple fields by separating them with commas (,). Example: &quot;url,dir_size,user_tags&quot;.</p>
+     * <p>The field that is used to return additional information about a child subject. Valid values:
+     * \* url: returns the URL of the thumbnail of a file in the response.
+     * \* exif: returns the Exchangeable Image File Format (EXIF) data of a file in the response.
+     * \* cropping_suggestion: returns the cropping suggestion on a file in the response.
+     * \* characteristic_hash: returns the characteristic hash value of a file in the response.
+     * \* video_metadata: returns the metadata of a video file, such as the video duration, bitrate, height, and width, in the response.
+     * \* video_preview_metadata: returns the transcoding information of a video file, such as the transcoding specification for each definition, in the response.
+     * \* investigation_info: returns the investigation information in the response.
+     * \* dir_size: returns the statistics on each subfolder in the response.
+     * \* user_tags: returns the user tags of each child subject in the response.
+     * You can specify multiple fields by separating them with commas (,). Example: &quot;url,dir_size,user_tags&quot;.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>url,dir_size,user_tags</p>
      */
     @NameInMap("fields")
     public String fields;
 
     /**
-     * <p>The maximum number of results to return. Valid values: 1 to 100.</p>
-     * <p>The number of returned entries must be less than or equal to the value of this parameter.</p>
+     * <p>The maximum number of results to return. Valid values: 1 to 100.
+     * The number of returned entries must be less than or equal to the value of this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -68,16 +64,14 @@ public class ListFileRequest extends TeaModel {
     public String marker;
 
     /**
-     * <p>The sorting field. Valid values:</p>
-     * <p>created_at: sorts the entries by creation time. updated_at: sorts the entries by update time. size: sorts the entries by file size. name: sorts the entries by file name.</p>
-     * <p>Default value: created_at.</p>
-     * <p>Enumeration:</p>
-     * <ul>
-     * <li>updated_at: update time</li>
-     * <li>size: file size</li>
-     * <li>name: file name</li>
-     * <li>created_at: creation time</li>
-     * </ul>
+     * <p>The sorting field. Valid values:
+     * created_at: sorts the entries by creation time. updated_at: sorts the entries by update time. size: sorts the entries by file size. name: sorts the entries by file name.
+     * Default value: created_at.
+     * Enumeration:
+     * \* updated_at: update time
+     * \* size: file size
+     * \* name: file name
+     * \* created_at: creation time</p>
      * 
      * <strong>example:</strong>
      * <p>updated_at</p>
@@ -86,9 +80,9 @@ public class ListFileRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The sorting direction. Valid values:</p>
-     * <p>ASC: ascending order DESC: descending order</p>
-     * <p>Default value: ASC.</p>
+     * <p>The sorting direction. Valid values:
+     * ASC: ascending order DESC: descending order
+     * Default value: ASC.</p>
      * 
      * <strong>example:</strong>
      * <p>ASC</p>
@@ -116,9 +110,9 @@ public class ListFileRequest extends TeaModel {
     public String shareId;
 
     /**
-     * <p>The state of the files to return. Valid values:</p>
-     * <p>available: returns only normal files. uploading: returns only files that are being uploaded.</p>
-     * <p>By default, only files in the available state are returned.</p>
+     * <p>The state of the files to return. Valid values:
+     * available: returns only normal files. uploading: returns only files that are being uploaded.
+     * By default, only files in the available state are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>available</p>
@@ -133,9 +127,9 @@ public class ListFileRequest extends TeaModel {
     public java.util.Map<String, ImageProcess> thumbnailProcesses;
 
     /**
-     * <p>The file type. Valid values:</p>
-     * <p>file: returns only files. folder: returns only folders.</p>
-     * <p>By default, files of all types are returned.</p>
+     * <p>The file type. Valid values:
+     * file: returns only files. folder: returns only folders.
+     * By default, files of all types are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>file</p>

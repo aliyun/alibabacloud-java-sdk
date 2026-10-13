@@ -15,7 +15,7 @@ public class DeltaGetLastCursorRequest extends TeaModel {
     public String driveId;
 
     /**
-     * <p>The ID of the root file of the synced folder.</p>
+     * <p>The ID of the root directory for the sync folder.</p>
      * 
      * <strong>example:</strong>
      * <p>622fb09598ae66777c7040109a16f49381f6abe1</p>

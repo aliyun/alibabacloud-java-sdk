@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateDomainRequest extends TeaModel {
     /**
      * <p>The description of the domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hello enterprise drive debug environment</p>
      */
     @NameInMap("description")
     public String description;
@@ -22,6 +25,9 @@ public class UpdateDomainRequest extends TeaModel {
 
     /**
      * <p>The name of the domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hello Enterprise Drive</p>
      */
     @NameInMap("domain_name")
     public String domainName;

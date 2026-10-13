@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateDriveRequest extends TeaModel {
     /**
-     * <p>The description of the drive. The description can be up to 1,024 characters in length.</p>
+     * <p>The description of the drive. The description can be up to 1,024 characters long.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VIP space</p>
      */
     @NameInMap("description")
     public String description;
@@ -21,16 +24,16 @@ public class UpdateDriveRequest extends TeaModel {
     public String driveId;
 
     /**
-     * <p>The name of the drive. The name can be up to 128 characters in length.</p>
+     * <p>The drive name. The name can be up to 128 characters long.</p>
      * 
      * <strong>example:</strong>
-     * <p>my_drive</p>
+     * <p>My personal space</p>
      */
     @NameInMap("drive_name")
     public String driveName;
 
     /**
-     * <p>The owner of the drive. Note: You can modify the owner of a personal drive only by using an AccessKey pair.</p>
+     * <p>The owner of the drive. Note: To change the owner of a personal drive, you must use an access key (AK).</p>
      * 
      * <strong>example:</strong>
      * <p>user1</p>
@@ -39,8 +42,8 @@ public class UpdateDriveRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The state of the drive. Valid values:</p>
-     * <p>enabled and disabled.</p>
+     * <p>The status of the drive. Valid values:</p>
+     * <p>enabled: The drive is available for use.<br>disabled: The drive cannot be used.<br></p>
      * 
      * <strong>example:</strong>
      * <p>enabled</p>
@@ -49,7 +52,7 @@ public class UpdateDriveRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The total size of the drive. Unit: bytes. A value of -1 specifies that the size is unlimited.</p>
+     * <p>The total size of the drive, in bytes. Set this value to -1 to have no limit.</p>
      * 
      * <strong>example:</strong>
      * <p>10240</p>

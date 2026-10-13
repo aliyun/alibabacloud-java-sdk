@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUserRequest extends TeaModel {
     /**
-     * <p>The maximum number of results to return. Valid values: 1 to 100. Default value: 100.</p>
+     * <p>The maximum number of users to return.<br><strong>Value range</strong>: 1 to 100.<br><strong>Default value</strong>: 100.<br><br></p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -14,7 +14,7 @@ public class ListUserRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker. By default, this parameter is left empty.</p>
+     * <p>The pagination token that specifies the starting position of the results. The results are returned in alphabetical order. If you omit this parameter, results are returned from the start of the list.<br><strong>Default value</strong>: none.<br></p>
      * 
      * <strong>example:</strong>
      * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>

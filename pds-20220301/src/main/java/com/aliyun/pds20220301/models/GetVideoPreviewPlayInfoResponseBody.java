@@ -41,7 +41,7 @@ public class GetVideoPreviewPlayInfoResponseBody extends TeaModel {
     public String shareId;
 
     /**
-     * <p>The information about video playback.</p>
+     * <p>The playback information.</p>
      */
     @NameInMap("video_preview_play_info")
     public VideoPreviewPlayInfo videoPreviewPlayInfo;

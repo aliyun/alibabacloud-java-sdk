@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class SearchSimilarImageClustersResponseBody extends TeaModel {
     /**
+     * <p>A pagination marker. If the response does not include all results, the service returns this marker. Use this marker in a subsequent request to retrieve the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0***</p>
      */
     @NameInMap("next_marker")
     public String nextMarker;
 
+    /**
+     * <p>A list of similar image clusters.</p>
+     */
     @NameInMap("similar_image_clusters")
     public java.util.List<SearchSimilarImageClustersResponseBodySimilarImageClusters> similarImageClusters;
 
@@ -36,6 +41,9 @@ public class SearchSimilarImageClustersResponseBody extends TeaModel {
     }
 
     public static class SearchSimilarImageClustersResponseBodySimilarImageClusters extends TeaModel {
+        /**
+         * <p>A list of similar images in the cluster.</p>
+         */
         @NameInMap("files")
         public java.util.List<File> files;
 

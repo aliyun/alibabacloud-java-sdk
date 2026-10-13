@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateUserResponseBody extends TeaModel {
     /**
-     * <p>The URL of the profile picture.</p>
+     * <p>The avatar URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://aa.com/1.jpg">http://aa.com/1.jpg</a></p>
@@ -14,7 +14,7 @@ public class CreateUserResponseBody extends TeaModel {
     public String avatar;
 
     /**
-     * <p>The time when the user was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The creation time, represented as a Unix timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1639762579768</p>
@@ -23,7 +23,7 @@ public class CreateUserResponseBody extends TeaModel {
     public Long createdAt;
 
     /**
-     * <p>The user who created the user.</p>
+     * <p>The ID of the creator.</p>
      * 
      * <strong>example:</strong>
      * <p>user1</p>
@@ -32,7 +32,7 @@ public class CreateUserResponseBody extends TeaModel {
     public String creator;
 
     /**
-     * <p>The ID of the default drive.</p>
+     * <p>The ID of the user\&quot;s default drive.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class CreateUserResponseBody extends TeaModel {
     public String defaultDriveId;
 
     /**
-     * <p>The description of the user.</p>
+     * <p>The user description.</p>
      * 
      * <strong>example:</strong>
      * <p>vipuser</p>
@@ -68,7 +68,7 @@ public class CreateUserResponseBody extends TeaModel {
     public String email;
 
     /**
-     * <p>The nickname of the user.</p>
+     * <p>The nickname.</p>
      * 
      * <strong>example:</strong>
      * <p>001</p>
@@ -86,11 +86,14 @@ public class CreateUserResponseBody extends TeaModel {
     public String phone;
 
     /**
-     * <p>The role of the user. Valid values:</p>
+     * <p>The user role. Valid values:</p>
      * <ul>
-     * <li>superadmin</li>
-     * <li>admin</li>
-     * <li>user</li>
+     * <li><p><code>superadmin</code>: Super administrator</p>
+     * </li>
+     * <li><p><code>admin</code>: Administrator</p>
+     * </li>
+     * <li><p><code>user</code>: User</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,10 +103,12 @@ public class CreateUserResponseBody extends TeaModel {
     public String role;
 
     /**
-     * <p>The state of the user. Valid values:</p>
+     * <p>The user status. Valid values:</p>
      * <ul>
-     * <li>disabled: The user is prohibited from logon.</li>
-     * <li>enabled: The user is in a normal state.</li>
+     * <li><p><code>disabled</code>: The user is inactive.</p>
+     * </li>
+     * <li><p><code>enabled</code>: The user is active.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -113,7 +118,7 @@ public class CreateUserResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The time when the user was modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The modification time, represented as a Unix timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1639762579768</p>
@@ -122,7 +127,7 @@ public class CreateUserResponseBody extends TeaModel {
     public Long updatedAt;
 
     /**
-     * <p>The custom data.</p>
+     * <p>A key-value object for storing custom user data.</p>
      */
     @NameInMap("user_data")
     public java.util.Map<String, ?> userData;

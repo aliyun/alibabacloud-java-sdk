@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class InvestigateFileRequest extends TeaModel {
     /**
+     * <p>A list of drive and file ID pairs. You can specify up to five pairs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("drive_file_ids")
@@ -25,6 +26,7 @@ public class InvestigateFileRequest extends TeaModel {
 
     public static class InvestigateFileRequestDriveFileIds extends TeaModel {
         /**
+         * <p>The drive ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -34,6 +36,7 @@ public class InvestigateFileRequest extends TeaModel {
         public String driveId;
 
         /**
+         * <p>The file ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

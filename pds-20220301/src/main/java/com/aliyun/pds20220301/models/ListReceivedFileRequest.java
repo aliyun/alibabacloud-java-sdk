@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListReceivedFileRequest extends TeaModel {
     /**
-     * <p>The maximum number of results to return. Valid values: 1 to 100. Default value: 100.</p>
+     * <p>The maximum number of items to return. The value cannot exceed 100. If you do not specify this parameter, the default is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -14,7 +14,7 @@ public class ListReceivedFileRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker. By default, this parameter is empty.</p>
+     * <p>The pagination marker from a previous response. The query continues from the position indicated by this marker. If you do not specify this parameter, the query starts from the beginning of the file list.</p>
      * 
      * <strong>example:</strong>
      * <p>eym***</p>

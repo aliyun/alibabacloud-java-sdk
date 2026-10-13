@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateGroupRequest extends TeaModel {
     /**
-     * <p>The description of the group. The description can be up to 1,024 characters in length.</p>
+     * <p>The description of the group. The maximum length is 1,024 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>test group description</p>
@@ -14,7 +14,7 @@ public class CreateGroupRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the group. The name must be 1 to 128 characters in length.</p>
+     * <p>The group name. The name must be 1 to 128 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CreateGroupRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>Specifies whether the group is a root group. A root group cannot be added to any other group. In most cases, a root group is the top-level organization in the organizational structure.</p>
+     * <p>Specifies whether to create a root group. A root group cannot be added to any other group and is typically used as the top-level entity in an organizational structure.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -33,7 +33,7 @@ public class CreateGroupRequest extends TeaModel {
     public Boolean isRoot;
 
     /**
-     * <p>The ID of the parent group to which the group is added. If this parameter is specified, the system automatically adds the group to the specified parent group after the group is created.</p>
+     * <p>The ID of the parent group. If specified, the new group is added to this parent group on creation.</p>
      * 
      * <strong>example:</strong>
      * <p>2e43ec8427dd45f19431b7504649a1b3</p>

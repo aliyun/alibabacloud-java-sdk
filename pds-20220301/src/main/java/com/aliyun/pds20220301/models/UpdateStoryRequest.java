@@ -5,17 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateStoryRequest extends TeaModel {
     /**
+     * <p>The story cover.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
     @NameInMap("cover")
     public UpdateStoryRequestCover cover;
 
+    /**
+     * <p>The custom labels. You can specify up to 20 labels.</p>
+     */
     @NameInMap("custom_labels")
     @Deprecated
     public java.util.Map<String, String> customLabels;
 
     /**
+     * <p>The drive ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,6 +31,7 @@ public class UpdateStoryRequest extends TeaModel {
     public String driveId;
 
     /**
+     * <p>The story ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +41,8 @@ public class UpdateStoryRequest extends TeaModel {
     public String storyId;
 
     /**
+     * <p>The name of the story. The maximum length is 1,024 bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>name1</p>
      * 
@@ -91,6 +100,8 @@ public class UpdateStoryRequest extends TeaModel {
 
     public static class UpdateStoryRequestCover extends TeaModel {
         /**
+         * <p>The file ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>63e5e4340f76cb3ead5f40f68163f0f967c1a7bf</p>
          */
@@ -98,6 +109,8 @@ public class UpdateStoryRequest extends TeaModel {
         public String fileId;
 
         /**
+         * <p>The revision ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>642a88dd06e49d9c0a14411ebae606f70edd9a59</p>
          */

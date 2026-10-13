@@ -24,7 +24,7 @@ public class CreateDomainRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>Specifies whether to enable the default drive feature. A value of true specifies that all users are assigned a drive by default on the first logon. Default value: false.</p>
+     * <p>Specifies whether to enable a default drive for users. If set to <code>true</code>, a drive is automatically provisioned for each user upon their first login. The default value is <code>false</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -33,7 +33,7 @@ public class CreateDomainRequest extends TeaModel {
     public Boolean initDriveEnable;
 
     /**
-     * <p>This parameter is required when the init_drive_enable is set to true. The size of the default drive. Unit: bytes. The default is 0, meaning the created drive size is 0, and files cannot be uploaded. If you need to initialize the drive, set this value. A value of -1 indicates that the size is unlimited.</p>
+     * <p>This parameter is required if <code>init_drive_enable</code> is set to <code>true</code>. The size of the default drive for new users, in bytes. The default value is <code>0</code>, which creates a drive with zero capacity, preventing users from uploading files. To provide initial storage, you must set this parameter. A value of <code>-1</code> indicates an unlimited size.</p>
      * 
      * <strong>example:</strong>
      * <p>1073741824</p>
@@ -42,7 +42,7 @@ public class CreateDomainRequest extends TeaModel {
     public Long initDriveSize;
 
     /**
-     * <p>The ID of the parent domain. If you want to create a child domain, specify parent_domain_id. In most cases, you do not need to create a child domain. If you want to perform secondary operations based on Drive and Photo Service, contact the customer service.</p>
+     * <p>The ID of the parent domain. Set this parameter to create a child domain. This parameter is optional. For information about implementing custom operations, contact PDS customer service.</p>
      * 
      * <strong>example:</strong>
      * <p>bj1</p>
@@ -51,7 +51,7 @@ public class CreateDomainRequest extends TeaModel {
     public String parentDomainId;
 
     /**
-     * <p>The total storage quota for all drives in the domain. A value of 0 indicates that the quota is unlimited.</p>
+     * <p>The total storage quota for the domain, in bytes. This value represents the combined storage limit for all drives within the domain. A value of <code>0</code> indicates no limit.</p>
      * 
      * <strong>example:</strong>
      * <p>1099511627776</p>
@@ -60,10 +60,12 @@ public class CreateDomainRequest extends TeaModel {
     public Long sizeQuota;
 
     /**
-     * <p>Specifies the storage redundancy type. Valid values:</p>
+     * <p>The storage redundancy type. Valid values:</p>
      * <ul>
-     * <li>LRS: locally redundant storage</li>
-     * <li>ZRS: zone-redundant storage</li>
+     * <li><p><code>LRS</code>: Locally Redundant Storage</p>
+     * </li>
+     * <li><p><code>ZRS</code>: Zone-Redundant Storage</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,7 +75,7 @@ public class CreateDomainRequest extends TeaModel {
     public String storeRedundancyType;
 
     /**
-     * <p>The largest number of users that can be created in the domain. A value of 0 specifies that the number is unlimited.</p>
+     * <p>The user count quota for the domain. This specifies the maximum number of users that can be created. A value of <code>0</code> indicates no limit.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>

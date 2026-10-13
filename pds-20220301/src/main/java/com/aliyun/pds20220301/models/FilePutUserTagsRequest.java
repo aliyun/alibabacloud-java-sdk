@@ -25,7 +25,7 @@ public class FilePutUserTagsRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The tags to be added to the file. You cannot leave this parameter empty. You can specify up to 1,000 tags. You cannot specify tags that have the same name.</p>
+     * <p>The array of tags to add. The array must contain 1 to 1,000 tags and must not contain duplicate tag keys.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("user_tags")
@@ -62,7 +62,7 @@ public class FilePutUserTagsRequest extends TeaModel {
 
     public static class FilePutUserTagsRequestUserTags extends TeaModel {
         /**
-         * <p>The name of the tag. The tag name cannot be empty and cannot contain number signs (#).</p>
+         * <p>The tag key. Must not be empty or contain the # character.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class FilePutUserTagsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag. The tag value cannot contain number signs (#).</p>
+         * <p>The tag value. Must not contain the # character.</p>
          * 
          * <strong>example:</strong>
          * <p>value</p>

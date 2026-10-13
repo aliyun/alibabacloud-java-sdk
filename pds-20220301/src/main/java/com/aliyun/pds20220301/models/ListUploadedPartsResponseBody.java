@@ -14,7 +14,7 @@ public class ListUploadedPartsResponseBody extends TeaModel {
     public String fileId;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If next_marker is empty, no next page exists.</p>
+     * <p>The marker for the next page of results. This value is empty when there are no more results to return.</p>
      * 
      * <strong>example:</strong>
      * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
@@ -23,7 +23,7 @@ public class ListUploadedPartsResponseBody extends TeaModel {
     public String nextPartNumberMarker;
 
     /**
-     * <p>Indicates whether the parallel upload feature is enabled.</p>
+     * <p>Indicates whether parallel upload is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -32,7 +32,7 @@ public class ListUploadedPartsResponseBody extends TeaModel {
     public Boolean parallelUpload;
 
     /**
-     * <p>The ID of the upload task.</p>
+     * <p>The upload ID.</p>
      * 
      * <strong>example:</strong>
      * <p>00166D06127B413BA1EC8ABB1144D101</p>
@@ -41,7 +41,7 @@ public class ListUploadedPartsResponseBody extends TeaModel {
     public String uploadId;
 
     /**
-     * <p>The information about the file parts.</p>
+     * <p>A list of uploaded parts.</p>
      */
     @NameInMap("uploaded_parts")
     public java.util.List<UploadPartInfo> uploadedParts;

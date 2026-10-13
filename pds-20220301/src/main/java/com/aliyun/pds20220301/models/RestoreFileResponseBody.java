@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class RestoreFileResponseBody extends TeaModel {
     /**
-     * <p>The ID of the asynchronous task.</p>
-     * <p>If an empty string is returned, the file or folder is restored.</p>
-     * <p>If a non-empty string is returned, an asynchronous task is required. You can call the GetAsyncTask operation to obtain the information about an asynchronous task based on the task ID.</p>
+     * <p>The asynchronous task ID.</p>
+     * <p>If an empty string is returned, the file or folder is restored from the recycle bin directly.</p>
+     * <p>If a non-empty string is returned, asynchronous processing is required. Call GetAsyncTask with this asynchronous task ID to retrieve the task information.</p>
      * 
      * <strong>example:</strong>
      * <p>4221bf6e6ab43c255edc4463bf3a6f5f5d317406</p>
@@ -34,7 +34,7 @@ public class RestoreFileResponseBody extends TeaModel {
     public String driveId;
 
     /**
-     * <p>The ID of the file or folder.</p>
+     * <p>The file or folder ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4221bf6e6ab43a255edc4463bffa6f5f5d317401</p>

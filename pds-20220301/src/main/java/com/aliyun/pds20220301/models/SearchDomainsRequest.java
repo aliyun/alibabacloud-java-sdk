@@ -15,8 +15,7 @@ public class SearchDomainsRequest extends TeaModel {
     public Long limit;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.\
-     * By default, this parameter is empty.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.<br> By default, this parameter is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
@@ -26,6 +25,9 @@ public class SearchDomainsRequest extends TeaModel {
 
     /**
      * <p>The name of the domain. Fuzzy search is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hello Drive</p>
      */
     @NameInMap("name")
     public String name;

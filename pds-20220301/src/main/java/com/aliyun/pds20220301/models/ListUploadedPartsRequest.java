@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUploadedPartsRequest extends TeaModel {
     /**
-     * <p>The drive ID. This parameter is required if the file is not uploaded by using the share URL of the file.</p>
+     * <p>The drive ID. Required for all scenarios except uploads from a share.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,7 +24,7 @@ public class ListUploadedPartsRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The maximum number of results to return. Valid values: 1 to 100. Default value: 100.</p>
+     * <p>The maximum number of parts to return. The value cannot exceed 100. The default is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -33,7 +33,7 @@ public class ListUploadedPartsRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker. By default, this parameter is left empty.</p>
+     * <p>The marker that specifies the position after which to start listing parts. Obtain this value from the <code>next_part_number_marker</code> field in a previous response. If this parameter is omitted, the listing starts from the first part.</p>
      * 
      * <strong>example:</strong>
      * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
@@ -42,7 +42,7 @@ public class ListUploadedPartsRequest extends TeaModel {
     public Integer partNumberMarker;
 
     /**
-     * <p>The share ID. This parameter is required if the file is uploaded by using the share URL of the file.</p>
+     * <p>The share ID. Required when uploading from a share.</p>
      * 
      * <strong>example:</strong>
      * <p>7JQX1FswpQ8</p>
@@ -51,7 +51,7 @@ public class ListUploadedPartsRequest extends TeaModel {
     public String shareId;
 
     /**
-     * <p>The ID of the upload task.</p>
+     * <p>The upload ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

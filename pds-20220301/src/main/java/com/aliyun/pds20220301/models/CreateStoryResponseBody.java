@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateStoryResponseBody extends TeaModel {
     /**
+     * <p>The drive ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

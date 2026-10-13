@@ -4,10 +4,15 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class CsiGetFileInfoResponseBody extends TeaModel {
+    /**
+     * <p>The content security details of the file.</p>
+     */
     @NameInMap("investigation_info")
     public InvestigationInfo investigationInfo;
 
     /**
+     * <p>The download URL for the file.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899eff525?Expires=xxx&OSSAccessKeyId=xxx&Signature=xxx">https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899eff525?Expires=xxx&amp;OSSAccessKeyId=xxx&amp;Signature=xxx</a></p>
      */

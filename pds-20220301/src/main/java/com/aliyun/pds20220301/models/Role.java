@@ -24,6 +24,9 @@ public class Role extends TeaModel {
 
     /**
      * <p>The description of the role.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>拥有预览文件权限</p>
      */
     @NameInMap("description")
     public String description;
@@ -39,6 +42,9 @@ public class Role extends TeaModel {
 
     /**
      * <p>The name of the role.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>文件预览者</p>
      */
     @NameInMap("name")
     public String name;

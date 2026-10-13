@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetVideoPreviewPlayInfoRequest extends TeaModel {
     /**
-     * <p>The category. It is the transcoding mode that you want to use. Valid values:</p>
+     * <p>The category. You must enable the corresponding transcoding feature. Valid values:</p>
      * <ul>
-     * <li>live_transcoding: plays a live stream while transcoding is in progress.</li>
-     * <li>quick_video: plays a video while transcoding is in progress.</li>
-     * <li>offline_audio: plays a piece of audio after the audio is transcoded offline.</li>
-     * <li>offline_video: plays a video after the video is transcoded offline.</li>
+     * <li>live_transcoding: live transcoding and streaming</li>
+     * <li>quick_video: quick transcoding and streaming</li>
+     * <li>offline_audio: offline audio transcoding</li>
+     * <li>offline_video: offline video transcoding</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>live_transcoding</p>
+     * <p>quick_video</p>
      */
     @NameInMap("category")
     public String category;
@@ -40,7 +40,7 @@ public class GetVideoPreviewPlayInfoRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>Specifies whether to obtain the URL of the master M3U8 playlist. This parameter is valid only if the category parameter is set to quick_video.</p>
+     * <p>Specifies whether to obtain the URL of the master m3u8 file. This parameter is valid only when category is set to quick_video.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -48,8 +48,11 @@ public class GetVideoPreviewPlayInfoRequest extends TeaModel {
     @NameInMap("get_master_url")
     public Boolean getMasterUrl;
 
+    @NameInMap("get_subtitle_info")
+    public Boolean getSubtitleInfo;
+
     /**
-     * <p>Specifies whether not to query the playback URL. If you set this parameter to true, only transcoding metadata is returned. The video is not transcoded in the TS format, and the playback URL is not returned. If you set this parameter to false, the playback URL is returned. If the video has not been transcoded by using the template specified by template_id, the transcoding process is triggered. You are charged value-added service fees generated for transcoding.</p>
+     * <p>Specifies whether to exclude the playback URL. If you set this parameter to true, only transcoding metadata is obtained, TS transcoding is not triggered, and the returned information does not contain the playback URL. Otherwise, the playback URL is returned. If the video for this template_id has not been transcoded, the backend triggers transcoding. Transcoding incurs corresponding value-added service fees.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -58,7 +61,7 @@ public class GetVideoPreviewPlayInfoRequest extends TeaModel {
     public Boolean getWithoutUrl;
 
     /**
-     * <p>Specifies whether to initiate re-transcoding. If you set this parameter to true, the file is re-transcoded, with a fixed 202 response for retries. Before you use this parameter, contact us to enable it for you.</p>
+     * <p>Specifies whether to initiate re-transcoding. If you set this parameter to true, re-transcoding is initiated for the file, and a 202 response is returned to prompt you to wait and retry. Before you use this parameter, contact us to enable the support.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -67,7 +70,7 @@ public class GetVideoPreviewPlayInfoRequest extends TeaModel {
     public Boolean reTranscode;
 
     /**
-     * <p>The share ID. If you want to share a file, carry the <code>x-share-token</code> header for authentication in the request and specify share_id. In this case, <code>drive_id</code> is invalid. Otherwise, use an <code>AccessKey pair</code> or <code>access token</code> for authentication and specify <code>drive_id</code>. You must specify one of <code>share_id</code> and <code>drive_id</code>.</p>
+     * <p>The share ID. If you manage files through a share, include the <code>x-share-token</code> header for authentication and pass this field. In this case, <code>drive_id</code> is invalid. Otherwise, use the <code>aksk</code> or <code>access_token</code> method for authentication and pass the <code>drive_id</code> field. You must specify either <code>share_id</code> or <code>drive_id</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>7JQX1FswpQ8</p>
@@ -76,7 +79,7 @@ public class GetVideoPreviewPlayInfoRequest extends TeaModel {
     public String shareId;
 
     /**
-     * <p>The ID of the definition template. If you leave this parameter empty, all definition templates are available.</p>
+     * <p>The definition template ID. If you leave this parameter empty, all available definition templates are retrieved.</p>
      * 
      * <strong>example:</strong>
      * <p>264_480p</p>
@@ -85,7 +88,7 @@ public class GetVideoPreviewPlayInfoRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The validity period of the URL. Unit: seconds. Default value: 900, which is 15 minutes. Maximum value: 14400, which is 4 hours.</p>
+     * <p>The URL timeout period. Unit: seconds. Default value: 15 minutes. Maximum value: 4 hours.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -128,6 +131,14 @@ public class GetVideoPreviewPlayInfoRequest extends TeaModel {
     }
     public Boolean getGetMasterUrl() {
         return this.getMasterUrl;
+    }
+
+    public GetVideoPreviewPlayInfoRequest setGetSubtitleInfo(Boolean getSubtitleInfo) {
+        this.getSubtitleInfo = getSubtitleInfo;
+        return this;
+    }
+    public Boolean getGetSubtitleInfo() {
+        return this.getSubtitleInfo;
     }
 
     public GetVideoPreviewPlayInfoRequest setGetWithoutUrl(Boolean getWithoutUrl) {

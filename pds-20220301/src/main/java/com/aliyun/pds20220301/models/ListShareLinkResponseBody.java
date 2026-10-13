@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListShareLinkResponseBody extends TeaModel {
     /**
-     * <p>The information about the shares.</p>
+     * <p>The list of shares.</p>
      */
     @NameInMap("items")
     public java.util.List<ShareLink> items;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If next_marker is empty, no next page exists.</p>
+     * <p>A token for the next page of results. This field is omitted if there are no more results to return.</p>
      * 
      * <strong>example:</strong>
      * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>

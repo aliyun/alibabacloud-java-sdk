@@ -4,10 +4,15 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class UserExtraItem extends TeaModel {
+    /**
+     * <p>Details of a linked account.</p>
+     */
     @NameInMap("account")
     public java.util.List<AccountLinkInfo> account;
 
     /**
+     * <p>The URL of the user\&quot;s avatar.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://a.b.c/ccp.jpg">http://a.b.c/ccp.jpg</a></p>
      */
@@ -15,6 +20,8 @@ public class UserExtraItem extends TeaModel {
     public String avatar;
 
     /**
+     * <p>The time the user was created, formatted as a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1567407718386</p>
      */
@@ -22,6 +29,8 @@ public class UserExtraItem extends TeaModel {
     public String createdAt;
 
     /**
+     * <p>The creator of the user account. For example, <code>system</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>system</p>
      */
@@ -36,15 +45,23 @@ public class UserExtraItem extends TeaModel {
     public BaseDriveResponse defaultDrive;
 
     /**
+     * <p>The ID of the user\&quot;s default drive.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
     @NameInMap("default_drive_id")
     public String defaultDriveId;
 
+    /**
+     * <p>The default storage location for the user\&quot;s data.</p>
+     */
     @NameInMap("default_location")
     public String defaultLocation;
 
+    /**
+     * <p>Whether the user is prevented from changing their own password. If <code>true</code>, the user cannot change their password.</p>
+     */
     @NameInMap("deny_change_password_by_self")
     public Boolean denyChangePasswordBySelf;
 
@@ -56,6 +73,8 @@ public class UserExtraItem extends TeaModel {
     public String description;
 
     /**
+     * <p>The ID of the domain.</p>
+     * 
      * <strong>example:</strong>
      * <p>hz999</p>
      */
@@ -63,6 +82,8 @@ public class UserExtraItem extends TeaModel {
     public String domainId;
 
     /**
+     * <p>The email address of the user.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="mailto:123@ccp.com">123@ccp.com</a></p>
      */
@@ -70,51 +91,83 @@ public class UserExtraItem extends TeaModel {
     public String email;
 
     /**
+     * <p>The time the user account expires, formatted as a UNIX timestamp in milliseconds. A value of <code>0</code> means the account never expires.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("expired_at")
     public Long expiredAt;
 
+    /**
+     * <p>Whether the user is synchronized from an external source.</p>
+     */
     @NameInMap("is_sync")
     public Boolean isSync;
 
+    /**
+     * <p>The time of the user\&quot;s last login, formatted as a UNIX timestamp in milliseconds.</p>
+     */
     @NameInMap("last_login_time")
     public Long lastLoginTime;
 
+    /**
+     * <p>The time the user\&quot;s refresh token was last used, formatted as a UNIX timestamp in milliseconds.</p>
+     */
     @NameInMap("last_refresh_token_time")
     public Long lastRefreshTokenTime;
 
+    /**
+     * <p>Whether the user must change their password at the next login. If <code>true</code>, a password change is required.</p>
+     */
     @NameInMap("need_change_password_next_login")
     public Boolean needChangePasswordNextLogin;
 
     /**
+     * <p>The nickname of the user.</p>
+     * 
      * <strong>example:</strong>
      * <p>abc</p>
      */
     @NameInMap("nick_name")
     public String nickName;
 
+    /**
+     * <p>Details of a parent group.</p>
+     */
     @NameInMap("parent_group")
     public java.util.List<BaseDriveResponse> parentGroup;
 
+    /**
+     * <p>The status of the user\&quot;s path in the group hierarchy.</p>
+     */
     @NameInMap("path_status")
     public String pathStatus;
 
+    /**
+     * <p>The permission details.</p>
+     */
     @NameInMap("permission")
     public java.util.Map<String, IDPermission> permission;
 
     /**
+     * <p>The phone number of the user.</p>
+     * 
      * <strong>example:</strong>
      * <p>13700000000</p>
      */
     @NameInMap("phone")
     public String phone;
 
+    /**
+     * <p>The country or region code for the user\&quot;s phone number. For example, <code>86</code> for the Chinese mainland.</p>
+     */
     @NameInMap("phone_region")
     public String phoneRegion;
 
     /**
+     * <p>The role of the user. For example, <code>user</code> or <code>admin</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>user</p>
      */
@@ -122,6 +175,8 @@ public class UserExtraItem extends TeaModel {
     public String role;
 
     /**
+     * <p>The status of the user account. Valid values are <code>enabled</code> and <code>disabled</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>enabled</p>
      */
@@ -129,16 +184,23 @@ public class UserExtraItem extends TeaModel {
     public String status;
 
     /**
+     * <p>The time the user was last updated, formatted as a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1567407718386</p>
      */
     @NameInMap("updated_at")
     public String updatedAt;
 
+    /**
+     * <p>A key-value map that stores custom data about the user.</p>
+     */
     @NameInMap("user_data")
     public java.util.Map<String, ?> userData;
 
     /**
+     * <p>The ID of the user.</p>
+     * 
      * <strong>example:</strong>
      * <p>ccpuserid</p>
      */
@@ -146,6 +208,8 @@ public class UserExtraItem extends TeaModel {
     public String userId;
 
     /**
+     * <p>The name of the user.</p>
+     * 
      * <strong>example:</strong>
      * <p>name</p>
      */
