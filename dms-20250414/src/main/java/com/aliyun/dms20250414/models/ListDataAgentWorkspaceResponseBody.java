@@ -56,7 +56,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -127,7 +127,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
 
     public static class ListDataAgentWorkspaceResponseBodyDataContent extends TeaModel {
         /**
-         * <p>The time when the workspace was created. The value is a timestamp in milliseconds.</p>
+         * <p>The creation time of the workspace. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1765960516000</p>
@@ -154,6 +154,15 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         public String creatorName;
 
         /**
+         * <p>The number of custom agents in the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
+        @NameInMap("CustomAgentCount")
+        public Integer customAgentCount;
+
+        /**
          * <p>The description of the workspace.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +181,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         public Boolean isSessionShareEnabled;
 
         /**
-         * <p>The time when the workspace was last modified. The value is a timestamp in milliseconds.</p>
+         * <p>The last modification time of the workspace. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1765961516000</p>
@@ -181,7 +190,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
-         * <p>The name of the user\&quot;s role in the workspace.</p>
+         * <p>The role name of the user in the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>admin</p>
@@ -217,7 +226,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         public Integer totalSessionCount;
 
         /**
-         * <p>The workspace type.</p>
+         * <p>The type of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>personal</p>
@@ -226,7 +235,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The ID of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>20923*****7291</p>
@@ -279,6 +288,14 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         }
         public String getCreatorName() {
             return this.creatorName;
+        }
+
+        public ListDataAgentWorkspaceResponseBodyDataContent setCustomAgentCount(Integer customAgentCount) {
+            this.customAgentCount = customAgentCount;
+            return this;
+        }
+        public Integer getCustomAgentCount() {
+            return this.customAgentCount;
         }
 
         public ListDataAgentWorkspaceResponseBodyDataContent setDescription(String description) {

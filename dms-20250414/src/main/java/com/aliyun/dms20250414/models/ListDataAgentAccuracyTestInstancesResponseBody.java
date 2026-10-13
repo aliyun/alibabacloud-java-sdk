@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
     /**
-     * <p>The response struct.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListDataAgentAccuracyTestInstancesResponseBodyData> data;
@@ -29,7 +29,7 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The maximum number of entries returned per page. You can use this parameter together with NextToken to implement paging.</p>
+     * <p>The maximum number of results to return per request. You can use this parameter with NextToken to paginate results.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,7 +38,7 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token.</p>
+     * <p>The next token.</p>
      * 
      * <strong>example:</strong>
      * <p>zCXS*****</p>
@@ -74,7 +74,7 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -83,7 +83,7 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
     public String success;
 
     /**
-     * <p>The operation timestamp.</p>
+     * <p>The timestamp of the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>1768270172</p>
@@ -222,6 +222,15 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The ID of the test dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds-sdg***jkh</p>
+         */
+        @NameInMap("DatasetId")
+        public String datasetId;
+
+        /**
          * <p>The data source.</p>
          * 
          * <strong>example:</strong>
@@ -229,6 +238,15 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
          */
         @NameInMap("Datasource")
         public String datasource;
+
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
+        @NameInMap("Description")
+        public String description;
 
         /**
          * <p>The ID of the test set file.</p>
@@ -249,7 +267,7 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-30T07:31:09.000+00:00</p>
@@ -288,13 +306,13 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
          * <p>The custom agent name.</p>
          * 
          * <strong>example:</strong>
-         * <p>AgentTestName</p>
+         * <p>Agent test name</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>Specifies whether sessions are displayed after analysis. This feature is not supported.</p>
+         * <p>Specifies whether the session is displayed after analysis. This feature is currently not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -303,7 +321,7 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
         public String needDelete;
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The ID of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>8wfig6l33n4f4xxxxxxxxxx</p>
@@ -340,12 +358,28 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
             return this.creator;
         }
 
+        public ListDataAgentAccuracyTestInstancesResponseBodyData setDatasetId(String datasetId) {
+            this.datasetId = datasetId;
+            return this;
+        }
+        public String getDatasetId() {
+            return this.datasetId;
+        }
+
         public ListDataAgentAccuracyTestInstancesResponseBodyData setDatasource(String datasource) {
             this.datasource = datasource;
             return this;
         }
         public String getDatasource() {
             return this.datasource;
+        }
+
+        public ListDataAgentAccuracyTestInstancesResponseBodyData setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public ListDataAgentAccuracyTestInstancesResponseBodyData setFileId(String fileId) {

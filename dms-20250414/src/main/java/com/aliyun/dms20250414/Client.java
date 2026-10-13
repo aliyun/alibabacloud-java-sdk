@@ -3950,10 +3950,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Lists accuracy test configuration items that meet the specified conditions.</p>
+     * <p>Lists the accuracy test configuration items that meet the specified conditions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists accuracy test configuration items that meet the specified conditions.</p>
+     * <p>Lists the accuracy test configuration items that meet the specified conditions.</p>
      * 
      * @param request ListDataAgentAccuracyTestInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4005,10 +4005,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Lists accuracy test configuration items that meet the specified conditions.</p>
+     * <p>Lists the accuracy test configuration items that meet the specified conditions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists accuracy test configuration items that meet the specified conditions.</p>
+     * <p>Lists the accuracy test configuration items that meet the specified conditions.</p>
      * 
      * @param request ListDataAgentAccuracyTestInstancesRequest
      * @return ListDataAgentAccuracyTestInstancesResponse
@@ -4556,7 +4556,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a paginated list of collaborative workspaces under the primary account.</p>
+     * <p>Queries a paginated list of collaborative workspaces under the Alibaba Cloud account.</p>
      * 
      * @param request ListDataAgentWorkspaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4624,7 +4624,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a paginated list of collaborative workspaces under the primary account.</p>
+     * <p>Queries a paginated list of collaborative workspaces under the Alibaba Cloud account.</p>
      * 
      * @param request ListDataAgentWorkspaceRequest
      * @return ListDataAgentWorkspaceResponse

@@ -5,31 +5,43 @@ import com.aliyun.tea.*;
 
 public class AgenticTableColumn extends TeaModel {
     /**
-     * <p>The name of the column.</p>
+     * <p>The column name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>id</p>
      */
     @NameInMap("ColumnName")
     public String columnName;
 
     /**
-     * <p>The data type of the column.</p>
+     * <p>The column type, which is the native type definition of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bigint</p>
      */
     @NameInMap("ColumnType")
     public String columnType;
 
     /**
-     * <p>The description of the column.</p>
+     * <p>The column description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Primary key ID</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>Engine-specific metadata for the column.</p>
+     * <p>The engine metadata of the column.</p>
      */
     @NameInMap("EngineMeta")
     public AgenticTableColumnEngineMeta engineMeta;
 
     /**
-     * <p>The 1-based ordinal position of the column within the table.</p>
+     * <p>The position of the column in the table, starting from 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Position")
     public Integer position;
