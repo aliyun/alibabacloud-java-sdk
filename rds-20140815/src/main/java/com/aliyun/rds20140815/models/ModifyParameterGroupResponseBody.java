@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyParameterGroupResponseBody extends TeaModel {
     /**
-     * <p>The parameter template ID.</p>
+     * <p>The ID of the parameter template.</p>
      * 
      * <strong>example:</strong>
      * <p>rpg-13ppdh****</p>
@@ -14,7 +14,7 @@ public class ModifyParameterGroupResponseBody extends TeaModel {
     public String parameterGroupId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>857DC00B-7B85-4853-8B27-AD65EB618BC6</p>

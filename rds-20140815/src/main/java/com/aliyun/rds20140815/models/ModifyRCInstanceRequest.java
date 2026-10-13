@@ -7,9 +7,9 @@ public class ModifyRCInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong> (default): Automatic payment is enabled. Make sure that your account balance is sufficient.</li>
-     * <li><strong>false</strong>: An order is generated but payment is not automatically made.<blockquote>
-     * <p>If your payment method balance is insufficient, set the parameter AutoPay to false. An unpaid order is generated, and you can log on to the ApsaraDB RDS console to complete the payment.</p>
+     * <li><strong>true</strong> (default): enables automatic payment. Make sure that your account balance is sufficient.</li>
+     * <li><strong>false</strong>: generates an order without deducting fees.<blockquote>
+     * <p>If your account balance is insufficient, you can set the AutoPay parameter to false. An unpaid order is generated. You can log on to the ApsaraDB RDS console to complete the payment.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -23,11 +23,11 @@ public class ModifyRCInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically use coupons. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong> (default): Coupons are automatically used.</li>
-     * <li><strong>false</strong>: Coupons are not used.</li>
+     * <li><strong>true</strong>: automatically uses coupons. This is the default value.</li>
+     * <li><strong>false</strong>: does not automatically use coupons.</li>
      * </ul>
      * <blockquote>
-     * <p>If you use coupons and then perform a downgrade, the amount deducted by coupons is not refunded.</p>
+     * <p>If you use a coupon and then downgrade the instance type, the amount deducted by the voucher is not refunded.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -40,13 +40,13 @@ public class ModifyRCInstanceRequest extends TeaModel {
     public String businessInfo;
 
     /**
-     * <p>The type of the Upgrade/Downgrade. Valid values:</p>
+     * <p>The instance upgrade or downgrade type. Valid values:</p>
      * <blockquote>
-     * <p>This parameter does not need to be uploaded. The system can automatically determine whether the change is an upgrade or a downgrade. If you upload this parameter, follow the rules below.</p>
+     * <p>You do not need to specify this parameter. The system automatically determines whether to upgrade or downgrade the instance type. If you want to specify it, follow these rules:</p>
      * </blockquote>
      * <ul>
-     * <li><strong>Up</strong> (default): Upgrades the instance type. Make sure that your account payment method balance is sufficient.</li>
-     * <li><strong>Down</strong>: Downgrades the instance type. Set Direction to down when the instance type specified by InstanceType is lower than the current instance type.</li>
+     * <li><strong>Up</strong> (default): upgrades the instance type. Make sure that your account balance is sufficient.</li>
+     * <li><strong>Down</strong>: downgrades the instance type. When the instance type specified in InstanceType is lower than the current instance type, set Direction to Down.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,10 +56,10 @@ public class ModifyRCInstanceRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform a precheck on the instance creation operation. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Performs a dry run without creating the instance. The system checks items such as the request parameters, request format, service limits, and available resources.</li>
-     * <li><strong>false</strong> (default): Sends the request. If the request passes the check, the instance is created.</li>
+     * <li><strong>true</strong>: performs a precheck without creating an instance. Check items include request parameters, request format, service limits, and inventory.</li>
+     * <li><strong>false</strong>: sends a normal request and directly creates the instance after the request passes the precheck. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class ModifyRCInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The target instance type. For information about the instance types supported by RDS Custom instances, see <a href="https://help.aliyun.com/document_detail/2844823.html">RDS Custom instance types</a>.</p>
+     * <p>The destination instance type. For more information about the instance types supported by RDS Target instances, see <a href="https://help.aliyun.com/document_detail/2844823.html">RDS Target instance types</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>mysql.i8.large.2cm</p>
@@ -98,8 +98,8 @@ public class ModifyRCInstanceRequest extends TeaModel {
     /**
      * <p>The restart time of the instance.</p>
      * <ul>
-     * <li>If <strong>RebootWhenFinished</strong> is set to <strong>false</strong> and the instance status is <strong>Running</strong>, you <strong>must</strong> set a restart time within 48 hours.</li>
-     * <li>The time follows the ISO 8601 standard in UTC+0. Format: <code>yyyy-MM-ddTHH:mmZ</code>.</li>
+     * <li>If <strong>RebootWhenFinished</strong> is set to <strong>false</strong> and the instance is in the <strong>Running</strong> state, you <strong>must</strong> specify a restart time within 48 hours.</li>
+     * <li>Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time must be in UTC.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,13 +109,13 @@ public class ModifyRCInstanceRequest extends TeaModel {
     public String rebootTime;
 
     /**
-     * <p>Specifies whether to immediately restart the instance after the specification change is complete. Valid values:</p>
+     * <p>Specifies whether to immediately restart the instance after the instance type change is complete. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong> (default): The instance is restarted immediately.</li>
-     * <li><strong>false</strong>: The instance is not restarted.</li>
+     * <li><strong>true</strong>: restarts the instance immediately. This is the default value.</li>
+     * <li><strong>false</strong>: does not restart the instance immediately.</li>
      * </ul>
      * <blockquote>
-     * <p>If the instance is in the <strong>Stopped</strong> state, the instance remains in the Stopped state and is not restarted even if you set <code>RebootWhenFinished=true</code>.</p>
+     * <p>If the instance is in the <strong>Stopped</strong> state, it remains in the Stopped state and is not restarted even if you set RebootWhenFinished to true.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

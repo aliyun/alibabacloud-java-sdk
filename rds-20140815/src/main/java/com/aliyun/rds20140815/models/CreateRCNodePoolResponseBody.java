@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRCNodePoolResponseBody extends TeaModel {
     /**
-     * <p>The list of instance IDs.</p>
+     * <p>The instance IDs.</p>
      */
     @NameInMap("InstanceIdSets")
     public java.util.List<String> instanceIdSets;

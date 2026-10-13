@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDasInstanceConfigResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>C3C247D4-1643-4C5D-87C2-C829543FC626</p>

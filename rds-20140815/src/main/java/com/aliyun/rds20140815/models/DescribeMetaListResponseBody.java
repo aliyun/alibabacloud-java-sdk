@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMetaListResponseBody extends TeaModel {
     /**
-     * <p>The instance name.</p>
+     * <p>The name of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-uf6wjk5****</p>
@@ -35,7 +35,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>60F9A12A-16B8-4728-B099-4CA38D32C31C</p>

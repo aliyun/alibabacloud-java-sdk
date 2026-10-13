@@ -14,7 +14,7 @@ public class CloneDBInstanceResponseBody extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The order ID.</p>
+     * <p>The ID of the order.</p>
      * 
      * <strong>example:</strong>
      * <p>100789370****</p>
@@ -23,7 +23,7 @@ public class CloneDBInstanceResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1E43AAE0-BEE8-43DA-860D-EAF2****</p>

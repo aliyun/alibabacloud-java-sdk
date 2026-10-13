@@ -51,7 +51,7 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
         public String classGroup;
 
         /**
-         * <p>The number of CPU cores for the instance type. Unit: cores.</p>
+         * <p>The number of CPU cores that correspond to the instance specifications. Unit: cores.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -71,8 +71,8 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
         /**
          * <p>The effective period. Valid values:</p>
          * <ul>
-         * <li><strong>Immediate</strong> (default): The specification change takes effect immediately.</li>
-         * <li><strong>MaintainTime</strong>: The specification change takes effect during the maintenance window. For more information, see <a href="https://help.aliyun.com/document_detail/610402.html">ModifyDBInstanceMaintainTime</a>.</li>
+         * <li><strong>Immediate</strong> (default): The changes take effect immediately.</li>
+         * <li><strong>MaintainTime</strong>: The changes take effect within the maintenance window. For more information, see <a href="https://help.aliyun.com/document_detail/610402.html">ModifyDBInstanceMaintainTime</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -91,7 +91,7 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
         public String mark;
 
         /**
-         * <p>The memory capacity for the instance type. Unit: GB.</p>
+         * <p>The memory capacity that corresponds to the instance specifications. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -109,7 +109,7 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The storage description.</p>
+         * <p>The storage information.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -118,7 +118,7 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
         public String storage;
 
         /**
-         * <p>The target instance type for the specification change.</p>
+         * <p>The target instance specifications for the specification change.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql.x2.medium.2c</p>

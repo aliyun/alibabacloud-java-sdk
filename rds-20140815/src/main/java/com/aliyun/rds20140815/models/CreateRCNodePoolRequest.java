@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRCNodePoolRequest extends TeaModel {
     /**
-     * <p>The number of RDS Custom instances to create. This parameter is applicable only to batch creation of RDS Custom instances.</p>
+     * <p>Specifies the number of RDS Custom instances to create. This parameter is applicable only when you create multiple RDS Custom instances at a time.</p>
      * <p>Valid values: <strong>1</strong> to <strong>5</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -15,14 +15,13 @@ public class CreateRCNodePoolRequest extends TeaModel {
     public Integer amount;
 
     /**
-     * <p>Specifies whether to enable automatic payment.
-     * Valid values:</p>
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: Automatic payment is enabled. Make sure that your account balance is sufficient.</li>
-     * <li><strong>false</strong>: Only an order is generated. No payment is made.</li>
+     * <li><strong>false</strong>: Only an order is generated and no payment is made.</li>
      * </ul>
      * <blockquote>
-     * <p>The default value is true. If your payment method has an insufficient balance, set AutoPay to false. In this case, an unpaid order is generated. You can log on to the ApsaraDB RDS console to complete the payment.</p>
+     * <p>Default value: <strong>true</strong>. If the balance of your payment method is insufficient, you can set the AutoPay parameter to false. In this case, an unpaid order is generated, and you can log on to the ApsaraDB RDS console to complete the payment.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,15 +31,15 @@ public class CreateRCNodePoolRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal. This parameter is valid only when you create subscription instances. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal for the instance. This parameter is valid only when you create a subscription instance. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: yes.</li>
+     * <li><strong>false</strong>: no.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>If you purchase on a monthly basis, the auto-renewal epoch is 1 month.</li>
-     * <li>If you purchase on a yearly basis, the auto-renewal epoch is 1 year.</li>
+     * <li>If the subscription duration is one month, the auto-renewal cycle is 1 month.</li>
+     * <li>If the subscription duration is one year, the auto-renewal cycle is 1 year.</li>
      * </ul>
      * </blockquote>
      * 
@@ -51,7 +50,7 @@ public class CreateRCNodePoolRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -60,7 +59,7 @@ public class CreateRCNodePoolRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the RDS Custom container cluster.</p>
+     * <p>The RDS Custom container cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,10 +69,10 @@ public class CreateRCNodePoolRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Specifies whether to allow the instance to join an ACK cluster. If this parameter settings is set to <strong>1</strong>, the created instance can be added to an ACK cluster for efficient container application management.</p>
+     * <p>Specifies whether the instance is allowed to join an ACK cluster. When this parameter is set to <strong>1</strong>, the created instance can be added to an ACK cluster for efficient management of containerized applications.</p>
      * <ul>
-     * <li><strong>1</strong>: Yes.</li>
-     * <li><strong>0</strong> (default): No.</li>
+     * <li><strong>1</strong>: yes.</li>
+     * <li><strong>0</strong> (default): no.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,7 +82,7 @@ public class CreateRCNodePoolRequest extends TeaModel {
     public String createMode;
 
     /**
-     * <p>The list of data cloud disks.</p>
+     * <p>The data cloud disks.</p>
      */
     @NameInMap("DataDisk")
     public java.util.List<CreateRCNodePoolRequestDataDisk> dataDisk;
@@ -98,7 +97,7 @@ public class CreateRCNodePoolRequest extends TeaModel {
     public String deploymentSetId;
 
     /**
-     * <p>The instance description. The description must be 2 to 256 characters in length and can contain letters and Chinese characters. The description cannot start with http:// or https://.</p>
+     * <p>The instance description. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -107,10 +106,10 @@ public class CreateRCNodePoolRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to perform a dry run for this request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run before creating the instance. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run without creating the instance. The system checks the request parameters, request format, service limits, and available stock.</li>
-     * <li><strong>false</strong> (default): sends the request. If the request passes the check, the instance is created.</li>
+     * <li><strong>true</strong>: A dry run is performed and no instance is created. The system checks the request parameters, request format, service limits, and available resources.</li>
+     * <li><strong>false</strong> (default): A normal request is sent and the instance is created if the request passes the dry run.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -129,7 +128,7 @@ public class CreateRCNodePoolRequest extends TeaModel {
     public String hostName;
 
     /**
-     * <p>The image ID used by the instance.</p>
+     * <p>The image ID of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>image-dsvjzw2ii8n4fvr6de</p>
@@ -160,7 +159,7 @@ public class CreateRCNodePoolRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The instance type. For the instance types supported by RDS Custom instances, see <a href="https://help.aliyun.com/document_detail/2844823.html">RDS Custom instance types</a>.</p>
+     * <p>The instance type. For the instance types supported by RDS Custom, see <a href="https://help.aliyun.com/document_detail/2844823.html">RDS Custom instance types</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -170,7 +169,7 @@ public class CreateRCNodePoolRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>A reserved parameter. This parameter is not supported.</p>
+     * <p>Reserved parameter. Not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -179,7 +178,7 @@ public class CreateRCNodePoolRequest extends TeaModel {
     public String internetChargeType;
 
     /**
-     * <p>A reserved parameter. This parameter is not supported.</p>
+     * <p>Reserved parameter. Not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -188,7 +187,7 @@ public class CreateRCNodePoolRequest extends TeaModel {
     public Integer internetMaxBandwidthOut;
 
     /**
-     * <p>A reserved parameter. This parameter is not supported.</p>
+     * <p>Reserved parameter. Not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -197,7 +196,7 @@ public class CreateRCNodePoolRequest extends TeaModel {
     public String ioOptimized;
 
     /**
-     * <p>The name of the key pair. Only a single name is supported.</p>
+     * <p>The key pair name. Only one key pair name is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>dell5502</p>
@@ -206,7 +205,7 @@ public class CreateRCNodePoolRequest extends TeaModel {
     public String keyPairName;
 
     /**
-     * <p>The name of the node pool.</p>
+     * <p>The node pool name.</p>
      * 
      * <strong>example:</strong>
      * <p>testNodePool</p>
@@ -215,7 +214,7 @@ public class CreateRCNodePoolRequest extends TeaModel {
     public String nodePoolName;
 
     /**
-     * <p>The password of the root account of the instance.</p>
+     * <p>The password of the root account for the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>testPassword</p>
@@ -233,10 +232,10 @@ public class CreateRCNodePoolRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the subscription duration for the subscription billable methods. Valid values:</p>
+     * <p>The time unit of the subscription billing method. Valid values:</p>
      * <ul>
-     * <li><strong>Year</strong></li>
-     * <li><strong>Month</strong> (default)</li>
+     * <li><strong>Year</strong>: year.</li>
+     * <li><strong>Month</strong> (default): month.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -265,7 +264,7 @@ public class CreateRCNodePoolRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>A reserved parameter. This parameter is not supported.</p>
+     * <p>Reserved parameter. Not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -274,7 +273,7 @@ public class CreateRCNodePoolRequest extends TeaModel {
     public String securityEnhancementStrategy;
 
     /**
-     * <p>The security group ID. You can specify an existing security group ID. If the security group does not exist, automatic creation of a security group is performed.</p>
+     * <p>The security group ID. You can specify an existing security group ID. If the specified security group does not exist, a security group is automatically created.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-m5e9abdu1rtxa12b****</p>
@@ -283,7 +282,7 @@ public class CreateRCNodePoolRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>A reserved parameter. This parameter is not supported.</p>
+     * <p>Reserved parameter. Not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -292,7 +291,7 @@ public class CreateRCNodePoolRequest extends TeaModel {
     public String spotStrategy;
 
     /**
-     * <p>The supported scenario. This parameter is required when <strong>createMode</strong> is set to <strong>1</strong>. Currently, only <strong>edge</strong> is supported.</p>
+     * <p>The supported scenario. This parameter is required when the <strong>createMode</strong> parameter is set to <strong>1</strong>. Only <strong>edge</strong> is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>edge</p>
@@ -301,19 +300,19 @@ public class CreateRCNodePoolRequest extends TeaModel {
     public String supportCase;
 
     /**
-     * <p>The system cloud disk specifications.</p>
+     * <p>The system cloud disk.</p>
      */
     @NameInMap("SystemDisk")
     public CreateRCNodePoolRequestSystemDisk systemDisk;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateRCNodePoolRequestTag> tag;
 
     /**
-     * <p>A reserved parameter. This parameter is not supported.</p>
+     * <p>Reserved parameter. Not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -324,7 +323,7 @@ public class CreateRCNodePoolRequest extends TeaModel {
     /**
      * <p>The vSwitch ID.</p>
      * <blockquote>
-     * <p>The vSwitch must be in the same zone as the ApsaraDB RDS instance.</p>
+     * <p>The vSwitch must be in the same zone as the RDS instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -337,7 +336,7 @@ public class CreateRCNodePoolRequest extends TeaModel {
     /**
      * <p>The zone ID of the instance.</p>
      * <blockquote>
-     * <p>If you specify the VSwitchId parameter, the ZoneId parameter must match the zone of the specified vSwitch. You can also leave this parameter empty, and the system automatically selects the zone of the specified vSwitch.</p>
+     * <p>If you specify the VSwitchId parameter, the ZoneId parameter must be set to the zone where the vSwitch resides. You can also leave the ZoneId parameter empty, and the system automatically selects the zone where the specified vSwitch resides.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -625,7 +624,7 @@ public class CreateRCNodePoolRequest extends TeaModel {
 
     public static class CreateRCNodePoolRequestDataDisk extends TeaModel {
         /**
-         * <p>The type of the data cloud disk. Only <strong>cloud_essd</strong> (ESSD cloud disk) is supported. For more information about standard SSDs and other cloud disk types, see the related documentation.</p>
+         * <p>The data cloud disk type. Currently, only <strong>cloud_essd</strong> (ESSD cloud disk) is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_essd</p>
@@ -634,7 +633,7 @@ public class CreateRCNodePoolRequest extends TeaModel {
         public String category;
 
         /**
-         * <p>A reserved parameter. This parameter is not supported.</p>
+         * <p>Reserved parameter. Not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -645,8 +644,9 @@ public class CreateRCNodePoolRequest extends TeaModel {
         /**
          * <p>Specifies whether to encrypt the data cloud disk. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong>: no.
+         * Default value: <strong>false</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -656,12 +656,12 @@ public class CreateRCNodePoolRequest extends TeaModel {
         public String encrypted;
 
         /**
-         * <p>The performance level (PL) of the ESSD cloud disk. For standard SSDs and other cloud disk types, this parameter is not applicable. Valid values:</p>
+         * <p>The performance level of the ESSD cloud disk. Valid values:</p>
          * <ul>
-         * <li><strong>PL0</strong>: A single cloud disk can deliver up to 10,000 random read/write IOPS.</li>
-         * <li><strong>PL1</strong>: A single cloud disk can deliver up to 50,000 random read/write IOPS.</li>
-         * <li><strong>PL2</strong>: A single cloud disk can deliver up to 100,000 random read/write IOPS.</li>
-         * <li><strong>PL3</strong>: A single cloud disk can deliver up to 1,000,000 random read/write IOPS.</li>
+         * <li><strong>PL0</strong>: An ESSD can deliver up to 10,000 random read/write IOPS.</li>
+         * <li><strong>PL1</strong>: An ESSD can deliver up to 50,000 random read/write IOPS.</li>
+         * <li><strong>PL2</strong>: An ESSD can deliver up to 100,000 random read/write IOPS.</li>
+         * <li><strong>PL3</strong>: An ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -728,7 +728,7 @@ public class CreateRCNodePoolRequest extends TeaModel {
 
     public static class CreateRCNodePoolRequestSystemDisk extends TeaModel {
         /**
-         * <p>The category of the system cloud disk. Only <strong>cloud_essd</strong> (Enterprise SSD) is supported.</p>
+         * <p>The category of the system cloud disk. Only <strong>cloud_essd</strong> (ESSD) is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_essd</p>
@@ -737,12 +737,12 @@ public class CreateRCNodePoolRequest extends TeaModel {
         public String category;
 
         /**
-         * <p>The performance level (PL) of the ESSD cloud disk. For standard SSDs and other cloud disk types, this parameter is not applicable. Valid values:</p>
+         * <p>The performance level of the ESSD cloud disk. Valid values:</p>
          * <ul>
-         * <li><strong>PL0</strong>: A single cloud disk can deliver up to 10,000 random read/write IOPS.</li>
-         * <li><strong>PL1</strong>: A single cloud disk can deliver up to 50,000 random read/write IOPS.</li>
-         * <li><strong>PL2</strong>: A single cloud disk can deliver up to 100,000 random read/write IOPS.</li>
-         * <li><strong>PL3</strong>: A single cloud disk can deliver up to 1,000,000 random read/write IOPS.</li>
+         * <li><strong>PL0</strong>: An ESSD can deliver up to 10,000 random read/write IOPS.</li>
+         * <li><strong>PL1</strong>: An ESSD can deliver up to 50,000 random read/write IOPS.</li>
+         * <li><strong>PL2</strong>: An ESSD can deliver up to 100,000 random read/write IOPS.</li>
+         * <li><strong>PL3</strong>: An ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -793,7 +793,7 @@ public class CreateRCNodePoolRequest extends TeaModel {
 
     public static class CreateRCNodePoolRequestTag extends TeaModel {
         /**
-         * <p>The tag key. You can create up to N tag keys at a time. Valid values of N: <strong>1 to 20</strong>. The tag key cannot be an empty string.</p>
+         * <p>The tag key. You can create up to N tag keys at a time. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag key cannot be an empty string.</p>
          * 
          * <strong>example:</strong>
          * <p>testkey1</p>

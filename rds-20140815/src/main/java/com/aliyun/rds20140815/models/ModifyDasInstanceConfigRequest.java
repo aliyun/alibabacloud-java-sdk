@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDasInstanceConfigRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can be up to 64 ASCII characters in length. The value cannot contain non-ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -14,7 +14,7 @@ public class ModifyDasInstanceConfigRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> to query the instance ID.</p>
+     * <p>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,8 +35,8 @@ public class ModifyDasInstanceConfigRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic storage expansion. Valid values:</p>
      * <ul>
-     * <li><strong>Enable</strong></li>
-     * <li><strong>Disable</strong></li>
+     * <li><strong>Enable</strong>: Enables automatic storage expansion.</li>
+     * <li><strong>Disable</strong>: Disables automatic storage expansion.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -47,7 +47,7 @@ public class ModifyDasInstanceConfigRequest extends TeaModel {
     public String storageAutoScale;
 
     /**
-     * <p>The threshold in percentage of remaining storage space that triggers automatic storage expansion. Valid values:</p>
+     * <p>The threshold percentage that triggers automatic storage expansion. When the percentage of remaining storage space reaches the specified threshold, automatic storage expansion is triggered. Valid values:</p>
      * <ul>
      * <li><strong>10</strong></li>
      * <li><strong>20</strong></li>
@@ -66,10 +66,10 @@ public class ModifyDasInstanceConfigRequest extends TeaModel {
     public Integer storageThreshold;
 
     /**
-     * <p>The upper limit of automatic storage expansion. The value must be greater than or equal to the current total storage capacity of the instance.</p>
+     * <p>The upper limit for automatic storage expansion. The value must be greater than or equal to the current total storage capacity of the instance.</p>
      * <ul>
-     * <li>Upper limit for ESSDs: 32000 GB.</li>
-     * <li>Upper limit for standard SSDs: 6000 GB.<blockquote>
+     * <li>Upper limit for ESSDs: 32,000 GB</li>
+     * <li>Upper limit for standard SSDs: 6,000 GB<blockquote>
      * <p>This parameter is required when <strong>StorageAutoScale</strong> is set to <strong>Enable</strong>.</p>
      * </blockquote>
      * </li>

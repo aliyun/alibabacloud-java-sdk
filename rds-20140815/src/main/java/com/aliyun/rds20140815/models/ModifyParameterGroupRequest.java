@@ -7,14 +7,14 @@ public class ModifyParameterGroupRequest extends TeaModel {
     /**
      * <p>The modification mode of the parameter template. Valid values:</p>
      * <ul>
-     * <li><p><strong>Collectivity</strong> (default): adds or updates parameters.</p>
+     * <li><p><strong>Collectivity</strong>: adds or modifies parameters. This is the default value.</p>
      * <blockquote>
-     * <p>The parameters that you specify in the <strong>Parameters</strong> parameter are added to or updated in the existing parameter template. Other parameters in the existing parameter template are not affected.</p>
+     * <p>The parameters specified in the <strong>Parameters</strong> parameter are added to the current parameter template, or the existing parameters in the current parameter template are modified. Other parameters in the current parameter template remain unaffected.</p>
      * </blockquote>
      * </li>
-     * <li><p><strong>Individual</strong>: overwrites the parameter template.</p>
+     * <li><p><strong>Individual</strong>: overwrites parameters.</p>
      * <blockquote>
-     * <p>The existing parameter template is replaced with the parameters that you specify in the <strong>Parameters</strong> parameter.</p>
+     * <p>The content in the current parameter template is replaced with the content specified in the <strong>Parameters</strong> parameter.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -29,9 +29,9 @@ public class ModifyParameterGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The description of the parameter template. The description can be up to 200 characters in length.</p>
+     * <p>The description of the parameter template. The description must be 0 to 200 characters in length.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the original parameter template description is retained.</p>
+     * <p>If you do not specify this parameter, the original description of the parameter template is retained.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class ModifyParameterGroupRequest extends TeaModel {
     public String parameterGroupDesc;
 
     /**
-     * <p>The parameter template ID. You can call the DescribeParameterGroups operation to query the parameter template ID.</p>
+     * <p>The ID of the parameter template. You can call the DescribeParameterGroups operation to query the ID of the parameter template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class ModifyParameterGroupRequest extends TeaModel {
      * <li>The name must be 8 to 64 characters in length.</li>
      * </ul>
      * <blockquote>
-     * <p>If you do not specify this parameter, the original parameter template name is retained.</p>
+     * <p>If you do not specify this parameter, the original name of the parameter template is retained.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -67,12 +67,12 @@ public class ModifyParameterGroupRequest extends TeaModel {
     public String parameterGroupName;
 
     /**
-     * <p>A JSON string that consists of parameters and their values. Format: {&quot;Parameter 1&quot;:&quot;Value 1&quot;,&quot;Parameter 2&quot;:&quot;Value 2&quot;...}. For more information about the parameters that can be modified, see <a href="https://help.aliyun.com/document_detail/96063.html">Configure the parameters of an ApsaraDB RDS for MySQL instance</a> or <a href="https://help.aliyun.com/document_detail/96751.html">Configure the parameters of an ApsaraDB RDS for PostgreSQL instance</a>.</p>
+     * <p>The JSON string of parameters and values. Format: {&quot;Parameter 1&quot;:&quot;Value 1&quot;,&quot;Parameter 2&quot;:&quot;Value 2&quot;...}. For more information about the parameters that can be modified, see <a href="https://help.aliyun.com/document_detail/96063.html">Set the parameters of an ApsaraDB RDS for MySQL instance</a> or <a href="https://help.aliyun.com/document_detail/96751.html">Set the parameters of an ApsaraDB RDS for PostgreSQL instance</a>.</p>
      * <blockquote>
      * <ul>
-     * <li>If <strong>ModifyMode</strong> is set to <strong>Individual</strong>, the parameters that you specify overwrite the existing parameter template.</li>
-     * <li>If <strong>ModifyMode</strong> is set to <strong>Collectivity</strong>, the parameters that you specify are added to or updated in the existing parameter template. Other parameters in the existing parameter template are not affected.</li>
-     * <li>If you do not specify this parameter, the original parameter information is retained.</li>
+     * <li>If the <strong>ModifyMode</strong> parameter is set to <strong>Individual</strong>, the specified parameters overwrite the original parameters in the parameter template.</li>
+     * <li>If the <strong>ModifyMode</strong> parameter is set to <strong>Collectivity</strong>, the specified parameters are added to or modified in the original parameter template.</li>
+     * <li>If you do not specify this parameter, the original parameters are retained.</li>
      * </ul>
      * </blockquote>
      * 
@@ -85,7 +85,7 @@ public class ModifyParameterGroupRequest extends TeaModel {
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
      * <blockquote>
-     * <p>The region of a parameter template cannot be changed. You can call the CloneParameterGroup operation to copy a parameter template to another region.</p>
+     * <p>The region of a parameter template cannot be modified. You can call the CloneParameterGroup operation to copy the parameter template to another region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -96,7 +96,7 @@ public class ModifyParameterGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
+     * <p>The ID of the resource group. You can call the DescribeDBInstanceAttribute operation to query the ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmy****</p>

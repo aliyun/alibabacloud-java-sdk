@@ -14,9 +14,9 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     public String connectionString;
 
     /**
-     * <p>The instance ID. If you set the <strong>Amount</strong> parameter to a value greater than <strong>1</strong>, the number of instance IDs that corresponds to the value is returned, separated by commas.</p>
-     * <p>For example, if <strong>Amount</strong> is set to <strong>3</strong>, three instance IDs are returned. Example:
-     * <code>rm-uf6wjk5*****1，rm-uf6wjk5*****2，rm-uf6wjk5*****3</code></p>
+     * <p>The instance ID. If you set the <strong>Amount</strong> parameter to a value greater than <strong>1</strong>, the response contains the specified number of instance IDs separated by commas.</p>
+     * <p>For example, if you set the <strong>Amount</strong> parameter to <strong>3</strong>, the response contains three instance IDs. Example:
+     * <code>rm-uf6wjk5*****1,rm-uf6wjk5*****2,rm-uf6wjk5*****3</code></p>
      * 
      * <strong>example:</strong>
      * <p>rm-uf6wjk5****</p>
@@ -25,9 +25,9 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>Indicates that a dry run is performed before the instance is created.</p>
+     * <p>Indicates whether a dry run was performed before the instance was created.</p>
      * <ul>
-     * <li>The return value is always <strong>true</strong>.</li>
+     * <li>The value is fixed to <strong>true</strong>.</li>
      * <li>If no dry run is performed, this parameter is not returned.</li>
      * </ul>
      * 
@@ -38,7 +38,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Indicates whether the dry run for instance creation passed. Valid values:</p>
+     * <p>Indicates whether the dry run passed. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: The dry run passed.</li>
      * <li><strong>false</strong>: The dry run failed.</li>
@@ -57,9 +57,9 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     public Boolean dryRunResult;
 
     /**
-     * <p>The message for the batch creation task.</p>
+     * <p>The prompt message for the batch creation task.</p>
      * <blockquote>
-     * <p>This parameter is returned only when the <strong>Amount</strong> parameter is greater than 1.</p>
+     * <p>This parameter is returned only when the <strong>Amount</strong> parameter is set to a value greater than 1.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The port number that corresponds to the internal endpoint of the instance.</p>
+     * <p>The port number of the internal endpoint of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>3306</p>
@@ -96,10 +96,10 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether tags are successfully bound to the instance. Valid values:</p>
+     * <p>Indicates whether the instance was successfully tagged. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Tags are successfully bound.</li>
-     * <li><strong>false</strong>: Tags failed to be bound.</li>
+     * <li><strong>true</strong>: The instance was successfully tagged.</li>
+     * <li><strong>false</strong>: The instance failed to be tagged.</li>
      * </ul>
      * <blockquote>
      * <p>If no tags are bound to the instance, this parameter is not returned.</p>
@@ -114,8 +114,8 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     /**
      * <p>The task ID of the batch creation task.</p>
      * <ul>
-     * <li>This parameter is returned only when the <strong>Amount</strong> parameter is greater than 1.</li>
-     * <li>Querying tasks by <strong>TaskId</strong> is not supported at this time.</li>
+     * <li>This parameter is returned only when the <strong>Amount</strong> parameter is set to a value greater than 1.</li>
+     * <li>You cannot query the task by using the <strong>TaskId</strong> value.</li>
      * </ul>
      * 
      * <strong>example:</strong>

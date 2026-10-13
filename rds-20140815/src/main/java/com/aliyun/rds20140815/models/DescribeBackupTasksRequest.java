@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupTasksRequest extends TeaModel {
     /**
-     * <p>The backup task ID.</p>
+     * <p>The ID of the backup task.</p>
      * 
      * <strong>example:</strong>
      * <p>476****</p>
@@ -14,7 +14,7 @@ public class DescribeBackupTasksRequest extends TeaModel {
     public Integer backupJobId;
 
     /**
-     * <p>The backup task status. Valid values:</p>
+     * <p>The status of the backup task. Valid values:</p>
      * <ul>
      * <li><strong>NoStart</strong>: not started</li>
      * <li><strong>Progressing</strong>: in progress</li>
@@ -28,7 +28,7 @@ public class DescribeBackupTasksRequest extends TeaModel {
     public String backupJobStatus;
 
     /**
-     * <p>The backup mode. Valid values:</p>
+     * <p>The backup pattern. Valid values:</p>
      * <ul>
      * <li><strong>Automated</strong>: automatic backup</li>
      * <li><strong>Manual</strong>: manual backup</li>
@@ -41,7 +41,7 @@ public class DescribeBackupTasksRequest extends TeaModel {
     public String backupMode;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can be up to 64 ASCII characters in length. It cannot contain non-ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -50,7 +50,7 @@ public class DescribeBackupTasksRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
+     * <p>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class DescribeBackupTasksRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>

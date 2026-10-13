@@ -9,11 +9,11 @@ public class CloneDBInstanceRequest extends TeaModel {
      * <ol>
      * <li><p><strong>true</strong>: enables automatic payment. Make sure that your account balance is sufficient.</p>
      * </li>
-     * <li><p><strong>false</strong>: generates an order without charging the account.</p>
+     * <li><p><strong>false</strong>: generates an unpaid order without deducting fees.</p>
      * </li>
      * </ol>
      * <blockquote>
-     * <p>Default value: true. If your payment method has insufficient balance, set AutoPay to false. In this case, an unpaid order is generated. You can log on to the ApsaraDB RDS console to pay for the order.</p>
+     * <p>Default value: true. If your payment method has an insufficient balance, you can set the AutoPay parameter to false. In this case, an unpaid order is generated, and you can log on to the ApsaraDB RDS console to pay the order.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,10 +23,10 @@ public class CloneDBInstanceRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The backup set ID.</p>
-     * <p>You can call the DescribeBackups operation to query the backup set list.</p>
+     * <p>The ID of the backup set.</p>
+     * <p>You can call the DescribeBackups operation to query backup sets.</p>
      * <blockquote>
-     * <p>You must specify at least one of <strong>BackupId</strong> and <strong>RestoreTime</strong>.</p>
+     * <p>You must specify at least one of the <strong>BackupId</strong> and <strong>RestoreTime</strong> parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -38,8 +38,8 @@ public class CloneDBInstanceRequest extends TeaModel {
     /**
      * <p>The backup type. Valid values:</p>
      * <ul>
-     * <li><strong>FullBackup</strong>: full backup.</li>
-     * <li><strong>IncrementalBackup</strong>: incremental backup.</li>
+     * <li><strong>FullBackup</strong>: full backup</li>
+     * <li><strong>IncrementalBackup</strong>: incremental backup</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,11 +52,11 @@ public class CloneDBInstanceRequest extends TeaModel {
     public String bpeEnabled;
 
     /**
-     * <p>Specifies whether to enable the I/O burst feature for the Premium ESSD cloud disk. Valid values:</p>
+     * <p>Specifies whether to enable the I/O performance burst feature for cloud disks. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: enables the feature.</li>
      * <li><strong>false</strong>: disables the feature.<blockquote>
-     * <p>For more information about the I/O burst feature, see <a href="https://help.aliyun.com/document_detail/2340501.html">What is Premium ESSD?</a>.</p>
+     * <p>For more information about the I/O performance burst feature, see <a href="https://help.aliyun.com/document_detail/2340501.html">What is Premium ESSD?</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -70,18 +70,18 @@ public class CloneDBInstanceRequest extends TeaModel {
     /**
      * <p>The instance edition. Valid values:</p>
      * <ul>
-     * <li><strong>Basic</strong>: Basic Edition.</li>
-     * <li><strong>HighAvailability</strong>: High-availability Edition.</li>
-     * <li><strong>AlwaysOn</strong>: Cluster Edition (SQL Server).</li>
-     * <li><strong>cluster</strong>: Cluster Edition (MySQL).</li>
-     * <li><strong>Finance</strong>: Enterprise Edition. This value is supported only on the China site (aliyun.com).</li>
+     * <li><strong>Basic</strong>: Basic Edition</li>
+     * <li><strong>HighAvailability</strong>: High-availability Edition</li>
+     * <li><strong>AlwaysOn</strong>: Cluster Edition (SQL Server)</li>
+     * <li><strong>cluster</strong>: Cluster Edition (MySQL)</li>
+     * <li><strong>Finance</strong>: Finance Edition (supported only on the China site)</li>
      * </ul>
      * <p><strong>Serverless instances</strong></p>
      * <ul>
-     * <li><strong>serverless_basic</strong>: Serverless Basic Edition. This value is valid only for ApsaraDB RDS for MySQL and ApsaraDB RDS for PostgreSQL instances.</li>
-     * <li><strong>serverless_standard</strong>: MySQL Serverless High-availability Edition.</li>
-     * <li><strong>serverless_ha</strong>: SQL Server Serverless High-availability Edition.<blockquote>
-     * <p>You do not need to specify this parameter. The clone instance uses the same edition as the source instance.</p>
+     * <li><strong>serverless_basic</strong>: Serverless Basic Edition (supported only for MySQL and PostgreSQL)</li>
+     * <li><strong>serverless_standard</strong>: MySQL Serverless High-availability Edition</li>
+     * <li><strong>serverless_ha</strong>: SQL Server Serverless High-availability Edition<blockquote>
+     * <p>You do not need to specify this parameter. The cloned instance inherits the edition of the source instance.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -93,7 +93,7 @@ public class CloneDBInstanceRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>Ensures the idempotence of the request and prevents duplicate submissions. The value is generated by the client and must be unique across different requests. The value can be up to 64 ASCII characters in length and cannot contain non-ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88**********</p>
@@ -117,9 +117,9 @@ public class CloneDBInstanceRequest extends TeaModel {
     public String DBInstanceClass;
 
     /**
-     * <p>The name of the instance. The name must be 2 to 255 characters in length. It must start with a letter or a Chinese character and can contain digits, Chinese characters, letters, underscores (_), and hyphens (-).</p>
+     * <p>The description of the instance. The description must be 2 to 255 characters in length. It must start with a Chinese character or a letter and can contain digits, Chinese characters, letters, underscores (_), and hyphens (-).</p>
      * <blockquote>
-     * <p>The name cannot start with http:// or https://.</p>
+     * <p>The description cannot start with http:// or https://.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class CloneDBInstanceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>Instance storage capacity of the instance. Unit: GB. The value increases in increments of 5 GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</p>
+     * <p>Instance storage capacity of the instance. Unit: GB. Instance storage capacity increases in increments of 5 GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</p>
      * <blockquote>
      * <p>Default value: instance storage capacity of the source instance.</p>
      * </blockquote>
@@ -153,15 +153,15 @@ public class CloneDBInstanceRequest extends TeaModel {
     /**
      * <p>The instance storage type. Valid values:</p>
      * <ul>
-     * <li><strong>general_essd</strong>: Premium ESSD (recommended).</li>
-     * <li><strong>local_ssd</strong>: local SSD.</li>
-     * <li><strong>cloud_ssd</strong>: standard SSD.</li>
-     * <li><strong>cloud_essd</strong>: PL1 ESSD.</li>
-     * <li><strong>cloud_essd2</strong>: PL2 ESSD.</li>
-     * <li><strong>cloud_essd3</strong>: PL3 ESSD.</li>
+     * <li><strong>general_essd</strong>: Premium ESSD (recommended)</li>
+     * <li><strong>local_ssd</strong>: local SSD</li>
+     * <li><strong>cloud_ssd</strong>: standard SSD</li>
+     * <li><strong>cloud_essd</strong>: PL1 ESSD</li>
+     * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
+     * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
      * </ul>
      * <blockquote>
-     * <p>Serverless instances support only PL1 ESSDs and Premium ESSDs.</p>
+     * <p>Serverless instances support only PL1 ESSD and Premium ESSD.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class CloneDBInstanceRequest extends TeaModel {
     public String DBInstanceStorageType;
 
     /**
-     * <p>The database names in the following format: <code>OriginalDatabaseName1,OriginalDatabaseName2</code>.</p>
+     * <p>The names of the databases to restore. Format: <code>OriginalDatabaseName1,OriginalDatabaseName2</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>test1,test2</p>
@@ -180,7 +180,7 @@ public class CloneDBInstanceRequest extends TeaModel {
     public String dbNames;
 
     /**
-     * <p>The dedicated cluster ID.</p>
+     * <p>The ID of the dedicated cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>dhg-7a9****</p>
@@ -189,10 +189,10 @@ public class CloneDBInstanceRequest extends TeaModel {
     public String dedicatedHostGroupId;
 
     /**
-     * <p>Specifies whether to enable the release protection feature. Valid values:</p>
+     * <p>Specifies whether to enable release protection. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables the feature.</li>
-     * <li><strong>false</strong> (default): disables the feature.</li>
+     * <li><strong>true</strong>: enables release protection.</li>
+     * <li><strong>false</strong> (default): disables release protection.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -204,8 +204,8 @@ public class CloneDBInstanceRequest extends TeaModel {
     /**
      * <p>The network type of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>VPC</strong>: virtual private cloud (VPC).</li>
-     * <li><strong>Classic</strong>: classic network.</li>
+     * <li><strong>VPC</strong>: Virtual Private Cloud (VPC)</li>
+     * <li><strong>Classic</strong>: classic network</li>
      * </ul>
      * <blockquote>
      * <p>Default value: the network type of the source instance.</p>
@@ -218,7 +218,7 @@ public class CloneDBInstanceRequest extends TeaModel {
     public String instanceNetworkType;
 
     /**
-     * <p>Specifies whether to enable the Buffer Pool Extension (BPE) feature for the Premium ESSD cloud disk. Valid values:</p>
+     * <p>Specifies whether to enable the Buffer Pool Extension (BPE) feature for cloud disks. Valid values:</p>
      * <ul>
      * <li><strong>1</strong>: enables the feature.</li>
      * <li><strong>0</strong>: disables the feature.</li>
@@ -236,9 +236,9 @@ public class CloneDBInstanceRequest extends TeaModel {
     /**
      * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
-     * <li><strong>Prepaid</strong>: subscription.</li>
-     * <li><strong>Serverless</strong>: serverless. This value is not supported for ApsaraDB RDS for MariaDB instances. For more information, see <a href="https://help.aliyun.com/document_detail/411291.html">Overview of MySQL Serverless instances</a>, <a href="https://help.aliyun.com/document_detail/604344.html">Overview of SQL Server Serverless instances</a>, and <a href="https://help.aliyun.com/document_detail/607742.html">Overview of PostgreSQL Serverless instances</a>.</li>
+     * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+     * <li><strong>Prepaid</strong>: subscription</li>
+     * <li><strong>Serverless</strong>: serverless. This billing method is not supported for ApsaraDB RDS for MariaDB instances. For more information, see <a href="https://help.aliyun.com/document_detail/411291.html">Overview of serverless ApsaraDB RDS for MySQL instances</a>, <a href="https://help.aliyun.com/document_detail/604344.html">Overview of serverless ApsaraDB RDS for SQL Server instances</a>, and <a href="https://help.aliyun.com/document_detail/607742.html">Overview of serverless ApsaraDB RDS for PostgreSQL instances</a>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -249,13 +249,13 @@ public class CloneDBInstanceRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The unit of the subscription duration. Valid values:</p>
+     * <p>The subscription period of the subscription instance. Valid values:</p>
      * <ul>
-     * <li><strong>Year</strong></li>
-     * <li><strong>Month</strong></li>
+     * <li><strong>Year</strong>: yearly</li>
+     * <li><strong>Month</strong>: monthly</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required if PayType is set to <strong>Prepaid</strong>.</p>
+     * <p>This parameter is required if the <strong>PayType</strong> parameter is set to <strong>Prepaid</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -265,7 +265,7 @@ public class CloneDBInstanceRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The internal IP address of the new instance. The IP address must be within the IP address range of the specified vSwitch. The system automatically assigns an internal IP address based on the values of <strong>VPCId</strong> and <strong>VSwitchId</strong>.</p>
+     * <p>The internal IP address of the new instance. The IP address must be within the IP address range of the specified vSwitch. By default, the system automatically allocates an IP address based on the <strong>VPCId</strong> and <strong>VSwitchId</strong> parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>172.XX.XX.69</p>
@@ -274,7 +274,7 @@ public class CloneDBInstanceRequest extends TeaModel {
     public String privateIpAddress;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query region IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -286,7 +286,7 @@ public class CloneDBInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to restore individual databases and tables. Set this parameter to <strong>true</strong> to restore individual databases and tables. Otherwise, leave this parameter empty.</p>
+     * <p>Specifies whether to restore individual databases and tables. Set the value to <strong>true</strong> to restore individual databases and tables. Otherwise, leave this parameter empty.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -295,9 +295,9 @@ public class CloneDBInstanceRequest extends TeaModel {
     public String restoreTable;
 
     /**
-     * <p>Any point in time within the backup retention period. Specify the time in the format of <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+     * <p>The point in time to which you want to restore data. The point in time must be within the backup retention period. Specify the time in the ISO 8601 standard in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
      * <blockquote>
-     * <p>You must specify at least one of <strong>BackupId</strong> and <strong>RestoreTime</strong>.</p>
+     * <p>You must specify at least one of the <strong>BackupId</strong> and <strong>RestoreTime</strong> parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -310,8 +310,8 @@ public class CloneDBInstanceRequest extends TeaModel {
     public CloneDBInstanceRequestServerlessConfig serverlessConfig;
 
     /**
-     * <p>The information about the databases and tables that you want to restore. Format:
-     * <code>[{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;Database1Name&quot;,&quot;newname&quot;:&quot;NewDatabase1Name&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Table1NameInDatabase1&quot;,&quot;newname&quot;:&quot;NewTable1Name&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Table2NameInDatabase1&quot;,&quot;newname&quot;:&quot;NewTable2Name&quot;}]},{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;Database2Name&quot;,&quot;newname&quot;:&quot;NewDatabase2Name&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Table1NameInDatabase2&quot;,&quot;newname&quot;:&quot;NewTable1Name&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Table2NameInDatabase2&quot;,&quot;newname&quot;:&quot;NewTable2Name&quot;}]}]</code></p>
+     * <p>The information about the databases and tables to restore. This parameter is required when you restore individual databases and tables. Format:
+     * <code>[{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;Original database 1 name&quot;,&quot;newname&quot;:&quot;New database 1 name&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Table 1 name in database 1&quot;,&quot;newname&quot;:&quot;New table 1 name&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Table 2 name in database 1&quot;,&quot;newname&quot;:&quot;New table 2 name&quot;}]},{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;Original database 2 name&quot;,&quot;newname&quot;:&quot;New database 2 name&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Table 1 name in database 2&quot;,&quot;newname&quot;:&quot;New table 1 name&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Table 2 name in database 2&quot;,&quot;newname&quot;:&quot;New table 2 name&quot;}]}]</code></p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;testdb1&quot;,&quot;newname&quot;:&quot;testdb1_new&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;testdb1table1&quot;,&quot;newname&quot;:&quot;testdb1table1_new&quot;}]}]</p>
@@ -320,7 +320,7 @@ public class CloneDBInstanceRequest extends TeaModel {
     public String tableMeta;
 
     /**
-     * <p>The tag list.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CloneDBInstanceRequestTag> tag;
@@ -328,11 +328,11 @@ public class CloneDBInstanceRequest extends TeaModel {
     /**
      * <p>The subscription duration. Valid values:</p>
      * <ul>
-     * <li>If <strong>Period</strong> is set to <strong>Year</strong>, the value of UsedTime ranges from <strong>1 to 3</strong>.</li>
-     * <li>If <strong>Period</strong> is set to <strong>Month</strong>, the value of UsedTime ranges from <strong>1 to 9</strong>.</li>
+     * <li>If the <strong>Period</strong> parameter is set to <strong>Year</strong>, the value of the UsedTime parameter ranges from <strong>1</strong> to <strong>3</strong>.</li>
+     * <li>If the <strong>Period</strong> parameter is set to <strong>Month</strong>, the value of the UsedTime parameter ranges from <strong>1</strong> to <strong>9</strong>.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required if PayType is set to <strong>Prepaid</strong>.</p>
+     * <p>This parameter is required if the <strong>PayType</strong> parameter is set to <strong>Prepaid</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -342,9 +342,9 @@ public class CloneDBInstanceRequest extends TeaModel {
     public Integer usedTime;
 
     /**
-     * <p>The VPC ID.</p>
+     * <p>The ID of the VPC.</p>
      * <blockquote>
-     * <p>Make sure that the VPC belongs to the corresponding region.</p>
+     * <p>Make sure that the VPC belongs to the specified region.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -354,10 +354,10 @@ public class CloneDBInstanceRequest extends TeaModel {
     public String VPCId;
 
     /**
-     * <p>The vSwitch ID. The zone of the vSwitch must correspond to the active zone ID specified in <strong>ZoneId</strong>.</p>
+     * <p>The vSwitch ID. The zone where the vSwitch resides must correspond to the zone ID specified in <strong>ZoneId</strong>.</p>
      * <ul>
-     * <li>The network type (<strong>InstanceNetworkType</strong>) must be set to <strong>VPC</strong>.</li>
-     * <li>If you specify <strong>ZoneSlaveId1</strong> (secondary zone ID), you must specify two vSwitch IDs separated by a comma (,).</li>
+     * <li>The network type <strong>InstanceNetworkType</strong> must be set to <strong>VPC</strong>.</li>
+     * <li>If you specify <strong>ZoneSlaveId1</strong> (secondary zone ID), you must specify two vSwitch IDs and separate them with a comma (,).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -367,9 +367,9 @@ public class CloneDBInstanceRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The primary zone ID. You can call the DescribeRegions operation to query the zone ID.</p>
+     * <p>The primary zone ID. You can call the DescribeRegions operation to query zone IDs.</p>
      * <blockquote>
-     * <p>Default value: the zone of the source instance.</p>
+     * <p>Default value: the zone ID of the source instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -379,7 +379,7 @@ public class CloneDBInstanceRequest extends TeaModel {
     public String zoneId;
 
     /**
-     * <p>The zone ID of the secondary node. If this parameter is set to the same value as <strong>ZoneId</strong>, the single-zone deployment method is used. If this parameter is set to a different value from <strong>ZoneId</strong>, the multi-zone deployment method is used.</p>
+     * <p>The zone ID of the secondary node. If this parameter is set to the same value as the <strong>ZoneId</strong> parameter, it is a single-zone deployment. If this parameter is set to a different value from the <strong>ZoneId</strong> parameter, it is a multi-zone deployment.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-c</p>
@@ -388,8 +388,8 @@ public class CloneDBInstanceRequest extends TeaModel {
     public String zoneIdSlave1;
 
     /**
-     * <p>&lt;props=&quot;intl&quot;&gt;The zone ID of the logger node. If this parameter is set to the same value as <strong>ZoneId</strong>, the single-zone deployment method is used. If this parameter is set to a different value from <strong>ZoneId</strong>, the multi-zone deployment method is used.</p>
-     * <p>&lt;props=&quot;china&quot;&gt;The zone ID of the secondary node or logger node. If this parameter is set to the same value as <strong>ZoneId</strong>, the single-zone deployment method is used. If this parameter is set to a different value from <strong>ZoneId</strong>, the multi-zone deployment method is used.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;The zone ID of the logger node. If this parameter is set to the same value as the <strong>ZoneId</strong> parameter, it is a single-zone deployment. If this parameter is set to a different value from the <strong>ZoneId</strong> parameter, it is a multi-zone deployment.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The zone ID of the secondary node or logger node. If this parameter is set to the same value as the <strong>ZoneId</strong> parameter, it is a single-zone deployment. If this parameter is set to a different value from the <strong>ZoneId</strong> parameter, it is a multi-zone deployment.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-d</p>
@@ -728,12 +728,12 @@ public class CloneDBInstanceRequest extends TeaModel {
 
     public static class CloneDBInstanceRequestTag extends TeaModel {
         /**
-         * <p>The tag key. Specify this parameter to attach a tag to the instance.</p>
+         * <p>The tag key. You can specify this parameter to bind a tag to the instance.</p>
          * <ul>
-         * <li>If the specified tag key already exists, the tag is directly attached to the instance. You can call the ListTagResources operation to query existing tags.</li>
-         * <li>If the specified tag key does not exist, the tag key is created and then attached to the instance.</li>
-         * <li>Empty strings are not allowed.</li>
-         * <li>This parameter must be used together with <strong>Tag.Value</strong>.</li>
+         * <li>If the specified tag key already exists, the tag key is directly bound to the instance. You can call the ListTagResources operation to query created tags.</li>
+         * <li>If the specified tag key does not exist, the tag key is created and then bound to the instance.</li>
+         * <li>The tag key cannot be an empty string.</li>
+         * <li>This parameter must be used together with the <strong>Tag.Value</strong> parameter.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -743,11 +743,11 @@ public class CloneDBInstanceRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value that corresponds to the tag key. Specify this parameter to attach a tag to the instance.</p>
+         * <p>The tag value that corresponds to the tag key. You can specify this parameter to bind a tag to the instance.</p>
          * <ul>
-         * <li>If the specified tag value already exists for the corresponding tag key, the tag value is directly attached to the instance. You can call the ListTagResources operation to query existing tags.</li>
-         * <li>If the specified tag value does not exist for the corresponding tag key, the tag value is created and then attached to the instance.</li>
-         * <li>This parameter must be used together with <strong>Tag.Key</strong>.</li>
+         * <li>If the specified tag value already exists for the corresponding tag key, the tag value is directly bound to the instance. You can call the ListTagResources operation to query created tags.</li>
+         * <li>If the specified tag value does not exist for the corresponding tag key, the tag value is created and then bound to the instance.</li>
+         * <li>This parameter must be used together with the <strong>Tag.Key</strong> parameter.</li>
          * </ul>
          * 
          * <strong>example:</strong>

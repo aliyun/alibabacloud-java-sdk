@@ -14,7 +14,7 @@ public class CreateDBInstanceReplicationRequest extends TeaModel {
     public String channelName;
 
     /**
-     * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
+     * <p>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CreateDBInstanceReplicationRequest extends TeaModel {
     public String dbInstanceId;
 
     /**
-     * <p>The address of the primary database host. IP addresses and domain names are supported.</p>
+     * <p>The host address of the primary database. Both IP addresses and domain names are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class CreateDBInstanceReplicationRequest extends TeaModel {
     public String masterHost;
 
     /**
-     * <p>The password of the primary database, which is used to authenticate the replication user. The password must be Base64-encoded in advance.</p>
+     * <p>The password of the primary database used to authenticate the replication user. The password must be Base64-encoded in advance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class CreateDBInstanceReplicationRequest extends TeaModel {
     public String masterPassword;
 
     /**
-     * <p>The port number of the primary database. The default port is 3306 for MySQL.</p>
+     * <p>The port number of the primary database. Typically, the port is 3306 for MySQL.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class CreateDBInstanceReplicationRequest extends TeaModel {
     public Integer masterPort;
 
     /**
-     * <p>The username of the primary database, which is used to establish the replication connection.</p>
+     * <p>The username of the primary database used to establish a replication connection.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
