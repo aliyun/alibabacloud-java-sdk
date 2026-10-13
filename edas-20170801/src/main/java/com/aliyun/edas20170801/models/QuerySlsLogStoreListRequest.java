@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuerySlsLogStoreListRequest extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class QuerySlsLogStoreListRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The number of the page to return. Pages start from Page 1.</p>
+     * <p>The page number. Pages start from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,7 +24,7 @@ public class QuerySlsLogStoreListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -33,12 +33,10 @@ public class QuerySlsLogStoreListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The type of data that is collected by Log Service. Valid values:</p>
+     * <p>The Simple Log Service collection type. Valid values:</p>
      * <ul>
-     * <li><p>file: the file type</p>
-     * </li>
-     * <li><p>stdout: the standard output type</p>
-     * </li>
+     * <li>file: File.</li>
+     * <li>stdout: Standard output.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

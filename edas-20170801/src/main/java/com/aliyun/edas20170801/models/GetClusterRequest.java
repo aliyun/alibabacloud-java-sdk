@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetClusterRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster in Enterprise Distributed Application Service (EDAS). You can call the ListCluster operation to query the cluster ID. For more information, see <a href="https://help.aliyun.com/document_detail/154995.html">ListCluster</a>.</p>
+     * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/154995.html">ListCluster</a> operation to obtain the cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

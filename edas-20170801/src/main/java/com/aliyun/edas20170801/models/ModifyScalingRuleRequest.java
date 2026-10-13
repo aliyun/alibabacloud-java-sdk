@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyScalingRuleRequest extends TeaModel {
     /**
-     * <p>Set the value to true if scale-outs are allowed.</p>
+     * <p>Must be set to true if auto scaling is used.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public Boolean acceptEULA;
 
     /**
-     * <p>The ID of the application.</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The ID of the instance group to which the application is deployed.</p>
+     * <p>The deployment group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,12 +34,10 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The relationship among the conditions that trigger a scale-in.</p>
+     * <p>The trigger condition. Valid values:</p>
      * <ul>
-     * <li><p>OR: one of the conditions</p>
-     * </li>
-     * <li><p>AND: all conditions</p>
-     * </li>
+     * <li>OR: Any condition.</li>
+     * <li>AND: All conditions.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +47,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public String inCondition;
 
     /**
-     * <p>The CPU utilization that triggers a scale-in.</p>
+     * <p>The trigger metric: CPU utilization.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -58,7 +56,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public Integer inCpu;
 
     /**
-     * <p>The duration in which the metric threshold is exceeded. Unit: minutes.</p>
+     * <p>The duration, in minutes.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -67,12 +65,10 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public Integer inDuration;
 
     /**
-     * <p>Specifies whether to allow scale-ins.</p>
+     * <p>Specifies whether to include the scale-in rule. Valid values:</p>
      * <ul>
-     * <li><p>true: allows scale-ins.</p>
-     * </li>
-     * <li><p>false: does not allow scale-ins.</p>
-     * </li>
+     * <li>true: Included.</li>
+     * <li>false: Not included.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,7 +78,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public Boolean inEnable;
 
     /**
-     * <p>The minimum number of instances that must be retained in each group when a scale-in is performed.</p>
+     * <p>The minimum number of instances to retain when the group scales in.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -91,7 +87,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public Integer inInstanceNum;
 
     /**
-     * <p>The system load that triggers a scale-in.</p>
+     * <p>The trigger metric: system load.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -100,7 +96,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public Integer inLoad;
 
     /**
-     * <p>The minimum service latency that triggers a scale-in. The lower limit is 0. Unit: milliseconds.</p>
+     * <p>The trigger metric: service latency. Unit: milliseconds. Minimum value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -109,7 +105,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public Integer inRT;
 
     /**
-     * <p>The number of instances that are removed during each scale-in.</p>
+     * <p>The number of instances to scale in at a time.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -118,7 +114,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public Integer inStep;
 
     /**
-     * <p>The key pair that is used to log on to the instance. This parameter takes effect only if you choose to create instances based on the specifications of an existing instance during a scale-out.</p>
+     * <p>The name of the logon key pair for the instance. This parameter is valid only when the existing instance rule is used for auto scaling.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;tdy218&quot;</p>
@@ -127,12 +123,10 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public String keyPairName;
 
     /**
-     * <p>The multi-zone scaling policy. Valid values:</p>
+     * <p>The multi-zone scaling policy for auto scaling. Valid values:</p>
      * <ul>
-     * <li><p>PRIORITY: The vSwitch that is first selected has the highest priority.</p>
-     * </li>
-     * <li><p>BALANCE: This policy evenly distributes instances across zones in which the vSwitches reside.</p>
-     * </li>
+     * <li>PRIORITY: Priority policy.</li>
+     * <li>BALANCE: Balanced distribution policy.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -142,7 +136,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public String multiAzPolicy;
 
     /**
-     * <p>The CPU utilization that triggers a scale-out.</p>
+     * <p>The trigger metric: CPU utilization.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -151,12 +145,10 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public Integer outCPU;
 
     /**
-     * <p>The relationship among the conditions that trigger a scale-out.</p>
+     * <p>The trigger condition. Valid values:</p>
      * <ul>
-     * <li><p>OR: one of the conditions</p>
-     * </li>
-     * <li><p>AND: all conditions</p>
-     * </li>
+     * <li>OR: Any condition.</li>
+     * <li>AND: All conditions.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -166,7 +158,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public String outCondition;
 
     /**
-     * <p>The duration in which the metric threshold is exceeded. Unit: minutes.</p>
+     * <p>The duration, in minutes.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -175,7 +167,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public Integer outDuration;
 
     /**
-     * <p>Specifies whether to allow scale-outs.</p>
+     * <p>Specifies whether to include the scale-out rule.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -184,7 +176,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public Boolean outEnable;
 
     /**
-     * <p>The maximum number of instances in each group when a scale-out is performed.</p>
+     * <p>The maximum number of instances when the group scales out.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -193,7 +185,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public Integer outInstanceNum;
 
     /**
-     * <p>The system load that triggers a scale-out.</p>
+     * <p>The trigger metric: system load.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -202,7 +194,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public Integer outLoad;
 
     /**
-     * <p>The minimum service latency that triggers a scale-out. The lower limit is 0. Unit: milliseconds.</p>
+     * <p>The trigger metric: service latency. Unit: milliseconds. Minimum value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -211,7 +203,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public Integer outRT;
 
     /**
-     * <p>The number of instances that are added during each scale-out.</p>
+     * <p>The number of instances to scale out at a time.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -220,7 +212,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public Integer outStep;
 
     /**
-     * <p>The password that is used to log on to the instance. This parameter takes effect only if you choose to create instances based on the specifications of an existing instance during a scale-out.</p>
+     * <p>The logon password of the instance. This parameter is valid only when the existing instance rule is used for auto scaling.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;Pwd*****&quot;</p>
@@ -229,14 +221,12 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>The source of the instance to be added during a scale-out. Valid values:</p>
+     * <p>The source of instances for scale-out. Valid values:</p>
      * <ul>
-     * <li><p>NEW: elastic resources</p>
-     * </li>
-     * <li><p>AVAILABLE: existing resources If you prefer existing resources to elastic resources, set this parameter to AVAILABLE_FIRST.</p>
-     * </li>
+     * <li>NEW: Elastic resources.</li>
+     * <li>AVAILABLE: Existing resources. To prioritize existing resources, use AVAILABLE_FIRST.</li>
      * </ul>
-     * <p>If you set this parameter to NEW or AVAILABLE_FIRST, you must specify the auto-scaling parameters. If you set this parameter to NEW, instances are created based on a launch template or the specifications of an existing instance.</p>
+     * <p>If you set this parameter to NEW or AVAILABLE_FIRST, you must specify auto scaling parameters. Auto scaling includes two modes: launch template and existing instance rule.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;AVAILABLE&quot;</p>
@@ -245,12 +235,10 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public String resourceFrom;
 
     /**
-     * <p>The instance handling mode during a scale-in. Valid values:</p>
+     * <p>The reclamation mode for scale-in. Valid values:</p>
      * <ul>
-     * <li><p>release: When a scale-in is performed, instances that are no longer used are released.</p>
-     * </li>
-     * <li><p>recycle: When a scale-in is performed, instances that are no longer used are stopped and reclaimed.</p>
-     * </li>
+     * <li>release: Release mode.</li>
+     * <li>recycle: Stop and reclaim mode.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -260,7 +248,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public String scalingPolicy;
 
     /**
-     * <p>The ID of the launch template that is used to create instances during a scale-out. This parameter takes effect only if you set the OutEnable parameter to true. This parameter takes precedence over the TemplateInstanceId parameter.</p>
+     * <p>The launch template ID for auto scaling. This parameter is valid only when OutEnable is set to true, and it has a higher priority than TemplateInstanceId.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;lt-wz9hkhn8wp*****&quot;</p>
@@ -269,7 +257,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The ID of the instance whose specifications are used to create instances during a scale-out. This parameter is valid only when you set the OutEnable parameter to true.</p>
+     * <p>The instance ID for the existing instance rule of auto scaling. This parameter is valid only when OutEnable is set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;1&quot;</p>
@@ -278,7 +266,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public String templateInstanceId;
 
     /**
-     * <p>The name of the instance whose specifications are used to create instances during a scale-out. This parameter takes effect only if you specify the TemplateInstanceId parameter.</p>
+     * <p>The instance name for the existing instance rule of auto scaling. This parameter is valid only when TemplateInstanceId is specified.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;tpl-tdy218&quot;</p>
@@ -287,7 +275,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public String templateInstanceName;
 
     /**
-     * <p>The version of the launch template that is used to create instances during a scale-out. This parameter takes effect only if you set the OutEnable parameter to true. To use the default template version, set this parameter to <code>-1</code>. Otherwise, set this parameter to the version that you want to use.</p>
+     * <p>The launch template version for auto scaling. This parameter is valid only when OutEnable is set to true. Set this parameter to <code>-1</code> to use the default template version, or set it to a specific version number.</p>
      * 
      * <strong>example:</strong>
      * <p>-1</p>
@@ -296,7 +284,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public Integer templateVersion;
 
     /**
-     * <p>The IDs of the vSwitches that are associated with the VPC. Separate multiple IDs with commas (,).</p>
+     * <p>The list of vSwitch IDs in the VPC. Separate multiple IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;vsw-bp1ldxs3d4fd*****&quot;</p>
@@ -305,7 +293,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public String vSwitchIds;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) that is associated with the instances created based on a launch template or the specifications of an existing instance.</p>
+     * <p>The VPC ID associated with the launch template or existing instance rule for auto scaling.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;vpc-bp1j55oz3bg*****&quot;</p>

@@ -2913,7 +2913,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a specific cluster.</p>
+     * <p>Retrieves the details of a specified cluster.</p>
      * 
      * @param request GetClusterRequest
      * @param headers map
@@ -2947,7 +2947,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a specific cluster.</p>
+     * <p>Retrieves the details of a specified cluster.</p>
      * 
      * @param request GetClusterRequest
      * @return GetClusterResponse
@@ -3321,6 +3321,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getK8sServicesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of application import and export.</p>
+     * 
+     * @param request GetMigrateApplicationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMigrateApplicationResponse
+     */
+    public GetMigrateApplicationResponse getMigrateApplicationWithOptions(GetMigrateApplicationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.migrationId)) {
+            query.put("migrationId", request.migrationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.migrationType)) {
+            query.put("migrationType", request.migrationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMigrateApplication"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v5/k8s/migrateK8sApp"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMigrateApplicationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of application import and export.</p>
+     * 
+     * @param request GetMigrateApplicationRequest
+     * @return GetMigrateApplicationResponse
+     */
+    public GetMigrateApplicationResponse getMigrateApplication(GetMigrateApplicationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getMigrateApplicationWithOptions(request, headers, runtime);
     }
 
     /**
@@ -5581,7 +5636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries consumed services.</p>
+     * <p>Queries the consumed services.</p>
      * 
      * @param request ListConsumedServicesRequest
      * @param headers map
@@ -5615,7 +5670,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries consumed services.</p>
+     * <p>Queries the consumed services.</p>
      * 
      * @param request ListConsumedServicesRequest
      * @return ListConsumedServicesResponse
@@ -6810,11 +6865,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <blockquote>
-     * <p>For application deployment in a container service Kubernetes cluster imported to Enterprise Distributed Application Service (EDAS), use the DeployK8sApplication operation provided by EDAS. For more information, see <a href="https://help.aliyun.com/document_detail/149420.html">DeployK8sApplication</a>.</p>
-     * </blockquote>
-     * 
      * <b>summary</b> : 
      * <p>Migrates an application.</p>
      * 
@@ -6865,11 +6915,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <blockquote>
-     * <p>For application deployment in a container service Kubernetes cluster imported to Enterprise Distributed Application Service (EDAS), use the DeployK8sApplication operation provided by EDAS. For more information, see <a href="https://help.aliyun.com/document_detail/149420.html">DeployK8sApplication</a>.</p>
-     * </blockquote>
-     * 
      * <b>summary</b> : 
      * <p>Migrates an application.</p>
      * 
@@ -6957,7 +7002,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the scaling rule for an application.</p>
+     * <p>Modifies the auto scaling rules.</p>
      * 
      * @param request ModifyScalingRuleRequest
      * @param headers map
@@ -7107,7 +7152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the scaling rule for an application.</p>
+     * <p>Modifies the auto scaling rules.</p>
      * 
      * @param request ModifyScalingRuleRequest
      * @return ModifyScalingRuleResponse
@@ -7345,7 +7390,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration details of Log Service for an application.</p>
+     * <p>Queries the Simple Log Service configuration details of an application.</p>
      * 
      * @param request QuerySlsLogStoreListRequest
      * @param headers map
@@ -7391,7 +7436,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration details of Log Service for an application.</p>
+     * <p>Queries the Simple Log Service configuration details of an application.</p>
      * 
      * @param request QuerySlsLogStoreListRequest
      * @return QuerySlsLogStoreListResponse

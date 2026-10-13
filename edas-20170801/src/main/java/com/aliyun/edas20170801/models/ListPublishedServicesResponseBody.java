@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPublishedServicesResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ListPublishedServicesResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -26,7 +26,7 @@ public class ListPublishedServicesResponseBody extends TeaModel {
     public ListPublishedServicesResponseBodyPublishedServicesList publishedServicesList;
 
     /**
-     * <p>The unique ID of the request.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1D6FC-4307-4583-BA6F-215F3857E****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConsumedServicesResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -17,7 +17,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
     public ListConsumedServicesResponseBodyConsumedServicesList consumedServicesList;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

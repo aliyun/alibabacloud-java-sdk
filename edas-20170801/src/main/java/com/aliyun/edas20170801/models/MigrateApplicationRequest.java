@@ -5,16 +5,20 @@ import com.aliyun.tea.*;
 
 public class MigrateApplicationRequest extends TeaModel {
     /**
-     * <p>The list of application IDs.</p>
+     * <p>appIds</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;b72c0ed4-a69f-4872-b4c6-def5555bfd3e,a72c0ed4-a69f-4872-b4c6-def5555bfd3e&quot;</p>
      */
     @NameInMap("appIds")
-    public java.util.List<String> appIds;
+    public String appIds;
 
     /**
      * <p>The operation command. Valid values:</p>
      * <ul>
-     * <li>export: Export.</li>
-     * <li>import: Import.</li>
+     * <li>export: export</li>
+     * <li>import: import</li>
+     * <li>clone: clone</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +37,7 @@ public class MigrateApplicationRequest extends TeaModel {
     public String config;
 
     /**
-     * <p>The raw data for the application to be imported, which is sourced from the JSON file of the exported application.</p>
+     * <p>The row data of the imported application, which is sourced from the JSON file of the exported application.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;job_id&quot;:&quot;b72c0ed4-a69f-4872-b4c6-def5555bfd3e&quot;,&quot;app_info&quot;:&quot;xxxx&quot;</p>
@@ -55,11 +59,11 @@ public class MigrateApplicationRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public MigrateApplicationRequest setAppIds(java.util.List<String> appIds) {
+    public MigrateApplicationRequest setAppIds(String appIds) {
         this.appIds = appIds;
         return this;
     }
-    public java.util.List<String> getAppIds() {
+    public String getAppIds() {
         return this.appIds;
     }
 

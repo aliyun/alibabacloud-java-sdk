@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetClusterResponseBody extends TeaModel {
     /**
-     * <p>The information about the cluster.</p>
+     * <p>The cluster information.</p>
      */
     @NameInMap("Cluster")
     public GetClusterResponseBodyCluster cluster;
 
     /**
-     * <p>The HTTP status code that is returned.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,7 +20,7 @@ public class GetClusterResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The detailed information that is returned.</p>
+     * <p>The detailed message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class GetClusterResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>d76db491</p>
@@ -76,7 +76,7 @@ public class GetClusterResponseBody extends TeaModel {
 
     public static class GetClusterResponseBodyCluster extends TeaModel {
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5439271a-015b-433d-befb-d76d****</p>
@@ -85,18 +85,13 @@ public class GetClusterResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The import status of the cluster. Valid values:</p>
+         * <p>The cluster import status. Valid values:</p>
          * <ul>
-         * <li><p>1: The cluster is imported.</p>
-         * </li>
-         * <li><p>2: The cluster fails to be imported.</p>
-         * </li>
-         * <li><p>3: The cluster is being imported.</p>
-         * </li>
-         * <li><p>4: The cluster is deleted.</p>
-         * </li>
-         * <li><p>0: The cluster is not imported.</p>
-         * </li>
+         * <li>1: Imported.</li>
+         * <li>2: Import failed.</li>
+         * <li>3: Importing.</li>
+         * <li>4: Cluster deleted.</li>
+         * <li>0: Not imported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,7 +101,7 @@ public class GetClusterResponseBody extends TeaModel {
         public Integer clusterImportStatus;
 
         /**
-         * <p>The name of the cluster.</p>
+         * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>ClusterTest</p>
@@ -115,20 +110,14 @@ public class GetClusterResponseBody extends TeaModel {
         public String clusterName;
 
         /**
-         * <p>The type of the cluster. Valid values:</p>
+         * <p>The cluster type. Valid values:</p>
          * <ul>
-         * <li><p>0: regular Docker cluster</p>
-         * </li>
-         * <li><p>1: Swarm cluster</p>
-         * </li>
-         * <li><p>2: Elastic Compute Service (ECS) cluster</p>
-         * </li>
-         * <li><p>3: self-managed Kubernetes cluster in EDAS</p>
-         * </li>
-         * <li><p>4: cluster in which Pandora automatically registers applications</p>
-         * </li>
-         * <li><p>5: ACK cluster</p>
-         * </li>
+         * <li>0: Common Docker cluster.</li>
+         * <li>1: Swarm cluster.</li>
+         * <li>2: ECS cluster.</li>
+         * <li>3: EDAS self-managed Kubernetes cluster.</li>
+         * <li>4: Pandora auto-registered application cluster.</li>
+         * <li>5: Container Service Kubernetes cluster.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -156,7 +145,7 @@ public class GetClusterResponseBody extends TeaModel {
         public Integer cpuUsed;
 
         /**
-         * <p>The time when the cluster was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The timestamp when the cluster was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1570708232145</p>
@@ -165,7 +154,7 @@ public class GetClusterResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The ID of the Container Service for Kubernetes (ACK) cluster.</p>
+         * <p>The Container Service cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c2ce62869f4d4466b920312315f05****</p>
@@ -174,7 +163,7 @@ public class GetClusterResponseBody extends TeaModel {
         public String csClusterId;
 
         /**
-         * <p>The description of the cluster.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>Test</p>
@@ -183,7 +172,7 @@ public class GetClusterResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The provider of Infrastructure as a Service (IaaS) resources used in the cluster.</p>
+         * <p>The IaaS resource provider.</p>
          * 
          * <strong>example:</strong>
          * <p>ALIYUN</p>
@@ -192,7 +181,7 @@ public class GetClusterResponseBody extends TeaModel {
         public String iaasProvider;
 
         /**
-         * <p>The total size of memory. Unit: MB.</p>
+         * <p>The total memory. Unit: MB.</p>
          * 
          * <strong>example:</strong>
          * <p>2048</p>
@@ -201,7 +190,7 @@ public class GetClusterResponseBody extends TeaModel {
         public Integer mem;
 
         /**
-         * <p>The size of used memory. Unit: MB.</p>
+         * <p>The amount of used memory. Unit: MB.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -210,12 +199,10 @@ public class GetClusterResponseBody extends TeaModel {
         public Integer memUsed;
 
         /**
-         * <p>The network type of the cluster. Valid values:</p>
+         * <p>The network type. Valid values:</p>
          * <ul>
-         * <li><p>1: classic network</p>
-         * </li>
-         * <li><p>2: virtual private cloud (VPC)</p>
-         * </li>
+         * <li>1: Classic network.</li>
+         * <li>2: VPC.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -234,16 +221,12 @@ public class GetClusterResponseBody extends TeaModel {
         public Integer nodeNum;
 
         /**
-         * <p>The overcommit ratio supported by a Docker cluster. Valid values:</p>
+         * <p>The CPU overselling ratio for Docker clusters. Valid values:</p>
          * <ul>
-         * <li><p>1: 1:1, which means that resources are not overcommitted.</p>
-         * </li>
-         * <li><p>2: 1:2, which means that resources are overcommitted by 1:2.</p>
-         * </li>
-         * <li><p>4: 1:4, which means that resources are overcommitted by 1:4.</p>
-         * </li>
-         * <li><p>8: 1:8, which means that resources are overcommitted by 1:8.</p>
-         * </li>
+         * <li>1: 1:1 ratio. No overselling.</li>
+         * <li>2: 1:2 overselling ratio.</li>
+         * <li>4: 1:4 overselling ratio.</li>
+         * <li>8: 1:8 overselling ratio.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -253,7 +236,7 @@ public class GetClusterResponseBody extends TeaModel {
         public Integer oversoldFactor;
 
         /**
-         * <p>The ID of the region where the cluster resides.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -262,7 +245,7 @@ public class GetClusterResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The subtype of the Kubernetes cluster. Valid values: ManagedKubernetes, Ask, and ExternalKubernetes. ManagedKubernetes refers to the ACK cluster. Ask refers to the Serverless Kubernetes (ASK) cluster. ExternalKubernetes refers to the external cluster.</p>
+         * <p>The subtype of the Kubernetes cluster. ManagedKubernetes indicates an ACK cluster, Ask indicates an ASK cluster, and ExternalKubernetes indicates an external cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>ManagedKubernetes</p>
@@ -271,7 +254,7 @@ public class GetClusterResponseBody extends TeaModel {
         public String subClusterType;
 
         /**
-         * <p>The time when the cluster was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The timestamp when the cluster was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1570708232145</p>
@@ -280,7 +263,7 @@ public class GetClusterResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-xxxxz1mlwpb****</p>

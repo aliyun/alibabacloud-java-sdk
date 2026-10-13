@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MigrateApplicationResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The API status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>

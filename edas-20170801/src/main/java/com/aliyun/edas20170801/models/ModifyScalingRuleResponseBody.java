@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyScalingRuleResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code that is returned.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ModifyScalingRuleResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The message that is returned.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class ModifyScalingRuleResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CB36E997-FE54-476C-8C0D-********</p>
