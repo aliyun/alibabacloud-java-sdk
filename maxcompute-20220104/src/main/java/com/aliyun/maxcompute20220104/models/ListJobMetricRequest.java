@@ -5,18 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListJobMetricRequest extends TeaModel {
     /**
-     * <p>Grouping basis.</p>
+     * <p>The grouping basis.</p>
      * <blockquote>
-     * <p>Available values: project, quota, type, status. Meanings:</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li><p>project: Group and aggregate by project;</p>
-     * </li>
-     * <li><p>quota: Group and aggregate by quota;</p>
-     * </li>
-     * <li><p>type: Group and aggregate by job type;</p>
-     * </li>
-     * <li><p>status: Group and aggregate by job status.</p>
-     * </li>
+     * <li>project: grouping and aggregation by project</li>
+     * <li>quota: grouping and aggregation by quota</li>
+     * <li>type: grouping and aggregation by job type</li>
+     * <li>status: grouping and aggregation by job status</li>
      * </ul>
      * </blockquote>
      * 
@@ -27,7 +23,7 @@ public class ListJobMetricRequest extends TeaModel {
     public String group;
 
     /**
-     * <p>The name of observation metric.</p>
+     * <p>The metric information.</p>
      * 
      * <strong>example:</strong>
      * <p>num</p>
@@ -36,7 +32,7 @@ public class ListJobMetricRequest extends TeaModel {
     public String metric;
 
     /**
-     * <p>The monitoring statistical period.Unit:Second(s).</p>
+     * <p>The monitoring statistical period.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -45,19 +41,19 @@ public class ListJobMetricRequest extends TeaModel {
     public Long period;
 
     /**
-     * <p>The name of MaxCompute projects (for filtering).</p>
+     * <p>The list of MaxCompute project names used for filtering.</p>
      */
     @NameInMap("project")
     public java.util.List<String> project;
 
     /**
-     * <p>The nickname of computing Quota nickname used by the job (for filtering).</p>
+     * <p>The list of compute quota nicknames used for filtering.</p>
      */
     @NameInMap("quota")
     public java.util.List<String> quota;
 
     /**
-     * <p>The type of observation metric.</p>
+     * <p>The metric type.</p>
      * 
      * <strong>example:</strong>
      * <p>total</p>
@@ -66,7 +62,7 @@ public class ListJobMetricRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The end time for the observation interval.</p>
+     * <p>The end time of the query time range. The value is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,7 +72,7 @@ public class ListJobMetricRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The start time for the observation interval.</p>
+     * <p>The start time of the query time range. The value is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class ListStoragePartitionsInfoShrinkRequest extends TeaModel {
     public Boolean ascOrder;
 
     /**
-     * <p>The date for which to retrieve statistics. The date must be in <code>YYYYMMdd</code> format.</p>
+     * <p>The statistical date at the day level. Specify the time parameter in the YYYYMMdd format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListStoragePartitionsInfoShrinkRequest extends TeaModel {
     public String date;
 
     /**
-     * <p>The column to sort by.</p>
+     * <p>The sort column.</p>
      * 
      * <strong>example:</strong>
      * <p>totalFrequency</p>
@@ -51,7 +51,7 @@ public class ListStoragePartitionsInfoShrinkRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The partition name. This parameter supports fuzzy matching.</p>
+     * <p>The partition name for fuzzy matching.</p>
      * 
      * <strong>example:</strong>
      * <p>20241201</p>
@@ -69,7 +69,7 @@ public class ListStoragePartitionsInfoShrinkRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The schema that contains the table.</p>
+     * <p>The schema to which the table belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>schema</p>
@@ -78,7 +78,7 @@ public class ListStoragePartitionsInfoShrinkRequest extends TeaModel {
     public String schema;
 
     /**
-     * <p>The tenant ID. You can find this ID in the MaxCompute console by navigating to <strong>Tenant Management</strong> &gt; <strong>Tenant Properties</strong>.</p>
+     * <p>The tenant ID. You can view the tenant ID by logging on to the MaxCompute console and choosing <strong>Tenant Management</strong> &gt; <strong>Tenant Properties</strong> in the left-side navigation pane.</p>
      * 
      * <strong>example:</strong>
      * <p>40713753659****</p>

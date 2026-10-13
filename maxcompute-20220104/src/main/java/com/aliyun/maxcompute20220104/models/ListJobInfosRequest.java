@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListJobInfosRequest extends TeaModel {
     /**
-     * <p>Specifies whether to sort in ascending or descending order.</p>
+     * <p>Specifies whether to sort the results in ascending order.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -36,13 +36,13 @@ public class ListJobInfosRequest extends TeaModel {
     public Long from;
 
     /**
-     * <p>The job instance IDs.</p>
+     * <p>The job instance Id.</p>
      */
     @NameInMap("instanceIdList")
     public java.util.List<String> instanceIdList;
 
     /**
-     * <p>The job owners.</p>
+     * <p>The list of job owners.</p>
      */
     @NameInMap("jobOwnerList")
     public java.util.List<String> jobOwnerList;
@@ -69,7 +69,7 @@ public class ListJobInfosRequest extends TeaModel {
     public String quotaNickname;
 
     /**
-     * <p>The intelligent diagnosis labels.</p>
+     * <p>The intelligent diagnostics tags.</p>
      */
     @NameInMap("sceneTagList")
     public java.util.List<String> sceneTagList;
@@ -81,13 +81,13 @@ public class ListJobInfosRequest extends TeaModel {
     public java.util.List<String> signatureList;
 
     /**
-     * <p>The fields used for multi-column sorting.</p>
+     * <p>The multi-column sort fields.</p>
      */
     @NameInMap("sortByList")
     public java.util.List<String> sortByList;
 
     /**
-     * <p>The sort orders for multi-column sorting.</p>
+     * <p>The multi-column sort orders.</p>
      */
     @NameInMap("sortOrderList")
     public java.util.List<String> sortOrderList;
@@ -121,7 +121,7 @@ public class ListJobInfosRequest extends TeaModel {
     public java.util.List<String> typeList;
 
     /**
-     * <p>The column used for sorting.</p>
+     * <p>The sort column.</p>
      * 
      * <strong>example:</strong>
      * <p>cuUsage</p>
@@ -139,7 +139,7 @@ public class ListJobInfosRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

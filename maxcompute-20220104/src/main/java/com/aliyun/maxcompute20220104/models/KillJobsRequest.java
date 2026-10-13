@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class KillJobsRequest extends TeaModel {
     /**
-     * <p>The request body parameters.</p>
+     * <p>The list of jobs to terminate. The instanceId is obtained from the job instance ID returned by ListJobInfos, and the projectName is obtained from the project name returned by ListProjects.</p>
      * 
      * <strong>example:</strong>
      * <p>[
@@ -23,7 +23,7 @@ public class KillJobsRequest extends TeaModel {
     public String body;
 
     /**
-     * <p>The ID of the region in which the instance resides.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -32,7 +32,7 @@ public class KillJobsRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The ID of the tenant.</p>
+     * <p>The tenant ID.</p>
      * 
      * <strong>example:</strong>
      * <p>478403690625249</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTableInfoResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The response result.</p>
      */
     @NameInMap("data")
     public GetTableInfoResponseBodyData data;
@@ -42,7 +42,7 @@ public class GetTableInfoResponseBody extends TeaModel {
 
     public static class GetTableInfoResponseBodyDataClusterInfoSortCols extends TeaModel {
         /**
-         * <p>The name of the sorting field.</p>
+         * <p>The name of the sort column.</p>
          * 
          * <strong>example:</strong>
          * <p>col_2</p>
@@ -51,7 +51,7 @@ public class GetTableInfoResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The sorting order.</p>
+         * <p>The sort order.</p>
          * 
          * <strong>example:</strong>
          * <p>DESC</p>
@@ -84,7 +84,7 @@ public class GetTableInfoResponseBody extends TeaModel {
 
     public static class GetTableInfoResponseBodyDataClusterInfo extends TeaModel {
         /**
-         * <p>Optional. The number of buckets in the clustered table. The value 0 indicates that the number of buckets dynamically changes when a job is running.</p>
+         * <p>The number of buckets in the clustered table. This is an optional field. A value of 0 indicates that the number of buckets is dynamically determined during job execution.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -93,14 +93,16 @@ public class GetTableInfoResponseBody extends TeaModel {
         public Long bucketNum;
 
         /**
-         * <p>The cluster keys.</p>
+         * <p>The cluster key.</p>
          */
         @NameInMap("clusterCols")
         public java.util.List<String> clusterCols;
 
         /**
-         * <p>The clustering type of the table. MaxCompute supports <a href="https://www.alibabacloud.com/help/maxcompute/use-cases/hash-clustering">hash clustering</a> and</p>
-         * <p><a href="https://www.alibabacloud.com/help/maxcompute/use-cases/range-clustering">range clustering</a>.</p>
+         * <p>The clustering type of the table. MaxCompute currently supports &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/use-cases/hash-clustering">Hash Clustering</a>
+         * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/use-cases/hash-clustering">Hash Clustering</a> and
+         * &lt;props=&quot;china&quot;&gt; <a href="https://www.alibabacloud.com/help/en/maxcompute/use-cases/hash-clustering">Range Clustering</a>
+         * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/use-cases/range-clustering">Range Clustering</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>Hash</p>
@@ -109,7 +111,7 @@ public class GetTableInfoResponseBody extends TeaModel {
         public String clusterType;
 
         /**
-         * <p>The condition by which the results are sorted.</p>
+         * <p>The sort columns.</p>
          */
         @NameInMap("sortCols")
         public java.util.List<GetTableInfoResponseBodyDataClusterInfoSortCols> sortCols;
@@ -155,7 +157,7 @@ public class GetTableInfoResponseBody extends TeaModel {
 
     public static class GetTableInfoResponseBodyDataNativeColumns extends TeaModel {
         /**
-         * <p>The column comments.</p>
+         * <p>The column comment.</p>
          * 
          * <strong>example:</strong>
          * <p>Store name</p>
@@ -164,7 +166,8 @@ public class GetTableInfoResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The sensitivity-level label of the column. For more information, see <a href="https://www.alibabacloud.com/help/maxcompute/user-guide/label-based-access-control">Label-based access control</a>.</p>
+         * <p>The sensitivity level label of the column. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/label-based-access-control">Label-based access control</a>
+         * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/user-guide/label-based-access-control">Label-based access control</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -182,7 +185,7 @@ public class GetTableInfoResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The column type.</p>
+         * <p>The data type.</p>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>
@@ -231,16 +234,17 @@ public class GetTableInfoResponseBody extends TeaModel {
 
     public static class GetTableInfoResponseBodyDataPartitionColumns extends TeaModel {
         /**
-         * <p>The comments of the partition key column.</p>
+         * <p>The partition column comment.</p>
          * 
          * <strong>example:</strong>
-         * <p>Sales date</p>
+         * <p>Sale date</p>
          */
         @NameInMap("comment")
         public String comment;
 
         /**
-         * <p>The sensitivity-level label of the column. For more information, see <a href="https://www.alibabacloud.com/help/maxcompute/user-guide/label-based-access-control">Label-based access control</a>.</p>
+         * <p>The sensitivity level label of the column. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/label-based-access-control">Label-based access control</a>
+         * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/user-guide/label-based-access-control">Label-based access control</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -258,7 +262,7 @@ public class GetTableInfoResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The partition column type.</p>
+         * <p>The data type.</p>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>
@@ -307,7 +311,7 @@ public class GetTableInfoResponseBody extends TeaModel {
 
     public static class GetTableInfoResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the materialized view is automatically refreshed. This response parameter is returned when type is set to materializedView.</p>
+         * <p>Indicates whether automatic refresh of the materialized view is enabled. This parameter is returned only when the type is materialized view.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -316,13 +320,13 @@ public class GetTableInfoResponseBody extends TeaModel {
         public Boolean autoRefreshEnabled;
 
         /**
-         * <p>The clustering attribute. This response parameter is returned when the table is a clustered table.</p>
+         * <p>The clustering properties. This parameter is returned only when the table type is clustered table.</p>
          */
         @NameInMap("clusterInfo")
         public GetTableInfoResponseBodyDataClusterInfo clusterInfo;
 
         /**
-         * <p>The comments of the table.</p>
+         * <p>The table comment.</p>
          * 
          * <strong>example:</strong>
          * <p>sale_detail</p>
@@ -331,7 +335,7 @@ public class GetTableInfoResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>DDL statement to create a table.</p>
+         * <p>The DDL statement used to create the table.</p>
          * 
          * <strong>example:</strong>
          * <p>create table if not exists sale_detail( shop_name STRING, customer_id STRING, total_price DOUBLE) partitioned by (sale_date STRING, region STRING);</p>
@@ -340,7 +344,7 @@ public class GetTableInfoResponseBody extends TeaModel {
         public String createTableDDL;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time is in ISO 8601 format and in the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-17T07:07:47Z</p>
@@ -358,7 +362,7 @@ public class GetTableInfoResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The number of file of the table.</p>
+         * <p>The number of files.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -367,7 +371,7 @@ public class GetTableInfoResponseBody extends TeaModel {
         public Long fileNum;
 
         /**
-         * <p>Indicates whether the table is an external table. This response parameter is returned when type is set to external.</p>
+         * <p>Indicates whether the table is an external table. This parameter is returned only when the type is table.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -376,7 +380,7 @@ public class GetTableInfoResponseBody extends TeaModel {
         public Boolean isExternalTable;
 
         /**
-         * <p>Indicates whether data of the materialized view is invalid due to changes in the data of the source table. This response parameter is returned when type is set to materializedView.</p>
+         * <p>Indicates whether the data in the materialized view is invalid due to changes in the source table data. This parameter is returned only when the type is materialized view.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -385,7 +389,10 @@ public class GetTableInfoResponseBody extends TeaModel {
         public Boolean isOutdated;
 
         /**
-         * <p>The time when data of the table or view was last accessed.</p>
+         * <p>The time when the data of the table or view was last accessed. This parameter is returned only when the table is a non-partitioned table.</p>
+         * <blockquote>
+         * <p>This data has been gradually collected since July 2023. If the table has not been accessed after the upgrade, or if it is accessed through ALGO jobs or Hologres direct read, the last_access_time cannot be collected.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>2023-11-21T02:05:56Z</p>
@@ -394,7 +401,7 @@ public class GetTableInfoResponseBody extends TeaModel {
         public Long lastAccessTime;
 
         /**
-         * <p>The time when the data definition language (DDL) statement of the table or view was last modified.</p>
+         * <p>The time when the DDL statement of the table or view was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-11-21T02:05:56Z</p>
@@ -403,7 +410,7 @@ public class GetTableInfoResponseBody extends TeaModel {
         public Long lastDDLTime;
 
         /**
-         * <p>The time when data of the table or view was last modified.</p>
+         * <p>The time when the data of the table or view was last modified. The time is in ISO 8601 format and in the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-11-21T02:05:56Z</p>
@@ -412,7 +419,7 @@ public class GetTableInfoResponseBody extends TeaModel {
         public Long lastModifiedTime;
 
         /**
-         * <p>The lifecycle. Unit: days.</p>
+         * <p>The lifecycle in days.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -421,7 +428,7 @@ public class GetTableInfoResponseBody extends TeaModel {
         public String lifecycle;
 
         /**
-         * <p>The path of the external table. This response parameter is returned when type is set to external.</p>
+         * <p>The external table location. This parameter is returned only when the type is external table.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://oss-cn-hangzhou-internal.aliyuncs.com/oss-mc-test/Demo1/</p>
@@ -430,7 +437,8 @@ public class GetTableInfoResponseBody extends TeaModel {
         public String location;
 
         /**
-         * <p>Indicates whether the table or view is a <a href="https://www.alibabacloud.com/help/maxcompute/user-guide/materialized-view-operations">materialize view</a>.</p>
+         * <p>Indicates whether the table is a &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/materialized-view-operations">materialized view</a>
+         * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/user-guide/materialized-view-operations">materialized view</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -448,13 +456,13 @@ public class GetTableInfoResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The field information.</p>
+         * <p>The column information.</p>
          */
         @NameInMap("nativeColumns")
         public java.util.List<GetTableInfoResponseBodyDataNativeColumns> nativeColumns;
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the role AliyunODPSDefaultRole in Resource Access Management (RAM). This response parameter is returned when type is set to external.</p>
+         * <p>The ARN of AliyunODPSDefaultRole in RAM. This parameter is returned only when the type is external table.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::xxxxx:role/aliyunodpsdefaultrole</p>
@@ -463,7 +471,7 @@ public class GetTableInfoResponseBody extends TeaModel {
         public String odpsPropertiesRolearn;
 
         /**
-         * <p>Indicates whether the table header is ignored. This response parameter is returned when type is set to external.</p>
+         * <p>Indicates whether to ignore the header. This parameter is returned only when the type is external table.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -472,7 +480,7 @@ public class GetTableInfoResponseBody extends TeaModel {
         public Boolean odpsSqlTextOptionFlushHeader;
 
         /**
-         * <p>The first N rows that were ignored in the table header. This response parameter is returned when type is set to external.</p>
+         * <p>The number of header lines to ignore. This parameter is returned only when the type is external table.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -481,7 +489,7 @@ public class GetTableInfoResponseBody extends TeaModel {
         public Long odpsTextOptionHeaderLinesCount;
 
         /**
-         * <p>The account information of the table or view owner.</p>
+         * <p>The account information of the owner of the table or view.</p>
          * 
          * <strong>example:</strong>
          * <p>ALIYUN$odps****@aliyunid.com</p>
@@ -490,13 +498,13 @@ public class GetTableInfoResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The information about partition key columns. This response parameter is returned only for partitioned tables.</p>
+         * <p>The partition column information. This parameter is returned only for partitioned tables.</p>
          */
         @NameInMap("partitionColumns")
         public java.util.List<GetTableInfoResponseBodyDataPartitionColumns> partitionColumns;
 
         /**
-         * <p>The physical size of the table.</p>
+         * <p>The physical size.</p>
          * 
          * <strong>example:</strong>
          * <p>2763</p>
@@ -514,7 +522,7 @@ public class GetTableInfoResponseBody extends TeaModel {
         public String projectName;
 
         /**
-         * <p>Indicates whether the query rewrite operation can be performed by using the materialized view. This response parameter is returned when type is set to materializedView.</p>
+         * <p>Indicates whether query rewrite through the materialized view is allowed. This parameter is returned only when the type is materialized view.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -523,7 +531,7 @@ public class GetTableInfoResponseBody extends TeaModel {
         public Boolean rewriteEnabled;
 
         /**
-         * <p>The name of the schema to which the table or the view belongs.</p>
+         * <p>The name of the schema to which the table or view belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -532,7 +540,7 @@ public class GetTableInfoResponseBody extends TeaModel {
         public String schema;
 
         /**
-         * <p>The data size of the non-partitioned table. If the table is a partitioned table, the system does not calculate the data size of the table. In this case, the value of this parameter is NULL. The PARTITIONS view includes the data size of each partition in a partitioned table. Unit: bytes.</p>
+         * <p>The data size of the table. If the table is a non-partitioned table, the value is the data size of the table. If the table is a partitioned table, the system does not calculate the data size of the table, and the value is NULL. The PARTITIONS view contains the data size of each partition in the partitioned table. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>5372</p>
@@ -541,7 +549,7 @@ public class GetTableInfoResponseBody extends TeaModel {
         public Long size;
 
         /**
-         * <p>The storage handler of the external table. This response parameter is returned when type is set to external.</p>
+         * <p>The external table parser. This parameter is returned only when the type is external table.</p>
          * 
          * <strong>example:</strong>
          * <p>com.aliyun.odps.CsvStorageHandler</p>
@@ -550,7 +558,8 @@ public class GetTableInfoResponseBody extends TeaModel {
         public String storageHandler;
 
         /**
-         * <p>The sensitivity-level label of the table. For more information, see <a href="https://www.alibabacloud.com/help/maxcompute/user-guide/label-based-access-control">Label-based access control</a>.</p>
+         * <p>The sensitivity level label of the table. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/label-based-access-control">Label-based access control</a>
+         * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/user-guide/label-based-access-control">Label-based access control</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -559,7 +568,7 @@ public class GetTableInfoResponseBody extends TeaModel {
         public String tableLabel;
 
         /**
-         * <p>The name of the Tablestore table to be accessed. This response parameter is returned when type is set to external.</p>
+         * <p>The name of the Tablestore table to be accessed. This parameter is returned only when the type is external table.</p>
          * 
          * <strong>example:</strong>
          * <p>ots_tpch_orders</p>
@@ -568,7 +577,7 @@ public class GetTableInfoResponseBody extends TeaModel {
         public String tablesotreTableName;
 
         /**
-         * <p>The columns of the Tablestore table to be accessed, including the primary key column and attribute column. This response parameter is returned when type is set to external.</p>
+         * <p>The columns of the Tablestore table to be accessed by MaxCompute, including the primary key columns and attribute columns. This parameter is returned only when the type is external table.</p>
          * 
          * <strong>example:</strong>
          * <p>o_orderkey,o_orderdate,o_custkey,o_orderstatus,o_totalprice</p>
@@ -579,14 +588,11 @@ public class GetTableInfoResponseBody extends TeaModel {
         /**
          * <p>The type of the table or view. Valid values:</p>
          * <ul>
-         * <li><p><strong>internal</strong>: internal table</p>
-         * </li>
-         * <li><p><strong>external</strong>: external table</p>
-         * </li>
-         * <li><p><strong>view</strong>: view</p>
-         * </li>
-         * <li><p><strong>materializedView</strong>: <a href="https://www.alibabacloud.com/help/maxcompute/user-guide/materialized-view-operations">materialize view</a></p>
-         * </li>
+         * <li><strong>internal</strong>: Internal table.</li>
+         * <li><strong>external</strong>: External table.</li>
+         * <li><strong>view</strong>: View.</li>
+         * <li><strong>materializedView</strong>: &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/materialized-view-operations">Materialized view</a>
+         * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/user-guide/materialized-view-operations">Materialized view</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -596,7 +602,7 @@ public class GetTableInfoResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The statement that generates the view. This response parameter is returned when type is set to view.</p>
+         * <p>The statement used to create the view. This parameter is returned only when the type is view.</p>
          * 
          * <strong>example:</strong>
          * <p>select shop_name, sum(total_price) from sale_detail group by shop_name</p>

@@ -11,7 +11,7 @@ public class ListPackagesResponseBody extends TeaModel {
     public ListPackagesResponseBodyData data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0bc3b4aa16677927210252786e4cb6</p>
@@ -42,7 +42,7 @@ public class ListPackagesResponseBody extends TeaModel {
 
     public static class ListPackagesResponseBodyDataCreatedPackages extends TeaModel {
         /**
-         * <p>The time when the package was created.</p>
+         * <p>The creation time. The format is ISO 8601 and the time zone is UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-02T02:30:34Z</p>
@@ -84,7 +84,7 @@ public class ListPackagesResponseBody extends TeaModel {
 
     public static class ListPackagesResponseBodyDataInstalledPackages extends TeaModel {
         /**
-         * <p>The time when the package was installed.</p>
+         * <p>The installation time. The format is ISO 8601 and the time zone is UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-09-02T02:30:34Z</p>
@@ -102,7 +102,7 @@ public class ListPackagesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The project to which the package belongs. This parameter is required if the package is installed in the MaxCompute project.</p>
+         * <p>The project to which the package belongs. This parameter is required if the package is installed.</p>
          * 
          * <strong>example:</strong>
          * <p>projectB</p>
@@ -111,7 +111,7 @@ public class ListPackagesResponseBody extends TeaModel {
         public String sourceProject;
 
         /**
-         * <p>The status of the package.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -160,13 +160,13 @@ public class ListPackagesResponseBody extends TeaModel {
 
     public static class ListPackagesResponseBodyData extends TeaModel {
         /**
-         * <p>The packages that were created.</p>
+         * <p>The list of created packages.</p>
          */
         @NameInMap("createdPackages")
         public java.util.List<ListPackagesResponseBodyDataCreatedPackages> createdPackages;
 
         /**
-         * <p>The packages that were installed.</p>
+         * <p>The list of installed packages.</p>
          */
         @NameInMap("installedPackages")
         public java.util.List<ListPackagesResponseBodyDataInstalledPackages> installedPackages;

@@ -31,16 +31,11 @@ public class QueryQuotaMetricResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
      * <ul>
-     * <li><p>1xx: informational response. The request was received and is being processed.</p>
-     * </li>
-     * <li><p>2xx: success. The request was successfully received, understood, and accepted by the server.</p>
-     * </li>
-     * <li><p>3xx: redirection. The request was redirected. Further action needs to be taken to complete the request.</p>
-     * </li>
-     * <li><p>4xx: client error. The request contains incorrect request parameters or syntax, or specific request conditions cannot be met.</p>
-     * </li>
-     * <li><p>5xx: server error. The server failed to fulfill the request for other reasons.</p>
-     * </li>
+     * <li>1xx: Informational. The request was received and is being processed.</li>
+     * <li>2xx: Success. The request was successfully received, understood, and accepted by the server.</li>
+     * <li>3xx: Redirection. The request was redirected, and further action is required to complete it.</li>
+     * <li>4xx: Client error. The request contains bad syntax, invalid parameters, or cannot be fulfilled.</li>
+     * <li>5xx: Server error. The server failed to fulfill the request due to other reasons.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -105,7 +100,7 @@ public class QueryQuotaMetricResponseBody extends TeaModel {
 
     public static class QueryQuotaMetricResponseBodyDataMetrics extends TeaModel {
         /**
-         * <p>The metadata of the metric.</p>
+         * <p>The metric metadata information.</p>
          */
         @NameInMap("metric")
         public java.util.Map<String, String> metric;
@@ -141,10 +136,10 @@ public class QueryQuotaMetricResponseBody extends TeaModel {
 
     public static class QueryQuotaMetricResponseBodyData extends TeaModel {
         /**
-         * <p>This parameter is not supported.</p>
+         * <p>Not supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>Not supported.</p>
+         * <p>Not supported</p>
          */
         @NameInMap("category")
         public String category;
@@ -156,7 +151,7 @@ public class QueryQuotaMetricResponseBody extends TeaModel {
         public java.util.List<QueryQuotaMetricResponseBodyDataMetrics> metrics;
 
         /**
-         * <p>The name of the metric.</p>
+         * <p>The name of the observed metric.</p>
          * 
          * <strong>example:</strong>
          * <p>cpu</p>

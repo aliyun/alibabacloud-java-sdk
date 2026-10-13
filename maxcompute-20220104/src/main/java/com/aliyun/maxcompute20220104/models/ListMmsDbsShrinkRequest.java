@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMmsDbsShrinkRequest extends TeaModel {
     /**
-     * <p>Data source name</p>
+     * <p>The name of the data source.</p>
      * 
      * <strong>example:</strong>
      * <p>demo</p>
@@ -14,7 +14,7 @@ public class ListMmsDbsShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Page number</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListMmsDbsShrinkRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>Number of records per page</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,13 +32,13 @@ public class ListMmsDbsShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Sorting conditions</p>
+     * <p>The sorting conditions.</p>
      */
     @NameInMap("sorter")
     public String sorterShrink;
 
     /**
-     * <p>Data source status</p>
+     * <p>The status of the data source.</p>
      * 
      * <strong>example:</strong>
      * <p>STARTED</p>

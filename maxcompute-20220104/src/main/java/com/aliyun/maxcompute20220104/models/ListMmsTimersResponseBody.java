@@ -42,7 +42,7 @@ public class ListMmsTimersResponseBody extends TeaModel {
 
     public static class ListMmsTimersResponseBodyDataObjectList extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-17 09:29:58</p>
@@ -60,7 +60,7 @@ public class ListMmsTimersResponseBody extends TeaModel {
         public Long dbId;
 
         /**
-         * <p>The timer ID.</p>
+         * <p>The scheduled task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>18</p>
@@ -69,7 +69,7 @@ public class ListMmsTimersResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The timer name.</p>
+         * <p>The scheduled task name.</p>
          * 
          * <strong>example:</strong>
          * <p>migrate_db_1</p>
@@ -78,7 +78,7 @@ public class ListMmsTimersResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The schedule type.</p>
+         * <p>The schedule type of the scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>Daily</p>
@@ -105,7 +105,7 @@ public class ListMmsTimersResponseBody extends TeaModel {
         public String srcDbName;
 
         /**
-         * <p>Indicates whether the timer is stopped.</p>
+         * <p>Indicates whether the task is stopped.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -220,7 +220,7 @@ public class ListMmsTimersResponseBody extends TeaModel {
 
     public static class ListMmsTimersResponseBodyData extends TeaModel {
         /**
-         * <p>A list of timers.</p>
+         * <p>The log information.</p>
          */
         @NameInMap("objectList")
         public java.util.List<ListMmsTimersResponseBodyDataObjectList> objectList;
@@ -235,7 +235,7 @@ public class ListMmsTimersResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
-         * <p>The number of entries on the current page.</p>
+         * <p>The number of entries displayed per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

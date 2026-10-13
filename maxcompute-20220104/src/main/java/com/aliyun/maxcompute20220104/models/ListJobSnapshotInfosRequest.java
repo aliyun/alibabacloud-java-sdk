@@ -14,15 +14,15 @@ public class ListJobSnapshotInfosRequest extends TeaModel {
     public Boolean ascOrder;
 
     /**
-     * <p>The upstream node ID.</p>
+     * <p>The upstream node IDs.</p>
      */
     @NameInMap("extNodeIdList")
     public java.util.List<String> extNodeIdList;
 
     /**
-     * <p>The start UNIX timestamp.</p>
+     * <p>The start timestamp.</p>
      * <blockquote>
-     * <p>This parameter is invalid. The end timestamp is the point in time for the snapshot that you want to view.</p>
+     * <p>This parameter is invalid. The end timestamp specifies the snapshot time to query.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,31 +32,31 @@ public class ListJobSnapshotInfosRequest extends TeaModel {
     public Long from;
 
     /**
-     * <p>The job instance ID.</p>
+     * <p>The job instance Id.</p>
      */
     @NameInMap("instanceIdList")
     public java.util.List<String> instanceIdList;
 
     /**
-     * <p>The job owner.</p>
+     * <p>The list of job owners.</p>
      */
     @NameInMap("jobOwnerList")
     public java.util.List<String> jobOwnerList;
 
     /**
-     * <p>The job priority.</p>
+     * <p>The job priorities.</p>
      */
     @NameInMap("priorityList")
     public java.util.List<Long> priorityList;
 
     /**
-     * <p>The project name.</p>
+     * <p>The project names.</p>
      */
     @NameInMap("projectList")
     public java.util.List<String> projectList;
 
     /**
-     * <p>The nickname of the computing quota that the job uses.</p>
+     * <p>The nickname of the compute quota used by the job.</p>
      * 
      * <strong>example:</strong>
      * <p>quota_A</p>
@@ -65,31 +65,31 @@ public class ListJobSnapshotInfosRequest extends TeaModel {
     public String quotaNickname;
 
     /**
-     * <p>The signature of the SQL job.</p>
+     * <p>The SQL job signatures.</p>
      */
     @NameInMap("signatureList")
     public java.util.List<String> signatureList;
 
     /**
-     * <p>The fields for multi-column sorting.</p>
+     * <p>The multi-column sort fields.</p>
      */
     @NameInMap("sortByList")
     public java.util.List<String> sortByList;
 
     /**
-     * <p>The sort orders for multi-column sorting.</p>
+     * <p>The multi-column sort orders.</p>
      */
     @NameInMap("sortOrderList")
     public java.util.List<String> sortOrderList;
 
     /**
-     * <p>The job status.</p>
+     * <p>The job statuses.</p>
      */
     @NameInMap("statusList")
     public java.util.List<String> statusList;
 
     /**
-     * <p>The end UNIX timestamp.</p>
+     * <p>The end timestamp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -99,44 +99,29 @@ public class ListJobSnapshotInfosRequest extends TeaModel {
     public Long to;
 
     /**
-     * <p>The job type.</p>
+     * <p>The job types.</p>
      */
     @NameInMap("typeList")
     public java.util.List<String> typeList;
 
     /**
-     * <p>The column to sort by. Valid values:</p>
+     * <p>The sort column. Valid values:</p>
      * <ul>
-     * <li><p>submittedAtTime</p>
-     * </li>
-     * <li><p>waitingTime</p>
-     * </li>
-     * <li><p>runningAtTime</p>
-     * </li>
-     * <li><p>runningTime</p>
-     * </li>
-     * <li><p>snapshotTime</p>
-     * </li>
-     * <li><p>totalTime</p>
-     * </li>
-     * <li><p>cpuUsage</p>
-     * </li>
-     * <li><p>memoryUsage</p>
-     * </li>
-     * <li><p>minCpuPct</p>
-     * </li>
-     * <li><p>minMemoryPct</p>
-     * </li>
-     * <li><p>priority</p>
-     * </li>
-     * <li><p>cpuRequest</p>
-     * </li>
-     * <li><p>memoryRequest</p>
-     * </li>
-     * <li><p>cpuUsageToRequestRatio</p>
-     * </li>
-     * <li><p>memoryUsageToRequestRatio</p>
-     * </li>
+     * <li>submittedAtTime</li>
+     * <li>waitingTime</li>
+     * <li>runningAtTime</li>
+     * <li>runningTime</li>
+     * <li>snapshotTime</li>
+     * <li>totalTime</li>
+     * <li>cpuUsage </li>
+     * <li>memoryUsage</li>
+     * <li>minCpuPct</li>
+     * <li>minMemoryPct</li>
+     * <li>priority</li>
+     * <li>cpuRequest</li>
+     * <li>memoryRequest</li>
+     * <li>cpuUsageToRequestRatio</li>
+     * <li>memoryUsageToRequestRatio</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -155,7 +140,7 @@ public class ListJobSnapshotInfosRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size, which is the maximum number of entries to return per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -173,7 +158,7 @@ public class ListJobSnapshotInfosRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The tenant ID. To view the tenant ID, log on to the MaxCompute console. In the navigation pane on the left, choose Tenant Management &gt; Tenant Properties.</p>
+     * <p>The tenant ID. You can view the tenant ID by logging on to the MaxCompute console and choosing Tenant Management &gt; Tenant Properties in the left-side navigation pane.</p>
      * 
      * <strong>example:</strong>
      * <p>478403690625249</p>

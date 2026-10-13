@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMmsTaskLogsResponseBody extends TeaModel {
     /**
-     * <p>A list of logs.</p>
+     * <p>The list of logs.</p>
      */
     @NameInMap("data")
     public java.util.List<ListMmsTaskLogsResponseBodyData> data;
@@ -51,7 +51,7 @@ public class ListMmsTaskLogsResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>The time when the log was created.</p>
+         * <p>The creation time. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-17 15:44:00</p>
@@ -78,7 +78,7 @@ public class ListMmsTaskLogsResponseBody extends TeaModel {
         public String msg;
 
         /**
-         * <p>The data source ID.</p>
+         * <p>The ID of the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>2000015</p>
@@ -87,7 +87,7 @@ public class ListMmsTaskLogsResponseBody extends TeaModel {
         public Long sourceId;
 
         /**
-         * <p>The migration task status.</p>
+         * <p>The status of the migration task.</p>
          * 
          * <strong>example:</strong>
          * <p>DATA_DOING</p>
@@ -96,7 +96,7 @@ public class ListMmsTaskLogsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The migration task ID.</p>
+         * <p>The ID of the migration task.</p>
          * 
          * <strong>example:</strong>
          * <p>4023</p>

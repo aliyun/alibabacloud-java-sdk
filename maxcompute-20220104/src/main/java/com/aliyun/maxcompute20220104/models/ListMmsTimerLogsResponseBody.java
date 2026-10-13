@@ -42,7 +42,7 @@ public class ListMmsTimerLogsResponseBody extends TeaModel {
 
     public static class ListMmsTimerLogsResponseBodyDataObjectList extends TeaModel {
         /**
-         * <p>The logged action for the migration job created by the scheduled task.</p>
+         * <p>The action log of the migration job created by the scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>start job</p>
@@ -51,7 +51,7 @@ public class ListMmsTimerLogsResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>The creation time of the log entry.</p>
+         * <p>The time when the log was created. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-17 15:44:17</p>
@@ -60,7 +60,7 @@ public class ListMmsTimerLogsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The ID of the asynchronous task for the migration job created by the scheduled task.</p>
+         * <p>The ID of the asynchronous task created by the scheduled task to create a migration job.</p>
          * 
          * <strong>example:</strong>
          * <p>1003476</p>
@@ -69,7 +69,7 @@ public class ListMmsTimerLogsResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>A detailed message about the action.</p>
+         * <p>The log information of the migration job created by the scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>start job success</p>
@@ -78,7 +78,7 @@ public class ListMmsTimerLogsResponseBody extends TeaModel {
         public String msg;
 
         /**
-         * <p>The ID of the data source.</p>
+         * <p>The data source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>200018</p>
@@ -167,7 +167,7 @@ public class ListMmsTimerLogsResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -176,7 +176,7 @@ public class ListMmsTimerLogsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

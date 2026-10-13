@@ -62,7 +62,7 @@ public class ListMmsTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The partition value. Use this parameter to filter migration tasks that migrated a specific partition value.</p>
+     * <p>The partition value. Filters migration tasks that migrated a specific partition value.</p>
      * 
      * <strong>example:</strong>
      * <p>p1=1/p2=abc</p>
@@ -192,7 +192,7 @@ public class ListMmsTasksRequest extends TeaModel {
 
     public static class ListMmsTasksRequestSorter extends TeaModel {
         /**
-         * <p>Sorts results by the start time.</p>
+         * <p>Sorts the results by start time.</p>
          * 
          * <strong>example:</strong>
          * <p>desc</p>
@@ -201,7 +201,7 @@ public class ListMmsTasksRequest extends TeaModel {
         public String startTime;
 
         /**
-         * <p>Sorts results by status.</p>
+         * <p>Sorts the results by status.</p>
          * 
          * <strong>example:</strong>
          * <p>asc</p>

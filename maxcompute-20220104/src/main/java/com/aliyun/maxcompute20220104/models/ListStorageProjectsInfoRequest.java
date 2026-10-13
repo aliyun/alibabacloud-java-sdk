@@ -14,7 +14,7 @@ public class ListStorageProjectsInfoRequest extends TeaModel {
     public Boolean ascOrder;
 
     /**
-     * <p>The statistics collection date. The date is accurate to the day. The date must be in the <code>YYYYMMdd</code> format.</p>
+     * <p>The statistical date, in the YYYYMMdd format. Data is collected on a daily basis.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,18 +24,13 @@ public class ListStorageProjectsInfoRequest extends TeaModel {
     public String date;
 
     /**
-     * <p>The column to sort by. Valid values:</p>
+     * <p>The sort column. Valid values:</p>
      * <ul>
-     * <li><p>totalStorage</p>
-     * </li>
-     * <li><p>longTermStorage</p>
-     * </li>
-     * <li><p>lowFreqStorage</p>
-     * </li>
-     * <li><p>standardStorage</p>
-     * </li>
-     * <li><p>recycleBinStorage</p>
-     * </li>
+     * <li>totalStorage</li>
+     * <li>longTermStorage</li>
+     * <li>lowFreqStorage</li>
+     * <li>standardStorage</li>
+     * <li>recycleBinStorage</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,7 +67,7 @@ public class ListStorageProjectsInfoRequest extends TeaModel {
     public String projectPrefix;
 
     /**
-     * <p>The number of days for year-over-year comparison.</p>
+     * <p>The number of days used for comparison.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -90,7 +85,7 @@ public class ListStorageProjectsInfoRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The tenant ID. You can log on to the MaxCompute console and choose <strong>Tenant Property</strong> in the navigation pane on the left to view the tenant ID.</p>
+     * <p>The tenant ID. You can view the tenant ID by logging on to the MaxCompute console and choosing <strong>Tenant Management</strong> &gt; <strong>Tenant Properties</strong> in the left-side navigation pane.</p>
      * 
      * <strong>example:</strong>
      * <p>28074710977****</p>

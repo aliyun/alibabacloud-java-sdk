@@ -11,7 +11,7 @@ public class ListJobInfosResponseBody extends TeaModel {
     public ListJobInfosResponseBodyData data;
 
     /**
-     * <p>The HTTP status code. If the value is not empty and is not 200, the request failed.</p>
+     * <p>Indicates whether the request is successful. If the value is not null and is not 200, the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -59,7 +59,7 @@ public class ListJobInfosResponseBody extends TeaModel {
 
     public static class ListJobInfosResponseBodyDataJobInfoListSceneResults extends TeaModel {
         /**
-         * <p>The details of the intelligent diagnostics result.</p>
+         * <p>The details of the intelligent diagnosis result.</p>
          * 
          * <strong>example:</strong>
          * <p>This job uses annual and monthly computing resources. It may be that the job is waiting for resources due to the large amount of overall job running data, many resources requested, and low job priority. Please go to Resource Consumption to view the specific situation. You can also go to Cost Optimization to see if you need to adjust resource configuration.</p>
@@ -68,13 +68,13 @@ public class ListJobInfosResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The node information about data skew or data bloat. This parameter is returned only when the diagnostics scenario is data skew or data bloat.</p>
+         * <p>The node information for data skew and data bloat. This parameter is returned only when the diagnosis scenario is data skew or data bloat.</p>
          */
         @NameInMap("params")
         public java.util.Map<String, String> params;
 
         /**
-         * <p>The scenario of the intelligent diagnostics result.</p>
+         * <p>The scenario of the intelligent diagnosis result.</p>
          * 
          * <strong>example:</strong>
          * <p>LackResource</p>
@@ -83,7 +83,7 @@ public class ListJobInfosResponseBody extends TeaModel {
         public String scene;
 
         /**
-         * <p>The tag of the intelligent diagnostics result.</p>
+         * <p>The tag of the intelligent diagnosis result.</p>
          * 
          * <strong>example:</strong>
          * <p>SubscriptionLackResource</p>
@@ -92,7 +92,7 @@ public class ListJobInfosResponseBody extends TeaModel {
         public String sceneTag;
 
         /**
-         * <p>The summary of the intelligent diagnostics result.</p>
+         * <p>The summary of the intelligent diagnosis result.</p>
          * 
          * <strong>example:</strong>
          * <p>Insufficient computing resources available for the job. Click to view details.</p>
@@ -101,7 +101,7 @@ public class ListJobInfosResponseBody extends TeaModel {
         public String summary;
 
         /**
-         * <p>The type of the intelligent diagnostics result.</p>
+         * <p>The type of the intelligent diagnosis result.</p>
          * 
          * <strong>example:</strong>
          * <p>warning</p>
@@ -193,7 +193,7 @@ public class ListJobInfosResponseBody extends TeaModel {
         public Long cuUsage;
 
         /**
-         * <p>The time when the job finished running.</p>
+         * <p>The end time of the execution. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -220,7 +220,7 @@ public class ListJobInfosResponseBody extends TeaModel {
         public String extNodeName;
 
         /**
-         * <p>The person responsible for the execution.</p>
+         * <p>The person in charge of the execution.</p>
          * 
          * <strong>example:</strong>
          * <p>duty_2</p>
@@ -346,7 +346,7 @@ public class ListJobInfosResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The role session name of the entity that submitted the job through role assumption.</p>
+         * <p>The role assumption used to commit the job.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyunservicerole</p>
@@ -355,7 +355,7 @@ public class ListJobInfosResponseBody extends TeaModel {
         public String roleSessionName;
 
         /**
-         * <p>The time when the job started running.</p>
+         * <p>The start time of the job execution. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1672112113</p>
@@ -364,7 +364,7 @@ public class ListJobInfosResponseBody extends TeaModel {
         public Long runningAtTime;
 
         /**
-         * <p>The running time.</p>
+         * <p>The execution duration. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>800</p>
@@ -373,7 +373,7 @@ public class ListJobInfosResponseBody extends TeaModel {
         public Long runningTime;
 
         /**
-         * <p>The intelligent diagnostics results.</p>
+         * <p>The intelligent diagnosis results.</p>
          */
         @NameInMap("sceneResults")
         public java.util.List<ListJobInfosResponseBodyDataJobInfoListSceneResults> sceneResults;
@@ -406,7 +406,7 @@ public class ListJobInfosResponseBody extends TeaModel {
         public String statusSnapshot;
 
         /**
-         * <p>The time when the job was submitted.</p>
+         * <p>The submission time of the job. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1672112013</p>
@@ -442,7 +442,7 @@ public class ListJobInfosResponseBody extends TeaModel {
         public String tenantId;
 
         /**
-         * <p>The total running duration.</p>
+         * <p>The total execution duration.</p>
          * 
          * <strong>example:</strong>
          * <p>900</p>
@@ -451,7 +451,7 @@ public class ListJobInfosResponseBody extends TeaModel {
         public Long totalTime;
 
         /**
-         * <p>The waiting time.</p>
+         * <p>The waiting time. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

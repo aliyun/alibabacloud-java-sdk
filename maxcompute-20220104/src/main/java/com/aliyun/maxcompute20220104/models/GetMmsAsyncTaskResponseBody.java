@@ -42,7 +42,7 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
 
     public static class GetMmsAsyncTaskResponseBodyData extends TeaModel {
         /**
-         * <p>The creation time, in the format of YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The creation time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-17 15:44:00</p>
@@ -51,7 +51,7 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The end time, in the format of YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The end time of the execution. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-17 17:44:17</p>
@@ -69,7 +69,7 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
         public String errorMsg;
 
         /**
-         * <p>The asynchronous task ID.</p>
+         * <p>The ID of the asynchronous task.</p>
          * 
          * <strong>example:</strong>
          * <p>2523</p>
@@ -87,7 +87,7 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
         public Long objectId;
 
         /**
-         * <p>The running progress.</p>
+         * <p>The execution progress.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -96,7 +96,7 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
         public Integer progress;
 
         /**
-         * <p>The running result.</p>
+         * <p>The execution result.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -114,7 +114,7 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
         public Boolean running;
 
         /**
-         * <p>The data source ID.</p>
+         * <p>The ID of the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>2000017</p>
@@ -123,7 +123,7 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
         public Long sourceId;
 
         /**
-         * <p>The start time, in the format of YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The start time of the execution. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-17 15:44:17</p>
@@ -132,7 +132,7 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The asynchronous task status.</p>
+         * <p>The status of the asynchronous task.</p>
          * 
          * <strong>example:</strong>
          * <p>DONE</p>
@@ -141,7 +141,7 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The asynchronous task type.</p>
+         * <p>The type of the asynchronous task.</p>
          * 
          * <strong>example:</strong>
          * <p>TASK_CREATE</p>
