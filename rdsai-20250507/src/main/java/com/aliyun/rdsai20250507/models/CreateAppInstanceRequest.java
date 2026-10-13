@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAppInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the RDS for PostgreSQL instance with which the RDS Supabase instances are associated.</p>
-     * <blockquote>
-     * <p>: Only newly purchased empty RDS for PostgreSQL instances are supported. The major engine version must be PostgreSQL 17 and the minor version must be 20250630 or later.</p>
-     * </blockquote>
+     * <p>The name of the AI application to create.</p>
      * 
      * <strong>example:</strong>
      * <p>test-supabase</p>
@@ -17,7 +14,7 @@ public class CreateAppInstanceRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The application type. Currently, only <strong>supabase</strong> is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>supabase</p>
@@ -26,7 +23,7 @@ public class CreateAppInstanceRequest extends TeaModel {
     public String appType;
 
     /**
-     * <p>The name of the new AI application.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. The client generates the value of this parameter to prevent duplicate requests from being submitted.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -35,19 +32,20 @@ public class CreateAppInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>List of modules</p>
+     * <p>The list of components.</p>
      */
     @NameInMap("Components")
     public java.util.List<CreateAppInstanceRequestComponents> components;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>The database instance configuration.</p>
      */
     @NameInMap("DBInstanceConfig")
     public CreateAppInstanceRequestDBInstanceConfig DBInstanceConfig;
 
     /**
-     * <p>The instance type. Only <strong>rdsai.supabase.basic</strong> is supported.</p>
+     * <p>The instance ID of the RDS PostgreSQL database instance to which the AI application connects.</p>
+     * <p><notice>Only <strong>newly purchased empty RDS PostgreSQL instances</strong> are supported. The major engine version must be <strong>17</strong>, and the minor engine version must be <strong>20250630 or later</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>pgm-2ze49qv594vi****</p>
@@ -56,7 +54,8 @@ public class CreateAppInstanceRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The Supabase Dashboard user name.</p>
+     * <p>The password for the Supabase Dashboard.</p>
+     * <p>The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and underscores (_).</p>
      * 
      * <strong>example:</strong>
      * <p>test_Password</p>
@@ -65,8 +64,7 @@ public class CreateAppInstanceRequest extends TeaModel {
     public String dashboardPassword;
 
     /**
-     * <p>The password used to access the RDS database.</p>
-     * <p>The password must be 8 to 32 characters in length and must contain at least three of the following characters: uppercase letters, lowercase letters, digits, and underscores (_).</p>
+     * <p>The username for the Supabase Dashboard.</p>
      * 
      * <strong>example:</strong>
      * <p>supabase</p>
@@ -75,6 +73,8 @@ public class CreateAppInstanceRequest extends TeaModel {
     public String dashboardUsername;
 
     /**
+     * <p>The database name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_database_01</p>
      */
@@ -82,7 +82,8 @@ public class CreateAppInstanceRequest extends TeaModel {
     public String database;
 
     /**
-     * <p>The idempotency token. The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
+     * <p>The password for accessing the RDS database.</p>
+     * <p>The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and underscores (_).</p>
      * 
      * <strong>example:</strong>
      * <p>test_Password</p>
@@ -91,10 +92,12 @@ public class CreateAppInstanceRequest extends TeaModel {
     public String databasePassword;
 
     /**
-     * <p>Specifies whether to enable public endpoint.</p>
+     * <p>Specifies whether to restore from existing PostgreSQL data. Valid values:</p>
      * <ul>
-     * <li>true (default)</li>
-     * <li>false</li>
+     * <li><p>true: restores from existing data.</p>
+     * </li>
+     * <li><p>false (default): does not restore from existing data.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -104,7 +107,7 @@ public class CreateAppInstanceRequest extends TeaModel {
     public Boolean initializeWithExistingData;
 
     /**
-     * <p>The vSwitch ID.</p>
+     * <p>The instance type. Currently, only <strong>rdsai.supabase.basic</strong> is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>rdsai.supabase.basic</p>
@@ -113,7 +116,13 @@ public class CreateAppInstanceRequest extends TeaModel {
     public String instanceClass;
 
     /**
-     * <p>The billing method of the RDS for PostgreSQL instance.</p>
+     * <p>Specifies whether to enable the public network connection endpoint. Valid values:</p>
+     * <ul>
+     * <li><p>true (default): Enabled.</p>
+     * </li>
+     * <li><p>false: Disabled.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -122,8 +131,14 @@ public class CreateAppInstanceRequest extends TeaModel {
     public Boolean publicEndpointEnabled;
 
     /**
-     * <p>The Supabase Dashboard password.</p>
-     * <p>The password must be 8 to 32 characters in length and must contain at least three of the following characters: uppercase letters, lowercase letters, digits, and underscores (_).</p>
+     * <p>Specifies whether to enable the Internet NAT gateway. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: enables the Internet NAT gateway.</li>
+     * <li><strong>false</strong> (default): does not enable the Internet NAT gateway.</li>
+     * </ul>
+     * <blockquote>
+     * <p>Notice: If an Internet NAT gateway is already enabled for the vSwitch specified by the <strong>VSwitchId</strong> parameter settings, set this parameter to <strong>false</strong>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -132,14 +147,7 @@ public class CreateAppInstanceRequest extends TeaModel {
     public Boolean publicNetworkAccessEnabled;
 
     /**
-     * <p>Specifies whether to enable the Internet NAT gateway. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong>: enable the Internet NAT gateway.</li>
-     * <li><strong>false</strong> (default): disable the Internet NAT gateway.</li>
-     * </ul>
-     * <blockquote>
-     * <p> If an Internet NAT gateway is enabled for the vSwitch that you specify for VSwitchId, select false for this parameter.</p>
-     * </blockquote>
+     * <p>Reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -148,7 +156,7 @@ public class CreateAppInstanceRequest extends TeaModel {
     public Boolean RAGEnabled;
 
     /**
-     * <p>The operation that you want to perform. Set the value to <strong>CreateAppInstance</strong>.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -157,7 +165,7 @@ public class CreateAppInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The application type. Only <strong>supabase</strong> is supported.</p>
+     * <p>The vSwitch ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-9dp2hkpm22gxscfgy****</p>
@@ -308,7 +316,7 @@ public class CreateAppInstanceRequest extends TeaModel {
 
     public static class CreateAppInstanceRequestComponents extends TeaModel {
         /**
-         * <p>Module type</p>
+         * <p>The component type.</p>
          * 
          * <strong>example:</strong>
          * <p>supabase</p>
@@ -342,7 +350,7 @@ public class CreateAppInstanceRequest extends TeaModel {
         public String DBInstanceClass;
 
         /**
-         * <p>The storage capacity of the database instance.</p>
+         * <p>The instance storage capacity of the database instance.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -351,7 +359,7 @@ public class CreateAppInstanceRequest extends TeaModel {
         public Integer DBInstanceStorage;
 
         /**
-         * <p>The payment type of the database instance.</p>
+         * <p>The billing method of the database instance.</p>
          * 
          * <strong>example:</strong>
          * <p>Postpaid</p>

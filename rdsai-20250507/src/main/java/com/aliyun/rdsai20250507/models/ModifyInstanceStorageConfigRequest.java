@@ -8,7 +8,7 @@ public class ModifyInstanceStorageConfigRequest extends TeaModel {
     public String branchName;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, which ensures that the request is not repeated.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, which prevents repeated submissions of requests.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -94,7 +94,7 @@ public class ModifyInstanceStorageConfigRequest extends TeaModel {
          * <li><strong>AWS_ACCESS_KEY_ID</strong>: the AccessKey ID for OSS.</li>
          * <li><strong>AWS_SECRET_ACCESS_KEY</strong>: the AccessKey Secret for OSS.</li>
          * <li><strong>GLOBAL_S3_BUCKET</strong>: the bucket name of OSS.</li>
-         * <li><strong>TENANT_ID</strong>: the OSS directory name. You do not need to create it in advance.</li>
+         * <li><strong>TENANT_ID</strong>: the OSS directory name. You do not need to create it.</li>
          * <li><strong>GLOBAL_S3_ENDPOINT</strong>: the endpoint of OSS.</li>
          * <li><strong>REGION</strong>: the region of OSS.</li>
          * </ul>

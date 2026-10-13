@@ -29,7 +29,7 @@ public class ListSkillResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The unique request identifier.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
@@ -93,7 +93,13 @@ public class ListSkillResponseBody extends TeaModel {
 
     public static class ListSkillResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the currently active version.</p>
+         * <p>The currently active skill version information.</p>
+         */
+        @NameInMap("ActiveVersion")
+        public java.util.Map<String, ?> activeVersion;
+
+        /**
+         * <p>The currently active version ID.</p>
          * 
          * <strong>example:</strong>
          * <p>version-example</p>
@@ -144,7 +150,7 @@ public class ListSkillResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The display name of the skill.</p>
+         * <p>The skill display name.</p>
          * 
          * <strong>example:</strong>
          * <p>Example Skill</p>
@@ -189,7 +195,7 @@ public class ListSkillResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The visibility scope of the skill.</p>
+         * <p>The skill visibility scope.</p>
          * 
          * <strong>example:</strong>
          * <p>PRIVATE</p>
@@ -207,7 +213,7 @@ public class ListSkillResponseBody extends TeaModel {
         public String skillType;
 
         /**
-         * <p>The stable identifier of the skill.</p>
+         * <p>The skill stable identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>example-skill</p>
@@ -224,9 +230,26 @@ public class ListSkillResponseBody extends TeaModel {
         @NameInMap("UpdatedAt")
         public String updatedAt;
 
+        /**
+         * <p>The skill visibility for the current user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
+         */
+        @NameInMap("Visibility")
+        public String visibility;
+
         public static ListSkillResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListSkillResponseBodyData self = new ListSkillResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListSkillResponseBodyData setActiveVersion(java.util.Map<String, ?> activeVersion) {
+            this.activeVersion = activeVersion;
+            return this;
+        }
+        public java.util.Map<String, ?> getActiveVersion() {
+            return this.activeVersion;
         }
 
         public ListSkillResponseBodyData setActiveVersionId(String activeVersionId) {
@@ -347,6 +370,14 @@ public class ListSkillResponseBody extends TeaModel {
         }
         public String getUpdatedAt() {
             return this.updatedAt;
+        }
+
+        public ListSkillResponseBodyData setVisibility(String visibility) {
+            this.visibility = visibility;
+            return this;
+        }
+        public String getVisibility() {
+            return this.visibility;
         }
 
     }

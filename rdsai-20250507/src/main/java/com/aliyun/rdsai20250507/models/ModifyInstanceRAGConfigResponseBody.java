@@ -26,7 +26,7 @@ public class ModifyInstanceRAGConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The RAG Agent status. Valid values:</p>
+     * <p>The RAG Agent status.</p>
      * <ul>
      * <li><strong>true</strong>: Enabled.</li>
      * <li><strong>false</strong>: Disabled.</li>

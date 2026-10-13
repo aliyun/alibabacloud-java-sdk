@@ -139,7 +139,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
          * <p>The inspection description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Automatically inspect production RDS instances at 2 AM every day</p>
+         * <p>Automatically inspect production ApsaraDB RDS instances at 2:00 AM every day</p>
          */
         @NameInMap("Description")
         public String description;
@@ -180,7 +180,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
          * <p>The task name.</p>
          * 
          * <strong>example:</strong>
-         * <p>InspectionTest</p>
+         * <p>Inspection test</p>
          */
         @NameInMap("Name")
         public String name;

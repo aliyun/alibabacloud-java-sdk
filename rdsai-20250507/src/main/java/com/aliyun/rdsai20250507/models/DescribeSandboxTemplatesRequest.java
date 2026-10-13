@@ -18,7 +18,7 @@ public class DescribeSandboxTemplatesRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * <p>A reserved parameter. You can ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>

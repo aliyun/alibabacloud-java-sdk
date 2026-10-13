@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCustomAgentResponseBody extends TeaModel {
     /**
-     * <p>A list of custom agents.</p>
+     * <p>The returned data object.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListCustomAgentResponseBodyData> data;
@@ -20,7 +20,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of records per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -37,14 +37,11 @@ public class ListCustomAgentResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>A list of skills.</p>
-     */
     @NameInMap("Skills")
     public java.util.List<ListCustomAgentResponseBodySkills> skills;
 
     /**
-     * <p>The total number of entries that match the query. This parameter is not returned by default.</p>
+     * <p>The total number of data records that meet the request conditions. This parameter is optional and is not returned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -125,7 +122,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
         public Boolean enableTools;
 
         /**
-         * <p>The agent ID.</p>
+         * <p>AgentId。</p>
          * 
          * <strong>example:</strong>
          * <p>d1b7d639-f34e-44c7-8231-987da14d****</p>
@@ -134,10 +131,10 @@ public class ListCustomAgentResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The name of the custom agent.</p>
+         * <p>The name of the dedicated agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>日志分析Agent</p>
+         * <p>Log Analysis Agent</p>
          */
         @NameInMap("Name")
         public String name;
@@ -146,13 +143,13 @@ public class ListCustomAgentResponseBody extends TeaModel {
          * <p>The system prompt.</p>
          * 
          * <strong>example:</strong>
-         * <p>我是您用来查询实例列表的专属Agent。</p>
+         * <p>I am your dedicated agent for querying instance lists</p>
          */
         @NameInMap("SystemPrompt")
         public String systemPrompt;
 
         /**
-         * <p>A list of tools.</p>
+         * <p>The tool information.</p>
          */
         @NameInMap("Tools")
         public java.util.List<String> tools;
@@ -230,27 +227,15 @@ public class ListCustomAgentResponseBody extends TeaModel {
     }
 
     public static class ListCustomAgentResponseBodySkills extends TeaModel {
-        /**
-         * <p>The description of the skill.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The skill ID.</p>
-         */
         @NameInMap("Id")
         public String id;
 
-        /**
-         * <p>The name of the skill.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The type of the skill.</p>
-         */
         @NameInMap("SkillType")
         public String skillType;
 

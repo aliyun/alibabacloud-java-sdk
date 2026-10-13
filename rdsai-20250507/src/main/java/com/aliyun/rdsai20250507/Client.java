@@ -35,6 +35,184 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Adds a job exclusion item.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds an exclusion item to an import task.</p>
+     * 
+     * @param request AddContextDatabaseSyncJobExclusionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddContextDatabaseSyncJobExclusionResponse
+     */
+    public AddContextDatabaseSyncJobExclusionResponse addContextDatabaseSyncJobExclusionWithOptions(AddContextDatabaseSyncJobExclusionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.documentId)) {
+            query.put("DocumentId", request.documentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddContextDatabaseSyncJobExclusion"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddContextDatabaseSyncJobExclusionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Adds a job exclusion item.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds an exclusion item to an import task.</p>
+     * 
+     * @param request AddContextDatabaseSyncJobExclusionRequest
+     * @return AddContextDatabaseSyncJobExclusionResponse
+     */
+    public AddContextDatabaseSyncJobExclusionResponse addContextDatabaseSyncJobExclusion(AddContextDatabaseSyncJobExclusionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addContextDatabaseSyncJobExclusionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can specify a ClientToken to ensure idempotence for write operations. If you do not specify this parameter, the backend automatically generates one.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Cancels an in-progress discovery task by task ID.</p>
+     * 
+     * @param request CancelContextDatabaseSyncDiscoveryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelContextDatabaseSyncDiscoveryResponse
+     */
+    public CancelContextDatabaseSyncDiscoveryResponse cancelContextDatabaseSyncDiscoveryWithOptions(CancelContextDatabaseSyncDiscoveryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CancelContextDatabaseSyncDiscovery"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelContextDatabaseSyncDiscoveryResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can specify a ClientToken to ensure idempotence for write operations. If you do not specify this parameter, the backend automatically generates one.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Cancels an in-progress discovery task by task ID.</p>
+     * 
+     * @param request CancelContextDatabaseSyncDiscoveryRequest
+     * @return CancelContextDatabaseSyncDiscoveryResponse
+     */
+    public CancelContextDatabaseSyncDiscoveryResponse cancelContextDatabaseSyncDiscovery(CancelContextDatabaseSyncDiscoveryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.cancelContextDatabaseSyncDiscoveryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Write operations support idempotence through ClientToken. If ClientToken is not provided, the backend generates one automatically. Cancellation is best-effort. Completed RunItems are not affected.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Cancels a run.</p>
+     * 
+     * @param request CancelContextDatabaseSyncRunRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelContextDatabaseSyncRunResponse
+     */
+    public CancelContextDatabaseSyncRunResponse cancelContextDatabaseSyncRunWithOptions(CancelContextDatabaseSyncRunRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runId)) {
+            query.put("RunId", request.runId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CancelContextDatabaseSyncRun"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelContextDatabaseSyncRunResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Write operations support idempotence through ClientToken. If ClientToken is not provided, the backend generates one automatically. Cancellation is best-effort. Completed RunItems are not affected.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Cancels a run.</p>
+     * 
+     * @param request CancelContextDatabaseSyncRunRequest
+     * @return CancelContextDatabaseSyncRunResponse
+     */
+    public CancelContextDatabaseSyncRunResponse cancelContextDatabaseSyncRun(CancelContextDatabaseSyncRunRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.cancelContextDatabaseSyncRunWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Sends a conversation message.</p>
      * 
@@ -242,15 +420,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported Engine</h3>
-     * <p>RDS PostgreSQL  </p>
-     * <h3>Related Function Documentation</h3>
+     * <h3>Applicable engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Warning: This API operation involves a Fee. Carefully read the related Function Documentation before performing this operation.</p>
+     * <p>Warning: This API operation incurs fees. Read the related documentation carefully before you perform this operation.
+     * <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates an RDS Supabase instance.</p>
+     * <p>Creates an RDS AI application instance.</p>
      * 
      * @param tmpReq CreateAppInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -356,15 +535,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported Engine</h3>
-     * <p>RDS PostgreSQL  </p>
-     * <h3>Related Function Documentation</h3>
+     * <h3>Applicable engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Warning: This API operation involves a Fee. Carefully read the related Function Documentation before performing this operation.</p>
+     * <p>Warning: This API operation incurs fees. Read the related documentation carefully before you perform this operation.
+     * <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates an RDS Supabase instance.</p>
+     * <p>Creates an RDS AI application instance.</p>
      * 
      * @param request CreateAppInstanceRequest
      * @return CreateAppInstanceResponse
@@ -434,7 +614,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a member. When GenerateInitialKey is set to true, the first API key is issued at the same time, and the plaintext ApiKey is returned in the response. This is a sensitive field and is returned only once. Store it securely. After the member is created, you can use the List or Get operation to query the member and the metadata of the API keys under the member.</p>
+     * <p>Creates a member. If GenerateInitialKey is set to true, the first API key is also issued, and the plaintext ApiKey is returned in the response. This is a sensitive field and is returned only once. Store it securely. After the member is created, you can call the List or Get operation to query the member and the metadata of the API keys under the member.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a ContextDB member.</p>
@@ -485,7 +665,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a member. When GenerateInitialKey is set to true, the first API key is issued at the same time, and the plaintext ApiKey is returned in the response. This is a sensitive field and is returned only once. Store it securely. After the member is created, you can use the List or Get operation to query the member and the metadata of the API keys under the member.</p>
+     * <p>Creates a member. If GenerateInitialKey is set to true, the first API key is also issued, and the plaintext ApiKey is returned in the response. This is a sensitive field and is returned only once. Store it securely. After the member is created, you can call the List or Get operation to query the member and the metadata of the API keys under the member.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a ContextDB member.</p>
@@ -500,10 +680,240 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a workspace, the first member, and the first API key in a one-time onboarding flow. Returns the plaintext API key.</p>
+     * <p>For write operations, you can specify a ClientToken to ensure idempotency. If no ClientToken is provided, the backend automatically generates one. Upon successful creation, the complete information of the created object is returned, including the ID that can be used for subsequent queries or updates.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a workspace, the first member, and the first API key in a one-time onboarding flow.</p>
+     * <p>Creates a synchronization connection.</p>
+     * 
+     * @param request CreateContextDatabaseSyncConnectionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateContextDatabaseSyncConnectionResponse
+     */
+    public CreateContextDatabaseSyncConnectionResponse createContextDatabaseSyncConnectionWithOptions(CreateContextDatabaseSyncConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authKind)) {
+            query.put("AuthKind", request.authKind);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            query.put("DisplayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pluginId)) {
+            query.put("PluginId", request.pluginId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateContextDatabaseSyncConnection"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateContextDatabaseSyncConnectionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>For write operations, you can specify a ClientToken to ensure idempotency. If no ClientToken is provided, the backend automatically generates one. Upon successful creation, the complete information of the created object is returned, including the ID that can be used for subsequent queries or updates.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a synchronization connection.</p>
+     * 
+     * @param request CreateContextDatabaseSyncConnectionRequest
+     * @return CreateContextDatabaseSyncConnectionResponse
+     */
+    public CreateContextDatabaseSyncConnectionResponse createContextDatabaseSyncConnection(CreateContextDatabaseSyncConnectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createContextDatabaseSyncConnectionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Write operations support idempotence via ClientToken. If ClientToken is not provided, the backend generates one automatically. Target is an implicit concept — you only need to provide KnowledgeBaseId, and the backend automatically creates or matches the Target.
+     * On success, the response returns the complete information of the created object. The Id field is active and can be used for subsequent queries or updates.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an import task.</p>
+     * 
+     * @param tmpReq CreateContextDatabaseSyncJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateContextDatabaseSyncJobResponse
+     */
+    public CreateContextDatabaseSyncJobResponse createContextDatabaseSyncJobWithOptions(CreateContextDatabaseSyncJobRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateContextDatabaseSyncJobShrinkRequest request = new CreateContextDatabaseSyncJobShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.filters)) {
+            request.filtersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filters, "Filters", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filtersShrink)) {
+            query.put("Filters", request.filtersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            query.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
+            query.put("SourceId", request.sourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetId)) {
+            query.put("TargetId", request.targetId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetKnowledgeBaseId)) {
+            query.put("TargetKnowledgeBaseId", request.targetKnowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetKnowledgeBaseName)) {
+            query.put("TargetKnowledgeBaseName", request.targetKnowledgeBaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateContextDatabaseSyncJob"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateContextDatabaseSyncJobResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Write operations support idempotence via ClientToken. If ClientToken is not provided, the backend generates one automatically. Target is an implicit concept — you only need to provide KnowledgeBaseId, and the backend automatically creates or matches the Target.
+     * On success, the response returns the complete information of the created object. The Id field is active and can be used for subsequent queries or updates.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an import task.</p>
+     * 
+     * @param request CreateContextDatabaseSyncJobRequest
+     * @return CreateContextDatabaseSyncJobResponse
+     */
+    public CreateContextDatabaseSyncJobResponse createContextDatabaseSyncJob(CreateContextDatabaseSyncJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createContextDatabaseSyncJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Write operations support idempotence by passing a ClientToken. If no token is provided, the backend generates one automatically. After creating a data selection scope, you typically need to call StartContextDatabaseSyncSourceDiscovery to discover available nodes.
+     * On success, the response returns the complete information of the created object. The Id field can be used for subsequent queries or updates.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a data selection scope.</p>
+     * 
+     * @param tmpReq CreateContextDatabaseSyncSourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateContextDatabaseSyncSourceResponse
+     */
+    public CreateContextDatabaseSyncSourceResponse createContextDatabaseSyncSourceWithOptions(CreateContextDatabaseSyncSourceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateContextDatabaseSyncSourceShrinkRequest request = new CreateContextDatabaseSyncSourceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sourceConfig)) {
+            request.sourceConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceConfig, "SourceConfig", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionId)) {
+            query.put("ConnectionId", request.connectionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceConfigShrink)) {
+            query.put("SourceConfig", request.sourceConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateContextDatabaseSyncSource"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateContextDatabaseSyncSourceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Write operations support idempotence by passing a ClientToken. If no token is provided, the backend generates one automatically. After creating a data selection scope, you typically need to call StartContextDatabaseSyncSourceDiscovery to discover available nodes.
+     * On success, the response returns the complete information of the created object. The Id field can be used for subsequent queries or updates.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a data selection scope.</p>
+     * 
+     * @param request CreateContextDatabaseSyncSourceRequest
+     * @return CreateContextDatabaseSyncSourceResponse
+     */
+    public CreateContextDatabaseSyncSourceResponse createContextDatabaseSyncSource(CreateContextDatabaseSyncSourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createContextDatabaseSyncSourceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a workspace along with the first member and the first API key in a one-time onboarding process. The plaintext API key is returned in the response.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a workspace, the first member, and the first API key in a one-time onboarding process.</p>
      * 
      * @param request CreateContextDatabaseWorkspaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -539,10 +949,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a workspace, the first member, and the first API key in a one-time onboarding flow. Returns the plaintext API key.</p>
+     * <p>Creates a workspace along with the first member and the first API key in a one-time onboarding process. The plaintext API key is returned in the response.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a workspace, the first member, and the first API key in a one-time onboarding flow.</p>
+     * <p>Creates a workspace, the first member, and the first API key in a one-time onboarding process.</p>
      * 
      * @param request CreateContextDatabaseWorkspaceRequest
      * @return CreateContextDatabaseWorkspaceResponse
@@ -700,11 +1110,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>适用引擎</h3>
-     * <p><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></p>
+     * <h3>Applicable engine</h3>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
-     * <p>触发 MO 用量明细 CSV 异步导出任务</p>
+     * <p>Triggers an asynchronous export task for MO usage details in CSV format.</p>
      * 
      * @param request CreateMOUsageDetailExportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -756,11 +1166,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>适用引擎</h3>
-     * <p><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></p>
+     * <h3>Applicable engine</h3>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
-     * <p>触发 MO 用量明细 CSV 异步导出任务</p>
+     * <p>Triggers an asynchronous export task for MO usage details in CSV format.</p>
      * 
      * @param request CreateMOUsageDetailExportRequest
      * @return CreateMOUsageDetailExportResponse
@@ -868,9 +1278,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Warning: This API operation incurs fees. Read the related documentation carefully before you perform this operation.
+     * <p>Warning: This API operation incurs fees. Read the related feature documentation carefully before you perform this operation.
      * <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * </blockquote>
      * 
@@ -953,9 +1363,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Warning: This API operation incurs fees. Read the related documentation carefully before you perform this operation.
+     * <p>Warning: This API operation incurs fees. Read the related feature documentation carefully before you perform this operation.
      * <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * </blockquote>
      * 
@@ -972,7 +1382,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a user-defined Skill.</p>
+     * <p>Creates a user-defined skill.</p>
      * 
      * @param tmpReq CreateSkillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1007,6 +1417,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Name", request.name);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.updateNote)) {
+            query.put("UpdateNote", request.updateNote);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.uploadId)) {
             query.put("UploadId", request.uploadId);
         }
@@ -1038,7 +1452,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a user-defined Skill.</p>
+     * <p>Creates a user-defined skill.</p>
      * 
      * @param request CreateSkillRequest
      * @return CreateSkillResponse
@@ -1112,7 +1526,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <blockquote>
      * <p>Warning: This API operation incurs fees. Read the related feature documentation carefully before you perform this operation.
      * <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>
-     * Notice: Deleting an RDS Supabase project does not automatically delete the ApsaraDB RDS for PostgreSQL instance or the Internet NAT gateway that were created with the project. You must <a href="https://help.aliyun.com/document_detail/96749.html">manual release the instance</a> and delete the <a href="https://help.aliyun.com/document_detail/121139.html">Internet NAT gateway</a> and <a href="https://help.aliyun.com/document_detail/121527.html">EIP</a>.</p>
+     * Notice: Deleting an RDS Supabase project does not automatically delete the ApsaraDB RDS for PostgreSQL instance or the Internet NAT gateway that were created along with the project. You must <a href="https://help.aliyun.com/document_detail/96749.html">manual release the instance</a> and delete the <a href="https://help.aliyun.com/document_detail/121139.html">Internet NAT gateway</a> and <a href="https://help.aliyun.com/document_detail/121527.html">EIP</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -1166,7 +1580,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <blockquote>
      * <p>Warning: This API operation incurs fees. Read the related feature documentation carefully before you perform this operation.
      * <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>
-     * Notice: Deleting an RDS Supabase project does not automatically delete the ApsaraDB RDS for PostgreSQL instance or the Internet NAT gateway that were created with the project. You must <a href="https://help.aliyun.com/document_detail/96749.html">manual release the instance</a> and delete the <a href="https://help.aliyun.com/document_detail/121139.html">Internet NAT gateway</a> and <a href="https://help.aliyun.com/document_detail/121527.html">EIP</a>.</p>
+     * Notice: Deleting an RDS Supabase project does not automatically delete the ApsaraDB RDS for PostgreSQL instance or the Internet NAT gateway that were created along with the project. You must <a href="https://help.aliyun.com/document_detail/96749.html">manual release the instance</a> and delete the <a href="https://help.aliyun.com/document_detail/121139.html">Internet NAT gateway</a> and <a href="https://help.aliyun.com/document_detail/121527.html">EIP</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -1182,10 +1596,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a member (hard delete, not recoverable).</p>
+     * <p>Deletes a member. This is a hard delete and cannot be undone.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a ContextDB member.</p>
+     * <p>Deletes a context database member.</p>
      * 
      * @param request DeleteContextDatabaseMemberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1221,10 +1635,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a member (hard delete, not recoverable).</p>
+     * <p>Deletes a member. This is a hard delete and cannot be undone.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a ContextDB member.</p>
+     * <p>Deletes a context database member.</p>
      * 
      * @param request DeleteContextDatabaseMemberRequest
      * @return DeleteContextDatabaseMemberResponse
@@ -1236,7 +1650,181 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a workspace. This is a hard delete and cannot be recovered. After successful deletion, local metadata is soft-deleted synchronously. Deleted workspaces no longer count toward the quota.</p>
+     * <p>For write operations, you can specify a ClientToken to ensure idempotency. If you do not specify a ClientToken, the backend automatically generates one.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a data source.</p>
+     * 
+     * @param request DeleteContextDatabaseSyncConnectionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteContextDatabaseSyncConnectionResponse
+     */
+    public DeleteContextDatabaseSyncConnectionResponse deleteContextDatabaseSyncConnectionWithOptions(DeleteContextDatabaseSyncConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionId)) {
+            query.put("ConnectionId", request.connectionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteContextDatabaseSyncConnection"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteContextDatabaseSyncConnectionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>For write operations, you can specify a ClientToken to ensure idempotency. If you do not specify a ClientToken, the backend automatically generates one.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a data source.</p>
+     * 
+     * @param request DeleteContextDatabaseSyncConnectionRequest
+     * @return DeleteContextDatabaseSyncConnectionResponse
+     */
+    public DeleteContextDatabaseSyncConnectionResponse deleteContextDatabaseSyncConnection(DeleteContextDatabaseSyncConnectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteContextDatabaseSyncConnectionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can provide a ClientToken to ensure idempotency for write operations. If not provided, the backend automatically generates one.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an import task.</p>
+     * 
+     * @param request DeleteContextDatabaseSyncJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteContextDatabaseSyncJobResponse
+     */
+    public DeleteContextDatabaseSyncJobResponse deleteContextDatabaseSyncJobWithOptions(DeleteContextDatabaseSyncJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteContextDatabaseSyncJob"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteContextDatabaseSyncJobResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can provide a ClientToken to ensure idempotency for write operations. If not provided, the backend automatically generates one.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an import task.</p>
+     * 
+     * @param request DeleteContextDatabaseSyncJobRequest
+     * @return DeleteContextDatabaseSyncJobResponse
+     */
+    public DeleteContextDatabaseSyncJobResponse deleteContextDatabaseSyncJob(DeleteContextDatabaseSyncJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteContextDatabaseSyncJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Write operations support idempotence through ClientToken. If ClientToken is not provided, the backend generates one automatically.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a data selection scope.</p>
+     * 
+     * @param request DeleteContextDatabaseSyncSourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteContextDatabaseSyncSourceResponse
+     */
+    public DeleteContextDatabaseSyncSourceResponse deleteContextDatabaseSyncSourceWithOptions(DeleteContextDatabaseSyncSourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
+            query.put("SourceId", request.sourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteContextDatabaseSyncSource"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteContextDatabaseSyncSourceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Write operations support idempotence through ClientToken. If ClientToken is not provided, the backend generates one automatically.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a data selection scope.</p>
+     * 
+     * @param request DeleteContextDatabaseSyncSourceRequest
+     * @return DeleteContextDatabaseSyncSourceResponse
+     */
+    public DeleteContextDatabaseSyncSourceResponse deleteContextDatabaseSyncSource(DeleteContextDatabaseSyncSourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteContextDatabaseSyncSourceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a workspace. This is a hard delete and cannot be recovered. After the workspace is deleted, the local metadata is soft-deleted synchronously. Deleted workspaces no longer count toward the quota.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a ContextDB workspace.</p>
@@ -1271,7 +1859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a workspace. This is a hard delete and cannot be recovered. After successful deletion, local metadata is soft-deleted synchronously. Deleted workspaces no longer count toward the quota.</p>
+     * <p>Deletes a workspace. This is a hard delete and cannot be recovered. After the workspace is deleted, the local metadata is soft-deleted synchronously. Deleted workspaces no longer count toward the quota.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a ContextDB workspace.</p>
@@ -1330,7 +1918,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engine</h3>
      * <p>RDS Supabase</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
@@ -1376,7 +1964,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engine</h3>
      * <p>RDS Supabase</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
@@ -1550,13 +2138,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>This API retrieves a list of RDS AI application instances.</p>
+     * <p>Queries a list of RDS AI application instances.</p>
      * 
      * @param request DescribeAppInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1604,13 +2192,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>This API retrieves a list of RDS AI application instances.</p>
+     * <p>Queries a list of RDS AI application instances.</p>
      * 
      * @param request DescribeAppInstancesRequest
      * @return DescribeAppInstancesResponse
@@ -1686,7 +2274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This API retrieves the list of events.</p>
+     * <p>Queries a list of events.</p>
      * 
      * @param request DescribeEventsListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1738,7 +2326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This API retrieves the list of events.</p>
+     * <p>Queries a list of events.</p>
      * 
      * @param request DescribeEventsListRequest
      * @return DescribeEventsListResponse
@@ -1878,13 +2466,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engine</h3>
      * <p>RDS PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the IP whitelist of an ApsaraDB RDS AI application instance.</p>
+     * <p>Queries the IP whitelist of an RDS AI application instance.</p>
      * 
      * @param request DescribeInstanceIpWhitelistRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1928,13 +2516,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engine</h3>
      * <p>RDS PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the IP whitelist of an ApsaraDB RDS AI application instance.</p>
+     * <p>Queries the IP whitelist of an RDS AI application instance.</p>
      * 
      * @param request DescribeInstanceIpWhitelistRequest
      * @return DescribeInstanceIpWhitelistResponse
@@ -2224,11 +2812,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>适用引擎</h3>
-     * <p><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></p>
+     * <h3>Applicable engine</h3>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
-     * <p>查看 model operator 实例具体 token 汇总情况</p>
+     * <p>Queries the token usage summary for a model operator instance.</p>
      * 
      * @param request DescribeMOTokenUsageSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2280,11 +2868,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>适用引擎</h3>
-     * <p><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></p>
+     * <h3>Applicable engine</h3>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
-     * <p>查看 model operator 实例具体 token 汇总情况</p>
+     * <p>Queries the token usage summary for a model operator instance.</p>
      * 
      * @param request DescribeMOTokenUsageSummaryRequest
      * @return DescribeMOTokenUsageSummaryResponse
@@ -2296,11 +2884,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>适用引擎</h3>
-     * <p><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></p>
+     * <h3>Applicable engine</h3>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
-     * <p>查询 MO 用量明细 CSV 异步导出任务的状态/下载链接</p>
+     * <p>Queries the status or download link of an asynchronous CSV export task for MO usage details.</p>
      * 
      * @param request DescribeMOUsageDetailExportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2332,11 +2920,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>适用引擎</h3>
-     * <p><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></p>
+     * <h3>Applicable engine</h3>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
-     * <p>查询 MO 用量明细 CSV 异步导出任务的状态/下载链接</p>
+     * <p>Queries the status or download link of an asynchronous CSV export task for MO usage details.</p>
      * 
      * @param request DescribeMOUsageDetailExportRequest
      * @return DescribeMOUsageDetailExportResponse
@@ -2352,7 +2940,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the basic information and usage of RDS AI Assistant Ultimate Edition.</p>
+     * <p>Queries the basic information and usage of an RDS AI Assistant Ultimate Edition instance.</p>
      * 
      * @param request DescribeModelOperatorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2392,7 +2980,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the basic information and usage of RDS AI Assistant Ultimate Edition.</p>
+     * <p>Queries the basic information and usage of an RDS AI Assistant Ultimate Edition instance.</p>
      * 
      * @param request DescribeModelOperatorRequest
      * @return DescribeModelOperatorResponse
@@ -2408,7 +2996,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries instance monitoring data of an ApsaraDB RDS AI Assistant Ultimate Edition instance.</p>
+     * <p>Queries instance monitoring data of an RDS AI Assistant Ultimate Edition instance.</p>
      * 
      * @param tmpReq DescribeMonitorDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2470,7 +3058,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries instance monitoring data of an ApsaraDB RDS AI Assistant Ultimate Edition instance.</p>
+     * <p>Queries instance monitoring data of an RDS AI Assistant Ultimate Edition instance.</p>
      * 
      * @param request DescribeMonitorDataRequest
      * @return DescribeMonitorDataResponse
@@ -2488,7 +3076,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of sandbox templates available for creating a Supabase sandbox.</p>
+     * <p>Queries the list of sandbox templates used to create Supabase sandboxes.</p>
      * 
      * @param request DescribeSandboxTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2554,7 +3142,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of sandbox templates available for creating a Supabase sandbox.</p>
+     * <p>Queries the list of sandbox templates used to create Supabase sandboxes.</p>
      * 
      * @param request DescribeSandboxTemplatesRequest
      * @return DescribeSandboxTemplatesResponse
@@ -2566,11 +3154,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
-     * <p><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Enterprise Edition</a></p>
+     * <h3>Applicable engine</h3>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Describes the whitelist of an RDS AI Assistant Enterprise Edition instance.</p>
+     * <p>Queries the whitelist of an RDS AI Assistant Ultimate Edition instance.</p>
      * 
      * @param request DescribeWhitelistIpsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2602,11 +3190,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
-     * <p><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Enterprise Edition</a></p>
+     * <h3>Applicable engine</h3>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Describes the whitelist of an RDS AI Assistant Enterprise Edition instance.</p>
+     * <p>Queries the whitelist of an RDS AI Assistant Ultimate Edition instance.</p>
      * 
      * @param request DescribeWhitelistIpsRequest
      * @return DescribeWhitelistIpsResponse
@@ -2618,13 +3206,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Disables the sandbox feature and Edge Routine capabilities for a Supabase instance.</p>
+     * <p>Disables the sandbox and Edge Routine capabilities of a Supabase instance.</p>
      * <blockquote>
-     * <p>Notice: This operation deletes all sandboxes and edge functions of the Supabase instance. Fully assess business risks before performing this operation.</p>
+     * <p>Notice: This operation deletes all sandboxes and Edge Routines of the Supabase instance. Fully assess the business risks before performing this operation.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Disables the sandbox feature and Edge Routine capabilities for a Supabase instance. Note: This operation deletes all sandboxes and edge functions of the instance. Fully assess business risks before performing this operation.</p>
+     * <p>Disables the sandbox and Edge Routine capabilities of a Supabase instance. Note: This operation deletes all sandboxes and Edge Routines of the instance. Fully assess the business risks before performing this operation.</p>
      * 
      * @param request DisableAgentRuntimeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2668,13 +3256,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Disables the sandbox feature and Edge Routine capabilities for a Supabase instance.</p>
+     * <p>Disables the sandbox and Edge Routine capabilities of a Supabase instance.</p>
      * <blockquote>
-     * <p>Notice: This operation deletes all sandboxes and edge functions of the Supabase instance. Fully assess business risks before performing this operation.</p>
+     * <p>Notice: This operation deletes all sandboxes and Edge Routines of the Supabase instance. Fully assess the business risks before performing this operation.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Disables the sandbox feature and Edge Routine capabilities for a Supabase instance. Note: This operation deletes all sandboxes and edge functions of the instance. Fully assess business risks before performing this operation.</p>
+     * <p>Disables the sandbox and Edge Routine capabilities of a Supabase instance. Note: This operation deletes all sandboxes and Edge Routines of the instance. Fully assess the business risks before performing this operation.</p>
      * 
      * @param request DisableAgentRuntimeRequest
      * @return DisableAgentRuntimeResponse
@@ -2688,7 +3276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>During the public preview, the sandbox and Edge Routine features are free of charge.</p>
      * <h3>Before you begin</h3>
-     * <p>Before using this feature, you must complete <a href="https://api.aliyun.com/api/ResourceManager/2020-03-31/CreateServiceLinkedRole?spm=api-workbench.API%20Document.0.0.4ea75094rJgPzK&RegionId=cn-beijing&tab=DEBUG&params=%7B%2522ServiceName%2522:%2522supabase.rdsai.aliyuncs.com%2522%7D&sdkStyle=old">service-linked role authorization</a>. The service-linked role used is <a href="https://www.alibabacloud.com/help/en/ram/product-overview/services-that-work-with-service-linked-roles">AliyunServiceRoleForRDSAISupabase</a>.</p>
+     * <p>Before you use this feature, <a href="https://api.aliyun.com/api/ResourceManager/2020-03-31/CreateServiceLinkedRole?spm=api-workbench.API%20Document.0.0.4ea75094rJgPzK&RegionId=cn-beijing&tab=DEBUG&params=%7B%2522ServiceName%2522:%2522supabase.rdsai.aliyuncs.com%2522%7D&sdkStyle=old">authorize the service-linked role</a>. The service-linked role used is <a href="https://www.alibabacloud.com/help/en/ram/product-overview/services-that-work-with-service-linked-roles">AliyunServiceRoleForRDSAISupabase</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Enables the sandbox and Edge Routine capabilities for a Supabase instance. Read the operation description before you call this operation.</p>
@@ -2745,7 +3333,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>During the public preview, the sandbox and Edge Routine features are free of charge.</p>
      * <h3>Before you begin</h3>
-     * <p>Before using this feature, you must complete <a href="https://api.aliyun.com/api/ResourceManager/2020-03-31/CreateServiceLinkedRole?spm=api-workbench.API%20Document.0.0.4ea75094rJgPzK&RegionId=cn-beijing&tab=DEBUG&params=%7B%2522ServiceName%2522:%2522supabase.rdsai.aliyuncs.com%2522%7D&sdkStyle=old">service-linked role authorization</a>. The service-linked role used is <a href="https://www.alibabacloud.com/help/en/ram/product-overview/services-that-work-with-service-linked-roles">AliyunServiceRoleForRDSAISupabase</a>.</p>
+     * <p>Before you use this feature, <a href="https://api.aliyun.com/api/ResourceManager/2020-03-31/CreateServiceLinkedRole?spm=api-workbench.API%20Document.0.0.4ea75094rJgPzK&RegionId=cn-beijing&tab=DEBUG&params=%7B%2522ServiceName%2522:%2522supabase.rdsai.aliyuncs.com%2522%7D&sdkStyle=old">authorize the service-linked role</a>. The service-linked role used is <a href="https://www.alibabacloud.com/help/en/ram/product-overview/services-that-work-with-service-linked-roles">AliyunServiceRoleForRDSAISupabase</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Enables the sandbox and Edge Routine capabilities for a Supabase instance. Read the operation description before you call this operation.</p>
@@ -2760,11 +3348,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>适用引擎</h3>
-     * <p>RDS SUPABASE</p>
+     * <h3>Applicable engine</h3>
+     * <p>RDS Supabase.</p>
      * 
      * <b>summary</b> : 
-     * <p>GetAvailableLLMModels</p>
+     * <p>Retrieves the list of large language models supported by the current RDS Supabase AI gateway.</p>
      * 
      * @param request GetAvailableLLMModelsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2804,11 +3392,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>适用引擎</h3>
-     * <p>RDS SUPABASE</p>
+     * <h3>Applicable engine</h3>
+     * <p>RDS Supabase.</p>
      * 
      * <b>summary</b> : 
-     * <p>GetAvailableLLMModels</p>
+     * <p>Retrieves the list of large language models supported by the current RDS Supabase AI gateway.</p>
      * 
      * @param request GetAvailableLLMModelsRequest
      * @return GetAvailableLLMModelsResponse
@@ -2820,7 +3408,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取会话可选模型</p>
+     * <p>Retrieves the available models for a session.</p>
      * 
      * @param request GetChatModelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2845,7 +3433,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取会话可选模型</p>
+     * <p>Retrieves the available models for a session.</p>
      * 
      * @param request GetChatModelRequest
      * @return GetChatModelResponse
@@ -2853,6 +3441,492 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetChatModelResponse getChatModel(GetChatModelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getChatModelWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a connection.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a datasource configuration.</p>
+     * 
+     * @param request GetContextDatabaseSyncConnectionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetContextDatabaseSyncConnectionResponse
+     */
+    public GetContextDatabaseSyncConnectionResponse getContextDatabaseSyncConnectionWithOptions(GetContextDatabaseSyncConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionId)) {
+            query.put("ConnectionId", request.connectionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetContextDatabaseSyncConnection"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetContextDatabaseSyncConnectionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a connection.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a datasource configuration.</p>
+     * 
+     * @param request GetContextDatabaseSyncConnectionRequest
+     * @return GetContextDatabaseSyncConnectionResponse
+     */
+    public GetContextDatabaseSyncConnectionResponse getContextDatabaseSyncConnection(GetContextDatabaseSyncConnectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getContextDatabaseSyncConnectionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the authorization scope of a connection.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the authorization scope of a data source.</p>
+     * 
+     * @param request GetContextDatabaseSyncConnectionAuthorizationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetContextDatabaseSyncConnectionAuthorizationResponse
+     */
+    public GetContextDatabaseSyncConnectionAuthorizationResponse getContextDatabaseSyncConnectionAuthorizationWithOptions(GetContextDatabaseSyncConnectionAuthorizationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionId)) {
+            query.put("ConnectionId", request.connectionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetContextDatabaseSyncConnectionAuthorization"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetContextDatabaseSyncConnectionAuthorizationResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the authorization scope of a connection.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the authorization scope of a data source.</p>
+     * 
+     * @param request GetContextDatabaseSyncConnectionAuthorizationRequest
+     * @return GetContextDatabaseSyncConnectionAuthorizationResponse
+     */
+    public GetContextDatabaseSyncConnectionAuthorizationResponse getContextDatabaseSyncConnectionAuthorization(GetContextDatabaseSyncConnectionAuthorizationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getContextDatabaseSyncConnectionAuthorizationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the status of a discovery task by task ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the status of a discovery task by task ID.</p>
+     * 
+     * @param request GetContextDatabaseSyncDiscoveryTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetContextDatabaseSyncDiscoveryTaskResponse
+     */
+    public GetContextDatabaseSyncDiscoveryTaskResponse getContextDatabaseSyncDiscoveryTaskWithOptions(GetContextDatabaseSyncDiscoveryTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetContextDatabaseSyncDiscoveryTask"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetContextDatabaseSyncDiscoveryTaskResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the status of a discovery task by task ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the status of a discovery task by task ID.</p>
+     * 
+     * @param request GetContextDatabaseSyncDiscoveryTaskRequest
+     * @return GetContextDatabaseSyncDiscoveryTaskResponse
+     */
+    public GetContextDatabaseSyncDiscoveryTaskResponse getContextDatabaseSyncDiscoveryTask(GetContextDatabaseSyncDiscoveryTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getContextDatabaseSyncDiscoveryTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a job.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the details of an import job.</p>
+     * 
+     * @param request GetContextDatabaseSyncJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetContextDatabaseSyncJobResponse
+     */
+    public GetContextDatabaseSyncJobResponse getContextDatabaseSyncJobWithOptions(GetContextDatabaseSyncJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetContextDatabaseSyncJob"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetContextDatabaseSyncJobResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a job.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the details of an import job.</p>
+     * 
+     * @param request GetContextDatabaseSyncJobRequest
+     * @return GetContextDatabaseSyncJobResponse
+     */
+    public GetContextDatabaseSyncJobResponse getContextDatabaseSyncJob(GetContextDatabaseSyncJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getContextDatabaseSyncJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries whether a job can be started.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries whether an import task can be started.</p>
+     * 
+     * @param request GetContextDatabaseSyncJobReadinessRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetContextDatabaseSyncJobReadinessResponse
+     */
+    public GetContextDatabaseSyncJobReadinessResponse getContextDatabaseSyncJobReadinessWithOptions(GetContextDatabaseSyncJobReadinessRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetContextDatabaseSyncJobReadiness"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetContextDatabaseSyncJobReadinessResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries whether a job can be started.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries whether an import task can be started.</p>
+     * 
+     * @param request GetContextDatabaseSyncJobReadinessRequest
+     * @return GetContextDatabaseSyncJobReadinessResponse
+     */
+    public GetContextDatabaseSyncJobReadinessResponse getContextDatabaseSyncJobReadiness(GetContextDatabaseSyncJobReadinessRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getContextDatabaseSyncJobReadinessWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the scheduling configuration of a job.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the scheduling configuration of an import task.</p>
+     * 
+     * @param request GetContextDatabaseSyncJobScheduleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetContextDatabaseSyncJobScheduleResponse
+     */
+    public GetContextDatabaseSyncJobScheduleResponse getContextDatabaseSyncJobScheduleWithOptions(GetContextDatabaseSyncJobScheduleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetContextDatabaseSyncJobSchedule"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetContextDatabaseSyncJobScheduleResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the scheduling configuration of a job.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the scheduling configuration of an import task.</p>
+     * 
+     * @param request GetContextDatabaseSyncJobScheduleRequest
+     * @return GetContextDatabaseSyncJobScheduleResponse
+     */
+    public GetContextDatabaseSyncJobScheduleResponse getContextDatabaseSyncJobSchedule(GetContextDatabaseSyncJobScheduleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getContextDatabaseSyncJobScheduleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a run.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a run.</p>
+     * 
+     * @param request GetContextDatabaseSyncRunRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetContextDatabaseSyncRunResponse
+     */
+    public GetContextDatabaseSyncRunResponse getContextDatabaseSyncRunWithOptions(GetContextDatabaseSyncRunRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.runId)) {
+            query.put("RunId", request.runId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetContextDatabaseSyncRun"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetContextDatabaseSyncRunResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a run.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a run.</p>
+     * 
+     * @param request GetContextDatabaseSyncRunRequest
+     * @return GetContextDatabaseSyncRunResponse
+     */
+    public GetContextDatabaseSyncRunResponse getContextDatabaseSyncRun(GetContextDatabaseSyncRunRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getContextDatabaseSyncRunWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a source.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a data selection scope.</p>
+     * 
+     * @param request GetContextDatabaseSyncSourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetContextDatabaseSyncSourceResponse
+     */
+    public GetContextDatabaseSyncSourceResponse getContextDatabaseSyncSourceWithOptions(GetContextDatabaseSyncSourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
+            query.put("SourceId", request.sourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetContextDatabaseSyncSource"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetContextDatabaseSyncSourceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a source.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a data selection scope.</p>
+     * 
+     * @param request GetContextDatabaseSyncSourceRequest
+     * @return GetContextDatabaseSyncSourceResponse
+     */
+    public GetContextDatabaseSyncSourceResponse getContextDatabaseSyncSource(GetContextDatabaseSyncSourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getContextDatabaseSyncSourceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the current node selection of the source.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the current node selection in the data selection scope.</p>
+     * 
+     * @param request GetContextDatabaseSyncSourceSelectionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetContextDatabaseSyncSourceSelectionResponse
+     */
+    public GetContextDatabaseSyncSourceSelectionResponse getContextDatabaseSyncSourceSelectionWithOptions(GetContextDatabaseSyncSourceSelectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
+            query.put("SourceId", request.sourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetContextDatabaseSyncSourceSelection"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetContextDatabaseSyncSourceSelectionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the current node selection of the source.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the current node selection in the data selection scope.</p>
+     * 
+     * @param request GetContextDatabaseSyncSourceSelectionRequest
+     * @return GetContextDatabaseSyncSourceSelectionResponse
+     */
+    public GetContextDatabaseSyncSourceSelectionResponse getContextDatabaseSyncSourceSelection(GetContextDatabaseSyncSourceSelectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getContextDatabaseSyncSourceSelectionWithOptions(request, runtime);
     }
 
     /**
@@ -2917,7 +3991,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves details for a specified custom agent.</p>
+     * <p>Queries a dedicated agent created by the user.</p>
      * 
      * @param request GetCustomAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2949,7 +4023,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves details for a specified custom agent.</p>
+     * <p>Queries a dedicated agent created by the user.</p>
      * 
      * @param request GetCustomAgentRequest
      * @return GetCustomAgentResponse
@@ -3077,7 +4151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves order information for the RDS AI Assistant Ultimate Edition.</p>
+     * <p>Retrieves order information for RDS AI Assistant Ultimate Edition.</p>
      * 
      * @param request GetModelOperatorOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3113,7 +4187,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves order information for the RDS AI Assistant Ultimate Edition.</p>
+     * <p>Retrieves order information for RDS AI Assistant Ultimate Edition.</p>
      * 
      * @param request GetModelOperatorOrderRequest
      * @return GetModelOperatorOrderResponse
@@ -3237,7 +4311,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified Skill. You can retrieve your own Skills or system preset Skills.</p>
+     * <p>Retrieves the details of a specified skill. You can retrieve your own skills or system preset skills.</p>
      * 
      * @param request GetSkillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3246,12 +4320,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetSkillResponse getSkillWithOptions(GetSkillRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.download)) {
+            query.put("Download", request.download);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.language)) {
             query.put("Language", request.language);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.path)) {
+            query.put("Path", request.path);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.skillId)) {
             query.put("SkillId", request.skillId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            query.put("VersionId", request.versionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
@@ -3277,7 +4363,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified Skill. You can retrieve your own Skills or system preset Skills.</p>
+     * <p>Retrieves the details of a specified skill. You can retrieve your own skills or system preset skills.</p>
      * 
      * @param request GetSkillRequest
      * @return GetSkillResponse
@@ -3471,10 +4557,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Lists all members in a specified workspace. Each member includes a list of API keys associated with the member (plaintext values are not returned).</p>
+     * <p>Lists all members in a specified workspace. Each member includes a list of API keys (plaintext values are not returned).</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists the members of a context database.</p>
+     * <p>Lists context database members.</p>
      * 
      * @param request ListContextDatabaseMembersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3514,10 +4600,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Lists all members in a specified workspace. Each member includes a list of API keys associated with the member (plaintext values are not returned).</p>
+     * <p>Lists all members in a specified workspace. Each member includes a list of API keys (plaintext values are not returned).</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists the members of a context database.</p>
+     * <p>Lists context database members.</p>
      * 
      * @param request ListContextDatabaseMembersRequest
      * @return ListContextDatabaseMembersResponse
@@ -3525,6 +4611,608 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListContextDatabaseMembersResponse listContextDatabaseMembers(ListContextDatabaseMembersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listContextDatabaseMembersWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The list operation returns paginated results by default. Page and PageSize are optional parameters.
+     * The Data list field in the response is returned as an array. Total indicates the total number of records that match the specified conditions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists the datasource configurations in a workspace.</p>
+     * 
+     * @param request ListContextDatabaseSyncConnectionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListContextDatabaseSyncConnectionsResponse
+     */
+    public ListContextDatabaseSyncConnectionsResponse listContextDatabaseSyncConnectionsWithOptions(ListContextDatabaseSyncConnectionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("Page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pluginId)) {
+            query.put("PluginId", request.pluginId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListContextDatabaseSyncConnections"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListContextDatabaseSyncConnectionsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The list operation returns paginated results by default. Page and PageSize are optional parameters.
+     * The Data list field in the response is returned as an array. Total indicates the total number of records that match the specified conditions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists the datasource configurations in a workspace.</p>
+     * 
+     * @param request ListContextDatabaseSyncConnectionsRequest
+     * @return ListContextDatabaseSyncConnectionsResponse
+     */
+    public ListContextDatabaseSyncConnectionsResponse listContextDatabaseSyncConnections(ListContextDatabaseSyncConnectionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listContextDatabaseSyncConnectionsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>By default, this operation returns paginated results. The Page and PageSize parameters are optional. The Data field in the response is returned as an array, and the Total field indicates the total number of matching entries.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists the documents associated with an import task.</p>
+     * 
+     * @param request ListContextDatabaseSyncJobDocumentsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListContextDatabaseSyncJobDocumentsResponse
+     */
+    public ListContextDatabaseSyncJobDocumentsResponse listContextDatabaseSyncJobDocumentsWithOptions(ListContextDatabaseSyncJobDocumentsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("Page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListContextDatabaseSyncJobDocuments"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListContextDatabaseSyncJobDocumentsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>By default, this operation returns paginated results. The Page and PageSize parameters are optional. The Data field in the response is returned as an array, and the Total field indicates the total number of matching entries.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists the documents associated with an import task.</p>
+     * 
+     * @param request ListContextDatabaseSyncJobDocumentsRequest
+     * @return ListContextDatabaseSyncJobDocumentsResponse
+     */
+    public ListContextDatabaseSyncJobDocumentsResponse listContextDatabaseSyncJobDocuments(ListContextDatabaseSyncJobDocumentsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listContextDatabaseSyncJobDocumentsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation uses pagination by default. Page and PageSize are optional parameters.
+     * The Data field in the response returns an array. Total indicates the total number of records that match the specified conditions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists the exclusions of an import task.</p>
+     * 
+     * @param request ListContextDatabaseSyncJobExclusionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListContextDatabaseSyncJobExclusionsResponse
+     */
+    public ListContextDatabaseSyncJobExclusionsResponse listContextDatabaseSyncJobExclusionsWithOptions(ListContextDatabaseSyncJobExclusionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListContextDatabaseSyncJobExclusions"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListContextDatabaseSyncJobExclusionsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation uses pagination by default. Page and PageSize are optional parameters.
+     * The Data field in the response returns an array. Total indicates the total number of records that match the specified conditions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists the exclusions of an import task.</p>
+     * 
+     * @param request ListContextDatabaseSyncJobExclusionsRequest
+     * @return ListContextDatabaseSyncJobExclusionsResponse
+     */
+    public ListContextDatabaseSyncJobExclusionsResponse listContextDatabaseSyncJobExclusions(ListContextDatabaseSyncJobExclusionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listContextDatabaseSyncJobExclusionsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The list operation returns paginated results by default. Page and PageSize are optional parameters.
+     * The Data list field in the response is returned as an array. Total indicates the total number of records that match the specified conditions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists import tasks.</p>
+     * 
+     * @param request ListContextDatabaseSyncJobsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListContextDatabaseSyncJobsResponse
+     */
+    public ListContextDatabaseSyncJobsResponse listContextDatabaseSyncJobsWithOptions(ListContextDatabaseSyncJobsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            query.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("Page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListContextDatabaseSyncJobs"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListContextDatabaseSyncJobsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The list operation returns paginated results by default. Page and PageSize are optional parameters.
+     * The Data list field in the response is returned as an array. Total indicates the total number of records that match the specified conditions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists import tasks.</p>
+     * 
+     * @param request ListContextDatabaseSyncJobsRequest
+     * @return ListContextDatabaseSyncJobsResponse
+     */
+    public ListContextDatabaseSyncJobsResponse listContextDatabaseSyncJobs(ListContextDatabaseSyncJobsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listContextDatabaseSyncJobsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation returns a fixed-length array of available plugins in the workspace and does not support pagination.
+     * The Data list field in the response is returned as an array, and Total indicates the total number of entries that meet the conditions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists available synchronization plugins.</p>
+     * 
+     * @param request ListContextDatabaseSyncPluginsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListContextDatabaseSyncPluginsResponse
+     */
+    public ListContextDatabaseSyncPluginsResponse listContextDatabaseSyncPluginsWithOptions(ListContextDatabaseSyncPluginsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListContextDatabaseSyncPlugins"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListContextDatabaseSyncPluginsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation returns a fixed-length array of available plugins in the workspace and does not support pagination.
+     * The Data list field in the response is returned as an array, and Total indicates the total number of entries that meet the conditions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists available synchronization plugins.</p>
+     * 
+     * @param request ListContextDatabaseSyncPluginsRequest
+     * @return ListContextDatabaseSyncPluginsResponse
+     */
+    public ListContextDatabaseSyncPluginsResponse listContextDatabaseSyncPlugins(ListContextDatabaseSyncPluginsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listContextDatabaseSyncPluginsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The list API returns paginated results by default. The Page and PageSize parameters are optional. Run records are a list of RunItems that show the processing results of each document in each import run.
+     * The Data list field in the response is returned as an array, and Total indicates the total number of entries that meet the conditions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists the run records.</p>
+     * 
+     * @param request ListContextDatabaseSyncRunItemsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListContextDatabaseSyncRunItemsResponse
+     */
+    public ListContextDatabaseSyncRunItemsResponse listContextDatabaseSyncRunItemsWithOptions(ListContextDatabaseSyncRunItemsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("Page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runId)) {
+            query.put("RunId", request.runId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListContextDatabaseSyncRunItems"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListContextDatabaseSyncRunItemsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The list API returns paginated results by default. The Page and PageSize parameters are optional. Run records are a list of RunItems that show the processing results of each document in each import run.
+     * The Data list field in the response is returned as an array, and Total indicates the total number of entries that meet the conditions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists the run records.</p>
+     * 
+     * @param request ListContextDatabaseSyncRunItemsRequest
+     * @return ListContextDatabaseSyncRunItemsResponse
+     */
+    public ListContextDatabaseSyncRunItemsResponse listContextDatabaseSyncRunItems(ListContextDatabaseSyncRunItemsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listContextDatabaseSyncRunItemsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>列表接口默认分页返回，Page 与 PageSize 为可选参数。
+     * 响应中的 Data 列表字段使用数组返回，Total 表示符合条件的总条数。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>列出 Run 日志</p>
+     * 
+     * @param request ListContextDatabaseSyncRunLogsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListContextDatabaseSyncRunLogsResponse
+     */
+    public ListContextDatabaseSyncRunLogsResponse listContextDatabaseSyncRunLogsWithOptions(ListContextDatabaseSyncRunLogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("Page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runId)) {
+            query.put("RunId", request.runId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListContextDatabaseSyncRunLogs"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListContextDatabaseSyncRunLogsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>列表接口默认分页返回，Page 与 PageSize 为可选参数。
+     * 响应中的 Data 列表字段使用数组返回，Total 表示符合条件的总条数。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>列出 Run 日志</p>
+     * 
+     * @param request ListContextDatabaseSyncRunLogsRequest
+     * @return ListContextDatabaseSyncRunLogsResponse
+     */
+    public ListContextDatabaseSyncRunLogsResponse listContextDatabaseSyncRunLogs(ListContextDatabaseSyncRunLogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listContextDatabaseSyncRunLogsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>By default, this operation returns paginated results. The Page and PageSize parameters are optional.
+     * The Data field in the response is returned as an array, and the Total field indicates the total number of items that meet the query conditions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists the runs.</p>
+     * 
+     * @param request ListContextDatabaseSyncRunsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListContextDatabaseSyncRunsResponse
+     */
+    public ListContextDatabaseSyncRunsResponse listContextDatabaseSyncRunsWithOptions(ListContextDatabaseSyncRunsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("Page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListContextDatabaseSyncRuns"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListContextDatabaseSyncRunsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>By default, this operation returns paginated results. The Page and PageSize parameters are optional.
+     * The Data field in the response is returned as an array, and the Total field indicates the total number of items that meet the query conditions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists the runs.</p>
+     * 
+     * @param request ListContextDatabaseSyncRunsRequest
+     * @return ListContextDatabaseSyncRunsResponse
+     */
+    public ListContextDatabaseSyncRunsResponse listContextDatabaseSyncRuns(ListContextDatabaseSyncRunsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listContextDatabaseSyncRunsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>List operations return paginated results by default. Page and PageSize are optional parameters. The Data list field in the response is returned as an array, and Total indicates the total number of entries that meet the conditions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists the discovered tree nodes for the data selection scope.</p>
+     * 
+     * @param request ListContextDatabaseSyncSourceTreeNodesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListContextDatabaseSyncSourceTreeNodesResponse
+     */
+    public ListContextDatabaseSyncSourceTreeNodesResponse listContextDatabaseSyncSourceTreeNodesWithOptions(ListContextDatabaseSyncSourceTreeNodesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
+            query.put("SourceId", request.sourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListContextDatabaseSyncSourceTreeNodes"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListContextDatabaseSyncSourceTreeNodesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>List operations return paginated results by default. Page and PageSize are optional parameters. The Data list field in the response is returned as an array, and Total indicates the total number of entries that meet the conditions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists the discovered tree nodes for the data selection scope.</p>
+     * 
+     * @param request ListContextDatabaseSyncSourceTreeNodesRequest
+     * @return ListContextDatabaseSyncSourceTreeNodesResponse
+     */
+    public ListContextDatabaseSyncSourceTreeNodesResponse listContextDatabaseSyncSourceTreeNodes(ListContextDatabaseSyncSourceTreeNodesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listContextDatabaseSyncSourceTreeNodesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>By default, the list operation returns paginated results. Page and PageSize are optional parameters. The Data list field in the response is returned as an array, and Total indicates the total number of entries that meet the conditions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists the data selection scopes.</p>
+     * 
+     * @param request ListContextDatabaseSyncSourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListContextDatabaseSyncSourcesResponse
+     */
+    public ListContextDatabaseSyncSourcesResponse listContextDatabaseSyncSourcesWithOptions(ListContextDatabaseSyncSourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("Page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListContextDatabaseSyncSources"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListContextDatabaseSyncSourcesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>By default, the list operation returns paginated results. Page and PageSize are optional parameters. The Data list field in the response is returned as an array, and Total indicates the total number of entries that meet the conditions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists the data selection scopes.</p>
+     * 
+     * @param request ListContextDatabaseSyncSourcesRequest
+     * @return ListContextDatabaseSyncSourcesResponse
+     */
+    public ListContextDatabaseSyncSourcesResponse listContextDatabaseSyncSources(ListContextDatabaseSyncSourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listContextDatabaseSyncSourcesWithOptions(request, runtime);
     }
 
     /**
@@ -3591,7 +5279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists your custom agents.</p>
+     * <p>Queries the list of dedicated agents created by the user.</p>
      * 
      * @param request ListCustomAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3627,7 +5315,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists your custom agents.</p>
+     * <p>Queries the list of dedicated agents created by the user.</p>
      * 
      * @param request ListCustomAgentRequest
      * @return ListCustomAgentResponse
@@ -3639,7 +5327,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the custom agent tools of the user.</p>
+     * <p>Queries the list of Agent tools for a user.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListCustomAgentToolsResponse
@@ -3662,7 +5350,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the custom agent tools of the user.</p>
+     * <p>Queries the list of Agent tools for a user.</p>
      * @return ListCustomAgentToolsResponse
      */
     public ListCustomAgentToolsResponse listCustomAgentTools() throws Exception {
@@ -3672,11 +5360,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>适用引擎</h3>
-     * <p>RDS SUPABASE</p>
+     * <h3>Applicable engine</h3>
+     * <p>RDS Supabase.</p>
      * 
      * <b>summary</b> : 
-     * <p>ListLLMTokenUsage</p>
+     * <p>Retrieves the AI gateway token usage for an RDS Supabase instance.</p>
      * 
      * @param request ListLLMTokenUsageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3724,11 +5412,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>适用引擎</h3>
-     * <p>RDS SUPABASE</p>
+     * <h3>Applicable engine</h3>
+     * <p>RDS Supabase.</p>
      * 
      * <b>summary</b> : 
-     * <p>ListLLMTokenUsage</p>
+     * <p>Retrieves the AI gateway token usage for an RDS Supabase instance.</p>
      * 
      * @param request ListLLMTokenUsageRequest
      * @return ListLLMTokenUsageResponse
@@ -3811,6 +5499,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("Query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scope)) {
+            query.put("Scope", request.scope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sort)) {
+            query.put("Sort", request.sort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
@@ -4072,13 +5776,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engine</h3>
      * <p>RDS PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the IP whitelist of an ApsaraDB RDS AI application instance.</p>
+     * <p>Modifies the IP whitelist of an RDS AI application instance.</p>
      * 
      * @param request ModifyInstanceIpWhitelistRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4134,13 +5838,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engine</h3>
      * <p>RDS PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the IP whitelist of an ApsaraDB RDS AI application instance.</p>
+     * <p>Modifies the IP whitelist of an RDS AI application instance.</p>
      * 
      * @param request ModifyInstanceIpWhitelistRequest
      * @return ModifyInstanceIpWhitelistResponse
@@ -4694,11 +6398,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
-     * <p><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Enterprise Edition</a></p>
+     * <h3>Applicable engine</h3>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the IP whitelist for an RDS AI Assistant Enterprise Edition instance.</p>
+     * <p>Modifies the IP whitelist of an RDS AI Assistant Ultimate Edition instance.</p>
      * 
      * @param request ModifyWhitelistIpsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4734,11 +6438,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
-     * <p><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Enterprise Edition</a></p>
+     * <h3>Applicable engine</h3>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the IP whitelist for an RDS AI Assistant Enterprise Edition instance.</p>
+     * <p>Modifies the IP whitelist of an RDS AI Assistant Ultimate Edition instance.</p>
      * 
      * @param request ModifyWhitelistIpsRequest
      * @return ModifyWhitelistIpsResponse
@@ -4746,6 +6450,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyWhitelistIpsResponse modifyWhitelistIps(ModifyWhitelistIpsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyWhitelistIpsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes an exclusion item for a job.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an exclusion item for an import job.</p>
+     * 
+     * @param request RemoveContextDatabaseSyncJobExclusionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveContextDatabaseSyncJobExclusionResponse
+     */
+    public RemoveContextDatabaseSyncJobExclusionResponse removeContextDatabaseSyncJobExclusionWithOptions(RemoveContextDatabaseSyncJobExclusionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.documentId)) {
+            query.put("DocumentId", request.documentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RemoveContextDatabaseSyncJobExclusion"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveContextDatabaseSyncJobExclusionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes an exclusion item for a job.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an exclusion item for an import job.</p>
+     * 
+     * @param request RemoveContextDatabaseSyncJobExclusionRequest
+     * @return RemoveContextDatabaseSyncJobExclusionResponse
+     */
+    public RemoveContextDatabaseSyncJobExclusionResponse removeContextDatabaseSyncJobExclusion(RemoveContextDatabaseSyncJobExclusionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.removeContextDatabaseSyncJobExclusionWithOptions(request, runtime);
     }
 
     /**
@@ -4818,11 +6584,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
-     * <p><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant (Ultimate Edition)</a></p>
+     * <h3>Applicable engine</h3>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Resets an API key.</p>
+     * <p>Resets the API key.</p>
      * 
      * @param request ResetApiKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4858,11 +6624,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
-     * <p><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant (Ultimate Edition)</a></p>
+     * <h3>Applicable engine</h3>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Resets an API key.</p>
+     * <p>Resets the API key.</p>
      * 
      * @param request ResetApiKeyRequest
      * @return ResetApiKeyResponse
@@ -4880,7 +6646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Resets the keys of an RDS AI instance, including AnonKey, ServiceKey, and JwtSecret. After the reset, the old keys and secret become invalid immediately. Ensure that your applications are adapted accordingly.</p>
+     * <p>Resets the keys of an RDS AI instance, including AnonKey, ServiceKey, and JwtSecret. After the reset, the old keys and secret become invalid immediately. Ensure that your applications are updated accordingly.</p>
      * 
      * @param request ResetInstanceKeysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4922,7 +6688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Resets the keys of an RDS AI instance, including AnonKey, ServiceKey, and JwtSecret. After the reset, the old keys and secret become invalid immediately. Ensure that your applications are adapted accordingly.</p>
+     * <p>Resets the keys of an RDS AI instance, including AnonKey, ServiceKey, and JwtSecret. After the reset, the old keys and secret become invalid immediately. Ensure that your applications are updated accordingly.</p>
      * 
      * @param request ResetInstanceKeysRequest
      * @return ResetInstanceKeysResponse
@@ -4939,11 +6705,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * <blockquote>
-     * <p>Currently, only the password of the RDS Supabase Dashboard user can be reset.</p>
+     * <p>Currently, only the password of the RDS Supabase Dashboard user can be modified.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Resets the logon password and database access password of an ApsaraDB RDS AI application instance.</p>
+     * <p>Resets the logon password and database access password of an RDS AI application instance.</p>
      * 
      * @param request ResetInstancePasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4996,11 +6762,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * <blockquote>
-     * <p>Currently, only the password of the RDS Supabase Dashboard user can be reset.</p>
+     * <p>Currently, only the password of the RDS Supabase Dashboard user can be modified.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Resets the logon password and database access password of an ApsaraDB RDS AI application instance.</p>
+     * <p>Resets the logon password and database access password of an RDS AI application instance.</p>
      * 
      * @param request ResetInstancePasswordRequest
      * @return ResetInstancePasswordResponse
@@ -5076,10 +6842,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。 重试会基于失败项生成新的 Run，原 Run 状态保持不变。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>基于快照重试失败明细</p>
+     * 
+     * @param request RetryFailedContextDatabaseSyncRunRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RetryFailedContextDatabaseSyncRunResponse
+     */
+    public RetryFailedContextDatabaseSyncRunResponse retryFailedContextDatabaseSyncRunWithOptions(RetryFailedContextDatabaseSyncRunRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runId)) {
+            query.put("RunId", request.runId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RetryFailedContextDatabaseSyncRun"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RetryFailedContextDatabaseSyncRunResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。 重试会基于失败项生成新的 Run，原 Run 状态保持不变。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>基于快照重试失败明细</p>
+     * 
+     * @param request RetryFailedContextDatabaseSyncRunRequest
+     * @return RetryFailedContextDatabaseSyncRunResponse
+     */
+    public RetryFailedContextDatabaseSyncRunResponse retryFailedContextDatabaseSyncRun(RetryFailedContextDatabaseSyncRunRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.retryFailedContextDatabaseSyncRunWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Revokes an API key.</p>
      * 
      * <b>summary</b> : 
-     * <p>Revokes a context database API key.</p>
+     * <p>Revokes an API key for a context database.</p>
      * 
      * @param request RevokeContextDatabaseApiKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5122,7 +6946,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Revokes an API key.</p>
      * 
      * <b>summary</b> : 
-     * <p>Revokes a context database API key.</p>
+     * <p>Revokes an API key for a context database.</p>
      * 
      * @param request RevokeContextDatabaseApiKeyRequest
      * @return RevokeContextDatabaseApiKeyResponse
@@ -5130,6 +6954,126 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RevokeContextDatabaseApiKeyResponse revokeContextDatabaseApiKey(RevokeContextDatabaseApiKeyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.revokeContextDatabaseApiKeyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Write operations support idempotence by passing a ClientToken. If no ClientToken is provided, the backend generates one automatically.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Manually triggers a run.</p>
+     * 
+     * @param request StartContextDatabaseSyncRunRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartContextDatabaseSyncRunResponse
+     */
+    public StartContextDatabaseSyncRunResponse startContextDatabaseSyncRunWithOptions(StartContextDatabaseSyncRunRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartContextDatabaseSyncRun"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartContextDatabaseSyncRunResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Write operations support idempotence by passing a ClientToken. If no ClientToken is provided, the backend generates one automatically.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Manually triggers a run.</p>
+     * 
+     * @param request StartContextDatabaseSyncRunRequest
+     * @return StartContextDatabaseSyncRunResponse
+     */
+    public StartContextDatabaseSyncRunResponse startContextDatabaseSyncRun(StartContextDatabaseSyncRunRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startContextDatabaseSyncRunWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Write operations support idempotence by passing a ClientToken. If no ClientToken is provided, the backend generates one automatically. Discovery is an asynchronous operation. The operation returns a discovery task identifier. Poll for results to retrieve SelectedNodeKeys.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Initiates a snapshot discovery task for data selection scope configuration.</p>
+     * 
+     * @param request StartContextDatabaseSyncSourceDiscoveryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartContextDatabaseSyncSourceDiscoveryResponse
+     */
+    public StartContextDatabaseSyncSourceDiscoveryResponse startContextDatabaseSyncSourceDiscoveryWithOptions(StartContextDatabaseSyncSourceDiscoveryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
+            query.put("SourceId", request.sourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartContextDatabaseSyncSourceDiscovery"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartContextDatabaseSyncSourceDiscoveryResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Write operations support idempotence by passing a ClientToken. If no ClientToken is provided, the backend generates one automatically. Discovery is an asynchronous operation. The operation returns a discovery task identifier. Poll for results to retrieve SelectedNodeKeys.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Initiates a snapshot discovery task for data selection scope configuration.</p>
+     * 
+     * @param request StartContextDatabaseSyncSourceDiscoveryRequest
+     * @return StartContextDatabaseSyncSourceDiscoveryResponse
+     */
+    public StartContextDatabaseSyncSourceDiscoveryResponse startContextDatabaseSyncSourceDiscovery(StartContextDatabaseSyncSourceDiscoveryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startContextDatabaseSyncSourceDiscoveryWithOptions(request, runtime);
     }
 
     /**
@@ -5200,7 +7144,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
@@ -5250,7 +7194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
@@ -5266,11 +7210,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
-     * <p><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
+     * <h3>Applicable engine</h3>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Modify the API KEY Quota</p>
+     * <p>Modifies the quota of an API key.</p>
      * 
      * @param tmpReq UpdateApiKeyQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5312,11 +7256,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
-     * <p><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
+     * <h3>Applicable engine</h3>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Modify the API KEY Quota</p>
+     * <p>Modifies the quota of an API key.</p>
      * 
      * @param request UpdateApiKeyQuotaRequest
      * @return UpdateApiKeyQuotaResponse
@@ -5331,7 +7275,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Updates the display metadata of an API key. At least one of Name or Description must be specified. The plaintext key is not reissued.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the display metadata of a ContextDB API key.</p>
+     * <p>Updates the API key of a context database.</p>
      * 
      * @param request UpdateContextDatabaseApiKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5382,7 +7326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Updates the display metadata of an API key. At least one of Name or Description must be specified. The plaintext key is not reissued.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the display metadata of a ContextDB API key.</p>
+     * <p>Updates the API key of a context database.</p>
      * 
      * @param request UpdateContextDatabaseApiKeyRequest
      * @return UpdateContextDatabaseApiKeyResponse
@@ -5456,6 +7400,444 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>更新连接元数据</p>
+     * 
+     * @param request UpdateContextDatabaseSyncConnectionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateContextDatabaseSyncConnectionResponse
+     */
+    public UpdateContextDatabaseSyncConnectionResponse updateContextDatabaseSyncConnectionWithOptions(UpdateContextDatabaseSyncConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionId)) {
+            query.put("ConnectionId", request.connectionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            query.put("DisplayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateContextDatabaseSyncConnection"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateContextDatabaseSyncConnectionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>更新连接元数据</p>
+     * 
+     * @param request UpdateContextDatabaseSyncConnectionRequest
+     * @return UpdateContextDatabaseSyncConnectionResponse
+     */
+    public UpdateContextDatabaseSyncConnectionResponse updateContextDatabaseSyncConnection(UpdateContextDatabaseSyncConnectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateContextDatabaseSyncConnectionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>单独轮换连接凭据</p>
+     * 
+     * @param tmpReq UpdateContextDatabaseSyncConnectionCredentialRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateContextDatabaseSyncConnectionCredentialResponse
+     */
+    public UpdateContextDatabaseSyncConnectionCredentialResponse updateContextDatabaseSyncConnectionCredentialWithOptions(UpdateContextDatabaseSyncConnectionCredentialRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateContextDatabaseSyncConnectionCredentialShrinkRequest request = new UpdateContextDatabaseSyncConnectionCredentialShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.credentials)) {
+            request.credentialsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.credentials, "Credentials", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionId)) {
+            query.put("ConnectionId", request.connectionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialsShrink)) {
+            query.put("Credentials", request.credentialsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateContextDatabaseSyncConnectionCredential"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateContextDatabaseSyncConnectionCredentialResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>单独轮换连接凭据</p>
+     * 
+     * @param request UpdateContextDatabaseSyncConnectionCredentialRequest
+     * @return UpdateContextDatabaseSyncConnectionCredentialResponse
+     */
+    public UpdateContextDatabaseSyncConnectionCredentialResponse updateContextDatabaseSyncConnectionCredential(UpdateContextDatabaseSyncConnectionCredentialRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateContextDatabaseSyncConnectionCredentialWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。 Target 为隐含概念，调用方只需传入 KnowledgeBaseId，后端自动创建/匹配 Target。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>更新 Job 元数据</p>
+     * 
+     * @param tmpReq UpdateContextDatabaseSyncJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateContextDatabaseSyncJobResponse
+     */
+    public UpdateContextDatabaseSyncJobResponse updateContextDatabaseSyncJobWithOptions(UpdateContextDatabaseSyncJobRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateContextDatabaseSyncJobShrinkRequest request = new UpdateContextDatabaseSyncJobShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.filters)) {
+            request.filtersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filters, "Filters", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
+            query.put("Enabled", request.enabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filtersShrink)) {
+            query.put("Filters", request.filtersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetKnowledgeBaseId)) {
+            query.put("TargetKnowledgeBaseId", request.targetKnowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetKnowledgeBaseName)) {
+            query.put("TargetKnowledgeBaseName", request.targetKnowledgeBaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateContextDatabaseSyncJob"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateContextDatabaseSyncJobResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。 Target 为隐含概念，调用方只需传入 KnowledgeBaseId，后端自动创建/匹配 Target。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>更新 Job 元数据</p>
+     * 
+     * @param request UpdateContextDatabaseSyncJobRequest
+     * @return UpdateContextDatabaseSyncJobResponse
+     */
+    public UpdateContextDatabaseSyncJobResponse updateContextDatabaseSyncJob(UpdateContextDatabaseSyncJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateContextDatabaseSyncJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>更新 Job 调度配置</p>
+     * 
+     * @param tmpReq UpdateContextDatabaseSyncJobScheduleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateContextDatabaseSyncJobScheduleResponse
+     */
+    public UpdateContextDatabaseSyncJobScheduleResponse updateContextDatabaseSyncJobScheduleWithOptions(UpdateContextDatabaseSyncJobScheduleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateContextDatabaseSyncJobScheduleShrinkRequest request = new UpdateContextDatabaseSyncJobScheduleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dailyTimes)) {
+            request.dailyTimesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dailyTimes, "DailyTimes", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dailyTimesShrink)) {
+            query.put("DailyTimes", request.dailyTimesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.intervalMinutes)) {
+            query.put("IntervalMinutes", request.intervalMinutes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.missedPolicy)) {
+            query.put("MissedPolicy", request.missedPolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateContextDatabaseSyncJobSchedule"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateContextDatabaseSyncJobScheduleResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>写操作可传入 ClientToken 实现幂等；未传时由后端自动生成。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>更新 Job 调度配置</p>
+     * 
+     * @param request UpdateContextDatabaseSyncJobScheduleRequest
+     * @return UpdateContextDatabaseSyncJobScheduleResponse
+     */
+    public UpdateContextDatabaseSyncJobScheduleResponse updateContextDatabaseSyncJobSchedule(UpdateContextDatabaseSyncJobScheduleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateContextDatabaseSyncJobScheduleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Write operations support idempotence via ClientToken. If ClientToken is not provided, the backend generates one automatically.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the metadata of a data selection scope.</p>
+     * 
+     * @param tmpReq UpdateContextDatabaseSyncSourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateContextDatabaseSyncSourceResponse
+     */
+    public UpdateContextDatabaseSyncSourceResponse updateContextDatabaseSyncSourceWithOptions(UpdateContextDatabaseSyncSourceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateContextDatabaseSyncSourceShrinkRequest request = new UpdateContextDatabaseSyncSourceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sourceConfig)) {
+            request.sourceConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceConfig, "SourceConfig", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceConfigShrink)) {
+            query.put("SourceConfig", request.sourceConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
+            query.put("SourceId", request.sourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateContextDatabaseSyncSource"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateContextDatabaseSyncSourceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Write operations support idempotence via ClientToken. If ClientToken is not provided, the backend generates one automatically.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the metadata of a data selection scope.</p>
+     * 
+     * @param request UpdateContextDatabaseSyncSourceRequest
+     * @return UpdateContextDatabaseSyncSourceResponse
+     */
+    public UpdateContextDatabaseSyncSourceResponse updateContextDatabaseSyncSource(UpdateContextDatabaseSyncSourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateContextDatabaseSyncSourceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>For write operations, you can pass the ClientToken parameter to ensure idempotency. If this parameter is not provided, the backend automatically generates one.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the explicit node selection for the data selection scope.</p>
+     * 
+     * @param tmpReq UpdateContextDatabaseSyncSourceSelectionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateContextDatabaseSyncSourceSelectionResponse
+     */
+    public UpdateContextDatabaseSyncSourceSelectionResponse updateContextDatabaseSyncSourceSelectionWithOptions(UpdateContextDatabaseSyncSourceSelectionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateContextDatabaseSyncSourceSelectionShrinkRequest request = new UpdateContextDatabaseSyncSourceSelectionShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.selectedNodeKeys)) {
+            request.selectedNodeKeysShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.selectedNodeKeys, "SelectedNodeKeys", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.selectedNodeKeysShrink)) {
+            query.put("SelectedNodeKeys", request.selectedNodeKeysShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.selectionPolicy)) {
+            query.put("SelectionPolicy", request.selectionPolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
+            query.put("SourceId", request.sourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateContextDatabaseSyncSourceSelection"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateContextDatabaseSyncSourceSelectionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>For write operations, you can pass the ClientToken parameter to ensure idempotency. If this parameter is not provided, the backend automatically generates one.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the explicit node selection for the data selection scope.</p>
+     * 
+     * @param request UpdateContextDatabaseSyncSourceSelectionRequest
+     * @return UpdateContextDatabaseSyncSourceSelectionResponse
+     */
+    public UpdateContextDatabaseSyncSourceSelectionResponse updateContextDatabaseSyncSourceSelection(UpdateContextDatabaseSyncSourceSelectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateContextDatabaseSyncSourceSelectionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Modifies the name of a workspace.</p>
      * 
      * <b>summary</b> : 
@@ -5510,7 +7892,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a custom agent.</p>
+     * <p>Updates a Custom Agent.</p>
      * 
      * @param tmpReq UpdateCustomAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5572,7 +7954,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a custom agent.</p>
+     * <p>Updates a Custom Agent.</p>
      * 
      * @param request UpdateCustomAgentRequest
      * @return UpdateCustomAgentResponse
@@ -5584,11 +7966,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
-     * <p><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Enterprise Edition</a></p>
+     * <h3>Applicable engine</h3>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the alert threshold percentage for API keys.</p>
+     * <p>Updates the alert threshold percentage for an API key.</p>
      * 
      * @param tmpReq UpdateMOQuotaAlertThresholdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5630,11 +8012,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
-     * <p><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Enterprise Edition</a></p>
+     * <h3>Applicable engine</h3>
+     * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the alert threshold percentage for API keys.</p>
+     * <p>Updates the alert threshold percentage for an API key.</p>
      * 
      * @param request UpdateMOQuotaAlertThresholdRequest
      * @return UpdateMOQuotaAlertThresholdResponse
@@ -5646,7 +8028,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the information of a specified skill.</p>
+     * <p>Updates the information of a specified Skill.</p>
      * 
      * @param tmpReq UpdateSkillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5685,6 +8067,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SkillId", request.skillId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.updateNote)) {
+            query.put("UpdateNote", request.updateNote);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadId)) {
+            query.put("UploadId", request.uploadId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadToken)) {
+            query.put("UploadToken", request.uploadToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -5704,7 +8102,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the information of a specified skill.</p>
+     * <p>Updates the information of a specified Skill.</p>
      * 
      * @param request UpdateSkillRequest
      * @return UpdateSkillResponse
@@ -5712,5 +8110,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateSkillResponse updateSkill(UpdateSkillRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateSkillWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Validates the connection credentials and authorization.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Validates datasource credentials and authorization.</p>
+     * 
+     * @param request VerifyContextDatabaseSyncConnectionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return VerifyContextDatabaseSyncConnectionResponse
+     */
+    public VerifyContextDatabaseSyncConnectionResponse verifyContextDatabaseSyncConnectionWithOptions(VerifyContextDatabaseSyncConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionId)) {
+            query.put("ConnectionId", request.connectionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "VerifyContextDatabaseSyncConnection"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new VerifyContextDatabaseSyncConnectionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Validates the connection credentials and authorization.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Validates datasource credentials and authorization.</p>
+     * 
+     * @param request VerifyContextDatabaseSyncConnectionRequest
+     * @return VerifyContextDatabaseSyncConnectionResponse
+     */
+    public VerifyContextDatabaseSyncConnectionResponse verifyContextDatabaseSyncConnection(VerifyContextDatabaseSyncConnectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.verifyContextDatabaseSyncConnectionWithOptions(request, runtime);
     }
 }

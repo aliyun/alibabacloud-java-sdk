@@ -15,7 +15,7 @@ public class UpdateContextDatabaseMemberRequest extends TeaModel {
     public String memberId;
 
     /**
-     * <p>The new role. Valid values: owner, admin, and member. If not specified, the current role is retained.</p>
+     * <p>The new role. Valid values: owner, admin, and member. If this parameter is not specified, the current role is retained.</p>
      * 
      * <strong>example:</strong>
      * <p>admin</p>
@@ -24,7 +24,7 @@ public class UpdateContextDatabaseMemberRequest extends TeaModel {
     public String role;
 
     /**
-     * <p>The new status. Valid values: active, disabled, and deleted. If not specified, the current status is retained.</p>
+     * <p>The new status. Valid values: active, disabled, and deleted. If this parameter is not specified, the current status is retained.</p>
      * 
      * <strong>example:</strong>
      * <p>disabled</p>

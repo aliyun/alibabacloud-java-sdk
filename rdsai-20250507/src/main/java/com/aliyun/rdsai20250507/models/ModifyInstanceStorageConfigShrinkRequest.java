@@ -8,7 +8,7 @@ public class ModifyInstanceStorageConfigShrinkRequest extends TeaModel {
     public String branchName;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, which ensures that the request is not repeated.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, which prevents repeated submissions of requests.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAvailableLLMModelsResponseBody extends TeaModel {
     /**
+     * <p>The models.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;glm-5&quot;,&quot;deepseek-v3.2&quot;]</p>
      */
@@ -12,6 +14,8 @@ public class GetAvailableLLMModelsResponseBody extends TeaModel {
     public java.util.List<String> models;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329241C</p>
      */

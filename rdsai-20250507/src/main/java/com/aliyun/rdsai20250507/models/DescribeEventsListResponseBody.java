@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEventsListResponseBody extends TeaModel {
     /**
-     * <p>The count for each event code.</p>
+     * <p>The total number of events.</p>
      * 
      * <strong>example:</strong>
      * <p>OtherException:3,MysqlIOException:1</p>
@@ -14,13 +14,13 @@ public class DescribeEventsListResponseBody extends TeaModel {
     public String eventCodeCounts;
 
     /**
-     * <p>A list of events.</p>
+     * <p>The list of events.</p>
      */
     @NameInMap("Events")
     public java.util.List<DescribeEventsListResponseBodyEvents> events;
 
     /**
-     * <p>The number of pages returned.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class DescribeEventsListResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of records per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -56,7 +56,7 @@ public class DescribeEventsListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -162,16 +162,16 @@ public class DescribeEventsListResponseBody extends TeaModel {
         public String eventStatus;
 
         /**
-         * <p>A list of event times.</p>
+         * <p>The list of event times.</p>
          */
         @NameInMap("EventTimeList")
         public java.util.List<String> eventTimeList;
 
         /**
-         * <p>The instance description.</p>
+         * <p>The description of the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试实例</p>
+         * <p>Test instance</p>
          */
         @NameInMap("InstanceDescription")
         public String instanceDescription;
@@ -194,9 +194,6 @@ public class DescribeEventsListResponseBody extends TeaModel {
         @NameInMap("RecoveryTime")
         public String recoveryTime;
 
-        /**
-         * <p>The region ID.</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 

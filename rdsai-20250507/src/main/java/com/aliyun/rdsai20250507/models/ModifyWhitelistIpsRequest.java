@@ -14,7 +14,7 @@ public class ModifyWhitelistIpsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The IP whitelist. Before you modify the IP whitelist, call the DescribeInstanceIpWhitelist operation to query the existing IP whitelist of the instance.</p>
+     * <p>IP address whitelist. Before modifying IP address whitelist, call the DescribeInstanceIpWhitelist operation to query the existing IP whitelist of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>127.0.0.1,192.168.1.0/24</p>

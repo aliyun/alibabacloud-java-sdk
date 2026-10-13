@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateApiKeyQuotaResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public UpdateApiKeyQuotaResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -20,7 +20,7 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
@@ -29,7 +29,7 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>The request result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -76,7 +76,7 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
 
     public static class UpdateApiKeyQuotaResponseBodyDataCustomKeyList extends TeaModel {
         /**
-         * <p>The API key.</p>
+         * <p>Api Key</p>
          * 
          * <strong>example:</strong>
          * <p>sk-rds-xxx</p>
@@ -92,7 +92,7 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
         public Long dailyTokenQuota;
 
         /**
-         * <p>The limit rate.</p>
+         * <p>The quota ratio.</p>
          * 
          * <strong>example:</strong>
          * <p>0.2</p>
@@ -101,14 +101,11 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
         public Float limitRate;
 
         /**
-         * <p>The quota limiting method. Valid values:</p>
+         * <p>The quota type. Valid values:</p>
          * <ul>
-         * <li><p><code>ratio</code>: Sets the limit based on a ratio.</p>
-         * </li>
-         * <li><p><code>fixed</code>: Sets the limit to a fixed value.</p>
-         * </li>
-         * <li><p><code>auto</code>: Allocates the limit automatically.</p>
-         * </li>
+         * <li>ratio: by ratio.</li>
+         * <li>fixed: by fixed value.</li>
+         * <li>auto: automatic allocation of EPS resource.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,7 +115,7 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
         public String limitType;
 
         /**
-         * <p>The token quota for the API key.</p>
+         * <p>The quota of the current key.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateMOUsageDetailExportRequest extends TeaModel {
     /**
+     * <p>The API key to use.</p>
+     * 
      * <strong>example:</strong>
      * <p>sk-rds-*****</p>
      */
@@ -12,7 +14,7 @@ public class CreateMOUsageDetailExportRequest extends TeaModel {
     public String apiKey;
 
     /**
-     * <p>结束时间，UTC 0 时区 ISO8601 字符串，格式 yyyy-MM-ddTHH:mm:ssZ；与 StartTime 跨度不超过 30 天</p>
+     * <p>The inspection end time in the YYYY-MM-DDTHH:mm:ssZ format. The time range between StartTime and EndTime cannot exceed 30 days.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,6 +24,7 @@ public class CreateMOUsageDetailExportRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The instance name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +34,8 @@ public class CreateMOUsageDetailExportRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The model to call.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen-flash</p>
      */
@@ -38,7 +43,7 @@ public class CreateMOUsageDetailExportRequest extends TeaModel {
     public String model;
 
     /**
-     * <p>起始时间，UTC 0 时区 ISO8601 字符串，格式 yyyy-MM-ddTHH:mm:ssZ</p>
+     * <p>The inspection start time in the YYYY-MM-DDTHH:mm:ssZ format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +53,8 @@ public class CreateMOUsageDetailExportRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The view type.</p>
+     * 
      * <strong>example:</strong>
      * <p>text</p>
      */

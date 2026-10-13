@@ -20,7 +20,7 @@ public class CreateSkillRequest extends TeaModel {
     public java.util.List<String> dbtypes;
 
     /**
-     * <p>The Skill description. The description can be up to 1000 characters in length.</p>
+     * <p>The skill description. The description can be up to 1000 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>SQL query optimization skill</p>
@@ -29,7 +29,7 @@ public class CreateSkillRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The Skill name. The name can contain only lowercase letters, digits, and hyphens.</p>
+     * <p>The skill name. The name can contain only lowercase letters, digits, and hyphens.</p>
      * 
      * <strong>example:</strong>
      * <p>query-optimization</p>
@@ -38,7 +38,16 @@ public class CreateSkillRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The Skill upload session ID.</p>
+     * <p>The ContextDB skill version update note. Provide this value when confirming storage after validation passes. The note can be up to 1000 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Initial release</p>
+     */
+    @NameInMap("UpdateNote")
+    public String updateNote;
+
+    /**
+     * <p>The skill upload session ID.</p>
      * 
      * <strong>example:</strong>
      * <p>upload-example</p>
@@ -47,7 +56,7 @@ public class CreateSkillRequest extends TeaModel {
     public String uploadId;
 
     /**
-     * <p>The Skill upload session token.</p>
+     * <p>The skill upload session token.</p>
      * 
      * <strong>example:</strong>
      * <p>token-example</p>
@@ -99,6 +108,14 @@ public class CreateSkillRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateSkillRequest setUpdateNote(String updateNote) {
+        this.updateNote = updateNote;
+        return this;
+    }
+    public String getUpdateNote() {
+        return this.updateNote;
     }
 
     public CreateSkillRequest setUploadId(String uploadId) {

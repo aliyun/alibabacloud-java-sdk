@@ -47,7 +47,7 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records that match the query conditions. This parameter is optional and may not be returned by default.</p>
+     * <p>The total number of records that match the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

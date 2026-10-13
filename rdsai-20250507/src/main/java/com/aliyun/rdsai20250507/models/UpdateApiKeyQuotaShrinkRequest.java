@@ -14,7 +14,7 @@ public class UpdateApiKeyQuotaShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>A list of API keys.</p>
+     * <p>The list of API keys.</p>
      */
     @NameInMap("Keys")
     public String keysShrink;

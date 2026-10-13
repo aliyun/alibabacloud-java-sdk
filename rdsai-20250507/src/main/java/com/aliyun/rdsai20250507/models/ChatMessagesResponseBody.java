@@ -8,7 +8,7 @@ public class ChatMessagesResponseBody extends TeaModel {
      * <p>The answer content.</p>
      * 
      * <strong>example:</strong>
-     * <p>The disk usage of instance rm-bp14as9914vd3**** is 23%, and storage expansion is not needed at this time. If you need to view the detailed configuration, performance monitoring, or perform other operations for an instance, let me know your specific requirements!</p>
+     * <p>The disk usage of instance rm-bp14as9914vd3**** is 23%, and storage expansion is not needed at this time. If you need to view the detailed configuration, performance monitoring, or perform other operations for a specific instance, let me know your specific requirements!</p>
      */
     @NameInMap("Answer")
     public String answer;
@@ -89,7 +89,7 @@ public class ChatMessagesResponseBody extends TeaModel {
      * <p>The query mode.</p>
      * 
      * <strong>example:</strong>
-     * <p>This field will be deprecated in the future. Ignore it</p>
+     * <p>This field will be deprecated and can be ignored</p>
      */
     @NameInMap("Mode")
     public String mode;

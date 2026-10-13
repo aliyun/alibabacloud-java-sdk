@@ -4,10 +4,15 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class CreateMOUsageDetailExportResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public CreateMOUsageDetailExportResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,6 +20,8 @@ public class CreateMOUsageDetailExportResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329241C</p>
      */
@@ -22,6 +29,8 @@ public class CreateMOUsageDetailExportResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The request result.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -67,6 +76,8 @@ public class CreateMOUsageDetailExportResponseBody extends TeaModel {
 
     public static class CreateMOUsageDetailExportResponseBodyDataFilters extends TeaModel {
         /**
+         * <p>The API key to use.</p>
+         * 
          * <strong>example:</strong>
          * <p>sk-***</p>
          */
@@ -74,6 +85,8 @@ public class CreateMOUsageDetailExportResponseBody extends TeaModel {
         public String apiKey;
 
         /**
+         * <p>The inspection end time in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-03-10T02:02:20Z</p>
          */
@@ -81,6 +94,8 @@ public class CreateMOUsageDetailExportResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>rds_copilot**_public_cn-******</p>
          */
@@ -88,6 +103,8 @@ public class CreateMOUsageDetailExportResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The model to call.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen-flash</p>
          */
@@ -95,6 +112,8 @@ public class CreateMOUsageDetailExportResponseBody extends TeaModel {
         public String model;
 
         /**
+         * <p>The inspection start time in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-05T16:00:00Z</p>
          */
@@ -150,6 +169,8 @@ public class CreateMOUsageDetailExportResponseBody extends TeaModel {
 
     public static class CreateMOUsageDetailExportResponseBodyData extends TeaModel {
         /**
+         * <p>The completion time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-15T21:18:45Z</p>
          */
@@ -157,6 +178,8 @@ public class CreateMOUsageDetailExportResponseBody extends TeaModel {
         public String completedAt;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-15T21:14:45Z</p>
          */
@@ -164,6 +187,8 @@ public class CreateMOUsageDetailExportResponseBody extends TeaModel {
         public String createdAt;
 
         /**
+         * <p>The download URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>http://***</p>
          */
@@ -171,6 +196,8 @@ public class CreateMOUsageDetailExportResponseBody extends TeaModel {
         public String downloadUrl;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>picture owner error</p>
          */
@@ -178,7 +205,7 @@ public class CreateMOUsageDetailExportResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>下载 URL 失效时间（UTC ISO8601）</p>
+         * <p>The expiration time in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-02-07T21:14:45Z</p>
@@ -187,16 +214,23 @@ public class CreateMOUsageDetailExportResponseBody extends TeaModel {
         public String expiresAt;
 
         /**
+         * <p>The file size in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>403</p>
          */
         @NameInMap("FileSize")
         public Long fileSize;
 
+        /**
+         * <p>The query filter conditions.</p>
+         */
         @NameInMap("Filters")
         public CreateMOUsageDetailExportResponseBodyDataFilters filters;
 
         /**
+         * <p>The target conversion format.</p>
+         * 
          * <strong>example:</strong>
          * <p>csv</p>
          */
@@ -204,6 +238,8 @@ public class CreateMOUsageDetailExportResponseBody extends TeaModel {
         public String format;
 
         /**
+         * <p>The OssKey passed when calling the operation. (This field is deprecated)</p>
+         * 
          * <strong>example:</strong>
          * <p>ddd6*****2a76</p>
          */
@@ -211,6 +247,8 @@ public class CreateMOUsageDetailExportResponseBody extends TeaModel {
         public String ossKey;
 
         /**
+         * <p>The total number of data rows.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -218,7 +256,7 @@ public class CreateMOUsageDetailExportResponseBody extends TeaModel {
         public Long rowCount;
 
         /**
-         * <p>pending / processing / completed / failed / expired</p>
+         * <p>The module status.</p>
          * 
          * <strong>example:</strong>
          * <p>pending / processing / completed / failed / expired</p>

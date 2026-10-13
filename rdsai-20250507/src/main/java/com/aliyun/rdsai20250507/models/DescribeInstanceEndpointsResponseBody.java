@@ -14,13 +14,13 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
     public String branchName;
 
     /**
-     * <p>The list of endpoint information of the database instance.</p>
+     * <p>The list of endpoint information for the database instance.</p>
      */
     @NameInMap("DBInstanceEndpoints")
     public java.util.List<DescribeInstanceEndpointsResponseBodyDBInstanceEndpoints> DBInstanceEndpoints;
 
     /**
-     * <p>The list of endpoint information of the AI application instance.</p>
+     * <p>The list of endpoint information for the AI application instance.</p>
      */
     @NameInMap("InstanceEndpoints")
     public java.util.List<DescribeInstanceEndpointsResponseBodyInstanceEndpoints> instanceEndpoints;

@@ -112,7 +112,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public String keyName;
 
         /**
-         * <p>The quota limit ratio.</p>
+         * <p>The quota ratio.</p>
          * 
          * <strong>example:</strong>
          * <p>0.2</p>
@@ -121,7 +121,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public Float limitRate;
 
         /**
-         * <p>The quota limit method. Valid values:</p>
+         * <p>The quota type. Valid values:</p>
          * <ul>
          * <li><strong>fixed</strong>: Fixed value.</li>
          * <li><strong>ratio</strong>: Percentage.</li>
@@ -138,7 +138,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public String roleArn;
 
         /**
-         * <p>The alert threshold percentage. For example, 80 indicates that an alert is triggered when the usage reaches 80%. The alert resets when the usage drops below this percentage.</p>
+         * <p>The alert threshold percentage. For example, 80 indicates that an alert is triggered when the usage reaches 80%. The alert is reset when the usage drops below this percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -147,7 +147,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public Integer thresholdPercent;
 
         /**
-         * <p>The quota limit of the current key.</p>
+         * <p>The quota of the current key.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -236,7 +236,7 @@ public class ListApiKeysResponseBody extends TeaModel {
 
     public static class ListApiKeysResponseBodyData extends TeaModel {
         /**
-         * <p>The URL for model invocation.</p>
+         * <p>The URL for model calls.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://xxx.yy/v1">http://xxx.yy/v1</a></p>
@@ -296,7 +296,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public String systemApiKey;
 
         /**
-         * <p>The alert threshold percentage for SystemApiKey. For example, 80 indicates that an alert is triggered when the usage reaches 80%. The alert resets when the usage drops below this percentage.</p>
+         * <p>The alert threshold percentage for SystemApiKey. For example, 80 indicates that an alert is triggered when the usage reaches 80%. The alert is reset when the usage drops below this percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>

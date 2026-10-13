@@ -14,7 +14,7 @@ public class ModifySandboxTemplateRequest extends TeaModel {
     public String defaultCpu;
 
     /**
-     * <p>The memory size for sandboxes created from this template. Unit: Gi. Valid values: 1Gi to 8Gi.</p>
+     * <p>The memory size of sandboxes created from this template. Unit: Gi. Valid values: 1Gi to 8Gi.</p>
      * 
      * <strong>example:</strong>
      * <p>1Gi</p>

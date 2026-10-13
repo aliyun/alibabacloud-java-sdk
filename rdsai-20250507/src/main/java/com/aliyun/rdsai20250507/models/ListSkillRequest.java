@@ -38,6 +38,42 @@ public class ListSkillRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The search parameter for skill name or description. This filter is not currently enabled in the ContextDB management console.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example</p>
+     */
+    @NameInMap("Query")
+    public String query;
+
+    /**
+     * <p>The ContextDB query scope. Valid values: all (default), private, and system.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>all</p>
+     */
+    @NameInMap("Scope")
+    public String scope;
+
+    /**
+     * <p>The sort parameter for skills. This sorting is not currently enabled in the ContextDB management console.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>updated_at_desc</p>
+     */
+    @NameInMap("Sort")
+    public String sort;
+
+    /**
+     * <p>The filter parameter for skill source. This filter is not currently enabled in the ContextDB management console.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SYSTEM</p>
+     */
+    @NameInMap("Source")
+    public String source;
+
+    /**
      * <p>The ContextDB workspace ID.</p>
      * 
      * <strong>example:</strong>
@@ -73,6 +109,38 @@ public class ListSkillRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListSkillRequest setQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    public String getQuery() {
+        return this.query;
+    }
+
+    public ListSkillRequest setScope(String scope) {
+        this.scope = scope;
+        return this;
+    }
+    public String getScope() {
+        return this.scope;
+    }
+
+    public ListSkillRequest setSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    public String getSort() {
+        return this.sort;
+    }
+
+    public ListSkillRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
     public ListSkillRequest setWorkspaceId(String workspaceId) {

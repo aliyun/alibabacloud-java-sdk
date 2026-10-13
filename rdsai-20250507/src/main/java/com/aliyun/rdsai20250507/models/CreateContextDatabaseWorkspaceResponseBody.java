@@ -70,7 +70,7 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
     /**
      * <p>The workspace status. Valid values:</p>
      * <ul>
-     * <li>Active: running normally.</li>
+     * <li>Active: running as expected.</li>
      * <li>Locked: locked due to overdue payment or expiration.</li>
      * </ul>
      * 

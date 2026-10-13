@@ -14,7 +14,7 @@ public class DescribeCommonSandboxTemplatesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that indicates the position from which the query starts. Set this parameter to empty to start from the beginning.</p>
+     * <p>The token that determines the start point of the query. Set this parameter to empty to start the query from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAc3HCuYhJi/wvpk4xOr0VLYz/NvD85HpgBeRBCusEIeVQ0dHZH9jr+NP3X9Jx0iSoql55b9nd4PIDm252/a0f+U=</p>
@@ -76,7 +76,7 @@ public class DescribeCommonSandboxTemplatesResponseBody extends TeaModel {
 
     public static class DescribeCommonSandboxTemplatesResponseBodyTemplates extends TeaModel {
         /**
-         * <p>The default number of CPUs for sandboxes created by using this template.</p>
+         * <p>The default number of CPUs for a sandbox created by using this template.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -85,7 +85,7 @@ public class DescribeCommonSandboxTemplatesResponseBody extends TeaModel {
         public String defaultCpu;
 
         /**
-         * <p>The default memory size for sandboxes created by using this template. The unit ends with Gi.</p>
+         * <p>The default memory size for a sandbox created by using this template. The unit ends with Gi.</p>
          * 
          * <strong>example:</strong>
          * <p>1Gi</p>
@@ -103,7 +103,7 @@ public class DescribeCommonSandboxTemplatesResponseBody extends TeaModel {
         public Long defaultReplicas;
 
         /**
-         * <p>The description of the sandbox template.</p>
+         * <p>The sandbox template description.</p>
          * 
          * <strong>example:</strong>
          * <p>Execute user-provided Python code in the sandbox environment. Runs any Python script the user provides and returns the output.</p>
@@ -112,7 +112,7 @@ public class DescribeCommonSandboxTemplatesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the sandbox template.</p>
+         * <p>The sandbox template name.</p>
          * 
          * <strong>example:</strong>
          * <p>desktop</p>

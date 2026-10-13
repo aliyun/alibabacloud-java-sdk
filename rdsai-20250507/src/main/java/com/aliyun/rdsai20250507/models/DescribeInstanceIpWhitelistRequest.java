@@ -26,7 +26,7 @@ public class DescribeInstanceIpWhitelistRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>

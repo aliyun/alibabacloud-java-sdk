@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCustomAgentToolsResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The returned data object.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListCustomAgentToolsResponseBodyData> data;
@@ -42,7 +42,7 @@ public class ListCustomAgentToolsResponseBody extends TeaModel {
 
     public static class ListCustomAgentToolsResponseBodyData extends TeaModel {
         /**
-         * <p>The description in English.</p>
+         * <p>The English description.</p>
          * 
          * <strong>example:</strong>
          * <p>Queries RDS instances.</p>
@@ -51,10 +51,10 @@ public class ListCustomAgentToolsResponseBody extends TeaModel {
         public String en;
 
         /**
-         * <p>The description in Japanese.</p>
+         * <p>The Japanese description.</p>
          * 
          * <strong>example:</strong>
-         * <p>RDS インスタンスの一覧を照会します。</p>
+         * <p>RDS インスタンスの一覧を照会します</p>
          */
         @NameInMap("Ja")
         public String ja;
@@ -69,10 +69,10 @@ public class ListCustomAgentToolsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The description in Traditional Chinese.</p>
+         * <p>The Traditional Chinese description.</p>
          * 
          * <strong>example:</strong>
-         * <p>查詢 RDS 實例清單。</p>
+         * <p>查詢 RDS 實例清單</p>
          */
         @NameInMap("Tc")
         public String tc;
@@ -87,10 +87,10 @@ public class ListCustomAgentToolsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The description in Simplified Chinese.</p>
+         * <p>The Chinese description.</p>
          * 
          * <strong>example:</strong>
-         * <p>查询RDS实例列表。</p>
+         * <p>查询RDS实例列表</p>
          */
         @NameInMap("Zh")
         public String zh;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
     /**
-     * <p>The creation time.</p>
+     * <p>The time when the member was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-05-28T17:59:55Z</p>
@@ -127,7 +127,7 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
 
     public static class DeleteContextDatabaseMemberResponseBodyKeys extends TeaModel {
         /**
-         * <p>The creation time. This field is empty.</p>
+         * <p>The time when the API key was created. This field is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>(null)</p>
@@ -154,7 +154,7 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
         public String expiresAt;
 
         /**
-         * <p>The API key suffix. This field is empty.</p>
+         * <p>The suffix of the API key. This field is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>(null)</p>
@@ -172,7 +172,7 @@ public class DeleteContextDatabaseMemberResponseBody extends TeaModel {
         public Long keyId;
 
         /**
-         * <p>The API key prefix. This field is empty.</p>
+         * <p>The prefix of the API key. This field is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>(null)</p>

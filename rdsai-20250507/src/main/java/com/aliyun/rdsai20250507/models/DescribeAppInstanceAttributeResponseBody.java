@@ -23,7 +23,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String appType;
 
     /**
-     * <p>Reserved parameter.</p>
+     * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Reserved parameter</p>
@@ -32,7 +32,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String branchName;
 
     /**
-     * <p>Reserved parameter.</p>
+     * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Reserved parameter</p>
@@ -47,7 +47,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public java.util.List<DescribeAppInstanceAttributeResponseBodyComponents> components;
 
     /**
-     * <p>The ID of the RDS PostgreSQL database instance that the AI application is connected to.</p>
+     * <p>The instance ID of the RDS PostgreSQL database instance connected to the AI application.</p>
      * 
      * <strong>example:</strong>
      * <p>pgm-2ze49qv594vi****</p>
@@ -74,7 +74,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String eipStatus;
 
     /**
-     * <p>The instance class of the AI application.</p>
+     * <p>The instance type of the AI application.</p>
      * 
      * <strong>example:</strong>
      * <p>rdsai.supabase.basic</p>
@@ -110,7 +110,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>Reserved parameter.</p>
+     * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Reserved parameter</p>
@@ -119,7 +119,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String loginToken;
 
     /**
-     * <p>The minor version details of each component of the RDS AI application instance.</p>
+     * <p>The minor versions of individual components of the RDS AI application instance.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;studio\&quot;:\&quot;20260602r1\&quot;,\&quot;storage\&quot;:\&quot;v1.48.9\&quot;,\&quot;auth\&quot;:\&quot;v2.188.1\&quot;,\&quot;kong\&quot;:\&quot;3.9.0\&quot;,\&quot;rest\&quot;:\&quot;v12.2.12\&quot;,\&quot;meta\&quot;:\&quot;v0.89.3\&quot;,\&quot;realtime-dev\&quot;:\&quot;v2.34.47\&quot;,\&quot;postgres\&quot;:\&quot;rds_postgres_1700_20260830\&quot;}</p>
@@ -137,7 +137,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String natCreatedBy;
 
     /**
-     * <p>The ID of the NAT gateway.</p>
+     * <p>The NAT gateway ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ngw-bp1l82hw87m2y77ci1hie</p>
@@ -155,7 +155,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String natStatus;
 
     /**
-     * <p>The public connection string of the AI application.</p>
+     * <p>The public endpoint of the AI application.</p>
      * 
      * <strong>example:</strong>
      * <p>8.152. XXX.XXX:8000</p>
@@ -182,7 +182,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Reserved parameter.</p>
+     * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Reserved parameter</p>
@@ -191,7 +191,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String retentionHours;
 
     /**
-     * <p>Reserved parameter.</p>
+     * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Reserved parameter</p>
@@ -200,7 +200,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String sqlExtendMoInstanceId;
 
     /**
-     * <p>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/2623972.html">Instance status table</a>.</p>
+     * <p>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/2623972.html">Instance status</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -209,7 +209,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Reserved parameter.</p>
+     * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Reserved parameter</p>
@@ -218,7 +218,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String uploadKey;
 
     /**
-     * <p>Reserved parameter.</p>
+     * <p>A reserved parameter.</p>
      */
     @NameInMap("UploadKeyList")
     public java.util.List<DescribeAppInstanceAttributeResponseBodyUploadKeyList> uploadKeyList;
@@ -233,7 +233,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The internal connection string of the AI application.</p>
+     * <p>The internal endpoint of the AI application.</p>
      * 
      * <strong>example:</strong>
      * <p>172.16.XXX.XXX:8000</p>
@@ -523,7 +523,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
 
     public static class DescribeAppInstanceAttributeResponseBodyUploadKeyList extends TeaModel {
         /**
-         * <p>Reserved parameter.</p>
+         * <p>A reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>Reserved parameter</p>
@@ -532,7 +532,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         public Boolean isSystemKey;
 
         /**
-         * <p>Reserved parameter.</p>
+         * <p>A reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>Reserved parameter</p>
@@ -541,7 +541,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         public String remark;
 
         /**
-         * <p>Reserved parameter.</p>
+         * <p>A reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>Reserved parameter</p>
@@ -550,7 +550,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         public Long slsStorageBytes;
 
         /**
-         * <p>Reserved parameter.</p>
+         * <p>A reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>Reserved parameter</p>
@@ -559,7 +559,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Reserved parameter.</p>
+         * <p>A reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>Reserved parameter</p>

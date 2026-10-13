@@ -4,10 +4,15 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class GetChatModelResponseBody extends TeaModel {
+    /**
+     * <p>The query result.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetChatModelResponseBodyData> data;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */
@@ -37,6 +42,8 @@ public class GetChatModelResponseBody extends TeaModel {
 
     public static class GetChatModelResponseBodyData extends TeaModel {
         /**
+         * <p>The context window size of the model.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000000</p>
          */
@@ -44,22 +51,32 @@ public class GetChatModelResponseBody extends TeaModel {
         public Long contextWindow;
 
         /**
+         * <p>Indicates whether this is the default model.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("Default")
         public Boolean _default;
 
+        /**
+         * <p>The list of supported modalities.</p>
+         */
         @NameInMap("Features")
         public java.util.List<String> features;
 
         /**
+         * <p>The model ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen3.7-max</p>
          */
         @NameInMap("ModelId")
         public String modelId;
 
+        /**
+         * <p>The list of thinking depth levels for the model.</p>
+         */
         @NameInMap("ThinkingLevels")
         public java.util.List<String> thinkingLevels;
 

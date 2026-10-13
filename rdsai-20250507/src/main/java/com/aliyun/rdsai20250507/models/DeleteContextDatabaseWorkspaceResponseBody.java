@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteContextDatabaseWorkspaceResponseBody extends TeaModel {
     /**
-     * <p>The time when the workspace was created, in ISO-8601 format.</p>
+     * <p>The time when the workspace was created, in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-05-28T17:59:55Z</p>

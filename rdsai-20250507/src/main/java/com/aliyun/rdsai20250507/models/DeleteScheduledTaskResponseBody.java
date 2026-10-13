@@ -8,7 +8,7 @@ public class DeleteScheduledTaskResponseBody extends TeaModel {
      * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Scheduled task deleted successfully</p>
+     * <p>The scheduled task is deleted</p>
      */
     @NameInMap("Message")
     public String message;

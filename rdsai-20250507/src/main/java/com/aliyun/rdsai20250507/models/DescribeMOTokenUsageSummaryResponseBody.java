@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The token usage records.</p>
+     */
     @NameInMap("Records")
     public java.util.List<DescribeMOTokenUsageSummaryResponseBodyRecords> records;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */
@@ -22,16 +29,23 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The request result.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The usage summary information.</p>
+     */
     @NameInMap("Summary")
     public DescribeMOTokenUsageSummaryResponseBodySummary summary;
 
     /**
+     * <p>The type.</p>
+     * 
      * <strong>example:</strong>
      * <p>text</p>
      */
@@ -93,6 +107,8 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
 
     public static class DescribeMOTokenUsageSummaryResponseBodyRecords extends TeaModel {
         /**
+         * <p>The API key used.</p>
+         * 
          * <strong>example:</strong>
          * <p>sk-rds-ds5jjo08hyz1g9orhs3y56l5cy3l3shm</p>
          */
@@ -100,6 +116,8 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
         public String apiKey;
 
         /**
+         * <p>The number of input tokens that hit the cache.</p>
+         * 
          * <strong>example:</strong>
          * <p>8000</p>
          */
@@ -107,6 +125,8 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
         public Double cacheTokens;
 
         /**
+         * <p>The date, accurate to the day.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-04-21</p>
          */
@@ -114,6 +134,8 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
         public String date;
 
         /**
+         * <p>The input token usage.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
@@ -121,6 +143,8 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
         public Double inputTokens;
 
         /**
+         * <p>The API key name.</p>
+         * 
          * <strong>example:</strong>
          * <p>qcy-apikey</p>
          */
@@ -128,6 +152,8 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
         public String keyName;
 
         /**
+         * <p>The model called.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen-flash</p>
          */
@@ -135,6 +161,8 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
         public String model;
 
         /**
+         * <p>The output token usage.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
@@ -142,6 +170,8 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
         public Double outputTokens;
 
         /**
+         * <p>The number of requests.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -149,6 +179,8 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
         public Long requestCount;
 
         /**
+         * <p>The total number of tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>100000</p>
          */
@@ -156,6 +188,8 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
         public Double totalTokens;
 
         /**
+         * <p>The query type.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -251,6 +285,8 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
 
     public static class DescribeMOTokenUsageSummaryResponseBodySummary extends TeaModel {
         /**
+         * <p>The number of input tokens that hit the cache.</p>
+         * 
          * <strong>example:</strong>
          * <p>9000</p>
          */
@@ -258,6 +294,8 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
         public Double cacheTokens;
 
         /**
+         * <p>The input token usage.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
@@ -265,6 +303,8 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
         public Double inputTokens;
 
         /**
+         * <p>The output token usage.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -272,6 +312,8 @@ public class DescribeMOTokenUsageSummaryResponseBody extends TeaModel {
         public Double outputTokens;
 
         /**
+         * <p>The total number of tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>11000</p>
          */

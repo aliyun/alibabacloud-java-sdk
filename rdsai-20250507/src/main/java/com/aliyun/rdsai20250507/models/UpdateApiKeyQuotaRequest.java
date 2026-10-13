@@ -14,7 +14,7 @@ public class UpdateApiKeyQuotaRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>A list of API keys.</p>
+     * <p>The list of API keys.</p>
      */
     @NameInMap("Keys")
     public java.util.List<UpdateApiKeyQuotaRequestKeys> keys;
@@ -42,7 +42,7 @@ public class UpdateApiKeyQuotaRequest extends TeaModel {
 
     public static class UpdateApiKeyQuotaRequestKeys extends TeaModel {
         /**
-         * <p>The API key.</p>
+         * <p>API KEY</p>
          * 
          * <strong>example:</strong>
          * <p>sk-rds-xxx</p>
@@ -58,7 +58,7 @@ public class UpdateApiKeyQuotaRequest extends TeaModel {
         public Long dailyTokenQuota;
 
         /**
-         * <p>The limit rate. This parameter is required when <code>LimitType</code> is set to <code>ratio</code>.</p>
+         * <p>The throttling ratio. This parameter is required when type is set to ratio.</p>
          * 
          * <strong>example:</strong>
          * <p>0.2</p>
@@ -67,14 +67,11 @@ public class UpdateApiKeyQuotaRequest extends TeaModel {
         public Double limitRate;
 
         /**
-         * <p>The limit type. Valid values:</p>
+         * <p>The quota type. Valid values:</p>
          * <ul>
-         * <li><p><code>ratio</code>: Allocates the quota proportionally.</p>
-         * </li>
-         * <li><p><code>fixed</code>: Allocates a fixed quota.</p>
-         * </li>
-         * <li><p><code>auto</code>: Allocates the quota automatically.</p>
-         * </li>
+         * <li>ratio: by ratio.</li>
+         * <li>fixed: by fixed value.</li>
+         * <li>auto: automatic allocation of EPS resource.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -84,7 +81,7 @@ public class UpdateApiKeyQuotaRequest extends TeaModel {
         public String limitType;
 
         /**
-         * <p>The token quota. This parameter is required when <code>LimitType</code> is set to <code>fixed</code>.</p>
+         * <p>The fixed throttling value. This parameter is required when type is set to fixed.</p>
          * 
          * <strong>example:</strong>
          * <p>100000</p>

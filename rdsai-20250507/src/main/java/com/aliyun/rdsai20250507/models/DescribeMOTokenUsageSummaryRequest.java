@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeMOTokenUsageSummaryRequest extends TeaModel {
     /**
+     * <p>The API key used.</p>
+     * 
      * <strong>example:</strong>
      * <p>sk-rds-*****</p>
      */
@@ -12,6 +14,8 @@ public class DescribeMOTokenUsageSummaryRequest extends TeaModel {
     public String apiKey;
 
     /**
+     * <p>The end time of the instance. Format: YYYY-MM-DD. The interval between EndTime and StartTime cannot exceed 31 days.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-04-30</p>
      */
@@ -19,6 +23,7 @@ public class DescribeMOTokenUsageSummaryRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The instance name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,8 @@ public class DescribeMOTokenUsageSummaryRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The model called.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen-flash</p>
      */
@@ -35,6 +42,8 @@ public class DescribeMOTokenUsageSummaryRequest extends TeaModel {
     public String model;
 
     /**
+     * <p>The start time of the instance. Format: YYYY-MM-DD.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-04-21</p>
      */
@@ -42,6 +51,8 @@ public class DescribeMOTokenUsageSummaryRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The query type.</p>
+     * 
      * <strong>example:</strong>
      * <p>text</p>
      */

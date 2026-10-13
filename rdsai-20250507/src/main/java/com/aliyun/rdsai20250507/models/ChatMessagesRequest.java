@@ -217,7 +217,7 @@ public class ChatMessagesRequest extends TeaModel {
         public String timezone;
 
         /**
-         * <p>The tool approval mode for the current conversation. Valid values: read_only (read-only, write tools are rejected), manual (write tools require manual approval), and auto (the approval sub-agent automatically determines the action. If the result is needs_human, the approval is escalated to manual review). When this parameter is passed, the approval mode of the current conversation is updated.</p>
+         * <p>The tool approval mode for the current conversation. Valid values: read_only (read-only, write tools are rejected), manual (write tools require manual approval), and auto (the approval sub-agent automatically determines the action. If the result is needs_human, the request is escalated to manual approval). When this parameter is passed, the approval mode of the current conversation is updated.</p>
          * 
          * <strong>example:</strong>
          * <p>manual</p>

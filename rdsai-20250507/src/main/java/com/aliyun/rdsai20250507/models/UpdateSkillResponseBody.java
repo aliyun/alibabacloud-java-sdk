@@ -5,6 +5,24 @@ import com.aliyun.tea.*;
 
 public class UpdateSkillResponseBody extends TeaModel {
     /**
+     * <p>The update action performed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ADD_VERSION</p>
+     */
+    @NameInMap("Action")
+    public String action;
+
+    /**
+     * <p>The content digest of the Skill package.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef</p>
+     */
+    @NameInMap("BundleHash")
+    public String bundleHash;
+
+    /**
      * <p>The content.</p>
      * 
      * <strong>example:</strong>
@@ -20,16 +38,16 @@ public class UpdateSkillResponseBody extends TeaModel {
     public java.util.List<String> dbtypes;
 
     /**
-     * <p>The skill description. The description can be up to 1000 characters in length.</p>
+     * <p>The description of the Skill. The description can be up to 1000 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>SQL Review Expert: Comprehensively reviews SQL for security, performance, and compliance, identifies risks, and provides optimization suggestions. Activated immediately when a user submits SQL or asks about &quot;SQL review&quot;, &quot;SQL audit&quot;, &quot;any risks&quot;, or &quot;how to optimize&quot;</p>
+     * <p>SQL Review Expert: Comprehensively reviews SQL for security, performance, and compliance, identifies risks, and provides optimization suggestions. Activated immediately when a user submits SQL or asks &quot;SQL review&quot;, &quot;SQL Review&quot;, &quot;any risks?&quot;, or &quot;how to optimize&quot;</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The unique identifier of the skill.</p>
+     * <p>The unique identifier of the Skill.</p>
      * 
      * <strong>example:</strong>
      * <p>d1b7d639-f34e-44c7-8231-987da14d****</p>
@@ -38,7 +56,7 @@ public class UpdateSkillResponseBody extends TeaModel {
     public String id;
 
     /**
-     * <p>The skill name. The name can contain only lowercase letters, digits, and hyphens.</p>
+     * <p>The name of the Skill. The name can contain only lowercase letters, digits, and hyphens.</p>
      * 
      * <strong>example:</strong>
      * <p>sql-review</p>
@@ -56,7 +74,16 @@ public class UpdateSkillResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The skill type.</p>
+     * <p>The ID of the updated Skill.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>skill-example</p>
+     */
+    @NameInMap("SkillId")
+    public String skillId;
+
+    /**
+     * <p>The Skill type.</p>
      * 
      * <strong>example:</strong>
      * <p>user</p>
@@ -65,7 +92,7 @@ public class UpdateSkillResponseBody extends TeaModel {
     public String skillType;
 
     /**
-     * <p>The time when the skill was last updated.</p>
+     * <p>The time when the Skill was updated.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-02-04T21:14:45Z</p>
@@ -73,9 +100,34 @@ public class UpdateSkillResponseBody extends TeaModel {
     @NameInMap("UpdatedAt")
     public String updatedAt;
 
+    /**
+     * <p>The ID of the Skill version created in this update.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>version-example</p>
+     */
+    @NameInMap("VersionId")
+    public String versionId;
+
     public static UpdateSkillResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateSkillResponseBody self = new UpdateSkillResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateSkillResponseBody setAction(String action) {
+        this.action = action;
+        return this;
+    }
+    public String getAction() {
+        return this.action;
+    }
+
+    public UpdateSkillResponseBody setBundleHash(String bundleHash) {
+        this.bundleHash = bundleHash;
+        return this;
+    }
+    public String getBundleHash() {
+        return this.bundleHash;
     }
 
     public UpdateSkillResponseBody setContent(java.util.Map<String, ?> content) {
@@ -126,6 +178,14 @@ public class UpdateSkillResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public UpdateSkillResponseBody setSkillId(String skillId) {
+        this.skillId = skillId;
+        return this;
+    }
+    public String getSkillId() {
+        return this.skillId;
+    }
+
     public UpdateSkillResponseBody setSkillType(String skillType) {
         this.skillType = skillType;
         return this;
@@ -140,6 +200,14 @@ public class UpdateSkillResponseBody extends TeaModel {
     }
     public String getUpdatedAt() {
         return this.updatedAt;
+    }
+
+    public UpdateSkillResponseBody setVersionId(String versionId) {
+        this.versionId = versionId;
+        return this;
+    }
+    public String getVersionId() {
+        return this.versionId;
     }
 
 }

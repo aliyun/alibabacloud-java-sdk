@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateMOQuotaAlertThresholdResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
@@ -14,13 +14,13 @@ public class UpdateMOQuotaAlertThresholdResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result list.</p>
+     * <p>The list of results.</p>
      */
     @NameInMap("Results")
     public java.util.List<UpdateMOQuotaAlertThresholdResponseBodyResults> results;
 
     /**
-     * <p>A value of <code>true</code> indicates that the request was successful.</p>
+     * <p>The request result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -59,7 +59,7 @@ public class UpdateMOQuotaAlertThresholdResponseBody extends TeaModel {
 
     public static class UpdateMOQuotaAlertThresholdResponseBodyResults extends TeaModel {
         /**
-         * <p>The API key.</p>
+         * <p>API Key</p>
          * 
          * <strong>example:</strong>
          * <p>sk-rds-*****</p>
@@ -68,7 +68,7 @@ public class UpdateMOQuotaAlertThresholdResponseBody extends TeaModel {
         public String apikey;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>rds_copilot***_public_cn-o*****1</p>
@@ -95,10 +95,10 @@ public class UpdateMOQuotaAlertThresholdResponseBody extends TeaModel {
         public String keyType;
 
         /**
-         * <p>The alert threshold percentage. For example, a value of 80 triggers an alert when usage reaches 80% of the usage quota. The alert is reset after the usage falls below this percentage.</p>
+         * <p>The alert threshold percentage. For example, 80 indicates that an alert is triggered when the usage reaches 80%. The alert is reset when the usage drops below this percentage.</p>
          * 
          * <strong>example:</strong>
-         * <p>[0, 100]，0 会清理告警设置</p>
+         * <p>[0, 100]. 0 clears the alert settings</p>
          */
         @NameInMap("ThresholdPercent")
         public Integer thresholdPercent;

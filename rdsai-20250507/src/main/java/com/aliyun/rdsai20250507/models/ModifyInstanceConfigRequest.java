@@ -8,7 +8,7 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public String branchName;
 
     /**
-     * <p>The idempotency parameter.</p>
+     * <p>The idempotence parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>

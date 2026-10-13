@@ -27,7 +27,7 @@ public class UpdateCustomAgentRequest extends TeaModel {
      * <p>The name of the dedicated agent.</p>
      * 
      * <strong>example:</strong>
-     * <p>QueryInstanceListAgent</p>
+     * <p>Query Instance List Agent</p>
      */
     @NameInMap("Name")
     public String name;
@@ -39,7 +39,7 @@ public class UpdateCustomAgentRequest extends TeaModel {
      * <p>The system prompt.</p>
      * 
      * <strong>example:</strong>
-     * <p>I am your dedicated agent for querying instance lists</p>
+     * <p>I am your dedicated Agent for querying instance lists</p>
      */
     @NameInMap("SystemPrompt")
     public String systemPrompt;
