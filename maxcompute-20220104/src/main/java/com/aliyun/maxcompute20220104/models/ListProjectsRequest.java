@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListProjectsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to list the built-in <strong>SYSTEM_CATALOG</strong> project. This project provides information such as project metadata and usage history. For more information, see the &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/tenant-level-information-schema">Information Schema</a>
-     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/tenant-level-information-schema">Information Schema</a> feature.</p>
+     * <p>Specifies whether to list the built-in <strong>SYSTEM_CATALOG</strong> project. This project provides information such as project metadata and usage history. For more information, see the &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/tenant-level-information-schema">Information Schema</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/tenant-level-information-schema">Information Schema</a> feature.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

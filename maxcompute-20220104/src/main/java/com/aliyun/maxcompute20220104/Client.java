@@ -1316,6 +1316,87 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Generates the offline Logview file for a specified MaxCompute instance and returns a presigned Object Storage Service (OSS) download URL.</p>
+     * <h2>Procedure</h2>
+     * <ol>
+     * <li>Specify the project name by using the project path parameter and the instance ID in the project by using the instance parameter.</li>
+     * <li>Select useVpcEndpoint based on the download environment: If this parameter is not specified or is set to false, the default OSS endpoint is used. If this parameter is set to true, the OSS VPC endpoint configured on the server is used. The download client must have network access to the selected endpoint.</li>
+     * <li>Obtain the URL from the data field in the success response and download the file before the link expires. The link expires 10 minutes after it is generated. If the link expires, call this operation again to obtain a new link.</li>
+     * </ol>
+     * <h2>File and usage instructions</h2>
+     * <ul>
+     * <li>The downloaded file is named logview_detail_{project}_{instance}.txt. The file content is offline Logview data in UTF-8 encoded JSON format. The specific data varies based on the instance task type and available information, and is not guaranteed to include execution results.</li>
+     * <li>Each call rebuilds and uploads the offline Logview data. The same file object path is used for the same project and instance, and a subsequent upload overwrites the previous content.</li>
+     * <li>This operation returns a download URL instead of a file stream upon success. A success response identifies the request by using requestId and returns the download link in the data field. The httpCode, errorCode, and errorMsg fields are common response fields. These fields are not assigned values when this operation is successfully processed, but they are not guaranteed to be omitted from the response.</li>
+     * <li>If useVpcEndpoint is set to true and no OSS VPC endpoint is configured on the server, link generation fails and does not automatically fall back to the default endpoint.</li>
+     * <li>The sample URL in the data field is desensitized and is used only to illustrate the format. It cannot be used for actual downloads.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the download link for the offline Logview file of an instance in a specified MaxCompute project. The link is valid for 10 minutes from the time it is generated.</p>
+     * 
+     * @param request GetLogviewDownloadUrlRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetLogviewDownloadUrlResponse
+     */
+    public GetLogviewDownloadUrlResponse getLogviewDownloadUrlWithOptions(String project, String instance, GetLogviewDownloadUrlRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.useVpcEndpoint)) {
+            query.put("useVpcEndpoint", request.useVpcEndpoint);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLogviewDownloadUrl"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/logview/project/" + com.aliyun.openapiutil.Client.getEncodeParam(project) + "/instance/" + com.aliyun.openapiutil.Client.getEncodeParam(instance) + "/downloadUrl"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLogviewDownloadUrlResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Generates the offline Logview file for a specified MaxCompute instance and returns a presigned Object Storage Service (OSS) download URL.</p>
+     * <h2>Procedure</h2>
+     * <ol>
+     * <li>Specify the project name by using the project path parameter and the instance ID in the project by using the instance parameter.</li>
+     * <li>Select useVpcEndpoint based on the download environment: If this parameter is not specified or is set to false, the default OSS endpoint is used. If this parameter is set to true, the OSS VPC endpoint configured on the server is used. The download client must have network access to the selected endpoint.</li>
+     * <li>Obtain the URL from the data field in the success response and download the file before the link expires. The link expires 10 minutes after it is generated. If the link expires, call this operation again to obtain a new link.</li>
+     * </ol>
+     * <h2>File and usage instructions</h2>
+     * <ul>
+     * <li>The downloaded file is named logview_detail_{project}_{instance}.txt. The file content is offline Logview data in UTF-8 encoded JSON format. The specific data varies based on the instance task type and available information, and is not guaranteed to include execution results.</li>
+     * <li>Each call rebuilds and uploads the offline Logview data. The same file object path is used for the same project and instance, and a subsequent upload overwrites the previous content.</li>
+     * <li>This operation returns a download URL instead of a file stream upon success. A success response identifies the request by using requestId and returns the download link in the data field. The httpCode, errorCode, and errorMsg fields are common response fields. These fields are not assigned values when this operation is successfully processed, but they are not guaranteed to be omitted from the response.</li>
+     * <li>If useVpcEndpoint is set to true and no OSS VPC endpoint is configured on the server, link generation fails and does not automatically fall back to the default endpoint.</li>
+     * <li>The sample URL in the data field is desensitized and is used only to illustrate the format. It cannot be used for actual downloads.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the download link for the offline Logview file of an instance in a specified MaxCompute project. The link is valid for 10 minutes from the time it is generated.</p>
+     * 
+     * @param request GetLogviewDownloadUrlRequest
+     * @return GetLogviewDownloadUrlResponse
+     */
+    public GetLogviewDownloadUrlResponse getLogviewDownloadUrl(String project, String instance, GetLogviewDownloadUrlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getLogviewDownloadUrlWithOptions(project, instance, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Retrieves a single asynchronous task in MMA.</p>
      * 
@@ -4011,7 +4092,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of MaxCompute projects.</p>
+     * <p>Lists MaxCompute projects</p>
      * 
      * @param request ListProjectsRequest
      * @param headers map
@@ -4089,7 +4170,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of MaxCompute projects.</p>
+     * <p>Lists MaxCompute projects</p>
      * 
      * @param request ListProjectsRequest
      * @return ListProjectsResponse
