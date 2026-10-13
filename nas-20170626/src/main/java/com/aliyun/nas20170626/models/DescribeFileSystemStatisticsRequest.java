@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeFileSystemStatisticsRequest extends TeaModel {
     /**
-     * <p>The page number.</p>
-     * <p>Pages start from page 1. Default value: 1.</p>
+     * <p>The page number of the list.</p>
+     * <p>Start value (default value): 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -15,7 +15,7 @@ public class DescribeFileSystemStatisticsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of file system statistics entries per page in a paging query.</p>
      * <p>Valid values: 1 to 100.</p>
      * <p>Default value: 10.</p>
      * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySmbAclRequest extends TeaModel {
     /**
-     * <p>Specifies whether to allow anonymous access. </p>
+     * <p>Specifies whether to allow anonymous access. Valid values: </p>
      * <ul>
      * <li><p>true: Anonymous access is allowed.</p>
      * </li>
@@ -23,7 +23,7 @@ public class ModifySmbAclRequest extends TeaModel {
     public Boolean enableAnonymousAccess;
 
     /**
-     * <p>Specifies whether to enable encryption in transit.</p>
+     * <p>Specifies whether to enable encryption in transit. Valid values:</p>
      * <ul>
      * <li><p>true: Encryption in transit is enabled.</p>
      * </li>
@@ -48,18 +48,18 @@ public class ModifySmbAclRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The home folder path for each user. The file path format is as follows:</p>
+     * <p>The home folder path for each user. The file path must meet the following format requirements:</p>
      * <ul>
-     * <li><p>Use a forward slash (/) or backslash (\) as the separator.</p>
+     * <li><p>Forward slashes (/) or backslashes (\) are used as separators.</p>
      * </li>
      * <li><p>Each segment cannot contain <code>&lt;&gt;&quot;:|?*</code>.</p>
      * </li>
      * <li><p>The length of each segment ranges from 0 to 255.</p>
      * </li>
-     * <li><p>The total length ranges from 0 to 32767.</p>
+     * <li><p>The total length ranges from 0 to 32,767.</p>
      * </li>
      * </ul>
-     * <p>For example, if the user folder is <code>/home</code>, the file system performs automatic creation of the <code>/home/A</code> folder when user A performs logon. If <code>/home/A</code> already exists, this step is skipped.</p>
+     * <p>For example, if the home folder is <code>/home</code>, the file system automatically creates the <code>/home/A</code> folder when user A logs on. If <code>/home/A</code> already exists, this step is skipped.</p>
      * <blockquote>
      * <p>User A must have the permission to create folders. Otherwise, the <code>/home/A</code> folder cannot be created.</p>
      * </blockquote>
@@ -71,7 +71,7 @@ public class ModifySmbAclRequest extends TeaModel {
     public String homeDirPath;
 
     /**
-     * <p>The Base64-encoded string of the keytab file content.</p>
+     * <p>The Base64-encoded content of the keytab file.</p>
      * 
      * <strong>example:</strong>
      * <p>BQIAAABHAAIADUFMSUFEVEVTVC5DT00ABGNpZnMAGXNtYnNlcnZlcjI0LmFsaWFkdGVzdC5jb20AAAABAAAAAAEAAQAIqIx6v7p11oUAAABHAAIADUFMSUFEVEVTVC5DT00ABGNpZnMAGXNtYnNlcnZlcjI0LmFsaWFkdGVzdC5jb20AAAABAAAAAAEAAwAIqIx6v7p11oUAAABPAAIADUFMSUFEVEVTVC5DT00ABGNpZnMAGXNtYnNlcnZlcjI0LmFsaWFkdGVzdC5jb20AAAABAAAAAAEAFwAQnQZWB3RAPHU7PMIJyBWePAAAAF8AAgANQUxJQURURVNULkNPTQAEY2lmcwAZc21ic2VydmVyMjQuYWxpYWR0ZXN0LmNvbQAAAAEAAAAAAQASACAGJ7F0s+bcBjf6jD5HlvlRLmPSOW+qDZe0Qk0lQcf8WwAAAE8AAgANQUxJQURURVNULkNPTQAEY2lmcwAZc21ic2VydmVyMjQuYWxpYWR0ZXN0LmNvbQAAAAEAAAAAAQARABDdFmanrSIatnDDh****</p>
@@ -89,7 +89,7 @@ public class ModifySmbAclRequest extends TeaModel {
     public String keytabMd5;
 
     /**
-     * <p>Specifies whether to reject unencrypted clients.</p>
+     * <p>Specifies whether to reject unencrypted clients. Valid values:</p>
      * <ul>
      * <li><p>true: Unencrypted clients are rejected.</p>
      * </li>
@@ -104,14 +104,14 @@ public class ModifySmbAclRequest extends TeaModel {
     public Boolean rejectUnencryptedAccess;
 
     /**
-     * <p>The ID of the superuser. The ID must follow these rules:</p>
+     * <p>The ID of the superuser. The ID must meet the following rules:</p>
      * <ul>
-     * <li><p>Must start with <code>S</code>, and no other letters are allowed after the initial S.</p>
+     * <li><p>The ID must start with <code>S</code> and cannot contain other letters after the initial S.</p>
      * </li>
-     * <li><p>Must contain at least three hyphens (-) as separators.</p>
+     * <li><p>The ID must contain at least three hyphens (-) as separators.</p>
      * </li>
      * </ul>
-     * <p>For example, <code>S-1-5-22</code> or <code>S-1-5-22-23</code>.</p>
+     * <p>Example: <code>S-1-5-22</code> or <code>S-1-5-22-23</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>S-1-5-22</p>

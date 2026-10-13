@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDirRequest extends TeaModel {
     /**
-     * <p>The ID of the file system.</p>
+     * <p>The file system ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateDirRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The ID of the owner group for the directory. Valid values: 0 to 4294967295.</p>
+     * <p>The user group ID of the directory owner. Valid values: 0 to 4294967295.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CreateDirRequest extends TeaModel {
     public Integer ownerGroupId;
 
     /**
-     * <p>The owner ID for the directory. Valid values: 0 to 4294967295.</p>
+     * <p>The user ID of the directory owner. Valid values: 0 to 4294967295.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class CreateDirRequest extends TeaModel {
     public Integer ownerUserId;
 
     /**
-     * <p>The Portable Operating System Interface (POSIX) permissions applied to the root directory. The value is a valid octal number, such as 0755.</p>
+     * <p>The POSIX permissions to apply to the root directory path. The value is a valid octal number, such as 0755.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,8 +47,8 @@ public class CreateDirRequest extends TeaModel {
     /**
      * <p>Specifies whether to create a multi-level directory. Valid values:</p>
      * <ul>
-     * <li>true (default): If no multi-level directory exists, directories are created level by level.</li>
-     * <li>false: Only the last level of directory is created. An error message is returned because the parent directory does not exist.</li>
+     * <li>true (default): If the multi-level directory does not exist, the system creates the directories level by level.</li>
+     * <li>false: Only the last-level directory is created. If the parent directory does not exist, an error message is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,17 +60,17 @@ public class CreateDirRequest extends TeaModel {
     /**
      * <p>The directory name.</p>
      * <ul>
-     * <li>The directory must start with a forward slash (/).</li>
-     * <li>The directory can contain digits and letters.</li>
-     * <li>The directory can contain underscores (_), hyphens (-), and periods (.).</li>
-     * <li>The directory cannot contain symbolic links, such as the current directory (.), the upper-level directory (..), and other symbolic links.</li>
-     * </ul>
-     * <blockquote>
+     * <li>The name must start with a forward slash (/).</li>
+     * <li>The name can contain digits and uppercase and lowercase letters.</li>
+     * <li>The name can contain underscores (_), hyphens (-), or periods (.).</li>
+     * <li>The path cannot contain symbolic links, such as the current directory (.), the parent directory (..), or other symbolic links.<blockquote>
      * <ul>
-     * <li>If the root directory does not exist, configure the information for directory creation. The system then automatically creates the specified root directory based on your settings.</li>
-     * <li>If the root directory exists, you do not need to configure the information for directory creation. The configurations for directory creation are ignored even if you configure the information.</li>
+     * <li>If the root directory does not exist, configure the automatic creation information. The system automatically creates the specified root directory based on the settings.</li>
+     * <li>If the root directory already exists, you do not need to configure the automatic creation information. If you configure the information, the automatic creation settings are ignored.</li>
      * </ul>
      * </blockquote>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

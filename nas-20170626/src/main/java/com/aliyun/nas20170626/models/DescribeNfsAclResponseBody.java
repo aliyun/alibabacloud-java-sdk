@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNfsAclResponseBody extends TeaModel {
     /**
-     * <p>The information about the ACL feature.</p>
+     * <p>The ACL information.</p>
      */
     @NameInMap("Acl")
     public DescribeNfsAclResponseBodyAcl acl;
@@ -42,10 +42,12 @@ public class DescribeNfsAclResponseBody extends TeaModel {
 
     public static class DescribeNfsAclResponseBodyAcl extends TeaModel {
         /**
-         * <p>Indicates whether the NFS ACL feature is enabled.</p>
+         * <p>Indicates whether the NFS ACL feature is enabled. Valid values:</p>
          * <ul>
-         * <li>true: The NFS ACL feature is enabled.</li>
-         * <li>false: The NFS ACL feature is disabled.</li>
+         * <li><p>true: The NFS ACL feature is enabled.</p>
+         * </li>
+         * <li><p>false: The NFS ACL feature is not enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

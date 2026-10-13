@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyProtocolMountTargetRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Generate a unique value from your client to ensure that different requests have unique ClientToken values.</p>
-     * <p>ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Generate a unique value from your client to ensure that the value is unique among different requests.</p>
+     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -22,7 +22,7 @@ public class ModifyProtocolMountTargetRequest extends TeaModel {
      * <p>Limits:</p>
      * <ul>
      * <li>The description must be 2 to 128 characters in length.</li>
-     * <li>The description must start with a letter or Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>The description must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</li>
      * <li>The description can contain digits, colons (:), underscores (_), and hyphens (-).</li>
      * </ul>
      * 

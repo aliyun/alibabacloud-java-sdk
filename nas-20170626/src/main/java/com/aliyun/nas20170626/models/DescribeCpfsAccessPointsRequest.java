@@ -60,7 +60,7 @@ public class DescribeCpfsAccessPointsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The list of CPFS access point tags.</p>
+     * <p>The list of tags for the CPFS access point.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeCpfsAccessPointsRequestTag> tag;

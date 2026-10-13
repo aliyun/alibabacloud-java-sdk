@@ -68,7 +68,7 @@ public class ModifyAccessRuleRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The read and write permissions of the authorized object on the file system.</p>
+     * <p>The read and write permissions on the file system granted to the authorized object.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li>RDWR (default): read and write.</li>
@@ -95,14 +95,14 @@ public class ModifyAccessRuleRequest extends TeaModel {
     public String sourceCidrIp;
 
     /**
-     * <p>The authorization of the system user of the authorized object on the file system.</p>
+     * <p>The authorization for the system user of the authorized object to access the file system.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li>no_squash: allows access to the file system as the root user.</li>
      * <li>root_squash: maps the root user to the nobody user when the root user accesses the file system.</li>
      * <li>all_squash: maps all users to the nobody user regardless of the user identity used to access the file system.</li>
      * </ul>
-     * <p>The nobody user is a default user in Linux. This user can access only public content on the server and has low privileges and high security.</p>
+     * <p>The nobody user is the default user in Linux. This user can access only public content on the server and has low privileges and high security.</p>
      * 
      * <strong>example:</strong>
      * <p>all_squash</p>

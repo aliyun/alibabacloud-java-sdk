@@ -234,7 +234,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
 
     public static class DescribeAccessPointsResponseBodyAccessPoints extends TeaModel {
         /**
-         * <p>The access point ARN.</p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the access point.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:nas:cn-hangzhou:178321033379****:accesspoint/ap-ie15yd****</p>
@@ -279,7 +279,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The access point domain name.</p>
+         * <p>The domain name of the access point.</p>
          * 
          * <strong>example:</strong>
          * <p>ap-ie15ydanoz.001014****-w****.cn-hangzhou.nas.aliyuncs.com</p>
@@ -330,7 +330,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         public String rootPath;
 
         /**
-         * <p>The root directory permission.</p>
+         * <p>The root directory permissions.</p>
          */
         @NameInMap("RootPathPermission")
         public DescribeAccessPointsResponseBodyAccessPointsRootPathPermission rootPathPermission;
@@ -354,13 +354,13 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
          * <p>The current access point status.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Active: available.</li>
-         * <li>Inactive: unavailable.</li>
+         * <li>Active: active.</li>
+         * <li>Inactive: inactive.</li>
          * <li>Pending: being created.</li>
          * <li>Deleting: being deleted.</li>
          * </ul>
          * <blockquote>
-         * <p>You can mount the file system only when the status is Active.</p>
+         * <p>You can mount a file system only when the status is Active.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

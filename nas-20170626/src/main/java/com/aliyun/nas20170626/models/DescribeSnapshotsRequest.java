@@ -15,7 +15,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
 
     /**
      * <p>The file system type.</p>
-     * <p>Valid values: extreme (Extreme NAS file system)</p>
+     * <p>Valid value: extreme (Extreme NAS file system).</p>
      * 
      * <strong>example:</strong>
      * <p>extreme</p>

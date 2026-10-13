@@ -11,7 +11,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
     public DescribeFileSystemStatisticsResponseBodyFileSystems fileSystems;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the file system statistics information list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of file system statistics information entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of file system entries.</p>
+     * <p>The total number of file system statistics information entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

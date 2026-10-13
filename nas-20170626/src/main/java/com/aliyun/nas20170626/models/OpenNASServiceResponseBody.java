@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OpenNASServiceResponseBody extends TeaModel {
     /**
-     * <p>The access denied details.</p>
+     * <p>The details of the permission verification failure.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -22,7 +22,7 @@ public class OpenNASServiceResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The order ID for enabling the service.</p>
+     * <p>The order ID for activating the service.</p>
      * 
      * <strong>example:</strong>
      * <p>20671870151****</p>

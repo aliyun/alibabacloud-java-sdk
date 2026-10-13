@@ -8,7 +8,7 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
     public DescribeMountedClientsResponseBodyClients clients;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the client list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of IP addresses returned per page.</p>
+     * <p>The number of client IP addresses on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -35,7 +35,7 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of IP addresses.</p>
+     * <p>The total number of client IP addresses returned.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

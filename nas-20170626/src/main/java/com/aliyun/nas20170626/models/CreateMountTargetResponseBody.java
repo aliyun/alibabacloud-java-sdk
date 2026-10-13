@@ -59,7 +59,7 @@ public class CreateMountTargetResponseBody extends TeaModel {
 
     public static class CreateMountTargetResponseBodyMountTargetExtra extends TeaModel {
         /**
-         * <p>The dual-stack mount target that supports both IPv4 and IPv6.</p>
+         * <p>The IPv4 and IPv6 dual-stack mount target.</p>
          * 
          * <strong>example:</strong>
          * <p>174494b666-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</p>

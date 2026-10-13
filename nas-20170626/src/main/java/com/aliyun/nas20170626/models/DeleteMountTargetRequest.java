@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteMountTargetRequest extends TeaModel {
     /**
-     * <p>The ID of the file system.</p>
+     * <p>The file system ID.</p>
      * <ul>
-     * <li>Sample ID of a General-purpose NAS file system: 31a8e4\<em>\</em>\<em>\</em>.</li>
-     * <li>The IDs of Extreme NAS file systems must start with <code>extreme-</code>, for example, extreme-0015\<em>\</em>\<em>\</em>.</li>
-     * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-125487\<em>\</em>\<em>\</em>.</li>
+     * <li><p>General-purpose NAS: 31a8e4\<em>\</em>\<em>\</em>.</p>
+     * </li>
+     * <li><p>Extreme NAS: must start with <code>extreme-</code>, for example, extreme-0015\<em>\</em>\<em>\</em>.</p>
+     * </li>
+     * <li><p>Cloud Parallel File Storage (CPFS): must start with <code>cpfs-</code>, for example, cpfs-125487\<em>\</em>\<em>\</em>.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -20,7 +23,7 @@ public class DeleteMountTargetRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The domain name of the mount target.</p>
+     * <p>The mount target.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

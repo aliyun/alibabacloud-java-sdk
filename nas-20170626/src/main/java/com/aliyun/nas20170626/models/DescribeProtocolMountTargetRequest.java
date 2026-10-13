@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeProtocolMountTargetRequest extends TeaModel {
     /**
-     * <p>Ensures the idempotence of the request. Generate a unique parameter value from your client to ensure that the value is unique among different requests.</p>
-     * <p>ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>Ensures the idempotency of the request. Generate a value from your client to ensure that the value is unique among different requests.</p>
+     * <p>The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotency</a>.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</p>
+     * <p>If you do not specify this parameter, the system uses the RequestId of the API request as the ClientToken value. The RequestId may vary for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -34,11 +34,11 @@ public class DescribeProtocolMountTargetRequest extends TeaModel {
     public java.util.List<DescribeProtocolMountTargetRequestFilters> filters;
 
     /**
-     * <p>The maximum number of results to return per query.</p>
+     * <p>The maximum number of results to return in each query.</p>
      * <ul>
-     * <li><p>Valid values: 10 to 100.</p>
+     * <li><p>Valid values: 10 to 100</p>
      * </li>
-     * <li><p>Default value: 20.</p>
+     * <li><p>Default value: 20</p>
      * </li>
      * </ul>
      * 
@@ -49,7 +49,7 @@ public class DescribeProtocolMountTargetRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The token used to initiate the next request when the response is truncated. You can use this token to retrieve the remaining results from where the truncation occurred.</p>
+     * <p>The token that is used for the next query. If not all results are returned in a query, a value is returned for the NextToken parameter. You can use this token in the next request to retrieve the remaining results.</p>
      * 
      * <strong>example:</strong>
      * <p>aBcdg==</p>

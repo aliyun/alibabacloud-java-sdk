@@ -10,7 +10,7 @@ public class ListDirectoriesAndFilesRequest extends TeaModel {
      * <ul>
      * <li>false (default): No. Both directories and files can be queried.</li>
      * <li>true: Yes. Only directories are queried.<blockquote>
-     * <p>When StorageType is set to All, DirectoryOnly must be set to true and cannot be set to false.</p>
+     * <p>If StorageType is set to All, DirectoryOnly must be set to true and cannot be set to false.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -43,7 +43,7 @@ public class ListDirectoriesAndFilesRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the return results are truncated, you can use NextToken to initiate a new request to retrieve the content after the current truncation position.</p>
+     * <p>If the returned results are truncated, you can use NextToken to initiate a new request to retrieve the content after the current truncation point.</p>
      * 
      * <strong>example:</strong>
      * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>
@@ -68,7 +68,7 @@ public class ListDirectoriesAndFilesRequest extends TeaModel {
      * <li>InfrequentAccess: IA storage class.</li>
      * <li>Archive: Archive storage class.</li>
      * <li>All: queries data of all storage classes.<blockquote>
-     * <p>When StorageType is set to All, you must set DirectoryOnly to true.</p>
+     * <p>If StorageType is set to All, you must set DirectoryOnly to true.</p>
      * </blockquote>
      * </li>
      * </ul>

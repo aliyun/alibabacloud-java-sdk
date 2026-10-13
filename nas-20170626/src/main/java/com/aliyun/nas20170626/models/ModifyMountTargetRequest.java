@@ -61,11 +61,11 @@ public class ModifyMountTargetRequest extends TeaModel {
      * <p>The mount target status.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Active: active</li>
-     * <li>Inactive: inactive</li>
+     * <li>Active: Active.</li>
+     * <li>Inactive: Inactive.</li>
      * </ul>
      * <blockquote>
-     * <p>Only General-purpose NAS supports changing the mount target status.</p>
+     * <p>Currently, only General-purpose NAS supports changing the mount target status.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

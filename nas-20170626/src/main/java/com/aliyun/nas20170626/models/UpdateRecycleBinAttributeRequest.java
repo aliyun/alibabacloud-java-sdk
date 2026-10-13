@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateRecycleBinAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the file system.</p>
+     * <p>The file system ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateRecycleBinAttributeRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The retention period of the files in the recycle bin. Unit: days.</p>
+     * <p>The retention period of files in the recycle bin. Unit: days.</p>
      * <p>Valid values: 1 to 180.</p>
      * <p>Default value: 3.</p>
      * <p>This parameter is required.</p>

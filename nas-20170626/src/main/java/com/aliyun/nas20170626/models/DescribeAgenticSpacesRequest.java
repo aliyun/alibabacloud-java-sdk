@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAgenticSpacesRequest extends TeaModel {
     /**
-     * <p>The file system ID.</p>
+     * <p>The ID of the file system.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,13 +15,13 @@ public class DescribeAgenticSpacesRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The collection of filter conditions.</p>
+     * <p>The collection of filter key information.</p>
      */
     @NameInMap("Filters")
     public java.util.List<DescribeAgenticSpacesRequestFilters> filters;
 
     /**
-     * <p>The number of results per query.</p>
+     * <p>The number of entries to return for each query.</p>
      * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class DescribeAgenticSpacesRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The pagination token. Set this parameter to the value of NextToken that is returned in the previous API call.</p>
+     * <p>The query token. Set the value to the NextToken value returned from the previous call.</p>
      * 
      * <strong>example:</strong>
      * <p>MTc3OTkzNTA0Mjg0NTc1MDI4OCM0MDQ0MzA****=</p>
@@ -90,9 +90,9 @@ public class DescribeAgenticSpacesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the filter key. Wildcards are not supported.</p>
+         * <p>The value of the filter key. This parameter does not support wildcards.</p>
          * <ul>
-         * <li>AgenticSpaceIds: Only a single ID can be specified.</li>
+         * <li>AgenticSpaceIds: You can specify only one ID.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -35,10 +35,10 @@ public class DescribeLifecyclePoliciesRequest extends TeaModel {
     public String lifecyclePolicyId;
 
     /**
-     * <p>The lifecycle policy name. Naming rules:</p>
-     * <p>The name must be 3 to 64 characters in length, must start with a letter, and can contain letters, digits, underscores (_), or hyphens (-).</p>
+     * <p>The lifecycle policy name. The naming rules are as follows:</p>
+     * <p>The name must be 3 to 64 characters in length, start with a letter, and can contain letters, digits, underscores (_), or hyphens (-).</p>
      * <blockquote>
-     * <p>Optional for General-purpose NAS file systems. If specified, this parameter takes precedence. If not specified, LifecyclePolicyId is used instead.</p>
+     * <p>This parameter is optional for General-purpose NAS file systems. If specified, this parameter takes precedence. If not specified, LifecyclePolicyId is used instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -98,7 +98,7 @@ public class DescribeLifecyclePoliciesRequest extends TeaModel {
     public String path;
 
     /**
-     * <p>The storage type. Valid values:</p>
+     * <p>The storage tiering type. Valid values:</p>
      * <ul>
      * <li>InfrequentAccess: IA storage class.</li>
      * <li>Archive: Archive storage class.<blockquote>

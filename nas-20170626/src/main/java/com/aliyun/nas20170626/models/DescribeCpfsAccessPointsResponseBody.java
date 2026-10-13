@@ -272,7 +272,7 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The list of CPFS access point tags.</p>
+         * <p>The list of tags for the CPFS access point.</p>
          */
         @NameInMap("Tags")
         public java.util.List<DescribeCpfsAccessPointsResponseBodyAccessPointsTags> tags;

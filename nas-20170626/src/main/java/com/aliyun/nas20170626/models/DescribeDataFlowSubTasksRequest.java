@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataFlowSubTasksRequest extends TeaModel {
     /**
-     * <p>The file system ID.</p>
+     * <p>The ID of the file system. Only CPFS for Lingjun file systems are supported. The ID must start with <code>bmcpfs-</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeDataFlowSubTasksRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The filter keys for querying data flow streaming tasks.</p>
+     * <p>The filter keys used to query streaming tasks of a data flow.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>false</p>
@@ -24,13 +24,9 @@ public class DescribeDataFlowSubTasksRequest extends TeaModel {
     public java.util.List<DescribeDataFlowSubTasksRequestFilters> filters;
 
     /**
-     * <p>The maximum number of results per query.</p>
-     * <ul>
-     * <li><p>Valid values: 20 to 100.</p>
-     * </li>
-     * <li><p>Default value: 20.</p>
-     * </li>
-     * </ul>
+     * <p>The maximum number of entries to return for a single request.</p>
+     * <p>Valid values: 20 to 100.</p>
+     * <p>Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -39,7 +35,7 @@ public class DescribeDataFlowSubTasksRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>If the response is truncated, you can use NextToken to send a subsequent request to retrieve the remaining content from the point of truncation.</p>
+     * <p>The token that is used to retrieve the next page of results when the returned results are truncated. You can use NextToken to initiate another request to retrieve the results after the current truncation point.</p>
      * 
      * <strong>example:</strong>
      * <p>iWk0AQAAAAAvY2FzZS8=</p>
@@ -104,14 +100,14 @@ public class DescribeDataFlowSubTasksRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the filter key. Wildcards are not supported.</p>
+         * <p>The value of the filter key. This parameter does not support wildcards.</p>
          * <ul>
-         * <li>If Key is set to DataFlowIds, Value is set to a data flow ID or part of a data flow ID. You can specify one or more data flow IDs. A maximum of 10 data flow IDs can be specified. Example: <code>df-194433a5be31****</code> or <code>df-194433a512a2****,df-234533a5be31****</code>.</li>
-         * <li>If Key is set to DataFlowTaskIds, Value is set to a data flow task ID or part of a data flow task ID. You can specify one or more data flow task IDs. A maximum of 10 data flow task IDs can be specified. Example: <code>task-29ee8e890f45****</code> or <code>task-29ee8e890f45****,task-38ae8e890f45****</code>.</li>
-         * <li>If Key is set to DataFlowSubTaskIds, Value is set to a data flow streaming task ID or part of a data flow streaming task ID. You can specify one or more data flow streaming task IDs. A maximum of 10 data flow streaming task IDs can be specified. Example: <code>subTaskId-370kyfmyknxcyzw****</code> or <code>subTaskId-247kyfmyknxcyzw****,subTaskId-256kyfmyknxcyzw****</code>.</li>
-         * <li>If Key is set to Status, Value is set to the status of the data flow task, including EXPIRED, CREATED, RUNNING, COMPLETE, CANCELING, FAILED, and CANCELED. Combined queries are supported.</li>
-         * <li>If Key is set to SrcFilePath, Value is set to the source file path. The maximum length is 1,023 characters.</li>
-         * <li>If Key is set to DstFilePath, Value is set to the destination file path. The maximum length is 1,023 characters.</li>
+         * <li>If Key is set to DataFlowIds, Value is set to a data flow ID or a part of a data flow ID. You can specify one or more data flow IDs. A maximum of 10 data flow IDs can be specified. Example: <code>df-194433a5be31****</code> or <code>df-194433a512a2****,df-234533a5be31****</code>.</li>
+         * <li>If Key is set to DataFlowTaskIds, Value is set to a data flow task ID or a part of a data flow task ID. You can specify one or more data flow task IDs. A maximum of 10 data flow task IDs can be specified. Example: <code>task-29ee8e890f45****</code> or <code>task-29ee8e890f45****,task-38ae8e890f45****</code>.</li>
+         * <li>If Key is set to DataFlowSubTaskIds, Value is set to a data flow streaming task ID or a part of a data flow streaming task ID. You can specify one or more data flow streaming task IDs. A maximum of 10 data flow streaming task IDs can be specified. Example: <code>subTaskId-370kyfmyknxcyzw****</code> or <code>subTaskId-247kyfmyknxcyzw****,subTaskId-256kyfmyknxcyzw****</code>.</li>
+         * <li>If Key is set to Status, Value is set to the status of the data flow task. Valid values: EXPIRED, CREATED, RUNNING, COMPLETE, CANCELING, FAILED, and CANCELED. Combined queries are supported.</li>
+         * <li>If Key is set to SrcFilePath, Value is set to the source file path. The path can be up to 1,023 characters in length.</li>
+         * <li>If Key is set to DstFilePath, Value is set to the destination file path. The path can be up to 1,023 characters in length.</li>
          * </ul>
          * 
          * <strong>example:</strong>

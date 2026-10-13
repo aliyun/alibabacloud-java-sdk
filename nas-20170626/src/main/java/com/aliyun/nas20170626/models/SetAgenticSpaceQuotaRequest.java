@@ -44,9 +44,9 @@ public class SetAgenticSpaceQuotaRequest extends TeaModel {
     /**
      * <p>The maximum number of files allowed by the quota. Valid values:</p>
      * <ul>
-     * <li><p>Minimum value: 10000.</p>
+     * <li><p>Minimum value: 10,000.</p>
      * </li>
-     * <li><p>Maximum value: 100000000.</p>
+     * <li><p>Maximum value: 100,000,000.</p>
      * </li>
      * </ul>
      * 
@@ -70,9 +70,9 @@ public class SetAgenticSpaceQuotaRequest extends TeaModel {
      * <p>The total capacity limit of the quota. Unit: bytes.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Minimum value: 10737418240 (10 GiB).</li>
-     * <li>Maximum value: 1099511627776000 (1024000 GiB).</li>
-     * <li>Increment: 1073741824 (1 GiB).</li>
+     * <li>Minimum value: 10,737,418,240 (10 GiB).</li>
+     * <li>Maximum value: 1,099,511,627,776,000 (1,024,000 GiB).</li>
+     * <li>Increment: 1,073,741,824 (1 GiB).</li>
      * </ul>
      * 
      * <strong>example:</strong>

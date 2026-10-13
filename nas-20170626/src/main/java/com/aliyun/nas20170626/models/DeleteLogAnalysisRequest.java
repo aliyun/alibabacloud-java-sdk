@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLogAnalysisRequest extends TeaModel {
     /**
-     * <p>The ID of the file system.</p>
+     * <p>The file system ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteLogAnalysisRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

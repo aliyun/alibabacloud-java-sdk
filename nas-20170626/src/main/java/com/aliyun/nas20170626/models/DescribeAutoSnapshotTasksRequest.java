@@ -26,7 +26,7 @@ public class DescribeAutoSnapshotTasksRequest extends TeaModel {
 
     /**
      * <p>The type of the file system.</p>
-     * <p>Valid values: extreme (Extreme NAS file system)</p>
+     * <p>Valid values: extreme (Extreme NAS file system).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class DescribeAutoSnapshotTasksRequest extends TeaModel {
 
     /**
      * <p>The page number of the automatic snapshot task list.</p>
-     * <p>Start value (default value): 1</p>
+     * <p>Start value (default value): 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

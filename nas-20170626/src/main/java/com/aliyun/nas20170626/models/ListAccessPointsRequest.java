@@ -15,7 +15,7 @@ public class ListAccessPointsRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The filter information.</p>
+     * <p>The filter key information.</p>
      */
     @NameInMap("Filters")
     public java.util.List<ListAccessPointsRequestFilters> filters;

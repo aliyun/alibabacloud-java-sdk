@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataFlowTasksResponseBody extends TeaModel {
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the return results are truncated, you can use NextToken to initiate a new request to retrieve the content after the truncation point.</p>
+     * <p>If the returned results are truncated, you can use NextToken to initiate a new request to retrieve the content after the truncation point.</p>
      * 
      * <strong>example:</strong>
      * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>

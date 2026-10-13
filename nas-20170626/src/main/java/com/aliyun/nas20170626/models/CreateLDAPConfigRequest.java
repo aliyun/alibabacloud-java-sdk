@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLDAPConfigRequest extends TeaModel {
     /**
-     * <p>An LDAP entry.</p>
+     * <p>The distinguished name (DN) of the entry to bind to the LDAP directory.</p>
      * 
      * <strong>example:</strong>
      * <p>cn=alibaba,dc=com</p>
@@ -14,7 +14,7 @@ public class CreateLDAPConfigRequest extends TeaModel {
     public String bindDN;
 
     /**
-     * <p>The ID of the file system.</p>
+     * <p>The file system ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CreateLDAPConfigRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>An LDAP search base.</p>
+     * <p>The LDAP search base.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class CreateLDAPConfigRequest extends TeaModel {
     public String searchBase;
 
     /**
-     * <p>An LDAP URI.</p>
+     * <p>The LDAP server address.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

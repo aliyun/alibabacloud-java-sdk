@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeMountTargetsRequest extends TeaModel {
     /**
-     * <p>The IPv4 and IPv6 dual-stack mount target.</p>
+     * <p>The dual-stack (IPv4 and IPv6) mount target domain.</p>
      * <blockquote>
-     * <p>Currently, only Extreme NAS in regions in the Chinese mainland supports IPv6.</p>
+     * <p>IPv6 is currently supported only in the Chinese mainland regions for Extreme NAS file systems.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,7 +23,7 @@ public class DescribeMountTargetsRequest extends TeaModel {
      * </li>
      * <li><p>Extreme NAS: must start with <code>extreme-</code>, for example, extreme-0015\<em>\</em>\<em>\</em>.</p>
      * </li>
-     * <li><p>CPFS: must start with <code>cpfs-</code>, for example, cpfs-125487\<em>\</em>\<em>\</em>.</p>
+     * <li><p>Cloud Parallel File Storage (CPFS): must start with <code>cpfs-</code>, for example, cpfs-125487\<em>\</em>\<em>\</em>.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateSnapshotRequest extends TeaModel {
     /**
-     * <p>The description of the snapshot.</p>
+     * <p>The snapshot description.</p>
      * <p>Limits:</p>
      * <ul>
      * <li>The description must be 2 to 256 characters in length.</li>
      * <li>The description cannot start with <code>http://</code> or <code>https://</code>.</li>
-     * <li>This parameter is empty by default.</li>
+     * <li>Default value: empty.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +20,7 @@ public class CreateSnapshotRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the advanced Extreme NAS file system. The value must start with <code>extreme-</code>, for example, <code>extreme-01dd****</code>.</p>
+     * <p>The ID of the Advanced Extreme NAS file system. The value must start with <code>extreme-</code>, such as <code>extreme-01dd****</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,8 +34,8 @@ public class CreateSnapshotRequest extends TeaModel {
      * <p>Unit: days.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>\-1 (default). Auto snapshots are permanently retained. After the number of auto snapshots exceeds the upper limit, the earliest auto snapshot is automatically deleted.</li>
-     * <li>1 to 65536: Auto snapshots are retained for the specified days. After the retention period of auto snapshots expires, the auto snapshots are automatically deleted.</li>
+     * <li>-1 (default): The snapshot is permanently retained and is automatically deleted when the snapshot quota is reached.</li>
+     * <li>1 to 65536: The snapshot is retained for the specified number of days. The snapshot is subject to automatic release after the retention period expires.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,9 +48,9 @@ public class CreateSnapshotRequest extends TeaModel {
      * <p>The snapshot name.</p>
      * <p>Limits:</p>
      * <ul>
-     * <li>The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</li>
-     * <li>The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
-     * <li>The name cannot start with auto because snapshots whose names start with auto are recognized as auto snapshots.</li>
+     * <li>The name must be 2 to 128 characters in length and can contain letters and digits. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>The name can contain digits, colons (:), underscores (_), or hyphens (-).</li>
+     * <li>The name cannot start with auto to avoid conflicts with automatic snapshot names.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
     /**
-     * <p>The execution logs of the lifecycle management policy.</p>
+     * <p>The execution logs of the lifecycle policy.</p>
      */
     @NameInMap("LifecyclePolicyLogs")
     public java.util.List<DescribeLifecyclePolicyLogsResponseBodyLifecyclePolicyLogs> lifecyclePolicyLogs;
@@ -20,7 +20,7 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of log entries per page.</p>
+     * <p>The number of log entries returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>BC7C825C-5F65-4B56-BEF6-98C56C7C****</p>
@@ -38,10 +38,11 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The request status. Valid values:</p>
+     * <p>Indicates whether the request is successful.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -117,7 +118,7 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
          * <p>The attribute of the rule.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Atime: the last access time of the file.</li>
+         * <li>Atime: The last access time of the file.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -130,7 +131,7 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
          * <p>The threshold of the rule.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>If Attribute is set to Atime, this parameter specifies the number of days since the file was last accessed. Valid values: 1 to 365.</li>
+         * <li>If Attribute is set to Atime, the value indicates the number of days a file has not been accessed. Valid values: 1 to 365.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -166,7 +167,7 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
         /**
          * <p>The attribute of the rule. Valid values:</p>
          * <ul>
-         * <li>RetrieveType: the retrieval method.</li>
+         * <li>RetrieveType: The retrieval method.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -178,9 +179,9 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
         /**
          * <p>The threshold of the rule. Valid values:</p>
          * <ul>
-         * <li>RetrieveType<ul>
-         * <li>AfterVisit: Supported when LifecyclePolicyType=Auto. Indicates best-effort recall on visit.</li>
-         * <li>All: Supported when LifecyclePolicyType=OnDemand. Indicates retrieving all data.</li>
+         * <li>RetrieveType:<ul>
+         * <li>AfterVisit: Supported when LifecyclePolicyType is set to Auto. This value indicates best-effort recall on visit.</li>
+         * <li>All: Supported when LifecyclePolicyType is set to OnDemand. This value indicates that all data is retrieved.</li>
          * </ul>
          * </li>
          * </ul>
@@ -219,7 +220,7 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
          * <p>The attribute of the rule.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Atime: the last access time of the file.</li>
+         * <li>Atime: The last access time of the file.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -232,7 +233,7 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
          * <p>The threshold of the rule.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>If Attribute is set to Atime, this parameter specifies the number of days since the file was last accessed. Valid values: 1 to 365.</li>
+         * <li>If Attribute is set to Atime, the value indicates the number of days a file has not been accessed. Valid values: 1 to 365.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -266,7 +267,7 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
 
     public static class DescribeLifecyclePolicyLogsResponseBodyLifecyclePolicyLogs extends TeaModel {
         /**
-         * <p>The time when the task was created. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The time when the task was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-20T02:25:07Z</p>
@@ -275,13 +276,13 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The file data expiration and deletion rules. A maximum of one rule can be configured.</p>
+         * <p>The expiration and deletion rules for file data. You can configure up to one rule.</p>
          */
         @NameInMap("DeleteRules")
         public java.util.List<DescribeLifecyclePolicyLogsResponseBodyLifecyclePolicyLogsDeleteRules> deleteRules;
 
         /**
-         * <p>The execution paths of the specified retrieval task.</p>
+         * <p>The execution paths specified for the retrieval task.</p>
          */
         @NameInMap("Paths")
         public java.util.List<String> paths;
@@ -295,11 +296,11 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
         /**
          * <p>The status of the data retrieval task. Valid values:</p>
          * <ul>
-         * <li>PENDING: Being created.</li>
-         * <li>RUNNING: Running.</li>
-         * <li>STOPPED: Stopped.</li>
-         * <li>FINISHED: Finished.</li>
-         * <li>FAILED: Failed.</li>
+         * <li>PENDING: The task is being created.</li>
+         * <li>RUNNING: The task is running.</li>
+         * <li>STOPPED: The task is stopped.</li>
+         * <li>FINISHED: The task is completed.</li>
+         * <li>FAILED: The task fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -311,8 +312,8 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
         /**
          * <p>The tiered storage type. Valid values:</p>
          * <ul>
-         * <li>InfrequentAccess: IA storage class (default).</li>
-         * <li>Archive: Archive storage.</li>
+         * <li>InfrequentAccess: IA storage class. This is the default value.</li>
+         * <li>Archive: Archive storage class.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -322,7 +323,7 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
         public String storageType;
 
         /**
-         * <p>The task overview.</p>
+         * <p>The task summary.</p>
          * 
          * <strong>example:</strong>
          * <p>Total tasks: 100000, success tasks: 100000</p>
@@ -331,7 +332,7 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
         public String summary;
 
         /**
-         * <p>The file data transit rules.</p>
+         * <p>The file data transition rules.</p>
          */
         @NameInMap("TransitRules")
         public java.util.List<DescribeLifecyclePolicyLogsResponseBodyLifecyclePolicyLogsTransitRules> transitRules;

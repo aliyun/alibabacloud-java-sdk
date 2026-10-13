@@ -7,9 +7,9 @@ public class DeleteFileSystemRequest extends TeaModel {
     /**
      * <p>The ID of the file system that you want to delete.</p>
      * <ul>
-     * <li>Sample ID of a General-purpose NAS file system: 31a8e4\<em>\</em>\<em>\</em>.</li>
-     * <li>The IDs of Extreme NAS file systems must start with <code>extreme-</code>, for example, extreme-0015\<em>\</em>\<em>\</em>.</li>
-     * <li>The IDs of Cloud Parallel File Storage (CPFS) file systems must start with <code>cpfs-</code>, for example, cpfs-00cb6fa094ca\<em>\</em>\<em>\</em>.</li>
+     * <li>General-purpose NAS: 31a8e4\<em>\</em>\<em>\</em>.</li>
+     * <li>Extreme NAS: The ID must start with <code>extreme-</code>, such as extreme-0015\<em>\</em>\<em>\</em>.</li>
+     * <li>Cloud Parallel File Storage (CPFS): The ID must start with <code>cpfs-</code>, such as cpfs-00cb6fa094ca\<em>\</em>\<em>\</em>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

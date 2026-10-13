@@ -7,14 +7,14 @@ public class DescribeFilesystemsAssociatedHpnZonesShrinkRequest extends TeaModel
     /**
      * <p>The collection of file system IDs.</p>
      * <blockquote>
-     * <p> The maximum number of elements in the set must be less than or equal to 20.</p>
+     * <p>The maximum number of elements in the collection must be less than or equal to 20.</p>
      * </blockquote>
      */
     @NameInMap("Filesystems")
     public String filesystemsShrink;
 
     /**
-     * <p>The ID of the region where the file system resides.</p>
+     * <p>The region ID of the file system.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -15,7 +15,7 @@ public class ModifyFileSystemShrinkRequest extends TeaModel {
      * <p>Limits:</p>
      * <ul>
      * <li>The description must be 2 to 128 characters in length.</li>
-     * <li>The description must start with a letter. It cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>The description must start with a letter or Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</li>
      * <li>The description can contain digits, colons (:), underscores (_), or hyphens (-).</li>
      * </ul>
      * 

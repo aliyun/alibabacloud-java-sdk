@@ -9,7 +9,7 @@ public class ModifyAccessGroupRequest extends TeaModel {
      * <p>Limits:</p>
      * <ul>
      * <li>The name must be 3 to 64 characters in length.</li>
-     * <li>The name must start with a letter and can contain letters, digits, underscores (_), or hyphens (-).</li>
+     * <li>The name must start with a letter and can contain letters, digits, underscores (_), and hyphens (-).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -20,12 +20,12 @@ public class ModifyAccessGroupRequest extends TeaModel {
     public String accessGroupName;
 
     /**
-     * <p>The permission group description.</p>
+     * <p>The description of the permission group.</p>
      * <p>Limits:</p>
      * <ul>
      * <li>By default, the description is the same as the permission group name. The description must be 2 to 128 characters in length.</li>
      * <li>The description must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</li>
-     * <li>The description can contain digits, colons (:), underscores (_), or hyphens (-).</li>
+     * <li>The description can contain digits, colons (:), underscores (_), and hyphens (-).</li>
      * </ul>
      * 
      * <strong>example:</strong>

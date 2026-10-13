@@ -8,7 +8,7 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
     public DescribeStoragePackagesResponseBodyPackages packages;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number of the storage plan list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of storage plans returned per page.</p>
+     * <p>The number of storage plans on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +26,7 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>035B3A3A-E514-4B41-B906-5D906CFB****</p>

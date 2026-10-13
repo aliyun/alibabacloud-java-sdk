@@ -29,7 +29,7 @@ public class SetDirQuotaRequest extends TeaModel {
      * <p>The absolute path of the directory in the file system.</p>
      * <blockquote>
      * <ul>
-     * <li>You can set a quota only for a directory that has been created in the NAS file system. The directory path for the quota is the absolute path in the NAS file system, not the local path on a compute node (for example, an ECS instance or container).</li>
+     * <li>You can set a quota only for a directory that already exists in the NAS file system. The directory path for the quota is the absolute path in the NAS file system, not the local path on a compute node (such as an ECS instance or container).</li>
      * <li>Directories whose path names contain Chinese characters are not supported.</li>
      * </ul>
      * </blockquote>
@@ -46,7 +46,7 @@ public class SetDirQuotaRequest extends TeaModel {
      * <p>Valid values:</p>
      * <ul>
      * <li>Accounting: statistical quota. Only tracks usage.</li>
-     * <li>Enforcement: restrictive quota. When usage exceeds the limit, operations such as creating files or directories and appending data fail.</li>
+     * <li>Enforcement: enforcement quota. When usage exceeds the limit, operations such as creating files or directories and appending data fail.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -86,9 +86,9 @@ public class SetDirQuotaRequest extends TeaModel {
      * <p>The user type.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Uid: user ID</li>
-     * <li>Gid: user group ID</li>
-     * <li>AllUsers: all users</li>
+     * <li>Uid: user ID.</li>
+     * <li>Gid: user group ID.</li>
+     * <li>AllUsers: all users.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

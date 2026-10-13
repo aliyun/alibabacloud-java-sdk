@@ -16,7 +16,7 @@ public class CreateFileRequest extends TeaModel {
 
     /**
      * <p>The portable account ID.
-     * Limit: The value is a 16-character string that supports digits and lowercase letters.</p>
+     * Limit: The value is a 16-character string that contains digits and lowercase letters.</p>
      * 
      * <strong>example:</strong>
      * <p>378cc7630f26****</p>
@@ -27,8 +27,8 @@ public class CreateFileRequest extends TeaModel {
     /**
      * <p>Specifies whether to share directory permissions. Valid values:</p>
      * <ul>
-     * <li>false (default): does not share directory permissions.</li>
-     * <li>true: shares directory permissions.<blockquote>
+     * <li>false (default): Directory permissions are not shared.</li>
+     * <li>true: Directory permissions are shared.<blockquote>
      * <ul>
      * <li>This parameter takes effect only when Type is set to Directory and Owner is not empty.</li>
      * <li>The directory has inheritable Owner permissions. The Owner has read and write permissions on subdirectories and files created under this directory, even if they are created by other users.</li>

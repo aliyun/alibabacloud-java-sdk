@@ -7,11 +7,11 @@ public class DescribeFilesetsRequest extends TeaModel {
     /**
      * <p>The file system ID.</p>
      * <ul>
-     * <li><p>CPFS: The ID must start with <code>cpfs-</code>, such as cpfs-099394bd928c****.</p>
+     * <li><p>CPFS: The ID must start with <code>cpfs-</code>, such as cpfs-099394bd928c\<em>\</em>\<em>\</em>.</p>
      * </li>
-     * <li><p>CPFS for Lingjun: The ID must start with <code>bmcpfs-</code>, such as bmcpfs-290w65p03ok64ya****.</p>
+     * <li><p>CPFS for Lingjun: The ID must start with <code>bmcpfs-</code>, such as bmcpfs-290w65p03ok64ya\<em>\</em>\<em>\</em>.</p>
      * <blockquote>
-     * <p>This operation supports only CPFS file systems (with ID prefixes cpfs-* or bmcpfs-*). General-purpose NAS and Extreme NAS file systems are not supported.</p>
+     * <p>This operation supports only CPFS file systems (with the ID prefix cpfs-\* or bmcpfs-\*). General-purpose NAS and Extreme NAS file systems are not supported.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -40,7 +40,7 @@ public class DescribeFilesetsRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the return results are truncated, use NextToken to initiate a new request to retrieve the content after the truncation point.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the return results are truncated, use NextToken to start a new request to retrieve the results after the truncation point.</p>
      * 
      * <strong>example:</strong>
      * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>
@@ -155,9 +155,9 @@ public class DescribeFilesetsRequest extends TeaModel {
          * <p>The value of the filter key. Wildcards are not supported for this parameter.</p>
          * <ul>
          * <li>If Key is set to FsetIds, Value is set to a fileset ID. You can specify one or more fileset IDs, up to a maximum of 10. Separate multiple values with commas (,). Example: <code>fset-1902718ea0ae****</code> or <code>fset-1902718ea0ae****,fset-3212718ea0ae****</code>.</li>
-         * <li>If Key is set to FileSystemPath, Value is set to the path or a partial path of the fileset in the CPFS file system. The value must be 2 to 1,024 characters in length and encoded in UTF-8.</li>
-         * <li>If Key is set to Description, Value is set to the description or a partial description of the fileset.</li>
-         * <li>If Key is set to QuotaExists, Value is set to true or false. If this parameter is left empty, all filesets are returned.</li>
+         * <li>If Key is set to FileSystemPath, Value is set to the full path or a partial path of the fileset in the CPFS file system. The value must be 2 to 1,024 characters in length and encoded in UTF-8.</li>
+         * <li>If Key is set to Description, Value is set to the full description or a partial description of the fileset.</li>
+         * <li>If Key is set to QuotaExists, Value is set to true or false. If you leave this parameter empty, all filesets are returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>

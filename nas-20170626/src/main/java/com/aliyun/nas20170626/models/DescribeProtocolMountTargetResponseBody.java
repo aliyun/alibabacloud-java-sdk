@@ -80,7 +80,7 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
          * <p>The description of the protocol service export directory.</p>
          * 
          * <strong>example:</strong>
-         * <p>此协议服务导出目录的描述。</p>
+         * <p>Description of this protocol service export directory</p>
          */
         @NameInMap("Description")
         public String description;
@@ -104,7 +104,7 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
         public String fsetId;
 
         /**
-         * <p>The exported directory of the protocol service.</p>
+         * <p>The export directory of the protocol service.</p>
          * 
          * <strong>example:</strong>
          * <p>/path/</p>

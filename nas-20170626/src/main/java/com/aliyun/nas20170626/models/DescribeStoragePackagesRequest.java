@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeStoragePackagesRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
-     * <p>Pages start from page 1. Default value: 1.</p>
+     * <p>The page number of the list.</p>
+     * <p>Start value (default value): 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -15,7 +15,7 @@ public class DescribeStoragePackagesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of storage plans to return on each page.</p>
+     * <p>The number of storage plans on each page during a paged query.</p>
      * <p>Valid values: 1 to 100.</p>
      * <p>Default value: 10.</p>
      * 
@@ -36,11 +36,11 @@ public class DescribeStoragePackagesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Specifies whether the time to return is in UTC.</p>
+     * <p>Specifies whether the returned time is in UTC format.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true (default): returns UTC time.</li>
-     * <li>false: returns UNIX timestamp.</li>
+     * <li>true (default): The returned time is in UTC format.</li>
+     * <li>false: A UNIX timestamp is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>

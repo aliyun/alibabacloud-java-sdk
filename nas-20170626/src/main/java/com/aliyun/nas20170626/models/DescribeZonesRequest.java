@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeZonesRequest extends TeaModel {
     /**
-     * <p>The type of the file system.</p>
-     * <p>Valid value:</p>
+     * <p>The file system type.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>standard: General-purpose Apsara File Storage NAS (NAS) file system</li>
+     * <li>standard (default): General-purpose NAS.</li>
      * <li>extreme: Extreme NAS file system.</li>
-     * <li>cpfs: CPFS file system.</li>
+     * <li>cpfs: Cloud Parallel File Storage.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,8 +20,8 @@ public class DescribeZonesRequest extends TeaModel {
     public String fileSystemType;
 
     /**
-     * <p>The ID of the region where you want to query zones.</p>
-     * <p>You can call the DescribeRegions operation to query the latest region list.</p>
+     * <p>The ID of the region where the zones reside.</p>
+     * <p>You can call DescribeRegions to query the latest region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

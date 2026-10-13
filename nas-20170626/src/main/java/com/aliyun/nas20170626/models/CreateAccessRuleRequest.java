@@ -30,10 +30,10 @@ public class CreateAccessRuleRequest extends TeaModel {
 
     /**
      * <p>The source IPv6 CIDR block.</p>
-     * <p>The value supports CIDR format and IPv6 format address range.</p>
+     * <p>CIDR blocks and IPv6 address ranges are supported.</p>
      * <blockquote>
      * <ul>
-     * <li>The IPv6 feature is supported only by Extreme NAS file systems in regions in the Chinese mainland, and IPv6 must be enabled for the file system.</li>
+     * <li>IPv6 is supported only by Extreme NAS file systems in regions in the Chinese mainland, and IPv6 must be enabled for the file system.</li>
      * <li>Only VPC networks are supported.</li>
      * <li>IPv4 and IPv6 are mutually exclusive.</li>
      * </ul>
@@ -60,8 +60,8 @@ public class CreateAccessRuleRequest extends TeaModel {
      * <p>The read and write permissions of the authorized address on the file system.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>RDWR (default): read and write.</li>
-     * <li>RDONLY: read-only.</li>
+     * <li>RDWR (default): Read and write.</li>
+     * <li>RDONLY: Read-only.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,14 +84,14 @@ public class CreateAccessRuleRequest extends TeaModel {
     public String sourceCidrIp;
 
     /**
-     * <p>The access permissions of the system user of the authorized address on the file system.</p>
+     * <p>The authorization of the system user of the authorized address on the file system.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>no_squash (default): allows access to the file system as the root user.</li>
-     * <li>root_squash: maps the root user to the nobody user when the root user accesses the file system.</li>
-     * <li>all_squash: maps all users to the nobody user regardless of the user identity.</li>
+     * <li>no_squash (default): Allows access to the file system as the root user.</li>
+     * <li>root_squash: Maps the root user to the nobody user when the file system is accessed as the root user.</li>
+     * <li>all_squash: Maps all users to the nobody user regardless of the user identity used to access the file system.</li>
      * </ul>
-     * <p>The nobody user is a default user in Linux. The nobody user can access only public content on the server and has low privileges and high security. Authorization is required for the system user to access the file system.</p>
+     * <p>The nobody user is the default user in Linux. The nobody user can access only public content on the server and has low privileges and high security.</p>
      * 
      * <strong>example:</strong>
      * <p>no_squash</p>

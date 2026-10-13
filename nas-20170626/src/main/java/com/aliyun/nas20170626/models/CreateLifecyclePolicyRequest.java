@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLifecyclePolicyRequest extends TeaModel {
     /**
-     * <p>The file data expiration and deletion rules. You can configure up to one rule.</p>
+     * <p>The data expiration and deletion rules. You can configure up to one rule.</p>
      */
     @NameInMap("DeleteRules")
     public java.util.List<CreateLifecyclePolicyRequestDeleteRules> deleteRules;
@@ -63,11 +63,11 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
      * <p>The management rule associated with the lifecycle management policy. Only General-purpose NAS is supported.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>DEFAULT_ATIME_14: files that have not been accessed for 14 days.</li>
-     * <li>DEFAULT_ATIME_30: files that have not been accessed for 30 days.</li>
-     * <li>DEFAULT_ATIME_60: files that have not been accessed for 60 days.</li>
-     * <li>DEFAULT_ATIME_90: files that have not been accessed for 90 days.</li>
-     * <li>DEFAULT_ATIME_180: files that have not been accessed for 180 days. DEFAULT_ATIME_180 is supported only when StorageType is set to Archive.<blockquote>
+     * <li>DEFAULT_ATIME_14: files not accessed in the last 14 days.</li>
+     * <li>DEFAULT_ATIME_30: files not accessed in the last 30 days.</li>
+     * <li>DEFAULT_ATIME_60: files not accessed in the last 60 days.</li>
+     * <li>DEFAULT_ATIME_90: files not accessed in the last 90 days.</li>
+     * <li>DEFAULT_ATIME_180: files not accessed in the last 180 days. DEFAULT_ATIME_180 is supported only when StorageType is set to Archive.<blockquote>
      * <ul>
      * <li>If an IA storage class policy has already been configured for the directory, the archive policy duration must be longer than the IA storage class policy duration.</li>
      * <li>Only General-purpose NAS supports this parameter.</li>
@@ -110,7 +110,7 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
     public java.util.List<String> paths;
 
     /**
-     * <p>The file data retrieval rules. You can configure up to one rule.</p>
+     * <p>The data retrieval rules. You can configure up to one rule.</p>
      * <blockquote>
      * <p>Only CPFS for Lingjun file systems are supported.</p>
      * </blockquote>
@@ -125,7 +125,7 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
      * <p>The storage tiering type.</p>
      * <ul>
      * <li>InfrequentAccess: IA storage class.</li>
-     * <li>Archive: Archive storage class.</li>
+     * <li>Archive: Archive storage.</li>
      * </ul>
      * <blockquote>
      * <p>General-purpose NAS supports InfrequentAccess and Archive. CPFS for Lingjun supports only InfrequentAccess.</p>
@@ -139,7 +139,7 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
     public String storageType;
 
     /**
-     * <p>The file data transit rules. You can configure up to one rule.</p>
+     * <p>The data transit rules. You can configure up to one rule.</p>
      * <blockquote>
      * <p>Supported only when LifecyclePolicyType is set to Auto for CPFS for Lingjun file systems.</p>
      * </blockquote>
@@ -245,7 +245,7 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
          * <p>The rule attribute.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Atime: the last access time of the file.</li>
+         * <li>Atime: the access time of the file.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -347,7 +347,7 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
          * <p>The rule attribute.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Atime: the last access time of the file.</li>
+         * <li>Atime: the access time of the file.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -45,7 +45,7 @@ public class CancelDirQuotaRequest extends TeaModel {
      * <ul>
      * <li>Uid: user ID</li>
      * <li>Gid: user group ID</li>
-     * <li>AllUsers: all users.</li>
+     * <li>AllUsers: all users</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

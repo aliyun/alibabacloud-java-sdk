@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyFilesetRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
-     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence?</a></p>
+     * <p>Ensures the idempotence of the request. Generate a parameter value from your client to ensure that the value is unique across different requests.</p>
+     * <p>ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,13 +18,13 @@ public class ModifyFilesetRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to enable deletion protection to allow you to release the fileset by using the console or by calling the <a href="https://help.aliyun.com/document_detail/2402263.html">DeleteFileset</a> operation. Valid values:</p>
+     * <p>The release protection property of the instance. Specifies whether the instance can be released by using the console or the <a href="https://help.aliyun.com/document_detail/2402263.html">DeleteFileset</a> operation.</p>
      * <ul>
-     * <li>true: enables release protection.</li>
-     * <li>false: disables release protection.</li>
+     * <li>true: Enables release protection for the instance.</li>
+     * <li>false: Disables release protection for the instance.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter can protect filesets only against manual releases, but not against automatic releases.</p>
+     * <p>This property only restricts manual release operations and does not take effect on system-initiated release operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class ModifyFilesetRequest extends TeaModel {
     public Boolean deletionProtection;
 
     /**
-     * <p>The fileset description.</p>
+     * <p>The description of the fileset.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -46,12 +46,12 @@ public class ModifyFilesetRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request.</p>
-     * <p>During the dry run, the system checks whether the request parameters are valid and whether the requested resources are available. During the dry run, no fileset is modified and no fees incurred.</p>
+     * <p>Specifies whether to perform a dry run for this modification request.</p>
+     * <p>A dry run checks parameter validity and inventory without actually modifying the instance or incurring charges.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run. The system checks the required parameters, request syntax, service limits, and Apsara File Storage NAS (NAS) inventory data. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned.</li>
-     * <li>false (default): performs a dry run and sends the request. If the request passes the dry run, the specified fileset is modified.</li>
+     * <li>true: Sends a dry run request without modifying the instance. The check items include whether required parameters are specified, request format, business limits, and NAS inventory. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned.</li>
+     * <li>false (default): Sends a normal request. After the check passes, the instance is directly modified.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,10 +61,12 @@ public class ModifyFilesetRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the file system.</p>
+     * <p>The file system ID.</p>
      * <ul>
-     * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-099394bd928c\<em>\</em>\<em>\</em>.</li>
-     * <li>The IDs of CPFS for LINGJUN file systems must start with <code>bmcpfs-</code>. Example: bmcpfs-290w65p03ok64ya\<em>\</em>\<em>\</em>.</li>
+     * <li><p>CPFS: The ID must start with <code>cpfs-</code>, such as cpfs-099394bd928c****.</p>
+     * </li>
+     * <li><p>CPFS for Lingjun: The ID must start with <code>bmcpfs-</code>, such as bmcpfs-290w65p03ok64ya****.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -75,7 +77,7 @@ public class ModifyFilesetRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The fileset ID.</p>
+     * <p>Fileset ID。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

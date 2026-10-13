@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAccessGroupResponseBody extends TeaModel {
     /**
-     * <p>The name of the permission group.</p>
+     * <p>The permission group name.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-test</p>

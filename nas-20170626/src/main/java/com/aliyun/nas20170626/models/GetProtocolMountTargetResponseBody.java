@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetProtocolMountTargetResponseBody extends TeaModel {
     /**
-     * <p>If the response is truncated, you can use NextToken to send a subsequent request to retrieve the content after the current truncation point.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the return results are truncated, use NextToken to initiate another request to retrieve the content after the current truncation position.</p>
      * 
      * <strong>example:</strong>
      * <p>M18xMA==</p>
@@ -133,9 +133,9 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
          * <p>The protocol type of the file system.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>NFS: NFS protocol</li>
-         * <li>SMB: SMB protocol</li>
-         * <li>cpfs: the protocol type supported by CPFS file systems</li>
+         * <li>NFS: NFS protocol.</li>
+         * <li>SMB: SMB protocol.</li>
+         * <li>cpfs: the protocol type supported by the CPFS file system.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -176,7 +176,7 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The virtual private cloud (VPC) ID of the protocol service export.</p>
+         * <p>The VPC ID of the protocol service export.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1h5mxoqfuo3xurf****</p>

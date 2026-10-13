@@ -57,7 +57,7 @@ public class UpdateLifecyclePolicyRequest extends TeaModel {
     public java.util.List<String> paths;
 
     /**
-     * <p>The data retrieval rules. You can configure up to one rule.</p>
+     * <p>The data retrieval rules. A maximum of one rule can be configured.</p>
      * <blockquote>
      * <p>Only CPFS for Lingjun file systems are supported.</p>
      * </blockquote>
@@ -79,7 +79,7 @@ public class UpdateLifecyclePolicyRequest extends TeaModel {
     public String storageType;
 
     /**
-     * <p>The data transit rules. You can configure up to one rule.</p>
+     * <p>The data transit rules. A maximum of one rule can be configured.</p>
      * <blockquote>
      * <p>This parameter is supported only when LifecyclePolicyType is set to Auto for CPFS for Lingjun file systems.</p>
      * </blockquote>
@@ -161,7 +161,7 @@ public class UpdateLifecyclePolicyRequest extends TeaModel {
          * <p>The attribute of the rule.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Atime: the last access time of the file.</li>
+         * <li>Atime: the access time of the file.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -224,7 +224,7 @@ public class UpdateLifecyclePolicyRequest extends TeaModel {
          * <ul>
          * <li>RetrieveType<ul>
          * <li>AfterVisit: supported when LifecyclePolicyType is set to Auto. Indicates best-effort recall on visit.</li>
-         * <li>All: supported when LifecyclePolicyType is set to OnDemand. Indicates retrieving all data.</li>
+         * <li>All: supported when LifecyclePolicyType is set to OnDemand. Indicates retrieval of all data.</li>
          * </ul>
          * </li>
          * </ul>
@@ -263,7 +263,7 @@ public class UpdateLifecyclePolicyRequest extends TeaModel {
          * <p>The attribute of the rule.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Atime: the last access time of the file.</li>
+         * <li>Atime: the access time of the file.</li>
          * </ul>
          * 
          * <strong>example:</strong>

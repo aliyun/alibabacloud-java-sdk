@@ -23,9 +23,9 @@ public class CreateCpfsAccessPointRequest extends TeaModel {
     /**
      * <p>The file system ID.</p>
      * <ul>
-     * <li><p>Cloud Parallel File Storage (CPFS): must start with <code>cpfs-</code>, such as cpfs-125487\<em>\</em>\<em>\</em>.</p>
+     * <li><p>Cloud Parallel File Storage (CPFS): The ID must start with <code>cpfs-</code>. Example: cpfs-125487\<em>\</em>\<em>\</em>.</p>
      * </li>
-     * <li><p>CPFS for Lingjun: must start with <code>bmcpfs-</code>, such as bmcpfs-0015\<em>\</em>\<em>\</em>.</p>
+     * <li><p>CPFS for Lingjun: The ID must start with <code>bmcpfs-</code>. Example: bmcpfs-0015\<em>\</em>\<em>\</em>.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

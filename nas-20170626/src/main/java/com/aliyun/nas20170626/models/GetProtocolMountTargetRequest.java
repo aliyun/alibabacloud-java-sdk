@@ -21,8 +21,8 @@ public class GetProtocolMountTargetRequest extends TeaModel {
      * <p>The export directory ID of the protocol service. <strong>Required</strong>.</p>
      * <p><strong>How to obtain</strong>:</p>
      * <ul>
-     * <li>Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createprotocolmounttarget-cpfs">CreateProtocolMountTarget</a> to create an export directory and obtain the ExportId from the response.</li>
-     * <li>Or call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolmounttarget-cpfs">DescribeProtocolMountTarget</a> to query the list of export directories and obtain the ExportId from the response.</li>
+     * <li>Call the <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createprotocolmounttarget-cpfs">CreateProtocolMountTarget</a> operation to create an export directory and obtain the ExportId from the response.</li>
+     * <li>Or call the <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolmounttarget-cpfs">DescribeProtocolMountTarget</a> operation to query the list of export directories and obtain the ExportId from the response.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -51,7 +51,7 @@ public class GetProtocolMountTargetRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The maximum number of results to return per query.</p>
+     * <p>The number of results returned per query.</p>
      * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class GetProtocolMountTargetRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>If the response is truncated, you can use NextToken to send a subsequent request to retrieve the content after the current truncation point.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the return results are truncated, use NextToken to initiate another request to retrieve the content after the current truncation position.</p>
      * 
      * <strong>example:</strong>
      * <p>M18xMA==</p>

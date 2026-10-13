@@ -15,7 +15,7 @@ public class StartLifecyclePolicyExecutionRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The lifecycle policy ID.</p>
+     * <p>The ID of the lifecycle management policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

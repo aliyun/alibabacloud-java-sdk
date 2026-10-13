@@ -15,7 +15,7 @@ public class EnableRecycleBinRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The retention period of the files in the recycle bin. Unit: days.</p>
+     * <p>The retention period of files in the recycle bin. Unit: days.</p>
      * <p>Valid values: 1 to 180.</p>
      * <p>Default value: 3.</p>
      * 
