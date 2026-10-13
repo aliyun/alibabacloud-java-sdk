@@ -27,6 +27,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Writes messages or text to a memory store. By default, sync is set to true, which synchronously waits for extraction and returns only memories (an empty array is allowed). If sync is set to false, the operation returns only a taskId that can be queried by using GetMemoryTask.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Writes messages or text to a memory store. By default, sync is set to true, which synchronously waits for extraction and returns only memories (an empty array is allowed). If sync is set to false, the operation returns only a taskId that can be queried by using GetMemoryTask.</p>
+     * 
+     * @param tmpReq AddMemoriesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddMemoriesResponse
+     */
+    public AddMemoriesResponse addMemoriesWithOptions(String workspaceId, String memoryStoreName, AddMemoriesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AddMemoriesShrinkRequest request = new AddMemoriesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddMemories"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/memorystores/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryStoreName) + "/memories"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddMemoriesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Writes messages or text to a memory store. By default, sync is set to true, which synchronously waits for extraction and returns only memories (an empty array is allowed). If sync is set to false, the operation returns only a taskId that can be queried by using GetMemoryTask.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Writes messages or text to a memory store. By default, sync is set to true, which synchronously waits for extraction and returns only memories (an empty array is allowed). If sync is set to false, the operation returns only a taskId that can be queried by using GetMemoryTask.</p>
+     * 
+     * @param request AddMemoriesRequest
+     * @return AddMemoriesResponse
+     */
+    public AddMemoriesResponse addMemories(String workspaceId, String memoryStoreName, AddMemoriesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.addMemoriesWithOptions(workspaceId, memoryStoreName, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Deletes models in a specified workspace in batches. If any model is in use, the entire batch request fails.</p>
      * 
@@ -817,6 +876,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createMcpWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a long-term memory store in a specified workspace.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a long-term memory store in a specified workspace.</p>
+     * 
+     * @param tmpReq CreateMemoryStoreRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMemoryStoreResponse
+     */
+    public CreateMemoryStoreResponse createMemoryStoreWithOptions(String workspaceId, CreateMemoryStoreRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateMemoryStoreShrinkRequest request = new CreateMemoryStoreShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMemoryStore"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/memorystores"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMemoryStoreResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a long-term memory store in a specified workspace.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a long-term memory store in a specified workspace.</p>
+     * 
+     * @param request CreateMemoryStoreRequest
+     * @return CreateMemoryStoreResponse
+     */
+    public CreateMemoryStoreResponse createMemoryStore(String workspaceId, CreateMemoryStoreRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createMemoryStoreWithOptions(workspaceId, request, headers, runtime);
     }
 
     /**
@@ -1671,6 +1795,100 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteMcpWithOptions(mcpServerId, workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a long-term memory based on the memory ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a long-term memory based on the memory ID.</p>
+     * 
+     * @param request DeleteMemoryRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteMemoryResponse
+     */
+    public DeleteMemoryResponse deleteMemoryWithOptions(String workspaceId, String memoryStoreName, String memoryId, DeleteMemoryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteMemory"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/memorystores/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryStoreName) + "/memories/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMemoryResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a long-term memory based on the memory ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a long-term memory based on the memory ID.</p>
+     * 
+     * @param request DeleteMemoryRequest
+     * @return DeleteMemoryResponse
+     */
+    public DeleteMemoryResponse deleteMemory(String workspaceId, String memoryStoreName, String memoryId, DeleteMemoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteMemoryWithOptions(workspaceId, memoryStoreName, memoryId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Asynchronously deletes a MemoryStore and all its long-term memory.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Asynchronously deletes a MemoryStore and all its long-term memory.</p>
+     * 
+     * @param request DeleteMemoryStoreRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteMemoryStoreResponse
+     */
+    public DeleteMemoryStoreResponse deleteMemoryStoreWithOptions(String workspaceId, String memoryStoreName, DeleteMemoryStoreRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteMemoryStore"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/memorystores/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryStoreName) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMemoryStoreResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Asynchronously deletes a MemoryStore and all its long-term memory.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Asynchronously deletes a MemoryStore and all its long-term memory.</p>
+     * 
+     * @param request DeleteMemoryStoreRequest
+     * @return DeleteMemoryStoreResponse
+     */
+    public DeleteMemoryStoreResponse deleteMemoryStore(String workspaceId, String memoryStoreName, DeleteMemoryStoreRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteMemoryStoreWithOptions(workspaceId, memoryStoreName, request, headers, runtime);
     }
 
     /**
@@ -2575,12 +2793,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>创建或更新后，可轮询本接口查询最新配置版本的执行结果。latestVersionStatus 与 latestSpecVersion 对应；latestExecutionError 表示该版本的等待或失败原因，retryable 为 true 时可稍后再次查询。
-     * 返回的配置为最新提交的配置，可能尚未生效。请结合 latestVersionStatus、智能体整体状态 status 和运行实例统计 sandboxPhaseCounts 确认部署及运行情况。
-     * 查询不存在、已完成删除或不属于指定工作空间的自定义智能体时，返回资源不存在错误。</p>
+     * <p>After creating or updating a custom agent, you can poll this operation to query the execution results of the latest configuration version. <code>latestVersionStatus</code> corresponds to <code>latestSpecVersion</code>. <code>latestExecutionError</code> indicates the reason for the pending or failed status of this version. If <code>retryable</code> is true, you can query again later.
+     * The returned configuration is the most recently submitted configuration and may not have taken effect. Verify the deployment and running status by checking <code>latestVersionStatus</code>, the overall agent status <code>status</code>, and the running instance statistics <code>sandboxPhaseCounts</code>.
+     * If the queried custom agent does not exist, has been deleted, or does not belong to the specified workspace, a resource not found error is returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询自定义智能体</p>
+     * <p>Queries the details of a custom agent in a specified workspace, including deployment configurations, the execute status of the latest configuration version, and running instance status statistics.</p>
      * 
      * @param request GetCustomAgentRequest
      * @param headers map
@@ -2608,12 +2826,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>创建或更新后，可轮询本接口查询最新配置版本的执行结果。latestVersionStatus 与 latestSpecVersion 对应；latestExecutionError 表示该版本的等待或失败原因，retryable 为 true 时可稍后再次查询。
-     * 返回的配置为最新提交的配置，可能尚未生效。请结合 latestVersionStatus、智能体整体状态 status 和运行实例统计 sandboxPhaseCounts 确认部署及运行情况。
-     * 查询不存在、已完成删除或不属于指定工作空间的自定义智能体时，返回资源不存在错误。</p>
+     * <p>After creating or updating a custom agent, you can poll this operation to query the execution results of the latest configuration version. <code>latestVersionStatus</code> corresponds to <code>latestSpecVersion</code>. <code>latestExecutionError</code> indicates the reason for the pending or failed status of this version. If <code>retryable</code> is true, you can query again later.
+     * The returned configuration is the most recently submitted configuration and may not have taken effect. Verify the deployment and running status by checking <code>latestVersionStatus</code>, the overall agent status <code>status</code>, and the running instance statistics <code>sandboxPhaseCounts</code>.
+     * If the queried custom agent does not exist, has been deleted, or does not belong to the specified workspace, a resource not found error is returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询自定义智能体</p>
+     * <p>Queries the details of a custom agent in a specified workspace, including deployment configurations, the execute status of the latest configuration version, and running instance status statistics.</p>
      * 
      * @param request GetCustomAgentRequest
      * @return GetCustomAgentResponse
@@ -2894,6 +3112,147 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getMcpMarketItemWithOptions(workspaceId, marketItemId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries a long-term memory by memory ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a long-term memory by memory ID.</p>
+     * 
+     * @param request GetMemoryRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMemoryResponse
+     */
+    public GetMemoryResponse getMemoryWithOptions(String workspaceId, String memoryStoreName, String memoryId, GetMemoryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMemory"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/memorystores/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryStoreName) + "/memories/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMemoryResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries a long-term memory by memory ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a long-term memory by memory ID.</p>
+     * 
+     * @param request GetMemoryRequest
+     * @return GetMemoryResponse
+     */
+    public GetMemoryResponse getMemory(String workspaceId, String memoryStoreName, String memoryId, GetMemoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getMemoryWithOptions(workspaceId, memoryStoreName, memoryId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the public information and current status of a MemoryStore in a specified workspace.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the public information and current status of a MemoryStore in a specified workspace.</p>
+     * 
+     * @param request GetMemoryStoreRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMemoryStoreResponse
+     */
+    public GetMemoryStoreResponse getMemoryStoreWithOptions(String workspaceId, String memoryStoreName, GetMemoryStoreRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMemoryStore"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/memorystores/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryStoreName) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMemoryStoreResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the public information and current status of a MemoryStore in a specified workspace.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the public information and current status of a MemoryStore in a specified workspace.</p>
+     * 
+     * @param request GetMemoryStoreRequest
+     * @return GetMemoryStoreResponse
+     */
+    public GetMemoryStoreResponse getMemoryStore(String workspaceId, String memoryStoreName, GetMemoryStoreRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getMemoryStoreWithOptions(workspaceId, memoryStoreName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the task ID returned by the asynchronous AddMemories operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the task ID returned by the asynchronous AddMemories operation.</p>
+     * 
+     * @param request GetMemoryTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMemoryTaskResponse
+     */
+    public GetMemoryTaskResponse getMemoryTaskWithOptions(String workspaceId, String memoryStoreName, String taskId, GetMemoryTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMemoryTask"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/memorystores/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryStoreName) + "/memory-tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(taskId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMemoryTaskResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the task ID returned by the asynchronous AddMemories operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the task ID returned by the asynchronous AddMemories operation.</p>
+     * 
+     * @param request GetMemoryTaskRequest
+     * @return GetMemoryTaskResponse
+     */
+    public GetMemoryTaskResponse getMemoryTask(String workspaceId, String memoryStoreName, String taskId, GetMemoryTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getMemoryTaskWithOptions(workspaceId, memoryStoreName, taskId, request, headers, runtime);
     }
 
     /**
@@ -4484,6 +4843,266 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Performs a paged query on long-term memory. Paging is supported, and you can filter the results independently by user ID, agent ID, and session ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a paged query on long-term memory. Paging is supported, and you can filter the results independently by user ID, agent ID, and session ID.</p>
+     * 
+     * @param request ListMemoriesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMemoriesResponse
+     */
+    public ListMemoriesResponse listMemoriesWithOptions(String workspaceId, String memoryStoreName, ListMemoriesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            query.put("agentId", request.agentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("sessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("userId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMemories"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/memorystores/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryStoreName) + "/memories"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMemoriesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Performs a paged query on long-term memory. Paging is supported, and you can filter the results independently by user ID, agent ID, and session ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a paged query on long-term memory. Paging is supported, and you can filter the results independently by user ID, agent ID, and session ID.</p>
+     * 
+     * @param request ListMemoriesRequest
+     * @return ListMemoriesResponse
+     */
+    public ListMemoriesResponse listMemories(String workspaceId, String memoryStoreName, ListMemoriesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMemoriesWithOptions(workspaceId, memoryStoreName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Performs a paged query for raw messages by exact scope with paging. SessionId is required, and at least one of UserId and AgentId must be provided.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a paged query for raw messages by exact scope with paging. SessionId is required, and at least one of UserId and AgentId must be provided.</p>
+     * 
+     * @param request ListMemorySessionMessagesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMemorySessionMessagesResponse
+     */
+    public ListMemorySessionMessagesResponse listMemorySessionMessagesWithOptions(String workspaceId, String memoryStoreName, ListMemorySessionMessagesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            query.put("agentId", request.agentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("sessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("userId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMemorySessionMessages"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/memorystores/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryStoreName) + "/messages"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMemorySessionMessagesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Performs a paged query for raw messages by exact scope with paging. SessionId is required, and at least one of UserId and AgentId must be provided.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a paged query for raw messages by exact scope with paging. SessionId is required, and at least one of UserId and AgentId must be provided.</p>
+     * 
+     * @param request ListMemorySessionMessagesRequest
+     * @return ListMemorySessionMessagesResponse
+     */
+    public ListMemorySessionMessagesResponse listMemorySessionMessages(String workspaceId, String memoryStoreName, ListMemorySessionMessagesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMemorySessionMessagesWithOptions(workspaceId, memoryStoreName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Performs a paging query for sessions in a MemoryStore, and allows independent filtering by user ID and agent ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a paging query for sessions in a MemoryStore, and allows independent filtering by user ID and agent ID.</p>
+     * 
+     * @param request ListMemorySessionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMemorySessionsResponse
+     */
+    public ListMemorySessionsResponse listMemorySessionsWithOptions(String workspaceId, String memoryStoreName, ListMemorySessionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            query.put("agentId", request.agentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("userId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMemorySessions"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/memorystores/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryStoreName) + "/sessions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMemorySessionsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Performs a paging query for sessions in a MemoryStore, and allows independent filtering by user ID and agent ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a paging query for sessions in a MemoryStore, and allows independent filtering by user ID and agent ID.</p>
+     * 
+     * @param request ListMemorySessionsRequest
+     * @return ListMemorySessionsResponse
+     */
+    public ListMemorySessionsResponse listMemorySessions(String workspaceId, String memoryStoreName, ListMemorySessionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMemorySessionsWithOptions(workspaceId, memoryStoreName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries MemoryStores in a specified workspace by using paging.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries MemoryStores in a specified workspace by using paging.</p>
+     * 
+     * @param request ListMemoryStoresRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMemoryStoresResponse
+     */
+    public ListMemoryStoresResponse listMemoryStoresWithOptions(String workspaceId, ListMemoryStoresRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMemoryStores"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/memorystores"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMemoryStoresResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries MemoryStores in a specified workspace by using paging.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries MemoryStores in a specified workspace by using paging.</p>
+     * 
+     * @param request ListMemoryStoresRequest
+     * @return ListMemoryStoresResponse
+     */
+    public ListMemoryStoresResponse listMemoryStores(String workspaceId, ListMemoryStoresRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMemoryStoresWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Queries model connections in a specified AgentCore workspace. Supports filtering by name through <code>Name</code> and selecting exact match or fuzzy match through <code>SearchType</code>. Also supports filtering by model provider type and invoke protocol, and supports paging.</p>
      * 
      * <b>summary</b> : 
@@ -5588,6 +6207,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Retrieves long-term memory from a MemoryStore based on semantics queries.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves long-term memory from a MemoryStore based on semantics queries.</p>
+     * 
+     * @param tmpReq SearchMemoriesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchMemoriesResponse
+     */
+    public SearchMemoriesResponse searchMemoriesWithOptions(String workspaceId, String memoryStoreName, SearchMemoriesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SearchMemoriesShrinkRequest request = new SearchMemoriesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchMemories"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/memorystores/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryStoreName) + "/memories/search"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchMemoriesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves long-term memory from a MemoryStore based on semantics queries.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves long-term memory from a MemoryStore based on semantics queries.</p>
+     * 
+     * @param request SearchMemoriesRequest
+     * @return SearchMemoriesResponse
+     */
+    public SearchMemoriesResponse searchMemories(String workspaceId, String memoryStoreName, SearchMemoriesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.searchMemoriesWithOptions(workspaceId, memoryStoreName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Operation description</h2>
      * <p>Submits a specified AgentSpec draft version for review. If no release pipeline is configured, the version is published directly to online status.</p>
      * 
@@ -6407,6 +7085,130 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateMcpTemplateConfigWithOptions(workspaceId, mcpServerId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the long-term memory text or metadata based on the memory ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the long-term memory text or metadata based on the memory ID.</p>
+     * 
+     * @param tmpReq UpdateMemoryRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateMemoryResponse
+     */
+    public UpdateMemoryResponse updateMemoryWithOptions(String workspaceId, String memoryStoreName, String memoryId, UpdateMemoryRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateMemoryShrinkRequest request = new UpdateMemoryShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateMemory"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/memorystores/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryStoreName) + "/memories/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateMemoryResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the long-term memory text or metadata based on the memory ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the long-term memory text or metadata based on the memory ID.</p>
+     * 
+     * @param request UpdateMemoryRequest
+     * @return UpdateMemoryResponse
+     */
+    public UpdateMemoryResponse updateMemory(String workspaceId, String memoryStoreName, String memoryId, UpdateMemoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateMemoryWithOptions(workspaceId, memoryStoreName, memoryId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates a memory store.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a memory store.</p>
+     * 
+     * @param tmpReq UpdateMemoryStoreRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateMemoryStoreResponse
+     */
+    public UpdateMemoryStoreResponse updateMemoryStoreWithOptions(String workspaceId, String memoryStoreName, UpdateMemoryStoreRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateMemoryStoreShrinkRequest request = new UpdateMemoryStoreShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateMemoryStore"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/memorystores/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryStoreName) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateMemoryStoreResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates a memory store.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a memory store.</p>
+     * 
+     * @param request UpdateMemoryStoreRequest
+     * @return UpdateMemoryStoreResponse
+     */
+    public UpdateMemoryStoreResponse updateMemoryStore(String workspaceId, String memoryStoreName, UpdateMemoryStoreRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateMemoryStoreWithOptions(workspaceId, memoryStoreName, request, headers, runtime);
     }
 
     /**
