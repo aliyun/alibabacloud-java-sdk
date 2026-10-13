@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBeebotIntentResponseBody extends TeaModel {
     /**
-     * <p>Internal request ID</p>
+     * <p>The internal request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0B219FCB-EC71-1F08-BB1B-0E87C20158C8</p>
@@ -14,7 +14,7 @@ public class DescribeBeebotIntentResponseBody extends TeaModel {
     public String beebotRequestId;
 
     /**
-     * <p>API status code</p>
+     * <p>The API status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -23,7 +23,7 @@ public class DescribeBeebotIntentResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,13 +32,13 @@ public class DescribeBeebotIntentResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Intent information</p>
+     * <p>The intent information.</p>
      */
     @NameInMap("Intent")
     public DescribeBeebotIntentResponseBodyIntent intent;
 
     /**
-     * <p>Intent ID</p>
+     * <p>The intent ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10717802</p>
@@ -47,7 +47,7 @@ public class DescribeBeebotIntentResponseBody extends TeaModel {
     public Long intentId;
 
     /**
-     * <p>API message</p>
+     * <p>The API message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -56,7 +56,7 @@ public class DescribeBeebotIntentResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
@@ -65,7 +65,7 @@ public class DescribeBeebotIntentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call succeeded</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -144,16 +144,16 @@ public class DescribeBeebotIntentResponseBody extends TeaModel {
 
     public static class DescribeBeebotIntentResponseBodyIntent extends TeaModel {
         /**
-         * <p>Intent alias</p>
+         * <p>The intent alias.</p>
          * 
          * <strong>example:</strong>
-         * <p>嗯明白了</p>
+         * <p>Okay, got it</p>
          */
         @NameInMap("AliasName")
         public String aliasName;
 
         /**
-         * <p>Creation time</p>
+         * <p>The creation time. The format is YYYY-MM-DD HH:mm:ss.+ZZZZ, where +ZZZZ indicates the time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-21 10:29:59.+0800</p>
@@ -162,7 +162,7 @@ public class DescribeBeebotIntentResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Creator user ID</p>
+         * <p>The ID of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>1252504</p>
@@ -171,7 +171,7 @@ public class DescribeBeebotIntentResponseBody extends TeaModel {
         public String createUserId;
 
         /**
-         * <p>Creator account name</p>
+         * <p>The username of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:xxx@voice-navigator-testonaliyun.com">xxx@voice-navigator-testonaliyun.com</a></p>
@@ -180,7 +180,7 @@ public class DescribeBeebotIntentResponseBody extends TeaModel {
         public String createUserName;
 
         /**
-         * <p>Intent ID</p>
+         * <p>The intent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10717802</p>
@@ -189,16 +189,16 @@ public class DescribeBeebotIntentResponseBody extends TeaModel {
         public Long intentId;
 
         /**
-         * <p>Intent name</p>
+         * <p>The intent name.</p>
          * 
          * <strong>example:</strong>
-         * <p>知道了</p>
+         * <p>Got it</p>
          */
         @NameInMap("IntentName")
         public String intentName;
 
         /**
-         * <p>Modification time</p>
+         * <p>The modification time. The format is YYYY-MM-DD HH:mm:ss.+ZZZZ, where +ZZZZ indicates the time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-21 15:52:57.+0800</p>
@@ -207,7 +207,7 @@ public class DescribeBeebotIntentResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>Modifier user ID</p>
+         * <p>The ID of the modifier.</p>
          * 
          * <strong>example:</strong>
          * <p>1252504</p>
@@ -216,7 +216,7 @@ public class DescribeBeebotIntentResponseBody extends TeaModel {
         public String modifyUserId;
 
         /**
-         * <p>Modifier account name</p>
+         * <p>The username of the modifier.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:xxx@voice-navigator-testonaliyun.com">xxx@voice-navigator-testonaliyun.com</a></p>

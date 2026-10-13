@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class UploadScriptRecordingRequest extends TeaModel {
     /**
-     * <p>Text content of the recording file</p>
+     * <p>The text content of the recording file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>您好</p>
+     * <p>Hello</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
-     * <p>File key in OSS</p>
+     * <p>The key of the file in OSS.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UploadScriptRecordingRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>File name</p>
+     * <p>The file name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class UploadScriptRecordingRequest extends TeaModel {
     public String fileName;
 
     /**
-     * <p>Instance ID</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class UploadScriptRecordingRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Script ID</p>
+     * <p>The script ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

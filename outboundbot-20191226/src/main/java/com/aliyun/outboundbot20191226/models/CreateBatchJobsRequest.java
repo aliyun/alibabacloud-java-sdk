@@ -5,26 +5,26 @@ import com.aliyun.tea.*;
 
 public class CreateBatchJobsRequest extends TeaModel {
     /**
-     * <p>Description of the batch job.</p>
+     * <p>The description of the batch job.</p>
      * 
      * <strong>example:</strong>
-     * <p>描述</p>
+     * <p>Description</p>
      */
     @NameInMap("BatchJobDescription")
     public String batchJobDescription;
 
     /**
-     * <p>Name of the batch job.</p>
+     * <p>The name of the batch job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>第一个作业组</p>
+     * <p>First job group</p>
      */
     @NameInMap("BatchJobName")
     public String batchJobName;
 
     /**
-     * <p>List of caller numbers.</p>
+     * <p>The list of calling numbers.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;95187&quot;]</p>
@@ -33,7 +33,7 @@ public class CreateBatchJobsRequest extends TeaModel {
     public java.util.List<String> callingNumber;
 
     /**
-     * <p>ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,9 +43,9 @@ public class CreateBatchJobsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Path to the Excel file that contains the batch job data.</p>
+     * <p>The URL to download the Excel file for the batch job.</p>
      * <blockquote>
-     * <p>Get this value from the Folder parameter in the response of the GetJobDataUploadParams operation.</p>
+     * <p>You can obtain this parameter from the Folder response parameter of the GetJobDataUploadParams operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class CreateBatchJobsRequest extends TeaModel {
     public String jobFilePath;
 
     /**
-     * <p>ID of the scenario.</p>
+     * <p>The scenario ID.</p>
      * 
      * <strong>example:</strong>
      * <p>c6a668d1-3145-4048-9101-cb3678bb8884</p>
@@ -64,7 +64,7 @@ public class CreateBatchJobsRequest extends TeaModel {
     public String scenarioId;
 
     /**
-     * <p>ID of the script.</p>
+     * <p>The script ID.</p>
      * 
      * <strong>example:</strong>
      * <p>b9ff4e88-65f9-4eb3-987c-11ba51f3f24d</p>
@@ -73,16 +73,20 @@ public class CreateBatchJobsRequest extends TeaModel {
     public String scriptId;
 
     /**
-     * <p>JSON string that defines the job execution policy. Required.</p>
+     * <p>The JSON string of the job execution strategy. This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;maxAttemptsPerDay&quot;:2,&quot;name&quot;:&quot;策略名字&quot;,&quot;workingTime&quot;:[{&quot;beginTime&quot;:&quot;09:00:00&quot;,&quot;endTime&quot;:&quot;12:00:00&quot;},{&quot;beginTime&quot;:&quot;13:00:00&quot;,&quot;endTime&quot;:&quot;18:30:00&quot;}],&quot;minAttemptInterval&quot;:60}</p>
+     * <p>{&quot;maxAttemptsPerDay&quot;:2,&quot;name&quot;:&quot;Strategy name&quot;,&quot;workingTime&quot;:[{&quot;beginTime&quot;:&quot;09:00:00&quot;,&quot;endTime&quot;:&quot;12:00:00&quot;},{&quot;beginTime&quot;:&quot;13:00:00&quot;,&quot;endTime&quot;:&quot;18:30:00&quot;}],&quot;minAttemptInterval&quot;:60}</p>
      */
     @NameInMap("StrategyJson")
     public String strategyJson;
 
     /**
-     * <p>Indicates whether the job is submitted. Set to false to submit the job. Set to true to save it as a draft.</p>
+     * <p>Specifies whether the job is submitted. Valid values:</p>
+     * <ul>
+     * <li>true: The job is saved as a draft.</li>
+     * <li>false: The job is submitted.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

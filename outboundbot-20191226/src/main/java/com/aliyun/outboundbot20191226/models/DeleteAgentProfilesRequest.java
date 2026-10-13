@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteAgentProfilesRequest extends TeaModel {
     /**
-     * <p>Collection of agent profile IDs</p>
+     * <p>The collection of agent configuration IDs.</p>
      */
     @NameInMap("AgentProfileIds")
     public java.util.List<String> agentProfileIds;
 
     /**
-     * <p>app_ip (system field, optional)</p>
+     * <p>The app_ip (system field, optional).</p>
      * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>

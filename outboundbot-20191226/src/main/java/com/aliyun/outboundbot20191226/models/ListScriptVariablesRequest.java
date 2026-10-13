@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListScriptVariablesRequest extends TeaModel {
     /**
-     * <p>The instance ID (also referred to as the business ID).</p>
+     * <p>The instance ID (also known as the business ID).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,11 +16,14 @@ public class ListScriptVariablesRequest extends TeaModel {
 
     /**
      * <p>Specifies whether the environment is a test environment.</p>
+     * <ul>
+     * <li>true: Test environment.</li>
+     * <li>false: Production environment after release.</li>
+     * <li>Default value: false.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>true：测试环境
-     * false：发布后的正式环境
-     * 默认为false</p>
+     * <p>false</p>
      */
     @NameInMap("Sandbox")
     public Boolean sandbox;

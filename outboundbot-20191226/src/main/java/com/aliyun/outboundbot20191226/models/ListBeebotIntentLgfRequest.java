@@ -25,10 +25,10 @@ public class ListBeebotIntentLgfRequest extends TeaModel {
     public String intentId;
 
     /**
-     * <p>The utterance template.</p>
+     * <p>The utterance template for the intent.</p>
      * 
      * <strong>example:</strong>
-     * <p>我是一个问法模版</p>
+     * <p>I am an utterance template</p>
      */
     @NameInMap("LgfText")
     public String lgfText;
@@ -44,7 +44,7 @@ public class ListBeebotIntentLgfRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Number of items</p>
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

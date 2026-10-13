@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListBeebotIntentUserSayRequest extends TeaModel {
     /**
-     * <p>The keyword in the user utterance.</p>
+     * <p>The keyword in the utterance content.</p>
      * 
      * <strong>example:</strong>
-     * <p>知道</p>
+     * <p>know</p>
      */
     @NameInMap("Content")
     public String content;
@@ -44,7 +44,7 @@ public class ListBeebotIntentUserSayRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to display on each page.</p>
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

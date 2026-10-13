@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceRequest extends TeaModel {
     /**
-     * <p>A list of calling numbers.</p>
+     * <p>The list of caller numbers.</p>
      * <blockquote>
-     * <p>This parameter is optional.</p>
+     * <p>By default, this parameter is left empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,13 +20,13 @@ public class ModifyInstanceRequest extends TeaModel {
      * <p>The description of the instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>这是新的实例</p>
+     * <p>This is a new instance</p>
      */
     @NameInMap("InstanceDescription")
     public String instanceDescription;
 
     /**
-     * <p>The ID of the Outbound Bot instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class ModifyInstanceRequest extends TeaModel {
      * <p>The name of the instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>新实例</p>
+     * <p>New instance</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;

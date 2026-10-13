@@ -113,7 +113,7 @@ public class GetContactBlockListResponseBody extends TeaModel {
 
     public static class GetContactBlockListResponseBodyContactBlocklistListList extends TeaModel {
         /**
-         * <p>The unique business key of the outbound call blocklist entry.</p>
+         * <p>The unique business key of the outbound call blocklist.</p>
          * 
          * <strong>example:</strong>
          * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
@@ -122,7 +122,7 @@ public class GetContactBlockListResponseBody extends TeaModel {
         public String contactBlockListId;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1640077685465</p>
@@ -176,7 +176,7 @@ public class GetContactBlockListResponseBody extends TeaModel {
         public String phoneNumber;
 
         /**
-         * <p>The remarks.</p>
+         * <p>The remark.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx</p>
@@ -257,7 +257,7 @@ public class GetContactBlockListResponseBody extends TeaModel {
 
     public static class GetContactBlockListResponseBodyContactBlocklistList extends TeaModel {
         /**
-         * <p>The array data.</p>
+         * <p>The data array.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>

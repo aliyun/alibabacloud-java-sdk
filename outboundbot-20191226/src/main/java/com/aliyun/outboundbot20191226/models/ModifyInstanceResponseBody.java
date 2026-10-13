@@ -32,7 +32,7 @@ public class ModifyInstanceResponseBody extends TeaModel {
     public ModifyInstanceResponseBodyInstance instance;
 
     /**
-     * <p>The response message.</p>
+     * <p>The message returned by the API.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -113,7 +113,7 @@ public class ModifyInstanceResponseBody extends TeaModel {
 
     public static class ModifyInstanceResponseBodyInstance extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1578469042851</p>
@@ -140,10 +140,10 @@ public class ModifyInstanceResponseBody extends TeaModel {
         public String creatorName;
 
         /**
-         * <p>The instance description.</p>
+         * <p>The description of the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>这是第一个实例</p>
+         * <p>This is the first instance</p>
          */
         @NameInMap("InstanceDescription")
         public String instanceDescription;
@@ -161,7 +161,7 @@ public class ModifyInstanceResponseBody extends TeaModel {
          * <p>The name of the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>第一个实例</p>
+         * <p>First instance</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;

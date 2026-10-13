@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeJobGroupRequest extends TeaModel {
     /**
-     * <p>Filter condition. This parameter is deprecated.</p>
+     * <p>The filter conditions. This parameter is deprecated.</p>
      */
     @NameInMap("BriefTypes")
     public java.util.List<String> briefTypes;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class DescribeJobGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Job group ID.</p>
+     * <p>The job group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

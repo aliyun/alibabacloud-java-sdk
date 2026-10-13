@@ -122,7 +122,7 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
          * <p>The industry.</p>
          * 
          * <strong>example:</strong>
-         * <p>金融</p>
+         * <p>Finance</p>
          */
         @NameInMap("Industry")
         public String industry;
@@ -149,7 +149,7 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
          * <p>The scene.</p>
          * 
          * <strong>example:</strong>
-         * <p>电销</p>
+         * <p>Telemarketing</p>
          */
         @NameInMap("Scene")
         public String scene;
@@ -158,7 +158,7 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
          * <p>The script description.</p>
          * 
          * <strong>example:</strong>
-         * <p>销售话术</p>
+         * <p>Sales script</p>
          */
         @NameInMap("ScriptDescription")
         public String scriptDescription;
@@ -176,7 +176,7 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
          * <p>The script name.</p>
          * 
          * <strong>example:</strong>
-         * <p>销售话术</p>
+         * <p>Sales script</p>
          */
         @NameInMap("ScriptName")
         public String scriptName;

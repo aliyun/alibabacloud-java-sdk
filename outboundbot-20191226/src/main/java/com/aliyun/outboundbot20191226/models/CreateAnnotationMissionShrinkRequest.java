@@ -7,7 +7,7 @@ public class CreateAnnotationMissionShrinkRequest extends TeaModel {
     /**
      * <p>The agent ID.</p>
      * <blockquote>
-     * <p>You can obtain this ID from the \<code>DescribeInstance\\</code> operation.</p>
+     * <p>You can obtain this value from the DescribeInstance operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class CreateAnnotationMissionShrinkRequest extends TeaModel {
     public String agentId;
 
     /**
-     * <p>The workspace key.</p>
+     * <p>The business space key.</p>
      * <blockquote>
-     * <p>You can obtain this key from the \<code>DescribeInstance\\</code> operation.</p>
+     * <p>You can obtain this value from the DescribeInstance operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class CreateAnnotationMissionShrinkRequest extends TeaModel {
     /**
      * <p>The data type of the annotation task.</p>
      * <ul>
-     * <li>1: Outbound call</li>
+     * <li>1: outbound call</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,24 +41,22 @@ public class CreateAnnotationMissionShrinkRequest extends TeaModel {
     public Integer annotationMissionDataSourceType;
 
     /**
-     * <p>The list of annotation data sources.</p>
+     * <p>The annotation data source list.</p>
      * <blockquote>
-     * <p>This parameter has the same function as \<code>AnnotationMissionDebugDataSourceListJsonString\\</code>. You can specify either of them.</p>
+     * <p>This parameter has the same function as AnnotationMissionDebugDataSourceListJsonString. Specify either one of them.</p>
      * </blockquote>
      */
     @NameInMap("AnnotationMissionDebugDataSourceList")
     public String annotationMissionDebugDataSourceListShrink;
 
     /**
-     * <p>The JSON string for the test data.</p>
+     * <p>The debug data in JSON format.</p>
      * <blockquote>
-     * <p>This parameter has the same function as \<code>AnnotationMissionDebugDataSourceList\\</code>. You can specify either of them. The format is \<code>[1]\\</code>, \<code>[2]\\</code>, or \<code>[1,2]\\</code>. You can specify multiple filter conditions in the array. The enumeration values are as follows:</p>
+     * <p>This parameter has the same function as AnnotationMissionDebugDataSourceList. Specify either one of them. The format is [1], [2], or [1,2]. You can specify multiple filter conditions in the array. The enum values for the filter conditions are as follows.</p>
      * </blockquote>
      * <ul>
-     * <li><p>1: Outbound call task</p>
-     * </li>
-     * <li><p>2: Test task</p>
-     * </li>
+     * <li>1: outbound call task</li>
+     * <li>2: test task</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,15 +69,15 @@ public class CreateAnnotationMissionShrinkRequest extends TeaModel {
      * <p>The name of the annotation task.</p>
      * 
      * <strong>example:</strong>
-     * <p>询问卖车-标注任务-20230506-112934</p>
+     * <p>CarSaleInquiry-AnnotationTask-20230506-112934</p>
      */
     @NameInMap("AnnotationMissionName")
     public String annotationMissionName;
 
     /**
-     * <p>The bot ID.</p>
+     * <p>The robot ID.</p>
      * <blockquote>
-     * <p>You can obtain this ID from the \<code>DescribeScript\\</code> operation.</p>
+     * <p>You can obtain this value from the DescribeScript operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -89,7 +87,7 @@ public class CreateAnnotationMissionShrinkRequest extends TeaModel {
     public String chatbotId;
 
     /**
-     * <p>The end time for filtering calls.</p>
+     * <p>The end time for the call time filter.</p>
      * 
      * <strong>example:</strong>
      * <p>1682956800000</p>
@@ -98,7 +96,7 @@ public class CreateAnnotationMissionShrinkRequest extends TeaModel {
     public Long conversationTimeEndFilter;
 
     /**
-     * <p>The start time for filtering calls.</p>
+     * <p>The start time for the call time filter.</p>
      * 
      * <strong>example:</strong>
      * <p>1683302400000</p>
@@ -107,7 +105,7 @@ public class CreateAnnotationMissionShrinkRequest extends TeaModel {
     public Long conversationTimeStartFilter;
 
     /**
-     * <p>Specifies whether to exclude call records that have been annotated in other tasks. If you do not specify this parameter, the default value is \<code>false\\</code>.</p>
+     * <p>Specifies whether to exclude call records that have been annotated by other tasks. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -116,14 +114,12 @@ public class CreateAnnotationMissionShrinkRequest extends TeaModel {
     public Boolean excludeOtherSession;
 
     /**
-     * <p>Indicates whether the business process ended normally.</p>
+     * <p>Specifies whether the business ended normally.</p>
      * <blockquote>
-     * <p>This parameter takes effect only when \<code>SessionEndReasonFilterList\\</code> is not specified.</p>
+     * <p>This parameter takes effect only when SessionEndReasonFilterList is not specified.</p>
      * <ul>
-     * <li><p>\<code>true\\</code>: The call record is normal.</p>
-     * </li>
-     * <li><p>\<code>false\\</code>: The call did not end normally.</p>
-     * </li>
+     * <li>true: normal call records</li>
+     * <li>false: abnormal call records</li>
      * </ul>
      * </blockquote>
      * 
@@ -143,9 +139,9 @@ public class CreateAnnotationMissionShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The custom sampling amount.</p>
+     * <p>The custom sampling quantity.</p>
      * <blockquote>
-     * <p>This parameter is required and takes effect only when \<code>SamplingType\\</code> is set to 3. Otherwise, the task fails to be created.</p>
+     * <p>This parameter takes effect only when SamplingType is set to 3. This parameter is required in that case. Otherwise, the creation fails.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -155,9 +151,9 @@ public class CreateAnnotationMissionShrinkRequest extends TeaModel {
     public Integer samplingCount;
 
     /**
-     * <p>The sampling percentage.</p>
+     * <p>The sampling ratio.</p>
      * <blockquote>
-     * <p>This parameter is required and takes effect only when \<code>SamplingType\\</code> is set to 2. Otherwise, the task fails to be created.</p>
+     * <p>This parameter takes effect only when SamplingType is set to 2. This parameter is required in that case. Otherwise, the creation fails.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -169,12 +165,9 @@ public class CreateAnnotationMissionShrinkRequest extends TeaModel {
     /**
      * <p>The sampling type.</p>
      * <ul>
-     * <li><p>1: Full data</p>
-     * </li>
-     * <li><p>2: Percentage</p>
-     * </li>
-     * <li><p>3: Custom amount</p>
-     * </li>
+     * <li>1: full</li>
+     * <li>2: percentage</li>
+     * <li>3: custom quantity</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -184,7 +177,7 @@ public class CreateAnnotationMissionShrinkRequest extends TeaModel {
     public Integer samplingType;
 
     /**
-     * <p>The outbound scenario ID.</p>
+     * <p>The outbound call scenario ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6236f21e-2e04-4dad-a47b-ae77e6a48325</p>
@@ -193,43 +186,32 @@ public class CreateAnnotationMissionShrinkRequest extends TeaModel {
     public String scriptId;
 
     /**
-     * <p>The filter condition for call completion statuses.</p>
+     * <p>The call result status filter conditions.</p>
      * <blockquote>
-     * <p>This parameter has the same function as \<code>SessionEndReasonFilterListJsonString\\</code>. You can specify either of them.</p>
+     * <p>This parameter has the same function as SessionEndReasonFilterListJsonString. Specify either one of them.</p>
      * </blockquote>
      */
     @NameInMap("SessionEndReasonFilterList")
     public java.util.List<Integer> sessionEndReasonFilterList;
 
     /**
-     * <p>The filter condition for call completion statuses.</p>
+     * <p>The call result status filter conditions.</p>
      * <blockquote>
-     * <p>This parameter has the same function as \<code>SessionEndReasonFilterList\\</code>. You can specify either of them. The format is \<code>[1]\\</code> or \<code>[1,2]\\</code>. You can specify multiple filter conditions in the array. The enumeration values for the filter conditions are as follows.</p>
+     * <p>This parameter has the same function as SessionEndReasonFilterList. Specify either one of them. The format is [1], [1,2], etc. You can specify multiple filter conditions in the array. The enum values for the filter conditions are as follows.</p>
      * </blockquote>
-     * <p><strong>Enumeration values for filtering call records</strong></p>
+     * <p><strong>Call record filter enum values</strong></p>
      * <ul>
-     * <li><p>1: The call ended normally.</p>
-     * </li>
-     * <li><p>2: The bot hung up after a recognition failure.</p>
-     * </li>
-     * <li><p>3: The call was hung up due to a silence timeout.</p>
-     * </li>
-     * <li><p>4: The user hung up after a recognition failure.</p>
-     * </li>
-     * <li><p>5: The user hung up for no reason.</p>
-     * </li>
-     * <li><p>6: The call was transferred to a manual agent after an intent was hit.</p>
-     * </li>
-     * <li><p>7: The call was transferred to a manual agent after a recognition failure.</p>
-     * </li>
-     * <li><p>8: No interaction from the user.</p>
-     * </li>
-     * <li><p>9: The call was interrupted by a system exception.</p>
-     * </li>
-     * <li><p>10: The call was transferred to an IVR after an intent was hit.</p>
-     * </li>
-     * <li><p>11: The call was transferred to an IVR after a recognition failure.</p>
-     * </li>
+     * <li>1: normal completion</li>
+     * <li>2: robot hung up after recognition rejection</li>
+     * <li>3: hung up due to silence timeout</li>
+     * <li>4: user hung up after recognition rejection</li>
+     * <li>5: user hung up without reason</li>
+     * <li>6: transferred to agent by intent match</li>
+     * <li>7: transferred to agent by recognition rejection</li>
+     * <li>8: no interaction on user side</li>
+     * <li>9: system exception interruption</li>
+     * <li>10: transferred to IVR by intent match</li>
+     * <li>11: transferred to IVR by recognition rejection</li>
      * </ul>
      * 
      * <strong>example:</strong>

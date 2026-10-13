@@ -38,7 +38,7 @@ public class ListBeebotIntentResponseBody extends TeaModel {
     public java.util.List<ListBeebotIntentResponseBodyIntents> intents;
 
     /**
-     * <p>The message returned by the operation.</p>
+     * <p>The message returned by the API operation.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -56,7 +56,7 @@ public class ListBeebotIntentResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -74,7 +74,7 @@ public class ListBeebotIntentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call succeeded.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -181,13 +181,13 @@ public class ListBeebotIntentResponseBody extends TeaModel {
          * <p>The intent alias.</p>
          * 
          * <strong>example:</strong>
-         * <p>嗯明白了</p>
+         * <p>Okay, understood</p>
          */
         @NameInMap("AliasName")
         public String aliasName;
 
         /**
-         * <p>The time when the intent was created.</p>
+         * <p>The creation time. The format is YYYY-MM-DD HH:mm:ss.+ZZZZ, where +ZZZZ indicates the time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-21 16:03:15.+0800</p>
@@ -205,7 +205,7 @@ public class ListBeebotIntentResponseBody extends TeaModel {
         public String createUserId;
 
         /**
-         * <p>The name of the account that created the intent.</p>
+         * <p>The name of the user who created the intent.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:xxx@voice-navigator-testonaliyun.com">xxx@voice-navigator-testonaliyun.com</a></p>
@@ -225,17 +225,17 @@ public class ListBeebotIntentResponseBody extends TeaModel {
         /**
          * <p>The intent name.</p>
          * <blockquote>
-         * <p>This is the intent code. It uniquely identifies the intent.</p>
+         * <p>The intent code, which is a unique identifier.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>知道了</p>
+         * <p>Understood</p>
          */
         @NameInMap("IntentName")
         public String intentName;
 
         /**
-         * <p>The time when the intent was last modified.</p>
+         * <p>The modification time. The format is YYYY-MM-DD HH:mm:ss.+ZZZZ, where +ZZZZ indicates the time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-21 16:03:15.+0800</p>
@@ -244,7 +244,7 @@ public class ListBeebotIntentResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>Modify User ID</p>
+         * <p>The ID of the user who modified the intent.</p>
          * 
          * <strong>example:</strong>
          * <p>1252504</p>
@@ -253,7 +253,7 @@ public class ListBeebotIntentResponseBody extends TeaModel {
         public String modifyUserId;
 
         /**
-         * <p>Modify the account name.</p>
+         * <p>The name of the user who modified the intent.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:xxx@voice-navigator-testonaliyun.com">xxx@voice-navigator-testonaliyun.com</a></p>

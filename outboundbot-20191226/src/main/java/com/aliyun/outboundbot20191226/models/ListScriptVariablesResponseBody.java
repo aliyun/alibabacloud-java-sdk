@@ -23,7 +23,7 @@ public class ListScriptVariablesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The API message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -41,7 +41,7 @@ public class ListScriptVariablesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -113,7 +113,7 @@ public class ListScriptVariablesResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>表示客户的真实姓名</p>
+         * <p>The real name of the customer</p>
          */
         @NameInMap("Description")
         public String description;
@@ -122,7 +122,7 @@ public class ListScriptVariablesResponseBody extends TeaModel {
          * <p>The display name of the variable.</p>
          * 
          * <strong>example:</strong>
-         * <p>姓名</p>
+         * <p>Name</p>
          */
         @NameInMap("DisplayName")
         public String displayName;

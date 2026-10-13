@@ -15,7 +15,7 @@ public class ListJobsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The list of job IDs. A maximum of 99 child items are allowed.</p>
+     * <p>The list of job IDs. Note: A maximum of 99 job IDs can be specified.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

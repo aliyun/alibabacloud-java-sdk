@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
     /**
-     * <p>Status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,13 +14,13 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Data.</p>
+     * <p>The data.</p>
      */
     @NameInMap("Data")
     public ListAllTenantBindNumberBindingResponseBodyData data;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>API response message.</p>
+     * <p>The message returned by the API.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -38,7 +38,7 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A4BEAB4B-C810-5386-B72A-1A35FF1E6B15</p>
@@ -47,7 +47,7 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call succeeded.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -109,11 +109,14 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
     }
 
     public static class ListAllTenantBindNumberBindingResponseBodyDataList extends TeaModel {
+        /**
+         * <p>The billing method of the number.</p>
+         */
         @NameInMap("BillingType")
         public String billingType;
 
         /**
-         * <p>Binding ID.</p>
+         * <p>The binding ID.</p>
          * 
          * <strong>example:</strong>
          * <p>b5bfb844-ce85-4779-bc8f-161fba46aa07</p>
@@ -122,13 +125,13 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
         public String bindingId;
 
         /**
-         * <p>List of instance names.</p>
+         * <p>The list of instance names.</p>
          */
         @NameInMap("InstanceNameList")
         public java.util.List<String> instanceNameList;
 
         /**
-         * <p>Phone number.</p>
+         * <p>The number.</p>
          * 
          * <strong>example:</strong>
          * <p>15005059355</p>
@@ -137,7 +140,7 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
         public String number;
 
         /**
-         * <p>Policy.</p>
+         * <p>The policy.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;rateLimitPeriod\&quot;:\&quot;1\&quot;,\&quot;rateLimitCount\&quot;:\&quot;1\&quot;}</p>
@@ -146,10 +149,10 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
         public String serializedParams;
 
         /**
-         * <p>Trunk name.</p>
+         * <p>The trunk name.</p>
          * 
          * <strong>example:</strong>
-         * <p>小码-公共</p>
+         * <p>Xiaoma-Public</p>
          */
         @NameInMap("TrunkName")
         public String trunkName;
@@ -211,7 +214,7 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
 
     public static class ListAllTenantBindNumberBindingResponseBodyData extends TeaModel {
         /**
-         * <p>Array.</p>
+         * <p>The list.</p>
          */
         @NameInMap("List")
         public java.util.List<ListAllTenantBindNumberBindingResponseBodyDataList> list;

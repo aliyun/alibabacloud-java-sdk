@@ -47,7 +47,7 @@ public class GetAgentProfileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -110,7 +110,7 @@ public class GetAgentProfileResponseBody extends TeaModel {
 
     public static class GetAgentProfileResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the agent configuration.</p>
+         * <p>The agent profile ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d31794e2a51f47d2901b4094d88311d7</p>
@@ -119,7 +119,7 @@ public class GetAgentProfileResponseBody extends TeaModel {
         public String agentProfileId;
 
         /**
-         * <p>The ID of the agent configuration template.</p>
+         * <p>The agent profile template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>default-survey</p>
@@ -128,7 +128,7 @@ public class GetAgentProfileResponseBody extends TeaModel {
         public String agentProfileTemplateId;
 
         /**
-         * <p>The agent type.</p>
+         * <p>agent type</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -146,7 +146,7 @@ public class GetAgentProfileResponseBody extends TeaModel {
         public String apiPluginJson;
 
         /**
-         * <p>The time when the configuration was created.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1741338619000</p>
@@ -158,7 +158,7 @@ public class GetAgentProfileResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>这是一个大模型机器人</p>
+         * <p>This is a large language model chatbot</p>
          */
         @NameInMap("Description")
         public String description;
@@ -182,10 +182,10 @@ public class GetAgentProfileResponseBody extends TeaModel {
         public String instructionJson;
 
         /**
-         * <p>The description of the labels.</p>
+         * <p>The label descriptions.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;name\&quot;:\&quot;是否送达\&quot;,\&quot;description\&quot;:\&quot;购买的家电是否已经送达\&quot;,\&quot;valueList\&quot;:\&quot;[\\\&quot;是\\\&quot;,\\\&quot;否\\\&quot;]\&quot;},{\&quot;name\&quot;:\&quot;预约上门时间\&quot;,\&quot;description\&quot;:\&quot;收集客户期望的上门安装时间\&quot;,\&quot;valueList\&quot;:\&quot;[]\&quot;}]</p>
+         * <p>[{\&quot;name\&quot;:\&quot;Delivered\&quot;,\&quot;description\&quot;:\&quot;Whether the purchased home appliance has been delivered\&quot;,\&quot;valueList\&quot;:\&quot;[\\\&quot;Yes\\\&quot;,\\\&quot;No\\\&quot;]\&quot;},{\&quot;name\&quot;:\&quot;On-site Appointment Time\&quot;,\&quot;description\&quot;:\&quot;Collect the customer\&quot;s expected on-site installation time\&quot;,\&quot;valueList\&quot;:\&quot;[]\&quot;}]</p>
          */
         @NameInMap("LabelsJson")
         public String labelsJson;
@@ -209,18 +209,13 @@ public class GetAgentProfileResponseBody extends TeaModel {
         public String modelConfig;
 
         /**
-         * <p>The Natural Language Understanding (NLU) configuration. The parameters are described as follows:</p>
+         * <p>The NLU configuration. Parameter settings:</p>
          * <ul>
-         * <li><p>chatbotInstanceId: The instance ID of the ChatMe LLM agent.</p>
-         * </li>
-         * <li><p>faqCategoryIds: The IDs of the attached FAQ categories.</p>
-         * </li>
-         * <li><p>llmAgentId: The ID of the ChatMe LLM workspace.</p>
-         * </li>
-         * <li><p>llmAgentKey: The key of the ChatMe LLM workspace.</p>
-         * </li>
-         * <li><p>llmAgentInstanceId: The instance ID of the ChatMe LLM workspace.</p>
-         * </li>
+         * <li>chatbotInstanceId: the instance ID of the Chatbot large language model.</li>
+         * <li>faqCategoryIds: the IDs of the attached FAQ categories.</li>
+         * <li>llmAgentId: the workspace ID of the Chatbot large language model.</li>
+         * <li>llmAgentKey: the workspace key of the Chatbot large language model.</li>
+         * <li>llmAgentInstanceId: the workspace instance ID of the Chatbot large language model.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -230,7 +225,7 @@ public class GetAgentProfileResponseBody extends TeaModel {
         public String nluConfigJson;
 
         /**
-         * <p>The prompt for the professional pattern.</p>
+         * <p>The prompt in professional mode.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -242,7 +237,7 @@ public class GetAgentProfileResponseBody extends TeaModel {
          * <p>The agent configuration.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;name&quot;:&quot;小x&quot;,&quot;gender&quot;:&quot;男&quot;,&quot;age&quot;:18,&quot;role&quot;:&quot;游戏推广员&quot;,&quot;communicationStyle&quot;:[&quot;亲切&quot;],&quot;goals&quot;:&quot;你好&quot;,&quot;background&quot;:&quot;不是很好&quot;,&quot;openingPrompt&quot;:&quot;你好，我是xxx&quot;}</p>
+         * <p>{&quot;name&quot;:&quot;Xiao X&quot;,&quot;gender&quot;:&quot;Male&quot;,&quot;age&quot;:18,&quot;role&quot;:&quot;Game Promoter&quot;,&quot;communicationStyle&quot;:[&quot;Friendly&quot;],&quot;goals&quot;:&quot;Hello&quot;,&quot;background&quot;:&quot;Not very good&quot;,&quot;openingPrompt&quot;:&quot;Hello, I am XXX&quot;}</p>
          */
         @NameInMap("PromptJson")
         public String promptJson;
@@ -251,7 +246,7 @@ public class GetAgentProfileResponseBody extends TeaModel {
          * <p>The scenario.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试场景</p>
+         * <p>Test scenario</p>
          */
         @NameInMap("Scenario")
         public String scenario;
@@ -275,7 +270,7 @@ public class GetAgentProfileResponseBody extends TeaModel {
         public Boolean system;
 
         /**
-         * <p>The time when the configuration was last modified.</p>
+         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1741338619000</p>
@@ -287,7 +282,7 @@ public class GetAgentProfileResponseBody extends TeaModel {
          * <p>The variable configuration.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;name\&quot;:\&quot;name\&quot;,\&quot;description\&quot;:\&quot;客户姓名\&quot;},{\&quot;name\&quot;:\&quot;gender\&quot;,\&quot;description\&quot;:\&quot;客户性别\&quot;}]</p>
+         * <p>[{\&quot;name\&quot;:\&quot;name\&quot;,\&quot;description\&quot;:\&quot;Customer name\&quot;},{\&quot;name\&quot;:\&quot;gender\&quot;,\&quot;description\&quot;:\&quot;Customer gender\&quot;}]</p>
          */
         @NameInMap("VariablesJson")
         public String variablesJson;

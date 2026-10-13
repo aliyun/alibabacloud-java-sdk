@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The status code of the API</p>
+     * <p>The status code of the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message of the API</p>
+     * <p>The message returned by the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -32,7 +32,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The token to start the next query</p>
+     * <p>The token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>b949ae1f-01dc-4191-ae5a-70fbe6772fd8</p>
@@ -41,7 +41,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
@@ -50,7 +50,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -59,7 +59,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>Resources</p>
+     * <p>The list of resources.</p>
      */
     @NameInMap("TagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
@@ -127,7 +127,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
         /**
-         * <p>Resource ID</p>
+         * <p>The resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>b949ae1f-01dc-4191-ae5a-70fbe6772fd8</p>
@@ -136,7 +136,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>Resource type</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>instance</p>
@@ -145,7 +145,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>Tag key</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key1</p>
@@ -154,7 +154,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>Tag value</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value1</p>

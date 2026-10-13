@@ -4,54 +4,21 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class GenerateUploadUrlResponseBody extends TeaModel {
-    /**
-     * <p>Response code</p>
-     * 
-     * <strong>example:</strong>
-     * <p>OK</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>Response data</p>
-     */
     @NameInMap("Data")
     public GenerateUploadUrlResponseBodyData data;
 
-    /**
-     * <p>HTTP status code</p>
-     * 
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <p>API message</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Success</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>Request ID</p>
-     * 
-     * <strong>example:</strong>
-     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the operation succeeded</p>
-     * 
-     * <strong>example:</strong>
-     * <p>True</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -109,75 +76,27 @@ public class GenerateUploadUrlResponseBody extends TeaModel {
     }
 
     public static class GenerateUploadUrlResponseBodyData extends TeaModel {
-        /**
-         * <p>OSS access ID</p>
-         * 
-         * <strong>example:</strong>
-         * <p>LBA******</p>
-         */
         @NameInMap("AccessId")
         public String accessId;
 
-        /**
-         * <p>Time-to-live (TTL) in seconds</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1742960933</p>
-         */
         @NameInMap("Expire")
         public Integer expire;
 
-        /**
-         * <p>Upload folder path</p>
-         * 
-         * <strong>example:</strong>
-         * <p>pload/file/874d7371-791b-4281-935c-637630a37785/874d7371-791b-4281-935c-637630a37785_9bd7916d-a340-4925-a911-92390cbe0f33.json</p>
-         */
         @NameInMap("Folder")
         public String folder;
 
-        /**
-         * <p>Upload server URL</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="https://cloudagentbot-online.oss-cn-hangzhou.aliyuncs.com">https://cloudagentbot-online.oss-cn-hangzhou.aliyuncs.com</a></p>
-         */
         @NameInMap("Host")
         public String host;
 
-        /**
-         * <p>API message for the upload</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Success</p>
-         */
         @NameInMap("Message")
         public String message;
 
-        /**
-         * <p>Upload policy</p>
-         * 
-         * <strong>example:</strong>
-         * <p>eyJleHBpcmF0aW9uIjoiMjAyNS0wMy0yNlQwMzo0ODo1My4wMzVaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsNTI0Mjg4MF0sWyJzdGFydHMtd2l0aCIsIiRrZXkiLCJ1cGxvYWQvZmlsZS84NzRkNzM3MS03OTFiLTQyODEtOTM1Yy02Mzc2MzBhMzc3ODUvIl1dfQ==&quot;,</p>
-         */
         @NameInMap("Policy")
         public String policy;
 
-        /**
-         * <p>Signature</p>
-         * 
-         * <strong>example:</strong>
-         * <p>I6d1ONWVuTj5i0Kz4Vn+V0lC6v4=</p>
-         */
         @NameInMap("Signature")
         public String signature;
 
-        /**
-         * <p>Indicates whether the upload succeeded</p>
-         * 
-         * <strong>example:</strong>
-         * <p>True</p>
-         */
         @NameInMap("Success")
         public Boolean success;
 

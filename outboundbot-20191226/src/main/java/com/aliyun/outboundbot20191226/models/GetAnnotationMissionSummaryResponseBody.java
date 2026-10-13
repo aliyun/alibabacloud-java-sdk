@@ -29,7 +29,7 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The additional information. If the request is successful, success is returned. If the request fails, an error code is returned.</p>
+     * <p>The additional information. If the request is successful, &quot;success&quot; is returned. If the request fails, a specific error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>You are not authorized to perform this action. CDR:View privileges are required.</p>
@@ -47,7 +47,7 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. A value of true indicates a successful call. A value of false indicates a failed call.</p>
+     * <p>Indicates whether the call was successful. true: The call was successful. false: The call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -119,7 +119,7 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
         public Integer addCustomizationDataCount;
 
         /**
-         * <p>The number of times hotwords were added.</p>
+         * <p>The number of times hot words were added.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -128,7 +128,7 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
         public Integer addVocabularyDataCount;
 
         /**
-         * <p>Data is invalid.</p>
+         * <p>The number of invalid data entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -137,7 +137,7 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
         public Integer annotationInvalid;
 
         /**
-         * <p>The character accuracy rate. Unit: 0.01%.</p>
+         * <p>The character accuracy rate, in units of 0.01%.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -146,7 +146,7 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
         public Integer characterCorrectRate;
 
         /**
-         * <p>The character error rate. Unit: 0.01%.</p>
+         * <p>The character error rate, in units of 0.01%.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -164,7 +164,7 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
         public Integer chatTotalCount;
 
         /**
-         * <p>Not annotated.</p>
+         * <p>The number of unannotated entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -173,7 +173,7 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
         public Integer noAnnotation;
 
         /**
-         * <p>The sentence error rate. Unit: 0.01%.</p>
+         * <p>The sentence error rate, in units of 0.01%.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -182,7 +182,7 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
         public Integer sentenceErrorRate;
 
         /**
-         * <p>The word error rate. Unit: 0.01%. This parameter is typically used for English.</p>
+         * <p>The word error rate, in units of 0.01%. Generally used for English.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -280,7 +280,7 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
         public Integer annotationCorrectCount;
 
         /**
-         * <p>Invalid data</p>
+         * <p>The number of invalid data entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -316,7 +316,7 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
         public Integer intentionNotCoveredCount;
 
         /**
-         * <p>The number of detection errors.</p>
+         * <p>The number of recognition errors.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -325,7 +325,7 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
         public Integer matchErrorCount;
 
         /**
-         * <p>Not annotated.</p>
+         * <p>The number of unannotated entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -334,7 +334,7 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
         public Integer noAnnotation;
 
         /**
-         * <p>The number of translations that were not recognized.</p>
+         * <p>The number of unrecognized translation attempts.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -424,7 +424,7 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The name of the tag.</p>
+         * <p>The tag name.</p>
          * 
          * <strong>example:</strong>
          * <p>知晓率1_复制</p>
@@ -488,19 +488,19 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
         public String annotationMissionId;
 
         /**
-         * <p>The statistics of speech annotation.</p>
+         * <p>The speech annotate statistics information.</p>
          */
         @NameInMap("AsrSummaryInfo")
         public GetAnnotationMissionSummaryResponseBodyDataAsrSummaryInfo asrSummaryInfo;
 
         /**
-         * <p>The statistics of semantic tagging.</p>
+         * <p>The semantics annotate statistics information.</p>
          */
         @NameInMap("IntentSummaryInfo")
         public GetAnnotationMissionSummaryResponseBodyDataIntentSummaryInfo intentSummaryInfo;
 
         /**
-         * <p>The additional information. If the request is successful, success is returned. If the request fails, an error code is returned.</p>
+         * <p>The additional information. If the request is successful, &quot;success&quot; is returned. If the request fails, a specific error code is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>You are not authorized to perform this action. CDR:View privileges are required.</p>
@@ -509,7 +509,7 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>Indicates whether the call was successful. A value of true indicates a successful call. A value of false indicates a failed call.</p>
+         * <p>Indicates whether the call was successful. true: The call was successful. false: The call failed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -518,7 +518,7 @@ public class GetAnnotationMissionSummaryResponseBody extends TeaModel {
         public Boolean success;
 
         /**
-         * <p>The custom tags and their quantities.</p>
+         * <p>The custom tags and their counts.</p>
          */
         @NameInMap("TagSummaryInfo")
         public GetAnnotationMissionSummaryResponseBodyDataTagSummaryInfo tagSummaryInfo;

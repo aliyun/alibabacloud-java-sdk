@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTTSDemoResponseBody extends TeaModel {
     /**
-     * <p>URL of the preview audio file.</p>
+     * <p>The URL of the preview audio file.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://XXX/XXX">http://XXX/XXX</a></p>
@@ -14,7 +14,7 @@ public class DescribeTTSDemoResponseBody extends TeaModel {
     public String auditionUrl;
 
     /**
-     * <p>API status code.</p>
+     * <p>The API status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -23,7 +23,7 @@ public class DescribeTTSDemoResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,7 +32,7 @@ public class DescribeTTSDemoResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>API response message.</p>
+     * <p>The API response message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -41,7 +41,7 @@ public class DescribeTTSDemoResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>

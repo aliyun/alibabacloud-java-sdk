@@ -23,7 +23,7 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The response message.</p>
+     * <p>The API message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -41,7 +41,7 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The script publishing histories.</p>
+     * <p>The publish history list.</p>
      */
     @NameInMap("ScriptPublishHistories")
     public ListScriptPublishHistoriesResponseBodyScriptPublishHistories scriptPublishHistories;
@@ -110,10 +110,10 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
 
     public static class ListScriptPublishHistoriesResponseBodyScriptPublishHistoriesList extends TeaModel {
         /**
-         * <p>The description of this published version.</p>
+         * <p>The publish description.</p>
          * 
          * <strong>example:</strong>
-         * <p>第一次发布</p>
+         * <p>First release</p>
          */
         @NameInMap("Description")
         public String description;
@@ -128,7 +128,7 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The publish time.</p>
+         * <p>The publish time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1578965079000</p>
@@ -137,7 +137,7 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
         public Long publishTime;
 
         /**
-         * <p>The script ID.</p>
+         * <p>The scenario ID.</p>
          * 
          * <strong>example:</strong>
          * <p>29420f65-8f1f-4009-b2f8-f4f7b5d59090</p>
@@ -203,7 +203,7 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
 
     public static class ListScriptPublishHistoriesResponseBodyScriptPublishHistories extends TeaModel {
         /**
-         * <p>The data list.</p>
+         * <p>The data array.</p>
          */
         @NameInMap("List")
         public java.util.List<ListScriptPublishHistoriesResponseBodyScriptPublishHistoriesList> list;
@@ -218,7 +218,7 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -227,7 +227,7 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total count.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

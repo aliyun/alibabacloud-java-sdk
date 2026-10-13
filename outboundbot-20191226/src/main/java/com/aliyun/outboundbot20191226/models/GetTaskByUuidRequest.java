@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTaskByUuidRequest extends TeaModel {
     /**
-     * <p>Instance ID</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetTaskByUuidRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Task ID</p>
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,9 +25,9 @@ public class GetTaskByUuidRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>Include conversation details</p>
+     * <p>Specifies whether to include conversation information.</p>
      * <blockquote>
-     * <p>The default value is false.</p>
+     * <p>Default value: false.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

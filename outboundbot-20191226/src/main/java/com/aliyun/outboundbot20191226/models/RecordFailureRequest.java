@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RecordFailureRequest extends TeaModel {
     /**
-     * <p>Call start time</p>
+     * <p>The start time of the call. The value is a UNIX timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class RecordFailureRequest extends TeaModel {
     public Long actualTime;
 
     /**
-     * <p>Call ID</p>
+     * <p>The call ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class RecordFailureRequest extends TeaModel {
     public String callId;
 
     /**
-     * <p>Called number</p>
+     * <p>The called number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class RecordFailureRequest extends TeaModel {
     public String calledNumber;
 
     /**
-     * <p>Calling number</p>
+     * <p>The calling number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,14 +45,11 @@ public class RecordFailureRequest extends TeaModel {
     public String callingNumber;
 
     /**
-     * <p>Failure reason.</p>
+     * <p>The cause of the failure. Valid values:</p>
      * <ul>
-     * <li><p>Nonexistent number (NotExists)</p>
-     * </li>
-     * <li><p>Busy (Busy)</p>
-     * </li>
-     * <li><p>No answer (NotAnswered)</p>
-     * </li>
+     * <li>NotExists: nonexistent number.</li>
+     * <li>Busy: busy.</li>
+     * <li>NotAnswered: not answered.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -63,14 +60,11 @@ public class RecordFailureRequest extends TeaModel {
     public String dispositionCode;
 
     /**
-     * <p>Error code when the outbound call fails.</p>
+     * <p>The error codes that occur when the outbound call fails. Valid values:</p>
      * <ul>
-     * <li><p>Nonexistent number (NotExists)</p>
-     * </li>
-     * <li><p>Busy (Busy)</p>
-     * </li>
-     * <li><p>No answer (NotAnswered)</p>
-     * </li>
+     * <li>NotExists: nonexistent number.</li>
+     * <li>Busy: busy.</li>
+     * <li>NotAnswered: not answered.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,7 +74,7 @@ public class RecordFailureRequest extends TeaModel {
     public String exceptionCodes;
 
     /**
-     * <p>Instance ID</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -90,7 +84,7 @@ public class RecordFailureRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Task ID</p>
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SaveAnnotationMissionSessionListResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The status code of the API operation.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class SaveAnnotationMissionSessionListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data.</p>
      */
     @NameInMap("Data")
     public SaveAnnotationMissionSessionListResponseBodyData data;
@@ -29,10 +29,10 @@ public class SaveAnnotationMissionSessionListResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The returned message. If the request is successful, success is returned. If the request fails, an error code is returned.</p>
+     * <p>The additional information. If the request is successful, success is returned. If the request fails, a specific error code is returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>执行失败：查找元素或操作超时,outTaskId:trademark_regnew_public_cn-zz4310rp1lb,flowId:null,nodeUUID:541b6c71-8cce-4ab0-af84-713ca9741821</p>
+     * <p>Execution failed: element not found or operation timed out, outTaskId:trademark_regnew_public_cn-zz4310rp1lb, flowId:null, nodeUUID:541b6c71-8cce-4ab0-af84-713ca9741821</p>
      */
     @NameInMap("Message")
     public String message;
@@ -47,7 +47,11 @@ public class SaveAnnotationMissionSessionListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. A value of true indicates success. A value of false indicates failure.</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call fails.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +114,7 @@ public class SaveAnnotationMissionSessionListResponseBody extends TeaModel {
 
     public static class SaveAnnotationMissionSessionListResponseBodyDataSaveAnnotationMissionSessionListRequest extends TeaModel {
         /**
-         * <p>The content of the script for the approval requests</p>
+         * <p>The script content of the approval application.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -135,16 +139,16 @@ public class SaveAnnotationMissionSessionListResponseBody extends TeaModel {
 
     public static class SaveAnnotationMissionSessionListResponseBodyData extends TeaModel {
         /**
-         * <p>The message returned for the operation.</p>
+         * <p>The message returned by the API operation.</p>
          * 
          * <strong>example:</strong>
-         * <p>执行失败：查找元素或操作超时,outTaskId:trademark_regnew_public_cn-zz4310rp1lb,flowId:null,nodeUUID:541b6c71-8cce-4ab0-af84-713ca9741821</p>
+         * <p>Execution failed: element not found or operation timed out, outTaskId:trademark_regnew_public_cn-zz4310rp1lb, flowId:null, nodeUUID:541b6c71-8cce-4ab0-af84-713ca9741821</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The list of messages.</p>
+         * <p>The message list.</p>
          */
         @NameInMap("MessageList")
         public java.util.List<String> messageList;
@@ -156,7 +160,7 @@ public class SaveAnnotationMissionSessionListResponseBody extends TeaModel {
         public SaveAnnotationMissionSessionListResponseBodyDataSaveAnnotationMissionSessionListRequest saveAnnotationMissionSessionListRequest;
 
         /**
-         * <p>Indicates whether the operation was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

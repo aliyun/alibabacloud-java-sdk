@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetAnnotationMissionTagInfoListRequest extends TeaModel {
     /**
-     * <p>Instance ID</p>
+     * <p>The instance ID.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system returns the default tags for the tenant.</p>
+     * <p>If this parameter is not specified, the default tags of the tenant are returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class GetAnnotationMissionTagInfoListRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Page number</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +26,7 @@ public class GetAnnotationMissionTagInfoListRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
-     * <p>Number of records per page</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

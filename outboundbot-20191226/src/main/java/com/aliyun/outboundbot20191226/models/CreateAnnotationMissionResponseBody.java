@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAnnotationMissionResponseBody extends TeaModel {
     /**
-     * <p>The status code of the API.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -29,10 +29,10 @@ public class CreateAnnotationMissionResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Additional information. If the request is successful, \<code>success\\</code> is returned. If the request fails, a specific error code is returned.</p>
+     * <p>The additional information. If the request was successful, &quot;success&quot; is returned. If the request failed, a specific error code is returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>执行失败：查找元素或操作超时,outTaskId:trademark_regnew_public_cn-uax33hol2uu,flowId:null,nodeUUID:541b6c71-8cce-4ab0-af84-713ca9741821</p>
+     * <p>Execution failed: element lookup or operation timed out, outTaskId:trademark_regnew_public_cn-uax33hol2uu,flowId:null,nodeUUID:541b6c71-8cce-4ab0-af84-713ca9741821</p>
      */
     @NameInMap("Message")
     public String message;
@@ -47,7 +47,7 @@ public class CreateAnnotationMissionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. \<code>true\\</code>: The call was successful. \<code>false\\</code>: The call failed.</p>
+     * <p>Indicates whether the call was successful. true: The call was successful. false: The call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -110,10 +110,10 @@ public class CreateAnnotationMissionResponseBody extends TeaModel {
 
     public static class CreateAnnotationMissionResponseBodyData extends TeaModel {
         /**
-         * <p>Additional information. If the request is successful, \<code>success\\</code> is returned. If the request fails, a specific error code is returned.</p>
+         * <p>The additional information. If the request was successful, &quot;success&quot; is returned. If the request failed, a specific error code is returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>执行失败：查找元素或操作超时,outTaskId:trademark_regnew_public_cn-uax33hol2uu,flowId:null,nodeUUID:541b6c71-8cce-4ab0-af84-713ca9741821</p>
+         * <p>Execution failed: element lookup or operation timed out, outTaskId:trademark_regnew_public_cn-uax33hol2uu,flowId:null,nodeUUID:541b6c71-8cce-4ab0-af84-713ca9741821</p>
          */
         @NameInMap("Message")
         public String message;

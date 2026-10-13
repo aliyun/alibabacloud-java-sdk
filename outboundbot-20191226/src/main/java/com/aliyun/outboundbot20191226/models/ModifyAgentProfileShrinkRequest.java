@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyAgentProfileShrinkRequest extends TeaModel {
     /**
-     * <p>Agent configuration ID</p>
+     * <p>The agent profile ID.</p>
      * <blockquote>
-     * <p>Get the agent configuration ID for created scenarios from the ChatbotId return parameter of DescribeScript.</p>
+     * <p>You can obtain the agent profile ID of a created scenario from the ChatbotId response parameter of DescribeScript.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class ModifyAgentProfileShrinkRequest extends TeaModel {
     public String agentProfileId;
 
     /**
-     * <p>API plug-in configuration</p>
+     * <p>The API plugin configuration.</p>
      * <blockquote>
-     * <p>To bind multiple APIs, get the UUIDs of multiple APIs through ListApiPlugins and fill them in the format [{&quot;uuid&quot;:&quot;xxx&quot;},{&quot;uuid&quot;:&quot;xxxx&quot;&quot;},....].</p>
+     * <p>To bind multiple APIs, obtain the UUIDs of multiple APIs through ListApiPlugins, and fill them in the format of [{&quot;uuid&quot;:&quot;xxx&quot;},{&quot;uuid&quot;:&quot;xxxx&quot;},....].</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,22 +30,22 @@ public class ModifyAgentProfileShrinkRequest extends TeaModel {
     public String apiPluginJson;
 
     /**
-     * <p>Description</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>第一版本提交审核</p>
+     * <p>First version submitted for review</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>FAQ category ID</p>
+     * <p>The FAQ category IDs.</p>
      */
     @NameInMap("FaqCategoryIds")
     public String faqCategoryIdsShrink;
 
     /**
-     * <p>Instance ID</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class ModifyAgentProfileShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Instruction configuration</p>
+     * <p>The instruction configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>[{
@@ -70,7 +70,7 @@ public class ModifyAgentProfileShrinkRequest extends TeaModel {
      *     &quot;type&quot;: &quot;CollectNumber&quot;,
      *     &quot;instructions&quot;: [{
      *         &quot;code&quot;: &quot;DTMF0&quot;,
-     *         &quot;name&quot;: &quot;收号测试&quot;,
+     *         &quot;name&quot;: &quot;Number collection test&quot;,
      *         &quot;collectVoice&quot;: true,
      *         &quot;terminator&quot;: &quot;#&quot;
      *     }]
@@ -80,20 +80,20 @@ public class ModifyAgentProfileShrinkRequest extends TeaModel {
     public String instructionJson;
 
     /**
-     * <p>Label description</p>
+     * <p>The label description.</p>
      * 
      * <strong>example:</strong>
      * <p>[{
-     *     &quot;name&quot;: &quot;是否满意&quot;,
-     *     &quot;description&quot;: &quot;对介绍的游戏内容是否感兴趣&quot;,
-     *     &quot;valueList&quot;: &quot;[\&quot;有兴趣\&quot;,\&quot;没兴趣\&quot;]&quot;
+     *     &quot;name&quot;: &quot;Satisfied&quot;,
+     *     &quot;description&quot;: &quot;Whether interested in the introduced game content&quot;,
+     *     &quot;valueList&quot;: &quot;[\&quot;Interested\&quot;,\&quot;Not interested\&quot;]&quot;
      * }]</p>
      */
     @NameInMap("LabelsJson")
     public String labelsJson;
 
     /**
-     * <p>Model ID</p>
+     * <p>The model ID.</p>
      * 
      * <strong>example:</strong>
      * <p>model_001</p>
@@ -102,7 +102,7 @@ public class ModifyAgentProfileShrinkRequest extends TeaModel {
     public String model;
 
     /**
-     * <p>Model configuration</p>
+     * <p>The model configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -111,30 +111,30 @@ public class ModifyAgentProfileShrinkRequest extends TeaModel {
     public String modelConfig;
 
     /**
-     * <p>Prompt (Professional Mode)</p>
+     * <p>The prompt in professional mode.</p>
      * 
      * <strong>example:</strong>
-     * <p>\n名称：安妮 \n身份：游戏推广员\n背景：通过电话向玩家宣传最新福利活动，确保每一位玩家都能及时掌握信息，享受游戏的乐趣。\n技能：作为游戏客服，向用户推荐限时游戏福利活动，强调福利亮点并告知参与流程。\n约束条件：你需要记住你是安妮，来自于热门游戏客服团队，专注于通过电话向玩家宣传最新福利活动。\n作为主动联系玩家的客服，需要根据玩家是否想了解活动的意图来选择是否介绍。\n保持通话的专业性，同时语言平易近人，确保玩家轻松理解活动内容。\n明确活动的起止时间，确保玩家不会混淆。\n强调活动的重点奖励和参与方式，提升玩家的参与兴趣。</p>
+     * <p>\nName: Annie \nIdentity: Game Promoter\nBackground: Promote the latest promotional events to players over the phone, ensuring that every player stays informed and enjoys the game.\nSkills: As a game customer service representative, recommend limited-time game promotional events to users, highlight the event benefits, and inform them of the participation process.\nConstraints: You need to remember that you are Annie, from the customer service team of a popular game, focusing on promoting the latest promotional events to players over the phone.\nAs a customer service representative proactively contacting players, you need to choose whether to introduce the event based on the player\&quot;s intention to learn about it.\nMaintain the professionalism of the call while keeping the language approachable to ensure players can easily understand the event content.\nClarify the start and end times of the event to ensure players do not get confused.\nHighlight the key rewards and participation methods to increase players\&quot; interest in participating</p>
      */
     @NameInMap("Prompt")
     public String prompt;
 
     /**
-     * <p>Agent configuration</p>
+     * <p>The agent configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{
-     *     &quot;name&quot;: &quot;安妮&quot;,
-     *     &quot;gender&quot;: &quot;女&quot;,
+     *     &quot;name&quot;: &quot;Annie&quot;,
+     *     &quot;gender&quot;: &quot;Female&quot;,
      *     &quot;age&quot;: 20,
-     *     &quot;role&quot;: &quot;游戏推广员&quot;,
-     *     &quot;communicationStyle&quot;: [&quot;亲切&quot;, &quot;口语化&quot;, &quot;活泼&quot;],
-     *     &quot;goals&quot;: &quot;通过电话向玩家宣传最新福利活动，确保每一位玩家都能及时掌握信息，享受游戏的乐趣。&quot;,
-     *     &quot;background&quot;: &quot;福利介绍\n从${开始时间}开始，直至${结束时间}结束，为期一周的时间里，我们精心准备了\&quot;限时寻宝\&quot;福利活动。只要您在这段时间内每日登录游戏，即可领取登录礼包，内含珍稀材料、能量药剂和限定外观奖励\n\n福利亮点\n本次活动的亮点在于，累积登录达到5天的玩家，将额外获得一份\&quot;神秘宝箱\&quot;，开启宝箱获得稀有宠物，将为您的战斗增添强大助力！千万别错过这次增强实力的绝佳机会。\n\n参与方式\n登录游戏后，在活动面板中找到\&quot;限时寻宝\&quot;，点击即可领取对应的奖励。记得每天上线，奖励不等人哦！&quot;,
-     *     &quot;skills&quot;: &quot;作为游戏客服，向用户推荐限时游戏福利活动，强调福利亮点并告知参与流程。&quot;,
-     *     &quot;workflow&quot;: &quot;1.亲切问候与自我介绍\n- 开场白：“尊敬的冒险者，您好！我是安妮，来自游戏客服团队。今天有幸与您连线，是想分享一项即将启动的独家福利活动，绝对会让您的探险之旅更加精彩纷呈！”\n- 确认玩家想了解活动后，再进行福利活动的介绍\n2.福利活动介绍\n3.强调福利亮点\n4.说明参与方式与提醒\n5.鼓励分享与反馈\n- 互动号召：“如果您觉得这个活动不错，不妨和您的公会伙伴或者游戏朋友分享这个好消息。同时，我们也非常欢迎您在活动结束后，通过游戏内置的反馈系统告诉我们您的体验感受和建议。”\n技能6: 礼貌结束通话\n- 结束语：“好了，尊敬的冒险者，以上就是这次活动的主要内容。希望您能在活动中满载而归，祝您在旅程中所向披靡！如果还有任何疑问，欢迎随时联系我们客服团队。感谢您的接听，期待再次为您服务，再见！”&quot;,
-     *     &quot;constraint&quot;: &quot;你需要记住你是安妮，来自于热门游戏客服团队，专注于通过电话向玩家宣传最新福利活动。\n作为主动联系玩家的客服，需要根据玩家是否想了解活动的意图来选择是否介绍。\n保持通话的专业性，同时语言平易近人，确保玩家轻松理解活动内容。\n明确活动的起止时间，确保玩家不会混淆。\n强调活动的重点奖励和参与方式，提升玩家的参与兴趣。\n鼓励玩家间的互动和反馈，以促进游戏社区的活跃度。\n结束通话时保持礼貌，给玩家留下良好印象。\n用户询问的问题与目标或流程无关时， 请礼貌拒绝，并引导到目标问题上。\n对于不知道的问题，请不要胡乱回复，需要礼貌回复“不清楚”，并引导到目标问题上。&quot;,
-     *     &quot;openingPrompt&quot;: &quot;尊敬的冒险者，您好！我是安妮，来自游戏客服团队。今天有幸与您连线，是想分享一项即将启动的独家福利活动，绝对会让您的探险之旅更加精彩纷呈！&quot;,
+     *     &quot;role&quot;: &quot;Game Promoter&quot;,
+     *     &quot;communicationStyle&quot;: [&quot;Friendly&quot;, &quot;Conversational&quot;, &quot;Lively&quot;],
+     *     &quot;goals&quot;: &quot;Promote the latest promotional events to players over the phone, ensuring that every player stays informed and enjoys the game.&quot;,
+     *     &quot;background&quot;: &quot;Event Introduction\nStarting from ${Start Time} until ${End Time}, we have carefully prepared the \&quot;Limited-Time Treasure Hunt\&quot; promotional event for a week. As long as you log in to the game daily during this period, you can claim a login gift pack containing rare materials, energy potions, and exclusive cosmetic rewards.\n\nEvent Highlights\nThe highlight of this event is that players who log in for 5 cumulative days will receive an extra \&quot;Mystery Chest\&quot;. Opening the chest to obtain a rare pet will add a powerful boost to your battles! Do not miss this excellent opportunity to enhance your strength.\n\nHow to Participate\nAfter logging into the game, find \&quot;Limited-Time Treasure Hunt\&quot; in the event panel and click to claim the corresponding rewards. Remember to log in every day, the rewards wait for no one!&quot;,
+     *     &quot;skills&quot;: &quot;As a game customer service representative, recommend limited-time game promotional events to users, highlight the event benefits, and inform them of the participation process.&quot;,
+     *     &quot;workflow&quot;: &quot;1. Friendly greeting and self-introduction\n- Opening: \&quot;Greetings, honorable adventurer! I am Annie from the game customer service team. I am honored to connect with you today to share an exclusive promotional event that is about to launch, which will definitely make your adventure more exciting!\&quot;\n- Introduce the promotional event only after confirming that the player wants to learn about it.\n2. Promotional event introduction\n3. Highlight event benefits\n4. Explain how to participate and remind\n5. Encourage sharing and feedback\n- Call to action: \&quot;If you think this event is good, feel free to share this good news with your guild mates or game friends. At the same time, we also welcome you to share your experience and suggestions through the in-game feedback system after the event ends.\&quot;\nSkill 6: Politely end the call\n- Closing: \&quot;Well, honorable adventurer, that is the main content of this event. I hope you will return with full rewards from the event, and I wish you invincible in your journey! If you have any questions, feel free to contact our customer service team. Thank you for taking my call, I look forward to serving you again, goodbye!\&quot;&quot;,
+     *     &quot;constraint&quot;: &quot;You need to remember that you are Annie, from the customer service team of a popular game, focusing on promoting the latest promotional events to players over the phone.\nAs a customer service representative proactively contacting players, you need to choose whether to introduce the event based on the player\&quot;s intention to learn about it.\nMaintain the professionalism of the call while keeping the language approachable to ensure players can easily understand the event content.\nClarify the start and end times of the event to ensure players do not get confused.\nHighlight the key rewards and participation methods to increase players\&quot; interest in participating.\nEncourage interaction and feedback among players to promote the activity of the game community.\nMaintain politeness when ending the call to leave a good impression on the player.\nWhen the user asks questions unrelated to the goal or process, politely refuse and guide them back to the target topic.\nFor questions you do not know the answer to, do not reply randomly. You need to politely reply \&quot;I am not sure\&quot; and guide them back to the target topic.&quot;,
+     *     &quot;openingPrompt&quot;: &quot;Greetings, honorable adventurer! I am Annie from the game customer service team. I am honored to connect with you today to share an exclusive promotional event that is about to launch, which will definitely make your adventure more exciting!&quot;,
      *     &quot;output&quot;: &quot;&quot;,
      *     &quot;aiHangupOutput&quot;: &quot;&quot;,
      *     &quot;aiSilenceTimeoutOutput&quot;: &quot;&quot;
@@ -144,24 +144,24 @@ public class ModifyAgentProfileShrinkRequest extends TeaModel {
     public String promptJson;
 
     /**
-     * <p>Scenario</p>
+     * <p>The scenario.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试场景</p>
+     * <p>Test scenario</p>
      */
     @NameInMap("Scenario")
     public String scenario;
 
     /**
-     * <p>Variable configuration</p>
+     * <p>The variable configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>[{
-     *     &quot;name&quot;: &quot;开始时间&quot;,
-     *     &quot;description&quot;: &quot;开始时间&quot;
+     *     &quot;name&quot;: &quot;Start Time&quot;,
+     *     &quot;description&quot;: &quot;Start time&quot;
      * }, {
-     *     &quot;name&quot;: &quot;结束时间&quot;,
-     *     &quot;description&quot;: &quot;结束时间&quot;
+     *     &quot;name&quot;: &quot;End Time&quot;,
+     *     &quot;description&quot;: &quot;End time&quot;
      * }]</p>
      */
     @NameInMap("VariablesJson")

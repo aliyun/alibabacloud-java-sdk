@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SaveAnnotationMissionTagInfoListResponseBody extends TeaModel {
     /**
-     * <p>The status code of the API call.</p>
+     * <p>The API status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class SaveAnnotationMissionTagInfoListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data.</p>
      */
     @NameInMap("Data")
     public SaveAnnotationMissionTagInfoListResponseBodyData data;
@@ -29,7 +29,7 @@ public class SaveAnnotationMissionTagInfoListResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned for the API call.</p>
+     * <p>The API response message.</p>
      * 
      * <strong>example:</strong>
      * <p>执行失败：查找元素或操作超时，outTaskId：trademark_regnew_public_cn-uax33hol2uu,flowId：null，nodeUUID：541b6c71-8cce-4ab0-af84-713ca9741821</p>
@@ -47,7 +47,11 @@ public class SaveAnnotationMissionTagInfoListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. A value of true indicates that the call was successful. A value of false indicates that the call failed.</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +114,7 @@ public class SaveAnnotationMissionTagInfoListResponseBody extends TeaModel {
 
     public static class SaveAnnotationMissionTagInfoListResponseBodyData extends TeaModel {
         /**
-         * <p>The number of successful operations.</p>
+         * <p>The number of successfully executed operations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -119,7 +123,7 @@ public class SaveAnnotationMissionTagInfoListResponseBody extends TeaModel {
         public Integer execCount;
 
         /**
-         * <p>The message returned for the API call.</p>
+         * <p>The API response message.</p>
          * 
          * <strong>example:</strong>
          * <p>执行失败：查找元素或操作超时，outTaskId：trademark_regnew_public_cn-uax33hol2uu，flowId：null，nodeUUID：541b6c71-8cce-4ab0-af84-713ca9741821</p>
@@ -128,7 +132,7 @@ public class SaveAnnotationMissionTagInfoListResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>Indicates whether the operation was successful.</p>
+         * <p>Indicates whether the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

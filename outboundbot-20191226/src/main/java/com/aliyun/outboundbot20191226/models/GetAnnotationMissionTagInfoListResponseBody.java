@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAnnotationMissionTagInfoListResponseBody extends TeaModel {
     /**
-     * <p>Status code</p>
+     * <p>The API status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,13 +14,13 @@ public class GetAnnotationMissionTagInfoListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Response data</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public GetAnnotationMissionTagInfoListResponseBodyData data;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class GetAnnotationMissionTagInfoListResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Response message</p>
+     * <p>The message returned by the API.</p>
      * 
      * <strong>example:</strong>
      * <p>CDR \&quot;job-efbaeefc-4d45-4e79-83f7-b33b0769c969\&quot; doesn\&quot;t exists.</p>
@@ -38,7 +38,7 @@ public class GetAnnotationMissionTagInfoListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
@@ -47,7 +47,7 @@ public class GetAnnotationMissionTagInfoListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call succeeded. A value of true indicates success. A value of false indicates failure.</p>
+     * <p>Indicates whether the call was successful. Valid values: true: The call was successful. false: The call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,16 +110,16 @@ public class GetAnnotationMissionTagInfoListResponseBody extends TeaModel {
 
     public static class GetAnnotationMissionTagInfoListResponseBodyDataAnnotationMissionTagInfoList extends TeaModel {
         /**
-         * <p>Tag description</p>
+         * <p>The tag description.</p>
          * 
          * <strong>example:</strong>
-         * <p>用户投诉</p>
+         * <p>User complaint</p>
          */
         @NameInMap("AnnotationMissionTagInfoDescription")
         public String annotationMissionTagInfoDescription;
 
         /**
-         * <p>Tag ID</p>
+         * <p>The tag ID.</p>
          * 
          * <strong>example:</strong>
          * <p>e1ee87ea-ebad-4079-aebb-1c56a4ef0c06</p>
@@ -128,16 +128,16 @@ public class GetAnnotationMissionTagInfoListResponseBody extends TeaModel {
         public String annotationMissionTagInfoId;
 
         /**
-         * <p>Tag name</p>
+         * <p>The tag name.</p>
          * 
          * <strong>example:</strong>
-         * <p>用户投诉</p>
+         * <p>User complaint</p>
          */
         @NameInMap("AnnotationMissionTagInfoName")
         public String annotationMissionTagInfoName;
 
         /**
-         * <p>Indicates whether the tag is deleted. A value of true indicates that the tag is deleted.</p>
+         * <p>Indicates whether the tag is deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -146,7 +146,7 @@ public class GetAnnotationMissionTagInfoListResponseBody extends TeaModel {
         public Boolean delete;
 
         /**
-         * <p>Instance ID</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3c3b8d1d-deff-48d9-9318-addc80ae5b1e</p>
@@ -155,7 +155,7 @@ public class GetAnnotationMissionTagInfoListResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Tenant ID</p>
+         * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DING_ORG_dingbd9daecdb7aaed3bffe93478753d9884</p>
@@ -220,13 +220,13 @@ public class GetAnnotationMissionTagInfoListResponseBody extends TeaModel {
 
     public static class GetAnnotationMissionTagInfoListResponseBodyData extends TeaModel {
         /**
-         * <p>Tag list</p>
+         * <p>The list of tags.</p>
          */
         @NameInMap("AnnotationMissionTagInfoList")
         public java.util.List<GetAnnotationMissionTagInfoListResponseBodyDataAnnotationMissionTagInfoList> annotationMissionTagInfoList;
 
         /**
-         * <p>Response message</p>
+         * <p>The message returned by the API.</p>
          * 
          * <strong>example:</strong>
          * <p>CDR \&quot;job-efbaeefc-4d45-4e79-83f7-b33b0769c969\&quot; doesn\&quot;t exists.</p>
@@ -235,7 +235,7 @@ public class GetAnnotationMissionTagInfoListResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>Indicates whether the call succeeded. A value of true indicates success. A value of false indicates failure.</p>
+         * <p>Indicates whether the call was successful. Valid values: true: The call was successful. false: The call failed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

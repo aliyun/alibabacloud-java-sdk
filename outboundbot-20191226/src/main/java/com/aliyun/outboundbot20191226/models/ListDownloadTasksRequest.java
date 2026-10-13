@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDownloadTasksRequest extends TeaModel {
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ae4572af-376f-439f-8970-38764acbaa91</p>
@@ -14,7 +14,7 @@ public class ListDownloadTasksRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Page number</p>
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListDownloadTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Count</p>
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

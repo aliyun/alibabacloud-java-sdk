@@ -23,13 +23,13 @@ public class ListInstancesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The list of service instances.</p>
+     * <p>The list of outbound robot instances.</p>
      */
     @NameInMap("Instances")
     public java.util.List<ListInstancesResponseBodyInstances> instances;
 
     /**
-     * <p>The response message.</p>
+     * <p>The message returned by the API.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -65,7 +65,7 @@ public class ListInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -203,7 +203,7 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstances extends TeaModel {
         /**
-         * <p>The time when the instance was created.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1578469042851</p>
@@ -230,16 +230,16 @@ public class ListInstancesResponseBody extends TeaModel {
         public String creatorName;
 
         /**
-         * <p>The description of the Outbound Bot service instance.</p>
+         * <p>The description of the outbound robot instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>这是一个实例</p>
+         * <p>This is an instance</p>
          */
         @NameInMap("InstanceDescription")
         public String instanceDescription;
 
         /**
-         * <p>The service instance ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>90515b5-6115-4ccf-83e2-52d5bfaf2ddf</p>
@@ -248,16 +248,16 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The name of the Outbound Bot service instance.</p>
+         * <p>The name of the outbound robot instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>回访</p>
+         * <p>Follow-up</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>Indicates whether the instance is a system preset instance.</p>
+         * <p>Indicates whether the instance is a system-preset instance.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

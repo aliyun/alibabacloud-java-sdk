@@ -23,7 +23,7 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The task list.</p>
+     * <p>The list of job groups.</p>
      */
     @NameInMap("JobGroups")
     public java.util.List<ListJobGroupsAsyncResponseBodyJobGroups> jobGroups;
@@ -92,7 +92,7 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>Indicates whether the result is valid.</p>
+     * <p>Indicates whether the request is valid.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -195,7 +195,7 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
 
     public static class ListJobGroupsAsyncResponseBodyJobGroupsExportProgress extends TeaModel {
         /**
-         * <p>The download URL. [Deprecated]</p>
+         * <p><strong>[Deprecated]</strong> The download URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.xxx.com/xxx">http://www.xxx.com/xxx</a></p>
@@ -254,7 +254,7 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
 
     public static class ListJobGroupsAsyncResponseBodyJobGroupsProgress extends TeaModel {
         /**
-         * <p>The number of cancelled jobs.</p>
+         * <p>The number of canceled jobs.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -263,7 +263,7 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
         public Integer cancelledNum;
 
         /**
-         * <p>The total execution duration so far. [Deprecated]</p>
+         * <p><strong>[Deprecated]</strong> The total execution duration up to the current time.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -308,7 +308,7 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
         public Integer scheduling;
 
         /**
-         * <p>The start time. [Deprecated]</p>
+         * <p><strong>[Deprecated]</strong> The start time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1640316786259</p>
@@ -319,14 +319,14 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
         /**
          * <p>The execution status. Valid values:</p>
          * <ul>
-         * <li>Draft: Draft.</li>
-         * <li>Scheduling: Scheduling in progress.</li>
-         * <li>Executing: Executing.</li>
-         * <li>Completed: Completed.</li>
-         * <li>Paused: Paused.</li>
-         * <li>Failed: Failed.</li>
-         * <li>Cancelled: Cancelled.</li>
-         * <li>Initializing: Initializing.</li>
+         * <li>Draft: The job group is a draft.</li>
+         * <li>Scheduling: The job group is being scheduled.</li>
+         * <li>Executing: The job group is being executed.</li>
+         * <li>Completed: The job group is completed.</li>
+         * <li>Paused: The job group is paused.</li>
+         * <li>Failed: The job group failed.</li>
+         * <li>Cancelled: The job group is canceled.</li>
+         * <li>Initializing: The job group is being initialized.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -354,7 +354,7 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
         public Integer totalJobs;
 
         /**
-         * <p>The number of unanswered jobs. [Deprecated]</p>
+         * <p><strong>[Deprecated]</strong> The number of unanswered jobs.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -459,7 +459,7 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
 
     public static class ListJobGroupsAsyncResponseBodyJobGroupsStrategy extends TeaModel {
         /**
-         * <p>The strategy end time.</p>
+         * <p>The end time of the strategy. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1640316786259</p>
@@ -468,7 +468,7 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The strategy start time.</p>
+         * <p>The start time of the strategy. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1640316786259</p>
@@ -501,7 +501,7 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
 
     public static class ListJobGroupsAsyncResponseBodyJobGroups extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1640316786259</p>
@@ -519,7 +519,7 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
         public ListJobGroupsAsyncResponseBodyJobGroupsExportProgress exportProgress;
 
         /**
-         * <p>The ID of the jobFile parsing task. [Deprecated]</p>
+         * <p><strong>[Deprecated]</strong> The ID of the jobFile parsing task.</p>
          * 
          * <strong>example:</strong>
          * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
@@ -528,7 +528,7 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
         public String jobDataParsingTaskId;
 
         /**
-         * <p>The task description.</p>
+         * <p>The description of the job group.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -537,7 +537,7 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
         public String jobGroupDescription;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the job group.</p>
          * 
          * <strong>example:</strong>
          * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
@@ -546,7 +546,7 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
         public String jobGroupId;
 
         /**
-         * <p>The task name.</p>
+         * <p>The name of the job group.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -564,7 +564,7 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
         public Integer minConcurrency;
 
         /**
-         * <p>The modification time, in milliseconds.</p>
+         * <p>The modification time in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1640316786259</p>
@@ -582,7 +582,7 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
         public ListJobGroupsAsyncResponseBodyJobGroupsProgress progress;
 
         /**
-         * <p>The script ID.</p>
+         * <p>The ID of the script.</p>
          * 
          * <strong>example:</strong>
          * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
@@ -591,7 +591,7 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
         public String scriptId;
 
         /**
-         * <p>The script name.</p>
+         * <p>The name of the script.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx</p>
@@ -600,7 +600,7 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
         public String scriptName;
 
         /**
-         * <p>The script version.</p>
+         * <p>The version of the script.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -609,7 +609,7 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
         public String scriptVersion;
 
         /**
-         * <p>The task status.</p>
+         * <p>The status of the job group.</p>
          * 
          * <strong>example:</strong>
          * <p>Scheduling</p>
@@ -618,9 +618,9 @@ public class ListJobGroupsAsyncResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The strategy. [Deprecated]</p>
+         * <p><strong>[Deprecated]</strong> The strategy.</p>
          * <blockquote>
-         * <p>To view the task strategy information, call the DescribeJobGroup operation.</p>
+         * <p>To view the strategy information of the job group, call the DescribeJobGroup operation.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

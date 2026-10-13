@@ -14,7 +14,7 @@ public class ListBeebotIntentUserSayResponseBody extends TeaModel {
     public String beebotRequestId;
 
     /**
-     * <p>The status code of the API.</p>
+     * <p>The API status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -32,7 +32,7 @@ public class ListBeebotIntentUserSayResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned for the API call.</p>
+     * <p>The API message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -50,7 +50,7 @@ public class ListBeebotIntentUserSayResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries displayed per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -68,7 +68,7 @@ public class ListBeebotIntentUserSayResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -178,16 +178,16 @@ public class ListBeebotIntentUserSayResponseBody extends TeaModel {
 
     public static class ListBeebotIntentUserSayResponseBodyUserSays extends TeaModel {
         /**
-         * <p>The content of the utterance.</p>
+         * <p>The utterance content.</p>
          * 
          * <strong>example:</strong>
-         * <p>你知道xxxx么？</p>
+         * <p>Do you know xxxx?</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
-         * <p>The time when the utterance was created.</p>
+         * <p>The creation time. The format is YYYY-MM-DD HH:mm:ss.+ZZZZ, where +ZZZZ indicates the time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-21 14:16:05.+0800</p>
@@ -205,7 +205,7 @@ public class ListBeebotIntentUserSayResponseBody extends TeaModel {
         public Long intentId;
 
         /**
-         * <p>The time when the utterance was last modified.</p>
+         * <p>The modification time. The format is YYYY-MM-DD HH:mm:ss.+ZZZZ, where +ZZZZ indicates the time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-21 14:16:05.+0800</p>

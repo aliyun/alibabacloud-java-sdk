@@ -23,7 +23,7 @@ public class TaskPreparingResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The response message.</p>
+     * <p>The message returned by the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>Succes</p>
@@ -50,7 +50,7 @@ public class TaskPreparingResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The task ID.</p>
+     * <p>The node ID.</p>
      * 
      * <strong>example:</strong>
      * <p>e4e2a770-b97b-465a-80d8-06dca008c503</p>

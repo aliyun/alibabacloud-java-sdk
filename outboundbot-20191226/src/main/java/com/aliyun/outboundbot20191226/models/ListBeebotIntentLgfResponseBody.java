@@ -38,7 +38,7 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
     public java.util.List<ListBeebotIntentLgfResponseBodyLgfs> lgfs;
 
     /**
-     * <p>The message returned by the API.</p>
+     * <p>The API message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -56,7 +56,7 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -74,7 +74,7 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -178,7 +178,7 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
 
     public static class ListBeebotIntentLgfResponseBodyLgfs extends TeaModel {
         /**
-         * <p>The time when the template was created.</p>
+         * <p>The creation time. The format is YYYY-MM-DD HH:mm:ss.+ZZZZ, where +ZZZZ indicates the time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-21 10:54:18.+0800</p>
@@ -196,7 +196,7 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
         public Long intentId;
 
         /**
-         * <p>The ID of the utterance template.</p>
+         * <p>The utterance template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5666117</p>
@@ -205,7 +205,7 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
         public Long lgfId;
 
         /**
-         * <p>The time when the template was last modified.</p>
+         * <p>The modification time. The format is YYYY-MM-DD HH:mm:ss.+ZZZZ, where +ZZZZ indicates the time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-21 10:54:18.+0800</p>
@@ -217,7 +217,7 @@ public class ListBeebotIntentLgfResponseBody extends TeaModel {
          * <p>The content of the utterance template.</p>
          * 
          * <strong>example:</strong>
-         * <p>我是一个问法模版</p>
+         * <p>I am an utterance template</p>
          */
         @NameInMap("RuleText")
         public String ruleText;

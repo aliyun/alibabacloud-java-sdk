@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDownloadTasksResponseBody extends TeaModel {
     /**
-     * <p>API status code</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,13 +14,13 @@ public class ListDownloadTasksResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Download task list</p>
+     * <p>The list of download tasks.</p>
      */
     @NameInMap("DownloadTasks")
     public ListDownloadTasksResponseBodyDownloadTasks downloadTasks;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>API message</p>
+     * <p>The message returned by the API.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -38,7 +38,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>904CFA7B-8AD9-50FF-9B3E-404B20B9EE31</p>
@@ -47,7 +47,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Success</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -110,7 +110,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
 
     public static class ListDownloadTasksResponseBodyDownloadTasksListDownloadTaskFiles extends TeaModel {
         /**
-         * <p>File ID</p>
+         * <p>The file ID.</p>
          * 
          * <strong>example:</strong>
          * <p>01f8d11abdb9406996c0c46e7*******</p>
@@ -119,7 +119,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         public String fileId;
 
         /**
-         * <p>Completion progress [Deprecated]</p>
+         * <p><strong>[Deprecated]</strong> The completion progress.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -128,20 +128,14 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         public Integer progress;
 
         /**
-         * <p>File status</p>
+         * <p>The file status. Valid values:</p>
          * <ul>
-         * <li><p>Pending: Pending</p>
-         * </li>
-         * <li><p>InProgress: In progress</p>
-         * </li>
-         * <li><p>Finished: Completed</p>
-         * </li>
-         * <li><p>Failed: Failed</p>
-         * </li>
-         * <li><p>Expired: Expired</p>
-         * </li>
-         * <li><p>Cancelled: Canceled</p>
-         * </li>
+         * <li>Pending: Pending.</li>
+         * <li>InProgress: In progress.</li>
+         * <li>Finished: Finished.</li>
+         * <li>Failed: Failed.</li>
+         * <li>Expired: Expired.</li>
+         * <li>Cancelled: Cancelled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -151,10 +145,10 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Title</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
-         * <p>GUI-TEST-新建风险</p>
+         * <p>GUI-TEST-Create risk</p>
          */
         @NameInMap("Title")
         public String title;
@@ -200,13 +194,13 @@ public class ListDownloadTasksResponseBody extends TeaModel {
 
     public static class ListDownloadTasksResponseBodyDownloadTasksList extends TeaModel {
         /**
-         * <p>Download task file list</p>
+         * <p>The list of files for the download task.</p>
          */
         @NameInMap("DownloadTaskFiles")
         public java.util.List<ListDownloadTasksResponseBodyDownloadTasksListDownloadTaskFiles> downloadTaskFiles;
 
         /**
-         * <p>The expiration time.</p>
+         * <p>The expiration time. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1646792941</p>
@@ -215,20 +209,14 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         public Long expireTime;
 
         /**
-         * <p>Export status.</p>
+         * <p>The export status. Valid values:</p>
          * <ul>
-         * <li><p>Pending: Pending</p>
-         * </li>
-         * <li><p>InProgress: In progress</p>
-         * </li>
-         * <li><p>Finished: Completed</p>
-         * </li>
-         * <li><p>Failed: Failed</p>
-         * </li>
-         * <li><p>Expired: Expired</p>
-         * </li>
-         * <li><p>Cancelled: Canceled</p>
-         * </li>
+         * <li>Pending: Pending.</li>
+         * <li>InProgress: In progress.</li>
+         * <li>Finished: Finished.</li>
+         * <li>Failed: Failed.</li>
+         * <li>Expired: Expired.</li>
+         * <li>Cancelled: Cancelled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -238,7 +226,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Task ID</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6b0e547e-501c-480a-812f-d27e28e74f9a</p>
@@ -247,10 +235,10 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>Title</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
-         * <p>GUI-TEST-新建风险</p>
+         * <p>GUI-TEST-Create risk</p>
          */
         @NameInMap("Title")
         public String title;
@@ -304,13 +292,13 @@ public class ListDownloadTasksResponseBody extends TeaModel {
 
     public static class ListDownloadTasksResponseBodyDownloadTasks extends TeaModel {
         /**
-         * <p>Download task array</p>
+         * <p>The array of download tasks.</p>
          */
         @NameInMap("List")
         public java.util.List<ListDownloadTasksResponseBodyDownloadTasksList> list;
 
         /**
-         * <p>Page number</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -319,7 +307,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>Count</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -328,7 +316,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>Total count</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

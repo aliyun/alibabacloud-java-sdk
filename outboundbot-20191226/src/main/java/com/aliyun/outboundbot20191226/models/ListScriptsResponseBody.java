@@ -23,7 +23,7 @@ public class ListScriptsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The response message.</p>
+     * <p>The message returned by the API.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -41,7 +41,7 @@ public class ListScriptsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The script list.</p>
+     * <p>The list of scripts.</p>
      */
     @NameInMap("Scripts")
     public ListScriptsResponseBodyScripts scripts;
@@ -119,7 +119,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public String fcFunction;
 
         /**
-         * <p>The function service trigger URL.</p>
+         * <p>The function service trigger.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://sanfang_test-xxxxxx.cn-shanghai-vpc.fcapp.run">http://sanfang_test-xxxxxx.cn-shanghai-vpc.fcapp.run</a></p>
@@ -128,7 +128,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public String fcHttpTriggerUrl;
 
         /**
-         * <p>The function service region.</p>
+         * <p>The region of the function service.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -169,7 +169,7 @@ public class ListScriptsResponseBody extends TeaModel {
 
     public static class ListScriptsResponseBodyScriptsList extends TeaModel {
         /**
-         * <p>The access key of the robot business workspace.</p>
+         * <p>The access key of the robot workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>14791f5f226b4878b3d9b676a0291234</p>
@@ -178,7 +178,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public String agentKey;
 
         /**
-         * <p>Indicates whether the robot business workspace is a large model workspace.</p>
+         * <p>Indicates whether the robot workspace is a large model workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -186,11 +186,14 @@ public class ListScriptsResponseBody extends TeaModel {
         @NameInMap("AgentLlm")
         public Boolean agentLlm;
 
+        /**
+         * <p>The chatbot ID.</p>
+         */
         @NameInMap("ChatBotId")
         public String chatBotId;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1578965079000</p>
@@ -208,7 +211,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public String debugStatus;
 
         /**
-         * <p>Indicates whether the emotion recognition feature is enabled. This parameter is set to false for all large model scenarios.</p>
+         * <p>Indicates whether the emotion recognition configuration is enabled. This value is always false for large models.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -226,7 +229,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public String industry;
 
         /**
-         * <p>Indicates whether the debug version is in draft state.</p>
+         * <p>Indicates whether the debug version is in the draft state.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -253,7 +256,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public Boolean isPreset;
 
         /**
-         * <p>Indicates whether the long pause detection feature is enabled. This parameter is set to false for all large model scenarios.</p>
+         * <p>Indicates whether the long pause configuration is enabled. This value is always false for large models.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -262,7 +265,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public Boolean longWaitEnable;
 
         /**
-         * <p>Indicates whether the filler phrase feature is enabled.</p>
+         * <p>Indicates whether the filler word configuration is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -271,7 +274,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public Boolean miniPlaybackEnable;
 
         /**
-         * <p>Indicates whether the graceful barge-in feature is enabled. This parameter is set to false for all large model scenarios.</p>
+         * <p>Indicates whether the graceful barge-in configuration is enabled. This value is always false for large models.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -280,7 +283,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public Boolean newBargeInEnable;
 
         /**
-         * <p>The robot access type. If the scenario uses a small model, this field is empty. If the scenario uses a large model, this field is set to Managed.</p>
+         * <p>The robot access type. If the scenario is a small model scenario, this field is empty. If the scenario is a large model scenario, this field is Managed.</p>
          * 
          * <strong>example:</strong>
          * <p>Empty or Managed</p>
@@ -289,7 +292,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public String nluAccessType;
 
         /**
-         * <p>The robot engine. If the scenario uses a small model, this field is empty. If the scenario uses a large model, this field is set to Prompts.</p>
+         * <p>The robot engine. If the scenario is a small model scenario, this field is empty. If the scenario is a large model scenario, this field is Prompts.</p>
          * 
          * <strong>example:</strong>
          * <p>Empty or Prompts</p>
@@ -298,16 +301,16 @@ public class ListScriptsResponseBody extends TeaModel {
         public String nluEngine;
 
         /**
-         * <p>The function computing service mode configuration.</p>
+         * <p>The Function Compute service mode configuration.</p>
          */
         @NameInMap("NluProfile")
         public ListScriptsResponseBodyScriptsListNluProfile nluProfile;
 
         /**
-         * <p>The reason for review rejection.</p>
+         * <p>The reason for rejection.</p>
          * 
          * <strong>example:</strong>
-         * <p>Non-compliant script language</p>
+         * <p>Non-compliant script wording</p>
          */
         @NameInMap("RejectReason")
         public String rejectReason;
@@ -316,7 +319,7 @@ public class ListScriptsResponseBody extends TeaModel {
          * <p>The scenario.</p>
          * 
          * <strong>example:</strong>
-         * <p>Telemarketing</p>
+         * <p>Telesales</p>
          */
         @NameInMap("Scene")
         public String scene;
@@ -325,7 +328,7 @@ public class ListScriptsResponseBody extends TeaModel {
          * <p>The script description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Telemarketing script</p>
+         * <p>Telesales script</p>
          */
         @NameInMap("ScriptDescription")
         public String scriptDescription;
@@ -343,7 +346,7 @@ public class ListScriptsResponseBody extends TeaModel {
          * <p>The script name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Telemarketing script</p>
+         * <p>Telesales script</p>
          */
         @NameInMap("ScriptName")
         public String scriptName;
@@ -358,7 +361,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1578965079000</p>
@@ -367,7 +370,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
-         * <p>The robot business workspace ID.</p>
+         * <p>The robot workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1160195</p>
@@ -576,7 +579,7 @@ public class ListScriptsResponseBody extends TeaModel {
 
     public static class ListScriptsResponseBodyScripts extends TeaModel {
         /**
-         * <p>The script array.</p>
+         * <p>The array of scripts.</p>
          */
         @NameInMap("List")
         public java.util.List<ListScriptsResponseBodyScriptsList> list;

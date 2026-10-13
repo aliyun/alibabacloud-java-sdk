@@ -45,7 +45,7 @@ public class ModifyOutboundCallNumberRequest extends TeaModel {
     public Integer rateLimitCount;
 
     /**
-     * <p>The rate limit period. Unit: seconds.</p>
+     * <p>The rate limit period, in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

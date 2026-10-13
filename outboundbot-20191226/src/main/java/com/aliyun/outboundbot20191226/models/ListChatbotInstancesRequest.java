@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListChatbotInstancesRequest extends TeaModel {
     /**
-     * <p>Workspace access key for the chatbot.</p>
+     * <p>The access key of the chatbot workspace.</p>
      * <blockquote>
-     * <p>Get this key by calling ListChatbotAgents. If you omit this parameter, the API returns instances from all workspaces.</p>
+     * <p>You can obtain the value by calling the ListChatbotAgents operation. If you leave this parameter empty, chatbots in all workspaces are queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class ListChatbotInstancesRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>Page number.</p>
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,9 +27,9 @@ public class ListChatbotInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Number of items per page.</p>
+     * <p>The number of entries per page.</p>
      * <blockquote>
-     * <p>The value must be less than or equal to 50.</p>
+     * <p>The value of this parameter must be less than or equal to 50.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

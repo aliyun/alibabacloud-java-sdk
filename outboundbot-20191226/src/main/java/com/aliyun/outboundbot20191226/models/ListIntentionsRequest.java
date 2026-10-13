@@ -6,15 +6,12 @@ import com.aliyun.tea.*;
 public class ListIntentionsRequest extends TeaModel {
     /**
      * <blockquote>
-     * <p>Notice: </p>
+     * <p>Notice: This parameter is required. Select a value based on the scenario.</p>
      * </blockquote>
-     * <p>This parameter is required. Select based on the scenario.</p>
-     * <p>Annotation data source.</p>
+     * <p>The annotation data source. Valid values:</p>
      * <ul>
-     * <li><p>1: Outbound Call</p>
-     * </li>
-     * <li><p>2: Navigation</p>
-     * </li>
+     * <li>1: outbound call</li>
+     * <li>2: navigation</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,9 +21,9 @@ public class ListIntentionsRequest extends TeaModel {
     public Long annotationMissionDataSourceType;
 
     /**
-     * <p>Bot ID</p>
+     * <p>The robot ID.</p>
      * <blockquote>
-     * <p>Get this from the DescribeScript API. The corresponding parameter is ChatbotId.</p>
+     * <p>You can obtain this value from the DescribeScript operation, which corresponds to the ChatbotId parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -36,12 +33,10 @@ public class ListIntentionsRequest extends TeaModel {
     public String botId;
 
     /**
-     * <p>Environment</p>
+     * <p>The environment. Valid values:</p>
      * <ul>
-     * <li><p>1: Private Cloud</p>
-     * </li>
-     * <li><p>2: Public Cloud</p>
-     * </li>
+     * <li>1: private cloud</li>
+     * <li>2: public cloud</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +46,7 @@ public class ListIntentionsRequest extends TeaModel {
     public Long environment;
 
     /**
-     * <p>Instance ID</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>e5035654-1745-484a-8c5b-165f7c7bcd79</p>
@@ -60,7 +55,7 @@ public class ListIntentionsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Intent ID</p>
+     * <p>The intent ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10717802</p>
@@ -69,7 +64,7 @@ public class ListIntentionsRequest extends TeaModel {
     public Long intentId;
 
     /**
-     * <p>Page Number</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -78,7 +73,7 @@ public class ListIntentionsRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
-     * <p>Number.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -87,7 +82,7 @@ public class ListIntentionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Scenario ID</p>
+     * <p>The scenario ID.</p>
      * 
      * <strong>example:</strong>
      * <p>c5c5d8c0-c0f1-48a7-be2b-dc46006d888a</p>
@@ -96,13 +91,13 @@ public class ListIntentionsRequest extends TeaModel {
     public String scriptId;
 
     /**
-     * <p>Intent Name</p>
+     * <p>The intent name.</p>
      * <blockquote>
-     * <p>Use this for fuzzy queries based on keywords.</p>
+     * <p>Supports fuzzy match by keyword as a filter condition.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>知道</p>
+     * <p>know</p>
      */
     @NameInMap("UserNick")
     public String userNick;

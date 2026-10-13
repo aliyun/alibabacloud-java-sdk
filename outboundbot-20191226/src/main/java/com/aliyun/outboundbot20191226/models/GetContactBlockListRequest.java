@@ -24,7 +24,7 @@ public class GetContactBlockListRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number. This parameter is required.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,7 +33,7 @@ public class GetContactBlockListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. This parameter is required.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,6 +41,9 @@ public class GetContactBlockListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The search criteria for the outbound call blocklist.</p>
+     */
     @NameInMap("SearchPattern")
     public String searchPattern;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIntentionsResponseBody extends TeaModel {
     /**
-     * <p>API Status Code</p>
+     * <p>The status code of the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,13 +14,13 @@ public class ListIntentionsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned Data</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public ListIntentionsResponseBodyData data;
 
     /**
-     * <p>HTTP Status Code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class ListIntentionsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>API Message</p>
+     * <p>The message returned by the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -38,7 +38,7 @@ public class ListIntentionsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
@@ -47,7 +47,7 @@ public class ListIntentionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Is Success</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,13 +110,13 @@ public class ListIntentionsResponseBody extends TeaModel {
 
     public static class ListIntentionsResponseBodyDataIntentListRuleCheck extends TeaModel {
         /**
-         * <p>Error Message</p>
+         * <p>The error message.</p>
          */
         @NameInMap("Error")
         public java.util.List<String> error;
 
         /**
-         * <p>Is Strict Match</p>
+         * <p>Indicates whether strict matching is used.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -125,16 +125,16 @@ public class ListIntentionsResponseBody extends TeaModel {
         public Boolean strict;
 
         /**
-         * <p>Expression Value</p>
+         * <p>The expression value.</p>
          * 
          * <strong>example:</strong>
-         * <p>知道</p>
+         * <p>know</p>
          */
         @NameInMap("Text")
         public String text;
 
         /**
-         * <p>Warning Message</p>
+         * <p>The warning message.</p>
          */
         @NameInMap("Warning")
         public java.util.List<String> warning;
@@ -180,7 +180,7 @@ public class ListIntentionsResponseBody extends TeaModel {
 
     public static class ListIntentionsResponseBodyDataIntentListSlotFeedbackFunctionsSwitch extends TeaModel {
         /**
-         * <p>Condition ID</p>
+         * <p>The condition ID.</p>
          * 
          * <strong>example:</strong>
          * <p>b9932604-08ae-4525-bbe5-c8cce3066070</p>
@@ -189,7 +189,7 @@ public class ListIntentionsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Follow-up Question Label</p>
+         * <p>The clarification prompt label.</p>
          * 
          * <strong>example:</strong>
          * <p>SQL_SUB_QUERY</p>
@@ -198,7 +198,7 @@ public class ListIntentionsResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>Condition Name</p>
+         * <p>The condition name.</p>
          * 
          * <strong>example:</strong>
          * <p>测试0609_20241021_101018_复制_复制_复制</p>
@@ -207,7 +207,7 @@ public class ListIntentionsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Type</p>
+         * <p>The type.</p>
          * 
          * <strong>example:</strong>
          * <p>PASSKEY</p>
@@ -216,7 +216,7 @@ public class ListIntentionsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Condition Value</p>
+         * <p>The condition value.</p>
          * 
          * <strong>example:</strong>
          * <p>BASE_VALIDATE_FILTER_SWITCH</p>
@@ -273,7 +273,7 @@ public class ListIntentionsResponseBody extends TeaModel {
 
     public static class ListIntentionsResponseBodyDataIntentListSlotFeedbackFunctions extends TeaModel {
         /**
-         * <p>Alibaba Cloud Function Name</p>
+         * <p>The Alibaba Cloud function name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -282,7 +282,7 @@ public class ListIntentionsResponseBody extends TeaModel {
         public String aliyunFunction;
 
         /**
-         * <p>Alibaba Cloud Service</p>
+         * <p>The Alibaba Cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -291,7 +291,7 @@ public class ListIntentionsResponseBody extends TeaModel {
         public String aliyunService;
 
         /**
-         * <p>API Status Code</p>
+         * <p>The status code of the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -300,7 +300,7 @@ public class ListIntentionsResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>Follow-up Question Description</p>
+         * <p>The clarification description.</p>
          * 
          * <strong>example:</strong>
          * <p>GA setup for HPC cn4-HPC-EndUserServer-GlobalAccelerator</p>
@@ -309,7 +309,7 @@ public class ListIntentionsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Endpoint</p>
+         * <p>The endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou.log.aliyuncs.com</p>
@@ -318,7 +318,7 @@ public class ListIntentionsResponseBody extends TeaModel {
         public String endPoint;
 
         /**
-         * <p>Follow-up Question Function</p>
+         * <p>The clarification function.</p>
          * 
          * <strong>example:</strong>
          * <p>count</p>
@@ -327,7 +327,7 @@ public class ListIntentionsResponseBody extends TeaModel {
         public String function;
 
         /**
-         * <p>Function Name</p>
+         * <p>The function name.</p>
          * 
          * <strong>example:</strong>
          * <p>方欣云呼系统每日拨测_2024年11月</p>
@@ -336,25 +336,23 @@ public class ListIntentionsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Parameters</p>
+         * <p>The parameters.</p>
          */
         @NameInMap("Params")
         public java.util.Map<String, ?> params;
 
         /**
-         * <p>Feature Switch. Values:</p>
+         * <p>The feature switch. Valid values:</p>
          * <ul>
-         * <li><p><strong>on</strong>: Enabled</p>
-         * </li>
-         * <li><p><strong>off</strong>: Disabled</p>
-         * </li>
+         * <li><strong>on</strong>: Enabled.</li>
+         * <li><strong>off</strong>: Disabled.</li>
          * </ul>
          */
         @NameInMap("Switch")
         public java.util.List<ListIntentionsResponseBodyDataIntentListSlotFeedbackFunctionsSwitch> _switch;
 
         /**
-         * <p>Follow-up Question Type</p>
+         * <p>The clarification type.</p>
          * 
          * <strong>example:</strong>
          * <p>cluster</p>
@@ -451,7 +449,7 @@ public class ListIntentionsResponseBody extends TeaModel {
 
     public static class ListIntentionsResponseBodyDataIntentListSlotTags extends TeaModel {
         /**
-         * <p>User Say Unique Identifier for the Label</p>
+         * <p>The unique identifier of the intent utterance corresponding to the label.</p>
          * 
          * <strong>example:</strong>
          * <p>17448458</p>
@@ -460,10 +458,10 @@ public class ListIntentionsResponseBody extends TeaModel {
         public String userSayId;
 
         /**
-         * <p>The value of the tag is the result of tagging an intent expression.</p>
+         * <p>The tagging result of the intent utterance corresponding to the label.</p>
          * 
          * <strong>example:</strong>
-         * <p>你知道xxxx？</p>
+         * <p>Do you know xxxx?</p>
          */
         @NameInMap("Value")
         public String value;
@@ -493,18 +491,18 @@ public class ListIntentionsResponseBody extends TeaModel {
 
     public static class ListIntentionsResponseBodyDataIntentListSlot extends TeaModel {
         /**
-         * <p>The follow-up question function.</p>
+         * <p>The clarification functions.</p>
          * <blockquote>
-         * <p>Notice: This parameter is invalid.</p>
+         * <p>Notice: 无效内容</p>
          * </blockquote>
          */
         @NameInMap("FeedbackFunctions")
         public java.util.List<ListIntentionsResponseBodyDataIntentListSlotFeedbackFunctions> feedbackFunctions;
 
         /**
-         * <p>Feedback Type</p>
+         * <p>The feedback type.</p>
          * <blockquote>
-         * <p>Notice: Invalid content</p>
+         * <p>Notice: 无效内容</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -514,7 +512,7 @@ public class ListIntentionsResponseBody extends TeaModel {
         public String feedbackType;
 
         /**
-         * <p>Slot Unique Identifier</p>
+         * <p>The unique identifier of the slot.</p>
          * 
          * <strong>example:</strong>
          * <p>9ec31b50-32b8-11eb-9478-19d2d885afdb</p>
@@ -523,12 +521,10 @@ public class ListIntentionsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Is Array:</p>
+         * <p>Indicates whether the slot is an array. Valid values:</p>
          * <ul>
-         * <li><p>true: Yes</p>
-         * </li>
-         * <li><p>false: No</p>
-         * </li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -538,9 +534,9 @@ public class ListIntentionsResponseBody extends TeaModel {
         public Boolean isArray;
 
         /**
-         * <p>Is Encrypted</p>
+         * <p>Indicates whether the slot is encrypted.</p>
          * <blockquote>
-         * <p>Notice: Invalid content</p>
+         * <p>Notice: 无效内容</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -550,9 +546,9 @@ public class ListIntentionsResponseBody extends TeaModel {
         public Boolean isEncrypt;
 
         /**
-         * <p>Is Interactive</p>
+         * <p>Indicates whether the slot is interactive.</p>
          * <blockquote>
-         * <p>Notice: Invalid content</p>
+         * <p>Notice: 无效内容</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -562,12 +558,10 @@ public class ListIntentionsResponseBody extends TeaModel {
         public Boolean isInteractive;
 
         /**
-         * <p>Is Required Slot:</p>
+         * <p>Indicates whether the slot is required. Valid values:</p>
          * <ul>
-         * <li><p>true: Yes</p>
-         * </li>
-         * <li><p>false: No</p>
-         * </li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -577,7 +571,7 @@ public class ListIntentionsResponseBody extends TeaModel {
         public Boolean isNecessary;
 
         /**
-         * <p>Slot Lifecycle</p>
+         * <p>The slot life span.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -586,28 +580,28 @@ public class ListIntentionsResponseBody extends TeaModel {
         public Integer lifeSpan;
 
         /**
-         * <p>Slot Name</p>
+         * <p>The slot name.</p>
          * 
          * <strong>example:</strong>
-         * <p>知道</p>
+         * <p>know</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>Slot Follow-up Question</p>
+         * <p>The slot clarification prompts.</p>
          */
         @NameInMap("Question")
         public java.util.List<String> question;
 
         /**
-         * <p>Slot Tagging Labels</p>
+         * <p>The slot tagging labels.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListIntentionsResponseBodyDataIntentListSlotTags> tags;
 
         /**
-         * <p>Slot Tagging Result</p>
+         * <p>The slot tagging result.</p>
          * 
          * <strong>example:</strong>
          * <p>@知道</p>
@@ -720,7 +714,7 @@ public class ListIntentionsResponseBody extends TeaModel {
 
     public static class ListIntentionsResponseBodyDataIntentListUserSayUserSayData extends TeaModel {
         /**
-         * <p>Slot Unique Identifier</p>
+         * <p>The unique identifier of the slot.</p>
          * 
          * <strong>example:</strong>
          * <p>9ec31b50-32b8-11eb-9478-19d2d885afdb</p>
@@ -729,10 +723,10 @@ public class ListIntentionsResponseBody extends TeaModel {
         public String slotId;
 
         /**
-         * <p>Expression</p>
+         * <p>The utterance text.</p>
          * 
          * <strong>example:</strong>
-         * <p>知道</p>
+         * <p>know</p>
          */
         @NameInMap("Text")
         public String text;
@@ -762,9 +756,9 @@ public class ListIntentionsResponseBody extends TeaModel {
 
     public static class ListIntentionsResponseBodyDataIntentListUserSay extends TeaModel {
         /**
-         * <p>Source ID</p>
+         * <p>The source ID.</p>
          * <blockquote>
-         * <p>Notice: Invalid content</p>
+         * <p>Notice: 无效内容</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -774,7 +768,7 @@ public class ListIntentionsResponseBody extends TeaModel {
         public String fromId;
 
         /**
-         * <p>The ID of the user utterance.</p>
+         * <p>The utterance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>17448458</p>
@@ -783,7 +777,7 @@ public class ListIntentionsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Is Strict Match</p>
+         * <p>Indicates whether strict matching is used.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -792,7 +786,7 @@ public class ListIntentionsResponseBody extends TeaModel {
         public Boolean strict;
 
         /**
-         * <p>User Say List</p>
+         * <p>The list of user utterances.</p>
          */
         @NameInMap("UserSayData")
         public java.util.List<ListIntentionsResponseBodyDataIntentListUserSayUserSayData> userSayData;
@@ -838,13 +832,13 @@ public class ListIntentionsResponseBody extends TeaModel {
 
     public static class ListIntentionsResponseBodyDataIntentList extends TeaModel {
         /**
-         * <p>Intent Alias</p>
+         * <p>The intent alias.</p>
          */
         @NameInMap("Alias")
         public java.util.List<String> alias;
 
         /**
-         * <p>Bot ID (Deprecated)</p>
+         * <p>The robot ID. [Deprecated]</p>
          * 
          * <strong>example:</strong>
          * <p>chatbot-cn-n7QmzrUnNe</p>
@@ -853,7 +847,7 @@ public class ListIntentionsResponseBody extends TeaModel {
         public Long botId;
 
         /**
-         * <p>Bot Name</p>
+         * <p>The robot name.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -862,7 +856,7 @@ public class ListIntentionsResponseBody extends TeaModel {
         public String botName;
 
         /**
-         * <p>Conversation Flow ID</p>
+         * <p>The dialog flow ID.</p>
          * 
          * <strong>example:</strong>
          * <p>50099</p>
@@ -871,7 +865,7 @@ public class ListIntentionsResponseBody extends TeaModel {
         public String dialogId;
 
         /**
-         * <p>Intent ID</p>
+         * <p>The intent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10717802</p>
@@ -880,12 +874,10 @@ public class ListIntentionsResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Language</p>
+         * <p>The language.</p>
          * <ul>
-         * <li><p>English (en-us)</p>
-         * </li>
-         * <li><p>Chinese (zh-cn)</p>
-         * </li>
+         * <li>English: en-us</li>
+         * <li>Chinese: zh-cn</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -895,28 +887,28 @@ public class ListIntentionsResponseBody extends TeaModel {
         public String language;
 
         /**
-         * <p>Intent Name</p>
+         * <p>The intent name.</p>
          * 
          * <strong>example:</strong>
-         * <p>知道了</p>
+         * <p>Got it</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>LGF Intent Expression</p>
+         * <p>The LGF intent utterance expressions.</p>
          */
         @NameInMap("RuleCheck")
         public java.util.List<ListIntentionsResponseBodyDataIntentListRuleCheck> ruleCheck;
 
         /**
-         * <p>Intent Slot Information</p>
+         * <p>The intent slot information.</p>
          */
         @NameInMap("Slot")
         public java.util.List<ListIntentionsResponseBodyDataIntentListSlot> slot;
 
         /**
-         * <p>Table ID</p>
+         * <p>The table ID.</p>
          * 
          * <strong>example:</strong>
          * <p>43258</p>
@@ -925,16 +917,12 @@ public class ListIntentionsResponseBody extends TeaModel {
         public Long tableId;
 
         /**
-         * <p>Intent Type:</p>
+         * <p>The intent type. Valid values:</p>
          * <ul>
-         * <li><p>0: Normal intent;</p>
-         * </li>
-         * <li><p>1: UNKNOWN;</p>
-         * </li>
-         * <li><p>2: TableQA intent;</p>
-         * </li>
-         * <li><p>3: Generated from standard intent</p>
-         * </li>
+         * <li>0: normal intent. </li>
+         * <li>1: UNKNOWN. </li>
+         * <li>2: TableQA intent. </li>
+         * <li>3: generated from a standard intent.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -944,7 +932,7 @@ public class ListIntentionsResponseBody extends TeaModel {
         public Integer type;
 
         /**
-         * <p>User Say List</p>
+         * <p>The list of user utterances.</p>
          */
         @NameInMap("UserSay")
         public java.util.List<ListIntentionsResponseBodyDataIntentListUserSay> userSay;
@@ -1054,7 +1042,7 @@ public class ListIntentionsResponseBody extends TeaModel {
 
     public static class ListIntentionsResponseBodyData extends TeaModel {
         /**
-         * <p>Bot ID</p>
+         * <p>The robot ID.</p>
          * 
          * <strong>example:</strong>
          * <p>chatbot-cn-n7QmzrUnNe</p>
@@ -1063,13 +1051,13 @@ public class ListIntentionsResponseBody extends TeaModel {
         public String botId;
 
         /**
-         * <p>Intent List</p>
+         * <p>The list of intents.</p>
          */
         @NameInMap("IntentList")
         public java.util.List<ListIntentionsResponseBodyDataIntentList> intentList;
 
         /**
-         * <p>API Message</p>
+         * <p>The message returned by the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -1078,7 +1066,7 @@ public class ListIntentionsResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>Indicates whether the operation was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

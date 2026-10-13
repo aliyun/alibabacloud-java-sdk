@@ -25,7 +25,7 @@ public class ListScriptPublishHistoriesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class ListScriptPublishHistoriesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The script ID.</p>
+     * <p>The scenario ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

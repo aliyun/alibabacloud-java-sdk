@@ -25,7 +25,7 @@ public class QueryScriptsByStatusRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -41,6 +41,9 @@ public class GetContactWhiteListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The search condition for the outbound whitelist.</p>
+     */
     @NameInMap("SearchPattern")
     public String searchPattern;
 

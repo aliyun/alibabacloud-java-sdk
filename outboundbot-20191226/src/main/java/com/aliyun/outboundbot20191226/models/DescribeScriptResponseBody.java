@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeScriptResponseBody extends TeaModel {
     /**
-     * <p>API status code</p>
+     * <p>The API status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class DescribeScriptResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DescribeScriptResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>API message</p>
+     * <p>The API message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -32,7 +32,7 @@ public class DescribeScriptResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Deprecated</p>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>none</p>
@@ -41,7 +41,7 @@ public class DescribeScriptResponseBody extends TeaModel {
     public String nlsConfig;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
@@ -50,7 +50,7 @@ public class DescribeScriptResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Script details</p>
+     * <p>The script.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -59,7 +59,7 @@ public class DescribeScriptResponseBody extends TeaModel {
     public DescribeScriptResponseBodyScript script;
 
     /**
-     * <p>Indicates whether the call succeeded</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -130,7 +130,7 @@ public class DescribeScriptResponseBody extends TeaModel {
 
     public static class DescribeScriptResponseBodyScriptNluProfile extends TeaModel {
         /**
-         * <p>Function service name</p>
+         * <p>The function service name.</p>
          * 
          * <strong>example:</strong>
          * <p>sanfang_test</p>
@@ -139,7 +139,7 @@ public class DescribeScriptResponseBody extends TeaModel {
         public String fcFunction;
 
         /**
-         * <p>Function service trigger URL</p>
+         * <p>The HTTP trigger URL of the function.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://sanfang_test-xxxxxx.cn-shanghai-vpc.fcapp.run">http://sanfang_test-xxxxxx.cn-shanghai-vpc.fcapp.run</a></p>
@@ -148,7 +148,7 @@ public class DescribeScriptResponseBody extends TeaModel {
         public String fcHttpTriggerUrl;
 
         /**
-         * <p>Function service region</p>
+         * <p>The region of the function.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -156,6 +156,13 @@ public class DescribeScriptResponseBody extends TeaModel {
         @NameInMap("FcRegion")
         public String fcRegion;
 
+        /**
+         * <p>Indicates whether Chatbot prompts are supported. Valid values:</p>
+         * <ul>
+         * <li>true: Supported.</li>
+         * <li>false: Not supported.</li>
+         * </ul>
+         */
         @NameInMap("SupportBeebotPrompts")
         public Boolean supportBeebotPrompts;
 
@@ -200,7 +207,7 @@ public class DescribeScriptResponseBody extends TeaModel {
 
     public static class DescribeScriptResponseBodyScript extends TeaModel {
         /**
-         * <p>Robot workspace access key</p>
+         * <p>The access key of the chatbot workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>1218333</p>
@@ -209,7 +216,7 @@ public class DescribeScriptResponseBody extends TeaModel {
         public Long agentId;
 
         /**
-         * <p>Robot workspace access key</p>
+         * <p>The access key of the chatbot workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>14791f5f226b4878b3d9b676a0291234</p>
@@ -218,7 +225,7 @@ public class DescribeScriptResponseBody extends TeaModel {
         public String agentKey;
 
         /**
-         * <p>Indicates whether the robot workspace uses a Large Language Model (LLM)</p>
+         * <p>Indicates whether the chatbot workspace is a large language model (LLM) workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -227,7 +234,7 @@ public class DescribeScriptResponseBody extends TeaModel {
         public Boolean agentLlm;
 
         /**
-         * <p>ASR configuration</p>
+         * <p>The automatic speech recognition (ASR) configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -246,16 +253,16 @@ public class DescribeScriptResponseBody extends TeaModel {
         public String asrConfig;
 
         /**
-         * <p>Call configuration</p>
+         * <p>The call configuration.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;silenceConfig&quot;:{&quot;silenceReplyTimeout&quot;:499,&quot;silenceTimeoutMaxCount&quot;:10,&quot;silenceTimeoutMaxCountEnable&quot;:true},&quot;hangupConfig&quot;:{&quot;aiHangupEnable&quot;:false,&quot;delayHangup&quot;:0,&quot;hangupMaxRounds&quot;:20,&quot;hangupMaxRoundsBroadcast&quot;:&quot;感谢您的接听，祝您生活愉快，再见!&quot;,&quot;hangupMaxRoundsEnable&quot;:false},&quot;securityInterceptConfig&quot;:{&quot;broadcast&quot;:&quot;您说的这个问题我不能回答您，您可以尝试询问其他问题。&quot;},&quot;specialInterceptConfig&quot;:{&quot;specialInterceptEnable&quot;:false,&quot;specialIntercepts&quot;:[{&quot;code&quot;:&quot;voiceAssistant&quot;},{&quot;code&quot;:&quot;extensionNumberTransfer&quot;}]},&quot;transitionConfig&quot;:{&quot;transitionSwitch&quot;:false}}</p>
+         * <p>{&quot;silenceConfig&quot;:{&quot;silenceReplyTimeout&quot;:499,&quot;silenceTimeoutMaxCount&quot;:10,&quot;silenceTimeoutMaxCountEnable&quot;:true},&quot;hangupConfig&quot;:{&quot;aiHangupEnable&quot;:false,&quot;delayHangup&quot;:0,&quot;hangupMaxRounds&quot;:20,&quot;hangupMaxRoundsBroadcast&quot;:&quot;Thank you for taking the call. Have a great day. Goodbye!&quot;,&quot;hangupMaxRoundsEnable&quot;:false},&quot;securityInterceptConfig&quot;:{&quot;broadcast&quot;:&quot;I cannot answer this question. Please try asking something else.&quot;},&quot;specialInterceptConfig&quot;:{&quot;specialInterceptEnable&quot;:false,&quot;specialIntercepts&quot;:[{&quot;code&quot;:&quot;voiceAssistant&quot;},{&quot;code&quot;:&quot;extensionNumberTransfer&quot;}]},&quot;transitionConfig&quot;:{&quot;transitionSwitch&quot;:false}}</p>
          */
         @NameInMap("ChatConfig")
         public String chatConfig;
 
         /**
-         * <p>Chatbot ID</p>
+         * <p>The chatbot ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d31794e2a51f47d2901b4094d88311d7</p>
@@ -264,7 +271,7 @@ public class DescribeScriptResponseBody extends TeaModel {
         public String chatbotId;
 
         /**
-         * <p>Status of the debug script</p>
+         * <p>The debug status of the script.</p>
          * 
          * <strong>example:</strong>
          * <p>DRAFTED</p>
@@ -273,7 +280,7 @@ public class DescribeScriptResponseBody extends TeaModel {
         public String debugStatus;
 
         /**
-         * <p>Enables emotion detection</p>
+         * <p>Specifies whether the emotion recognition feature is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -282,16 +289,16 @@ public class DescribeScriptResponseBody extends TeaModel {
         public Boolean emotionEnable;
 
         /**
-         * <p>Industry</p>
+         * <p>The industry.</p>
          * 
          * <strong>example:</strong>
-         * <p>金融</p>
+         * <p>Finance</p>
          */
         @NameInMap("Industry")
         public String industry;
 
         /**
-         * <p>Indicates whether the debug version is in draft status</p>
+         * <p>Indicates whether the debug version is in the draft state.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -300,7 +307,7 @@ public class DescribeScriptResponseBody extends TeaModel {
         public Boolean isDebugDrafted;
 
         /**
-         * <p>Indicates whether the script is in draft status</p>
+         * <p>Indicates whether the script is in the draft state.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -308,11 +315,17 @@ public class DescribeScriptResponseBody extends TeaModel {
         @NameInMap("IsDrafted")
         public Boolean isDrafted;
 
+        /**
+         * <p>The custom label configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;labels\&quot;:[{\&quot;description\&quot;:\&quot;\&quot;,\&quot;name\&quot;:\&quot;Availability\&quot;,\&quot;valueList\&quot;:\&quot;[\\\&quot;Available\\\&quot;,\\\&quot;Unavailable\\\&quot;]\&quot;}]}</p>
+         */
         @NameInMap("LabelConfig")
         public String labelConfig;
 
         /**
-         * <p>Enables intelligent sentence break</p>
+         * <p>Specifies whether the intelligent sentence segmentation feature is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -321,7 +334,7 @@ public class DescribeScriptResponseBody extends TeaModel {
         public Boolean longWaitEnable;
 
         /**
-         * <p>Enables tone continuity</p>
+         * <p>Specifies whether the mini playback feature is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -330,7 +343,7 @@ public class DescribeScriptResponseBody extends TeaModel {
         public Boolean miniPlaybackEnable;
 
         /**
-         * <p>Enables graceful barge-in</p>
+         * <p>Specifies whether the graceful barge-in feature is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -339,12 +352,10 @@ public class DescribeScriptResponseBody extends TeaModel {
         public Boolean newBargeInEnable;
 
         /**
-         * <p>NLU engine (applies only to LLM scenarios)</p>
+         * <p>The natural language understanding (NLU) engine. This parameter applies only to large language model (LLM) scenarios. Valid values:</p>
          * <ul>
-         * <li><p>Prompts — Text entry mode</p>
-         * </li>
-         * <li><p>SSE_FUNCTION — Function Compute service mode</p>
-         * </li>
+         * <li>Prompts: text input mode. </li>
+         * <li>SSE_FUNCTION: Function Compute service mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -354,31 +365,31 @@ public class DescribeScriptResponseBody extends TeaModel {
         public String nluEngine;
 
         /**
-         * <p>Function Compute service mode configuration</p>
+         * <p>The configuration of the Function Compute service mode.</p>
          */
         @NameInMap("NluProfile")
         public DescribeScriptResponseBodyScriptNluProfile nluProfile;
 
         /**
-         * <p>Scenario</p>
+         * <p>The scenario.</p>
          * 
          * <strong>example:</strong>
-         * <p>催收</p>
+         * <p>Collection</p>
          */
         @NameInMap("Scene")
         public String scene;
 
         /**
-         * <p>Script description</p>
+         * <p>The description of the script.</p>
          * 
          * <strong>example:</strong>
-         * <p>催收话术</p>
+         * <p>Collection script</p>
          */
         @NameInMap("ScriptDescription")
         public String scriptDescription;
 
         /**
-         * <p>Script ID</p>
+         * <p>The script ID.</p>
          * 
          * <strong>example:</strong>
          * <p>810b5872-57f0-4b27-80ab-7b3f4d8a6374</p>
@@ -387,16 +398,16 @@ public class DescribeScriptResponseBody extends TeaModel {
         public String scriptId;
 
         /**
-         * <p>Script name</p>
+         * <p>The name of the script.</p>
          * 
          * <strong>example:</strong>
-         * <p>催收话术</p>
+         * <p>Collection script</p>
          */
         @NameInMap("ScriptName")
         public String scriptName;
 
         /**
-         * <p>Script status</p>
+         * <p>The status of the script.</p>
          * 
          * <strong>example:</strong>
          * <p>DRAFTED</p>
@@ -405,7 +416,7 @@ public class DescribeScriptResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>TTS configuration for the script</p>
+         * <p>The text-to-speech (TTS) configuration of the script.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -413,6 +424,7 @@ public class DescribeScriptResponseBody extends TeaModel {
          *     &quot;engine&quot;: &quot;ali&quot;,
          *     &quot;engineXunfei&quot;: &quot;&quot;,
          *     &quot;globalInterruptible&quot;: true,
+         *         &quot;closingStatementInterruptible&quot;: false, &quot;openingPromptInterruptible&quot;: false,
          *     &quot;nlsServiceType&quot;: &quot;Managed&quot;,
          *     &quot;pitchRate&quot;: &quot;0&quot;,
          *     &quot;speechRate&quot;: &quot;0&quot;,
@@ -424,7 +436,7 @@ public class DescribeScriptResponseBody extends TeaModel {
         public String ttsConfig;
 
         /**
-         * <p>Time when the script was last updated</p>
+         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1578881227000</p>

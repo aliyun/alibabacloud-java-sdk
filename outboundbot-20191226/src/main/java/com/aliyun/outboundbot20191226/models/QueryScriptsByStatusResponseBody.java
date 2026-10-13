@@ -23,7 +23,7 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -41,7 +41,7 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The scenarios.</p>
+     * <p>The list of scenarios.</p>
      */
     @NameInMap("Scripts")
     public QueryScriptsByStatusResponseBodyScripts scripts;
@@ -140,13 +140,13 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
          * <p>The industry.</p>
          * 
          * <strong>example:</strong>
-         * <p>通用</p>
+         * <p>General</p>
          */
         @NameInMap("Industry")
         public String industry;
 
         /**
-         * <p>Indicates whether the debug version is a draft.</p>
+         * <p>Indicates whether the debug version is in the draft state.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -155,7 +155,7 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
         public Boolean isDebugDrafted;
 
         /**
-         * <p>Indicates whether the version is a draft.</p>
+         * <p>Indicates whether the version is in the draft state.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -167,7 +167,7 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
          * <p>The scenario.</p>
          * 
          * <strong>example:</strong>
-         * <p>电销</p>
+         * <p>Telemarketing</p>
          */
         @NameInMap("Scene")
         public String scene;
@@ -176,7 +176,7 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
          * <p>The script description.</p>
          * 
          * <strong>example:</strong>
-         * <p>销售话术</p>
+         * <p>Sales script</p>
          */
         @NameInMap("ScriptDescription")
         public String scriptDescription;
@@ -194,7 +194,7 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
          * <p>The scenario name.</p>
          * 
          * <strong>example:</strong>
-         * <p>销售话术</p>
+         * <p>Sales script</p>
          */
         @NameInMap("ScriptName")
         public String scriptName;
@@ -202,28 +202,17 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
         /**
          * <p>The status of the application version. Valid values:</p>
          * <ul>
-         * <li><p><strong>DRAFTED</strong>: The script is a draft.</p>
-         * </li>
-         * <li><p><strong>INITIALIZE_IN_PROGRESS</strong>: The script is being initialized.</p>
-         * </li>
-         * <li><p><strong>PUBLISHED</strong>: The script is published.</p>
-         * </li>
-         * <li><p><strong>PUBLISH_IN_PROGRESS</strong>: The script is being published.</p>
-         * </li>
-         * <li><p><strong>ROLLBACK_IN_PROGRESS</strong>: The script is being rolled back.</p>
-         * </li>
-         * <li><p><strong>EXAMINE_IN_PROGRESS</strong>: The script is pending approval.</p>
-         * </li>
-         * <li><p><strong>PUBLISHED_AND_EXAMINE_IN_PROGRESS</strong>: The script is published and pending approval.</p>
-         * </li>
-         * <li><p><strong>PUBLISH_FAILED</strong>: The script failed to be published.</p>
-         * </li>
-         * <li><p><strong>ROLLBACK_FAILED</strong>: The script failed to be rolled back.</p>
-         * </li>
-         * <li><p><strong>IMPORT_IN_PROGRESS</strong>: The script is being imported.</p>
-         * </li>
-         * <li><p><strong>IMPORT_FAILED</strong>: The script failed to be imported.</p>
-         * </li>
+         * <li><strong>DRAFTED</strong>: Draft.</li>
+         * <li><strong>INITIALIZE_IN_PROGRESS</strong>: Initializing.</li>
+         * <li><strong>PUBLISHED</strong>: Published.</li>
+         * <li><strong>PUBLISH_IN_PROGRESS</strong>: Publishing.</li>
+         * <li><strong>ROLLBACK_IN_PROGRESS</strong>: Rolling back.</li>
+         * <li><strong>EXAMINE_IN_PROGRESS</strong>: Pending review.</li>
+         * <li><strong>PUBLISHED_AND_EXAMINE_IN_PROGRESS</strong>: Published and pending review.</li>
+         * <li><strong>PUBLISH_FAILED</strong>: Publish failed.</li>
+         * <li><strong>ROLLBACK_FAILED</strong>: Rollback failed.</li>
+         * <li><strong>IMPORT_IN_PROGRESS</strong>: Importing.</li>
+         * <li><strong>IMPORT_FAILED</strong>: Import failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -233,7 +222,7 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the script was last updated.</p>
+         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1579055782000</p>
@@ -346,7 +335,7 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
 
     public static class QueryScriptsByStatusResponseBodyScripts extends TeaModel {
         /**
-         * <p>The list of scenarios.</p>
+         * <p>The list of scenario details.</p>
          */
         @NameInMap("List")
         public java.util.List<QueryScriptsByStatusResponseBodyScriptsList> list;
@@ -361,7 +350,7 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -370,7 +359,7 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>

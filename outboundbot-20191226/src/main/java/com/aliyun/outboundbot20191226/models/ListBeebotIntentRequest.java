@@ -17,11 +17,11 @@ public class ListBeebotIntentRequest extends TeaModel {
     /**
      * <p>The intent name.</p>
      * <blockquote>
-     * <p>This is the intent code. It uniquely identifies the intent.</p>
+     * <p>The intent code, which is a unique identifier.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>知道了</p>
+     * <p>Understood</p>
      */
     @NameInMap("IntentName")
     public String intentName;
@@ -37,7 +37,7 @@ public class ListBeebotIntentRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

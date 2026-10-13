@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeTTSDemoRequest extends TeaModel {
     /**
-     * <p>The AccessKey (AK) for this namespace.</p>
+     * <p>The AccessKey (AK) of the namespace.</p>
      * <blockquote>
-     * <p>When the engine is set to xunfei, you must enter the AK.</p>
+     * <p>When the engine is xunfei, enter the AK here.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeTTSDemoRequest extends TeaModel {
     public String accessKey;
 
     /**
-     * <p>Alibaba Cloud customized voice, which is the voice call ID.</p>
+     * <p>The Alibaba Cloud custom voice, which is the voice invocation ID.</p>
      * 
      * <strong>example:</strong>
      * <p>voice-e1be3a6</p>
@@ -26,11 +26,11 @@ public class DescribeTTSDemoRequest extends TeaModel {
     public String aliCustomizedVoice;
 
     /**
-     * <p>Voice service type.</p>
+     * <p>The speech service type.</p>
      * <ul>
-     * <li><p>When using <strong>ali</strong> as the custom service, this field stores the appKey of the Intelligent Speech Interaction product project.</p>
+     * <li><p>When you use <strong>ali</strong> as the custom service, this field stores the appKey of the interactive voice response product project.</p>
      * </li>
-     * <li><p>When using <strong>xunfei</strong> as the custom service provider, this field stores the corresponding appKey.</p>
+     * <li><p>When you use <strong>xunfei</strong> as the custom service provider, this field stores the corresponding appKey.</p>
      * </li>
      * </ul>
      * 
@@ -41,14 +41,13 @@ public class DescribeTTSDemoRequest extends TeaModel {
     public String appKey;
 
     /**
-     * <p>Storage engine. Valid values: ali, volc, and xunfei.</p>
+     * <p>The storage engine. Valid values: ali, volc, xunfei.</p>
      * <ul>
-     * <li><p>When using the default service or selecting Alibaba Cloud as the custom service, set this parameter to <strong>ali</strong>.</p>
-     * </li>
-     * <li><p>When using the Doubao service, set this parameter to <strong>volc</strong>.</p>
-     * </li>
-     * <li><p>When using xunfei as the service provider, set this parameter to <strong>xunfei</strong>. This value can only be used in small model scenarios.</p>
-     * </li>
+     * <li>When using traditional voices, CosyVoice, or selecting Alibaba Cloud as the custom service, set this to <strong>ali</strong>.</li>
+     * <li>When using the doubao service, set this to <strong>volc</strong>.</li>
+     * <li>When using xunfei as the service provider, set this to <strong>xunfei</strong> (can only be used in small model scenarios).</li>
+     * <li>When using your own service, set this to <strong>dock</strong>, and set NlsServiceType to Authorized.</li>
+     * <li>When using CV-v3-flash and Qwen voices, set this to <strong>bailian</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,11 +56,17 @@ public class DescribeTTSDemoRequest extends TeaModel {
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>The extended parameter. When Engine is set to <strong>dock</strong>, enter the configuration ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;thirdVoiceConfigUuid&quot;:&quot;3cd82813ece049c4aff3ea3d***********&quot;}</p>
+     */
     @NameInMap("ExtParams")
     public String extParams;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,11 +76,11 @@ public class DescribeTTSDemoRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Service type.
-     * Managed: The default Intelligent Speech Interaction product service of the Outbound Bot product (public service).
-     * Authorized: The Intelligent Speech Interaction product service purchased by the public cloud customer (customer\&quot;s private service), authorized through Script Management &gt; Edit &gt; Call Service &gt; Custom Service.</p>
+     * <p>The service type.
+     * Managed: the default service (public service) of the outbound robot product.
+     * Authorized: the interactive voice response service purchased by the public cloud customer (custom service), configured through system administration &gt; Third-party Voice Configuration.</p>
      * <blockquote>
-     * <p>When using Alibaba Cloud Intelligent Speech Interaction, that is, when using Alibaba Cloud as the custom service provider, set this parameter to Authorized.</p>
+     * <p>When using Alibaba Cloud interactive voice response as the custom service provider, set this to Authorized.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -85,10 +90,7 @@ public class DescribeTTSDemoRequest extends TeaModel {
     public String nlsServiceType;
 
     /**
-     * <p>Pitch.
-     * An integer between [-500, 500]. Default value: 0.</p>
-     * <p>A value greater than 0 indicates a higher pitch.</p>
-     * <p>A value less than 0 indicates a lower pitch.</p>
+     * <p>The pitch.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -97,7 +99,7 @@ public class DescribeTTSDemoRequest extends TeaModel {
     public Integer pitchRate;
 
     /**
-     * <p>Script ID.</p>
+     * <p>The scenario ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5ab2d935-306c-478a-88bf-d08e4e25c1b7</p>
@@ -106,9 +108,9 @@ public class DescribeTTSDemoRequest extends TeaModel {
     public String scriptId;
 
     /**
-     * <p>The AccessKey Secret (SK) for this namespace.</p>
+     * <p>The AccessKey Secret (SK) of the namespace.</p>
      * <blockquote>
-     * <p>When the engine is set to xunfei, you must enter the SK.</p>
+     * <p>When the engine is xunfei, enter the SK here.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -118,10 +120,9 @@ public class DescribeTTSDemoRequest extends TeaModel {
     public String secretKey;
 
     /**
-     * <p>Speech rate.
-     * An integer between [-500, 500]. Default value: 0.</p>
-     * <p>A value greater than 0 indicates a faster speech rate.</p>
-     * <p>A value less than 0 indicates a slower speech rate.</p>
+     * <p>The speech rate. The value is an integer in the range of [-500, 500]. Default value: 0.</p>
+     * <p>A value greater than 0 increases the pitch.</p>
+     * <p>A value less than 0 decreases the pitch.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -130,19 +131,19 @@ public class DescribeTTSDemoRequest extends TeaModel {
     public Integer speechRate;
 
     /**
-     * <p>Text content.</p>
+     * <p>The text content.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试</p>
+     * <p>Test</p>
      */
     @NameInMap("Text")
     public String text;
 
     /**
-     * <p>Voice information, such as aixia, siyue, or xiaoyun. For the complete list of available voices, refer to the voice list below.</p>
+     * <p>The voice information, such as aixia, siyue, or xiaoyun. For the complete list of available voices, refer to the voice list below.</p>
      * <blockquote>
-     * <p>Because the Voice value of a cloned voice is a unique, non-fixed value generated during voice cloning, the specific Voice value cannot be provided at this stage. You must obtain the specific VoiceID from the voice cloning page by calling the ListVoiceClone API.</p>
+     * <p>Because the Voice value for cloned voices is a non-fixed value generated during voice cloning, a specific Voice value cannot be provided at this stage. You can obtain the specific VoiceID from the voice cloning page by calling the ListVoiceClone operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -152,10 +153,9 @@ public class DescribeTTSDemoRequest extends TeaModel {
     public String voice;
 
     /**
-     * <p>Volume.
-     * An integer between [0, 100]. Default value: 50.</p>
-     * <p>A value greater than 50 indicates a higher volume.</p>
-     * <p>A value less than 50 indicates a lower volume.</p>
+     * <p>The volume. The value is an integer in the range of [0, 100]. Default value: 50.</p>
+     * <p>A value greater than 50 increases the volume.</p>
+     * <p>A value less than 50 decreases the volume.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>

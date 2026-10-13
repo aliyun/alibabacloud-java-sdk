@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListJobGroupsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the asynchronous task. You can use this ID to query the status of the task.</p>
+     * <p>The ID of the asynchronous query. If the query is asynchronous, you can use this ID to obtain the query results.</p>
      * 
      * <strong>example:</strong>
      * <p>6243d904-939d-42ce-a8e4-886a139e77a3</p>
@@ -38,7 +38,7 @@ public class ListJobGroupsResponseBody extends TeaModel {
     public ListJobGroupsResponseBodyJobGroups jobGroups;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -47,7 +47,7 @@ public class ListJobGroupsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
@@ -56,7 +56,11 @@ public class ListJobGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values: <code>true</code> and <code>false</code>.</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -127,7 +131,7 @@ public class ListJobGroupsResponseBody extends TeaModel {
 
     public static class ListJobGroupsResponseBodyJobGroupsListExportProgress extends TeaModel {
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong></p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.xxx.com/xxx">http://www.xxx.com/xxx</a></p>
@@ -136,7 +140,7 @@ public class ListJobGroupsResponseBody extends TeaModel {
         public String fileHttpUrl;
 
         /**
-         * <p>The progress of the export task.</p>
+         * <p>The progress.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -147,14 +151,10 @@ public class ListJobGroupsResponseBody extends TeaModel {
         /**
          * <p>The status of the export task. Valid values:</p>
          * <ul>
-         * <li><p><strong>PENDING</strong>: The task is pending.</p>
-         * </li>
-         * <li><p><strong>IN_PROGRESS</strong>: The task is in progress.</p>
-         * </li>
-         * <li><p><strong>FINISHED</strong>: The task is finished.</p>
-         * </li>
-         * <li><p><strong>FAILED</strong>: The task failed.</p>
-         * </li>
+         * <li><strong>PENDING</strong>: Pending.</li>
+         * <li><strong>IN_PROGRESS</strong>: In progress.</li>
+         * <li><strong>FINISHED</strong>: Finished.</li>
+         * <li><strong>FAILED</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -196,7 +196,7 @@ public class ListJobGroupsResponseBody extends TeaModel {
 
     public static class ListJobGroupsResponseBodyJobGroupsListProgress extends TeaModel {
         /**
-         * <p>The number of canceled jobs.</p>
+         * <p>The number of cancelled jobs.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -205,7 +205,7 @@ public class ListJobGroupsResponseBody extends TeaModel {
         public Integer cancelledNum;
 
         /**
-         * <p>The total runtime. This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong> The total execution duration up to the current time.</p>
          * 
          * <strong>example:</strong>
          * <p>1578550074361</p>
@@ -214,7 +214,7 @@ public class ListJobGroupsResponseBody extends TeaModel {
         public Integer duration;
 
         /**
-         * <p>The number of running jobs.</p>
+         * <p>The number of executing jobs.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -241,7 +241,7 @@ public class ListJobGroupsResponseBody extends TeaModel {
         public Integer pausedNum;
 
         /**
-         * <p>The number of jobs that are being scheduled.</p>
+         * <p>The number of jobs being scheduled.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -250,7 +250,7 @@ public class ListJobGroupsResponseBody extends TeaModel {
         public Integer scheduling;
 
         /**
-         * <p>The start time. This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong> The start time. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1578550074361</p>
@@ -262,24 +262,16 @@ public class ListJobGroupsResponseBody extends TeaModel {
          * <blockquote>
          * <p>This parameter is no longer returned.</p>
          * </blockquote>
-         * <p>The status of the job. Valid values:</p>
+         * <p>The execution status. Valid values:</p>
          * <ul>
-         * <li><p><strong>Draft</strong>: The job is a draft.</p>
-         * </li>
-         * <li><p><strong>Scheduling</strong>: The job is being scheduled.</p>
-         * </li>
-         * <li><p><strong>Executing</strong>: The job is running.</p>
-         * </li>
-         * <li><p><strong>Completed</strong>: The job is completed.</p>
-         * </li>
-         * <li><p><strong>Paused</strong>: The job is paused.</p>
-         * </li>
-         * <li><p><strong>Failed</strong>: The job failed.</p>
-         * </li>
-         * <li><p><strong>Cancelled</strong>: The job is canceled.</p>
-         * </li>
-         * <li><p><strong>Initializing</strong>: The job is being initialized.</p>
-         * </li>
+         * <li><strong>Draft</strong>: Draft.</li>
+         * <li><strong>Scheduling</strong>: Scheduling.</li>
+         * <li><strong>Executing</strong>: Executing.</li>
+         * <li><strong>Completed</strong>: Completed.</li>
+         * <li><strong>Paused</strong>: Paused.</li>
+         * <li><strong>Failed</strong>: Failed.</li>
+         * <li><strong>Cancelled</strong>: Cancelled.</li>
+         * <li><strong>Initializing</strong>: Initializing.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -289,7 +281,7 @@ public class ListJobGroupsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The number of completed jobs.</p>
+         * <p>The number of completed jobs up to the current time.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -307,7 +299,7 @@ public class ListJobGroupsResponseBody extends TeaModel {
         public Integer totalJobs;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong></p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -412,7 +404,7 @@ public class ListJobGroupsResponseBody extends TeaModel {
 
     public static class ListJobGroupsResponseBodyJobGroupsListStrategy extends TeaModel {
         /**
-         * <p>The end time of the calling window.</p>
+         * <p>The end time of the strategy. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2209702074000</p>
@@ -421,7 +413,7 @@ public class ListJobGroupsResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The start time of the calling window.</p>
+         * <p>The start time of the strategy. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1578550074000</p>
@@ -454,7 +446,7 @@ public class ListJobGroupsResponseBody extends TeaModel {
 
     public static class ListJobGroupsResponseBodyJobGroupsList extends TeaModel {
         /**
-         * <p>The time when the job group was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The creation time. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1578550074361</p>
@@ -463,7 +455,7 @@ public class ListJobGroupsResponseBody extends TeaModel {
         public Long creationTime;
 
         /**
-         * <p>The progress of the export task.</p>
+         * <p>The export progress.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -472,7 +464,7 @@ public class ListJobGroupsResponseBody extends TeaModel {
         public ListJobGroupsResponseBodyJobGroupsListExportProgress exportProgress;
 
         /**
-         * <p>The ID of the task that parses the job data file. This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong> The ID of the jobFile parsing task.</p>
          * 
          * <strong>example:</strong>
          * <p>c62e6789-28a8-41db-941e-171a01d3b3b9</p>
@@ -481,16 +473,16 @@ public class ListJobGroupsResponseBody extends TeaModel {
         public String jobDataParsingTaskId;
 
         /**
-         * <p>The description of the job group.</p>
+         * <p>The job group description.</p>
          * 
          * <strong>example:</strong>
-         * <p>催收的作业组</p>
+         * <p>Collection job group</p>
          */
         @NameInMap("JobGroupDescription")
         public String jobGroupDescription;
 
         /**
-         * <p>The ID of the job group.</p>
+         * <p>The job group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c62e6789-28a8-41db-941e-171a01d3b3b9</p>
@@ -499,16 +491,16 @@ public class ListJobGroupsResponseBody extends TeaModel {
         public String jobGroupId;
 
         /**
-         * <p>The name of the job group.</p>
+         * <p>The job group name.</p>
          * 
          * <strong>example:</strong>
-         * <p>催收作业组</p>
+         * <p>Collection job group</p>
          */
         @NameInMap("JobGroupName")
         public String jobGroupName;
 
         /**
-         * <p>The minimum number of concurrent calls.</p>
+         * <p>The number of valid tasks with a minimum concurrency guarantee.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -517,7 +509,7 @@ public class ListJobGroupsResponseBody extends TeaModel {
         public Integer minConcurrency;
 
         /**
-         * <p>The time when the job group was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The modification time in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1578550074361</p>
@@ -526,7 +518,7 @@ public class ListJobGroupsResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>The progress of the job group.</p>
+         * <p>The node statistics information.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -535,7 +527,7 @@ public class ListJobGroupsResponseBody extends TeaModel {
         public ListJobGroupsResponseBodyJobGroupsListProgress progress;
 
         /**
-         * <p>The ID of the script.</p>
+         * <p>The script ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c62e6789-28a8-41db-941e-171a01d3b3b9</p>
@@ -544,10 +536,10 @@ public class ListJobGroupsResponseBody extends TeaModel {
         public String scriptId;
 
         /**
-         * <p>The name of the script.</p>
+         * <p>The script name.</p>
          * 
          * <strong>example:</strong>
-         * <p>话术名称</p>
+         * <p>Script name</p>
          */
         @NameInMap("ScriptName")
         public String scriptName;
@@ -562,24 +554,16 @@ public class ListJobGroupsResponseBody extends TeaModel {
         public String scriptVersion;
 
         /**
-         * <p>The status of the job group. Valid values:</p>
+         * <p>The execution status. Valid values:</p>
          * <ul>
-         * <li><p><strong>Draft</strong>: The job group is a draft.</p>
-         * </li>
-         * <li><p><strong>Scheduling</strong>: The job group is being scheduled.</p>
-         * </li>
-         * <li><p><strong>Executing</strong>: The job group is running.</p>
-         * </li>
-         * <li><p><strong>Completed</strong>: The job group is completed.</p>
-         * </li>
-         * <li><p><strong>Paused</strong>: The job group is paused.</p>
-         * </li>
-         * <li><p><strong>Failed</strong>: The job group failed.</p>
-         * </li>
-         * <li><p><strong>Cancelled</strong>: The job group is canceled.</p>
-         * </li>
-         * <li><p><strong>Initializing</strong>: The job group is being initialized.</p>
-         * </li>
+         * <li><strong>Draft</strong>: Draft.</li>
+         * <li><strong>Scheduling</strong>: Scheduling.</li>
+         * <li><strong>Executing</strong>: Executing.</li>
+         * <li><strong>Completed</strong>: Completed.</li>
+         * <li><strong>Paused</strong>: Paused.</li>
+         * <li><strong>Failed</strong>: Failed.</li>
+         * <li><strong>Cancelled</strong>: Cancelled.</li>
+         * <li><strong>Initializing</strong>: Initializing.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -589,9 +573,9 @@ public class ListJobGroupsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The calling strategy. This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong> The strategy.</p>
          * <blockquote>
-         * <p>To view the strategy for a job group, call the <code>DescribeJobGroup</code> operation.</p>
+         * <p>To view the job strategy information, call the DescribeJobGroup operation.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -738,13 +722,13 @@ public class ListJobGroupsResponseBody extends TeaModel {
 
     public static class ListJobGroupsResponseBodyJobGroups extends TeaModel {
         /**
-         * <p>The list of job groups.</p>
+         * <p>The array.</p>
          */
         @NameInMap("List")
         public java.util.List<ListJobGroupsResponseBodyJobGroupsList> list;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -753,7 +737,7 @@ public class ListJobGroupsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -762,7 +746,7 @@ public class ListJobGroupsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

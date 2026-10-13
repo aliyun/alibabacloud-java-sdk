@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAnnotationMissionRequest extends TeaModel {
     /**
-     * <p>Annotation mission ID</p>
+     * <p>The ID of the annotation task.</p>
      * 
      * <strong>example:</strong>
      * <p>0943abcb-bd7d-4ace-8cf7-97d39d4dd0b9</p>
@@ -14,32 +14,29 @@ public class ListAnnotationMissionRequest extends TeaModel {
     public String annotationMissionId;
 
     /**
-     * <p>Annotation mission name</p>
+     * <p>The name of the annotation task.</p>
      * 
      * <strong>example:</strong>
-     * <p>全景服务场景-标注任务-20230316-103253</p>
+     * <p>Panorama service scenario - Annotation task - 20230316-103253</p>
      */
     @NameInMap("AnnotationMissionName")
     public String annotationMissionName;
 
     /**
-     * <p>Annotation status filter. Deprecated.</p>
+     * <p>The annotation status filter. This parameter is deprecated.</p>
      */
     @NameInMap("AnnotationStatusListFilter")
     public java.util.List<Integer> annotationStatusListFilter;
 
     /**
-     * <p>Annotation status filter</p>
+     * <p>The annotation status filter.</p>
      * <blockquote>
-     * <p>Format: [1]. You can specify multiple values. Valid values:</p>
+     * <p>The format is [1]. You can select multiple filter conditions. The valid values are as follows:</p>
      * </blockquote>
      * <ul>
-     * <li><p>1: In progress</p>
-     * </li>
-     * <li><p>2: Completed</p>
-     * </li>
-     * <li><p>3: Closed</p>
-     * </li>
+     * <li>1: In progress.</li>
+     * <li>2: Completed.</li>
+     * <li>3: Closed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +46,7 @@ public class ListAnnotationMissionRequest extends TeaModel {
     public String annotationStatusListStringFilter;
 
     /**
-     * <p>End time of the annotation mission creation filter</p>
+     * <p>The end time for the annotation task creation filter.</p>
      * 
      * <strong>example:</strong>
      * <p>1673280000000</p>
@@ -58,7 +55,7 @@ public class ListAnnotationMissionRequest extends TeaModel {
     public Long createTimeEndFilter;
 
     /**
-     * <p>Start time of the annotation mission creation filter</p>
+     * <p>The start time for the annotation task creation filter.</p>
      * 
      * <strong>example:</strong>
      * <p>1661961600000</p>
@@ -67,7 +64,7 @@ public class ListAnnotationMissionRequest extends TeaModel {
     public Long createTimeStartFilter;
 
     /**
-     * <p>Instance ID</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>191ef468-75a2-4004-9441-a5c31bf5cd9d</p>
@@ -76,7 +73,7 @@ public class ListAnnotationMissionRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Page number</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -85,7 +82,7 @@ public class ListAnnotationMissionRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
-     * <p>Number of entries per page</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

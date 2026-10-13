@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class SaveAnnotationMissionSessionListRequest extends TeaModel {
     /**
-     * <p>The agent ID.</p>
+     * <p>The ID of the agent.</p>
      * <blockquote>
-     * <p>Obtain this by calling the DescribeInstance operation.</p>
+     * <p>You can obtain this value by calling the DescribeInstance API operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
     public String agentId;
 
     /**
-     * <p>The key of the workspace. If you do not specify this parameter, the default workspace is accessed. Obtain the key on the Business Management page of your Alibaba Cloud account.</p>
+     * <p>The key of the workspace. If you do not specify this parameter, the default workspace is accessed. You can obtain the key value on the Business Management page of the Alibaba Cloud account.</p>
      * <blockquote>
-     * <p>Obtain this by calling the DescribeInstance operation.</p>
+     * <p>You can obtain this value by calling the DescribeInstance API operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,11 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
     public String agentKey;
 
     /**
-     * <p>The source of the annotation data. Valid values: 1: Outbound call. 2: Navigation.</p>
+     * <p>The data source of the annotation task. Valid values:</p>
+     * <ul>
+     * <li>1: outbound call</li>
+     * <li>2: voice navigation</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,18 +42,19 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
     public Long annotationMissionDataSourceType;
 
     /**
-     * <p>The list of sessions.</p>
+     * <p>The session list.</p>
      * <blockquote>
-     * <p>This parameter has the same function as AnnotationMissionSessionListJsonString. Specify either of them.</p>
+     * <p>This parameter serves the same purpose as the AnnotationMissionSessionListJsonString parameter. Specify only one of them.</p>
      * </blockquote>
      */
     @NameInMap("AnnotationMissionSessionList")
     public java.util.List<SaveAnnotationMissionSessionListRequestAnnotationMissionSessionList> annotationMissionSessionList;
 
     /**
-     * <p>The list of sessions in JSON format.</p>
+     * <p>The JSON string of the session list.</p>
      * <blockquote>
-     * <p>This parameter has the same function as the AnnotationMissionSessionList parameter. You can specify either of them. The JSON field is a parameter of AnnotationMissionSessionList.</p>
+     * <p>This parameter serves the same purpose as AnnotationMissionSessionList. Specify only one of them.
+     * The JSON fields correspond to the parameters of AnnotationMissionSessionList.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,14 +64,11 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
     public String annotationMissionSessionListJsonString;
 
     /**
-     * <p>The environment.</p>
+     * <p>The environment. Valid values:</p>
      * <ul>
-     * <li><p>0: NONE</p>
-     * </li>
-     * <li><p>1: Private cloud</p>
-     * </li>
-     * <li><p>2: Public cloud</p>
-     * </li>
+     * <li>0: NONE</li>
+     * <li>1: private cloud</li>
+     * <li>2: public cloud</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,10 +78,10 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
     public Long environment;
 
     /**
-     * <p>The user\&quot;s nickname.</p>
+     * <p>The nickname of the user.</p>
      * 
      * <strong>example:</strong>
-     * <p>用户</p>
+     * <p>User</p>
      */
     @NameInMap("UserNick")
     public String userNick;
@@ -147,7 +149,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
 
     public static class SaveAnnotationMissionSessionListRequestAnnotationMissionSessionListAnnotationMissionChatListAnnotationMissionChatCustomizationDataInfoList extends TeaModel {
         /**
-         * <p>The ID.</p>
+         * <p>ID</p>
          * 
          * <strong>example:</strong>
          * <p>b598a47a-7c03-45fb-af6b-343950dd9512</p>
@@ -156,7 +158,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public String annotationMissionChatCustomizationDataInfoId;
 
         /**
-         * <p>The chat ID.</p>
+         * <p>chat ID</p>
          * 
          * <strong>example:</strong>
          * <p>977a45dc-b636-4407-9e98-9f572c709ada</p>
@@ -165,7 +167,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public String annotationMissionChatId;
 
         /**
-         * <p>The ID of the annotation task.</p>
+         * <p>The annotation task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>03f56192-fa8a-40dc-9558-39b357f0618f</p>
@@ -186,13 +188,13 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
          * <p>The content.</p>
          * 
          * <strong>example:</strong>
-         * <p>现在呢主动邀请到您，机会非常难得，而且额度放着不用，也是不收费的，可以当作咱们的备用金，最快5分钟就能到账，建议您可以先把额度免费领取下来呢。</p>
+         * <p>You are now proactively invited to apply. This is a rare opportunity. The credit limit is free of charge if left unused and can be used as your reserve fund. The funds can be credited to your account in as fast as 5 minutes. We recommend that you claim the credit limit for free first</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
-         * <p>Create</p>
+         * <p>Specifies whether to create the item.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -201,7 +203,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public Boolean create;
 
         /**
-         * <p>The time when the item was created.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1682316909210</p>
@@ -213,13 +215,13 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>默认数据描述</p>
+         * <p>Default data description</p>
          */
         @NameInMap("CustomizationDataDescription")
         public String customizationDataDescription;
 
         /**
-         * <p>The ID.</p>
+         * <p>ID</p>
          * 
          * <strong>example:</strong>
          * <p>977a45dc-b636-4407-9e98-9f572c709ada</p>
@@ -231,13 +233,13 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
          * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>默认数据</p>
+         * <p>Default data</p>
          */
         @NameInMap("CustomizationDataName")
         public String customizationDataName;
 
         /**
-         * <p>The weight of the language model data.</p>
+         * <p>The language model data weight.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -246,7 +248,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public Integer customizationDataWeight;
 
         /**
-         * <p>Delete</p>
+         * <p>Specifies whether to delete the item.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -264,7 +266,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The time when the item was last modified.</p>
+         * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1673438100000</p>
@@ -393,7 +395,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
 
     public static class SaveAnnotationMissionSessionListRequestAnnotationMissionSessionListAnnotationMissionChatListAnnotationMissionChatIntentUserSayInfoList extends TeaModel {
         /**
-         * <p>The chat ID.</p>
+         * <p>chat ID</p>
          * 
          * <strong>example:</strong>
          * <p>ddce607f-f537-4ebd-9914-cf45671defb9</p>
@@ -402,7 +404,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public String annotationMissionChatId;
 
         /**
-         * <p>The ID.</p>
+         * <p>ID</p>
          * 
          * <strong>example:</strong>
          * <p>ddce607f-f537-4ebd-9914-cf45671defb9</p>
@@ -411,7 +413,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public String annotationMissionChatIntentUserSayInfoId;
 
         /**
-         * <p>The ID of the annotation task.</p>
+         * <p>The annotation task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ddce607f-f537-4ebd-9914-cf45671defb9</p>
@@ -429,7 +431,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public String annotationMissionSessionId;
 
         /**
-         * <p>The bot ID.</p>
+         * <p>The robot ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ddce607f-f537-4ebd-9914-cf45671defb9</p>
@@ -447,7 +449,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public String content;
 
         /**
-         * <p>Create</p>
+         * <p>Specifies whether to create the item.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -456,7 +458,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public Boolean create;
 
         /**
-         * <p>The time when the item was created.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1683858248778</p>
@@ -465,7 +467,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>Delete this item.</p>
+         * <p>Specifies whether to delete the item.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -501,7 +503,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public Long intentId;
 
         /**
-         * <p>The time when the item was last modified.</p>
+         * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1683858248778</p>
@@ -622,7 +624,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
 
     public static class SaveAnnotationMissionSessionListRequestAnnotationMissionSessionListAnnotationMissionChatListAnnotationMissionChatTagInfoList extends TeaModel {
         /**
-         * <p>The chat ID.</p>
+         * <p>chat ID</p>
          * 
          * <strong>example:</strong>
          * <p>977a45dc-b636-4407-9e98-9f572c709ada</p>
@@ -631,7 +633,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public String annotationMissionChatId;
 
         /**
-         * <p>The ID.</p>
+         * <p>ID</p>
          * 
          * <strong>example:</strong>
          * <p>id</p>
@@ -640,7 +642,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public String annotationMissionChatTagInfoId;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>977a45dc-b636-4407-9e98-9f572c709ada</p>
@@ -658,7 +660,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public String annotationMissionSessionId;
 
         /**
-         * <p>The tag ID.</p>
+         * <p>tag ID</p>
          * 
          * <strong>example:</strong>
          * <p>977a45dc-b636-4407-9e98-9f572c709ada</p>
@@ -667,7 +669,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public String annotationMissionTagInfoId;
 
         /**
-         * <p>The tag name.</p>
+         * <p>The name of the tag.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -678,7 +680,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public String annotationMissionTagInfoName;
 
         /**
-         * <p>Create</p>
+         * <p>Specifies whether to create the item.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -687,7 +689,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public Boolean create;
 
         /**
-         * <p>End time of the annotation mission group.</p>
+         * <p>The end time of the annotation mission group.</p>
          * 
          * <strong>example:</strong>
          * <p>1679710866060</p>
@@ -696,7 +698,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>Delete</p>
+         * <p>Specifies whether to delete the item.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -714,7 +716,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Modified time</p>
+         * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1679710866060</p>
@@ -819,7 +821,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
 
     public static class SaveAnnotationMissionSessionListRequestAnnotationMissionSessionListAnnotationMissionChatListAnnotationMissionChatVocabularyInfoList extends TeaModel {
         /**
-         * <p>The chat ID.</p>
+         * <p>chat ID</p>
          * 
          * <strong>example:</strong>
          * <p>77343553-cbc2-4487-a35c-869f1e86c573</p>
@@ -828,7 +830,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public String annotationMissionChatId;
 
         /**
-         * <p>The ID.</p>
+         * <p>ID</p>
          * 
          * <strong>example:</strong>
          * <p>77343553-cbc2-4487-a35c-869f1e86c573</p>
@@ -837,7 +839,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public String annotationMissionChatVocabularyInfoId;
 
         /**
-         * <p>The ID of the annotation task.</p>
+         * <p>The annotation task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>977a45dc-b636-4407-9e98-9f572c709ada</p>
@@ -855,7 +857,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public String annotationMissionSessionId;
 
         /**
-         * <p>Create</p>
+         * <p>Specifies whether to create the item.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -864,7 +866,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public Boolean create;
 
         /**
-         * <p>The time when the item was created.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1677552860720</p>
@@ -873,7 +875,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>Delete</p>
+         * <p>Specifies whether to delete the item.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -891,7 +893,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The time when the item was last modified.</p>
+         * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1679283408230</p>
@@ -900,7 +902,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public Long modifiedTime;
 
         /**
-         * <p>The content of the hotword annotation.</p>
+         * <p>The hot word annotation content.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -912,13 +914,13 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>售后咨询</p>
+         * <p>After-sales consultation</p>
          */
         @NameInMap("VocabularyDescription")
         public String vocabularyDescription;
 
         /**
-         * <p>The hotword ID.</p>
+         * <p>The hot word ID.</p>
          * 
          * <strong>example:</strong>
          * <p>77343553-cbc2-4487-a35c-869f1e86c573</p>
@@ -927,16 +929,16 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public String vocabularyId;
 
         /**
-         * <p>The name of the processing scenario.</p>
+         * <p>The processing scenario name.</p>
          * 
          * <strong>example:</strong>
-         * <p>咨询</p>
+         * <p>Consultation</p>
          */
         @NameInMap("VocabularyName")
         public String vocabularyName;
 
         /**
-         * <p>The weight of the hotword. The value ranges from -6 to 5.</p>
+         * <p>The hot word weight. Valid values: -6 to 5.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1065,7 +1067,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
 
     public static class SaveAnnotationMissionSessionListRequestAnnotationMissionSessionListAnnotationMissionChatList extends TeaModel {
         /**
-         * <p>The result of manual ASR annotation. This is used to calculate the character accuracy rate.</p>
+         * <p>The manual ASR annotation text result, which is used to calculate the character accuracy rate.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -1074,13 +1076,13 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public String annotationAsrResult;
 
         /**
-         * <p>The language model annotation information for the annotation task chat.</p>
+         * <p>The language model annotation information table for the annotation task chat.</p>
          */
         @NameInMap("AnnotationMissionChatCustomizationDataInfoList")
         public java.util.List<SaveAnnotationMissionSessionListRequestAnnotationMissionSessionListAnnotationMissionChatListAnnotationMissionChatCustomizationDataInfoList> annotationMissionChatCustomizationDataInfoList;
 
         /**
-         * <p>The chat ID.</p>
+         * <p>chat ID</p>
          * 
          * <strong>example:</strong>
          * <p>ddce607f-f537-4ebd-9914-cf45671defb9</p>
@@ -1095,19 +1097,19 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public java.util.List<SaveAnnotationMissionSessionListRequestAnnotationMissionSessionListAnnotationMissionChatListAnnotationMissionChatIntentUserSayInfoList> annotationMissionChatIntentUserSayInfoList;
 
         /**
-         * <p>The list of mappings between annotation information chats and attached tags.</p>
+         * <p>The mapping list of bound tags for the annotation information chat.</p>
          */
         @NameInMap("AnnotationMissionChatTagInfoList")
         public java.util.List<SaveAnnotationMissionSessionListRequestAnnotationMissionSessionListAnnotationMissionChatListAnnotationMissionChatTagInfoList> annotationMissionChatTagInfoList;
 
         /**
-         * <p>The hotword annotation information for the annotation task chat.</p>
+         * <p>The hot word annotation information table for the annotation task chat.</p>
          */
         @NameInMap("AnnotationMissionChatVocabularyInfoList")
         public java.util.List<SaveAnnotationMissionSessionListRequestAnnotationMissionSessionListAnnotationMissionChatListAnnotationMissionChatVocabularyInfoList> annotationMissionChatVocabularyInfoList;
 
         /**
-         * <p>The ID of the annotation task.</p>
+         * <p>The annotation task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ddce607f-f537-4ebd-9914-cf45671defb9</p>
@@ -1125,16 +1127,12 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public String annotationMissionSessionId;
 
         /**
-         * <p>The annotation status.</p>
+         * <p>The annotation status. Valid values:</p>
          * <ul>
-         * <li><p>0: UNDO</p>
-         * </li>
-         * <li><p>1: DOING</p>
-         * </li>
-         * <li><p>2: DONE</p>
-         * </li>
-         * <li><p>3: CLOSED</p>
-         * </li>
+         * <li>0: Not completed (UNDO).</li>
+         * <li>1: In progress (DOING).</li>
+         * <li>2: Completed (DONE).</li>
+         * <li>3: Canceled (CLOSED).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1144,7 +1142,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public Integer annotationStatus;
 
         /**
-         * <p>The content of the robot\&quot;s response.</p>
+         * <p>The reply content of the robot.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;Answer\&quot;: u\&quot;\u53c2\u8003\u6587\u6863\uff1a<a href="https://help.aliyun.com/document_detail/181325.html%5C%5C">https://help.aliyun.com/document_detail/181325.html\\</a>&quot;, \&quot;QuestionId\&quot;: 372858, \&quot;Uuid\&quot;: \&quot;ac14000516762684770197536d0044\&quot;}</p>
@@ -1153,16 +1151,12 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public String answer;
 
         /**
-         * <p>The Automatic Speech Recognition (ASR) annotation status.</p>
+         * <p>The ASR annotation status. Valid values:</p>
          * <ul>
-         * <li><p>0: UNDO</p>
-         * </li>
-         * <li><p>1: DOING</p>
-         * </li>
-         * <li><p>2: DONE</p>
-         * </li>
-         * <li><p>3: CLOSED</p>
-         * </li>
+         * <li>0: Not completed (UNDO).</li>
+         * <li>1: In progress (DOING).</li>
+         * <li>2: Completed (DONE).</li>
+         * <li>3: Canceled (CLOSED).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1172,7 +1166,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public Integer asrAnnotationStatus;
 
         /**
-         * <p>The time when the chat was created.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1679629770336</p>
@@ -1190,16 +1184,12 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The semantic tagging status.</p>
+         * <p>The intent annotation status. Valid values:</p>
          * <ul>
-         * <li><p>0: UNDO</p>
-         * </li>
-         * <li><p>1: DOING</p>
-         * </li>
-         * <li><p>2: DONE</p>
-         * </li>
-         * <li><p>3: CLOSED</p>
-         * </li>
+         * <li>0: Not completed (UNDO).</li>
+         * <li>1: In progress (DOING).</li>
+         * <li>2: Completed (DONE).</li>
+         * <li>3: Canceled (CLOSED).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1209,7 +1199,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public Integer intentAnnotationStatus;
 
         /**
-         * <p>The time when the chat was last modified.</p>
+         * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1629360780000</p>
@@ -1218,7 +1208,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public Long modifiedTime;
 
         /**
-         * <p>The time when the chat was triggered.</p>
+         * <p>The trigger time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1682493047418</p>
@@ -1227,7 +1217,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public Long occurTime;
 
         /**
-         * <p>The ASR result.</p>
+         * <p>The ASR recognition result.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -1236,7 +1226,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public String originalAsrResult;
 
         /**
-         * <p>The serial number of the current session interaction.</p>
+         * <p>The sequence number of the current session interaction round.</p>
          * 
          * <strong>example:</strong>
          * <p>1475140522</p>
@@ -1245,7 +1235,14 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public String sequenceId;
 
         /**
-         * <p>The annotation action. Valid values: 1: Correct. 20: Matching error (not optimized). 21: Matching error (optimized). 3: Not covered. 4: Invalid.</p>
+         * <p>The annotation action. Valid values:</p>
+         * <ul>
+         * <li>1: Correct.</li>
+         * <li>20: Match error, not optimized.</li>
+         * <li>21: Match error, optimized.</li>
+         * <li>3: Not covered.</li>
+         * <li>4: Invalid.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1254,16 +1251,12 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public Integer subStatus;
 
         /**
-         * <p>The tag annotation status.</p>
+         * <p>The tag annotation status. Valid values:</p>
          * <ul>
-         * <li><p>0: UNDO</p>
-         * </li>
-         * <li><p>1: DOING</p>
-         * </li>
-         * <li><p>2: DONE</p>
-         * </li>
-         * <li><p>3: CLOSED</p>
-         * </li>
+         * <li>0: Not completed (UNDO).</li>
+         * <li>1: In progress (DOING).</li>
+         * <li>2: Completed (DONE).</li>
+         * <li>3: Canceled (CLOSED).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1273,12 +1266,10 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public Integer tagAnnotationStatus;
 
         /**
-         * <p>The transcription error flag.</p>
+         * <p>Indicates whether a translation error occurred. Valid values:</p>
          * <ul>
-         * <li><p>0: No</p>
-         * </li>
-         * <li><p>1: Yes</p>
-         * </li>
+         * <li>0: No.</li>
+         * <li>1: Yes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1464,13 +1455,13 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
 
     public static class SaveAnnotationMissionSessionListRequestAnnotationMissionSessionList extends TeaModel {
         /**
-         * <p>The list of chats.</p>
+         * <p>The chat list.</p>
          */
         @NameInMap("AnnotationMissionChatList")
         public java.util.List<SaveAnnotationMissionSessionListRequestAnnotationMissionSessionListAnnotationMissionChatList> annotationMissionChatList;
 
         /**
-         * <p>The ID of the annotation task.</p>
+         * <p>The annotation task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c88cc004-de69-4eee-aa5f-2efed533a54e</p>
@@ -1488,16 +1479,12 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public String annotationMissionSessionId;
 
         /**
-         * <p>The annotation status.</p>
+         * <p>The annotation status. Valid values:</p>
          * <ul>
-         * <li><p>0: UNDO</p>
-         * </li>
-         * <li><p>1: DOING</p>
-         * </li>
-         * <li><p>2: DONE</p>
-         * </li>
-         * <li><p>3: CLOSED</p>
-         * </li>
+         * <li>0: Not completed (UNDO).</li>
+         * <li>1: In progress (DOING).</li>
+         * <li>2: Completed (DONE).</li>
+         * <li>3: Canceled (CLOSED).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1507,7 +1494,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public Integer annotationStatus;
 
         /**
-         * <p>The time when the session was created.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-14T02:01:23Z</p>
@@ -1525,7 +1512,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The task group ID.</p>
+         * <p>The job group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>29e669bd-a9d1-4529-98cd-c2b0549bcf53</p>
@@ -1534,7 +1521,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public String jobGroupId;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>593aaf5e-1275-4add-9990-22696385dc6e</p>
@@ -1543,7 +1530,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The time when the session was last modified.</p>
+         * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1683858248778</p>
@@ -1561,7 +1548,7 @@ public class SaveAnnotationMissionSessionListRequest extends TeaModel {
         public String scriptId;
 
         /**
-         * <p>For an outbound call, this is the task ID. For navigation, this is the conversation ID.</p>
+         * <p>The session ID. The value is taskId for outbound robots and conversationId for voice navigator robots.</p>
          * 
          * <strong>example:</strong>
          * <p>e6271044-b4b2-4ad8-ade4-c720be023538</p>

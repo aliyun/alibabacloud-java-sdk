@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAnnotationMissionRequest extends TeaModel {
     /**
-     * <p>Annotation task ID.</p>
+     * <p>The annotation task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>c88cc004-de69-4eee-aa5f-2efed533a54e</p>
@@ -14,16 +14,16 @@ public class ModifyAnnotationMissionRequest extends TeaModel {
     public String annotationMissionId;
 
     /**
-     * <p>Annotation task name.</p>
+     * <p>The annotation task name.</p>
      * 
      * <strong>example:</strong>
-     * <p>询问卖车-标注任务-20230506-112934</p>
+     * <p>AskAboutSellingCar-AnnotationTask-20230506-112934</p>
      */
     @NameInMap("AnnotationMissionName")
     public String annotationMissionName;
 
     /**
-     * <p>Annotation task status.</p>
+     * <p>The annotation task status.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -32,7 +32,7 @@ public class ModifyAnnotationMissionRequest extends TeaModel {
     public Integer annotationStatus;
 
     /**
-     * <p>Delete the task.</p>
+     * <p>Specifies whether to delete the task.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

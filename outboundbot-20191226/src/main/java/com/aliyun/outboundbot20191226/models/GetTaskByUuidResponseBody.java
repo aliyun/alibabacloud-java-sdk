@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTaskByUuidResponseBody extends TeaModel {
     /**
-     * <p>API status code</p>
+     * <p>The API status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class GetTaskByUuidResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class GetTaskByUuidResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Response message</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -32,7 +32,7 @@ public class GetTaskByUuidResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
@@ -41,7 +41,7 @@ public class GetTaskByUuidResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -50,7 +50,7 @@ public class GetTaskByUuidResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>Task information</p>
+     * <p>The task information.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -113,36 +113,23 @@ public class GetTaskByUuidResponseBody extends TeaModel {
 
     public static class GetTaskByUuidResponseBodyTaskConversations extends TeaModel {
         /**
-         * <p>Action type</p>
+         * <p>The instruction. Valid values:</p>
          * <ul>
-         * <li><p>Dialogue: Dialogue</p>
-         * </li>
-         * <li><p>AbortDialogue: Abort a dialogue</p>
-         * </li>
-         * <li><p>SilenceTimeout: Silence timeout</p>
-         * </li>
-         * <li><p>CollectedNumber: Collected number</p>
-         * </li>
-         * <li><p>EndDialogue: End a dialogue</p>
-         * </li>
-         * <li><p>Broadcast: Greeting message</p>
-         * </li>
-         * <li><p>HangUp: Hang up</p>
-         * </li>
-         * <li><p>Authorize: Authorization</p>
-         * </li>
-         * <li><p>TransferToAgent: Transfer to an agent</p>
-         * </li>
-         * <li><p>TransferToIVR: Transfer to an IVR system</p>
-         * </li>
-         * <li><p>RedirectToPage: Redirect to a page</p>
-         * </li>
-         * <li><p>CollectNumber: Collect a number</p>
-         * </li>
-         * <li><p>WaitOnAsyncTask: Wait for an asynchronous task</p>
-         * </li>
-         * <li><p>Error: Error</p>
-         * </li>
+         * <li>BeginDialogue: starts the conversation.</li>
+         * <li>Dialogue: indicates a conversation.</li>
+         * <li>AbortDialogue: aborts the conversation.</li>
+         * <li>SilenceTimeout: indicates a silence timeout.</li>
+         * <li>CollectedNumber: indicates a collected number.</li>
+         * <li>EndDialogue: ends the conversation.</li>
+         * <li>Broadcast: indicates an opening remark.</li>
+         * <li>HangUp: hangs up the call.</li>
+         * <li>Authorize: grants authorization.</li>
+         * <li>TransferToAgent: transfers the call to an agent.</li>
+         * <li>TransferToIVR: transfers the call to an IVR.</li>
+         * <li>RedirectToPage: redirects to a page.</li>
+         * <li>CollectNumber: collects a number.</li>
+         * <li>WaitOnAsyncTask: waits for an asynchronous task.</li>
+         * <li>Error: indicates an error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -152,16 +139,16 @@ public class GetTaskByUuidResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>Conversation text.</p>
+         * <p>The conversation text.</p>
          * 
          * <strong>example:</strong>
-         * <p>你好，我是**客服</p>
+         * <p>Hello, I am **customer service</p>
          */
         @NameInMap("Script")
         public String script;
 
         /**
-         * <p>Session ID</p>
+         * <p>The session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>fd279983-93b9-b13b-9a34-64e5df473225</p>
@@ -170,7 +157,7 @@ public class GetTaskByUuidResponseBody extends TeaModel {
         public String sequenceId;
 
         /**
-         * <p>Who spoke in the conversation. Valid values: Robot or Contact.</p>
+         * <p>The speaker of the conversation. Valid values: Robot and Contact.</p>
          * 
          * <strong>example:</strong>
          * <p>Robot</p>
@@ -179,7 +166,7 @@ public class GetTaskByUuidResponseBody extends TeaModel {
         public String speaker;
 
         /**
-         * <p>Timestamp when the summary was created.</p>
+         * <p>The time when the summary was created. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1579068424883</p>
@@ -236,7 +223,7 @@ public class GetTaskByUuidResponseBody extends TeaModel {
 
     public static class GetTaskByUuidResponseBodyTask extends TeaModel {
         /**
-         * <p>Actual execution time</p>
+         * <p>The actual execution time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1640090211434</p>
@@ -245,7 +232,7 @@ public class GetTaskByUuidResponseBody extends TeaModel {
         public Long actualTime;
 
         /**
-         * <p>Call ID</p>
+         * <p>The call ID.</p>
          * 
          * <strong>example:</strong>
          * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
@@ -254,7 +241,7 @@ public class GetTaskByUuidResponseBody extends TeaModel {
         public String callId;
 
         /**
-         * <p>Callee number</p>
+         * <p>The called number.</p>
          * 
          * <strong>example:</strong>
          * <p>13777777777</p>
@@ -263,7 +250,7 @@ public class GetTaskByUuidResponseBody extends TeaModel {
         public String calledNumber;
 
         /**
-         * <p>Caller number</p>
+         * <p>The calling number.</p>
          * 
          * <strong>example:</strong>
          * <p>057190294</p>
@@ -272,41 +259,29 @@ public class GetTaskByUuidResponseBody extends TeaModel {
         public String callingNumber;
 
         /**
-         * <p>List of conversations</p>
+         * <p>The list of conversation information.</p>
          */
         @NameInMap("Conversations")
         public java.util.List<GetTaskByUuidResponseBodyTaskConversations> conversations;
 
         /**
-         * <p>Reason the task ended</p>
+         * <p>The end reason. Valid values:</p>
          * <ul>
-         * <li><p>FINISHED: Task completed normally</p>
-         * </li>
-         * <li><p>CHATBOT_HANGUP_AFTER_NOANSWER: Bot hung up after no answer</p>
-         * </li>
-         * <li><p>CHATBOT_HANGUP_AFTER_SILENCE: Bot hung up after silence timeout</p>
-         * </li>
-         * <li><p>CLIENT_HANGUP_AFTER_NOANSWER: Client hung up after no answer</p>
-         * </li>
-         * <li><p>CLIENT_HANGUP: Client hung up without reason</p>
-         * </li>
-         * <li><p>TRANSFER_BY_INTENT: Transferred to agent after intent match</p>
-         * </li>
-         * <li><p>TRANSFER_AFTER_NOANSWER: Transferred to agent after no answer</p>
-         * </li>
-         * <li><p>INO_INTERACTION: No interaction from client</p>
-         * </li>
-         * <li><p>ERROR: System error interrupted the task</p>
-         * </li>
-         * <li><p>SPECIAL_INTERCEPT_VOICE_ASSISTANT: Intercepted due to voice assistant</p>
-         * </li>
-         * <li><p>SPECIAL_INTERCEPT_EXTENSION_NUMBER_TRANSFER: Intercepted due to extension number transfer</p>
-         * </li>
+         * <li>FINISHED: normal completion.</li>
+         * <li>CHATBOT_HANGUP_AFTER_NOANSWER: the robot hangs up after unrecognized input.</li>
+         * <li>CHATBOT_HANGUP_AFTER_SILENCE: the robot hangs up after a silence timeout.</li>
+         * <li>CLIENT_HANGUP_AFTER_NOANSWER: the user hangs up after unrecognized input.</li>
+         * <li>CLIENT_HANGUP: the user hangs up without a reason.</li>
+         * <li>TRANSFER_BY_INTENT: the call is transferred to a human agent due to intent matching.</li>
+         * <li>TRANSFER_AFTER_NOANSWER: the call is transferred to a human agent after unrecognized input.</li>
+         * <li>INO_INTERACTION: no interaction from the user.</li>
+         * <li>ERROR: the system is interrupted due to an exception.</li>
+         * <li>SPECIAL_INTERCEPT_VOICE_ASSISTANT: intercepted due to special circumstances - voice assistant.</li>
+         * <li>SPECIAL_INTERCEPT_EXTENSION_NUMBER_TRANSFER: intercepted due to special circumstances - extension number transfer.</li>
          * </ul>
          * <blockquote>
-         * <p>Notice: </p>
+         * <p>Notice: The data type of this parameter is String. The returned value is an enumerated value such as FINISHED.</notice></p>
          * </blockquote>
-         * <p>This parameter is a string that returns an enumeration value such as FINISHED.</p>
          * 
          * <strong>example:</strong>
          * <p>FINISHED</p>
@@ -315,7 +290,7 @@ public class GetTaskByUuidResponseBody extends TeaModel {
         public String endReason;
 
         /**
-         * <p>End time</p>
+         * <p>The end time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1640090211434</p>
@@ -324,7 +299,7 @@ public class GetTaskByUuidResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>Task ID</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -333,7 +308,7 @@ public class GetTaskByUuidResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Instance ID</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
@@ -342,7 +317,7 @@ public class GetTaskByUuidResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Job group ID</p>
+         * <p>The job group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
@@ -351,7 +326,7 @@ public class GetTaskByUuidResponseBody extends TeaModel {
         public String jobGroupId;
 
         /**
-         * <p>Job ID</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
@@ -360,7 +335,7 @@ public class GetTaskByUuidResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>Planned execution time (deprecated)</p>
+         * <p><strong>[Deprecated]</strong> The planned execution time of the task. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1640090211434</p>

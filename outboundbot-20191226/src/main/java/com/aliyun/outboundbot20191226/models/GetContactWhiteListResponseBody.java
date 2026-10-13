@@ -14,7 +14,7 @@ public class GetContactWhiteListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The contact list.</p>
+     * <p>The contact whitelist.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -32,7 +32,7 @@ public class GetContactWhiteListResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The API response message.</p>
+     * <p>The API message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -122,7 +122,7 @@ public class GetContactWhiteListResponseBody extends TeaModel {
         public String contactWhiteListId;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1640174411848</p>
@@ -152,7 +152,7 @@ public class GetContactWhiteListResponseBody extends TeaModel {
          * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>John Smith</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("Name")
         public String name;
@@ -176,7 +176,7 @@ public class GetContactWhiteListResponseBody extends TeaModel {
         public String phoneNumber;
 
         /**
-         * <p>The remarks.</p>
+         * <p>The remark.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx</p>
@@ -257,7 +257,7 @@ public class GetContactWhiteListResponseBody extends TeaModel {
 
     public static class GetContactWhiteListResponseBodyContactWhitelistList extends TeaModel {
         /**
-         * <p>The contact list.</p>
+         * <p>The contact whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>

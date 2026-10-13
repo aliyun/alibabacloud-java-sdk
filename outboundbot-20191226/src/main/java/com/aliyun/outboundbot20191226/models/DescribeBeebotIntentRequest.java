@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBeebotIntentRequest extends TeaModel {
     /**
-     * <p>Instance ID</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeBeebotIntentRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Intent ID</p>
+     * <p>The intent ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DescribeBeebotIntentRequest extends TeaModel {
     public Long intentId;
 
     /**
-     * <p>Scenario ID</p>
+     * <p>The scenario ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

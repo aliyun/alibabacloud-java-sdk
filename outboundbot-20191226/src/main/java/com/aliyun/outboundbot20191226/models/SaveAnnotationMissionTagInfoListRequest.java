@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class SaveAnnotationMissionTagInfoListRequest extends TeaModel {
     /**
-     * <p>The list of tags.</p>
+     * <p>The tag list.</p>
      * <blockquote>
-     * <p>This parameter has the same function as AnnotationMissionTagInfoListJsonString. Specify either this parameter or AnnotationMissionTagInfoListJsonString.</p>
+     * <p>This parameter is the same as the AnnotationMissionTagInfoListJsonString parameter. Specify either one.</p>
      * </blockquote>
      */
     @NameInMap("AnnotationMissionTagInfoList")
     public java.util.List<SaveAnnotationMissionTagInfoListRequestAnnotationMissionTagInfoList> annotationMissionTagInfoList;
 
     /**
-     * <p>The JSON-formatted data of the tags.</p>
+     * <p>The tag JSON data.</p>
      * <blockquote>
-     * <p>The parameters in the JSON string are the same as those in AnnotationMissionTagInfoList. Specify either this parameter or AnnotationMissionTagInfoList.</p>
+     * <p>The parameters in the JSON are the same as those in the AnnotationMissionTagInfoList parameter. Specify either this parameter or AnnotationMissionTagInfoList.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;delete&quot;:false,				&quot;InstanceId&quot;:&quot;00b37342-e759-4fe5-b296-aef775933af0&quot;,					&quot;AnnotationMissionTagInfoName&quot;:&quot;测试数据1&quot;,					&quot;AnnotationMissionTagInfoDescription&quot;:&quot;测试&quot;}]</p>
+     * <p>[{&quot;delete&quot;:false,				&quot;InstanceId&quot;:&quot;00b37342-e759-4fe5-b296-aef775933af0&quot;,					&quot;AnnotationMissionTagInfoName&quot;:&quot;TestData1&quot;,					&quot;AnnotationMissionTagInfoDescription&quot;:&quot;Test&quot;}]</p>
      */
     @NameInMap("AnnotationMissionTagInfoListJsonString")
     public String annotationMissionTagInfoListJsonString;
@@ -35,7 +35,7 @@ public class SaveAnnotationMissionTagInfoListRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Indicates whether to restore the default tag values.</p>
+     * <p>Specifies whether to restore the default tag values.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -85,7 +85,7 @@ public class SaveAnnotationMissionTagInfoListRequest extends TeaModel {
          * <p>The tag description.</p>
          * 
          * <strong>example:</strong>
-         * <p>标签描述</p>
+         * <p>Tag description</p>
          */
         @NameInMap("AnnotationMissionTagInfoDescription")
         public String annotationMissionTagInfoDescription;
@@ -103,15 +103,15 @@ public class SaveAnnotationMissionTagInfoListRequest extends TeaModel {
          * <p>The tag name.</p>
          * 
          * <strong>example:</strong>
-         * <p>标签</p>
+         * <p>Tag</p>
          */
         @NameInMap("AnnotationMissionTagInfoName")
         public String annotationMissionTagInfoName;
 
         /**
-         * <p>Indicates whether to delete the tag.</p>
+         * <p>Specifies whether to delete the tag.</p>
          * <blockquote>
-         * <p>Set this parameter to true to delete the tag. Set it to false to add the tag.</p>
+         * <p>Set this parameter to true to delete the tag, or false to add the tag.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

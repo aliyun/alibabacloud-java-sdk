@@ -9,9 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-shanghai", "outboundbot.cn-shanghai.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("outboundbot", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -237,7 +234,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the resource group of a resource.</p>
+     * <p>Changes the resource group.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -273,7 +270,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the resource group of a resource.</p>
+     * <p>Changes the resource group.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -285,7 +282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can create an intelligent configuration.</p>
+     * <p>Creates an agent configuration.</p>
      * 
      * @param request CreateAgentProfileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -369,7 +366,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can create an intelligent configuration.</p>
+     * <p>Creates an agent configuration.</p>
      * 
      * @param request CreateAgentProfileRequest
      * @return CreateAgentProfileResponse
@@ -499,7 +496,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deprecated. Do not use this operation to batch-create outbound calling jobs.</p>
+     * <p><em>[Deprecated]</em>* Creates outbound jobs in batches.</p>
      * 
      * @param request CreateBatchJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -563,7 +560,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deprecated. Do not use this operation to batch-create outbound calling jobs.</p>
+     * <p><em>[Deprecated]</em>* Creates outbound jobs in batches.</p>
      * 
      * @param request CreateBatchJobsRequest
      * @return CreateBatchJobsResponse
@@ -841,6 +838,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateBeebotIntentUserSayResponse createBeebotIntentUserSay(CreateBeebotIntentUserSayRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createBeebotIntentUserSayWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a custom script template for a specified script.</p>
+     * 
+     * @param request CreateCustomScriptTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCustomScriptTemplateResponse
+     */
+    public CreateCustomScriptTemplateResponse createCustomScriptTemplateWithOptions(CreateCustomScriptTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.labelsJson)) {
+            body.put("LabelsJson", request.labelsJson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.model)) {
+            body.put("Model", request.model);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
+            body.put("Prompt", request.prompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promptJson)) {
+            body.put("PromptJson", request.promptJson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scriptId)) {
+            body.put("ScriptId", request.scriptId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCustomScriptTemplate"),
+            new TeaPair("version", "2019-12-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCustomScriptTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a custom script template for a specified script.</p>
+     * 
+     * @param request CreateCustomScriptTemplateRequest
+     * @return CreateCustomScriptTemplateResponse
+     */
+    public CreateCustomScriptTemplateResponse createCustomScriptTemplate(CreateCustomScriptTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCustomScriptTemplateWithOptions(request, runtime);
     }
 
     /**
@@ -1373,6 +1442,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates a phone number and associates it with the current tenant.</p>
+     * 
+     * @param request CreateNumberRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateNumberResponse
+     */
+    public CreateNumberResponse createNumberWithOptions(CreateNumberRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.numbers)) {
+            query.put("Numbers", request.numbers);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trunkId)) {
+            query.put("TrunkId", request.trunkId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateNumber"),
+            new TeaPair("version", "2019-12-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateNumberResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a phone number and associates it with the current tenant.</p>
+     * 
+     * @param request CreateNumberRequest
+     * @return CreateNumberResponse
+     */
+    public CreateNumberResponse createNumber(CreateNumberRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createNumberWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Create a scenario.</p>
      * 
      * @param request CreateScriptRequest
@@ -1692,7 +1809,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes Large Language Model (LLM) agents.</p>
+     * <p>Creates a cloned voice.</p>
+     * 
+     * @param request CreateVoiceCloneRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateVoiceCloneResponse
+     */
+    public CreateVoiceCloneResponse createVoiceCloneWithOptions(CreateVoiceCloneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileId)) {
+            query.put("FileId", request.fileId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.model)) {
+            query.put("Model", request.model);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.voiceName)) {
+            query.put("VoiceName", request.voiceName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateVoiceClone"),
+            new TeaPair("version", "2019-12-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVoiceCloneResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a cloned voice.</p>
+     * 
+     * @param request CreateVoiceCloneRequest
+     * @return CreateVoiceCloneResponse
+     */
+    public CreateVoiceCloneResponse createVoiceClone(CreateVoiceCloneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createVoiceCloneWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a foundation model robot.</p>
      * 
      * @param tmpReq DeleteAgentProfilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1734,7 +1907,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes Large Language Model (LLM) agents.</p>
+     * <p>Deletes a foundation model robot.</p>
      * 
      * @param request DeleteAgentProfilesRequest
      * @return DeleteAgentProfilesResponse
@@ -1746,7 +1919,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes all entries from the number district database. This operation is deprecated.</p>
+     * <p>Clears the number attribution database. This operation is deprecated.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAllNumberDistrictInfoResponse
@@ -1769,7 +1942,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes all entries from the number district database. This operation is deprecated.</p>
+     * <p>Clears the number attribution database. This operation is deprecated.</p>
      * @return DeleteAllNumberDistrictInfoResponse
      */
     public DeleteAllNumberDistrictInfoResponse deleteAllNumberDistrictInfo() throws Exception {
@@ -2043,6 +2216,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteContactWhiteListResponse deleteContactWhiteList(DeleteContactWhiteListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteContactWhiteListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a specified custom script template.</p>
+     * 
+     * @param request DeleteCustomScriptTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCustomScriptTemplateResponse
+     */
+    public DeleteCustomScriptTemplateResponse deleteCustomScriptTemplateWithOptions(DeleteCustomScriptTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentProfileId)) {
+            body.put("AgentProfileId", request.agentProfileId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCustomScriptTemplate"),
+            new TeaPair("version", "2019-12-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCustomScriptTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a specified custom script template.</p>
+     * 
+     * @param request DeleteCustomScriptTemplateRequest
+     * @return DeleteCustomScriptTemplateResponse
+     */
+    public DeleteCustomScriptTemplateResponse deleteCustomScriptTemplate(DeleteCustomScriptTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCustomScriptTemplateWithOptions(request, runtime);
     }
 
     /**
@@ -2494,11 +2715,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a specified cloned voice. Before deletion, the system checks whether the voice is still referenced by scenarios under the instance. Deletion fails if the voice is referenced.</p>
+     * 
+     * @param request DeleteVoiceCloneRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteVoiceCloneResponse
+     */
+    public DeleteVoiceCloneResponse deleteVoiceCloneWithOptions(DeleteVoiceCloneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.voiceId)) {
+            query.put("VoiceId", request.voiceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteVoiceClone"),
+            new TeaPair("version", "2019-12-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteVoiceCloneResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a specified cloned voice. Before deletion, the system checks whether the voice is still referenced by scenarios under the instance. Deletion fails if the voice is referenced.</p>
+     * 
+     * @param request DeleteVoiceCloneRequest
+     * @return DeleteVoiceCloneResponse
+     */
+    public DeleteVoiceCloneResponse deleteVoiceClone(DeleteVoiceCloneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteVoiceCloneWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
-     * <p>**</p>
+     * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the intent in the small model scenario.</p>
+     * <p>Retrieves the intent in a small model scenario.</p>
      * 
      * @param request DescribeBeebotIntentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2538,10 +2807,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>**</p>
+     * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the intent in the small model scenario.</p>
+     * <p>Retrieves the intent in a small model scenario.</p>
      * 
      * @param request DescribeBeebotIntentRequest
      * @return DescribeBeebotIntentResponse
@@ -2605,7 +2874,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tag statistics of hits for a job group.</p>
+     * <p>Queries the label hit statistics of a job group.</p>
      * 
      * @param request DescribeDsReportsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2641,7 +2910,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tag statistics of hits for a job group.</p>
+     * <p>Queries the label hit statistics of a job group.</p>
      * 
      * @param request DescribeDsReportsRequest
      * @return DescribeDsReportsResponse
@@ -2711,7 +2980,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns the execution status of tasks in a task group.</p>
+     * <p>Retrieves the execution status of jobs in a job group.</p>
      * 
      * @param request DescribeGroupExecutingInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2747,7 +3016,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns the execution status of tasks in a task group.</p>
+     * <p>Retrieves the execution status of jobs in a job group.</p>
      * 
      * @param request DescribeGroupExecutingInfoRequest
      * @return DescribeGroupExecutingInfoResponse
@@ -2759,7 +3028,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information of an outbound robot business instance.</p>
+     * <p>Queries the details of an outbound robot instance.</p>
      * 
      * @param request DescribeInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2791,7 +3060,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information of an outbound robot business instance.</p>
+     * <p>Queries the details of an outbound robot instance.</p>
      * 
      * @param request DescribeInstanceRequest
      * @return DescribeInstanceResponse
@@ -3007,7 +3276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves data for intelligent outbound call job groups.</p>
+     * <p>Queries outbound robot task data.</p>
      * 
      * @param request DescribeJobGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3047,7 +3316,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves data for intelligent outbound call job groups.</p>
+     * <p>Queries outbound robot task data.</p>
      * 
      * @param request DescribeJobGroupRequest
      * @return DescribeJobGroupResponse
@@ -3107,7 +3376,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns information about a script.</p>
+     * <p>Retrieves the details of a script.</p>
      * 
      * @param request DescribeScriptRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3143,7 +3412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns information about a script.</p>
+     * <p>Retrieves the details of a script.</p>
      * 
      * @param request DescribeScriptRequest
      * @return DescribeScriptResponse
@@ -3255,7 +3524,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>TTS preview.</p>
+     * <p>Previews text-to-speech (TTS) audio.</p>
      * 
      * @param request DescribeTTSDemoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3339,7 +3608,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>TTS preview.</p>
+     * <p>Previews text-to-speech (TTS) audio.</p>
      * 
      * @param request DescribeTTSDemoRequest
      * @return DescribeTTSDemoResponse
@@ -3527,7 +3796,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Downloads a call recording.</p>
+     * <p>Downloads call recordings.</p>
      * 
      * @param request DownloadRecordingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3571,7 +3840,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Downloads a call recording.</p>
+     * <p>Downloads call recordings.</p>
      * 
      * @param request DownloadRecordingRequest
      * @return DownloadRecordingResponse
@@ -3734,9 +4003,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Upload a hotword list file.</p>
-     * 
      * @param request GenerateUploadUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GenerateUploadUrlResponse
@@ -3770,9 +4036,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Upload a hotword list file.</p>
-     * 
      * @param request GenerateUploadUrlRequest
      * @return GenerateUploadUrlResponse
      */
@@ -3831,7 +4094,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the configuration of an agent.</p>
+     * <p>Retrieves the agent configuration.</p>
      * 
      * @param request GetAgentProfileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3871,7 +4134,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the configuration of an agent.</p>
+     * <p>Retrieves the agent configuration.</p>
      * 
      * @param request GetAgentProfileRequest
      * @return GetAgentProfileResponse
@@ -3931,7 +4194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>null</p>
+     * <p>null.</p>
      * 
      * @param request GetAnnotationMissionSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3963,7 +4226,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>null</p>
+     * <p>null.</p>
      * 
      * @param request GetAnnotationMissionSummaryRequest
      * @return GetAnnotationMissionSummaryResponse
@@ -3974,6 +4237,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the list of annotation tags.</p>
+     * 
      * @param request GetAnnotationMissionTagInfoListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAnnotationMissionTagInfoListResponse
@@ -4011,6 +4277,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the list of annotation tags.</p>
+     * 
      * @param request GetAnnotationMissionTagInfoListRequest
      * @return GetAnnotationMissionTagInfoListResponse
      */
@@ -4113,7 +4382,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve the global outbound time periods for the outbound calling system.</p>
+     * <p>Retrieves the global outbound calling time periods in the outbound system.</p>
      * 
      * @param request GetBaseStrategyPeriodRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4149,7 +4418,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve the global outbound time periods for the outbound calling system.</p>
+     * <p>Retrieves the global outbound calling time periods in the outbound system.</p>
      * 
      * @param request GetBaseStrategyPeriodRequest
      * @return GetBaseStrategyPeriodResponse
@@ -4254,7 +4523,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the global outbound call policy whitelist.</p>
+     * <p>Queries the global outbound whitelist.</p>
      * 
      * @param request GetContactWhiteListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4302,7 +4571,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the global outbound call policy whitelist.</p>
+     * <p>Queries the global outbound whitelist.</p>
      * 
      * @param request GetContactWhiteListRequest
      * @return GetContactWhiteListResponse
@@ -4514,7 +4783,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the download URL for the number library template. This API is deprecated.</p>
+     * <p>Retrieves the download URL for a number library template. This operation is deprecated.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetNumberDistrictInfoTemplateDownloadUrlResponse
@@ -4537,7 +4806,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the download URL for the number library template. This API is deprecated.</p>
+     * <p>Retrieves the download URL for a number library template. This operation is deprecated.</p>
      * @return GetNumberDistrictInfoTemplateDownloadUrlResponse
      */
     public GetNumberDistrictInfoTemplateDownloadUrlResponse getNumberDistrictInfoTemplateDownloadUrl() throws Exception {
@@ -4547,7 +4816,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the public key of the asymmetric encryption algorithm.</p>
+     * <p>Retrieves the public key of an asymmetric encryption algorithm.</p>
      * 
      * @param request GetPublicKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4572,7 +4841,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the public key of the asymmetric encryption algorithm.</p>
+     * <p>Retrieves the public key of an asymmetric encryption algorithm.</p>
      * 
      * @param request GetPublicKeyRequest
      * @return GetPublicKeyResponse
@@ -4668,7 +4937,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve a task by its UUID.</p>
+     * <p>Retrieves a task by UUID.</p>
      * 
      * @param request GetTaskByUuidRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4696,7 +4965,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve a task by its UUID.</p>
+     * <p>Retrieves a task by UUID.</p>
      * 
      * @param request GetTaskByUuidRequest
      * @return GetTaskByUuidResponse
@@ -4897,7 +5166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the phone numbers bound to the tenant.</p>
+     * <p>Queries the numbers bound to a tenant.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAllTenantBindNumberBindingResponse
@@ -4920,7 +5189,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the phone numbers bound to the tenant.</p>
+     * <p>Queries the numbers bound to a tenant.</p>
      * @return ListAllTenantBindNumberBindingResponse
      */
     public ListAllTenantBindNumberBindingResponse listAllTenantBindNumberBinding() throws Exception {
@@ -4930,7 +5199,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists annotation missions.</p>
+     * <p>Retrieves a list of annotation tasks.</p>
      * 
      * @param request ListAnnotationMissionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4994,7 +5263,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists annotation missions.</p>
+     * <p>Retrieves a list of annotation tasks.</p>
      * 
      * @param request ListAnnotationMissionRequest
      * @return ListAnnotationMissionResponse
@@ -5006,7 +5275,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListAnnotationMissionSession</p>
+     * <p>Lists annotation mission sessions.</p>
      * 
      * @param request ListAnnotationMissionSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5058,7 +5327,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListAnnotationMissionSession</p>
+     * <p>Lists annotation mission sessions.</p>
      * 
      * @param request ListAnnotationMissionSessionRequest
      * @return ListAnnotationMissionSessionResponse
@@ -5126,7 +5395,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists intents for small-model scenarios.</p>
+     * <p>Queries the list of intents in small model scenarios.</p>
      * 
      * @param request ListBeebotIntentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5174,7 +5443,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists intents for small-model scenarios.</p>
+     * <p>Queries the list of intents in small model scenarios.</p>
      * 
      * @param request ListBeebotIntentRequest
      * @return ListBeebotIntentResponse
@@ -5186,7 +5455,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the utterance templates for a specified intent in a scenario.</p>
+     * <p>Queries the utterance templates for Chatbot intents in small model scenarios.</p>
      * 
      * @param request ListBeebotIntentLgfRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5238,7 +5507,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the utterance templates for a specified intent in a scenario.</p>
+     * <p>Queries the utterance templates for Chatbot intents in small model scenarios.</p>
      * 
      * @param request ListBeebotIntentLgfRequest
      * @return ListBeebotIntentLgfResponse
@@ -5314,7 +5583,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the instances of the Yunxiao Mi chatbot service in Alibaba Cloud.</p>
+     * <p>Queries a list of Chatbot instances in the public cloud edition.</p>
      * 
      * @param request ListChatbotInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5354,7 +5623,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the instances of the Yunxiao Mi chatbot service in Alibaba Cloud.</p>
+     * <p>Queries a list of Chatbot instances in the public cloud edition.</p>
      * 
      * @param request ListChatbotInstancesRequest
      * @return ListChatbotInstancesResponse
@@ -5362,6 +5631,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListChatbotInstancesResponse listChatbotInstances(ListChatbotInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listChatbotInstancesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询自定义场景模板列表</p>
+     * 
+     * @param request ListCustomScriptTemplatesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCustomScriptTemplatesResponse
+     */
+    public ListCustomScriptTemplatesResponse listCustomScriptTemplatesWithOptions(ListCustomScriptTemplatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCustomScriptTemplates"),
+            new TeaPair("version", "2019-12-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCustomScriptTemplatesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询自定义场景模板列表</p>
+     * 
+     * @param request ListCustomScriptTemplatesRequest
+     * @return ListCustomScriptTemplatesResponse
+     */
+    public ListCustomScriptTemplatesResponse listCustomScriptTemplates(ListCustomScriptTemplatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCustomScriptTemplatesWithOptions(request, runtime);
     }
 
     /**
@@ -5414,7 +5735,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of download tasks in Download Hub.</p>
+     * <p>Queries the download center list.</p>
      * 
      * @param request ListDownloadTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5442,7 +5763,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of download tasks in Download Hub.</p>
+     * <p>Queries the download center list.</p>
      * 
      * @param request ListDownloadTasksRequest
      * @return ListDownloadTasksResponse
@@ -5550,7 +5871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of Outbound Bot service instances.</p>
+     * <p>Queries a list of outbound robot instances.</p>
      * 
      * @param request ListInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5598,7 +5919,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of Outbound Bot service instances.</p>
+     * <p>Queries a list of outbound robot instances.</p>
      * 
      * @param request ListInstancesRequest
      * @return ListInstancesResponse
@@ -5610,7 +5931,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query intent for the Annotation Center list.</p>
+     * <p>Queries intents in the annotation center list.</p>
      * 
      * @param request ListIntentionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5674,7 +5995,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query intent for the Annotation Center list.</p>
+     * <p>Queries intents in the annotation center list.</p>
      * 
      * @param request ListIntentionsRequest
      * @return ListIntentionsResponse
@@ -5746,7 +6067,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of outbound call task groups.</p>
+     * <p>Queries the list of outbound job groups.</p>
      * 
      * @param request ListJobGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5810,7 +6131,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of outbound call task groups.</p>
+     * <p>Queries the list of outbound job groups.</p>
      * 
      * @param request ListJobGroupsRequest
      * @return ListJobGroupsResponse
@@ -5822,7 +6143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Asynchronously retrieves the list of outbound call task groups. When the Async parameter is specified in the ListJobGroup operation, use this operation to retrieve the results of the asynchronous ListJobGroup call.</p>
+     * <p>Retrieves the list of outbound job groups asynchronously. When the Async parameter is specified in a ListJobGroup call, use this operation to retrieve the asynchronous results of the ListJobGroup operation.</p>
      * 
      * @param request ListJobGroupsAsyncRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5850,7 +6171,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Asynchronously retrieves the list of outbound call task groups. When the Async parameter is specified in the ListJobGroup operation, use this operation to retrieve the results of the asynchronous ListJobGroup call.</p>
+     * <p>Retrieves the list of outbound job groups asynchronously. When the Async parameter is specified in a ListJobGroup call, use this operation to retrieve the asynchronous results of the ListJobGroup operation.</p>
      * 
      * @param request ListJobGroupsAsyncRequest
      * @return ListJobGroupsAsyncResponse
@@ -6078,7 +6399,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the publication history of the small model for outbound calls.</p>
+     * <p>Queries the publish history list for small model outbound calls.</p>
      * 
      * @param request ListScriptPublishHistoriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6122,7 +6443,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the publication history of the small model for outbound calls.</p>
+     * <p>Queries the publish history list for small model outbound calls.</p>
      * 
      * @param request ListScriptPublishHistoriesRequest
      * @return ListScriptPublishHistoriesResponse
@@ -6206,7 +6527,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the variables that are currently used in a scenario.</p>
+     * <p>Retrieves the variables currently used in the scenario.</p>
      * 
      * @param request ListScriptVariablesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6246,7 +6567,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the variables that are currently used in a scenario.</p>
+     * <p>Retrieves the variables currently used in the scenario.</p>
      * 
      * @param request ListScriptVariablesRequest
      * @return ListScriptVariablesResponse
@@ -6380,7 +6701,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the tag relationships for resources.</p>
+     * <p>Queries the list of SIP trunks.</p>
+     * 
+     * @param request ListSipTrunksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSipTrunksResponse
+     */
+    public ListSipTrunksResponse listSipTrunksWithOptions(ListSipTrunksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSipTrunks"),
+            new TeaPair("version", "2019-12-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSipTrunksResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of SIP trunks.</p>
+     * 
+     * @param request ListSipTrunksRequest
+     * @return ListSipTrunksResponse
+     */
+    public ListSipTrunksResponse listSipTrunks(ListSipTrunksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listSipTrunksWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries resource tag relationships.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6428,7 +6786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the tag relationships for resources.</p>
+     * <p>Queries resource tag relationships.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -6488,7 +6846,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify the agent configuration.</p>
+     * <p>Performs a paged query to retrieve the list of cloned voices for an instance by using paging.</p>
+     * 
+     * @param request ListVoiceCloneRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListVoiceCloneResponse
+     */
+    public ListVoiceCloneResponse listVoiceCloneWithOptions(ListVoiceCloneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListVoiceClone"),
+            new TeaPair("version", "2019-12-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListVoiceCloneResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paged query to retrieve the list of cloned voices for an instance by using paging.</p>
+     * 
+     * @param request ListVoiceCloneRequest
+     * @return ListVoiceCloneResponse
+     */
+    public ListVoiceCloneResponse listVoiceClone(ListVoiceCloneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listVoiceCloneWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the agent configuration.</p>
      * 
      * @param tmpReq ModifyAgentProfileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6574,7 +6988,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify the agent configuration.</p>
+     * <p>Modifies the agent configuration.</p>
      * 
      * @param request ModifyAgentProfileRequest
      * @return ModifyAgentProfileResponse
@@ -6586,7 +7000,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the status and name of an annotation task.</p>
+     * <p>Modifies the status and name of an annotation task.</p>
      * 
      * @param request ModifyAnnotationMissionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6630,7 +7044,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the status and name of an annotation task.</p>
+     * <p>Modifies the status and name of an annotation task.</p>
      * 
      * @param request ModifyAnnotationMissionRequest
      * @return ModifyAnnotationMissionResponse
@@ -6908,7 +7322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a dialogue flow. This is a legacy API for the canvas.</p>
+     * <p>Modifies a dialog flow. This is a legacy canvas operation.</p>
      * 
      * @param request ModifyDialogueFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6956,7 +7370,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a dialogue flow. This is a legacy API for the canvas.</p>
+     * <p>Modifies a dialog flow. This is a legacy canvas operation.</p>
      * 
      * @param request ModifyDialogueFlowRequest
      * @return ModifyDialogueFlowResponse
@@ -7088,7 +7502,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies an Outbound Bot instance.</p>
+     * <p>Modifies an outbound robot instance.</p>
      * 
      * @param request ModifyInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7136,7 +7550,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies an Outbound Bot instance.</p>
+     * <p>Modifies an outbound robot instance.</p>
      * 
      * @param request ModifyInstanceRequest
      * @return ModifyInstanceResponse
@@ -7216,7 +7630,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify an intelligent outbound call task group.</p>
+     * <p>Modifies an outbound robot job group.</p>
      * 
      * @param request ModifyJobGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7304,7 +7718,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify an intelligent outbound call task group.</p>
+     * <p>Modifies an outbound robot job group.</p>
      * 
      * @param request ModifyJobGroupRequest
      * @return ModifyJobGroupResponse
@@ -7706,6 +8120,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>修改声音克隆</p>
+     * 
+     * @param request ModifyVoiceCloneRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyVoiceCloneResponse
+     */
+    public ModifyVoiceCloneResponse modifyVoiceCloneWithOptions(ModifyVoiceCloneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.voiceId)) {
+            query.put("VoiceId", request.voiceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.voiceName)) {
+            query.put("VoiceName", request.voiceName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyVoiceClone"),
+            new TeaPair("version", "2019-12-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyVoiceCloneResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改声音克隆</p>
+     * 
+     * @param request ModifyVoiceCloneRequest
+     * @return ModifyVoiceCloneResponse
+     */
+    public ModifyVoiceCloneResponse modifyVoiceClone(ModifyVoiceCloneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyVoiceCloneWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Publishing a scenario</p>
      * 
      * @param request PublishScriptRequest
@@ -8034,7 +8504,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries scenario information by status.</p>
+     * <p>Queries scenario information based on the scenario status.</p>
      * 
      * @param request QueryScriptsByStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8078,7 +8548,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries scenario information by status.</p>
+     * <p>Queries scenario information based on the scenario status.</p>
      * 
      * @param request QueryScriptsByStatusRequest
      * @return QueryScriptsByStatusResponse
@@ -8090,7 +8560,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>CC sends the call failure reason to the outbound calling system. This operation is deprecated.</p>
+     * <p><em>[Deprecated]</em>* Submits the cause of a call failure to the outbound call business system.</p>
      * 
      * @param request RecordFailureRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8150,7 +8620,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>CC sends the call failure reason to the outbound calling system. This operation is deprecated.</p>
+     * <p><em>[Deprecated]</em>* Submits the cause of a call failure to the outbound call business system.</p>
      * 
      * @param request RecordFailureRequest
      * @return RecordFailureResponse
@@ -8330,7 +8800,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can save a list of annotation chat instances.</p>
+     * <p>Saves the list of annotated chat instances.</p>
      * 
      * @param request SaveAnnotationMissionSessionListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8386,7 +8856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can save a list of annotation chat instances.</p>
+     * <p>Saves the list of annotated chat instances.</p>
      * 
      * @param request SaveAnnotationMissionSessionListRequest
      * @return SaveAnnotationMissionSessionListResponse
@@ -8398,7 +8868,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Saves instance tags in a batch.</p>
+     * <p>Saves instance tag information in batches.</p>
      * 
      * @param request SaveAnnotationMissionTagInfoListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8442,7 +8912,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Saves instance tags in a batch.</p>
+     * <p>Saves instance tag information in batches.</p>
      * 
      * @param request SaveAnnotationMissionTagInfoListRequest
      * @return SaveAnnotationMissionTagInfoListResponse
@@ -8726,7 +9196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Search for tasks.</p>
+     * <p>Queries tasks.</p>
      * 
      * @param request SearchTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8754,7 +9224,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Search for tasks.</p>
+     * <p>Queries tasks.</p>
      * 
      * @param request SearchTaskRequest
      * @return SearchTaskResponse
@@ -8930,6 +9400,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitRecordingResponse submitRecording(SubmitRecordingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitRecordingWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Submits the pre-review approval or rejection result for a script review record under a specified instance for a whitelisted tenant, and returns the updated script information.</p>
+     * 
+     * @param request SubmitScriptPreReviewResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitScriptPreReviewResultResponse
+     */
+    public SubmitScriptPreReviewResultResponse submitScriptPreReviewResultWithOptions(SubmitScriptPreReviewResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordId)) {
+            query.put("RecordId", request.recordId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rejectReason)) {
+            query.put("RejectReason", request.rejectReason);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reviewResult)) {
+            query.put("ReviewResult", request.reviewResult);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitScriptPreReviewResult"),
+            new TeaPair("version", "2019-12-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitScriptPreReviewResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Submits the pre-review approval or rejection result for a script review record under a specified instance for a whitelisted tenant, and returns the updated script information.</p>
+     * 
+     * @param request SubmitScriptPreReviewResultRequest
+     * @return SubmitScriptPreReviewResultResponse
+     */
+    public SubmitScriptPreReviewResultResponse submitScriptPreReviewResult(SubmitScriptPreReviewResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitScriptPreReviewResultWithOptions(request, runtime);
     }
 
     /**
@@ -9220,7 +9746,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Prepares a task for execution.</p>
+     * <p>Prepares a node for execution.</p>
      * 
      * @param request TaskPreparingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9260,7 +9786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Prepares a task for execution.</p>
+     * <p>Prepares a node for execution.</p>
      * 
      * @param request TaskPreparingRequest
      * @return TaskPreparingResponse
@@ -9380,7 +9906,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upload recording files.</p>
+     * <p>Uploads a recording file.</p>
      * 
      * @param request UploadScriptRecordingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9428,7 +9954,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upload recording files.</p>
+     * <p>Uploads a recording file.</p>
      * 
      * @param request UploadScriptRecordingRequest
      * @return UploadScriptRecordingResponse

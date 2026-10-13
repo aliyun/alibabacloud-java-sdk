@@ -25,7 +25,7 @@ public class DescribeJobRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>Specifies whether to return task scenario information.</p>
+     * <p>Specifies whether to return the task scenario information.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

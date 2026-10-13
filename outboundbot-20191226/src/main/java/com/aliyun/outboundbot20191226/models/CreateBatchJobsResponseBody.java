@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateBatchJobsResponseBody extends TeaModel {
     /**
-     * <p>Information about the job group.</p>
+     * <p>The job group information.</p>
      */
     @NameInMap("BatchJob")
     public CreateBatchJobsResponseBodyBatchJob batchJob;
 
     /**
-     * <p>API status code.</p>
+     * <p>The API status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -20,7 +20,7 @@ public class CreateBatchJobsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class CreateBatchJobsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Response message.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -38,7 +38,7 @@ public class CreateBatchJobsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
@@ -47,7 +47,7 @@ public class CreateBatchJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call succeeded.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class CreateBatchJobsResponseBody extends TeaModel {
 
     public static class CreateBatchJobsResponseBodyBatchJobStrategyWorkingTime extends TeaModel {
         /**
-         * <p>Start time.</p>
+         * <p>The start time. The format is HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>09:00:00</p>
@@ -119,7 +119,7 @@ public class CreateBatchJobsResponseBody extends TeaModel {
         public String beginTime;
 
         /**
-         * <p>End time.</p>
+         * <p>The end time. The format is HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>12:00:00</p>
@@ -152,7 +152,7 @@ public class CreateBatchJobsResponseBody extends TeaModel {
 
     public static class CreateBatchJobsResponseBodyBatchJobStrategy extends TeaModel {
         /**
-         * <p>Custom information for the policy.</p>
+         * <p>The custom information of the strategy.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -161,7 +161,7 @@ public class CreateBatchJobsResponseBody extends TeaModel {
         public String customized;
 
         /**
-         * <p>End time of the scheduling policy.</p>
+         * <p>The end time of the scheduling strategy. The time is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2209702074000</p>
@@ -170,7 +170,7 @@ public class CreateBatchJobsResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>Action to take for outbound calls that were not completed in the previous cycle.</p>
+         * <p>The follow-up strategy for outbound calls that are not completed in the previous cycle.</p>
          * 
          * <strong>example:</strong>
          * <p>CONTINUE</p>
@@ -179,7 +179,7 @@ public class CreateBatchJobsResponseBody extends TeaModel {
         public String followUpStrategy;
 
         /**
-         * <p>Indicates whether the policy is a template.</p>
+         * <p>Indicates whether the strategy is a template.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -188,7 +188,7 @@ public class CreateBatchJobsResponseBody extends TeaModel {
         public Boolean isTemplate;
 
         /**
-         * <p>Maximum number of retries per day after a failed call.</p>
+         * <p>The maximum number of retries per day after a call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -197,7 +197,7 @@ public class CreateBatchJobsResponseBody extends TeaModel {
         public Integer maxAttemptsPerDay;
 
         /**
-         * <p>Minimum interval between retries.</p>
+         * <p>The minimum interval between retries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -206,7 +206,13 @@ public class CreateBatchJobsResponseBody extends TeaModel {
         public Integer minAttemptInterval;
 
         /**
-         * <p>How often the job repeats. Valid values: Once, Day, Week, and Month.</p>
+         * <p>The repetition mode. Valid values:</p>
+         * <ul>
+         * <li>Once: The job is not repeated.</li>
+         * <li>Day: The job is repeated every day.</li>
+         * <li>Week: The job is repeated every week.</li>
+         * <li>Month: The job is repeated every month.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Once</p>
@@ -215,13 +221,13 @@ public class CreateBatchJobsResponseBody extends TeaModel {
         public String repeatBy;
 
         /**
-         * <p>List of days on which the job repeats.</p>
+         * <p>The list of days on which the job is repeated.</p>
          */
         @NameInMap("RepeatDays")
         public java.util.List<String> repeatDays;
 
         /**
-         * <p>Recording policy for caller numbers.</p>
+         * <p>The recording strategy for the calling number.</p>
          * 
          * <strong>example:</strong>
          * <p>LocalFirst</p>
@@ -230,7 +236,7 @@ public class CreateBatchJobsResponseBody extends TeaModel {
         public String routingStrategy;
 
         /**
-         * <p>Start time when the job group begins execution.</p>
+         * <p>The time when the job group starts to be executed. The time is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1578550074000</p>
@@ -239,16 +245,16 @@ public class CreateBatchJobsResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>Description of the policy.</p>
+         * <p>The strategy description.</p>
          * 
          * <strong>example:</strong>
-         * <p>作业执行策略</p>
+         * <p>Job execution strategy</p>
          */
         @NameInMap("StrategyDescription")
         public String strategyDescription;
 
         /**
-         * <p>ID of the policy.</p>
+         * <p>The strategy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>f718798d-96be-40e4-bef6-317b54855708</p>
@@ -257,16 +263,16 @@ public class CreateBatchJobsResponseBody extends TeaModel {
         public String strategyId;
 
         /**
-         * <p>Name of the policy.</p>
+         * <p>The strategy name.</p>
          * 
          * <strong>example:</strong>
-         * <p>策略</p>
+         * <p>Strategy</p>
          */
         @NameInMap("StrategyName")
         public String strategyName;
 
         /**
-         * <p>Type of the policy.</p>
+         * <p>The strategy type.</p>
          * 
          * <strong>example:</strong>
          * <p>Repeatable</p>
@@ -275,7 +281,7 @@ public class CreateBatchJobsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Time periods during which the job runs each day.</p>
+         * <p>The time periods during which the job is executed in a day.</p>
          */
         @NameInMap("WorkingTime")
         public java.util.List<CreateBatchJobsResponseBodyBatchJobStrategyWorkingTime> workingTime;
@@ -409,7 +415,7 @@ public class CreateBatchJobsResponseBody extends TeaModel {
 
     public static class CreateBatchJobsResponseBodyBatchJob extends TeaModel {
         /**
-         * <p>ID of the job group.</p>
+         * <p>The job group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5a7e8b09-baf9-4cab-b540-c971f47a7146</p>
@@ -418,13 +424,13 @@ public class CreateBatchJobsResponseBody extends TeaModel {
         public String batchJobId;
 
         /**
-         * <p>List of caller numbers.</p>
+         * <p>The list of calling numbers.</p>
          */
         @NameInMap("CallingNumbers")
         public java.util.List<String> callingNumbers;
 
         /**
-         * <p>Time when the job group was created.</p>
+         * <p>The time when the job group was created. The time is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1579068424000</p>
@@ -433,7 +439,7 @@ public class CreateBatchJobsResponseBody extends TeaModel {
         public Long creationTime;
 
         /**
-         * <p>Key of the uploaded Excel file.</p>
+         * <p>The key of the uploaded Excel file.</p>
          * 
          * <strong>example:</strong>
          * <p>52e80b02-0126-4556-a1e6-ef5b3747ed53/a9a3ddc7-d7d7-48cd-82b5-b31bb5510e71_2a66f8ad-dfbb-4980-9b84-439171295a11.xlsx</p>
@@ -442,25 +448,25 @@ public class CreateBatchJobsResponseBody extends TeaModel {
         public String jobFilePath;
 
         /**
-         * <p>Description of the job group.</p>
+         * <p>The description of the job group.</p>
          * 
          * <strong>example:</strong>
-         * <p>第一个批量作业</p>
+         * <p>First batch job</p>
          */
         @NameInMap("JobGroupDescription")
         public String jobGroupDescription;
 
         /**
-         * <p>Name of the job group.</p>
+         * <p>The name of the job group.</p>
          * 
          * <strong>example:</strong>
-         * <p>批量作业01</p>
+         * <p>Batch job 01</p>
          */
         @NameInMap("JobGroupName")
         public String jobGroupName;
 
         /**
-         * <p>ID of the scenario for the job group.</p>
+         * <p>The scenario ID of the job group.</p>
          * 
          * <strong>example:</strong>
          * <p>6cea9bed-63e6-439e-ae4c-b3333efff53d</p>
@@ -469,7 +475,7 @@ public class CreateBatchJobsResponseBody extends TeaModel {
         public String scenarioId;
 
         /**
-         * <p>Job execution policy.</p>
+         * <p>The job execution strategy.</p>
          */
         @NameInMap("Strategy")
         public CreateBatchJobsResponseBodyBatchJobStrategy strategy;

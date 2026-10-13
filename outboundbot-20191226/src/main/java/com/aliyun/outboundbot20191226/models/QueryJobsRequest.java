@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class QueryJobsRequest extends TeaModel {
     /**
-     * <p>The filter condition for the contact name.</p>
+     * <p>The contact name for filtering.</p>
      * 
      * <strong>example:</strong>
-     * <p>张三</p>
+     * <p>Zhang San</p>
      */
     @NameInMap("ContactName")
     public String contactName;
 
     /**
-     * <p>The filter condition for the end time. Default value: 0, which indicates the current time.</p>
+     * <p>The end time for filtering. Default value: 0, which indicates the current time. Specify a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1579077794665</p>
@@ -62,7 +62,7 @@ public class QueryJobsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The filter condition for the contact phone number.</p>
+     * <p>The contact phone number for filtering.</p>
      * 
      * <strong>example:</strong>
      * <p>135****8888</p>
@@ -71,7 +71,7 @@ public class QueryJobsRequest extends TeaModel {
     public String phoneNumber;
 
     /**
-     * <p>The scenario ID. This is a legacy parameter and has been deprecated.</p>
+     * <p>The scenario ID. <strong>[Deprecated]</strong> Legacy parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>b0f35dd1-0337-402e-9c4f-3a6c2426950a</p>
@@ -80,7 +80,7 @@ public class QueryJobsRequest extends TeaModel {
     public String scenarioId;
 
     /**
-     * <p>The filter condition for the start time. Default value: 0, which indicates the start of the current day.</p>
+     * <p>The start time for filtering. Default value: 0, which indicates 00:00 today. Specify a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1579068424883</p>
@@ -89,7 +89,12 @@ public class QueryJobsRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>Specifies whether to query by start time, end time, or job creation time. Valid values: start, end, job_create.</p>
+     * <p>The time basis for filtering. This parameter specifies the filtering criterion rather than a specific date or time. Valid values:</p>
+     * <ul>
+     * <li>start: Filters by start time.</li>
+     * <li>end: Filters by end time.</li>
+     * <li>job_create: Filters by job creation time.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>start</p>
