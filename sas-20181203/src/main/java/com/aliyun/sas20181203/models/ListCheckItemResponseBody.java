@@ -247,6 +247,9 @@ public class ListCheckItemResponseBody extends TeaModel {
 
         /**
          * <p>The estimated number of instances affected by the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("InstanceEstimatedCount")
         public Integer instanceEstimatedCount;

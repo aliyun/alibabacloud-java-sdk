@@ -7,13 +7,13 @@ public class DescribeClusterScannerListRequest extends TeaModel {
     /**
      * <p>The list of cluster IDs.</p>
      * <p>You must specify at least one of StatusList and ClusterIdList. If neither is specified, the API returns HTTP 400 with the error code InvalidParam.</p>
-     * <p>Before calling this operation, make sure that an ACK cluster exists. You can obtain the cluster ID by calling the <a href="https://api.aliyun.com/document/CS/2015-12-15/DescribeClusters">DescribeClusters</a> operation of Container Service.</p>
+     * <p>An ACK container cluster must exist before the call. You can obtain cluster IDs by calling the <a href="https://api.aliyun.com/document/CS/2015-12-15/DescribeClusters">DescribeClusters</a> operation of Container Service.</p>
      */
     @NameInMap("ClusterIdList")
     public java.util.List<String> clusterIdList;
 
     /**
-     * <p>The language type for the request and response messages.</p>
+     * <p>The language of the request and response.</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -28,11 +28,12 @@ public class DescribeClusterScannerListRequest extends TeaModel {
     /**
      * <p>The list of scanner statuses. Valid values:</p>
      * <ul>
-     * <li><strong>online</strong>: Running.</li>
-     * <li><strong>offline</strong>: Offline.</li>
-     * <li><strong>not_installed</strong>: Not installed.</li>
+     * <li><strong>online</strong>: Running</li>
+     * <li><strong>offline</strong>: Offline</li>
+     * <li><strong>not_installed</strong>: Not installed</li>
      * </ul>
      * <p>You must specify at least one of StatusList and ClusterIdList. If neither is specified, the API returns HTTP 400 with the error code InvalidParam.</p>
+     * <p>If you specify a value other than online, offline, or not_installed, the service does not return a parameter validation error. Instead, it returns an empty list.</p>
      */
     @NameInMap("StatusList")
     public java.util.List<String> statusList;

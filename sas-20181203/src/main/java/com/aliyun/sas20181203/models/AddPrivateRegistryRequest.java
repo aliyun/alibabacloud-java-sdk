@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddPrivateRegistryRequest extends TeaModel {
     /**
-     * <p>The domain name of the image repository.</p>
+     * <p>The domain name of the registry.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class AddPrivateRegistryRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The additional parameter of the image repository. This parameter is required when you set the RegistryType parameter to <strong>quay</strong>. Valid values:</p>
+     * <p>The additional parameters for the image registry. This parameter is required when you use <strong>quay</strong>. The parameters include:</p>
      * <ul>
-     * <li><strong>namespace</strong></li>
-     * <li><strong>authToken</strong></li>
+     * <li><strong>namespace</strong>: The namespace.</li>
+     * <li><strong>authToken</strong>: The authorization token.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,8 +30,8 @@ public class AddPrivateRegistryRequest extends TeaModel {
     /**
      * <p>The network type. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Internet</li>
-     * <li><strong>2</strong>: virtual private cloud (VPC)</li>
+     * <li><strong>1</strong>: Internet.</li>
+     * <li><strong>2</strong>: VPC.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -42,7 +42,7 @@ public class AddPrivateRegistryRequest extends TeaModel {
     public Long netType;
 
     /**
-     * <p>The password that is used to log on to the image repository.</p>
+     * <p>The password.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,10 +61,10 @@ public class AddPrivateRegistryRequest extends TeaModel {
     public Integer port;
 
     /**
-     * <p>The type of the protocol. Valid values:</p>
+     * <p>The protocol type. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: HTTP</li>
-     * <li><strong>2</strong>: HTTPS</li>
+     * <li><strong>1</strong>: HTTP.</li>
+     * <li><strong>2</strong>: HTTPS.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -75,7 +75,8 @@ public class AddPrivateRegistryRequest extends TeaModel {
     public Long protocolType;
 
     /**
-     * <p>The IP address of the image repository.</p>
+     * <p>The IP address of the registry.</p>
+     * <p>Enter a valid IPv4 address that can be used to connect to the image registry. To specify a domain name for the image registry, use the DomainName parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -87,7 +88,7 @@ public class AddPrivateRegistryRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~ListImageRegistryRegion~~">ListImageRegistryRegion</a> operation to query the IDs of supported regions.</p>
+     * <p>You can call the <a href="~~ListImageRegistryRegion~~">ListImageRegistryRegion</a> operation to query the supported region IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -98,10 +99,10 @@ public class AddPrivateRegistryRequest extends TeaModel {
     public String registryRegionId;
 
     /**
-     * <p>The type of the private image repository. Valid values:</p>
+     * <p>The type of the private image registry. Valid values:</p>
      * <ul>
-     * <li><strong>harbor</strong></li>
-     * <li><strong>quay</strong></li>
+     * <li><strong>harbor</strong>: Harbor environment.</li>
+     * <li><strong>quay</strong>: Quay environment.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -112,10 +113,10 @@ public class AddPrivateRegistryRequest extends TeaModel {
     public String registryType;
 
     /**
-     * <p>The version of the image repository. Valid values:</p>
+     * <p>The version of the image registry. Valid values:</p>
      * <ul>
-     * <li><strong>V1</strong></li>
-     * <li><strong>V2</strong></li>
+     * <li><strong>V1</strong>: Version 1.0.</li>
+     * <li><strong>V2</strong>: Version 2.0.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -126,7 +127,7 @@ public class AddPrivateRegistryRequest extends TeaModel {
     public String registryVersion;
 
     /**
-     * <p>The number of images that are scanned per hour.</p>
+     * <p>The number of images scanned per hour.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -135,7 +136,7 @@ public class AddPrivateRegistryRequest extends TeaModel {
     public Integer transPerHour;
 
     /**
-     * <p>The username that is used to log on to the image repository.</p>
+     * <p>The username of the image registry.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -145,7 +146,7 @@ public class AddPrivateRegistryRequest extends TeaModel {
     public String userName;
 
     /**
-     * <p>The ID of the VPC.</p>
+     * <p>The instance ID of the VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-wz9hs3e5*******908kd</p>

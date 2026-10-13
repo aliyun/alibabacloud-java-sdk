@@ -55,9 +55,17 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
     }
 
     public static class ListUnknownThreatDetectEventResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>检测结果为正常进程</p>
+         */
         @NameInMap("AnalyzeDesc")
         public String analyzeDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>white</p>
+         */
         @NameInMap("AnalyzeResult")
         public String analyzeResult;
 
@@ -97,6 +105,10 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         @NameInMap("FirstTime")
         public Long firstTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>确认处理</p>
+         */
         @NameInMap("HandleRemark")
         public String handleRemark;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyServerlessAuthToMachineRequest extends TeaModel {
     /**
-     * <p>The application query conditions.</p>
+     * <p>The query conditions for applications.</p>
      * 
      * <strong>example:</strong>
      * <p>**7ad7e3a</p>
@@ -16,7 +16,7 @@ public class ModifyServerlessAuthToMachineRequest extends TeaModel {
     /**
      * <p>The instance type. Valid values:</p>
      * <ul>
-     * <li><strong>SERVERLESS</strong>: Serverless asset.</li>
+     * <li><strong>SERVERLESS</strong>: Serverless assets.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,8 +28,8 @@ public class ModifyServerlessAuthToMachineRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic binding. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Disable automatic binding.</li>
-     * <li><strong>1</strong>: Enable automatic binding.</li>
+     * <li><strong>0</strong>: Disabled.</li>
+     * <li><strong>1</strong>: Enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,8 +41,8 @@ public class ModifyServerlessAuthToMachineRequest extends TeaModel {
     /**
      * <p>Specifies whether to bind all assets. Default value: <strong>false</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Bind all assets.</li>
-     * <li><strong>false</strong>: Do not bind all assets.</li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,18 +54,19 @@ public class ModifyServerlessAuthToMachineRequest extends TeaModel {
     /**
      * <p>The list of application IDs to bind.</p>
      * <blockquote>
-     * <p>Obtain the IDs by calling the <a href="~~ListMachineApps~~">ListMachineApps</a> operation.</p>
+     * <p>You can obtain the application IDs by calling the <a href="~~ListMachineApps~~">ListMachineApps</a> operation.</p>
      * </blockquote>
      */
     @NameInMap("BindAppList")
     public java.util.List<String> bindAppList;
 
     /**
-     * <p>The Asset Type for the operation. Valid values:</p>
+     * <p>The Asset Type to operate. Valid values:</p>
      * <ul>
      * <li><strong>INSTANCE</strong>: Instance.</li>
      * <li><strong>APP</strong>: Application.</li>
      * </ul>
+     * <p>This parameter is required when you manage Serverless asset authorizations.</p>
      * 
      * <strong>example:</strong>
      * <p>APP</p>
@@ -80,7 +81,7 @@ public class ModifyServerlessAuthToMachineRequest extends TeaModel {
     public java.util.List<String> bindUuidList;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
@@ -89,9 +90,9 @@ public class ModifyServerlessAuthToMachineRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The search conditions for assets. This parameter is in JSON format. Pay attention to letter case when you specify this parameter.</p>
+     * <p>Specifies the conditions for searching assets. The value must be in JSON format and is case-sensitive.</p>
      * <blockquote>
-     * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. Call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</p>
+     * <p>You can search for assets by using conditions such as the instance ID, instance name, VPC ID, region, and public IP address of the asset. You can call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -101,16 +102,16 @@ public class ModifyServerlessAuthToMachineRequest extends TeaModel {
     public String criteria;
 
     /**
-     * <p>Specifies whether to perform a dry run. true: performs only a check without executing the actual operation. false: performs the actual operation. Default value: false.</p>
+     * <p>Specifies whether to only precheck the request. A value of true indicates that only the request is prechecked and no actual operation is performed. A value of false indicates that the request is executed. Default value: false.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The logical relationship among multiple search conditions. Valid values:</p>
+     * <p>Specifies the logical relationship among multiple search conditions. Valid values:</p>
      * <ul>
-     * <li><strong>OR</strong>: Multiple conditions are evaluated using a logical OR.</li>
-     * <li><strong>AND</strong>: Multiple conditions are evaluated using a logical AND.</li>
+     * <li><strong>OR</strong>: The conditions have an OR relationship.</li>
+     * <li><strong>AND</strong>: The conditions have an AND relationship.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -120,7 +121,7 @@ public class ModifyServerlessAuthToMachineRequest extends TeaModel {
     public String logicalExp;
 
     /**
-     * <p>The NTM version code for pre-binding.</p>
+     * <p>The NTM version code used for pre-binding.</p>
      * 
      * <strong>example:</strong>
      * <p>level2</p>
@@ -135,7 +136,7 @@ public class ModifyServerlessAuthToMachineRequest extends TeaModel {
      * <li><strong>1</strong>: Yes.</li>
      * </ul>
      * <blockquote>
-     * <p>After pre-binding is enabled, the corresponding number of authorization licenses are automatically bound to the specified servers after the purchase is completed.</p>
+     * <p>After you enable pre-binding, the system automatically binds the corresponding version of authorizations to the specified server after the purchase is completed.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -145,7 +146,7 @@ public class ModifyServerlessAuthToMachineRequest extends TeaModel {
     public Integer preBind;
 
     /**
-     * <p>The pre-binding order ID.</p>
+     * <p>The ID of the pre-binding order.</p>
      * 
      * <strong>example:</strong>
      * <p>233016**0482</p>
@@ -154,7 +155,7 @@ public class ModifyServerlessAuthToMachineRequest extends TeaModel {
     public Long preBindOrderId;
 
     /**
-     * <p>The UID of the resource directory.</p>
+     * <p>The UID of the associated resource directory.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -165,7 +166,7 @@ public class ModifyServerlessAuthToMachineRequest extends TeaModel {
     /**
      * <p>The list of application IDs to unbind.</p>
      * <blockquote>
-     * <p>Obtain the IDs by calling the <a href="~~ListMachineApps~~">ListMachineApps</a> operation.</p>
+     * <p>You can obtain the application IDs by calling the <a href="~~ListMachineApps~~">ListMachineApps</a> operation.</p>
      * </blockquote>
      */
     @NameInMap("UnBindAppList")

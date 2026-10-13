@@ -43,6 +43,9 @@ public class GetUnknownThreatDetectStatisticResponseBody extends TeaModel {
     public static class GetUnknownThreatDetectStatisticResponseBodyData extends TeaModel {
         /**
          * <p>The number of servers that have blocking events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("BlockEventMachineCount")
         public Integer blockEventMachineCount;

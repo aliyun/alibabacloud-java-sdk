@@ -1064,8 +1064,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you call this operation, the service connects to and verifies the target image registry. Make sure that the image registry address is accessible and that the username and password are valid.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Adds a self-managed image repository.</p>
+     * <p>Connects to a self-managed image registry.</p>
      * 
      * @param request AddPrivateRegistryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1144,8 +1147,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you call this operation, the service connects to and verifies the target image registry. Make sure that the image registry address is accessible and that the username and password are valid.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Adds a self-managed image repository.</p>
+     * <p>Connects to a self-managed image registry.</p>
      * 
      * @param request AddPrivateRegistryRequest
      * @return AddPrivateRegistryResponse
@@ -3798,6 +3804,98 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Initiates deep analysis for a specified file and streams the progress of each analysis stage in real time by using Server-Sent Events (SSE).
+     * [Input parameters] You must provide at least one of the Hash and EventId parameters. If EventId is provided, the file hash is preferentially parsed from the details of the corresponding alert. Otherwise, the provided Hash (MD5 or SHA-256) is used. The Source parameter identifies the call source and is used for commercial verification based on the source.
+     * [Response] The response is of the text/event-stream type. The server pushes events sequentially based on the processing stages. Valid values for the event name (event):</p>
+     * <ul>
+     * <li>accepted: The request is accepted.</li>
+     * <li>authorized: The purchase verification for the source is passed.</li>
+     * <li>alertResolved: The file hash is parsed from the alert or input parameters.</li>
+     * <li>fileReady: The file download link is ready.</li>
+     * <li>dispatched: The file is delivered to the detection engine, including the requestId.</li>
+     * <li>result: The analysis result is matched. This parameter is optional and pushed after the asynchronous result is ready.</li>
+     * <li>done: The current analysis process is completed.</li>
+     * <li>error: A processing exception occurs, including the error code and message.
+     * The data body of each event is a JSON object in the data field. The fields vary depending on the event type. For more information, see the response structure description.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Initiates deep analysis for a malicious file.</p>
+     * 
+     * @param request CreateFileDeepAnalyzeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateFileDeepAnalyzeResponse
+     */
+    public CreateFileDeepAnalyzeResponse createFileDeepAnalyzeWithOptions(CreateFileDeepAnalyzeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.context)) {
+            query.put("Context", request.context);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventId)) {
+            query.put("EventId", request.eventId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hash)) {
+            query.put("Hash", request.hash);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
+            query.put("SourceIp", request.sourceIp);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateFileDeepAnalyze"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFileDeepAnalyzeResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Initiates deep analysis for a specified file and streams the progress of each analysis stage in real time by using Server-Sent Events (SSE).
+     * [Input parameters] You must provide at least one of the Hash and EventId parameters. If EventId is provided, the file hash is preferentially parsed from the details of the corresponding alert. Otherwise, the provided Hash (MD5 or SHA-256) is used. The Source parameter identifies the call source and is used for commercial verification based on the source.
+     * [Response] The response is of the text/event-stream type. The server pushes events sequentially based on the processing stages. Valid values for the event name (event):</p>
+     * <ul>
+     * <li>accepted: The request is accepted.</li>
+     * <li>authorized: The purchase verification for the source is passed.</li>
+     * <li>alertResolved: The file hash is parsed from the alert or input parameters.</li>
+     * <li>fileReady: The file download link is ready.</li>
+     * <li>dispatched: The file is delivered to the detection engine, including the requestId.</li>
+     * <li>result: The analysis result is matched. This parameter is optional and pushed after the asynchronous result is ready.</li>
+     * <li>done: The current analysis process is completed.</li>
+     * <li>error: A processing exception occurs, including the error code and message.
+     * The data body of each event is a JSON object in the data field. The fields vary depending on the event type. For more information, see the response structure description.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Initiates deep analysis for a malicious file.</p>
+     * 
+     * @param request CreateFileDeepAnalyzeRequest
+     * @return CreateFileDeepAnalyzeResponse
+     */
+    public CreateFileDeepAnalyzeResponse createFileDeepAnalyze(CreateFileDeepAnalyzeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createFileDeepAnalyzeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Pushes a file to the cloud for detection.</p>
      * <h3>File upload methods</h3>
      * <p>Two file upload methods are supported: pre-upload and download URL.
@@ -6046,10 +6144,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation. Other editions do not support this operation.</p>
+     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a task under My Policies in the task center.</p>
+     * <p>Creates a task under My Policies in Task Center.</p>
      * 
      * @param request CreateSoarStrategyTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6097,10 +6195,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation. Other editions do not support this operation.</p>
+     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a task under My Policies in the task center.</p>
+     * <p>Creates a task under My Policies in Task Center.</p>
      * 
      * @param request CreateSoarStrategyTaskRequest
      * @return CreateSoarStrategyTaskResponse
@@ -12223,10 +12321,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other criteria. You can also set logical relationships between different search criteria to find assets that match multiple conditions.</p>
+     * <p>You can search for assets by conditions such as instance ID, instance name, VPC ID, region, and public IP address. You can also set logical relationships between different search conditions to search for assets that meet multiple conditions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries assets that match specified search criteria by using conditional query settings such as asset instance name and region. Supports both paging and NextToken methods. The NextToken method is recommended.</p>
+     * <p>Queries asset information that meets the conditional criteria through Settings, such as searching for specified assets by conditions like the asset instance name or the area to which the asset instance belongs. Currently, both paging and NextToken methods are provided for conditional query, and the NextToken method is recommended.</p>
      * 
      * @param request DescribeCloudCenterInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12306,10 +12404,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other criteria. You can also set logical relationships between different search criteria to find assets that match multiple conditions.</p>
+     * <p>You can search for assets by conditions such as instance ID, instance name, VPC ID, region, and public IP address. You can also set logical relationships between different search conditions to search for assets that meet multiple conditions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries assets that match specified search criteria by using conditional query settings such as asset instance name and region. Supports both paging and NextToken methods. The NextToken method is recommended.</p>
+     * <p>Queries asset information that meets the conditional criteria through Settings, such as searching for specified assets by conditions like the asset instance name or the area to which the asset instance belongs. Currently, both paging and NextToken methods are provided for conditional query, and the NextToken method is recommended.</p>
      * 
      * @param request DescribeCloudCenterInstancesRequest
      * @return DescribeCloudCenterInstancesResponse
@@ -12814,7 +12912,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the scanner status information of a Kubernetes cluster.</p>
+     * <p>Queries the status information of Kubernetes cluster scanners.</p>
      * 
      * @param request DescribeClusterScannerListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12854,7 +12952,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the scanner status information of a Kubernetes cluster.</p>
+     * <p>Queries the status information of Kubernetes cluster scanners.</p>
      * 
      * @param request DescribeClusterScannerListRequest
      * @return DescribeClusterScannerListResponse
@@ -23815,7 +23913,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an export task of exceptions.</p>
+     * <p>Queries the export information of security alert events.</p>
      * 
      * @param request DescribeSuspEventExportInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23847,7 +23945,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an export task of exceptions.</p>
+     * <p>Queries the export information of security alert events.</p>
      * 
      * @param request DescribeSuspEventExportInfoRequest
      * @return DescribeSuspEventExportInfoResponse
@@ -23859,7 +23957,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries quarantined files in the file quarantine box by paging.</p>
+     * <p>Performs a paged query of quarantined files in the file quarantine box by using paging.</p>
      * 
      * @param request DescribeSuspEventQuaraFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23919,7 +24017,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries quarantined files in the file quarantine box by paging.</p>
+     * <p>Performs a paged query of quarantined files in the file quarantine box by using paging.</p>
      * 
      * @param request DescribeSuspEventQuaraFilesRequest
      * @return DescribeSuspEventQuaraFilesResponse
@@ -23983,7 +24081,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of security alert events that have not been aggregated.</p>
+     * <p>Queries a list of unaggregated security alert events.</p>
      * 
      * @param tmpReq DescribeSuspEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24167,7 +24265,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of security alert events that have not been aggregated.</p>
+     * <p>Queries a list of unaggregated security alert events.</p>
      * 
      * @param request DescribeSuspEventsRequest
      * @return DescribeSuspEventsResponse
@@ -31562,7 +31660,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a file protection event.</p>
+     * <p>Retrieves file tamper-proofing events.</p>
      * 
      * @param request GetFileProtectClientEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31590,7 +31688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a file protection event.</p>
+     * <p>Retrieves file tamper-proofing events.</p>
      * 
      * @param request GetFileProtectClientEventRequest
      * @return GetFileProtectClientEventResponse
@@ -32205,7 +32303,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the monitoring data of management nodes to which the cloud honeypot belongs.</p>
+     * <p>Queries the monitoring data of cloud honeypot management nodes.</p>
      * 
      * @param request GetHoneypotNodeMetricListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32265,7 +32363,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the monitoring data of management nodes to which the cloud honeypot belongs.</p>
+     * <p>Queries the monitoring data of cloud honeypot management nodes.</p>
      * 
      * @param request GetHoneypotNodeMetricListRequest
      * @return GetHoneypotNodeMetricListResponse
@@ -32324,8 +32422,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a specified honeypot probe. Before calling this operation, call ListHoneypotProbe to query the probe status. Call this operation only for ready probes whose status is online or installed. Probes in the install_failed or initialing state are unavailable.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the details about a specified probe.</p>
+     * <p>Queries the details of a specified honeypot probe.</p>
      * 
      * @param request GetHoneypotProbeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32360,8 +32461,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a specified honeypot probe. Before calling this operation, call ListHoneypotProbe to query the probe status. Call this operation only for ready probes whose status is online or installed. Probes in the install_failed or initialing state are unavailable.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the details about a specified probe.</p>
+     * <p>Queries the details of a specified honeypot probe.</p>
      * 
      * @param request GetHoneypotProbeRequest
      * @return GetHoneypotProbeResponse
@@ -32605,7 +32709,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the valid value ranges for instance authorization.</p>
+     * <p>Retrieves the valid value ranges for instance authorizations.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetInstanceAuthRangeResponse
@@ -32628,7 +32732,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the valid value ranges for instance authorization.</p>
+     * <p>Retrieves the valid value ranges for instance authorizations.</p>
      * @return GetInstanceAuthRangeResponse
      */
     public GetInstanceAuthRangeResponse getInstanceAuthRange() throws Exception {
@@ -35881,10 +35985,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of assets for agentless detection.</p>
+     * <p>Queries the list of assets for agentless scanning.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries agentless detection assets.</p>
+     * <p>Queries agentless scan assets.</p>
      * 
      * @param request ListAgentlessAssetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -35948,10 +36052,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of assets for agentless detection.</p>
+     * <p>Queries the list of assets for agentless scanning.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries agentless detection assets.</p>
+     * <p>Queries agentless scan assets.</p>
      * 
      * @param request ListAgentlessAssetRequest
      * @return ListAgentlessAssetResponse
@@ -37938,7 +38042,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the asset list of cloud products.</p>
+     * <p>Retrieves the list of cloud product assets.</p>
      * 
      * @param request ListCloudAssetInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -38002,7 +38106,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the asset list of cloud products.</p>
+     * <p>Retrieves the list of cloud product assets.</p>
      * 
      * @param request ListCloudAssetInstancesRequest
      * @return ListCloudAssetInstancesResponse
@@ -45755,7 +45859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables pay-as-you-go billing for a specified feature.</p>
+     * <p>Enables or disables the pay-as-you-go billing method for specified features.</p>
      * 
      * @param tmpReq ModifyPostPayModuleSwitchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -45825,7 +45929,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables pay-as-you-go billing for a specified feature.</p>
+     * <p>Enables or disables the pay-as-you-go billing method for specified features.</p>
      * 
      * @param request ModifyPostPayModuleSwitchRequest
      * @return ModifyPostPayModuleSwitchResponse
@@ -46299,7 +46403,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Manages Serverless asset authorization.</p>
+     * <p>Manages Serverless asset authorizations.</p>
      * 
      * @param request ModifyServerlessAuthToMachineRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -46395,7 +46499,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Manages Serverless asset authorization.</p>
+     * <p>Manages Serverless asset authorizations.</p>
      * 
      * @param request ModifyServerlessAuthToMachineRequest
      * @return ModifyServerlessAuthToMachineResponse
@@ -52406,7 +52510,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the status of a file protection event.</p>
+     * <p>Updates the status of file tamper-proofing events.</p>
      * 
      * @param request UpdateFileProtectClientEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -52506,7 +52610,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the status of a file protection event.</p>
+     * <p>Updates the status of file tamper-proofing events.</p>
      * 
      * @param request UpdateFileProtectClientEventRequest
      * @return UpdateFileProtectClientEventResponse
@@ -53900,7 +54004,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the protection edition bound to a server after you enable the pay-as-you-go billing method for host and container security.</p>
+     * <p>Changes the protection edition bound to a server after you enable pay-as-you-go billing for Host and Container Security.</p>
      * 
      * @param request UpdatePostPaidBindRelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -53956,7 +54060,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the protection edition bound to a server after you enable the pay-as-you-go billing method for host and container security.</p>
+     * <p>Changes the protection edition bound to a server after you enable pay-as-you-go billing for Host and Container Security.</p>
      * 
      * @param request UpdatePostPaidBindRelRequest
      * @return UpdatePostPaidBindRelResponse

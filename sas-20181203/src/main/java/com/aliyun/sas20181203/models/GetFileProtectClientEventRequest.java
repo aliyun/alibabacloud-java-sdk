@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFileProtectClientEventRequest extends TeaModel {
     /**
-     * <p>The unique ID of the alert event.</p>
+     * <p>The unique ID of the alert event. This parameter is required. If it is not provided, the API returns an HTTP 400 error.</p>
      * 
      * <strong>example:</strong>
      * <p>131231</p>

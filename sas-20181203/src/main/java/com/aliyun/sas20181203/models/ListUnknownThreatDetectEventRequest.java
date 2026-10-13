@@ -4,6 +4,10 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListUnknownThreatDetectEventRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>white</p>
+     */
     @NameInMap("AnalyzeResult")
     public String analyzeResult;
 
@@ -25,6 +29,10 @@ public class ListUnknownThreatDetectEventRequest extends TeaModel {
     @NameInMap("HashKey")
     public String hashKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

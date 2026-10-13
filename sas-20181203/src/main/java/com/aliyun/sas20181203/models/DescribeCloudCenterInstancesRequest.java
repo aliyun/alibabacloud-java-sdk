@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudCenterInstancesRequest extends TeaModel {
     /**
-     * <p>The search criteria for assets. This parameter is in JSON format. Pay attention to case sensitivity when entering parameter values.</p>
+     * <p>The search conditions for assets. This parameter is in JSON format. Pay attention to the case sensitivity when you specify this parameter.</p>
      * <blockquote>
-     * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other criteria. Call <a href="~~DescribeCriteria~~">DescribeCriteria</a> to query the supported search criteria.</p>
+     * <p>You can search for assets by conditions such as instance ID, instance name, VPC ID, region, and public IP address. You can call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     public String criteria;
 
     /**
-     * <p>The page number from which to start displaying query results. Default value: <strong>1</strong>. This means results are displayed starting from page 1.</p>
+     * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,12 +26,12 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The asset vendor. Separate multiple vendors with commas (,). Valid values:</p>
+     * <p>The asset provider. Separate multiple asset providers with commas (,). Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: Alibaba Cloud asset</li>
-     * <li><strong>1</strong>: off-cloud asset</li>
+     * <li><strong>1</strong>: non-Alibaba Cloud asset</li>
      * <li><strong>2</strong>: IDC asset</li>
-     * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>7</strong>, <strong>14</strong>, <strong>16</strong>: assets from other cloud vendors</li>
+     * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>7</strong>, <strong>14</strong>, and <strong>16</strong>: asset on other cloud platforms</li>
      * <li><strong>8</strong>: lightweight asset</li>
      * <li><strong>9</strong>: SAE</li>
      * <li><strong>10</strong>: PAI</li>
@@ -44,7 +44,7 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     public String flags;
 
     /**
-     * <p>The importance level of the asset. Valid values:</p>
+     * <p>The importance of the asset. Valid values:</p>
      * <ul>
      * <li><strong>2</strong>: important asset</li>
      * <li><strong>1</strong>: general asset</li>
@@ -58,7 +58,7 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     public Integer importance;
 
     /**
-     * <p>The language of the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -71,10 +71,10 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The logical relationship between multiple search criteria. Default value: <strong>OR</strong>. Valid values:</p>
+     * <p>The logical relationship between multiple search conditions. Default value: <strong>OR</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>OR</strong>: The multiple search criteria have an OR relationship.</li>
-     * <li><strong>AND</strong>: The multiple search criteria have an AND relationship.</li>
+     * <li><strong>OR</strong>: The logical relationship between multiple search conditions is <strong>OR</strong>.</li>
+     * <li><strong>AND</strong>: The logical relationship between multiple search conditions is <strong>AND</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,11 +84,11 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     public String logicalExp;
 
     /**
-     * <p>The type of assets to query. Valid values:</p>
+     * <p>The type of the asset to query. Valid values:</p>
      * <ul>
      * <li><strong>ecs</strong>: server</li>
-     * <li><strong>cloud_product</strong>: cloud product</li>
-     * <li><strong>eci</strong>: Elastic Container Instance</li>
+     * <li><strong>cloud_product</strong>: cloud service</li>
+     * <li><strong>eci</strong>: elastic container instance</li>
      * <li><strong>rund</strong>: RunD container instance</li>
      * <li><strong>runc</strong>: RunC container instance</li>
      * </ul>
@@ -100,7 +100,7 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     public String machineTypes;
 
     /**
-     * <p>The NextToken value returned when using the NextToken method. Leave this parameter empty for the first request.</p>
+     * <p>The NextToken value returned when the NextToken method is used. Leave this parameter empty for the first query.</p>
      * 
      * <strong>example:</strong>
      * <p>E17B501887A2D3AA5E8360A6EFA3B***</p>
@@ -109,10 +109,10 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Specifies whether to apply internationalization to the default group <strong>Ungrouped</strong>. Default value: <strong>false</strong>. Valid values:</p>
+     * <p>Specifies whether to internationalize the default group <strong>Ungrouped</strong>. Default value: <strong>false</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Internationalization is not applied. When the GroupTrace parameter returns the Security Center default group <strong>Ungrouped</strong>, it is still displayed as <strong>Ungrouped</strong>.</li>
-     * <li><strong>false</strong>: Internationalization is applied. When the GroupTrace parameter returns the Security Center default group <strong>Ungrouped</strong>, it is displayed as <strong>default</strong>.</li>
+     * <li><strong>true</strong>: does not internationalize the default group. If the value of the GroupTrace response parameter is the default group <strong>Ungrouped</strong> in Security Center, <strong>Ungrouped</strong> is still displayed as <strong>Ungrouped</strong>.</li>
+     * <li><strong>false</strong>: internationalizes the default group. If the value of the GroupTrace response parameter is the default group <strong>Ungrouped</strong> in Security Center, <strong>Ungrouped</strong> is displayed as <strong>default</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -122,7 +122,7 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     public Boolean noGroupTrace;
 
     /**
-     * <p>The number of assets to display per page in a paged query. Settings take effect per page. Default value: <strong>20</strong>. This means 20 assets are displayed per page.</p>
+     * <p>The number of Asset entries to display on each page when you configure paging for a paged query through Settings. Default value: <strong>20</strong>, which indicates that 20 pieces of Asset information are displayed on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -131,7 +131,7 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the instance to query resides.</p>
+     * <p>The ID of the region where the instance resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -141,9 +141,9 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The primary account ID of the resource directory member accounts.</p>
+     * <p>The ID of the Alibaba Cloud account to which the member accounts in the resource folder belong.</p>
      * <blockquote>
-     * <p>Call <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> to obtain this parameter.</p>
+     * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -153,10 +153,10 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>Specifies whether to use the NextToken method to retrieve the asset list. If this parameter is set to true, TotalCount is no longer returned. Valid values:</p>
+     * <p>Specifies whether to use the NextToken method to pull asset list data. If you use this parameter, TotalCount is not returned. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Use the NextToken method.</li>
-     * <li><strong>false</strong>: Do not use the NextToken method.</li>
+     * <li><strong>true</strong>: uses the NextToken method.</li>
+     * <li><strong>false</strong>: does not use the NextToken method.</li>
      * </ul>
      * 
      * <strong>example:</strong>

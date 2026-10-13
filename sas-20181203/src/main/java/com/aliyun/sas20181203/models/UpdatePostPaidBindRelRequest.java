@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePostPaidBindRelRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically bind newly added assets. Valid values:</p>
+     * <p>Specifies whether to enable automatic binding for newly added assets. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: Disabled.</li>
      * <li><strong>1</strong>: Enabled.</li>
@@ -18,11 +18,11 @@ public class UpdatePostPaidBindRelRequest extends TeaModel {
     public Integer autoBind;
 
     /**
-     * <p>The edition to automatically bind when new assets are added. Valid values:</p>
+     * <p>The edition to automatically bind to newly added assets. Valid values:</p>
      * <ul>
      * <li><strong>1</strong>: Free Edition </li>
      * <li><strong>3</strong>: Enterprise Edition</li>
-     * <li><strong>5</strong>: Advanced Edition</li>
+     * <li><strong>5</strong>: Premium Edition</li>
      * <li><strong>6</strong>: Anti-virus Edition    </li>
      * <li><strong>7</strong>: Ultimate Edition</li>
      * </ul>
@@ -40,7 +40,7 @@ public class UpdatePostPaidBindRelRequest extends TeaModel {
     public java.util.List<UpdatePostPaidBindRelRequestBindAction> bindAction;
 
     /**
-     * <p>The client token used to ensure the idempotence of the request. Use a different token for different requests. Only ASCII characters are supported. The token cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
@@ -49,22 +49,25 @@ public class UpdatePostPaidBindRelRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run. Valid values: true: performs only a dry run without executing the actual operation. false: sends the request normally. Default value: false.</p>
+     * <p>Specifies whether to perform a dry run for the request. A value of true indicates that only a dry run is performed and no actual operation is executed. A value of false indicates that the request is normally executed. Default value: false.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The abbreviated name of the cloud service. Valid values:</p>
+     * <p>The abbreviation of the cloud service. Valid values:</p>
      * <ul>
-     * <li><strong>sas</strong>: Security Center.</li>
+     * <li><strong>sas</strong>: Security Center</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>sas</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
-     * <p>Specifies whether to force an edition upgrade.</p>
+     * <p>Specifies whether to forcibly upgrade the edition.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -148,13 +151,13 @@ public class UpdatePostPaidBindRelRequest extends TeaModel {
         public Boolean bindAll;
 
         /**
-         * <p>The free quota type.</p>
+         * <p>The type of free quota used for the binding operation.</p>
          */
         @NameInMap("FreeType")
         public String freeType;
 
         /**
-         * <p>The list of UUIDs of the specified servers.</p>
+         * <p>The UUIDs of the specified servers.</p>
          */
         @NameInMap("UuidList")
         public java.util.List<String> uuidList;
@@ -164,7 +167,7 @@ public class UpdatePostPaidBindRelRequest extends TeaModel {
          * <ul>
          * <li><strong>1</strong>: Free Edition </li>
          * <li><strong>3</strong>: Enterprise Edition</li>
-         * <li><strong>5</strong>: Advanced Edition</li>
+         * <li><strong>5</strong>: Premium Edition</li>
          * <li><strong>6</strong>: Anti-virus Edition    </li>
          * <li><strong>7</strong>: Ultimate Edition</li>
          * </ul>

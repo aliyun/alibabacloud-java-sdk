@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSuspEventQuaraFilesRequest extends TeaModel {
     /**
-     * <p>The page number of the file list to view.</p>
+     * <p>The page number of the file list to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeSuspEventQuaraFilesRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>The identifier of the request source. Set the value to <strong>sas</strong>.</p>
+     * <p>The source identifier of the request. Set the value to <strong>sas</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>sas</p>
@@ -33,7 +33,7 @@ public class DescribeSuspEventQuaraFilesRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The ID of the server group where the quarantined file is located.</p>
+     * <p>The ID of the server group to which the quarantined file belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>11472451</p>
@@ -42,7 +42,7 @@ public class DescribeSuspEventQuaraFilesRequest extends TeaModel {
     public Long groupingId;
 
     /**
-     * <p>The maximum number of entries per page in a paged query.</p>
+     * <p>The maximum number of entries to return on each page during paging in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -60,7 +60,7 @@ public class DescribeSuspEventQuaraFilesRequest extends TeaModel {
     public String quaraTag;
 
     /**
-     * <p>The IP address of the access source.</p>
+     * <p>The source IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>59.82.XX.XX</p>
@@ -69,14 +69,14 @@ public class DescribeSuspEventQuaraFilesRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The status of the quarantined files to query. Valid values:  </p>
+     * <p>The status of the quarantined files that you want to query. Valid values:  </p>
      * <ul>
      * <li><strong>quaraFailed</strong>: Quarantine failed.</li>
      * <li><strong>quaraDone</strong>: Quarantine succeeded.</li>
-     * <li><strong>quaraing</strong>: Quarantine in progress.</li>
-     * <li><strong>rollbackFailed</strong>: Quarantine rollback failed.</li>
-     * <li><strong>rollbackDone</strong>: Quarantine rollback succeeded.</li>
-     * <li><strong>rollbacking</strong>: Quarantine rollback in progress.</li>
+     * <li><strong>quaraing</strong>: Quarantining.</li>
+     * <li><strong>rollbackFailed</strong>: Restore failed.</li>
+     * <li><strong>rollbackDone</strong>: Restore succeeded.</li>
+     * <li><strong>rollbacking</strong>: Restoring.</li>
      * </ul>
      * 
      * <strong>example:</strong>

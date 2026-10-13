@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyPostPayModuleSwitchShrinkRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Use a different token for each request. Only ASCII characters are supported. The token can be up to 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
@@ -14,19 +14,27 @@ public class ModifyPostPayModuleSwitchShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values: true: performs a check without executing the operation. false: executes the operation. Default value: false.</p>
+     * <p>Specifies whether to perform a dry run on the request. Valid values:</p>
+     * <ul>
+     * <li>true: Performs a dry run. The system checks the request but does not perform the actual operation.</li>
+     * <li>false: Performs the request normally.
+     * Default value: false.</li>
+     * </ul>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>The switch configuration of the EDR module.</p>
+     */
     @NameInMap("EdrModuleSwitch")
     public String edrModuleSwitchShrink;
 
     /**
-     * <p>Specifies whether to automatically bind new assets for host and container protection. Valid values:</p>
+     * <p>Specifies whether to automatically bind new assets to the host and container protection feature. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Disabled.</li>
-     * <li><strong>1</strong>: Enabled.</li>
+     * <li><strong>0</strong>: disabled</li>
+     * <li><strong>1</strong>: enabled</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,11 +46,11 @@ public class ModifyPostPayModuleSwitchShrinkRequest extends TeaModel {
     /**
      * <p>The edition to which new assets are automatically bound for host and container protection. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Free Edition. </li>
-     * <li><strong>3</strong>: Enterprise Edition.</li>
-     * <li><strong>5</strong>: Advanced Edition.</li>
-     * <li><strong>6</strong>: Anti-virus Edition.    </li>
-     * <li><strong>7</strong>: Ultimate Edition.</li>
+     * <li><strong>1</strong>: Free Edition </li>
+     * <li><strong>3</strong>: Enterprise Edition</li>
+     * <li><strong>5</strong>: Advanced Edition</li>
+     * <li><strong>6</strong>: Anti-virus Edition    </li>
+     * <li><strong>7</strong>: Ultimate Edition</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +62,7 @@ public class ModifyPostPayModuleSwitchShrinkRequest extends TeaModel {
     /**
      * <p>The pay-as-you-go instance ID. This parameter is required.</p>
      * <blockquote>
-     * <p>Invoke the <a href="~~DescribeVersionConfig~~">DescribeVersionConfig</a> operation to obtain this parameter.</p>
+     * <p>Invoke the <a href="~~DescribeVersionConfig~~">DescribeVersionConfig</a> operation to obtain the value of this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -64,27 +72,27 @@ public class ModifyPostPayModuleSwitchShrinkRequest extends TeaModel {
     public String postPayInstanceId;
 
     /**
-     * <p>The switch status of pay-as-you-go modules in JSON string format. Valid values:</p>
+     * <p>The switch status of pay-as-you-go modules. The value is a JSON string. Valid values:</p>
      * <ul>
      * <li>Key:<ul>
-     * <li><strong>VUL</strong>: vulnerability management module</li>
-     * <li><strong>CSPM</strong>: Cloud Security Posture Management (CSPM) module</li>
-     * <li><strong>AGENTLESS</strong>: agentless detection module</li>
-     * <li><strong>SERVERLESS</strong>: serverless security module</li>
-     * <li><strong>CTDR</strong>: threat detection and response module</li>
-     * <li><strong>POST_HOST</strong>: host and container security module</li>
-     * <li><strong>SDK</strong>: malicious file detection SDK module</li>
-     * <li><strong>RASP</strong>: application protection module</li>
-     * <li><strong>CTDR_STORAGE</strong>: log management module</li>
-     * <li><strong>ANTI_RANSOMWARE</strong>: anti-ransomware management</li>
+     * <li><strong>VUL</strong>: Vulnerability fixing module</li>
+     * <li><strong>CSPM</strong>: Cloud Security Posture Management module</li>
+     * <li><strong>AGENTLESS</strong>: Agentless detection module</li>
+     * <li><strong>SERVERLESS</strong>: Serverless security module</li>
+     * <li><strong>CTDR</strong>: Cloud Threat Detection and Response module</li>
+     * <li><strong>POST_HOST</strong>: Host and container security module</li>
+     * <li><strong>SDK</strong>: Malicious file detection SDK module</li>
+     * <li><strong>RASP</strong>: Application protection module</li>
+     * <li><strong>CTDR_STORAGE</strong>: Log management module</li>
+     * <li><strong>ANTI_RANSOMWARE</strong>: Anti-ransomware management</li>
      * </ul>
      * </li>
      * <li>Value: 0 indicates disabled. 1 indicates enabled.</li>
      * </ul>
      * <blockquote>
-     * <p>Modules for which no value is specified remain unchanged.</p>
+     * <p>The values of modules that are not specified remain unchanged.</p>
      * </blockquote>
-     * <p><notice>This parameter has the same meaning as PostPayModuleSwitchObj. If both parameters are specified, the value of PostPayModuleSwitch takes precedence.</notice></p>
+     * <p><notice>This parameter has the same meaning as the PostPayModuleSwitchObj parameter. If both parameters are specified, the value of PostPayModuleSwitch takes precedence.</notice></p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;VUL&quot;:1,&quot;CSPM&quot;:0}</p>
@@ -93,9 +101,9 @@ public class ModifyPostPayModuleSwitchShrinkRequest extends TeaModel {
     public String postPayModuleSwitch;
 
     /**
-     * <p>The pay-as-you-go module switch.</p>
+     * <p>The switches of pay-as-you-go modules.</p>
      * <blockquote>
-     * <p>Notice: This parameter has the same meaning as PostPayModuleSwitch. If both parameters are specified, the value of PostPayModuleSwitch takes precedence.</notice></p>
+     * <p>Notice:  This parameter has the same meaning as the PostPayModuleSwitch parameter. If both parameters are specified, the value of PostPayModuleSwitch takes precedence.</notice></p>
      * </blockquote>
      */
     @NameInMap("PostPayModuleSwitchObj")

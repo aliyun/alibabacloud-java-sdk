@@ -111,9 +111,17 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         @NameInMap("AnalyzeResult")
         public String analyzeResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal system process</p>
+         */
         @NameInMap("ExplanationEn")
         public String explanationEn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>正常系统进程</p>
+         */
         @NameInMap("ExplanationZh")
         public String explanationZh;
 

@@ -44,10 +44,14 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         /**
          * <p>The alert notification level. Valid values:</p>
          * <ul>
-         * <li>0: no alert</li>
-         * <li>1: reminder</li>
-         * <li>2: suspicious</li>
-         * <li>3: high-risk.</li>
+         * <li><p>0: No alert.</p>
+         * </li>
+         * <li><p>1: Reminder.</p>
+         * </li>
+         * <li><p>2: Suspicious.</p>
+         * </li>
+         * <li><p>3: High-risk.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -75,7 +79,7 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The file path.</p>
+         * <p>The path of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>/usr/local</p>
@@ -84,7 +88,7 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public String filePath;
 
         /**
-         * <p>The process permissions.</p>
+         * <p>The permissions of the process.</p>
          * 
          * <strong>example:</strong>
          * <p>rwxr-xr-x</p>
@@ -102,7 +106,7 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public Long firstTime;
 
         /**
-         * <p>The time when the event was handled.</p>
+         * <p>The time when the event was handled. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1694576692000</p>
@@ -111,7 +115,7 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public Long handleTime;
 
         /**
-         * <p>The event ID.</p>
+         * <p>The ID of the event.</p>
          * 
          * <strong>example:</strong>
          * <p>3454</p>
@@ -120,7 +124,7 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The instance name.</p>
+         * <p>The name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>i-wz92q7m5hsbgfhdss***</p>
@@ -147,7 +151,7 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public String intranetIp;
 
         /**
-         * <p>The time when the event most recently occurred.</p>
+         * <p>The time when the event last occurred. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1694576692000</p>
@@ -165,7 +169,7 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public String operation;
 
         /**
-         * <p>The operating system type.</p>
+         * <p>The type of the operating system.</p>
          * 
          * <strong>example:</strong>
          * <p>linux</p>
@@ -174,7 +178,7 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public String platform;
 
         /**
-         * <p>The process path.</p>
+         * <p>The path of the process.</p>
          * 
          * <strong>example:</strong>
          * <p>/bin/bash33</p>
@@ -201,7 +205,7 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public String remark;
 
         /**
-         * <p>The action of the blocking rule.</p>
+         * <p>The action of the interception rule.</p>
          * 
          * <strong>example:</strong>
          * <p>block</p>
@@ -210,7 +214,7 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public String ruleAction;
 
         /**
-         * <p>The rule name.</p>
+         * <p>The name of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>test-000</p>
@@ -219,11 +223,11 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The event status. Valid values:</p>
+         * <p>The status of the event. Valid values:</p>
          * <ul>
-         * <li>0: unhandled </li>
-         * <li>1: handled</li>
-         * <li>2: whitelisted.</li>
+         * <li>0: Unhandled. </li>
+         * <li>1: Handled.</li>
+         * <li>2: Whitelisted.</li>
          * </ul>
          * 
          * <strong>example:</strong>

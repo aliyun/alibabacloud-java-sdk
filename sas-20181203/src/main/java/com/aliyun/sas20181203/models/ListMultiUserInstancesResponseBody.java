@@ -187,12 +187,24 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
     }
 
     public static class ListMultiUserInstancesResponseBodyDaInstanceCspmInstanceCapacity extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Assigned")
         public Long assigned;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Used")
         public Long used;
 
@@ -909,6 +921,10 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
         @NameInMap("CspmCapacity")
         public ListMultiUserInstancesResponseBodyDaInstanceCspmCapacity cspmCapacity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;Count&quot;:0,&quot;Used&quot;:0,&quot;Assigned&quot;:0}</p>
+         */
         @NameInMap("CspmInstanceCapacity")
         public ListMultiUserInstancesResponseBodyDaInstanceCspmInstanceCapacity cspmInstanceCapacity;
 
@@ -1340,9 +1356,17 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
     }
 
     public static class ListMultiUserInstancesResponseBodySaleInstanceListCspmInstanceCapacity extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Used")
         public Long used;
 
@@ -1915,6 +1939,10 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
         @NameInMap("CspmCapacity")
         public ListMultiUserInstancesResponseBodySaleInstanceListCspmCapacity cspmCapacity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;Count&quot;:0,&quot;Used&quot;:0}</p>
+         */
         @NameInMap("CspmInstanceCapacity")
         public ListMultiUserInstancesResponseBodySaleInstanceListCspmInstanceCapacity cspmInstanceCapacity;
 

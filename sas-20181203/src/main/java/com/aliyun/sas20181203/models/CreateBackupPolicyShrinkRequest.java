@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBackupPolicyShrinkRequest extends TeaModel {
     /**
-     * <p>The name of the protection policy to create. Set this parameter to the desired policy name.</p>
+     * <p>Sets the name of the anti-ransomware policy to create.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,30 +16,30 @@ public class CreateBackupPolicyShrinkRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li><strong>IsDefault</strong>: The type of the protection policy to create. Valid values:<ul>
-     * <li><strong>1</strong>: Recommended policy.</li>
-     * <li><strong>0</strong>: Custom policy.</li>
+     * <li><strong>IsDefault</strong>: The type of the anti-ransomware policy to create. Valid values:<ul>
+     * <li><strong>1</strong>: recommended policy</li>
+     * <li><strong>0</strong>: custom policy</li>
      * </ul>
      * </li>
      * <li><strong>Include</strong>: The file types to protect. To protect all file types, set this parameter to [].</li>
-     * <li><strong>Source</strong>: The server folders to protect. To protect all folders, set this parameter to [].</li>
-     * <li><strong>ExcludeSystemPath</strong>: Specifies whether to exclude specified folders. Set this parameter to <strong>true</strong> to exclude folders. If you do not want to exclude folders, you do not need to set this parameter.</li>
-     * <li><strong>Exclude</strong>: The specified protection folder addresses. If you do not want to specify protection folder addresses, set this parameter to [].</li>
-     * <li><strong>Schedule</strong>: The time and interval at which the data backup task is scheduled to run. Specify a non-peak hour that is not on the hour. Examples:<ul>
-     * <li>Example 1: I|1583216092|P21D indicates that the data backup starts at 2020-03-03 14:14:52 and the backup policy runs at an interval of 3 weeks.</li>
-     * <li>Example 2: I|1583216092|PT24H indicates that the data backup starts at 2020-03-03 14:14:52 and the backup policy runs at an interval of 24 hours.</li>
+     * <li><strong>Source</strong>: The server directories to protect. To protect all directories, set this parameter to [].</li>
+     * <li><strong>ExcludeSystemPath</strong>: Specifies whether to exclude the specified directories. To exclude the directories, set this parameter to <strong>true</strong>. If you do not want to exclude the directories, you do not need to set this parameter.</li>
+     * <li><strong>Exclude</strong>: Sets the specified protection directory addresses. If you do not want to specify protection directory addresses, set this parameter to [].</li>
+     * <li><strong>Schedule</strong>: Sets the execution time and execution interval of the data backup task. We recommend that you specify a non-integer hour during off-peak hours. Examples:<ul>
+     * <li>Example 1: I|1583216092|P21D indicates that the data backup starts at 14:14:52 on March 3, 2020, and the backup policy execution interval is 3 weeks.</li>
+     * <li>Example 2: I|1583216092|PT24H indicates that the data backup starts at 14:14:52 on March 3, 2020, and the backup policy execution interval is 24 hours.</li>
      * </ul>
      * </li>
-     * <li><strong>Retention</strong>: The retention period of backup data, in days. The value 7 indicates 1 week, 365 indicates 1 year, and -1 indicates permanent retention.</li>
-     * <li><strong>SpeedLimiter</strong>: The network bandwidth throttling for backup. For example, 0:24:30720 indicates that the network bandwidth throttling for backup is 30 MB/s from 00:00 to 24:00.</li>
+     * <li><strong>Retention</strong>: The retention period of the backup data. Unit: days. A value of 7 indicates 1 week, 365 indicates 1 year, and -1 indicates permanent retention.</li>
+     * <li><strong>SpeedLimiter</strong>: Sets the backup network bandwidth limit. Example: 0:24:30720 indicates that the network bandwidth limit for the backup network is 30 MByte/s from 00:00 to 24:00.</li>
      * <li><strong>UseVss</strong>: Specifies whether to enable the Volume Shadow Copy Service (VSS) feature for Windows. Valid values:<ul>
-     * <li><strong>true</strong>: Enabled.</li>
-     * <li><strong>false</strong>: Not enabled.</li>
+     * <li><strong>true</strong>: enabled</li>
+     * <li><strong>false</strong>: disabled</li>
      * </ul>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>The VSS (Windows) feature applies only to Windows systems. After this feature is enabled, the issue of individual file backup failures due to process occupation is effectively reduced. We recommend that you enable this feature. After this feature is enabled, file backup for exFAT and FAT32 disk formats is not supported.</p>
+     * <p>The VSS feature is available only for Windows systems. Enabling this feature effectively reduces the issue of individual file backup failures caused by process occupation. We recommend that you enable this feature. After this feature is enabled, file backup for exFAT and FAT32 disk formats is not supported.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -50,10 +50,11 @@ public class CreateBackupPolicyShrinkRequest extends TeaModel {
     public String policyShrink;
 
     /**
-     * <p>The region ID of the non-Alibaba Cloud server.</p>
+     * <p>The region ID of the server that is not deployed on Alibaba Cloud.</p>
      * <blockquote>
-     * <p>Call the <a href="~~DescribeSupportRegion~~">DescribeSupportRegion</a> operation to query the regions supported by the anti-ransomware feature, and then select the supported region closest to the region where your non-Alibaba Cloud server resides.</p>
+     * <p>You can call the <a href="~~DescribeSupportRegion~~">DescribeSupportRegion</a> operation to query the regions supported by the anti-ransomware feature, and then select a supported region that is closest to the region of your server that is not deployed on Alibaba Cloud.</p>
      * </blockquote>
+     * <p>This parameter is required when the ServerType parameter is set to OUT_CLOUD.</p>
      * 
      * <strong>example:</strong>
      * <p>ch-hangzhou</p>
@@ -62,7 +63,7 @@ public class CreateBackupPolicyShrinkRequest extends TeaModel {
     public String policyRegionId;
 
     /**
-     * <p>The version of the protection policy. Set the value to <strong>2.0.0</strong>.</p>
+     * <p>The version of the anti-ransomware policy. Fixed value: <strong>2.0.0</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,10 +73,10 @@ public class CreateBackupPolicyShrinkRequest extends TeaModel {
     public String policyVersion;
 
     /**
-     * <p>The method used to cover assets. Valid values:</p>
+     * <p>The method to cover assets. Valid values:</p>
      * <ul>
-     * <li><strong>ALL_MACHINE</strong>: All assets.<blockquote>
-     * <p>To cover all assets of this type, set this parameter to <strong>ALL_MACHINE</strong>. In this case, <strong>UuidList</strong> is invalid. Only one policy that covers all assets can exist for each server type.</p>
+     * <li><strong>ALL_MACHINE</strong>: all assets<blockquote>
+     * <p>To cover all assets of the specified type, set this parameter to <strong>ALL_MACHINE</strong>. In this case, the <strong>UuidList</strong> parameter is invalid. Only one policy that covers all assets can be created for each server type.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -89,9 +90,9 @@ public class CreateBackupPolicyShrinkRequest extends TeaModel {
     /**
      * <p>The server type. Valid values:</p>
      * <ul>
-     * <li><strong>ALIYUN</strong>: Alibaba Cloud server.</li>
-     * <li><strong>OUT_CLOUD</strong>: Non-Alibaba Cloud server.</li>
-     * <li><strong>TRIPARTITE</strong>: Simple application server.</li>
+     * <li><strong>ALIYUN</strong>: Alibaba Cloud server</li>
+     * <li><strong>OUT_CLOUD</strong>: server that is not deployed on Alibaba Cloud</li>
+     * <li><strong>TRIPARTITE</strong>: simple application server</li>
      * </ul>
      * 
      * <strong>example:</strong>

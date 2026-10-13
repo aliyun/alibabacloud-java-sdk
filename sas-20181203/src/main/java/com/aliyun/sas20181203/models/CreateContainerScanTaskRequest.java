@@ -17,7 +17,8 @@ public class CreateContainerScanTaskRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The container ID.</p>
+     * <p>The container IDs.</p>
+     * <p>This parameter is required. A scan task cannot be created if no container ID is provided.</p>
      * 
      * <strong>example:</strong>
      * <p>c927cf190e886696db53cda0efb57145394ccf0bf9f525353fa5c22a26e4****</p>
@@ -26,7 +27,7 @@ public class CreateContainerScanTaskRequest extends TeaModel {
     public String containerIds;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>Specifies the language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>

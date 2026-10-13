@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
     /**
-     * <p>The handling status for the exception. Valid values:</p>
+     * <p>The processing status of anomalous events. Valid values:</p>
      * <ul>
-     * <li><strong>exporting</strong>: in progress</li>
-     * <li><strong>success</strong>: successful</li>
-     * <li><strong>failed</strong>: failed</li>
-     * <li><strong>pending</strong>: pending</li>
+     * <li><strong>exporting</strong>: Processing.</li>
+     * <li><strong>success</strong>: Succeeded.</li>
+     * <li><strong>failed</strong>: Failed.</li>
+     * <li><strong>pending</strong>: Pending.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The time when the export task was created.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-12-20T15:18Z</p>
@@ -38,7 +38,7 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
     public Long gmtCreate;
 
     /**
-     * <p>The time when the export task was modified.</p>
+     * <p>The modification time.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-12-20T15:18Z</p>
@@ -47,7 +47,7 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
     public Long gmtModified;
 
     /**
-     * <p>The ID of the export task.</p>
+     * <p>The ID of the export task for anomalous events.</p>
      * 
      * <strong>example:</strong>
      * <p>11</p>
@@ -56,7 +56,7 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
     public Integer id;
 
     /**
-     * <p>The URL at which you can download the exported Excel file.</p>
+     * <p>The download URL of the exported Excel file.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://suspicious-xxxxxxx.oss-cn-shanghai.aliyuncs.com/xxxxxxxxxxx/suspicious_event_20221221_1671590525269.zip?Expires=1671594125&OSSAccessKeyId=yourAccessKeyID&Signature=xxxxxxxxxxxxxxxxxx">http://suspicious-xxxxxxx.oss-cn-shanghai.aliyuncs.com/xxxxxxxxxxx/suspicious_event_20221221_1671590525269.zip?Expires=1671594125&amp;OSSAccessKeyId=yourAccessKeyID&amp;Signature=xxxxxxxxxxxxxxxxxx</a></p>
@@ -65,7 +65,7 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
     public String link;
 
     /**
-     * <p>The progress percentage of the export task.</p>
+     * <p>The export progress of anomalous events, in percentage.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -74,7 +74,7 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
     public Integer progress;
 
     /**
-     * <p>The exported parameters of exceptions.</p>
+     * <p>The export parameters for anomalous events.</p>
      * 
      * <strong>example:</strong>
      * <p>id,eventSubType,eventDetail,level,status,ip,instanceName,desc,lastTime,operateTime,note</p>
@@ -92,7 +92,7 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of exceptions exported.</p>
+     * <p>The total number of anomalous events.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -101,7 +101,7 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The type of the export task. The value is fixed as suspiciousEvent.</p>
+     * <p>The type of the export task. The value is fixed to suspiciousEvent.</p>
      * 
      * <strong>example:</strong>
      * <p>suspiciousEvent</p>
