@@ -635,6 +635,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Immediately ends a penetration test.</p>
+     * 
+     * @param request EndPenetrationTestRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EndPenetrationTestResponse
+     */
+    public EndPenetrationTestResponse endPenetrationTestWithOptions(EndPenetrationTestRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EndPenetrationTest"),
+            new TeaPair("version", "2026-04-24"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EndPenetrationTestResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Immediately ends a penetration test.</p>
+     * 
+     * @param request EndPenetrationTestRequest
+     * @return EndPenetrationTestResponse
+     */
+    public EndPenetrationTestResponse endPenetrationTest(EndPenetrationTestRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.endPenetrationTestWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves the analysis results of alert records.</p>
      * 
      * @param tmpReq GetAlertRecordAnalysisResultRequest
@@ -1699,6 +1743,98 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the details of a penetration test application.</p>
+     * 
+     * @param request QueryPenetrationTestDetailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryPenetrationTestDetailResponse
+     */
+    public QueryPenetrationTestDetailResponse queryPenetrationTestDetailWithOptions(QueryPenetrationTestDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryPenetrationTestDetail"),
+            new TeaPair("version", "2026-04-24"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryPenetrationTestDetailResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a penetration test application.</p>
+     * 
+     * @param request QueryPenetrationTestDetailRequest
+     * @return QueryPenetrationTestDetailResponse
+     */
+    public QueryPenetrationTestDetailResponse queryPenetrationTestDetail(QueryPenetrationTestDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryPenetrationTestDetailWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询渗透测试申请列表</p>
+     * 
+     * @param request QueryPenetrationTestListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryPenetrationTestListResponse
+     */
+    public QueryPenetrationTestListResponse queryPenetrationTestListWithOptions(QueryPenetrationTestListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryPenetrationTestList"),
+            new TeaPair("version", "2026-04-24"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryPenetrationTestListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询渗透测试申请列表</p>
+     * 
+     * @param request QueryPenetrationTestListRequest
+     * @return QueryPenetrationTestListResponse
+     */
+    public QueryPenetrationTestListResponse queryPenetrationTestList(QueryPenetrationTestListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryPenetrationTestListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries cloud resource control events.</p>
      * 
      * @param tmpReq QueryResourceControlEventsRequest
@@ -2073,6 +2209,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitApplyRecordResponse submitApplyRecord(SubmitApplyRecordRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitApplyRecordWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Submits a penetration test application.</p>
+     * 
+     * @param request SubmitPenetrationTestRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitPenetrationTestResponse
+     */
+    public SubmitPenetrationTestResponse submitPenetrationTestWithOptions(SubmitPenetrationTestRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.assetList)) {
+            query.put("AssetList", request.assetList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isThirdpartyTest)) {
+            query.put("IsThirdpartyTest", request.isThirdpartyTest);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.testContent)) {
+            query.put("TestContent", request.testContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.testEndDate)) {
+            query.put("TestEndDate", request.testEndDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.testSourceIps)) {
+            query.put("TestSourceIps", request.testSourceIps);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.testStartDate)) {
+            query.put("TestStartDate", request.testStartDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.testSteps)) {
+            query.put("TestSteps", request.testSteps);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.thirdpartyEmail)) {
+            query.put("ThirdpartyEmail", request.thirdpartyEmail);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.thirdpartyMobile)) {
+            query.put("ThirdpartyMobile", request.thirdpartyMobile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.thirdpartyTester)) {
+            query.put("ThirdpartyTester", request.thirdpartyTester);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitPenetrationTest"),
+            new TeaPair("version", "2026-04-24"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitPenetrationTestResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Submits a penetration test application.</p>
+     * 
+     * @param request SubmitPenetrationTestRequest
+     * @return SubmitPenetrationTestResponse
+     */
+    public SubmitPenetrationTestResponse submitPenetrationTest(SubmitPenetrationTestRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitPenetrationTestWithOptions(request, runtime);
     }
 
     /**
