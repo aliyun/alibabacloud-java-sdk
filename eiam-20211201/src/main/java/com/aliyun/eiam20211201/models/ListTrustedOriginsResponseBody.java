@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTrustedOriginsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries per page that takes effect for this request.</p>
+     * <p>The maximum number of results per page that takes effect for this request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListTrustedOriginsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next page query.</p>
+     * <p>The pagination token for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>NT_example</p>
@@ -32,7 +32,7 @@ public class ListTrustedOriginsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -93,7 +93,7 @@ public class ListTrustedOriginsResponseBody extends TeaModel {
 
     public static class ListTrustedOriginsResponseBodyTrustedOrigins extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time is in RFC 3339 format and in the UTC time zone.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class ListTrustedOriginsResponseBody extends TeaModel {
         public java.util.List<String> trustedOriginScene;
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time. The time is in RFC 3339 format and in the UTC time zone.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>

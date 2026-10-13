@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExecIdentityProviderMetadataUrlResolutionRequest extends TeaModel {
     /**
-     * <p>The ID of the identity provider in IDaaS.</p>
+     * <p>The identity provider ID in IDaaS.</p>
      * 
      * <strong>example:</strong>
      * <p>idp_mwpcwnhrimlr2horxXXXX</p>
@@ -24,7 +24,7 @@ public class ExecIdentityProviderMetadataUrlResolutionRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The network access endpoint ID.</p>
+     * <p>The network endpoint ID.</p>
      * 
      * <strong>example:</strong>
      * <p>inae_public</p>
@@ -42,6 +42,8 @@ public class ExecIdentityProviderMetadataUrlResolutionRequest extends TeaModel {
     public String oidcIssuer;
 
     /**
+     * <p>The SAML metadata URL.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://dc.test.com/FederationMetadata/2007-06/FederationMetadata.xml">https://dc.test.com/FederationMetadata/2007-06/FederationMetadata.xml</a></p>
      */

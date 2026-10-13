@@ -4,6 +4,9 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class CreateFederatedCredentialProviderRequest extends TeaModel {
+    /**
+     * <p>The identity provider configuration.</p>
+     */
     @NameInMap("CloudIdPProviderConfig")
     public CreateFederatedCredentialProviderRequestCloudIdPProviderConfig cloudIdPProviderConfig;
 
@@ -152,6 +155,8 @@ public class CreateFederatedCredentialProviderRequest extends TeaModel {
 
     public static class CreateFederatedCredentialProviderRequestCloudIdPProviderConfig extends TeaModel {
         /**
+         * <p>The ID of the identity provider.</p>
+         * 
          * <strong>example:</strong>
          * <p>idp_m7hk2hbnew5ir3ycfabug6xxxx</p>
          */
@@ -181,7 +186,7 @@ public class CreateFederatedCredentialProviderRequest extends TeaModel {
         public java.util.List<String> audiences;
 
         /**
-         * <p>Issuer</p>
+         * <p>The token issuer identifier (Issuer).</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com">https://example.com</a></p>
@@ -468,7 +473,7 @@ public class CreateFederatedCredentialProviderRequest extends TeaModel {
         public String trustAnchorSource;
 
         /**
-         * <p>The trust condition for the root certificate.</p>
+         * <p>The trust condition of the root certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>IsNullOrEmpty(&quot;jwt.issuer&quot;)</p>

@@ -42,7 +42,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
 
     public static class ObtainCredentialResponseBodyCredentialCredentialContentApiKeyContent extends TeaModel {
         /**
-         * <p>The API key content.</p>
+         * <p>The API key value.</p>
          * 
          * <strong>example:</strong>
          * <p>nsklncmwizncxxxx</p>
@@ -109,13 +109,13 @@ public class ObtainCredentialResponseBody extends TeaModel {
 
     public static class ObtainCredentialResponseBodyCredentialCredentialContent extends TeaModel {
         /**
-         * <p>The credential content of the API key credential type.</p>
+         * <p>The content of the API key credential.</p>
          */
         @NameInMap("ApiKeyContent")
         public ObtainCredentialResponseBodyCredentialCredentialContentApiKeyContent apiKeyContent;
 
         /**
-         * <p>The credential content of the OAuth client authentication credential type.</p>
+         * <p>The content of the OAuth client credential.</p>
          */
         @NameInMap("OAuthClientContent")
         public ObtainCredentialResponseBodyCredentialCredentialContentOAuthClientContent OAuthClientContent;
@@ -154,7 +154,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The credential content.</p>
+         * <p>The content of the credential.</p>
          */
         @NameInMap("CredentialContent")
         public ObtainCredentialResponseBodyCredentialCredentialContent credentialContent;
@@ -172,6 +172,12 @@ public class ObtainCredentialResponseBody extends TeaModel {
         @NameInMap("CredentialCreationType")
         public String credentialCreationType;
 
+        /**
+         * <p>The external unique identifier of the credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>credential_external_1234567890</p>
+         */
         @NameInMap("CredentialExternalId")
         public String credentialExternalId;
 
@@ -205,8 +211,8 @@ public class ObtainCredentialResponseBody extends TeaModel {
         /**
          * <p>The scenarios label of the credential. Valid values:</p>
          * <ul>
-         * <li>llm: large language model.</li>
-         * <li>saas: third-party SaaS service.</li>
+         * <li>llm: Large language model.</li>
+         * <li>saas: Third-party SaaS service.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -215,6 +221,12 @@ public class ObtainCredentialResponseBody extends TeaModel {
         @NameInMap("CredentialScenarioLabel")
         public String credentialScenarioLabel;
 
+        /**
+         * <p>The sharing scope of the credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>common</p>
+         */
         @NameInMap("CredentialSharingScope")
         public String credentialSharingScope;
 
@@ -230,7 +242,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
         /**
          * <p>The type of the subject to which the credential belongs. Valid values:</p>
          * <ul>
-         * <li>authentication_token_provider: authentication token provider.</li>
+         * <li>authentication_token_provider: Authentication token provider.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -242,8 +254,8 @@ public class ObtainCredentialResponseBody extends TeaModel {
         /**
          * <p>The credential type. Valid values:</p>
          * <ul>
-         * <li>api_key: API key authentication credential.</li>
-         * <li>oauth_client: OAuth client authentication credential.</li>
+         * <li>api_key: API key credential.</li>
+         * <li>oauth_client: OAuth client credential.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -261,6 +273,12 @@ public class ObtainCredentialResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the account to which the credential is exclusively assigned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_1234567890</p>
+         */
         @NameInMap("ExclusiveUserId")
         public String exclusiveUserId;
 

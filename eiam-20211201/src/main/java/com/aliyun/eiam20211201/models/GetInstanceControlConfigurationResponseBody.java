@@ -42,7 +42,7 @@ public class GetInstanceControlConfigurationResponseBody extends TeaModel {
 
     public static class GetInstanceControlConfigurationResponseBodyInstanceControlConfigurationControlElementsHumanVerificationConfig extends TeaModel {
         /**
-         * <p>The CAPTCHA type.</p>
+         * <p>The CAPTCHA verification type.</p>
          * 
          * <strong>example:</strong>
          * <p>urn:alibaba:idaas:humanverification:alibaba-cloud-jigsaw-verification</p>
@@ -76,7 +76,7 @@ public class GetInstanceControlConfigurationResponseBody extends TeaModel {
         public String elementName;
 
         /**
-         * <p>The Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) authenticate configuration.</p>
+         * <p>The Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) authentication configuration.</p>
          */
         @NameInMap("HumanVerificationConfig")
         public GetInstanceControlConfigurationResponseBodyInstanceControlConfigurationControlElementsHumanVerificationConfig humanVerificationConfig;

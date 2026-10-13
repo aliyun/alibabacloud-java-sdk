@@ -23,6 +23,9 @@ public class UpdateApplicationInfoRequest extends TeaModel {
     @NameInMap("ApplicationName")
     public String applicationName;
 
+    /**
+     * <p>The application owner.</p>
+     */
     @NameInMap("ApplicationOwner")
     public UpdateApplicationInfoRequestApplicationOwner applicationOwner;
 
@@ -33,7 +36,7 @@ public class UpdateApplicationInfoRequest extends TeaModel {
     public java.util.List<String> applicationVisibility;
 
     /**
-     * <p>The idempotence token.</p>
+     * <p>The idempotency token.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-example</p>
@@ -41,6 +44,9 @@ public class UpdateApplicationInfoRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The list of application extension fields.</p>
+     */
     @NameInMap("CustomFields")
     public java.util.List<UpdateApplicationInfoRequestCustomFields> customFields;
 
@@ -133,9 +139,15 @@ public class UpdateApplicationInfoRequest extends TeaModel {
     }
 
     public static class UpdateApplicationInfoRequestApplicationOwner extends TeaModel {
+        /**
+         * <p>The list of group IDs.</p>
+         */
         @NameInMap("GroupIds")
         public java.util.List<String> groupIds;
 
+        /**
+         * <p>The list of user IDs.</p>
+         */
         @NameInMap("UserIds")
         public java.util.List<String> userIds;
 
@@ -163,12 +175,30 @@ public class UpdateApplicationInfoRequest extends TeaModel {
     }
 
     public static class UpdateApplicationInfoRequestCustomFields extends TeaModel {
+        /**
+         * <p>The name of the application extension field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent_type</p>
+         */
         @NameInMap("FieldName")
         public String fieldName;
 
+        /**
+         * <p>The value of the application extension field. If FieldName is set to agentType, valid values are bailian, pai, dify, and volcano. If FieldName is set to agentExternalId, enter the relevant value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bailian</p>
+         */
         @NameInMap("FieldValue")
         public String fieldValue;
 
+        /**
+         * <p>The operation type for the application extension field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>add</p>
+         */
         @NameInMap("Operation")
         public String operation;
 

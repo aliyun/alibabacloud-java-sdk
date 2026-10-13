@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOrganizationalUnitsForResourceServerRequest extends TeaModel {
     /**
-     * <p>The resource server application ID.</p>
+     * <p>The ResourceServer application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class ListOrganizationalUnitsForResourceServerRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of entries to return on each page.</p>
+     * <p>The number of rows per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -40,7 +40,7 @@ public class ListOrganizationalUnitsForResourceServerRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. To retrieve the next page of results, set this parameter to the NextToken value from the previous response.</p>
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>
@@ -49,7 +49,7 @@ public class ListOrganizationalUnitsForResourceServerRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the resource server scope.</p>
+     * <p>The permission ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ress_nbte4bb3qqqnaq73rlmkqixxxx</p>
@@ -112,7 +112,7 @@ public class ListOrganizationalUnitsForResourceServerRequest extends TeaModel {
 
     public static class ListOrganizationalUnitsForResourceServerRequestFilter extends TeaModel {
         /**
-         * <p>The filter key.</p>
+         * <p>The name of the filter condition.</p>
          * 
          * <strong>example:</strong>
          * <p>OrganizationalUnitIds</p>
@@ -121,7 +121,7 @@ public class ListOrganizationalUnitsForResourceServerRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The list of filter values.</p>
+         * <p>The list of filter condition values.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;

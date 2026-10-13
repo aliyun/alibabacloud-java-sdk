@@ -400,7 +400,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
          * <p>The AppSecret of the Lark custom application.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>REOQ6Cl55kriOd8NOBeqWYLKpHR4p6fdZxxxx</p>
          */
         @NameInMap("AppSecret")
         public String appSecret;
@@ -484,7 +484,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
          * <p>The AD/LDAP administrator password.</p>
          * 
          * <strong>example:</strong>
-         * <p>XXXX</p>
+         * <p>123456</p>
          */
         @NameInMap("AdministratorPassword")
         public String administratorPassword;
@@ -816,11 +816,11 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public String grantType;
 
         /**
-         * <p>The PKCE algorithm. Valid values:</p>
+         * <p>The PKCE challenge method. Valid values:</p>
          * <ul>
          * <li><p>S256: SHA-256.</p>
          * </li>
-         * <li><p>plain: plaintext.</p>
+         * <li><p>plain: Plaintext.</p>
          * </li>
          * </ul>
          * 
@@ -905,7 +905,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public Long notAfter;
 
         /**
-         * <p>The date before which the certificate is not valid.</p>
+         * <p>The date before which the certificate is not yet valid.</p>
          * 
          * <strong>example:</strong>
          * <p>1672531200000</p>
@@ -1029,12 +1029,18 @@ public class GetIdentityProviderResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the external IdP is required to sign assertions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("WantAssertionsSigned")
         public Boolean wantAssertionsSigned;
 
         /**
-         * <p>Indicates whether the external IdP is required to sign the Response.</p>
+         * <p>Indicates whether the external IdP is required to sign responses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("WantResponseSigned")
         public Boolean wantResponseSigned;
@@ -1153,9 +1159,9 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         /**
          * <p>Indicates whether group synchronization is enabled. Valid values:</p>
          * <ul>
-         * <li><p>disabled: Disabled.</p>
+         * <li><p>disabled</p>
          * </li>
-         * <li><p>enabled: Enabled.</p>
+         * <li><p>enabled</p>
          * </li>
          * </ul>
          * 
@@ -1168,9 +1174,9 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         /**
          * <p>The incremental callback status, which indicates whether incremental callback data from the IdP is processed. Valid values:</p>
          * <ul>
-         * <li><p>disabled: Disabled.</p>
+         * <li><p>disabled</p>
          * </li>
-         * <li><p>enabled: Enabled.</p>
+         * <li><p>enabled</p>
          * </li>
          * </ul>
          * 
@@ -1181,7 +1187,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public String incrementalCallbackStatus;
 
         /**
-         * <p>The sync scope configuration.</p>
+         * <p>The synchronization scope configuration.</p>
          */
         @NameInMap("UdSyncScopeConfig")
         public GetIdentityProviderResponseBodyIdentityProviderDetailUdPullConfigUdSyncScopeConfig udSyncScopeConfig;
@@ -1267,7 +1273,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public String incrementalCallbackStatus;
 
         /**
-         * <p>The list of sync scope configurations.</p>
+         * <p>The list of synchronization scope configurations.</p>
          */
         @NameInMap("UdSyncScopeConfigs")
         public java.util.List<GetIdentityProviderResponseBodyIdentityProviderDetailUdPushConfigUdSyncScopeConfigs> udSyncScopeConfigs;
@@ -1315,7 +1321,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public String authorizeCallbackDomain;
 
         /**
-         * <p>The WeCom contacts secret.</p>
+         * <p>The WeCom contact secret.</p>
          * 
          * <strong>example:</strong>
          * <p>mPLLiWv-_9witxxxEJCpk1xkF5hOgBzpRt4kBkxxxx</p>
@@ -1542,7 +1548,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public String identityProviderName;
 
         /**
-         * <p>The synchronization type of the identity provider. Valid values:</p>
+         * <p>The sync type of the identity provider. Valid values:</p>
          * <ul>
          * <li><p>urn:alibaba:idaas:idp:alibaba:dingtalk:pull: Inbound DingTalk.</p>
          * </li>
@@ -1638,17 +1644,17 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfig samlConfig;
 
         /**
-         * <p>The inbound sync configuration.</p>
+         * <p>The inbound synchronization configuration.</p>
          */
         @NameInMap("UdPullConfig")
         public GetIdentityProviderResponseBodyIdentityProviderDetailUdPullConfig udPullConfig;
 
         /**
-         * <p>Indicates whether the inbound sync feature is supported. Valid values:</p>
+         * <p>Indicates whether the inbound synchronization feature is supported. Valid values:</p>
          * <ul>
-         * <li><p>disabled: Disabled.</p>
+         * <li><p>disabled</p>
          * </li>
-         * <li><p>enabled: Enabled.</p>
+         * <li><p>enabled</p>
          * </li>
          * </ul>
          * 
@@ -1659,17 +1665,17 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public String udPullStatus;
 
         /**
-         * <p>The outbound sync configuration.</p>
+         * <p>The outbound synchronization configuration.</p>
          */
         @NameInMap("UdPushConfig")
         public GetIdentityProviderResponseBodyIdentityProviderDetailUdPushConfig udPushConfig;
 
         /**
-         * <p>Indicates whether the outbound sync capability is enabled. Valid values:</p>
+         * <p>Indicates whether the outbound synchronization capability is enabled. Valid values:</p>
          * <ul>
-         * <li><p>disabled: Disabled.</p>
+         * <li><p>disabled</p>
          * </li>
-         * <li><p>enabled: Enabled.</p>
+         * <li><p>enabled</p>
          * </li>
          * </ul>
          * 

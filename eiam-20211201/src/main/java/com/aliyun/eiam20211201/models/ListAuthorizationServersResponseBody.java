@@ -11,7 +11,7 @@ public class ListAuthorizationServersResponseBody extends TeaModel {
     public java.util.List<ListAuthorizationServersResponseBodyAuthorizationServers> authorizationServers;
 
     /**
-     * <p>The number of entries per page for a paged query.</p>
+     * <p>The maximum number of entries per page for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListAuthorizationServersResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token returned in this call.</p>
+     * <p>The pagination token returned by this call.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -111,7 +111,7 @@ public class ListAuthorizationServersResponseBody extends TeaModel {
         public String authorizationServerName;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1652085686179</p>
@@ -183,7 +183,7 @@ public class ListAuthorizationServersResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1652085686179</p>

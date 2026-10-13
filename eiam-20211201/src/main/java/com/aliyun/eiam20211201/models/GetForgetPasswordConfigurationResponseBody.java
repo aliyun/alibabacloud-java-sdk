@@ -42,40 +42,50 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
 
     public static class GetForgetPasswordConfigurationResponseBodyOpenForgetPasswordConfiguration extends TeaModel {
         /**
-         * <p>The list of authentication channels for forgot password. This parameter is required when ForgetPasswordStatus is set to enabled. Valid values: email, sms (SMS), totp (OTP), and web_authn (WebAuthn).</p>
+         * <p>The list of forgot password authentication channels. Required when ForgetPasswordStatus is set to enabled. Valid values:</p>
+         * <ul>
+         * <li>email: Email.</li>
+         * <li>sms: SMS.</li>
+         * <li>totp: OTP dynamic password.</li>
+         * <li>web_authn: WebAuthn.</li>
+         * </ul>
          */
         @NameInMap("AuthenticationChannels")
         public java.util.List<String> authenticationChannels;
 
         /**
-         * <p>Indicates whether the forgot password feature is enabled. This parameter is deprecated. Use the ForgetPasswordStatus parameter instead.</p>
+         * <p><strong>[Deprecated]</strong> Indicates whether the forgot password feature is enabled. This parameter is deprecated. Use the ForgetPasswordStatus parameter instead.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>deprecated: true</p>
          */
         @NameInMap("Enable")
         public Boolean enable;
 
         /**
-         * <p>Indicates whether email is enabled as an authentication method for forgot password. This parameter is deprecated. Use the AuthenticationChannels parameter instead.</p>
+         * <p><strong>[Deprecated]</strong> Indicates whether email is enabled as a forgot password authentication method. This parameter is deprecated. Use the AuthenticationChannels parameter instead.</p>
          * 
          * <strong>example:</strong>
-         * <p>false</p>
+         * <p>deprecated: true</p>
          */
         @NameInMap("EnableEmail")
         public Boolean enableEmail;
 
         /**
-         * <p>Indicates whether SMS is enabled as an authentication method for forgot password. This parameter is deprecated. Use the AuthenticationChannels parameter instead.</p>
+         * <p><strong>[Deprecated]</strong> Indicates whether SMS is enabled as a forgot password authentication method. This parameter is deprecated. Use the AuthenticationChannels parameter instead.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>deprecated: true</p>
          */
         @NameInMap("EnableSms")
         public Boolean enableSms;
 
         /**
-         * <p>The status of the forgot password configuration. Valid values: enabled and disabled.</p>
+         * <p>The forgot password configuration status. Valid values:</p>
+         * <ul>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>

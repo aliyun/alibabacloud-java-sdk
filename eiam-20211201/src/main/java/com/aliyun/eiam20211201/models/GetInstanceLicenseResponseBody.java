@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceLicenseResponseBody extends TeaModel {
     /**
-     * <p>The response result.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("License")
     public GetInstanceLicenseResponseBodyLicense license;
@@ -87,13 +87,16 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         public Long networkAccessEndpointQuota;
 
         /**
-         * <p>The PAM privileged management license status. Valid values: enabled and disabled.</p>
+         * <p>The PAM privileged access management license status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         @NameInMap("PamLicenseStatus")
         public String pamLicenseStatus;
 
         /**
-         * <p>The number of prepaid active accounts.</p>
+         * <p>The number of prepaid active users.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -216,7 +219,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         public String licenseChargeType;
 
         /**
-         * <p>The detailed license configuration in JSON string format.</p>
+         * <p>The detailed license configuration as a JSON string.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;modules&quot;:[{&quot;features&quot;:[{&quot;name&quot;:&quot;urn:alibaba:idaas:license:module:ud:customField&quot;,&quot;status&quot;:&quot;enabled&quot;}]……{&quot;name&quot;:&quot;urn:alibaba:idaas:license:tag:enterprise&quot;,&quot;status&quot;:&quot;enabled&quot;}],&quot;version&quot;:&quot;1.0&quot;}</p>
@@ -261,7 +264,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         public String purchaseChannel;
 
         /**
-         * <p>The unique identifier of the external product associated with the license.</p>
+         * <p>The unique identifier of the external commodity associated with the license.</p>
          * 
          * <strong>example:</strong>
          * <p>eiam-cn-xxxxx</p>

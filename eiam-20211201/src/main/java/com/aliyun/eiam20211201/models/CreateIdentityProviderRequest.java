@@ -38,13 +38,13 @@ public class CreateIdentityProviderRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The DingTalk configuration.</p>
+     * <p>The DingTalk configuration information.</p>
      */
     @NameInMap("DingtalkAppConfig")
     public CreateIdentityProviderRequestDingtalkAppConfig dingtalkAppConfig;
 
     /**
-     * <p>The name of the identity provider.</p>
+     * <p>The identity provider name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,14 +56,22 @@ public class CreateIdentityProviderRequest extends TeaModel {
     /**
      * <p>The synchronization type of the identity provider. Valid values:</p>
      * <ul>
-     * <li>urn:alibaba:idaas:idp:alibaba:dingtalk:pull: inbound DingTalk</li>
-     * <li>urn:alibaba:idaas:idp:alibaba:dingtalk:push: outbound DingTalk</li>
-     * <li>urn:alibaba:idaas:idp:tencent:wecom:pull: inbound WeCom</li>
-     * <li>urn:alibaba:idaas:idp:bytedance:lark:pull: inbound Lark</li>
-     * <li>urn:alibaba:idaas:idp:microsoft:ad:pull: inbound AD</li>
-     * <li>urn:alibaba:idaas:idp:unknown:ldap:pull: inbound LDAP</li>
-     * <li>urn:alibaba:idaas:idp:standard:oidc: standard OIDC</li>
-     * <li>urn:alibaba:idaas:idp:alibaba:sase: SASE custom OIDC</li>
+     * <li><p>Inbound DingTalk: urn:alibaba:idaas:idp:alibaba:dingtalk:pull</p>
+     * </li>
+     * <li><p>Outbound DingTalk: urn:alibaba:idaas:idp:alibaba:dingtalk:push</p>
+     * </li>
+     * <li><p>Inbound WeCom: urn:alibaba:idaas:idp:tencent:wecom:pull</p>
+     * </li>
+     * <li><p>Inbound Lark: urn:alibaba:idaas:idp:bytedance:lark:pull</p>
+     * </li>
+     * <li><p>Inbound AD: urn:alibaba:idaas:idp:microsoft:ad:pull</p>
+     * </li>
+     * <li><p>Inbound LDAP: urn:alibaba:idaas:idp:unknown:ldap:pull</p>
+     * </li>
+     * <li><p>Standard OIDC: urn:alibaba:idaas:idp:standard:oidc</p>
+     * </li>
+     * <li><p>SASE custom OIDC: urn:alibaba:idaas:idp:alibaba:sase</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -96,7 +104,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
     public CreateIdentityProviderRequestLdapConfig ldapConfig;
 
     /**
-     * <p>The URL of the application logo.</p>
+     * <p>The application logo URL.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-image://xxxx_23aqr2ye554csg33dqpch5eu3q/tmp/d17d9adc-a943-45e7-ba0c-2838dddea678</p>
@@ -296,8 +304,10 @@ public class CreateIdentityProviderRequest extends TeaModel {
         /**
          * <p>Specifies whether the corresponding IdP supports authentication. Valid values:</p>
          * <ul>
-         * <li>disabled: Disabled.</li>
-         * <li>enabled: Enabled.</li>
+         * <li><p>disabled: Disabled.</p>
+         * </li>
+         * <li><p>enabled: Enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -309,8 +319,10 @@ public class CreateIdentityProviderRequest extends TeaModel {
         /**
          * <p>Specifies whether automatic password update is supported. Valid values:</p>
          * <ul>
-         * <li>disabled: Disabled.</li>
-         * <li>enabled: Enabled.</li>
+         * <li><p>disabled: Disabled.</p>
+         * </li>
+         * <li><p>enabled: Enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -422,8 +434,10 @@ public class CreateIdentityProviderRequest extends TeaModel {
         /**
          * <p>The type of the expression. Valid values:</p>
          * <ul>
-         * <li>field: field</li>
-         * <li>expression: expression</li>
+         * <li><p>field: Field.</p>
+         * </li>
+         * <li><p>expression: Expression.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -508,8 +522,10 @@ public class CreateIdentityProviderRequest extends TeaModel {
         /**
          * <p>Specifies whether automatic account matching is enabled. Valid values:</p>
          * <ul>
-         * <li>disabled: Disabled.</li>
-         * <li>enabled: Enabled.</li>
+         * <li><p>disabled: Disabled.</p>
+         * </li>
+         * <li><p>enabled: Enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -519,10 +535,10 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String autoMatchUserStatus;
 
         /**
-         * <p>Specifies whether the manual account binding feature is enabled. Valid values:</p>
+         * <p>Specifies whether the manual account binding feature is enabled for users. Valid values:</p>
          * <ul>
-         * <li>disabled: Disabled.</li>
-         * <li>enabled: Enabled.</li>
+         * <li>disabled</li>
+         * <li>enabled</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -593,9 +609,9 @@ public class CreateIdentityProviderRequest extends TeaModel {
         /**
          * <p>The DingTalk version. Valid values:</p>
          * <ul>
-         * <li><p>public_dingtalk: standard DingTalk</p>
+         * <li><p>public_dingtalk: Standard DingTalk.</p>
          * </li>
-         * <li><p>private_dingtalk: exclusive DingTalk</p>
+         * <li><p>private_dingtalk: Dedicated DingTalk.</p>
          * </li>
          * </ul>
          * 
@@ -776,7 +792,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
          * <p>The administrator password.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxx</p>
+         * <p>123456</p>
          */
         @NameInMap("AdministratorPassword")
         public String administratorPassword;
@@ -791,12 +807,10 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String administratorUsername;
 
         /**
-         * <p>Specifies whether to verify the certificate fingerprint. Valid values:</p>
+         * <p>Specifies whether certificate fingerprint verification is enabled. Valid values:</p>
          * <ul>
-         * <li><p>disabled: Disabled.</p>
-         * </li>
-         * <li><p>enabled: Enabled.</p>
-         * </li>
+         * <li>disabled</li>
+         * <li>enabled</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -812,7 +826,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public java.util.List<String> certificateFingerprints;
 
         /**
-         * <p>The group member attribute name.</p>
+         * <p>The group member identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>member</p>
@@ -895,10 +909,8 @@ public class CreateIdentityProviderRequest extends TeaModel {
         /**
          * <p>Specifies whether StartTLS is enabled. Valid values:</p>
          * <ul>
-         * <li><p>disabled: Disabled.</p>
-         * </li>
-         * <li><p>enabled: Enabled.</p>
-         * </li>
+         * <li>disabled</li>
+         * <li>enabled</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1621,8 +1633,10 @@ public class CreateIdentityProviderRequest extends TeaModel {
         /**
          * <p>Specifies whether group synchronization is supported. Default value: disabled. Valid values:</p>
          * <ul>
-         * <li>disabled: Disabled.</li>
-         * <li>enabled: Enabled.</li>
+         * <li><p>disabled: Disabled.</p>
+         * </li>
+         * <li><p>enabled: Enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1634,8 +1648,10 @@ public class CreateIdentityProviderRequest extends TeaModel {
         /**
          * <p>Specifies whether to process incremental callback data from the IdP. Valid values:</p>
          * <ul>
-         * <li>disabled: Disabled.</li>
-         * <li>enabled: Enabled.</li>
+         * <li><p>disabled: Disabled.</p>
+         * </li>
+         * <li><p>enabled: Enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1653,8 +1669,10 @@ public class CreateIdentityProviderRequest extends TeaModel {
         /**
          * <p>Specifies whether to periodically verify data differences between EIAM and the identity provider. Valid values:</p>
          * <ul>
-         * <li>disabled: Disabled.</li>
-         * <li>enabled: Enabled.</li>
+         * <li><p>disabled: Disabled.</p>
+         * </li>
+         * <li><p>enabled: Enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1813,7 +1831,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
 
     public static class CreateIdentityProviderRequestUdPushConfig extends TeaModel {
         /**
-         * <p>The incremental callback status. This field is not yet available. Ignore this field.</p>
+         * <p>The incremental callback status. This field is not yet enabled. Ignore this field.</p>
          * 
          * <strong>example:</strong>
          * <p>disabled</p>
@@ -1828,7 +1846,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public CreateIdentityProviderRequestUdPushConfigPeriodicSyncConfig periodicSyncConfig;
 
         /**
-         * <p>The periodic verification status. This field is not yet available. Ignore this field.</p>
+         * <p>The periodic verification status. This field is not yet enabled. Ignore this field.</p>
          * 
          * <strong>example:</strong>
          * <p>disabled</p>
@@ -1901,7 +1919,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String authorizeCallbackDomain;
 
         /**
-         * <p>The WeCom address book secret.</p>
+         * <p>The WeCom contacts secret.</p>
          * 
          * <strong>example:</strong>
          * <p>mPLLiWv-_9wittxxxEJCpk1xkF5hOgBzpRt4kBkxxx</p>
@@ -1928,7 +1946,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String corpSecret;
 
         /**
-         * <p>The trusted domain.</p>
+         * <p>The trusted domain name.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxx.aliyunidaas.com/">https://xxx.aliyunidaas.com/</a></p>

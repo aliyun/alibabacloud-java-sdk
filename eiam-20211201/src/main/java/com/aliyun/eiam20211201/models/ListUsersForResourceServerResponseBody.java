@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUsersForResourceServerResponseBody extends TeaModel {
     /**
-     * <p>The number of entries per page for paged queries.</p>
+     * <p>The number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next page.</p>
+     * <p>The pagination token for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -23,7 +23,7 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -41,7 +41,7 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
-     * <p>A list of user accounts.</p>
+     * <p>The list of accounts.</p>
      */
     @NameInMap("Users")
     public java.util.List<ListUsersForResourceServerResponseBodyUsers> users;
@@ -93,7 +93,7 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
 
     public static class ListUsersForResourceServerResponseBodyUsersResourceServerScopes extends TeaModel {
         /**
-         * <p>The ID of the scope permission.</p>
+         * <p>The scope permission ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ress_nbte4bb3qqqnaq73rlmkqixxxx</p>
@@ -102,7 +102,7 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
         public String resourceServerScopeId;
 
         /**
-         * <p>The name of the scope permission.</p>
+         * <p>The scope permission name.</p>
          * 
          * <strong>example:</strong>
          * <p>Read All User</p>
@@ -135,7 +135,7 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
 
     public static class ListUsersForResourceServerResponseBodyUsers extends TeaModel {
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_qsw77zl5vrllwzyrrfwbmpxxxx</p>
@@ -144,13 +144,13 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>A list of granted scope permissions.</p>
+         * <p>The list of granted scope permissions.</p>
          */
         @NameInMap("ResourceServerScopes")
         public java.util.List<ListUsersForResourceServerResponseBodyUsersResourceServerScopes> resourceServerScopes;
 
         /**
-         * <p>The ID of the user account.</p>
+         * <p>The account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>user_nbsomva32b6utec3hgi7scxxxx</p>

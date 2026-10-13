@@ -24,6 +24,12 @@ public class GenerateOauthTokenRequest extends TeaModel {
     @NameInMap("Audience")
     public String audience;
 
+    /**
+     * <p>The grant type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>client_credentials</p>
+     */
     @NameInMap("GrantType")
     public String grantType;
 
@@ -37,19 +43,37 @@ public class GenerateOauthTokenRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The requested token type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>urn:ietf:params:oauth:token-type:access_token</p>
+     */
     @NameInMap("RequestedTokenType")
     public String requestedTokenType;
 
     /**
-     * <p>The permission scopes.</p>
+     * <p>The permission scope.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ScopeValues")
     public java.util.List<String> scopeValues;
 
+    /**
+     * <p>The subject token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>subject001</p>
+     */
     @NameInMap("SubjectToken")
     public String subjectToken;
 
+    /**
+     * <p>The subject token type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>urn:ietf:params:oauth:token-type:access_token</p>
+     */
     @NameInMap("SubjectTokenType")
     public String subjectTokenType;
 

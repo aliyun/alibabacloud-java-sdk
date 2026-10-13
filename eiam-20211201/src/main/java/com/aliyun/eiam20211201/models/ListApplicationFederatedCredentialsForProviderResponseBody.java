@@ -11,7 +11,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
     public java.util.List<ListApplicationFederatedCredentialsForProviderResponseBodyApplicationFederatedCredentials> applicationFederatedCredentials;
 
     /**
-     * <p>The maximum number of entries per page for a paged query.</p>
+     * <p>The maximum number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -189,7 +189,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         public java.util.List<String> instanceIds;
 
         /**
-         * <p>The GCP project ID.</p>
+         * <p>The GCP project ID to which the resource belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>turnkey-axiom-475109-xx</p>
@@ -198,7 +198,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         public String projectId;
 
         /**
-         * <p>The subject corresponding to the service account.</p>
+         * <p>The subject (sub) that corresponds to the service account.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789</p>
@@ -264,7 +264,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
 
     public static class ListApplicationFederatedCredentialsForProviderResponseBodyApplicationFederatedCredentialsOidcVerificationConfigKubernetesConfig extends TeaModel {
         /**
-         * <p>The K8s namespace.</p>
+         * <p>The Kubernetes namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -282,7 +282,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         public String podNamePrefix;
 
         /**
-         * <p>The K8s service account name.</p>
+         * <p>The Kubernetes service account name.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -432,7 +432,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
 
     public static class ListApplicationFederatedCredentialsForProviderResponseBodyApplicationFederatedCredentials extends TeaModel {
         /**
-         * <p>The application federated credential ID.</p>
+         * <p>The ID of the application federated credential.</p>
          * 
          * <strong>example:</strong>
          * <p>afc_dads12sadxxxxx</p>
@@ -441,7 +441,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         public String applicationFederatedCredentialId;
 
         /**
-         * <p>The application federated credential name.</p>
+         * <p>The name of the application federated credential.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -450,7 +450,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         public String applicationFederatedCredentialName;
 
         /**
-         * <p>The application federated credential type.</p>
+         * <p>The type of the application federated credential.</p>
          * 
          * <strong>example:</strong>
          * <p>oidc</p>
@@ -459,7 +459,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         public String applicationFederatedCredentialType;
 
         /**
-         * <p>The application ID.</p>
+         * <p>The ID of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>app_asda1dsadxxxxx</p>
@@ -468,7 +468,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         public String applicationId;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the credential was created. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1758785994982</p>
@@ -477,7 +477,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         public Long createTime;
 
         /**
-         * <p>The application federated credential description.</p>
+         * <p>The description of the application federated credential.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -504,7 +504,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         public String instanceId;
 
         /**
-         * <p>The last used time.</p>
+         * <p>The time when the credential was last used. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1758785994982</p>
@@ -525,7 +525,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         public ListApplicationFederatedCredentialsForProviderResponseBodyApplicationFederatedCredentialsPkcs7VerificationConfig pkcs7VerificationConfig;
 
         /**
-         * <p>The application federated credential status.</p>
+         * <p>The status of the application federated credential.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -534,7 +534,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         public String status;
 
         /**
-         * <p>The update time.</p>
+         * <p>The time when the credential was last updated. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1758785994982</p>

@@ -11,7 +11,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
     public java.util.List<ListCredentialProvidersResponseBodyCredentialProviders> credentialProviders;
 
     /**
-     * <p>The maximum number of entries per page for a paged query.</p>
+     * <p>The number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token returned in this call.</p>
+     * <p>The pagination token returned by this call.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -99,7 +99,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
         public java.util.List<String> allowedTokenIssuers;
 
         /**
-         * <p>Specifies whether to enable the JWT-derived short token capability.</p>
+         * <p>Indicates whether the JWT-derived short token feature is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -117,7 +117,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
         public Integer expiration;
 
         /**
-         * <p>Specifies whether to enable JWT expiration cleanup.</p>
+         * <p>Indicates whether JWT expiration cleanup is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -135,7 +135,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
         public String issuer;
 
         /**
-         * <p>The JWKs endpoint URL.</p>
+         * <p>The JWKS endpoint URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example123456.aliyunidaas.com/api/v2/auths_ngz2wj35ixxxdyat55nexxxxxx/oauth2/jwks">https://example123456.aliyunidaas.com/api/v2/auths_ngz2wj35ixxxdyat55nexxxxxx/oauth2/jwks</a></p>
@@ -200,7 +200,10 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
 
     public static class ListCredentialProvidersResponseBodyCredentialProvidersCredentialProviderConfigOAuthProviderConfig extends TeaModel {
         /**
-         * <p>The endpoint URL used to guide users through authorization. Conditionally required: this parameter is required when AuthorizationFlow is set to user_federation and ProviderVendor is set to custom. For preset vendors, this value can be automatically populated through DiscoveryUrl.</p>
+         * <p>The authorization endpoint of the OAuth protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/authorize">https://example.com/authorize</a></p>
          */
         @NameInMap("AuthorizationEndpoint")
         public String authorizationEndpoint;
@@ -208,9 +211,12 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
         /**
          * <p>The OAuth authorization flow type. Valid values:</p>
          * <ul>
-         * <li>m2m: machine-to-machine (2LO, Client Credentials).</li>
-         * <li>user_federation: user federation (3LO, Authorization Code).</li>
+         * <li>m2m: Machine-to-machine.</li>
+         * <li>user_federation: User federation.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>m2m</p>
          */
         @NameInMap("AuthorizationFlow")
         public String authorizationFlow;
@@ -225,34 +231,70 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
         public String clientId;
 
         /**
-         * <p>The URL of the discovery document used to automatically obtain OAuth endpoint configurations. Conditionally optional: used when AuthorizationFlow is set to user_federation. If DiscoveryUrl is not provided, you must manually configure fields such as TokenEndpoint and AuthorizationEndpoint.</p>
+         * <p>The URL of the OAuth discovery document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/.well-known/openid-configuration">https://example.com/.well-known/openid-configuration</a></p>
          */
         @NameInMap("DiscoveryUrl")
         public String discoveryUrl;
 
+        /**
+         * <p>The issuer endpoint of the OAuth protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/issuer">https://example.com/issuer</a></p>
+         */
         @NameInMap("Issuer")
         public String issuer;
 
         /**
-         * <p>The method used to generate the PKCE code_challenge. Default value: s256.</p>
+         * <p>The algorithm used to compute the code challenge in PKCE. Valid values:</p>
+         * <ul>
+         * <li>S256</li>
+         * <li>plain</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>S256</p>
          */
         @NameInMap("PkceChallengeMethod")
         public String pkceChallengeMethod;
 
         /**
-         * <p>Specifies whether to use the PKCE extension to enhance security. We recommend that you always enable this feature.</p>
+         * <p>Indicates whether PKCE is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("PkceEnabled")
         public Boolean pkceEnabled;
 
         /**
-         * <p>The preset vendor or custom configuration. Optional. Default value: custom.</p>
+         * <p>The OAuth provider vendor type. Valid values:</p>
+         * <ul>
+         * <li>custom: Custom.</li>
+         * <li>dingtalk: DingTalk.</li>
+         * <li>feishu: Lark.</li>
+         * <li>github: GitHub.</li>
+         * <li>microsoft: Microsoft.</li>
+         * <li>google: Google.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         @NameInMap("ProviderVendor")
         public String providerVendor;
 
         /**
          * <p>The scope in the OAuth protocol, which specifies the permission scope.</p>
+         * <blockquote>
+         * <p>The scope configured on the credential provider serves as the default value. If the scope parameter is not specified when calling the DeveloperAPI to obtain an OAuth access token, the scope configured on the credential provider is used for token issuance.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p>Notice: Multiple scope values are separated by spaces.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>example:test_01 example:test_02</p>
@@ -261,7 +303,10 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>The redirect URI automatically generated by the system when the credential provider is created. Configure this value as the redirect_uri in the OAuth provider.</p>
+         * <p>The system-generated redirect URI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/callback">https://example.com/callback</a></p>
          */
         @NameInMap("SystemRedirectUri")
         public String systemRedirectUri;
@@ -384,7 +429,10 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
         public ListCredentialProvidersResponseBodyCredentialProvidersCredentialProviderConfigOAuthProviderConfig OAuthProviderConfig;
 
         /**
-         * <p>The list of credential IDs that correspond to the sensitive configurations of the credential provider.</p>
+         * <p>The list of credential IDs that correspond to the sensitive configuration of the credential provider.</p>
+         * <blockquote>
+         * <p>The system securely stores the sensitive configuration of the credential provider as credentials.</p>
+         * </blockquote>
          */
         @NameInMap("ProviderCredentialIds")
         public java.util.List<String> providerCredentialIds;
@@ -438,6 +486,10 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
 
         /**
          * <p>The creation type of the credential provider. Valid values:</p>
+         * <ul>
+         * <li>system_init: Created by the system.</li>
+         * <li>user_custom: Created by the user.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>user_custom</p>
@@ -474,6 +526,10 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
 
         /**
          * <p>The credential provider type. Valid values:</p>
+         * <ul>
+         * <li>oauth: OAuth credential provider</li>
+         * <li>jwt: JWT credential provider</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>oauth</p>
@@ -501,6 +557,10 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
 
         /**
          * <p>The credential provider status. Valid values:</p>
+         * <ul>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>

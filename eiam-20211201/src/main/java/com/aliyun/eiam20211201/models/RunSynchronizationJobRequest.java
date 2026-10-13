@@ -33,13 +33,13 @@ public class RunSynchronizationJobRequest extends TeaModel {
     public Boolean passwordInitialization;
 
     /**
-     * <p>The configuration of the synchronization scope.</p>
+     * <p>The synchronization scope configuration.</p>
      */
     @NameInMap("SynchronizationScopeConfig")
     public RunSynchronizationJobRequestSynchronizationScopeConfig synchronizationScopeConfig;
 
     /**
-     * <p>The ID of the synchronization target.</p>
+     * <p>The synchronization target ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,12 +49,10 @@ public class RunSynchronizationJobRequest extends TeaModel {
     public String targetId;
 
     /**
-     * <p>The type of the synchronization target. Valid values:</p>
+     * <p>The synchronization target type. Valid values:</p>
      * <ul>
-     * <li><p>identity_provider: The identity provider.</p>
-     * </li>
-     * <li><p>application: The application.</p>
-     * </li>
+     * <li>identity_provider: identity provider</li>
+     * <li>application: application</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

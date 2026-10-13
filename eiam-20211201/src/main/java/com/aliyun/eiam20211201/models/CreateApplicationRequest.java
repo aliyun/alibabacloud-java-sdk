@@ -27,6 +27,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("ApplicationName")
     public String applicationName;
 
+    /**
+     * <p>The application owner.</p>
+     */
     @NameInMap("ApplicationOwner")
     public CreateApplicationRequestApplicationOwner applicationOwner;
 
@@ -45,7 +48,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String applicationSourceType;
 
     /**
-     * <p>The application template ID. This parameter is required when ApplicationSourceType is set to urn:alibaba:idaas:app:source:template.</p>
+     * <p>The application template ID. This parameter is required when the ApplicationSourceType parameter is set to urn:alibaba:idaas:app:source:template.</p>
      * 
      * <strong>example:</strong>
      * <p>apt_ramuser_mjqrsi</p>
@@ -53,6 +56,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("ApplicationTemplateId")
     public String applicationTemplateId;
 
+    /**
+     * <p>The list of application extension fields.</p>
+     */
     @NameInMap("CustomFields")
     public java.util.List<CreateApplicationRequestCustomFields> customFields;
 
@@ -85,7 +91,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String logoUrl;
 
     /**
-     * <p>The single sign-on protocol. Valid values:</p>
+     * <p>The single sign-on (SSO) protocol. Valid values:</p>
      * <ul>
      * <li>saml2: SAML 2.0 protocol.</li>
      * <li>oidc: OpenID Connect protocol.</li>
@@ -184,9 +190,15 @@ public class CreateApplicationRequest extends TeaModel {
     }
 
     public static class CreateApplicationRequestApplicationOwner extends TeaModel {
+        /**
+         * <p>The list of group IDs.</p>
+         */
         @NameInMap("GroupIds")
         public java.util.List<String> groupIds;
 
+        /**
+         * <p>The list of user IDs.</p>
+         */
         @NameInMap("UserIds")
         public java.util.List<String> userIds;
 
@@ -214,9 +226,21 @@ public class CreateApplicationRequest extends TeaModel {
     }
 
     public static class CreateApplicationRequestCustomFields extends TeaModel {
+        /**
+         * <p>The identifier of the application extension field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent_type</p>
+         */
         @NameInMap("FieldName")
         public String fieldName;
 
+        /**
+         * <p>The value of the application extension field. When FieldName is set to agentType, valid values are bailian, pai, dify, and volcano. When FieldName is set to agentExternalId, enter the relevant value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bailian</p>
+         */
         @NameInMap("FieldValue")
         public String fieldValue;
 

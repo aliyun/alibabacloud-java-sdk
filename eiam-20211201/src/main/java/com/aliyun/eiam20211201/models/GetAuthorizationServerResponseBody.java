@@ -93,7 +93,7 @@ public class GetAuthorizationServerResponseBody extends TeaModel {
         public String authorizationServerId;
 
         /**
-         * <p>The name of the authorization server.</p>
+         * <p>The authorization server name.</p>
          * 
          * <strong>example:</strong>
          * <p>System_Default</p>
@@ -102,7 +102,7 @@ public class GetAuthorizationServerResponseBody extends TeaModel {
         public String authorizationServerName;
 
         /**
-         * <p>The time when the authorization server was created.</p>
+         * <p>The time when the authorization server was created. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1754620108295</p>
@@ -120,7 +120,7 @@ public class GetAuthorizationServerResponseBody extends TeaModel {
         public String creationType;
 
         /**
-         * <p>The description of the authorization server.</p>
+         * <p>The authorization server description.</p>
          * 
          * <strong>example:</strong>
          * <p>description of authorization server</p>
@@ -138,7 +138,7 @@ public class GetAuthorizationServerResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The issuer of the authorization token.</p>
+         * <p>The authorization token issuer.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2">https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2</a></p>
@@ -165,7 +165,7 @@ public class GetAuthorizationServerResponseBody extends TeaModel {
         public String issuerMode;
 
         /**
-         * <p>The time when the authorization server was last updated.</p>
+         * <p>The time when the authorization server was last updated. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1781608572164</p>
@@ -174,13 +174,13 @@ public class GetAuthorizationServerResponseBody extends TeaModel {
         public Long lastUpdateTime;
 
         /**
-         * <p>The endpoint configuration of the authorization server.</p>
+         * <p>The authorization server endpoint configuration.</p>
          */
         @NameInMap("ProtocolEndpoint")
         public GetAuthorizationServerResponseBodyAuthorizationServerProtocolEndpoint protocolEndpoint;
 
         /**
-         * <p>The status of the authorization server.</p>
+         * <p>The authorization server status.</p>
          * 
          * <strong>example:</strong>
          * <p>ENABLE</p>

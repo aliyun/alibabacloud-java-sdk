@@ -34,7 +34,7 @@ public class CreateTrustedOriginRequest extends TeaModel {
     public String origin;
 
     /**
-     * <p>The name of the trusted origin used for management, display, and auditing. If not specified, the value is empty.</p>
+     * <p>The name of the trusted origin used for management, display, and auditing. If this parameter is not specified, the value is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>Qoder Production Console</p>

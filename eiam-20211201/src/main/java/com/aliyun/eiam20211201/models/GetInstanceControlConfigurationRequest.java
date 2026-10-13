@@ -4,6 +4,12 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceControlConfigurationRequest extends TeaModel {
+    /**
+     * <p>The name of the instance control item.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>representative-value-2026</p>
+     */
     @NameInMap("ElementName")
     public String elementName;
 

@@ -67,7 +67,7 @@ public class GetCredentialResponseBody extends TeaModel {
 
     public static class GetCredentialResponseBodyCredentialCredentialContent extends TeaModel {
         /**
-         * <p>The content of the OAuth client credential.</p>
+         * <p>The credential content of the OAuth client authentication credential type.</p>
          */
         @NameInMap("OAuthClientContent")
         public GetCredentialResponseBodyCredentialCredentialContentOAuthClientContent OAuthClientContent;
@@ -98,7 +98,7 @@ public class GetCredentialResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The content of the credential.</p>
+         * <p>The credential content.</p>
          */
         @NameInMap("CredentialContent")
         public GetCredentialResponseBodyCredentialCredentialContent credentialContent;
@@ -116,6 +116,12 @@ public class GetCredentialResponseBody extends TeaModel {
         @NameInMap("CredentialCreationType")
         public String credentialCreationType;
 
+        /**
+         * <p>The external unique identifier of the credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>credential_external_1234567890</p>
+         */
         @NameInMap("CredentialExternalId")
         public String credentialExternalId;
 
@@ -159,11 +165,17 @@ public class GetCredentialResponseBody extends TeaModel {
         @NameInMap("CredentialScenarioLabel")
         public String credentialScenarioLabel;
 
+        /**
+         * <p>The credential sharing scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>common</p>
+         */
         @NameInMap("CredentialSharingScope")
         public String credentialSharingScope;
 
         /**
-         * <p>The ID of the subject to which the credential belongs.</p>
+         * <p>The subject ID to which the credential belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>apt_werthgfdsasffxxxxx</p>
@@ -172,7 +184,7 @@ public class GetCredentialResponseBody extends TeaModel {
         public String credentialSubjectId;
 
         /**
-         * <p>The type of the subject to which the credential belongs. Valid values:</p>
+         * <p>The subject type to which the credential belongs. Valid values:</p>
          * <ul>
          * <li>authentication_token_provider: Authentication token provider.</li>
          * </ul>
@@ -186,8 +198,8 @@ public class GetCredentialResponseBody extends TeaModel {
         /**
          * <p>The credential type. Valid values:</p>
          * <ul>
-         * <li>api_key: API key credential.</li>
-         * <li>oauth_client: OAuth client credential.</li>
+         * <li>api_key: API key authentication credential.</li>
+         * <li>oauth_client: OAuth client authentication credential.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -205,6 +217,12 @@ public class GetCredentialResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The exclusive account ID of the credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_1234567890</p>
+         */
         @NameInMap("ExclusiveUserId")
         public String exclusiveUserId;
 

@@ -42,7 +42,7 @@ public class GetTrustedOriginResponseBody extends TeaModel {
 
     public static class GetTrustedOriginResponseBodyTrustedOrigin extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time is in RFC 3339 format and in the UTC time zone.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -97,13 +97,13 @@ public class GetTrustedOriginResponseBody extends TeaModel {
         public String trustedOriginId;
 
         /**
-         * <p>The trusted origin scene.</p>
+         * <p>The trusted origin scenes.</p>
          */
         @NameInMap("TrustedOriginScene")
         public java.util.List<String> trustedOriginScene;
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time. The time is in RFC 3339 format and in the UTC time zone.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>

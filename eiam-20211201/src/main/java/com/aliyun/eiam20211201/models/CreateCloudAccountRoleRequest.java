@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCloudAccountRoleRequest extends TeaModel {
     /**
-     * <p>A client token used to ensure the idempotence of the request. Generate a unique value for this parameter from your client. The token can contain only ASCII characters and must be no more than 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateCloudAccountRoleRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the Alibaba Cloud account.</p>
+     * <p>The cloud account ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CreateCloudAccountRoleRequest extends TeaModel {
     public String cloudAccountId;
 
     /**
-     * <p>The name of the cloud role.</p>
+     * <p>The cloud role name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,9 +35,9 @@ public class CreateCloudAccountRoleRequest extends TeaModel {
     public String cloudAccountRoleName;
 
     /**
-     * <p>The type of the cloud role. The format of this parameter depends on the type of the Alibaba Cloud account. The supported value is:</p>
+     * <p>The cloud role type. The specific format depends on the cloud account type. Valid values:</p>
      * <ul>
-     * <li>role: applies to Alibaba Cloud accounts.</li>
+     * <li>role: applicable to Alibaba Cloud accounts.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class CreateCloudAccountRoleRequest extends TeaModel {
     public String cloudAccountRoleType;
 
     /**
-     * <p>The description of the cloud role.</p>
+     * <p>The cloud role description.</p>
      * 
      * <strong>example:</strong>
      * <p>cloud_account_role_description</p>
@@ -56,7 +56,7 @@ public class CreateCloudAccountRoleRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

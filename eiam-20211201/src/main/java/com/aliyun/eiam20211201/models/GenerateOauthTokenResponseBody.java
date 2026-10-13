@@ -42,10 +42,10 @@ public class GenerateOauthTokenResponseBody extends TeaModel {
 
     public static class GenerateOauthTokenResponseBodyTokenResponse extends TeaModel {
         /**
-         * <p>Access Token。</p>
+         * <p>The access token.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJlaWFtIn0.signature</p>
          */
         @NameInMap("AccessToken")
         public String accessToken;
@@ -68,6 +68,12 @@ public class GenerateOauthTokenResponseBody extends TeaModel {
         @NameInMap("ExpiresIn")
         public Long expiresIn;
 
+        /**
+         * <p>The issued token type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
+         */
         @NameInMap("IssuedTokenType")
         public String issuedTokenType;
 

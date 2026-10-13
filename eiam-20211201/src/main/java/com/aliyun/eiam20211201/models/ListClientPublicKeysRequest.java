@@ -25,7 +25,7 @@ public class ListClientPublicKeysRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of entries to return on each page of a paged query.</p>
+     * <p>The number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -34,7 +34,7 @@ public class ListClientPublicKeysRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next page of results. Set this to the NextToken value from the previous API call. For the first query, leave this parameter empty.</p>
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call. Leave this parameter empty for the first query.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>

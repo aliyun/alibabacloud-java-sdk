@@ -84,7 +84,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
 
     public static class GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigAzureVmConfig extends TeaModel {
         /**
-         * <p>The principal ID.</p>
+         * <p>The identity identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>5dee234a-1b4c-4ad7-a19f-fxxxxx</p>
@@ -163,7 +163,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
         public java.util.List<String> instanceIds;
 
         /**
-         * <p>The GCP project ID.</p>
+         * <p>The GCP project ID to which the resource belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>turnkey-axiom-475109-xx</p>
@@ -172,7 +172,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
         public String projectId;
 
         /**
-         * <p>The subject corresponding to the service account.</p>
+         * <p>The sub claim that corresponds to the service account.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789</p>
@@ -448,7 +448,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
         public java.util.List<GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialAttributeMappings> attributeMappings;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1758785994982</p>
@@ -484,7 +484,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The last used time.</p>
+         * <p>The last used time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1758785994982</p>
@@ -514,7 +514,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1758785994982</p>

@@ -89,7 +89,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
     public SetIdentityProviderUdPullConfigurationRequestPullProtectedRule pullProtectedRule;
 
     /**
-     * <p>The inbound synchronization scope configuration.</p>
+     * <p>The inbound synchronization configuration.</p>
      */
     @NameInMap("UdSyncScopeConfig")
     public SetIdentityProviderUdPullConfigurationRequestUdSyncScopeConfig udSyncScopeConfig;
@@ -173,7 +173,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
 
     public static class SetIdentityProviderUdPullConfigurationRequestLdapUdPullConfig extends TeaModel {
         /**
-         * <p>The group member identifier.</p>
+         * <p>The group member attribute name.</p>
          * 
          * <strong>example:</strong>
          * <p>member</p>
@@ -200,7 +200,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
         public String groupObjectClassCustomFilter;
 
         /**
-         * <p>The organizational unit ObjectClass.</p>
+         * <p>The organization ObjectClass.</p>
          * 
          * <strong>example:</strong>
          * <p>organizationUnit,top</p>
@@ -292,13 +292,13 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
         public String periodicSyncCron;
 
         /**
-         * <p>The execution time points. This parameter is required when periodicSyncType is set to time. For example, [3, 5] indicates that the task runs once between 3:00 and 4:00 and once between 5:00 and 6:00.</p>
+         * <p>The execution time points. This parameter is required when periodicSyncType is set to time. For example, [3, 5] indicates that the synchronization runs once between 3:00 and 4:00 and once between 5:00 and 6:00.</p>
          */
         @NameInMap("PeriodicSyncTimes")
         public java.util.List<Integer> periodicSyncTimes;
 
         /**
-         * <p>The type of periodic synchronization.</p>
+         * <p>The periodic synchronization type.</p>
          * 
          * <strong>example:</strong>
          * <p>cron</p>
@@ -348,7 +348,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
         public Integer groupDeletedThreshold;
 
         /**
-         * <p>The threshold for the number of deleted organizational units. If the number of deleted organizational units exceeds this value, the synchronization task is terminated.</p>
+         * <p>The threshold for the number of deleted organizations. If the number of deleted organizations exceeds this value, the synchronization task is terminated.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -398,13 +398,13 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
 
     public static class SetIdentityProviderUdPullConfigurationRequestUdSyncScopeConfig extends TeaModel {
         /**
-         * <p>The list of source nodes for synchronization.</p>
+         * <p>The list of source scope nodes.</p>
          */
         @NameInMap("SourceScopes")
         public java.util.List<String> sourceScopes;
 
         /**
-         * <p>The target node for synchronization.</p>
+         * <p>The target scope node.</p>
          * 
          * <strong>example:</strong>
          * <p>ou_asdaq1addsxzdq1XXX</p>

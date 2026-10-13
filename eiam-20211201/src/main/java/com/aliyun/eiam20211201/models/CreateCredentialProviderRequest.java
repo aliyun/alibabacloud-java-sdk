@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class CreateCredentialProviderRequest extends TeaModel {
     /**
      * <p>The idempotency token that ensures the idempotence of the request.</p>
-     * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+     * <p>Generate a unique parameter value from your client to ensure that different requests have unique values. ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,7 +22,7 @@ public class CreateCredentialProviderRequest extends TeaModel {
     public CreateCredentialProviderRequestCredentialProviderConfig credentialProviderConfig;
 
     /**
-     * <p>The identifier of the credential provider.</p>
+     * <p>The business identifier of the credential provider.</p>
      * <blockquote>
      * <p>Allowed characters include uppercase and lowercase letters, digits, and the special characters <code>.-_</code>. The length cannot exceed 64 characters.</p>
      * </blockquote>
@@ -148,14 +148,14 @@ public class CreateCredentialProviderRequest extends TeaModel {
         /**
          * <p>The list of allowed JWT issuers.</p>
          * <blockquote>
-         * <p>The list length cannot exceed 200.</p>
+         * <p>The list cannot contain more than 200 entries.</p>
          * </blockquote>
          */
         @NameInMap("AllowedTokenIssuers")
         public java.util.List<String> allowedTokenIssuers;
 
         /**
-         * <p>Specifies whether to enable the JWT derived short token capability.</p>
+         * <p>Specifies whether to enable the JWT derived short token feature.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -164,7 +164,7 @@ public class CreateCredentialProviderRequest extends TeaModel {
         public Boolean derivedShortTokenEnabled;
 
         /**
-         * <p>The validity duration of the JWT. Unit: seconds.</p>
+         * <p>The validity period of the JWT, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>900</p>
@@ -222,19 +222,29 @@ public class CreateCredentialProviderRequest extends TeaModel {
 
     public static class CreateCredentialProviderRequestCredentialProviderConfigOAuthProviderConfig extends TeaModel {
         /**
-         * <p>The endpoint address used to guide users through authorization. Conditionally required: required when AuthorizationFlow=user_federation and ProviderVendor=custom. For preset vendors, this can be automatically populated through DiscoveryUrl.</p>
+         * <p>The authorization endpoint of the OAuth protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/authorize">https://example.com/authorize</a></p>
          */
         @NameInMap("AuthorizationEndpoint")
         public String authorizationEndpoint;
 
         /**
-         * <p>The OAuth authorization flow type. Valid values: m2m: machine-to-machine (2LO, Client Credentials). user_federation: user federation (3LO, Authorization Code).</p>
+         * <p>The OAuth authorization flow type. Valid values:</p>
+         * <ul>
+         * <li>m2m: Machine-to-machine.</li>
+         * <li>user_federation: User federation.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>m2m</p>
          */
         @NameInMap("AuthorizationFlow")
         public String authorizationFlow;
 
         /**
-         * <p>The client_id in the OAuth protocol.</p>
+         * <p>The client_id in the OAuth protocol, which is the client ID.</p>
          * <blockquote>
          * <p>The length cannot exceed 128 characters.</p>
          * </blockquote>
@@ -247,7 +257,7 @@ public class CreateCredentialProviderRequest extends TeaModel {
         public String clientId;
 
         /**
-         * <p>The client_secret in the OAuth protocol.</p>
+         * <p>The client_secret in the OAuth protocol, which is the client secret.</p>
          * <blockquote>
          * <p>The length cannot exceed 1024 characters.</p>
          * </blockquote>
@@ -260,43 +270,73 @@ public class CreateCredentialProviderRequest extends TeaModel {
         public String clientSecret;
 
         /**
-         * <p>The Discovery document URL used to automatically retrieve OAuth endpoint configurations. Conditionally optional: used when AuthorizationFlow=user_federation. If DiscoveryUrl is not provided, you must manually configure fields such as TokenEndpoint and AuthorizationEndpoint.</p>
+         * <p>The URL of the OAuth Discovery document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/.well-known/openid-configuration">https://example.com/.well-known/openid-configuration</a></p>
          */
         @NameInMap("DiscoveryUrl")
         public String discoveryUrl;
 
+        /**
+         * <p>The Issuer endpoint of the OAuth protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/issuer">https://example.com/issuer</a></p>
+         */
         @NameInMap("Issuer")
         public String issuer;
 
         /**
-         * <p>The PKCE code_challenge generation method. Default value: s256.</p>
+         * <p>The algorithm used to calculate the Code Challenge in PKCE. Valid values:</p>
+         * <ul>
+         * <li>S256.</li>
+         * <li>plain.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>S256</p>
          */
         @NameInMap("PkceChallengeMethod")
         public String pkceChallengeMethod;
 
         /**
-         * <p>Specifies whether to use the PKCE extension to enhance security. We recommend that you always enable this feature.</p>
+         * <p>Specifies whether to enable PKCE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("PkceEnabled")
         public Boolean pkceEnabled;
 
         /**
-         * <p>The preset vendor or custom configuration. Optional. Default value: custom.</p>
+         * <p>The OAuth provider vendor type. Valid values:</p>
+         * <ul>
+         * <li>custom: Custom.</li>
+         * <li>dingtalk: DingTalk.</li>
+         * <li>feishu: Lark.</li>
+         * <li>github: GitHub.</li>
+         * <li>microsoft: Microsoft.</li>
+         * <li>google: Google.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         @NameInMap("ProviderVendor")
         public String providerVendor;
 
         /**
-         * <p>The scope in the OAuth protocol, which defines the permission range.</p>
+         * <p>The scope in the OAuth protocol, which specifies the permission scope.</p>
          * <blockquote>
-         * <p>The Scope configuration on the credential provider serves as the fallback value. If the scope parameter is not specified when calling the DeveloperAPI to obtain an OAuth Access Token, the Scope configuration on the credential provider is used for issuance.</p>
+         * <p>The Scope configuration on the credential provider serves as the default value. If the scope parameter is not specified when calling the DeveloperAPI to obtain an OAuth Access Token, the Scope configuration on the credential provider is used for issuance.</p>
          * </blockquote>
          * <blockquote>
          * <p>Notice: Separate multiple Scope values with spaces.</p>
          * </blockquote>
-         * <p>Restrictions for each individual Scope value:</p>
+         * <p>The following restrictions apply to each individual Scope value:</p>
          * <ol>
-         * <li>Allowed characters: lowercase letters, digits, and the special characters <code>|/:_-.</code></li>
+         * <li>Allowed characters: lowercase letters, digits, and the special characters <code>|/:_-.</code>.</li>
          * <li>Must contain at least one lowercase letter or digit.</li>
          * <li>Must start with the special character <code>.</code>, a lowercase letter, or a digit.</li>
          * <li>The length cannot exceed 1024 characters.</li>
@@ -311,7 +351,7 @@ public class CreateCredentialProviderRequest extends TeaModel {
         /**
          * <p>The token endpoint of the OAuth protocol.</p>
          * <blockquote>
-         * <p>Must start with <code>http://</code> or <code>https://</code>, and the length cannot exceed 1024 characters.</p>
+         * <p>The value must start with <code>http://</code> or <code>https://</code>, and the length cannot exceed 1024 characters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

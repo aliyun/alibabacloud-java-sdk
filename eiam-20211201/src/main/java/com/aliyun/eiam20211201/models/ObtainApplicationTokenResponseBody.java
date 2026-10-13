@@ -78,7 +78,7 @@ public class ObtainApplicationTokenResponseBody extends TeaModel {
         public String applicationTokenType;
 
         /**
-         * <p>The time when the application token was created.</p>
+         * <p>The time when the application token was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1735610930000</p>
@@ -87,7 +87,7 @@ public class ObtainApplicationTokenResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The expiration time.</p>
+         * <p>The expiration time. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1735610950000</p>
@@ -105,7 +105,7 @@ public class ObtainApplicationTokenResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The last used time.</p>
+         * <p>The last used time. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1735610930000</p>

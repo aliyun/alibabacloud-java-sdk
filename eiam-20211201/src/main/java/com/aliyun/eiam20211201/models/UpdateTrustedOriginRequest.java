@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTrustedOriginRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The idempotence token.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-example</p>
@@ -14,7 +14,7 @@ public class UpdateTrustedOriginRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the IDaaS EIAM instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class UpdateTrustedOriginRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>If this parameter is not specified, the trusted origin name is not modified.</p>
+     * <p>The trusted origin name.</p>
      * 
      * <strong>example:</strong>
      * <p>Qoder Production Console</p>
@@ -33,7 +33,7 @@ public class UpdateTrustedOriginRequest extends TeaModel {
     public String trustOriginName;
 
     /**
-     * <p>The ID of the trusted origin.</p>
+     * <p>The trusted origin ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class UpdateTrustedOriginRequest extends TeaModel {
     public String trustedOriginId;
 
     /**
-     * <p>When specified, the existing values are entirely replaced. Only iframe_embed and cors are supported.</p>
+     * <p>The trusted origin scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>iframe_embed</p>

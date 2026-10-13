@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCloudAccountRoleResponseBody extends TeaModel {
     /**
-     * <p>The ID of the cloud role.</p>
+     * <p>The cloud role ID.</p>
      * 
      * <strong>example:</strong>
      * <p>carole_01kmek49aqxxxx</p>
@@ -14,7 +14,7 @@ public class CreateCloudAccountRoleResponseBody extends TeaModel {
     public String cloudAccountRoleId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>

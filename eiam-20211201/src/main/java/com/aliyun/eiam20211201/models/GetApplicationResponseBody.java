@@ -41,9 +41,15 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyApplicationApplicationOwner extends TeaModel {
+        /**
+         * <p>The list of group scopes for synchronization authorization.</p>
+         */
         @NameInMap("GroupIds")
         public java.util.List<String> groupIds;
 
+        /**
+         * <p>The list of user IDs.</p>
+         */
         @NameInMap("UserIds")
         public java.util.List<String> userIds;
 
@@ -71,9 +77,21 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyApplicationCustomFields extends TeaModel {
+        /**
+         * <p>The identifier of the application custom field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent_source_id</p>
+         */
         @NameInMap("FieldName")
         public String fieldName;
 
+        /**
+         * <p>The value of the application custom field. When FieldName is set to agentType, valid values are bailian, pai, dify, and volcano. When FieldName is set to agentExternalId, enter the corresponding value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>38899</p>
+         */
         @NameInMap("FieldValue")
         public String fieldValue;
 
@@ -102,7 +120,7 @@ public class GetApplicationResponseBody extends TeaModel {
 
     public static class GetApplicationResponseBodyApplication extends TeaModel {
         /**
-         * <p>The status of the Developer API feature for the application. Valid values:</p>
+         * <p>The Developer API feature status of the application. Valid values:</p>
          * <ul>
          * <li>enabled: Enabled.</li>
          * <li>disabled: Disabled.</li>
@@ -149,11 +167,14 @@ public class GetApplicationResponseBody extends TeaModel {
          * <p>The application name.</p>
          * 
          * <strong>example:</strong>
-         * <p>SAML application</p>
+         * <p>SAML Application</p>
          */
         @NameInMap("ApplicationName")
         public String applicationName;
 
+        /**
+         * <p>The application owner.</p>
+         */
         @NameInMap("ApplicationOwner")
         public GetApplicationResponseBodyApplicationApplicationOwner applicationOwner;
 
@@ -171,7 +192,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String applicationSourceType;
 
         /**
-         * <p>The ID of the application template associated during creation. This value is returned only when the application was created from an application template.</p>
+         * <p>The application template ID associated during creation. This value is returned only when the application was created from an application template.</p>
          * 
          * <strong>example:</strong>
          * <p>apt_rpa_tdsxxx</p>
@@ -208,7 +229,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String clientId;
 
         /**
-         * <p>The time when the application was created. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The time when the application was created, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -216,11 +237,14 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The list of application custom fields.</p>
+         */
         @NameInMap("CustomFields")
         public java.util.List<GetApplicationResponseBodyApplicationCustomFields> customFields;
 
         /**
-         * <p>Indicates whether the custom Subject field in the token is enabled. After this feature is enabled, the issued Access Token changes from \&lt;clientId\&gt; to \&lt;clientId\&gt;:\&lt;client.activeSubjectUrn\&gt;, where client.activeSubjectUrn is configured in the attribute mapping of the federated identity credential of the application.</p>
+         * <p>Indicates whether the custom Subject field in the token is enabled. After this feature is enabled, the issued Access Token changes from <clientId> to <clientId>:&lt;client.activeSubjectUrn&gt;, where client.activeSubjectUrn is configured in the attribute mapping of the federated identity credential of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -232,7 +256,7 @@ public class GetApplicationResponseBody extends TeaModel {
          * <p>The application description.</p>
          * 
          * <strong>example:</strong>
-         * <p>An application for test environment</p>
+         * <p>An application for the test environment</p>
          */
         @NameInMap("Description")
         public String description;
@@ -288,7 +312,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String managedServiceCode;
 
         /**
-         * <p>The unique identifier of the ResourceServer, which corresponds to the ResourceServer audience.</p>
+         * <p>The unique identifier of the ResourceServer, corresponding to the ResourceServer audience.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com">https://www.example.com</a></p>
@@ -323,6 +347,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("ServiceManaged")
         public Boolean serviceManaged;
 
+        /**
+         * <p>The list of capabilities configured through smart configuration.</p>
+         */
         @NameInMap("SmartConfigCapabilities")
         public java.util.List<String> smartConfigCapabilities;
 
@@ -355,7 +382,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the application was last updated. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The time when the application was last updated, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>

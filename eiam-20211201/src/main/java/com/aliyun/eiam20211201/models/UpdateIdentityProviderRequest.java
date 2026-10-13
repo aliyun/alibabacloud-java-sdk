@@ -772,7 +772,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
 
     public static class UpdateIdentityProviderRequestSamlConfigCertificates extends TeaModel {
         /**
-         * <p>The certificate content.</p>
+         * <p>The content of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE----- MIIC0jCCAbqgAwIBAgIQXXXXX-----END CERTIFICATE-----</p>
@@ -806,7 +806,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String bindingMethod;
 
         /**
-         * <p>The certificate list of the IdP.</p>
+         * <p>The list of IdP certificates.</p>
          */
         @NameInMap("Certificates")
         public java.util.List<UpdateIdentityProviderRequestSamlConfigCertificates> certificates;
@@ -849,12 +849,18 @@ public class UpdateIdentityProviderRequest extends TeaModel {
 
         /**
          * <p>Specifies whether the external IdP is required to sign the Assertion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("WantAssertionsSigned")
         public Boolean wantAssertionsSigned;
 
         /**
          * <p>Specifies whether the external IdP is required to sign the Response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("WantResponseSigned")
         public Boolean wantResponseSigned;
@@ -950,6 +956,8 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String authorizeCallbackDomain;
 
         /**
+         * <p>The WeCom contacts secret.</p>
+         * 
          * <strong>example:</strong>
          * <p>mPLLiWv-_9witxxxEJCpk1xkF5hOgBzpRt4kBkxxx</p>
          */
@@ -966,7 +974,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String corpSecret;
 
         /**
-         * <p>The trusted domain name.</p>
+         * <p>The trusted domain.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxx.aliyunidaas.com">https://xxx.aliyunidaas.com</a></p>

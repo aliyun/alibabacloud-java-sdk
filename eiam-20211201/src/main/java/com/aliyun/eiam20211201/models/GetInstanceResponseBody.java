@@ -42,7 +42,7 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyInstanceDefaultEndpoint extends TeaModel {
         /**
-         * <p>The domain name of the instance.</p>
+         * <p>The domain name address of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>example-xxx.aliyunidaas.com</p>
@@ -106,7 +106,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String initDomain;
 
         /**
-         * <p>The automatic redirect status of the initialization domain name. Valid values:</p>
+         * <p>The auto-redirect status of the initialization domain name. Valid values:</p>
          * <ul>
          * <li><p>enabled: Enabled.</p>
          * </li>
@@ -153,6 +153,8 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyInstanceReplicationConfiguration extends TeaModel {
         /**
+         * <p>The instance ID of the backup instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>idaas_xxxx</p>
          */
@@ -160,6 +162,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String backupInstanceId;
 
         /**
+         * <p>The region ID of the backup instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -167,6 +171,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String backupInstanceRegionId;
 
         /**
+         * <p>The instance ID of the primary instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>idaas_xxxx</p>
          */
@@ -174,6 +180,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String primaryInstanceId;
 
         /**
+         * <p>The region ID of the primary instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -181,6 +189,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String primaryInstanceRegionId;
 
         /**
+         * <p>The time when the disaster recovery data replication was created. The value is a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1778499337000</p>
          */
@@ -236,7 +246,7 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyInstance extends TeaModel {
         /**
-         * <p>The time when the instance was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the instance was created. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1550115455000</p>
@@ -245,6 +255,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>Indicates whether cross-region replication is enabled. Valid values: enabled or disabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>enabled</p>
          */
@@ -252,6 +264,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String crossRegionReplication;
 
         /**
+         * <p>The cross-region replication role. Valid values: primary indicates the primary instance, and backup indicates the backup instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>primary</p>
          */
@@ -259,13 +273,13 @@ public class GetInstanceResponseBody extends TeaModel {
         public String crossRegionReplicationRole;
 
         /**
-         * <p>The default domain name of the instance. This field is no longer maintained. Use the DomainConfig fields or refer to the query domain name list operation instead.</p>
+         * <p>The default domain name of the instance. This field is no longer maintained. Use the DomainConfig fields or refer to the domain name list query operation instead.</p>
          */
         @NameInMap("DefaultEndpoint")
         public GetInstanceResponseBodyInstanceDefaultEndpoint defaultEndpoint;
 
         /**
-         * <p>The description of the instance.</p>
+         * <p>The instance description.</p>
          * 
          * <strong>example:</strong>
          * <p>instance_for_test</p>
@@ -280,12 +294,14 @@ public class GetInstanceResponseBody extends TeaModel {
         public GetInstanceResponseBodyInstanceDomainConfig domainConfig;
 
         /**
-         * <p>The public egress CIDR blocks of the instance. For example, during Active Directory (AD) account synchronization, the EIAM instance accesses your AD server through these public CIDR blocks.</p>
+         * <p>The egress public IP address ranges of the instance. For example, during AD account synchronization, the EIAM instance accesses your AD server through these public IP address ranges.</p>
          */
         @NameInMap("EgressAddresses")
         public java.util.List<String> egressAddresses;
 
         /**
+         * <p>The failover activation status of the instance. Valid values: active indicates activated, and inactive indicates not activated.</p>
+         * 
          * <strong>example:</strong>
          * <p>inactive</p>
          */
@@ -302,7 +318,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The ServiceCode of the Alibaba Cloud service that manages the instance.</p>
+         * <p>The service code of the Alibaba Cloud service that manages the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>sase</p>
@@ -313,6 +329,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("ManagedServiceCode")
         public String managedServiceCode;
 
+        /**
+         * <p>The cross-region replication configuration. This parameter is returned only when CrossRegionReplication is set to enabled.</p>
+         */
         @NameInMap("ReplicationConfiguration")
         public GetInstanceResponseBodyInstanceReplicationConfiguration replicationConfiguration;
 

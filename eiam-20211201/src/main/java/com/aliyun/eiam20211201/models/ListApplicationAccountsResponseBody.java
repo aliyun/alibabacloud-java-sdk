@@ -86,7 +86,7 @@ public class ListApplicationAccountsResponseBody extends TeaModel {
         public String applicationUsername;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the application account was created. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1737510353000</p>

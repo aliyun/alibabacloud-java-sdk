@@ -42,7 +42,7 @@ public class ListFederatedCredentialProvidersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token.</p>
+     * <p>The pagination token for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>
@@ -51,7 +51,7 @@ public class ListFederatedCredentialProvidersRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The token used to query the previous page.</p>
+     * <p>The pagination token for the previous page.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxxxexample</p>

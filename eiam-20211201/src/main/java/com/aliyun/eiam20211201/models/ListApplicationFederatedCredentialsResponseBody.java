@@ -189,7 +189,7 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
         public java.util.List<String> instanceIds;
 
         /**
-         * <p>The GCP project ID.</p>
+         * <p>The GCP project ID to which the resource belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>6193072600270353961</p>
@@ -198,7 +198,7 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
         public String projectId;
 
         /**
-         * <p>The sub claim corresponding to the service account.</p>
+         * <p>The subject (sub) that corresponds to the service account.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789</p>
@@ -468,7 +468,7 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1758785994982</p>
@@ -504,7 +504,7 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The last used time.</p>
+         * <p>The last used time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1758785994982</p>
@@ -534,7 +534,7 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1758785994982</p>
@@ -554,8 +554,8 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
         /**
          * <p>The verification mode. Valid values:</p>
          * <ul>
-         * <li>freedom: free mode.</li>
-         * <li>structured: structured mode.</li>
+         * <li>freedom: Free mode.</li>
+         * <li>structured: Structured mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>

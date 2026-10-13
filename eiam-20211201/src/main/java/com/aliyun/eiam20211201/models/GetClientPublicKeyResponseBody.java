@@ -69,7 +69,7 @@ public class GetClientPublicKeyResponseBody extends TeaModel {
         public String clientPublicKeyId;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1731305755000</p>
@@ -87,7 +87,7 @@ public class GetClientPublicKeyResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The last time the key pair was used.</p>
+         * <p>The last used time. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1771305755000</p>

@@ -15,7 +15,7 @@ public class ListAuthorizationServersRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of entries per page for a paged query.</p>
+     * <p>The maximum number of entries per page for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
