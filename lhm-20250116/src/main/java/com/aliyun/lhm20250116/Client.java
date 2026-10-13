@@ -1812,6 +1812,156 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2>接口说明</h2>
+     * <p>校验一个数据源名称在当前租户下是否已被占用，用于新建数据源或修改数据源名称之前的前置检查。
+     * 同租户内的数据源名称不可重复，名称冲突时新建会直接失败。先调用本接口确认名称可用，可以避免把冲突留到提交新建请求时才暴露。</p>
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><code>dsName</code> 为待校验的数据源名称，按名称精确匹配当前租户下未删除的数据源，不支持前缀或模糊匹配。</li>
+     * <li>校验范围限定在当前租户，其他租户下的同名数据源不影响结果；已被删除的数据源名称可以重新使用。</li>
+     * </ul>
+     * <h2>返回说明</h2>
+     * <p>返回单值响应，<code>data</code> 为布尔值，表示名称校验结果：<code>true</code>-已存在同名数据源，该名称不可用；<code>false</code>-该名称未被占用，可以用于新建。
+     * 注意 <code>data</code> 的语义与 <code>success</code> 相反方向：<code>success</code> 为 <code>true</code> 且 <code>data</code> 为 <code>true</code> 表示接口调用成功且查到了同名数据源，此时应当更换名称。<code>success</code> 为 <code>false</code> 时结合 <code>errCode</code> 与 <code>errMessage</code> 定位调用失败原因。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>停止探查任务</p>
+     * 
+     * @param request ExecMetaProfilingSkillJobDisableRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExecMetaProfilingSkillJobDisableResponse
+     */
+    public ExecMetaProfilingSkillJobDisableResponse execMetaProfilingSkillJobDisableWithOptions(ExecMetaProfilingSkillJobDisableRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dsId)) {
+            body.put("dsId", request.dsId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExecMetaProfilingSkillJobDisable"),
+            new TeaPair("version", "2025-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/meta/skill/profiling/job/disable"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExecMetaProfilingSkillJobDisableResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>接口说明</h2>
+     * <p>校验一个数据源名称在当前租户下是否已被占用，用于新建数据源或修改数据源名称之前的前置检查。
+     * 同租户内的数据源名称不可重复，名称冲突时新建会直接失败。先调用本接口确认名称可用，可以避免把冲突留到提交新建请求时才暴露。</p>
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><code>dsName</code> 为待校验的数据源名称，按名称精确匹配当前租户下未删除的数据源，不支持前缀或模糊匹配。</li>
+     * <li>校验范围限定在当前租户，其他租户下的同名数据源不影响结果；已被删除的数据源名称可以重新使用。</li>
+     * </ul>
+     * <h2>返回说明</h2>
+     * <p>返回单值响应，<code>data</code> 为布尔值，表示名称校验结果：<code>true</code>-已存在同名数据源，该名称不可用；<code>false</code>-该名称未被占用，可以用于新建。
+     * 注意 <code>data</code> 的语义与 <code>success</code> 相反方向：<code>success</code> 为 <code>true</code> 且 <code>data</code> 为 <code>true</code> 表示接口调用成功且查到了同名数据源，此时应当更换名称。<code>success</code> 为 <code>false</code> 时结合 <code>errCode</code> 与 <code>errMessage</code> 定位调用失败原因。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>停止探查任务</p>
+     * 
+     * @param request ExecMetaProfilingSkillJobDisableRequest
+     * @return ExecMetaProfilingSkillJobDisableResponse
+     */
+    public ExecMetaProfilingSkillJobDisableResponse execMetaProfilingSkillJobDisable(ExecMetaProfilingSkillJobDisableRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.execMetaProfilingSkillJobDisableWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>接口说明</h2>
+     * <p>校验一个数据源名称在当前租户下是否已被占用，用于新建数据源或修改数据源名称之前的前置检查。
+     * 同租户内的数据源名称不可重复，名称冲突时新建会直接失败。先调用本接口确认名称可用，可以避免把冲突留到提交新建请求时才暴露。</p>
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><code>dsName</code> 为待校验的数据源名称，按名称精确匹配当前租户下未删除的数据源，不支持前缀或模糊匹配。</li>
+     * <li>校验范围限定在当前租户，其他租户下的同名数据源不影响结果；已被删除的数据源名称可以重新使用。</li>
+     * </ul>
+     * <h2>返回说明</h2>
+     * <p>返回单值响应，<code>data</code> 为布尔值，表示名称校验结果：<code>true</code>-已存在同名数据源，该名称不可用；<code>false</code>-该名称未被占用，可以用于新建。
+     * 注意 <code>data</code> 的语义与 <code>success</code> 相反方向：<code>success</code> 为 <code>true</code> 且 <code>data</code> 为 <code>true</code> 表示接口调用成功且查到了同名数据源，此时应当更换名称。<code>success</code> 为 <code>false</code> 时结合 <code>errCode</code> 与 <code>errMessage</code> 定位调用失败原因。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>立即执行探查任务</p>
+     * 
+     * @param request ExecMetaProfilingTaskRunRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExecMetaProfilingTaskRunResponse
+     */
+    public ExecMetaProfilingTaskRunResponse execMetaProfilingTaskRunWithOptions(ExecMetaProfilingTaskRunRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.batchNo)) {
+            body.put("batchNo", request.batchNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.componentId)) {
+            body.put("componentId", request.componentId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExecMetaProfilingTaskRun"),
+            new TeaPair("version", "2025-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/meta/profiling/task/runNow"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExecMetaProfilingTaskRunResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>接口说明</h2>
+     * <p>校验一个数据源名称在当前租户下是否已被占用，用于新建数据源或修改数据源名称之前的前置检查。
+     * 同租户内的数据源名称不可重复，名称冲突时新建会直接失败。先调用本接口确认名称可用，可以避免把冲突留到提交新建请求时才暴露。</p>
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><code>dsName</code> 为待校验的数据源名称，按名称精确匹配当前租户下未删除的数据源，不支持前缀或模糊匹配。</li>
+     * <li>校验范围限定在当前租户，其他租户下的同名数据源不影响结果；已被删除的数据源名称可以重新使用。</li>
+     * </ul>
+     * <h2>返回说明</h2>
+     * <p>返回单值响应，<code>data</code> 为布尔值，表示名称校验结果：<code>true</code>-已存在同名数据源，该名称不可用；<code>false</code>-该名称未被占用，可以用于新建。
+     * 注意 <code>data</code> 的语义与 <code>success</code> 相反方向：<code>success</code> 为 <code>true</code> 且 <code>data</code> 为 <code>true</code> 表示接口调用成功且查到了同名数据源，此时应当更换名称。<code>success</code> 为 <code>false</code> 时结合 <code>errCode</code> 与 <code>errMessage</code> 定位调用失败原因。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>立即执行探查任务</p>
+     * 
+     * @param request ExecMetaProfilingTaskRunRequest
+     * @return ExecMetaProfilingTaskRunResponse
+     */
+    public ExecMetaProfilingTaskRunResponse execMetaProfilingTaskRun(ExecMetaProfilingTaskRunRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.execMetaProfilingTaskRunWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Operation description</h2>
      * <p>Performs a synchronous conversion of a single SQL script. The parsing and rewriting are completed within a single call, and the SQL text in the target dialect is returned directly. This operation is suitable for manually verifying individual statements or validating conversion results. The conversion processes statements as query statements (DQL). To convert entire scripts or large files in batches, use the asynchronous script conversion task operation to avoid synchronous call timeouts.</p>
      * <h2>Request description</h2>
@@ -3319,6 +3469,85 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
+     * <p>Queries the overview of a data validation report by validation batch. Returns the number of tables validated, the number of passed tables, the pass rate, statistics by partition and field, and the report generation status. This operation serves as the primary entry point for viewing validation results. For table-level details, call the report instance or column-level result API operation.</p>
+     * <h2>Request description</h2>
+     * <ul>
+     * <li><code>batchId</code>: Required. The ID of the validation job (batch), which is obtained from the return value of the save validation task API operation. Subsequent execution, termination, rerun, and report API operations use this ID to reference the same validation.</li>
+     * </ul>
+     * <h2>Response description</h2>
+     * <p>Returns a single-value response. The <code>data</code> field is the overview object: <code>checkType</code> indicates the validation type (0: data volume comparison, 1: metric comparison, 2: weak content comparison), <code>checkResult</code> indicates the validation result (0: no records, 1: passed, 2: failed), <code>reportStatus</code> indicates the report generation status (0: not generated, 1: generating, 2: generated), and <code>reportGenerateMessage</code> provides the generation prompt message. The statistics section includes the number of validated tables, failed tables, passed tables, skipped tables and partitions, validated partitions, validated rows and passed rows, pass rate (<code>passProcess</code> is a decimal, <code>passProcessExport</code> is a string with a percentage sign), the number of validated and passed fields, as well as the source and destination data source information, associated task ID and time, and template information in metric validation scenarios.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves an overview of incremental changes in a data source.</p>
+     * 
+     * @param request GetMetaCompareIncrementDbOverviewRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMetaCompareIncrementDbOverviewResponse
+     */
+    public GetMetaCompareIncrementDbOverviewResponse getMetaCompareIncrementDbOverviewWithOptions(GetMetaCompareIncrementDbOverviewRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogName)) {
+            body.put("catalogName", request.catalogName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
+            body.put("dbName", request.dbName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isSummary)) {
+            body.put("isSummary", request.isSummary);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("taskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMetaCompareIncrementDbOverview"),
+            new TeaPair("version", "2025-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/meta/profiling/result/databases/overviewOfCompareIncrement"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMetaCompareIncrementDbOverviewResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Queries the overview of a data validation report by validation batch. Returns the number of tables validated, the number of passed tables, the pass rate, statistics by partition and field, and the report generation status. This operation serves as the primary entry point for viewing validation results. For table-level details, call the report instance or column-level result API operation.</p>
+     * <h2>Request description</h2>
+     * <ul>
+     * <li><code>batchId</code>: Required. The ID of the validation job (batch), which is obtained from the return value of the save validation task API operation. Subsequent execution, termination, rerun, and report API operations use this ID to reference the same validation.</li>
+     * </ul>
+     * <h2>Response description</h2>
+     * <p>Returns a single-value response. The <code>data</code> field is the overview object: <code>checkType</code> indicates the validation type (0: data volume comparison, 1: metric comparison, 2: weak content comparison), <code>checkResult</code> indicates the validation result (0: no records, 1: passed, 2: failed), <code>reportStatus</code> indicates the report generation status (0: not generated, 1: generating, 2: generated), and <code>reportGenerateMessage</code> provides the generation prompt message. The statistics section includes the number of validated tables, failed tables, passed tables, skipped tables and partitions, validated partitions, validated rows and passed rows, pass rate (<code>passProcess</code> is a decimal, <code>passProcessExport</code> is a string with a percentage sign), the number of validated and passed fields, as well as the source and destination data source information, associated task ID and time, and template information in metric validation scenarios.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves an overview of incremental changes in a data source.</p>
+     * 
+     * @param request GetMetaCompareIncrementDbOverviewRequest
+     * @return GetMetaCompareIncrementDbOverviewResponse
+     */
+    public GetMetaCompareIncrementDbOverviewResponse getMetaCompareIncrementDbOverview(GetMetaCompareIncrementDbOverviewRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getMetaCompareIncrementDbOverviewWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
      * <p>Retrieves temporary authorization credentials required for direct file uploads to Object Storage Service (OSS). The response includes a temporary AccessKey, security token, access endpoint, bucket, allowed upload directory prefix, upload policy and signature, and expiration time. These credentials enable the client to upload files by using form-based direct upload (PostObject) without storing long-term keys on the client.</p>
      * <h2>Request description</h2>
      * <ul>
@@ -3375,6 +3604,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getMetaOssTempKeyWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the data source overview.</p>
+     * 
+     * @param request GetMetaProfilingResultDbOverviewRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMetaProfilingResultDbOverviewResponse
+     */
+    public GetMetaProfilingResultDbOverviewResponse getMetaProfilingResultDbOverviewWithOptions(GetMetaProfilingResultDbOverviewRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.isSummary)) {
+            query.put("isSummary", request.isSummary);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("taskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMetaProfilingResultDbOverview"),
+            new TeaPair("version", "2025-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/meta/profiling/result/databases/overviewOfTaskDimension"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMetaProfilingResultDbOverviewResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the data source overview.</p>
+     * 
+     * @param request GetMetaProfilingResultDbOverviewRequest
+     * @return GetMetaProfilingResultDbOverviewResponse
+     */
+    public GetMetaProfilingResultDbOverviewResponse getMetaProfilingResultDbOverview(GetMetaProfilingResultDbOverviewRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getMetaProfilingResultDbOverviewWithOptions(request, headers, runtime);
     }
 
     /**
@@ -4461,6 +4741,382 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取catalog分页列表</p>
+     * 
+     * @param request ListMetaProfilingResultCatalogPageRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMetaProfilingResultCatalogPageResponse
+     */
+    public ListMetaProfilingResultCatalogPageResponse listMetaProfilingResultCatalogPageWithOptions(ListMetaProfilingResultCatalogPageRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogName)) {
+            body.put("catalogName", request.catalogName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
+            body.put("dbName", request.dbName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupBy)) {
+            body.put("groupBy", request.groupBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needTotalCount)) {
+            body.put("needTotalCount", request.needTotalCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            body.put("orderBy", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderDirection)) {
+            body.put("orderDirection", request.orderDirection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageIndex)) {
+            body.put("pageIndex", request.pageIndex);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("taskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMetaProfilingResultCatalogPage"),
+            new TeaPair("version", "2025-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/meta/profiling/result/catalogs/pageOfTaskDimension"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMetaProfilingResultCatalogPageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取catalog分页列表</p>
+     * 
+     * @param request ListMetaProfilingResultCatalogPageRequest
+     * @return ListMetaProfilingResultCatalogPageResponse
+     */
+    public ListMetaProfilingResultCatalogPageResponse listMetaProfilingResultCatalogPage(ListMetaProfilingResultCatalogPageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMetaProfilingResultCatalogPageWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paging query on table-level details in metadata profiling results, and returns the storage size, record count, partition information, external or transactional property, migration status, and last access time of each table.</p>
+     * 
+     * @param request ListMetaProfilingResultTablePageRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMetaProfilingResultTablePageResponse
+     */
+    public ListMetaProfilingResultTablePageResponse listMetaProfilingResultTablePageWithOptions(ListMetaProfilingResultTablePageRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.componentType)) {
+            body.put("componentType", request.componentType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataRange)) {
+            body.put("dataRange", request.dataRange);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSize)) {
+            body.put("dataSize", request.dataSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataUnit)) {
+            body.put("dataUnit", request.dataUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
+            body.put("dbName", request.dbName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupBy)) {
+            body.put("groupBy", request.groupBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isPartitioned)) {
+            body.put("isPartitioned", request.isPartitioned);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isSummary)) {
+            body.put("isSummary", request.isSummary);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.migrationStatus)) {
+            body.put("migrationStatus", request.migrationStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needTotalCount)) {
+            body.put("needTotalCount", request.needTotalCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            body.put("orderBy", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderDirection)) {
+            body.put("orderDirection", request.orderDirection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageIndex)) {
+            body.put("pageIndex", request.pageIndex);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableName)) {
+            body.put("tableName", request.tableName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("taskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMetaProfilingResultTablePage"),
+            new TeaPair("version", "2025-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/meta/profiling/result/tables/pageOfTaskDimension"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMetaProfilingResultTablePageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paging query on table-level details in metadata profiling results, and returns the storage size, record count, partition information, external or transactional property, migration status, and last access time of each table.</p>
+     * 
+     * @param request ListMetaProfilingResultTablePageRequest
+     * @return ListMetaProfilingResultTablePageResponse
+     */
+    public ListMetaProfilingResultTablePageResponse listMetaProfilingResultTablePage(ListMetaProfilingResultTablePageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMetaProfilingResultTablePageWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询函数分页列表</p>
+     * 
+     * @param request ListMetaProfilingResultUdfPageRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMetaProfilingResultUdfPageResponse
+     */
+    public ListMetaProfilingResultUdfPageResponse listMetaProfilingResultUdfPageWithOptions(ListMetaProfilingResultUdfPageRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogName)) {
+            body.put("catalogName", request.catalogName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.componentType)) {
+            body.put("componentType", request.componentType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
+            body.put("dbName", request.dbName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.funcName)) {
+            body.put("funcName", request.funcName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupBy)) {
+            body.put("groupBy", request.groupBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isSummary)) {
+            body.put("isSummary", request.isSummary);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needTotalCount)) {
+            body.put("needTotalCount", request.needTotalCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            body.put("orderBy", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderDirection)) {
+            body.put("orderDirection", request.orderDirection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageIndex)) {
+            body.put("pageIndex", request.pageIndex);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("taskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMetaProfilingResultUdfPage"),
+            new TeaPair("version", "2025-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/meta/profiling/result/udf/pageOfTaskDimension"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMetaProfilingResultUdfPageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询函数分页列表</p>
+     * 
+     * @param request ListMetaProfilingResultUdfPageRequest
+     * @return ListMetaProfilingResultUdfPageResponse
+     */
+    public ListMetaProfilingResultUdfPageResponse listMetaProfilingResultUdfPage(ListMetaProfilingResultUdfPageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMetaProfilingResultUdfPageWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paged query on metadata profiling nodes and their scheduling and execute information, and returns paging data including basic node information, associated data components, comparison difference counts, the latest execute batch, and the next scheduled time.</p>
+     * 
+     * @param request ListMetaProfilingSkillJobPageRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMetaProfilingSkillJobPageResponse
+     */
+    public ListMetaProfilingSkillJobPageResponse listMetaProfilingSkillJobPageWithOptions(ListMetaProfilingSkillJobPageRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.componentIds)) {
+            body.put("componentIds", request.componentIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dsId)) {
+            body.put("dsId", request.dsId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dsName)) {
+            body.put("dsName", request.dsName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dsType)) {
+            body.put("dsType", request.dsType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupBy)) {
+            body.put("groupBy", request.groupBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isDisplaySystemTask)) {
+            body.put("isDisplaySystemTask", request.isDisplaySystemTask);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            body.put("jobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobName)) {
+            body.put("jobName", request.jobName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needTotalCount)) {
+            body.put("needTotalCount", request.needTotalCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            body.put("orderBy", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderDirection)) {
+            body.put("orderDirection", request.orderDirection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageIndex)) {
+            body.put("pageIndex", request.pageIndex);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMetaProfilingSkillJobPage"),
+            new TeaPair("version", "2025-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/meta/skill/profiling/job/page"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMetaProfilingSkillJobPageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paged query on metadata profiling nodes and their scheduling and execute information, and returns paging data including basic node information, associated data components, comparison difference counts, the latest execute batch, and the next scheduled time.</p>
+     * 
+     * @param request ListMetaProfilingSkillJobPageRequest
+     * @return ListMetaProfilingSkillJobPageResponse
+     */
+    public ListMetaProfilingSkillJobPageResponse listMetaProfilingSkillJobPage(ListMetaProfilingSkillJobPageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMetaProfilingSkillJobPageWithOptions(request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h2>Interface Description</h2>
      * <p>This is an internal interface for submitting a workflow transformation task. It submits a workflow transformation based on the source, target data sources, and SQL node type mapping. The interface synchronously returns the acceptance result, and the asynchronous execution result can be queried through GetInnerConvertAsyncResult.</p>
@@ -4829,6 +5485,93 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.singleSqlDryRunWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates or updates a metadata profiling task by using a skill, configures the target component, profiling schema, profiling type, and rules, and returns the profiling task ID.</p>
+     * 
+     * @param request SkillAddMetaProfilingJobRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SkillAddMetaProfilingJobResponse
+     */
+    public SkillAddMetaProfilingJobResponse skillAddMetaProfilingJobWithOptions(SkillAddMetaProfilingJobRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.componentId)) {
+            body.put("componentId", request.componentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobDesc)) {
+            body.put("jobDesc", request.jobDesc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            body.put("jobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobName)) {
+            body.put("jobName", request.jobName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metaIds)) {
+            body.put("metaIds", request.metaIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pluginId)) {
+            body.put("pluginId", request.pluginId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.profilingFlag)) {
+            body.put("profilingFlag", request.profilingFlag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.profilingPermission)) {
+            body.put("profilingPermission", request.profilingPermission);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.profilingRule)) {
+            body.put("profilingRule", request.profilingRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.profilingSchemaList)) {
+            body.put("profilingSchemaList", request.profilingSchemaList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.profilingType)) {
+            body.put("profilingType", request.profilingType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SkillAddMetaProfilingJob"),
+            new TeaPair("version", "2025-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/meta/skill/profiling/job"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SkillAddMetaProfilingJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates or updates a metadata profiling task by using a skill, configures the target component, profiling schema, profiling type, and rules, and returns the profiling task ID.</p>
+     * 
+     * @param request SkillAddMetaProfilingJobRequest
+     * @return SkillAddMetaProfilingJobResponse
+     */
+    public SkillAddMetaProfilingJobResponse skillAddMetaProfilingJob(SkillAddMetaProfilingJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.skillAddMetaProfilingJobWithOptions(request, headers, runtime);
     }
 
     /**

@@ -1,3 +1,15 @@
+2026-10-13 Version: 1.3.0
+- Support API ExecMetaProfilingSkillJobDisable.
+- Support API ExecMetaProfilingTaskRun.
+- Support API GetMetaCompareIncrementDbOverview.
+- Support API GetMetaProfilingResultDbOverview.
+- Support API ListMetaProfilingResultCatalogPage.
+- Support API ListMetaProfilingResultTablePage.
+- Support API ListMetaProfilingResultUdfPage.
+- Support API ListMetaProfilingSkillJobPage.
+- Support API SkillAddMetaProfilingJob.
+
+
 2026-09-18 Version: 1.2.0
 - Support API SaveSkillAuditRecord.
 
