@@ -4,9 +4,6 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class UpdateAlertStrategyRequest extends TeaModel {
-    @NameInMap("X-Debug-Id")
-    public String xDebugId;
-
     /**
      * <p>Specifies whether the alert policy is enabled.</p>
      * <p>This parameter is required.</p>
@@ -28,13 +25,13 @@ public class UpdateAlertStrategyRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The Kubernetes labels.</p>
+     * <p>The Kubernetes label.</p>
      */
     @NameInMap("k8sLabel")
     public Boolean k8sLabel;
 
     /**
-     * <p>The Policy Name of the alerting policy.</p>
+     * <p>The name of the alerting policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,20 +47,9 @@ public class UpdateAlertStrategyRequest extends TeaModel {
     @NameInMap("strategy")
     public UpdateAlertStrategyRequestStrategy strategy;
 
-    @NameInMap("x-sysom-invoke-source")
-    public String xSysomInvokeSource;
-
     public static UpdateAlertStrategyRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAlertStrategyRequest self = new UpdateAlertStrategyRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateAlertStrategyRequest setXDebugId(String xDebugId) {
-        this.xDebugId = xDebugId;
-        return this;
-    }
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     public UpdateAlertStrategyRequest setEnabled(Boolean enabled) {
@@ -106,17 +92,9 @@ public class UpdateAlertStrategyRequest extends TeaModel {
         return this.strategy;
     }
 
-    public UpdateAlertStrategyRequest setXSysomInvokeSource(String xSysomInvokeSource) {
-        this.xSysomInvokeSource = xSysomInvokeSource;
-        return this;
-    }
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
-    }
-
     public static class UpdateAlertStrategyRequestStrategy extends TeaModel {
         /**
-         * <p>The collection of clusters for which alerts are received.</p>
+         * <p>The collection of clusters that receive alerts.</p>
          */
         @NameInMap("clusters")
         public java.util.List<String> clusters;
@@ -128,7 +106,7 @@ public class UpdateAlertStrategyRequest extends TeaModel {
         public java.util.List<Integer> destinations;
 
         /**
-         * <p>The collection of anomaly items for which alerts are received.</p>
+         * <p>The collection of exception items that receive alerts.</p>
          */
         @NameInMap("items")
         public java.util.List<String> items;

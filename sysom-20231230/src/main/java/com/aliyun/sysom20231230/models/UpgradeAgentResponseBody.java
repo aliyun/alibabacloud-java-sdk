@@ -14,10 +14,10 @@ public class UpgradeAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status code.</p>
+     * <p>The status code. Valid values:</p>
      * <ul>
-     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
-     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+     * <li>Success: The authorization is successful.</li>
+     * <li>Other values indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class UpgradeAgentResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public UpgradeAgentResponseBodyData data;
@@ -35,8 +35,8 @@ public class UpgradeAgentResponseBody extends TeaModel {
     /**
      * <p>The error message.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, this field is empty.</li>
-     * <li>Otherwise, this field contains the request error information.</li>
+     * <li>If code is Success, this field is empty.</li>
+     * <li>Otherwise, this field contains the error information of the request.</li>
      * </ul>
      * 
      * <strong>example:</strong>

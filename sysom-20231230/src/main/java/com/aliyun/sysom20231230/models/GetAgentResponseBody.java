@@ -17,7 +17,7 @@ public class GetAgentResponseBody extends TeaModel {
      * <p>The status code.</p>
      * <ul>
      * <li><code>code == Success</code> indicates that the authorization is successful.</li>
-     * <li>Other status codes indicate that the authorization failed. If the authorization fails, check the <code>message</code> field for the detailed fault information.</li>
+     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class GetAgentResponseBody extends TeaModel {
      * <p>The error message.</p>
      * <ul>
      * <li>If <code>code == Success</code>, this field is empty.</li>
-     * <li>Otherwise, this field contains the request error information.</li>
+     * <li>Otherwise, this field contains the error information of the request.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class GetAgentResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
-         * <p>The update script for this agent version.</p>
+         * <p>The upgrade script for this agent version.</p>
          * 
          * <strong>example:</strong>
          * <p>sysom.sh upgrade</p>
@@ -129,7 +129,7 @@ public class GetAgentResponseBody extends TeaModel {
         public String upgradeScript;
 
         /**
-         * <p>The agent version number.</p>
+         * <p>The version number of the agent.</p>
          * 
          * <strong>example:</strong>
          * <p>3.4.0-1</p>
@@ -203,7 +203,7 @@ public class GetAgentResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The component description.</p>
+         * <p>The description of the component.</p>
          * 
          * <strong>example:</strong>
          * <p>SysOM Agent</p>
@@ -221,7 +221,7 @@ public class GetAgentResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The component name.</p>
+         * <p>The name of the component.</p>
          * 
          * <strong>example:</strong>
          * <p>SysOM</p>
@@ -230,7 +230,7 @@ public class GetAgentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The supported architectures.</p>
+         * <p>The supported architecture.</p>
          * 
          * <strong>example:</strong>
          * <p>x86</p>
@@ -257,7 +257,7 @@ public class GetAgentResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
-         * <p>The component version information.</p>
+         * <p>The version information of the component.</p>
          */
         @NameInMap("versions")
         public java.util.List<GetAgentResponseBodyDataVersions> versions;

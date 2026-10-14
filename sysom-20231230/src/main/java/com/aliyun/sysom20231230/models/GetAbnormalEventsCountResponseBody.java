@@ -65,7 +65,7 @@ public class GetAbnormalEventsCountResponseBody extends TeaModel {
         public java.util.List<String> eventList;
 
         /**
-         * <p>The type of the abnormal event.</p>
+         * <p>The type of the abnormality.</p>
          * 
          * <strong>example:</strong>
          * <p>health</p>
@@ -74,7 +74,7 @@ public class GetAbnormalEventsCountResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The number of abnormal events of this type.</p>
+         * <p>The number of abnormalities of this type.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

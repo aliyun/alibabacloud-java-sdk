@@ -4,9 +4,6 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class ListAbnormalyEventsRequest extends TeaModel {
-    @NameInMap("X-Debug-Id")
-    public String xDebugId;
-
     /**
      * <p>The cluster ID.</p>
      * 
@@ -17,7 +14,7 @@ public class ListAbnormalyEventsRequest extends TeaModel {
     public String cluster;
 
     /**
-     * <p>The current page number. This parameter is present during paginated queries.</p>
+     * <p>The current page number. This field exists when pagination is used.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +35,7 @@ public class ListAbnormalyEventsRequest extends TeaModel {
      * <p>The name of the anomaly event.</p>
      * 
      * <strong>example:</strong>
-     * <p>节点根文件系统使用检测</p>
+     * <p>Node root filesystem usage check</p>
      */
     @NameInMap("event")
     public String event;
@@ -89,7 +86,7 @@ public class ListAbnormalyEventsRequest extends TeaModel {
     public String pod;
 
     /**
-     * <p>Specifies whether to display pod anomaly events.</p>
+     * <p>Specifies whether to display anomaly events of the pod.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -106,20 +103,9 @@ public class ListAbnormalyEventsRequest extends TeaModel {
     @NameInMap("start")
     public Float start;
 
-    @NameInMap("x-sysom-invoke-source")
-    public String xSysomInvokeSource;
-
     public static ListAbnormalyEventsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAbnormalyEventsRequest self = new ListAbnormalyEventsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListAbnormalyEventsRequest setXDebugId(String xDebugId) {
-        this.xDebugId = xDebugId;
-        return this;
-    }
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     public ListAbnormalyEventsRequest setCluster(String cluster) {
@@ -208,14 +194,6 @@ public class ListAbnormalyEventsRequest extends TeaModel {
     }
     public Float getStart() {
         return this.start;
-    }
-
-    public ListAbnormalyEventsRequest setXSysomInvokeSource(String xSysomInvokeSource) {
-        this.xSysomInvokeSource = xSysomInvokeSource;
-        return this;
-    }
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
     }
 
 }

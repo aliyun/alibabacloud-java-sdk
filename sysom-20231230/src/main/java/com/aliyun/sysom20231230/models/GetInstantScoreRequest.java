@@ -4,9 +4,6 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class GetInstantScoreRequest extends TeaModel {
-    @NameInMap("X-Debug-Id")
-    public String xDebugId;
-
     /**
      * <p>The cluster ID.</p>
      * 
@@ -25,20 +22,9 @@ public class GetInstantScoreRequest extends TeaModel {
     @NameInMap("instance")
     public String instance;
 
-    @NameInMap("x-sysom-invoke-source")
-    public String xSysomInvokeSource;
-
     public static GetInstantScoreRequest build(java.util.Map<String, ?> map) throws Exception {
         GetInstantScoreRequest self = new GetInstantScoreRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetInstantScoreRequest setXDebugId(String xDebugId) {
-        this.xDebugId = xDebugId;
-        return this;
-    }
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     public GetInstantScoreRequest setCluster(String cluster) {
@@ -55,14 +41,6 @@ public class GetInstantScoreRequest extends TeaModel {
     }
     public String getInstance() {
         return this.instance;
-    }
-
-    public GetInstantScoreRequest setXSysomInvokeSource(String xSysomInvokeSource) {
-        this.xSysomInvokeSource = xSysomInvokeSource;
-        return this;
-    }
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
     }
 
 }

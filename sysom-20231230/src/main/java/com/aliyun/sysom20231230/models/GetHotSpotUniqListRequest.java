@@ -4,9 +4,6 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class GetHotSpotUniqListRequest extends TeaModel {
-    @NameInMap("X-Debug-Id")
-    public String xDebugId;
-
     /**
      * <p>The end time.</p>
      * <p>This parameter is required.</p>
@@ -60,25 +57,14 @@ public class GetHotSpotUniqListRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>默认需要为&quot;flag&quot;，待查询的字段</p>
+     * <p>The default value must be &quot;flag&quot;, which specifies the field to query</p>
      */
     @NameInMap("uniq")
     public String uniq;
 
-    @NameInMap("x-sysom-invoke-source")
-    public String xSysomInvokeSource;
-
     public static GetHotSpotUniqListRequest build(java.util.Map<String, ?> map) throws Exception {
         GetHotSpotUniqListRequest self = new GetHotSpotUniqListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetHotSpotUniqListRequest setXDebugId(String xDebugId) {
-        this.xDebugId = xDebugId;
-        return this;
-    }
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     public GetHotSpotUniqListRequest setBegEnd(Long begEnd) {
@@ -127,14 +113,6 @@ public class GetHotSpotUniqListRequest extends TeaModel {
     }
     public String getUniq() {
         return this.uniq;
-    }
-
-    public GetHotSpotUniqListRequest setXSysomInvokeSource(String xSysomInvokeSource) {
-        this.xSysomInvokeSource = xSysomInvokeSource;
-        return this;
-    }
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
     }
 
 }

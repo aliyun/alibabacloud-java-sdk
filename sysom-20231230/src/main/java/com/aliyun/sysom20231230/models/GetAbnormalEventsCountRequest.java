@@ -4,9 +4,6 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class GetAbnormalEventsCountRequest extends TeaModel {
-    @NameInMap("X-Debug-Id")
-    public String xDebugId;
-
     /**
      * <p>The cluster ID.</p>
      * 
@@ -35,7 +32,7 @@ public class GetAbnormalEventsCountRequest extends TeaModel {
     public String instance;
 
     /**
-     * <p>The severity level of abnormal events.</p>
+     * <p>The severity level of the abnormal event.</p>
      * 
      * <strong>example:</strong>
      * <p>potential</p>
@@ -79,20 +76,9 @@ public class GetAbnormalEventsCountRequest extends TeaModel {
     @NameInMap("start")
     public Float start;
 
-    @NameInMap("x-sysom-invoke-source")
-    public String xSysomInvokeSource;
-
     public static GetAbnormalEventsCountRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAbnormalEventsCountRequest self = new GetAbnormalEventsCountRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetAbnormalEventsCountRequest setXDebugId(String xDebugId) {
-        this.xDebugId = xDebugId;
-        return this;
-    }
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     public GetAbnormalEventsCountRequest setCluster(String cluster) {
@@ -157,14 +143,6 @@ public class GetAbnormalEventsCountRequest extends TeaModel {
     }
     public Float getStart() {
         return this.start;
-    }
-
-    public GetAbnormalEventsCountRequest setXSysomInvokeSource(String xSysomInvokeSource) {
-        this.xSysomInvokeSource = xSysomInvokeSource;
-        return this;
-    }
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
     }
 
 }

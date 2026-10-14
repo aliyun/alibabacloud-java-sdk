@@ -4,9 +4,6 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class ListAllInstancesRequest extends TeaModel {
-    @NameInMap("X-Debug-Id")
-    public String xDebugId;
-
     /**
      * <p>The current page number.</p>
      * 
@@ -44,7 +41,7 @@ public class ListAllInstancesRequest extends TeaModel {
     public String managedType;
 
     /**
-     * <p>The maximum number of records to retrieve in a single request.</p>
+     * <p>The maximum number of entries to return in a single request.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -91,20 +88,9 @@ public class ListAllInstancesRequest extends TeaModel {
     @NameInMap("region")
     public String region;
 
-    @NameInMap("x-sysom-invoke-source")
-    public String xSysomInvokeSource;
-
     public static ListAllInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAllInstancesRequest self = new ListAllInstancesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListAllInstancesRequest setXDebugId(String xDebugId) {
-        this.xDebugId = xDebugId;
-        return this;
-    }
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     public ListAllInstancesRequest setCurrent(String current) {
@@ -177,14 +163,6 @@ public class ListAllInstancesRequest extends TeaModel {
     }
     public String getRegion() {
         return this.region;
-    }
-
-    public ListAllInstancesRequest setXSysomInvokeSource(String xSysomInvokeSource) {
-        this.xSysomInvokeSource = xSysomInvokeSource;
-        return this;
-    }
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
     }
 
 }

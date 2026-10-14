@@ -4,15 +4,12 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class GetConfigByNameRequest extends TeaModel {
-    @NameInMap("X-Debug-Id")
-    public String xDebugId;
-
     /**
      * <p>The configuration name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>节点网络延时检测</p>
+     * <p>Node network latency detection</p>
      */
     @NameInMap("configName")
     public String configName;
@@ -37,7 +34,7 @@ public class GetConfigByNameRequest extends TeaModel {
     public String entityId;
 
     /**
-     * <p>Specifies whether to use the global UID.</p>
+     * <p>Specifies whether to use a global UID.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -54,20 +51,9 @@ public class GetConfigByNameRequest extends TeaModel {
     @NameInMap("versionId")
     public Long versionId;
 
-    @NameInMap("x-sysom-invoke-source")
-    public String xSysomInvokeSource;
-
     public static GetConfigByNameRequest build(java.util.Map<String, ?> map) throws Exception {
         GetConfigByNameRequest self = new GetConfigByNameRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetConfigByNameRequest setXDebugId(String xDebugId) {
-        this.xDebugId = xDebugId;
-        return this;
-    }
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     public GetConfigByNameRequest setConfigName(String configName) {
@@ -108,14 +94,6 @@ public class GetConfigByNameRequest extends TeaModel {
     }
     public Long getVersionId() {
         return this.versionId;
-    }
-
-    public GetConfigByNameRequest setXSysomInvokeSource(String xSysomInvokeSource) {
-        this.xSysomInvokeSource = xSysomInvokeSource;
-        return this;
-    }
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
     }
 
 }

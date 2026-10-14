@@ -4,11 +4,8 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricListRequest extends TeaModel {
-    @NameInMap("X-Debug-Id")
-    public String xDebugId;
-
     /**
-     * <p>The end time, in seconds (UNIX timestamp).</p>
+     * <p>The end time. The value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1683618245000</p>
@@ -35,7 +32,7 @@ public class DescribeMetricListRequest extends TeaModel {
     public String metricName;
 
     /**
-     * <p>The start time, in seconds (UNIX timestamp).</p>
+     * <p>The start time. The value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1709740800000</p>
@@ -43,20 +40,9 @@ public class DescribeMetricListRequest extends TeaModel {
     @NameInMap("startTime")
     public Long startTime;
 
-    @NameInMap("x-sysom-invoke-source")
-    public String xSysomInvokeSource;
-
     public static DescribeMetricListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetricListRequest self = new DescribeMetricListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeMetricListRequest setXDebugId(String xDebugId) {
-        this.xDebugId = xDebugId;
-        return this;
-    }
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     public DescribeMetricListRequest setEndTime(Long endTime) {
@@ -89,14 +75,6 @@ public class DescribeMetricListRequest extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
-    }
-
-    public DescribeMetricListRequest setXSysomInvokeSource(String xSysomInvokeSource) {
-        this.xSysomInvokeSource = xSysomInvokeSource;
-        return this;
-    }
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
     }
 
 }

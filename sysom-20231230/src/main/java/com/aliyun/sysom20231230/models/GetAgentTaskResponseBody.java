@@ -17,7 +17,7 @@ public class GetAgentTaskResponseBody extends TeaModel {
      * <p>The status code.</p>
      * <ul>
      * <li><code>code == Success</code> indicates that the authorization is successful.</li>
-     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+     * <li>Other status codes indicate that the authorization failed. If the authorization fails, check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,7 +84,7 @@ public class GetAgentTaskResponseBody extends TeaModel {
 
     public static class GetAgentTaskResponseBodyDataJobs extends TeaModel {
         /**
-         * <p>The reason that caused the task to fail. This field is returned only when the task execution fails.</p>
+         * <p>If the task fails, this field contains the cause of the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>Deprecated (misused)</p>
@@ -93,9 +93,9 @@ public class GetAgentTaskResponseBody extends TeaModel {
         public String error;
 
         /**
-         * <p>The error code of the subtask failure. Valid values:</p>
+         * <p>The error code for the subtask failure. Valid values:</p>
          * <ul>
-         * <li>Empty: The task is executed normally.</li>
+         * <li>Empty: The task is running normally.</li>
          * <li>INSTANCE_NOT_SUPPORTED: The instance type is not supported.</li>
          * <li>INSTANCE_NOT_EXISTS: The instance does not exist.</li>
          * <li>INSTANCE_RELEASED: The instance has been released.</li>
@@ -104,16 +104,16 @@ public class GetAgentTaskResponseBody extends TeaModel {
          * <li>AGENT_ALREADY_INSTALLED: The Agent is already installed.</li>
          * <li>AGENT_NOT_INSTALLED: The Agent is not installed.</li>
          * <li>AGENT_SAME_VERSION: The version is the same.</li>
-         * <li>HAS_RUNNING_JOB: A running task exists.</li>
+         * <li>HAS_RUNNING_JOB: A running task already exists.</li>
          * <li>RPM_LOCK_HELD: The RPM lock is held.</li>
-         * <li>DISK_SPACE_INSUFFICIENT: The disk space is insufficient.</li>
+         * <li>DISK_SPACE_INSUFFICIENT: Insufficient disk space.</li>
          * <li>NODE_LOAD_HIGH: The node load is high.</li>
-         * <li>COMMAND_FAILED: The command execution failed.</li>
+         * <li>COMMAND_FAILED: Command execution failed.</li>
          * <li>CLIENT_NOT_RUNNING: The Cloud Assistant Agent is not running.</li>
          * <li>CLIENT_NOT_RESPONSE: The Cloud Assistant Agent is not responding.</li>
-         * <li>DELIVERY_TIMEOUT: The command delivery timed out.</li>
-         * <li>EXECUTION_TIMEOUT: The command execution timed out.</li>
-         * <li>TASK_CONCURRENCY_LIMIT: The task concurrency limit is reached.</li>
+         * <li>DELIVERY_TIMEOUT: Command delivery timed out.</li>
+         * <li>EXECUTION_TIMEOUT: Command execution timed out.</li>
+         * <li>TASK_CONCURRENCY_LIMIT: The task concurrency limit has been reached.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,7 +123,7 @@ public class GetAgentTaskResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The detailed description of the subtask failure. Valid values:</p>
+         * <p>The detailed description of the subtask failure cause. Valid values:</p>
          * <ul>
          * <li>The instance type is not supported.</li>
          * <li>The instance does not exist.</li>
@@ -135,18 +135,18 @@ public class GetAgentTaskResponseBody extends TeaModel {
          * <li>The Agent version is the same. No upgrade is required.</li>
          * <li>A running task exists. Try again later.</li>
          * <li>The RPM lock is held. Try again later.</li>
-         * <li>The disk space is insufficient.</li>
+         * <li>Insufficient disk space.</li>
          * <li>The node load is too high. Try again later.</li>
-         * <li>The command execution failed. Try again later.</li>
+         * <li>Command execution failed. Try again later.</li>
          * <li>The Cloud Assistant Agent is not running.</li>
          * <li>The Cloud Assistant Agent is not responding.</li>
-         * <li>The command delivery timed out.</li>
-         * <li>The command execution timed out.</li>
-         * <li>The task concurrency limit is reached.</li>
+         * <li>Command delivery timed out.</li>
+         * <li>Command execution timed out.</li>
+         * <li>The task concurrency limit has been reached.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>The disk space is insufficient</p>
+         * <p>Insufficient disk space</p>
          */
         @NameInMap("errorMessage")
         public String errorMessage;
@@ -195,10 +195,10 @@ public class GetAgentTaskResponseBody extends TeaModel {
         /**
          * <p>The subtask status. Valid values:</p>
          * <ul>
-         * <li>Created: The subtask is created.</li>
-         * <li>Running: The subtask is running.</li>
-         * <li>Success: The subtask succeeded.</li>
-         * <li>Fail: The subtask failed.</li>
+         * <li>Created: Created.</li>
+         * <li>Running: Running.</li>
+         * <li>Success: The task succeeded.</li>
+         * <li>Fail: The task failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

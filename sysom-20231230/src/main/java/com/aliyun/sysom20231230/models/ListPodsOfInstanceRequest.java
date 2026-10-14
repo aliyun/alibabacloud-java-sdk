@@ -4,11 +4,8 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class ListPodsOfInstanceRequest extends TeaModel {
-    @NameInMap("X-Debug-Id")
-    public String xDebugId;
-
     /**
-     * <p>The cluster ID.</p>
+     * <p>The cluster identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>c96e34d74eb6748f3b2a46552d5d653f6</p>
@@ -17,7 +14,7 @@ public class ListPodsOfInstanceRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The current page number. Pages start from page 1.</p>
+     * <p>The current page number (starting from 1).</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -43,20 +40,9 @@ public class ListPodsOfInstanceRequest extends TeaModel {
     @NameInMap("pageSize")
     public Long pageSize;
 
-    @NameInMap("x-sysom-invoke-source")
-    public String xSysomInvokeSource;
-
     public static ListPodsOfInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPodsOfInstanceRequest self = new ListPodsOfInstanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListPodsOfInstanceRequest setXDebugId(String xDebugId) {
-        this.xDebugId = xDebugId;
-        return this;
-    }
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     public ListPodsOfInstanceRequest setClusterId(String clusterId) {
@@ -89,14 +75,6 @@ public class ListPodsOfInstanceRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
-    }
-
-    public ListPodsOfInstanceRequest setXSysomInvokeSource(String xSysomInvokeSource) {
-        this.xSysomInvokeSource = xSysomInvokeSource;
-        return this;
-    }
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
     }
 
 }

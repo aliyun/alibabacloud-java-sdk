@@ -119,7 +119,7 @@ public class ListAgentsResponseBody extends TeaModel {
         public String installScript;
 
         /**
-         * <p>The uninstallation script of the component.</p>
+         * <p>The uninstall script of the component.</p>
          * 
          * <strong>example:</strong>
          * <p>sysom.sh uninstall</p>
@@ -128,7 +128,7 @@ public class ListAgentsResponseBody extends TeaModel {
         public String uninstallScript;
 
         /**
-         * <p>The time when the component version was updated.</p>
+         * <p>The time when the component version was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-14T20:46:08</p>
@@ -137,7 +137,7 @@ public class ListAgentsResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
-         * <p>The update script of the component.</p>
+         * <p>The upgrade script of the component.</p>
          * 
          * <strong>example:</strong>
          * <p>sysom.sh upgrade</p>
@@ -146,7 +146,7 @@ public class ListAgentsResponseBody extends TeaModel {
         public String upgradeScript;
 
         /**
-         * <p>The component version number.</p>
+         * <p>The version number of the component.</p>
          * 
          * <strong>example:</strong>
          * <p>3.4.0-1</p>
@@ -247,7 +247,7 @@ public class ListAgentsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The supported architectures (multiple architectures are separated by commas).</p>
+         * <p>The supported architectures. Multiple architectures are separated by commas.</p>
          * 
          * <strong>example:</strong>
          * <p>x86</p>
@@ -269,7 +269,7 @@ public class ListAgentsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The time when the component was updated.</p>
+         * <p>The time when the component was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-14T20:46:08</p>

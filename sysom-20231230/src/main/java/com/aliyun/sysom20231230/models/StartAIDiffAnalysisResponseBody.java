@@ -7,8 +7,8 @@ public class StartAIDiffAnalysisResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <ul>
-     * <li><code>code == Success</code> indicates that authorization is successful.</li>
-     * <li>Other status codes indicate authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+     * <li>If code is Success, the authorization is successful.</li>
+     * <li>Other status codes indicate that the authorization has failed. Check the message field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -23,19 +23,19 @@ public class StartAIDiffAnalysisResponseBody extends TeaModel {
      * <strong>example:</strong>
      * <p>&quot;[
      *   {
-     *       name: &quot;xxx&quot;, #operator name
-     *       before_time: 2, # total time of the former
-     *       after_time: 4, # total time of the latter
-     *       time_diff: 2,  # time difference
-     *       before_time_perc: &quot;80%&quot;, # total time percentage of the former
-     *       after_time_perc: &quot;23%&quot;, # total time percentage of the latter
-     *       time_perc_diff: &quot;-54%&quot;,  # time percentage difference
-     *       before_count: 1, # total call count of the former
-     *       after_count: 2,  # total call count of the latter
-     *       count_diff: 1,   # call count difference
-     *       before_count_perc: &quot;56%&quot;, # total call percentage of the former
-     *       after_count_perc: &quot;32%&quot;,  # total call percentage of the latter
-     *       count_perc_diff: &quot;44%&quot;,   # call percentage difference
+     *       name: &quot;xxx&quot;, # Operator name
+     *       before_time: 2, # Total time of the former
+     *       after_time: 4, # Total time of the latter
+     *       time_diff: 2,  # Time difference
+     *       before_time_perc: &quot;80%&quot;, # Total time percentage of the former
+     *       after_time_perc: &quot;23%&quot;, # Total time percentage of the latter
+     *       time_perc_diff: &quot;-54%&quot;,  # Time percentage difference
+     *       before_count: 1, # Total call count of the former
+     *       after_count: 2,  # Total call count of the latter
+     *       count_diff: 1,   # Call count difference
+     *       before_count_perc: &quot;56%&quot;, # Total call percentage of the former
+     *       after_count_perc: &quot;32%&quot;,  # Total call percentage of the latter
+     *       count_perc_diff: &quot;44%&quot;,   # Call percentage difference
      *   },
      *   {...}
      * ]&quot;</p>

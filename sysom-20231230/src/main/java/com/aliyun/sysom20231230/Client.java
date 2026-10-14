@@ -29,17 +29,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: The diagnosis feature requires a service-linked role to be created under the Resource Access Management (RAM) user. Invoking this operation automatically checks whether the service-linked role exists and creates it if it does not. The RAM user that invokes this operation must have the ram:CreateServiceLinkedRole permission.</notice>
-     * Take note of the following items when you invoke this operation to authorize SysOM to diagnose ECS instances:</p>
+     * <p>Notice: The diagnostics feature requires a service-linked role to be created under the Resource Access Management (RAM) user. Invoking this operation automatically checks whether the service-linked role exists and creates it if it does not. The RAM user that invokes this operation must have the ram:CreateServiceLinkedRole permission.</notice>
+     * Note the following when you invoke this operation to authorize SysOM to diagnose ECS instances:</p>
      * </blockquote>
      * <ul>
      * <li>Each authorization is valid for 7 days. After 7 days, the authorization expires and you must invoke this operation again to re-authorize.</li>
      * <li>If the SysOM service-linked role (AliyunServiceRoleForSysom) does not exist when you invoke this operation, automatic creation is performed. The Resource Access Management (RAM) user that invokes this operation must have the <code>ram:CreateServiceLinkedRole</code> permission.</li>
-     * <li>When you invoke this operation to authorize diagnosis on a specific instance, the label <code>sysom:diagnosis</code> is automatically associated with the target ECS instance. SysOM only allows diagnosis on instances that have this label.</li>
+     * <li>When you invoke this operation to authorize diagnostics on a specific instance, the label <code>sysom:diagnosis</code> is automatically associated with the target ECS instance. SysOM only allows diagnostics on instances that have this label.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Authorizes SysOM to diagnose ECS instances under the current account. You must call this operation to authorize diagnosis on a specific ECS instance before you can call the InvokeDiagnosis operation to initiate diagnosis on it.</p>
+     * <p>Authorizes SysOM to diagnose ECS instances under the current account. You must call this operation to authorize diagnostics on a specific ECS instance before you can call the InvokeDiagnosis operation to initiate diagnostics on it.</p>
      * 
      * @param request AuthDiagnosisRequest
      * @param headers map
@@ -48,15 +48,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public AuthDiagnosisResponse authDiagnosisWithOptions(AuthDiagnosisRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.autoCreateRole)) {
             body.put("autoCreateRole", request.autoCreateRole);
@@ -72,7 +63,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -92,17 +82,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: The diagnosis feature requires a service-linked role to be created under the Resource Access Management (RAM) user. Invoking this operation automatically checks whether the service-linked role exists and creates it if it does not. The RAM user that invokes this operation must have the ram:CreateServiceLinkedRole permission.</notice>
-     * Take note of the following items when you invoke this operation to authorize SysOM to diagnose ECS instances:</p>
+     * <p>Notice: The diagnostics feature requires a service-linked role to be created under the Resource Access Management (RAM) user. Invoking this operation automatically checks whether the service-linked role exists and creates it if it does not. The RAM user that invokes this operation must have the ram:CreateServiceLinkedRole permission.</notice>
+     * Note the following when you invoke this operation to authorize SysOM to diagnose ECS instances:</p>
      * </blockquote>
      * <ul>
      * <li>Each authorization is valid for 7 days. After 7 days, the authorization expires and you must invoke this operation again to re-authorize.</li>
      * <li>If the SysOM service-linked role (AliyunServiceRoleForSysom) does not exist when you invoke this operation, automatic creation is performed. The Resource Access Management (RAM) user that invokes this operation must have the <code>ram:CreateServiceLinkedRole</code> permission.</li>
-     * <li>When you invoke this operation to authorize diagnosis on a specific instance, the label <code>sysom:diagnosis</code> is automatically associated with the target ECS instance. SysOM only allows diagnosis on instances that have this label.</li>
+     * <li>When you invoke this operation to authorize diagnostics on a specific instance, the label <code>sysom:diagnosis</code> is automatically associated with the target ECS instance. SysOM only allows diagnostics on instances that have this label.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Authorizes SysOM to diagnose ECS instances under the current account. You must call this operation to authorize diagnosis on a specific ECS instance before you can call the InvokeDiagnosis operation to initiate diagnosis on it.</p>
+     * <p>Authorizes SysOM to diagnose ECS instances under the current account. You must call this operation to authorize diagnostics on a specific ECS instance before you can call the InvokeDiagnosis operation to initiate diagnostics on it.</p>
      * 
      * @param request AuthDiagnosisRequest
      * @return AuthDiagnosisResponse
@@ -115,10 +105,83 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>The instance list retrieved by this operation contains only machines managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Checks whether resources such as clusters and nodes support the current configuration.</p>
+     * 
+     * @param request CheckAgentConfigSupportedRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckAgentConfigSupportedResponse
+     */
+    public CheckAgentConfigSupportedResponse checkAgentConfigSupportedWithOptions(CheckAgentConfigSupportedRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            query.put("agentId", request.agentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.checkType)) {
+            query.put("checkType", request.checkType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusters)) {
+            query.put("clusters", request.clusters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("configId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
+            query.put("content", request.content);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instances)) {
+            query.put("instances", request.instances);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckAgentConfigSupported"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/am/agent/checkAgentConfigSupported"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckAgentConfigSupportedResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The instance list retrieved by this operation contains only machines managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Checks whether resources such as clusters and nodes support the current configuration.</p>
+     * 
+     * @param request CheckAgentConfigSupportedRequest
+     * @return CheckAgentConfigSupportedResponse
+     */
+    public CheckAgentConfigSupportedResponse checkAgentConfigSupported(CheckAgentConfigSupportedRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.checkAgentConfigSupportedWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>The instance list returned by this operation contains only instances that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</p>
      * 
      * <b>summary</b> : 
-     * <p>Checks whether a target instance is supported by SysOM.</p>
+     * <p>Checks whether target instances are supported by SysOM.</p>
      * 
      * @param request CheckInstanceSupportRequest
      * @param headers map
@@ -127,15 +190,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public CheckInstanceSupportResponse checkInstanceSupportWithOptions(CheckInstanceSupportRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instances)) {
             body.put("instances", request.instances);
@@ -147,7 +201,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -169,7 +222,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The instance list returned by this operation contains only instances that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</p>
      * 
      * <b>summary</b> : 
-     * <p>Checks whether a target instance is supported by SysOM.</p>
+     * <p>Checks whether target instances are supported by SysOM.</p>
      * 
      * @param request CheckInstanceSupportRequest
      * @return CheckInstanceSupportResponse
@@ -191,15 +244,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public CpuHighAgentStreamResponseResponse cpuHighAgentStreamResponseWithOptions(CpuHighAgentStreamResponseRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.llmParamString)) {
             body.put("llmParamString", request.llmParamString);
@@ -207,7 +251,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -239,6 +282,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates a component configuration.</p>
+     * 
+     * @param request CreateAgentConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAgentConfigResponse
+     */
+    public CreateAgentConfigResponse createAgentConfigWithOptions(CreateAgentConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            body.put("agentId", request.agentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configName)) {
+            body.put("configName", request.configName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
+            body.put("content", request.content);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAgentConfig"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/am/agent/createAgentConfig"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAgentConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a component configuration.</p>
+     * 
+     * @param request CreateAgentConfigRequest
+     * @return CreateAgentConfigResponse
+     */
+    public CreateAgentConfigResponse createAgentConfig(CreateAgentConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createAgentConfigWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a contact for alert notifications.</p>
      * 
      * @param request CreateAlertDestinationRequest
@@ -248,15 +346,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public CreateAlertDestinationResponse createAlertDestinationWithOptions(CreateAlertDestinationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
             body.put("app_id", request.appId);
@@ -292,7 +381,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -333,15 +421,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public CreateAlertStrategyResponse createAlertStrategyWithOptions(CreateAlertStrategyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
             body.put("enabled", request.enabled);
@@ -361,7 +440,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -394,9 +472,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Use this operation with the call_sseapi interface of the aliyun-tea-openapi-inner package.</li>
-     * <li>Populate the parameters based on the general LLM service input parameters, convert them to a string, and assign the string to llmParamString.</li>
-     * <li>Convert the returned data from a string to a dict before use. Refer to the general LLM service response format.</li>
+     * <li>Use this operation together with the call_sseapi operation in the aliyun-tea-openapi-inner package.</li>
+     * <li>Populate the parameters based on the input parameters of the general LLM service, convert them to a string, and assign the string to llmParamString.</li>
+     * <li>Convert the returned string to a dictionary before use. Refer to the response format of the general LLM service.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -409,15 +487,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public CreateClusterVpcEndpointConnectionResponse createClusterVpcEndpointConnectionWithOptions(CreateClusterVpcEndpointConnectionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
             body.put("clusterId", request.clusterId);
@@ -433,7 +502,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -453,9 +521,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Use this operation with the call_sseapi interface of the aliyun-tea-openapi-inner package.</li>
-     * <li>Populate the parameters based on the general LLM service input parameters, convert them to a string, and assign the string to llmParamString.</li>
-     * <li>Convert the returned data from a string to a dict before use. Refer to the general LLM service response format.</li>
+     * <li>Use this operation together with the call_sseapi operation in the aliyun-tea-openapi-inner package.</li>
+     * <li>Populate the parameters based on the input parameters of the general LLM service, convert them to a string, and assign the string to llmParamString.</li>
+     * <li>Convert the returned string to a dictionary before use. Refer to the response format of the general LLM service.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -481,15 +549,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public CreateInstanceInspectionResponse createInstanceInspectionWithOptions(CreateInstanceInspectionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instance)) {
             body.put("instance", request.instance);
@@ -513,7 +572,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -545,7 +603,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an intelligent diagnostic node for system breakdowns, which diagnoses the vmcore or dmesg log files provided as input parameters.</p>
+     * <p>Creates an intelligent breakdown diagnostic node to diagnose the vmcore or dmesg log file specified in the input parameters.</p>
      * 
      * @param request CreateVmcoreDiagnosisTaskRequest
      * @param headers map
@@ -554,15 +612,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public CreateVmcoreDiagnosisTaskResponse createVmcoreDiagnosisTaskWithOptions(CreateVmcoreDiagnosisTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.debuginfoCommonUrl)) {
             body.put("debuginfoCommonUrl", request.debuginfoCommonUrl);
@@ -586,7 +635,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -605,7 +653,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an intelligent diagnostic node for system breakdowns, which diagnoses the vmcore or dmesg log files provided as input parameters.</p>
+     * <p>Creates an intelligent breakdown diagnostic node to diagnose the vmcore or dmesg log file specified in the input parameters.</p>
      * 
      * @param request CreateVmcoreDiagnosisTaskRequest
      * @return CreateVmcoreDiagnosisTaskResponse
@@ -614,6 +662,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createVmcoreDiagnosisTaskWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a component configuration.</p>
+     * 
+     * @param request DeleteAgentConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAgentConfigResponse
+     */
+    public DeleteAgentConfigResponse deleteAgentConfigWithOptions(DeleteAgentConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            query.put("agentId", request.agentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("configId", request.configId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAgentConfig"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/am/agent/deleteAgentConfig"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAgentConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a component configuration.</p>
+     * 
+     * @param request DeleteAgentConfigRequest
+     * @return DeleteAgentConfigResponse
+     */
+    public DeleteAgentConfigResponse deleteAgentConfig(DeleteAgentConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteAgentConfigWithOptions(request, headers, runtime);
     }
 
     /**
@@ -628,16 +727,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteAlertDestinationResponse deleteAlertDestinationWithOptions(DeleteAlertDestinationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.id)) {
             query.put("id", request.id);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -673,7 +764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an alert policy for push notifications.</p>
+     * <p>Deletes an alert policy for push alerting.</p>
      * 
      * @param request DeleteAlertStrategyRequest
      * @param headers map
@@ -683,16 +774,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteAlertStrategyResponse deleteAlertStrategyWithOptions(DeleteAlertStrategyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.id)) {
             query.put("id", request.id);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -715,7 +798,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an alert policy for push notifications.</p>
+     * <p>Deletes an alert policy for push alerting.</p>
      * 
      * @param request DeleteAlertStrategyRequest
      * @return DeleteAlertStrategyResponse
@@ -728,7 +811,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The instance list retrieved by this operation contains only machines that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</p>
+     * <p>The instance list returned by this operation contains only machines that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries metric data.</p>
@@ -741,10 +824,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeMetricListResponse describeMetricListWithOptions(DescribeMetricListRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("endTime", request.endTime);
         }
@@ -759,10 +838,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
             query.put("startTime", request.startTime);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -785,7 +860,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The instance list retrieved by this operation contains only machines that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</p>
+     * <p>The instance list returned by this operation contains only machines that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries metric data.</p>
@@ -802,12 +877,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Populate the parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</li>
+     * <li>Populate parameters according to the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</li>
      * <li>Convert the returned data from a string to a dict before use. Refer to the standard LLM service response format.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the response from the Copilot service.</p>
+     * <p>Retrieves the response result from the Copilot service.</p>
      * 
      * @param request GenerateCopilotResponseRequest
      * @param headers map
@@ -816,15 +891,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public GenerateCopilotResponseResponse generateCopilotResponseWithOptions(GenerateCopilotResponseRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.llmParamString)) {
             body.put("llmParamString", request.llmParamString);
@@ -832,7 +898,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -852,12 +917,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Populate the parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</li>
+     * <li>Populate parameters according to the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</li>
      * <li>Convert the returned data from a string to a dict before use. Refer to the standard LLM service response format.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the response from the Copilot service.</p>
+     * <p>Retrieves the response result from the Copilot service.</p>
      * 
      * @param request GenerateCopilotResponseRequest
      * @return GenerateCopilotResponseResponse
@@ -872,7 +937,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Use this operation together with the call_sseapi interface in the aliyun-tea-openapi-inner package.</li>
-     * <li>Populate parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</li>
+     * <li>Populate the parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</li>
      * <li>Convert the returned string data to a dict before use. Refer to the standard LLM service response format.</li>
      * </ul>
      * 
@@ -886,15 +951,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public GenerateCopilotStreamResponseResponse generateCopilotStreamResponseWithOptions(GenerateCopilotStreamResponseRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.llmParamString)) {
             body.put("llmParamString", request.llmParamString);
@@ -902,7 +958,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -923,7 +978,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Use this operation together with the call_sseapi interface in the aliyun-tea-openapi-inner package.</li>
-     * <li>Populate parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</li>
+     * <li>Populate the parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</li>
      * <li>Convert the returned string data to a dict before use. Refer to the standard LLM service response format.</li>
      * </ul>
      * 
@@ -941,7 +996,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the AI Infra analysis results.</p>
+     * <p>Queries AI Infra analysis results.</p>
      * 
      * @param request GetAIQueryResultRequest
      * @param headers map
@@ -950,15 +1005,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public GetAIQueryResultResponse getAIQueryResultWithOptions(GetAIQueryResultRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.analysisId)) {
             body.put("analysisId", request.analysisId);
@@ -966,7 +1012,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -985,7 +1030,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the AI Infra analysis results.</p>
+     * <p>Queries AI Infra analysis results.</p>
      * 
      * @param request GetAIQueryResultRequest
      * @return GetAIQueryResultResponse
@@ -1008,10 +1053,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAbnormalEventsCountResponse getAbnormalEventsCountWithOptions(GetAbnormalEventsCountRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.cluster)) {
             query.put("cluster", request.cluster);
         }
@@ -1042,10 +1083,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.start)) {
             query.put("start", request.start);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1081,7 +1118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified component.</p>
+     * <p>Retrieves the details of a specific component.</p>
      * 
      * @param request GetAgentRequest
      * @param headers map
@@ -1091,16 +1128,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAgentResponse getAgentWithOptions(GetAgentRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
             query.put("agent_id", request.agentId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1123,7 +1152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified component.</p>
+     * <p>Retrieves the details of a specific component.</p>
      * 
      * @param request GetAgentRequest
      * @return GetAgentResponse
@@ -1132,6 +1161,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getAgentWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves component configurations.</p>
+     * 
+     * @param request GetAgentConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAgentConfigResponse
+     */
+    public GetAgentConfigResponse getAgentConfigWithOptions(GetAgentConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            query.put("agentId", request.agentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("configId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configName)) {
+            query.put("configName", request.configName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.current)) {
+            query.put("current", request.current);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("region", request.region);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAgentConfig"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/am/agent/getAgentConfig"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves component configurations.</p>
+     * 
+     * @param request GetAgentConfigRequest
+     * @return GetAgentConfigResponse
+     */
+    public GetAgentConfigResponse getAgentConfig(GetAgentConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getAgentConfigWithOptions(request, headers, runtime);
     }
 
     /**
@@ -1146,16 +1242,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAgentTaskResponse getAgentTaskWithOptions(GetAgentTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
             query.put("task_id", request.taskId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1190,6 +1278,112 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. Check the <code>data.status</code> field in the response to determine the current state. When <code>data.status == Success</code>, the diagnosis is complete and you can read the diagnostic results from <code>data.result</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves diagnostic results.</p>
+     * 
+     * @param request GetAifgResultRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAifgResultResponse
+     */
+    public GetAifgResultResponse getAifgResultWithOptions(GetAifgResultRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("taskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAifgResult"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/aifg/getAifgResult"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAifgResultResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. Check the <code>data.status</code> field in the response to determine the current state. When <code>data.status == Success</code>, the diagnosis is complete and you can read the diagnostic results from <code>data.result</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves diagnostic results.</p>
+     * 
+     * @param request GetAifgResultRequest
+     * @return GetAifgResultResponse
+     */
+    public GetAifgResultResponse getAifgResult(GetAifgResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getAifgResultWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. You can check the <code>data.status</code> field in the response data to determine the current state. When <code>data.status == Success</code>, the diagnosis is complete and you can read the diagnostic result from <code>data.result</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the URL link of a diagnostic result.</p>
+     * 
+     * @param request GetAifgUrlRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAifgUrlResponse
+     */
+    public GetAifgUrlResponse getAifgUrlWithOptions(GetAifgUrlRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("taskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAifgUrl"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/aifg/getAifgUrl"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAifgUrlResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. You can check the <code>data.status</code> field in the response data to determine the current state. When <code>data.status == Success</code>, the diagnosis is complete and you can read the diagnostic result from <code>data.result</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the URL link of a diagnostic result.</p>
+     * 
+     * @param request GetAifgUrlRequest
+     * @return GetAifgUrlResponse
+     */
+    public GetAifgUrlResponse getAifgUrl(GetAifgUrlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getAifgUrlWithOptions(request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Retrieves the information of a specified alert contact.</p>
      * 
@@ -1201,16 +1395,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAlertDestinationResponse getAlertDestinationWithOptions(GetAlertDestinationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.id)) {
             query.put("id", request.id);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1246,7 +1432,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves an alert for a user based on the policy ID.</p>
+     * <p>Retrieves an alert rule of a user by policy ID.</p>
      * 
      * @param request GetAlertStrategyRequest
      * @param headers map
@@ -1256,16 +1442,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAlertStrategyResponse getAlertStrategyWithOptions(GetAlertStrategyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.id)) {
             query.put("id", request.id);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1288,7 +1466,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves an alert for a user based on the policy ID.</p>
+     * <p>Retrieves an alert rule of a user by policy ID.</p>
      * 
      * @param request GetAlertStrategyRequest
      * @return GetAlertStrategyResponse
@@ -1311,10 +1489,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetConfigByNameResponse getConfigByNameWithOptions(GetConfigByNameRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.configName)) {
             query.put("configName", request.configName);
         }
@@ -1333,10 +1507,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
             query.put("versionId", request.versionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1372,7 +1542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the chat history of Copilot.</p>
+     * <p>Retrieves the historical chat records of Copilot.</p>
      * 
      * @param request GetCopilotHistoryRequest
      * @param headers map
@@ -1381,15 +1551,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public GetCopilotHistoryResponse getCopilotHistoryWithOptions(GetCopilotHistoryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.count)) {
             body.put("count", request.count);
@@ -1397,7 +1558,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -1416,7 +1576,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the chat history of Copilot.</p>
+     * <p>Retrieves the historical chat records of Copilot.</p>
      * 
      * @param request GetCopilotHistoryRequest
      * @return GetCopilotHistoryResponse
@@ -1429,10 +1589,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be running. You can check the <code>data.status</code> field in the response to determine the status. When <code>data.status == Success</code>, the diagnosis is complete and you can read the diagnostic result from <code>data.result</code>.</p>
+     * <p>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be running. You can check the <code>data.status</code> field in the response to determine the status. When <code>data.status == Success</code>, the diagnosis is complete and you can read the diagnostic results from <code>data.result</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the diagnostic result.</p>
+     * <p>Retrieves diagnostic results.</p>
      * 
      * @param request GetDiagnosisResultRequest
      * @param headers map
@@ -1442,16 +1602,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetDiagnosisResultResponse getDiagnosisResultWithOptions(GetDiagnosisResultRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
             query.put("task_id", request.taskId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1474,10 +1626,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be running. You can check the <code>data.status</code> field in the response to determine the status. When <code>data.status == Success</code>, the diagnosis is complete and you can read the diagnostic result from <code>data.result</code>.</p>
+     * <p>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be running. You can check the <code>data.status</code> field in the response to determine the status. When <code>data.status == Success</code>, the diagnosis is complete and you can read the diagnostic results from <code>data.result</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the diagnostic result.</p>
+     * <p>Retrieves diagnostic results.</p>
      * 
      * @param request GetDiagnosisResultRequest
      * @return GetDiagnosisResultResponse
@@ -1489,8 +1641,251 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After installing the component for the target ACK cluster:</p>
+     * <ol>
+     * <li>First, when a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 instances are included in the first batch.</li>
+     * <li>Then, the operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component without user intervention.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Retrieves the health status distribution of nodes or Pods within a specified time period.</p>
+     * <p>Retrieves the GPU cluster parameter list.</p>
+     * 
+     * @param request GetGpuClusterArgsOptionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetGpuClusterArgsOptionsResponse
+     */
+    public GetGpuClusterArgsOptionsResponse getGpuClusterArgsOptionsWithOptions(GetGpuClusterArgsOptionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filterType)) {
+            query.put("filterType", request.filterType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterValues)) {
+            query.put("filterValues", request.filterValues);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetGpuClusterArgsOptions"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/aiTopology/topology/listClusterTopologyOptions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetGpuClusterArgsOptionsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>After installing the component for the target ACK cluster:</p>
+     * <ol>
+     * <li>First, when a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 instances are included in the first batch.</li>
+     * <li>Then, the operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component without user intervention.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the GPU cluster parameter list.</p>
+     * 
+     * @param request GetGpuClusterArgsOptionsRequest
+     * @return GetGpuClusterArgsOptionsResponse
+     */
+    public GetGpuClusterArgsOptionsResponse getGpuClusterArgsOptions(GetGpuClusterArgsOptionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getGpuClusterArgsOptionsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>After installing the component on the target ACK cluster:</p>
+     * <ol>
+     * <li>When a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only the first 50 nodes are processed in the first batch.</li>
+     * <li>The operating system console periodically checks the scaling status of managed clusters. When a new ECS instance is added to a cluster, the console automatically installs the component on it without user intervention.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the list of GPU cluster alerts.</p>
+     * 
+     * @param request GetGpuClusterListAlarmRecordRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetGpuClusterListAlarmRecordResponse
+     */
+    public GetGpuClusterListAlarmRecordResponse getGpuClusterListAlarmRecordWithOptions(GetGpuClusterListAlarmRecordRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alarmCluster)) {
+            query.put("alarmCluster", request.alarmCluster);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.alarmExtInfo)) {
+            query.put("alarmExtInfo", request.alarmExtInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.alarmTask)) {
+            query.put("alarmTask", request.alarmTask);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.alarmTime)) {
+            query.put("alarmTime", request.alarmTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.alarmType)) {
+            query.put("alarmType", request.alarmType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.current)) {
+            query.put("current", request.current);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetGpuClusterListAlarmRecord"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/aiTopology/topology/listAlarmRecord"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetGpuClusterListAlarmRecordResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>After installing the component on the target ACK cluster:</p>
+     * <ol>
+     * <li>When a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only the first 50 nodes are processed in the first batch.</li>
+     * <li>The operating system console periodically checks the scaling status of managed clusters. When a new ECS instance is added to a cluster, the console automatically installs the component on it without user intervention.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the list of GPU cluster alerts.</p>
+     * 
+     * @param request GetGpuClusterListAlarmRecordRequest
+     * @return GetGpuClusterListAlarmRecordResponse
+     */
+    public GetGpuClusterListAlarmRecordResponse getGpuClusterListAlarmRecord(GetGpuClusterListAlarmRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getGpuClusterListAlarmRecordWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>After you install the component on the target ACK cluster:</p>
+     * <ol>
+     * <li>When a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only the first 50 nodes are processed in the first batch.</li>
+     * <li>The operating system console periodically checks the scaling status of managed clusters. When a new ECS instance is added to a cluster, the console automatically installs the component on it without requiring manual intervention.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the GPU cluster topology.</p>
+     * 
+     * @param request GetGpuClusterTopologyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetGpuClusterTopologyResponse
+     */
+    public GetGpuClusterTopologyResponse getGpuClusterTopologyWithOptions(GetGpuClusterTopologyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {
+            query.put("channelId", request.channelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("clusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.communicationId)) {
+            query.put("communicationId", request.communicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIdList)) {
+            query.put("instanceIdList", request.instanceIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.podList)) {
+            query.put("podList", request.podList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("startTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskIdList)) {
+            query.put("taskIdList", request.taskIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topoType)) {
+            query.put("topoType", request.topoType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetGpuClusterTopology"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/aiTopology/topology/clusterTopology"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetGpuClusterTopologyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>After you install the component on the target ACK cluster:</p>
+     * <ol>
+     * <li>When a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only the first 50 nodes are processed in the first batch.</li>
+     * <li>The operating system console periodically checks the scaling status of managed clusters. When a new ECS instance is added to a cluster, the console automatically installs the component on it without requiring manual intervention.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the GPU cluster topology.</p>
+     * 
+     * @param request GetGpuClusterTopologyRequest
+     * @return GetGpuClusterTopologyResponse
+     */
+    public GetGpuClusterTopologyResponse getGpuClusterTopology(GetGpuClusterTopologyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getGpuClusterTopologyWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the health status distribution of nodes or pods over a specified time period.</p>
      * 
      * @param request GetHealthPercentageRequest
      * @param headers map
@@ -1500,10 +1895,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetHealthPercentageResponse getHealthPercentageWithOptions(GetHealthPercentageRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.cluster)) {
             query.put("cluster", request.cluster);
         }
@@ -1518,10 +1909,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.start)) {
             query.put("start", request.start);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1544,7 +1931,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the health status distribution of nodes or Pods within a specified time period.</p>
+     * <p>Retrieves the health status distribution of nodes or pods over a specified time period.</p>
      * 
      * @param request GetHealthPercentageRequest
      * @return GetHealthPercentageResponse
@@ -1557,7 +1944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the number of cluster nodes or the number of Pods on a node.</p>
+     * <p>Retrieves the number of nodes or node Pods in a cluster.</p>
      * 
      * @param request GetHostCountRequest
      * @param headers map
@@ -1567,10 +1954,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetHostCountResponse getHostCountWithOptions(GetHostCountRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.cluster)) {
             query.put("cluster", request.cluster);
         }
@@ -1585,10 +1968,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.start)) {
             query.put("start", request.start);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1611,7 +1990,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the number of cluster nodes or the number of Pods on a node.</p>
+     * <p>Retrieves the number of nodes or node Pods in a cluster.</p>
      * 
      * @param request GetHostCountRequest
      * @return GetHostCountResponse
@@ -1633,15 +2012,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public GetHotSpotUniqListResponse getHotSpotUniqListWithOptions(GetHotSpotUniqListRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.begEnd)) {
             body.put("beg_end", request.begEnd);
@@ -1669,7 +2039,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -1700,6 +2069,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The hotfix task process is asynchronous. When you call this operation, the task may still be running. You can check the <code>data.status</code> field in the response to determine the task status. If <code>data.status</code> is <code>Success</code>, the task succeeded, and you can obtain the task result from the <code>data.result</code> field.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the status of an asynchronous task for CVE hotfixes on a node.</p>
+     * 
+     * @param request GetHotfixTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetHotfixTaskResponse
+     */
+    public GetHotfixTaskResponse getHotfixTaskWithOptions(GetHotfixTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("taskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetHotfixTask"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/hotfix_manager/task/get"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetHotfixTaskResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The hotfix task process is asynchronous. When you call this operation, the task may still be running. You can check the <code>data.status</code> field in the response to determine the task status. If <code>data.status</code> is <code>Success</code>, the task succeeded, and you can obtain the task result from the <code>data.result</code> field.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the status of an asynchronous task for CVE hotfixes on a node.</p>
+     * 
+     * @param request GetHotfixTaskRequest
+     * @return GetHotfixTaskResponse
+     */
+    public GetHotfixTaskResponse getHotfixTask(GetHotfixTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getHotfixTaskWithOptions(request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Retrieves hot spot analysis results.</p>
      * 
@@ -1710,15 +2132,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public GetHotspotAnalysisResponse getHotspotAnalysisWithOptions(GetHotspotAnalysisRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appType)) {
             body.put("appType", request.appType);
@@ -1746,7 +2159,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -1778,7 +2190,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the hot spot comparison and tracing results.</p>
+     * <p>Retrieves the results of a hot spot comparison trace.</p>
      * 
      * @param request GetHotspotCompareRequest
      * @param headers map
@@ -1787,15 +2199,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public GetHotspotCompareResponse getHotspotCompareWithOptions(GetHotspotCompareRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.beg1End)) {
             body.put("beg1_end", request.beg1End);
@@ -1839,7 +2242,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -1858,7 +2260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the hot spot comparison and tracing results.</p>
+     * <p>Retrieves the results of a hot spot comparison trace.</p>
      * 
      * @param request GetHotspotCompareRequest
      * @return GetHotspotCompareResponse
@@ -1880,15 +2282,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public GetHotspotInstanceListResponse getHotspotInstanceListWithOptions(GetHotspotInstanceListRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.begEnd)) {
             body.put("beg_end", request.begEnd);
@@ -1904,7 +2297,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -1945,15 +2337,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public GetHotspotPidListResponse getHotspotPidListWithOptions(GetHotspotPidListRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.begEnd)) {
             body.put("beg_end", request.begEnd);
@@ -1973,7 +2356,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -2014,15 +2396,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public GetHotspotTrackingResponse getHotspotTrackingWithOptions(GetHotspotTrackingRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.begEnd)) {
             body.put("beg_end", request.begEnd);
@@ -2050,7 +2423,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -2092,16 +2464,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetInspectionReportResponse getInspectionReportWithOptions(GetInspectionReportRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.reportId)) {
             query.put("reportId", request.reportId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2147,20 +2511,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetInstantScoreResponse getInstantScoreWithOptions(GetInstantScoreRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.cluster)) {
             query.put("cluster", request.cluster);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instance)) {
             query.put("instance", request.instance);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2195,8 +2551,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After installing the component for the target ACK cluster:</p>
+     * <ol>
+     * <li>First, when a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster contains more than 50 nodes, only 50 instances are included in the first batch.</li>
+     * <li>Then, the operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on it without user intervention.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of AI Infra analysis records.</p>
+     * <p>Retrieves a list of GPU clusters.</p>
+     * 
+     * @param request GetListGpuClusterRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetListGpuClusterResponse
+     */
+    public GetListGpuClusterResponse getListGpuClusterWithOptions(GetListGpuClusterRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeRegion)) {
+            query.put("timeRegion", request.timeRegion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetListGpuCluster"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/aiTopology/topology/listCluster"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetListGpuClusterResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>After installing the component for the target ACK cluster:</p>
+     * <ol>
+     * <li>First, when a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster contains more than 50 nodes, only 50 instances are included in the first batch.</li>
+     * <li>Then, the operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on it without user intervention.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves a list of GPU clusters.</p>
+     * 
+     * @param request GetListGpuClusterRequest
+     * @return GetListGpuClusterResponse
+     */
+    public GetListGpuClusterResponse getListGpuCluster(GetListGpuClusterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getListGpuClusterWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves a list of AI Infra analysis records.</p>
      * 
      * @param request GetListRecordRequest
      * @param headers map
@@ -2206,10 +2627,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetListRecordResponse getListRecordWithOptions(GetListRecordRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.analysisId)) {
             query.put("analysisId", request.analysisId);
         }
@@ -2228,10 +2645,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.region)) {
             query.put("region", request.region);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2254,7 +2667,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of AI Infra analysis records.</p>
+     * <p>Retrieves a list of AI Infra analysis records.</p>
      * 
      * @param request GetListRecordRequest
      * @return GetListRecordResponse
@@ -2267,7 +2680,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the proportion of abnormal issues for nodes in a cluster or pods in a node within a specified time range.</p>
+     * <p>Retrieves the proportion of anomaly issues for nodes in a cluster or pods in a node within a specified time range.</p>
      * 
      * @param request GetProblemPercentageRequest
      * @param headers map
@@ -2277,10 +2690,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetProblemPercentageResponse getProblemPercentageWithOptions(GetProblemPercentageRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.cluster)) {
             query.put("cluster", request.cluster);
         }
@@ -2295,10 +2704,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.start)) {
             query.put("start", request.start);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2321,7 +2726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the proportion of abnormal issues for nodes in a cluster or pods in a node within a specified time range.</p>
+     * <p>Retrieves the proportion of anomaly issues for nodes in a cluster or pods in a node within a specified time range.</p>
      * 
      * @param request GetProblemPercentageRequest
      * @return GetProblemPercentageResponse
@@ -2344,10 +2749,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetRangeScoreResponse getRangeScoreWithOptions(GetRangeScoreRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.cluster)) {
             query.put("cluster", request.cluster);
         }
@@ -2362,10 +2763,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.start)) {
             query.put("start", request.start);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2411,10 +2808,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetResourcesResponse getResourcesWithOptions(GetResourcesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.cluster)) {
             query.put("cluster", request.cluster);
         }
@@ -2425,10 +2818,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
             query.put("type", request.type);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2483,10 +2872,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.channel)) {
             query.put("channel", request.channel);
         }
@@ -2497,10 +2882,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.serviceName)) {
             query.put("service_name", request.serviceName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2549,16 +2930,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetVmcoreDiagnosisTaskResponse getVmcoreDiagnosisTaskWithOptions(GetVmcoreDiagnosisTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
             query.put("taskId", request.taskId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2596,14 +2969,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Some SysOM API operations require role assumption based on the <code>AliyunServiceRoleForSysom</code> service-linked role. Before using SysOM features, invoke this operation to perform initialization and ensure that the service-linked role has been created.</p>
      * <ul>
-     * <li><code>check_only</code>: If this parameter is set to True, the operation only checks whether the service-linked role exists and does not create it. If this parameter is set to False or left empty, invoking this operation triggers automatic creation of the service-linked role if it does not exist.<blockquote>
-     * <p>Note: When you call this operation to initialize the role through the API, you agree to the user agreement of the operating system console by default. For more information, refer to: <a href="https://www.alibabacloud.com/help/en/alinux/product-overview/os-console-overview">Operating system console overview</a>, <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202001091714_51956.html">Alibaba Cloud Service Trial Terms</a></p>
+     * <li><code>check_only</code>: If this parameter is set to True, only a check is performed to determine whether the service-linked role exists. The service-linked role is not created. If this parameter is set to False or left empty, automatic creation of the service-linked role is performed if it does not exist.<blockquote>
+     * <p>Note: When you call this operation to initialize the role, you agree to the user agreement of the operating system console by default. For more information, see <a href="https://www.alibabacloud.com/help/en/alinux/product-overview/os-console-overview">Operating system console overview</a> and <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202001091714_51956.html">Alibaba Cloud Service Trial Terms</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Initializes SysOM and ensures that the service-linked role exists.</p>
+     * <p>Initializes SysOM to ensure that the service-linked role exists.</p>
      * 
      * @param request InitialSysomRequest
      * @param headers map
@@ -2612,15 +2985,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public InitialSysomResponse initialSysomWithOptions(InitialSysomRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.checkOnly)) {
             body.put("check_only", request.checkOnly);
@@ -2632,7 +2996,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -2653,14 +3016,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Some SysOM API operations require role assumption based on the <code>AliyunServiceRoleForSysom</code> service-linked role. Before using SysOM features, invoke this operation to perform initialization and ensure that the service-linked role has been created.</p>
      * <ul>
-     * <li><code>check_only</code>: If this parameter is set to True, the operation only checks whether the service-linked role exists and does not create it. If this parameter is set to False or left empty, invoking this operation triggers automatic creation of the service-linked role if it does not exist.<blockquote>
-     * <p>Note: When you call this operation to initialize the role through the API, you agree to the user agreement of the operating system console by default. For more information, refer to: <a href="https://www.alibabacloud.com/help/en/alinux/product-overview/os-console-overview">Operating system console overview</a>, <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202001091714_51956.html">Alibaba Cloud Service Trial Terms</a></p>
+     * <li><code>check_only</code>: If this parameter is set to True, only a check is performed to determine whether the service-linked role exists. The service-linked role is not created. If this parameter is set to False or left empty, automatic creation of the service-linked role is performed if it does not exist.<blockquote>
+     * <p>Note: When you call this operation to initialize the role, you agree to the user agreement of the operating system console by default. For more information, see <a href="https://www.alibabacloud.com/help/en/alinux/product-overview/os-console-overview">Operating system console overview</a> and <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202001091714_51956.html">Alibaba Cloud Service Trial Terms</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Initializes SysOM and ensures that the service-linked role exists.</p>
+     * <p>Initializes SysOM to ensure that the service-linked role exists.</p>
      * 
      * @param request InitialSysomRequest
      * @return InitialSysomResponse
@@ -2673,10 +3036,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to query the task execution status.</p>
+     * <p>Calling this operation to install an agent is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetAgentTask operation to query the task execution status.</p>
      * 
      * <b>summary</b> : 
-     * <p>Installs an Agent on a specified instance.</p>
+     * <p>Installs an agent on a specified instance.</p>
      * 
      * @param request InstallAgentRequest
      * @param headers map
@@ -2685,15 +3048,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public InstallAgentResponse installAgentWithOptions(InstallAgentRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
             body.put("agent_id", request.agentId);
@@ -2713,7 +3067,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -2732,10 +3085,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to query the task execution status.</p>
+     * <p>Calling this operation to install an agent is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetAgentTask operation to query the task execution status.</p>
      * 
      * <b>summary</b> : 
-     * <p>Installs an Agent on a specified instance.</p>
+     * <p>Installs an agent on a specified instance.</p>
      * 
      * @param request InstallAgentRequest
      * @return InstallAgentResponse
@@ -2750,8 +3103,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>After you install a component on the target ACK cluster:</p>
      * <ol>
-     * <li>First, when the cluster is managed for the first time, the component is installed on all existing ECS instances in the cluster. If the cluster contains more than 50 nodes, only 50 instances are processed in the first batch.</li>
-     * <li>Then, the operating system console periodically checks the scaling status of the managed cluster in each epoch. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on the instance without user intervention.</li>
+     * <li>First, when the cluster is managed for the first time, the component is installed on all existing ECS instances in the cluster. If the cluster contains more than 50 nodes, only 50 instances are included in the first batch.</li>
+     * <li>Then, the operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on the instance without user intervention.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -2764,15 +3117,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public InstallAgentForClusterResponse installAgentForClusterWithOptions(InstallAgentForClusterRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
             body.put("agent_id", request.agentId);
@@ -2796,7 +3140,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -2817,8 +3160,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>After you install a component on the target ACK cluster:</p>
      * <ol>
-     * <li>First, when the cluster is managed for the first time, the component is installed on all existing ECS instances in the cluster. If the cluster contains more than 50 nodes, only 50 instances are processed in the first batch.</li>
-     * <li>Then, the operating system console periodically checks the scaling status of the managed cluster in each epoch. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on the instance without user intervention.</li>
+     * <li>First, when the cluster is managed for the first time, the component is installed on all existing ECS instances in the cluster. If the cluster contains more than 50 nodes, only 50 instances are included in the first batch.</li>
+     * <li>Then, the operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on the instance without user intervention.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -2835,7 +3178,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the task execution status.</p>
+     * <p>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to check the task execution status.</p>
      * 
      * <b>summary</b> : 
      * <p>Installs an Agent on a specified instance.</p>
@@ -2847,15 +3190,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public InstallAgentWithTypeResponse installAgentWithTypeWithOptions(InstallAgentWithTypeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
             body.put("Tag", request.tag);
@@ -2883,7 +3217,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -2902,7 +3235,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the task execution status.</p>
+     * <p>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to check the task execution status.</p>
      * 
      * <b>summary</b> : 
      * <p>Installs an Agent on a specified instance.</p>
@@ -2917,8 +3250,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation asynchronously installs the agent. After the operation is called, a task ID is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Initiates an anomaly diagnostics task.</p>
+     * <p>Installs CVE hotfixes asynchronously on specified instances.</p>
+     * 
+     * @param request InstallHotfixRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InstallHotfixResponse
+     */
+    public InstallHotfixResponse installHotfixWithOptions(InstallHotfixRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cveId)) {
+            body.put("cveId", request.cveId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instances)) {
+            body.put("instances", request.instances);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InstallHotfix"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/hotfix_manager/hotfix/install"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InstallHotfixResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation asynchronously installs the agent. After the operation is called, a task ID is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Installs CVE hotfixes asynchronously on specified instances.</p>
+     * 
+     * @param request InstallHotfixRequest
+     * @return InstallHotfixResponse
+     */
+    public InstallHotfixResponse installHotfix(InstallHotfixRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.installHotfixWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Initiates an anomaly diagnosis.</p>
      * 
      * @param request InvokeAnomalyDiagnosisRequest
      * @param headers map
@@ -2928,16 +3318,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public InvokeAnomalyDiagnosisResponse invokeAnomalyDiagnosisWithOptions(InvokeAnomalyDiagnosisRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.uuid)) {
             query.put("uuid", request.uuid);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2960,7 +3342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Initiates an anomaly diagnostics task.</p>
+     * <p>Initiates an anomaly diagnosis.</p>
      * 
      * @param request InvokeAnomalyDiagnosisRequest
      * @return InvokeAnomalyDiagnosisResponse
@@ -3056,10 +3438,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAbnormalyEventsResponse listAbnormalyEventsWithOptions(ListAbnormalyEventsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.cluster)) {
             query.put("cluster", request.cluster);
         }
@@ -3102,10 +3480,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.start)) {
             query.put("start", request.start);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3151,10 +3525,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAgentInstallRecordsResponse listAgentInstallRecordsWithOptions(ListAgentInstallRecordsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.current)) {
             query.put("current", request.current);
         }
@@ -3181,10 +3551,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             query.put("status", request.status);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3230,10 +3596,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAgentsResponse listAgentsWithOptions(ListAgentsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.current)) {
             query.put("current", request.current);
         }
@@ -3248,10 +3610,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
             query.put("type", request.type);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3286,8 +3644,81 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation retrieves the list of regions where the current user has machines managed by SysOM. If the user has ECS instances in a region but those instances are not managed by SysOM, that region does not appear in the results.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of alert contacts.</p>
+     * <p>Retrieves a list of diagnostic tasks.</p>
+     * 
+     * @param request ListAifgJobsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAifgJobsResponse
+     */
+    public ListAifgJobsResponse listAifgJobsWithOptions(ListAifgJobsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.current)) {
+            query.put("current", request.current);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceName)) {
+            query.put("serviceName", request.serviceName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAifgJobs"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/aifg/listAifgJobs"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAifgJobsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation retrieves the list of regions where the current user has machines managed by SysOM. If the user has ECS instances in a region but those instances are not managed by SysOM, that region does not appear in the results.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves a list of diagnostic tasks.</p>
+     * 
+     * @param request ListAifgJobsRequest
+     * @return ListAifgJobsResponse
+     */
+    public ListAifgJobsResponse listAifgJobs(ListAifgJobsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listAifgJobsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves a list of alert contacts.</p>
      * 
      * @param request ListAlertDestinationsRequest
      * @param headers map
@@ -3297,10 +3728,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAlertDestinationsResponse listAlertDestinationsWithOptions(ListAlertDestinationsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.current)) {
             query.put("current", request.current);
         }
@@ -3319,10 +3746,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("pageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3345,7 +3768,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of alert contacts.</p>
+     * <p>Retrieves a list of alert contacts.</p>
      * 
      * @param request ListAlertDestinationsRequest
      * @return ListAlertDestinationsResponse
@@ -3395,7 +3818,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves all push alert policies for the current user.</p>
+     * <p>Retrieves all alert policies configured by the user for push notifications.</p>
      * 
      * @param request ListAlertStrategiesRequest
      * @param headers map
@@ -3405,10 +3828,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAlertStrategiesResponse listAlertStrategiesWithOptions(ListAlertStrategiesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.current)) {
             query.put("current", request.current);
         }
@@ -3427,10 +3846,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("pageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3453,7 +3868,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves all push alert policies for the current user.</p>
+     * <p>Retrieves all alert policies configured by the user for push notifications.</p>
      * 
      * @param request ListAlertStrategiesRequest
      * @return ListAlertStrategiesResponse
@@ -3466,7 +3881,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of managed or unmanaged instances along with their instance information.</p>
+     * <p>Retrieves a list of managed and unmanaged instances along with their instance information.</p>
      * 
      * @param request ListAllInstancesRequest
      * @param headers map
@@ -3476,10 +3891,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAllInstancesResponse listAllInstancesWithOptions(ListAllInstancesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.current)) {
             query.put("current", request.current);
         }
@@ -3516,10 +3927,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("region", request.region);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -3540,7 +3947,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of managed or unmanaged instances along with their instance information.</p>
+     * <p>Retrieves a list of managed and unmanaged instances along with their instance information.</p>
      * 
      * @param request ListAllInstancesRequest
      * @return ListAllInstancesResponse
@@ -3553,7 +3960,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the component installation records of a cluster.</p>
+     * <p>Retrieves the installation records of cluster components.</p>
      * 
      * @param request ListClusterAgentInstallRecordsRequest
      * @param headers map
@@ -3563,10 +3970,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListClusterAgentInstallRecordsResponse listClusterAgentInstallRecordsWithOptions(ListClusterAgentInstallRecordsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.agentConfigId)) {
             query.put("agent_config_id", request.agentConfigId);
         }
@@ -3591,10 +3994,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("plugin_version", request.pluginVersion);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -3615,7 +4014,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the component installation records of a cluster.</p>
+     * <p>Retrieves the installation records of cluster components.</p>
      * 
      * @param request ListClusterAgentInstallRecordsRequest
      * @return ListClusterAgentInstallRecordsResponse
@@ -3638,10 +4037,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListClustersResponse listClustersWithOptions(ListClustersRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
             query.put("cluster_id", request.clusterId);
         }
@@ -3668,10 +4063,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("pageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3717,10 +4108,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListDiagnosisResponse listDiagnosisWithOptions(ListDiagnosisRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.current)) {
             query.put("current", request.current);
         }
@@ -3739,10 +4126,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             query.put("status", request.status);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3778,7 +4161,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the health status list of cluster nodes or Pods within a specified time range.</p>
+     * <p>Retrieves the health status list of cluster nodes or pods within a specified time range.</p>
      * 
      * @param request ListInstanceHealthRequest
      * @param headers map
@@ -3788,10 +4171,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListInstanceHealthResponse listInstanceHealthWithOptions(ListInstanceHealthRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.cluster)) {
             query.put("cluster", request.cluster);
         }
@@ -3816,10 +4195,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("start", request.start);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -3840,7 +4215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the health status list of cluster nodes or Pods within a specified time range.</p>
+     * <p>Retrieves the health status list of cluster nodes or pods within a specified time range.</p>
      * 
      * @param request ListInstanceHealthRequest
      * @return ListInstanceHealthResponse
@@ -3853,7 +4228,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves all values of a specified type of instance information.</p>
+     * <p>Retrieves all values of a specific type of instance information.</p>
      * 
      * @param request ListInstanceInfoRequest
      * @param headers map
@@ -3863,10 +4238,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListInstanceInfoResponse listInstanceInfoWithOptions(ListInstanceInfoRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.infoType)) {
             query.put("infoType", request.infoType);
         }
@@ -3895,10 +4266,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("region", request.region);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -3919,7 +4286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves all values of a specified type of instance information.</p>
+     * <p>Retrieves all values of a specific type of instance information.</p>
      * 
      * @param request ListInstanceInfoRequest
      * @return ListInstanceInfoResponse
@@ -3935,7 +4302,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Retrieves the list of machines managed by SysOM.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves instance statuses.</p>
+     * <p>Retrieves the instance status.</p>
      * 
      * @param request ListInstanceStatusRequest
      * @param headers map
@@ -3945,10 +4312,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListInstanceStatusResponse listInstanceStatusWithOptions(ListInstanceStatusRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.current)) {
             query.put("current", request.current);
         }
@@ -3967,10 +4330,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             query.put("status", request.status);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3996,7 +4355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Retrieves the list of machines managed by SysOM.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves instance statuses.</p>
+     * <p>Retrieves the instance status.</p>
      * 
      * @param request ListInstanceStatusRequest
      * @return ListInstanceStatusResponse
@@ -4012,7 +4371,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This operation retrieves the list of instances that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of instances.</p>
+     * <p>Retrieves the list of managed instances.</p>
      * 
      * @param request ListInstancesRequest
      * @param headers map
@@ -4022,10 +4381,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListInstancesResponse listInstancesWithOptions(ListInstancesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
             query.put("cluster_id", request.clusterId);
         }
@@ -4048,10 +4403,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             query.put("status", request.status);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -4077,7 +4428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This operation retrieves the list of instances that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of instances.</p>
+     * <p>Retrieves the list of managed instances.</p>
      * 
      * @param request ListInstancesRequest
      * @return ListInstancesResponse
@@ -4103,10 +4454,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListInstancesEcsInfoListResponse listInstancesEcsInfoListWithOptions(ListInstancesEcsInfoListRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.infoType)) {
             query.put("info_type", request.infoType);
         }
@@ -4125,10 +4472,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.region)) {
             query.put("region", request.region);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -4186,10 +4529,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.current)) {
             query.put("current", request.current);
         }
@@ -4250,10 +4589,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("resource_group_name", request.resourceGroupName);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -4293,7 +4628,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The instance list retrieved by this operation contains only machines that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of instances for plugin installation, update, or uninstallation.</p>
+     * <p>Retrieves the list of instances for plug-in installation, update, or uninstallation.</p>
      * 
      * @param request ListPluginsInstancesRequest
      * @param headers map
@@ -4303,10 +4638,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListPluginsInstancesResponse listPluginsInstancesWithOptions(ListPluginsInstancesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.current)) {
             query.put("current", request.current);
         }
@@ -4335,10 +4666,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("region", request.region);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -4362,7 +4689,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The instance list retrieved by this operation contains only machines that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of instances for plugin installation, update, or uninstallation.</p>
+     * <p>Retrieves the list of instances for plug-in installation, update, or uninstallation.</p>
      * 
      * @param request ListPluginsInstancesRequest
      * @return ListPluginsInstancesResponse
@@ -4385,10 +4712,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListPodsOfInstanceResponse listPodsOfInstanceWithOptions(ListPodsOfInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
             query.put("cluster_id", request.clusterId);
         }
@@ -4403,10 +4726,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("pageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -4495,16 +4814,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListVmcoreDiagnosisTaskResponse listVmcoreDiagnosisTaskWithOptions(ListVmcoreDiagnosisTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.days)) {
             query.put("days", request.days);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -4539,6 +4850,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The call to this operation to install the agent is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetHotfixTask operation to obtain the execution status of the task.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Asynchronously queries the CVE hotfix status on specified instances.</p>
+     * 
+     * @param request QueryHotfixStatusRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryHotfixStatusResponse
+     */
+    public QueryHotfixStatusResponse queryHotfixStatusWithOptions(QueryHotfixStatusRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cveId)) {
+            body.put("cveId", request.cveId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instances)) {
+            body.put("instances", request.instances);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryHotfixStatus"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/hotfix_manager/hotfix/query_status"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryHotfixStatusResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The call to this operation to install the agent is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetHotfixTask operation to obtain the execution status of the task.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Asynchronously queries the CVE hotfix status on specified instances.</p>
+     * 
+     * @param request QueryHotfixStatusRequest
+     * @return QueryHotfixStatusResponse
+     */
+    public QueryHotfixStatusResponse queryHotfixStatus(QueryHotfixStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.queryHotfixStatusWithOptions(request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Starts AI job analysis.</p>
      * 
@@ -4549,15 +4917,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public StartAIAnalysisResponse startAIAnalysisWithOptions(StartAIAnalysisRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.analysisTool)) {
             body.put("analysisTool", request.analysisTool);
@@ -4617,7 +4976,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -4649,7 +5007,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Currently, only comparative analysis of the same pid across different steps within the same AI Infra analysis record is supported.</p>
+     * <p>Currently, only comparative analysis of the same PID across different steps within the same AI Infra analysis record is supported.</p>
      * 
      * <b>summary</b> : 
      * <p>Starts an AI Infra differential analysis.</p>
@@ -4661,15 +5019,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public StartAIDiffAnalysisResponse startAIDiffAnalysisWithOptions(StartAIDiffAnalysisRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.task1)) {
             body.put("task1", request.task1);
@@ -4681,7 +5030,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -4700,7 +5048,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Currently, only comparative analysis of the same pid across different steps within the same AI Infra analysis record is supported.</p>
+     * <p>Currently, only comparative analysis of the same PID across different steps within the same AI Infra analysis record is supported.</p>
      * 
      * <b>summary</b> : 
      * <p>Starts an AI Infra differential analysis.</p>
@@ -4712,6 +5060,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.startAIDiffAnalysisWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Currently, only comparative analysis of the same PID across different steps within the same AI Infra analysis record is supported.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Triggers AI application diagnostics.</p>
+     * 
+     * @param request StartAifgAnalysisRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartAifgAnalysisResponse
+     */
+    public StartAifgAnalysisResponse startAifgAnalysisWithOptions(StartAifgAnalysisRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.channel)) {
+            body.put("channel", request.channel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.params)) {
+            body.put("params", request.params);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            body.put("region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceName)) {
+            body.put("serviceName", request.serviceName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartAifgAnalysis"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/aifg/startAifgAnalysis"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartAifgAnalysisResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Currently, only comparative analysis of the same PID across different steps within the same AI Infra analysis record is supported.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Triggers AI application diagnostics.</p>
+     * 
+     * @param request StartAifgAnalysisRequest
+     * @return StartAifgAnalysisResponse
+     */
+    public StartAifgAnalysisResponse startAifgAnalysis(StartAifgAnalysisRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.startAifgAnalysisWithOptions(request, headers, runtime);
     }
 
     /**
@@ -4728,15 +5141,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public UninstallAgentResponse uninstallAgentWithOptions(UninstallAgentRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
             body.put("agent_id", request.agentId);
@@ -4752,7 +5156,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -4796,15 +5199,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public UninstallAgentForClusterResponse uninstallAgentForClusterWithOptions(UninstallAgentForClusterRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
             body.put("agent_id", request.agentId);
@@ -4820,7 +5214,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -4852,7 +5245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calling this operation to uninstall an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
+     * <p>Calling this operation to uninstall an Agent is asynchronous. After the call, a task_id is returned. Use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
      * 
      * <b>summary</b> : 
      * <p>Uninstalls a specified version of a component.</p>
@@ -4864,15 +5257,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public UninstallAgentWithTypeResponse uninstallAgentWithTypeWithOptions(UninstallAgentWithTypeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
             body.put("agentId", request.agentId);
@@ -4892,7 +5276,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -4911,7 +5294,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calling this operation to uninstall an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
+     * <p>Calling this operation to uninstall an Agent is asynchronous. After the call, a task_id is returned. Use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
      * 
      * <b>summary</b> : 
      * <p>Uninstalls a specified version of a component.</p>
@@ -4923,6 +5306,124 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.uninstallAgentWithTypeWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Asynchronously uninstalls CVE hotfixes from the specified instances.</p>
+     * 
+     * @param request UninstallHotfixRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UninstallHotfixResponse
+     */
+    public UninstallHotfixResponse uninstallHotfixWithOptions(UninstallHotfixRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cveId)) {
+            body.put("cveId", request.cveId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instances)) {
+            body.put("instances", request.instances);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UninstallHotfix"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/hotfix_manager/hotfix/uninstall"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UninstallHotfixResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Asynchronously uninstalls CVE hotfixes from the specified instances.</p>
+     * 
+     * @param request UninstallHotfixRequest
+     * @return UninstallHotfixResponse
+     */
+    public UninstallHotfixResponse uninstallHotfix(UninstallHotfixRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.uninstallHotfixWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>After the configuration is updated, the new configuration is delivered to all resources that use it.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the component configuration.</p>
+     * 
+     * @param request UpdateAgentConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAgentConfigResponse
+     */
+    public UpdateAgentConfigResponse updateAgentConfigWithOptions(UpdateAgentConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            body.put("agentId", request.agentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            body.put("configId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
+            body.put("content", request.content);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAgentConfig"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/am/agent/updateAgentConfig"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAgentConfigResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>After the configuration is updated, the new configuration is delivered to all resources that use it.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the component configuration.</p>
+     * 
+     * @param request UpdateAgentConfigRequest
+     * @return UpdateAgentConfigResponse
+     */
+    public UpdateAgentConfigResponse updateAgentConfig(UpdateAgentConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateAgentConfigWithOptions(request, headers, runtime);
     }
 
     /**
@@ -4939,15 +5440,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public UpdateAlertDestinationResponse updateAlertDestinationWithOptions(UpdateAlertDestinationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
             body.put("app_id", request.appId);
@@ -4987,7 +5479,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -5031,15 +5522,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public UpdateAlertEnabledResponse updateAlertEnabledWithOptions(UpdateAlertEnabledRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
             body.put("enabled", request.enabled);
@@ -5051,7 +5533,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -5092,15 +5573,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public UpdateAlertStrategyResponse updateAlertStrategyWithOptions(UpdateAlertStrategyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
             body.put("enabled", request.enabled);
@@ -5124,7 +5596,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -5156,6 +5627,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Updates the configuration of a cluster component.</p>
+     * 
+     * @param request UpdateClusterAgentConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateClusterAgentConfigResponse
+     */
+    public UpdateClusterAgentConfigResponse updateClusterAgentConfigWithOptions(UpdateClusterAgentConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            body.put("agentId", request.agentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            body.put("clusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            body.put("configId", request.configId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateClusterAgentConfig"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/am/agent/updateClusterAgentConfig"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateClusterAgentConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the configuration of a cluster component.</p>
+     * 
+     * @param request UpdateClusterAgentConfigRequest
+     * @return UpdateClusterAgentConfigResponse
+     */
+    public UpdateClusterAgentConfigResponse updateClusterAgentConfig(UpdateClusterAgentConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateClusterAgentConfigWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Updates the attention level of an anomaly item. Adjusting the attention level affects the sensitivity of the anomaly detection algorithm.</p>
      * 
      * @param request UpdateEventsAttentionRequest
@@ -5165,15 +5691,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public UpdateEventsAttentionResponse updateEventsAttentionWithOptions(UpdateEventsAttentionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.mode)) {
             body.put("mode", request.mode);
@@ -5189,7 +5706,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -5243,10 +5759,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.channel)) {
             query.put("channel", request.channel);
         }
@@ -5257,10 +5769,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.serviceName)) {
             query.put("service_name", request.serviceName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -5301,11 +5809,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Updates the component configuration of an instance.</p>
+     * 
+     * @param request UpdateInstanceAgentConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateInstanceAgentConfigResponse
+     */
+    public UpdateInstanceAgentConfigResponse updateInstanceAgentConfigWithOptions(UpdateInstanceAgentConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            body.put("agentId", request.agentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            body.put("configId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instances)) {
+            body.put("instances", request.instances);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateInstanceAgentConfig"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/am/agent/updateInstanceAgentConfig"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateInstanceAgentConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the component configuration of an instance.</p>
+     * 
+     * @param request UpdateInstanceAgentConfigRequest
+     * @return UpdateInstanceAgentConfigResponse
+     */
+    public UpdateInstanceAgentConfigResponse updateInstanceAgentConfig(UpdateInstanceAgentConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateInstanceAgentConfigWithOptions(request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
-     * <p>Calling this operation to update the Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
+     * <p>Calling this operation to update an Agent is asynchronous. After the call, a task_id is returned. Use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the version of an installed component to a specified version.</p>
+     * <p>Updates an installed component to a specified version.</p>
      * 
      * @param request UpgradeAgentRequest
      * @param headers map
@@ -5314,15 +5877,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public UpgradeAgentResponse upgradeAgentWithOptions(UpgradeAgentRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
             body.put("agent_id", request.agentId);
@@ -5338,7 +5892,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -5357,10 +5910,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calling this operation to update the Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
+     * <p>Calling this operation to update an Agent is asynchronous. After the call, a task_id is returned. Use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the version of an installed component to a specified version.</p>
+     * <p>Updates an installed component to a specified version.</p>
      * 
      * @param request UpgradeAgentRequest
      * @return UpgradeAgentResponse
@@ -5373,7 +5926,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a component for an ACK cluster.</p>
+     * <p>Updates a component for a cluster.</p>
      * 
      * @param request UpgradeAgentForClusterRequest
      * @param headers map
@@ -5382,15 +5935,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public UpgradeAgentForClusterResponse upgradeAgentForClusterWithOptions(UpgradeAgentForClusterRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
             body.put("agent_id", request.agentId);
@@ -5406,7 +5950,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -5425,7 +5968,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a component for an ACK cluster.</p>
+     * <p>Updates a component for a cluster.</p>
      * 
      * @param request UpgradeAgentForClusterRequest
      * @return UpgradeAgentForClusterResponse
@@ -5438,7 +5981,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calling this operation to update the Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
+     * <p>Calling this operation to update an Agent is asynchronous. After the call, a task_id is returned. Use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates the version of an installed component to a specified version.</p>
@@ -5450,15 +5993,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public UpgradeAgentWithTypeResponse upgradeAgentWithTypeWithOptions(UpgradeAgentWithTypeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.xDebugId)) {
-            query.put("X-Debug-Id", request.xDebugId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.xSysomInvokeSource)) {
-            query.put("x-sysom-invoke-source", request.xSysomInvokeSource);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
             body.put("agentId", request.agentId);
@@ -5478,7 +6012,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -5497,7 +6030,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calling this operation to update the Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
+     * <p>Calling this operation to update an Agent is asynchronous. After the call, a task_id is returned. Use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates the version of an installed component to a specified version.</p>

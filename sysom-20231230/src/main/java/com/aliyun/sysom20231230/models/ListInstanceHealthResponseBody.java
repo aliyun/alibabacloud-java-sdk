@@ -7,8 +7,8 @@ public class ListInstanceHealthResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <ul>
-     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
-     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+     * <li>If <code>code == Success</code>, the authorization is successful.</li>
+     * <li>Other status codes indicate authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class ListInstanceHealthResponseBody extends TeaModel {
      * <p>The error message.</p>
      * <ul>
      * <li>If <code>code == Success</code>, this field is empty.</li>
-     * <li>Otherwise, this field contains the error information of the request.</li>
+     * <li>Otherwise, this field contains the request error information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class ListInstanceHealthResponseBody extends TeaModel {
 
     public static class ListInstanceHealthResponseBodyData extends TeaModel {
         /**
-         * <p>The list of container image names in the Pod.</p>
+         * <p>The list of container image names in the pod.</p>
          */
         @NameInMap("images")
         public java.util.List<String> images;
@@ -116,7 +116,7 @@ public class ListInstanceHealthResponseBody extends TeaModel {
         public String instance;
 
         /**
-         * <p>The namespace of the Pod.</p>
+         * <p>The namespace of the pod.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -125,7 +125,7 @@ public class ListInstanceHealthResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The Pod name.</p>
+         * <p>The pod name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-pod</p>
@@ -154,11 +154,11 @@ public class ListInstanceHealthResponseBody extends TeaModel {
         /**
          * <p>The running status of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Running</strong>: running.</li>
-         * <li><strong>Offline</strong>: offline.</li>
+         * <li><strong>Running</strong>: Running.</li>
+         * <li><strong>Offline</strong>: Offline.</li>
          * </ul>
          * <blockquote>
-         * <p>An instance in the Offline state indicates that the heartbeat between the node and the SysOM server is lost. It does not mean that the corresponding ECS instance is not running.</p>
+         * <p>An instance in the Offline status indicates that the heartbeat between the node and the SysOM server is lost. It does not mean that the corresponding ECS instance is not running.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

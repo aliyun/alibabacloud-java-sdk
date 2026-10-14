@@ -20,7 +20,7 @@ public class GetHotspotPidListResponseBody extends TeaModel {
     public GetHotspotPidListResponseBodyData data;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>

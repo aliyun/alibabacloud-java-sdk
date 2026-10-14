@@ -4,9 +4,6 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class UpgradeAgentRequest extends TeaModel {
-    @NameInMap("X-Debug-Id")
-    public String xDebugId;
-
     /**
      * <p>The ID of the component to update.</p>
      * <p>This parameter is required.</p>
@@ -34,20 +31,9 @@ public class UpgradeAgentRequest extends TeaModel {
     @NameInMap("instances")
     public java.util.List<UpgradeAgentRequestInstances> instances;
 
-    @NameInMap("x-sysom-invoke-source")
-    public String xSysomInvokeSource;
-
     public static UpgradeAgentRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeAgentRequest self = new UpgradeAgentRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpgradeAgentRequest setXDebugId(String xDebugId) {
-        this.xDebugId = xDebugId;
-        return this;
-    }
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     public UpgradeAgentRequest setAgentId(String agentId) {
@@ -72,14 +58,6 @@ public class UpgradeAgentRequest extends TeaModel {
     }
     public java.util.List<UpgradeAgentRequestInstances> getInstances() {
         return this.instances;
-    }
-
-    public UpgradeAgentRequest setXSysomInvokeSource(String xSysomInvokeSource) {
-        this.xSysomInvokeSource = xSysomInvokeSource;
-        return this;
-    }
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
     }
 
     public static class UpgradeAgentRequestInstances extends TeaModel {

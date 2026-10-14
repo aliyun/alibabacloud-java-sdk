@@ -4,9 +4,6 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesEcsInfoListRequest extends TeaModel {
-    @NameInMap("X-Debug-Id")
-    public String xDebugId;
-
     /**
      * <p>The type of information to retrieve.</p>
      * <p>This parameter is required.</p>
@@ -54,20 +51,9 @@ public class ListInstancesEcsInfoListRequest extends TeaModel {
     @NameInMap("region")
     public String region;
 
-    @NameInMap("x-sysom-invoke-source")
-    public String xSysomInvokeSource;
-
     public static ListInstancesEcsInfoListRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesEcsInfoListRequest self = new ListInstancesEcsInfoListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListInstancesEcsInfoListRequest setXDebugId(String xDebugId) {
-        this.xDebugId = xDebugId;
-        return this;
-    }
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     public ListInstancesEcsInfoListRequest setInfoType(String infoType) {
@@ -108,14 +94,6 @@ public class ListInstancesEcsInfoListRequest extends TeaModel {
     }
     public String getRegion() {
         return this.region;
-    }
-
-    public ListInstancesEcsInfoListRequest setXSysomInvokeSource(String xSysomInvokeSource) {
-        this.xSysomInvokeSource = xSysomInvokeSource;
-        return this;
-    }
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
     }
 
 }

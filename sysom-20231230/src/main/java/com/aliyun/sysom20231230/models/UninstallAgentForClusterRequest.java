@@ -4,9 +4,6 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class UninstallAgentForClusterRequest extends TeaModel {
-    @NameInMap("X-Debug-Id")
-    public String xDebugId;
-
     /**
      * <p>The component ID.</p>
      * 
@@ -28,7 +25,7 @@ public class UninstallAgentForClusterRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>This cluster ID must be the ID of an ACK cluster.</p>
+     * <p>This parameter must be set to the ID of an ACK cluster.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -37,20 +34,9 @@ public class UninstallAgentForClusterRequest extends TeaModel {
     @NameInMap("cluster_id")
     public String clusterId;
 
-    @NameInMap("x-sysom-invoke-source")
-    public String xSysomInvokeSource;
-
     public static UninstallAgentForClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         UninstallAgentForClusterRequest self = new UninstallAgentForClusterRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UninstallAgentForClusterRequest setXDebugId(String xDebugId) {
-        this.xDebugId = xDebugId;
-        return this;
-    }
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     public UninstallAgentForClusterRequest setAgentId(String agentId) {
@@ -75,14 +61,6 @@ public class UninstallAgentForClusterRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
-    }
-
-    public UninstallAgentForClusterRequest setXSysomInvokeSource(String xSysomInvokeSource) {
-        this.xSysomInvokeSource = xSysomInvokeSource;
-        return this;
-    }
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
     }
 
 }

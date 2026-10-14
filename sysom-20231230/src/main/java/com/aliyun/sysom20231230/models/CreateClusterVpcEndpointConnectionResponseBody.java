@@ -76,7 +76,7 @@ public class CreateClusterVpcEndpointConnectionResponseBody extends TeaModel {
 
     public static class CreateClusterVpcEndpointConnectionResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the endpoint connection.</p>
+         * <p>The endpoint connection ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ep-xxx</p>

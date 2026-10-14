@@ -36,7 +36,7 @@ public class InstallAgentForClusterResponseBody extends TeaModel {
      * <p>The error message.</p>
      * <ul>
      * <li>If <code>code == Success</code>, this field is empty.</li>
-     * <li>Otherwise, this field contains the request error information.</li>
+     * <li>Otherwise, this field contains the error information of the request.</li>
      * </ul>
      * 
      * <strong>example:</strong>

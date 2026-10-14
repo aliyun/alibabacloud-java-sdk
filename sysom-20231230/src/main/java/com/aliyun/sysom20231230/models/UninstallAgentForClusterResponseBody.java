@@ -16,7 +16,7 @@ public class UninstallAgentForClusterResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <ul>
-     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+     * <li><code>code == Success</code> indicates that the authorization was successful.</li>
      * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
@@ -84,7 +84,7 @@ public class UninstallAgentForClusterResponseBody extends TeaModel {
 
     public static class UninstallAgentForClusterResponseBodyData extends TeaModel {
         /**
-         * <p>The task ID. You can use this task ID to call GetAgentTask to query the execution status of the task.</p>
+         * <p>The task ID. You can use this task ID to call the GetAgentTasK operation to query the execution status of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>049ea0609515414b9e19c3389d7ba638</p>

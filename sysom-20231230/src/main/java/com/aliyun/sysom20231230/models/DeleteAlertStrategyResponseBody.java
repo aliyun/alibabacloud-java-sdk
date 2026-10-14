@@ -7,7 +7,7 @@ public class DeleteAlertStrategyResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <ul>
-     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+     * <li><code>code == Success</code> indicates that the authorization was successful.</li>
      * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 

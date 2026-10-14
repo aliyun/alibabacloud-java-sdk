@@ -4,9 +4,6 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class UpgradeAgentWithTypeRequest extends TeaModel {
-    @NameInMap("X-Debug-Id")
-    public String xDebugId;
-
     /**
      * <p>The ID of the component to update.</p>
      * <p>This parameter is required.</p>
@@ -18,7 +15,7 @@ public class UpgradeAgentWithTypeRequest extends TeaModel {
     public String agentId;
 
     /**
-     * <p>The version of the component to update to.</p>
+     * <p>The version to which the component is updated.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,26 +34,15 @@ public class UpgradeAgentWithTypeRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The list of instances for which to update the component.</p>
+     * <p>The list of instances on which to update the component.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("instances")
     public java.util.List<UpgradeAgentWithTypeRequestInstances> instances;
 
-    @NameInMap("x-sysom-invoke-source")
-    public String xSysomInvokeSource;
-
     public static UpgradeAgentWithTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeAgentWithTypeRequest self = new UpgradeAgentWithTypeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpgradeAgentWithTypeRequest setXDebugId(String xDebugId) {
-        this.xDebugId = xDebugId;
-        return this;
-    }
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     public UpgradeAgentWithTypeRequest setAgentId(String agentId) {
@@ -89,14 +75,6 @@ public class UpgradeAgentWithTypeRequest extends TeaModel {
     }
     public java.util.List<UpgradeAgentWithTypeRequestInstances> getInstances() {
         return this.instances;
-    }
-
-    public UpgradeAgentWithTypeRequest setXSysomInvokeSource(String xSysomInvokeSource) {
-        this.xSysomInvokeSource = xSysomInvokeSource;
-        return this;
-    }
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
     }
 
     public static class UpgradeAgentWithTypeRequestInstances extends TeaModel {

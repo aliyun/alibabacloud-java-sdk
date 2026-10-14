@@ -4,11 +4,8 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesWithEcsInfoRequest extends TeaModel {
-    @NameInMap("X-Debug-Id")
-    public String xDebugId;
-
     /**
-     * <p>The page number for pagination. This parameter specifies the current page.</p>
+     * <p>The page number for pagination. This field indicates the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +23,7 @@ public class ListInstancesWithEcsInfoRequest extends TeaModel {
     public String healthStatus;
 
     /**
-     * <p>Specifies an instance ID to filter the Agent installation status of the specified instance.</p>
+     * <p>Specifies the instance ID to filter the Agent installation status of the specified instance.</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp118piqcio9tiwgh84b</p>
@@ -59,7 +56,7 @@ public class ListInstancesWithEcsInfoRequest extends TeaModel {
     public ListInstancesWithEcsInfoRequestInstanceTag instanceTag;
 
     /**
-     * <p>Filters instances by management status.</p>
+     * <p>Filters instances by managed status.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -140,20 +137,9 @@ public class ListInstancesWithEcsInfoRequest extends TeaModel {
     @NameInMap("resource_group_name")
     public String resourceGroupName;
 
-    @NameInMap("x-sysom-invoke-source")
-    public String xSysomInvokeSource;
-
     public static ListInstancesWithEcsInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesWithEcsInfoRequest self = new ListInstancesWithEcsInfoRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListInstancesWithEcsInfoRequest setXDebugId(String xDebugId) {
-        this.xDebugId = xDebugId;
-        return this;
-    }
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     public ListInstancesWithEcsInfoRequest setCurrent(Integer current) {
@@ -274,14 +260,6 @@ public class ListInstancesWithEcsInfoRequest extends TeaModel {
     }
     public String getResourceGroupName() {
         return this.resourceGroupName;
-    }
-
-    public ListInstancesWithEcsInfoRequest setXSysomInvokeSource(String xSysomInvokeSource) {
-        this.xSysomInvokeSource = xSysomInvokeSource;
-        return this;
-    }
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
     }
 
     public static class ListInstancesWithEcsInfoRequestInstanceTag extends TeaModel {

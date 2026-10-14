@@ -16,8 +16,8 @@ public class ListInstanceStatusResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <ul>
-     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
-     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed error message.</li>
+     * <li><code>code == Success</code> indicates that the authorization was successful.</li>
+     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -121,8 +121,8 @@ public class ListInstanceStatusResponseBody extends TeaModel {
         /**
          * <p>The running status of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Running</strong>: running.</li>
-         * <li><strong>Offline</strong>: offline.</li>
+         * <li><strong>Running</strong>: The instance is running.</li>
+         * <li><strong>Offline</strong>: The instance is offline.</li>
          * </ul>
          * <blockquote>
          * <p>An instance in the Offline status indicates that the heartbeat between the node and the SysOM server is lost. It does not mean that the corresponding ECS instance is not running.</p>

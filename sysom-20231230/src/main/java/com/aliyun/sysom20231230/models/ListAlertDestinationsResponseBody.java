@@ -7,7 +7,7 @@ public class ListAlertDestinationsResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <ul>
-     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+     * <li><code>code == Success</code> indicates that the authorization was successful.</li>
      * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
@@ -39,7 +39,7 @@ public class ListAlertDestinationsResponseBody extends TeaModel {
      * <p>The error message.</p>
      * <ul>
      * <li>If <code>code == Success</code>, this field is empty.</li>
-     * <li>Otherwise, this field contains the error information for the request.</li>
+     * <li>Otherwise, this field contains the request error information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,7 +67,7 @@ public class ListAlertDestinationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The maximum number of records returned by this request based on MaxResults.</p>
+     * <p>The maximum number of records returned by MaxResults for this request.</p>
      * 
      * <strong>example:</strong>
      * <p>623</p>

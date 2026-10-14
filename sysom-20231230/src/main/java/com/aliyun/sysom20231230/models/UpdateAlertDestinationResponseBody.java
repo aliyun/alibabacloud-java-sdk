@@ -18,7 +18,7 @@ public class UpdateAlertDestinationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The response result.</p>
      * 
      * <strong>example:</strong>
      * <p>{

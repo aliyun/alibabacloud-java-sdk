@@ -23,7 +23,7 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
      * <p>The error message.</p>
      * <ul>
      * <li>If <code>code == Success</code>, this field is empty.</li>
-     * <li>Otherwise, this field contains the error message for the request.</li>
+     * <li>Otherwise, this field contains the error message of the request.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -98,7 +98,7 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
         public String phone;
 
         /**
-         * <p>The secret key of the chatbot.</p>
+         * <p>The chatbot secret key.</p>
          * 
          * <strong>example:</strong>
          * <p>SECxxx</p>
@@ -156,7 +156,7 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
 
     public static class CreateAlertDestinationResponseBodyData extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the contact was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1753669116286</p>
@@ -216,7 +216,7 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
         public String uid;
 
         /**
-         * <p>The update time.</p>
+         * <p>The time when the contact was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1751254826285</p>

@@ -4,9 +4,6 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class GetServiceFuncStatusRequest extends TeaModel {
-    @NameInMap("X-Debug-Id")
-    public String xDebugId;
-
     /**
      * <p>The channel name.</p>
      * <p>This parameter is required.</p>
@@ -34,20 +31,9 @@ public class GetServiceFuncStatusRequest extends TeaModel {
     @NameInMap("service_name")
     public String serviceName;
 
-    @NameInMap("x-sysom-invoke-source")
-    public String xSysomInvokeSource;
-
     public static GetServiceFuncStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         GetServiceFuncStatusRequest self = new GetServiceFuncStatusRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetServiceFuncStatusRequest setXDebugId(String xDebugId) {
-        this.xDebugId = xDebugId;
-        return this;
-    }
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     public GetServiceFuncStatusRequest setChannel(String channel) {
@@ -72,14 +58,6 @@ public class GetServiceFuncStatusRequest extends TeaModel {
     }
     public String getServiceName() {
         return this.serviceName;
-    }
-
-    public GetServiceFuncStatusRequest setXSysomInvokeSource(String xSysomInvokeSource) {
-        this.xSysomInvokeSource = xSysomInvokeSource;
-        return this;
-    }
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
     }
 
     public static class GetServiceFuncStatusRequestParams extends TeaModel {

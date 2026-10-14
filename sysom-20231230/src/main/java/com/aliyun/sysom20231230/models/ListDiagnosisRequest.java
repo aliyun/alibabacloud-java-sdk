@@ -4,9 +4,6 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class ListDiagnosisRequest extends TeaModel {
-    @NameInMap("X-Debug-Id")
-    public String xDebugId;
-
     /**
      * <p>The current page number.</p>
      * 
@@ -59,20 +56,9 @@ public class ListDiagnosisRequest extends TeaModel {
     @NameInMap("status")
     public String status;
 
-    @NameInMap("x-sysom-invoke-source")
-    public String xSysomInvokeSource;
-
     public static ListDiagnosisRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDiagnosisRequest self = new ListDiagnosisRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListDiagnosisRequest setXDebugId(String xDebugId) {
-        this.xDebugId = xDebugId;
-        return this;
-    }
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     public ListDiagnosisRequest setCurrent(Long current) {
@@ -113,14 +99,6 @@ public class ListDiagnosisRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
-    }
-
-    public ListDiagnosisRequest setXSysomInvokeSource(String xSysomInvokeSource) {
-        this.xSysomInvokeSource = xSysomInvokeSource;
-        return this;
-    }
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
     }
 
 }

@@ -4,9 +4,6 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceInfoRequest extends TeaModel {
-    @NameInMap("X-Debug-Id")
-    public String xDebugId;
-
     /**
      * <p>The information type.</p>
      * 
@@ -70,20 +67,9 @@ public class ListInstanceInfoRequest extends TeaModel {
     @NameInMap("region")
     public String region;
 
-    @NameInMap("x-sysom-invoke-source")
-    public String xSysomInvokeSource;
-
     public static ListInstanceInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstanceInfoRequest self = new ListInstanceInfoRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListInstanceInfoRequest setXDebugId(String xDebugId) {
-        this.xDebugId = xDebugId;
-        return this;
-    }
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     public ListInstanceInfoRequest setInfoType(String infoType) {
@@ -140,14 +126,6 @@ public class ListInstanceInfoRequest extends TeaModel {
     }
     public String getRegion() {
         return this.region;
-    }
-
-    public ListInstanceInfoRequest setXSysomInvokeSource(String xSysomInvokeSource) {
-        this.xSysomInvokeSource = xSysomInvokeSource;
-        return this;
-    }
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
     }
 
 }

@@ -128,7 +128,7 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The canary release environment.</p>
+         * <p>The grayscale configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -155,7 +155,7 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
         public String pluginVersion;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-25T15:08:19</p>

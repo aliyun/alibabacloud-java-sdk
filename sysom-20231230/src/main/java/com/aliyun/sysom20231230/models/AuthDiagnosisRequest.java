@@ -4,9 +4,6 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class AuthDiagnosisRequest extends TeaModel {
-    @NameInMap("X-Debug-Id")
-    public String xDebugId;
-
     /**
      * <p>Specifies whether to enable automatic creation of the service-linked role.</p>
      */
@@ -14,31 +11,20 @@ public class AuthDiagnosisRequest extends TeaModel {
     public Boolean autoCreateRole;
 
     /**
-     * <p>Specifies whether to automatically install the latest version of the agent if it is not installed.</p>
+     * <p>Specifies whether to automatically install the latest version of the agent if it is not already installed.</p>
      */
     @NameInMap("autoInstallAgent")
     public Boolean autoInstallAgent;
 
     /**
-     * <p>The list of instances authorized for diagnosis.</p>
+     * <p>The list of instances authorized for diagnostics.</p>
      */
     @NameInMap("instances")
     public java.util.List<AuthDiagnosisRequestInstances> instances;
 
-    @NameInMap("x-sysom-invoke-source")
-    public String xSysomInvokeSource;
-
     public static AuthDiagnosisRequest build(java.util.Map<String, ?> map) throws Exception {
         AuthDiagnosisRequest self = new AuthDiagnosisRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AuthDiagnosisRequest setXDebugId(String xDebugId) {
-        this.xDebugId = xDebugId;
-        return this;
-    }
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     public AuthDiagnosisRequest setAutoCreateRole(Boolean autoCreateRole) {
@@ -63,14 +49,6 @@ public class AuthDiagnosisRequest extends TeaModel {
     }
     public java.util.List<AuthDiagnosisRequestInstances> getInstances() {
         return this.instances;
-    }
-
-    public AuthDiagnosisRequest setXSysomInvokeSource(String xSysomInvokeSource) {
-        this.xSysomInvokeSource = xSysomInvokeSource;
-        return this;
-    }
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
     }
 
     public static class AuthDiagnosisRequestInstances extends TeaModel {

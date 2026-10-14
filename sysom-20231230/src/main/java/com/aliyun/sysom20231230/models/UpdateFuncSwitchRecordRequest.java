@@ -4,9 +4,6 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class UpdateFuncSwitchRecordRequest extends TeaModel {
-    @NameInMap("X-Debug-Id")
-    public String xDebugId;
-
     /**
      * <p>The diagnostic channel. Currently, this parameter is fixed to the ECS channel.</p>
      * <p>This parameter is required.</p>
@@ -18,7 +15,7 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
     public String channel;
 
     /**
-     * <p>The diagnostic parameters. Different types of diagnostics require different diagnostic parameters. You can use this field to filter records whose parameters match specified values.</p>
+     * <p>The diagnostic parameters. Different types of diagnostics require different diagnostic parameters. You can use this field to filter records whose parameters match the specified values.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("params")
@@ -34,20 +31,9 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
     @NameInMap("service_name")
     public String serviceName;
 
-    @NameInMap("x-sysom-invoke-source")
-    public String xSysomInvokeSource;
-
     public static UpdateFuncSwitchRecordRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateFuncSwitchRecordRequest self = new UpdateFuncSwitchRecordRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateFuncSwitchRecordRequest setXDebugId(String xDebugId) {
-        this.xDebugId = xDebugId;
-        return this;
-    }
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     public UpdateFuncSwitchRecordRequest setChannel(String channel) {
@@ -74,14 +60,6 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
         return this.serviceName;
     }
 
-    public UpdateFuncSwitchRecordRequest setXSysomInvokeSource(String xSysomInvokeSource) {
-        this.xSysomInvokeSource = xSysomInvokeSource;
-        return this;
-    }
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
-    }
-
     public static class UpdateFuncSwitchRecordRequestParamsArgs extends TeaModel {
         /**
          * <p>The configuration process.</p>
@@ -102,7 +80,7 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
         public String cpu;
 
         /**
-         * <p>The start duration. Unit: seconds.</p>
+         * <p>The start duration, in seconds (s).</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>

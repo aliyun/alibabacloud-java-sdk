@@ -20,7 +20,7 @@ public class GetListRecordResponseBody extends TeaModel {
     public java.util.List<GetListRecordResponseBodyData> data;
 
     /**
-     * <p>The description of the status code.</p>
+     * <p>The status code description.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -123,7 +123,7 @@ public class GetListRecordResponseBody extends TeaModel {
          * <p>The analysis failure log.</p>
          * 
          * <strong>example:</strong>
-         * <p>机器i-wz9dej066kii4goqpnze分析失败, 失败原因: Not get GPU trace data for \&quot;e59ce870-dbd4-4c44-a814-174ac6ab5bcf\&quot; \&quot;[\&quot;118534\&quot;]\&quot;!</p>
+         * <p>Analysis failed for instance i-wz9dej066kii4goqpnze. Failure reason: Not get GPU trace data for \&quot;e59ce870-dbd4-4c44-a814-174ac6ab5bcf\&quot; \&quot;[\&quot;118534\&quot;]\&quot;!</p>
          */
         @NameInMap("failedLog")
         public String failedLog;

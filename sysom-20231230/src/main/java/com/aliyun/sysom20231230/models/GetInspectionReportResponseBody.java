@@ -8,7 +8,7 @@ public class GetInspectionReportResponseBody extends TeaModel {
      * <p>The status code.</p>
      * <ul>
      * <li><code>code == Success</code> indicates that the authorization is successful.</li>
-     * <li>Other status codes indicate that the authorization has failed. Check the <code>message</code> field for the detailed error message.</li>
+     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed error message.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class GetInspectionReportResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response data.</p>
+     * <p>The response result.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

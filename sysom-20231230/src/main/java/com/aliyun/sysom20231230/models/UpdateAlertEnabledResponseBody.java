@@ -7,8 +7,8 @@ public class UpdateAlertEnabledResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, the authorization is successful.</li>
-     * <li>Other status codes indicate authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+     * <li>Other status codes indicate that the authorization failed. If the authorization fails, check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class UpdateAlertEnabledResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -26,7 +26,7 @@ public class UpdateAlertEnabledResponseBody extends TeaModel {
      *     &quot;name&quot;: &quot;test-name&quot;,
      *     &quot;strategy&quot;: {
      *       &quot;items&quot;: [
-     *         &quot;节点CPU使用率检测&quot;
+     *         &quot;Node CPU usage detection&quot;
      *       ],
      *       &quot;clusters&quot;: [
      *         &quot;cluster1&quot;
@@ -45,7 +45,7 @@ public class UpdateAlertEnabledResponseBody extends TeaModel {
      * <p>The error message.</p>
      * <ul>
      * <li>If <code>code == Success</code>, this field is empty.</li>
-     * <li>Otherwise, this field contains the error information of the request.</li>
+     * <li>Otherwise, this field contains the request error information.</li>
      * </ul>
      * 
      * <strong>example:</strong>

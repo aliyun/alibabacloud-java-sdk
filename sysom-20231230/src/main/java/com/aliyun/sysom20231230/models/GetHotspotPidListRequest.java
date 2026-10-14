@@ -4,9 +4,6 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class GetHotspotPidListRequest extends TeaModel {
-    @NameInMap("X-Debug-Id")
-    public String xDebugId;
-
     /**
      * <p>The end time.</p>
      * <p>This parameter is required.</p>
@@ -47,20 +44,9 @@ public class GetHotspotPidListRequest extends TeaModel {
     @NameInMap("table")
     public String table;
 
-    @NameInMap("x-sysom-invoke-source")
-    public String xSysomInvokeSource;
-
     public static GetHotspotPidListRequest build(java.util.Map<String, ?> map) throws Exception {
         GetHotspotPidListRequest self = new GetHotspotPidListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetHotspotPidListRequest setXDebugId(String xDebugId) {
-        this.xDebugId = xDebugId;
-        return this;
-    }
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     public GetHotspotPidListRequest setBegEnd(Long begEnd) {
@@ -93,14 +79,6 @@ public class GetHotspotPidListRequest extends TeaModel {
     }
     public String getTable() {
         return this.table;
-    }
-
-    public GetHotspotPidListRequest setXSysomInvokeSource(String xSysomInvokeSource) {
-        this.xSysomInvokeSource = xSysomInvokeSource;
-        return this;
-    }
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
     }
 
 }

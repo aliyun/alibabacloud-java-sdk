@@ -14,10 +14,10 @@ public class UpdateEventsAttentionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status code. Valid values:</p>
+     * <p>The status code.</p>
      * <ul>
-     * <li>Success: The authorization is successful.</li>
-     * <li>Other values: The authorization failed. Check the message field for the detailed fault information.</li>
+     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class UpdateEventsAttentionResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public UpdateEventsAttentionResponseBodyData data;

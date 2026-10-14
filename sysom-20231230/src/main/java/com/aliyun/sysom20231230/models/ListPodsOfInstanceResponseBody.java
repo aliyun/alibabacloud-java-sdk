@@ -39,7 +39,7 @@ public class ListPodsOfInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The maximum number of entries returned for this request.</p>
+     * <p>The maximum number of records returned in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>42</p>
@@ -94,7 +94,7 @@ public class ListPodsOfInstanceResponseBody extends TeaModel {
 
     public static class ListPodsOfInstanceResponseBodyData extends TeaModel {
         /**
-         * <p>The namespace in which the pod resides.</p>
+         * <p>The namespace of the pod.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

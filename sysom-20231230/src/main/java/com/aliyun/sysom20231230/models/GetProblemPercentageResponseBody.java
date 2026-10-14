@@ -101,7 +101,7 @@ public class GetProblemPercentageResponseBody extends TeaModel {
 
     public static class GetProblemPercentageResponseBodyData extends TeaModel {
         /**
-         * <p>The type of the abnormal item.</p>
+         * <p>The anomaly item type.</p>
          * 
          * <strong>example:</strong>
          * <p>saturation</p>
@@ -110,7 +110,7 @@ public class GetProblemPercentageResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The number of abnormal items of this type.</p>
+         * <p>The number of anomaly items of this type.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

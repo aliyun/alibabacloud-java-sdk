@@ -18,7 +18,7 @@ public class GetServiceFuncStatusResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public GetServiceFuncStatusResponseBodyData data;

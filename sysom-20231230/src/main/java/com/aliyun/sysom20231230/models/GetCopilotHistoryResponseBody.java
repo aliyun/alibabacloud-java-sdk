@@ -14,7 +14,7 @@ public class GetCopilotHistoryResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The list of chat records. The length equals the requested count. If the actual chat records are fewer than the requested count, the actual number is returned. Format: [{&quot;user&quot;:&quot;&quot;,&quot;content&quot;:&quot;&quot;.question,&quot;time&quot;:&quot;&quot;},{...}]</p>
+     * <p>The list of chat records. The length equals the requested number. If the actual chat records are fewer than the requested number, the actual number is returned. Format: [{&quot;user&quot;:&quot;&quot;,&quot;content&quot;:&quot;&quot;.question,&quot;time&quot;:&quot;&quot;},{...}]</p>
      */
     @NameInMap("data")
     public java.util.List<GetCopilotHistoryResponseBodyData> data;
@@ -83,13 +83,13 @@ public class GetCopilotHistoryResponseBody extends TeaModel {
          * <p>The chat content text.</p>
          * 
          * <strong>example:</strong>
-         * <p>Specific content replied by Copilot</p>
+         * <p>The specific content replied by Copilot</p>
          */
         @NameInMap("content")
         public String content;
 
         /**
-         * <p>The time of the chat record. The value is of the string type.</p>
+         * <p>The chat record time, of the string type.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-02 10:02:39</p>
@@ -100,8 +100,8 @@ public class GetCopilotHistoryResponseBody extends TeaModel {
         /**
          * <p>The role identifier. Valid values:</p>
          * <ul>
-         * <li>user: a user.</li>
-         * <li>copilot: a bot.</li>
+         * <li>user: the user.</li>
+         * <li>copilot: the bot.</li>
          * </ul>
          * 
          * <strong>example:</strong>

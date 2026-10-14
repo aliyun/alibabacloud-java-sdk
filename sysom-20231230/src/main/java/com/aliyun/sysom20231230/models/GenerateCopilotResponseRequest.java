@@ -4,9 +4,6 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class GenerateCopilotResponseRequest extends TeaModel {
-    @NameInMap("X-Debug-Id")
-    public String xDebugId;
-
     /**
      * <p>The input parameter for the Copilot LLM service. Refer to the standard LLM API input parameter dict, convert it to a string, and pass it to llmParamString.</p>
      * 
@@ -16,20 +13,9 @@ public class GenerateCopilotResponseRequest extends TeaModel {
     @NameInMap("llmParamString")
     public String llmParamString;
 
-    @NameInMap("x-sysom-invoke-source")
-    public String xSysomInvokeSource;
-
     public static GenerateCopilotResponseRequest build(java.util.Map<String, ?> map) throws Exception {
         GenerateCopilotResponseRequest self = new GenerateCopilotResponseRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GenerateCopilotResponseRequest setXDebugId(String xDebugId) {
-        this.xDebugId = xDebugId;
-        return this;
-    }
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     public GenerateCopilotResponseRequest setLlmParamString(String llmParamString) {
@@ -38,14 +24,6 @@ public class GenerateCopilotResponseRequest extends TeaModel {
     }
     public String getLlmParamString() {
         return this.llmParamString;
-    }
-
-    public GenerateCopilotResponseRequest setXSysomInvokeSource(String xSysomInvokeSource) {
-        this.xSysomInvokeSource = xSysomInvokeSource;
-        return this;
-    }
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
     }
 
 }

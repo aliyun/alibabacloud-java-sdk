@@ -4,9 +4,6 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class CreateVmcoreDiagnosisTaskRequest extends TeaModel {
-    @NameInMap("X-Debug-Id")
-    public String xDebugId;
-
     /**
      * <p>The download URL of the debuginfo-common file. This parameter is optional when the diagnosis type is vmcore.</p>
      * <p>For CentOS or Alinux kernel diagnostics, the corresponding debuginfo-common file is automatically downloaded, so this parameter is not required. For other distribution kernels, manually provide the download URL of the debuginfo-common file that corresponds to the kernel version.</p>
@@ -39,8 +36,8 @@ public class CreateVmcoreDiagnosisTaskRequest extends TeaModel {
     /**
      * <p>The task type. Valid values:</p>
      * <ul>
-     * <li>vmcore: vmcore file diagnostic task.</li>
-     * <li>dmesg: dmesg log diagnostic task.</li>
+     * <li>vmcore: a vmcore file diagnostic task.</li>
+     * <li>dmesg: a dmesg log diagnostic task.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -59,20 +56,9 @@ public class CreateVmcoreDiagnosisTaskRequest extends TeaModel {
     @NameInMap("vmcoreUrl")
     public String vmcoreUrl;
 
-    @NameInMap("x-sysom-invoke-source")
-    public String xSysomInvokeSource;
-
     public static CreateVmcoreDiagnosisTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateVmcoreDiagnosisTaskRequest self = new CreateVmcoreDiagnosisTaskRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateVmcoreDiagnosisTaskRequest setXDebugId(String xDebugId) {
-        this.xDebugId = xDebugId;
-        return this;
-    }
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     public CreateVmcoreDiagnosisTaskRequest setDebuginfoCommonUrl(String debuginfoCommonUrl) {
@@ -113,14 +99,6 @@ public class CreateVmcoreDiagnosisTaskRequest extends TeaModel {
     }
     public String getVmcoreUrl() {
         return this.vmcoreUrl;
-    }
-
-    public CreateVmcoreDiagnosisTaskRequest setXSysomInvokeSource(String xSysomInvokeSource) {
-        this.xSysomInvokeSource = xSysomInvokeSource;
-        return this;
-    }
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
     }
 
 }

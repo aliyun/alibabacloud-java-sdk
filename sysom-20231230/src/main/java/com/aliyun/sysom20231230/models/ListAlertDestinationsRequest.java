@@ -4,9 +4,6 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class ListAlertDestinationsRequest extends TeaModel {
-    @NameInMap("X-Debug-Id")
-    public String xDebugId;
-
     /**
      * <p>The current page number (starting from 1).</p>
      * 
@@ -52,20 +49,9 @@ public class ListAlertDestinationsRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
-    @NameInMap("x-sysom-invoke-source")
-    public String xSysomInvokeSource;
-
     public static ListAlertDestinationsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAlertDestinationsRequest self = new ListAlertDestinationsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListAlertDestinationsRequest setXDebugId(String xDebugId) {
-        this.xDebugId = xDebugId;
-        return this;
-    }
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     public ListAlertDestinationsRequest setCurrent(Integer current) {
@@ -106,14 +92,6 @@ public class ListAlertDestinationsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public ListAlertDestinationsRequest setXSysomInvokeSource(String xSysomInvokeSource) {
-        this.xSysomInvokeSource = xSysomInvokeSource;
-        return this;
-    }
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
     }
 
 }

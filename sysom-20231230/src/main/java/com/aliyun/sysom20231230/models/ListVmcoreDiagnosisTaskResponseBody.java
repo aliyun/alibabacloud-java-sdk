@@ -7,8 +7,8 @@ public class ListVmcoreDiagnosisTaskResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <ul>
-     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
-     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+     * <li><code>code == Success</code>: The authorization is successful.</li>
+     * <li>Other status codes: The authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class ListVmcoreDiagnosisTaskResponseBody extends TeaModel {
      * <p>The error message.</p>
      * <ul>
      * <li>If <code>code == Success</code>, this field is empty.</li>
-     * <li>Otherwise, this field contains the error message of the request.</li>
+     * <li>Otherwise, this field contains the request error information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class ListVmcoreDiagnosisTaskResponseBody extends TeaModel {
 
     public static class ListVmcoreDiagnosisTaskResponseBodyData extends TeaModel {
         /**
-         * <p>The task creation time.</p>
+         * <p>The time when the task was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-02T17:36:12</p>

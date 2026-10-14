@@ -7,8 +7,8 @@ public class CheckInstanceSupportResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <ul>
-     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
-     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+     * <li>If <code>code == Success</code>, the authorization is successful.</li>
+     * <li>Other status codes indicate authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CheckInstanceSupportResponseBody extends TeaModel {
     public java.util.List<CheckInstanceSupportResponseBodyData> data;
 
     /**
-     * <p>The error message. This field contains the error information when code is not Success.</p>
+     * <p>The error message. This field contains detailed error information when code is not Success.</p>
      * 
      * <strong>example:</strong>
      * <p>SysomOpenAPIAssumeRoleException: EntityNotExist.Role The role not exists: acs:ram::xxxxx:role/aliyunserviceroleforsysom</p>
@@ -89,7 +89,7 @@ public class CheckInstanceSupportResponseBody extends TeaModel {
         public String instance;
 
         /**
-         * <p>The reason why the instance cannot be managed. This value is not empty when success is false.</p>
+         * <p>The reason why the instance is not supported for management. This value is not empty when support is false.</p>
          * 
          * <strong>example:</strong>
          * <p>instance not found in ecs</p>
@@ -98,11 +98,11 @@ public class CheckInstanceSupportResponseBody extends TeaModel {
         public String reason;
 
         /**
-         * <p>Indicates whether the instance can be managed by SysOM.</p>
+         * <p>Indicates whether the instance is supported for management by SysOM.</p>
          * <ul>
-         * <li><p><strong>true</strong>: The instance can be managed by SysOM.</p>
+         * <li><p><strong>true</strong>: The instance is supported for management by SysOM.</p>
          * </li>
-         * <li><p><strong>false</strong>: The instance cannot be managed by SysOM.</p>
+         * <li><p><strong>false</strong>: The instance is not supported for management by SysOM.</p>
          * </li>
          * </ul>
          * 

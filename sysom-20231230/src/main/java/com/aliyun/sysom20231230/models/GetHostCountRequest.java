@@ -4,9 +4,6 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class GetHostCountRequest extends TeaModel {
-    @NameInMap("X-Debug-Id")
-    public String xDebugId;
-
     /**
      * <p>The cluster ID.</p>
      * 
@@ -43,20 +40,9 @@ public class GetHostCountRequest extends TeaModel {
     @NameInMap("start")
     public Float start;
 
-    @NameInMap("x-sysom-invoke-source")
-    public String xSysomInvokeSource;
-
     public static GetHostCountRequest build(java.util.Map<String, ?> map) throws Exception {
         GetHostCountRequest self = new GetHostCountRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetHostCountRequest setXDebugId(String xDebugId) {
-        this.xDebugId = xDebugId;
-        return this;
-    }
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     public GetHostCountRequest setCluster(String cluster) {
@@ -89,14 +75,6 @@ public class GetHostCountRequest extends TeaModel {
     }
     public Float getStart() {
         return this.start;
-    }
-
-    public GetHostCountRequest setXSysomInvokeSource(String xSysomInvokeSource) {
-        this.xSysomInvokeSource = xSysomInvokeSource;
-        return this;
-    }
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
     }
 
 }

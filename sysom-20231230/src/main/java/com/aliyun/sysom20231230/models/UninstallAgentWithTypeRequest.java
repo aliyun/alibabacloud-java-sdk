@@ -4,9 +4,6 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class UninstallAgentWithTypeRequest extends TeaModel {
-    @NameInMap("X-Debug-Id")
-    public String xDebugId;
-
     /**
      * <p>The ID of the component to uninstall.</p>
      * <p>This parameter is required.</p>
@@ -43,20 +40,9 @@ public class UninstallAgentWithTypeRequest extends TeaModel {
     @NameInMap("instances")
     public java.util.List<UninstallAgentWithTypeRequestInstances> instances;
 
-    @NameInMap("x-sysom-invoke-source")
-    public String xSysomInvokeSource;
-
     public static UninstallAgentWithTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         UninstallAgentWithTypeRequest self = new UninstallAgentWithTypeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UninstallAgentWithTypeRequest setXDebugId(String xDebugId) {
-        this.xDebugId = xDebugId;
-        return this;
-    }
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     public UninstallAgentWithTypeRequest setAgentId(String agentId) {
@@ -89,14 +75,6 @@ public class UninstallAgentWithTypeRequest extends TeaModel {
     }
     public java.util.List<UninstallAgentWithTypeRequestInstances> getInstances() {
         return this.instances;
-    }
-
-    public UninstallAgentWithTypeRequest setXSysomInvokeSource(String xSysomInvokeSource) {
-        this.xSysomInvokeSource = xSysomInvokeSource;
-        return this;
-    }
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
     }
 
     public static class UninstallAgentWithTypeRequestInstances extends TeaModel {

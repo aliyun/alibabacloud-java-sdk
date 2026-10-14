@@ -4,9 +4,6 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class ListAgentInstallRecordsRequest extends TeaModel {
-    @NameInMap("X-Debug-Id")
-    public String xDebugId;
-
     /**
      * <p>The current page number. Pages start from page 1.</p>
      * 
@@ -17,7 +14,7 @@ public class ListAgentInstallRecordsRequest extends TeaModel {
     public Long current;
 
     /**
-     * <p>Specifies the instance ID. If this parameter is specified, only the Agent installation records for the specified instance are returned.</p>
+     * <p>The instance ID. If you specify this parameter, only the Agent installation records for the specified instance are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp118piqcio9tiwgh84b</p>
@@ -35,7 +32,7 @@ public class ListAgentInstallRecordsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Specifies the Agent ID. If this parameter is specified, only the installation records for the specified Agent are returned. You can use this parameter together with the plugin_version parameter.</p>
+     * <p>The Agent ID. If you specify this parameter, only the installation records for the specified Agent are returned. You can use this parameter together with the plugin_version parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
@@ -44,7 +41,7 @@ public class ListAgentInstallRecordsRequest extends TeaModel {
     public String pluginId;
 
     /**
-     * <p>Specifies the Agent version. This parameter cannot be used alone and must be used together with the plugin_id parameter to filter the installation records for a specific version of the specified Agent.</p>
+     * <p>The Agent version. This parameter cannot be used alone. Use it together with the plugin_id parameter to filter the installation records for a specific version of the specified Agent.</p>
      * 
      * <strong>example:</strong>
      * <p>3.4.0-1</p>
@@ -62,7 +59,7 @@ public class ListAgentInstallRecordsRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>Filters component installation records by status.</p>
+     * <p>The status used to filter component installation records.</p>
      * 
      * <strong>example:</strong>
      * <p>Installed</p>
@@ -70,20 +67,9 @@ public class ListAgentInstallRecordsRequest extends TeaModel {
     @NameInMap("status")
     public String status;
 
-    @NameInMap("x-sysom-invoke-source")
-    public String xSysomInvokeSource;
-
     public static ListAgentInstallRecordsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAgentInstallRecordsRequest self = new ListAgentInstallRecordsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListAgentInstallRecordsRequest setXDebugId(String xDebugId) {
-        this.xDebugId = xDebugId;
-        return this;
-    }
-    public String getXDebugId() {
-        return this.xDebugId;
     }
 
     public ListAgentInstallRecordsRequest setCurrent(Long current) {
@@ -140,14 +126,6 @@ public class ListAgentInstallRecordsRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
-    }
-
-    public ListAgentInstallRecordsRequest setXSysomInvokeSource(String xSysomInvokeSource) {
-        this.xSysomInvokeSource = xSysomInvokeSource;
-        return this;
-    }
-    public String getXSysomInvokeSource() {
-        return this.xSysomInvokeSource;
     }
 
 }

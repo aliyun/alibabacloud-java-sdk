@@ -27,7 +27,7 @@ public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
      * <p>The error message.</p>
      * <ul>
      * <li>If <code>code == Success</code>, this field is empty.</li>
-     * <li>Otherwise, this field contains the request error information.</li>
+     * <li>Otherwise, this field contains the request error message.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,7 +84,7 @@ public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
 
     public static class GetVmcoreDiagnosisTaskResponseBodyDataUrls extends TeaModel {
         /**
-         * <p>The download URL of the debuginfo-common RPM package.</p>
+         * <p>The download link for the debuginfo-common RPM package.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo-common/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo-common/file/path</a></p>
@@ -93,7 +93,7 @@ public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
         public String debuginfoCommonUrl;
 
         /**
-         * <p>The download URL of the debuginfo RPM package.</p>
+         * <p>The download link for the debuginfo RPM package.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo/file/path</a></p>
@@ -102,7 +102,7 @@ public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
         public String debuginfoUrl;
 
         /**
-         * <p>The download URL of the dmesg log.</p>
+         * <p>The download link for the dmesg log.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/dmesg/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/dmesg/file/path</a></p>
@@ -111,7 +111,7 @@ public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
         public String dmesgUrl;
 
         /**
-         * <p>The download URL of the vmcore file.</p>
+         * <p>The download link for the vmcore file.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/vmcore/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/vmcore/file/path</a></p>
@@ -214,7 +214,7 @@ public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
         public String taskType;
 
         /**
-         * <p>The download URLs of related files associated with the task.</p>
+         * <p>The download links for files related to the task.</p>
          */
         @NameInMap("urls")
         public GetVmcoreDiagnosisTaskResponseBodyDataUrls urls;

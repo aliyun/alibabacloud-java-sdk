@@ -27,7 +27,7 @@ public class ListAgentInstallRecordsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned results.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("data")
     public java.util.List<ListAgentInstallRecordsResponseBodyData> data;
