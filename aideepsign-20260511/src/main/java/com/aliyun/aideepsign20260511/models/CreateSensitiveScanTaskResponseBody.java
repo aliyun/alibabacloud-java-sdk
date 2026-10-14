@@ -54,7 +54,7 @@ public class CreateSensitiveScanTaskResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The task ID. You can use this ID to call the GetSensitiveScanResult operation to query the result.</p>
+     * <p>The task ID. You can use this ID to call <code>GetSensitiveScanResult</code> to query the result.</p>
      * 
      * <strong>example:</strong>
      * <p>f47ac10b-58cc-4372-a567-0e02b2c3d479</p>

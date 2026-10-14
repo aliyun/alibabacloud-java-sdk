@@ -29,7 +29,7 @@ public class VerifyImageSignatureResponseBody extends TeaModel {
     public VerifyImageSignatureResponseBodyIssuer issuer;
 
     /**
-     * <p>Indicates whether the issuer is trusted. A value of true indicates that the issuer certificate is issued by a trusted CA.</p>
+     * <p>Indicates whether the issuer is trusted. A value of true indicates that the issuer certificate is issued by a trusted certification authority (CA).</p>
      */
     @NameInMap("IssuerTrusted")
     public Boolean issuerTrusted;
@@ -67,9 +67,10 @@ public class VerifyImageSignatureResponseBody extends TeaModel {
     /**
      * <p>The signature verification status. Valid values:</p>
      * <ul>
-     * <li>Valid: The signature is valid.</li>
-     * <li>Invalid: The signature is invalid or has been tampered with.</li>
-     * <li>Trusted: The signature is valid and trusted.</li>
+     * <li>Unsigned: The image does not contain C2PA data.</li>
+     * <li>Invalid: The signature, data hash, or C2PA structure is invalid.</li>
+     * <li>Valid: The signature and data hash are valid, but the issuer is not necessarily trusted.</li>
+     * <li>Trusted: The signature is valid and the issuer certificate is trusted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -300,7 +301,7 @@ public class VerifyImageSignatureResponseBody extends TeaModel {
 
     public static class VerifyImageSignatureResponseBodyManifest extends TeaModel {
         /**
-         * <p>The list of assertions, which contains metadata such as the origin and editing history of the image.</p>
+         * <p>The list of assertions, which contains metadata such as the provenance and editing history of the image.</p>
          */
         @NameInMap("Assertions")
         public java.util.List<VerifyImageSignatureResponseBodyManifestAssertions> assertions;

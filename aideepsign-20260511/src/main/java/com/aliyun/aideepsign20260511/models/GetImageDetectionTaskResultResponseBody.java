@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetImageDetectionTaskResultResponseBody extends TeaModel {
     /**
-     * <p>The business error code. The value <code>&quot;OK&quot;</code> is returned when the request succeeds.</p>
+     * <p>The business error code. The value &quot;OK&quot; is returned when the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -19,7 +19,7 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
      * <li>aigc: AIGC only.</li>
      * <li>tamper: tamper detection.</li>
      * </ul>
-     * <p>This parameter is returned only when <code>Status</code> is <code>succeeded</code>.</p>
+     * <p>This field is returned only when Status is succeeded.</p>
      * 
      * <strong>example:</strong>
      * <p>tamper</p>
@@ -28,7 +28,7 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
     public String detectMode;
 
     /**
-     * <p>The HTTP status code. The value <code>200</code> is returned when the request succeeds.</p>
+     * <p>The HTTP status code. The value 200 is returned when the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -37,13 +37,13 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The list of AIGC detection result labels. This parameter is returned only when <code>Status</code> is <code>succeeded</code> and the task includes AIGC detection.</p>
+     * <p>The list of detection result labels. This field is returned only when Status is succeeded and AIGC detection is included. The label values and confidence ranges vary depending on DetectMode. In aigc mode, AIGC generation identification labels are returned (see the table below). In tamper mode, aigc/aips labels are returned (confidence range: 0 to 1).</p>
      */
     @NameInMap("Labels")
     public java.util.List<GetImageDetectionTaskResultResponseBodyLabels> labels;
 
     /**
-     * <p>The additional information. The value <code>&quot;success&quot;</code> is returned when the request succeeds. An error message is returned when the task fails. This parameter is returned only when <code>Status</code> is <code>failed</code>.</p>
+     * <p>The additional information. The value &quot;success&quot; is returned when the request succeeds. The error message is returned when the task fails. This field is returned only when Status is failed.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -63,10 +63,10 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
     /**
      * <p>The task status. Valid values:</p>
      * <ul>
-     * <li><code>pending</code>: waiting.</li>
-     * <li><code>running</code>: in progress.</li>
-     * <li><code>succeeded</code>: completed.</li>
-     * <li><code>failed</code>: failed.</li>
+     * <li>pending: waiting.</li>
+     * <li>running: in progress.</li>
+     * <li>succeeded: completed.</li>
+     * <li>failed: failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,7 +82,7 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The tamper detection results. This parameter is returned only when <code>DetectType</code> is <code>tamper</code> or <code>auto</code> (and the image is identified as a credential-type image).</p>
+     * <p>The tamper detection result.</p>
      */
     @NameInMap("Tamper")
     public GetImageDetectionTaskResultResponseBodyTamper tamper;
@@ -192,14 +192,10 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
         public Float confidence;
 
         /**
-         * <p>The detection label. Valid values:</p>
-         * <ul>
-         * <li>ai_generated: AI-generated.</li>
-         * <li>non_ai_generated: not AI-generated.</li>
-         * </ul>
+         * <p>The detection label. When DetectMode is aigc, valid values are: risk_aigc (the image is suspected to be AIGC-generated), risk_fake (the image is suspected to be a composite image), risk_edit (the image is suspected to be AI-edited). When DetectMode is tamper, valid values are: aigc (AIGC detection score), aips (AI post-processing detection score).</p>
          * 
          * <strong>example:</strong>
-         * <p>non_ai_generated</p>
+         * <p>risk_aigc</p>
          */
         @NameInMap("Label")
         public String label;
@@ -229,13 +225,22 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
 
     public static class GetImageDetectionTaskResultResponseBodyTamperBaseResultsAigc extends TeaModel {
         /**
-         * <p>The description of the AIGC detection result.</p>
+         * <p>The AIGC detection result description.</p>
          * 
          * <strong>example:</strong>
-         * <p>疑似AI生成图片</p>
+         * <p>Suspected AI-generated image</p>
          */
         @NameInMap("Desc")
         public String desc;
+
+        /**
+         * <p>The AIGC dimension risk label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>高风险</p>
+         */
+        @NameInMap("Risk")
+        public String risk;
 
         /**
          * <p>The AIGC detection score. Value range: 0 to 1. A higher value indicates a greater likelihood of AI generation.</p>
@@ -259,6 +264,14 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
             return this.desc;
         }
 
+        public GetImageDetectionTaskResultResponseBodyTamperBaseResultsAigc setRisk(String risk) {
+            this.risk = risk;
+            return this;
+        }
+        public String getRisk() {
+            return this.risk;
+        }
+
         public GetImageDetectionTaskResultResponseBodyTamperBaseResultsAigc setScore(Float score) {
             this.score = score;
             return this;
@@ -271,13 +284,22 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
 
     public static class GetImageDetectionTaskResultResponseBodyTamperBaseResultsAips extends TeaModel {
         /**
-         * <p>The description of the AI post-processing detection result.</p>
+         * <p>The AI post-processing detection result description.</p>
          * 
          * <strong>example:</strong>
-         * <p>未发现AI后处理痕迹</p>
+         * <p>No AI post-processing traces detected</p>
          */
         @NameInMap("Desc")
         public String desc;
+
+        /**
+         * <p>The local PS/AI editing dimension risk label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>高风险</p>
+         */
+        @NameInMap("Risk")
+        public String risk;
 
         /**
          * <p>The AI post-processing detection score. Value range: 0 to 1. A higher value indicates a greater likelihood of AI post-processing.</p>
@@ -301,6 +323,14 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
             return this.desc;
         }
 
+        public GetImageDetectionTaskResultResponseBodyTamperBaseResultsAips setRisk(String risk) {
+            this.risk = risk;
+            return this;
+        }
+        public String getRisk() {
+            return this.risk;
+        }
+
         public GetImageDetectionTaskResultResponseBodyTamperBaseResultsAips setScore(Float score) {
             this.score = score;
             return this;
@@ -313,13 +343,13 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
 
     public static class GetImageDetectionTaskResultResponseBodyTamperBaseResultsPsLocItems extends TeaModel {
         /**
-         * <p>The bounding box coordinates of the tampered region in the format <code>[x1, y1, x2, y2]</code>.</p>
+         * <p>The bounding box coordinates of the tampered region, in the format <code>[x1, y1, x2, y2]</code>.</p>
          */
         @NameInMap("Bbox")
         public java.util.List<Float> bbox;
 
         /**
-         * <p>The tamper confidence level for the region. Value range: <code>0 to 1</code>.</p>
+         * <p>The tamper confidence of the region. Value range: 0 to 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0.67</p>
@@ -352,10 +382,10 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
 
     public static class GetImageDetectionTaskResultResponseBodyTamperBaseResultsPsLoc extends TeaModel {
         /**
-         * <p>The description of the PS tamper localization result.</p>
+         * <p>The PS tamper localization result description.</p>
          * 
          * <strong>example:</strong>
-         * <p>发现1处疑似PS修改区域</p>
+         * <p>1 suspected PS-modified region detected</p>
          */
         @NameInMap("Desc")
         public String desc;
@@ -389,9 +419,68 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
 
     }
 
+    public static class GetImageDetectionTaskResultResponseBodyTamperBaseResultsRecap extends TeaModel {
+        /**
+         * <p>The recapture/copy detection result description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Recapture detection score</p>
+         */
+        @NameInMap("Desc")
+        public String desc;
+
+        /**
+         * <p>The recapture/copy dimension risk label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>高风险</p>
+         */
+        @NameInMap("Risk")
+        public String risk;
+
+        /**
+         * <p>The recapture/copy detection score. Value range: 0 to 1. A higher value indicates a greater likelihood of recapture or copying.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.9998</p>
+         */
+        @NameInMap("Score")
+        public Float score;
+
+        public static GetImageDetectionTaskResultResponseBodyTamperBaseResultsRecap build(java.util.Map<String, ?> map) throws Exception {
+            GetImageDetectionTaskResultResponseBodyTamperBaseResultsRecap self = new GetImageDetectionTaskResultResponseBodyTamperBaseResultsRecap();
+            return TeaModel.build(map, self);
+        }
+
+        public GetImageDetectionTaskResultResponseBodyTamperBaseResultsRecap setDesc(String desc) {
+            this.desc = desc;
+            return this;
+        }
+        public String getDesc() {
+            return this.desc;
+        }
+
+        public GetImageDetectionTaskResultResponseBodyTamperBaseResultsRecap setRisk(String risk) {
+            this.risk = risk;
+            return this;
+        }
+        public String getRisk() {
+            return this.risk;
+        }
+
+        public GetImageDetectionTaskResultResponseBodyTamperBaseResultsRecap setScore(Float score) {
+            this.score = score;
+            return this;
+        }
+        public Float getScore() {
+            return this.score;
+        }
+
+    }
+
     public static class GetImageDetectionTaskResultResponseBodyTamperBaseResults extends TeaModel {
         /**
-         * <p>The AIGC detection score.</p>
+         * <p>The AIGC detection result.</p>
          */
         @NameInMap("Aigc")
         public GetImageDetectionTaskResultResponseBodyTamperBaseResultsAigc aigc;
@@ -412,10 +501,16 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
         public String imgType;
 
         /**
-         * <p>The PS tamper localization results.</p>
+         * <p>The PS tamper localization result.</p>
          */
         @NameInMap("PsLoc")
         public GetImageDetectionTaskResultResponseBodyTamperBaseResultsPsLoc psLoc;
+
+        /**
+         * <p>The recapture/copy detection result.</p>
+         */
+        @NameInMap("Recap")
+        public GetImageDetectionTaskResultResponseBodyTamperBaseResultsRecap recap;
 
         public static GetImageDetectionTaskResultResponseBodyTamperBaseResults build(java.util.Map<String, ?> map) throws Exception {
             GetImageDetectionTaskResultResponseBodyTamperBaseResults self = new GetImageDetectionTaskResultResponseBodyTamperBaseResults();
@@ -454,42 +549,88 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
             return this.psLoc;
         }
 
+        public GetImageDetectionTaskResultResponseBodyTamperBaseResults setRecap(GetImageDetectionTaskResultResponseBodyTamperBaseResultsRecap recap) {
+            this.recap = recap;
+            return this;
+        }
+        public GetImageDetectionTaskResultResponseBodyTamperBaseResultsRecap getRecap() {
+            return this.recap;
+        }
+
     }
 
     public static class GetImageDetectionTaskResultResponseBodyTamper extends TeaModel {
         /**
-         * <p>The basic detection results, including detection scores across multiple dimensions.</p>
+         * <p>The AI visible watermark. This field is returned only in large model mode. It is empty in small model mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>是</p>
+         */
+        @NameInMap("AiWatermark")
+        public String aiWatermark;
+
+        /**
+         * <p>The basic algorithm detection results, including multi-dimensional detection scores and risk labels.</p>
          */
         @NameInMap("BaseResults")
         public GetImageDetectionTaskResultResponseBodyTamperBaseResults baseResults;
 
         /**
+         * <p>The final conclusion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Metadata data analytics result verified as high risk</p>
+         */
+        @NameInMap("FinalConclusion")
+        public String finalConclusion;
+
+        /**
          * <p>The comprehensive analysis result from the large language model.</p>
          * 
          * <strong>example:</strong>
-         * <p>该图片经检测存在AI生成痕迹，AIGC检测得分0.95，建议进一步核实图片来源。</p>
+         * <p>The image has been detected with traces of AI generation. The AIGC detection score is 0.95. We recommend further verifying the image source</p>
          */
         @NameInMap("LlmResult")
         public String llmResult;
 
         /**
-         * <p>The risk code. A value of <code>&quot;0&quot;</code> indicates no risk.</p>
+         * <p>The metadata AI flag. This field is always returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>高风险</p>
          */
-        @NameInMap("RiskCode")
-        public String riskCode;
+        @NameInMap("MetadataAiFlag")
+        public String metadataAiFlag;
 
         /**
-         * <p>The list of risk reasons. An empty array is returned when no risk is detected.</p>
+         * <p>The source of the metadata AI flag. This field is returned only in large model mode. It is empty in small model mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>通义</p>
          */
-        @NameInMap("RiskReasons")
-        public java.util.List<String> riskReasons;
+        @NameInMap("MetadataAiSource")
+        public String metadataAiSource;
+
+        /**
+         * <p>The determination result. This field is always returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>高风险</p>
+         */
+        @NameInMap("RiskLevel")
+        public String riskLevel;
 
         public static GetImageDetectionTaskResultResponseBodyTamper build(java.util.Map<String, ?> map) throws Exception {
             GetImageDetectionTaskResultResponseBodyTamper self = new GetImageDetectionTaskResultResponseBodyTamper();
             return TeaModel.build(map, self);
+        }
+
+        public GetImageDetectionTaskResultResponseBodyTamper setAiWatermark(String aiWatermark) {
+            this.aiWatermark = aiWatermark;
+            return this;
+        }
+        public String getAiWatermark() {
+            return this.aiWatermark;
         }
 
         public GetImageDetectionTaskResultResponseBodyTamper setBaseResults(GetImageDetectionTaskResultResponseBodyTamperBaseResults baseResults) {
@@ -500,6 +641,14 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
             return this.baseResults;
         }
 
+        public GetImageDetectionTaskResultResponseBodyTamper setFinalConclusion(String finalConclusion) {
+            this.finalConclusion = finalConclusion;
+            return this;
+        }
+        public String getFinalConclusion() {
+            return this.finalConclusion;
+        }
+
         public GetImageDetectionTaskResultResponseBodyTamper setLlmResult(String llmResult) {
             this.llmResult = llmResult;
             return this;
@@ -508,20 +657,28 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
             return this.llmResult;
         }
 
-        public GetImageDetectionTaskResultResponseBodyTamper setRiskCode(String riskCode) {
-            this.riskCode = riskCode;
+        public GetImageDetectionTaskResultResponseBodyTamper setMetadataAiFlag(String metadataAiFlag) {
+            this.metadataAiFlag = metadataAiFlag;
             return this;
         }
-        public String getRiskCode() {
-            return this.riskCode;
+        public String getMetadataAiFlag() {
+            return this.metadataAiFlag;
         }
 
-        public GetImageDetectionTaskResultResponseBodyTamper setRiskReasons(java.util.List<String> riskReasons) {
-            this.riskReasons = riskReasons;
+        public GetImageDetectionTaskResultResponseBodyTamper setMetadataAiSource(String metadataAiSource) {
+            this.metadataAiSource = metadataAiSource;
             return this;
         }
-        public java.util.List<String> getRiskReasons() {
-            return this.riskReasons;
+        public String getMetadataAiSource() {
+            return this.metadataAiSource;
+        }
+
+        public GetImageDetectionTaskResultResponseBodyTamper setRiskLevel(String riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public String getRiskLevel() {
+            return this.riskLevel;
         }
 
     }

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateImageTaskResponseBody extends TeaModel {
     /**
-     * <p>The business error code. The value <code>OK</code> is returned if the request succeeds.</p>
+     * <p>The business error code. The value <code>OK</code> is returned if the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class CreateImageTaskResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The HTTP status code. The value <code>200</code> is returned if the request succeeds.</p>
+     * <p>The HTTP status code. The value <code>200</code> is returned if the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class CreateImageTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The additional information. The value <code>success</code> is returned if the request succeeds.</p>
+     * <p>The additional information. The value <code>success</code> is returned if the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

@@ -23,7 +23,7 @@ public class SignUserImageResponseBody extends TeaModel {
     public String certificateSubject;
 
     /**
-     * <p>The business error code. The value &quot;OK&quot; is returned if the request succeeds.</p>
+     * <p>The business error code. &quot;OK&quot; is returned if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -32,7 +32,7 @@ public class SignUserImageResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The HTTP status code. The value 200 is returned if the request succeeds.</p>
+     * <p>The HTTP status code. 200 is returned if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -41,7 +41,7 @@ public class SignUserImageResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The additional information. The value &quot;success&quot; is returned if the request succeeds.</p>
+     * <p>The additional information. &quot;success&quot; is returned if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -86,7 +86,7 @@ public class SignUserImageResponseBody extends TeaModel {
     public String signedImageUrl;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;

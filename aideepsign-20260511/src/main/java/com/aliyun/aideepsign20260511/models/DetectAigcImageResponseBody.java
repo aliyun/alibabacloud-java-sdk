@@ -11,7 +11,7 @@ public class DetectAigcImageResponseBody extends TeaModel {
     public java.util.List<DetectAigcImageResponseBodyBody> body;
 
     /**
-     * <p>The business error code. The value <code>OK</code> is returned if the request was successful.</p>
+     * <p>The business error code. The value <code>OK</code> is returned if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -20,7 +20,7 @@ public class DetectAigcImageResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The HTTP status code. The value <code>200</code> is returned if the request was successful.</p>
+     * <p>The HTTP status code. The value <code>200</code> is returned if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class DetectAigcImageResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The additional information. The value <code>success</code> is returned if the request was successful.</p>
+     * <p>The additional information. The value <code>success</code> is returned if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -49,8 +49,8 @@ public class DetectAigcImageResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li>true: The call was successful.</li>
-     * <li>false: The call failed.</li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      */
     @NameInMap("Success")
@@ -111,7 +111,7 @@ public class DetectAigcImageResponseBody extends TeaModel {
 
     public static class DetectAigcImageResponseBodyBody extends TeaModel {
         /**
-         * <p>The confidence level. Value range: 0 to 1. A higher value indicates a higher probability.</p>
+         * <p>The confidence score. Value range: 0 to 1. A higher value indicates a higher probability.</p>
          * 
          * <strong>example:</strong>
          * <p>0.51</p>

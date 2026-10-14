@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetectImageBasicInfoResponseBody extends TeaModel {
     /**
-     * <p>The business error code. &quot;OK&quot; is returned if the request was successful.</p>
+     * <p>The business error code. Returns &quot;OK&quot; when the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class DetectImageBasicInfoResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The image resolution (width × height), such as 1920 × 1080. This value is empty if the resolution cannot be identified.</p>
+     * <p>The image resolution (width × height), such as 1920 × 1080. Empty if the resolution cannot be identified.</p>
      * 
      * <strong>example:</strong>
      * <p>2048 * 2048</p>
@@ -23,7 +23,7 @@ public class DetectImageBasicInfoResponseBody extends TeaModel {
     public String dpi;
 
     /**
-     * <p>The HTTP status code. 200 is returned if the request was successful.</p>
+     * <p>The HTTP status code. Returns 200 when the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,7 +32,7 @@ public class DetectImageBasicInfoResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The additional information. &quot;success&quot; is returned if the request was successful.</p>
+     * <p>The additional information. Returns &quot;success&quot; when the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -68,13 +68,13 @@ public class DetectImageBasicInfoResponseBody extends TeaModel {
     public String size;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The image format, such as JPEG, PNG, GIF, or WEBP. UNKNOWN is returned if the format cannot be identified.</p>
+     * <p>The image format, such as JPEG, PNG, GIF, or WEBP. Returns <code>UNKNOWN</code> if the format cannot be identified.</p>
      * 
      * <strong>example:</strong>
      * <p>PNG</p>

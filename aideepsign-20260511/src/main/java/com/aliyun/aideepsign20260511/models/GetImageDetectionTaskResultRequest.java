@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetImageDetectionTaskResultRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
@@ -14,7 +14,7 @@ public class GetImageDetectionTaskResultRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The task ID returned by <code>CreateImageDetectionTask</code>.</p>
+     * <p>The task ID returned by CreateImageDetectionTask.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
