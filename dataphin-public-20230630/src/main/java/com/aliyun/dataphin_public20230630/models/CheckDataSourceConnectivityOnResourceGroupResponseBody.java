@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CheckDataSourceConnectivityOnResourceGroupResponseBody extends TeaModel {
     /**
+     * <p>The error code of the request. A value of OK indicates that the request is normal.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class CheckDataSourceConnectivityOnResourceGroupResponseBody extends TeaM
     public String code;
 
     /**
+     * <p>The ID of the connectivity check task. You can poll the task result by calling GetCheckConnectivityJobByJobId.</p>
+     * 
      * <strong>example:</strong>
      * <p>129837xxxx</p>
      */
@@ -19,6 +23,8 @@ public class CheckDataSourceConnectivityOnResourceGroupResponseBody extends TeaM
     public String data;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class CheckDataSourceConnectivityOnResourceGroupResponseBody extends TeaM
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -33,6 +41,8 @@ public class CheckDataSourceConnectivityOnResourceGroupResponseBody extends TeaM
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -40,6 +50,8 @@ public class CheckDataSourceConnectivityOnResourceGroupResponseBody extends TeaM
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

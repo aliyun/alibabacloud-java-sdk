@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StartPipelineIntegratedTaskResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class StartPipelineIntegratedTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The incremental instance ID after startup.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
@@ -19,6 +23,8 @@ public class StartPipelineIntegratedTaskResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class StartPipelineIntegratedTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -33,6 +41,8 @@ public class StartPipelineIntegratedTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -40,6 +50,8 @@ public class StartPipelineIntegratedTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

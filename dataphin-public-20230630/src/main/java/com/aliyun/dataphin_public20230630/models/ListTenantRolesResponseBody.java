@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTenantRolesResponseBody extends TeaModel {
     /**
+     * <p>The request error code. OK indicates that the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListTenantRolesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code of the backend response.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class ListTenantRolesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -26,16 +32,23 @@ public class ListTenantRolesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The role list.</p>
+     */
     @NameInMap("RoleList")
     public java.util.List<ListTenantRolesResponseBodyRoleList> roleList;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class ListTenantRolesResponseBody extends TeaModel {
 
     public static class ListTenantRolesResponseBodyRoleList extends TeaModel {
         /**
+         * <p>The JSON string of the permission set.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -104,6 +119,8 @@ public class ListTenantRolesResponseBody extends TeaModel {
         public String authJson;
 
         /**
+         * <p>The user ID of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>30121201</p>
          */
@@ -111,6 +128,8 @@ public class ListTenantRolesResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-07 16:45:30</p>
          */
@@ -118,6 +137,8 @@ public class ListTenantRolesResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-07 16:45:30</p>
          */
@@ -125,6 +146,8 @@ public class ListTenantRolesResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The user ID of the modifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>30121201</p>
          */
@@ -132,6 +155,8 @@ public class ListTenantRolesResponseBody extends TeaModel {
         public String modifier;
 
         /**
+         * <p>The role description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -139,6 +164,8 @@ public class ListTenantRolesResponseBody extends TeaModel {
         public String roleDesc;
 
         /**
+         * <p>The role key.</p>
+         * 
          * <strong>example:</strong>
          * <p>test::1212</p>
          */
@@ -146,6 +173,8 @@ public class ListTenantRolesResponseBody extends TeaModel {
         public String roleKey;
 
         /**
+         * <p>The role name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -153,6 +182,12 @@ public class ListTenantRolesResponseBody extends TeaModel {
         public String roleName;
 
         /**
+         * <p>The role type. Valid values:</p>
+         * <ul>
+         * <li>BUILD_IN: built-in role</li>
+         * <li>CUSTOM: custom role</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CUSTOM</p>
          */
@@ -160,6 +195,13 @@ public class ListTenantRolesResponseBody extends TeaModel {
         public String roleType;
 
         /**
+         * <p>The role status. Valid values:</p>
+         * <ul>
+         * <li>ON: enabled</li>
+         * <li>OFF: disabled</li>
+         * <li>DEL: deleted</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ON</p>
          */
@@ -167,6 +209,8 @@ public class ListTenantRolesResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The tenant ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>30121001</p>
          */
@@ -174,6 +218,8 @@ public class ListTenantRolesResponseBody extends TeaModel {
         public Long tenantId;
 
         /**
+         * <p>The tenant type.</p>
+         * 
          * <strong>example:</strong>
          * <p>CUSTOM</p>
          */

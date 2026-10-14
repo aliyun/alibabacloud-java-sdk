@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListScheduleTemplatesResponseBody extends TeaModel {
     /**
+     * <p>The error code. OK indicates that the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,16 +14,23 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The schedule template list response.</p>
+     */
     @NameInMap("ListScheduleTemplatesResponse")
     public ListScheduleTemplatesResponseBodyListScheduleTemplatesResponse listScheduleTemplatesResponse;
 
     /**
+     * <p>The error message of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,12 +38,17 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,13 +107,17 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
 
     public static class ListScheduleTemplatesResponseBodyListScheduleTemplatesResponseResultDataConditionScheduleParamList extends TeaModel {
         /**
+         * <p>The name of the condition.</p>
+         * 
          * <strong>example:</strong>
-         * <p>失败重跑条件</p>
+         * <p>Rerun on failure condition</p>
          */
         @NameInMap("ConditionName")
         public String conditionName;
 
         /**
+         * <p>The cron expression used after the condition is met.</p>
+         * 
          * <strong>example:</strong>
          * <p>0 30 * * * ?</p>
          */
@@ -107,6 +125,8 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         public String cronExpression;
 
         /**
+         * <p>Specifies whether the condition is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -114,6 +134,8 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
+         * <p>Specifies whether to follow the main schedule parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -121,6 +143,13 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         public Boolean followScheduleParam;
 
         /**
+         * <p>The node schedule status after the condition is met. Valid values:</p>
+         * <ul>
+         * <li>1: Normal.</li>
+         * <li>2: Paused.</li>
+         * <li>3: Dry run.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -128,6 +157,8 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         public Integer nodeStatus;
 
         /**
+         * <p>The conditional expression tree as a JSON character string. The keys are in lower camel case and must be parsed by the caller.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;type&quot;:&quot;EXPRESSION_GROUP&quot;,&quot;operator&quot;:&quot;or&quot;}</p>
          */
@@ -135,6 +166,8 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         public String scheduleConditionJson;
 
         /**
+         * <p>The schedule time used after the condition is met.</p>
+         * 
          * <strong>example:</strong>
          * <p>00:30</p>
          */
@@ -206,6 +239,8 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
 
     public static class ListScheduleTemplatesResponseBodyListScheduleTemplatesResponseResultDataCustomIntervalConfig extends TeaModel {
         /**
+         * <p>The end time of the effective period.</p>
+         * 
          * <strong>example:</strong>
          * <p>23:59</p>
          */
@@ -213,6 +248,8 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The interval value.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -220,6 +257,8 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         public Integer interval;
 
         /**
+         * <p>The interval unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>MINUTE</p>
          */
@@ -227,6 +266,8 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         public String intervalUnit;
 
         /**
+         * <p>The schedule period to which the interval belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>DAY_INTERVAL</p>
          */
@@ -234,6 +275,8 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         public String schedulePeriod;
 
         /**
+         * <p>The start time of the effective period.</p>
+         * 
          * <strong>example:</strong>
          * <p>00:00</p>
          */
@@ -289,6 +332,8 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
 
     public static class ListScheduleTemplatesResponseBodyListScheduleTemplatesResponseResultDataCustomIntervalConfigs extends TeaModel {
         /**
+         * <p>The end time of the effective period.</p>
+         * 
          * <strong>example:</strong>
          * <p>23:59</p>
          */
@@ -296,6 +341,8 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The interval value.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -303,6 +350,8 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         public Integer interval;
 
         /**
+         * <p>The interval unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>MINUTE</p>
          */
@@ -310,6 +359,8 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         public String intervalUnit;
 
         /**
+         * <p>The schedule period to which the interval belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>DAY_INTERVAL</p>
          */
@@ -317,6 +368,8 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         public String schedulePeriod;
 
         /**
+         * <p>The start time of the effective period.</p>
+         * 
          * <strong>example:</strong>
          * <p>00:00</p>
          */
@@ -371,10 +424,15 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListScheduleTemplatesResponseBodyListScheduleTemplatesResponseResultData extends TeaModel {
+        /**
+         * <p>The condition-based schedule parameters. This parameter has a value only for condition-based schedule templates.</p>
+         */
         @NameInMap("ConditionScheduleParamList")
         public java.util.List<ListScheduleTemplatesResponseBodyListScheduleTemplatesResponseResultDataConditionScheduleParamList> conditionScheduleParamList;
 
         /**
+         * <p>The cron expression for automatic scheduling. Refer to Linux cron expressions.</p>
+         * 
          * <strong>example:</strong>
          * <p>0 0 1 * * ?</p>
          */
@@ -382,26 +440,38 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         public String cronExpression;
 
         /**
+         * <p>Specifies whether a custom cron expression is used.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("CustomCronExpression")
         public Boolean customCronExpression;
 
+        /**
+         * <p>The custom schedule interval configuration. This configuration takes effect only when used together with CustomIntervalConfigType.</p>
+         */
         @NameInMap("CustomIntervalConfig")
         public ListScheduleTemplatesResponseBodyListScheduleTemplatesResponseResultDataCustomIntervalConfig customIntervalConfig;
 
         /**
+         * <p>The type of the custom interval configuration. Valid values: TIME_POINT, TIME_PERIOD, CUSTOM_TIME_POINT, and CUSTOM_TIME_PERIOD.</p>
+         * 
          * <strong>example:</strong>
          * <p>CUSTOM_TIME_PERIOD</p>
          */
         @NameInMap("CustomIntervalConfigType")
         public String customIntervalConfigType;
 
+        /**
+         * <p>The custom schedule interval configurations. This parameter is valid only when CustomIntervalConfigType is set to CUSTOM_TIME_PERIOD.</p>
+         */
         @NameInMap("CustomIntervalConfigs")
         public java.util.List<ListScheduleTemplatesResponseBodyListScheduleTemplatesResponseResultDataCustomIntervalConfigs> customIntervalConfigs;
 
         /**
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1704153600000</p>
          */
@@ -409,6 +479,8 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
+         * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1709516800000</p>
          */
@@ -416,6 +488,8 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         public Long gmtModify;
 
         /**
+         * <p>Specifies whether the schedule template is referenced by a node.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -423,6 +497,8 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         public Boolean hasReference;
 
         /**
+         * <p>The ID of the modifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>30001012</p>
          */
@@ -430,13 +506,17 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         public String modifierId;
 
         /**
+         * <p>The name of the modifier.</p>
+         * 
          * <strong>example:</strong>
-         * <p>李四</p>
+         * <p>Li Si</p>
          */
         @NameInMap("ModifierName")
         public String modifierName;
 
         /**
+         * <p>The schedule interval type. Valid values: YEARLY, MONTHLY, WEEKLY, DAILY, HOURLY, and MINUTELY.</p>
+         * 
          * <strong>example:</strong>
          * <p>DAILY</p>
          */
@@ -444,13 +524,17 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         public String scheduleIntervalType;
 
         /**
+         * <p>The description of the schedule template.</p>
+         * 
          * <strong>example:</strong>
-         * <p>工作日每天凌晨1点调度</p>
+         * <p>Scheduled at 1:00 AM on weekdays</p>
          */
         @NameInMap("ScheduleTemplateDesc")
         public String scheduleTemplateDesc;
 
         /**
+         * <p>The ID of the schedule template, which is used to bind a schedule template when updating a node.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */
@@ -458,13 +542,17 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         public Long scheduleTemplateId;
 
         /**
+         * <p>The name of the schedule template.</p>
+         * 
          * <strong>example:</strong>
-         * <p>每天凌晨1点</p>
+         * <p>1:00 AM every day</p>
          */
         @NameInMap("ScheduleTemplateName")
         public String scheduleTemplateName;
 
         /**
+         * <p>The templatetype. Valid values: BASE_SCHEDULE_TEMPLATE: basic scheduling template, CONDITION_SCHEDULE_TEMPLATE: conditional scheduling template.</p>
+         * 
          * <strong>example:</strong>
          * <p>BASE_SCHEDULE_TEMPLATE</p>
          */
@@ -472,6 +560,8 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         public String scheduleTemplateType;
 
         /**
+         * <p>The schedule type. Valid values: normal scheduling, dry run scheduling, and paused scheduling.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -479,6 +569,8 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         public Integer scheduleType;
 
         /**
+         * <p>The ID of the tenant to which the schedule template belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>30001011</p>
          */
@@ -486,6 +578,8 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         public Long tenantId;
 
         /**
+         * <p>The ID of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>30001011</p>
          */
@@ -493,13 +587,17 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>The name of the creator.</p>
+         * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("UserName")
         public String userName;
 
         /**
+         * <p>The end date of the effective period, in the yyyy-MM-dd format.</p>
+         * 
          * <strong>example:</strong>
          * <p>9999-01-01</p>
          */
@@ -507,6 +605,8 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
         public String validEndDate;
 
         /**
+         * <p>The start date of the effective period, in the yyyy-MM-dd format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-01</p>
          */
@@ -698,12 +798,17 @@ public class ListScheduleTemplatesResponseBody extends TeaModel {
 
     public static class ListScheduleTemplatesResponseBodyListScheduleTemplatesResponse extends TeaModel {
         /**
+         * <p>The total number of schedule templates that meet the specified conditions. This number is not limited by pagination.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The schedule templates.</p>
+         */
         @NameInMap("ResultData")
         public java.util.List<ListScheduleTemplatesResponseBodyListScheduleTemplatesResponseResultData> resultData;
 

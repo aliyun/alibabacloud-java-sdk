@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class BatchHandoverAssetResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The result of the batch asset owner transfer.</p>
+     */
     @NameInMap("Data")
     public BatchHandoverAssetResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class BatchHandoverAssetResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The backend exception details.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -29,12 +38,17 @@ public class BatchHandoverAssetResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>82E78D6B-AA8F-1FEF-8AA3-5C9DA2A79140</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,6 +107,8 @@ public class BatchHandoverAssetResponseBody extends TeaModel {
 
     public static class BatchHandoverAssetResponseBodyData extends TeaModel {
         /**
+         * <p>The error message. This parameter is empty if no error occurs.</p>
+         * 
          * <strong>example:</strong>
          * <p>NullPointException</p>
          */
@@ -100,16 +116,30 @@ public class BatchHandoverAssetResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The number of failed transfers.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("FailCount")
         public Integer failCount;
 
+        /**
+         * <p>The list of asset GUIDs for which the transfer failed. This parameter is empty if all transfers succeed.</p>
+         */
         @NameInMap("FailedGuids")
         public java.util.List<String> failedGuids;
 
         /**
+         * <p>The status of the batch transfer task. Valid values:</p>
+         * <ul>
+         * <li>INIT: Initial.</li>
+         * <li>HANDOVER_RECORDS_GENERATED: Records generated.</li>
+         * <li>PROCESSING_WITHOUT_APPROVAL: Processing.</li>
+         * <li>SUCCESS: Success.</li>
+         * <li>FINISHED_WITH_EXCEPTION: Finished with failures.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */
@@ -117,6 +147,8 @@ public class BatchHandoverAssetResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The number of successful transfers.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -124,6 +156,8 @@ public class BatchHandoverAssetResponseBody extends TeaModel {
         public Integer successCount;
 
         /**
+         * <p>The total number of transferred assets.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

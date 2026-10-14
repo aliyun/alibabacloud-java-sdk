@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBatchTaskInfoByVersionRequest extends TeaModel {
     /**
-     * <p>The node ID in the directory tree.</p>
+     * <p>The node ID of the task directory tree.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class GetBatchTaskInfoByVersionRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The ID of the operator.</p>
+     * <p>The operator user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>30001011</p>
@@ -34,7 +34,7 @@ public class GetBatchTaskInfoByVersionRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The ID of the project to which the node belongs.</p>
+     * <p>The project to which the task belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

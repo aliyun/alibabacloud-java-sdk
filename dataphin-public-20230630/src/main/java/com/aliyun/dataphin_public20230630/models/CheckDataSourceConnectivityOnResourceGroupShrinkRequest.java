@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CheckDataSourceConnectivityOnResourceGroupShrinkRequest extends TeaModel {
     /**
+     * <p>The check object.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CheckCommand")
     public String checkCommandShrink;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,8 @@ public class CheckDataSourceConnectivityOnResourceGroupShrinkRequest extends Tea
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

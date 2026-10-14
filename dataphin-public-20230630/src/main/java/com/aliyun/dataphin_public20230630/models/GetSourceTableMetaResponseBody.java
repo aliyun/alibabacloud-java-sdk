@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetSourceTableMetaResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The metadata of the integration source table, including the table description and field list.</p>
+     */
     @NameInMap("Data")
     public GetSourceTableMetaResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetSourceTableMetaResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The backend exception details.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -29,12 +38,17 @@ public class GetSourceTableMetaResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>82E78D6B-AA8F-1FEF-8AA3-5C9DA2A79140</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,6 +107,8 @@ public class GetSourceTableMetaResponseBody extends TeaModel {
 
     public static class GetSourceTableMetaResponseBodyDataColumns extends TeaModel {
         /**
+         * <p>The column comment.</p>
+         * 
          * <strong>example:</strong>
          * <p>unique id</p>
          */
@@ -100,6 +116,8 @@ public class GetSourceTableMetaResponseBody extends TeaModel {
         public String comment;
 
         /**
+         * <p>The column data type.</p>
+         * 
          * <strong>example:</strong>
          * <p>bigint</p>
          */
@@ -107,6 +125,8 @@ public class GetSourceTableMetaResponseBody extends TeaModel {
         public String dataType;
 
         /**
+         * <p>The column name.</p>
+         * 
          * <strong>example:</strong>
          * <p>id</p>
          */
@@ -114,6 +134,8 @@ public class GetSourceTableMetaResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Indicates whether the column is a primary key.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -121,6 +143,8 @@ public class GetSourceTableMetaResponseBody extends TeaModel {
         public Boolean pk;
 
         /**
+         * <p>Indicates whether the column is a partition column.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -128,6 +152,8 @@ public class GetSourceTableMetaResponseBody extends TeaModel {
         public Boolean pt;
 
         /**
+         * <p>The raw column data type.</p>
+         * 
          * <strong>example:</strong>
          * <p>bigint</p>
          */
@@ -135,6 +161,8 @@ public class GetSourceTableMetaResponseBody extends TeaModel {
         public String rawDataType;
 
         /**
+         * <p>The column sequence number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -205,10 +233,15 @@ public class GetSourceTableMetaResponseBody extends TeaModel {
     }
 
     public static class GetSourceTableMetaResponseBodyData extends TeaModel {
+        /**
+         * <p>The column list.</p>
+         */
         @NameInMap("Columns")
         public java.util.List<GetSourceTableMetaResponseBodyDataColumns> columns;
 
         /**
+         * <p>The globally unique identifier (GUID) of the table.</p>
+         * 
          * <strong>example:</strong>
          * <p>300001410.default.sample</p>
          */
@@ -216,6 +249,8 @@ public class GetSourceTableMetaResponseBody extends TeaModel {
         public String guid;
 
         /**
+         * <p>The table description or comment.</p>
+         * 
          * <strong>example:</strong>
          * <p>sample</p>
          */
@@ -223,6 +258,8 @@ public class GetSourceTableMetaResponseBody extends TeaModel {
         public String tableComment;
 
         /**
+         * <p>The table name.</p>
+         * 
          * <strong>example:</strong>
          * <p>sample</p>
          */

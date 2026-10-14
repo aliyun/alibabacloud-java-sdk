@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The error code of the request. A value of OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -23,7 +23,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -32,7 +32,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
@@ -41,7 +41,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
 
     public static class GetBatchTaskInfoByVersionResponseBodyTaskInfoCustomScheduleConfig extends TeaModel {
         /**
-         * <p>The end time in the format of HH:mm.</p>
+         * <p>The end time in the HH:mm format.</p>
          * 
          * <strong>example:</strong>
          * <p>20:59</p>
@@ -125,7 +125,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public Integer interval;
 
         /**
-         * <p>The interval unit. Valid values: MINUTE, HOUR.</p>
+         * <p>The unit of the interval. Valid values: MINUTE and HOUR.</p>
          * 
          * <strong>example:</strong>
          * <p>HOUR</p>
@@ -143,7 +143,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String schedulePeriod;
 
         /**
-         * <p>The start time in the format of HH:mm.</p>
+         * <p>The start time in the HH:mm format.</p>
          * 
          * <strong>example:</strong>
          * <p>08:00</p>
@@ -200,7 +200,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
 
     public static class GetBatchTaskInfoByVersionResponseBodyTaskInfoParamList extends TeaModel {
         /**
-         * <p>The parameter name.</p>
+         * <p>The name of the parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>key</p>
@@ -209,7 +209,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The parameter value.</p>
+         * <p>The value of the parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>Value</p>
@@ -240,9 +240,85 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
 
     }
 
+    public static class GetBatchTaskInfoByVersionResponseBodyTaskInfoPythonModuleList extends TeaModel {
+        /**
+         * <p>The ID of the third-party package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
+         */
+        @NameInMap("ModuleId")
+        public Long moduleId;
+
+        /**
+         * <p>The name of the third-party package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pandas</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        /**
+         * <p>The Python version that the third-party package depends on.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Python 3.7</p>
+         */
+        @NameInMap("PythonVersion")
+        public String pythonVersion;
+
+        /**
+         * <p>The version number of the third-party package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.3.5</p>
+         */
+        @NameInMap("Version")
+        public String version;
+
+        public static GetBatchTaskInfoByVersionResponseBodyTaskInfoPythonModuleList build(java.util.Map<String, ?> map) throws Exception {
+            GetBatchTaskInfoByVersionResponseBodyTaskInfoPythonModuleList self = new GetBatchTaskInfoByVersionResponseBodyTaskInfoPythonModuleList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfoPythonModuleList setModuleId(Long moduleId) {
+            this.moduleId = moduleId;
+            return this;
+        }
+        public Long getModuleId() {
+            return this.moduleId;
+        }
+
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfoPythonModuleList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfoPythonModuleList setPythonVersion(String pythonVersion) {
+            this.pythonVersion = pythonVersion;
+            return this;
+        }
+        public String getPythonVersion() {
+            return this.pythonVersion;
+        }
+
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfoPythonModuleList setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+    }
+
     public static class GetBatchTaskInfoByVersionResponseBodyTaskInfoSparkClientInfo extends TeaModel {
         /**
-         * <p>The Spark client version name.</p>
+         * <p>The name of the Spark client.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -321,7 +397,13 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public GetBatchTaskInfoByVersionResponseBodyTaskInfoUpStreamListDependPeriod dependPeriod;
 
         /**
-         * <p>The dependency strategy. Valid values: ALL, FIRST, LAST, NEAR.</p>
+         * <p>The dependency strategy. Valid values:</p>
+         * <ul>
+         * <li>ALL</li>
+         * <li>FIRST</li>
+         * <li>LAST</li>
+         * <li>NEAR</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>LAST</p>
@@ -330,16 +412,16 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String dependStrategy;
 
         /**
-         * <p>The dependent logical table fields.</p>
+         * <p>The fields of the dependent logical table.</p>
          */
         @NameInMap("FieldList")
         public java.util.List<String> fieldList;
 
         /**
-         * <p>The type of the upstream dependency node. Valid values:</p>
+         * <p>The node type of the upstream dependency. Valid values:</p>
          * <ul>
-         * <li>PHYSICAL: physical node.</li>
-         * <li>LOGICAL: logical table dependency.</li>
+         * <li>PHYSICAL: Physical node.</li>
+         * <li>LOGICAL: Logical table dependency.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -349,7 +431,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String nodeType;
 
         /**
-         * <p>The period difference. A value of 0 indicates a same-cycle dependency. A positive number indicates a dependency on the previous N cycles.</p>
+         * <p>The period difference. A value of 0 indicates a same-period dependency. A positive integer indicates a dependency on the previous N periods.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -364,7 +446,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public Boolean sourceNodeEnabled;
 
         /**
-         * <p>The upstream node ID.</p>
+         * <p>The ID of the upstream node.</p>
          * 
          * <strong>example:</strong>
          * <p>n_2001</p>
@@ -373,7 +455,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String sourceNodeId;
 
         /**
-         * <p>The upstream node name.</p>
+         * <p>The name of the upstream node.</p>
          * 
          * <strong>example:</strong>
          * <p>t_input1</p>
@@ -391,16 +473,16 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String sourceNodeOutputName;
 
         /**
-         * <p>The username of the upstream node owner.</p>
+         * <p>The upstream username.</p>
          * 
          * <strong>example:</strong>
-         * <p>John</p>
+         * <p>John Doe</p>
          */
         @NameInMap("SourceNodeUserName")
         public String sourceNodeUserName;
 
         /**
-         * <p>The input table name.</p>
+         * <p>The name of the input table.</p>
          * 
          * <strong>example:</strong>
          * <p>t_input1</p>
@@ -505,7 +587,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
 
     public static class GetBatchTaskInfoByVersionResponseBodyTaskInfo extends TeaModel {
         /**
-         * <p>The task code.</p>
+         * <p>The code of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>show tables;</p>
@@ -514,7 +596,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The cron expression for automatic scheduling. Refer to the Linux cron expression syntax.</p>
+         * <p>The cron expression for automatic scheduling. You can refer to Linux cron expressions.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 1 * * ?</p>
@@ -538,7 +620,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String dagId;
 
         /**
-         * <p>The catalog for database SQL nodes. This parameter takes effect only for data source types that require a catalog, such as Presto.</p>
+         * <p>The catalog of the data source. This parameter takes effect only for database SQL tasks and data source types that require a catalog, such as Presto.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql_catalog</p>
@@ -547,7 +629,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String dataSourceCatalog;
 
         /**
-         * <p>The data source ID for database SQL nodes.</p>
+         * <p>The ID of the data source for the database SQL task.</p>
          * 
          * <strong>example:</strong>
          * <p>12131111</p>
@@ -556,7 +638,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String dataSourceId;
 
         /**
-         * <p>The schema for database SQL nodes. This parameter takes effect only for data source types that require a schema, such as Oracle.</p>
+         * <p>The schema of the data source. This parameter takes effect only for database SQL tasks and data source types that require a schema, such as Oracle.</p>
          * 
          * <strong>example:</strong>
          * <p>erp</p>
@@ -565,19 +647,19 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String dataSourceSchema;
 
         /**
-         * <p>The list of development owner IDs.</p>
+         * <p>The IDs of the developers.</p>
          */
         @NameInMap("DevelopOwnerIdList")
         public java.util.List<String> developOwnerIdList;
 
         /**
-         * <p>The list of development owner names.</p>
+         * <p>The names of the developers.</p>
          */
         @NameInMap("DevelopOwnerNameList")
         public java.util.List<String> developOwnerNameList;
 
         /**
-         * <p>The node ID in the directory tree.</p>
+         * <p>The node ID of the task directory tree.</p>
          * 
          * <strong>example:</strong>
          * <p>12113111</p>
@@ -586,16 +668,16 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public Long fileId;
 
         /**
-         * <p>Indicates whether the task has a development environment node.</p>
+         * <p>Indicates whether a development environment node exists.</p>
          */
         @NameInMap("HasDevNode")
         public Boolean hasDevNode;
 
         /**
-         * <p>The task name.</p>
+         * <p>The name of the task.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestTask1</p>
+         * <p>Test task 1</p>
          */
         @NameInMap("Name")
         public String name;
@@ -607,16 +689,16 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public Boolean needPublish;
 
         /**
-         * <p>The task description.</p>
+         * <p>The description of the task.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxTest</p>
+         * <p>xx test</p>
          */
         @NameInMap("NodeDescription")
         public String nodeDescription;
 
         /**
-         * <p>The source of the node, indicating the organization or application that created the node.</p>
+         * <p>The source of the node. This indicates the organization or application that created the node.</p>
          * 
          * <strong>example:</strong>
          * <p>openapi</p>
@@ -625,7 +707,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String nodeFrom;
 
         /**
-         * <p>The node ID.</p>
+         * <p>The ID of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>n_1011_21232132322</p>
@@ -634,27 +716,22 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The node name.</p>
+         * <p>The name of the node.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestTask1</p>
+         * <p>Test task 1</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
-         * <p>The list of node output names.</p>
+         * <p>The output names of the node.</p>
          */
         @NameInMap("NodeOutputNameList")
         public java.util.List<String> nodeOutputNameList;
 
         /**
-         * <p>The node status. Valid values:</p>
-         * <ul>
-         * <li>1: Normal.</li>
-         * <li>2: Paused.</li>
-         * <li>3: Dry run.</li>
-         * </ul>
+         * <p>The status of the node. Valid values: 1 (Normal), 2 (Paused), and 3 (Dry run).</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -663,7 +740,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public Integer nodeStatus;
 
         /**
-         * <p>The user ID of the current operator.</p>
+         * <p>The ID of the user who performs the current operation.</p>
          * 
          * <strong>example:</strong>
          * <p>30231123</p>
@@ -672,13 +749,13 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String operatorUserId;
 
         /**
-         * <p>The list of O&amp;M owner IDs.</p>
+         * <p>The IDs of the O&amp;M owners.</p>
          */
         @NameInMap("OpsOwnerIdList")
         public java.util.List<String> opsOwnerIdList;
 
         /**
-         * <p>The list of O&amp;M owner names.</p>
+         * <p>The names of the O&amp;M owners.</p>
          */
         @NameInMap("OpsOwnerNameList")
         public java.util.List<String> opsOwnerNameList;
@@ -687,7 +764,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
          * <p>The name of the node owner.</p>
          * 
          * <strong>example:</strong>
-         * <p>John</p>
+         * <p>John Doe</p>
          */
         @NameInMap("OwnerName")
         public String ownerName;
@@ -708,13 +785,13 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public java.util.List<GetBatchTaskInfoByVersionResponseBodyTaskInfoParamList> paramList;
 
         /**
-         * <p>Indicates whether the node is paused for scheduling.</p>
+         * <p>Indicates whether the scheduling of the node is paused.</p>
          */
         @NameInMap("Paused")
         public Boolean paused;
 
         /**
-         * <p>The scheduling priority of the node. Valid values: 1 to 9. A larger value indicates a lower priority.</p>
+         * <p>The scheduling priority of the task. Valid values: 1 to 9. A larger value indicates a lower priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -723,7 +800,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The project ID.</p>
+         * <p>The ID of the project.</p>
          * 
          * <strong>example:</strong>
          * <p>131211211</p>
@@ -732,13 +809,28 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>Indicates whether the task is published.</p>
+         * <p>Indicates whether the node is published.</p>
          */
         @NameInMap("Published")
         public Boolean published;
 
         /**
-         * <p>The remarks.</p>
+         * <p>The list of third-party packages that the Python task depends on.</p>
+         */
+        @NameInMap("PythonModuleList")
+        public java.util.List<GetBatchTaskInfoByVersionResponseBodyTaskInfoPythonModuleList> pythonModuleList;
+
+        /**
+         * <p>The Python version of the Python task, such as Python 3.7.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Python 3.7</p>
+         */
+        @NameInMap("PythonVersion")
+        public String pythonVersion;
+
+        /**
+         * <p>The remark.</p>
          * 
          * <strong>example:</strong>
          * <p>test xx</p>
@@ -747,7 +839,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String remark;
 
         /**
-         * <p>Indicates whether the node can be rerun.</p>
+         * <p>Indicates whether the task can be rerun.</p>
          */
         @NameInMap("Rerunable")
         public Boolean rerunable;
@@ -755,12 +847,12 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         /**
          * <p>The scheduling period. Valid values:</p>
          * <ul>
-         * <li>YEARLY</li>
-         * <li>MONTHLY</li>
-         * <li>WEEKLY</li>
-         * <li>DAILY</li>
-         * <li>HOURLY</li>
-         * <li>MINUTELY</li>
+         * <li>YEARLY: Yearly.</li>
+         * <li>MONTHLY: Monthly.</li>
+         * <li>WEEKLY: Weekly.</li>
+         * <li>DAILY: Daily.</li>
+         * <li>HOURLY: Hourly.</li>
+         * <li>MINUTELY: Minutely.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -772,8 +864,8 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         /**
          * <p>The node type. Valid values:</p>
          * <ul>
-         * <li>1: periodic node.</li>
-         * <li>3: manual node.</li>
+         * <li>1: Periodic task.</li>
+         * <li>3: Manual task.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -783,27 +875,27 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public Integer scheduleType;
 
         /**
-         * <p>The Spark client information.</p>
+         * <p>The Spark client.</p>
          */
         @NameInMap("SparkClientInfo")
         public GetBatchTaskInfoByVersionResponseBodyTaskInfoSparkClientInfo sparkClientInfo;
 
         /**
-         * <p>The submit status. Valid values:</p>
+         * <p>The publish status. Valid values:</p>
          * <ul>
-         * <li>0: draft.</li>
-         * <li>1: submitted.</li>
-         * <li>100: in development.</li>
+         * <li>0: Draft.</li>
+         * <li>1: Submitted.</li>
+         * <li>100: In development.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>TestTask1</p>
+         * <p>Test task 1</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The task type. For more information, refer to the API operation for creating batch tasks.</p>
+         * <p>The task type. For more information, see the API operation for creating an offline computing task.</p>
          * 
          * <strong>example:</strong>
          * <p>21</p>
@@ -1052,6 +1144,22 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         }
         public Boolean getPublished() {
             return this.published;
+        }
+
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfo setPythonModuleList(java.util.List<GetBatchTaskInfoByVersionResponseBodyTaskInfoPythonModuleList> pythonModuleList) {
+            this.pythonModuleList = pythonModuleList;
+            return this;
+        }
+        public java.util.List<GetBatchTaskInfoByVersionResponseBodyTaskInfoPythonModuleList> getPythonModuleList() {
+            return this.pythonModuleList;
+        }
+
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfo setPythonVersion(String pythonVersion) {
+            this.pythonVersion = pythonVersion;
+            return this;
+        }
+        public String getPythonVersion() {
+            return this.pythonVersion;
         }
 
         public GetBatchTaskInfoByVersionResponseBodyTaskInfo setRemark(String remark) {

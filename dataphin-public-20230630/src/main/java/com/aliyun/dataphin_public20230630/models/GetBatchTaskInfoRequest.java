@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBatchTaskInfoRequest extends TeaModel {
     /**
-     * <p>The environment identifier. Valid values:</p>
-     * <ul>
-     * <li>dev</li>
-     * <li>prod</li>
-     * </ul>
-     * <p>Default value: dev.</p>
+     * <p>The environment identifier. Valid values: dev and prod. Default value: dev.</p>
      * 
      * <strong>example:</strong>
      * <p>dev</p>
@@ -19,7 +14,7 @@ public class GetBatchTaskInfoRequest extends TeaModel {
     public String env;
 
     /**
-     * <p>The node ID in the directory tree.</p>
+     * <p>The node ID in the task directory tree.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +49,7 @@ public class GetBatchTaskInfoRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The ID of the project to which the node belongs.</p>
+     * <p>The project to which the task belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

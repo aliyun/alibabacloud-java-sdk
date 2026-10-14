@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class StopPipelineIntegratedTaskRequest extends TeaModel {
     /**
+     * <p>The request context information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Context")
     public StopPipelineIntegratedTaskRequestContext context;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,8 @@ public class StopPipelineIntegratedTaskRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30121101</p>
      */
@@ -27,6 +31,7 @@ public class StopPipelineIntegratedTaskRequest extends TeaModel {
     public String opUserId;
 
     /**
+     * <p>The stop parameters.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("StopCommand")
@@ -71,6 +76,7 @@ public class StopPipelineIntegratedTaskRequest extends TeaModel {
 
     public static class StopPipelineIntegratedTaskRequestContext extends TeaModel {
         /**
+         * <p>The current operating environment. Valid values: DEV: development environment. PROD: production environment.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -80,6 +86,7 @@ public class StopPipelineIntegratedTaskRequest extends TeaModel {
         public String env;
 
         /**
+         * <p>The ID of the project to which the integration pipeline task belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,6 +120,7 @@ public class StopPipelineIntegratedTaskRequest extends TeaModel {
 
     public static class StopPipelineIntegratedTaskRequestStopCommand extends TeaModel {
         /**
+         * <p>The list of instance IDs of the incremental instances to stop.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("TaskIds")

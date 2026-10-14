@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListScheduleTemplatesRequest extends TeaModel {
     /**
+     * <p>The query conditions for the scheduling template list. This is a JSON object that supports keyword search and pagination.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListScheduleTemplatesCommand")
     public ListScheduleTemplatesRequestListScheduleTemplatesCommand listScheduleTemplatesCommand;
 
     /**
+     * <p>The tenant ID, which indicates the tenant for the current operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,8 @@ public class ListScheduleTemplatesRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the user who performs the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -57,13 +61,17 @@ public class ListScheduleTemplatesRequest extends TeaModel {
 
     public static class ListScheduleTemplatesRequestListScheduleTemplatesCommand extends TeaModel {
         /**
+         * <p>The keyword for fuzzy matching by template name. If this parameter is empty or not specified, no filtering is applied.</p>
+         * 
          * <strong>example:</strong>
-         * <p>小时</p>
+         * <p>Hour</p>
          */
         @NameInMap("Keyword")
         public String keyword;
 
         /**
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -71,6 +79,8 @@ public class ListScheduleTemplatesRequest extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page. Default value: 50. Maximum value: 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -78,6 +88,13 @@ public class ListScheduleTemplatesRequest extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The scheduling templatetype. Valid values:</p>
+         * <ul>
+         * <li>BASE_SCHEDULE_TEMPLATE: basic scheduling template</li>
+         * <li>CONDITION_SCHEDULE_TEMPLATE: conditional scheduling template
+         * If this parameter is not specified, all types are returned.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>BASE_SCHEDULE_TEMPLATE</p>
          */

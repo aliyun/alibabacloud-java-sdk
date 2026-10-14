@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class StopPipelineIntegratedTaskResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The batch results of stopping integrated incremental and full instances.</p>
+     */
     @NameInMap("Data")
     public StopPipelineIntegratedTaskResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class StopPipelineIntegratedTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -29,6 +38,8 @@ public class StopPipelineIntegratedTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -36,6 +47,8 @@ public class StopPipelineIntegratedTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class StopPipelineIntegratedTaskResponseBody extends TeaModel {
 
     public static class StopPipelineIntegratedTaskResponseBodyDataDevOpsActionResDTOList extends TeaModel {
         /**
+         * <p>The job name.</p>
+         * 
          * <strong>example:</strong>
          * <p>eedsauto</p>
          */
@@ -104,6 +119,8 @@ public class StopPipelineIntegratedTaskResponseBody extends TeaModel {
         public String jobName;
 
         /**
+         * <p>The job owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>1692173406264688</p>
          */
@@ -111,6 +128,8 @@ public class StopPipelineIntegratedTaskResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The operation status.</p>
+         * 
          * <strong>example:</strong>
          * <p>FAIED</p>
          */
@@ -149,10 +168,15 @@ public class StopPipelineIntegratedTaskResponseBody extends TeaModel {
     }
 
     public static class StopPipelineIntegratedTaskResponseBodyData extends TeaModel {
+        /**
+         * <p>The stop results for each instance.</p>
+         */
         @NameInMap("DevOpsActionResDTOList")
         public java.util.List<StopPipelineIntegratedTaskResponseBodyDataDevOpsActionResDTOList> devOpsActionResDTOList;
 
         /**
+         * <p>The number of failed stops.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -160,6 +184,8 @@ public class StopPipelineIntegratedTaskResponseBody extends TeaModel {
         public Long fail;
 
         /**
+         * <p>The number of successful stops.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

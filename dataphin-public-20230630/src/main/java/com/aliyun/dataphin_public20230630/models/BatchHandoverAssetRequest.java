@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class BatchHandoverAssetRequest extends TeaModel {
     /**
+     * <p>The batch transfer command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("HandoverCommand")
     public BatchHandoverAssetRequestHandoverCommand handoverCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,8 @@ public class BatchHandoverAssetRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -57,12 +61,14 @@ public class BatchHandoverAssetRequest extends TeaModel {
 
     public static class BatchHandoverAssetRequestHandoverCommand extends TeaModel {
         /**
+         * <p>The list of asset GUIDs to be transferred. A maximum of 50 assets can be transferred at a time. Currently, only physical tables and logical tables are supported. Data source tables are not supported.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("GuidList")
         public java.util.List<String> guidList;
 
         /**
+         * <p>The user ID of the transfer recipient.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

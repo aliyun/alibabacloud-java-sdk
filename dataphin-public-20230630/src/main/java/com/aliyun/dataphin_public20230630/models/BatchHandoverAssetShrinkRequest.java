@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class BatchHandoverAssetShrinkRequest extends TeaModel {
     /**
+     * <p>The batch transfer command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("HandoverCommand")
     public String handoverCommandShrink;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,8 @@ public class BatchHandoverAssetShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

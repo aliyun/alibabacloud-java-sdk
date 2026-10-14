@@ -21,6 +21,8 @@ public class ListTablesRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -58,7 +60,7 @@ public class ListTablesRequest extends TeaModel {
 
     public static class ListTablesRequestListQuery extends TeaModel {
         /**
-         * <p>The asset catalog, such as the project name or business unit name.</p>
+         * <p>The asset catalog: project name and business unit name.</p>
          * 
          * <strong>example:</strong>
          * <p>LD_test01_dev</p>
@@ -67,7 +69,7 @@ public class ListTablesRequest extends TeaModel {
         public String catalog;
 
         /**
-         * <p>The keyword for searching. Table names are supported.</p>
+         * <p>The supported keyword: table name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -76,6 +78,8 @@ public class ListTablesRequest extends TeaModel {
         public String keyword;
 
         /**
+         * <p>The ID of the owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>30012011</p>
          */
@@ -92,7 +96,7 @@ public class ListTablesRequest extends TeaModel {
         public Integer pageNo;
 
         /**
-         * <p>The number of records per page. Default value: 20.</p>
+         * <p>The number of entries per page. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -100,6 +104,23 @@ public class ListTablesRequest extends TeaModel {
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The table types. If you do not specify this parameter or pass an empty list, all table types are queried. Valid values:</p>
+         * <ul>
+         * <li>PHYSICAL_TABLE: Physical table of the compute source.</li>
+         * <li>PHYSICAL_VIEW: View of the compute source.</li>
+         * <li>PHYSICAL_MATERIALIZED_VIEW: Materialized view of the compute source.</li>
+         * <li>STREAM_TABLE: Meta table.</li>
+         * <li>MIRROR_TABLE: Mirror table.</li>
+         * <li>DIM: Logical dimension table.</li>
+         * <li>FACT: Logical fact table.</li>
+         * <li>SUM_BIZ_UNIT: Logical aggregate table.</li>
+         * <li>LOGIC_VIEW: Logical view.</li>
+         * <li>DATASOURCE_TABLE: Data source table.</li>
+         * <li>DATASOURCE_VIEW: Data source view.</li>
+         * <li>DATASOURCE_MATERIALIZED_VIEW: Data source materialized view.</li>
+         * </ul>
+         */
         @NameInMap("SubTypes")
         public java.util.List<String> subTypes;
 

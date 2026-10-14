@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListScheduleTemplatesShrinkRequest extends TeaModel {
     /**
+     * <p>The query conditions for the scheduling template list. This is a JSON object that supports keyword search and pagination.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListScheduleTemplatesCommand")
     public String listScheduleTemplatesCommandShrink;
 
     /**
+     * <p>The tenant ID, which indicates the tenant for the current operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,8 @@ public class ListScheduleTemplatesShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the user who performs the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

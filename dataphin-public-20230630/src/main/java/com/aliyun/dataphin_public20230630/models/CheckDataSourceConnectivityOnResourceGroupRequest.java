@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CheckDataSourceConnectivityOnResourceGroupRequest extends TeaModel {
     /**
+     * <p>The check object.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CheckCommand")
     public CheckDataSourceConnectivityOnResourceGroupRequestCheckCommand checkCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,8 @@ public class CheckDataSourceConnectivityOnResourceGroupRequest extends TeaModel 
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -57,6 +61,8 @@ public class CheckDataSourceConnectivityOnResourceGroupRequest extends TeaModel 
 
     public static class CheckDataSourceConnectivityOnResourceGroupRequestCheckCommandConfigItemList extends TeaModel {
         /**
+         * <p>The key of the configuration item.</p>
+         * 
          * <strong>example:</strong>
          * <p>jdbc.url</p>
          */
@@ -64,6 +70,8 @@ public class CheckDataSourceConnectivityOnResourceGroupRequest extends TeaModel 
         public String key;
 
         /**
+         * <p>The configuration value.</p>
+         * 
          * <strong>example:</strong>
          * <p>jdbc:mysql://host:port/database</p>
          */
@@ -94,10 +102,15 @@ public class CheckDataSourceConnectivityOnResourceGroupRequest extends TeaModel 
     }
 
     public static class CheckDataSourceConnectivityOnResourceGroupRequestCheckCommand extends TeaModel {
+        /**
+         * <p>The connection configuration items. If DataSourceId is specified, this parameter is optional and the saved configurations of the data source are used by default.</p>
+         */
         @NameInMap("ConfigItemList")
         public java.util.List<CheckDataSourceConnectivityOnResourceGroupRequestCheckCommandConfigItemList> configItemList;
 
         /**
+         * <p>The data source ID. This parameter is optional. If specified, the check result is associated with the data source and visible on the data source page, and the old check records of the data source on the target resource group are cleared first. If Type and ConfigItemList are not specified, the saved type and configurations of the data source are used for the check.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -105,6 +118,8 @@ public class CheckDataSourceConnectivityOnResourceGroupRequest extends TeaModel 
         public String dataSourceId;
 
         /**
+         * <p>The ID of the schedule resource group. The connectivity check task is executed on this resource group.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg_269xxxxx</p>
          */
@@ -112,6 +127,8 @@ public class CheckDataSourceConnectivityOnResourceGroupRequest extends TeaModel 
         public String resourceGroupId;
 
         /**
+         * <p>The data source type. If DataSourceId is specified, this parameter is optional and the saved type of the data source is used by default.</p>
+         * 
          * <strong>example:</strong>
          * <p>MYSQL</p>
          */

@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class StopPipelineIntegratedTaskShrinkRequest extends TeaModel {
     /**
+     * <p>The request context information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Context")
     public String contextShrink;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,8 @@ public class StopPipelineIntegratedTaskShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30121101</p>
      */
@@ -27,6 +31,7 @@ public class StopPipelineIntegratedTaskShrinkRequest extends TeaModel {
     public String opUserId;
 
     /**
+     * <p>The stop parameters.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("StopCommand")

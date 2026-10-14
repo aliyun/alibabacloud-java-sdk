@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetCheckConnectivityJobByJobIdResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The connectivity check task.</p>
+     */
     @NameInMap("Data")
     public GetCheckConnectivityJobByJobIdResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetCheckConnectivityJobByJobIdResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,8 @@ public class GetCheckConnectivityJobByJobIdResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -36,6 +47,8 @@ public class GetCheckConnectivityJobByJobIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class GetCheckConnectivityJobByJobIdResponseBody extends TeaModel {
 
     public static class GetCheckConnectivityJobByJobIdResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the data source. This parameter is empty if the check is performed before creation.</p>
+         * 
          * <strong>example:</strong>
          * <p>192</p>
          */
@@ -104,6 +119,8 @@ public class GetCheckConnectivityJobByJobIdResponseBody extends TeaModel {
         public String dataSourceId;
 
         /**
+         * <p>The error message returned when the check fails.</p>
+         * 
          * <strong>example:</strong>
          * <p>notFoundIp</p>
          */
@@ -111,6 +128,8 @@ public class GetCheckConnectivityJobByJobIdResponseBody extends TeaModel {
         public String errorMsg;
 
         /**
+         * <p>The ID of the connectivity check task.</p>
+         * 
          * <strong>example:</strong>
          * <p>123123</p>
          */
@@ -118,6 +137,8 @@ public class GetCheckConnectivityJobByJobIdResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The job type.</p>
+         * 
          * <strong>example:</strong>
          * <p>application/cluster</p>
          */
@@ -125,6 +146,8 @@ public class GetCheckConnectivityJobByJobIdResponseBody extends TeaModel {
         public String jobType;
 
         /**
+         * <p>The job status. Valid values: NEW, IN_PROCESS, SUCCESS, and FAILED.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */
@@ -132,6 +155,8 @@ public class GetCheckConnectivityJobByJobIdResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The ID of the tenant to which the check task belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>30001011</p>
          */
@@ -139,6 +164,8 @@ public class GetCheckConnectivityJobByJobIdResponseBody extends TeaModel {
         public String tenantId;
 
         /**
+         * <p>The ID of the underlying execution task.</p>
+         * 
          * <strong>example:</strong>
          * <p>t_7572319950395080706_20251225_7572319950395080707</p>
          */

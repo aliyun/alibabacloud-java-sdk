@@ -15,7 +15,7 @@ public class SyncDepartmentUserRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The ID of the operator user.</p>
+     * <p>The ID of the user who performs the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>30001011</p>
@@ -61,13 +61,13 @@ public class SyncDepartmentUserRequest extends TeaModel {
 
     public static class SyncDepartmentUserRequestSyncDepartmentUserCommandDeptUserMapping extends TeaModel {
         /**
-         * <p>The list of department IDs to which the user belongs. If this parameter is left empty, the user affiliation is deleted.</p>
+         * <p>The list of department IDs to which the user belongs. If the list is empty, the user membership is deleted.</p>
          */
         @NameInMap("DepartmentIdList")
         public java.util.List<String> departmentIdList;
 
         /**
-         * <p>The user source type.</p>
+         * <p>The source type of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun</p>
@@ -76,7 +76,7 @@ public class SyncDepartmentUserRequest extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The user ID in the user system. This is the unique identifier of the user.</p>
+         * <p>The user ID in the user system, which serves as the unique identifier of the user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class SyncDepartmentUserRequest extends TeaModel {
 
     public static class SyncDepartmentUserRequestSyncDepartmentUserCommand extends TeaModel {
         /**
-         * <p>The mapping between users and their affiliated departments.</p>
+         * <p>The department membership relationships of the user.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("DeptUserMapping")

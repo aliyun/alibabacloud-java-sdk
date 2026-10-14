@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class StartPipelineIntegratedTaskRequest extends TeaModel {
     /**
+     * <p>The request context.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Context")
     public StartPipelineIntegratedTaskRequestContext context;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,8 @@ public class StartPipelineIntegratedTaskRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30110121</p>
      */
@@ -27,6 +31,7 @@ public class StartPipelineIntegratedTaskRequest extends TeaModel {
     public String opUserId;
 
     /**
+     * <p>The startup parameters.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("StartCommand")
@@ -71,6 +76,11 @@ public class StartPipelineIntegratedTaskRequest extends TeaModel {
 
     public static class StartPipelineIntegratedTaskRequestContext extends TeaModel {
         /**
+         * <p>The current operating environment. Valid values:</p>
+         * <ul>
+         * <li>DEV: Development environment.</li>
+         * <li>PROD: Production environment.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -80,6 +90,7 @@ public class StartPipelineIntegratedTaskRequest extends TeaModel {
         public String env;
 
         /**
+         * <p>The ID of the project to which the integration pipeline node belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,6 +124,8 @@ public class StartPipelineIntegratedTaskRequest extends TeaModel {
 
     public static class StartPipelineIntegratedTaskRequestStartCommand extends TeaModel {
         /**
+         * <p>The bandwidth limit for the offline full task. Unit: MB/s.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -120,6 +133,8 @@ public class StartPipelineIntegratedTaskRequest extends TeaModel {
         public Integer byteSpeed;
 
         /**
+         * <p>The specified time checkpoint for starting in pure incremental mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-09-22 15:28:31</p>
          */
@@ -127,6 +142,8 @@ public class StartPipelineIntegratedTaskRequest extends TeaModel {
         public String checkpoint;
 
         /**
+         * <p>The concurrency for the offline full task.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -134,6 +151,12 @@ public class StartPipelineIntegratedTaskRequest extends TeaModel {
         public Integer concurrent;
 
         /**
+         * <p>The startup mode for the full table task. Valid values:</p>
+         * <ul>
+         * <li>INIT</li>
+         * <li>RELAY</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>RELAY</p>
          */
@@ -141,6 +164,8 @@ public class StartPipelineIntegratedTaskRequest extends TeaModel {
         public String fullTaskMode;
 
         /**
+         * <p>The incremental instance ID required when restarting the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>t_1234567890_123123</p>
          */
@@ -148,6 +173,8 @@ public class StartPipelineIntegratedTaskRequest extends TeaModel {
         public String incrementalTaskId;
 
         /**
+         * <p>The memory for the offline full task. Unit: MB.</p>
+         * 
          * <strong>example:</strong>
          * <p>1024</p>
          */
@@ -155,6 +182,8 @@ public class StartPipelineIntegratedTaskRequest extends TeaModel {
         public Integer memory;
 
         /**
+         * <p>The ID of the real-time node required when starting from a node.</p>
+         * 
          * <strong>example:</strong>
          * <p>n_1234567890</p>
          */
@@ -162,6 +191,8 @@ public class StartPipelineIntegratedTaskRequest extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>The ID of the resource group used by the full table instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -169,6 +200,12 @@ public class StartPipelineIntegratedTaskRequest extends TeaModel {
         public String quotaGroupId;
 
         /**
+         * <p>The synchronization mode. Valid values:</p>
+         * <ul>
+         * <li>DI_DF</li>
+         * <li>DI</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DI_DF</p>
          */

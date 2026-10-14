@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCheckConnectivityJobByJobIdRequest extends TeaModel {
     /**
+     * <p>The ID of the connectivity check task, which is the Data returned by CheckDataSourceConnectivityOnResourceGroup.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetCheckConnectivityJobByJobIdRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class GetCheckConnectivityJobByJobIdRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

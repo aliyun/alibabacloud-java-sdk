@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTableRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetTableRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -21,6 +24,8 @@ public class GetTableRequest extends TeaModel {
     public String opUserId;
 
     /**
+     * <p>The GUID of the table asset.</p>
+     * 
      * <strong>example:</strong>
      * <p>dp_ds_table.123.12344.db.table</p>
      */
