@@ -27,16 +27,16 @@ public class ModifyCustomAgentRequest extends TeaModel {
     public String DMSUnit;
 
     /**
-     * <p>The specified data scope in <strong>JSON character string format</strong>.</p>
+     * <p>The specified data scope in <strong>JSON string format</strong>.</p>
      * <ul>
      * <li>General parameter description<ul>
-     * <li>tableFlag: true specifies the data scope.</li>
+     * <li>tableFlag: true indicates that a data scope is specified.</li>
      * <li>scope: personal is a fixed value.</li>
      * <li>personal: parameters for file and database types.</li>
      * </ul>
      * </li>
      * </ul>
-     * <p><strong>File type</strong>: pass parameters in the following format:</p>
+     * <p><strong>File type</strong>: Pass parameters in the following format:</p>
      * <ul>
      * <li>DataSourceType: remote_data_center is a fixed value.</li>
      * <li>FileId: the file ID.</li>
@@ -62,16 +62,16 @@ public class ModifyCustomAgentRequest extends TeaModel {
      *   }
      * }
      * </code></pre>
-     * <p><strong>Database type</strong>: pass parameters as follows:</p>
+     * <p><strong>Database type</strong>: Pass parameters in the following format:</p>
      * <ul>
      * <li>DataSourceType: database is a fixed value.</li>
-     * <li>DmsInstanceId: the DMS instance ID returned by the Data Center operation.</li>
-     * <li>DmsDatabaseId: the DMS database ID returned by the Data Center operation.</li>
-     * <li>FileId: the instance name. <strong>[Deprecated]</strong></li>
-     * <li>DbName: the database name returned by the Data Center operation.</li>
-     * <li>Database: the database name returned by the Data Center operation.</li>
-     * <li>Tables: the table names returned by the Data Center operation.</li>
-     * <li>TableIds: the table IDs returned by the Data Center operation.</li>
+     * <li>DmsInstanceId: the DMS instance ID returned by the data center API.</li>
+     * <li>DmsDatabaseId: the DMS database ID returned by the data center API.</li>
+     * <li>FileId: the instance name. (Deprecated)</li>
+     * <li>DbName: the database name returned by the data center API.</li>
+     * <li>Database: the database name returned by the data center API.</li>
+     * <li>Tables: the table names returned by the data center API.</li>
+     * <li>TableIds: the table IDs returned by the data center API.</li>
      * <li>Engine: the engine type, such as mysql or postgresql.</li>
      * <li>RegionId: the current region.</li>
      * </ul>
@@ -104,7 +104,7 @@ public class ModifyCustomAgentRequest extends TeaModel {
      *   &quot;personal&quot; : {
      *     &quot;DataSourceType&quot; : &quot;remote_data_center&quot;,
      *     &quot;FileId&quot; : &quot;f-5qlrwaw10<strong><strong><strong><strong>s3gpw1z&quot;,
-     *     &quot;Database&quot; : &quot;Test_spreadsheet</strong></strong></strong>.xlsx&quot;,
+     *     &quot;Database&quot; : &quot;Test table</strong></strong></strong>.xlsx&quot;,
      *     &quot;Tables&quot; : [ &quot;Sheet1&quot; ],
      *     &quot;TableIds&quot; : [ &quot;</strong>****&quot; ],
      *     &quot;RegionId&quot; : &quot;cn-hangzhou&quot;
@@ -138,8 +138,8 @@ public class ModifyCustomAgentRequest extends TeaModel {
      * <strong>example:</strong>
      * <p>Analysis framework:</p>
      * <ol>
-     * <li>Monitor core metrics (GMV, order volume, UV, and conversion rate) on a daily, weekly, and monthly basis, and analyze trend changes as well as year-over-year and month-over-month fluctuations.</li>
-     * <li>Segment data by new and returning customers, channels, and regions to identify growth drivers and weaknesses.</li>
+     * <li>Monitor core metrics (GMV, order volume, UV, and conversion rate) on a daily, weekly, and monthly basis, and analyze trend changes and year-over-year or month-over-month fluctuations.</li>
+     * <li>Segment by new and existing customers, channels, and regions to identify growth drivers and weaknesses.</li>
      * <li>Conduct funnel analysis based on user behavior paths (browse -&gt; add to cart -&gt; pay) to locate churn points</li>
      * </ol>
      */
@@ -156,9 +156,9 @@ public class ModifyCustomAgentRequest extends TeaModel {
      * <p>Core metric definitions:</p>
      * <ol>
      * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including both successfully paid and unpaid orders.</li>
-     * <li>Order volume refers to the number of valid orders placed per day.</li>
+     * <li>Order volume is the number of valid orders placed per day.</li>
      * <li>UV (Unique Visitors) refers to the number of deduplicated users who visit the website or app.</li>
-     * <li>Conversion rate = Number of paid orders / UV, reflecting the traffic conversion efficiency</li>
+     * <li>Conversion rate = paid orders / UV, reflecting the traffic conversion efficiency</li>
      * </ol>
      */
     @NameInMap("Knowledge")
@@ -183,6 +183,15 @@ public class ModifyCustomAgentRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The list of recommended questions.</p>
+     * <ul>
+     * <li>You can configure up to 10 recommended questions.</li>
+     * </ul>
+     */
+    @NameInMap("RecommendQuestionList")
+    public java.util.List<String> recommendQuestionList;
+
+    /**
      * <p>The ID of the referenced historical session.</p>
      * 
      * <strong>example:</strong>
@@ -204,7 +213,7 @@ public class ModifyCustomAgentRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Require all numbers in the text report to be written in Chinese characters instead of Arabic numerals</p>
+     * <p>The text report requires that all numbers use Chinese numerals instead of Arabic numerals</p>
      */
     @NameInMap("TextReportConfig")
     public String textReportConfig;
@@ -222,7 +231,7 @@ public class ModifyCustomAgentRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Require all numbers in the web report to be written in Chinese characters instead of Arabic numerals</p>
+     * <p>The web report requires that all numbers use Chinese numerals instead of Arabic numerals</p>
      */
     @NameInMap("WebReportConfig")
     public String webReportConfig;
@@ -230,11 +239,11 @@ public class ModifyCustomAgentRequest extends TeaModel {
     /**
      * <p>The web report theme. Valid values:</p>
      * <ul>
-     * <li>default: default.</li>
-     * <li>journal: journal.</li>
-     * <li>legacy: classic.</li>
-     * <li>neobrutalism: stylized.</li>
-     * <li>infographic: infographic.</li>
+     * <li>default: Default.</li>
+     * <li>journal: Journal.</li>
+     * <li>legacy: Classic.</li>
+     * <li>neobrutalism: Stylized.</li>
+     * <li>infographic: Infographic.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -343,6 +352,14 @@ public class ModifyCustomAgentRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public ModifyCustomAgentRequest setRecommendQuestionList(java.util.List<String> recommendQuestionList) {
+        this.recommendQuestionList = recommendQuestionList;
+        return this;
+    }
+    public java.util.List<String> getRecommendQuestionList() {
+        return this.recommendQuestionList;
     }
 
     public ModifyCustomAgentRequest setRelatedSessionId(String relatedSessionId) {
@@ -466,7 +483,7 @@ public class ModifyCustomAgentRequest extends TeaModel {
 
     public static class ModifyCustomAgentRequestExecutionConfig extends TeaModel {
         /**
-         * <p>Specifies whether to prohibit appending data sources during the session.</p>
+         * <p>Specifies whether to prohibit appending data sources in a session.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -475,7 +492,7 @@ public class ModifyCustomAgentRequest extends TeaModel {
         public Boolean forbiddenAppendDataSource;
 
         /**
-         * <p>Specifies whether to disable user inquiries during the process.</p>
+         * <p>Specifies whether to disable user prompts during the process.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -502,7 +519,7 @@ public class ModifyCustomAgentRequest extends TeaModel {
         public Boolean skipSqlConfirm;
 
         /**
-         * <p>Specifies whether to skip the web report generation confirmation.</p>
+         * <p>Specifies whether to skip the confirmation for generating a web report.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -561,8 +578,8 @@ public class ModifyCustomAgentRequest extends TeaModel {
         /**
          * <p>The access type. If this parameter is not specified, the default value is mcp. Valid values:</p>
          * <ul>
-         * <li>mcp: access through MCP. You must pass the McpServerId parameter.</li>
-         * <li>dms_kb: access through DMS knowledge base. You must pass the KbUuid parameter.</li>
+         * <li>mcp: access through MCP. You must specify the McpServerId parameter.</li>
+         * <li>dms_kb: access through a DMS knowledge base. You must specify the KbUuid parameter.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -581,7 +598,7 @@ public class ModifyCustomAgentRequest extends TeaModel {
         public String kbUuid;
 
         /**
-         * <p>The ID of the MCP server.</p>
+         * <p>The MCP server ID.</p>
          * 
          * <strong>example:</strong>
          * <p>nhdpt9adf6ac**********ca</p>
@@ -674,7 +691,7 @@ public class ModifyCustomAgentRequest extends TeaModel {
 
     public static class ModifyCustomAgentRequestScheduleTaskConfig extends TeaModel {
         /**
-         * <p>The cron expression for periodic scheduling.</p>
+         * <p>The cron expression for scheduled execution.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 0,1 ? * 1-7</p>

@@ -13,6 +13,9 @@ public class AgenticDmsInstanceSyncTask extends TeaModel {
     @NameInMap("ActorType")
     public String actorType;
 
+    @NameInMap("AuthorizeAddVpcNatWhiteList")
+    public Boolean authorizeAddVpcNatWhiteList;
+
     @NameInMap("ErrorCode")
     public String errorCode;
 
@@ -79,6 +82,14 @@ public class AgenticDmsInstanceSyncTask extends TeaModel {
     }
     public String getActorType() {
         return this.actorType;
+    }
+
+    public AgenticDmsInstanceSyncTask setAuthorizeAddVpcNatWhiteList(Boolean authorizeAddVpcNatWhiteList) {
+        this.authorizeAddVpcNatWhiteList = authorizeAddVpcNatWhiteList;
+        return this;
+    }
+    public Boolean getAuthorizeAddVpcNatWhiteList() {
+        return this.authorizeAddVpcNatWhiteList;
     }
 
     public AgenticDmsInstanceSyncTask setErrorCode(String errorCode) {

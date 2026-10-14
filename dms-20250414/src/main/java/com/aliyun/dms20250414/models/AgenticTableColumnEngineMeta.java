@@ -4,93 +4,33 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class AgenticTableColumnEngineMeta extends TeaModel {
-    /**
-     * <p>Specifies whether the field is auto-incremented.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("AutoIncrement")
     public Boolean autoIncrement;
 
-    /**
-     * <p>The defined length of the field.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>20</p>
-     */
     @NameInMap("DataLength")
     public Long dataLength;
 
-    /**
-     * <p>The precision of the numeric field.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("DataPrecision")
     public Integer dataPrecision;
 
-    /**
-     * <p>The scale of the numeric field, which is the number of decimal places.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2</p>
-     */
     @NameInMap("DataScale")
     public Integer dataScale;
 
-    /**
-     * <p>The default value of the field.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("DefaultValue")
     public String defaultValue;
 
-    /**
-     * <p>The character set of the field.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>utf8mb4</p>
-     */
     @NameInMap("Encoding")
     public String encoding;
 
-    /**
-     * <p>The additional information of the field, such as auto_increment.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>auto_increment</p>
-     */
     @NameInMap("Extra")
     public String extra;
 
-    /**
-     * <p>Specifies whether the field is a generated column.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("GenerationColumn")
     public Boolean generationColumn;
 
-    /**
-     * <p>The calculation expression of the generated column.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>price * quantity</p>
-     */
     @NameInMap("GenerationExpression")
     public String generationExpression;
 
-    /**
-     * <p>Specifies whether the field allows null values.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("Nullable")
     public Boolean nullable;
 

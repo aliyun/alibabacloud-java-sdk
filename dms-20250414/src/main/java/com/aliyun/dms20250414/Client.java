@@ -27,6 +27,144 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Enter the connection and authentication information for the data source. The connection is automatically tested before saving. If the test succeeds, the data source is created and metadata synchronization starts.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a data source accessible by the Agent data gateway.</p>
+     * 
+     * @param request AddAgenticDataSourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddAgenticDataSourceResponse
+     */
+    public AddAgenticDataSourceResponse addAgenticDataSourceWithOptions(AddAgenticDataSourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alias)) {
+            query.put("Alias", request.alias);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authAccount)) {
+            query.put("AuthAccount", request.authAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authPassword)) {
+            query.put("AuthPassword", request.authPassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogName)) {
+            query.put("CatalogName", request.catalogName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.createMode)) {
+            query.put("CreateMode", request.createMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbType)) {
+            query.put("DbType", request.dbType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.envType)) {
+            query.put("EnvType", request.envType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.host)) {
+            query.put("Host", request.host);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceResourceId)) {
+            query.put("InstanceResourceId", request.instanceResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceSource)) {
+            query.put("InstanceSource", request.instanceSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kmsSecret)) {
+            query.put("KmsSecret", request.kmsSecret);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyId)) {
+            query.put("PolicyId", request.policyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.port)) {
+            query.put("Port", request.port);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleArn)) {
+            query.put("RoleArn", request.roleArn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schema)) {
+            query.put("Schema", request.schema);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snowflakeRole)) {
+            query.put("SnowflakeRole", request.snowflakeRole);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snowflakeWarehouse)) {
+            query.put("SnowflakeWarehouse", request.snowflakeWarehouse);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.syncAlias)) {
+            query.put("SyncAlias", request.syncAlias);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useSsl)) {
+            query.put("UseSsl", request.useSsl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
+            query.put("VSwitchId", request.vSwitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddAgenticDataSource"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddAgenticDataSourceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Enter the connection and authentication information for the data source. The connection is automatically tested before saving. If the test succeeds, the data source is created and metadata synchronization starts.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a data source accessible by the Agent data gateway.</p>
+     * 
+     * @param request AddAgenticDataSourceRequest
+     * @return AddAgenticDataSourceResponse
+     */
+    public AddAgenticDataSourceResponse addAgenticDataSource(AddAgenticDataSourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addAgenticDataSourceWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Adds a memory entry to a DataAgent.</p>
      * 
@@ -364,6 +502,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>The credential is used to execute SQL statements through the data gateway (OneQuery) and can be restricted to the instance level or the database level.
+     * Fixed properties of the credential:</p>
+     * <ul>
+     * <li>Validity period: 10 minutes after creation.</li>
+     * <li>Maximum number of connections: 500.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a temporary credential for an agent to execute SQL statements.</p>
+     * 
+     * @param request CreateAgenticSqlExecuteCredentialRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAgenticSqlExecuteCredentialResponse
+     */
+    public CreateAgenticSqlExecuteCredentialResponse createAgenticSqlExecuteCredentialWithOptions(CreateAgenticSqlExecuteCredentialRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogName)) {
+            query.put("CatalogName", request.catalogName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogUuid)) {
+            query.put("CatalogUuid", request.catalogUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.databaseUuid)) {
+            query.put("DatabaseUuid", request.databaseUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qualifiedName)) {
+            query.put("QualifiedName", request.qualifiedName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAgenticSqlExecuteCredential"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAgenticSqlExecuteCredentialResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The credential is used to execute SQL statements through the data gateway (OneQuery) and can be restricted to the instance level or the database level.
+     * Fixed properties of the credential:</p>
+     * <ul>
+     * <li>Validity period: 10 minutes after creation.</li>
+     * <li>Maximum number of connections: 500.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a temporary credential for an agent to execute SQL statements.</p>
+     * 
+     * @param request CreateAgenticSqlExecuteCredentialRequest
+     * @return CreateAgenticSqlExecuteCredentialResponse
+     */
+    public CreateAgenticSqlExecuteCredentialResponse createAgenticSqlExecuteCredential(CreateAgenticSqlExecuteCredentialRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAgenticSqlExecuteCredentialWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Creates an Airflow instance in a workspace.</p>
      * 
      * <b>summary</b> : 
@@ -540,7 +750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a custom agent in a personal space or workspace.</p>
+     * <p>Creates a custom agent in a personal or shared workspace.</p>
      * 
      * @param tmpReq CreateCustomAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -566,6 +776,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.knowledgeSemanticConfigListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.knowledgeSemanticConfigList, "KnowledgeSemanticConfigList", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.recommendQuestionList)) {
+            request.recommendQuestionListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.recommendQuestionList, "RecommendQuestionList", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.scheduleTaskConfig)) {
             request.scheduleTaskConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.scheduleTaskConfig, "ScheduleTaskConfig", "json");
         }
@@ -575,6 +789,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentType)) {
+            query.put("AgentType", request.agentType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.callbackConfigShrink)) {
             query.put("CallbackConfig", request.callbackConfigShrink);
         }
@@ -613,6 +831,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recommendQuestionListShrink)) {
+            query.put("RecommendQuestionList", request.recommendQuestionListShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.relatedSessionId)) {
@@ -662,7 +884,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a custom agent in a personal space or workspace.</p>
+     * <p>Creates a custom agent in a personal or shared workspace.</p>
      * 
      * @param request CreateCustomAgentRequest
      * @return CreateCustomAgentResponse
@@ -1216,6 +1438,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateOneMetaSqlTemplateResponse createOneMetaSqlTemplate(CreateOneMetaSqlTemplateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createOneMetaSqlTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>After deletion, the data source cannot establish connections and cannot be restored by calling the enable API operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a data source and its associated metadata catalog.</p>
+     * 
+     * @param request DeleteAgenticDataSourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAgenticDataSourceResponse
+     */
+    public DeleteAgenticDataSourceResponse deleteAgenticDataSourceWithOptions(DeleteAgenticDataSourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceUuid)) {
+            query.put("DataSourceUuid", request.dataSourceUuid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAgenticDataSource"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAgenticDataSourceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>After deletion, the data source cannot establish connections and cannot be restored by calling the enable API operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a data source and its associated metadata catalog.</p>
+     * 
+     * @param request DeleteAgenticDataSourceRequest
+     * @return DeleteAgenticDataSourceResponse
+     */
+    public DeleteAgenticDataSourceResponse deleteAgenticDataSource(DeleteAgenticDataSourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAgenticDataSourceWithOptions(request, runtime);
     }
 
     /**
@@ -1984,7 +2256,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a custom agent by custom agent ID.</p>
+     * <p>Retrieves the details of a custom agent by custom agent ID.</p>
      * 
      * @param request DescribeCustomAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2020,7 +2292,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a custom agent by custom agent ID.</p>
+     * <p>Retrieves the details of a custom agent by custom agent ID.</p>
      * 
      * @param request DescribeCustomAgentRequest
      * @return DescribeCustomAgentResponse
@@ -2588,6 +2860,240 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAgenticAgentByInstallTokenResponse getAgenticAgentByInstallToken(GetAgenticAgentByInstallTokenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAgenticAgentByInstallTokenWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of an Agentic DMS catalog based on the catalog UUID.</p>
+     * 
+     * @param request GetAgenticCatalogRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAgenticCatalogResponse
+     */
+    public GetAgenticCatalogResponse getAgenticCatalogWithOptions(GetAgenticCatalogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogUuid)) {
+            query.put("CatalogUuid", request.catalogUuid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAgenticCatalog"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgenticCatalogResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of an Agentic DMS catalog based on the catalog UUID.</p>
+     * 
+     * @param request GetAgenticCatalogRequest
+     * @return GetAgenticCatalogResponse
+     */
+    public GetAgenticCatalogResponse getAgenticCatalog(GetAgenticCatalogRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAgenticCatalogWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the connection, authentication, status, and metadata catalog information of a specified data source under the current account. Only masked values are returned for passwords.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a data source by its UUID.</p>
+     * 
+     * @param request GetAgenticDataSourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAgenticDataSourceResponse
+     */
+    public GetAgenticDataSourceResponse getAgenticDataSourceWithOptions(GetAgenticDataSourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceUuid)) {
+            query.put("DataSourceUuid", request.dataSourceUuid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAgenticDataSource"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgenticDataSourceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the connection, authentication, status, and metadata catalog information of a specified data source under the current account. Only masked values are returned for passwords.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a data source by its UUID.</p>
+     * 
+     * @param request GetAgenticDataSourceRequest
+     * @return GetAgenticDataSourceResponse
+     */
+    public GetAgenticDataSourceResponse getAgenticDataSource(GetAgenticDataSourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAgenticDataSourceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a database in Agentic DMS based on the database UUID.</p>
+     * 
+     * @param request GetAgenticDatabaseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAgenticDatabaseResponse
+     */
+    public GetAgenticDatabaseResponse getAgenticDatabaseWithOptions(GetAgenticDatabaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.databaseUuid)) {
+            query.put("DatabaseUuid", request.databaseUuid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAgenticDatabase"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgenticDatabaseResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a database in Agentic DMS based on the database UUID.</p>
+     * 
+     * @param request GetAgenticDatabaseRequest
+     * @return GetAgenticDatabaseResponse
+     */
+    public GetAgenticDatabaseResponse getAgenticDatabase(GetAgenticDatabaseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAgenticDatabaseWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the fields of a table based on the database UUID and the fully qualified name of the table.</p>
+     * 
+     * @param request GetAgenticTableColumnRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAgenticTableColumnResponse
+     */
+    public GetAgenticTableColumnResponse getAgenticTableColumnWithOptions(GetAgenticTableColumnRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.databaseUuid)) {
+            query.put("DatabaseUuid", request.databaseUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableQualifiedName)) {
+            query.put("TableQualifiedName", request.tableQualifiedName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAgenticTableColumn"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgenticTableColumnResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the fields of a table based on the database UUID and the fully qualified name of the table.</p>
+     * 
+     * @param request GetAgenticTableColumnRequest
+     * @return GetAgenticTableColumnResponse
+     */
+    public GetAgenticTableColumnResponse getAgenticTableColumn(GetAgenticTableColumnRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAgenticTableColumnWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the indexes of a table based on the database UUID and the fully qualified name of the table.</p>
+     * 
+     * @param request GetAgenticTableIndexRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAgenticTableIndexResponse
+     */
+    public GetAgenticTableIndexResponse getAgenticTableIndexWithOptions(GetAgenticTableIndexRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.databaseUuid)) {
+            query.put("DatabaseUuid", request.databaseUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableQualifiedName)) {
+            query.put("TableQualifiedName", request.tableQualifiedName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAgenticTableIndex"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgenticTableIndexResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the indexes of a table based on the database UUID and the fully qualified name of the table.</p>
+     * 
+     * @param request GetAgenticTableIndexRequest
+     * @return GetAgenticTableIndexResponse
+     */
+    public GetAgenticTableIndexResponse getAgenticTableIndex(GetAgenticTableIndexRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAgenticTableIndexWithOptions(request, runtime);
     }
 
     /**
@@ -3707,6 +4213,276 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Performs a paging query on the catalogs in Agentic DMS. You can filter the results by catalog type and name prefix.</p>
+     * 
+     * @param request ListAgenticCatalogRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAgenticCatalogResponse
+     */
+    public ListAgenticCatalogResponse listAgenticCatalogWithOptions(ListAgenticCatalogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogType)) {
+            query.put("CatalogType", request.catalogType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchKey)) {
+            query.put("SearchKey", request.searchKey);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAgenticCatalog"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAgenticCatalogResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paging query on the catalogs in Agentic DMS. You can filter the results by catalog type and name prefix.</p>
+     * 
+     * @param request ListAgenticCatalogRequest
+     * @return ListAgenticCatalogResponse
+     */
+    public ListAgenticCatalogResponse listAgenticCatalog(ListAgenticCatalogRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAgenticCatalogWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can filter data sources by type, status, endpoint, port, source, and connection target name. You can also perform a fuzzy search by name or endpoint. If multiple filter conditions are specified, the intersection of the conditions is used.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a paged query on the data sources of the current account by using paging.</p>
+     * 
+     * @param request ListAgenticDataSourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAgenticDataSourcesResponse
+     */
+    public ListAgenticDataSourcesResponse listAgenticDataSourcesWithOptions(ListAgenticDataSourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbType)) {
+            query.put("DbType", request.dbType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.host)) {
+            query.put("Host", request.host);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceSource)) {
+            query.put("InstanceSource", request.instanceSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.port)) {
+            query.put("Port", request.port);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schema)) {
+            query.put("Schema", request.schema);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchKey)) {
+            query.put("SearchKey", request.searchKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.state)) {
+            query.put("State", request.state);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAgenticDataSources"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAgenticDataSourcesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can filter data sources by type, status, endpoint, port, source, and connection target name. You can also perform a fuzzy search by name or endpoint. If multiple filter conditions are specified, the intersection of the conditions is used.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a paged query on the data sources of the current account by using paging.</p>
+     * 
+     * @param request ListAgenticDataSourcesRequest
+     * @return ListAgenticDataSourcesResponse
+     */
+    public ListAgenticDataSourcesResponse listAgenticDataSources(ListAgenticDataSourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAgenticDataSourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paged query for the list of databases in a specified catalog, with options to filter by name prefix and specify the sorting method for paging.</p>
+     * 
+     * @param request ListAgenticDatabaseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAgenticDatabaseResponse
+     */
+    public ListAgenticDatabaseResponse listAgenticDatabaseWithOptions(ListAgenticDatabaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogUuid)) {
+            query.put("CatalogUuid", request.catalogUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchKey)) {
+            query.put("SearchKey", request.searchKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortFieldName)) {
+            query.put("SortFieldName", request.sortFieldName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortOrder)) {
+            query.put("SortOrder", request.sortOrder);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAgenticDatabase"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAgenticDatabaseResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paged query for the list of databases in a specified catalog, with options to filter by name prefix and specify the sorting method for paging.</p>
+     * 
+     * @param request ListAgenticDatabaseRequest
+     * @return ListAgenticDatabaseResponse
+     */
+    public ListAgenticDatabaseResponse listAgenticDatabase(ListAgenticDatabaseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAgenticDatabaseWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the basic information and engine metadata of tables in a specified database by using paging. You can filter the results by keyword and table type, and specify the sorting method.</p>
+     * 
+     * @param request ListAgenticTableBaseInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAgenticTableBaseInfoResponse
+     */
+    public ListAgenticTableBaseInfoResponse listAgenticTableBaseInfoWithOptions(ListAgenticTableBaseInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.databaseUuid)) {
+            query.put("DatabaseUuid", request.databaseUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchKey)) {
+            query.put("SearchKey", request.searchKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortFieldName)) {
+            query.put("SortFieldName", request.sortFieldName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortOrder)) {
+            query.put("SortOrder", request.sortOrder);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableType)) {
+            query.put("TableType", request.tableType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAgenticTableBaseInfo"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAgenticTableBaseInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the basic information and engine metadata of tables in a specified database by using paging. You can filter the results by keyword and table type, and specify the sorting method.</p>
+     * 
+     * @param request ListAgenticTableBaseInfoRequest
+     * @return ListAgenticTableBaseInfoResponse
+     */
+    public ListAgenticTableBaseInfoResponse listAgenticTableBaseInfo(ListAgenticTableBaseInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAgenticTableBaseInfoWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Lists the available Airflow versions.</p>
      * 
@@ -3818,7 +4594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists all custom agents in personal spaces and workspaces.</p>
+     * <p>Lists all custom agents in personal and shared workspaces.</p>
      * 
      * @param request ListCustomAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3827,6 +4603,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListCustomAgentResponse listCustomAgentWithOptions(ListCustomAgentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentType)) {
+            query.put("AgentType", request.agentType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
         }
@@ -3870,7 +4650,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists all custom agents in personal spaces and workspaces.</p>
+     * <p>Lists all custom agents in personal and shared workspaces.</p>
      * 
      * @param request ListCustomAgentRequest
      * @return ListCustomAgentResponse
@@ -5330,7 +6110,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a custom agent in a personal or shared workspace.</p>
+     * <p>Modifies a custom agent in a personal or team workspace.</p>
      * 
      * @param tmpReq ModifyCustomAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5354,6 +6134,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.knowledgeSemanticConfigList)) {
             request.knowledgeSemanticConfigListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.knowledgeSemanticConfigList, "KnowledgeSemanticConfigList", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.recommendQuestionList)) {
+            request.recommendQuestionListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.recommendQuestionList, "RecommendQuestionList", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.scheduleTaskConfig)) {
@@ -5409,6 +6193,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Name", request.name);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.recommendQuestionListShrink)) {
+            query.put("RecommendQuestionList", request.recommendQuestionListShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.relatedSessionId)) {
             query.put("RelatedSessionId", request.relatedSessionId);
         }
@@ -5456,7 +6244,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a custom agent in a personal or shared workspace.</p>
+     * <p>Modifies a custom agent in a personal or team workspace.</p>
      * 
      * @param request ModifyCustomAgentRequest
      * @return ModifyCustomAgentResponse
@@ -5975,6 +6763,134 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Searches for catalogs in Agentic DMS by keyword, catalog type, database type, or a list of catalog UUIDs, and returns paginated results.</p>
+     * 
+     * @param request SearchAgenticCatalogRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchAgenticCatalogResponse
+     */
+    public SearchAgenticCatalogResponse searchAgenticCatalogWithOptions(SearchAgenticCatalogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogType)) {
+            query.put("CatalogType", request.catalogType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogUuids)) {
+            query.put("CatalogUuids", request.catalogUuids);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbType)) {
+            query.put("DbType", request.dbType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchKey)) {
+            query.put("SearchKey", request.searchKey);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchAgenticCatalog"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchAgenticCatalogResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Searches for catalogs in Agentic DMS by keyword, catalog type, database type, or a list of catalog UUIDs, and returns paginated results.</p>
+     * 
+     * @param request SearchAgenticCatalogRequest
+     * @return SearchAgenticCatalogResponse
+     */
+    public SearchAgenticCatalogResponse searchAgenticCatalog(SearchAgenticCatalogRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.searchAgenticCatalogWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Searches for databases across catalogs by keyword. You can filter the results by catalog, database type, and environment type. The results are paginated.</p>
+     * 
+     * @param request SearchAgenticDatabaseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchAgenticDatabaseResponse
+     */
+    public SearchAgenticDatabaseResponse searchAgenticDatabaseWithOptions(SearchAgenticDatabaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogUuid)) {
+            query.put("CatalogUuid", request.catalogUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbType)) {
+            query.put("DbType", request.dbType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.envType)) {
+            query.put("EnvType", request.envType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchKey)) {
+            query.put("SearchKey", request.searchKey);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchAgenticDatabase"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchAgenticDatabaseResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Searches for databases across catalogs by keyword. You can filter the results by catalog, database type, and environment type. The results are paginated.</p>
+     * 
+     * @param request SearchAgenticDatabaseRequest
+     * @return SearchAgenticDatabaseResponse
+     */
+    public SearchAgenticDatabaseResponse searchAgenticDatabase(SearchAgenticDatabaseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.searchAgenticDatabaseWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
@@ -6406,6 +7322,266 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StopDataAgentAccuracyTestTaskResponse stopDataAgentAccuracyTestTask(StopDataAgentAccuracyTestTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopDataAgentAccuracyTestTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Validates only the connection information passed in the current request without creating or modifying a data source. When testing an existing data source, you can pass DataSourceUuid to reuse the saved password.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Tests whether the network and authentication information of a data source are available.</p>
+     * 
+     * @param request TestAgenticDataSourceConnectionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TestAgenticDataSourceConnectionResponse
+     */
+    public TestAgenticDataSourceConnectionResponse testAgenticDataSourceConnectionWithOptions(TestAgenticDataSourceConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alias)) {
+            query.put("Alias", request.alias);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authAccount)) {
+            query.put("AuthAccount", request.authAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authPassword)) {
+            query.put("AuthPassword", request.authPassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogName)) {
+            query.put("CatalogName", request.catalogName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceUuid)) {
+            query.put("DataSourceUuid", request.dataSourceUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbType)) {
+            query.put("DbType", request.dbType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.envType)) {
+            query.put("EnvType", request.envType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.host)) {
+            query.put("Host", request.host);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceResourceId)) {
+            query.put("InstanceResourceId", request.instanceResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceSource)) {
+            query.put("InstanceSource", request.instanceSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kmsSecret)) {
+            query.put("KmsSecret", request.kmsSecret);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.port)) {
+            query.put("Port", request.port);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleArn)) {
+            query.put("RoleArn", request.roleArn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schema)) {
+            query.put("Schema", request.schema);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snowflakeRole)) {
+            query.put("SnowflakeRole", request.snowflakeRole);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snowflakeWarehouse)) {
+            query.put("SnowflakeWarehouse", request.snowflakeWarehouse);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.syncAlias)) {
+            query.put("SyncAlias", request.syncAlias);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useSsl)) {
+            query.put("UseSsl", request.useSsl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
+            query.put("VSwitchId", request.vSwitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TestAgenticDataSourceConnection"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TestAgenticDataSourceConnectionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Validates only the connection information passed in the current request without creating or modifying a data source. When testing an existing data source, you can pass DataSourceUuid to reuse the saved password.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Tests whether the network and authentication information of a data source are available.</p>
+     * 
+     * @param request TestAgenticDataSourceConnectionRequest
+     * @return TestAgenticDataSourceConnectionResponse
+     */
+    public TestAgenticDataSourceConnectionResponse testAgenticDataSourceConnection(TestAgenticDataSourceConnectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.testAgenticDataSourceConnectionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Only the parameters passed in the current request are modified. Unpassed parameters remain unchanged. The data source type cannot be modified.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the connection, authentication, or display information of an existing data source.</p>
+     * 
+     * @param request UpdateAgenticDataSourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAgenticDataSourceResponse
+     */
+    public UpdateAgenticDataSourceResponse updateAgenticDataSourceWithOptions(UpdateAgenticDataSourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alias)) {
+            query.put("Alias", request.alias);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authAccount)) {
+            query.put("AuthAccount", request.authAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authPassword)) {
+            query.put("AuthPassword", request.authPassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogName)) {
+            query.put("CatalogName", request.catalogName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.createMode)) {
+            query.put("CreateMode", request.createMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceUuid)) {
+            query.put("DataSourceUuid", request.dataSourceUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbType)) {
+            query.put("DbType", request.dbType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.envType)) {
+            query.put("EnvType", request.envType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.host)) {
+            query.put("Host", request.host);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceResourceId)) {
+            query.put("InstanceResourceId", request.instanceResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kmsSecret)) {
+            query.put("KmsSecret", request.kmsSecret);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyId)) {
+            query.put("PolicyId", request.policyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.port)) {
+            query.put("Port", request.port);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleArn)) {
+            query.put("RoleArn", request.roleArn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schema)) {
+            query.put("Schema", request.schema);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snowflakeRole)) {
+            query.put("SnowflakeRole", request.snowflakeRole);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snowflakeWarehouse)) {
+            query.put("SnowflakeWarehouse", request.snowflakeWarehouse);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.syncAlias)) {
+            query.put("SyncAlias", request.syncAlias);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useSsl)) {
+            query.put("UseSsl", request.useSsl);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAgenticDataSource"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAgenticDataSourceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Only the parameters passed in the current request are modified. Unpassed parameters remain unchanged. The data source type cannot be modified.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the connection, authentication, or display information of an existing data source.</p>
+     * 
+     * @param request UpdateAgenticDataSourceRequest
+     * @return UpdateAgenticDataSourceResponse
+     */
+    public UpdateAgenticDataSourceResponse updateAgenticDataSource(UpdateAgenticDataSourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAgenticDataSourceWithOptions(request, runtime);
     }
 
     /**

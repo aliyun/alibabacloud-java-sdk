@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCustomAgentResponseBody extends TeaModel {
     /**
-     * <p>The returned struct.</p>
+     * <p>The response struct.</p>
      */
     @NameInMap("Data")
     public ModifyCustomAgentResponseBodyData data;
@@ -160,7 +160,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
 
     public static class ModifyCustomAgentResponseBodyDataExecutionConfig extends TeaModel {
         /**
-         * <p>Specifies whether to prohibit appending data sources during the session.</p>
+         * <p>Specifies whether to prohibit appending data sources in a session.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -169,7 +169,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
         public Boolean forbiddenAppendDataSource;
 
         /**
-         * <p>Specifies whether to disable user inquiries during the process.</p>
+         * <p>Specifies whether to disable user prompts during the process.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -196,7 +196,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
         public Boolean skipSqlConfirm;
 
         /**
-         * <p>Specifies whether to skip the web report generation confirmation.</p>
+         * <p>Specifies whether to skip the confirmation for generating a web report.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -255,8 +255,8 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
         /**
          * <p>The access type. Valid values:</p>
          * <ul>
-         * <li>mcp: Access through MCP.</li>
-         * <li>dms_kb: Access through the DMS knowledge base.</li>
+         * <li>mcp: Accessed through MCP.</li>
+         * <li>dms_kb: Accessed through the DMS knowledge base.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -275,7 +275,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
         public String kbUuid;
 
         /**
-         * <p>The ID of the MCP server.</p>
+         * <p>The MCP server ID.</p>
          * 
          * <strong>example:</strong>
          * <p>nhdpt9adf6ac**********ca</p>
@@ -368,7 +368,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
 
     public static class ModifyCustomAgentResponseBodyDataScheduleTaskConfig extends TeaModel {
         /**
-         * <p>The cron expression for periodic scheduling.</p>
+         * <p>The cron expression for scheduled execution.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 0 ? * 1-7</p>
@@ -427,7 +427,20 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
 
     public static class ModifyCustomAgentResponseBodyData extends TeaModel {
         /**
-         * <p>The primary Alibaba Cloud account ID.</p>
+         * <p>The custom agent type. Valid values:</p>
+         * <ul>
+         * <li>Default: The system-built-in custom agent. Each workspace can have at most one Default type, and it cannot be deleted.</li>
+         * <li>Common: The common custom agent.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Common</p>
+         */
+        @NameInMap("AgentType")
+        public String agentType;
+
+        /**
+         * <p>The ID of the Alibaba Cloud main account.</p>
          * 
          * <strong>example:</strong>
          * <p>16738266********</p>
@@ -484,7 +497,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
          *   &quot;personal&quot; : {
          *     &quot;DataSourceType&quot; : &quot;remote_data_center&quot;,
          *     &quot;FileId&quot; : &quot;f-5qlrwaw10<strong><strong><strong><strong>s3gpw1z&quot;,
-         *     &quot;Database&quot; : &quot;Test_spreadsheet</strong></strong></strong>.xlsx&quot;,
+         *     &quot;Database&quot; : &quot;Test table</strong></strong></strong>.xlsx&quot;,
          *     &quot;Tables&quot; : [ &quot;Sheet1&quot; ],
          *     &quot;TableIds&quot; : [ &quot;</strong>****&quot; ],
          *     &quot;RegionId&quot; : &quot;cn-hangzhou&quot;
@@ -542,8 +555,8 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>Analysis framework:</p>
          * <ol>
-         * <li>Monitor core metrics (GMV, order volume, UV, and conversion rate) on a daily, weekly, and monthly basis, and analyze trend changes as well as year-over-year and month-over-month fluctuations.</li>
-         * <li>Segment data by new and returning customers, channels, and regions to identify growth drivers and weaknesses.</li>
+         * <li>Monitor core metrics (GMV, order volume, UV, and conversion rate) on a daily, weekly, and monthly basis, and analyze trend changes and year-over-year or month-over-month fluctuations.</li>
+         * <li>Segment by new and existing customers, channels, and regions to identify growth drivers and weaknesses.</li>
          * <li>Conduct funnel analysis based on user behavior paths (browse -&gt; add to cart -&gt; pay) to locate churn points</li>
          * </ol>
          */
@@ -566,9 +579,9 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
          * <p>Core metric definitions:</p>
          * <ol>
          * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including both successfully paid and unpaid orders.</li>
-         * <li>Order volume refers to the number of valid orders placed per day.</li>
+         * <li>Order volume is the number of valid orders placed per day.</li>
          * <li>UV (Unique Visitors) refers to the number of deduplicated users who visit the website or app.</li>
-         * <li>Conversion rate = Number of paid orders / UV, reflecting the traffic conversion efficiency</li>
+         * <li>Conversion rate = paid orders / UV, reflecting the traffic conversion efficiency</li>
          * </ol>
          */
         @NameInMap("Knowledge")
@@ -629,6 +642,15 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
         public String offlineTime;
 
         /**
+         * <p>The list of recommended questions.</p>
+         * <ul>
+         * <li>You can configure up to 10 recommended questions.</li>
+         * </ul>
+         */
+        @NameInMap("RecommendQuestionList")
+        public java.util.List<String> recommendQuestionList;
+
+        /**
          * <p>The region.</p>
          * 
          * <strong>example:</strong>
@@ -674,7 +696,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
          * <p>The text report format.</p>
          * 
          * <strong>example:</strong>
-         * <p>Require all numbers in the text report to be written in Chinese characters instead of Arabic numerals</p>
+         * <p>The text report requires that all numbers use Chinese numerals instead of Arabic numerals</p>
          */
         @NameInMap("TextReportConfig")
         public String textReportConfig;
@@ -689,7 +711,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
          * <p>The web report format.</p>
          * 
          * <strong>example:</strong>
-         * <p>Require all numbers in the web report to be written in Chinese characters instead of Arabic numerals</p>
+         * <p>The web report requires that all numbers use Chinese numerals instead of Arabic numerals</p>
          */
         @NameInMap("WebReportConfig")
         public String webReportConfig;
@@ -697,11 +719,11 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
         /**
          * <p>The web report theme. Valid values:</p>
          * <ul>
-         * <li>default: default.</li>
-         * <li>journal: journal.</li>
-         * <li>legacy: classic.</li>
-         * <li>neobrutalism: stylized.</li>
-         * <li>infographic: infographic.</li>
+         * <li>default: Default.</li>
+         * <li>journal: Journal.</li>
+         * <li>legacy: Classic.</li>
+         * <li>neobrutalism: Stylized.</li>
+         * <li>infographic: Infographic.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -722,6 +744,14 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
         public static ModifyCustomAgentResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ModifyCustomAgentResponseBodyData self = new ModifyCustomAgentResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyCustomAgentResponseBodyData setAgentType(String agentType) {
+            this.agentType = agentType;
+            return this;
+        }
+        public String getAgentType() {
+            return this.agentType;
         }
 
         public ModifyCustomAgentResponseBodyData setAliyunParentUid(String aliyunParentUid) {
@@ -898,6 +928,14 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
         }
         public String getOfflineTime() {
             return this.offlineTime;
+        }
+
+        public ModifyCustomAgentResponseBodyData setRecommendQuestionList(java.util.List<String> recommendQuestionList) {
+            this.recommendQuestionList = recommendQuestionList;
+            return this;
+        }
+        public java.util.List<String> getRecommendQuestionList() {
+            return this.recommendQuestionList;
         }
 
         public ModifyCustomAgentResponseBodyData setRegion(String region) {

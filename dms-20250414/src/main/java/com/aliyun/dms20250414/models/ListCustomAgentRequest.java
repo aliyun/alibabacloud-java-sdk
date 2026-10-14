@@ -5,6 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListCustomAgentRequest extends TeaModel {
     /**
+     * <p>The custom agent type. Valid values:</p>
+     * <ul>
+     * <li>Default: system built-in custom agent</li>
+     * <li>Common: regular custom agent</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Common</p>
+     */
+    @NameInMap("AgentType")
+    public String agentType;
+
+    /**
      * <p>The page number. Pages start from 1.</p>
      * 
      * <strong>example:</strong>
@@ -32,10 +45,10 @@ public class ListCustomAgentRequest extends TeaModel {
     public Boolean queryAllReleased;
 
     /**
-     * <p>The search keyword. Fuzzy search is supported for custom agent names and descriptions.</p>
+     * <p>The search keyword. Supports fuzzy search for custom agent names and descriptions.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test Agent</p>
+     * <p>Test agent</p>
      */
     @NameInMap("SearchKey")
     public String searchKey;
@@ -61,6 +74,14 @@ public class ListCustomAgentRequest extends TeaModel {
     public static ListCustomAgentRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCustomAgentRequest self = new ListCustomAgentRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListCustomAgentRequest setAgentType(String agentType) {
+        this.agentType = agentType;
+        return this;
+    }
+    public String getAgentType() {
+        return this.agentType;
     }
 
     public ListCustomAgentRequest setPageNumber(Integer pageNumber) {

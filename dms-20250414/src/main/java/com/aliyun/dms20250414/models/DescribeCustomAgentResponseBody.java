@@ -38,7 +38,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Specifies whether the request is successful. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: The request is successful.                                 </li>
      * <li><strong>false</strong>: The request fails.</li>
@@ -169,7 +169,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         public Boolean forbiddenAppendDataSource;
 
         /**
-         * <p>Specifies whether to prohibit user inquiries during the process.</p>
+         * <p>Specifies whether to disable user prompts during the process.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -255,8 +255,8 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         /**
          * <p>The access type. Valid values:</p>
          * <ul>
-         * <li>mcp: Accessed through MCP.</li>
-         * <li>dms_kb: Accessed through DMS knowledge base.</li>
+         * <li>mcp: MCP access.</li>
+         * <li>dms_kb: DMS knowledge base access.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -377,7 +377,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         public String cronExpression;
 
         /**
-         * <p>The query for the scheduled task.</p>
+         * <p>The question for the scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>Analyze the data and provide the report</p>
@@ -386,7 +386,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         public String query;
 
         /**
-         * <p>The referenced historical session ID.</p>
+         * <p>The ID of the referenced historical session.</p>
          * 
          * <strong>example:</strong>
          * <p>4m24*****mg7j2v</p>
@@ -427,7 +427,20 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
 
     public static class DescribeCustomAgentResponseBodyData extends TeaModel {
         /**
-         * <p>The primary Alibaba Cloud account ID.</p>
+         * <p>The custom agent type. Valid values:</p>
+         * <ul>
+         * <li>Default: built-in custom agent.</li>
+         * <li>Common: common custom agent.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Common</p>
+         */
+        @NameInMap("AgentType")
+        public String agentType;
+
+        /**
+         * <p>The ID of the parent Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>16738266********</p>
@@ -537,7 +550,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-11T14:04:32.000+00:00</p>
@@ -634,6 +647,15 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         public String offlineTime;
 
         /**
+         * <p>The list of recommended questions.</p>
+         * <ul>
+         * <li>A maximum of 10 recommended questions can be configured.</li>
+         * </ul>
+         */
+        @NameInMap("RecommendQuestionList")
+        public java.util.List<String> recommendQuestionList;
+
+        /**
          * <p>The region.</p>
          * 
          * <strong>example:</strong>
@@ -643,7 +665,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The referenced historical session ID.</p>
+         * <p>The ID of the referenced historical session.</p>
          * 
          * <strong>example:</strong>
          * <p>5xyz...</p>
@@ -667,7 +689,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         public DescribeCustomAgentResponseBodyDataScheduleTaskConfig scheduleTaskConfig;
 
         /**
-         * <p>The status of the custom agent.</p>
+         * <p>The custom agent status.</p>
          * 
          * <strong>example:</strong>
          * <p>RELEASED</p>
@@ -702,11 +724,11 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         /**
          * <p>The web report theme. Valid values:</p>
          * <ul>
-         * <li>default: Default.</li>
-         * <li>journal: Journal.</li>
-         * <li>legacy: Classic.</li>
-         * <li>neobrutalism: Stylized.</li>
-         * <li>infographic: Infographic.</li>
+         * <li>default: The default theme.</li>
+         * <li>journal: The journal theme.</li>
+         * <li>legacy: The legacy theme.</li>
+         * <li>neobrutalism: The neobrutalism theme.</li>
+         * <li>infographic: The infographic theme.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -727,6 +749,14 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         public static DescribeCustomAgentResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeCustomAgentResponseBodyData self = new DescribeCustomAgentResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCustomAgentResponseBodyData setAgentType(String agentType) {
+            this.agentType = agentType;
+            return this;
+        }
+        public String getAgentType() {
+            return this.agentType;
         }
 
         public DescribeCustomAgentResponseBodyData setAliyunParentUid(String aliyunParentUid) {
@@ -911,6 +941,14 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         }
         public String getOfflineTime() {
             return this.offlineTime;
+        }
+
+        public DescribeCustomAgentResponseBodyData setRecommendQuestionList(java.util.List<String> recommendQuestionList) {
+            this.recommendQuestionList = recommendQuestionList;
+            return this;
+        }
+        public java.util.List<String> getRecommendQuestionList() {
+            return this.recommendQuestionList;
         }
 
         public DescribeCustomAgentResponseBodyData setRegion(String region) {
