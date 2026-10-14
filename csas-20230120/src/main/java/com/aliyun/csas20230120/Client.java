@@ -633,7 +633,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an approval flow under the current Alibaba Cloud account.</p>
+     * <p>Creates an approval process under the current Alibaba Cloud account.</p>
      * 
      * @param tmpReq CreateApprovalProcessRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -688,7 +688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an approval flow under the current Alibaba Cloud account.</p>
+     * <p>Creates an approval process under the current Alibaba Cloud account.</p>
      * 
      * @param request CreateApprovalProcessRequest
      * @return CreateApprovalProcessResponse
@@ -1431,10 +1431,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can create up to 500 internal-facing access applications by default.</p>
+     * <p>By default, you can create up to 500 private access applications.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an internal-facing access application under the current Alibaba Cloud account.</p>
+     * <p>Creates a private access application within the current Alibaba Cloud account.</p>
      * 
      * @param tmpReq CreatePrivateAccessApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1444,6 +1444,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreatePrivateAccessApplicationShrinkRequest request = new CreatePrivateAccessApplicationShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.healthCheckConfig)) {
+            request.healthCheckConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.healthCheckConfig, "HealthCheckConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.l7Config)) {
             request.l7ConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.l7Config, "L7Config", "json");
         }
@@ -1472,6 +1476,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthCheckConfigShrink)) {
+            body.put("HealthCheckConfig", request.healthCheckConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthCheckMode)) {
+            body.put("HealthCheckMode", request.healthCheckMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.l7ConfigShrink)) {
@@ -1533,10 +1545,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can create up to 500 internal-facing access applications by default.</p>
+     * <p>By default, you can create up to 500 private access applications.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an internal-facing access application under the current Alibaba Cloud account.</p>
+     * <p>Creates a private access application within the current Alibaba Cloud account.</p>
      * 
      * @param request CreatePrivateAccessApplicationRequest
      * @return CreatePrivateAccessApplicationResponse
@@ -4502,6 +4514,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the health check reports for specified internal-facing applications within a specified time range. The reports include the health check mode, latest status, success and failure counts, and failure details.</p>
+     * 
+     * @param request DescribeApplicationHealthCheckReportsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeApplicationHealthCheckReportsResponse
+     */
+    public DescribeApplicationHealthCheckReportsResponse describeApplicationHealthCheckReportsWithOptions(DescribeApplicationHealthCheckReportsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationIds)) {
+            bodyFlat.put("ApplicationIds", request.applicationIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            body.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            body.put("StartTime", request.startTime);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeApplicationHealthCheckReports"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeApplicationHealthCheckReportsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the health check reports for specified internal-facing applications within a specified time range. The reports include the health check mode, latest status, success and failure counts, and failure details.</p>
+     * 
+     * @param request DescribeApplicationHealthCheckReportsRequest
+     * @return DescribeApplicationHealthCheckReportsResponse
+     */
+    public DescribeApplicationHealthCheckReportsResponse describeApplicationHealthCheckReports(DescribeApplicationHealthCheckReportsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeApplicationHealthCheckReportsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Detaches private network access applications from a Connector in your Alibaba Cloud account.</p>
      * 
      * @deprecated OpenAPI DetachApplication2Connector is deprecated, please use csas::2023-01-20::ModifyForwardStrategy instead.
@@ -4999,7 +5068,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of the auto-start and anti-uninstall policy under the current Alibaba Cloud account.</p>
+     * <p>Queries the details of the auto-start and anti-uninstallation policies for the current Alibaba Cloud account.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetBootAndAntiUninstallPolicyResponse
@@ -5022,7 +5091,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of the auto-start and anti-uninstall policy under the current Alibaba Cloud account.</p>
+     * <p>Queries the details of the auto-start and anti-uninstallation policies for the current Alibaba Cloud account.</p>
      * @return GetBootAndAntiUninstallPolicyResponse
      */
     public GetBootAndAntiUninstallPolicyResponse getBootAndAntiUninstallPolicy() throws Exception {
@@ -5457,7 +5526,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an internal-facing access application under the current Alibaba Cloud account.</p>
+     * <p>Queries the details of a private access application under the current Alibaba Cloud account.</p>
      * 
      * @param request GetPrivateAccessApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5485,7 +5554,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an internal-facing access application under the current Alibaba Cloud account.</p>
+     * <p>Queries the details of a private access application under the current Alibaba Cloud account.</p>
      * 
      * @param request GetPrivateAccessApplicationRequest
      * @return GetPrivateAccessApplicationResponse
@@ -5623,7 +5692,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a device registration policy within the current Alibaba Cloud account.</p>
+     * <p>Queries the details of a device registration policy for the current Alibaba Cloud account.</p>
      * 
      * @param request GetRegistrationPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5651,7 +5720,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a device registration policy within the current Alibaba Cloud account.</p>
+     * <p>Queries the details of a device registration policy for the current Alibaba Cloud account.</p>
      * 
      * @param request GetRegistrationPolicyRequest
      * @return GetRegistrationPolicyResponse
@@ -5707,7 +5776,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a user endpoint device under the current Alibaba Cloud account.</p>
+     * <p>Queries the details of user terminal devices under the current Alibaba Cloud account.</p>
      * 
      * @param request GetUserDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5735,7 +5804,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a user endpoint device under the current Alibaba Cloud account.</p>
+     * <p>Queries the details of user terminal devices under the current Alibaba Cloud account.</p>
      * 
      * @param request GetUserDeviceRequest
      * @return GetUserDeviceResponse
@@ -6289,7 +6358,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of approval processes under the current Alibaba Cloud account.</p>
+     * <p>Queries the approval processes under the current Alibaba Cloud account.</p>
      * 
      * @param request ListApprovalProcessesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6317,7 +6386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of approval processes under the current Alibaba Cloud account.</p>
+     * <p>Queries the approval processes under the current Alibaba Cloud account.</p>
      * 
      * @param request ListApprovalProcessesRequest
      * @return ListApprovalProcessesResponse
@@ -6529,7 +6598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query connectors in batches.</p>
+     * <p>Queries connectors in batches.</p>
      * 
      * @param request ListConnectorsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6557,7 +6626,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query connectors in batches.</p>
+     * <p>Queries connectors in batches.</p>
      * 
      * @param request ListConnectorsRequest
      * @return ListConnectorsResponse
@@ -6665,7 +6734,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists DLP outbound file transfer logs.</p>
+     * <p>Lists Data Loss Prevention (DLP) outbound transfer logs.</p>
      * 
      * @param request ListDlpOutboundLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6729,7 +6798,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists DLP outbound file transfer logs.</p>
+     * <p>Lists Data Loss Prevention (DLP) outbound transfer logs.</p>
      * 
      * @param request ListDlpOutboundLogsRequest
      * @return ListDlpOutboundLogsResponse
@@ -6741,10 +6810,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the Internet access logs of endpoints under the current tenant by using paging. The logs contain full records of Internet access behavior.</p>
+     * <p>Performs a paged query on the Internet access logs of endpoints for the current tenant by using paging, which include full records of the Internet access behavior.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the Internet access logs of endpoints by using paging.</p>
+     * <p>Performs a paged query on the Internet access logs of endpoints by using paging.</p>
      * 
      * @param request ListDomainAccessLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6772,10 +6841,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the Internet access logs of endpoints under the current tenant by using paging. The logs contain full records of Internet access behavior.</p>
+     * <p>Performs a paged query on the Internet access logs of endpoints for the current tenant by using paging, which include full records of the Internet access behavior.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the Internet access logs of endpoints by using paging.</p>
+     * <p>Performs a paged query on the Internet access logs of endpoints by using paging.</p>
      * 
      * @param request ListDomainAccessLogsRequest
      * @return ListDomainAccessLogsResponse
@@ -6787,10 +6856,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of domain name entries in a specified domain name list by paging. Use this operation together with ListDomainMetas: first obtain the <code>ListId</code>, and then use this operation to perform paging through the domain names in the list.</p>
+     * <p>Queries domain name entries in a specified domain name list by using paging. Use this operation together with ListDomainMetas: first obtain the <code>ListId</code>, and then use this operation to page through the domain names in the list.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries domain name entries in a domain name list by paging.</p>
+     * <p>Queries domain name entries in a domain name list by using paging.</p>
      * 
      * @param request ListDomainItemsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6838,10 +6907,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of domain name entries in a specified domain name list by paging. Use this operation together with ListDomainMetas: first obtain the <code>ListId</code>, and then use this operation to perform paging through the domain names in the list.</p>
+     * <p>Queries domain name entries in a specified domain name list by using paging. Use this operation together with ListDomainMetas: first obtain the <code>ListId</code>, and then use this operation to page through the domain names in the list.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries domain name entries in a domain name list by paging.</p>
+     * <p>Queries domain name entries in a domain name list by using paging.</p>
      * 
      * @param request ListDomainItemsRequest
      * @return ListDomainItemsResponse
@@ -7780,7 +7849,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about all internal-facing access applications under the current Alibaba Cloud account.</p>
+     * <p>Queries the details of all private access applications in the current Alibaba Cloud account.</p>
      * 
      * @param request ListPrivateAccessApplicationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7807,6 +7876,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
             query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthCheckStatus)) {
+            query.put("HealthCheckStatus", request.healthCheckStatus);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
@@ -7848,7 +7921,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about all internal-facing access applications under the current Alibaba Cloud account.</p>
+     * <p>Queries the details of all private access applications in the current Alibaba Cloud account.</p>
      * 
      * @param request ListPrivateAccessApplicationsRequest
      * @return ListPrivateAccessApplicationsResponse
@@ -7900,7 +7973,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about all private access policies under the current Alibaba Cloud account.</p>
+     * <p>Queries the details of all private access policies within the current Alibaba Cloud account.</p>
      * 
      * @param request ListPrivateAccessPolicesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7928,7 +8001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about all private access policies under the current Alibaba Cloud account.</p>
+     * <p>Queries the details of all private access policies within the current Alibaba Cloud account.</p>
      * 
      * @param request ListPrivateAccessPolicesRequest
      * @return ListPrivateAccessPolicesResponse
@@ -8469,11 +8542,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>Use CurrentPage and PageSize for pagination. NextToken and MaxResults do not take effect.</li>
      * <li>SoftwareName supports fuzzy match.</li>
-     * <li>The Versions field (software version list) is not returned in the response. To query software versions, call <a href="~~ListSoftwarelibVersion~~">ListSoftwarelibVersion</a>.</li>
+     * <li>The Versions field (software version list) in the response is not returned. To query software versions, call <a href="~~ListSoftwarelibVersion~~">ListSoftwarelibVersion</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries software in the software library in batches.</p>
+     * <p>Queries software in the software library.</p>
      * 
      * @param request ListSoftwarelibSoftwareRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8536,11 +8609,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>Use CurrentPage and PageSize for pagination. NextToken and MaxResults do not take effect.</li>
      * <li>SoftwareName supports fuzzy match.</li>
-     * <li>The Versions field (software version list) is not returned in the response. To query software versions, call <a href="~~ListSoftwarelibVersion~~">ListSoftwarelibVersion</a>.</li>
+     * <li>The Versions field (software version list) in the response is not returned. To query software versions, call <a href="~~ListSoftwarelibVersion~~">ListSoftwarelibVersion</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries software in the software library in batches.</p>
+     * <p>Queries software in the software library.</p>
      * 
      * @param request ListSoftwarelibSoftwareRequest
      * @return ListSoftwarelibSoftwareResponse
@@ -8632,7 +8705,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of uninstall applications under the current Alibaba Cloud account in batches.</p>
+     * <p>Queries a list of uninstallation applications for the current Alibaba Cloud account in batches.</p>
      * 
      * @param request ListUninstallApplicationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8660,7 +8733,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of uninstall applications under the current Alibaba Cloud account in batches.</p>
+     * <p>Queries a list of uninstallation applications for the current Alibaba Cloud account in batches.</p>
      * 
      * @param request ListUninstallApplicationsRequest
      * @return ListUninstallApplicationsResponse
@@ -8712,7 +8785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of user endpoint devices under the current Alibaba Cloud account.</p>
+     * <p>Queries a list of user endpoint devices under the current Alibaba Cloud account.</p>
      * 
      * @param request ListUserDevicesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8840,7 +8913,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of user endpoint devices under the current Alibaba Cloud account.</p>
+     * <p>Queries a list of user endpoint devices under the current Alibaba Cloud account.</p>
      * 
      * @param request ListUserDevicesRequest
      * @return ListUserDevicesResponse
@@ -9092,7 +9165,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询病毒扫描额外名单</p>
+     * <p>Queries the virus scan blacklists and whitelists for a specified operating system, and returns the results grouped by matching dimension and list type. The blacklists and whitelists are global lists scoped to the Alibaba Cloud account and operating system dimensions, and take effect for all on-demand scans, scheduled scans, and real-time protection under the account.</p>
      * 
      * @param request ListVirusScanAdditionalListsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9120,7 +9193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询病毒扫描额外名单</p>
+     * <p>Queries the virus scan blacklists and whitelists for a specified operating system, and returns the results grouped by matching dimension and list type. The blacklists and whitelists are global lists scoped to the Alibaba Cloud account and operating system dimensions, and take effect for all on-demand scans, scheduled scans, and real-time protection under the account.</p>
      * 
      * @param request ListVirusScanAdditionalListsRequest
      * @return ListVirusScanAdditionalListsResponse
@@ -10095,7 +10168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the instance status of an approval under the current Alibaba Cloud account.</p>
+     * <p>Updates the status of an approval instance under the current Alibaba Cloud account.</p>
      * 
      * @param request UpdateApprovalStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10131,7 +10204,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the instance status of an approval under the current Alibaba Cloud account.</p>
+     * <p>Updates the status of an approval instance under the current Alibaba Cloud account.</p>
      * 
      * @param request UpdateApprovalStatusRequest
      * @return UpdateApprovalStatusResponse
@@ -10378,7 +10451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a Connector instance under the current Alibaba Cloud account.</p>
+     * <p>Modifies a connector instance within the current Alibaba Cloud account.</p>
      * 
      * @param request UpdateConnectorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10426,7 +10499,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a Connector instance under the current Alibaba Cloud account.</p>
+     * <p>Modifies a connector instance within the current Alibaba Cloud account.</p>
      * 
      * @param request UpdateConnectorRequest
      * @return UpdateConnectorResponse
@@ -10927,6 +11000,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdatePrivateAccessApplicationShrinkRequest request = new UpdatePrivateAccessApplicationShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.healthCheckConfig)) {
+            request.healthCheckConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.healthCheckConfig, "HealthCheckConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.l7Config)) {
             request.l7ConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.l7Config, "L7Config", "json");
         }
@@ -10955,6 +11032,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthCheckConfigShrink)) {
+            body.put("HealthCheckConfig", request.healthCheckConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthCheckMode)) {
+            body.put("HealthCheckMode", request.healthCheckMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.l7ConfigShrink)) {
@@ -11743,7 +11828,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the status of uninstall applications in batches under the current Alibaba Cloud account.</p>
+     * <p>Updates the status of multiple uninstallation applications under the current Alibaba Cloud account.</p>
      * 
      * @param request UpdateUninstallApplicationsStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11784,7 +11869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the status of uninstall applications in batches under the current Alibaba Cloud account.</p>
+     * <p>Updates the status of multiple uninstallation applications under the current Alibaba Cloud account.</p>
      * 
      * @param request UpdateUninstallApplicationsStatusRequest
      * @return UpdateUninstallApplicationsStatusResponse

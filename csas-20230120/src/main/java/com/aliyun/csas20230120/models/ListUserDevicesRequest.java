@@ -5,22 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListUserDevicesRequest extends TeaModel {
     /**
-     * <p>The collection of client statuses.</p>
+     * <p>The client statuses.</p>
      */
     @NameInMap("AppStatuses")
     public java.util.List<String> appStatuses;
 
     /**
-     * <p>The collection of client versions.</p>
+     * <p>The client versions.</p>
      */
     @NameInMap("AppVersions")
     public java.util.List<String> appVersions;
 
+    /**
+     * <p>The automatic logon statuses used to filter user endpoint devices.</p>
+     */
     @NameInMap("AutoLoginStatuses")
     public java.util.List<String> autoLoginStatuses;
 
     /**
-     * <p>The page number of the current page in a paging query. Valid values: 1 to 10000.</p>
+     * <p>The current page number for paging queries. Valid values: 1 to 10000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,10 +33,10 @@ public class ListUserDevicesRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>The department to which the user belongs. The value is 1 to 128 characters in length and supports Chinese characters and uppercase and lowercase letters. It can contain digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (_), forward slashes (/), at signs (@), and spaces.</p>
+     * <p>The department to which the user belongs. The name must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (_), forward slashes (/), at signs (@), and spaces.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试部</p>
+     * <p>Test Department</p>
      */
     @NameInMap("Department")
     public String department;
@@ -41,8 +44,8 @@ public class ListUserDevicesRequest extends TeaModel {
     /**
      * <p>The ownership of the endpoint device. Valid values:</p>
      * <ul>
-     * <li><strong>Personal</strong>: personal device.</li>
-     * <li><strong>Company</strong>: company device.</li>
+     * <li><strong>Personal</strong>: Personal device.</li>
+     * <li><strong>Company</strong>: Company device.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,7 +55,7 @@ public class ListUserDevicesRequest extends TeaModel {
     public String deviceBelong;
 
     /**
-     * <p>The device group ID.</p>
+     * <p>The ID of the device group.</p>
      * 
      * <strong>example:</strong>
      * <p>device-group-5191cf830a5e****</p>
@@ -61,31 +64,31 @@ public class ListUserDevicesRequest extends TeaModel {
     public String deviceGroupId;
 
     /**
-     * <p>The collection of endpoint device statuses.</p>
+     * <p>The endpoint device statuses.</p>
      */
     @NameInMap("DeviceStatuses")
     public java.util.List<String> deviceStatuses;
 
     /**
-     * <p>The collection of endpoint device IDs.</p>
+     * <p>The IDs of the endpoint devices.</p>
      */
     @NameInMap("DeviceTags")
     public java.util.List<String> deviceTags;
 
     /**
-     * <p>The collection of endpoint device operating system types.</p>
+     * <p>The operating system types of the endpoint devices.</p>
      */
     @NameInMap("DeviceTypes")
     public java.util.List<String> deviceTypes;
 
     /**
-     * <p>The collection of office data protection statuses.</p>
+     * <p>The office data protection statuses.</p>
      */
     @NameInMap("DlpStatuses")
     public java.util.List<String> dlpStatuses;
 
     /**
-     * <p>The name of the endpoint device. The value is 1 to 128 characters in length and supports Chinese characters and uppercase and lowercase letters. It can contain digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (<em>), forward slashes (/), at signs (@), and spaces. If you enter only an underscore (</em>), endpoint devices whose names contain 4-byte UTF-8 characters are also queried.</p>
+     * <p>The name of the endpoint device. The name must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (<em>), forward slashes (/), at signs (@), and spaces. If you enter only an underscore (</em>), the system also queries all endpoint devices whose names contain 4-byte UTF-8 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>win10-64bit</p>
@@ -94,7 +97,7 @@ public class ListUserDevicesRequest extends TeaModel {
     public String hostname;
 
     /**
-     * <p>The collection of Internet access statuses.</p>
+     * <p>The Internet access statuses.</p>
      */
     @NameInMap("IaStatuses")
     public java.util.List<String> iaStatuses;
@@ -118,19 +121,19 @@ public class ListUserDevicesRequest extends TeaModel {
     public String mac;
 
     /**
-     * <p>The collection of network access control statuses.</p>
+     * <p>The network access control statuses.</p>
      */
     @NameInMap("NacStatuses")
     public java.util.List<String> nacStatuses;
 
     /**
-     * <p>The collection of private access statuses.</p>
+     * <p>The internal network access statuses.</p>
      */
     @NameInMap("PaStatuses")
     public java.util.List<String> paStatuses;
 
     /**
-     * <p>The number of entries per page in a paging query. Settings: 1 to 500.</p>
+     * <p>The number of entries per page for paging queries. Valid values: 1 to 500.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -140,10 +143,10 @@ public class ListUserDevicesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The user ID. You can obtain this value from the following operations:</p>
+     * <p>The user ID. You can obtain the value from the following operations:</p>
      * <ul>
      * <li><a href="~~GetUserDevice~~">GetUserDevice</a>: Queries the details of a user endpoint device.</li>
-     * <li><a href="~~ListUserDevices~~">ListUserDevices</a>: Lists user endpoint devices.</li>
+     * <li><a href="~~ListUserDevices~~">ListUserDevices</a>: Queries a list of user endpoint devices.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -166,7 +169,7 @@ public class ListUserDevicesRequest extends TeaModel {
     public Boolean sharingStatus;
 
     /**
-     * <p>The BIOS system serial number.</p>
+     * <p>The BIOS system SN.</p>
      * 
      * <strong>example:</strong>
      * <p>5CG003****</p>
@@ -175,7 +178,7 @@ public class ListUserDevicesRequest extends TeaModel {
     public String snBios;
 
     /**
-     * <p>The system serial number.</p>
+     * <p>The system serial number (SN).</p>
      * 
      * <strong>example:</strong>
      * <p>KVN9C9****</p>
@@ -184,12 +187,12 @@ public class ListUserDevicesRequest extends TeaModel {
     public String snSystem;
 
     /**
-     * <p>The sort parameter. Valid values:</p>
+     * <p>The sorting parameter. Valid values:</p>
      * <ul>
-     * <li><strong>Username</strong>: sorted by Username in ascending order.</li>
-     * <li><strong>AppVersion</strong>: sorted by AppVersion in descending order.</li>
-     * <li><strong>UpdateTime</strong>: sorted by UpdateTime in descending order.</li>
-     * <li><strong>CreateTime</strong>: sorted by CreateTime in descending order.</li>
+     * <li><strong>Username</strong>: Sorts by Username in ascending order.</li>
+     * <li><strong>AppVersion</strong>: Sorts by AppVersion in descending order.</li>
+     * <li><strong>UpdateTime</strong>: Sorts by UpdateTime in descending order.</li>
+     * <li><strong>CreateTime</strong>: Sorts by CreateTime in descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -199,10 +202,10 @@ public class ListUserDevicesRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The username. The value is 1 to 128 characters in length and supports Chinese characters and uppercase and lowercase letters. It can contain digits, periods (.), underscores (_), hyphens (-), asterisks (*), at signs (@), and spaces.</p>
+     * <p>The username. The name must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), asterisks (*), at signs (@), and spaces.</p>
      * 
      * <strong>example:</strong>
-     * <p>王先生</p>
+     * <p>Mr. Wang</p>
      */
     @NameInMap("Username")
     public String username;
@@ -211,7 +214,7 @@ public class ListUserDevicesRequest extends TeaModel {
      * <p>The name of the office area.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试办公区</p>
+     * <p>Test office area</p>
      */
     @NameInMap("Workshop")
     public String workshop;

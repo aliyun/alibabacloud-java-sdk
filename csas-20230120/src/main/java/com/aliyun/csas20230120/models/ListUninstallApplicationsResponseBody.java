@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUninstallApplicationsResponseBody extends TeaModel {
     /**
-     * <p>The list of uninstall applications.</p>
+     * <p>The list of uninstallation applications.</p>
      */
     @NameInMap("Applications")
     public java.util.List<ListUninstallApplicationsResponseBodyApplications> applications;
@@ -20,7 +20,7 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of uninstall applications.</p>
+     * <p>The total number of uninstallation applications.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +59,7 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
 
     public static class ListUninstallApplicationsResponseBodyApplications extends TeaModel {
         /**
-         * <p>The uninstall application ID.</p>
+         * <p>The ID of the uninstallation application.</p>
          * 
          * <strong>example:</strong>
          * <p>uninstall-app-6646831ac314****</p>
@@ -68,7 +68,7 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>The time when the uninstall application was created.</p>
+         * <p>The time when the uninstallation application was created. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-07-17 18:46:55</p>
@@ -80,7 +80,7 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
          * <p>The department to which the user belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>Testing Department</p>
+         * <p>Test Department</p>
          */
         @NameInMap("Department")
         public String department;
@@ -163,7 +163,7 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
         public String reason;
 
         /**
-         * <p>The user ID.</p>
+         * <p>The ID of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
@@ -172,9 +172,9 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
         public String saseUserId;
 
         /**
-         * <p>The uninstall application status. Valid values:</p>
+         * <p>The status of the uninstallation application. Valid values:</p>
          * <ul>
-         * <li><strong>Pending</strong>: Pending processing.</li>
+         * <li><strong>Pending</strong>: Pending.</li>
          * <li><strong>Approved</strong>: Approved.</li>
          * <li><strong>Rejected</strong>: Rejected.</li>
          * </ul>

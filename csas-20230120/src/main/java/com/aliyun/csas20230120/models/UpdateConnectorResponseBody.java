@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateConnectorResponseBody extends TeaModel {
     /**
-     * <p>Connector。</p>
+     * <p>The connector.</p>
      */
     @NameInMap("Connector")
     public UpdateConnectorResponseBodyConnector connector;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>BE4FB974-11BC-5453-9BE1-1606A73EACA6</p>
@@ -84,7 +84,7 @@ public class UpdateConnectorResponseBody extends TeaModel {
 
     public static class UpdateConnectorResponseBodyConnector extends TeaModel {
         /**
-         * <p>Specifies whether to enable Global Accelerator. Valid values:</p>
+         * <p>Specifies whether to enable global acceleration. Valid values:</p>
          * <ul>
          * <li><strong>Enabled</strong>: Enabled.</li>
          * <li><strong>Disabled</strong>: Disabled.</li>
@@ -97,7 +97,7 @@ public class UpdateConnectorResponseBody extends TeaModel {
         public String accelerateStatus;
 
         /**
-         * <p>ConnectorID。</p>
+         * <p>The connector ID.</p>
          * 
          * <strong>example:</strong>
          * <p>connector-94db94e06b98****</p>
@@ -106,7 +106,7 @@ public class UpdateConnectorResponseBody extends TeaModel {
         public String connectorId;
 
         /**
-         * <p>The creation time of the Connector.</p>
+         * <p>The time when the connector was created, in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-16 17:18:46</p>
@@ -115,7 +115,7 @@ public class UpdateConnectorResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The Connector name.</p>
+         * <p>The name of the connector.</p>
          * 
          * <strong>example:</strong>
          * <p>connector_name</p>
@@ -133,7 +133,7 @@ public class UpdateConnectorResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The connection status of the Connector. Valid values:</p>
+         * <p>The connection status of the connector. Valid values:</p>
          * <ul>
          * <li><strong>Online</strong>: Online.</li>
          * <li><strong>Offline</strong>: Offline.</li>
@@ -146,7 +146,7 @@ public class UpdateConnectorResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The instance status of the Connector. Valid values:</p>
+         * <p>The instance status of the connector. Valid values:</p>
          * <ul>
          * <li><strong>Enabled</strong>: Enabled.</li>
          * <li><strong>Disabled</strong>: Shutdown.</li>
@@ -159,7 +159,7 @@ public class UpdateConnectorResponseBody extends TeaModel {
         public String switchStatus;
 
         /**
-         * <p>The upgrade time of the Connector.</p>
+         * <p>The upgrade time of the connector.</p>
          */
         @NameInMap("UpgradeTime")
         public UpdateConnectorResponseBodyConnectorUpgradeTime upgradeTime;

@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListVirusScanAdditionalListsResponseBody extends TeaModel {
+    /**
+     * <p>The blacklists and whitelists grouped by matching dimension. If a matching dimension contains no list entries, that dimension does not appear in the list.</p>
+     */
     @NameInMap("AdditionalLists")
     public java.util.List<ListVirusScanAdditionalListsResponseBodyAdditionalLists> additionalLists;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3D7EC0AF-DB2A-5D9C-90EC-F090A6BAAEA7</p>
      */
@@ -37,6 +42,8 @@ public class ListVirusScanAdditionalListsResponseBody extends TeaModel {
 
     public static class ListVirusScanAdditionalListsResponseBodyAdditionalListsListsListDetail extends TeaModel {
         /**
+         * <p>The creation time of the list entry, in the yyyy-MM-dd HH:mm:ss format. The time is in the UTC+8 time zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-08-21 10:24:31</p>
          */
@@ -44,6 +51,8 @@ public class ListVirusScanAdditionalListsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The content of the list entry. The meaning is determined by the AdditionalType to which it belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>.tmp</p>
          */
@@ -51,6 +60,8 @@ public class ListVirusScanAdditionalListsResponseBody extends TeaModel {
         public String detail;
 
         /**
+         * <p>The list entry ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>additional-list-4d7b1e9a6c38****</p>
          */
@@ -89,10 +100,19 @@ public class ListVirusScanAdditionalListsResponseBody extends TeaModel {
     }
 
     public static class ListVirusScanAdditionalListsResponseBodyAdditionalListsLists extends TeaModel {
+        /**
+         * <p>The list of entries.</p>
+         */
         @NameInMap("ListDetail")
         public java.util.List<ListVirusScanAdditionalListsResponseBodyAdditionalListsListsListDetail> listDetail;
 
         /**
+         * <p>The list type. Valid values:</p>
+         * <ul>
+         * <li><strong>Blacklist</strong>: Blacklist. Files that match are directly identified as virus files.</li>
+         * <li><strong>Whitelist</strong>: Whitelist. Files that match are excluded from virus detection.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Whitelist</p>
          */
@@ -124,12 +144,24 @@ public class ListVirusScanAdditionalListsResponseBody extends TeaModel {
 
     public static class ListVirusScanAdditionalListsResponseBodyAdditionalLists extends TeaModel {
         /**
+         * <p>The matching dimension of the list entry. Valid values:</p>
+         * <ul>
+         * <li><strong>FileSuffix</strong>: Matches by file name extension.</li>
+         * <li><strong>FileName</strong>: Matches by file name.</li>
+         * <li><strong>FolderName</strong>: Matches by folder name.</li>
+         * <li><strong>FilePath</strong>: Matches by file path.</li>
+         * <li><strong>FileMd5</strong>: Matches by file MD5 hash.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>FileSuffix</p>
          */
         @NameInMap("AdditionalType")
         public String additionalType;
 
+        /**
+         * <p>The lists grouped by list type under this matching dimension.</p>
+         */
         @NameInMap("Lists")
         public java.util.List<ListVirusScanAdditionalListsResponseBodyAdditionalListsLists> lists;
 

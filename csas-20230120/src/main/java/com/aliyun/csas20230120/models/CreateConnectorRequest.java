@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateConnectorRequest extends TeaModel {
     /**
-     * <p>The bandwidth value (Mbit/s).</p>
+     * <p>The bandwidth value in Mbit/s.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class CreateConnectorRequest extends TeaModel {
     public Integer bandwidth;
 
     /**
-     * <p>The connector name. The name must be 1 to 128 characters in length and can contain letters, digits, Chinese characters, periods (.), underscores (_), and hyphens (-).</p>
+     * <p>The name of the connector. The name must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class CreateConnectorRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The connector instance status. Valid values:</p>
+     * <p>The instance status of the connector. Valid values:</p>
      * <ul>
      * <li><strong>Enabled</strong>: Enabled.</li>
      * <li><strong>Disabled</strong>: Shutdown.</li>

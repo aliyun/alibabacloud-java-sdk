@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListPrivateAccessPolicesRequest extends TeaModel {
     /**
-     * <p>The ID of the private access application. The application ID cannot be used together with the private access tag ID for filtering. Sources of the value:</p>
+     * <p>The ID of the private access application. This parameter cannot be used together with the private access tag ID for filtering. You can obtain the value from the following sources:</p>
      * <ul>
-     * <li><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Queries private access applications by batch.</li>
-     * <li><a href="~~CreatePrivateAccessApplication~~">CreatePrivateAccessApplication</a>: Creates a private access application.</li>
+     * <li><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: List private access applications.</li>
+     * <li><a href="~~CreatePrivateAccessApplication~~">CreatePrivateAccessApplication</a>: Create a private access application.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,13 +21,13 @@ public class ListPrivateAccessPolicesRequest extends TeaModel {
      * <p>The name of the private access application.</p>
      * 
      * <strong>example:</strong>
-     * <p>办公</p>
+     * <p>Office</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;
 
     /**
-     * <p>The page number of the current page that is returned during paginated queries. Valid values: 1 to 10000.</p>
+     * <p>The page number of the current page returned during paging in a paged query. Valid values: 1 to 10000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class ListPrivateAccessPolicesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The name of the private access policy. The name must be 1 to 128 characters in length and supports Chinese characters and uppercase and lowercase English letters. It can contain digits, periods (.), underscores (_), and hyphens (-).</p>
+     * <p>Policy Name of the private access policy. Policy Name must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>private_access_policy_name</p>
@@ -46,7 +46,7 @@ public class ListPrivateAccessPolicesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The number of entries per page that is set during paginated queries. Valid values: 1 to 1000.</p>
+     * <p>The Settings for the number of entries per page during paging in a paged query. Valid values: 1 to 1000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,7 +69,7 @@ public class ListPrivateAccessPolicesRequest extends TeaModel {
     public String policyAction;
 
     /**
-     * <p>The collection of private access policy IDs. You can specify up to 100 private access policy IDs.</p>
+     * <p>The IDs of the private access policies. You can specify up to 100 private access policy IDs.</p>
      */
     @NameInMap("PolicyIds")
     public java.util.List<String> policyIds;
@@ -88,10 +88,10 @@ public class ListPrivateAccessPolicesRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The ID of the private access tag. The tag ID cannot be used together with the application ID for filtering. Sources of the value:</p>
+     * <p>The ID of the private access tag. This parameter cannot be used together with the application ID for filtering. You can obtain the value from the following sources:</p>
      * <ul>
-     * <li><a href="~~ListPrivateAccessTags~~">ListPrivateAccessTags</a>: Queries private access tags by batch.</li>
-     * <li><a href="~~CreatePrivateAccessTag~~">CreatePrivateAccessTag</a>: Creates a private access tag.</li>
+     * <li><a href="~~ListPrivateAccessTags~~">ListPrivateAccessTags</a>: List private access tags.</li>
+     * <li><a href="~~CreatePrivateAccessTag~~">CreatePrivateAccessTag</a>: Create a private access tag.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -104,16 +104,16 @@ public class ListPrivateAccessPolicesRequest extends TeaModel {
      * <p>The name of the tag.</p>
      * 
      * <strong>example:</strong>
-     * <p>云产品</p>
+     * <p>Cloud products</p>
      */
     @NameInMap("TagName")
     public String tagName;
 
     /**
-     * <p>The ID of the user group. Sources of the value:</p>
+     * <p>The ID of the user group. You can obtain the value from the following sources:</p>
      * <ul>
-     * <li><a href="~~ListUserGroups~~">ListUserGroups</a>: Queries user groups by batch.</li>
-     * <li><a href="~~CreateUserGroup~~">CreateUserGroup</a>: Creates a user group.</li>
+     * <li><a href="~~ListUserGroups~~">ListUserGroups</a>: List user groups.</li>
+     * <li><a href="~~CreateUserGroup~~">CreateUserGroup</a>: Create a user group.</li>
      * </ul>
      * 
      * <strong>example:</strong>

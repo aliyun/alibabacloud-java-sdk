@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateApprovalProcessRequest extends TeaModel {
     /**
-     * <p>The description of the approval flow. The description must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. Chinese characters are supported.</p>
+     * <p>The description of the approval process. The description must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
      * 
      * <strong>example:</strong>
-     * <p>This is an approval flow</p>
+     * <p>This is an approval process</p>
      */
     @NameInMap("Description")
     public String description;
@@ -20,7 +20,7 @@ public class CreateApprovalProcessRequest extends TeaModel {
     public CreateApprovalProcessRequestMatchSchemas matchSchemas;
 
     /**
-     * <p>The flow name. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). Chinese characters are supported.</p>
+     * <p>The name of the process. The name must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,7 @@ public class CreateApprovalProcessRequest extends TeaModel {
     public String processName;
 
     /**
-     * <p>The list of approval nodes. You can define up to 5 approval nodes.</p>
+     * <p>The list of approval nodes. You can define up to five approval nodes.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ProcessNodes")
@@ -75,7 +75,7 @@ public class CreateApprovalProcessRequest extends TeaModel {
 
     public static class CreateApprovalProcessRequestMatchSchemas extends TeaModel {
         /**
-         * <p>The ID of the device uninstall approval template.</p>
+         * <p>The ID of the application uninstallation approval template.</p>
          * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
@@ -93,7 +93,7 @@ public class CreateApprovalProcessRequest extends TeaModel {
         public String deviceRegistrationSchemaId;
 
         /**
-         * <p>The ID of the file outbound approval template.</p>
+         * <p>The ID of the outbound file transfer approval template.</p>
          * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>

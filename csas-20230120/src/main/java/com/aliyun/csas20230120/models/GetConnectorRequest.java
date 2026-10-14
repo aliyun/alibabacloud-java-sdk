@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetConnectorRequest extends TeaModel {
     /**
-     * <p>ConnectorID。</p>
+     * <p>The connector ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

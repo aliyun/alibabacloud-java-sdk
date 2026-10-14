@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDlpOutboundLogsRequest extends TeaModel {
     /**
-     * <p>The current page number, starting from 1.</p>
+     * <p>The current page number. Pages start from 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListDlpOutboundLogsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The end time of the query. UNIX timestamp in seconds.</p>
+     * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class ListDlpOutboundLogsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The policy action. Single-value exact match.</p>
+     * <p>The policy action. Exact match for a single value is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>block_and_hint</p>
@@ -53,7 +53,7 @@ public class ListDlpOutboundLogsRequest extends TeaModel {
     public String policyAction;
 
     /**
-     * <p>The original file name. Fuzzy match.</p>
+     * <p>The original file name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>TestFile</p>
@@ -62,7 +62,7 @@ public class ListDlpOutboundLogsRequest extends TeaModel {
     public String srcFileName;
 
     /**
-     * <p>The start time of the query. UNIX timestamp in seconds.</p>
+     * <p>The start time of the query. The value is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class ListDlpOutboundLogsRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The secondary channel ID in the format of <code>PrimaryChannelID.SubChannelID</code>. Separate multiple values with commas.</p>
+     * <p>The secondary channel ID. Format: primary channel ID.secondary channel ID. Multiple values are separated by commas.</p>
      * 
      * <strong>example:</strong>
      * <p>3.1,3.2</p>
@@ -81,7 +81,7 @@ public class ListDlpOutboundLogsRequest extends TeaModel {
     public String subChannelType;
 
     /**
-     * <p>The username. Exact match.</p>
+     * <p>The username. Exact match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>zhangsan</p>

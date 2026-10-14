@@ -11,7 +11,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
     public java.util.List<ListApprovalProcessesResponseBodyProcesses> processes;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>7E39C33B-F565-55C6-ACC2-953FCE7DA7D6</p>
@@ -59,13 +59,13 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
 
     public static class ListApprovalProcessesResponseBodyProcessesAppUninstallPolicies extends TeaModel {
         /**
-         * <p>The list of agent uninstallation policy IDs.</p>
+         * <p>The IDs of the endpoint uninstallation policies.</p>
          */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
         /**
-         * <p>The approval template ID.</p>
+         * <p>The ID of the approval template.</p>
          * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
@@ -98,13 +98,13 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
 
     public static class ListApprovalProcessesResponseBodyProcessesDeviceRegistrationPolicies extends TeaModel {
         /**
-         * <p>The list of device registration policy IDs.</p>
+         * <p>The IDs of the device registration policies.</p>
          */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
         /**
-         * <p>The approval template ID.</p>
+         * <p>The ID of the approval template.</p>
          * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
@@ -137,13 +137,13 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
 
     public static class ListApprovalProcessesResponseBodyProcessesDlpSendPolicies extends TeaModel {
         /**
-         * <p>The list of file outgoing policy IDs.</p>
+         * <p>The IDs of the file sending policies.</p>
          */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
         /**
-         * <p>The approval template ID.</p>
+         * <p>The ID of the approval template.</p>
          * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
@@ -176,13 +176,13 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
 
     public static class ListApprovalProcessesResponseBodyProcessesDomainBlacklistPolicies extends TeaModel {
         /**
-         * <p>The list of domain name blacklist policy IDs.</p>
+         * <p>The IDs of the domain name blacklist policies.</p>
          */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
         /**
-         * <p>The approval template ID.</p>
+         * <p>The ID of the approval template.</p>
          * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
@@ -215,13 +215,13 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
 
     public static class ListApprovalProcessesResponseBodyProcessesDomainWhitelistPolicies extends TeaModel {
         /**
-         * <p>The list of domain name whitelist policy IDs.</p>
+         * <p>The IDs of the domain name whitelist policies.</p>
          */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
         /**
-         * <p>The approval template ID.</p>
+         * <p>The ID of the approval template.</p>
          * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
@@ -284,13 +284,13 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
 
     public static class ListApprovalProcessesResponseBodyProcessesPeripheralBlockPolicies extends TeaModel {
         /**
-         * <p>The list of peripheral control policy IDs.</p>
+         * <p>The IDs of the peripheral control policy.</p>
          */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
         /**
-         * <p>The approval template ID.</p>
+         * <p>The ID of the approval template.</p>
          * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
@@ -353,7 +353,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
 
     public static class ListApprovalProcessesResponseBodyProcessesProcessNodes extends TeaModel {
         /**
-         * <p>审批人ID。</p>
+         * <p>The ID of the approver.</p>
          * 
          * <strong>example:</strong>
          * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
@@ -362,7 +362,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
         public String saseUserId;
 
         /**
-         * <p>审批人用户名。</p>
+         * <p>The username of the approver.</p>
          * 
          * <strong>example:</strong>
          * <p>王先生</p>
@@ -395,13 +395,13 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
 
     public static class ListApprovalProcessesResponseBodyProcessesSoftwareBlockPolicies extends TeaModel {
         /**
-         * <p>The list of software blocking policy IDs.</p>
+         * <p>The IDs of the software blocking policies.</p>
          */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
         /**
-         * <p>The approval template ID.</p>
+         * <p>The ID of the approval template.</p>
          * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
@@ -464,7 +464,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
 
     public static class ListApprovalProcessesResponseBodyProcesses extends TeaModel {
         /**
-         * <p>The list of policies associated with agent uninstallation.</p>
+         * <p>The list of policies associated with endpoint uninstallation.</p>
          */
         @NameInMap("AppUninstallPolicies")
         public ListApprovalProcessesResponseBodyProcessesAppUninstallPolicies appUninstallPolicies;
@@ -473,7 +473,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
         public Integer approvalType;
 
         /**
-         * <p>The time when the approval process was created.</p>
+         * <p>The time when the approval process was created. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-02-27 14:04:27</p>
@@ -485,7 +485,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
          * <p>The description of the approval process.</p>
          * 
          * <strong>example:</strong>
-         * <p>这是一个审批流程</p>
+         * <p>This is an approval process</p>
          */
         @NameInMap("Description")
         public String description;
@@ -497,7 +497,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
         public ListApprovalProcessesResponseBodyProcessesDeviceRegistrationPolicies deviceRegistrationPolicies;
 
         /**
-         * <p>The list of policies associated with file outgoing.</p>
+         * <p>The list of policies associated with file sending.</p>
          */
         @NameInMap("DlpSendPolicies")
         public ListApprovalProcessesResponseBodyProcessesDlpSendPolicies dlpSendPolicies;
@@ -527,7 +527,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
         public ListApprovalProcessesResponseBodyProcessesPrivateAccessBlockPolicies privateAccessBlockPolicies;
 
         /**
-         * <p>The approval process ID.</p>
+         * <p>The ID of the approval process.</p>
          * 
          * <strong>example:</strong>
          * <p>approval-process-35ee09077ee9****</p>
@@ -539,7 +539,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
          * <p>The name of the approval process.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>Test</p>
          */
         @NameInMap("ProcessName")
         public String processName;

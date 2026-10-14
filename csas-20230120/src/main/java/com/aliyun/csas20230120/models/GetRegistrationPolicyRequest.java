@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetRegistrationPolicyRequest extends TeaModel {
     /**
-     * <p>The ID of the device registration policy. Valid values are obtained from the following sources:</p>
+     * <p>The ID of the device registration policy. You can obtain the value from the following operations:</p>
      * <ul>
-     * <li><a href="~~ListRegistrationPolicies~~">ListRegistrationPolicies</a>: Queries device registration policies in batches.</li>
+     * <li><a href="~~ListRegistrationPolicies~~">ListRegistrationPolicies</a>: Lists device registration policies.</li>
      * <li><a href="~~GetRegistrationPolicy~~">GetRegistrationPolicy</a>: Queries the details of a device registration policy.</li>
      * <li><a href="~~CreateRegistrationPolicy~~">CreateRegistrationPolicy</a>: Creates a device registration policy.</li>
      * <li><a href="~~UpdateRegistrationPolicy~~">UpdateRegistrationPolicy</a>: Updates a device registration policy.</li>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDomainAccessLogsResponseBody extends TeaModel {
     /**
-     * <p>The list of access log records.</p>
+     * <p>The list of access records.</p>
      */
     @NameInMap("AccessLogs")
     public java.util.List<ListDomainAccessLogsResponseBodyAccessLogs> accessLogs;
@@ -20,7 +20,7 @@ public class ListDomainAccessLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records that match the query conditions.</p>
+     * <p>The total number of records that meet the specified conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>122</p>
@@ -59,7 +59,7 @@ public class ListDomainAccessLogsResponseBody extends TeaModel {
 
     public static class ListDomainAccessLogsResponseBodyAccessLogs extends TeaModel {
         /**
-         * <p>The action taken upon a rule hit.</p>
+         * <p>The matched action.</p>
          * 
          * <strong>example:</strong>
          * <p>WhiteList</p>
@@ -86,7 +86,7 @@ public class ListDomainAccessLogsResponseBody extends TeaModel {
         public String destAddress;
 
         /**
-         * <p>The event time.</p>
+         * <p>The time when the event occurred, in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-10 14:03:22</p>

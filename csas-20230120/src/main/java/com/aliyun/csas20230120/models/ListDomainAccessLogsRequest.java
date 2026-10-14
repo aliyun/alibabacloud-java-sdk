@@ -5,14 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDomainAccessLogsRequest extends TeaModel {
     /**
-     * <p>The action taken upon a rule hit. Exact match is used. Valid values:</p>
-     * <ul>
-     * <li>Audit: Audit.</li>
-     * <li>Observe: Observe only.</li>
-     * <li>WhiteList: Allowed by whitelist.</li>
-     * <li>Block: Blocked.</li>
-     * <li>Redirect: Redirected to a prompt page.</li>
-     * </ul>
+     * <p>The matched action for exact match.</p>
      * 
      * <strong>example:</strong>
      * <p>Block</p>
@@ -30,7 +23,7 @@ public class ListDomainAccessLogsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The department. Exact match is used.</p>
+     * <p>The department for exact match.</p>
      * 
      * <strong>example:</strong>
      * <p>IT department</p>
@@ -39,7 +32,7 @@ public class ListDomainAccessLogsRequest extends TeaModel {
     public String department;
 
     /**
-     * <p>The end time of the query. This value is a UNIX timestamp in seconds.</p>
+     * <p>The end time of the query, which is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1754956800</p>
@@ -48,7 +41,7 @@ public class ListDomainAccessLogsRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The number of entries per page in paging. Valid values: 1 to 1000.</p>
+     * <p>The Settings for the number of entries per page during paging in a paged query. Valid values: 1 to 1000.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -57,7 +50,7 @@ public class ListDomainAccessLogsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The policy type used to filter results.</p>
+     * <p>The policy type used for filtering.</p>
      * 
      * <strong>example:</strong>
      * <p>la_domain_white</p>
@@ -66,7 +59,7 @@ public class ListDomainAccessLogsRequest extends TeaModel {
     public String policyType;
 
     /**
-     * <p>The destination domain name accessed. Exact match is used.</p>
+     * <p>The destination domain name for exact match.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -75,7 +68,7 @@ public class ListDomainAccessLogsRequest extends TeaModel {
     public String remoteHost;
 
     /**
-     * <p>The start time of the query. This value is a UNIX timestamp in seconds.</p>
+     * <p>The start time of the query, which is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1754870400</p>
@@ -84,7 +77,7 @@ public class ListDomainAccessLogsRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The username. Exact match is used.</p>
+     * <p>The username for exact match.</p>
      * 
      * <strong>example:</strong>
      * <p>zhangsan</p>

@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class CreatePrivateAccessApplicationShrinkRequest extends TeaModel {
     /**
-     * <p>The application address groups. Required when ConfigMode is set to Precise. Not allowed when ConfigMode is an empty string.</p>
+     * <p>The application address groups. This parameter is required when ConfigMode is set to Precise, and cannot be specified when ConfigMode is an empty string.</p>
      */
     @NameInMap("AddressGroups")
     public java.util.List<AddressGroup> addressGroups;
 
     /**
-     * <p>The collection of internal-facing access application addresses. You can specify up to 1000 addresses.</p>
+     * <p>The collection of private access application addresses. You can enter up to 1,000 private access application addresses.</p>
      */
     @NameInMap("Addresses")
     public java.util.List<String> addresses;
 
     /**
-     * <p>The browser access status of the internal-facing access application. After this feature is enabled, you can access internal applications in a clientless manner. Default value: <strong>Disabled</strong>. Valid values:</p>
+     * <p>The browser access status of the private access application. After you enable this feature, you can access private access applications without a client. Default value: <strong>Disabled</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>Enabled</strong>: enabled.</li>
-     * <li><strong>Disabled</strong>: disabled.</li>
+     * <li><strong>Enabled</strong>: Enabled.</li>
+     * <li><strong>Disabled</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,30 +32,53 @@ public class CreatePrivateAccessApplicationShrinkRequest extends TeaModel {
     /**
      * <p>The configuration mode. Valid values:</p>
      * <ul>
-     * <li>Empty string: default mode.</li>
-     * <li>Precise: precise mode.</li>
+     * <li>Empty string: Default mode.</li>
+     * <li>Precise: Precise mode.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Precise</p>
      */
     @NameInMap("ConfigMode")
     public String configMode;
 
     /**
-     * <p>The description of the internal-facing access application. The description must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. Chinese characters are supported.</p>
+     * <p>The description of the private access application. The description must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
      * 
      * <strong>example:</strong>
-     * <p>This is an internal-facing access application</p>
+     * <p>This is a private access application</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The browser access mode parameter: the application configuration.</p>
+     * <p>The health check configuration. This parameter is required when HealthCheckMode is set to Continuous, and cannot be specified when HealthCheckMode is set to OnAccess.</p>
+     */
+    @NameInMap("HealthCheckConfig")
+    public String healthCheckConfigShrink;
+
+    /**
+     * <p>The health check mode. Valid values:</p>
+     * <ul>
+     * <li>OnAccess: Checks upon access without proactive probing.</li>
+     * <li>Continuous: Performs continuous checks and proactive probing based on the configurations in HealthCheckConfig.
+     * If this parameter is not specified, the default value is OnAccess. When the application addresses include wildcard domain names or CIDR blocks, or when the number of application addresses exceeds 10, only OnAccess is supported.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OnAccess</p>
+     */
+    @NameInMap("HealthCheckMode")
+    public String healthCheckMode;
+
+    /**
+     * <p>The application configuration in browser access mode.</p>
      */
     @NameInMap("L7Config")
     public String l7ConfigShrink;
 
     /**
-     * <p>The browser access mode parameter: the prefix of the mapped proxy domain name. The prefix must be 3 to 20 characters in length and can contain lowercase letters, digits, and hyphens (-).</p>
+     * <p>The prefix of the mapped proxy domain name in browser access mode. The prefix must be 3 to 20 characters in length, and can contain lowercase letters, digits, and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>app-sample</p>
@@ -64,7 +87,7 @@ public class CreatePrivateAccessApplicationShrinkRequest extends TeaModel {
     public String l7ProxyDomainAutomaticPrefix;
 
     /**
-     * <p>The browser access mode parameter: the custom proxy domain name. The value must be a valid domain name.</p>
+     * <p>The custom proxy domain name in browser access mode. The value must be a valid domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>app1.example.com</p>
@@ -73,7 +96,7 @@ public class CreatePrivateAccessApplicationShrinkRequest extends TeaModel {
     public String l7ProxyDomainCustom;
 
     /**
-     * <p>The name of the internal-facing access application. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). Chinese characters are supported.</p>
+     * <p>The name of the private access application. The name must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,15 +106,15 @@ public class CreatePrivateAccessApplicationShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The collection of port ranges for the internal-facing access application. You can specify up to 65535 port ranges. Port ranges cannot overlap or be duplicated.</p>
+     * <p>The collection of port ranges for the private access application. You can enter up to 65,535 port ranges. Multiple port ranges cannot be duplicate or overlap.</p>
      */
     @NameInMap("PortRanges")
     public java.util.List<CreatePrivateAccessApplicationShrinkRequestPortRanges> portRanges;
 
     /**
-     * <p>The protocol of the internal-facing access application. Valid values:</p>
+     * <p>The protocol of the private access application. Valid values:</p>
      * <ul>
-     * <li><strong>All</strong>: all protocols.</li>
+     * <li><strong>All</strong>: All protocols.</li>
      * <li><strong>TCP</strong></li>
      * <li><strong>UDP</strong></li>
      * </ul>
@@ -104,10 +127,10 @@ public class CreatePrivateAccessApplicationShrinkRequest extends TeaModel {
     public String protocol;
 
     /**
-     * <p>The status of the internal-facing access application. Valid values:</p>
+     * <p>The status of the private access application. Valid values:</p>
      * <ul>
-     * <li><strong>Enabled</strong>: enabled.</li>
-     * <li><strong>Disabled</strong>: disabled.</li>
+     * <li><strong>Enabled</strong>: Enabled.</li>
+     * <li><strong>Disabled</strong>: Disabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -118,11 +141,14 @@ public class CreatePrivateAccessApplicationShrinkRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The collection of internal-facing access tag IDs. You can associate up to 6 custom-type internal-facing access tags with each application.</p>
+     * <p>The collection of private access tag IDs. You can associate up to six custom private access tags with a single private access application.</p>
      */
     @NameInMap("TagIds")
     public java.util.List<String> tagIds;
 
+    /**
+     * <p>The configuration for unauthorized application access requests.</p>
+     */
     @NameInMap("UnauthorizedAccessConfig")
     public String unauthorizedAccessConfigShrink;
 
@@ -169,6 +195,22 @@ public class CreatePrivateAccessApplicationShrinkRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreatePrivateAccessApplicationShrinkRequest setHealthCheckConfigShrink(String healthCheckConfigShrink) {
+        this.healthCheckConfigShrink = healthCheckConfigShrink;
+        return this;
+    }
+    public String getHealthCheckConfigShrink() {
+        return this.healthCheckConfigShrink;
+    }
+
+    public CreatePrivateAccessApplicationShrinkRequest setHealthCheckMode(String healthCheckMode) {
+        this.healthCheckMode = healthCheckMode;
+        return this;
+    }
+    public String getHealthCheckMode() {
+        return this.healthCheckMode;
     }
 
     public CreatePrivateAccessApplicationShrinkRequest setL7ConfigShrink(String l7ConfigShrink) {

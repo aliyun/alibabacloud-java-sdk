@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetConnectorResponseBody extends TeaModel {
     /**
-     * <p>Connector。</p>
+     * <p>The connector.</p>
      */
     @NameInMap("Connector")
     public GetConnectorResponseBodyConnector connector;
@@ -84,7 +84,7 @@ public class GetConnectorResponseBody extends TeaModel {
 
     public static class GetConnectorResponseBodyConnector extends TeaModel {
         /**
-         * <p>ConnectorID。</p>
+         * <p>The connector ID.</p>
          * 
          * <strong>example:</strong>
          * <p>connector-94db94e06b98****</p>
@@ -93,7 +93,7 @@ public class GetConnectorResponseBody extends TeaModel {
         public String connectorId;
 
         /**
-         * <p>The connector creation time.</p>
+         * <p>The time when the connector was created, in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-16 17:18:46</p>
@@ -102,7 +102,7 @@ public class GetConnectorResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The connector name.</p>
+         * <p>The name of the connector.</p>
          * 
          * <strong>example:</strong>
          * <p>connector_name</p>
@@ -120,7 +120,7 @@ public class GetConnectorResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The connector connection status. Valid values:</p>
+         * <p>The connection status of the connector. Valid values:</p>
          * <ul>
          * <li><strong>Online</strong>: Online.</li>
          * <li><strong>Offline</strong>: Offline.</li>
@@ -133,10 +133,10 @@ public class GetConnectorResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The connector instance status. Valid values:</p>
+         * <p>The instance status of the connector. Valid values:</p>
          * <ul>
-         * <li><strong>Enabled</strong>: Enabled.</li>
-         * <li><strong>Disabled</strong>: Disabled.</li>
+         * <li><strong>Enabled</strong>: enabled</li>
+         * <li><strong>Disabled</strong>: shutdown</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -146,13 +146,13 @@ public class GetConnectorResponseBody extends TeaModel {
         public String switchStatus;
 
         /**
-         * <p>The connector upgrade time.</p>
+         * <p>The upgrade time of the connector.</p>
          */
         @NameInMap("UpgradeTime")
         public GetConnectorResponseBodyConnectorUpgradeTime upgradeTime;
 
         /**
-         * <p>The virtual IP address range.</p>
+         * <p>The virtual IP address CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.0/24</p>

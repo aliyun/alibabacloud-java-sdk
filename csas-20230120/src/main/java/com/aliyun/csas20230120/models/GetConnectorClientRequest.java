@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetConnectorClientRequest extends TeaModel {
     /**
-     * <p>The connector ID. You can call <a href="~~ListConnectors~~">ListConnectors</a> to query connectors.</p>
+     * <p>The connector ID. You can obtain this value from the <a href="~~ListConnectors~~">ListConnectors</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetConnectorClientRequest extends TeaModel {
     public String connectorId;
 
     /**
-     * <p>The unique device identifier of the ConnectorClient. You can call <a href="~~ListConnectors~~">ListConnectors</a> to query connectors.</p>
+     * <p>The unique identifier of the ConnectorClient device. You can obtain this value from the <a href="~~ListConnectors~~">ListConnectors</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

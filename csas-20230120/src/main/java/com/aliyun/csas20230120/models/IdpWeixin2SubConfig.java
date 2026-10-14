@@ -4,27 +4,59 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class IdpWeixin2SubConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1000002</p>
+     */
     @NameInMap("AgentId")
     public String agentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>wwautha1b2c3****</p>
+     */
     @NameInMap("AppSchema")
     public String appSchema;
 
+    /**
+     * <strong>example:</strong>
+     * <p>s1e2c3r4e5****</p>
+     */
     @NameInMap("AppSecret")
     public String appSecret;
 
+    /**
+     * <strong>example:</strong>
+     * <p>wwa1b2c3d4****</p>
+     */
     @NameInMap("CorpId")
     public String corpId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>a1e2s3k4e5****</p>
+     */
     @NameInMap("EventAesKey")
     public String eventAesKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://auth.example.com/callback/wework/a1b2">https://auth.example.com/callback/wework/a1b2</a>****</p>
+     */
     @NameInMap("EventLabel")
     public String eventLabel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>v1t2o3k4e5****</p>
+     */
     @NameInMap("EventVerifyToken")
     public String eventVerifyToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://auth.example.com/callback">https://auth.example.com/callback</a></p>
+     */
     @NameInMap("RedirectUri")
     public String redirectUri;
 

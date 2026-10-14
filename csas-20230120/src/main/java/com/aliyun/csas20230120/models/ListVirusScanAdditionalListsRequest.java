@@ -4,10 +4,18 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListVirusScanAdditionalListsRequest extends TeaModel {
+    /**
+     * <p>Filters by matching dimension. Duplicate values are not allowed. If this parameter is not specified, all matching dimensions are returned.</p>
+     */
     @NameInMap("AdditionalTypes")
     public java.util.List<String> additionalTypes;
 
     /**
+     * <p>The operating system type for which the list takes effect. Valid values:</p>
+     * <ul>
+     * <li><strong>windows</strong>: Windows.</li>
+     * <li><strong>macOS</strong>: macOS.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,16 +25,27 @@ public class ListVirusScanAdditionalListsRequest extends TeaModel {
     public String devType;
 
     /**
+     * <p>The content of the list entry, using exact match. This parameter is used to locate a specific list entry by content and does not support fuzzy match.</p>
+     * 
      * <strong>example:</strong>
      * <p>.tmp</p>
      */
     @NameInMap("ListDetail")
     public String listDetail;
 
+    /**
+     * <p>Filters by list entry ID. Duplicate values are not allowed. If this parameter is not specified, no filtering by list entry ID is applied.</p>
+     */
     @NameInMap("ListIds")
     public java.util.List<String> listIds;
 
     /**
+     * <p>Filters by list type. If this parameter is not specified, both blacklists and whitelists are returned. Valid values:</p>
+     * <ul>
+     * <li><strong>Blacklist</strong>: Blacklist. Files that match are directly identified as virus files.</li>
+     * <li><strong>Whitelist</strong>: Whitelist. Files that match are excluded from virus detection.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Whitelist</p>
      */

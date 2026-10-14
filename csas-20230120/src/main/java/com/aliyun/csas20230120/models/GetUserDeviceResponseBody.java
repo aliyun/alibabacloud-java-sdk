@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUserDeviceResponseBody extends TeaModel {
     /**
-     * <p>The terminal device.</p>
+     * <p>The endpoint device.</p>
      */
     @NameInMap("Device")
     public GetUserDeviceResponseBodyDevice device;
@@ -42,7 +42,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
 
     public static class GetUserDeviceResponseBodyDeviceHistoryUsers extends TeaModel {
         /**
-         * <p>The user ID.</p>
+         * <p>The ID of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
@@ -135,7 +135,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public Double cpu;
 
         /**
-         * <p>The process running description.</p>
+         * <p>The description of the running process.</p>
          * 
          * <strong>example:</strong>
          * <p>C:\Program Files\Google\Chrome\Application\chrome.exe</p>
@@ -153,7 +153,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public Integer memory;
 
         /**
-         * <p>The process name.</p>
+         * <p>The name of the process.</p>
          * 
          * <strong>example:</strong>
          * <p>chrome.exe</p>
@@ -202,7 +202,11 @@ public class GetUserDeviceResponseBody extends TeaModel {
 
     public static class GetUserDeviceResponseBodyDevice extends TeaModel {
         /**
-         * <p>The client status. Valid values:</p>
+         * <p>The status of the client. Valid values:</p>
+         * <ul>
+         * <li><strong>Online</strong>: Online.</li>
+         * <li><strong>Offline</strong>: Offline.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Online</p>
@@ -220,7 +224,12 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String appVersion;
 
         /**
-         * <p>The auto-logon status of the device. Valid values:</p>
+         * <p>The password-free logon status of the device. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
+         * <li><strong>Unprovisioned</strong>: Unprovisioned.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Enabled</p>
@@ -238,7 +247,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public Integer batteryHealthPercentage;
 
         /**
-         * <p>The battery remaining charge percentage.</p>
+         * <p>The remaining battery percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -247,7 +256,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public Integer batteryRemainingPercentage;
 
         /**
-         * <p>The CPU model of the terminal device.</p>
+         * <p>The CPU model of the endpoint device.</p>
          * 
          * <strong>example:</strong>
          * <p>Apple M1</p>
@@ -265,7 +274,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String city;
 
         /**
-         * <p>The city name in English.</p>
+         * <p>The city in English.</p>
          * 
          * <strong>example:</strong>
          * <p>Beijing City</p>
@@ -274,7 +283,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String cityEn;
 
         /**
-         * <p>The city name in Chinese.</p>
+         * <p>The city in Chinese.</p>
          * 
          * <strong>example:</strong>
          * <p>北京市</p>
@@ -292,7 +301,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String continent;
 
         /**
-         * <p>The continent name in English.</p>
+         * <p>The continent in English.</p>
          * 
          * <strong>example:</strong>
          * <p>Asia</p>
@@ -301,7 +310,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String continentEn;
 
         /**
-         * <p>The continent name in Chinese.</p>
+         * <p>The continent in Chinese.</p>
          * 
          * <strong>example:</strong>
          * <p>亚洲</p>
@@ -319,7 +328,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String country;
 
         /**
-         * <p>The country name in English.</p>
+         * <p>The country in English.</p>
          * 
          * <strong>example:</strong>
          * <p>China</p>
@@ -328,7 +337,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String countryEn;
 
         /**
-         * <p>The country name in Chinese.</p>
+         * <p>The country in Chinese.</p>
          * 
          * <strong>example:</strong>
          * <p>中国</p>
@@ -337,7 +346,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String countryZh;
 
         /**
-         * <p>The registration time of the terminal device.</p>
+         * <p>The registration time of the endpoint device. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-16 17:18:46</p>
@@ -349,13 +358,17 @@ public class GetUserDeviceResponseBody extends TeaModel {
          * <p>The department to which the user belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>QA Department</p>
+         * <p>Test Department</p>
          */
         @NameInMap("Department")
         public String department;
 
         /**
-         * <p>The ownership of the terminal device. Valid values:</p>
+         * <p>The ownership of the endpoint device. Valid values:</p>
+         * <ul>
+         * <li><strong>Personal</strong>: Personal device.</li>
+         * <li><strong>Company</strong>: Company device.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Company</p>
@@ -364,7 +377,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String deviceBelong;
 
         /**
-         * <p>The model of the terminal device.</p>
+         * <p>The model of the endpoint device.</p>
          * 
          * <strong>example:</strong>
          * <p>MacBookPro17,1</p>
@@ -373,7 +386,15 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String deviceModel;
 
         /**
-         * <p>The status of the terminal device. Valid values:</p>
+         * <p>The status of the endpoint device. Valid values:</p>
+         * <ul>
+         * <li><strong>Online</strong>: Online.</li>
+         * <li><strong>Offline</strong>: Offline.</li>
+         * <li><strong>LongTermOffline</strong>: Long-term offline.</li>
+         * <li><strong>Locked</strong>: Locked.</li>
+         * <li><strong>Lost</strong>: Reported as lost.</li>
+         * <li><strong>Unbound</strong>: Unbound.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Online</p>
@@ -382,7 +403,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String deviceStatus;
 
         /**
-         * <p>The ID of the terminal device.</p>
+         * <p>The ID of the endpoint device.</p>
          * 
          * <strong>example:</strong>
          * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
@@ -391,7 +412,15 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String deviceTag;
 
         /**
-         * <p>The operating system type of the terminal device. Valid values:</p>
+         * <p>The operating system type of the endpoint device. Valid values:</p>
+         * <ul>
+         * <li><strong>Windows</strong>: Windows.</li>
+         * <li><strong>macOS</strong>: macOS.</li>
+         * <li><strong>Linux</strong>: Linux.</li>
+         * <li><strong>Android</strong>: Android.</li>
+         * <li><strong>iOS</strong>: iOS.</li>
+         * <li><strong>Windows_Wuying</strong>: WUYING Workspace.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Windows</p>
@@ -400,7 +429,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String deviceType;
 
         /**
-         * <p>The operating system version of the terminal device.</p>
+         * <p>The operating system version of the endpoint device.</p>
          * 
          * <strong>example:</strong>
          * <p>3.5.1</p>
@@ -409,7 +438,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String deviceVersion;
 
         /**
-         * <p>The disk model of the terminal device.</p>
+         * <p>The disk model of the endpoint device.</p>
          * 
          * <strong>example:</strong>
          * <p>APPLE SSD AP0512Q Media</p>
@@ -437,6 +466,12 @@ public class GetUserDeviceResponseBody extends TeaModel {
 
         /**
          * <p>The office data protection status. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
+         * <li><strong>Unprovisioned</strong>: Unprovisioned.</li>
+         * <li><strong>Unauthorized</strong>: Unauthorized.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Unauthorized</p>
@@ -446,6 +481,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
 
         /**
          * <p>The anti-intrusion status. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Disabled</p>
@@ -454,13 +493,13 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String edrStatus;
 
         /**
-         * <p>The historical users of the terminal device.</p>
+         * <p>The collection of historical users of the endpoint device.</p>
          */
         @NameInMap("HistoryUsers")
         public java.util.List<GetUserDeviceResponseBodyDeviceHistoryUsers> historyUsers;
 
         /**
-         * <p>The name of the terminal device.</p>
+         * <p>The name of the endpoint device.</p>
          * 
          * <strong>example:</strong>
          * <p>win10-64bit</p>
@@ -470,6 +509,11 @@ public class GetUserDeviceResponseBody extends TeaModel {
 
         /**
          * <p>The Internet access status. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
+         * <li><strong>Unprovisioned</strong>: Unprovisioned.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Disabled</p>
@@ -478,7 +522,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String iaStatus;
 
         /**
-         * <p>The internal IP address of the terminal device.</p>
+         * <p>The internal IP address of the endpoint device.</p>
          * 
          * <strong>example:</strong>
          * <p>172.16.XX.XX</p>
@@ -487,7 +531,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String innerIP;
 
         /**
-         * <p>Indicates whether the terminal has joined an AD domain.</p>
+         * <p>Indicates whether the terminal is joined to an Active Directory (AD) domain.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -496,7 +540,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public Boolean joinAdDomain;
 
         /**
-         * <p>The MAC address of the terminal device.</p>
+         * <p>The MAC address of the endpoint device.</p>
          * 
          * <strong>example:</strong>
          * <p>48:9e:XX:XX:02:80</p>
@@ -505,13 +549,13 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String mac;
 
         /**
-         * <p>The IDs of matched device groups.</p>
+         * <p>The collection of matched device group IDs.</p>
          */
         @NameInMap("MatchDeviceGroupIds")
         public java.util.List<String> matchDeviceGroupIds;
 
         /**
-         * <p>The memory capacity of the terminal device. Unit: GB.</p>
+         * <p>The memory capacity of the endpoint device. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -521,6 +565,11 @@ public class GetUserDeviceResponseBody extends TeaModel {
 
         /**
          * <p>The network access control status. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
+         * <li><strong>Unprovisioned</strong>: Unprovisioned.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Unprovisioned</p>
@@ -529,13 +578,18 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String nacStatus;
 
         /**
-         * <p>The list of network interface controllers (NICs) of the terminal device.</p>
+         * <p>The list of network interface controllers (NICs) of the endpoint device.</p>
          */
         @NameInMap("NetInterfaceInfo")
         public java.util.List<GetUserDeviceResponseBodyDeviceNetInterfaceInfo> netInterfaceInfo;
 
         /**
-         * <p>The private access status. Valid values:</p>
+         * <p>The internal network access status. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
+         * <li><strong>Unprovisioned</strong>: Unprovisioned.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Enabled</p>
@@ -544,7 +598,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String paStatus;
 
         /**
-         * <p>The list of processes running on the terminal.</p>
+         * <p>The list of running processes on the terminal.</p>
          */
         @NameInMap("Processes")
         public java.util.List<GetUserDeviceResponseBodyDeviceProcesses> processes;
@@ -559,7 +613,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String province;
 
         /**
-         * <p>The province name in English.</p>
+         * <p>The province in English.</p>
          * 
          * <strong>example:</strong>
          * <p>Beijing</p>
@@ -568,7 +622,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String provinceEn;
 
         /**
-         * <p>The province name in Chinese.</p>
+         * <p>The province in Chinese.</p>
          * 
          * <strong>example:</strong>
          * <p>北京市</p>
@@ -577,7 +631,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String provinceZh;
 
         /**
-         * <p>The user ID.</p>
+         * <p>The ID of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
@@ -586,7 +640,11 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String saseUserId;
 
         /**
-         * <p>Indicates whether sharing is enabled for the device. Valid values:</p>
+         * <p>Specifies whether sharing is enabled for the device. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -604,7 +662,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String snBaseBoard;
 
         /**
-         * <p>The serial number (SN) of the BIOS system.</p>
+         * <p>The serial number of the BIOS.</p>
          * 
          * <strong>example:</strong>
          * <p>5CG003****</p>
@@ -622,7 +680,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String snDiskDrive;
 
         /**
-         * <p>The serial number (SN) of the processor.</p>
+         * <p>The serial number of the processor.</p>
          * 
          * <strong>example:</strong>
          * <p>BFEBFBFF0008****</p>
@@ -640,7 +698,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String snSystem;
 
         /**
-         * <p>The logon IP address of the terminal device.</p>
+         * <p>The logon IP address of the endpoint device.</p>
          * 
          * <strong>example:</strong>
          * <p>106.14.XX.XX</p>
@@ -658,7 +716,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public Long terminalInfoCollectTime;
 
         /**
-         * <p>The last online time of the terminal device.</p>
+         * <p>The last online time of the endpoint device. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-08-24 19:04:42</p>

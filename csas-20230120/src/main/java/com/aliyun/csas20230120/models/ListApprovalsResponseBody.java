@@ -103,10 +103,10 @@ public class ListApprovalsResponseBody extends TeaModel {
         /**
          * <p>The action performed on the approval progress node. Valid values:</p>
          * <ul>
-         * <li><strong>Approve</strong>: Approved.</li>
-         * <li><strong>Reject</strong>: Rejected.</li>
-         * <li><strong>Revoke</strong>: Revoked.</li>
-         * <li><strong>Comment</strong>: Commented.</li>
+         * <li><strong>Approve</strong>: Approve.</li>
+         * <li><strong>Reject</strong>: Reject.</li>
+         * <li><strong>Revoke</strong>: Revoke.</li>
+         * <li><strong>Comment</strong>: Comment.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class ListApprovalsResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>The comment on the approval progress node.</p>
+         * <p>The comment added to the approval progress node.</p>
          * 
          * <strong>example:</strong>
          * <p>Approved</p>
@@ -155,7 +155,7 @@ public class ListApprovalsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the approval progress node was executed. The value is a UNIX timestamp in seconds.</p>
+         * <p>The time when the action was performed on the approval progress node. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1736752000</p>
@@ -229,7 +229,7 @@ public class ListApprovalsResponseBody extends TeaModel {
         public String approvalDetail;
 
         /**
-         * <p>The instance ID of the approval.</p>
+         * <p>The ID of the approval instance.</p>
          * 
          * <strong>example:</strong>
          * <p>approval-872b5e911b35****</p>
@@ -238,7 +238,7 @@ public class ListApprovalsResponseBody extends TeaModel {
         public String approvalId;
 
         /**
-         * <p>The list of approval progress nodes.</p>
+         * <p>The list of progress nodes for the approval instance.</p>
          */
         @NameInMap("ApprovalProgresses")
         public java.util.List<ListApprovalsResponseBodyApprovalsApprovalProgresses> approvalProgresses;
@@ -246,7 +246,7 @@ public class ListApprovalsResponseBody extends TeaModel {
         /**
          * <p>The approval type. Valid values:</p>
          * <ul>
-         * <li>0: built-in approval.</li>
+         * <li>0: Built-in approval.</li>
          * <li>1: DingTalk approval.</li>
          * <li>2: WeCom approval.</li>
          * <li>3: Lark approval.</li>
@@ -259,7 +259,7 @@ public class ListApprovalsResponseBody extends TeaModel {
         public Integer approvalType;
 
         /**
-         * <p>The time when the approval instance was created.</p>
+         * <p>The time when the approval instance was created. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-11-15 22:11:55</p>
@@ -268,7 +268,7 @@ public class ListApprovalsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The department of the approval instance creator.</p>
+         * <p>The department of the user who created the approval instance.</p>
          * 
          * <strong>example:</strong>
          * <p>CN=cn***,OU=h***</p>
@@ -277,7 +277,7 @@ public class ListApprovalsResponseBody extends TeaModel {
         public String creatorDepartment;
 
         /**
-         * <p>The terminal device ID of the approval instance creator.</p>
+         * <p>The ID of the endpoint device on which the approval instance was created.</p>
          * 
          * <strong>example:</strong>
          * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
@@ -286,7 +286,7 @@ public class ListApprovalsResponseBody extends TeaModel {
         public String creatorDevTag;
 
         /**
-         * <p>The ID of the approval instance creator.</p>
+         * <p>The ID of the user who created the approval instance.</p>
          * 
          * <strong>example:</strong>
          * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
@@ -295,7 +295,7 @@ public class ListApprovalsResponseBody extends TeaModel {
         public String creatorUserId;
 
         /**
-         * <p>The username of the approval instance creator.</p>
+         * <p>The username of the user who created the approval instance.</p>
          * 
          * <strong>example:</strong>
          * <p>Wang***</p>
@@ -304,10 +304,10 @@ public class ListApprovalsResponseBody extends TeaModel {
         public String creatorUsername;
 
         /**
-         * <p>The filing effective status. An empty string is returned when the approval status is not Approved. Valid values:</p>
+         * <p>The effective status of the report. If the approval status is not Approved, an empty string is returned. Valid values:</p>
          * <ul>
-         * <li>Enabled: effective.</li>
-         * <li>Expired: expired or reached the expiration date.</li>
+         * <li>Enabled: Valid.</li>
+         * <li>Expired: Invalid or expired.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -317,7 +317,7 @@ public class ListApprovalsResponseBody extends TeaModel {
         public String effectStatus;
 
         /**
-         * <p>The filing deadline. The value is a UNIX timestamp in seconds. The value 0 is returned when ValidityType is set to Permanent.</p>
+         * <p>The expiration time of the report. The value is a UNIX timestamp in seconds. If ValidityType is set to Permanent, 0 is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1757952000</p>
@@ -326,18 +326,18 @@ public class ListApprovalsResponseBody extends TeaModel {
         public Long endTimestamp;
 
         /**
-         * <p>The policy type associated with the approval instance. Valid values:</p>
+         * <p>The type of the policy associated with the approval instance. Valid values:</p>
          * <ul>
          * <li><strong>DomainBlacklist</strong>: Domain name blacklist.</li>
          * <li><strong>DomainWhitelist</strong>: Domain name whitelist.</li>
          * <li><strong>SoftwareBlock</strong>: Software blocking.</li>
          * <li><strong>DeviceRegistration</strong>: Excess registration.</li>
          * <li><strong>AppUninstall</strong>: Endpoint uninstallation.</li>
-         * <li><strong>DlpSend</strong>: File outbound transfer.</li>
+         * <li><strong>DlpSend</strong>: Outbound file transfer.</li>
          * <li><strong>PeripheralBlock</strong>: Peripheral control.</li>
          * <li><strong>EndpointHardening</strong>: Endpoint hardening.</li>
          * <li><strong>oftwareHardening</strong>: Software hardening.</li>
-         * <li><strong>AiAgentBlock</strong>: AI Agent control.</li>
+         * <li><strong>AiAgentBlock</strong>: AI agent control.</li>
          * <li><strong>PrivateAccessBlock</strong>: Internal network access.</li>
          * </ul>
          * 
@@ -369,16 +369,16 @@ public class ListApprovalsResponseBody extends TeaModel {
          * <p>The reason for creating the approval instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>Temporary access for the project</p>
+         * <p>Temporary access for a project</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
-         * <p>The filing type. Valid values:</p>
+         * <p>The report type. Valid values:</p>
          * <ul>
-         * <li>ApprovalReport: approval filing.</li>
-         * <li>BackendReport: backend filing.</li>
+         * <li>ApprovalReport: Approval report.</li>
+         * <li>BackendReport: Backend report.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -415,7 +415,7 @@ public class ListApprovalsResponseBody extends TeaModel {
         public String schemaName;
 
         /**
-         * <p>The instance status of the approval. Valid values:</p>
+         * <p>The status of the approval instance. Valid values:</p>
          * <ul>
          * <li><strong>Pending</strong>: Pending approval.</li>
          * <li><strong>Approved</strong>: Approved.</li>
@@ -432,7 +432,7 @@ public class ListApprovalsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The validity duration type. Valid values: FixedTime, Permanent.</p>
+         * <p>The validity duration type. Valid values: FixedTime and Permanent.</p>
          * 
          * <strong>example:</strong>
          * <p>Permanent</p>

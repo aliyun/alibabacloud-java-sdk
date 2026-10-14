@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListConnectorsResponseBody extends TeaModel {
     /**
-     * <p>A list of connectors.</p>
+     * <p>The list of connectors.</p>
      */
     @NameInMap("Connectors")
     public java.util.List<ListConnectorsResponseBodyConnectors> connectors;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
@@ -59,7 +59,7 @@ public class ListConnectorsResponseBody extends TeaModel {
 
     public static class ListConnectorsResponseBodyConnectorsApplications extends TeaModel {
         /**
-         * <p>The private access application ID.</p>
+         * <p>The ID of the internal access application.</p>
          * 
          * <strong>example:</strong>
          * <p>pa-application-e12860ef6c48****</p>
@@ -68,7 +68,7 @@ public class ListConnectorsResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>The private access application name.</p>
+         * <p>The name of the internal access application.</p>
          * 
          * <strong>example:</strong>
          * <p>application_name</p>
@@ -101,7 +101,7 @@ public class ListConnectorsResponseBody extends TeaModel {
 
     public static class ListConnectorsResponseBodyConnectorsConnectorClients extends TeaModel {
         /**
-         * <p>The connection status between the connector client and connector server.</p>
+         * <p>The connection status between the connector client and the connector server.</p>
          * 
          * <strong>example:</strong>
          * <p>Disconnected</p>
@@ -110,7 +110,7 @@ public class ListConnectorsResponseBody extends TeaModel {
         public String connectionStatus;
 
         /**
-         * <p>The unique device ID of the connector client.</p>
+         * <p>The unique device identifier of the connector client.</p>
          * 
          * <strong>example:</strong>
          * <p>C50A2386-F851-4F11-920B-DF7148DA0C22</p>
@@ -177,7 +177,7 @@ public class ListConnectorsResponseBody extends TeaModel {
 
     public static class ListConnectorsResponseBodyConnectorsUpgradeTime extends TeaModel {
         /**
-         * <p>The end time of the upgrade window.</p>
+         * <p>The end time.</p>
          * 
          * <strong>example:</strong>
          * <p>23:00</p>
@@ -186,7 +186,7 @@ public class ListConnectorsResponseBody extends TeaModel {
         public String end;
 
         /**
-         * <p>The start time of the upgrade window.</p>
+         * <p>The start time.</p>
          * 
          * <strong>example:</strong>
          * <p>20:00</p>
@@ -219,12 +219,10 @@ public class ListConnectorsResponseBody extends TeaModel {
 
     public static class ListConnectorsResponseBodyConnectors extends TeaModel {
         /**
-         * <p>Indicates whether global acceleration is enabled. Valid values:</p>
+         * <p>Specifies whether global acceleration is enabled. Valid values:</p>
          * <ul>
-         * <li><p><strong>Enabled</strong>: Global acceleration is enabled.</p>
-         * </li>
-         * <li><p><strong>Disabled</strong>: Global acceleration is disabled.</p>
-         * </li>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -234,13 +232,13 @@ public class ListConnectorsResponseBody extends TeaModel {
         public String accelerateStatus;
 
         /**
-         * <p>A list of associated private access applications.</p>
+         * <p>The internal access applications associated with the connector.</p>
          */
         @NameInMap("Applications")
         public java.util.List<ListConnectorsResponseBodyConnectorsApplications> applications;
 
         /**
-         * <p>The cluster IP address.</p>
+         * <p>The IP address of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>1.1.1.1</p>
@@ -249,7 +247,7 @@ public class ListConnectorsResponseBody extends TeaModel {
         public String clusterIP;
 
         /**
-         * <p>The cluster port.</p>
+         * <p>The port of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>8000</p>
@@ -258,7 +256,7 @@ public class ListConnectorsResponseBody extends TeaModel {
         public String clusterPort;
 
         /**
-         * <p>A list of deployed connector clients.</p>
+         * <p>The deployed connector clients.</p>
          */
         @NameInMap("ConnectorClients")
         public java.util.List<ListConnectorsResponseBodyConnectorsConnectorClients> connectorClients;
@@ -273,7 +271,7 @@ public class ListConnectorsResponseBody extends TeaModel {
         public String connectorId;
 
         /**
-         * <p>The time the connector was created.</p>
+         * <p>The time when the connector was created. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-09-27 18:10:25</p>
@@ -282,7 +280,7 @@ public class ListConnectorsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The connector name.</p>
+         * <p>The name of the connector.</p>
          * 
          * <strong>example:</strong>
          * <p>connector_name</p>
@@ -302,10 +300,8 @@ public class ListConnectorsResponseBody extends TeaModel {
         /**
          * <p>The connection status of the connector. Valid values:</p>
          * <ul>
-         * <li><p><strong>Online</strong>: The connector is online.</p>
-         * </li>
-         * <li><p><strong>Offline</strong>: The connector is offline.</p>
-         * </li>
+         * <li><strong>Online</strong>: Online.</li>
+         * <li><strong>Offline</strong>: Offline.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -315,12 +311,10 @@ public class ListConnectorsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The status of the connector instance. Valid values:</p>
+         * <p>The connector instance status. Valid values:</p>
          * <ul>
-         * <li><p><strong>Enabled</strong>: The connector is enabled.</p>
-         * </li>
-         * <li><p><strong>Disabled</strong>: The connector is disabled.</p>
-         * </li>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Shutdown.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -330,7 +324,7 @@ public class ListConnectorsResponseBody extends TeaModel {
         public String switchStatus;
 
         /**
-         * <p>The upgrade window for the connector.</p>
+         * <p>The upgrade time of the connector.</p>
          */
         @NameInMap("UpgradeTime")
         public ListConnectorsResponseBodyConnectorsUpgradeTime upgradeTime;

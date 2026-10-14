@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSoftwarelibSoftwareRequest extends TeaModel {
     /**
-     * <p>The software classification ID. You can call <a href="~~ListSoftwarelibClassify~~">ListSoftwarelibClassify</a> to obtain the value.</p>
+     * <p>The software category ID. You can call <a href="~~ListSoftwarelibClassify~~">ListSoftwarelibClassify</a> to obtain the value.</p>
      * 
      * <strong>example:</strong>
      * <p>softwarelib-classify-61b7ccc63cae****</p>
@@ -14,7 +14,7 @@ public class ListSoftwarelibSoftwareRequest extends TeaModel {
     public String classifyId;
 
     /**
-     * <p>The page number of the current page in a paging query. Valid values: 1 to 10000.</p>
+     * <p>The page number of the current page displayed during paging in a paged query. Valid values: 1 to 10000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListSoftwarelibSoftwareRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>The maximum number of entries per page. This parameter is not supported by this operation. Use CurrentPage and PageSize for pagination.</p>
+     * <p>The maximum number of entries per page. This parameter is not supported by the current operation. Use CurrentPage and PageSize for pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -33,7 +33,7 @@ public class ListSoftwarelibSoftwareRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. This parameter is not supported by this operation. Use CurrentPage and PageSize for pagination.</p>
+     * <p>The query token. This parameter is not supported by the current operation. Use CurrentPage and PageSize for pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh27/Jy4SXvlU9WgqeV7az+t</p>
@@ -42,11 +42,11 @@ public class ListSoftwarelibSoftwareRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The operating system to which the software package applies. Valid values:</p>
+     * <p>The operating system applicable to the software package. Valid values:</p>
      * <ul>
      * <li><strong>Windows</strong>: Windows.</li>
      * <li><strong>Mac(Apple)</strong>: macOS with Apple silicon.</li>
-     * <li><strong>Mac(Intel)</strong>: macOS with Intel processors.</li>
+     * <li><strong>Mac(Intel)</strong>: macOS with Intel chips.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,7 +56,7 @@ public class ListSoftwarelibSoftwareRequest extends TeaModel {
     public String os;
 
     /**
-     * <p>The number of entries per page in a paging query. Valid values: 1 to 500.</p>
+     * <p>The Settings for the number of entries per page during paging in a paged query. Valid values: 1 to 500.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

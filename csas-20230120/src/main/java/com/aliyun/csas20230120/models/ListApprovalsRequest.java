@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListApprovalsRequest extends TeaModel {
     /**
-     * <p>The collection of approval instance IDs.</p>
+     * <p>The IDs of the approval instances.</p>
      */
     @NameInMap("ApprovalIds")
     public java.util.List<String> approvalIds;
 
     /**
-     * <p>The end time for querying approval instance creation, in seconds-level timestamp.</p>
+     * <p>The end time when the approval instance was created. The value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1736750500</p>
@@ -20,7 +20,7 @@ public class ListApprovalsRequest extends TeaModel {
     public Long createEndTime;
 
     /**
-     * <p>The start time for querying approval instance creation, in seconds-level timestamp.</p>
+     * <p>The start time when the approval instance was created. The value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1730000000</p>
@@ -29,16 +29,16 @@ public class ListApprovalsRequest extends TeaModel {
     public Long createStartTime;
 
     /**
-     * <p>The department of the approval instance creator.</p>
+     * <p>The department of the user who created the approval instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>QA Department</p>
+     * <p>Test Department</p>
      */
     @NameInMap("CreatorDepartment")
     public String creatorDepartment;
 
     /**
-     * <p>The terminal device ID of the approval instance creator.</p>
+     * <p>The ID of the endpoint device on which the approval instance was created.</p>
      * 
      * <strong>example:</strong>
      * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
@@ -47,7 +47,7 @@ public class ListApprovalsRequest extends TeaModel {
     public String creatorDevTag;
 
     /**
-     * <p>The ID of the approval instance creator.</p>
+     * <p>The ID of the user who created the approval instance.</p>
      * 
      * <strong>example:</strong>
      * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
@@ -56,7 +56,7 @@ public class ListApprovalsRequest extends TeaModel {
     public String creatorUserId;
 
     /**
-     * <p>The username of the approval instance creator.</p>
+     * <p>The username of the user who created the approval instance.</p>
      * 
      * <strong>example:</strong>
      * <p>Mr. Wang</p>
@@ -65,7 +65,7 @@ public class ListApprovalsRequest extends TeaModel {
     public String creatorUsername;
 
     /**
-     * <p>The page number of the current page in a paging query. Valid values: 1 to 10000.</p>
+     * <p>The page number of the current page for a paging query. Valid values: 1 to 10000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,17 +75,17 @@ public class ListApprovalsRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>The list of report effective statuses, serialized in Flat format. Duplicate values are not allowed. Only records with an approval status of Approved are matched. Valid values:</p>
+     * <p>The list of effective statuses of reports. The list uses the flat serialization format and cannot contain duplicate values. Only records with the Approved approval status are matched. Valid values:</p>
      * <ul>
-     * <li>Enabled: effective.</li>
-     * <li>Expired: expired or invalidated.</li>
+     * <li>Enabled: Valid.</li>
+     * <li>Expired: Invalid or expired.</li>
      * </ul>
      */
     @NameInMap("EffectStatuses")
     public java.util.List<String> effectStatuses;
 
     /**
-     * <p>The ID of the approval instance operator.</p>
+     * <p>The ID of the user who operated the approval instance.</p>
      * 
      * <strong>example:</strong>
      * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
@@ -94,7 +94,7 @@ public class ListApprovalsRequest extends TeaModel {
     public String operatorUserId;
 
     /**
-     * <p>The username of the approval instance operator.</p>
+     * <p>The username of the user who operated the approval instance.</p>
      * 
      * <strong>example:</strong>
      * <p>Ms. Li</p>
@@ -103,7 +103,7 @@ public class ListApprovalsRequest extends TeaModel {
     public String operatorUsername;
 
     /**
-     * <p>The number of entries per page in a paging query. Valid values: 1 to 500.</p>
+     * <p>The number of entries per page for a paging query. Valid values: 1 to 500.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -113,13 +113,13 @@ public class ListApprovalsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The adaptation policy type. Valid values:</p>
+     * <p>The type of the adapted policy. Valid values:</p>
      * <ul>
      * <li><strong>DomainBlacklist</strong>: Domain name blacklist.</li>
      * <li><strong>DomainWhitelist</strong>: Domain name whitelist.</li>
      * <li><strong>SoftwareBlock</strong>: Software blocking.</li>
-     * <li><strong>AppUninstall</strong>: Agent uninstallation.</li>
-     * <li><strong>DlpSend</strong>: File outbound transfer.</li>
+     * <li><strong>AppUninstall</strong>: Endpoint uninstallation.</li>
+     * <li><strong>DlpSend</strong>: Outbound file transfer.</li>
      * <li><strong>PeripheralBlock</strong>: Peripheral control.</li>
      * </ul>
      * 
@@ -130,7 +130,7 @@ public class ListApprovalsRequest extends TeaModel {
     public String policyType;
 
     /**
-     * <p>The associated approval process ID.</p>
+     * <p>The ID of the associated approval process.</p>
      * 
      * <strong>example:</strong>
      * <p>approval-process-fcc351b8a95b****</p>
@@ -139,7 +139,7 @@ public class ListApprovalsRequest extends TeaModel {
     public String processId;
 
     /**
-     * <p>The associated approval process name.</p>
+     * <p>The name of the associated approval process.</p>
      * 
      * <strong>example:</strong>
      * <p>Test</p>
@@ -148,18 +148,18 @@ public class ListApprovalsRequest extends TeaModel {
     public String processName;
 
     /**
-     * <p>The list of report types, serialized in Flat format. Duplicate values are not allowed. Valid values:</p>
+     * <p>The list of report types. The list uses the flat serialization format and cannot contain duplicate values. Valid values:</p>
      * <ul>
-     * <li>ApprovalReport: approval report.</li>
-     * <li>BackendReport: backend report.
-     * If not specified, only ApprovalReport is queried by default.</li>
+     * <li>ApprovalReport: Approval report.</li>
+     * <li>BackendReport: Backend report.
+     * If you do not specify this parameter, only ApprovalReport is queried by default.</li>
      * </ul>
      */
     @NameInMap("ReportTypes")
     public java.util.List<String> reportTypes;
 
     /**
-     * <p>The associated approval template ID.</p>
+     * <p>The ID of the associated approval template.</p>
      * 
      * <strong>example:</strong>
      * <p>approval-schema-090134f1ebff****</p>
@@ -168,7 +168,7 @@ public class ListApprovalsRequest extends TeaModel {
     public String schemaId;
 
     /**
-     * <p>The associated approval template name.</p>
+     * <p>The name of the associated approval template.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -177,7 +177,7 @@ public class ListApprovalsRequest extends TeaModel {
     public String schemaName;
 
     /**
-     * <p>The collection of approval instance statuses.</p>
+     * <p>The statuses of the approval instances.</p>
      */
     @NameInMap("Statuses")
     public java.util.List<String> statuses;

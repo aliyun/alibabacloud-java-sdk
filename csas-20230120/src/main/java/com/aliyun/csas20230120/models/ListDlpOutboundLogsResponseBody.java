@@ -11,7 +11,7 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
     public java.util.List<ListDlpOutboundLogsResponseBodyLogs> logs;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>9350F06D-80FB-5B8B-983A-0E25CBD08479</p>
@@ -20,7 +20,7 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records that match the query conditions.</p>
+     * <p>The total number of records that meet the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>120</p>
@@ -59,7 +59,7 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
 
     public static class ListDlpOutboundLogsResponseBodyLogsMatchedDictsInnerDicts extends TeaModel {
         /**
-         * <p>The number of matches.</p>
+         * <p>The hit count.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -101,7 +101,7 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
 
     public static class ListDlpOutboundLogsResponseBodyLogsMatchedDictsKeywords extends TeaModel {
         /**
-         * <p>The number of matches.</p>
+         * <p>The hit count.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -143,7 +143,7 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
 
     public static class ListDlpOutboundLogsResponseBodyLogsMatchedDictsUserDicts extends TeaModel {
         /**
-         * <p>The number of matches.</p>
+         * <p>The hit count.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -247,13 +247,13 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
          * <p>The corresponding data type.</p>
          * 
          * <strong>example:</strong>
-         * <p>Company Data</p>
+         * <p>Corporate data</p>
          */
         @NameInMap("EngineDataType")
         public String engineDataType;
 
         /**
-         * <p>The matched detection rule name.</p>
+         * <p>The name of the matched identification rule.</p>
          * 
          * <strong>example:</strong>
          * <p>ID No</p>
@@ -271,7 +271,7 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
         public String policyDesc;
 
         /**
-         * <p>The matched policy name.</p>
+         * <p>The hit Policy Name.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -349,7 +349,7 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
          * <p>The primary channel.</p>
          * 
          * <strong>example:</strong>
-         * <p>Web Upload</p>
+         * <p>Web upload</p>
          */
         @NameInMap("ChannelType")
         public String channelType;
@@ -364,7 +364,7 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
         public String department;
 
         /**
-         * <p>The local path of the file on the device.</p>
+         * <p>The local path of the file on the endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>C:\Users\a\Desktop\x.xlsx</p>
@@ -373,7 +373,7 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
         public String devFilePath;
 
         /**
-         * <p>The unique identifier of the device.</p>
+         * <p>The unique identifier of the endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>69FFB8EB-3E5E-5F11-A9D3-59ED8CBB345D</p>
@@ -382,7 +382,7 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
         public String deviceTag;
 
         /**
-         * <p>The device type.</p>
+         * <p>The endpoint type.</p>
          * 
          * <strong>example:</strong>
          * <p>Windows</p>
@@ -409,7 +409,7 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
         public String dlpStorageType;
 
         /**
-         * <p>The outbound destination address or URL.</p>
+         * <p>The destination address or URL of the outbound transfer.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://mail.example.com">https://mail.example.com</a></p>
@@ -445,7 +445,7 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
         public String fileOriginReferrer;
 
         /**
-         * <p>The file content preview snippet.</p>
+         * <p>The preview snippet of the file content.</p>
          * 
          * <strong>example:</strong>
          * <p>preview</p>
@@ -466,13 +466,13 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
          * <p>The organizational structure path.</p>
          * 
          * <strong>example:</strong>
-         * <p>R&amp;D Center-Data Platform Team</p>
+         * <p>R&amp;D Center - Data Platform Team</p>
          */
         @NameInMap("GroupInfo")
         public String groupInfo;
 
         /**
-         * <p>The hostname of the device.</p>
+         * <p>The endpoint hostname.</p>
          * 
          * <strong>example:</strong>
          * <p>MacBook-Pro</p>
@@ -490,7 +490,7 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
         public String logId;
 
         /**
-         * <p>The matched dictionary statistics.</p>
+         * <p>The statistics of matched dictionaries.</p>
          */
         @NameInMap("MatchedDicts")
         public ListDlpOutboundLogsResponseBodyLogsMatchedDicts matchedDicts;
@@ -526,7 +526,7 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
         public java.util.List<String> policyName;
 
         /**
-         * <p>The outbound process name.</p>
+         * <p>The outbound transfer process name.</p>
          * 
          * <strong>example:</strong>
          * <p>chrome.exe</p>
@@ -538,7 +538,7 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
          * <p>The secondary channel description.</p>
          * 
          * <strong>example:</strong>
-         * <p>WeCom-FileSend</p>
+         * <p>WeCom-File Transfer</p>
          */
         @NameInMap("ProcessNameDesc")
         public String processNameDesc;
@@ -583,13 +583,13 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
          * <p>The original file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>2026Q2FinancialReport.xlsx</p>
+         * <p>2026Q2_Financial_Report.xlsx</p>
          */
         @NameInMap("SrcFileName")
         public String srcFileName;
 
         /**
-         * <p>The source IP address of the device.</p>
+         * <p>The source IP address of the endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.5</p>
@@ -598,7 +598,7 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
         public String srcIp;
 
         /**
-         * <p>The time when the event occurred.</p>
+         * <p>The time when the event occurred. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-10 14:03:22</p>
@@ -607,7 +607,7 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The time when the log was reported.</p>
+         * <p>The time when the log was reported. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-10 14:03:25</p>
