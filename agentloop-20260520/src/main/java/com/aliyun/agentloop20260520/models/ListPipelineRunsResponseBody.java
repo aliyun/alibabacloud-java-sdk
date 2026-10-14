@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPipelineRunsResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries per page specified in the request. This value is echoed back.</p>
+     * <p>The maximum number of entries per page specified in the request, echoed in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -23,7 +23,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID, which is used to locate the request during troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
@@ -32,13 +32,13 @@ public class ListPipelineRunsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of pipeline runs.</p>
+     * <p>The list of runs.</p>
      */
     @NameInMap("runs")
     public java.util.List<ListPipelineRunsResponseBodyRuns> runs;
 
     /**
-     * <p>The total number of pipeline runs that match the filter conditions.</p>
+     * <p>The total number of pipeline runs that meet the filter conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -102,7 +102,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         public String agentSpaceName;
 
         /**
-         * <p>The current retry count.</p>
+         * <p>The current number of retries.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -133,7 +133,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         public String finishTime;
 
         /**
-         * <p>The start of the data window, in UNIX seconds.</p>
+         * <p>The start time of the data window, in UNIX seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1735660800</p>
@@ -189,7 +189,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The run statistics, including processedRows (number of processed rows), processedBytes (number of processed bytes), outputRows (number of output rows), outputBytes (number of output bytes), elapsedMs (elapsed time in milliseconds), cpuSec (CPU seconds), cpuCores (number of CPU cores), and tokenCount (number of tokens consumed).</p>
+         * <p>The run statistics, including processedRows (number of processed rows), processedBytes (number of processed bytes), outputRows (number of output rows), outputBytes (number of output bytes), elapsedMs (elapsed time in milliseconds), cpuSec (CPU seconds), cpuCores (number of CPU cores), and tokenCount (number of consumed tokens).</p>
          */
         @NameInMap("stats")
         public java.util.Map<String, ?> stats;
@@ -204,7 +204,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The end of the data window, in UNIX seconds.</p>
+         * <p>The end time of the data window, in UNIX seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1735747200</p>
@@ -223,7 +223,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         public String triggerTime;
 
         /**
-         * <p>The trigger type. Valid values: Scheduled, Manual, and RunOnce.</p>
+         * <p>The trigger type. Valid values: Scheduled, Manual, RunOnce, and Continuous (continuous micro-batch execution).</p>
          * 
          * <strong>example:</strong>
          * <p>Scheduled</p>

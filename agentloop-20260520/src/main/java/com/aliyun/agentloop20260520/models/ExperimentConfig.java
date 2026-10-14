@@ -5,19 +5,25 @@ import com.aliyun.tea.*;
 
 public class ExperimentConfig extends TeaModel {
     /**
-     * <p>The endpoint connector ID. This parameter is required in user/agent mode.</p>
+     * <p>The endpoint connector ID, which is required in user or agent mode.</p>
      */
     @NameInMap("endpointConnectorId")
     public String endpointConnectorId;
 
     /**
-     * <p>The experiment label (A/B/C/D/E).</p>
+     * <p>The experiment label (A, B, C, D, or E).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A</p>
      */
     @NameInMap("label")
     public String label;
 
     /**
-     * <p>The model name. You can set this parameter to agent in agent scenarios.</p>
+     * <p>The model name, which can be set to agent for agent scenarios.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qwen-max</p>
      */
     @NameInMap("modelName")
     public String modelName;
@@ -30,30 +36,42 @@ public class ExperimentConfig extends TeaModel {
 
     /**
      * <p>The model provider. Valid values: dashscope (default), user, and agent.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dashscope</p>
      */
     @NameInMap("modelProvider")
     public String modelProvider;
 
     /**
      * <p>The experiment name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>baseline</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>The prompt message template. Supports {{variable name}} placeholders.</p>
+     * <p>The prompt message template, which supports {{variable name}} placeholders.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;role&quot;:&quot;user&quot;,&quot;content&quot;:&quot;Please answer: {{question}}&quot;}]</p>
      */
     @NameInMap("promptTemplate")
     public java.util.List<PromptTemplateItem> promptTemplate;
 
     /**
-     * <p>The agent request body template. This parameter is required in agent mode. Supports {{variable name}} placeholders.</p>
+     * <p>The agent request body template, which is required in agent mode and supports {{variable name}} placeholders.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;input&quot;:&quot;{{question}}&quot;}</p>
      */
     @NameInMap("requestBodyTemplate")
     public String requestBodyTemplate;
 
     /**
-     * <p>The agent request header template. This parameter is optional in agent mode. Supports {{variable name}} placeholders.</p>
+     * <p>The agent request header template, which is optional in agent mode and supports {{variable name}} placeholders.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Content-Type: application/json&quot; }</p>
@@ -63,6 +81,9 @@ public class ExperimentConfig extends TeaModel {
 
     /**
      * <p>The agent request method. Valid values: POST (default) and GET.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>POST</p>
      */
     @NameInMap("requestMethod")
     public String requestMethod;

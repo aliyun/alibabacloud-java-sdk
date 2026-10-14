@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdateExperimentPlanResponseBody extends TeaModel {
     /**
-     * <p>The prompt message.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Experiment plan updated successfully</p>
+     * <p>The experiment plan is updated successfully</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>The experiment plan ID.</p>
+     * <p>The ID of the experiment plan.</p>
      * 
      * <strong>example:</strong>
      * <p>exp-plan-e95bff54685a4ae29ff3a834c1008a71</p>

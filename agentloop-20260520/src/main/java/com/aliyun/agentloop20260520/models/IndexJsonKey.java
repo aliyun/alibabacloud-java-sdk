@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class IndexJsonKey extends TeaModel {
     /**
-     * <p>Specifies whether the field contains Chinese characters. This parameter is required only when the <strong>type</strong> parameter is set to <strong>text</strong>. Valid values:</p>
+     * <p>Specifies whether Chinese characters are included. This parameter is required only when the <strong>type</strong> parameter is set to <strong>text</strong>. Valid values:</p>
      * <ul>
-     * <li>true: The field contains Chinese characters.</li>
-     * <li>false: The field does not contain Chinese characters.</li>
+     * <li>true: Chinese characters are included.</li>
+     * <li>false: Chinese characters are not included.</li>
      * </ul>
      * 
      * <strong>example:</strong>

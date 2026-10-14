@@ -4,9 +4,21 @@ package com.aliyun.agentloop20260520.models;
 import com.aliyun.tea.*;
 
 public class PromptTemplateItem extends TeaModel {
+    /**
+     * <p>The content, which supports {{variable name}} placeholders.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Please answer: {{question}}</p>
+     */
     @NameInMap("content")
     public String content;
 
+    /**
+     * <p>The role: system/user/assistant.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user</p>
+     */
     @NameInMap("role")
     public String role;
 

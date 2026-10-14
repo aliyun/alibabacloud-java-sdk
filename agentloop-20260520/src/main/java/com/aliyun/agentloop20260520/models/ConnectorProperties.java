@@ -5,19 +5,25 @@ import com.aliyun.tea.*;
 
 public class ConnectorProperties extends TeaModel {
     /**
-     * <p>The channel type: custom or apig. This parameter is optional for model_service and defaults to custom.</p>
+     * <p>The channel type. Valid values: custom and apig. This parameter is optional for model_service. Default value: custom.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>custom</p>
      */
     @NameInMap("channelType")
     public String channelType;
 
     /**
-     * <p>The sample request body provided by the user for verifying endpoint connectivity. This parameter is required when dryRun is set to All and type is set to agent_app. The value is not persisted.</p>
+     * <p>Specifies the sample request body provided by the user to verify endpoint connectivity. This parameter is required when dryRun is set to All and type is set to agent_app. The request body is not persisted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;input&quot;:&quot;Hello&quot;}</p>
      */
     @NameInMap("dryRunRequestBody")
     public String dryRunRequestBody;
 
     /**
-     * <p>The number of retries after a failed invocation of the dial-test registration service. Valid values: 0 to 10. Default value: 3.</p>
+     * <p>The number of retry attempts after a failed service invocation when you invoke the synthetic monitoring registration service. Valid values: 0 to 10. Default value: 3.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -27,24 +33,33 @@ public class ConnectorProperties extends TeaModel {
 
     /**
      * <p>The list of supported models in comma-separated format. This parameter is required for model_service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qwen-max</p>
      */
     @NameInMap("modelList")
     public String modelList;
 
     /**
-     * <p>The network type: internet or aliyun-vpc.</p>
+     * <p>The network type. Valid values: internet and aliyun-vpc.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>internet</p>
      */
     @NameInMap("network")
     public String network;
 
     /**
-     * <p>The protocol type: openai, openai-compatible, or anthropic. This parameter is required for model_service.</p>
+     * <p>The protocol type. Valid values: openai, openai-compatible, and anthropic. This parameter is required for model_service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>openai-compatible</p>
      */
     @NameInMap("protocol")
     public String protocol;
 
     /**
-     * <p>The QPS limit for the dial-test registration service. A value of 0 indicates no throttling. Otherwise, valid values: 0.1 to 1000. Default value: 20 for agent_app, 100 for model_service.</p>
+     * <p>The queries per second (QPS) limit for the dial test registration service. A value of 0 indicates no throttling. Otherwise, valid values are 0.1 to 1000. Default value: 20 for agent_app and 100 for model_service.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -54,24 +69,30 @@ public class ConnectorProperties extends TeaModel {
 
     /**
      * <p>The region. This parameter is required when the network type is aliyun-vpc.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("region")
     public String region;
 
     /**
-     * <p>The JSON Path extraction path for the response body. This parameter is optional for agent_app.</p>
+     * <p>The JSONPath extraction path for the response body. This parameter is optional for agent_app.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>$.choices[0].message.content</p>
      */
     @NameInMap("responseBodyPath")
     public String responseBodyPath;
 
     /**
-     * <p>The security group ID. This parameter is optional for agent_app.</p>
+     * <p>The ID of the security group. This parameter is optional for agent_app.</p>
      */
     @NameInMap("securityGroupId")
     public String securityGroupId;
 
     /**
-     * <p>The timeout for a single call, in milliseconds. Valid values: 1000 to 1800000. Default value: 300000.</p>
+     * <p>The timeout period for a single call in milliseconds. Valid values: 1000 to 1800000. Default value: 300000.</p>
      * 
      * <strong>example:</strong>
      * <p>30000</p>
@@ -80,13 +101,13 @@ public class ConnectorProperties extends TeaModel {
     public String timeoutMs;
 
     /**
-     * <p>The vSwitch ID. This parameter is optional for agent_app.</p>
+     * <p>The ID of the vSwitch. This parameter is optional for agent_app.</p>
      */
     @NameInMap("vSwitchId")
     public String vSwitchId;
 
     /**
-     * <p>The VPC ID. This parameter is optional for agent_app.</p>
+     * <p>The ID of the virtual private cloud (VPC). This parameter is optional for agent_app.</p>
      */
     @NameInMap("vpcId")
     public String vpcId;

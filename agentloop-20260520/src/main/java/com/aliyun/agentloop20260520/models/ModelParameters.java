@@ -4,24 +4,66 @@ package com.aliyun.agentloop20260520.models;
 import com.aliyun.tea.*;
 
 public class ModelParameters extends TeaModel {
+    /**
+     * <p>The frequency penalty. Positive values reduce repetition. Valid values: -2.0 to 2.0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.2</p>
+     */
     @NameInMap("frequencyPenalty")
     public Float frequencyPenalty;
 
+    /**
+     * <p>The maximum number of output tokens.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1024</p>
+     */
     @NameInMap("maxTokens")
     public Long maxTokens;
 
+    /**
+     * <p>The presence penalty. Positive values encourage new topics. Valid values: -2.0 to 2.0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.1</p>
+     */
     @NameInMap("presencePenalty")
     public Float presencePenalty;
 
+    /**
+     * <p>The stop sequences. Generation stops immediately when any of these sequences is encountered.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;END&quot;]</p>
+     */
     @NameInMap("stopSequences")
     public java.util.List<String> stopSequences;
 
+    /**
+     * <p>The temperature parameter that controls the randomness of the output. Valid values: 0 to 2.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.7</p>
+     */
     @NameInMap("temperature")
     public Float temperature;
 
+    /**
+     * <p>The top-k sampling parameter. Valid values: 1 to 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("topK")
     public Integer topK;
 
+    /**
+     * <p>The top-p sampling parameter. Valid values: 0 to 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.9</p>
+     */
     @NameInMap("topP")
     public Float topP;
 

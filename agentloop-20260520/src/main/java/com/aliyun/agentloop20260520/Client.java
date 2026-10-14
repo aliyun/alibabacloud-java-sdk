@@ -191,7 +191,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a context store.</p>
+     * <p>Creates a context library.</p>
      * 
      * @param request CreateContextStoreRequest
      * @param headers map
@@ -243,7 +243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a context store.</p>
+     * <p>Creates a context library.</p>
      * 
      * @param request CreateContextStoreRequest
      * @return CreateContextStoreResponse
@@ -809,6 +809,128 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates a run for the specified optimization task and returns the run ID. When preview is set to true, an independent pre-run is executed to generate candidate results and evidence. The pre-run does not publish candidate artifacts or advance the formal run history.</p>
+     * 
+     * @param request CreateOptimizeRunRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateOptimizeRunResponse
+     */
+    public CreateOptimizeRunResponse createOptimizeRunWithOptions(String agentSpace, String optimizeTaskName, CreateOptimizeRunRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.input)) {
+            body.put("input", request.input);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.preview)) {
+            body.put("preview", request.preview);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateOptimizeRun"),
+            new TeaPair("version", "2026-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/agentspace/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpace) + "/optimizetasks/" + com.aliyun.openapiutil.Client.getEncodeParam(optimizeTaskName) + "/runs"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateOptimizeRunResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a run for the specified optimization task and returns the run ID. When preview is set to true, an independent pre-run is executed to generate candidate results and evidence. The pre-run does not publish candidate artifacts or advance the formal run history.</p>
+     * 
+     * @param request CreateOptimizeRunRequest
+     * @return CreateOptimizeRunResponse
+     */
+    public CreateOptimizeRunResponse createOptimizeRun(String agentSpace, String optimizeTaskName, CreateOptimizeRunRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createOptimizeRunWithOptions(agentSpace, optimizeTaskName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an optimization task in a specified AgentSpace, and configures the task type, status, and type-specific parameters. Optional prompts only support inline Markdown.</p>
+     * 
+     * @param request CreateOptimizeTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateOptimizeTaskResponse
+     */
+    public CreateOptimizeTaskResponse createOptimizeTaskWithOptions(String agentSpace, CreateOptimizeTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            body.put("config", request.config);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.optimizeTaskName)) {
+            body.put("optimizeTaskName", request.optimizeTaskName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateOptimizeTask"),
+            new TeaPair("version", "2026-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/agentspace/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpace) + "/optimizetasks"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateOptimizeTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an optimization task in a specified AgentSpace, and configures the task type, status, and type-specific parameters. Optional prompts only support inline Markdown.</p>
+     * 
+     * @param request CreateOptimizeTaskRequest
+     * @return CreateOptimizeTaskResponse
+     */
+    public CreateOptimizeTaskResponse createOptimizeTask(String agentSpace, CreateOptimizeTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createOptimizeTaskWithOptions(agentSpace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a pipeline.</p>
      * 
      * @param request CreatePipelineRequest
@@ -1336,6 +1458,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Deletes an optimization task in a specified AgentSpace.</p>
+     * 
+     * @param request DeleteOptimizeTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteOptimizeTaskResponse
+     */
+    public DeleteOptimizeTaskResponse deleteOptimizeTaskWithOptions(String agentSpace, String optimizeTaskName, DeleteOptimizeTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteOptimizeTask"),
+            new TeaPair("version", "2026-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/agentspace/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpace) + "/optimizetasks/" + com.aliyun.openapiutil.Client.getEncodeParam(optimizeTaskName) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteOptimizeTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an optimization task in a specified AgentSpace.</p>
+     * 
+     * @param request DeleteOptimizeTaskRequest
+     * @return DeleteOptimizeTaskResponse
+     */
+    public DeleteOptimizeTaskResponse deleteOptimizeTask(String agentSpace, String optimizeTaskName, DeleteOptimizeTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteOptimizeTaskWithOptions(agentSpace, optimizeTaskName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes a pipeline.</p>
      * 
      * @param request DeletePipelineRequest
@@ -1560,7 +1729,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a context store.</p>
+     * <p>Queries the context store.</p>
      * 
      * @param request GetContextStoreRequest
      * @param headers map
@@ -1588,7 +1757,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a context store.</p>
+     * <p>Queries the context store.</p>
      * 
      * @param request GetContextStoreRequest
      * @return GetContextStoreResponse
@@ -1957,6 +2126,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询优化任务执行详情</p>
+     * 
+     * @param request GetOptimizeRunRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetOptimizeRunResponse
+     */
+    public GetOptimizeRunResponse getOptimizeRunWithOptions(String agentSpace, String optimizeTaskName, String optimizeRunId, GetOptimizeRunRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetOptimizeRun"),
+            new TeaPair("version", "2026-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/agentspace/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpace) + "/optimizetasks/" + com.aliyun.openapiutil.Client.getEncodeParam(optimizeTaskName) + "/runs/" + com.aliyun.openapiutil.Client.getEncodeParam(optimizeRunId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetOptimizeRunResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询优化任务执行详情</p>
+     * 
+     * @param request GetOptimizeRunRequest
+     * @return GetOptimizeRunResponse
+     */
+    public GetOptimizeRunResponse getOptimizeRun(String agentSpace, String optimizeTaskName, String optimizeRunId, GetOptimizeRunRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getOptimizeRunWithOptions(agentSpace, optimizeTaskName, optimizeRunId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询优化任务</p>
+     * 
+     * @param request GetOptimizeTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetOptimizeTaskResponse
+     */
+    public GetOptimizeTaskResponse getOptimizeTaskWithOptions(String agentSpace, String optimizeTaskName, GetOptimizeTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetOptimizeTask"),
+            new TeaPair("version", "2026-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/agentspace/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpace) + "/optimizetasks/" + com.aliyun.openapiutil.Client.getEncodeParam(optimizeTaskName) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetOptimizeTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询优化任务</p>
+     * 
+     * @param request GetOptimizeTaskRequest
+     * @return GetOptimizeTaskResponse
+     */
+    public GetOptimizeTaskResponse getOptimizeTask(String agentSpace, String optimizeTaskName, GetOptimizeTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getOptimizeTaskWithOptions(agentSpace, optimizeTaskName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries a pipeline.</p>
      * 
      * @param request GetPipelineRequest
@@ -2210,7 +2461,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of context stores.</p>
+     * <p>Queries the list of context stores.</p>
      * 
      * @param request ListContextStoresRequest
      * @param headers map
@@ -2260,7 +2511,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of context stores.</p>
+     * <p>Queries the list of context stores.</p>
      * 
      * @param request ListContextStoresRequest
      * @return ListContextStoresResponse
@@ -2748,7 +2999,129 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the execution history list of a pipeline.</p>
+     * <p>Performs a paging query on the run records of a specified optimization task. To obtain complete result references and frozen outputs, call GetOptimizeRun.</p>
+     * 
+     * @param request ListOptimizeRunsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListOptimizeRunsResponse
+     */
+    public ListOptimizeRunsResponse listOptimizeRunsWithOptions(String agentSpace, String optimizeTaskName, ListOptimizeRunsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.windowStartTimeBegin)) {
+            query.put("windowStartTimeBegin", request.windowStartTimeBegin);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.windowStartTimeEnd)) {
+            query.put("windowStartTimeEnd", request.windowStartTimeEnd);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListOptimizeRuns"),
+            new TeaPair("version", "2026-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/agentspace/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpace) + "/optimizetasks/" + com.aliyun.openapiutil.Client.getEncodeParam(optimizeTaskName) + "/runs"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListOptimizeRunsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paging query on the run records of a specified optimization task. To obtain complete result references and frozen outputs, call GetOptimizeRun.</p>
+     * 
+     * @param request ListOptimizeRunsRequest
+     * @return ListOptimizeRunsResponse
+     */
+    public ListOptimizeRunsResponse listOptimizeRuns(String agentSpace, String optimizeTaskName, ListOptimizeRunsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listOptimizeRunsWithOptions(agentSpace, optimizeTaskName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries optimization tasks in a specified AgentSpace by using paging and returns the task status, configurations, and scheduling checkpoints.</p>
+     * 
+     * @param request ListOptimizeTasksRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListOptimizeTasksResponse
+     */
+    public ListOptimizeTasksResponse listOptimizeTasksWithOptions(String agentSpace, ListOptimizeTasksRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListOptimizeTasks"),
+            new TeaPair("version", "2026-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/agentspace/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpace) + "/optimizetasks"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListOptimizeTasksResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries optimization tasks in a specified AgentSpace by using paging and returns the task status, configurations, and scheduling checkpoints.</p>
+     * 
+     * @param request ListOptimizeTasksRequest
+     * @return ListOptimizeTasksResponse
+     */
+    public ListOptimizeTasksResponse listOptimizeTasks(String agentSpace, ListOptimizeTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listOptimizeTasksWithOptions(agentSpace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the run history. Supports filtering by status, trigger type, and time range, and cursor-based pagination.</p>
      * 
      * @param request ListPipelineRunsRequest
      * @param headers map
@@ -2802,7 +3175,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the execution history list of a pipeline.</p>
+     * <p>Queries the run history. Supports filtering by status, trigger type, and time range, and cursor-based pagination.</p>
      * 
      * @param request ListPipelineRunsRequest
      * @return ListPipelineRunsResponse
@@ -2815,7 +3188,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of pipelines. Supports filtering by name, schedule type, and schedule status with cursor-based pagination.</p>
+     * <p>Queries a list of pipelines. Supports filtering by name, schedule type, and schedule status, and cursor-based pagination.</p>
      * 
      * @param request ListPipelinesRequest
      * @param headers map
@@ -2869,7 +3242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of pipelines. Supports filtering by name, schedule type, and schedule status with cursor-based pagination.</p>
+     * <p>Queries a list of pipelines. Supports filtering by name, schedule type, and schedule status, and cursor-based pagination.</p>
      * 
      * @param request ListPipelinesRequest
      * @return ListPipelinesResponse
@@ -3104,7 +3477,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Searches contexts.</p>
+     * <p>Searches the context.</p>
      * 
      * @param request SearchContextRequest
      * @param headers map
@@ -3166,7 +3539,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Searches contexts.</p>
+     * <p>Searches the context.</p>
      * 
      * @param request SearchContextRequest
      * @return SearchContextResponse
@@ -3683,7 +4056,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not included in the request remain unchanged. You can update only plans created by the current account.</p>
+     * <p>Updates a specified experiment plan. Fields that are not specified remain unchanged. You can only update plans created by the current account.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates an experiment plan.</p>
@@ -3760,7 +4133,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not included in the request remain unchanged. You can update only plans created by the current account.</p>
+     * <p>Updates a specified experiment plan. Fields that are not specified remain unchanged. You can only update plans created by the current account.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates an experiment plan.</p>
@@ -3855,6 +4228,120 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateExperimentRunWithOptions(agentSpace, recordId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Cancels a run or retries a failed artifact application. To cancel a run, set status to Cancelled. To retry a failed artifact application, set extra.application.action to retry and do not specify status.</p>
+     * 
+     * @param request UpdateOptimizeRunRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateOptimizeRunResponse
+     */
+    public UpdateOptimizeRunResponse updateOptimizeRunWithOptions(String agentSpace, String optimizeTaskName, String optimizeRunId, UpdateOptimizeRunRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.extra)) {
+            body.put("extra", request.extra);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateOptimizeRun"),
+            new TeaPair("version", "2026-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/agentspace/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpace) + "/optimizetasks/" + com.aliyun.openapiutil.Client.getEncodeParam(optimizeTaskName) + "/runs/" + com.aliyun.openapiutil.Client.getEncodeParam(optimizeRunId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateOptimizeRunResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Cancels a run or retries a failed artifact application. To cancel a run, set status to Cancelled. To retry a failed artifact application, set extra.application.action to retry and do not specify status.</p>
+     * 
+     * @param request UpdateOptimizeRunRequest
+     * @return UpdateOptimizeRunResponse
+     */
+    public UpdateOptimizeRunResponse updateOptimizeRun(String agentSpace, String optimizeTaskName, String optimizeRunId, UpdateOptimizeRunRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateOptimizeRunWithOptions(agentSpace, optimizeTaskName, optimizeRunId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新优化任务</p>
+     * 
+     * @param request UpdateOptimizeTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateOptimizeTaskResponse
+     */
+    public UpdateOptimizeTaskResponse updateOptimizeTaskWithOptions(String agentSpace, String optimizeTaskName, UpdateOptimizeTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            body.put("config", request.config);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateOptimizeTask"),
+            new TeaPair("version", "2026-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/agentspace/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpace) + "/optimizetasks/" + com.aliyun.openapiutil.Client.getEncodeParam(optimizeTaskName) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateOptimizeTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新优化任务</p>
+     * 
+     * @param request UpdateOptimizeTaskRequest
+     * @return UpdateOptimizeTaskResponse
+     */
+    public UpdateOptimizeTaskResponse updateOptimizeTask(String agentSpace, String optimizeTaskName, UpdateOptimizeTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateOptimizeTaskWithOptions(agentSpace, optimizeTaskName, request, headers, runtime);
     }
 
     /**

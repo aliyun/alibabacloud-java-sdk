@@ -4,69 +4,192 @@ package com.aliyun.agentloop20260520.models;
 import com.aliyun.tea.*;
 
 public class ExperimentRecord extends TeaModel {
+    /**
+     * <p>The completion time in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1767229200000</p>
+     */
     @NameInMap("completedAt")
     public Long completedAt;
 
+    /**
+     * <p>The number of completed tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("completedTasks")
     public Integer completedTasks;
 
+    /**
+     * <p>The data source type. Valid values: simple, dataset-full, and dataset-partial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dataset-full</p>
+     */
     @NameInMap("dataSourceType")
     public String dataSourceType;
 
+    /**
+     * <p>The dataset ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dataset-123456</p>
+     */
     @NameInMap("datasetId")
     public String datasetId;
 
+    /**
+     * <p>The SLS project where the dataset is located.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agentspace-project</p>
+     */
     @NameInMap("datasetProject")
     public String datasetProject;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Model invocation timeout</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the associated evaluation task.</p>
+     */
     @NameInMap("evaluationTaskId")
     public String evaluationTaskId;
 
+    /**
+     * <p>The list of evaluators.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;name&quot;:&quot;Builtin.agent_correctness&quot;}]</p>
+     */
     @NameInMap("evaluators")
     public java.util.List<Evaluator> evaluators;
 
+    /**
+     * <p>The execution time in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1767225600000</p>
+     */
     @NameInMap("executedAt")
     public Long executedAt;
 
+    /**
+     * <p>The list of experiment configurations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;label&quot;:&quot;A&quot;,&quot;name&quot;:&quot;baseline&quot;,&quot;modelName&quot;:&quot;qwen-max&quot;}]</p>
+     */
     @NameInMap("experimentConfig")
     public java.util.List<ExperimentConfig> experimentConfig;
 
+    /**
+     * <p>The ID of the associated experiment plan.</p>
+     */
     @NameInMap("experimentPlanId")
     public String experimentPlanId;
 
+    /**
+     * <p>The number of failed tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("failedTasks")
     public Integer failedTasks;
 
+    /**
+     * <p>The single-line input in SIMPLE mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;test&quot;:&quot;test&quot;,&quot;test2&quot;:1}</p>
+     */
     @NameInMap("input")
     public java.util.Map<String, ?> input;
 
+    /**
+     * <p>The list of model names used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;qwen-max&quot;]</p>
+     */
     @NameInMap("modelNames")
     public java.util.List<String> modelNames;
 
+    /**
+     * <p>The name of the associated experiment plan.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>customer-service-eval</p>
+     */
     @NameInMap("planName")
     public String planName;
 
+    /**
+     * <p>The execution progress, ranging from 0 to 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.5</p>
+     */
     @NameInMap("progress")
     public Float progress;
 
+    /**
+     * <p>The custom query SQL clause in dataset-partial mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>level &gt; 2</p>
+     */
     @NameInMap("querySql")
     public String querySql;
 
+    /**
+     * <p>The experiment record ID.</p>
+     */
     @NameInMap("recordId")
     public String recordId;
 
+    /**
+     * <p>The experiment record name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>baseline-run</p>
+     */
     @NameInMap("recordName")
     public String recordName;
 
+    /**
+     * <p>The list of selected data item IDs in dataset-partial mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;item-123456&quot;]</p>
+     */
     @NameInMap("selectedItemIds")
     public java.util.List<String> selectedItemIds;
 
+    /**
+     * <p>The status. Valid values: pending, running, completed, and failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>running</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The total number of tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("totalTasks")
     public Integer totalTasks;
 

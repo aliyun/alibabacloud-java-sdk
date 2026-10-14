@@ -14,7 +14,7 @@ public class SearchContextRequest extends TeaModel {
     public java.util.Map<String, ?> filter;
 
     /**
-     * <p>Specifies whether to apply structured formatting to the returned results.</p>
+     * <p>Specifies whether to structurally format the returned results.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,6 +23,8 @@ public class SearchContextRequest extends TeaModel {
     public Boolean formatted;
 
     /**
+     * <p>Specifies whether to include memories with sourceState=inactive. Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -30,7 +32,7 @@ public class SearchContextRequest extends TeaModel {
     public Boolean includeInactive;
 
     /**
-     * <p>The maximum number of returned results (similarity Top-N).</p>
+     * <p>The maximum number of returned results, which corresponds to the Top-N similarity.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -43,13 +45,13 @@ public class SearchContextRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>用户最近的偏好设置</p>
+     * <p>Recent user preferences</p>
      */
     @NameInMap("query")
     public String query;
 
     /**
-     * <p>The retrieval options that control the retrieval strategy.</p>
+     * <p>The retrieval options used to control the retrieval strategy.</p>
      * 
      * <strong>example:</strong>
      * <p>semantic</p>
@@ -57,6 +59,9 @@ public class SearchContextRequest extends TeaModel {
     @NameInMap("retrievalOption")
     public String retrievalOption;
 
+    /**
+     * <p>The recall scope. If a field with the same name conflicts with the filter, a 400 ScopeFilterConflict error is returned.</p>
+     */
     @NameInMap("scope")
     public SearchContextRequestScope scope;
 
@@ -140,6 +145,8 @@ public class SearchContextRequest extends TeaModel {
 
     public static class SearchContextRequestScope extends TeaModel {
         /**
+         * <p>Agent Id</p>
+         * 
          * <strong>example:</strong>
          * <p>sales-copilot</p>
          */
@@ -147,6 +154,8 @@ public class SearchContextRequest extends TeaModel {
         public String agentId;
 
         /**
+         * <p>The application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>crm-service</p>
          */
@@ -154,6 +163,8 @@ public class SearchContextRequest extends TeaModel {
         public String appId;
 
         /**
+         * <p>The run ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>run-001</p>
          */
@@ -161,6 +172,8 @@ public class SearchContextRequest extends TeaModel {
         public String runId;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>u-10001</p>
          */
