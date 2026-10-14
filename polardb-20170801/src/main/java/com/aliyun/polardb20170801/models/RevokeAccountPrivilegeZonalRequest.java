@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RevokeAccountPrivilegeZonalRequest extends TeaModel {
     /**
-     * <p>The account name.</p>
+     * <p>The name of the account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class RevokeAccountPrivilegeZonalRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>A client-generated token that ensures the idempotence of the request. The token must be unique for each request. It is case-sensitive and cannot exceed 64 ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the token. The token must be unique across different requests and is case-sensitive. The token can be up to 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f5********************</p>
@@ -25,6 +25,9 @@ public class RevokeAccountPrivilegeZonalRequest extends TeaModel {
 
     /**
      * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p>Note: This API supports only the cluster IDs of PolarDB on ENS clusters. For common clusters, use RevokeAccountPrivilege. You can call the DescribeDBClustersZonal operation to query the list of edge clusters.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +37,7 @@ public class RevokeAccountPrivilegeZonalRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The name of the database. To specify multiple databases, separate the names with a comma (,).</p>
+     * <p>The name of the database. You can specify multiple database names separated by commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGlobalDataNetworkListRequest extends TeaModel {
     /**
-     * <p>The page number to return.</p>
+     * <p>The page number of the query results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeGlobalDataNetworkListRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of records to return on each page.</p>
+     * <p>The number of records per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>

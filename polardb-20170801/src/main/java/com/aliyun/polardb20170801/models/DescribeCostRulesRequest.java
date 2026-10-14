@@ -5,7 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeCostRulesRequest extends TeaModel {
     /**
-     * <p>Filters by effective target type. Valid values: global, consumerGroup, and consumer.</p>
+     * <p>The ID of the cost rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cr-xxx</p>
+     */
+    @NameInMap("CostRuleId")
+    public String costRuleId;
+
+    /**
+     * <p>The type of the effective target. Valid values: global, consumerGroup, and consumer.</p>
      * 
      * <strong>example:</strong>
      * <p>global</p>
@@ -14,7 +23,7 @@ public class DescribeCostRulesRequest extends TeaModel {
     public String effectiveTargetType;
 
     /**
-     * <p>Filters by effective target value.</p>
+     * <p>The value of the effective target used to filter results.</p>
      * 
      * <strong>example:</strong>
      * <p>user</p>
@@ -33,7 +42,16 @@ public class DescribeCostRulesRequest extends TeaModel {
     public String gwClusterId;
 
     /**
-     * <p>The model name, such as gpt-4 or qwen-turbo.</p>
+     * <p>The input token tier used to filter results. Rules that include this tier are returned. Valid values: 0-32K, 32K-64K, 64K-128K, 128K-256K, 256K-512K, 512K-1M, and 1M+.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0-32K</p>
+     */
+    @NameInMap("InputTokenTier")
+    public String inputTokenTier;
+
+    /**
+     * <p>The name of the model, such as gpt-4 or qwen-turbo.</p>
      * 
      * <strong>example:</strong>
      * <p>qwen3-max</p>
@@ -42,7 +60,7 @@ public class DescribeCostRulesRequest extends TeaModel {
     public String modelName;
 
     /**
-     * <p>The model service ID.</p>
+     * <p>The ID of the model service.</p>
      * 
      * <strong>example:</strong>
      * <p>ms-xxxxxx</p>
@@ -88,6 +106,14 @@ public class DescribeCostRulesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeCostRulesRequest setCostRuleId(String costRuleId) {
+        this.costRuleId = costRuleId;
+        return this;
+    }
+    public String getCostRuleId() {
+        return this.costRuleId;
+    }
+
     public DescribeCostRulesRequest setEffectiveTargetType(String effectiveTargetType) {
         this.effectiveTargetType = effectiveTargetType;
         return this;
@@ -110,6 +136,14 @@ public class DescribeCostRulesRequest extends TeaModel {
     }
     public String getGwClusterId() {
         return this.gwClusterId;
+    }
+
+    public DescribeCostRulesRequest setInputTokenTier(String inputTokenTier) {
+        this.inputTokenTier = inputTokenTier;
+        return this;
+    }
+    public String getInputTokenTier() {
+        return this.inputTokenTier;
     }
 
     public DescribeCostRulesRequest setModelName(String modelName) {

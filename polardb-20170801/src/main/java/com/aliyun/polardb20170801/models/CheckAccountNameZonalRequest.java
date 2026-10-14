@@ -16,6 +16,9 @@ public class CheckAccountNameZonalRequest extends TeaModel {
 
     /**
      * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p>Note: This parameter accepts only edge cluster IDs, which you can obtain by calling the DescribeDBClustersZonal operation. For common PolarDB clusters, use the CheckAccountName operation.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

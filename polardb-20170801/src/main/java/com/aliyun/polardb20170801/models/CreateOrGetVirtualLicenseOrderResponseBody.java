@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateOrGetVirtualLicenseOrderResponseBody extends TeaModel {
     /**
-     * <p>The number of generated activation codes.</p>
+     * <p>The number of activation codes that have been generated.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class CreateOrGetVirtualLicenseOrderResponseBody extends TeaModel {
     public Integer activatedCodeCount;
 
     /**
-     * <p>The maximum number of activation codes that you can apply for.</p>
+     * <p>The quota of activation codes that can be requested.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class CreateOrGetVirtualLicenseOrderResponseBody extends TeaModel {
     public Integer activationCodeQuota;
 
     /**
-     * <p>The Alibaba Cloud order ID (including the virtual order ID).</p>
+     * <p>The Alibaba Cloud order ID, which includes the virtual order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2233****445566</p>
@@ -32,7 +32,7 @@ public class CreateOrGetVirtualLicenseOrderResponseBody extends TeaModel {
     public String aliyunOrderId;
 
     /**
-     * <p>Indicates whether activation codes can be generated without the system identifier.</p>
+     * <p>Indicates whether the System Identifier can be left empty when generating an activation code.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -59,7 +59,7 @@ public class CreateOrGetVirtualLicenseOrderResponseBody extends TeaModel {
     public String gmtModified;
 
     /**
-     * <p>Indicates whether the order is a virtual order (virtual orders allow pre-generation of activation codes).</p>
+     * <p>Indicates whether the order is a virtual order. Virtual orders allow pre-generation of activation codes.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -68,7 +68,7 @@ public class CreateOrGetVirtualLicenseOrderResponseBody extends TeaModel {
     public Boolean isVirtualOrder;
 
     /**
-     * <p>Indicates whether the virtual order is frozen (activation codes cannot be generated for a frozen virtual order).</p>
+     * <p>Indicates whether the virtual order is frozen. A frozen virtual order does not allow further generation of activation codes.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -77,7 +77,7 @@ public class CreateOrGetVirtualLicenseOrderResponseBody extends TeaModel {
     public Boolean isVirtualOrderFrozen;
 
     /**
-     * <p>The plan type.</p>
+     * <p>The package type.</p>
      * 
      * <strong>example:</strong>
      * <p>pre_generation_long_term</p>
@@ -86,7 +86,7 @@ public class CreateOrGetVirtualLicenseOrderResponseBody extends TeaModel {
     public String packageType;
 
     /**
-     * <p>The validity period of the plan, which is one year (common) or thirty years (long-term).</p>
+     * <p>The validity period of the package. Typical values are one year or long-term (30 years).</p>
      * 
      * <strong>example:</strong>
      * <p>30 years</p>
@@ -104,7 +104,7 @@ public class CreateOrGetVirtualLicenseOrderResponseBody extends TeaModel {
     public String purchaseChannel;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>45D24263-7E3A-4140-9472-************</p>
@@ -113,7 +113,7 @@ public class CreateOrGetVirtualLicenseOrderResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the virtual order.</p>
+     * <p>The virtual order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2024********483</p>

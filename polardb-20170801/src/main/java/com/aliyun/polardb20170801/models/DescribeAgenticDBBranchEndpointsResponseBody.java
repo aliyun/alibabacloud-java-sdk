@@ -60,7 +60,11 @@ public class DescribeAgenticDBBranchEndpointsResponseBody extends TeaModel {
         public String connectionString;
 
         /**
-         * <p>The network type. Valid values: Private and Public.</p>
+         * <p>The network type. Valid values:</p>
+         * <ul>
+         * <li>Private: private network.</li>
+         * <li>Public: public network.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Private</p>
@@ -127,7 +131,7 @@ public class DescribeAgenticDBBranchEndpointsResponseBody extends TeaModel {
         public String account;
 
         /**
-         * <p>The compatible connection address. The public endpoint is returned first. If no public endpoint is available, the private endpoint is returned.</p>
+         * <p>The compatible connection address. A public endpoint is returned first. If no public endpoint is available, a private endpoint is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.1.100</p>
@@ -142,7 +146,7 @@ public class DescribeAgenticDBBranchEndpointsResponseBody extends TeaModel {
         public java.util.List<DescribeAgenticDBBranchEndpointsResponseBodyItemsAddressItems> addressItems;
 
         /**
-         * <p>The compatible connection string. The public connection string is returned first. If no public connection string is available, the private connection string is returned.</p>
+         * <p>The compatible connection string. A public connection string is returned first. If no public connection string is available, a private connection string is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>postgresql://cloud_admin:******@10.0.1.100:5432/neondb</p>

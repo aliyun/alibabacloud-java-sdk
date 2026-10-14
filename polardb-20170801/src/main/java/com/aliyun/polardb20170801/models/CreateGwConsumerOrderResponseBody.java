@@ -15,6 +15,7 @@ public class CreateGwConsumerOrderResponseBody extends TeaModel {
 
     /**
      * <p>The expiration time.</p>
+     * <p>The time is in ISO 8601 format in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2020-11-14T16:00:00Z</p>

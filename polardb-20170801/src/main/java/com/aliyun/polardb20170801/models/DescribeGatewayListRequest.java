@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGatewayListRequest extends TeaModel {
     /**
-     * <p>The ID of the gateway instance.</p>
+     * <p>The gateway instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pg-xxxxxxxxxx</p>
@@ -14,7 +14,7 @@ public class DescribeGatewayListRequest extends TeaModel {
     public String gwClusterId;
 
     /**
-     * <p>The description of the gateway instance.</p>
+     * <p>The gateway description.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -23,7 +23,7 @@ public class DescribeGatewayListRequest extends TeaModel {
     public String gwDescription;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -34,12 +34,9 @@ public class DescribeGatewayListRequest extends TeaModel {
     /**
      * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p><strong>30</strong></p>
-     * </li>
-     * <li><p><strong>50</strong></p>
-     * </li>
-     * <li><p><strong>100</strong></p>
-     * </li>
+     * <li><strong>30</strong></li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
      * </ul>
      * <p>Default value: <strong>30</strong>.</p>
      * 

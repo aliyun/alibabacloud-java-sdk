@@ -39,7 +39,7 @@ public class ModifyApplicationEndpointAddressShrinkRequest extends TeaModel {
     public String netType;
 
     /**
-     * <p>The new endpoint prefix.</p>
+     * <p>The new endpoint address prefix.</p>
      * 
      * <strong>example:</strong>
      * <p>xg06iror0l</p>

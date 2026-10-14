@@ -14,7 +14,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
     public String engine;
 
     /**
-     * <p>The database engine version.</p>
+     * <p>The DPI engine version.</p>
      * 
      * <strong>example:</strong>
      * <p>3.1</p>
@@ -35,7 +35,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The total number of records on the current page.</p>
+     * <p>The total number of records on the page.</p>
      */
     @NameInMap("PageRecordCount")
     public String pageRecordCount;
@@ -167,6 +167,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
     public static class DescribeAIDBClusterTasksResponseBodyItems extends TeaModel {
         /**
          * <p>The task completion time.</p>
+         * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-06-09T18:00:00Z</p>
@@ -176,6 +177,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
 
         /**
          * <p>The creation time.</p>
+         * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-03-25T09:37:10Z</p>
@@ -193,7 +195,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         public String DBNodeDescription;
 
         /**
-         * <p>The template operator instance ID.</p>
+         * <p>The model operator instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pm-2ze***</p>
@@ -238,7 +240,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>The database engine version.</p>
+         * <p>The DPI engine version.</p>
          * 
          * <strong>example:</strong>
          * <p>3.1</p>
@@ -274,7 +276,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         public String modelSource;
 
         /**
-         * <p>The running parameters.</p>
+         * <p>The runtime parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -284,6 +286,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
 
         /**
          * <p>The task start time.</p>
+         * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-06-09T18:00:00Z</p>
@@ -310,7 +313,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         public String trainType;
 
         /**
-         * <p>The tuning framework.</p>
+         * <p>The fine-tuning framework.</p>
          */
         @NameInMap("TuneArch")
         public String tuneArch;

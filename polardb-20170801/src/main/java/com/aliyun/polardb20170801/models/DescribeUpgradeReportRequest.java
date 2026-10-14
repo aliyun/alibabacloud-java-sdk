@@ -5,14 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeUpgradeReportRequest extends TeaModel {
     /**
-     * <p>The product series. Valid values:</p>
+     * <p>The edition. Valid values:</p>
      * <ul>
-     * <li><p><strong>Normal</strong>: Cluster Edition (default)</p>
-     * </li>
-     * <li><p><strong>SENormal</strong>: Standard Edition</p>
-     * </li>
+     * <li><strong>Normal</strong>: Cluster Edition (default).</li>
+     * <li><strong>SENormal</strong>: Standard Edition.</li>
      * </ul>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/183258.html">Product series</a>.</p>
+     * <p>For more information about editions, see <a href="https://help.aliyun.com/document_detail/183258.html">Product editions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>Normal</p>
@@ -23,10 +21,8 @@ public class DescribeUpgradeReportRequest extends TeaModel {
     /**
      * <p>The database type. Valid values:</p>
      * <ul>
-     * <li><p><strong>MySQL</strong></p>
-     * </li>
-     * <li><p><strong>Oracle</strong></p>
-     * </li>
+     * <li><strong>MySQL</strong>.</li>
+     * <li><strong>Oracle</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,9 +65,9 @@ public class DescribeUpgradeReportRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <blockquote>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a>.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available regions.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -87,7 +83,7 @@ public class DescribeUpgradeReportRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the source instance.</p>
+     * <p>The source instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-2zen5pe5vi56447d0</p>
@@ -114,7 +110,7 @@ public class DescribeUpgradeReportRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>A special metric. This parameter is supported only for instances that use the Tair architecture.</p>
+     * <p>The special metric. Currently, only tair (PolarTair architecture) is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>orca</p>

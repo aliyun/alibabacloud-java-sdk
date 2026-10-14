@@ -27,7 +27,7 @@ public class CreateAIDBClusterApiKeyRequest extends TeaModel {
      * <blockquote>
      * <ul>
      * <li>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the region information of all clusters under the specified account.</li>
-     * <li>If this parameter is left empty, scheduled tasks in all regions under the current account are queried by default.</li>
+     * <li>If you leave this parameter empty, scheduled tasks across all regions under the current account are queried.</li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>

@@ -7,12 +7,9 @@ public class DescribeCrossCloudLevelsRequest extends TeaModel {
     /**
      * <p>The database engine type. Valid values:</p>
      * <ul>
-     * <li><p>MySQL</p>
-     * </li>
-     * <li><p>PostgreSQL</p>
-     * </li>
-     * <li><p>Oracle</p>
-     * </li>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>Oracle</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -23,24 +20,18 @@ public class DescribeCrossCloudLevelsRequest extends TeaModel {
     public String DBType;
 
     /**
-     * <p>The version number of the database engine.</p>
+     * <p>The database engine version.</p>
      * <p>Valid values for MySQL:</p>
      * <ul>
-     * <li><p>5.6</p>
-     * </li>
-     * <li><p>5.7</p>
-     * </li>
-     * <li><p>8.0</p>
-     * </li>
+     * <li>5.6</li>
+     * <li>5.7</li>
+     * <li>8.0</li>
      * </ul>
      * <p>Valid values for PostgreSQL:</p>
      * <ul>
-     * <li><p>11</p>
-     * </li>
-     * <li><p>14</p>
-     * </li>
-     * <li><p>15</p>
-     * </li>
+     * <li>11</li>
+     * <li>14</li>
+     * <li>15</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,7 +51,7 @@ public class DescribeCrossCloudLevelsRequest extends TeaModel {
     public String projectId;
 
     /**
-     * <p>The storage class.</p>
+     * <p>The storage type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

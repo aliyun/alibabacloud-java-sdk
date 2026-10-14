@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemovePolarClawMCPServerRequest extends TeaModel {
     /**
-     * <p>The application ID.</p>
+     * <p>The PolarClaw application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class EvaluateRegionResourceRequest extends TeaModel {
     /**
-     * <p>The link type of the cluster. The backend randomly selects a default value. Valid values:</p>
+     * <p>The cluster link type. The backend randomly selects a default value. Valid values:</p>
      * <ul>
-     * <li><p><strong>lvs</strong>: Linux Virtual Server.</p>
-     * </li>
-     * <li><p><strong>proxy</strong>: proxy server.</p>
-     * </li>
-     * <li><p><strong>dns</strong>: Domain Name System.</p>
-     * </li>
+     * <li><strong>lvs</strong>: Linux virtual server.</li>
+     * <li><strong>proxy</strong>: proxy server.</li>
+     * <li><strong>dns</strong>: Domain Name System.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,14 +19,11 @@ public class EvaluateRegionResourceRequest extends TeaModel {
     public String DBInstanceConnType;
 
     /**
-     * <p>The node specifications. For more information, see the following documents:</p>
+     * <p>The node specification. For more information, see the following topics:</p>
      * <ul>
-     * <li><p>PolarDB for MySQL: <a href="https://help.aliyun.com/document_detail/102542.html">Compute node specifications</a>.</p>
-     * </li>
-     * <li><p>PolarDB for PostgreSQL (Oracle Compatible): <a href="https://help.aliyun.com/document_detail/207921.html">Compute node specifications</a>.</p>
-     * </li>
-     * <li><p>PolarDB for PostgreSQL: <a href="https://help.aliyun.com/document_detail/209380.html">Compute node specifications</a>.</p>
-     * </li>
+     * <li>PolarDB for MySQL: <a href="https://help.aliyun.com/document_detail/102542.html">Compute node specifications</a>.</li>
+     * <li>PolarDB for PostgreSQL (Compatible with Oracle): <a href="https://help.aliyun.com/document_detail/207921.html">Compute node specifications</a>.</li>
+     * <li>PolarDB for PostgreSQL: <a href="https://help.aliyun.com/document_detail/209380.html">Compute node specifications</a>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -40,14 +34,11 @@ public class EvaluateRegionResourceRequest extends TeaModel {
     public String DBNodeClass;
 
     /**
-     * <p>The database engine type. Valid values:</p>
+     * <p>The type of the database engine. Valid values:</p>
      * <ul>
-     * <li><p><strong>MySQL</strong></p>
-     * </li>
-     * <li><p><strong>PostgreSQL</strong></p>
-     * </li>
-     * <li><p><strong>Oracle</strong></p>
-     * </li>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>PostgreSQL</strong></li>
+     * <li><strong>Oracle</strong></li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -58,32 +49,22 @@ public class EvaluateRegionResourceRequest extends TeaModel {
     public String DBType;
 
     /**
-     * <p>The version of the database engine.</p>
+     * <p>The database DPI engine version number.</p>
      * <ul>
-     * <li><p>Valid values for MySQL:</p>
-     * <ul>
-     * <li><p><strong>5.6</strong></p>
-     * </li>
-     * <li><p><strong>5.7</strong></p>
-     * </li>
-     * <li><p><strong>8.0</strong></p>
-     * </li>
+     * <li>Valid version numbers for MySQL: <ul>
+     * <li><strong>5.6</strong></li>
+     * <li><strong>5.7</strong></li>
+     * <li><strong>8.0</strong></li>
      * </ul>
      * </li>
-     * <li><p>Valid values for PostgreSQL:</p>
-     * <ul>
-     * <li><p><strong>11</strong></p>
-     * </li>
-     * <li><p><strong>14</strong></p>
-     * </li>
+     * <li>Valid version numbers for PostgreSQL:<ul>
+     * <li><strong>11</strong></li>
+     * <li><strong>14</strong></li>
      * </ul>
      * </li>
-     * <li><p>Valid values for Oracle:</p>
-     * <ul>
-     * <li><p><strong>11</strong></p>
-     * </li>
-     * <li><p><strong>14</strong></p>
-     * </li>
+     * <li>Valid version numbers for Oracle:<ul>
+     * <li><strong>11</strong></li>
+     * <li><strong>14</strong></li>
      * </ul>
      * </li>
      * </ul>
@@ -98,10 +79,8 @@ public class EvaluateRegionResourceRequest extends TeaModel {
     /**
      * <p>Specifies whether to return the list of zones that support single-zone deployment. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong> (default): The list is not returned.</p>
-     * </li>
-     * <li><p><strong>1</strong>: The list is returned.</p>
-     * </li>
+     * <li><strong>0</strong> (default): does not return the list.</li>
+     * <li><strong>1</strong>: returns the list.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -111,12 +90,10 @@ public class EvaluateRegionResourceRequest extends TeaModel {
     public String dispenseMode;
 
     /**
-     * <p>Specifies whether to create a MaxScale cluster. Valid values:</p>
+     * <p>Specifies whether to create MaxScale. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong> (default): A MaxScale cluster is created.</p>
-     * </li>
-     * <li><p><strong>false</strong>: A MaxScale cluster is not created.</p>
-     * </li>
+     * <li><strong>true</strong> (default): creates MaxScale.</li>
+     * <li><strong>false</strong>: does not create MaxScale.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -135,7 +112,7 @@ public class EvaluateRegionResourceRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available regions.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available regions.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -146,7 +123,7 @@ public class EvaluateRegionResourceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-************</p>
@@ -161,7 +138,7 @@ public class EvaluateRegionResourceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The subdomain. A subdomain is a level below a top-level domain. For example, if the parent domain is \<code>cn-beijing\\</code>, a valid subdomain is \<code>cn-beijing-i-aliyun\\</code>.</p>
+     * <p>The subdomain. The subdomain is the next level under the top-level domain (first-level domain or parent domain). For example, if the parent domain is cn-beijing, the subdomain can be cn-beijing-i-aliyun.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing-i-aliyun</p>
@@ -172,7 +149,7 @@ public class EvaluateRegionResourceRequest extends TeaModel {
     /**
      * <p>The zone ID.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available zones.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available zones.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

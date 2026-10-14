@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeKnowledgeBaseAttributeResponseBody extends TeaModel {
     /**
-     * <p>The number of AI applications bound to the knowledge base.</p>
+     * <p>The number of AI applications associated with the knowledge base.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -14,7 +14,8 @@ public class DescribeKnowledgeBaseAttributeResponseBody extends TeaModel {
     public Integer bindingAppCount;
 
     /**
-     * <p>The creation time.</p>
+     * <p>The time when the knowledge base was created.</p>
+     * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2020-08-14T05:58:42Z</p>

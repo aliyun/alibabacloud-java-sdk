@@ -5,13 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
     /**
-     * <p>The connection details.</p>
+     * <p>The connection information.</p>
      */
     @NameInMap("Connections")
     public java.util.List<DescribeGlobalDatabaseNetworkResponseBodyConnections> connections;
 
     /**
      * <p>The time when the GDN was created.</p>
+     * <p>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2020-02-24T11:57:54Z</p>
@@ -35,7 +36,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
     public java.util.List<DescribeGlobalDatabaseNetworkResponseBodyDBClusters> DBClusters;
 
     /**
-     * <p>The database engine type. Only MySQL is supported.</p>
+     * <p>The database engine type. Currently, only MySQL is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>MySQL</p>
@@ -44,7 +45,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
     public String DBType;
 
     /**
-     * <p>The database engine version. Only version 8.0 is supported.</p>
+     * <p>The database engine version. Currently, only version 8.0 is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>8.0</p>
@@ -53,13 +54,13 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
     public String DBVersion;
 
     /**
-     * <p>The description of the GDN. It must meet the following requirements:</p>
+     * <p>The description of the GDN. The description must meet the following requirements:</p>
      * <ul>
-     * <li><p>It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <li><p>It cannot start with http:// or https://.</p>
      * </li>
-     * <li><p>It must start with a letter or a Chinese character.</p>
+     * <li><p>It must start with an uppercase letter, a lowercase letter, or a Chinese character.</p>
      * </li>
-     * <li><p>It can contain only letters, Chinese characters, digits, underscores (_), and hyphens (-).</p>
+     * <li><p>It can contain uppercase letters, lowercase letters, Chinese characters, digits, underscores (_), or hyphens (-).</p>
      * </li>
      * <li><p>It must be 2 to 126 characters in length.</p>
      * </li>
@@ -72,7 +73,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
     public String GDNDescription;
 
     /**
-     * <p>The GDN ID.</p>
+     * <p>GDN ID。</p>
      * 
      * <strong>example:</strong>
      * <p>gdn-bp1fttxsrmv*****</p>
@@ -81,15 +82,15 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
     public String GDNId;
 
     /**
-     * <p>The status of the Global Database Network (GDN). Valid values:</p>
+     * <p>The status of the GDN. Valid values:</p>
      * <ul>
-     * <li><p><strong>creating</strong>: The GDN is being created.</p>
+     * <li><p><strong>creating</strong>: Being created.</p>
      * </li>
-     * <li><p><strong>active</strong>: The GDN is running.</p>
+     * <li><p><strong>active</strong>: Running.</p>
      * </li>
-     * <li><p><strong>deleting</strong>: The GDN is being deleted.</p>
+     * <li><p><strong>deleting</strong>: Being deleted.</p>
      * </li>
-     * <li><p><strong>locked</strong>: The GDN is locked. In this state, you cannot perform any operations on any cluster in the GDN.</p>
+     * <li><p><strong>locked</strong>: Locked. No operations can be performed on any cluster in the GDN.</p>
      * </li>
      * <li><p><strong>removing_member</strong>: A cluster is being removed from the GDN.</p>
      * </li>
@@ -111,7 +112,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
     public String globalDomainName;
 
     /**
-     * <p>The labels of the GDN.</p>
+     * <p>The property labels.</p>
      */
     @NameInMap("Labels")
     public DescribeGlobalDatabaseNetworkResponseBodyLabels labels;
@@ -304,7 +305,8 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
 
     public static class DescribeGlobalDatabaseNetworkResponseBodyDBClustersDBNodes extends TeaModel {
         /**
-         * <p>The time when the node was created.</p>
+         * <p>The time when the database node was created.</p>
+         * <p>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-03-23T21:35:43Z</p>
@@ -313,7 +315,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The node type.</p>
+         * <p>The node specifications of the database node.</p>
          * 
          * <strong>example:</strong>
          * <p>polar.mysql.x4.large</p>
@@ -322,7 +324,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         public String DBNodeClass;
 
         /**
-         * <p>The node ID.</p>
+         * <p>The database node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pi-****************</p>
@@ -331,11 +333,11 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         public String DBNodeId;
 
         /**
-         * <p>The role of the node. Valid values:</p>
+         * <p>The role of the database node. Valid values:</p>
          * <ul>
-         * <li><p><strong>Writer</strong>: the primary node</p>
+         * <li><p><strong>Writer</strong>: primary node</p>
          * </li>
-         * <li><p><strong>Reader</strong>: a read-only node</p>
+         * <li><p><strong>Reader</strong>: read-only node</p>
          * </li>
          * </ul>
          * 
@@ -348,25 +350,25 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         /**
          * <p>The status of the node. Valid values:</p>
          * <ul>
-         * <li><p><strong>Creating</strong>: The node is being created.</p>
+         * <li><p><strong>Creating</strong>: Being created.</p>
          * </li>
-         * <li><p><strong>Running</strong>: The node is running.</p>
+         * <li><p><strong>Running</strong>: Running.</p>
          * </li>
-         * <li><p><strong>Deleting</strong>: The node is being deleted.</p>
+         * <li><p><strong>Deleting</strong>: Being deleted.</p>
          * </li>
-         * <li><p><strong>Rebooting</strong>: The node is being restarted.</p>
+         * <li><p><strong>Rebooting</strong>: Being restarted.</p>
          * </li>
-         * <li><p><strong>ClassChanging</strong>: The node type is being changed.</p>
+         * <li><p><strong>ClassChanging</strong>: The node specifications are being changed.</p>
          * </li>
-         * <li><p><strong>NetAddressCreating</strong>: A network connection is being created.</p>
+         * <li><p><strong>NetAddressCreating</strong>: Network connectivity is being created.</p>
          * </li>
-         * <li><p><strong>NetAddressDeleting</strong>: A network connection is being deleted.</p>
+         * <li><p><strong>NetAddressDeleting</strong>: Network connectivity is being deleted.</p>
          * </li>
-         * <li><p><strong>NetAddressModifying</strong>: A network connection is being modified.</p>
+         * <li><p><strong>NetAddressModifying</strong>: Network connectivity is being modified.</p>
          * </li>
-         * <li><p><strong>MinorVersionUpgrading</strong>: The minor version is being upgraded.</p>
+         * <li><p><strong>MinorVersionUpgrading</strong>: A minor engine version upgrade is in progress.</p>
          * </li>
-         * <li><p><strong>Maintaining</strong>: The cluster is being maintained.</p>
+         * <li><p><strong>Maintaining</strong>: The cluster is under maintenance.</p>
          * </li>
          * <li><p><strong>Switching</strong>: A failover is in progress.</p>
          * </li>
@@ -379,7 +381,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         public String DBNodeStatus;
 
         /**
-         * <p>The failover priority. In the event of a failover, the system promotes a read-only node to the primary node. A larger value indicates a higher priority. Each read-only node is assigned a failover priority. Valid values: 1 to 15.</p>
+         * <p>The failover priority. Each node has a failover priority that determines the likelihood of the node being elected as the primary node during a failover. A higher value indicates a higher priority. Valid values: 1 to 15.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -388,7 +390,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         public Integer failoverPriority;
 
         /**
-         * <p>The maximum number of concurrent connections.</p>
+         * <p>The maximum number of concurrent connections to the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>8000</p>
@@ -397,7 +399,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         public Integer maxConnections;
 
         /**
-         * <p>The maximum I/O operations per second (IOPS).</p>
+         * <p>The maximum number of I/O requests per second (IOPS).</p>
          * 
          * <strong>example:</strong>
          * <p>32000</p>
@@ -495,16 +497,17 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
 
     public static class DescribeGlobalDatabaseNetworkResponseBodyDBClusters extends TeaModel {
         /**
-         * <p>The edition of the cluster. Valid values:</p>
-         * <p><code>Normal</code>: Cluster Edition <code>Basic</code>: Single-node Edition <code>Archive</code>: X-Engine Edition <code>NormalMultimaster</code>: Multi-master Cluster Edition <code>SENormal</code>: Standard Edition</p>
+         * <p>The edition of the product. Valid values:</p>
+         * <p>Normal: Cluster Edition
+         * Basic: Single Node Edition
+         * Archive: PolarDB X-Engine Edition
+         * NormalMultimaster: Multi-master Cluster Edition
+         * SENormal: PolarDB for MySQL Standard Edition</p>
          * <blockquote>
          * <ul>
-         * <li><p>Single-node Edition is not supported for PolarDB for PostgreSQL clusters that run PostgreSQL 11.</p>
-         * </li>
-         * <li><p>Standard Edition is supported for PolarDB for MySQL clusters that run MySQL 8.0 or 5.7 and for PolarDB for PostgreSQL clusters that run PostgreSQL 14.</p>
-         * </li>
-         * <li><p>X-Engine Edition and Multi-master Cluster Edition are supported only for PolarDB for MySQL clusters that run MySQL 8.0.</p>
-         * </li>
+         * <li>PolarDB for PostgreSQL 11 does not support Single Node Edition.</li>
+         * <li>PolarDB for MySQL 8.0, PolarDB for MySQL 5.7, and PolarDB for PostgreSQL 14 support PolarDB for MySQL Standard Edition.</li>
+         * <li>PolarDB for MySQL 8.0 supports PolarDB X-Engine Edition and Multi-master Cluster Edition.</li>
          * </ul>
          * </blockquote>
          * 
@@ -515,7 +518,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>The description of the cluster.</p>
+         * <p>The cluster description.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -524,7 +527,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         public String DBClusterDescription;
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The cluster ID in the GDN.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-wz9fb5nn44u1d****</p>
@@ -533,7 +536,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
-         * <p>The status of the cluster. For more information, see <a href="https://help.aliyun.com/document_detail/99286.html">Cluster statuses</a>.</p>
+         * <p>The status of the cluster in the GDN. For more information, see <a href="https://help.aliyun.com/document_detail/99286.html">Cluster status table</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -542,7 +545,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         public String DBClusterStatus;
 
         /**
-         * <p>The node type.</p>
+         * <p>The node specifications of the database node.</p>
          * 
          * <strong>example:</strong>
          * <p>polar.mysql.x4.large</p>
@@ -551,13 +554,13 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         public String DBNodeClass;
 
         /**
-         * <p>The details of the nodes in the cluster.</p>
+         * <p>The details of the database nodes.</p>
          */
         @NameInMap("DBNodes")
         public java.util.List<DescribeGlobalDatabaseNetworkResponseBodyDBClustersDBNodes> DBNodes;
 
         /**
-         * <p>The database engine. Only MySQL is supported.</p>
+         * <p>The database engine type. Currently, only MySQL is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>MySQL</p>
@@ -566,7 +569,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         public String DBType;
 
         /**
-         * <p>The database engine version. Only version 8.0 is supported.</p>
+         * <p>The database engine version. Currently, only version 8.0 is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>8.0</p>
@@ -577,8 +580,9 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         /**
          * <p>The expiration time of the cluster.</p>
          * <blockquote>
-         * <p>This parameter is returned only for subscription clusters. An empty string is returned for pay-as-you-go clusters.</p>
+         * <p>This parameter is returned only for clusters whose billing method is <strong>Prepaid</strong> (subscription). An empty value is returned for <strong>Postpaid</strong> (pay-as-you-go) clusters.</p>
          * </blockquote>
+         * <p>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-14T16:00:00Z</p>
@@ -589,13 +593,13 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the cluster has expired. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The cluster has expired.</p>
+         * <li><p><strong>true</strong></p>
          * </li>
-         * <li><p><strong>false</strong>: The cluster has not expired.</p>
+         * <li><p><strong>false</strong></p>
          * </li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is returned only for subscription clusters.</p>
+         * <p>This parameter is returned only for clusters whose billing method is <strong>Prepaid</strong> (subscription).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -605,7 +609,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         public String expired;
 
         /**
-         * <p>The billing method of the cluster. Valid values:</p>
+         * <p>The billing method. Valid values:</p>
          * <ul>
          * <li><p><strong>Postpaid</strong>: pay-as-you-go.</p>
          * </li>
@@ -620,7 +624,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         public String payType;
 
         /**
-         * <p>The region ID of the cluster.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -629,7 +633,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The replication lag for cross-region replication between the primary and standby clusters. Unit: seconds.</p>
+         * <p>The cross-region replication delay between the primary and secondary clusters. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -638,15 +642,15 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         public String replicaLag;
 
         /**
-         * <p>The role of the cluster in the GDN. Valid values:</p>
+         * <p>The role of the cluster. Valid values:</p>
          * <ul>
-         * <li><p><strong>primary</strong>: the primary cluster</p>
+         * <li><p><strong>primary</strong>: primary cluster</p>
          * </li>
-         * <li><p><strong>standby</strong>: a standby cluster</p>
+         * <li><p><strong>standby</strong>: secondary cluster</p>
          * </li>
          * </ul>
          * <blockquote>
-         * <p>A GDN consists of one primary cluster and up to four standby clusters.</p>
+         * <p>A GDN contains one primary cluster and up to four secondary clusters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -656,9 +660,9 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         public String role;
 
         /**
-         * <p>The type of the Serverless cluster. The value is fixed as <code>AgileServerless</code>.</p>
+         * <p>The serverless type. The value is fixed as AgileServerless.</p>
          * <blockquote>
-         * <p>This parameter is returned only for Serverless clusters.</p>
+         * <p>This parameter is supported only for serverless clusters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -668,7 +672,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         public String serverlessType;
 
         /**
-         * <p>The amount of storage space used. Unit: bytes.</p>
+         * <p>The storage usage. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>3012558848</p>
@@ -813,7 +817,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
 
     public static class DescribeGlobalDatabaseNetworkResponseBodyLabels extends TeaModel {
         /**
-         * <p>The version of the GDN.</p>
+         * <p>The GDN version.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0</p>

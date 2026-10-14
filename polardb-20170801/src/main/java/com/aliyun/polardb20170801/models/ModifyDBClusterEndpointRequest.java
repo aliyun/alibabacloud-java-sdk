@@ -49,10 +49,10 @@ public class ModifyDBClusterEndpointRequest extends TeaModel {
     /**
      * <p>The advanced configuration of the cluster endpoint in JSON format. You can configure the consistency level, transaction splitting, whether the primary node accepts read requests, connection pooling, and other settings.</p>
      * <ul>
-     * <li><p>To configure the load balancing policy, use the format <code>{\\&quot;LoadBalancePolicy\\&quot;:\\&quot;Load balancing policy\\&quot;}</code>. Valid values:   </p>
+     * <li><p>To configure the load balancing policy, use the format <code>{\\&quot;LoadBalancePolicy\\&quot;:\\&quot;Load balancing policy\\&quot;}</code>. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: connection-based load balancing (default)</li>
-     * <li><strong>1</strong>: active-request-based load balancing</li>
+     * <li><strong>0</strong>: connection-based load balancing. (Default)</li>
+     * <li><strong>1</strong>: active-request-based load balancing.</li>
      * </ul>
      * </li>
      * <li><p>To configure whether the primary node accepts read requests, use the format <code>{\\&quot;MasterAcceptReads\\&quot;:\\&quot;Whether the primary node accepts reads\\&quot;}</code>. Valid values:</p>
@@ -61,17 +61,18 @@ public class ModifyDBClusterEndpointRequest extends TeaModel {
      * <li><strong>off</strong>: The primary node does not accept read requests.</li>
      * </ul>
      * </li>
-     * <li><p>To configure transaction splitting, use the format <code>{\\&quot;DistributedTransaction\\&quot;:\\&quot;Transaction splitting\\&quot;}</code>. Valid values:</p>
+     * <li><p>To configure transaction splitting, use two parameters together in the format <code>{\\&quot;DistributedTransaction\\&quot;:\\&quot;Transaction splitting\\&quot;,\\&quot;TrxSplitAggressive\\&quot;:\\&quot;Transaction splitting\\&quot;}</code>. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong>: Transaction splitting is enabled. (Default)</li>
-     * <li><strong>off</strong>: Transaction splitting is disabled.</li>
+     * <li><strong>Disabled</strong>: DistributedTransaction=off, TrxSplitAggressive=off</li>
+     * <li><strong>Read request splitting before first write request</strong>: DistributedTransaction=on, TrxSplitAggressive=off</li>
+     * <li><strong>Full transaction splitting</strong>: DistributedTransaction=on, TrxSplitAggressive=on</li>
      * </ul>
      * </li>
      * <li><p>To configure the consistency level, use the format <code>{\\&quot;ConsistLevel\\&quot;:\\&quot;Consistency level\\&quot;}</code>. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: eventual consistency (weak)</li>
-     * <li><strong>1</strong>: session consistency (medium) (default)</li>
-     * <li><strong>2</strong>: global consistency (strong)</li>
+     * <li><strong>0</strong>: eventual consistency (weak).</li>
+     * <li><strong>1</strong>: session consistency (medium). (Default)</li>
+     * <li><strong>2</strong>: global consistency (strong).</li>
      * </ul>
      * </li>
      * <li><p>To configure the global consistency read timeout period, use the format <code>{\\&quot;ConsistTimeout\\&quot;:\\&quot;Global consistency read timeout\\&quot;}</code>. Valid values: 0 to 60000. Default value: 20. Unit: ms.</p>
@@ -81,32 +82,38 @@ public class ModifyDBClusterEndpointRequest extends TeaModel {
      * <li><p>To configure the global (or session) consistency read timeout policy, use the format <code>{\\&quot;ConsistTimeoutAction\\&quot;:\\&quot;Global consistency read timeout policy\\&quot;}</code>. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: Forward the read request to the primary node. (Default)</li>
-     * <li><strong>1</strong>: The proxy returns the error message <code>wait replication complete timeout, please retry</code> to the application.</li>
+     * <li><strong>1</strong>: The proxy returns an error message <code>wait replication complete timeout, please retry</code> to the application.</li>
      * </ul>
      * </li>
-     * <li><p>To configure connection pooling, use the format <code>{\\&quot;ConnectionPersist\\&quot;:\\&quot;Connection pool\\&quot;}</code>. Valid values:</p>
+     * <li><p>To configure the connection pool, use the format <code>{\\&quot;ConnectionPersist\\&quot;:\\&quot;Connection pool\\&quot;}</code>. Valid values:</p>
      * <ul>
-     * <li><strong>off</strong>: Connection pooling is disabled. (Default)</li>
-     * <li><strong>Session</strong>: Session-level connection pooling is enabled.</li>
-     * <li><strong>Transaction</strong>: Transaction-level connection pooling is enabled.</li>
+     * <li><strong>off</strong>: Disable the connection pool. (Default)</li>
+     * <li><strong>Session</strong>: Enable the session-level connection pool.</li>
+     * <li><strong>Transaction</strong>: Enable the transaction-level connection pooling.</li>
+     * </ul>
+     * </li>
+     * <li><p>To configure on-demand connection establishment, use the format <code>{\\&quot;ConnectAllBackends\\&quot;:\\&quot;On-demand connection\\&quot;}</code>. Valid values:</p>
+     * <ul>
+     * <li><strong>on</strong>: Enabled.</li>
+     * <li><strong>off</strong>: Disabled. (Default)</li>
      * </ul>
      * </li>
      * <li><p>To configure parallel query, use the format <code>{\\&quot;MaxParallelDegree\\&quot;:\\&quot;Parallel query\\&quot;}</code>. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong>: Parallel query is enabled.</li>
-     * <li><strong>off</strong>: Parallel query is disabled. (Default)</li>
+     * <li><strong>on</strong>: Enable parallel query.</li>
+     * <li><strong>off</strong>: Disable parallel query. (Default)</li>
      * </ul>
      * </li>
      * <li><p>To configure automatic request distribution among row offload reads from primary nodes, use the format <code>{\\&quot;EnableHtapImci\\&quot;:\\&quot;Row store/column store automatic request distribution\\&quot;}</code>. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong>: Automatic request distribution among row offload reads from primary nodes is enabled.</li>
-     * <li><strong>off</strong>: Automatic request distribution among row offload reads from primary nodes is disabled. (Default)</li>
+     * <li><strong>on</strong>: Enable automatic request distribution among row offload reads from primary nodes.</li>
+     * <li><strong>off</strong>: Disable automatic request distribution among row offload reads from primary nodes. (Default)</li>
      * </ul>
      * </li>
-     * <li><p>To configure overload protection, use the format <code>{\\&quot;EnableOverloadThrottle\\&quot;:\\&quot;Whether to enable overload protection\\&quot;}</code>. Valid values:</p>
+     * <li><p>To configure whether to enable overload protection, use the format <code>{\\&quot;EnableOverloadThrottle\\&quot;:\\&quot;Whether to enable overload protection\\&quot;}</code>. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong>: Overload protection is enabled.</li>
-     * <li><strong>off</strong>: Overload protection is disabled. (Default)</li>
+     * <li><strong>on</strong>: Enable overload protection.</li>
+     * <li><strong>off</strong>: Disable overload protection. (Default)</li>
      * </ul>
      * </li>
      * <li><p>To configure node weights, use the format <code>{\\&quot;NodesWeight\\&quot;:{\\&quot;Node ID\\&quot;:\\&quot;Weight value\\&quot;}}</code>.</p>
@@ -114,9 +121,9 @@ public class ModifyDBClusterEndpointRequest extends TeaModel {
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>Transaction splitting, whether the primary node accepts read requests, connection pooling, and overload protection can be configured only when the read/write mode of the PolarDB for MySQL cluster endpoint is <strong>ReadWrite (automatic read/write splitting)</strong>.</li>
-     * <li>When the read/write mode of the PolarDB for MySQL cluster endpoint is <strong>ReadOnly</strong>, both <strong>connection-based load balancing</strong> and <strong>active-request-based load balancing</strong> are supported. When the read/write mode is <strong>ReadWrite (automatic read/write splitting)</strong>, only <strong>active-request-based load balancing</strong> is supported.</li>
-     * <li>Automatic request distribution among row offload reads from primary nodes can be configured when the read/write mode of the PolarDB for MySQL cluster endpoint is <strong>ReadWrite (automatic read/write splitting)</strong>, or when the read/write mode is <strong>ReadOnly</strong> and the load balancing policy is <strong>active-request-based load balancing</strong>.</li>
+     * <li>Transaction splitting, whether the primary node accepts read requests, connection pooling, and overload protection can be configured only when the read/write mode of the PolarDB for MySQL cluster endpoint is <strong>read/write (automatic read/write splitting)</strong>.</li>
+     * <li>When the read/write mode of the PolarDB for MySQL cluster endpoint is <strong>read-only</strong>, both <strong>connection-based load balancing</strong> and <strong>active-request-based load balancing</strong> policies are supported. The <strong>read/write (automatic read/write splitting)</strong> mode supports only the <strong>active-request-based load balancing</strong> policy.</li>
+     * <li>Automatic request distribution among row offload reads from primary nodes can be configured when the read/write mode of the PolarDB for MySQL cluster endpoint is <strong>read/write (automatic read/write splitting)</strong>, or when the read/write mode is <strong>read-only</strong> and the load balancing policy is <strong>active-request-based load balancing</strong>.</li>
      * <li>Only PolarDB for MySQL supports setting the consistency level to global consistency.</li>
      * <li>If <strong>ReadWriteMode</strong> is set to <strong>ReadOnly</strong>, the consistency level can only be set to <strong>0</strong>.</li>
      * <li>You can configure the consistency level, transaction splitting, whether the primary node accepts read requests, and connection pooling at the same time. Example: <code>{\\&quot;ConsistLevel\\&quot;:\\&quot;1\\&quot;,\\&quot;DistributedTransaction\\&quot;:\\&quot;on\\&quot;,\\&quot;ConnectionPersist\\&quot;:\\&quot;Session\\&quot;,\\&quot;MasterAcceptReads\\&quot;:\\&quot;on\\&quot;}</code>.</li>
@@ -131,15 +138,15 @@ public class ModifyDBClusterEndpointRequest extends TeaModel {
     public String endpointConfig;
 
     /**
-     * <p>The read load nodes to add to the endpoint. Separate multiple nodes with commas (,). Default value: the existing nodes.</p>
+     * <p>The read load nodes to add to the target endpoint. Separate multiple nodes with commas (,). Default value: the existing nodes.</p>
      * <blockquote>
      * <ul>
      * <li>For PolarDB for MySQL, specify node IDs.</li>
      * <li>For PolarDB for PostgreSQL and PolarDB for PostgreSQL (Compatible with Oracle), specify node role names, such as <code>Writer,Reader1,Reader2</code>.</li>
-     * <li>If <strong>ReadWriteMode</strong> is set to <strong>ReadOnly</strong>, you can mount only one node. However, if this node fails, the endpoint may be unavailable for up to 1 hour. Do not use this configuration in production environments. Mount at least 2 nodes to improve availability.</li>
+     * <li>If <strong>ReadWriteMode</strong> is set to <strong>ReadOnly</strong>, you can mount only one node. However, if this node fails, the endpoint may be unavailable for up to 1 hour. Do not use this configuration in production environments. Select at least 2 nodes to improve availability.</li>
      * <li>If <strong>ReadWriteMode</strong> is set to <strong>ReadWrite</strong>, select at least 2 nodes.<ul>
-     * <li>For PolarDB for MySQL, you can select any two nodes. If both nodes are read-only nodes, write requests are forwarded to the primary node.</li>
-     * <li>For PolarDB for PostgreSQL and PolarDB for PostgreSQL (Compatible with Oracle), the primary node must be included.</li>
+     * <li>PolarDB for MySQL allows you to select any two nodes. If both nodes are read-only nodes, write requests are forwarded to the primary node.</li>
+     * <li>PolarDB for PostgreSQL and PolarDB for PostgreSQL (Compatible with Oracle) require the primary node to be included.</li>
      * </ul>
      * </li>
      * </ul>
@@ -162,7 +169,7 @@ public class ModifyDBClusterEndpointRequest extends TeaModel {
      * <ul>
      * <li><p><strong>0</strong>: Sends the request to the primary node.</p>
      * </li>
-     * <li><p><strong>2</strong>: Timeout degradation. When the global consistency read times out, the query is automatically degraded to regular requests, and the client does not receive an error message.</p>
+     * <li><p><strong>2</strong>: Timeout degradation. When the global consistency read times out, the query automatically degrades to regular requests, and the client does not receive an error message.</p>
      * </li>
      * </ul>
      * 
@@ -201,7 +208,7 @@ public class ModifyDBClusterEndpointRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to enable the global consistency (high-performance mode) feature for the node. Valid values:</p>
+     * <p>Specifies whether to enable the global consistency (performance schema) feature for the node. Valid values:</p>
      * <ul>
      * <li><p><strong>ON</strong>: Enabled.</p>
      * </li>

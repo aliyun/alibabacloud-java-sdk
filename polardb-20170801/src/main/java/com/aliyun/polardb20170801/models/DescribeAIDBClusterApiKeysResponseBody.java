@@ -74,6 +74,7 @@ public class DescribeAIDBClusterApiKeysResponseBody extends TeaModel {
 
         /**
          * <p>The creation time.</p>
+         * <p>The time is displayed in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-09T03:19:19Z</p>

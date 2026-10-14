@@ -7,7 +7,7 @@ public class DescribeUserEncryptionKeyListRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters in the destination region, including cluster IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters in the specified region, including the cluster ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class DescribeUserEncryptionKeyListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -43,7 +43,7 @@ public class DescribeUserEncryptionKeyListRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query information about the available regions of the destination account, including region IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available regions for the current account, including the region ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class DescribeUserEncryptionKeyListRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The region of the transparent data encryption (TDE) key.</p>
+     * <p>The region where the TDE key resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>

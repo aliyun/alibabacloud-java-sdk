@@ -103,6 +103,7 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
 
         /**
          * <p>The creation time.</p>
+         * <p>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-11T09:55:19Z</p>

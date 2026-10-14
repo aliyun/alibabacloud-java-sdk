@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCostRuleRequest extends TeaModel {
     /**
-     * <p>The cost in points per million cache tokens. Default value: 0.</p>
+     * <p>The cache cost points per million tokens. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,7 +14,16 @@ public class ModifyCostRuleRequest extends TeaModel {
     public String cacheCostPointsPerMillion;
 
     /**
-     * <p>The cost rule ID.</p>
+     * <p>The cache creation cost points per million tokens.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400</p>
+     */
+    @NameInMap("CacheCreationCostPointsPerMillion")
+    public String cacheCreationCostPointsPerMillion;
+
+    /**
+     * <p>The ID of the cost rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,6 +31,15 @@ public class ModifyCostRuleRequest extends TeaModel {
      */
     @NameInMap("CostRuleId")
     public String costRuleId;
+
+    /**
+     * <p>The explicit cache read cost points per million tokens.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
+    @NameInMap("ExplicitCacheCostPointsPerMillion")
+    public String explicitCacheCostPointsPerMillion;
 
     /**
      * <p>The gateway instance ID.</p>
@@ -34,7 +52,16 @@ public class ModifyCostRuleRequest extends TeaModel {
     public String gwClusterId;
 
     /**
-     * <p>The cost in points per million input tokens. Default value: 0.</p>
+     * <p>The image input cost points per image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
+    @NameInMap("ImageCostPointsPerCount")
+    public String imageCostPointsPerCount;
+
+    /**
+     * <p>The input cost points per million tokens. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -43,7 +70,16 @@ public class ModifyCostRuleRequest extends TeaModel {
     public String inputCostPointsPerMillion;
 
     /**
-     * <p>The model name, such as gpt-4 or qwen-turbo.</p>
+     * <p>The input token tiered price (non-cumulative) specified as a JSON array character string. Each element contains Tier and InputCostPointsPerMillion. Valid values for Tier: &quot;&quot; (default tier), 0-32K, 32K-64K, 64K-128K, 128K-256K, 256K-512K, 512K-1M, and 1M+. Example: [{&quot;Tier&quot;:&quot;0-32K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1200&quot;}]. A non-empty value replaces all existing tiers. If this parameter is not specified or is set to an empty string, the original tiers are retained. An empty array [] is not allowed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;Tier&quot;:&quot;0-32K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1200&quot;}]</p>
+     */
+    @NameInMap("InputTokenTiers")
+    public String inputTokenTiers;
+
+    /**
+     * <p>The name of the model, such as gpt-4 or qwen-turbo.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +89,7 @@ public class ModifyCostRuleRequest extends TeaModel {
     public String modelName;
 
     /**
-     * <p>The model service ID.</p>
+     * <p>The ID of the model service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,7 +99,7 @@ public class ModifyCostRuleRequest extends TeaModel {
     public String modelServiceId;
 
     /**
-     * <p>The cost in points per million output tokens. Default value: 0.</p>
+     * <p>The output cost points per million tokens. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -80,6 +116,15 @@ public class ModifyCostRuleRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The video input cost points per second.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
+    @NameInMap("VideoCostPointsPerSecond")
+    public String videoCostPointsPerSecond;
+
     public static ModifyCostRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyCostRuleRequest self = new ModifyCostRuleRequest();
         return TeaModel.build(map, self);
@@ -93,12 +138,28 @@ public class ModifyCostRuleRequest extends TeaModel {
         return this.cacheCostPointsPerMillion;
     }
 
+    public ModifyCostRuleRequest setCacheCreationCostPointsPerMillion(String cacheCreationCostPointsPerMillion) {
+        this.cacheCreationCostPointsPerMillion = cacheCreationCostPointsPerMillion;
+        return this;
+    }
+    public String getCacheCreationCostPointsPerMillion() {
+        return this.cacheCreationCostPointsPerMillion;
+    }
+
     public ModifyCostRuleRequest setCostRuleId(String costRuleId) {
         this.costRuleId = costRuleId;
         return this;
     }
     public String getCostRuleId() {
         return this.costRuleId;
+    }
+
+    public ModifyCostRuleRequest setExplicitCacheCostPointsPerMillion(String explicitCacheCostPointsPerMillion) {
+        this.explicitCacheCostPointsPerMillion = explicitCacheCostPointsPerMillion;
+        return this;
+    }
+    public String getExplicitCacheCostPointsPerMillion() {
+        return this.explicitCacheCostPointsPerMillion;
     }
 
     public ModifyCostRuleRequest setGwClusterId(String gwClusterId) {
@@ -109,12 +170,28 @@ public class ModifyCostRuleRequest extends TeaModel {
         return this.gwClusterId;
     }
 
+    public ModifyCostRuleRequest setImageCostPointsPerCount(String imageCostPointsPerCount) {
+        this.imageCostPointsPerCount = imageCostPointsPerCount;
+        return this;
+    }
+    public String getImageCostPointsPerCount() {
+        return this.imageCostPointsPerCount;
+    }
+
     public ModifyCostRuleRequest setInputCostPointsPerMillion(String inputCostPointsPerMillion) {
         this.inputCostPointsPerMillion = inputCostPointsPerMillion;
         return this;
     }
     public String getInputCostPointsPerMillion() {
         return this.inputCostPointsPerMillion;
+    }
+
+    public ModifyCostRuleRequest setInputTokenTiers(String inputTokenTiers) {
+        this.inputTokenTiers = inputTokenTiers;
+        return this;
+    }
+    public String getInputTokenTiers() {
+        return this.inputTokenTiers;
     }
 
     public ModifyCostRuleRequest setModelName(String modelName) {
@@ -147,6 +224,14 @@ public class ModifyCostRuleRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ModifyCostRuleRequest setVideoCostPointsPerSecond(String videoCostPointsPerSecond) {
+        this.videoCostPointsPerSecond = videoCostPointsPerSecond;
+        return this;
+    }
+    public String getVideoCostPointsPerSecond() {
+        return this.videoCostPointsPerSecond;
     }
 
 }

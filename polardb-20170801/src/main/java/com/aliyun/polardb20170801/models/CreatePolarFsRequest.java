@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePolarFsRequest extends TeaModel {
     /**
-     * <p>The acceleration storage space for Basic Edition with acceleration enabled. Unit: GB.</p>
+     * <p>The acceleration storage space for the Basic Edition with acceleration enabled. Unit: GB.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -40,7 +40,7 @@ public class CreatePolarFsRequest extends TeaModel {
     public String accelerateType;
 
     /**
-     * <p>The list of authorized account IDs for Cold Storage Edition instances, separated by commas (,).</p>
+     * <p>The list of authorized account IDs for the Cold Storage Edition instance, separated by commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>128***********，198***********</p>
@@ -68,7 +68,7 @@ public class CreatePolarFsRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically use coupons. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Coupons are used (default).</li>
+     * <li><strong>true</strong>: Coupons are automatically used (default).</li>
      * <li><strong>false</strong>: Coupons are not used.</li>
      * </ul>
      * 
@@ -119,7 +119,7 @@ public class CreatePolarFsRequest extends TeaModel {
     /**
      * <p>The bucket and path information.</p>
      * <blockquote>
-     * <p>This parameter is required for transparent acceleration scenarios.</p>
+     * <p>This parameter is required for the transparent acceleration scenario.</p>
      * </blockquote>
      */
     @NameInMap("CustomBucketPathList")
@@ -179,10 +179,10 @@ public class CreatePolarFsRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>This parameter is required when <strong>PayType</strong> is set to <strong>Prepaid</strong>. Specifies whether the subscription cluster uses a yearly or monthly billing cycle. You must pass this parameter when the billing method is subscription. </p>
+     * <p>The unit of the subscription duration. This parameter is required if PayType is set to <strong>Prepaid</strong>. Specifies whether the subscription cluster uses a yearly or monthly billing cycle. Valid values: </p>
      * <ul>
-     * <li><strong>Year</strong>: The subscription period is measured in years.</li>
-     * <li><strong>Month</strong>: The subscription period is measured in months.</li>
+     * <li><strong>Year</strong>: The subscription duration is measured in years.</li>
+     * <li><strong>Month</strong>: The subscription duration is measured in months.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class CreatePolarFsRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query region IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the region ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -223,16 +223,16 @@ public class CreatePolarFsRequest extends TeaModel {
     public Long storageSpace;
 
     /**
-     * <p>Valid values for high-performance storage type:</p>
+     * <p>Valid values for the high-performance storage type:</p>
      * <ul>
      * <li><strong>ESSDPL0</strong></li>
      * <li><strong>ESSDPL1</strong></li>
      * </ul>
-     * <p>Valid values for Basic Edition storage type:</p>
+     * <p>Valid values for the Basic Edition storage type:</p>
      * <ul>
      * <li><strong>city_redundancy (zone-redundant)</strong></li>
      * </ul>
-     * <p>Valid values for Cold Storage Edition storage type:</p>
+     * <p>Valid values for the Cold Storage Edition storage type:</p>
      * <ul>
      * <li><strong>city_redundancy (zone-redundant)</strong></li>
      * <li><strong>local_redundancy (locally redundant)</strong></li>
@@ -245,10 +245,10 @@ public class CreatePolarFsRequest extends TeaModel {
     public String storageType;
 
     /**
-     * <p>This parameter is required when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
+     * <p>The subscription duration. This parameter is required when PayType is set to <strong>Prepaid</strong>.</p>
      * <ul>
-     * <li>When <strong>Period</strong> is set to <strong>Month</strong>, the valid values of <strong>UsedTime</strong> are integers in the range of <code>[1-9]</code>.</li>
-     * <li>When <strong>Period</strong> is set to <strong>Year</strong>, the valid values of <strong>UsedTime</strong> are integers in the range of <code>[1-3]</code>.</li>
+     * <li>If <strong>Period</strong> is set to <strong>Month</strong>, valid values of <strong>UsedTime</strong> are integers in the range of <code>[1-9]</code>.</li>
+     * <li>If <strong>Period</strong> is set to <strong>Year</strong>, valid values of <strong>UsedTime</strong> are integers in the range of <code>[1-3]</code>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -258,7 +258,7 @@ public class CreatePolarFsRequest extends TeaModel {
     public String usedTime;
 
     /**
-     * <p>The VPC ID.</p>
+     * <p>The virtual private cloud (VPC) ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-*******************</p>

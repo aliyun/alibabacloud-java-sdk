@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGlobalDatabaseNetworkRequest extends TeaModel {
     /**
-     * <p>The ID of the Global Database Network (GDN).</p>
+     * <p>GDN ID。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

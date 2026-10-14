@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeKnowledgeBasesRequest extends TeaModel {
     /**
-     * <p>The keyword for searching knowledge bases.</p>
+     * <p>The keyword used to filter knowledge bases.</p>
      * 
      * <strong>example:</strong>
      * <p>testkb</p>

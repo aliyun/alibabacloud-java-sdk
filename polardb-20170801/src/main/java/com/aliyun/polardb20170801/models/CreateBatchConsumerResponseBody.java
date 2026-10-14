@@ -142,7 +142,7 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
         public Boolean active;
 
         /**
-         * <p>The full API key. Returned only in this response.</p>
+         * <p>The complete API key. Returned only in this response.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxxxx</p>
@@ -242,6 +242,7 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
 
         /**
          * <p>The expiration time.</p>
+         * <p>The time is in the ISO 8601 standard in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-25T09:37:10Z</p>
@@ -250,7 +251,7 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
         public String expireTime;
 
         /**
-         * <p>Indicates whether the key is expired.</p>
+         * <p>Indicates whether the key has expired.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -268,7 +269,7 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
-         * <p>The last modification time.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-04T16:09:29+08:00</p>

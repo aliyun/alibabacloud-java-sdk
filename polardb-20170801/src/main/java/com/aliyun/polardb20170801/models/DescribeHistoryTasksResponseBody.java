@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeHistoryTasksResponseBody extends TeaModel {
     /**
-     * <p>The list of tasks.</p>
+     * <p>The task list.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeHistoryTasksResponseBodyItems> items;
 
     /**
-     * <p>The page number of the query result.</p>
+     * <p>The page number of the query results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of records per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The unique ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F90D7C14-2D1C-5B88-9CD1-23AB2CF89***</p>
@@ -38,7 +38,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of tasks that meet the conditions, regardless of paging factors.</p>
+     * <p>The total number of tasks that meet the filter conditions, regardless of pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -95,7 +95,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         /**
          * <p>The allowed operation information.</p>
          * <blockquote>
-         * <p>This feature is not supported yet.</p>
+         * <p>This feature is not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -107,10 +107,8 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         /**
          * <p>The request source. Valid values:</p>
          * <ul>
-         * <li><p><strong>System</strong>: system</p>
-         * </li>
-         * <li><p><strong>User</strong>: user</p>
-         * </li>
+         * <li><strong>System</strong>: system.</li>
+         * <li><strong>User</strong>: user.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -120,7 +118,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String callerSource;
 
         /**
-         * <p>The ID of the requesting user. If <code>CallerSource</code> is <code>User</code>, this is the user\&quot;s UID.</p>
+         * <p>The ID of the requesting user. When CallerSource is set to User, this value represents the user UID.</p>
          * 
          * <strong>example:</strong>
          * <p>1816563541899***</p>
@@ -129,7 +127,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String callerUid;
 
         /**
-         * <p>The name of the current step being executed. If this parameter is empty, the task has not started.</p>
+         * <p>The name of the current step being executed. An empty value indicates that the task has not started.</p>
          * 
          * <strong>example:</strong>
          * <p>finish_task</p>
@@ -147,7 +145,8 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String dbType;
 
         /**
-         * <p>The end time of the task.</p>
+         * <p>The task end time.</p>
+         * <p>The time is in the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-03-03T07:30:57Z</p>
@@ -192,7 +191,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String product;
 
         /**
-         * <p>The completion progress of the task, from 0.0 to 100.0.</p>
+         * <p>The current progress.</p>
          * 
          * <strong>example:</strong>
          * <p>100.0</p>
@@ -201,7 +200,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public Float progress;
 
         /**
-         * <p>The reason for initiating the current task.</p>
+         * <p>The reason why the current task was initiated.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -219,9 +218,9 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The estimated remaining execution time, in seconds (s).</p>
+         * <p>The estimated remaining execution duration. Unit: seconds.</p>
          * <blockquote>
-         * <p>This value is for reference only. The actual execution time prevails.</p>
+         * <p>This value is for reference only. The actual execution duration may vary.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -231,7 +230,8 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public Integer remainTime;
 
         /**
-         * <p>The start time of the task.</p>
+         * <p>The task start time.</p>
+         * <p>The time is in the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-03-03T07:25:16Z</p>
@@ -240,22 +240,15 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The final status of the task.</p>
+         * <p>The task status.</p>
          * <ul>
-         * <li><p>Scheduled: waiting for execution</p>
-         * </li>
-         * <li><p>Running: executing</p>
-         * </li>
-         * <li><p>Succeed: executed successfully</p>
-         * </li>
-         * <li><p>Failed: execution failed</p>
-         * </li>
-         * <li><p>Cancelling: stopping</p>
-         * </li>
-         * <li><p>Canceled: stopped</p>
-         * </li>
-         * <li><p>Waiting: waiting for preset time</p>
-         * </li>
+         * <li>Scheduled: Waiting for execution.</li>
+         * <li>Running: Running.</li>
+         * <li>Succeed: Succeeded.</li>
+         * <li>Failed: Failed.</li>
+         * <li>Cancelling: Being canceled.</li>
+         * <li>Canceled: Canceled.</li>
+         * <li>Waiting: Waiting for the scheduled time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -292,7 +285,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String taskType;
 
         /**
-         * <p>The UID of the account that owns the resource.</p>
+         * <p>The ID of the user to whom the resource belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>1816563541899***</p>

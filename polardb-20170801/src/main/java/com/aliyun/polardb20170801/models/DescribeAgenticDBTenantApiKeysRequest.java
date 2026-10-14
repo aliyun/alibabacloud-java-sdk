@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAgenticDBTenantApiKeysRequest extends TeaModel {
     /**
+     * <p>The AgenticDB cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeAgenticDBTenantApiKeysRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,8 @@ public class DescribeAgenticDBTenantApiKeysRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 30. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -28,6 +33,7 @@ public class DescribeAgenticDBTenantApiKeysRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,8 @@ public class DescribeAgenticDBTenantApiKeysRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Filters results by tenant name.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-saas-app</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOrdersResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries returned for the current request. Default value: 10.</p>
+     * <p>The maximum number of entries to return. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,7 +14,7 @@ public class ListOrdersResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A pagination token. If the query results are not returned in a single call, this token is returned. Use this token in a subsequent call to retrieve the remaining results.</p>
+     * <p>The pagination token that is used to retrieve more results. If a single request does not return all results, this parameter is returned. You can pass the returned token in a subsequent request to continue retrieving results.</p>
      * 
      * <strong>example:</strong>
      * <p>212db86sca4384811e0b5e8707e******</p>
@@ -23,14 +23,14 @@ public class ListOrdersResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The list of orders.</p>
+     * <p>The order list.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OrderList")
     public java.util.List<ListOrdersResponseBodyOrderList> orderList;
 
     /**
-     * <p>The page number of the returned page. Default value: 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -39,14 +39,11 @@ public class ListOrdersResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p><strong>30</strong></p>
-     * </li>
-     * <li><p><strong>50</strong></p>
-     * </li>
-     * <li><p><strong>100</strong></p>
-     * </li>
+     * <li><strong>30</strong></li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
      * </ul>
      * <p>Default value: 30.</p>
      * 
@@ -137,7 +134,7 @@ public class ListOrdersResponseBody extends TeaModel {
 
     public static class ListOrdersResponseBodyOrderList extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The Alibaba Cloud account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1910740440664****</p>
@@ -148,9 +145,9 @@ public class ListOrdersResponseBody extends TeaModel {
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <ul>
-         * <li><p><strong>Postpaid</strong>: pay-as-you-go</p>
+         * <li><p><strong>Postpaid</strong>: pay-as-you-go.</p>
          * </li>
-         * <li><p><strong>Prepaid</strong>: subscription</p>
+         * <li><p><strong>Prepaid</strong>: subscription.</p>
          * </li>
          * </ul>
          * 
@@ -163,35 +160,23 @@ public class ListOrdersResponseBody extends TeaModel {
         /**
          * <p>The commodity code. Valid values:</p>
          * <ul>
-         * <li><p>polardb_sub: subscription in the Chinese mainland.</p>
-         * </li>
-         * <li><p>polardb_sub_intl: subscription in Hong Kong (China) and regions outside China.</p>
-         * </li>
-         * <li><p>polardb_payg: pay-as-you-go in the Chinese mainland.</p>
-         * </li>
-         * <li><p>polardb_payg_intl: pay-as-you-go in Hong Kong (China) and regions outside China.</p>
-         * </li>
-         * <li><p>polardb_sub_jushita: Jushita subscription.</p>
-         * </li>
-         * <li><p>polardb_payg_jushita: Jushita pay-as-you-go.</p>
-         * </li>
-         * <li><p>polardb_sub_cainiao: Cainiao subscription.</p>
-         * </li>
-         * <li><p>polardb_payg_cainiao: Cainiao pay-as-you-go.</p>
-         * </li>
-         * </ul>
-         * <blockquote>
+         * <li>polardb_sub: subscription in the Chinese mainland.</li>
+         * <li>polardb_sub_intl: subscription in Hong Kong (China) and outside China.</li>
+         * <li>polardb_payg: pay-as-you-go in the Chinese mainland.</li>
+         * <li>polardb_payg_intl: pay-as-you-go in Hong Kong (China) and outside China.</li>
+         * <li>polardb_sub_jushita: Jushita subscription.</li>
+         * <li>polardb_payg_jushita: Jushita pay-as-you-go.</li>
+         * <li>polardb_sub_cainiao: Cainiao subscription.</li>
+         * <li>polardb_payg_cainiao: Cainiao pay-as-you-go.<blockquote>
          * <ul>
-         * <li><p>If you use an Alibaba Cloud account for the China site, you can view only the commodity codes for the Chinese mainland.</p>
-         * </li>
-         * <li><p>If you use an Alibaba Cloud international site account, you can view only the commodity codes for regions outside the Chinese mainland.</p>
-         * </li>
-         * <li><p>If you use a Jushita account, you can view only the commodity codes for Jushita.</p>
-         * </li>
-         * <li><p>If you use a Cainiao account, you can view only the commodity codes for Cainiao.</p>
-         * </li>
+         * <li>If you use an Alibaba Cloud China Website account, you can view only the commodity codes for the Chinese mainland.</li>
+         * <li>If you use an Alibaba Cloud International Website account, you can view only the commodity codes for international regions.</li>
+         * <li>If you use a Jushita account, you can view only the commodity codes for Jushita.</li>
+         * <li>If you use a Cainiao account, you can view only the commodity codes for Cainiao.</li>
          * </ul>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>polardb_payg_intl</p>
@@ -200,7 +185,8 @@ public class ListOrdersResponseBody extends TeaModel {
         public String commodityCode;
 
         /**
-         * <p>The time when the order was created.</p>
+         * <p>The creation time.</p>
+         * <p>The time is in the YYYY-MM-DDTHH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-03-31T16:09:13</p>
@@ -209,7 +195,7 @@ public class ListOrdersResponseBody extends TeaModel {
         public String createdTime;
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The cluster ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-uf6k532gav*******</p>
@@ -227,17 +213,17 @@ public class ListOrdersResponseBody extends TeaModel {
         public String orderId;
 
         /**
-         * <p>The status of the order.</p>
+         * <p>The order status. Valid values:</p>
          * <ul>
          * <li><p><strong>pending</strong>: The task is waiting to start.</p>
          * </li>
-         * <li><p><strong>create</strong>: The order is placed and is being processed.</p>
+         * <li><p><strong>create</strong>: The order has been placed and entered the production process.</p>
          * </li>
-         * <li><p><strong>fail</strong>: The instance failed to be created.</p>
+         * <li><p><strong>fail</strong>: Production failed.</p>
          * </li>
          * <li><p><strong>cancel</strong>: The order is canceled.</p>
          * </li>
-         * <li><p><strong>success</strong>: The instance is created.</p>
+         * <li><p><strong>success</strong>: Production succeeded.</p>
          * </li>
          * </ul>
          * 
@@ -248,16 +234,12 @@ public class ListOrdersResponseBody extends TeaModel {
         public String orderStatus;
 
         /**
-         * <p>The type of the order. Valid values:</p>
+         * <p>The order type. Valid values:</p>
          * <ul>
-         * <li><p>BUY: The instance is purchased.</p>
-         * </li>
-         * <li><p>UPGRADE: The instance configuration is changed.</p>
-         * </li>
-         * <li><p>RENEW: The subscription is renewed.</p>
-         * </li>
-         * <li><p>CONVERT: The billing method is changed.</p>
-         * </li>
+         * <li>BUY: new purchase.</li>
+         * <li>UPGRADE: configuration change.</li>
+         * <li>RENEW: renewal.</li>
+         * <li>CONVERT: billing method conversion.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -276,7 +258,7 @@ public class ListOrdersResponseBody extends TeaModel {
         public String produceCode;
 
         /**
-         * <p>The region information</p>
+         * <p>The region information.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

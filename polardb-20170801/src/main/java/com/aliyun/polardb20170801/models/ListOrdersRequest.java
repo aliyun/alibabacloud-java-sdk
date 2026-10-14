@@ -5,27 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListOrdersRequest extends TeaModel {
     /**
-     * <p>The <a href="https://help.aliyun.com/document_detail/183258.html">edition</a> of the cluster. Valid values:</p>
+     * <p>The <a href="https://help.aliyun.com/document_detail/183258.html">product edition</a>. Valid values:</p>
      * <ul>
-     * <li><p><strong>Normal</strong>: Cluster Edition</p>
-     * </li>
-     * <li><p><strong>Basic</strong>: single node</p>
-     * </li>
-     * <li><p><strong>Archive</strong>: X-Engine</p>
-     * </li>
-     * <li><p><strong>NormalMultimaster</strong>: Multi-master Cluster Edition</p>
-     * </li>
-     * <li><p><strong>SENormal</strong>: Standard Edition</p>
-     * </li>
+     * <li><strong>Normal</strong>: Cluster Edition.</li>
+     * <li><strong>Basic</strong>: Single Node Edition.</li>
+     * <li><strong>Archive</strong>: X-Engine (Warm Data).</li>
+     * <li><strong>NormalMultimaster</strong>: Multi-master Cluster Edition.</li>
+     * <li><strong>SENormal</strong>: Standard Edition.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li><p>The single node edition is not supported on PolarDB for PostgreSQL clusters that run PostgreSQL 11.</p>
-     * </li>
-     * <li><p>The Standard Edition is supported on PolarDB for MySQL clusters that run MySQL 8.0 or 5.7, and on PolarDB for PostgreSQL clusters that run PostgreSQL 14.</p>
-     * </li>
-     * <li><p>PolarDB for MySQL clusters that run MySQL 8.0 support X-Engine and the Multi-master Cluster Edition.</p>
-     * </li>
+     * <li>PolarDB for PostgreSQL 11 does not support Single Node Edition.</li>
+     * <li>PolarDB for MySQL 8.0, PolarDB for MySQL 5.7, and PolarDB for PostgreSQL 14 support Standard Edition.</li>
+     * <li>PolarDB for MySQL 8.0 supports X-Engine (Warm Data) and Multi-master Cluster Edition.</li>
      * </ul>
      * </blockquote>
      * 
@@ -36,7 +28,7 @@ public class ListOrdersRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>The ID of the current instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-2zed3m89cw***</p>
@@ -45,7 +37,7 @@ public class ListOrdersRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of entries to return for the current request. Default value: 10.</p>
+     * <p>The maximum number of entries to return. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -54,7 +46,7 @@ public class ListOrdersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A pagination token. If the query results are not returned in a single call, this token is returned. Use this token in a subsequent call to retrieve the remaining results.</p>
+     * <p>The pagination token that is used to retrieve more results. If a single request does not return all results, this parameter is returned. You can pass the returned token in a subsequent request to continue retrieving results.</p>
      * 
      * <strong>example:</strong>
      * <p>212db86sca4384811e0b5e8707e******</p>
@@ -63,17 +55,17 @@ public class ListOrdersRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The status of the order.</p>
+     * <p>The order status. Valid values:</p>
      * <ul>
      * <li><p><strong>pending</strong>: The task is waiting to start.</p>
      * </li>
-     * <li><p><strong>create</strong>: The order is placed and is being processed.</p>
+     * <li><p><strong>create</strong>: The order has been placed and entered the production process.</p>
      * </li>
-     * <li><p><strong>fail</strong>: The instance failed to be created.</p>
+     * <li><p><strong>fail</strong>: Production failed.</p>
      * </li>
      * <li><p><strong>cancel</strong>: The order is canceled.</p>
      * </li>
-     * <li><p><strong>success</strong>: The instance is created.</p>
+     * <li><p><strong>success</strong>: Production succeeded.</p>
      * </li>
      * </ul>
      * 
@@ -93,14 +85,11 @@ public class ListOrdersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p><strong>30</strong></p>
-     * </li>
-     * <li><p><strong>50</strong></p>
-     * </li>
-     * <li><p><strong>100</strong></p>
-     * </li>
+     * <li><strong>30</strong></li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
      * </ul>
      * <p>Default value: 30.</p>
      * 
@@ -122,7 +111,7 @@ public class ListOrdersRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view the details of regions.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query region information.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

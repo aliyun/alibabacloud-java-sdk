@@ -33,6 +33,7 @@ public class TransformDBClusterPayTypeResponseBody extends TeaModel {
      * <blockquote>
      * <p>This response parameter is returned only when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
      * </blockquote>
+     * <p>The time follows the ISO 8601 standard in the format of YYYY-MM-DDTHH:mm:ssZ. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-04-20T10:00:00Z</p>

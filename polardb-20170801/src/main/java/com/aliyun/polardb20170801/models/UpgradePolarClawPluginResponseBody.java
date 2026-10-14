@@ -14,7 +14,7 @@ public class UpgradePolarClawPluginResponseBody extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The response status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -50,7 +50,7 @@ public class UpgradePolarClawPluginResponseBody extends TeaModel {
     public Boolean ok;
 
     /**
-     * <p>The ID of the upgraded plugin.</p>
+     * <p>The ID of the upgraded plug-in.</p>
      * 
      * <strong>example:</strong>
      * <p>openclaw-lark</p>
@@ -59,7 +59,7 @@ public class UpgradePolarClawPluginResponseBody extends TeaModel {
     public String pluginId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>7E2FE3BB-C677-5FF9-9FC5-9CF364BD6BE5</p>
@@ -68,7 +68,7 @@ public class UpgradePolarClawPluginResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the gateway restarted.</p>
+     * <p>Indicates whether the gateway was restarted.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

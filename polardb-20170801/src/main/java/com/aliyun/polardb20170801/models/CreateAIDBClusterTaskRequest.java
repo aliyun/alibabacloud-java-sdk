@@ -38,7 +38,7 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public String dataserviceMode;
 
     /**
-     * <p>The training dataset ID. This parameter is required for fine-tuning.</p>
+     * <p>The ID of the training dataset. This parameter is required for fine-tuning.</p>
      * 
      * <strong>example:</strong>
      * <p>pds-2zetrain***</p>
@@ -47,7 +47,7 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public String datasetPath;
 
     /**
-     * <p>The validation dataset ID. This parameter is required for evaluation.</p>
+     * <p>The ID of the validation dataset. This parameter is required for evaluation.</p>
      * 
      * <strong>example:</strong>
      * <p>pds-2zetrain***</p>
@@ -56,9 +56,9 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public String evalDatasetPath;
 
     /**
-     * <p>The model service type. Valid values:</p>
+     * <p>The type of the model service. Valid values:</p>
      * <ul>
-     * <li><strong>aitrain</strong>: model operator tuning</li>
+     * <li><strong>aitrain</strong>: Model operator tuning.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -69,10 +69,10 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public String kubeType;
 
     /**
-     * <p>The model name.</p>
+     * <p>The name of the model.</p>
      * <ul>
-     * <li><strong>For a preset model, specify the name of the selected model.</strong></li>
-     * <li><strong>For a custom model, specify the path where the model is stored (the model trained in a cold storage instance).</strong></li>
+     * <li><strong>For a preset model, specify the selected model name.</strong></li>
+     * <li><strong>For a custom model, specify the path of the model (the trained model in a cold storage instance).</strong></li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -83,10 +83,10 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public String modelName;
 
     /**
-     * <p>The model source. Valid values:</p>
+     * <p>The source of the model. Valid values:</p>
      * <ul>
-     * <li><strong>public</strong>: preset model</li>
-     * <li><strong>custom</strong>: custom model</li>
+     * <li><strong>public</strong>: Preset model.</li>
+     * <li><strong>custom</strong>: Custom model.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -97,7 +97,7 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public String modelSource;
 
     /**
-     * <p>The custom model type.</p>
+     * <p>The type of the custom model.</p>
      * 
      * <strong>example:</strong>
      * <p>qwen3</p>
@@ -127,7 +127,7 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The running parameters in a JSON string.</p>
+     * <p>The runtime parameters. The value is a JSON string.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -146,7 +146,7 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The model service description.</p>
+     * <p>The description of the model service.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx</p>
@@ -158,7 +158,7 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public String tuneArch;
 
     /**
-     * <p>The virtual private cloud (VPC) ID.</p>
+     * <p>The VPC ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-*******************</p>
@@ -167,7 +167,7 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public String VPCId;
 
     /**
-     * <p>The vSwitch ID.</p>
+     * <p>The ID of the vSwitch.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-*********************</p>

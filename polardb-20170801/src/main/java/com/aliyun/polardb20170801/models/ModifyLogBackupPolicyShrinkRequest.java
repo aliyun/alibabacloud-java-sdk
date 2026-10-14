@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class ModifyLogBackupPolicyShrinkRequest extends TeaModel {
     /**
-     * <p>The advanced backup policies.</p>
+     * <p>The advanced backup policy.</p>
      * <blockquote>
      * <ul>
      * <li><ul>
-     * <li>This parameter is not supported for PolarDB for PostgreSQL (Oracle Compatible) or PolarDB for PostgreSQL.</li>
+     * <li>This parameter is not supported by PolarDB for PostgreSQL (Compatible with Oracle) or PolarDB for PostgreSQL.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>This parameter is supported only for clusters for which the BackupPolicyLevel parameter is set to Advanced.</li>
+     * <li>This parameter is supported only by clusters whose BackupPolicyLevel is set to Advanced.</li>
      * </ul>
      * </li>
      * </ul>
@@ -25,7 +25,7 @@ public class ModifyLogBackupPolicyShrinkRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view information about all clusters in a specific region, including cluster IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query all clusters in a specific region, including their cluster IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -36,11 +36,11 @@ public class ModifyLogBackupPolicyShrinkRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The destination region for cross-region log backups. For information about the regions that support cross-region backup, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</p>
+     * <p>The region for cross-region log backup. For more information about the regions that support cross-region backup, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</p>
      * <blockquote>
      * <ul>
      * <li><ul>
-     * <li>After you enable the advanced backup feature, this parameter is no longer valid. Use the AdvancedLogPolicies parameter instead.</li>
+     * <li>After advanced backup is enabled, this parameter no longer takes effect. Use the AdvancedLogPolicies parameter instead.</li>
      * </ul>
      * </li>
      * </ul>
@@ -53,23 +53,20 @@ public class ModifyLogBackupPolicyShrinkRequest extends TeaModel {
     public String logBackupAnotherRegionRegion;
 
     /**
-     * <p>The retention period of cross-region log backups. Valid values:</p>
+     * <p>The retention period for cross-region backups. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: Disables the cross-region log backup feature.</p>
-     * </li>
-     * <li><p><strong>30 to 7300</strong>: The retention period in days.</p>
-     * </li>
-     * <li><p><strong>-1</strong>: long-term retention.</p>
-     * </li>
+     * <li><strong>0</strong>: disables the cross-region backup feature.</li>
+     * <li><strong>30 to 7300</strong>: the retention period for cross-region backups, in days.</li>
+     * <li><strong>-1</strong>: long-term retention (LTR).</li>
      * </ul>
      * <blockquote>
      * <ul>
      * <li><ul>
-     * <li>When you create a cluster, the default value of this parameter is <strong>0</strong>. This value disables the cross-region log backup feature.</li>
+     * <li>When a cluster is created, the default value is <strong>0</strong>, which indicates that the cross-region backup feature is disabled.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>After you enable the advanced backup feature, this parameter is no longer valid. Use the AdvancedLogPolicies parameter instead.</li>
+     * <li>After advanced backup is enabled, this parameter no longer takes effect. Use the AdvancedLogPolicies parameter instead.</li>
      * </ul>
      * </li>
      * </ul>
@@ -82,17 +79,15 @@ public class ModifyLogBackupPolicyShrinkRequest extends TeaModel {
     public String logBackupAnotherRegionRetentionPeriod;
 
     /**
-     * <p>The retention period of log backups. Valid values:</p>
+     * <p>The log retention period. Valid values:</p>
      * <ul>
-     * <li><p>3 to 7300: The retention period in days.</p>
-     * </li>
-     * <li><p>-1: long-term retention.</p>
-     * </li>
+     * <li>3 to 7300: the log retention period, in days.</li>
+     * <li>-1: long-term retention (LTR).</li>
      * </ul>
      * <blockquote>
      * <ul>
      * <li><ul>
-     * <li>After you enable the advanced backup feature, this parameter is no longer valid. Use the AdvancedLogPolicies parameter instead.</li>
+     * <li>After advanced backup is enabled, this parameter no longer takes effect. Use the AdvancedLogPolicies parameter instead.</li>
      * </ul>
      * </li>
      * </ul>

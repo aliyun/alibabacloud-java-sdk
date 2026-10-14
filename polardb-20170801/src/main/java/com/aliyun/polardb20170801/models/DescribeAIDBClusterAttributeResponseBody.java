@@ -29,6 +29,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The time when the cluster was created.</p>
+     * <p>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2020-08-14T05:58:42Z</p>
@@ -115,7 +116,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     public String ecsSecurityGroupId;
 
     /**
-     * <p>The list of network connection addresses of the instance.</p>
+     * <p>The list of network endpoints of the instance.</p>
      */
     @NameInMap("EndpointList")
     public java.util.List<DescribeAIDBClusterAttributeResponseBodyEndpointList> endpointList;
@@ -123,8 +124,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     /**
      * <p>The expiration time of the cluster.</p>
      * <blockquote>
-     * <p>Only clusters whose billing method is <strong>Prepaid</strong> (subscription) return a specific value. <strong>Postpaid</strong> (pay-as-you-go) clusters return an empty value.</p>
+     * <p>Only clusters with the billing method of <strong>Prepaid</strong> (subscription) return a specific value. <strong>Postpaid</strong> (pay-as-you-go) clusters return an empty value.</p>
      * </blockquote>
+     * <p>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2020-11-14T16:00:00Z</p>
@@ -181,7 +183,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     public String kubeClusterId;
 
     /**
-     * <p>The lock mode of the instance. The value <strong>lock</strong> indicates that the instance is automatically expired or has an overdue payment.</p>
+     * <p>The lock mode of the instance. The value is <strong>lock</strong>, which indicates that the instance is automatically expired or has an overdue payment.</p>
      * 
      * <strong>example:</strong>
      * <p>Unlock</p>
@@ -703,7 +705,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         public String mountPath;
 
         /**
-         * <p>The cloud disk name.</p>
+         * <p>The disk name.</p>
          * 
          * <strong>example:</strong>
          * <p>jueming</p>
@@ -712,7 +714,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The size of the storage cloud disk.</p>
+         * <p>The storage disk size.</p>
          * 
          * <strong>example:</strong>
          * <p>8192</p>
@@ -864,6 +866,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The creation time.</p>
+         * <p>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-08-14T05:58:42Z</p>
@@ -965,7 +968,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         public java.util.List<DescribeAIDBClusterAttributeResponseBodyDBNodesSupportedApis> supportedApis;
 
         /**
-         * <p>The ID of the Kubernetes virtual node.</p>
+         * <p>The Kubernetes virtual node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vn-***************</p>
@@ -1145,7 +1148,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
 
     public static class DescribeAIDBClusterAttributeResponseBodyEndpointListNetInfoItems extends TeaModel {
         /**
-         * <p>The database connection address.</p>
+         * <p>The database endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-**********.rwlb.rds.aliyuncs.com</p>
@@ -1154,7 +1157,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         public String connectionString;
 
         /**
-         * <p>The network type of the connection string. Valid values:</p>
+         * <p>The network type of the endpoint. Valid values:</p>
          * <ul>
          * <li><strong>Public</strong>: public endpoint</li>
          * <li><strong>Private</strong>: private endpoint</li>
@@ -1390,7 +1393,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         public String mountPath;
 
         /**
-         * <p>The cloud disk name.</p>
+         * <p>The disk name.</p>
          * 
          * <strong>example:</strong>
          * <p>jueming</p>

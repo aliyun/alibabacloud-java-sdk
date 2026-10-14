@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAgenticDBProjectRequest extends TeaModel {
     /**
+     * <p>The AgenticDB cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeAgenticDBProjectRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The ID of the target project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class DescribeAgenticDBProjectRequest extends TeaModel {
     public String projectId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class DescribeAgenticDBProjectRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the tenant to which the project belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

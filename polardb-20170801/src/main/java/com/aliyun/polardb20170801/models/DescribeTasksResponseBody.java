@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTasksResponseBody extends TeaModel {
     /**
-     * <p>The ID of the cluster to which the task belongs.</p>
+     * <p>The cluster ID associated with the task.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-***************</p>
@@ -14,7 +14,8 @@ public class DescribeTasksResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end of the time range to query.</p>
+     * <p>The end time of the query.</p>
+     * <p>The time is in the ISO 8601 standard in the UTC time zone (format: YYYY-MM-DDTHH:mmZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2020-12-02T03:00Z</p>
@@ -32,7 +33,7 @@ public class DescribeTasksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on the current page.</p>
+     * <p>The number of records on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -50,7 +51,8 @@ public class DescribeTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range to query.</p>
+     * <p>The start time of the query.</p>
+     * <p>The time is in the ISO 8601 standard in the UTC time zone (format: YYYY-MM-DDTHH:mmZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2020-11-30T00:00Z</p>
@@ -62,7 +64,7 @@ public class DescribeTasksResponseBody extends TeaModel {
     public DescribeTasksResponseBodyTasks tasks;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

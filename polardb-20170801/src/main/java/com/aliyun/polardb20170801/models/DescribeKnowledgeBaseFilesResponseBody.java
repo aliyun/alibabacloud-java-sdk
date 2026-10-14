@@ -265,7 +265,7 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
         public DescribeKnowledgeBaseFilesResponseBodyItemsShardingStrategyConfigRulesStrategyParameters parameters;
 
         /**
-         * <p>The chunking strategy type applied after a rule is matched.</p>
+         * <p>The chunking strategy type after a rule is matched.</p>
          * 
          * <strong>example:</strong>
          * <p>hierarchical</p>
@@ -391,13 +391,13 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
          * <p>The file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Financial_report.pdf</p>
+         * <p>FinancialReport.pdf</p>
          */
         @NameInMap("FileName")
         public String fileName;
 
         /**
-         * <p>The file size, in bytes.</p>
+         * <p>The file size in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>318881</p>
@@ -415,7 +415,7 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
         public String fileType;
 
         /**
-         * <p>Indicates whether the chunking strategy is inherited from the knowledge space.</p>
+         * <p>Indicates whether the knowledge space chunking strategy is inherited.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -454,7 +454,7 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
          * <p>The OSS file path.</p>
          * 
          * <strong>example:</strong>
-         * <p>oss://test-bucket-example/pks-xxxx/pkb-xxxx/Financial_report.pdf</p>
+         * <p>oss://test-bucket-example/pks-xxxx/pkb-xxxx/FinancialReport.pdf</p>
          */
         @NameInMap("OSSPath")
         public String OSSPath;
@@ -469,7 +469,7 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
         public Integer shardCount;
 
         /**
-         * <p>The chunking strategy configuration currently in effect for the document. This value may be empty if the complete configuration was not saved for existing objects.</p>
+         * <p>The chunking strategy configuration currently in effect for the document. This value may be empty if the complete configuration was not saved for existing instances.</p>
          */
         @NameInMap("ShardingStrategyConfig")
         public DescribeKnowledgeBaseFilesResponseBodyItemsShardingStrategyConfig shardingStrategyConfig;
@@ -494,6 +494,7 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
 
         /**
          * <p>The update time.</p>
+         * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-15T22:28:53Z</p>
@@ -503,6 +504,7 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
 
         /**
          * <p>The upload time.</p>
+         * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-15T22:28:53Z</p>

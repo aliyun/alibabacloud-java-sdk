@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchMemoriesRequest extends TeaModel {
     /**
-     * <p>The application ID.</p>
+     * <p>The application ID. Example: pa-**************.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

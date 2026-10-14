@@ -7,9 +7,9 @@ public class CreateAccountZonalRequest extends TeaModel {
     /**
      * <p>The description of the account. The description must meet the following requirements:</p>
      * <ul>
-     * <li><p>Cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <li><p>It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * </li>
-     * <li><p>Be 2 to 256 characters in length.</p>
+     * <li><p>It must be 2 to 256 characters in length.</p>
      * </li>
      * </ul>
      * 
@@ -20,15 +20,15 @@ public class CreateAccountZonalRequest extends TeaModel {
     public String accountDescription;
 
     /**
-     * <p>The account name. The name must meet the following requirements:</p>
+     * <p>The name of the account. The name must meet the following requirements:</p>
      * <ul>
-     * <li><p>Start with a lowercase letter and end with a letter or a digit.</p>
+     * <li><p>It must start with a lowercase letter and end with a letter or a digit.</p>
      * </li>
-     * <li><p>Contain only lowercase letters, digits, and underscores (_).</p>
+     * <li><p>It can contain lowercase letters, digits, and underscores (_).</p>
      * </li>
-     * <li><p>Be 2 to 16 characters in length.</p>
+     * <li><p>It must be 2 to 16 characters in length.</p>
      * </li>
-     * <li><p>Cannot be a reserved username, such as root or admin.</p>
+     * <li><p>It cannot be a reserved username, such as root or admin.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -40,13 +40,13 @@ public class CreateAccountZonalRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The account password. The password must meet the following requirements:</p>
+     * <p>The password of the account. The password must meet the following requirements:</p>
      * <ul>
-     * <li><p>Contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+     * <li><p>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
      * </li>
-     * <li><p>Be 8 to 32 characters in length.</p>
+     * <li><p>It must be 8 to 32 characters in length.</p>
      * </li>
-     * <li><p>Special characters are <code>!@#$%^&amp;*()_+-=</code>.</p>
+     * <li><p>Special characters include <code>!@#$%^&amp;*()_+-=</code>.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -60,15 +60,15 @@ public class CreateAccountZonalRequest extends TeaModel {
     /**
      * <p>The permissions of the account. Valid values:</p>
      * <ul>
-     * <li><p>ReadWrite: read and write permissions.</p>
+     * <li><p>ReadWrite: read and write permissions</p>
      * </li>
-     * <li><p>ReadOnly: read-only permissions.</p>
+     * <li><p>ReadOnly: read-only permissions</p>
      * </li>
-     * <li><p>DMLOnly: DML permissions only.</p>
+     * <li><p>DMLOnly: DML-only permissions</p>
      * </li>
-     * <li><p>DDLOnly: DDL permissions only.</p>
+     * <li><p>DDLOnly: DDL-only permissions</p>
      * </li>
-     * <li><p>ReadIndex: read and index permissions.</p>
+     * <li><p>ReadIndex: read and index permissions</p>
      * </li>
      * </ul>
      * 
@@ -79,11 +79,11 @@ public class CreateAccountZonalRequest extends TeaModel {
     public String accountPrivilege;
 
     /**
-     * <p>The account type. Valid values:</p>
+     * <p>The type of the account. Valid values:</p>
      * <ul>
-     * <li><p>Normal: a standard account.</p>
+     * <li><p>Normal: standard account</p>
      * </li>
-     * <li><p>Super: a privileged account.</p>
+     * <li><p>Super: privileged account</p>
      * </li>
      * </ul>
      * 
@@ -94,7 +94,7 @@ public class CreateAccountZonalRequest extends TeaModel {
     public String accountType;
 
     /**
-     * <p>A client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token is case-sensitive and can contain a maximum of 64 ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and is case-sensitive. It can contain a maximum of 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</p>
@@ -104,6 +104,9 @@ public class CreateAccountZonalRequest extends TeaModel {
 
     /**
      * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p>Note: Only edge cluster (Zonal) IDs are supported. You can query them by calling the DescribeDBClustersZonal operation. Standard PolarDB cluster IDs returned by DescribeDBClusters cannot be used for this API operation.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -113,7 +116,7 @@ public class CreateAccountZonalRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The name of the database that the destination account can access. You can specify multiple database names. Separate them with commas (,).</p>
+     * <p>The names of the databases that the account is authorized to access. You can specify multiple database names separated by commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>testdb</p>
@@ -137,11 +140,11 @@ public class CreateAccountZonalRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Specifies whether to grant permissions on all current and future databases in the cluster. Valid values:</p>
+     * <p>Specifies whether to grant the account permissions on all existing databases and all databases to be created in the cluster. Valid values:</p>
      * <ul>
-     * <li><p>0 or empty: Does not grant permissions.</p>
+     * <li><p>0 or empty: no</p>
      * </li>
-     * <li><p>1: Grants permissions.</p>
+     * <li><p>1: yes</p>
      * </li>
      * </ul>
      * 

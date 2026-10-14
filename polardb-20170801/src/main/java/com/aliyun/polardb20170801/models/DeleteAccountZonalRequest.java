@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAccountZonalRequest extends TeaModel {
     /**
-     * <p>The account name.</p>
+     * <p>The name of the account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,6 +16,9 @@ public class DeleteAccountZonalRequest extends TeaModel {
 
     /**
      * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p>Note: This parameter accepts only the ID of a PolarDB on ENS cluster (CloudProvider=ENS). For standard cloud clusters, use the DeleteAccount API. You can call the DescribeDBClustersZonal operation to query existing PolarDB on ENS clusters.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

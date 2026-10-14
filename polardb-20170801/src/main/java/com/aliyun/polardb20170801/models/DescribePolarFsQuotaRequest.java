@@ -7,7 +7,7 @@ public class DescribePolarFsQuotaRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>To find the cluster ID for enterprise, basic, or data lakehouse edition clusters, call the <a href="https://help.aliyun.com/document_detail/2319131.html">DescribeDBClusters</a> operation.</p>
+     * <p>Enterprise Edition, Basic Edition, and Data Lakehouse Edition: You can call the <a href="https://help.aliyun.com/document_detail/2319131.html">DescribeDBClusters</a> operation to query the cluster ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribePolarFsQuotaRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The destination path.</p>
+     * <p>The target path.</p>
      * 
      * <strong>example:</strong>
      * <p>/data</p>
@@ -26,7 +26,7 @@ public class DescribePolarFsQuotaRequest extends TeaModel {
     public String path;
 
     /**
-     * <p>The PolarFS instance ID.</p>
+     * <p>The Polarlakebase instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class DescribePolarFsQuotaRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to find the IDs of all available regions in your account.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all available regions for the current account, including region IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

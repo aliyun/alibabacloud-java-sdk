@@ -7,10 +7,8 @@ public class DisableDBClusterOrcaRequest extends TeaModel {
     /**
      * <p>Specifies whether to clean up data. Valid values:</p>
      * <ul>
-     * <li><p><strong>Enable</strong></p>
-     * </li>
-     * <li><p><strong>Disable</strong></p>
-     * </li>
+     * <li><strong>Enable</strong>: Enable data cleanup.</li>
+     * <li><strong>Disable</strong>: Disable data cleanup.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,7 +20,7 @@ public class DisableDBClusterOrcaRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters in a specific region, including cluster IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters in the specified region, including the cluster ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

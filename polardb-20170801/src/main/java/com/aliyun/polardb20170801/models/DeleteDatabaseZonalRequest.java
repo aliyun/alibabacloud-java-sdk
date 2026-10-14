@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteDatabaseZonalRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p>Note: The DBClusterId must be the ID of a PolarDB on ENS cluster created by calling CreateDBCluster(CloudProvider=ENS, EnsRegionId=xxx).</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

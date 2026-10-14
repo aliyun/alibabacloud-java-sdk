@@ -14,7 +14,7 @@ public class RemovePolarClawMCPServerResponseBody extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The status code.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,7 +32,7 @@ public class RemovePolarClawMCPServerResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Indicates whether the request was successful. A value of <code>true</code> indicates success.</p>
+     * <p>Indicates whether the operation was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class RemovePolarClawMCPServerResponseBody extends TeaModel {
     public Boolean ok;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>E56531A4-E552-40BA-9C58-137B80******</p>

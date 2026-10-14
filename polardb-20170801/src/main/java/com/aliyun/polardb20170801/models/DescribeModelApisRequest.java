@@ -15,7 +15,7 @@ public class DescribeModelApisRequest extends TeaModel {
     public String gwClusterId;
 
     /**
-     * <p>The model API IDs.</p>
+     * <p>The IDs of the model APIs.</p>
      * 
      * <strong>example:</strong>
      * <p>mi-xxx,mi-xxxx</p>
@@ -24,7 +24,7 @@ public class DescribeModelApisRequest extends TeaModel {
     public String modelApiIds;
 
     /**
-     * <p>The model category. Valid values:</p>
+     * <p>The category. Valid values:</p>
      * <ul>
      * <li><strong>text</strong></li>
      * <li><strong>embedding</strong></li>
@@ -38,7 +38,7 @@ public class DescribeModelApisRequest extends TeaModel {
     public String modelCategory;
 
     /**
-     * <p>The model API name.</p>
+     * <p>The name of the model API.</p>
      * 
      * <strong>example:</strong>
      * <p>testName</p>
@@ -60,9 +60,9 @@ public class DescribeModelApisRequest extends TeaModel {
      * <ul>
      * <li><strong>30</strong></li>
      * <li><strong>50</strong></li>
-     * <li><strong>100</strong></li>
+     * <li><strong>100</strong>
+     * Default value: <strong>30</strong>.</li>
      * </ul>
-     * <p>Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -104,7 +104,7 @@ public class DescribeModelApisRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The model API status.</p>
+     * <p>The status of the model API.</p>
      * 
      * <strong>example:</strong>
      * <p>Enable</p>

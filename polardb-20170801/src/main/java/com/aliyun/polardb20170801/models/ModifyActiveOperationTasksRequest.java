@@ -5,19 +5,17 @@ import com.aliyun.tea.*;
 
 public class ModifyActiveOperationTasksRequest extends TeaModel {
     /**
-     * <p>Specifies whether to immediately start scheduling. Valid values:</p>
+     * <p>Specifies whether to immediately start execution scheduling.</p>
      * <ul>
-     * <li>0: No. This is the default value.</li>
+     * <li>0: No (default).</li>
      * <li>1: Yes.</li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>If you set this parameter to 0, you must specify the SwitchTime parameter.</p>
-     * </li>
-     * <li><p>If you set this parameter to 1, the SwitchTime parameter does not take effect. In this case, the start time of the event is set to the current time, and the system determines the switching time based on the start time. Scheduling is started immediately, which is a prerequisite for the switchover. Then, the switchover is performed. You can call the DescribeActiveOperationTasks operation and check the return value of the PrepareInterval parameter for the preparation time.</p>
-     * </li>
+     * <li>If the value is 0, the SwitchTime parameter is required.</li>
+     * <li>If the value is 1, the SwitchTime parameter does not take effect. The event start time is set to the current time, and the switchover time is automatically calculated based on the new start time. The event immediately enters execution scheduling (not an immediate switchover) and begins pre-switchover preparations. The switchover is performed after the preparations are complete. You can call the DescribeActiveOperationTasks operation and obtain the preparation time from the PrepareInterval response parameter.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -34,7 +32,7 @@ public class ModifyActiveOperationTasksRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the region information about all clusters within a specified account.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the region information of all clusters under the target account.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -54,15 +52,13 @@ public class ModifyActiveOperationTasksRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The scheduled switching time that you want to specify. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The planned switchover time to set. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>The time that is specified by this parameter cannot be later than the latest execution time.</p>
-     * </li>
-     * <li><p>You can call the DescribeActiveOperationTasks operation and check the return value of the Deadline parameter for the latest execution time.</p>
-     * </li>
+     * <li>The time cannot be later than the deadline.</li>
+     * <li>You can call the DescribeActiveOperationTasks operation and obtain the deadline from the Deadline response parameter.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2023-04-25T06:00:00Z</p>
@@ -71,7 +67,7 @@ public class ModifyActiveOperationTasksRequest extends TeaModel {
     public String switchTime;
 
     /**
-     * <p>The task IDs.</p>
+     * <p>The list of task IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

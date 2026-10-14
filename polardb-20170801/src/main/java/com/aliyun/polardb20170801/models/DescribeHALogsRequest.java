@@ -17,7 +17,7 @@ public class DescribeHALogsRequest extends TeaModel {
     /**
      * <p>The node ID.</p>
      * <blockquote>
-     * <p>这是一个optional 字段，需要增加一个条件If specified,If specified, queries the high availability (HA) switchover records of <code>DBNodeId</code>. You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view the detailed information about all clusters under your account, including node IDs.</p>
+     * <p>Queries the HA failover records of the specified DBNodeId. You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters under your account, including node IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DescribeHALogsRequest extends TeaModel {
     public String DBNodeId;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. The time follows the <code>YYYY-MM-DDThh:mm:ssZ</code> format (UTC time).</p>
+     * <p>The end time of the query. The end time must be later than the start time. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2025-05-23T01:01:00Z</p>
@@ -55,7 +55,7 @@ public class DescribeHALogsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 5 to 50. Default value: 10.</p>
+     * <p>The number of entries per page. Valid values: 5 to 50. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -64,7 +64,7 @@ public class DescribeHALogsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The beginning of the time range to query. The time follows the <code>YYYY-MM-DDThh:mm:ssZ</code> format (UTC time).</p>
+     * <p>The start time of the query. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2025-05-01T00:00:00Z</p>

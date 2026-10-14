@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDBClusterVersionZonalRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p>Note: This parameter accepts only the ID of a PolarDB on ENS cluster. Regular PolarDB cluster IDs are not supported. You can call the DescribeDBClustersZonal operation to query the ID of an edge cluster.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +18,9 @@ public class DescribeDBClusterVersionZonalRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether to return information about the latest version or a list of upgradable versions. Valid values:</p>
+     * <p>Specifies the type of version information to return. Valid values:</p>
      * <ul>
-     * <li><p>LATEST_VERSION: Queries information about the latest version.</p>
+     * <li><p>LATEST_VERSION: Queries the latest version information.</p>
      * </li>
      * <li><p>AVAILABLE_VERSION: Queries the list of upgradable versions.</p>
      * </li>

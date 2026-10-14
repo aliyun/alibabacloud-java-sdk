@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAIDBClusterDatasetsRequest extends TeaModel {
     /**
-     * <p>The token used to retrieve the next page of results. This value is obtained from the response of a previous request. For the first request, leave this parameter empty.</p>
+     * <p>The initial token for this request. This parameter does not take effect when you query a list.</p>
      * 
      * <strong>example:</strong>
      * <p>EFSDF-DF-***</p>
@@ -14,7 +14,7 @@ public class DescribeAIDBClusterDatasetsRequest extends TeaModel {
     public String continuationToken;
 
     /**
-     * <p>The ID of the PolarDB cluster for AI model services.</p>
+     * <p>The instance ID of the PolarDB database for the AI model service.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-2ze88***</p>
@@ -34,10 +34,8 @@ public class DescribeAIDBClusterDatasetsRequest extends TeaModel {
     /**
      * <p>The type of the dataset. Valid values:</p>
      * <ul>
-     * <li><p><strong>train</strong>: The training set.</p>
-     * </li>
-     * <li><p><strong>eval</strong>: The evaluation set.</p>
-     * </li>
+     * <li><strong>train</strong>: training dataset.</li>
+     * <li><strong>eval</strong>: evaluation dataset.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,7 +51,7 @@ public class DescribeAIDBClusterDatasetsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number to return. Default value: 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -62,7 +60,7 @@ public class DescribeAIDBClusterDatasetsRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
+     * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
      * <p>Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -87,14 +85,11 @@ public class DescribeAIDBClusterDatasetsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The training mode. Valid values:</p>
+     * <p>The training mode of the dataset. Valid values:</p>
      * <ul>
-     * <li><p><strong>sft</strong>: supervised fine-tuning.</p>
-     * </li>
-     * <li><p><strong>grpo</strong>: reinforcement learning.</p>
-     * </li>
-     * <li><p><strong>text</strong>: text generation.</p>
-     * </li>
+     * <li><strong>sft</strong>: supervised fine-tuning.</li>
+     * <li><strong>grpo</strong>: reinforcement learning.</li>
+     * <li><strong>text</strong>: text generation.</li>
      * </ul>
      * 
      * <strong>example:</strong>

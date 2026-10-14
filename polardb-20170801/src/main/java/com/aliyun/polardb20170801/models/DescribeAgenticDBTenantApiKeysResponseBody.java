@@ -4,10 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
+    /**
+     * <p>The list of API keys.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeAgenticDBTenantApiKeysResponseBodyItems> items;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -22,6 +29,8 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C3D4E5F6-A7B8-9012-CDEF-123456789012</p>
      */
@@ -29,6 +38,8 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -82,6 +93,8 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
 
     public static class DescribeAgenticDBTenantApiKeysResponseBodyItems extends TeaModel {
         /**
+         * <p>The resource ID of the API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>ak-71304e39c7e841a1</p>
          */
@@ -89,6 +102,8 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
         public String apiKeyId;
 
         /**
+         * <p>The masked API key value.</p>
+         * 
          * <strong>example:</strong>
          * <p>pagc_key_cGFnYy1icDFhMmIz****</p>
          */
@@ -96,6 +111,9 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
         public String apiKeyMasked;
 
         /**
+         * <p>The time when the API key was created.</p>
+         * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-06-10T10:30:00Z</p>
          */
@@ -103,6 +121,8 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The description of the API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>MCP server token</p>
          */
@@ -110,6 +130,9 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The time when the API key expires.</p>
+         * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * 
          * <strong>example:</strong>
          * <p>2027-01-01T00:00:00Z</p>
          */
@@ -117,6 +140,8 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
         public String expireTime;
 
         /**
+         * <p>The status of the API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>Active</p>
          */
@@ -124,6 +149,8 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The ID of the tenant to which the API key belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>t-4b83e0da66674951</p>
          */
@@ -131,6 +158,8 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
         public String tenantId;
 
         /**
+         * <p>The name of the tenant to which the API key belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-saas-app</p>
          */

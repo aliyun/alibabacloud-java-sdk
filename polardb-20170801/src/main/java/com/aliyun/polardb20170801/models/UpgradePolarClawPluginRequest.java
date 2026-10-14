@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradePolarClawPluginRequest extends TeaModel {
     /**
-     * <p>The application ID.</p>
+     * <p>The PolarClaw application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpgradePolarClawPluginRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The name and version of the new npm package.</p>
+     * <p>The new npm package name, including the version number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpgradePolarClawPluginRequest extends TeaModel {
     public String npmPackage;
 
     /**
-     * <p>The ID of the plugin to upgrade.</p>
+     * <p>The ID of the plug-in to upgrade.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class UpgradePolarClawPluginRequest extends TeaModel {
     public String pluginId;
 
     /**
-     * <p>Specifies whether to restart the gateway after the upgrade. The default is true.</p>
+     * <p>Specifies whether to restart the gateway after the upgrade. Default value: true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

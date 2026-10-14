@@ -14,7 +14,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
     public String engine;
 
     /**
-     * <p>The engine version.</p>
+     * <p>The database engine version.</p>
      * 
      * <strong>example:</strong>
      * <p>8.0</p>
@@ -29,7 +29,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
     public java.util.List<DescribeModifyParameterLogResponseBodyItems> items;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>CD35F3-F3-44CA-AFFF-BAF869******</p>
@@ -76,7 +76,8 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
 
     public static class DescribeModifyParameterLogResponseBodyItems extends TeaModel {
         /**
-         * <p>The time when the parameter was last modified.</p>
+         * <p>The last modification time.</p>
+         * <p>The time is in the ISO 8601 format. The time is displayed in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-29T09:31:37Z</p>
@@ -112,7 +113,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         public String parameterName;
 
         /**
-         * <p>Indicates whether the modification was applied successfully.</p>
+         * <p>Indicates whether the modification is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

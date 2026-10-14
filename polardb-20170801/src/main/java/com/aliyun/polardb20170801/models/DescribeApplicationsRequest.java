@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationsRequest extends TeaModel {
     /**
-     * <p>The list of application IDs. If specified, only information about these applications is returned.</p>
+     * <p>The list of application IDs. If specified, only the information of these applications is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
@@ -20,7 +20,7 @@ public class DescribeApplicationsRequest extends TeaModel {
     public String applicationTypes;
 
     /**
-     * <p>The PolarDB instance ID. If specified, only application information related to this PolarDB instance is returned.</p>
+     * <p>The PolarDB instance ID. If specified, only the application information related to this PolarDB instance is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-**************</p>
@@ -63,7 +63,7 @@ public class DescribeApplicationsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tag.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeApplicationsRequestTag> tag;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCostRuleRequest extends TeaModel {
     /**
-     * <p>The cost points per million cached tokens. Default value: 0.</p>
+     * <p>The cache read cost points per million tokens. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,13 +14,25 @@ public class CreateCostRuleRequest extends TeaModel {
     public String cacheCostPointsPerMillion;
 
     /**
-     * <p>The effective target type. Valid values:</p>
-     * <ul>
-     * <li>global</li>
-     * <li>consumerGroup</li>
-     * <li>consumer</li>
-     * </ul>
-     * <p>Default value: global.</p>
+     * <p>The cache creation cost points per million tokens.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400</p>
+     */
+    @NameInMap("CacheCreationCostPointsPerMillion")
+    public String cacheCreationCostPointsPerMillion;
+
+    /**
+     * <p>The effective start time in the yyyy-MM-dd HH:mm:ss format. If this parameter is not specified, the rule takes effect immediately.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-10-14 00:00:00</p>
+     */
+    @NameInMap("EffectiveStartTime")
+    public String effectiveStartTime;
+
+    /**
+     * <p>The effective target type. Valid values: global, consumerGroup, and consumer. Default value: global.</p>
      * 
      * <strong>example:</strong>
      * <p>global</p>
@@ -29,13 +41,22 @@ public class CreateCostRuleRequest extends TeaModel {
     public String effectiveTargetType;
 
     /**
-     * <p>The effective target value. This parameter is required when EffectiveTargetType is not set to global.</p>
+     * <p>The effective target value. This parameter is required when the effective target type is not global.</p>
      * 
      * <strong>example:</strong>
      * <p>user</p>
      */
     @NameInMap("EffectiveTargetValue")
     public String effectiveTargetValue;
+
+    /**
+     * <p>The explicit cache read cost points per million tokens.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
+    @NameInMap("ExplicitCacheCostPointsPerMillion")
+    public String explicitCacheCostPointsPerMillion;
 
     /**
      * <p>The gateway instance ID.</p>
@@ -48,7 +69,16 @@ public class CreateCostRuleRequest extends TeaModel {
     public String gwClusterId;
 
     /**
-     * <p>The cost points per million input tokens. Default value: 0.</p>
+     * <p>The image input cost points per image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
+    @NameInMap("ImageCostPointsPerCount")
+    public String imageCostPointsPerCount;
+
+    /**
+     * <p>The input cost points per million tokens. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -57,7 +87,16 @@ public class CreateCostRuleRequest extends TeaModel {
     public String inputCostPointsPerMillion;
 
     /**
-     * <p>The model name, such as gpt-4 or qwen-turbo.</p>
+     * <p>The tiered price for input tokens (non-cumulative). The value is a JSON array character string. Each element contains Tier and InputCostPointsPerMillion. Valid values for Tier: &quot;&quot; (default tier), 0-32K, 32K-64K, 64K-128K, 128K-256K, 256K-512K, 512K-1M, and 1M+. Example: [{&quot;Tier&quot;:&quot;0-32K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1000&quot;},{&quot;Tier&quot;:&quot;32K-64K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1800&quot;}]. If this parameter is specified, it takes precedence over InputCostPointsPerMillion. An empty array [] is not allowed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;Tier&quot;:&quot;0-32K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1000&quot;},{&quot;Tier&quot;:&quot;32K-64K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1800&quot;}]</p>
+     */
+    @NameInMap("InputTokenTiers")
+    public String inputTokenTiers;
+
+    /**
+     * <p>The name of the model, such as gpt-4 or qwen-turbo.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,7 +106,7 @@ public class CreateCostRuleRequest extends TeaModel {
     public String modelName;
 
     /**
-     * <p>The model service ID.</p>
+     * <p>The ID of the model service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,7 +116,7 @@ public class CreateCostRuleRequest extends TeaModel {
     public String modelServiceId;
 
     /**
-     * <p>The cost points per million output tokens. Default value: 0.</p>
+     * <p>The output cost points per million tokens. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -94,6 +133,15 @@ public class CreateCostRuleRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The video input cost points per second.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
+    @NameInMap("VideoCostPointsPerSecond")
+    public String videoCostPointsPerSecond;
+
     public static CreateCostRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCostRuleRequest self = new CreateCostRuleRequest();
         return TeaModel.build(map, self);
@@ -105,6 +153,22 @@ public class CreateCostRuleRequest extends TeaModel {
     }
     public String getCacheCostPointsPerMillion() {
         return this.cacheCostPointsPerMillion;
+    }
+
+    public CreateCostRuleRequest setCacheCreationCostPointsPerMillion(String cacheCreationCostPointsPerMillion) {
+        this.cacheCreationCostPointsPerMillion = cacheCreationCostPointsPerMillion;
+        return this;
+    }
+    public String getCacheCreationCostPointsPerMillion() {
+        return this.cacheCreationCostPointsPerMillion;
+    }
+
+    public CreateCostRuleRequest setEffectiveStartTime(String effectiveStartTime) {
+        this.effectiveStartTime = effectiveStartTime;
+        return this;
+    }
+    public String getEffectiveStartTime() {
+        return this.effectiveStartTime;
     }
 
     public CreateCostRuleRequest setEffectiveTargetType(String effectiveTargetType) {
@@ -123,6 +187,14 @@ public class CreateCostRuleRequest extends TeaModel {
         return this.effectiveTargetValue;
     }
 
+    public CreateCostRuleRequest setExplicitCacheCostPointsPerMillion(String explicitCacheCostPointsPerMillion) {
+        this.explicitCacheCostPointsPerMillion = explicitCacheCostPointsPerMillion;
+        return this;
+    }
+    public String getExplicitCacheCostPointsPerMillion() {
+        return this.explicitCacheCostPointsPerMillion;
+    }
+
     public CreateCostRuleRequest setGwClusterId(String gwClusterId) {
         this.gwClusterId = gwClusterId;
         return this;
@@ -131,12 +203,28 @@ public class CreateCostRuleRequest extends TeaModel {
         return this.gwClusterId;
     }
 
+    public CreateCostRuleRequest setImageCostPointsPerCount(String imageCostPointsPerCount) {
+        this.imageCostPointsPerCount = imageCostPointsPerCount;
+        return this;
+    }
+    public String getImageCostPointsPerCount() {
+        return this.imageCostPointsPerCount;
+    }
+
     public CreateCostRuleRequest setInputCostPointsPerMillion(String inputCostPointsPerMillion) {
         this.inputCostPointsPerMillion = inputCostPointsPerMillion;
         return this;
     }
     public String getInputCostPointsPerMillion() {
         return this.inputCostPointsPerMillion;
+    }
+
+    public CreateCostRuleRequest setInputTokenTiers(String inputTokenTiers) {
+        this.inputTokenTiers = inputTokenTiers;
+        return this;
+    }
+    public String getInputTokenTiers() {
+        return this.inputTokenTiers;
     }
 
     public CreateCostRuleRequest setModelName(String modelName) {
@@ -169,6 +257,14 @@ public class CreateCostRuleRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateCostRuleRequest setVideoCostPointsPerSecond(String videoCostPointsPerSecond) {
+        this.videoCostPointsPerSecond = videoCostPointsPerSecond;
+        return this;
+    }
+    public String getVideoCostPointsPerSecond() {
+        return this.videoCostPointsPerSecond;
     }
 
 }

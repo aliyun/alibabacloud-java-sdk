@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAgenticDBBranchesRequest extends TeaModel {
     /**
+     * <p>The branch name for fuzzy match.</p>
+     * 
      * <strong>example:</strong>
      * <p>feature</p>
      */
@@ -12,6 +14,7 @@ public class DescribeAgenticDBBranchesRequest extends TeaModel {
     public String branchName;
 
     /**
+     * <p>The AgenticDB cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class DescribeAgenticDBBranchesRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +33,8 @@ public class DescribeAgenticDBBranchesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 30. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -35,6 +42,8 @@ public class DescribeAgenticDBBranchesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the project to which the branch belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>proj-a1b2c3d4e5f6</p>
      */
@@ -42,6 +51,7 @@ public class DescribeAgenticDBBranchesRequest extends TeaModel {
     public String projectId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +61,13 @@ public class DescribeAgenticDBBranchesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The status filter. Valid values:</p>
+     * <ul>
+     * <li>Running</li>
+     * <li>Pending</li>
+     * <li>Paused</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Active</p>
      */
@@ -58,6 +75,8 @@ public class DescribeAgenticDBBranchesRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The ID of the tenant to which the branch belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>t-4b83e0da66674951</p>
      */

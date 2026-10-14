@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class FailoverDBClusterZonalRequest extends TeaModel {
     /**
-     * <p>A client token to ensure the idempotence of the request. The client generates this token. It must be unique across requests. The token is case-sensitive and cannot exceed 64 ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token is case-sensitive and can contain a maximum of 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f54a343f1a4233c1e7d1c5******</p>
@@ -36,12 +36,10 @@ public class FailoverDBClusterZonalRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to fail back to the original primary zone after a failover. Valid values:</p>
+     * <p>Specifies whether to switch back to the original primary zone after a failover. Valid values:</p>
      * <ul>
-     * <li><p>true: Yes.</p>
-     * </li>
-     * <li><p>false: No.</p>
-     * </li>
+     * <li>true: Switch back to the original primary zone.</li>
+     * <li>false: Do not switch back to the original primary zone.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +49,7 @@ public class FailoverDBClusterZonalRequest extends TeaModel {
     public Boolean rollBackForDisaster;
 
     /**
-     * <p>The ID of the node to promote to the primary node. If you do not specify this parameter, the system automatically selects a node. Call the DescribeDBClusters operation to query node information, such as node IDs.</p>
+     * <p>The ID of the node to be switched to the primary node. If you leave this parameter empty, the system automatically elects a node. You can call the DescribeDBClusters operation to query the node ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pi-***********</p>
@@ -60,13 +58,12 @@ public class FailoverDBClusterZonalRequest extends TeaModel {
     public String targetDBNodeId;
 
     /**
-     * <p>The type of failover. Valid values:</p>
+     * <p>Specifies whether the switchover is a primary/secondary switchover within the primary zone. Valid values:</p>
      * <ul>
-     * <li><p>Primary: A primary/secondary failover within the primary zone.</p>
-     * </li>
-     * <li><p>Standby: A switch to the hot standby storage cluster.</p>
-     * </li>
+     * <li>Primary: primary/secondary switchover within the primary zone.</li>
+     * <li>Standby: switchover to the hot standby storage cluster.</li>
      * </ul>
+     * <p>Default value: Primary. This value indicates that the switchover is performed within the active zone.</p>
      * 
      * <strong>example:</strong>
      * <p>Primary</p>

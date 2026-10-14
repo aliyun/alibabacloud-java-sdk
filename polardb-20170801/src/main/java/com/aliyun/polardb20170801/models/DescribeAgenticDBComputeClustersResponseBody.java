@@ -130,6 +130,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
 
         /**
          * <p>The time when the compute instance was created.</p>
+         * <p>The time is in the ISO 8601 standard in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-10T11:00:00Z</p>
@@ -147,6 +148,8 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Indicates whether the compute instance is the default branch.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -189,9 +192,15 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
         @NameInMap("OperatorType")
         public String operatorType;
 
+        /**
+         * <p>The ID of the parent branch. This value is an empty string for the root branch.</p>
+         */
         @NameInMap("ParentBranchId")
         public String parentBranchId;
 
+        /**
+         * <p>The name of the parent branch. This value is an empty string for the root branch.</p>
+         */
         @NameInMap("ParentBranchName")
         public String parentBranchName;
 
@@ -223,7 +232,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The amount of used data, in bytes.</p>
+         * <p>The amount of data used, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1073741824</p>

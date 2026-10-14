@@ -14,13 +14,13 @@ public class CreateApplicationResponseBody extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The list of child components.</p>
+     * <p>The list of subcomponents.</p>
      */
     @NameInMap("Components")
     public java.util.List<CreateApplicationResponseBodyComponents> components;
 
     /**
-     * <p>The description of the application.</p>
+     * <p>The application description.</p>
      * 
      * <strong>example:</strong>
      * <p>myapp</p>
@@ -47,7 +47,7 @@ public class CreateApplicationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether resources are sufficient. This parameter is returned only when DryRun is set to true.</p>
+     * <p>Indicates whether the resources are sufficient. This parameter is returned only when DryRun is set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -56,7 +56,7 @@ public class CreateApplicationResponseBody extends TeaModel {
     public Boolean resourceAvailable;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-********************</p>
@@ -127,7 +127,7 @@ public class CreateApplicationResponseBody extends TeaModel {
 
     public static class CreateApplicationResponseBodyComponents extends TeaModel {
         /**
-         * <p>The child component ID.</p>
+         * <p>The subcomponent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pac-********************</p>

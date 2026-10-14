@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class EvaluateRegionResourceResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the resources are sufficient.</p>
+     * <p>Indicates whether sufficient resources are available.</p>
      * <ul>
-     * <li><p><strong>true</strong>: The resources are sufficient.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The resources are insufficient.</p>
-     * </li>
+     * <li><strong>true</strong>: Sufficient resources are available.</li>
+     * <li><strong>false</strong>: Resources are insufficient.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,14 +18,11 @@ public class EvaluateRegionResourceResponseBody extends TeaModel {
     public String DBInstanceAvailable;
 
     /**
-     * <p>The database engine type. Valid values:</p>
+     * <p>The type of the database engine. Valid values:</p>
      * <ul>
-     * <li><p><strong>MySQL</strong></p>
-     * </li>
-     * <li><p><strong>PostgreSQL</strong></p>
-     * </li>
-     * <li><p><strong>Oracle</strong></p>
-     * </li>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>PostgreSQL</strong></li>
+     * <li><strong>Oracle</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,28 +32,20 @@ public class EvaluateRegionResourceResponseBody extends TeaModel {
     public String DBType;
 
     /**
-     * <p>The version of the database engine.</p>
+     * <p>The database DPI engine version number.</p>
      * <ul>
-     * <li><p>Valid values for MySQL:</p>
-     * <ul>
-     * <li><p><strong>5.6</strong></p>
-     * </li>
-     * <li><p><strong>5.7</strong></p>
-     * </li>
-     * <li><p><strong>8.0</strong></p>
-     * </li>
+     * <li>Valid version numbers for MySQL: <ul>
+     * <li><strong>5.6</strong></li>
+     * <li><strong>5.7</strong></li>
+     * <li><strong>8.0</strong></li>
      * </ul>
      * </li>
-     * <li><p>Valid values for PostgreSQL:</p>
-     * <ul>
-     * <li><p><strong>11</strong></p>
-     * </li>
-     * <li><p><strong>14</strong></p>
-     * </li>
+     * <li>Valid version numbers for PostgreSQL:<ul>
+     * <li><strong>11</strong></li>
+     * <li><strong>14</strong></li>
      * </ul>
      * </li>
-     * <li><p>Valid value for Oracle: <strong>11</strong>.</p>
-     * </li>
+     * <li>Valid version number for Oracle: <strong>11</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>

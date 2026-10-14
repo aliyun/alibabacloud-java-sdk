@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAgenticDBComputeClustersRequest extends TeaModel {
     /**
+     * <p>The compute instance ID for fuzzy match (pc-xxxx), such as pc-2ze8k.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-2ze8k</p>
      */
@@ -50,7 +52,7 @@ public class DescribeAgenticDBComputeClustersRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The status filter. Valid values: Running, Stopped, and Waiting.</p>
+     * <p>Filters compute instances by status. Valid values: Running, Stopped, and Waiting.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>

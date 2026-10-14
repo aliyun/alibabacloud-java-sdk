@@ -23,7 +23,7 @@ public class UpdatePolarClawAgentSkillsResponseBody extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The return code.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>

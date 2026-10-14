@@ -14,9 +14,9 @@ public class DescribeHALogsResponseBody extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The instance type. Valid values:</p>
+     * <p>The instance type. Valid values: </p>
      * <ul>
-     * <li><strong>polardb_mysql_rw</strong>: read-write instance.</li>
+     * <li><strong>polardb_mysql_rw</strong>: read/write instance.</li>
      * <li><strong>polardb_mysql_ro</strong>: read-only instance.</li>
      * <li><strong>polardb_mysql_standby</strong>: standby instance.</li>
      * </ul>
@@ -28,7 +28,7 @@ public class DescribeHALogsResponseBody extends TeaModel {
     public String DBInstanceType;
 
     /**
-     * <p>The list of primary/secondary 这里 AI 机翻使用了 failover，但代码里用了 switch，建议保持一致，都改为 swichover logs.</p>
+     * <p>The list of primary/secondary switchover logs.</p>
      */
     @NameInMap("HaLogItems")
     public java.util.List<DescribeHALogsResponseBodyHaLogItems> haLogItems;
@@ -36,8 +36,8 @@ public class DescribeHALogsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether primary/secondary switchover records exist. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: No</li>
-     * <li><strong>0</strong>: Yes</li>
+     * <li><strong>1</strong>: No records exist.</li>
+     * <li><strong>0</strong>: Records exist.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,7 +56,7 @@ public class DescribeHALogsResponseBody extends TeaModel {
     public Integer itemsNumbers;
 
     /**
-     * <p>The page number. The value is greater than 0 and does not exceed the maximum value of the Integer data type. Default value: 1.</p>
+     * <p>The page number. The value is a positive integer that does not exceed the maximum value of the Integer data type. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -65,7 +65,7 @@ public class DescribeHALogsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page. Valid values: 30 to 100. Default value: 30.</p>
+     * <p>The number of entries per page. Valid values: 30 to 100. Default value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -170,7 +170,7 @@ public class DescribeHALogsResponseBody extends TeaModel {
 
     public static class DescribeHALogsResponseBodyHaLogItems extends TeaModel {
         /**
-         * <p>The cause code of the switchover.</p>
+         * <p>The switchover cause code.</p>
          * 
          * <strong>example:</strong>
          * <p>Platform.Ha.AuroraService.ManualOperations</p>
@@ -179,7 +179,7 @@ public class DescribeHALogsResponseBody extends TeaModel {
         public String switchCauseCode;
 
         /**
-         * <p>The cause of the switchover.</p>
+         * <p>The switchover cause.</p>
          * 
          * <strong>example:</strong>
          * <p>Platform.Ha.ManuallyTriggered</p>
@@ -189,6 +189,7 @@ public class DescribeHALogsResponseBody extends TeaModel {
 
         /**
          * <p>The end time of the switchover.</p>
+         * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-20T03:09:56Z</p>
@@ -207,6 +208,7 @@ public class DescribeHALogsResponseBody extends TeaModel {
 
         /**
          * <p>The start time of the switchover.</p>
+         * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-20T03:09:45Z</p>

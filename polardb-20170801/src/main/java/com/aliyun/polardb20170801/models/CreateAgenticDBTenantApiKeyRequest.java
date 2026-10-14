@@ -43,7 +43,7 @@ public class CreateAgenticDBTenantApiKeyRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The tenant name. The name must be unique within the cluster and contain 2 to 64 characters.</p>
+     * <p>The tenant name. The name must be unique within the cluster and must be 2 to 64 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

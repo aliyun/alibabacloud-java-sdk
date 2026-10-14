@@ -14,10 +14,11 @@ public class DescribeLocalAvailableRecoveryTimeResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The start of the time range available for recovery.</p>
+     * <p>The start time from which backups can be restored.</p>
      * <blockquote>
-     * <p>This is calculated based on level-1 backups and does not include level-2 backups.</p>
+     * <p>Calculated based on level-1 backups. Level-2 backups are not included.</p>
      * </blockquote>
+     * <p>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2025-09-10T14:19:48Z</p>
@@ -26,10 +27,11 @@ public class DescribeLocalAvailableRecoveryTimeResponseBody extends TeaModel {
     public String recoveryBeginTime;
 
     /**
-     * <p>The end of the time range available for recovery.</p>
+     * <p>The end time to which backups can be restored.</p>
      * <blockquote>
-     * <p>This is calculated based on level-1 backups and does not include level-2 backups.</p>
+     * <p>Calculated based on level-1 backups. Level-2 backups are not included.</p>
      * </blockquote>
+     * <p>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2025-09-17T08:56:45Z</p>

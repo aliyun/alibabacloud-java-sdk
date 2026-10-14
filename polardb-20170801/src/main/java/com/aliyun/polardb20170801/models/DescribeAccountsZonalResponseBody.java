@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountsZonalResponseBody extends TeaModel {
     /**
-     * <p>The details of the accounts.</p>
+     * <p>The details of the account information.</p>
      */
     @NameInMap("Accounts")
     public java.util.List<DescribeAccountsZonalResponseBodyAccounts> accounts;
 
     /**
-     * <p>The maximum number of entries returned in the request.</p>
+     * <p>The maximum number of entries to return for this request.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -20,7 +20,7 @@ public class DescribeAccountsZonalResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results. If the results are not fully returned, this token is returned. You can use this token in the next request to retrieve the remaining results.</p>
+     * <p>The query token. Set the value to the NextToken value returned in the last API call. If no subsequent query is required, do not specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>212db86sca4384811e0b5e8707e******</p>
@@ -161,7 +161,7 @@ public class DescribeAccountsZonalResponseBody extends TeaModel {
         public String accountDescription;
 
         /**
-         * <p>The lock state of the account. Valid values:</p>
+         * <p>The lock status of the account. Valid values:</p>
          * <ul>
          * <li><p>UnLock: The account is not locked.</p>
          * </li>
@@ -185,7 +185,7 @@ public class DescribeAccountsZonalResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>The time when the password expires.</p>
+         * <p>The expiration time of the password.</p>
          * 
          * <strong>example:</strong>
          * <p>undefined</p>
@@ -195,9 +195,14 @@ public class DescribeAccountsZonalResponseBody extends TeaModel {
 
         /**
          * <p>The status of the account. Valid values:</p>
-         * <p>Creating: The account is being created.</p>
-         * <p>Available: The account is active.</p>
-         * <p>Deleting: The account is being deleted.</p>
+         * <ul>
+         * <li><p>Creating: The account is being created.</p>
+         * </li>
+         * <li><p>Available: The account is available.</p>
+         * </li>
+         * <li><p>Deleting: The account is being deleted.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Available</p>
@@ -208,11 +213,11 @@ public class DescribeAccountsZonalResponseBody extends TeaModel {
         /**
          * <p>The type of the account. Valid values:</p>
          * <ul>
-         * <li><p>Normal: A standard account.</p>
+         * <li><p>Normal: standard account.</p>
          * </li>
-         * <li><p>Super: A privileged account.</p>
+         * <li><p>Super: privileged account.</p>
          * </li>
-         * <li><p>ReadOnly: A global read-only account.</p>
+         * <li><p>ReadOnly: global read-only account.</p>
          * </li>
          * </ul>
          * 
@@ -223,7 +228,7 @@ public class DescribeAccountsZonalResponseBody extends TeaModel {
         public String accountType;
 
         /**
-         * <p>The details of the database permissions that the account has.</p>
+         * <p>The details of the database permissions granted to the account.</p>
          */
         @NameInMap("DatabasePrivileges")
         public java.util.List<DescribeAccountsZonalResponseBodyAccountsDatabasePrivileges> databasePrivileges;

@@ -23,7 +23,16 @@ public class UpdateKBSyncLinkRequest extends TeaModel {
     public String clientSecret;
 
     /**
-     * <p>The unique ID of the knowledge base.</p>
+     * <p>The validity period of a successful Lark group member snapshot used for fallback reuse, in seconds. This parameter can be explicitly set only for FEISHU synchronization links. A value of -1 indicates that the snapshot never expires. A value of 0 disables snapshot fallback reuse. A positive integer indicates the maximum age of a snapshot allowed for reuse. If this parameter is omitted, the original value is retained. Explicitly passing -1 restores the default behavior.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-1</p>
+     */
+    @NameInMap("FeishuChatMemberStaleTtlSeconds")
+    public Integer feishuChatMemberStaleTtlSeconds;
+
+    /**
+     * <p>The unique identifier of the knowledge base.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +42,7 @@ public class UpdateKBSyncLinkRequest extends TeaModel {
     public String knowledgeBaseId;
 
     /**
-     * <p>The synchronization link ID.</p>
+     * <p>The ID of the synchronization link.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +52,7 @@ public class UpdateKBSyncLinkRequest extends TeaModel {
     public String linkId;
 
     /**
-     * <p>The DingTalk document MCP Server endpoint.</p>
+     * <p>The endpoint of the DingTalk Docs MCP server.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876</a></p>
@@ -62,7 +71,7 @@ public class UpdateKBSyncLinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The DingTalk spreadsheet MCP Server endpoint.</p>
+     * <p>The endpoint of the DingTalk Sheets MCP server.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543</a></p>
@@ -71,7 +80,7 @@ public class UpdateKBSyncLinkRequest extends TeaModel {
     public String sheetMcpEndpoint;
 
     /**
-     * <p>Specifies whether to enable automatic synchronization. This parameter can only be modified independently and cannot be changed together with other configurations.</p>
+     * <p>Specifies whether to enable automatic synchronization. This parameter must be modified individually and cannot be changed along with other configurations.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -98,13 +107,22 @@ public class UpdateKBSyncLinkRequest extends TeaModel {
     public String userAccessToken;
 
     /**
-     * <p>The DingTalk user ID of the operator.</p>
+     * <p>The ID of the DingTalk user that performs the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>123***56</p>
      */
     @NameInMap("UserId")
     public String userId;
+
+    /**
+     * <p>The new Lark user refresh token. Pass this parameter together with UserAccessToken. Passing empty strings for both parameters indicates deletion.</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
+    @NameInMap("UserRefreshToken")
+    public String userRefreshToken;
 
     public static UpdateKBSyncLinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateKBSyncLinkRequest self = new UpdateKBSyncLinkRequest();
@@ -125,6 +143,14 @@ public class UpdateKBSyncLinkRequest extends TeaModel {
     }
     public String getClientSecret() {
         return this.clientSecret;
+    }
+
+    public UpdateKBSyncLinkRequest setFeishuChatMemberStaleTtlSeconds(Integer feishuChatMemberStaleTtlSeconds) {
+        this.feishuChatMemberStaleTtlSeconds = feishuChatMemberStaleTtlSeconds;
+        return this;
+    }
+    public Integer getFeishuChatMemberStaleTtlSeconds() {
+        return this.feishuChatMemberStaleTtlSeconds;
     }
 
     public UpdateKBSyncLinkRequest setKnowledgeBaseId(String knowledgeBaseId) {
@@ -197,6 +223,14 @@ public class UpdateKBSyncLinkRequest extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
+    }
+
+    public UpdateKBSyncLinkRequest setUserRefreshToken(String userRefreshToken) {
+        this.userRefreshToken = userRefreshToken;
+        return this;
+    }
+    public String getUserRefreshToken() {
+        return this.userRefreshToken;
     }
 
 }

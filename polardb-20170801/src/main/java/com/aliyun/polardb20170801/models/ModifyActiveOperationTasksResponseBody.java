@@ -14,7 +14,7 @@ public class ModifyActiveOperationTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task IDs.</p>
+     * <p>The list of task IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>11111,22222</p>

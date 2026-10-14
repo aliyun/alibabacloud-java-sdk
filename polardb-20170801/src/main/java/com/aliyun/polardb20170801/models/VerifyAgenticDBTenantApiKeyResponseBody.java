@@ -23,7 +23,8 @@ public class VerifyAgenticDBTenantApiKeyResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The expiration time of the API key. This parameter is empty if the API key is permanently valid.</p>
+     * <p>The expiration time. This parameter is empty if the API key is permanently valid.</p>
+     * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2027-01-01T00:00:00Z</p>
@@ -32,12 +33,19 @@ public class VerifyAgenticDBTenantApiKeyResponseBody extends TeaModel {
     public String expireTime;
 
     /**
-     * <p>The reason why the validation failed. Valid values: NotFound, Expired, and Revoked. This parameter is empty if the API key is valid.</p>
+     * <p>The reason for the validation failure. This parameter is empty if the API key is valid. Valid values:</p>
+     * <ul>
+     * <li>NotFound: The API key is not found.</li>
+     * <li>Expired: The API key has expired.</li>
+     * <li>Revoked: The API key has been revoked.</li>
+     * </ul>
      */
     @NameInMap("Reason")
     public String reason;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

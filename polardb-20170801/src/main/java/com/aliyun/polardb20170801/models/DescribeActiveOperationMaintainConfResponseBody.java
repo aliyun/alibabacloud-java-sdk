@@ -11,7 +11,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
     public DescribeActiveOperationMaintainConfResponseBodyConfig config;
 
     /**
-     * <p>Indicates whether a configuration has been set. Valid values:1: Yes0: NoThe value of this parameter is 0 for the first query.</p>
+     * <p>Indicates whether the configuration has been set. Valid values: 1 (yes) and 0 (no). On the first visit, HasConfig is 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -59,7 +59,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
 
     public static class DescribeActiveOperationMaintainConfResponseBodyConfig extends TeaModel {
         /**
-         * <p>The time when the configuration was created.</p>
+         * <p>The creation time.</p>
+         * <p>The time is in the YYYY-MM-DDTHH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-07-04T19:28:46</p>
@@ -68,12 +69,10 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String createdTime;
 
         /**
-         * <p>The day of the cycle.</p>
+         * <p>The cycle time.</p>
          * <ul>
-         * <li><p>If CycleType is set to Month, this parameter returns a number from 1 to 28 that indicates the day of the month. Multiple days are separated by commas (,).</p>
-         * </li>
-         * <li><p>If CycleType is set to Week, this parameter returns a number from 1 to 7 that indicates the day of the week. Multiple days are separated by commas (,).</p>
-         * </li>
+         * <li>If CycleType is set to Month, a number from 1 to 28 is returned, indicating the day of the month. Multiple values are separated by commas (,).</li>
+         * <li>If CycleType is set to Week, a number from 1 to 7 is returned, indicating the day of the week. Multiple values are separated by commas (,).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -85,10 +84,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         /**
          * <p>The cycle type. Valid values:</p>
          * <ul>
-         * <li><p>Month: monthly</p>
-         * </li>
-         * <li><p>Week: weekly</p>
-         * </li>
+         * <li>Month: monthly</li>
+         * <li>Week: weekly</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -99,6 +96,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
 
         /**
          * <p>The end time of the maintenance window.</p>
+         * <p>The time is in UTC in the HH:mmZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>09:00Z</p>
@@ -108,6 +106,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
 
         /**
          * <p>The start time of the maintenance window.</p>
+         * <p>The time is in UTC. Example: 8:00Z.</p>
          * 
          * <strong>example:</strong>
          * <p>8:00Z</p>
@@ -116,7 +115,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String maintainStartTime;
 
         /**
-         * <p>The time when the configuration was last modified.</p>
+         * <p>The modification time.</p>
+         * <p>The time is in the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-02T02:10:08Z</p>
@@ -125,7 +125,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>Indicates whether the configuration is enabled. Valid values:1: Enabled2: Disabled</p>
+         * <p>Indicates whether the configuration is effective. Valid values: 1 (yes) and 2 (no).</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

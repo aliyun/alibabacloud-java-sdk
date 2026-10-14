@@ -59,7 +59,7 @@ public class RestartPolarClawGatewayResponseBody extends TeaModel {
     public String mode;
 
     /**
-     * <p>Indicates whether the operation was successful.</p>
+     * <p>Indicates whether the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -86,7 +86,7 @@ public class RestartPolarClawGatewayResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the gateway has been confirmed available after the restart. This value is returned synchronously.</p>
+     * <p>Indicates whether the gateway is confirmed available after the restart. This value is returned synchronously.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

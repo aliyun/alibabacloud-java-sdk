@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetAgenticDBTenantApiKeyRequest extends TeaModel {
     /**
+     * <p>The ID of the target API key.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ResetAgenticDBTenantApiKeyRequest extends TeaModel {
     public String apiKeyId;
 
     /**
+     * <p>The AgenticDB cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ResetAgenticDBTenantApiKeyRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class ResetAgenticDBTenantApiKeyRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the target tenant.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

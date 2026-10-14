@@ -7,7 +7,7 @@ public class DisableDBClusterOrcaResponseBody extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters that belong to your account, including cluster IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters under your account, including the cluster ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DisableDBClusterOrcaResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>D0CEC6AC-7760-409A-A0D5-E6CD86******</p>

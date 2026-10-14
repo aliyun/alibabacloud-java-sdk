@@ -93,7 +93,8 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
 
     public static class DescribeAgenticDBProjectsResponseBodyItems extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the project was created.</p>
+         * <p>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-10T11:00:00Z</p>
@@ -102,7 +103,7 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The associated AgenticDB cluster ID.</p>
+         * <p>The ID of the associated AgenticDB cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>pagc-bp1abcdef1234567</p>
@@ -156,6 +157,13 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
         public String projectName;
 
         /**
+         * <p>The project status. Valid values:</p>
+         * <ul>
+         * <li>Active: Normal.</li>
+         * <li>Destroying: Being destroyed.</li>
+         * <li>Destroyed: Destroyed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Active</p>
          */
@@ -163,7 +171,7 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tenant ID to which the project belongs.</p>
+         * <p>The ID of the tenant to which the project belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>t-4b83e0da66674951</p>

@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeBatchTasksRequest extends TeaModel {
     /**
-     * <p>The end time of the query range. Specify the time in UTC format.</p>
+     * <p>The end of the creation time range.</p>
+     * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +16,7 @@ public class DescribeBatchTasksRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The page number. The value must be a positive integer. The default is 1.</p>
+     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,7 +25,7 @@ public class DescribeBatchTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of records per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -33,7 +34,8 @@ public class DescribeBatchTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The start time of the query range. Specify the time in UTC format.</p>
+     * <p>The start of the creation time range.</p>
+     * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -43,16 +45,16 @@ public class DescribeBatchTasksRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The task statuses.</p>
+     * <p>The list of task statuses.</p>
      * <blockquote>
-     * <p>If you omit this parameter, the operation returns tasks of all statuses.</p>
+     * <p>If this parameter is left empty, scheduled tasks in all statuses are queried by default.</p>
      * </blockquote>
      */
     @NameInMap("Status")
     public java.util.List<String> status;
 
     /**
-     * <p>The type of the batch task.</p>
+     * <p>The batch task type.</p>
      * 
      * <strong>example:</strong>
      * <p>polarclaw_install_skills</p>

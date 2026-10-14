@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDBClusterEndpointsZonalRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p>Note: Only edge cluster (Zonal) IDs are supported. Regular PolarDB cluster IDs are not supported. You can call DescribeDBClustersZonal to retrieve the list of edge clusters.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +27,7 @@ public class DescribeDBClusterEndpointsZonalRequest extends TeaModel {
     public String DBEndpointId;
 
     /**
-     * <p>Specifies whether to return information about AI nodes.</p>
+     * <p>Specifies whether to return AI node information.</p>
      * 
      * <strong>example:</strong>
      * <p>AI</p>

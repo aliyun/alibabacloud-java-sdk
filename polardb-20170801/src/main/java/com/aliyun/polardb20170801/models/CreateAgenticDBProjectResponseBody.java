@@ -15,6 +15,7 @@ public class CreateAgenticDBProjectResponseBody extends TeaModel {
 
     /**
      * <p>The time when the project was created.</p>
+     * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2026-06-10T11:00:00Z</p>

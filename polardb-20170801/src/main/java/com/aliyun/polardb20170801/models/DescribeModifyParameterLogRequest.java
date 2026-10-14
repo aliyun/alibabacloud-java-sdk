@@ -15,7 +15,7 @@ public class DescribeModifyParameterLogRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. The time is in the <code>YYYY-MM-DDThh:mmZ</code> format and is in UTC.</p>
+     * <p>The end time of the query. The end time must be later than the start time. Specify the time in the <code>YYYY-MM-DDThh:mmZ</code> format (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class DescribeModifyParameterLogRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is in UTC.</p>
+     * <p>The start time of the query. Specify the time in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

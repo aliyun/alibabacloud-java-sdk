@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeAgenticDBProjectResponseBody extends TeaModel {
     /**
+     * <p>The time when the project was created.</p>
+     * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-06-10T11:00:00Z</p>
      */
@@ -12,6 +15,8 @@ public class DescribeAgenticDBProjectResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The ID of the default branch.</p>
+     * 
      * <strong>example:</strong>
      * <p>br-1a2b3c4d5e6f</p>
      */
@@ -19,6 +24,8 @@ public class DescribeAgenticDBProjectResponseBody extends TeaModel {
     public String defaultBranchId;
 
     /**
+     * <p>The name of the default branch.</p>
+     * 
      * <strong>example:</strong>
      * <p>main</p>
      */
@@ -26,6 +33,8 @@ public class DescribeAgenticDBProjectResponseBody extends TeaModel {
     public String defaultBranchName;
 
     /**
+     * <p>The description of the project.</p>
+     * 
      * <strong>example:</strong>
      * <p>Production analytics database</p>
      */
@@ -33,6 +42,8 @@ public class DescribeAgenticDBProjectResponseBody extends TeaModel {
     public String description;
 
     /**
+     * <p>Project ID</p>
+     * 
      * <strong>example:</strong>
      * <p>proj-a1b2c3d4e5f6</p>
      */
@@ -40,6 +51,8 @@ public class DescribeAgenticDBProjectResponseBody extends TeaModel {
     public String projectId;
 
     /**
+     * <p>The project name.</p>
+     * 
      * <strong>example:</strong>
      * <p>analytics-prod</p>
      */
@@ -47,6 +60,8 @@ public class DescribeAgenticDBProjectResponseBody extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>I9J0K1L2-M3N4-5678-IJKL-789012345678</p>
      */
@@ -54,6 +69,13 @@ public class DescribeAgenticDBProjectResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The project status. Valid values:</p>
+     * <ul>
+     * <li>Active: Normal.</li>
+     * <li>Destroying: Being destroyed.</li>
+     * <li>Destroyed: Destroyed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Active</p>
      */
@@ -61,6 +83,8 @@ public class DescribeAgenticDBProjectResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The ID of the tenant to which the project belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>t-4b83e0da66674951</p>
      */

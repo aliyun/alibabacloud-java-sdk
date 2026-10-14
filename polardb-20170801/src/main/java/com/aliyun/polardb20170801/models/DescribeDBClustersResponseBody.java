@@ -17,7 +17,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of clusters on the current page.</p>
+     * <p>The number of clusters returned on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -35,7 +35,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>16</p>

@@ -20,7 +20,7 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call. If there is no next query, do not pass this parameter.</p>
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call. If there is no next query, do not specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>212db86sca4384811e0b5e8707e******</p>
@@ -207,6 +207,7 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
 
         /**
          * <p>The time when the cluster was created.</p>
+         * <p>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-08-14T05:58:42Z</p>
@@ -264,6 +265,7 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
          * <blockquote>
          * <p>A specific value is returned only for clusters whose billing method is <strong>Prepaid</strong> (subscription). An empty value is returned for <strong>Postpaid</strong> (pay-as-you-go) clusters.</p>
          * </blockquote>
+         * <p>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-25T09:37:10Z</p>
@@ -293,8 +295,8 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
          * <p>The lock status of the cluster. Valid values: </p>
          * <ul>
          * <li><strong>Unlock</strong>: Normal. </li>
-         * <li><strong>ManualLock</strong>: Manually locked. </li>
-         * <li><strong>LockByExpiration</strong>: Automatically locked due to cluster expiration.</li>
+         * <li><strong>ManualLock</strong>: manually locked. </li>
+         * <li><strong>LockByExpiration</strong>: automatically locked due to cluster expiration.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -344,7 +346,7 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
         public String scaleMin;
 
         /**
-         * <p>The serverless type. A value of <strong>AgileServerless</strong> indicates that the cluster is a serverless cluster.</p>
+         * <p>The serverless type. A return value of <strong>AgileServerless</strong> indicates that the cluster is a serverless cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>AgileServerless</p>
@@ -377,7 +379,7 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
         public Long storageUsed;
 
         /**
-         * <p>The tag key. You can filter the cluster list by tag. You can specify up to 20 tag pairs. The number n for each tag pair must be unique and must be a consecutive integer starting from 1. The value of Tag.n.Key corresponds to Tag.n.Value.</p>
+         * <p>The tag key. You can use tags to filter clusters. You can specify up to 20 tags. The number n for each tag pair must be unique and must be a consecutive integer that starts from 1. The Tag.n.Key parameter is paired with the Tag.n.Value parameter.</p>
          */
         @NameInMap("Tags")
         public java.util.List<DescribeAgenticDBClustersResponseBodyItemsTags> tags;

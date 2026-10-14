@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCrossCloudLevelsResponseBody extends TeaModel {
     /**
-     * <p>The list of supported cross-cloud specifications.</p>
+     * <p>The list of specifications supported for cross-cloud scenarios.</p>
      */
     @NameInMap("CrossCloudLevelList")
     public java.util.List<DescribeCrossCloudLevelsResponseBodyCrossCloudLevelList> crossCloudLevelList;
@@ -63,7 +63,7 @@ public class DescribeCrossCloudLevelsResponseBody extends TeaModel {
          * <p>The CPU and memory.</p>
          * 
          * <strong>example:</strong>
-         * <p>2 core 8 GB</p>
+         * <p>2 cores 8 GB</p>
          */
         @NameInMap("LevelName")
         public String levelName;

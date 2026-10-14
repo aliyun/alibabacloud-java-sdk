@@ -15,7 +15,7 @@ public class DescribeAgenticDBBranchEndpointsRequest extends TeaModel {
     public String branchId;
 
     /**
-     * <p>The AgenticDB cluster ID.</p>
+     * <p>The ID of the AgenticDB cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

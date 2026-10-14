@@ -20,7 +20,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of records on the current page.</p>
+     * <p>The number of entries on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -47,7 +47,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -108,9 +108,51 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         return this.totalRecordCount;
     }
 
+    public static class DescribeCostRulesResponseBodyItemsInputTokenTiers extends TeaModel {
+        /**
+         * <p>The input cost points per million tokens for the tier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
+        @NameInMap("InputCostPointsPerMillion")
+        public String inputCostPointsPerMillion;
+
+        /**
+         * <p>The token tier. Valid values: &quot;&quot; (default tier), 0-32K, 32K-64K, 64K-128K, 128K-256K, 256K-512K, 512K-1M, and 1M+.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0-32K</p>
+         */
+        @NameInMap("Tier")
+        public String tier;
+
+        public static DescribeCostRulesResponseBodyItemsInputTokenTiers build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCostRulesResponseBodyItemsInputTokenTiers self = new DescribeCostRulesResponseBodyItemsInputTokenTiers();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCostRulesResponseBodyItemsInputTokenTiers setInputCostPointsPerMillion(String inputCostPointsPerMillion) {
+            this.inputCostPointsPerMillion = inputCostPointsPerMillion;
+            return this;
+        }
+        public String getInputCostPointsPerMillion() {
+            return this.inputCostPointsPerMillion;
+        }
+
+        public DescribeCostRulesResponseBodyItemsInputTokenTiers setTier(String tier) {
+            this.tier = tier;
+            return this;
+        }
+        public String getTier() {
+            return this.tier;
+        }
+
+    }
+
     public static class DescribeCostRulesResponseBodyItems extends TeaModel {
         /**
-         * <p>The cost points per million cache tokens. Default value: 0.</p>
+         * <p>The cache read cost points per million tokens. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -119,7 +161,16 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         public String cacheCostPointsPerMillion;
 
         /**
-         * <p>The cost rule ID.</p>
+         * <p>The cache creation or write cost points per million tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
+         */
+        @NameInMap("CacheCreationCostPointsPerMillion")
+        public String cacheCreationCostPointsPerMillion;
+
+        /**
+         * <p>The ID of the cost rule.</p>
          * 
          * <strong>example:</strong>
          * <p>924d450014e64e88ac6e8486f8e990**</p>
@@ -128,7 +179,25 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         public String costRuleId;
 
         /**
-         * <p>The effective target type.</p>
+         * <p>The end time of the effective period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-10-01T00:00:00Z</p>
+         */
+        @NameInMap("EffectiveEndTime")
+        public String effectiveEndTime;
+
+        /**
+         * <p>The start time of the effective period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-09-01T00:00:00Z</p>
+         */
+        @NameInMap("EffectiveStartTime")
+        public String effectiveStartTime;
+
+        /**
+         * <p>The type of the effective target.</p>
          * 
          * <strong>example:</strong>
          * <p>global</p>
@@ -137,7 +206,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         public String effectiveTargetType;
 
         /**
-         * <p>The effective target value.</p>
+         * <p>The value of the effective target.</p>
          * 
          * <strong>example:</strong>
          * <p>user</p>
@@ -146,7 +215,16 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         public String effectiveTargetValue;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The explicit cache read cost points per million tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("ExplicitCacheCostPointsPerMillion")
+        public String explicitCacheCostPointsPerMillion;
+
+        /**
+         * <p>The time when the cost rule was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-04T16:09:29+08:00</p>
@@ -155,7 +233,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
-         * <p>The last modification time.</p>
+         * <p>The time when the cost rule was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-16 16:46:20</p>
@@ -173,7 +251,16 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         public String gwClusterId;
 
         /**
-         * <p>The cost points per million input tokens. Default value: 0.</p>
+         * <p>The image input cost points per image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
+        @NameInMap("ImageCostPointsPerCount")
+        public String imageCostPointsPerCount;
+
+        /**
+         * <p>The input cost points per million tokens. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -182,7 +269,22 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         public String inputCostPointsPerMillion;
 
         /**
-         * <p>The model name.</p>
+         * <p>The input token tier. An empty value indicates a legacy or default rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0-32K</p>
+         */
+        @NameInMap("InputTokenTier")
+        public String inputTokenTier;
+
+        /**
+         * <p>The non-cumulative tiered pricing for input tokens. Each element includes the tier and the input cost points per million tokens.</p>
+         */
+        @NameInMap("InputTokenTiers")
+        public java.util.List<DescribeCostRulesResponseBodyItemsInputTokenTiers> inputTokenTiers;
+
+        /**
+         * <p>The name of the model.</p>
          * 
          * <strong>example:</strong>
          * <p>gpt-4</p>
@@ -191,7 +293,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         public String model;
 
         /**
-         * <p>The model service ID.</p>
+         * <p>The ID of the model service.</p>
          * 
          * <strong>example:</strong>
          * <p>ms-xxxxxxxxx</p>
@@ -200,13 +302,31 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         public String modelServiceId;
 
         /**
-         * <p>The cost points per million output tokens. Default value: 0.</p>
+         * <p>The model service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-service</p>
+         */
+        @NameInMap("ModelServiceName")
+        public String modelServiceName;
+
+        /**
+         * <p>The output cost points per million tokens. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("OutputCostPointsPerMillion")
         public String outputCostPointsPerMillion;
+
+        /**
+         * <p>The video input cost points per second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
+        @NameInMap("VideoCostPointsPerSecond")
+        public String videoCostPointsPerSecond;
 
         public static DescribeCostRulesResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeCostRulesResponseBodyItems self = new DescribeCostRulesResponseBodyItems();
@@ -221,12 +341,36 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             return this.cacheCostPointsPerMillion;
         }
 
+        public DescribeCostRulesResponseBodyItems setCacheCreationCostPointsPerMillion(String cacheCreationCostPointsPerMillion) {
+            this.cacheCreationCostPointsPerMillion = cacheCreationCostPointsPerMillion;
+            return this;
+        }
+        public String getCacheCreationCostPointsPerMillion() {
+            return this.cacheCreationCostPointsPerMillion;
+        }
+
         public DescribeCostRulesResponseBodyItems setCostRuleId(String costRuleId) {
             this.costRuleId = costRuleId;
             return this;
         }
         public String getCostRuleId() {
             return this.costRuleId;
+        }
+
+        public DescribeCostRulesResponseBodyItems setEffectiveEndTime(String effectiveEndTime) {
+            this.effectiveEndTime = effectiveEndTime;
+            return this;
+        }
+        public String getEffectiveEndTime() {
+            return this.effectiveEndTime;
+        }
+
+        public DescribeCostRulesResponseBodyItems setEffectiveStartTime(String effectiveStartTime) {
+            this.effectiveStartTime = effectiveStartTime;
+            return this;
+        }
+        public String getEffectiveStartTime() {
+            return this.effectiveStartTime;
         }
 
         public DescribeCostRulesResponseBodyItems setEffectiveTargetType(String effectiveTargetType) {
@@ -243,6 +387,14 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         }
         public String getEffectiveTargetValue() {
             return this.effectiveTargetValue;
+        }
+
+        public DescribeCostRulesResponseBodyItems setExplicitCacheCostPointsPerMillion(String explicitCacheCostPointsPerMillion) {
+            this.explicitCacheCostPointsPerMillion = explicitCacheCostPointsPerMillion;
+            return this;
+        }
+        public String getExplicitCacheCostPointsPerMillion() {
+            return this.explicitCacheCostPointsPerMillion;
         }
 
         public DescribeCostRulesResponseBodyItems setGmtCreated(String gmtCreated) {
@@ -269,12 +421,36 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             return this.gwClusterId;
         }
 
+        public DescribeCostRulesResponseBodyItems setImageCostPointsPerCount(String imageCostPointsPerCount) {
+            this.imageCostPointsPerCount = imageCostPointsPerCount;
+            return this;
+        }
+        public String getImageCostPointsPerCount() {
+            return this.imageCostPointsPerCount;
+        }
+
         public DescribeCostRulesResponseBodyItems setInputCostPointsPerMillion(String inputCostPointsPerMillion) {
             this.inputCostPointsPerMillion = inputCostPointsPerMillion;
             return this;
         }
         public String getInputCostPointsPerMillion() {
             return this.inputCostPointsPerMillion;
+        }
+
+        public DescribeCostRulesResponseBodyItems setInputTokenTier(String inputTokenTier) {
+            this.inputTokenTier = inputTokenTier;
+            return this;
+        }
+        public String getInputTokenTier() {
+            return this.inputTokenTier;
+        }
+
+        public DescribeCostRulesResponseBodyItems setInputTokenTiers(java.util.List<DescribeCostRulesResponseBodyItemsInputTokenTiers> inputTokenTiers) {
+            this.inputTokenTiers = inputTokenTiers;
+            return this;
+        }
+        public java.util.List<DescribeCostRulesResponseBodyItemsInputTokenTiers> getInputTokenTiers() {
+            return this.inputTokenTiers;
         }
 
         public DescribeCostRulesResponseBodyItems setModel(String model) {
@@ -293,12 +469,28 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             return this.modelServiceId;
         }
 
+        public DescribeCostRulesResponseBodyItems setModelServiceName(String modelServiceName) {
+            this.modelServiceName = modelServiceName;
+            return this;
+        }
+        public String getModelServiceName() {
+            return this.modelServiceName;
+        }
+
         public DescribeCostRulesResponseBodyItems setOutputCostPointsPerMillion(String outputCostPointsPerMillion) {
             this.outputCostPointsPerMillion = outputCostPointsPerMillion;
             return this;
         }
         public String getOutputCostPointsPerMillion() {
             return this.outputCostPointsPerMillion;
+        }
+
+        public DescribeCostRulesResponseBodyItems setVideoCostPointsPerSecond(String videoCostPointsPerSecond) {
+            this.videoCostPointsPerSecond = videoCostPointsPerSecond;
+            return this;
+        }
+        public String getVideoCostPointsPerSecond() {
+            return this.videoCostPointsPerSecond;
         }
 
     }
