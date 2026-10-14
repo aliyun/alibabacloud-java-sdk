@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetKnowledgeRecallRequest extends TeaModel {
     /**
-     * <p>The ID of the ADB MySQL cluster.</p>
+     * <p>The ID of the AnalyticDB for MySQL cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,16 @@ public class GetKnowledgeRecallRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The file path prefix. Only files that match the specified path prefix are recalled.</p>
+     * <p>The array of images to retrieve during image retrieval. Currently, only one image is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[     {       &quot;base64&quot;: &quot;/9j/4AAQSkZJRgABAQ...&quot;,       &quot;mime_type&quot;: &quot;image/jpeg&quot;     }   ]</p>
+     */
+    @NameInMap("Images")
+    public String images;
+
+    /**
+     * <p>The file path prefix. Only files that match the path prefix are retrieved.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://bucketName/path/prefix/</p>
@@ -24,7 +33,7 @@ public class GetKnowledgeRecallRequest extends TeaModel {
     public String path;
 
     /**
-     * <p>The question for knowledge base recall.</p>
+     * <p>The question for knowledge base retrieval.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +41,15 @@ public class GetKnowledgeRecallRequest extends TeaModel {
      */
     @NameInMap("Question")
     public String question;
+
+    /**
+     * <p>The semantic rules. Currently, only &quot;all&quot; and &quot;&quot; are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>all</p>
+     */
+    @NameInMap("SemanticRules")
+    public String semanticRules;
 
     /**
      * <p>The list of tags in JSON format.</p>
@@ -43,7 +61,7 @@ public class GetKnowledgeRecallRequest extends TeaModel {
     public String tags;
 
     /**
-     * <p>The top K associated files to recall.</p>
+     * <p>The top K value for retrieving associated files.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -52,7 +70,7 @@ public class GetKnowledgeRecallRequest extends TeaModel {
     public Integer topk;
 
     /**
-     * <p>The username. Only files that the specified user has permission to access are recalled.</p>
+     * <p>The username. Only files that the user has permissions to access are retrieved.</p>
      * 
      * <strong>example:</strong>
      * <p>user_name1</p>
@@ -73,6 +91,14 @@ public class GetKnowledgeRecallRequest extends TeaModel {
         return this.DBClusterId;
     }
 
+    public GetKnowledgeRecallRequest setImages(String images) {
+        this.images = images;
+        return this;
+    }
+    public String getImages() {
+        return this.images;
+    }
+
     public GetKnowledgeRecallRequest setPath(String path) {
         this.path = path;
         return this;
@@ -87,6 +113,14 @@ public class GetKnowledgeRecallRequest extends TeaModel {
     }
     public String getQuestion() {
         return this.question;
+    }
+
+    public GetKnowledgeRecallRequest setSemanticRules(String semanticRules) {
+        this.semanticRules = semanticRules;
+        return this;
+    }
+    public String getSemanticRules() {
+        return this.semanticRules;
     }
 
     public GetKnowledgeRecallRequest setTags(String tags) {

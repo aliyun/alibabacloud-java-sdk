@@ -153,8 +153,8 @@ public class CreateDBResourceGroupRequest extends TeaModel {
     /**
      * <p>The maximum reserved computing resources, in ACUs.</p>
      * <ul>
-     * <li>If the resource group type is Interactive, the maximum reserved computing resources are the current unallocated resources of the cluster, in increments of 16 ACUs.</li>
-     * <li>If the resource group type is Job, the maximum reserved computing resources are the current unallocated resources of the cluster, in increments of 8 ACUs.</li>
+     * <li>If the resource group type is Interactive, the maximum reserved computing resources are the current unallocated resources of the cluster, with a step size of 16 ACUs.</li>
+     * <li>If the resource group type is Job, the maximum reserved computing resources are the current unallocated resources of the cluster, with a step size of 8 ACUs.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -472,7 +472,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public Integer authNodeNum;
 
         /**
-         * <p>The authentication node specifications ([0-9+]ACU).</p>
+         * <p>The node specifications of authentication nodes ([0-9+]ACU).</p>
          * 
          * <strong>example:</strong>
          * <p>8ACU</p>
@@ -490,7 +490,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public Integer insertNodeNum;
 
         /**
-         * <p>The insert node specifications ([0-9+]ACU).</p>
+         * <p>The node specifications of insert nodes ([0-9+]ACU).</p>
          * 
          * <strong>example:</strong>
          * <p>8ACU</p>
@@ -499,7 +499,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public String insertNodeSpec;
 
         /**
-         * <p>The query node cache size (GB).</p>
+         * <p>The cache size of query nodes (GB).</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -517,7 +517,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public Integer selectNodeNum;
 
         /**
-         * <p>The query node specifications ([0-9+]ACU).</p>
+         * <p>The node specifications of query nodes ([0-9+]ACU).</p>
          * 
          * <strong>example:</strong>
          * <p>8ACU</p>
@@ -526,7 +526,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public String selectNodeSpec;
 
         /**
-         * <p>The storage node disk size.</p>
+         * <p>The disk size of storage nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -535,7 +535,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public Integer storageNodeDiskSize;
 
         /**
-         * <p>The storage node disk type (essd_pl1, essd_pl2).</p>
+         * <p>The disk type of storage nodes (essd_pl1, essd_pl2).</p>
          * 
          * <strong>example:</strong>
          * <p>essd_pl1</p>
@@ -553,7 +553,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public Integer storageNodeNum;
 
         /**
-         * <p>The storage node specifications ([0-9+]ACU).</p>
+         * <p>The node specifications of storage nodes ([0-9+]ACU).</p>
          * 
          * <strong>example:</strong>
          * <p>8ACU</p>
@@ -911,10 +911,21 @@ public class CreateDBResourceGroupRequest extends TeaModel {
 
     public static class CreateDBResourceGroupRequestRayConfig extends TeaModel {
         /**
+         * <p>The Ray authentication token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KnDC43ClfXqv&amp;P*s</p>
+         */
+        @NameInMap("AuthToken")
+        public String authToken;
+
+        /**
          * <p>The Ray cluster type. Valid values:</p>
          * <ul>
-         * <li>BASIC: basic type, non-high-availability</li>
-         * <li>HIGH_AVAILABILITY: high-availability type</li>
+         * <li><p>BASIC: basic type, non-high-availability.</p>
+         * </li>
+         * <li><p>HIGH_AVAILABILITY: high-availability type.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -969,7 +980,7 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public java.util.List<CreateDBResourceGroupRequestRayConfigStorageMounts> storageMounts;
 
         /**
-         * <p>The custom Python dependencies for RayCluster. The content follows the requirements.txt format, with one pip dependency per line. A maximum of 200 lines are supported, and each line can contain up to 512 characters. Version constraints, extras, PEP 440 direct URLs, and # comments are supported. Shell metacharacters are not supported. This parameter applies only to AI resource groups of the RayCluster type.</p>
+         * <p>The custom Python dependencies for RayCluster. The content follows the requirements.txt format, with one pip dependency per line. A maximum of 200 lines are supported, and each line can be up to 512 characters in length. Version constraints, extras, PEP 440 direct URLs, and # comments are supported. Shell metacharacters are not supported. This parameter applies only to AI resource groups of the RayCluster type.</p>
          * 
          * <strong>example:</strong>
          * <p>numpy==1.24.0</p>
@@ -986,6 +997,14 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         public static CreateDBResourceGroupRequestRayConfig build(java.util.Map<String, ?> map) throws Exception {
             CreateDBResourceGroupRequestRayConfig self = new CreateDBResourceGroupRequestRayConfig();
             return TeaModel.build(map, self);
+        }
+
+        public CreateDBResourceGroupRequestRayConfig setAuthToken(String authToken) {
+            this.authToken = authToken;
+            return this;
+        }
+        public String getAuthToken() {
+            return this.authToken;
         }
 
         public CreateDBResourceGroupRequestRayConfig setCategory(String category) {

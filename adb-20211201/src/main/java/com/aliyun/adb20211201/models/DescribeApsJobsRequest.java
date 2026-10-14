@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApsJobsRequest extends TeaModel {
     /**
-     * <p>The name of the APS job.</p>
+     * <p>The name of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>aps-xxxxx</p>
@@ -14,7 +14,7 @@ public class DescribeApsJobsRequest extends TeaModel {
     public String apsJobName;
 
     /**
-     * <p>The end of the time range to query.</p>
+     * <p>The end time of creation.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-04-23T01:10Z</p>
@@ -23,7 +23,7 @@ public class DescribeApsJobsRequest extends TeaModel {
     public String createTimeEnd;
 
     /**
-     * <p>The beginning of the time range to query.</p>
+     * <p>The start time of creation.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-03-23T01:10Z</p>

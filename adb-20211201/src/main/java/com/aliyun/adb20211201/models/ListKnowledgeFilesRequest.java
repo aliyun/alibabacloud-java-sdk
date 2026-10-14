@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListKnowledgeFilesRequest extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL instance.</p>
+     * <p>The ADB instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListKnowledgeFilesRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The JSON string of the file ID array. A maximum of 200 positive integers are supported.</p>
+     * <p>The JSON string of the file ID array, which contains up to 200 positive integers.</p>
      * 
      * <strong>example:</strong>
      * <p>[1001,1002,1003]</p>
@@ -24,7 +24,7 @@ public class ListKnowledgeFilesRequest extends TeaModel {
     public String fileIds;
 
     /**
-     * <p>The page number, starting from 1. If this parameter is not specified, Ray uses a default value of 1.</p>
+     * <p>The page number, starting from 1. If this parameter is not specified, the default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,7 +33,7 @@ public class ListKnowledgeFilesRequest extends TeaModel {
     public String page;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100. If this parameter is not specified, Ray uses a default value of 20.</p>
+     * <p>The number of entries per page. Valid values: 1 to 100. If this parameter is not specified, the default value is 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -42,15 +42,7 @@ public class ListKnowledgeFilesRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The processing status. Valid values:</p>
-     * <ul>
-     * <li>PENDING</li>
-     * <li>PROCESSING</li>
-     * <li>COMPLETED</li>
-     * <li>FAILED</li>
-     * <li>DUPLICATED</li>
-     * <li>SKIPPED</li>
-     * </ul>
+     * <p>The processing status. Valid values: PENDING, PROCESSING, COMPLETED, FAILED, DUPLICATED, and SKIPPED.</p>
      * 
      * <strong>example:</strong>
      * <p>FAILED</p>

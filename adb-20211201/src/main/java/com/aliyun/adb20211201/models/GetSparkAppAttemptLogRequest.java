@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetSparkAppAttemptLogRequest extends TeaModel {
     /**
-     * <p>The ID of the log.</p>
+     * <p>The ID of the retry log.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/455887.html">ListSparkAppAttempts</a> operation to query the information about the retry attempts of a Spark application, including the retry log IDs.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/455887.html">ListSparkAppAttempts</a> operation to query the retry history of an application, which includes the retry log ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class GetSparkAppAttemptLogRequest extends TeaModel {
     public String attemptId;
 
     /**
-     * <p>The number of log entries to return. Valid values: 1 to 500. Default value: 300.</p>
+     * <p>The number of lines in the retry log. Valid values: 1 to 500. Default value: 300.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -27,7 +27,7 @@ public class GetSparkAppAttemptLogRequest extends TeaModel {
     public Long logLength;
 
     /**
-     * <p>The log offset.</p>
+     * <p>The start offset for reading logs.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +36,7 @@ public class GetSparkAppAttemptLogRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of data rows per page.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>

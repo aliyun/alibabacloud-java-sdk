@@ -2264,7 +2264,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
+     * <p>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a resource group for a specified Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.</p>
@@ -2413,7 +2413,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
+     * <p>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a resource group for a specified Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.</p>
@@ -5152,7 +5152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an AnalyticDB Pipeline Service (APS) data source.</p>
+     * <p>Queries the details of an APS data source.</p>
      * 
      * @param request DescribeApsDatasourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5192,7 +5192,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an AnalyticDB Pipeline Service (APS) data source.</p>
+     * <p>Queries the details of an APS data source.</p>
      * 
      * @param request DescribeApsDatasourceRequest
      * @return DescribeApsDatasourceResponse
@@ -5204,7 +5204,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of AnalyticDB Pipeline Service (APS) data sources.</p>
+     * <p>Queries APS data sources.</p>
      * 
      * @param request DescribeApsDatasourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5264,7 +5264,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of AnalyticDB Pipeline Service (APS) data sources.</p>
+     * <p>Queries APS data sources.</p>
      * 
      * @param request DescribeApsDatasourcesRequest
      * @return DescribeApsDatasourcesResponse
@@ -5376,7 +5376,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of AnalyticDB Pipeline Service (APS) jobs.</p>
+     * <p>Queries a list of APS tasks.</p>
      * 
      * @param request DescribeApsJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5428,7 +5428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of AnalyticDB Pipeline Service (APS) jobs.</p>
+     * <p>Queries a list of APS tasks.</p>
      * 
      * @param request DescribeApsJobsRequest
      * @return DescribeApsJobsResponse
@@ -5440,7 +5440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the workloads of AnalyticDB Pipeline Service (APS) migration jobs.</p>
+     * <p>Queries the list of workloads for an APS migration task.</p>
      * 
      * @param request DescribeApsMigrationWorkloadsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5496,7 +5496,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the workloads of AnalyticDB Pipeline Service (APS) migration jobs.</p>
+     * <p>Queries the list of workloads for an APS migration task.</p>
      * 
      * @param request DescribeApsMigrationWorkloadsRequest
      * @return DescribeApsMigrationWorkloadsResponse
@@ -7966,10 +7966,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only supports viewing tasks within the last 30 days.</p>
+     * <p>You can view only tasks from the last 30 days.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieve historical task records.</p>
+     * <p>Retrieves historical task records.</p>
      * 
      * @param request DescribeHistoryTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8049,10 +8049,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only supports viewing tasks within the last 30 days.</p>
+     * <p>You can view only tasks from the last 30 days.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieve historical task records.</p>
+     * <p>Retrieves historical task records.</p>
      * 
      * @param request DescribeHistoryTasksRequest
      * @return DescribeHistoryTasksResponse
@@ -8064,7 +8064,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries task statistics.</p>
+     * <p>Queries task statistics in the task center.</p>
      * 
      * @param request DescribeHistoryTasksStatRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8136,7 +8136,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries task statistics.</p>
+     * <p>Queries task statistics in the task center.</p>
      * 
      * @param request DescribeHistoryTasksStatRequest
      * @return DescribeHistoryTasksStatResponse
@@ -8698,7 +8698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the service account permissions of an AnalyticDB for MySQL cluster.</p>
+     * <p>Queries the authorization status of a service account.</p>
      * 
      * @param request DescribeOperatorPermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8746,7 +8746,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the service account permissions of an AnalyticDB for MySQL cluster.</p>
+     * <p>Queries the authorization status of a service account.</p>
      * 
      * @param request DescribeOperatorPermissionRequest
      * @return DescribeOperatorPermissionResponse
@@ -10020,7 +10020,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the diagnostic information about Spark SQL queries.</p>
+     * <p>Queries the Spark SQL diagnostics list.</p>
      * 
      * @param request DescribeSparkSQLDiagnosisListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10080,7 +10080,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the diagnostic information about Spark SQL queries.</p>
+     * <p>Queries the Spark SQL diagnostics list.</p>
      * 
      * @param request DescribeSparkSQLDiagnosisListRequest
      * @return DescribeSparkSQLDiagnosisListResponse
@@ -11918,7 +11918,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs knowledge base recall.</p>
+     * <p>Adds a knowledge base document.</p>
      * 
      * @param request GetKnowledgeRecallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11939,6 +11939,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Question", request.question);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.semanticRules)) {
+            query.put("SemanticRules", request.semanticRules);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
             query.put("Tags", request.tags);
         }
@@ -11951,8 +11955,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("User", request.user);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.images)) {
+            body.put("Images", request.images);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetKnowledgeRecall"),
@@ -11970,7 +11980,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs knowledge base recall.</p>
+     * <p>Adds a knowledge base document.</p>
      * 
      * @param request GetKnowledgeRecallRequest
      * @return GetKnowledgeRecallResponse
@@ -12154,16 +12164,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
-     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * <li>Public endpoint of a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>VPC endpoint of a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p>If you encounter a 409 error when sending requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about the retry log of a Spark application.</p>
+     * <p>Queries the retry logs of a Spark application.</p>
      * 
      * @param request GetSparkAppAttemptLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12209,16 +12219,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
-     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * <li>Public endpoint of a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>VPC endpoint of a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p>If you encounter a 409 error when sending requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about the retry log of a Spark application.</p>
+     * <p>Queries the retry logs of a Spark application.</p>
      * 
      * @param request GetSparkAppAttemptLogRequest
      * @return GetSparkAppAttemptLogResponse

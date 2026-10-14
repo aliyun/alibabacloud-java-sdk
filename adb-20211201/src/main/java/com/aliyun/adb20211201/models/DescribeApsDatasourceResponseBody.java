@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeApsDatasourceResponseBody extends TeaModel {
     /**
-     * <p>The queried APS data source.</p>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("ApsDatasource")
     public DescribeApsDatasourceResponseBodyApsDatasource apsDatasource;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>******-<strong>D8-5</strong><em>-A</em>**-****587</p>
@@ -42,7 +44,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
 
     public static class DescribeApsDatasourceResponseBodyApsDatasourceDatabricksInfo extends TeaModel {
         /**
-         * <p>The token that is used to access Databricks.</p>
+         * <p>The token used to access Databricks.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -97,7 +99,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String emrClusterId;
 
         /**
-         * <p>The URL of the Hive Metastore.</p>
+         * <p>The Hive metastore URL.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -108,7 +110,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String metaStoreUri;
 
         /**
-         * <p>The security group ID.</p>
+         * <p>The ID of the security group.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-******</p>
@@ -117,7 +119,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String securityGroup;
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>The ID of the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-******</p>
@@ -166,7 +168,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
 
     public static class DescribeApsDatasourceResponseBodyApsDatasourceKafkaInfo extends TeaModel {
         /**
-         * <p>The ID of the Kafka instance.</p>
+         * <p>The Kafka instance ID.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -177,7 +179,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String kafkaClusterId;
 
         /**
-         * <p>The topic of the Kafka instance.</p>
+         * <p>kafka topic</p>
          * 
          * <strong>example:</strong>
          * <p>[{\&quot;value\&quot;: \&quot;hongxian_test\&quot;}]</p>
@@ -210,7 +212,9 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
 
     public static class DescribeApsDatasourceResponseBodyApsDatasourcePolarDBMysqlInfo extends TeaModel {
         /**
-         * <p>The parameter is no longer supported.</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -221,7 +225,9 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public Boolean across;
 
         /**
-         * <p>The parameter is no longer supported.</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -232,7 +238,9 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String acrossRole;
 
         /**
-         * <p>The parameter is no longer supported.</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -243,7 +251,9 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String acrossUid;
 
         /**
-         * <p>The parameter is no longer supported.</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -254,7 +264,9 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String connectUrl;
 
         /**
-         * <p>The parameter is no longer supported.</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -265,7 +277,9 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The parameter is no longer supported.</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -276,7 +290,9 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The parameter is no longer supported.</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -287,7 +303,9 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String securityGroup;
 
         /**
-         * <p>The parameter is no longer supported.</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -370,7 +388,9 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
 
     public static class DescribeApsDatasourceResponseBodyApsDatasourceRdsMysqlInfo extends TeaModel {
         /**
-         * <p>The parameter is no longer supported.</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -381,7 +401,9 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String connectUrl;
 
         /**
-         * <p>The parameter is no longer supported.</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -392,7 +414,9 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The parameter is no longer supported.</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -403,7 +427,9 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The parameter is no longer supported.</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -414,7 +440,9 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String securityGroup;
 
         /**
-         * <p>The parameter is no longer supported.</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -473,10 +501,10 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
 
     public static class DescribeApsDatasourceResponseBodyApsDatasourceSlsInfo extends TeaModel {
         /**
-         * <p>Indicates whether the data source is a cross-account resource. Valid values:</p>
+         * <p>Specifies whether the resource is cross-account. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The current network instance is a cross-account resource.</li>
+         * <li><strong>false</strong>: The current network instance belongs to the current account.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -513,7 +541,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String project;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The ID of the region to which the production site belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -587,7 +615,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
 
     public static class DescribeApsDatasourceResponseBodyApsDatasource extends TeaModel {
         /**
-         * <p>The time when the data source was created.</p>
+         * <p>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-04-12T15:03:38Z</p>
@@ -596,7 +624,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The ID of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>amv-******</p>
@@ -605,7 +633,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
-         * <p>The information about Databricks.</p>
+         * <p>The Databricks information.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -643,7 +671,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String datasourceType;
 
         /**
-         * <p>The information about the Hive data source.</p>
+         * <p>The Hive data source information.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -654,7 +682,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public DescribeApsDatasourceResponseBodyApsDatasourceHiveInfo hiveInfo;
 
         /**
-         * <p>The information about the Kafka instance.</p>
+         * <p>The Kafka instance information.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -665,7 +693,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public DescribeApsDatasourceResponseBodyApsDatasourceKafkaInfo kafkaInfo;
 
         /**
-         * <p>The parameter is no longer supported.</p>
+         * <p>This parameter is no longer supported.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -676,7 +704,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public DescribeApsDatasourceResponseBodyApsDatasourcePolarDBMysqlInfo polarDBMysqlInfo;
 
         /**
-         * <p>The parameter is no longer supported.</p>
+         * <p>This parameter is no longer supported.</p>
          * 
          * <strong>example:</strong>
          * <ul>

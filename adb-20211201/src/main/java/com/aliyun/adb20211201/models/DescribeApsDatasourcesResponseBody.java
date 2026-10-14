@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApsDatasourcesResponseBody extends TeaModel {
     /**
-     * <p>The queried APS data sources.</p>
+     * <p>The data sources.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -43,7 +43,7 @@ public class DescribeApsDatasourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of returned entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -98,7 +98,7 @@ public class DescribeApsDatasourcesResponseBody extends TeaModel {
 
     public static class DescribeApsDatasourcesResponseBodyApsDatasources extends TeaModel {
         /**
-         * <p>The time when the data source was created.</p>
+         * <p>The creation time. Format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-01-10 14:44:33</p>
@@ -116,7 +116,7 @@ public class DescribeApsDatasourcesResponseBody extends TeaModel {
         public String datasourceDescription;
 
         /**
-         * <p>The data source ID.</p>
+         * <p>The ID of the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

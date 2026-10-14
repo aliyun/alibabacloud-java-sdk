@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
     /**
-     * <p>The information about the request denial.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -41,13 +41,13 @@ public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The queried diagnostic information.</p>
+     * <p>The SQL diagnostics information collection.</p>
      */
     @NameInMap("SQLDiagnosisList")
     public java.util.List<DescribeSparkSQLDiagnosisListResponseBodySQLDiagnosisList> SQLDiagnosisList;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1343</p>
@@ -112,7 +112,7 @@ public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
         /**
          * <p>The application ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/612475.html">ListSparkApps</a> operation to query a list of Spark application IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/612475.html">ListSparkApps</a> operation to query the ID of the Spark application.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -122,7 +122,7 @@ public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The execution duration of the query. Unit: milliseconds.</p>
+         * <p>The actual running time. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -131,7 +131,7 @@ public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
         public Long elapsedTime;
 
         /**
-         * <p>The ID of the query executed within the Spark application.</p>
+         * <p>The internal query execution ID within the Spark application.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -140,7 +140,7 @@ public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
         public Long innerQueryId;
 
         /**
-         * <p>The maximum operator execution duration. Unit: milliseconds.</p>
+         * <p>The maximum operator execution time. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -149,7 +149,7 @@ public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
         public Long maxExclusiveTime;
 
         /**
-         * <p>The maximum operator memory used. Unit: bytes.</p>
+         * <p>The maximum operator memory consumption. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -167,7 +167,7 @@ public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
         public String SQL;
 
         /**
-         * <p>The number of entries scanned.</p>
+         * <p>The number of scanned rows.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -176,7 +176,7 @@ public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
         public Long scanRowCount;
 
         /**
-         * <p>The start time of the query. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time is displayed in UTC.</p>
+         * <p>The start time of the query. Format: <i>yyyy-MM-ddTHH:mmZ</i> (UTC time).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-20 09:09:00</p>
@@ -185,12 +185,12 @@ public class DescribeSparkSQLDiagnosisListResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The execution status of the query. Valid values:</p>
+         * <p>The final execution state of the query. Valid values:</p>
          * <ul>
-         * <li>COMPLETED</li>
-         * <li>CANCELED</li>
-         * <li>ABORTED</li>
-         * <li>FAILED</li>
+         * <li>COMPLETED: The query is completed.</li>
+         * <li>CANCELED: The query is canceled.</li>
+         * <li>ABORTED: The query is aborted.</li>
+         * <li>FAILED: The query failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

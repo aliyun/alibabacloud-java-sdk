@@ -7,7 +7,7 @@ public class DescribeSparkSQLDiagnosisListRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region, including cluster IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the details of all AnalyticDB for MySQL Data Lakehouse Edition (3.0) clusters in a specific region, including the cluster IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class DescribeSparkSQLDiagnosisListRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The latest start time.</p>
+     * <p>The maximum start time. Format: yyyy-MM-dd HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-11-28 23:00:00</p>
@@ -27,7 +27,7 @@ public class DescribeSparkSQLDiagnosisListRequest extends TeaModel {
     public String maxStartTime;
 
     /**
-     * <p>The earliest start time.</p>
+     * <p>The minimum start time. Format: yyyy-MM-dd HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-11-28 22:00:00</p>
@@ -36,17 +36,17 @@ public class DescribeSparkSQLDiagnosisListRequest extends TeaModel {
     public String minStartTime;
 
     /**
-     * <p>The order by which to sort query results. Specify the parameter value in the JSON format. Example: <code>[{&quot;Field&quot;:&quot;MaxExclusiveTime&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>.</p>
+     * <p>Sorts the query results by a specified field. The value must be a JSON string. Example: <code>[{&quot;Field&quot;:&quot;MaxExclusiveTime&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>. Parameters in the JSON string:</p>
      * <ul>
-     * <li><p><code>Field</code> specifies the field by which to sort the query results. Valid values:</p>
+     * <li><p><code>Field</code>: the sort field. Valid values:</p>
      * <ul>
-     * <li><code>MaxExclusiveTime</code>: the maximum execution duration.</li>
-     * <li><code>PeakMemory</code>: the peak memory.</li>
-     * <li><code>QueryStartTime</code>: the start time of the query.</li>
-     * <li><code>QueryWallclockTime</code>: the execution duration of the query.</li>
+     * <li><code>MaxExclusiveTime</code>: the maximum execution time.</li>
+     * <li><code>PeakMemory</code>: the peak memory usage.</li>
+     * <li><code>QueryStartTime</code>: the query start time.</li>
+     * <li><code>QueryWallclockTime</code>: the query execution time.</li>
      * </ul>
      * </li>
-     * <li><p><code>Type</code> specifies the sorting order. Valid values:</p>
+     * <li><p><code>Type</code>: the sort order. Valid values:</p>
      * <ul>
      * <li><code>Asc</code>: ascending order.</li>
      * <li><code>Desc</code>: descending order.</li>
@@ -54,10 +54,10 @@ public class DescribeSparkSQLDiagnosisListRequest extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>If you do not specify this parameter, query results are sorted by <code>MaxExclusiveTime</code> in ascending order.</li>
+     * <li>If this parameter is not specified, the results are sorted in ascending order by the <code>MaxExclusiveTime</code> field by default.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>[{\&quot;Field\&quot;:\&quot;QueryStartTime\&quot;,\&quot;Type\&quot;:\&quot;Desc\&quot;}]</p>
@@ -86,7 +86,7 @@ public class DescribeSparkSQLDiagnosisListRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the regions and zones supported by AnalyticDB for MySQL, including region IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

@@ -42,7 +42,7 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
 
     public static class ListKnowledgeFilesResponseBodyDataFiles extends TeaModel {
         /**
-         * <p>The time when the file was added to the knowledge base.</p>
+         * <p>The time when the file was added to the knowledge base. The format is yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-09 10:27:35</p>
@@ -60,7 +60,7 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
         public Long fileId;
 
         /**
-         * <p>The size of the file, in bytes.</p>
+         * <p>The size of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -69,7 +69,7 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
         public Long fileSizeBytes;
 
         /**
-         * <p>The Object Storage Service (OSS) URL of the file.</p>
+         * <p>The OSS URL of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://bucketName/path/to/file</p>
@@ -114,7 +114,7 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
         public Integer pageCount;
 
         /**
-         * <p>The processing message of the knowledge base file.</p>
+         * <p>The processing information of the knowledge base file.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -138,7 +138,7 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
         public String processStatus;
 
         /**
-         * <p>The time when the file was last updated.</p>
+         * <p>The update time. The format is yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-10 10:23:46</p>
@@ -249,7 +249,7 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
         public java.util.List<ListKnowledgeFilesResponseBodyDataFiles> files;
 
         /**
-         * <p>The message returned by the request.</p>
+         * <p>The message returned for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -289,7 +289,7 @@ public class ListKnowledgeFilesResponseBody extends TeaModel {
         public Boolean success;
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

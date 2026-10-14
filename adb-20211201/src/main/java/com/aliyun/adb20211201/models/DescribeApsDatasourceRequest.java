@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApsDatasourceRequest extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL cluster.</p>
+     * <p>The ADB instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeApsDatasourceRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The data source ID.</p>
+     * <p>The ID of the data source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

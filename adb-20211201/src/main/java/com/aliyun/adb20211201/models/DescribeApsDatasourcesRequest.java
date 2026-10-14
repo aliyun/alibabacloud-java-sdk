@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApsDatasourcesRequest extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL cluster.</p>
+     * <p>The ADB instance ID. This parameter is required. You can invoke the DescribeDBClusters operation to query the cluster ID in the specified region.</p>
      * 
      * <strong>example:</strong>
      * <p>amv-******</p>
@@ -32,7 +32,7 @@ public class DescribeApsDatasourcesRequest extends TeaModel {
     public String datasourceType;
 
     /**
-     * <p>The end of the time range to query.</p>
+     * <p>The end date. Format: yyyy-MM-dd.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-30</p>
@@ -70,7 +70,7 @@ public class DescribeApsDatasourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query.</p>
+     * <p>The start date. Format: yyyy-MM-dd.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-01</p>

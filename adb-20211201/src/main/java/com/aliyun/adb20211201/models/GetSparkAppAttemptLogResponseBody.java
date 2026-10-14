@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSparkAppAttemptLogResponseBody extends TeaModel {
     /**
-     * <p>The queried log.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public GetSparkAppAttemptLogResponseBodyData data;
@@ -51,7 +51,8 @@ public class GetSparkAppAttemptLogResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+         * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>amv-bp1bg858bo8c****</p>
@@ -60,7 +61,7 @@ public class GetSparkAppAttemptLogResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
-         * <p>The content of the log.</p>
+         * <p>The log content.</p>
          * 
          * <strong>example:</strong>
          * <p>22/04/22 15:30:49 INFO Utils: Start the dump task because s202207151211hz****-0001 app end, the interval is 238141ms;22/04/22 15:30:49 INFO AbstractConnector: Stopped Spark@5e774d9d{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}</p>
@@ -69,7 +70,7 @@ public class GetSparkAppAttemptLogResponseBody extends TeaModel {
         public String logContent;
 
         /**
-         * <p>The number of log entries. A value of 0 indicates that no valid logs are returned.</p>
+         * <p>The number of log lines. A value of 0 indicates that no valid logs exist.</p>
          * 
          * <strong>example:</strong>
          * <p>775946240</p>
@@ -78,7 +79,7 @@ public class GetSparkAppAttemptLogResponseBody extends TeaModel {
         public Integer logSize;
 
         /**
-         * <p>The alert message returned for the request, such as task execution failure or insufficient resources. If no alert occurs, null is returned.</p>
+         * <p>The alert message, such as task execution failure or insufficient resources. This parameter is empty if no alert is generated.</p>
          * 
          * <strong>example:</strong>
          * <p>WARNING: log file maybe deleted, please check oss path: oss://TestBucketName/applog/</p>

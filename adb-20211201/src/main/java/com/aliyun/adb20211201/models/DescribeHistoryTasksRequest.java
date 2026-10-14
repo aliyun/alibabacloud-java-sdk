@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHistoryTasksRequest extends TeaModel {
     /**
-     * <p>Minimum task execution time. Used to filter tasks with execution time greater than this value, in seconds. Default 0, meaning no limit.</p>
+     * <p>The minimum execution duration of the task. This parameter is used to filter tasks whose execution duration is greater than this value. Unit: seconds. Default value: 0, which indicates no limit.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,7 +14,7 @@ public class DescribeHistoryTasksRequest extends TeaModel {
     public Integer fromExecTime;
 
     /**
-     * <p>Start time of task start time, indicating querying tasks whose start time is after this time. Expressed according to ISO8601 standard, and must use UTC +0 time, format: yyyy-MM-ddTHH:mm:ssZ. Earliest supports 30 days ago, automatically converts to 30 days ago if more than 30 days from current time.</p>
+     * <p>The start time of the time range to query task start times. Tasks that start after this time are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The earliest supported time is 30 days ago. If the specified time is more than 30 days before the current time, it is automatically changed to 30 days ago.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DescribeHistoryTasksRequest extends TeaModel {
     public String fromStartTime;
 
     /**
-     * <p>The cluster ID. Separate multiple cluster IDs with commas (,). Maximum 30 cluster IDs. If not filled, defaults to querying historical tasks of all clusters in that region.</p>
+     * <p>The cluster ID. You can specify multiple cluster IDs separated by commas (,). You can specify up to 30 cluster IDs. If this parameter is left empty, historical tasks of all clusters in the region are queried by default.</p>
      * 
      * <strong>example:</strong>
      * <p>amv-********</p>
@@ -33,7 +33,7 @@ public class DescribeHistoryTasksRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The instance type. The value is fixed to Instance.</p>
+     * <p>The instance type. Set the value to Instance.</p>
      * 
      * <strong>example:</strong>
      * <p>Instance</p>
@@ -42,7 +42,7 @@ public class DescribeHistoryTasksRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The number of the page to return. Valid range: positive integers. Default value: 1</p>
+     * <p>The page number of the query result. Valid values: positive integers. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -60,7 +60,7 @@ public class DescribeHistoryTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -69,7 +69,7 @@ public class DescribeHistoryTasksRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Resource group ID.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-ae****</p>
@@ -78,17 +78,24 @@ public class DescribeHistoryTasksRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The state of the task. Valid values:</p>
+     * <p>The task status. Valid values:</p>
      * <ul>
-     * <li><strong>Scheduled</strong></li>
-     * <li><strong>Running</strong></li>
-     * <li><strong>Succeed</strong></li>
-     * <li><strong>Failed</strong>: The task failed.</li>
-     * <li><strong>Cancelling</strong></li>
-     * <li><strong>Canceled</strong></li>
-     * <li><strong>Waiting</strong></li>
+     * <li><p><strong>Scheduled</strong>: Pending execution.</p>
+     * </li>
+     * <li><p><strong>Running</strong>: Running.</p>
+     * </li>
+     * <li><p><strong>Succeed</strong>: Succeeded.</p>
+     * </li>
+     * <li><p><strong>Failed</strong>: Failed.</p>
+     * </li>
+     * <li><p><strong>Cancelling</strong>: Being canceled.</p>
+     * </li>
+     * <li><p><strong>Canceled</strong>: Canceled.</p>
+     * </li>
+     * <li><p><strong>Waiting</strong>: Waiting for the scheduled time.</p>
+     * </li>
      * </ul>
-     * <p>If querying multiple statuses, separate them with English commas. Default is empty, meaning select all.</p>
+     * <p>You can specify multiple values separated by commas (,). If this parameter is left empty, all statuses are queried by default.</p>
      * 
      * <strong>example:</strong>
      * <p>Scheduled</p>
@@ -97,7 +104,7 @@ public class DescribeHistoryTasksRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The job IDs. Separate multiple task IDs with commas (,). Maximum 30 task IDs. If not filled, defaults to querying historical tasks of all clusters.</p>
+     * <p>The task ID. You can specify multiple task IDs separated by commas (,). You can specify up to 30 task IDs. If this parameter is left empty, historical tasks of all clusters are queried by default.</p>
      * 
      * <strong>example:</strong>
      * <p>t-83br18hloy3faf****</p>
@@ -106,7 +113,7 @@ public class DescribeHistoryTasksRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>Task type, used to query specific type task situations. If multiple, separate with English commas (,), maximum 30 supported. Default is empty, meaning no restriction.</p>
+     * <p>The task type. This parameter is used to query tasks of a specific type. You can specify multiple task types separated by commas (,). You can specify up to 30 task types. If this parameter is left empty, no limit is applied.</p>
      * 
      * <strong>example:</strong>
      * <p>autotest_dispatch_cases</p>
@@ -115,7 +122,7 @@ public class DescribeHistoryTasksRequest extends TeaModel {
     public String taskType;
 
     /**
-     * <p>Maximum task execution time. Used to filter tasks with execution time not less than this value, in seconds. Default 0, meaning no limit.</p>
+     * <p>The maximum execution duration of the task. This parameter is used to filter tasks whose execution duration does not exceed this value. Unit: seconds. Default value: 0, which indicates no limit.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -124,7 +131,7 @@ public class DescribeHistoryTasksRequest extends TeaModel {
     public Integer toExecTime;
 
     /**
-     * <p>End time of task start time, indicating querying tasks whose start time is before this time. Expressed according to ISO8601 standard, and must use UTC +0 time, format: yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <p>The end time of the time range to query task start times. Tasks that start before this time are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

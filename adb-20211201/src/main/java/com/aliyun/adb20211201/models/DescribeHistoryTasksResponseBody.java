@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeHistoryTasksResponseBody extends TeaModel {
     /**
-     * <p>null</p>
+     * <p>The details of the access denial. This field is returned only when RAM authentication fails.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public DescribeHistoryTasksResponseBodyAccessDeniedDetail accessDeniedDetail;
 
     /**
-     * <p>The HTTP status code that is returned.</p>
+     * <p>The API status code or POP error code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,7 +20,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -35,10 +35,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
     public java.util.List<DescribeHistoryTasksResponseBodyItems> items;
 
     /**
-     * <p>The returned message. null</p>
+     * <p>The additional information about the call result. Valid values:</p>
      * <ul>
-     * <li>null****</li>
-     * <li>null</li>
+     * <li>If the request is normal, <strong>Success</strong> is returned. </li>
+     * <li>If the request is abnormal, a specific error code is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number of the query result.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -57,7 +57,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -66,7 +66,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E51713A3-BB45-5616-AB15-170B704F8F01</p>
@@ -75,10 +75,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: Successful.</li>
+     * <li><strong>false</strong>: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>Total record count.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -183,7 +183,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
 
     public static class DescribeHistoryTasksResponseBodyAccessDeniedDetail extends TeaModel {
         /**
-         * <p>null</p>
+         * <p>The authentication action.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -192,7 +192,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String authAction;
 
         /**
-         * <p>null</p>
+         * <p>The display name of the authorization principal.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -201,7 +201,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String authPrincipalDisplayName;
 
         /**
-         * <p>null</p>
+         * <p>The Alibaba Cloud account ID of the authentication principal.</p>
          * 
          * <strong>example:</strong>
          * <p>141345906006****</p>
@@ -210,7 +210,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>null</p>
+         * <p>The type of the authorization principal.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -219,7 +219,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>null</p>
+         * <p>The encoded diagnostic message.</p>
          * 
          * <strong>example:</strong>
          * <p>AQFmy+hZZsvoWTQ2NTJFQUFBLUIyNjktMzk5NS05MEZCLUMxMzgwNDUwMDA2Ng==</p>
@@ -228,10 +228,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>null</p>
+         * <p>The type of the access policy denial. Valid values:</p>
          * <ul>
-         * <li><strong>null</strong></li>
-         * <li><strong>null</strong></li>
+         * <li><strong>ImplicitDeny</strong>: The resource owner has not configured a relevant access policy for the current user, and unauthorized operations are denied by default.</li>
+         * <li><strong>ExplicitDeny</strong>: The RAM policy configured by the resource owner explicitly denies the current user from accessing the corresponding resource.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -241,13 +241,13 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String noPermissionType;
 
         /**
-         * <p>null</p>
+         * <p>The type of the policy that causes the permission denial. Valid values:</p>
          * <ul>
-         * <li><strong>null</strong></li>
-         * <li><strong>null</strong></li>
-         * <li><strong>null</strong></li>
-         * <li><strong>null</strong></li>
-         * <li><strong>null</strong></li>
+         * <li><strong>ControlPolicy</strong>: Control policy.</li>
+         * <li><strong>SessionPolicy</strong>: Session policy, which is an additional permission policy added to a temporary token.</li>
+         * <li><strong>AssumeRolePolicy</strong>: Assume role policy, which is the trust policy of a RAM role.</li>
+         * <li><strong>AccountLevelIdentityBasedPolicy</strong>: Account-level identity-access policy, which includes custom policies and system policies.</li>
+         * <li><strong>ResourceGroupLevelIdentityBasedPolicy</strong>: Resource group-level identity-access policy, which includes custom policies and system policies.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -321,7 +321,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
 
     public static class DescribeHistoryTasksResponseBodyItems extends TeaModel {
         /**
-         * <p>Allowed operation information. When used specifically, matches operation Action based on currentStepName+status in this information. If no Action is matched, represents task current status does not support operations.</p>
+         * <p>The allowed operation information. When you use this parameter, the system matches the operation action based on the currentStepName and status in this information. If no action is matched, the current task status does not support the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;steps\&quot;:[{\&quot;action_info\&quot;:{\&quot;Waiting\&quot;:[\&quot;modifySwitchTime\&quot;]},\&quot;step_name\&quot;:\&quot;exec_task\&quot;}]}</p>
@@ -330,7 +330,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String actionInfo;
 
         /**
-         * <p>null</p>
+         * <p>The ID of the requesting user. If callerSource is User, it represents the user UID.</p>
          * 
          * <strong>example:</strong>
          * <p>141345906006****</p>
@@ -339,10 +339,12 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String callerSource;
 
         /**
-         * <p>null</p>
+         * <p>The request source. Valid values:</p>
          * <ul>
-         * <li><strong>null</strong></li>
-         * <li><strong>null</strong></li>
+         * <li><p><strong>System</strong>: System.</p>
+         * </li>
+         * <li><p><strong>User</strong>: User.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -352,7 +354,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String callerUid;
 
         /**
-         * <p>Current executing step name. If empty, represents task has not started.</p>
+         * <p>The name of the current step. If this parameter is empty, the task has not started.</p>
          * 
          * <strong>example:</strong>
          * <p>exec_task</p>
@@ -361,7 +363,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String currentStepName;
 
         /**
-         * <p>The database engine type.</p>
+         * <p>The database type.</p>
          * 
          * <strong>example:</strong>
          * <p>analyticdb</p>
@@ -370,7 +372,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String dbType;
 
         /**
-         * <p>Task end time.</p>
+         * <p>The end time of the task. The time is displayed in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-02-03T12:06:17Z</p>
@@ -379,7 +381,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>Cluster ID.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>amv-********</p>
@@ -388,7 +390,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -397,7 +399,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>Instance type.</p>
+         * <p>The instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>Instance</p>
@@ -406,7 +408,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The service name.</p>
+         * <p>The product.</p>
          * 
          * <strong>example:</strong>
          * <p>ads</p>
@@ -415,7 +417,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String product;
 
         /**
-         * <p>Indicates the task progress.</p>
+         * <p>The current progress.</p>
          * 
          * <strong>example:</strong>
          * <p>79.0</p>
@@ -424,7 +426,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public Float progress;
 
         /**
-         * <p>The reason why the current task was initiated.</p>
+         * <p>The reason why the current task is initiated.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -442,7 +444,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>Estimated remaining execution time, in seconds.</p>
+         * <p>The estimated remaining execution time. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -451,7 +453,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public Integer remainTime;
 
         /**
-         * <p>Task start time.</p>
+         * <p>The start time of the task. The time is displayed in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-02-03T11:31:03Z</p>
@@ -460,15 +462,22 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>Task status. Valid values:</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><strong>Scheduled</strong></li>
-         * <li><strong>Running</strong></li>
-         * <li><strong>Succeed</strong></li>
-         * <li><strong>Failed</strong>: The task failed.</li>
-         * <li><strong>Cancelling</strong></li>
-         * <li><strong>Canceled</strong></li>
-         * <li><strong>Waiting</strong></li>
+         * <li><p><strong>Scheduled</strong>: Pending execution.</p>
+         * </li>
+         * <li><p><strong>Running</strong>: Running.</p>
+         * </li>
+         * <li><p><strong>Succeed</strong>: Succeeded.</p>
+         * </li>
+         * <li><p><strong>Failed</strong>: Failed.</p>
+         * </li>
+         * <li><p><strong>Cancelling</strong>: Being canceled.</p>
+         * </li>
+         * <li><p><strong>Canceled</strong>: Canceled.</p>
+         * </li>
+         * <li><p><strong>Waiting</strong>: Waiting for the scheduled time.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -487,7 +496,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String taskDetail;
 
         /**
-         * <p>Task ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>t-83br18hloy3faf****</p>
@@ -496,7 +505,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>Task type.</p>
+         * <p>The task type.</p>
          * 
          * <strong>example:</strong>
          * <p>autotest_dispatch_cases</p>
@@ -505,7 +514,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String taskType;
 
         /**
-         * <p>null</p>
+         * <p>The ID of the user to which the resource belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>141345906006****</p>
