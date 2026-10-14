@@ -4,10 +4,15 @@ package com.aliyun.sddp20260120.models;
 import com.aliyun.tea.*;
 
 public class ListTotalSensitiveInfoResponseBody extends TeaModel {
+    /**
+     * <p>The list of statistics grouped by region, template, data type, or date.</p>
+     */
     @NameInMap("DataCountDOList")
     public java.util.List<ListTotalSensitiveInfoResponseBodyDataCountDOList> dataCountDOList;
 
     /**
+     * <p>The total number of databases.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -15,6 +20,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
     public Long dbCount;
 
     /**
+     * <p>The total number of instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -22,16 +29,23 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
     public Long instanceCount;
 
     /**
+     * <p>The request ID, which can be used to locate this API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of counts aggregated by detection rule.</p>
+     */
     @NameInMap("RuleInfoList")
     public java.util.List<ListTotalSensitiveInfoResponseBodyRuleInfoList> ruleInfoList;
 
     /**
+     * <p>The number of data objects at the S0 sensitivity level.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -39,6 +53,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
     public Long s0Count;
 
     /**
+     * <p>The number of data objects at the S10 sensitivity level.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -46,6 +62,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
     public Long s10Count;
 
     /**
+     * <p>The number of data objects at the S1 sensitivity level.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -53,6 +71,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
     public Long s1Count;
 
     /**
+     * <p>The number of data objects at the S2 sensitivity level.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -60,6 +80,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
     public Long s2Count;
 
     /**
+     * <p>The number of data objects at the S3 sensitivity level.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -67,6 +89,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
     public Long s3Count;
 
     /**
+     * <p>The number of data objects at the S4 sensitivity level.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -74,6 +98,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
     public Long s4Count;
 
     /**
+     * <p>The number of data objects at the S5 sensitivity level.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -81,6 +107,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
     public Long s5Count;
 
     /**
+     * <p>The number of data objects at the S6 sensitivity level.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -88,6 +116,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
     public Long s6Count;
 
     /**
+     * <p>The number of data objects at the S7 sensitivity level.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -95,6 +125,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
     public Long s7Count;
 
     /**
+     * <p>The number of data objects at the S8 sensitivity level.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -102,6 +134,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
     public Long s8Count;
 
     /**
+     * <p>The number of data objects at the S9 sensitivity level.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -109,6 +143,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
     public Long s9Count;
 
     /**
+     * <p>The number of sensitive data objects within the current statistics scope.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -116,6 +152,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
     public Long sensitiveCount;
 
     /**
+     * <p>The number of databases that contain sensitive data.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -123,6 +161,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
     public Long sensitiveDbCount;
 
     /**
+     * <p>The number of instances that contain sensitive data.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -130,6 +170,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
     public Long sensitiveInstanceCount;
 
     /**
+     * <p>The size of sensitive unstructured data.</p>
+     * 
      * <strong>example:</strong>
      * <p>512</p>
      */
@@ -137,6 +179,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
     public Long sensitiveUnStructSize;
 
     /**
+     * <p>The number of child-level sensitive data objects. In structured data scenarios, this value is used for sensitive column statistics.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -144,6 +188,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
     public Long subSensitiveCount;
 
     /**
+     * <p>The total number of child-level data objects. In structured data scenarios, this value is used for column-level statistics.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -151,6 +197,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
     public Long subTotalCount;
 
     /**
+     * <p>The total number of data objects that match the current statistics or query scope.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -158,6 +206,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
+     * <p>The total size of unstructured data.</p>
+     * 
      * <strong>example:</strong>
      * <p>1024</p>
      */
@@ -363,6 +413,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
 
     public static class ListTotalSensitiveInfoResponseBodyDataCountDOListDataCountDOList extends TeaModel {
         /**
+         * <p>The statistics date, represented as a UNIX timestamp in nanoseconds. The time corresponds to midnight of the day in the server time zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>1788537600000000000</p>
          */
@@ -370,6 +422,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
         public Long date;
 
         /**
+         * <p>The number of sensitive data objects within the current statistics scope.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -377,6 +431,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
         public Long sensitiveCount;
 
         /**
+         * <p>The total number of data objects that match the current statistics or query scope.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -416,6 +472,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
 
     public static class ListTotalSensitiveInfoResponseBodyDataCountDOListRuleInfoList extends TeaModel {
         /**
+         * <p>The number of data objects that match the detection rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -423,6 +481,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
         public Long ruleCount;
 
         /**
+         * <p>The ID of the matched detection rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>1001</p>
          */
@@ -430,8 +490,10 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
         public Long ruleId;
 
         /**
+         * <p>The name of the matched detection rule.</p>
+         * 
          * <strong>example:</strong>
-         * <p>手机号</p>
+         * <p>Phone number</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
@@ -468,10 +530,15 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
     }
 
     public static class ListTotalSensitiveInfoResponseBodyDataCountDOList extends TeaModel {
+        /**
+         * <p>The list of statistics grouped by region, template, data type, or date.</p>
+         */
         @NameInMap("DataCountDOList")
         public java.util.List<ListTotalSensitiveInfoResponseBodyDataCountDOListDataCountDOList> dataCountDOList;
 
         /**
+         * <p>The statistics date, represented as a UNIX timestamp in nanoseconds. The time corresponds to midnight of the day in the server time zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>1788537600000000000</p>
          */
@@ -479,16 +546,23 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
         public Long date;
 
         /**
+         * <p>The region ID of the asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-zhangjiakou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The list of counts aggregated by detection rule.</p>
+         */
         @NameInMap("RuleInfoList")
         public java.util.List<ListTotalSensitiveInfoResponseBodyDataCountDOListRuleInfoList> ruleInfoList;
 
         /**
+         * <p>The number of data objects at the S0 sensitivity level.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -496,6 +570,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
         public Long s0Count;
 
         /**
+         * <p>The number of data objects at the S10 sensitivity level.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -503,6 +579,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
         public Long s10Count;
 
         /**
+         * <p>The number of data objects at the S1 sensitivity level.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -510,6 +588,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
         public Long s1Count;
 
         /**
+         * <p>The number of data objects at the S2 sensitivity level.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -517,6 +597,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
         public Long s2Count;
 
         /**
+         * <p>The number of data objects at the S3 sensitivity level.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -524,6 +606,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
         public Long s3Count;
 
         /**
+         * <p>The number of data objects at the S4 sensitivity level.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -531,6 +615,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
         public Long s4Count;
 
         /**
+         * <p>The number of data objects at the S5 sensitivity level.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -538,6 +624,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
         public Long s5Count;
 
         /**
+         * <p>The number of data objects at the S6 sensitivity level.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -545,6 +633,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
         public Long s6Count;
 
         /**
+         * <p>The number of data objects at the S7 sensitivity level.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -552,6 +642,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
         public Long s7Count;
 
         /**
+         * <p>The number of data objects at the S8 sensitivity level.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -559,6 +651,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
         public Long s8Count;
 
         /**
+         * <p>The number of data objects at the S9 sensitivity level.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -566,6 +660,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
         public Long s9Count;
 
         /**
+         * <p>The number of sensitive data objects within the current statistics scope.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -573,6 +669,12 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
         public Long sensitiveCount;
 
         /**
+         * <p>The data type of the statistics. Valid values:</p>
+         * <ul>
+         * <li>1: structured data.</li>
+         * <li>0: unstructured data.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -580,6 +682,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
         public Integer structFlag;
 
         /**
+         * <p>The ID of the data classification template.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -587,13 +691,17 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
         public Long templateId;
 
         /**
+         * <p>The name of the data classification template.</p>
+         * 
          * <strong>example:</strong>
-         * <p>通用分类分级模板</p>
+         * <p>General classification template</p>
          */
         @NameInMap("TemplateName")
         public String templateName;
 
         /**
+         * <p>The total number of data objects that match the current statistics or query scope.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -769,6 +877,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
 
     public static class ListTotalSensitiveInfoResponseBodyRuleInfoList extends TeaModel {
         /**
+         * <p>The number of data objects that match the detection rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -776,6 +886,8 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
         public Long ruleCount;
 
         /**
+         * <p>The ID of the matched detection rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>1001</p>
          */
@@ -783,8 +895,10 @@ public class ListTotalSensitiveInfoResponseBody extends TeaModel {
         public Integer ruleId;
 
         /**
+         * <p>The name of the matched detection rule.</p>
+         * 
          * <strong>example:</strong>
-         * <p>手机号</p>
+         * <p>Phone number</p>
          */
         @NameInMap("RuleName")
         public String ruleName;

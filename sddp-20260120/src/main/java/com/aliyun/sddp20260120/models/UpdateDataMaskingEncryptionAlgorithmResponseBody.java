@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDataMaskingEncryptionAlgorithmResponseBody extends TeaModel {
     /**
+     * <p>The request ID, which can be used to locate this API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
      */

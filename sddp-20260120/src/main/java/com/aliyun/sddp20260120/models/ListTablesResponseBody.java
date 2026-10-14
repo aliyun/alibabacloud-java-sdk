@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListTablesResponseBody extends TeaModel {
     /**
+     * <p>The page number of the returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The list of records returned by this query.</p>
+     */
     @NameInMap("Items")
     public java.util.List<ListTablesResponseBodyItems> items;
 
     /**
+     * <p>The pagination cursor used in this query.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -22,6 +29,8 @@ public class ListTablesResponseBody extends TeaModel {
     public String marker;
 
     /**
+     * <p>The cursor used to query the next page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1001</p>
      */
@@ -29,6 +38,8 @@ public class ListTablesResponseBody extends TeaModel {
     public String nextMarker;
 
     /**
+     * <p>The number of records per page in this query.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -36,6 +47,8 @@ public class ListTablesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID, which can be used to locate this API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
      */
@@ -43,6 +56,8 @@ public class ListTablesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries that match the current statistical or query scope.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -50,6 +65,8 @@ public class ListTablesResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
+     * <p>Indicates whether more pages are available. A value of true indicates that more data exists. A value of false indicates that no more data exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -127,6 +144,8 @@ public class ListTablesResponseBody extends TeaModel {
 
     public static class ListTablesResponseBodyItemsRuleList extends TeaModel {
         /**
+         * <p>The number of hits for this detection rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -134,13 +153,17 @@ public class ListTablesResponseBody extends TeaModel {
         public Long count;
 
         /**
+         * <p>The detection model or rule name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>手机号</p>
+         * <p>Phone number</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The sensitivity level ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -180,13 +203,17 @@ public class ListTablesResponseBody extends TeaModel {
 
     public static class ListTablesResponseBodyItems extends TeaModel {
         /**
+         * <p>The comment of the data table.</p>
+         * 
          * <strong>example:</strong>
-         * <p>客户联系方式</p>
+         * <p>Customer contact information</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
+         * <p>The creation time of the data object. The value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>1788566400000</p>
          */
@@ -194,6 +221,8 @@ public class ListTablesResponseBody extends TeaModel {
         public Long creationTime;
 
         /**
+         * <p>The cloud instance identity.</p>
+         * 
          * <strong>example:</strong>
          * <p>rm-2ze1abcdefgh****</p>
          */
@@ -201,6 +230,8 @@ public class ListTablesResponseBody extends TeaModel {
         public String dataAssetSourceId;
 
         /**
+         * <p>The database name.</p>
+         * 
          * <strong>example:</strong>
          * <p>business_db</p>
          */
@@ -208,13 +239,17 @@ public class ListTablesResponseBody extends TeaModel {
         public String dataSourceName;
 
         /**
+         * <p>The description of the database instance.</p>
+         * 
          * <strong>example:</strong>
-         * <p>业务数据库实例</p>
+         * <p>Business database instance</p>
          */
         @NameInMap("InstanceDescription")
         public String instanceDescription;
 
         /**
+         * <p>The data table name. Some engines return the name in the schema.table format.</p>
+         * 
          * <strong>example:</strong>
          * <p>customer</p>
          */
@@ -222,6 +257,8 @@ public class ListTablesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The Alibaba Cloud account ID of the data table owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456789012****</p>
          */
@@ -229,6 +266,8 @@ public class ListTablesResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The cloud product code.</p>
+         * 
          * <strong>example:</strong>
          * <p>RDS</p>
          */
@@ -236,6 +275,8 @@ public class ListTablesResponseBody extends TeaModel {
         public String productCode;
 
         /**
+         * <p>The sensitivity level ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -243,19 +284,29 @@ public class ListTablesResponseBody extends TeaModel {
         public Long riskLevelId;
 
         /**
+         * <p>The sensitivity level name.</p>
+         * 
          * <strong>example:</strong>
          * <p>S2</p>
          */
         @NameInMap("RiskLevelName")
         public String riskLevelName;
 
+        /**
+         * <p>The list of detection models or rules.</p>
+         */
         @NameInMap("RuleList")
         public java.util.List<ListTablesResponseBodyItemsRuleList> ruleList;
 
+        /**
+         * <p>Indicates whether the data is detected as sensitive data.</p>
+         */
         @NameInMap("Sensitive")
         public Boolean sensitive;
 
         /**
+         * <p>The number of sensitive data entries within the current statistical scope.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -263,6 +314,8 @@ public class ListTablesResponseBody extends TeaModel {
         public Integer sensitiveCount;
 
         /**
+         * <p>The proportion of sensitive data.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.2</p>
          */
@@ -270,13 +323,17 @@ public class ListTablesResponseBody extends TeaModel {
         public String sensitiveRatio;
 
         /**
+         * <p>The tenant name to which the data asset belongs.</p>
+         * 
          * <strong>example:</strong>
-         * <p>业务租户</p>
+         * <p>Business tenant</p>
          */
         @NameInMap("TenantName")
         public String tenantName;
 
         /**
+         * <p>The total number of entries that match the current statistical or query scope.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

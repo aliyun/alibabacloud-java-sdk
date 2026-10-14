@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateDataMaskingUsersRequest extends TeaModel {
     /**
+     * <p>The column encryption access permissions. Valid values:</p>
+     * <ul>
+     * <li>fullAccess: plaintext access.</li>
+     * <li>restrictedAccess: restricted access.</li>
+     * <li>noneAccess: decryption denied.</li>
+     * </ul>
+     * <p>noneAccess applies only to ApsaraDB RDS for MySQL instances whose active key pattern is client_key.</p>
+     * 
      * <strong>example:</strong>
      * <p>fullAccess</p>
      */
@@ -12,6 +20,8 @@ public class UpdateDataMaskingUsersRequest extends TeaModel {
     public String authRole;
 
     /**
+     * <p>The expiration time of the plaintext access permissions. Specify a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC. This parameter is required only when ExpireTimeOperation is set to SET. The value must be later than the current time and no later than 2145953410000. The server stores the value with second-level precision. Do not specify this parameter when ExpireTimeOperation is set to PRESERVE or CLEAR.</p>
+     * 
      * <strong>example:</strong>
      * <p>2145953410000</p>
      */
@@ -19,6 +29,14 @@ public class UpdateDataMaskingUsersRequest extends TeaModel {
     public Long expireTime;
 
     /**
+     * <p>The action to take on the permission expiration time. Valid values:</p>
+     * <ul>
+     * <li>PRESERVE: Retains the existing expiration time.</li>
+     * <li>CLEAR: Clears the expiration time.</li>
+     * <li>SET: Sets the expiration time to the value specified by ExpireTime.</li>
+     * </ul>
+     * <p>Default value: PRESERVE. Only fullAccess supports configuring a validity period.</p>
+     * 
      * <strong>example:</strong>
      * <p>PRESERVE</p>
      */
@@ -26,6 +44,12 @@ public class UpdateDataMaskingUsersRequest extends TeaModel {
     public String expireTimeOperation;
 
     /**
+     * <p>The language of the response description. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -33,6 +57,8 @@ public class UpdateDataMaskingUsersRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two parameters must correspond to each other.</p>
+     * 
      * <strong>example:</strong>
      * <p>RDS</p>
      */
@@ -40,12 +66,23 @@ public class UpdateDataMaskingUsersRequest extends TeaModel {
     public String productCode;
 
     /**
+     * <p>The cloud product type identifier. Valid values:</p>
+     * <ul>
+     * <li>5: RDS.</li>
+     * <li>8: POLARDB.</li>
+     * <li>27: PolarDBX2.</li>
+     * </ul>
+     * <p>If both ProductId and ProductCode are specified, they must correspond to each other.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
     @NameInMap("ProductId")
     public Long productId;
 
+    /**
+     * <p>The list of database accounts for which to set permissions.</p>
+     */
     @NameInMap("UserList")
     public java.util.List<UpdateDataMaskingUsersRequestUserList> userList;
 
@@ -112,6 +149,8 @@ public class UpdateDataMaskingUsersRequest extends TeaModel {
 
     public static class UpdateDataMaskingUsersRequestUserList extends TeaModel {
         /**
+         * <p>The database account identifier. Obtain this value from Items[].Id in the response of ListDataAssetAccounts and pass it as a string.</p>
+         * 
          * <strong>example:</strong>
          * <p>1001</p>
          */
@@ -119,6 +158,8 @@ public class UpdateDataMaskingUsersRequest extends TeaModel {
         public String accountId;
 
         /**
+         * <p>The database instance identity. Obtain this value from Items[].InstanceId in the response of ListDataMaskingInstances.</p>
+         * 
          * <strong>example:</strong>
          * <p>rm-2ze1abcdefgh****</p>
          */

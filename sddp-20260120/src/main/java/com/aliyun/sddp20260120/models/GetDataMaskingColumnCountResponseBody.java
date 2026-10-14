@@ -4,10 +4,15 @@ package com.aliyun.sddp20260120.models;
 import com.aliyun.tea.*;
 
 public class GetDataMaskingColumnCountResponseBody extends TeaModel {
+    /**
+     * <p>The column encryption statistics.</p>
+     */
     @NameInMap("ColumnCount")
     public GetDataMaskingColumnCountResponseBodyColumnCount columnCount;
 
     /**
+     * <p>The request ID, which can be used to locate this API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
      */
@@ -37,6 +42,8 @@ public class GetDataMaskingColumnCountResponseBody extends TeaModel {
 
     public static class GetDataMaskingColumnCountResponseBodyColumnCount extends TeaModel {
         /**
+         * <p>The number of encrypted columns within the current scope.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -44,6 +51,8 @@ public class GetDataMaskingColumnCountResponseBody extends TeaModel {
         public Long maskedCount;
 
         /**
+         * <p>The number of columns that failed to be encrypted within the current scope.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -51,6 +60,8 @@ public class GetDataMaskingColumnCountResponseBody extends TeaModel {
         public Long maskingFailedCount;
 
         /**
+         * <p>The number of sensitive columns within the current scope.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -58,6 +69,8 @@ public class GetDataMaskingColumnCountResponseBody extends TeaModel {
         public Long sensitiveCount;
 
         /**
+         * <p>The total number of columns within the current scope.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

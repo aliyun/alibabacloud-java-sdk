@@ -4,10 +4,15 @@ package com.aliyun.sddp20260120.models;
 import com.aliyun.tea.*;
 
 public class GetDataMaskingAccountCountResponseBody extends TeaModel {
+    /**
+     * <p>The permission statistics of column encryption accounts.</p>
+     */
     @NameInMap("AccountCount")
     public GetDataMaskingAccountCountResponseBodyAccountCount accountCount;
 
     /**
+     * <p>The request ID, which can be used to locate this API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
      */
@@ -37,6 +42,8 @@ public class GetDataMaskingAccountCountResponseBody extends TeaModel {
 
     public static class GetDataMaskingAccountCountResponseBodyAccountCount extends TeaModel {
         /**
+         * <p>The number of fullAccess accounts that have plaintext access.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -44,6 +51,8 @@ public class GetDataMaskingAccountCountResponseBody extends TeaModel {
         public Long fullAccessCount;
 
         /**
+         * <p>The number of noneAccess accounts that are prohibited from decryption.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -51,6 +60,8 @@ public class GetDataMaskingAccountCountResponseBody extends TeaModel {
         public Long noneAccessCount;
 
         /**
+         * <p>The number of restrictedAccess accounts that have restricted access.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -58,6 +69,8 @@ public class GetDataMaskingAccountCountResponseBody extends TeaModel {
         public Long restrictedAccessCount;
 
         /**
+         * <p>The total number of database accounts.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

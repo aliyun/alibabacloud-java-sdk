@@ -4,10 +4,15 @@ package com.aliyun.sddp20260120.models;
 import com.aliyun.tea.*;
 
 public class ListDataMaskingEncryptionAlgorithmsResponseBody extends TeaModel {
+    /**
+     * <p>The list of column encryption algorithms.</p>
+     */
     @NameInMap("Algorithms")
     public java.util.List<ListDataMaskingEncryptionAlgorithmsResponseBodyAlgorithms> algorithms;
 
     /**
+     * <p>The request ID, which can be used to locate this API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
      */
@@ -37,6 +42,8 @@ public class ListDataMaskingEncryptionAlgorithmsResponseBody extends TeaModel {
 
     public static class ListDataMaskingEncryptionAlgorithmsResponseBodyAlgorithms extends TeaModel {
         /**
+         * <p>The business error code for the record or operation. This value can be empty if no error occurs. Evaluate this value together with ErrorMessage.</p>
+         * 
          * <strong>example:</strong>
          * <p>data_masking_not_running</p>
          */
@@ -44,13 +51,17 @@ public class ListDataMaskingEncryptionAlgorithmsResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>The business error description for the record or operation.</p>
+         * 
          * <strong>example:</strong>
-         * <p>实例未处于运行状态</p>
+         * <p>The instance is not in the running state</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
+         * <p>The algorithm name.</p>
+         * 
          * <strong>example:</strong>
          * <p>AES_256_GCM</p>
          */

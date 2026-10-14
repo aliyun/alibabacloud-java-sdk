@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetDataMaskingColumnCountRequest extends TeaModel {
     /**
+     * <p>The language of the response description. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +18,8 @@ public class GetDataMaskingColumnCountRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The list of cloud product type identifiers. Separate multiple values with commas (,). Valid values for column encryption scenarios: 5 (ApsaraDB RDS), 8 (PolarDB), and 27 (PolarDB-X 2.0).</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -19,6 +27,8 @@ public class GetDataMaskingColumnCountRequest extends TeaModel {
     public String productIds;
 
     /**
+     * <p>The ID of the data classification template. You can obtain this value from Items[].Id returned by the ListTemplates operation. This value must be consistent with the selected sensitivity level and detection model.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

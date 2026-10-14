@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SyncDataAssetsRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values: zh: Chinese. en: English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,8 @@ public class SyncDataAssetsRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two parameters must match.</p>
+     * 
      * <strong>example:</strong>
      * <p>RDS</p>
      */

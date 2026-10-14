@@ -4,18 +4,45 @@ package com.aliyun.sddp20260120.models;
 import com.aliyun.tea.*;
 
 public class ListColumnsResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The list of records returned by this query.</p>
+     */
     @NameInMap("Items")
     public java.util.List<ListColumnsResponseBodyItems> items;
 
+    /**
+     * <p>The number of records per page for this query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID, which can be used to locate this API call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of records that match the current query scope.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,60 +92,175 @@ public class ListColumnsResponseBody extends TeaModel {
     }
 
     public static class ListColumnsResponseBodyItems extends TeaModel {
+        /**
+         * <p>The creation time of the data object. This value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1788566400000</p>
+         */
         @NameInMap("CreationTime")
         public Long creationTime;
 
+        /**
+         * <p>The cloud instance identity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze1abcdefgh****</p>
+         */
         @NameInMap("DataAssetSourceId")
         public String dataAssetSourceId;
 
+        /**
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>business_db</p>
+         */
         @NameInMap("DataSourceName")
         public String dataSourceName;
 
+        /**
+         * <p>The data type of the database column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>varchar</p>
+         */
         @NameInMap("DataType")
         public String dataType;
 
+        /**
+         * <p>The database engine type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
+         */
         @NameInMap("EngineType")
         public String engineType;
 
+        /**
+         * <p>The cloud instance identity to which the column belongs. This is a compatible field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze1abcdefgh****</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The compatible field for column encryption status. To query column encryption results, call ListDataMaskingColumns.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MaskingStatus")
         public Integer maskingStatus;
 
+        /**
+         * <p>The name of the data column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>phone</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The cloud product code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <p>The region ID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the detection result revision record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
+         */
         @NameInMap("RevisionId")
         public Long revisionId;
 
+        /**
+         * <p>The revision status of the detection result. Valid values:</p>
+         * <ul>
+         * <li>0: not revised.</li>
+         * <li>1: revised.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RevisionStatus")
         public Long revisionStatus;
 
+        /**
+         * <p>The sensitivity level ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RiskLevelId")
         public Long riskLevelId;
 
+        /**
+         * <p>The sensitivity level name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S2</p>
+         */
         @NameInMap("RiskLevelName")
         public String riskLevelName;
 
+        /**
+         * <p>The ID of the matched detection rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 
+        /**
+         * <p>The name of the matched detection rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Phone number</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The database schema name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
+        /**
+         * <p>Indicates whether the data is detected as sensitive data.</p>
+         */
         @NameInMap("Sensitive")
         public Boolean sensitive;
 
+        /**
+         * <p>The data table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customer</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 

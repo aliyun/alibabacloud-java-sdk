@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDataMaskingEncryptionAlgorithmRequest extends TeaModel {
     /**
+     * <p>The name of the instance-level column encryption algorithm. Select an available algorithm from the ListDataMaskingEncryptionAlgorithms operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>AES_256_GCM</p>
      */
@@ -12,6 +14,8 @@ public class UpdateDataMaskingEncryptionAlgorithmRequest extends TeaModel {
     public String encryptionAlgorithm;
 
     /**
+     * <p>The KMS key identifier. You can obtain this value from Items[].KeyId in the response of the ListKmsKeys operation. Specify this parameter when you use a KMS key. Do not specify this parameter for local key scenarios.</p>
+     * 
      * <strong>example:</strong>
      * <p>12345678-1234-1234-1234-12345678****</p>
      */
@@ -19,6 +23,8 @@ public class UpdateDataMaskingEncryptionAlgorithmRequest extends TeaModel {
     public String encryptionKeyId;
 
     /**
+     * <p>The database instance identity. You can obtain this value from Items[].InstanceId in the response of the ListDataMaskingInstances operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>rm-2ze1abcdefgh****</p>
      */
@@ -26,6 +32,12 @@ public class UpdateDataMaskingEncryptionAlgorithmRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The language of the response description. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -33,6 +45,8 @@ public class UpdateDataMaskingEncryptionAlgorithmRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If you also specify ProductId, the two values must correspond to each other.</p>
+     * 
      * <strong>example:</strong>
      * <p>RDS</p>
      */
@@ -40,6 +54,14 @@ public class UpdateDataMaskingEncryptionAlgorithmRequest extends TeaModel {
     public String productCode;
 
     /**
+     * <p>The cloud product type identifier. Valid values:</p>
+     * <ul>
+     * <li>5: RDS.</li>
+     * <li>8: POLARDB.</li>
+     * <li>27: PolarDBX2.</li>
+     * </ul>
+     * <p>If you specify both ProductId and ProductCode, the values must correspond to each other.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.sddp20260120.models;
 import com.aliyun.tea.*;
 
 public class ListMiniEngineVersionsResponseBody extends TeaModel {
+    /**
+     * <p>The list of available kernel versions.</p>
+     */
     @NameInMap("KernelVersions")
     public java.util.List<ListMiniEngineVersionsResponseBodyKernelVersions> kernelVersions;
 
     /**
+     * <p>The request ID. You can use this ID to locate the API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
      */
@@ -37,6 +42,8 @@ public class ListMiniEngineVersionsResponseBody extends TeaModel {
 
     public static class ListMiniEngineVersionsResponseBodyKernelVersions extends TeaModel {
         /**
+         * <p>The release type of the kernel version. This value is the same as the value returned by the corresponding database product. For example, for ApsaraDB RDS, LTS indicates a long-term support version and BETA indicates a preview version. For PolarDB, the value can be Stable, Old, HighRisk, or Beta.</p>
+         * 
          * <strong>example:</strong>
          * <p>LTS</p>
          */
@@ -44,6 +51,8 @@ public class ListMiniEngineVersionsResponseBody extends TeaModel {
         public String kernelReleaseType;
 
         /**
+         * <p>The available kernel version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>rds_20220731</p>
          */
@@ -51,6 +60,8 @@ public class ListMiniEngineVersionsResponseBody extends TeaModel {
         public String kernelVersion;
 
         /**
+         * <p>The display name of the kernel version.</p>
+         * 
          * <strong>example:</strong>
          * <p>MySQL 8.0</p>
          */

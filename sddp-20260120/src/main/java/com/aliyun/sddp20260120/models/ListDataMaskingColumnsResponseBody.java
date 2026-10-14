@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListDataMaskingColumnsResponseBody extends TeaModel {
     /**
+     * <p>The page number of the returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The list of records returned by the current query.</p>
+     */
     @NameInMap("Items")
     public java.util.List<ListDataMaskingColumnsResponseBodyItems> items;
 
     /**
+     * <p>The number of records per page for the current query.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +29,8 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID, which can be used to locate this API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
      */
@@ -29,6 +38,8 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records that match the current query scope.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -82,6 +93,8 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
 
     public static class ListDataMaskingColumnsResponseBodyItemsModelTags extends TeaModel {
         /**
+         * <p>The ID of the model tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>101</p>
          */
@@ -89,8 +102,10 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The name of the model tag.</p>
+         * 
          * <strong>example:</strong>
-         * <p>个人信息</p>
+         * <p>Personal information</p>
          */
         @NameInMap("Name")
         public String name;
@@ -120,6 +135,8 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
 
     public static class ListDataMaskingColumnsResponseBodyItems extends TeaModel {
         /**
+         * <p>The data type of the database column.</p>
+         * 
          * <strong>example:</strong>
          * <p>varchar</p>
          */
@@ -127,6 +144,8 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
         public String dataType;
 
         /**
+         * <p>The database name.</p>
+         * 
          * <strong>example:</strong>
          * <p>business_db</p>
          */
@@ -134,6 +153,8 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
         public String dbName;
 
         /**
+         * <p>The database engine type.</p>
+         * 
          * <strong>example:</strong>
          * <p>MySQL</p>
          */
@@ -141,6 +162,8 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
         public String engineType;
 
         /**
+         * <p>The business error code of the record or operation. This value can be empty if no error occurs. Evaluate this value together with ErrorMessage.</p>
+         * 
          * <strong>example:</strong>
          * <p>data_masking_not_running</p>
          */
@@ -148,13 +171,17 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>The business error description of the record or operation.</p>
+         * 
          * <strong>example:</strong>
-         * <p>实例未处于运行状态</p>
+         * <p>The instance is not in the running state</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
+         * <p>The ID of the column record.</p>
+         * 
          * <strong>example:</strong>
          * <p>column-example-001</p>
          */
@@ -162,6 +189,8 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The instance identity of the database.</p>
+         * 
          * <strong>example:</strong>
          * <p>rm-2ze1abcdefgh****</p>
          */
@@ -169,16 +198,31 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The column encryption status. Valid values:</p>
+         * <ul>
+         * <li>NotEncrypted: Not encrypted.</li>
+         * <li>Processing: Being processed.</li>
+         * <li>Success: Encryption succeeded.</li>
+         * <li>Failed: Encryption failed.</li>
+         * <li>Deleting: Being disabled.</li>
+         * <li>DeleteFailed: Disabling failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
         @NameInMap("MaskingStatus")
         public String maskingStatus;
 
+        /**
+         * <p>The list of matched model tags.</p>
+         */
         @NameInMap("ModelTags")
         public java.util.List<ListDataMaskingColumnsResponseBodyItemsModelTags> modelTags;
 
         /**
+         * <p>The name of the data column.</p>
+         * 
          * <strong>example:</strong>
          * <p>phone</p>
          */
@@ -186,6 +230,8 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The cloud product code.</p>
+         * 
          * <strong>example:</strong>
          * <p>RDS</p>
          */
@@ -193,6 +239,13 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
         public String productCode;
 
         /**
+         * <p>The cloud product type ID. Valid values:</p>
+         * <ul>
+         * <li>5: RDS.</li>
+         * <li>8: POLARDB.</li>
+         * <li>27: PolarDBX2.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -200,6 +253,8 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
         public Long productId;
 
         /**
+         * <p>The region ID of the asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-zhangjiakou</p>
          */
@@ -207,6 +262,8 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The ID of the sensitivity level.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -214,6 +271,8 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
         public Long riskLevelId;
 
         /**
+         * <p>The name of the sensitivity level.</p>
+         * 
          * <strong>example:</strong>
          * <p>S2</p>
          */
@@ -221,6 +280,8 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
         public String riskLevelName;
 
         /**
+         * <p>The ID of the matched detection rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>1001</p>
          */
@@ -228,13 +289,17 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
         public Long ruleId;
 
         /**
+         * <p>The name of the matched detection rule.</p>
+         * 
          * <strong>example:</strong>
-         * <p>手机号</p>
+         * <p>Phone number</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
+         * <p>The table name.</p>
+         * 
          * <strong>example:</strong>
          * <p>customer</p>
          */

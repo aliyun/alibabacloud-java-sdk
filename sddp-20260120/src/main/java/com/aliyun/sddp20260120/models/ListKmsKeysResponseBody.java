@@ -4,9 +4,18 @@ package com.aliyun.sddp20260120.models;
 import com.aliyun.tea.*;
 
 public class ListKmsKeysResponseBody extends TeaModel {
+    /**
+     * <p>The list of records returned by this query.</p>
+     */
     @NameInMap("Items")
     public java.util.List<ListKmsKeysResponseBodyItems> items;
 
+    /**
+     * <p>The request ID, which can be used to locate this API call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +41,21 @@ public class ListKmsKeysResponseBody extends TeaModel {
     }
 
     public static class ListKmsKeysResponseBodyItems extends TeaModel {
+        /**
+         * <p>The alias of the KMS key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alias/dsc-encryption</p>
+         */
         @NameInMap("AliasName")
         public String aliasName;
 
+        /**
+         * <p>The ID of the KMS key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678-1234-1234-1234-12345678****</p>
+         */
         @NameInMap("KeyId")
         public String keyId;
 

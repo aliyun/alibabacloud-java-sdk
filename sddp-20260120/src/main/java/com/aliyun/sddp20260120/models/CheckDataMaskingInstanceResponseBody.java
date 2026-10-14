@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CheckDataMaskingInstanceResponseBody extends TeaModel {
     /**
+     * <p>The instance check result code. A value of Success indicates that the check passed. For other values, handle the error based on ErrorMessage.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,13 +14,17 @@ public class CheckDataMaskingInstanceResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The instance check result description. A specific reason is returned when the check fails.</p>
+     * 
      * <strong>example:</strong>
-     * <p>实例未处于运行状态</p>
+     * <p>The instance is not in the running state</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
+     * <p>The request ID, which can be used to locate this API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
      */

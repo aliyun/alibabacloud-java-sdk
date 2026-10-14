@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListDataMaskingInstancesResponseBody extends TeaModel {
     /**
+     * <p>The page number of the returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The list of records returned by the current query.</p>
+     */
     @NameInMap("Items")
     public java.util.List<ListDataMaskingInstancesResponseBodyItems> items;
 
     /**
+     * <p>The number of records per page for the current query.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +29,8 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID. You can use this ID to locate the API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
      */
@@ -29,6 +38,8 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records that match the current statistics or query scope.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -82,6 +93,8 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
 
     public static class ListDataMaskingInstancesResponseBodyItems extends TeaModel {
         /**
+         * <p>The column encryption algorithm used by the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>AES_256_GCM</p>
          */
@@ -89,6 +102,8 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
         public String encryptionAlgorithm;
 
         /**
+         * <p>The ID of the KMS key used by the instance. This field may not be returned for local key scenarios.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345678-1234-1234-1234-12345678****</p>
          */
@@ -96,6 +111,8 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
         public String encryptionKeyId;
 
         /**
+         * <p>The database engine type.</p>
+         * 
          * <strong>example:</strong>
          * <p>MySQL</p>
          */
@@ -103,6 +120,8 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
         public String engineType;
 
         /**
+         * <p>The number of database accounts that have fullAccess plaintext access permissions.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -110,6 +129,8 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
         public Integer fullAccessAccountCount;
 
         /**
+         * <p>The instance identity of the database instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>rm-2ze1abcdefgh****</p>
          */
@@ -117,6 +138,8 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The code of the cloud product.</p>
+         * 
          * <strong>example:</strong>
          * <p>RDS</p>
          */
@@ -124,6 +147,8 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
         public String productCode;
 
         /**
+         * <p>The ID of the cloud product type. Valid values: 5 (RDS), 8 (POLARDB), and 27 (PolarDBX2).</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -131,6 +156,8 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
         public Long productId;
 
         /**
+         * <p>The region ID of the asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-zhangjiakou</p>
          */
@@ -138,8 +165,10 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The region name of the asset.</p>
+         * 
          * <strong>example:</strong>
-         * <p>华北 3（张家口）</p>
+         * <p>China (Zhangjiakou)</p>
          */
         @NameInMap("RegionName")
         public String regionName;
