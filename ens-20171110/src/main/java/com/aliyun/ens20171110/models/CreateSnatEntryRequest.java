@@ -7,11 +7,13 @@ public class CreateSnatEntryRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable IP affinity. If you do not specify this parameter, IP affinity is enabled by default. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong></li>
-     * <li><strong>true</strong></li>
+     * <li><p><strong>false</strong></p>
+     * </li>
+     * <li><p><strong>true</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> After you enable IP affinity, if multiple EIPs are associated with an SNAT entry, one client uses the same EIP to for communication. If IP affinity is disabled, the client uses a random EIP for communication.</p>
+     * <p>After you enable IP affinity, if multiple EIPs are associated with an SNAT entry, one client uses the same EIP to for communication. If IP affinity is disabled, the client uses a random EIP for communication.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,8 +34,10 @@ public class CreateSnatEntryRequest extends TeaModel {
     /**
      * <p>Whether to enable operator affinity. Value taking:</p>
      * <ul>
-     * <li>false:Do not open.</li>
-     * <li>true:Open.</li>
+     * <li><p>false:Do not open.</p>
+     * </li>
+     * <li><p>true:Open.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,7 +78,7 @@ public class CreateSnatEntryRequest extends TeaModel {
     /**
      * <p>The CIDR block. You can specify the CIDR block of a network, a vSwitch, or an instance. You can also specify a custom CIDR block. All instances within the CIDR block can access the Internet or external networks by using SNAT.</p>
      * <blockquote>
-     * <p> If you specify <strong>SourceVSwitchId</strong> and <strong>SourceCIDR</strong>, <strong>SourceVSwitchId</strong> does not take effect. The value that you specified for <strong>SourceCIDR</strong> takes precedence.</p>
+     * <p>If you specify <strong>SourceVSwitchId</strong> and <strong>SourceCIDR</strong>, <strong>SourceVSwitchId</strong> does not take effect. The value that you specified for <strong>SourceCIDR</strong> takes precedence.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -86,7 +90,7 @@ public class CreateSnatEntryRequest extends TeaModel {
     /**
      * <p>The ID of the network. This parameter specifies that all ENS instances in the network can use the SNAT entry to access the Internet.</p>
      * <blockquote>
-     * <p> If you specify <strong>SourceNetworkId</strong> and <strong>SourceVSwitchId</strong> or <strong>SourceCIDR</strong>, <strong>SourceNetworkId</strong> does not take effect. The value that you specified for <strong>SourceCIDR</strong> takes precedence. Priority: <strong>SourceCIDR</strong> &gt; <strong>SourceVSwitchId</strong> &gt; <strong>SourceNetworkId</strong>.</p>
+     * <p>If you specify <strong>SourceNetworkId</strong> and <strong>SourceVSwitchId</strong> or <strong>SourceCIDR</strong>, <strong>SourceNetworkId</strong> does not take effect. The value that you specified for <strong>SourceCIDR</strong> takes precedence. Priority: <strong>SourceCIDR</strong> &gt; <strong>SourceVSwitchId</strong> &gt; <strong>SourceNetworkId</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -98,7 +102,7 @@ public class CreateSnatEntryRequest extends TeaModel {
     /**
      * <p>The ID of the vSwitch that you need to access over the Internet. This parameter specifies that Edge Node Service (ENS) instances in the vSwitch can use the SNAT entry to access the Internet.</p>
      * <blockquote>
-     * <p> If you specify <strong>SourceVSwitchId</strong> and <strong>SourceCIDR</strong>, <strong>SourceVSwitchId</strong> does not take effect. The value that you specified for <strong>SourceCIDR</strong> takes precedence.</p>
+     * <p>If you specify <strong>SourceVSwitchId</strong> and <strong>SourceCIDR</strong>, <strong>SourceVSwitchId</strong> does not take effect. The value that you specified for <strong>SourceCIDR</strong> takes precedence.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

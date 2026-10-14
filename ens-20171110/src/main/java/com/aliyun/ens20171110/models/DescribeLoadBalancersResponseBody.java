@@ -8,7 +8,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
     public DescribeLoadBalancersResponseBodyLoadBalancers loadBalancers;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10. Valid values: <strong>10</strong> to <strong>100</strong>.</p>
+     * <p>The Settings for the number of entries per page during paging in a paged query. Default value: 10. Valid values: <strong>10</strong> to <strong>100</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -26,7 +26,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -35,10 +35,10 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The total number of entries in the list.</p>
      * 
      * <strong>example:</strong>
-     * <p>6</p>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;

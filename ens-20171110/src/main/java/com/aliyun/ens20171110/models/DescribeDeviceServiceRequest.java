@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDeviceServiceRequest extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The application ID.</p>
      * 
      * <strong>example:</strong>
      * <p>a2bac6f4-75dc-455e-8389-2dc8e47526d3</p>
@@ -14,7 +14,7 @@ public class DescribeDeviceServiceRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>This parameter does not take effect.</p>
+     * <p>Invalid parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-chongqing-10</p>
@@ -23,7 +23,7 @@ public class DescribeDeviceServiceRequest extends TeaModel {
     public String ensRegionId;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i-5sg1owx0g4ojy66ab2tez77r2</p>
@@ -32,7 +32,7 @@ public class DescribeDeviceServiceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2661b1dd-3453-418d-8182-bb34f79e8d3c</p>
@@ -41,7 +41,7 @@ public class DescribeDeviceServiceRequest extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the Edge Node Service (ENS) node.</p>
+     * <p>The ID of the ENS edge node.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-chongqing-11</p>

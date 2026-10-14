@@ -9,7 +9,7 @@ public class SetLoadBalancerStatusRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>lb-5t18quoohsrc3xkf86spmnu77</p>
+     * <p>lb-5t18quoohsrc3xkf86sp*****</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -17,8 +17,10 @@ public class SetLoadBalancerStatusRequest extends TeaModel {
     /**
      * <p>The new instance status. Valid values:</p>
      * <ul>
-     * <li><strong>Active</strong></li>
-     * <li><strong>InActive</strong></li>
+     * <li><p><strong>Active</strong></p>
+     * </li>
+     * <li><p><strong>InActive</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

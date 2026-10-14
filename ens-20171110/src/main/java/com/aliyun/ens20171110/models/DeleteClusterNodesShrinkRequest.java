@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteClusterNodesShrinkRequest extends TeaModel {
     /**
+     * <p>The request body parameters.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Body")
     public String bodyShrink;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,6 +21,9 @@ public class DeleteClusterNodesShrinkRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>Specifies whether to release the ENS instance where the node resides. Default value: true.</p>
+     */
     @NameInMap("ReleaseNode")
     public Boolean releaseNode;
 

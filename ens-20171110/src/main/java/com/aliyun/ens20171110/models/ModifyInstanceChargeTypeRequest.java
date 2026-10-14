@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceChargeTypeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable auto-payment when you change the billing method from pay-as-you-go to subscription. Valid values:</p>
-     * <p>true: enables auto-payment. Make sure that your account has sufficient balance.</p>
-     * <p>false (default): does not enable auto-payment. The order is generated but not paid.</p>
+     * <p>Specifies whether to automatically complete the payment when you switch the billing method of the instance from pay-as-you-go to subscription. Valid values:</p>
+     * <p>true: The payment is automatically completed. Make sure that your account balance is sufficient.</p>
+     * <p>false: Only an order is generated but no payment is made. This is the default value.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -16,9 +16,11 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal when you change the billing method from pay-as-you-go to subscription. Valid values:</p>
-     * <p>true: enables auto-renewal for the instance.</p>
-     * <p>false</p>
+     * <p>Specifies whether to enable auto-renewal when converting the instance from pay-as-you-go to subscription. Valid values:</p>
+     * <ul>
+     * <li>true: Auto-renewal is enabled.</li>
+     * <li>false: Auto-renewal is not enabled (default).</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -26,13 +28,17 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    /**
+     * <p>The billing cycle. Valid values: Month, Day, and Hour.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
+     */
     @NameInMap("BillingCycle")
     public String billingCycle;
 
     /**
-     * <p>Specifies whether to change the billing method of all data disks that are created with the instance to subscription when you change the billing method of the instance from pay-as-you-go to subscription. Valid values:</p>
-     * <p>true</p>
-     * <p>false (default)</p>
+     * <p>Specifies whether to convert all pay-as-you-go data cloud disks created with the instance to subscription data cloud disks when converting an instance-level pay-as-you-go instance to a subscription instance. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,9 +47,7 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     public Boolean includeDataDisks;
 
     /**
-     * <p>The new billing method. Valid values:</p>
-     * <p>PrePaid</p>
-     * <p>PostPaid (default)</p>
+     * <p>The target billing method of the instance. Valid values:</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,16 +57,16 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The IDs of the instances.</p>
+     * <p>The list of instance IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The subscription duration. This parameter is required if you set the InstanceChargeType parameter to PrePaid. Valid values:</p>
-     * <p>If the PeriodUnit parameter is set to Day, Period can only be set to 3.</p>
-     * <p>If PeriodUnit is Month, Period can be set to 1 to 9 or 12.</p>
+     * <p>The subscription duration when converting a pay-as-you-go instance to subscription. This parameter is required in this scenario. Valid values:</p>
+     * <p>If PeriodUnit is set to Day, Period can only be set to 3.</p>
+     * <p>If PeriodUnit is set to Month, Period can be set to 1-9 or 12.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -71,9 +75,7 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The unit of the subscription duration. This parameter is required if you set the InstanceChargeType parameter to PrePaid. Valid values:</p>
-     * <p>Month</p>
-     * <p>Day</p>
+     * <p>The unit of the subscription duration when converting an instance-level pay-as-you-go instance to a subscription instance. This parameter is required in this scenario. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>

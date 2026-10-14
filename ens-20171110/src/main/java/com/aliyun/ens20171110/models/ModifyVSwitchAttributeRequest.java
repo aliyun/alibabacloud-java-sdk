@@ -5,20 +5,32 @@ import com.aliyun.tea.*;
 
 public class ModifyVSwitchAttributeRequest extends TeaModel {
     /**
-     * <p>The description of the listener.</p>
+     * <p>Description.</p>
      * <ul>
-     * <li>The description must be 2 to 256 characters in length.</li>
-     * <li>It must start with a letter but cannot start with http:// or https://.</li>
+     * <li><p>Must be 2 to 256 characters in length and can contain English or Chinese characters.</p>
+     * </li>
+     * <li><p>Cannot start with http\:// or https\://.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>this is my first network</p>
+     * <p>this is my first vswitch</p>
      */
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("EnableIPv6")
+    public Boolean enableIPv6;
+
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <strong>example:</strong>
+     * <p>2408:XXXX:0:a600::/110</p>
+     */
+    @NameInMap("Ipv6CidrBlock")
+    public String ipv6CidrBlock;
+
+    /**
+     * <p>vSwitch ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,10 +40,12 @@ public class ModifyVSwitchAttributeRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The name of the vSwitch.</p>
+     * <p>vSwitch name.</p>
      * <ul>
-     * <li>The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
-     * <li>It must start with a letter but cannot start with http:// or https://.</li>
+     * <li><p>Must be 2 to 128 characters long. Can contain letters, digits, Chinese characters, underscores (_), and hyphens (-).</p>
+     * </li>
+     * <li><p>Must start with a letter or a Chinese character. Cannot start with http\:// or https\://.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,6 +65,22 @@ public class ModifyVSwitchAttributeRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ModifyVSwitchAttributeRequest setEnableIPv6(Boolean enableIPv6) {
+        this.enableIPv6 = enableIPv6;
+        return this;
+    }
+    public Boolean getEnableIPv6() {
+        return this.enableIPv6;
+    }
+
+    public ModifyVSwitchAttributeRequest setIpv6CidrBlock(String ipv6CidrBlock) {
+        this.ipv6CidrBlock = ipv6CidrBlock;
+        return this;
+    }
+    public String getIpv6CidrBlock() {
+        return this.ipv6CidrBlock;
     }
 
     public ModifyVSwitchAttributeRequest setVSwitchId(String vSwitchId) {

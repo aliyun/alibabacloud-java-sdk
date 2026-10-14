@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSDGsRequest extends TeaModel {
     /**
-     * <p>The AIC instance ID to be queried.</p>
+     * <p>The list of AIC instance IDs to query.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The IDs of SDGs that you want to query. By default, all SDGs are queried.</p>
+     * <p>The list of SDG IDs to query.</p>
      */
     @NameInMap("SDGIds")
     public java.util.List<String> SDGIds;

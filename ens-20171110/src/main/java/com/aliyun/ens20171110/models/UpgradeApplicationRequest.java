@@ -17,10 +17,14 @@ public class UpgradeApplicationRequest extends TeaModel {
     /**
      * <p>The information template for phased update. The value must be a JSON string and contain the following information:</p>
      * <ul>
-     * <li>Version range that you want to update</li>
-     * <li>Configuration information of the target version</li>
-     * <li>Canary release policy for resources</li>
-     * <li>Intelligent upgrade policy that contains information such as the time window and resource usage limit</li>
+     * <li><p>Version range that you want to update</p>
+     * </li>
+     * <li><p>Configuration information of the target version</p>
+     * </li>
+     * <li><p>Canary release policy for resources</p>
+     * </li>
+     * <li><p>Intelligent upgrade policy that contains information such as the time window and resource usage limit</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

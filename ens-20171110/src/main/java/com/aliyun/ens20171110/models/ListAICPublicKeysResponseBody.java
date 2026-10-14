@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAICPublicKeysResponseBody extends TeaModel {
     /**
-     * <p>Current page number when paging</p>
+     * <p>The current page number in the paginated query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListAICPublicKeysResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of records to display per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,13 +23,13 @@ public class ListAICPublicKeysResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Public key list</p>
+     * <p>The list of public keys.</p>
      */
     @NameInMap("PublicKeys")
     public java.util.List<ListAICPublicKeysResponseBodyPublicKeys> publicKeys;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique identifier of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxsxxxxx</p>
@@ -38,7 +38,7 @@ public class ListAICPublicKeysResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -93,7 +93,7 @@ public class ListAICPublicKeysResponseBody extends TeaModel {
 
     public static class ListAICPublicKeysResponseBodyPublicKeys extends TeaModel {
         /**
-         * <p>Public key content</p>
+         * <p>The content of the public key.</p>
          * 
          * <strong>example:</strong>
          * <p>fvsvshbvjfksvj</p>
@@ -102,7 +102,7 @@ public class ListAICPublicKeysResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The creation time of the voiceprint.</p>
+         * <p>The time when the public key was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-09T15:13:21+08:00</p>
@@ -111,16 +111,16 @@ public class ListAICPublicKeysResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>Public key description</p>
+         * <p>The description of the public key.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>Test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Public key grouping</p>
+         * <p>The group of the public key.</p>
          * 
          * <strong>example:</strong>
          * <p>test-group</p>
@@ -129,7 +129,7 @@ public class ListAICPublicKeysResponseBody extends TeaModel {
         public String keyGroup;
 
         /**
-         * <p>Public key name</p>
+         * <p>The name of the public key.</p>
          * 
          * <strong>example:</strong>
          * <p>mykey</p>
@@ -138,7 +138,7 @@ public class ListAICPublicKeysResponseBody extends TeaModel {
         public String keyName;
 
         /**
-         * <p>Public key type</p>
+         * <p>The type of the public key.</p>
          * 
          * <strong>example:</strong>
          * <p>adb</p>

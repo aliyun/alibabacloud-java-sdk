@@ -131,8 +131,10 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         /**
          * <p>The action that is performed on network traffic that matches the rule. Valid values:</p>
          * <ul>
-         * <li><strong>accept</strong>: allows the network traffic.</li>
-         * <li><strong>drop</strong>: blocks the network traffic.</li>
+         * <li><p><strong>accept</strong>: allows the network traffic.</p>
+         * </li>
+         * <li><p><strong>drop</strong>: blocks the network traffic.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -144,8 +146,10 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         /**
          * <p>The destination port range of the outbound rule.</p>
          * <ul>
-         * <li>If <strong>Protocol</strong> of the outbound rule is set to <strong>all</strong> or <strong>icmp</strong> the port range is <strong>-1/-1</strong>, which indicates all ports.</li>
-         * <li>If <strong>Protocol</strong> of the outbound rule is set to <strong>tcp</strong> or <strong>udp</strong>, the port range is in the following format: <strong>1/200</strong> or <strong>80/80</strong>. 1/200 indicates port 1 to port 200. 80/80 indicates port 80. Valid values for a port: <strong>1 to 65535</strong>.</li>
+         * <li><p>If <strong>Protocol</strong> of the outbound rule is set to <strong>all</strong> or <strong>icmp</strong> the port range is <strong>-1/-1</strong>, which indicates all ports.</p>
+         * </li>
+         * <li><p>If <strong>Protocol</strong> of the outbound rule is set to <strong>tcp</strong> or <strong>udp</strong>, the port range is in the following format: <strong>1/200</strong> or <strong>80/80</strong>. 1/200 indicates port 1 to port 200. 80/80 indicates port 80. Valid values for a port: <strong>1 to 65535</strong>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -166,10 +170,14 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         /**
          * <p>The protocol type. Valid values:</p>
          * <ul>
-         * <li><strong>icmp</strong>: ICMP.</li>
-         * <li><strong>tcp</strong>: TCP.</li>
-         * <li><strong>udp</strong>: UDP.</li>
-         * <li><strong>all</strong>: all protocols.</li>
+         * <li><p><strong>icmp</strong>: ICMP.</p>
+         * </li>
+         * <li><p><strong>tcp</strong>: TCP.</p>
+         * </li>
+         * <li><p><strong>udp</strong>: UDP.</p>
+         * </li>
+         * <li><p><strong>all</strong>: all protocols.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -181,8 +189,10 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         /**
          * <p>The type of the rule. Valid values:</p>
          * <ul>
-         * <li><strong>system</strong>: The rule is created by the system.</li>
-         * <li><strong>custom</strong>: The rule is created by a user.</li>
+         * <li><p><strong>system</strong>: The rule is created by the system.</p>
+         * </li>
+         * <li><p><strong>custom</strong>: The rule is created by a user.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -289,6 +299,12 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The destination network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/24</p>
+         */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
@@ -313,8 +329,10 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         /**
          * <p>The action that is performed on network traffic that matches the rule. Valid values:</p>
          * <ul>
-         * <li><strong>accept</strong>: allows the network traffic.</li>
-         * <li><strong>drop</strong>: blocks the network traffic.</li>
+         * <li><p><strong>accept</strong>: allows the network traffic.</p>
+         * </li>
+         * <li><p><strong>drop</strong>: blocks the network traffic.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -326,8 +344,10 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         /**
          * <p>The destination port range of the inbound rule.</p>
          * <ul>
-         * <li>If <strong>Protocol</strong> of the inbound rule is set to <strong>all</strong> or <strong>icmp</strong>, the port range is <strong>-1/-1</strong>, which indicates all ports.</li>
-         * <li>If <strong>Protocol</strong> of the inbound rule is set to <strong>tcp</strong> or <strong>udp</strong>, the port range is in the following format: <strong>1/200</strong> or <strong>80/80</strong>. 1/200 indicates port 1 to port 200. 80/80 indicates port 80. Valid values for a port: <strong>1 to 65535</strong>.</li>
+         * <li><p>If <strong>Protocol</strong> of the inbound rule is set to <strong>all</strong> or <strong>icmp</strong>, the port range is <strong>-1/-1</strong>, which indicates all ports.</p>
+         * </li>
+         * <li><p>If <strong>Protocol</strong> of the inbound rule is set to <strong>tcp</strong> or <strong>udp</strong>, the port range is in the following format: <strong>1/200</strong> or <strong>80/80</strong>. 1/200 indicates port 1 to port 200. 80/80 indicates port 80. Valid values for a port: <strong>1 to 65535</strong>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -348,10 +368,14 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         /**
          * <p>The protocol type. Valid values:</p>
          * <ul>
-         * <li><strong>icmp</strong>: ICMP.</li>
-         * <li><strong>tcp</strong>: TCP.</li>
-         * <li><strong>udp</strong>: UDP.</li>
-         * <li><strong>all</strong>: all protocols.</li>
+         * <li><p><strong>icmp</strong>: ICMP.</p>
+         * </li>
+         * <li><p><strong>tcp</strong>: TCP.</p>
+         * </li>
+         * <li><p><strong>udp</strong>: UDP.</p>
+         * </li>
+         * <li><p><strong>all</strong>: all protocols.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -363,8 +387,10 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         /**
          * <p>The type of the rule. Valid values:</p>
          * <ul>
-         * <li><strong>system</strong>: The rule is created by the system.</li>
-         * <li><strong>custom</strong>: The rule is created by a user.</li>
+         * <li><p><strong>system</strong>: The rule is created by the system.</p>
+         * </li>
+         * <li><p><strong>custom</strong>: The rule is created by a user.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -491,9 +517,12 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         /**
          * <p>The association status of the resource. Valid values:</p>
          * <ul>
-         * <li><strong>BINDED</strong>: The resource is associated with the network ACL.</li>
-         * <li><strong>BINDING</strong>: The resource is being associated with the network ACL.</li>
-         * <li><strong>UNBINDING</strong>: The resource is being disassociated from the network ACL.</li>
+         * <li><p><strong>BINDED</strong>: The resource is associated with the network ACL.</p>
+         * </li>
+         * <li><p><strong>BINDING</strong>: The resource is being associated with the network ACL.</p>
+         * </li>
+         * <li><p><strong>UNBINDING</strong>: The resource is being disassociated from the network ACL.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -599,8 +628,10 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         /**
          * <p>The status of the network ACL. Valid values:</p>
          * <ul>
-         * <li><strong>Available</strong>: The network ACL is available.</li>
-         * <li><strong>Modifying</strong>: The network ACL is being configured.</li>
+         * <li><p><strong>Available</strong>: The network ACL is available.</p>
+         * </li>
+         * <li><p><strong>Modifying</strong>: The network ACL is being configured.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

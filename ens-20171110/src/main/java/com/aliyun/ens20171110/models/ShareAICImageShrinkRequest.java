@@ -15,7 +15,7 @@ public class ShareAICImageShrinkRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The user groups.</p>
+     * <p>The user group.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Users")

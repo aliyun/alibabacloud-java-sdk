@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEnsRegionsResponseBody extends TeaModel {
     /**
-     * <p>The service code. 0 is returned for a successful request. An error code is returned for a failed request.</p>
+     * <p>The status code. A value of 0 indicates that the call was successful. If the call failed, an error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

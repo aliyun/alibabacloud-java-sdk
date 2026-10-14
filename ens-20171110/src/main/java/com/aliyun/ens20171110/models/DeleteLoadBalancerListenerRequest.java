@@ -17,7 +17,7 @@ public class DeleteLoadBalancerListenerRequest extends TeaModel {
     /**
      * <p>The frontend protocol that is used by the ELB instance.</p>
      * <blockquote>
-     * <p> This parameter is required if the same port is used by listeners that use different protocols.</p>
+     * <p>This parameter is required if the same port is used by listeners that use different protocols.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

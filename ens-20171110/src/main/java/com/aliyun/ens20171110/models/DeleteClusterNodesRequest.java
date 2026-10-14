@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteClusterNodesRequest extends TeaModel {
     /**
+     * <p>The request body parameters.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Body")
     public DeleteClusterNodesRequestBody body;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,6 +21,9 @@ public class DeleteClusterNodesRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>Specifies whether to release the ENS instance where the node resides. Default value: true.</p>
+     */
     @NameInMap("ReleaseNode")
     public Boolean releaseNode;
 
@@ -53,6 +58,7 @@ public class DeleteClusterNodesRequest extends TeaModel {
 
     public static class DeleteClusterNodesRequestBody extends TeaModel {
         /**
+         * <p>The information about the nodes to be removed.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Nodes")

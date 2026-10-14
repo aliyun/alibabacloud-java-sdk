@@ -11,7 +11,7 @@ public class CreateInstanceRequest extends TeaModel {
     public CreateInstanceRequestSystemDisk systemDisk;
 
     /**
-     * <p>Specifies whether to enable the auto-renewal feature. Valid values: <strong>True</strong> and <strong>False</strong>. Default value: False.</p>
+     * <p>Specifies whether to enable auto-renewal. Valid values: <strong>True</strong> | <strong>False</strong> (default).</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -20,7 +20,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String autoRenew;
 
     /**
-     * <p>The auto-renewal period for the instance. This parameter is required when the <strong>AutoRenew</strong> parameter is set to <strong>True</strong>. Valid values: <strong>1</strong> to <strong>12</strong>. Unit: months.</p>
+     * <p>The auto-renewal period. This parameter is required when <strong>AutoRenew</strong> is set to <strong>True</strong>. Valid values: <strong>1</strong> to <strong>12</strong>. Unit: months.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -39,11 +39,12 @@ public class CreateInstanceRequest extends TeaModel {
     public String ensRegionId;
 
     /**
-     * <p>The hostname of the Elastic Compute Service (ECS) instance. General naming rules: The hostname cannot start or end with a period (.) or hyphen (-). It cannot contain consecutive periods (.) or hyphens (-).</p>
-     * <p>Naming rules for specific instances:</p>
+     * <p>The hostname of the instance.
+     * General naming conventions: Periods (.) and hyphens (-) cannot be used as the first or last character and cannot be used consecutively.</p>
+     * <p>Specific naming conventions:</p>
      * <ul>
-     * <li>For Windows instances, the hostname must be <strong>2</strong> to <strong>15</strong> characters in length and cannot contain periods (.) or contain only digits. The hostname cannot contain periods (.) or contain only digits.</li>
-     * <li>For instances that run one of other operating systems such as Linux, the hostname must be <strong>2</strong> to <strong>64</strong> characters in length. You can use periods (.) to separate the hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).</li>
+     * <li>Windows instances: The hostname must be <strong>2</strong> to <strong>15</strong> characters in length. Periods (.) are not supported. The hostname cannot consist entirely of digits. Uppercase letters, lowercase letters, digits, and hyphens (-) are allowed.</li>
+     * <li>Other instances (such as Linux): The hostname must be <strong>2</strong> to <strong>64</strong> characters in length. Multiple periods (.) are supported. Each segment separated by a period can contain uppercase letters, lowercase letters, digits, and hyphens (-).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,7 +54,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String hostName;
 
     /**
-     * <p>The ID of the image file that you select when creating the instance.</p>
+     * <p>The ID of the image that is used to start the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>yourImage ID</p>
@@ -62,23 +63,23 @@ public class CreateInstanceRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The name of the instance. The name must conform to the following naming conventions:</p>
+     * <p>The name of the instance. Naming conventions:</p>
      * <ul>
-     * <li>The name must be <strong>2</strong> to <strong>128</strong> characters in length.</li>
-     * <li>It must start with a letter but cannot start with http:// or https://.</li>
-     * <li>The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</li>
+     * <li>The name must be <strong>2</strong> to <strong>128</strong> characters in length and can contain letters and Chinese characters.</li>
+     * <li>The name must start with an uppercase letter, a lowercase letter, or a Chinese character. It cannot start with http:// or https://.</li>
+     * <li>The name can contain digits, colons (:), underscores (_), periods (.), or hyphens (-).</li>
      * </ul>
-     * <p>If you do not specify this parameter, the instance ID is used as the instance name by default.</p>
+     * <p>If this parameter is not specified, the default value is the InstanceId of the instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>test:Instance_Name.1-2</p>
+     * <p>test：Instance_Name.1-2</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
-     * <p>The type of the instance.</p>
-     * <p>For more information, see <a href="~~66124~~"></a>.</p>
+     * <p>The instance type.</p>
+     * <p>For details about instance types, see <a href="https://help.aliyun.com/document_detail/66124.html">Limits</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,10 +89,12 @@ public class CreateInstanceRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>This parameter is required if you create the instance for the first time. The existing billing method is used by default if you have created an instance. Valid values:</p>
+     * <p>This parameter is required when you create an instance for the first time. If you already have instance resources, the existing billing method is used by default. Valid values:</p>
      * <ul>
-     * <li><strong>BandwidthByDay</strong>: Pay by daily peak bandwidth.</li>
-     * <li><strong>95BandwidthByMonth</strong>: Pay by monthly 95th percentile bandwidth.</li>
+     * <li><p><strong>BandwidthByDay</strong>: daily peak bandwidth.</p>
+     * </li>
+     * <li><p><strong>95BandwidthByMonth</strong>: monthly 95th percentile bandwidth.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,11 +104,14 @@ public class CreateInstanceRequest extends TeaModel {
     public String internetChargeType;
 
     /**
-     * <p>The type of the IP address. Valid values:</p>
+     * <p>The IP type. Valid values:</p>
      * <ul>
-     * <li><strong>ipv4</strong> (default)</li>
-     * <li><strong>ipv6</strong></li>
-     * <li><strong>ipv4Andipv6</strong></li>
+     * <li><p><strong>ipv4</strong> (default): IPv4.</p>
+     * </li>
+     * <li><p><strong>ipv6</strong>: IPv6.</p>
+     * </li>
+     * <li><p><strong>ipv4Andipv6</strong>: IPv4 and IPv6.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -115,7 +121,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String ipType;
 
     /**
-     * <p>The name of the key pair. You can specify only one name.</p>
+     * <p>The name of the key pair. Only a single name is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>TestKeyPairName</p>
@@ -128,7 +134,7 @@ public class CreateInstanceRequest extends TeaModel {
 
     /**
      * <p>The password of the instance.</p>
-     * <p>The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include: <code>()`~!@#$%^&amp;*-_+=|{}[]:;\\&quot;&lt;&gt;,.?/</code></p>
+     * <p>The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported: <code>()`~!@#$%^&amp;*-_+=|{}[]:;\\&quot;&lt;&gt;,.?/</code></p>
      * 
      * <strong>example:</strong>
      * <p>yourPassword:1</p>
@@ -139,10 +145,8 @@ public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to use the preset password of the image. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The password preset in the image is used, and the <strong>Password</strong> parameter must be null. For secure access, make sure that the selected image has a password configured.</p>
-     * </li>
-     * <li><p><strong>false</strong>: does not use the password preset in the image.</p>
-     * </li>
+     * <li><strong>true</strong>: The preset password of the image is used. The <strong>Password</strong> parameter must be empty, and you must make sure that the image has a preset password.</li>
+     * <li><strong>false</strong>: The preset password of the image is not used.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -152,7 +156,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Boolean passwordInherit;
 
     /**
-     * <p>The billing method of the instance. Set the value to Subscription.</p>
+     * <p>The payment method. Currently, this is a fixed value of Subscription (subscription instance). Modification is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Subscription</p>
@@ -161,7 +165,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String paymentType;
 
     /**
-     * <p>The subscription period of the instance. Valid values: <strong>1</strong> to <strong>9</strong> and <strong>12</strong>. Unit: months.</p>
+     * <p>The subscription duration. Valid values: <strong>1</strong> to <strong>9</strong> and <strong>12</strong>. Unit: months.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -171,7 +175,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The internal IP address. If this parameter is specified, you must specify the vSwitch ID. The vSwitch must be created first. Otherwise, an error is returned.</p>
+     * <p>The private IP address. If you specify a private IP address, you must also specify the VSwitchId parameter. The vSwitch must be created in advance. Otherwise, an error is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>10.10.10.10</p>
@@ -182,8 +186,8 @@ public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether a public IP address can be assigned to the specified instance. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong> (default): A public IP address can be assigned.</li>
+     * <li><strong>false</strong>: A public IP address cannot be assigned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -203,8 +207,8 @@ public class CreateInstanceRequest extends TeaModel {
     public String quantity;
 
     /**
-     * <p>Specifies whether to automatically append sequential suffixes to the hostnames specified by the <strong>HostName</strong> parameter and instance names specified by the <strong>InstanceName</strong> parameter. The sequential suffixes range from <strong>001</strong> to <strong>999</strong>.</p>
-     * <p>Examples: <strong>LocalHost001</strong> and <strong>LocalHost002</strong>, and <strong>MyInstance001</strong> and <strong>MyInstance002</strong>.</p>
+     * <p>Specifies whether to add sequential suffixes to <strong>HostName</strong> and <strong>InstanceName</strong>. The sequential suffixes start from <strong>001</strong> and cannot exceed <strong>999</strong>.</p>
+     * <p>Example: <strong>LocalHost001</strong>, <strong>LocalHost002</strong>, <strong>MyInstance001</strong>, and <strong>MyInstance002</strong>.</p>
      * <p>Default value: <strong>false</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -214,9 +218,9 @@ public class CreateInstanceRequest extends TeaModel {
     public Boolean uniqueSuffix;
 
     /**
-     * <p>Custom data. The data starts with <code>#!</code>. The data can be at most 256 characters in length and 16 KB in size. Only custom scripts are supported and cannot be rendered by InstanceMetaData.</p>
-     * <p>You can specify custom data. The data is encoded in Base64. The system does not encrypt your custom data when API requests are initiated. We recommend that you do not pass in confidential information such as passwords and private keys in plaintext. If you want to provide sensitive data such as passwords and private keys, encrypt the data and then encode it in Base64. The data is decrypted on the instance in the way it is encrypted.</p>
-     * <p>For more information, see <a href="https://cloudinit.readthedocs.io/en/latest/topics/format.html">User data formats</a>.</p>
+     * <p>The custom data. The data must start with <code>#!</code>. The maximum length is 256 characters and the maximum size is 16 KB. Only custom data scripts are supported. InstanceMetaData rendering is not supported.</p>
+     * <p>You can pass in custom data that is Base64-encoded. When you call the API to initiate a request, the custom data you specify is not encrypted. Do not pass in confidential information such as passwords and private keys in plaintext. If you need to pass in passwords or private keys, encrypt the content first and then Base64-encode it before passing it in. Decrypt the content in the same way inside the instance.</p>
+     * <p>For more information, see <a href="https://cloudinit.readthedocs.io/en/latest/topics/format.html">Data format</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>#!/bin/sh  echo &quot;Hello World.  The time is now $(date -R)!&quot; | tee /home/output.txt</p>
@@ -225,7 +229,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String userData;
 
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <p>The vSwitch ID.</p>
      * 
      * <strong>example:</strong>
      * <p>YourVSwitchId</p>
@@ -424,7 +428,7 @@ public class CreateInstanceRequest extends TeaModel {
 
     public static class CreateInstanceRequestDataDisk extends TeaModel {
         /**
-         * <p>The capacity of the first data disk. Unit: GiB. The capacity is at least 20 GiB and is a multiple of 10 GiB.</p>
+         * <p>The size of the first data cloud disk. Unit: GiB. The size must be at least 20 GiB and a multiple of 10.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -449,7 +453,7 @@ public class CreateInstanceRequest extends TeaModel {
 
     public static class CreateInstanceRequestSystemDisk extends TeaModel {
         /**
-         * <p>The size of the system disk. Unit: GiB. Valid values: <strong>20</strong> and <strong>40</strong>. The value cannot be smaller than the size of the image and must be a multiple of 10 GiB.</p>
+         * <p>The size of the system cloud disk. Unit: GiB. The value must be a multiple of 10 and cannot be smaller than the image size. For the valid range, refer to the SystemDiskMinSize and SystemDiskMaxSize values returned by DescribeAvailableResourceInfo. 20 GiB and 40 GiB are common configurations and do not indicate that only these two values are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>

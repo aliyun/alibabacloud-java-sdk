@@ -35,12 +35,15 @@ public class ModifyEpnInstanceRequest extends TeaModel {
     /**
      * <p>The networking mode. Valid values:</p>
      * <ul>
-     * <li><strong>SpeedUp</strong>: Intelligent acceleration network (Internet).</li>
-     * <li><strong>Connection</strong>: Internal network.</li>
-     * <li><strong>SpeedUpAndConnection</strong>: Intelligent acceleration network and internal network.</li>
+     * <li><p><strong>SpeedUp</strong>: Intelligent acceleration network (Internet).</p>
+     * </li>
+     * <li><p><strong>Connection</strong>: Internal network.</p>
+     * </li>
+     * <li><p><strong>SpeedUpAndConnection</strong>: Intelligent acceleration network and internal network.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The internal network supports only <strong>Connection</strong> and <strong>SpeedUpAndConnection</strong>.</p>
+     * <p>The internal network supports only <strong>Connection</strong> and <strong>SpeedUpAndConnection</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

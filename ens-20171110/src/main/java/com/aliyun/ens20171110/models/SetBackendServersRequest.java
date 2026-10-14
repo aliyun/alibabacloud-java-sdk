@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class SetBackendServersRequest extends TeaModel {
     /**
-     * <p>The list of backend servers that you added. You can modify the weights of up to 20 backend servers in each request.</p>
+     * <p>The list of backend servers to add. You can modify up to 20 backend servers in each call.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("BackendServers")
     public java.util.List<SetBackendServersRequestBackendServers> backendServers;
 
     /**
-     * <p>The ID of the Edge Load Balancer (ELB) instance.</p>
+     * <p>The ID of the load balancing instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,16 @@ public class SetBackendServersRequest extends TeaModel {
 
     public static class SetBackendServersRequestBackendServers extends TeaModel {
         /**
-         * <p>The ID of the instance that you use as the backend server.</p>
+         * <p>The IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.10</p>
+         */
+        @NameInMap("Ip")
+        public String ip;
+
+        /**
+         * <p>The instance ID of the backend server.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -54,10 +63,10 @@ public class SetBackendServersRequest extends TeaModel {
         public String serverId;
 
         /**
-         * <p>The type of the backend server. Valid values:</p>
+         * <p>The server type of the backend server. Valid values:</p>
          * <ul>
-         * <li><strong>ens</strong>: ENS instance</li>
-         * <li><strong>eni</strong>: elastic network interface (ENI)</li>
+         * <li><strong>ens</strong>: ENS instance.</li>
+         * <li><strong>eni</strong>: elastic network interfaces (ENIs) instance. The backend server is a network interface controller (NIC).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -69,7 +78,7 @@ public class SetBackendServersRequest extends TeaModel {
         /**
          * <p>The weight of the backend server. Default value: 100. Valid values: <strong>0</strong> to <strong>100</strong>.</p>
          * <blockquote>
-         * <p> The value 0 indicates that requests are not forwarded to the backend server.</p>
+         * <p>A value of 0 indicates that no requests are forwarded to the backend server.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -82,6 +91,14 @@ public class SetBackendServersRequest extends TeaModel {
         public static SetBackendServersRequestBackendServers build(java.util.Map<String, ?> map) throws Exception {
             SetBackendServersRequestBackendServers self = new SetBackendServersRequestBackendServers();
             return TeaModel.build(map, self);
+        }
+
+        public SetBackendServersRequestBackendServers setIp(String ip) {
+            this.ip = ip;
+            return this;
+        }
+        public String getIp() {
+            return this.ip;
         }
 
         public SetBackendServersRequestBackendServers setServerId(String serverId) {

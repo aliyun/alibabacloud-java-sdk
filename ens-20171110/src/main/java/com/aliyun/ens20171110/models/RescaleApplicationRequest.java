@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RescaleApplicationRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can query the application ID by calling the ListApplications operation.</p>
+     * <p>The application ID. You can obtain this value by calling the ListApplications operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,11 +15,11 @@ public class RescaleApplicationRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The level of resource scaling. The value is of the enumeration type. Valid values:</p>
+     * <p>The level of the scaling region. Valid values:</p>
      * <ul>
-     * <li>AreaIspCode (default): scales resources based on the Internet service provider (ISP).</li>
-     * <li>RegionId: scales resources based on the edge node.</li>
-     * <li>InstanceId: scales resources based on the instance ID. Resource scale-out specifies resource hosting and scale-in specifies resource release.</li>
+     * <li>AreaIspCode: region ISP.</li>
+     * <li>RegionId: edge zone.</li>
+     * <li>InstanceId: instance. Scale-out indicates resource hosting. Scale-in indicates resource release.</li>
      * </ul>
      * <p>Default value: AreaIspCode.</p>
      * 
@@ -30,10 +30,10 @@ public class RescaleApplicationRequest extends TeaModel {
     public String rescaleLevel;
 
     /**
-     * <p>The scaling operation. The value must be of the enumerated data type. Valid values:</p>
+     * <p>The scaling action for resources. Valid values:</p>
      * <ul>
-     * <li>Add: adds new resources.</li>
-     * <li>Del: releases resources.</li>
+     * <li>Add: Provisions new resources.</li>
+     * <li>Del: Releases resources.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -44,7 +44,7 @@ public class RescaleApplicationRequest extends TeaModel {
     public String rescaleType;
 
     /**
-     * <p>The required resources. The value must be a JSON string.</p>
+     * <p>The scaling resource requirements. The value is a string in JSON array format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class RescaleApplicationRequest extends TeaModel {
     public String resourceSelector;
 
     /**
-     * <p>The timeout period for asynchronous scaling. Unit: seconds. Default value: 300.</p>
+     * <p>The timeout period for asynchronous scaling, in seconds. Default value: 300.</p>
      * 
      * <strong>example:</strong>
      * <p>1800</p>
@@ -63,7 +63,7 @@ public class RescaleApplicationRequest extends TeaModel {
     public Integer timeout;
 
     /**
-     * <p>The version number of the application deployment package. By default, the stable version number is used. This parameter takes effect only when you perform resource scale-out.</p>
+     * <p>The application deployment version for new resources. This parameter takes effect only when resources are added. Default value: the stable version number of the application.</p>
      * 
      * <strong>example:</strong>
      * <p>v2</p>

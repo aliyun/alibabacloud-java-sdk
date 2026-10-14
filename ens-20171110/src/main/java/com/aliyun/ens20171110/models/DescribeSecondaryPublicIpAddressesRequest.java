@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSecondaryPublicIpAddressesRequest extends TeaModel {
     /**
-     * <p>The ID of the edge node.</p>
+     * <p>The ID of the ENS edge zone.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-44</p>
@@ -13,11 +13,14 @@ public class DescribeSecondaryPublicIpAddressesRequest extends TeaModel {
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    /**
+     * <p>The array of ENS edge zone IDs. Array length: 1 to 100.</p>
+     */
     @NameInMap("EnsRegionIds")
     public java.util.List<String> ensRegionIds;
 
     /**
-     * <p>The Internet service provider. Valid values:</p>
+     * <p>The Internet service provider (ISP). Valid values:</p>
      * <ul>
      * <li>cmcc: China Mobile.</li>
      * <li>unicom: China Unicom.</li>
@@ -31,7 +34,7 @@ public class DescribeSecondaryPublicIpAddressesRequest extends TeaModel {
     public String isp;
 
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -40,7 +43,7 @@ public class DescribeSecondaryPublicIpAddressesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 100. Default value: 10.</p>
+     * <p>The number of entries per page for paging queries. Maximum value: 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -49,7 +52,7 @@ public class DescribeSecondaryPublicIpAddressesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The secondary IP address.</p>
+     * <p>The secondary public IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>12.XXX.XXX.4</p>

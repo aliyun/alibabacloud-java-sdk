@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the information about clusters.</p>
+     * <p>The list of cluster information.</p>
      */
     @NameInMap("Clusters")
     public java.util.List<DescribeClusterResponseBodyClusters> clusters;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
@@ -51,7 +51,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The version of the cluster.</p>
+         * <p>The version information of the current cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>1.18.8</p>
@@ -69,7 +69,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The next version of the cluster.</p>
+         * <p>The next version information of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>1.20.8</p>
@@ -78,12 +78,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         public String nextVersion;
 
         /**
-         * <p>The health status of the instance.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>healthy</li>
-         * <li>unhealthy</li>
-         * </ul>
+         * <p>The health status of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>healthy</p>

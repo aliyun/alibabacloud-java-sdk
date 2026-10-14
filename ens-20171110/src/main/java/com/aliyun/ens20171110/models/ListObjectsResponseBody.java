@@ -15,6 +15,9 @@ public class ListObjectsResponseBody extends TeaModel {
 
     /**
      * <p>If the delimiter parameter is specified in the request, the response contains CommonPrefixes. Objects whose names contain the same string from the prefix to the next occurrence of the delimiter are grouped as a single result element in CommonPrefixes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Not applicable</p>
      */
     @NameInMap("CommonPrefixes")
     public java.util.List<String> commonPrefixes;
@@ -47,7 +50,7 @@ public class ListObjectsResponseBody extends TeaModel {
      * <p>The encoding type of the object names in the response.</p>
      * 
      * <strong>example:</strong>
-     * <p>N/A</p>
+     * <p>Not applicable</p>
      */
     @NameInMap("EncodingType")
     public String encodingType;
@@ -55,8 +58,10 @@ public class ListObjectsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the listed objects are truncated. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong></li>
-     * <li><strong>true</strong></li>
+     * <li><p><strong>false</strong></p>
+     * </li>
+     * <li><p><strong>true</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -249,9 +254,12 @@ public class ListObjectsResponseBody extends TeaModel {
         /**
          * <p>The entity tag (ETag). When an object is created, an ETag is created to identify the content of the object.</p>
          * <ul>
-         * <li>For an object that is created by calling the PutObject operation, the ETag value of the object is the MD5 hash of the object content.</li>
-         * <li>For an object that is not created by calling the PutObject operation, the ETag value of the object is the UUID of the object content.</li>
-         * <li>The ETag of an object can be used to check whether the object content is modified. However, we recommend that you use the MD5 hash of an object rather than the ETag value of the object to verify data integrity.</li>
+         * <li><p>For an object that is created by calling the PutObject operation, the ETag value of the object is the MD5 hash of the object content.</p>
+         * </li>
+         * <li><p>For an object that is not created by calling the PutObject operation, the ETag value of the object is the UUID of the object content.</p>
+         * </li>
+         * <li><p>The ETag of an object can be used to check whether the object content is modified. However, we recommend that you use the MD5 hash of an object rather than the ETag value of the object to verify data integrity.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

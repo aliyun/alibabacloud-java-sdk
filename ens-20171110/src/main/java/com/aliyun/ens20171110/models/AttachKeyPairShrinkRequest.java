@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachKeyPairShrinkRequest extends TeaModel {
     /**
-     * <p>The instance IDs.</p>
+     * <p>A list of instance IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class AttachKeyPairShrinkRequest extends TeaModel {
     public String instanceIdsShrink;
 
     /**
-     * <p>The key pair ID.</p>
+     * <p>The unique ID of the key pair.</p>
      * 
      * <strong>example:</strong>
      * <p>ssh-xxx</p>
@@ -30,7 +30,7 @@ public class AttachKeyPairShrinkRequest extends TeaModel {
     public String keyPairId;
 
     /**
-     * <p>The name of the SSH key pair.</p>
+     * <p>The key pair name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-kp</p>

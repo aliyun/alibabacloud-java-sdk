@@ -9,7 +9,7 @@ public class DescribeEnsRegionIdIpv6InfoRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-chengdu-xxxx-4</p>
+     * <p>cn-chengdu-****-4</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;

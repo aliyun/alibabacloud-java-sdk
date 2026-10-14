@@ -27,8 +27,10 @@ public class AssociateHaVipRequest extends TeaModel {
     /**
      * <p>The type of the instance to be associated with the HAVIP. Valid values:</p>
      * <ul>
-     * <li>EnsInstance (default): ENS instance</li>
-     * <li>NetworkInterface: elastic network interface (ENI)</li>
+     * <li><p>EnsInstance (default): ENS instance</p>
+     * </li>
+     * <li><p>NetworkInterface: elastic network interface (ENI)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E	 Request ID.</p>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -125,9 +125,12 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
         /**
          * <p>The type of the service. Valid values:</p>
          * <ul>
-         * <li>1: subscription instance.</li>
-         * <li>2: edge service instance.</li>
-         * <li>3: pay-as-you-go instance.</li>
+         * <li><p>1: subscription instance.</p>
+         * </li>
+         * <li><p>2: edge service instance.</p>
+         * </li>
+         * <li><p>3: pay-as-you-go instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

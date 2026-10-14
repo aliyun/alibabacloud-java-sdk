@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
     /**
-     * <p>The information about the bucket.</p>
+     * <p>The bucket information.</p>
      */
     @NameInMap("BucketList")
     public java.util.List<GetOssStorageAndAccByBucketsResponseBodyBucketList> bucketList;
@@ -42,7 +42,7 @@ public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
 
     public static class GetOssStorageAndAccByBucketsResponseBodyBucketList extends TeaModel {
         /**
-         * <p>The number of times that the bucket is accessed.</p>
+         * <p>The number of access requests.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -51,7 +51,7 @@ public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
         public Long acc;
 
         /**
-         * <p>The name of the bucket.</p>
+         * <p>The OSS bucket name.</p>
          * 
          * <strong>example:</strong>
          * <p>my-bucket</p>
@@ -60,7 +60,7 @@ public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
         public String bucket;
 
         /**
-         * <p>The storage usage of the bucket. Unit: bytes.</p>
+         * <p>The storage usage, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>

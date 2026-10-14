@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PrepareUploadResponseBody extends TeaModel {
     /**
-     * <p>The name of the bucket. This parameter is available only when the OSS SDK is used.</p>
+     * <p>The name of the physical storage. Pass this value when you use the OSS SDK.</p>
      * 
      * <strong>example:</strong>
      * <p>test-xxxxxx</p>
@@ -14,7 +14,7 @@ public class PrepareUploadResponseBody extends TeaModel {
     public String bucketName;
 
     /**
-     * <p>The endpoint. This parameter is available only when the OSS SDK is used.</p>
+     * <p>The endpoint. Pass this value when you use the OSS SDK.</p>
      * 
      * <strong>example:</strong>
      * <p>eos.aliyuncs.com</p>

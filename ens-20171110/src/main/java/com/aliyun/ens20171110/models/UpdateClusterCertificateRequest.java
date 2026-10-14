@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateClusterCertificateRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>eck-xxxxxxxx</p>
      */

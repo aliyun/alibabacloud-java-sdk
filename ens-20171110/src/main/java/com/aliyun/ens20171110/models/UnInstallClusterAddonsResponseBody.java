@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UnInstallClusterAddonsResponseBody extends TeaModel {
     /**
+     * <p>The ID of the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>eck-xxxxxxxx</p>
      */

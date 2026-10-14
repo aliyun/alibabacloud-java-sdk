@@ -4,10 +4,14 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class UpgradeClusterAddonsShrinkRequest extends TeaModel {
+    /**
+     * <p>The component information.</p>
+     */
     @NameInMap("Addons")
     public String addonsShrink;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

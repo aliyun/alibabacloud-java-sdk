@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSDGSharedDisksResponseBody extends TeaModel {
     /**
-     * <p>Current page number when paging</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeSDGSharedDisksResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class DescribeSDGSharedDisksResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxsxxxxx</p>
@@ -32,13 +32,13 @@ public class DescribeSDGSharedDisksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Shared disk list</p>
+     * <p>The list of shared disks.</p>
      */
     @NameInMap("SharedDisks")
     public java.util.List<DescribeSDGSharedDisksResponseBodySharedDisks> sharedDisks;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -93,7 +93,7 @@ public class DescribeSDGSharedDisksResponseBody extends TeaModel {
 
     public static class DescribeSDGSharedDisksResponseBodySharedDisks extends TeaModel {
         /**
-         * <p>The time when the shared disk was created.</p>
+         * <p>The time when the shared disk was created. The time follows the ISO 8601 standard and includes a time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-09T15:13:21+08:00</p>
@@ -102,7 +102,7 @@ public class DescribeSDGSharedDisksResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>shared disk id</p>
+         * <p>The ID of the shared disk.</p>
          * 
          * <strong>example:</strong>
          * <p>d-57kvvpuj1rk2ghumlgs6</p>
@@ -111,7 +111,7 @@ public class DescribeSDGSharedDisksResponseBody extends TeaModel {
         public String diskId;
 
         /**
-         * <p>Shared disk type</p>
+         * <p>The type of the shared disk.</p>
          * 
          * <strong>example:</strong>
          * <p>standard</p>
@@ -120,7 +120,7 @@ public class DescribeSDGSharedDisksResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>The namespace of the service.</p>
+         * <p>The namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -129,7 +129,7 @@ public class DescribeSDGSharedDisksResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The node ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-1</p>
@@ -138,7 +138,7 @@ public class DescribeSDGSharedDisksResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>SdgId of the shared disk</p>
+         * <p>The ID of the SDG.</p>
          * 
          * <strong>example:</strong>
          * <p>sdg-fqehhfdjv</p>
@@ -147,7 +147,7 @@ public class DescribeSDGSharedDisksResponseBody extends TeaModel {
         public String sdgId;
 
         /**
-         * <p>Number of shared mounts</p>
+         * <p>The number of shared mounts.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -156,7 +156,7 @@ public class DescribeSDGSharedDisksResponseBody extends TeaModel {
         public Integer sharedNum;
 
         /**
-         * <p>Shared disk status</p>
+         * <p>The status of the shared disk.</p>
          * 
          * <strong>example:</strong>
          * <p>avaliable</p>

@@ -4,10 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class UnInstallClusterAddonsShrinkRequest extends TeaModel {
+    /**
+     * <p>The add-on information.</p>
+     */
     @NameInMap("Addons")
     public String addonsShrink;
 
     /**
+     * <p>The ID of the cluster.</p>
+     * <p>The target cluster must be in the running state. You can call DescribeClustersV1 to query the cluster state.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

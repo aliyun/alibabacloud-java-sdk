@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetOssStorageAndAccByBucketsRequest extends TeaModel {
     /**
-     * <p>The information about the bucket.</p>
+     * <p>The bucket information.</p>
+     * <p>This parameter is required. If this parameter is not specified, the service returns error code 160002401.</p>
      * 
      * <strong>example:</strong>
      * <p>my-bucket</p>

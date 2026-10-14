@@ -216,7 +216,7 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
          * <p>The virtual IP address (VIP) of the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>10.8.<em>.</em></p>
+         * <p>10.8.****</p>
          */
         @NameInMap("Vip")
         public String vip;

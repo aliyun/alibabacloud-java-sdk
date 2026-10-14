@@ -26,9 +26,12 @@ public class ModifySecurityGroupAttributeRequest extends TeaModel {
     /**
      * <p>The name of the security group. The name of a bucket must meet the following requirements:</p>
      * <ul>
-     * <li>The name must be 2 to 128 characters in length.</li>
-     * <li>The name must start with a letter but cannot start with http:// or https://.</li>
-     * <li>The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+     * <li><p>The name must be 2 to 128 characters in length.</p>
+     * </li>
+     * <li><p>The name must start with a letter but cannot start with http\:// or https\://.</p>
+     * </li>
+     * <li><p>The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

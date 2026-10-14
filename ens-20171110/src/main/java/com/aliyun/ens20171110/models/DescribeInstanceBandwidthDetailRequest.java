@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceBandwidthDetailRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. The maximum interval between the beginning time and the end time is 86400 seconds. The interval is left-closed and right-open. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
+     * <p>The end time. The maximum difference from the start time is 86400 seconds. The query range is left-closed and right-open. Format: yyyy-MM-dd HH:mm:ss.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeInstanceBandwidthDetailRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the ENS node.</p>
+     * <p>The ENS node ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing-cmcc</p>
@@ -24,7 +24,7 @@ public class DescribeInstanceBandwidthDetailRequest extends TeaModel {
     public String ensRegionId;
 
     /**
-     * <p>The plan ID.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i-6ecpqvkicnchxccozrpxxxx</p>
@@ -33,7 +33,7 @@ public class DescribeInstanceBandwidthDetailRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The type of the instance, such as vm, eip, single_tenant, and nc. You can leave this parameter empty. The type of the instance, such as vm, eip, single_tenant, and nc.</p>
+     * <p>The instance type, such as vm, eip, single_tenant, or nc. You can leave this parameter empty if no special query is required.</p>
      * 
      * <strong>example:</strong>
      * <p>vm</p>
@@ -60,7 +60,7 @@ public class DescribeInstanceBandwidthDetailRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The type of the service, such as vm, eip, esk, and meta.</p>
+     * <p>The service type, such as vm, eip, esk, or meta.</p>
      * 
      * <strong>example:</strong>
      * <p>vm</p>
@@ -69,7 +69,7 @@ public class DescribeInstanceBandwidthDetailRequest extends TeaModel {
     public String serviceType;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
+     * <p>The start time in the yyyy-MM-dd HH:mm:ss format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

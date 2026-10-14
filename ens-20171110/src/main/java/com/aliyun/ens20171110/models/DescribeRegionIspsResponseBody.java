@@ -42,7 +42,7 @@ public class DescribeRegionIspsResponseBody extends TeaModel {
 
     public static class DescribeRegionIspsResponseBodyIsps extends TeaModel {
         /**
-         * <p>The code of the ISP.</p>
+         * <p>The ISP code.</p>
          * 
          * <strong>example:</strong>
          * <p>cmcc</p>
@@ -51,10 +51,10 @@ public class DescribeRegionIspsResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The name of the ISP.</p>
+         * <p>The ISP name.</p>
          * 
          * <strong>example:</strong>
-         * <p>move</p>
+         * <p>China Mobile</p>
          */
         @NameInMap("Name")
         public String name;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataDownloadURLResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,13 +14,13 @@ public class DescribeDataDownloadURLResponseBody extends TeaModel {
     public Long code;
 
     /**
-     * <p>The download URLs of data files.</p>
+     * <p>The list of download URLs for data files.</p>
      */
     @NameInMap("Data")
     public DescribeDataDownloadURLResponseBodyData data;
 
     /**
-     * <p>The response message. Success is returned for a successful request.</p>
+     * <p>The response message. A value of success indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -29,7 +29,7 @@ public class DescribeDataDownloadURLResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -85,7 +85,7 @@ public class DescribeDataDownloadURLResponseBody extends TeaModel {
         public String host;
 
         /**
-         * <p>The ID of the Edge Node Service (ENS) node.</p>
+         * <p>The ID of the ENS edge node.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-chenzhou-5</p>
@@ -118,7 +118,7 @@ public class DescribeDataDownloadURLResponseBody extends TeaModel {
 
     public static class DescribeDataDownloadURLResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the data file expires. The time is displayed in UTC.</p>
+         * <p>The expiration time of the download URL in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-10T03:36:27Z</p>
@@ -127,13 +127,13 @@ public class DescribeDataDownloadURLResponseBody extends TeaModel {
         public String expireTime;
 
         /**
-         * <p>The file servers.</p>
+         * <p>The list of file servers.</p>
          */
         @NameInMap("ServerList")
         public java.util.List<DescribeDataDownloadURLResponseBodyDataServerList> serverList;
 
         /**
-         * <p>The download URL of the data file.</p>
+         * <p>The download URL of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>/file/1450088842124331/97a32f2a-aa2c-436a-b19c-05b20d258618/f0313053530fc727f81b7d03fad93cd2/e4c2e8edac362acab7123654b9e73432?ak=edgepaas-innerapi-daily&amp;ts=1611229454&amp;sign=Yycbax%2F4OsTgm6BLoxR6lPs5gKE%3D</p>

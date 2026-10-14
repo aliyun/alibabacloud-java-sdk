@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class CreateSnapshotRequest extends TeaModel {
     /**
      * <p>The description of the snapshot. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
-     * <p>By default, this parameter is left empty.</p>
+     * <p>Default value: empty.</p>
      * 
      * <strong>example:</strong>
      * <p>testDescription</p>
@@ -15,7 +15,7 @@ public class CreateSnapshotRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the cloud disk.</p>
+     * <p>The cloud disk ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CreateSnapshotRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>The ID of the edge node.</p>
+     * <p>The ENS edge zone ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,11 +34,22 @@ public class CreateSnapshotRequest extends TeaModel {
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    /**
+     * <p>The billing cycle of the instance. Valid values:</p>
+     * <ul>
+     * <li>Hour</li>
+     * <li>Day</li>
+     * <li>Month</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Hour</p>
+     */
     @NameInMap("InstanceBillingCycle")
     public String instanceBillingCycle;
 
     /**
-     * <p>The name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The display name of the snapshot. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>. It can contain digits, colons (:), underscores (_), or hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>testSnapshotName</p>

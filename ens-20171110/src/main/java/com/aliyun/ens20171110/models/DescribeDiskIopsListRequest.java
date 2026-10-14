@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDiskIopsListRequest extends TeaModel {
     /**
-     * <p>The ID of the disk. Format: d-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>\*.</p>
+     * <p>The disk ID in the format of d-***********.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeDiskIopsListRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss. The time range specified by the StartTime and EndTime parameters cannot exceed one day for a query.</p>
+     * <p>The end time in the format of yyyy-MM-dd HH:mm:ss. The time span between the start time and end time cannot exceed one day.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DescribeDiskIopsListRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The start time in the format of yyyy-MM-dd HH:mm:ss.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

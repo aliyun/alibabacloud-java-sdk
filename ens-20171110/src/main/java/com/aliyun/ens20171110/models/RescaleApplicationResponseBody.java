@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RescaleApplicationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AAE90880-4970-4D81-A534-A6C0F3631F74</p>

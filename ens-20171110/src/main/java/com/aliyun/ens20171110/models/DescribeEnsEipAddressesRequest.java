@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEnsEipAddressesRequest extends TeaModel {
     /**
-     * <p>The ID of the EIP that you want to query. You can specify up to 50 EIP IDs. Separate multiple IDs with commas (,).</p>
+     * <p>The ID of the EIP instance to query. You can specify up to 50 EIP instance IDs separated by commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>eip-5q9uwkd9bznjpxz8hr6cirnjk</p>
@@ -14,7 +14,7 @@ public class DescribeEnsEipAddressesRequest extends TeaModel {
     public String allocationId;
 
     /**
-     * <p>The ID of the instance with which you want to associate the EIP.</p>
+     * <p>The instance ID of the cloud service.</p>
      * 
      * <strong>example:</strong>
      * <p>lb-5t18quoohsrc3xkf86spmnu77</p>
@@ -23,10 +23,12 @@ public class DescribeEnsEipAddressesRequest extends TeaModel {
     public String associatedInstanceId;
 
     /**
-     * <p>The type of the instance that is associated with the EIP. Valid values:</p>
+     * <p>The type of the cloud service instance to associate. Valid values: </p>
      * <ul>
-     * <li><strong>EnsInstance</strong>: ENS instance in a VPC</li>
-     * <li><strong>SlbInstance</strong>: SLB instance</li>
+     * <li><p><strong>EnsInstance</strong>: a VPC-type ENS instance.</p>
+     * </li>
+     * <li><p><strong>SlbInstance</strong>: a load balancing instance.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,10 +38,10 @@ public class DescribeEnsEipAddressesRequest extends TeaModel {
     public String associatedInstanceType;
 
     /**
-     * <p>The EIP that you want to query. You can specify up to 50 EIPs. Separate multiple EIPs with commas (,).</p>
+     * <p>The IP address of the EIP to query. You can specify up to 50 EIP addresses separated by commas (,).</p>
      * 
      * <strong>example:</strong>
-     * <p>192.168.0.1</p>
+     * <p>120.XXX.XXX.4</p>
      */
     @NameInMap("EipAddress")
     public String eipAddress;
@@ -54,7 +56,7 @@ public class DescribeEnsEipAddressesRequest extends TeaModel {
     public String eipName;
 
     /**
-     * <p>The ID of the Edge Node Service (ENS) node.</p>
+     * <p>The ENS edge zone ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-chengdu-telecom</p>
@@ -63,15 +65,30 @@ public class DescribeEnsEipAddressesRequest extends TeaModel {
     public String ensRegionId;
 
     /**
-     * <p>The IDs of edge nodes. You can specify 1 to 100 IDs.</p>
+     * <p>The array of ENS edge zone IDs. Array length: 1 to 100.</p>
      */
     @NameInMap("EnsRegionIds")
     public java.util.List<String> ensRegionIds;
 
+    /**
+     * <p>Specifies whether ICMP echo reply is enabled. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong> (default): enabled.</li>
+     * <li><strong>false</strong>: disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IcmpReplyEnabled")
     public Boolean icmpReplyEnabled;
 
     /**
+     * <p>The lock type.</p>
+     * <ul>
+     * <li>financial: locked due to overdue payment.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>financial</p>
      */
@@ -79,7 +96,7 @@ public class DescribeEnsEipAddressesRequest extends TeaModel {
     public String lockReason;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number of the list. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -88,7 +105,7 @@ public class DescribeEnsEipAddressesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: 100. Default value: 10.</p>
+     * <p>The number of entries per page for a paged query. Maximum value: 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -97,10 +114,12 @@ public class DescribeEnsEipAddressesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Specifies whether the EIP is a secondary EIP. Valid values:</p>
+     * <p>Specifies whether the EIP is a standby EIP. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: standby.</p>
+     * </li>
+     * <li><p><strong>false</strong>: not standby.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,6 +128,12 @@ public class DescribeEnsEipAddressesRequest extends TeaModel {
     @NameInMap("Standby")
     public String standby;
 
+    /**
+     * <p>The status of the EIP. Valid values: Associating: being associated. Unassociating: being disassociated. InUse: allocated. Available: available.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InUse</p>
+     */
     @NameInMap("Status")
     public String status;
 

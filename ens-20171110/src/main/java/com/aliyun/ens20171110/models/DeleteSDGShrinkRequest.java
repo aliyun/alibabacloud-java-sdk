@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSDGShrinkRequest extends TeaModel {
     /**
-     * <p>The IDs of the SDGs that you want to delete.</p>
+     * <p>The list of SDGs to delete.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SDGId")

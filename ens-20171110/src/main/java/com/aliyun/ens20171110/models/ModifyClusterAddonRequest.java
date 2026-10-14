@@ -4,10 +4,14 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ModifyClusterAddonRequest extends TeaModel {
+    /**
+     * <p>The parameter settings of the add-on.</p>
+     */
     @NameInMap("Addon")
     public ModifyClusterAddonRequestAddon addon;
 
     /**
+     * <p>The ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,7 @@ public class ModifyClusterAddonRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The name of the add-on. It must reference an installed add-on in the target cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,6 +61,8 @@ public class ModifyClusterAddonRequest extends TeaModel {
 
     public static class ModifyClusterAddonRequestAddonConfigSchema extends TeaModel {
         /**
+         * <p>The application version.</p>
+         * 
          * <strong>example:</strong>
          * <p>d0ead1f4e28de0f9e3c86588409a88a4</p>
          */
@@ -63,6 +70,8 @@ public class ModifyClusterAddonRequest extends TeaModel {
         public String appVersion;
 
         /**
+         * <p>The configuration version.</p>
+         * 
          * <strong>example:</strong>
          * <p>d0ead1f4e28de0f9e3c86588409a88a4</p>
          */
@@ -70,6 +79,8 @@ public class ModifyClusterAddonRequest extends TeaModel {
         public String configVersion;
 
         /**
+         * <p>The name of the add-on.</p>
+         * 
          * <strong>example:</strong>
          * <p>edge-csi-lite</p>
          */
@@ -77,6 +88,8 @@ public class ModifyClusterAddonRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The custom parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;k1&quot;:&quot;v1&quot;}</p>
          */
@@ -123,10 +136,15 @@ public class ModifyClusterAddonRequest extends TeaModel {
     }
 
     public static class ModifyClusterAddonRequestAddon extends TeaModel {
+        /**
+         * <p>The schema of the custom parameters for the add-on.</p>
+         */
         @NameInMap("ConfigSchema")
         public java.util.List<ModifyClusterAddonRequestAddonConfigSchema> configSchema;
 
         /**
+         * <p>The name of the add-on.</p>
+         * 
          * <strong>example:</strong>
          * <p>edge-csi-lite</p>
          */
@@ -134,6 +152,8 @@ public class ModifyClusterAddonRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1</p>
          */

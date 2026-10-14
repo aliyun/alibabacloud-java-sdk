@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataDistResultRequest extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeDataDistResultRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The name of the data file. Separate multiple names with commas (,). By default, all data files are queried.</p>
+     * <p>The data file names. This parameter is a filter condition. You can specify multiple names separated by commas (,). By default, all data files are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>cloudgame-shanghai/deploy_app/20220215/1644895216305ACG_M21B-ota-1.1.2-D-0215.0628_V1_0002-pre-weiduan.zip</p>
@@ -24,7 +24,7 @@ public class DescribeDataDistResultRequest extends TeaModel {
     public String dataNames;
 
     /**
-     * <p>The version number of the data file. Separate multiple numbers with commas (,). By default, all versions of data files are queried.</p>
+     * <p>The data file version numbers. This parameter is a filter condition. You can specify multiple versions separated by commas (,). By default, all versions are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>4885</p>
@@ -33,13 +33,13 @@ public class DescribeDataDistResultRequest extends TeaModel {
     public String dataVersions;
 
     /**
-     * <p>The IDs of the ENS nodes.</p>
+     * <p>The list of ENS edge zone IDs.</p>
      */
     @NameInMap("EnsRegionIds")
     public java.util.List<String> ensRegionIds;
 
     /**
-     * <p>The IDs of ENS instances. Separate multiple IDs with commas (,). By default, all instances are queried.</p>
+     * <p>The list of edge instance IDs. This parameter is a filter condition. You can specify multiple IDs separated by commas (,). By default, all instances are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>i-7ecpqvkicnchxccozrp,i-6ecpqvkicnchxccozrp</p>
@@ -48,7 +48,7 @@ public class DescribeDataDistResultRequest extends TeaModel {
     public String instanceIds;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+     * <p>The end date of the query in the format &quot;2006-01-02&quot;. By default, no time limit is applied.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-02-01</p>
@@ -57,7 +57,7 @@ public class DescribeDataDistResultRequest extends TeaModel {
     public String maxDate;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+     * <p>The start date of the query in the format &quot;2006-01-02&quot;. By default, no time limit is applied.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-01-02</p>
@@ -66,7 +66,7 @@ public class DescribeDataDistResultRequest extends TeaModel {
     public String minDate;
 
     /**
-     * <p>The page number. Pages start from page 1. This parameter is optional if you want to return the push status of all data files.</p>
+     * <p>The page number, starting from 1. You do not need to specify this parameter when exporting all data.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -75,7 +75,7 @@ public class DescribeDataDistResultRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. This parameter is optional if you want to return the distribution status of all data files.</p>
+     * <p>The number of entries per page for paging queries. This parameter is not required when exporting all data.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

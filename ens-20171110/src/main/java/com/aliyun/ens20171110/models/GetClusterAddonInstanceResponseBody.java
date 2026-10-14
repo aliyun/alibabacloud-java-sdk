@@ -4,13 +4,21 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class GetClusterAddonInstanceResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether associated cloud resources are automatically cleaned up.</p>
+     */
     @NameInMap("CleanupCloudResources")
     public Boolean cleanupCloudResources;
 
+    /**
+     * <p>The schema of custom parameters for the add-on.</p>
+     */
     @NameInMap("ConfigSchema")
     public java.util.List<GetClusterAddonInstanceResponseBodyConfigSchema> configSchema;
 
     /**
+     * <p>The add-on name.</p>
+     * 
      * <strong>example:</strong>
      * <p>edge-csi-lite</p>
      */
@@ -27,6 +35,14 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The current component instance status. Valid values:</p>
+     * <ul>
+     * <li><strong>enabled</strong>: Running normally.</li>
+     * <li><strong>deleting</strong>: Stopping.</li>
+     * <li><strong>enabling</strong>: Starting.</li>
+     * <li><strong>upgrading</strong>: In upgrade or configuration.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>enabled</p>
      */
@@ -34,6 +50,8 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The version number.</p>
+     * 
      * <strong>example:</strong>
      * <p>v1</p>
      */
@@ -95,6 +113,8 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
 
     public static class GetClusterAddonInstanceResponseBodyConfigSchema extends TeaModel {
         /**
+         * <p>The application version.</p>
+         * 
          * <strong>example:</strong>
          * <p>d0ead1f4e28de0f9e3c86588409a88a4</p>
          */
@@ -102,6 +122,8 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         public String appVersion;
 
         /**
+         * <p>The configuration version.</p>
+         * 
          * <strong>example:</strong>
          * <p>d0ead1f4e28de0f9e3c86588409a88a4</p>
          */
@@ -109,6 +131,8 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         public String configVersion;
 
         /**
+         * <p>The add-on name.</p>
+         * 
          * <strong>example:</strong>
          * <p>edge-csi-lite</p>
          */
@@ -116,6 +140,8 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The custom parameters of the add-on.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;k1&quot;:&quot;v1&quot;}</p>
          */

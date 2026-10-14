@@ -9,7 +9,7 @@ public class DescribeLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>8080</p>
+     * <p>80</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;

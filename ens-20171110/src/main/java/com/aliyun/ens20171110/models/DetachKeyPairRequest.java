@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetachKeyPairRequest extends TeaModel {
     /**
-     * <p>The instance IDs.</p>
+     * <p>An array of instance IDs from which to detach the key pair.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DetachKeyPairRequest extends TeaModel {
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The key pair ID.</p>
+     * <p>The ID of the key pair.</p>
      * 
      * <strong>example:</strong>
      * <p>ssh-xxx</p>
@@ -27,7 +27,7 @@ public class DetachKeyPairRequest extends TeaModel {
     public String keyPairId;
 
     /**
-     * <p>The name of the SSH key pair.</p>
+     * <p>The name of the key pair.</p>
      * 
      * <strong>example:</strong>
      * <p>test-kp</p>

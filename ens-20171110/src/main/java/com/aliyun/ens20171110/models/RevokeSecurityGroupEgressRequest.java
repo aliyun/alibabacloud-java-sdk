@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class RevokeSecurityGroupEgressRequest extends TeaModel {
     /**
-     * <p>The destination IP addresses. CIDR blocks and IPv4 addresses are supported.</p>
-     * <p>By default, this parameter is empty.</p>
+     * <p>The destination IP address range. CIDR blocks and IPv4 address ranges are supported.</p>
+     * <p>Default value: null.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,13 +16,13 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
     public String destCidrIp;
 
     /**
-     * <p>The transport layer protocol. The value of this parameter is case-sensitive. Valid values:</p>
+     * <p>The transport layer protocol. The value is case-sensitive. Valid values:</p>
      * <ul>
      * <li>tcp</li>
      * <li>udp</li>
      * <li>icmp</li>
      * <li>gre</li>
-     * <li>all: All protocols are supported.</li>
+     * <li>all: all protocols are supported</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -33,10 +33,10 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
     public String ipProtocol;
 
     /**
-     * <p>The action of the security group rule. Valid values:</p>
+     * <p>Settings for access permissions. Valid values:</p>
      * <ul>
-     * <li><strong>accept</strong>: allows access.</li>
-     * <li><strong>drop</strong>: denies access and returns no responses.</li>
+     * <li><strong>accept</strong>: accepts access.</li>
+     * <li><strong>drop</strong>: deny access without returning any denial information.</li>
      * </ul>
      * <p>Default value: <strong>accept</strong>.</p>
      * 
@@ -47,12 +47,12 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
     public String policy;
 
     /**
-     * <p>The range of destination ports that correspond to the transport layer protocol for the security group rule. Valid values:</p>
+     * <p>The range of destination ports that correspond to the transport layer protocol. Valid values:</p>
      * <ul>
-     * <li>If you set the IpProtocol parameter to tcp or udp, the port number ranges from <strong>1</strong> to <strong>65535</strong>. The start port number and the end port number are separated by a forward slash (/). Correct example: <strong>1/200</strong>. Incorrect example: <strong>200/1</strong>.</li>
-     * <li>When the IpProtocol parameter is set to icmp, the port number range is <strong>-1/-1</strong>, which indicates all ports.</li>
-     * <li>When the IpProtocol parameter is set to gre, the port number range is <strong>-1/-1</strong>, which indicates all ports.</li>
-     * <li>When the IpProtocol parameter is set to all, the port number range is <strong>-1/-1</strong>, which indicates all ports.</li>
+     * <li>TCP/UDP protocol: Valid values are <strong>1</strong> to <strong>65535</strong>. Separate the start port and the end port with a forward slash (/). Correct example: <strong>1/200</strong>. Incorrect example: <strong>200/1</strong>.</li>
+     * <li>ICMP protocol: <strong>-1/-1</strong>.</li>
+     * <li>GRE protocol: <strong>-1/-1</strong>.</li>
+     * <li>If IpProtocol is set to all: <strong>-1/-1</strong>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -73,7 +73,7 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The ID of the security group.</p>
+     * <p>The security group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,12 +83,12 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The range of port numbers that correspond to the transport layer protocol for the source security group. Valid values:</p>
+     * <p>The range of source ports that correspond to the transport layer protocol. Valid values:</p>
      * <ul>
-     * <li>If you set the IpProtocol parameter to tcp or udp, the port number ranges from <strong>1</strong> to <strong>65535</strong>. The start port number and the end port number are separated by a forward slash (/). Correct example: <strong>1/200</strong>. Incorrect example: <strong>200/1</strong>.</li>
-     * <li>When the IpProtocol parameter is set to icmp, the port number range is <strong>-1/-1</strong>, which indicates all ports.</li>
-     * <li>When the IpProtocol parameter is set to gre, the port number range is <strong>-1/-1</strong>, which indicates all ports.</li>
-     * <li>When the IpProtocol parameter is set to all, the port number range is <strong>-1/-1</strong>, which indicates all ports.</li>
+     * <li>TCP/UDP protocol: Valid values are <strong>1</strong> to <strong>65535</strong>. Separate the start port and the end port with a forward slash (/). Correct example: <strong>1/200</strong>. Incorrect example: <strong>200/1</strong>.</li>
+     * <li>ICMP protocol: <strong>-1/-1</strong>.</li>
+     * <li>GRE protocol: <strong>-1/-1</strong>.</li>
+     * <li>If IpProtocol is set to all: <strong>-1/-1</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>

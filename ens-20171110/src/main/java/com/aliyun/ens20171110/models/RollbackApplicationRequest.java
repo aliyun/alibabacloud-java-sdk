@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class RollbackApplicationRequest extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The application ID.</p>
+     * <p>The AppId is returned by the CreateApplication operation. FromAppVersion and ToAppVersion must be existing versions created by calling CreateAppVersion. You can call ListAppVersions to query the versions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +16,7 @@ public class RollbackApplicationRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The current version number.</p>
+     * <p>The version number to be rolled back.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +26,7 @@ public class RollbackApplicationRequest extends TeaModel {
     public String fromAppVersion;
 
     /**
-     * <p>The timeout period of the asynchronous rollback operation. Unit: seconds. Default value: 300.</p>
+     * <p>The timeout period for the asynchronous rollback operation. Unit: seconds. Default value: 300.</p>
      * 
      * <strong>example:</strong>
      * <p>1800</p>
@@ -34,7 +35,7 @@ public class RollbackApplicationRequest extends TeaModel {
     public Integer timeout;
 
     /**
-     * <p>The target version number. By default, the system automatically rolls back the container version to the previous version.</p>
+     * <p>The target version number. By default, the application is automatically rolled back to the previous version.</p>
      * 
      * <strong>example:</strong>
      * <p>v2</p>

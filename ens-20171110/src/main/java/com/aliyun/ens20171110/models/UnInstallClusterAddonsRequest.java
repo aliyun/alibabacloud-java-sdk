@@ -4,10 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class UnInstallClusterAddonsRequest extends TeaModel {
+    /**
+     * <p>The add-on information.</p>
+     */
     @NameInMap("Addons")
     public java.util.List<UnInstallClusterAddonsRequestAddons> addons;
 
     /**
+     * <p>The ID of the cluster.</p>
+     * <p>The target cluster must be in the running state. You can call DescribeClustersV1 to query the cluster state.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,8 @@ public class UnInstallClusterAddonsRequest extends TeaModel {
 
     public static class UnInstallClusterAddonsRequestAddons extends TeaModel {
         /**
+         * <p>The name of the add-on.</p>
+         * 
          * <strong>example:</strong>
          * <p>edge-csi-lite</p>
          */

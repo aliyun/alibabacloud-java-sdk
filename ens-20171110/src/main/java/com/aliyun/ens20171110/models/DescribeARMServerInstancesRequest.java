@@ -5,16 +5,18 @@ import com.aliyun.tea.*;
 
 public class DescribeARMServerInstancesRequest extends TeaModel {
     /**
-     * <p>The container specifications.</p>
+     * <p>The list of container specifications.</p>
      */
     @NameInMap("AICSpecs")
     public java.util.List<String> AICSpecs;
 
     /**
-     * <p>Spcifies whether the result contains the container information. Valid values:</p>
+     * <p>Specifies whether the query results include container information. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: Included.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Not included.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,13 +26,13 @@ public class DescribeARMServerInstancesRequest extends TeaModel {
     public Boolean describeAICInstances;
 
     /**
-     * <p>The IDs of the Edge Node Service (ENS) nodes.</p>
+     * <p>The list of ENS edge zone IDs.</p>
      */
     @NameInMap("EnsRegionIds")
     public java.util.List<String> ensRegionIds;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+     * <p>The end time of the query. Format: &quot;2006-01-02&quot;. By default, no time limit is applied.</p>
      * 
      * <strong>example:</strong>
      * <p>2006-01-03</p>
@@ -39,7 +41,7 @@ public class DescribeARMServerInstancesRequest extends TeaModel {
     public String maxDate;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+     * <p>The start time of the query. Format: &quot;2006-01-02&quot;. By default, no time limit is applied.</p>
      * 
      * <strong>example:</strong>
      * <p>2006-01-02</p>
@@ -48,7 +50,7 @@ public class DescribeARMServerInstancesRequest extends TeaModel {
     public String minDate;
 
     /**
-     * <p>The name of the server.</p>
+     * <p>The server name.</p>
      * 
      * <strong>example:</strong>
      * <p>Server-Name</p>
@@ -66,17 +68,17 @@ public class DescribeARMServerInstancesRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The sorting order of the results to return. Valid values: ServerIdSort, ServerNameSort, ExpireTimeSort, CreationTimeSort, and EnsRegionIdSort.</p>
-     * <p>asc: ascending order. desc: descending order.</p>
+     * <p>The sorting method for query results. You can sort results by one or more of the following fields: ServerIdSort (server ID), ServerNameSort (server name), ExpireTimeSort (expiration time), CreationTimeSort (creation time), and EnsRegionIdSort (edge zone ID).</p>
+     * <p>Valid values: asc (ascending order) and desc (descending order).</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;ServerIdSort&quot;:&quot;desc&quot;,&quot;ServerNameSort&quot;:&quot;desc&quot;,&quot;ExpireTimeSort&quot;:&quot;asc&quot;,&quot;CreationTimeSort&quot;:&quot;asc&quot;,&quot;EnsRegionIdSort&quot;:&quot;asc&quot;}</p>
+     * <p>{&quot;ServerIdSort&quot;:&quot;desc&quot;,&quot;ServerNameSort&quot;:&quot;desc&quot;,&quot;ExpireTimeSort&quot;:&quot;asc&quot;}</p>
      */
     @NameInMap("OrderByParams")
     public String orderByParams;
 
     /**
-     * <p>The page number. Pages start from page <strong>1</strong>.</p>
+     * <p>The page number of the query list. Minimum value: <strong>1</strong>.</p>
      * <p>Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -86,7 +88,7 @@ public class DescribeARMServerInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: <strong>100</strong>.</p>
+     * <p>The number of entries per page for a paged query. Maximum value: <strong>100</strong>.</p>
      * <p>Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -96,23 +98,26 @@ public class DescribeARMServerInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The IDs of the ARM servers.</p>
+     * <p>The list of server instance IDs.</p>
      */
     @NameInMap("ServerIds")
     public java.util.List<String> serverIds;
 
     /**
-     * <p>The server specifications.</p>
+     * <p>The list of server specifications.</p>
      */
     @NameInMap("ServerSpecs")
     public java.util.List<String> serverSpecs;
 
     /**
-     * <p>The operation statuses.</p>
+     * <p>The list of operation states.</p>
      */
     @NameInMap("States")
     public java.util.List<String> states;
 
+    /**
+     * <p>The list of tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<DescribeARMServerInstancesRequestTags> tags;
 
@@ -235,6 +240,8 @@ public class DescribeARMServerInstancesRequest extends TeaModel {
 
     public static class DescribeARMServerInstancesRequestTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>key-1</p>
          */
@@ -242,6 +249,8 @@ public class DescribeARMServerInstancesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>value-1</p>
          */

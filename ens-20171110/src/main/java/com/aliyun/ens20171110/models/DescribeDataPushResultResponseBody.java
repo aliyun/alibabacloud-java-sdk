@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataPushResultResponseBody extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The page number for paging during a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page set in Settings for paging during a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -26,7 +26,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
     public DescribeDataPushResultResponseBodyPushResults pushResults;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
@@ -35,7 +35,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>

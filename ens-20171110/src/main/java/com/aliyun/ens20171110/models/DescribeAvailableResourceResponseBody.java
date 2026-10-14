@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceResponseBody extends TeaModel {
     /**
-     * <p>The returned service code. 0 indicates that the request was successful.</p>
+     * <p>The business return code. The value 0 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -17,7 +17,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public DescribeAvailableResourceResponseBodyImages images;
 
     /**
-     * <p>The ID of the request. This is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     * <p>The common parameter. Each request ID is unique and active for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>

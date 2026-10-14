@@ -37,9 +37,12 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
     /**
      * <p>The networking mode. Valid values:</p>
      * <ul>
-     * <li>SpeedUp: intelligent acceleration network (Internet)</li>
-     * <li>Connection: internal network</li>
-     * <li>SpeedUpAndConnection: intelligent acceleration network and internal network</li>
+     * <li><p>SpeedUp: intelligent acceleration network (Internet)</p>
+     * </li>
+     * <li><p>Connection: internal network</p>
+     * </li>
+     * <li><p>SpeedUpAndConnection: intelligent acceleration network and internal network</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -197,9 +200,12 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The ISP. Valid values:</p>
          * <ul>
-         * <li>cmcc: China Mobile</li>
-         * <li>unicom: China Unicom</li>
-         * <li>telecom: China Telecom</li>
+         * <li><p>cmcc: China Mobile</p>
+         * </li>
+         * <li><p>unicom: China Unicom</p>
+         * </li>
+         * <li><p>telecom: China Telecom</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -229,9 +235,12 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The status of the instance. Valid values:</p>
          * <ul>
-         * <li>Running</li>
-         * <li>Stopped</li>
-         * <li>Expired</li>
+         * <li><p>Running</p>
+         * </li>
+         * <li><p>Stopped</p>
+         * </li>
+         * <li><p>Expired</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

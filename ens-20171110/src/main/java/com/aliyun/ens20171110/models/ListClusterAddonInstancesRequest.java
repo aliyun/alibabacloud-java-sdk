@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListClusterAddonInstancesRequest extends TeaModel {
     /**
-     * <p>Cluster ID.</p>
+     * <p>The cluster ID. The target cluster must be in the running state. You can verify the state by checking the State field in the response of DescribeClustersV1 or DescribeClusterDetail.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

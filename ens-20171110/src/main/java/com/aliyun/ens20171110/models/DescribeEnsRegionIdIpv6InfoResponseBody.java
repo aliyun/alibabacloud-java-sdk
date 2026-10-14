@@ -45,7 +45,7 @@ public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
          * <p>The ID of the node.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-chengdu-xxxx-4</p>
+         * <p>cn-chengdu-****-4</p>
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
@@ -53,8 +53,10 @@ public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
         /**
          * <p>Specifies whether IPv6 is supported. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

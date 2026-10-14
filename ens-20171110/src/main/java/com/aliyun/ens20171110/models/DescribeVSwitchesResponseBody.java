@@ -14,7 +14,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -32,7 +32,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -40,6 +40,9 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>A collection of VSwitches.</p>
+     */
     @NameInMap("VSwitches")
     public DescribeVSwitchesResponseBodyVSwitches vSwitches;
 
@@ -179,6 +182,13 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         @NameInMap("FreeIpCount")
         public Long freeIpCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2408:XXXX:0:a600::/110</p>
+         */
+        @NameInMap("Ipv6CidrBlock")
+        public String ipv6CidrBlock;
+
         @NameInMap("NetworkId")
         public String networkId;
 
@@ -237,6 +247,14 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
         public Long getFreeIpCount() {
             return this.freeIpCount;
+        }
+
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setIpv6CidrBlock(String ipv6CidrBlock) {
+            this.ipv6CidrBlock = ipv6CidrBlock;
+            return this;
+        }
+        public String getIpv6CidrBlock() {
+            return this.ipv6CidrBlock;
         }
 
         public DescribeVSwitchesResponseBodyVSwitchesVSwitch setNetworkId(String networkId) {

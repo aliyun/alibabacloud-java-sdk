@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeHaVipsResponseBody extends TeaModel {
     /**
-     * <p>Details of the HAVIPs.</p>
+     * <p>The details of the HaVips.</p>
      */
     @NameInMap("HaVips")
     public java.util.List<DescribeHaVipsResponseBodyHaVips> haVips;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,7 +93,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
 
     public static class DescribeHaVipsResponseBodyHaVipsAssociatedEipAddresses extends TeaModel {
         /**
-         * <p>The EIP.</p>
+         * <p>The IP address of the EIP.</p>
          * 
          * <strong>example:</strong>
          * <p>47.XX.XX.40</p>
@@ -135,7 +135,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
 
     public static class DescribeHaVipsResponseBodyHaVipsAssociatedInstances extends TeaModel {
         /**
-         * <p>The time when the instance was created.</p>
+         * <p>The time when the association was created. The time is in the ISO 8601 UTC format of YYYY-MM-DDTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-01-05T07:09:28Z</p>
@@ -144,7 +144,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i-51p****</p>
@@ -153,10 +153,10 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The type of the instance that is associated with the HAVIP. Valid values:</p>
+         * <p>The type of the instance to attach to the HaVip. Valid values:</p>
          * <ul>
-         * <li>EnsInstance: ENS instance</li>
-         * <li>NetworkInterface: elastic network interface (ENI)</li>
+         * <li>EnsInstance: An ENS cloud server instance.</li>
+         * <li>NetworkInterface: An elastic network interfaces (ENIs) instance, which is a network interface controller (NIC).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -166,7 +166,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The private IP address of the instance that is associated with the HAVIP. Valid values:</p>
+         * <p>The private IP address of the associated instance.</p>
          * 
          * <strong>example:</strong>
          * <p>192.XX.XX.9</p>
@@ -175,11 +175,11 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         public String ipAddress;
 
         /**
-         * <p>The association status of the HAVIP. Valid values:</p>
+         * <p>The association status of the HaVip instance. Valid values:</p>
          * <ul>
-         * <li>Associating</li>
-         * <li>InUse</li>
-         * <li>Unassociating</li>
+         * <li>Associating: The HaVip is being associated.</li>
+         * <li>InUse: The HaVip is available.</li>
+         * <li>Unassociating: The HaVip is being disassociated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -237,19 +237,19 @@ public class DescribeHaVipsResponseBody extends TeaModel {
 
     public static class DescribeHaVipsResponseBodyHaVips extends TeaModel {
         /**
-         * <p>The elastic IP addresses (EIPs) that are associated with the HAVIP.</p>
+         * <p>The elastic IP addresses (EIPs) associated with the HaVip.</p>
          */
         @NameInMap("AssociatedEipAddresses")
         public java.util.List<DescribeHaVipsResponseBodyHaVipsAssociatedEipAddresses> associatedEipAddresses;
 
         /**
-         * <p>The information about instances that are associated with the HAVIP.</p>
+         * <p>The instances associated with the HaVip.</p>
          */
         @NameInMap("AssociatedInstances")
         public java.util.List<DescribeHaVipsResponseBodyHaVipsAssociatedInstances> associatedInstances;
 
         /**
-         * <p>The time when the HAVIP was created.</p>
+         * <p>The time when the HaVip was created. The time is in the ISO 8601 UTC format of YYYY-MM-DDTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-29T11:17:38Z</p>
@@ -258,7 +258,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The description of the HAVIP.</p>
+         * <p>The description of the HaVip instance.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -267,7 +267,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The ID of the ENS node.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-guiyang-14</p>
@@ -276,7 +276,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         public String ensRegionId;
 
         /**
-         * <p>The ID of the HAVIP.</p>
+         * <p>The HaVip instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>havip-52y28****</p>
@@ -285,7 +285,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         public String haVipId;
 
         /**
-         * <p>The IP address of the HAVIP.</p>
+         * <p>The IP address of the HaVip.</p>
          * 
          * <strong>example:</strong>
          * <p>192.XX.XX.5</p>
@@ -294,7 +294,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         public String ipAddress;
 
         /**
-         * <p>The name of the HAVIP.</p>
+         * <p>The name of the HaVip instance.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -303,7 +303,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the network.</p>
+         * <p>The network ID.</p>
          * 
          * <strong>example:</strong>
          * <p>n-5wtkyrk****</p>
@@ -312,12 +312,12 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         public String networkId;
 
         /**
-         * <p>The status of the HAVIP. Valid values:</p>
+         * <p>The HaVip status. Valid values:</p>
          * <ul>
-         * <li>Creating</li>
-         * <li>Available</li>
-         * <li>InUse</li>
-         * <li>Deleting</li>
+         * <li>Creating: The HaVip is being created.</li>
+         * <li>Available: The HaVip is available.</li>
+         * <li>InUse: The HaVip is in use.</li>
+         * <li>Deleting: The HaVip is being deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -327,7 +327,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-5yc8d****</p>

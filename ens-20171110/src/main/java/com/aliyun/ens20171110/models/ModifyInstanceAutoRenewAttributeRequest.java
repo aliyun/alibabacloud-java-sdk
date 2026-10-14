@@ -9,7 +9,7 @@ public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>false</p>
+     * <p>True</p>
      */
     @NameInMap("AutoRenew")
     public String autoRenew;
@@ -18,7 +18,7 @@ public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
      * <p>The auto-renewal period of the instance. Unit: months. Valid values: 1 to 9 and 12. This parameter is required if the AutoRenew parameter is set to true.</p>
      * 
      * <strong>example:</strong>
-     * <p>12</p>
+     * <p>1</p>
      */
     @NameInMap("Duration")
     public String duration;
@@ -28,7 +28,7 @@ public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>instance-test</p>
+     * <p>i-5ci7l7k1m9m2zmhp4iw3o****</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;
@@ -39,14 +39,17 @@ public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether to renew the instance. The <strong>RenewalStatus</strong> parameter has a higher priority than the <strong>AutoRenew</strong> parameter. If you do not specify <strong>RenewalStatus</strong>, the <strong>AutoRenew</strong> parameter is used by default.</p>
      * <ul>
-     * <li>AutoRenewal: Auto-renewal is enabled for the instance.</li>
-     * <li>Normal: Auto-renewal is disabled for the instance.</li>
-     * <li>NotRenewal: The instance is not renewed.</li>
+     * <li><p>AutoRenewal: Auto-renewal is enabled for the instance.</p>
+     * </li>
+     * <li><p>Normal: Auto-renewal is disabled for the instance.</p>
+     * </li>
+     * <li><p>NotRenewal: The instance is not renewed.</p>
+     * </li>
      * </ul>
      * <p>The system no longer sends an expiration notification but sends only a renewal notification three days before the instance expires. To renew the instance, you can change the value of this parameter from NotRenewal to Normal and then manually renew the instance, or change the value of this parameter from NotRenewal to AutoRenewal.</p>
      * 
      * <strong>example:</strong>
-     * <p>Normal</p>
+     * <p>AutoRenewal</p>
      */
     @NameInMap("RenewalStatus")
     public String renewalStatus;

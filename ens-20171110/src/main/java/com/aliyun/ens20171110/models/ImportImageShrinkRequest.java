@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ImportImageShrinkRequest extends TeaModel {
     /**
-     * <p>System architecture. Allowed values:</br></p>
+     * <p>The system architecture. Valid values:</br></p>
      * <ul>
-     * <li>x86_64.</br></li>
+     * <li>x86_64</li>
      * </ul>
      * <p>Currently, only x86_64 is supported.</p>
      * <p>This parameter is required.</p>
@@ -19,8 +19,8 @@ public class ImportImageShrinkRequest extends TeaModel {
     public String architecture;
 
     /**
-     * <p><code>Image Type</code>
-     * ens_vm: ens virtual machine image (default)</p>
+     * <p>The image type. Valid values:</p>
+     * <p>ens_vm: ENS virtual machine image (default).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,13 +30,13 @@ public class ImportImageShrinkRequest extends TeaModel {
     public String computeType;
 
     /**
-     * <p>List of custom image information being created.</p>
+     * <p>The list of custom image information.</p>
      */
     @NameInMap("DiskDeviceMapping")
     public String diskDeviceMappingShrink;
 
     /**
-     * <p>Image format. Allowed values:</br>
+     * <p>The image format. Valid values:</br>
      * qcow2.</br>
      * Currently, only qcow2 is supported.</p>
      * <p>This parameter is required.</p>
@@ -48,20 +48,26 @@ public class ImportImageShrinkRequest extends TeaModel {
     public String imageFormat;
 
     /**
-     * <p>Image name. The length should be [2, 128] English or Chinese characters. It must start with a letter (uppercase or lowercase) or a Chinese character, and cannot start with http:// or https://. It can contain numbers, colons (:), underscores (_), or hyphens (-).</p>
+     * <p>The image name. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). It must start with a letter and cannot start with http:// or https://.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>镜像名称</p>
+     * <p>ImageName</p>
      */
     @NameInMap("ImageName")
     public String imageName;
 
+    /**
+     * <p>The image license type. Valid values: Aliyun (Alibaba Cloud license) and BYOL (Bring Your Own Key).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Aliyun</p>
+     */
     @NameInMap("LicenseType")
     public String licenseType;
 
     /**
-     * <p>The OSS Bucket where the image file is located.</p>
+     * <p>The OSS bucket that stores the image file.</p>
      * 
      * <strong>example:</strong>
      * <p>tmp-hybrid</p>
@@ -79,7 +85,7 @@ public class ImportImageShrinkRequest extends TeaModel {
     public String OSSObject;
 
     /**
-     * <p>The Region where the image is located. Currently, only cn-beijing is supported.</p>
+     * <p>The region where the image resides. Currently, only cn-beijing is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -88,10 +94,10 @@ public class ImportImageShrinkRequest extends TeaModel {
     public String OSSRegion;
 
     /**
-     * <p>Operating system platform type. Allowed values:</p>
+     * <p>The type of the operating system platform. Valid values:</p>
      * <ul>
-     * <li>windows.</li>
-     * <li>linux.</li>
+     * <li>windows</li>
+     * <li>linux</li>
      * </ul>
      * <p>Currently, only linux is supported.</p>
      * <p>This parameter is required.</p>
@@ -103,7 +109,7 @@ public class ImportImageShrinkRequest extends TeaModel {
     public String OSType;
 
     /**
-     * <p>Operating system distribution version</p>
+     * <p>The version of the operating system distribution.</p>
      * 
      * <strong>example:</strong>
      * <p>6.8</p>
@@ -112,7 +118,7 @@ public class ImportImageShrinkRequest extends TeaModel {
     public String OSVersion;
 
     /**
-     * <p>Operating system distribution. Allowed values:</p>
+     * <p>The operating system distribution. Valid values:</p>
      * <ul>
      * <li>centos</li>
      * <li>ubuntu</li>
@@ -125,7 +131,7 @@ public class ImportImageShrinkRequest extends TeaModel {
     public String platform;
 
     /**
-     * <p>The target OSS region where the image will be stored.</br></p>
+     * <p>The region of the destination OSS bucket where the image is stored.</br></p>
      * <blockquote>
      * <p>Currently, only cn-beijing and ap-southeast-1 are supported.</p>
      * </blockquote>

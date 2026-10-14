@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageInfosResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code that is returned.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -138,6 +138,9 @@ public class DescribeImageInfosResponseBody extends TeaModel {
         @NameInMap("ImageId")
         public String imageId;
 
+        @NameInMap("ImageOwnerAlias")
+        public String imageOwnerAlias;
+
         @NameInMap("ImageSize")
         public String imageSize;
 
@@ -188,6 +191,14 @@ public class DescribeImageInfosResponseBody extends TeaModel {
         }
         public String getImageId() {
             return this.imageId;
+        }
+
+        public DescribeImageInfosResponseBodyImagesImage setImageOwnerAlias(String imageOwnerAlias) {
+            this.imageOwnerAlias = imageOwnerAlias;
+            return this;
+        }
+        public String getImageOwnerAlias() {
+            return this.imageOwnerAlias;
         }
 
         public DescribeImageInfosResponseBodyImagesImage setImageSize(String imageSize) {

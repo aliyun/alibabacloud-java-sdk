@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeServcieScheduleResponseBody extends TeaModel {
     /**
-     * <p>The index number of the scheduled virtual device (pod).</p>
+     * <p>The index number of the scheduled target virtual device (container pod).</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -14,7 +14,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
     public Integer index;
 
     /**
-     * <p>The ID of the scheduled instance.</p>
+     * <p>The target instance ID for scheduling.</p>
      * 
      * <strong>example:</strong>
      * <p>i-5myukg7hnpbto7m024002****</p>
@@ -23,7 +23,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the scheduled instance.</p>
+     * <p>The IP address of the scheduled target instance.</p>
      * 
      * <strong>example:</strong>
      * <p>120.26.XX.XX</p>
@@ -32,7 +32,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
     public String instanceIp;
 
     /**
-     * <p>The start port of the scheduled instance.</p>
+     * <p>The start port of the scheduled target instance.</p>
      * 
      * <strong>example:</strong>
      * <p>3306</p>
@@ -41,13 +41,13 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
     public Integer instancePort;
 
     /**
-     * <p>The summary information about the scheduled virtual device.</p>
+     * <p>The summary information of the scheduled virtual device pod.</p>
      */
     @NameInMap("PodAbstractInfo")
     public DescribeServcieScheduleResponseBodyPodAbstractInfo podAbstractInfo;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
@@ -56,7 +56,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is repeated.</p>
+     * <p>Indicates whether the resource has been created.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -65,7 +65,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
     public Boolean requestRepeated;
 
     /**
-     * <p>The TCP port range of the scheduled instance or container. The value is in the ${from}-$-{to} format. Example: 80-88.</p>
+     * <p>The TCP service port range of the scheduled target virtual machine instance or container. Valid values are in the ${from}-${to} format, such as 80-88.</p>
      * 
      * <strong>example:</strong>
      * <p>80-88</p>
@@ -205,7 +205,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         public DescribeServcieScheduleResponseBodyPodAbstractInfoContainerStatuses containerStatuses;
 
         /**
-         * <p>The name of the pod.</p>
+         * <p>The pod name.</p>
          * 
          * <strong>example:</strong>
          * <p>gcs-prod-websocket-eip-telecom</p>
@@ -214,7 +214,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         public Boolean name;
 
         /**
-         * <p>The name of the namespace.</p>
+         * <p>The namespace name.</p>
          * 
          * <strong>example:</strong>
          * <p>default-aliyun</p>
@@ -223,7 +223,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         public Boolean namespace;
 
         /**
-         * <p>The pod scope.</p>
+         * <p>The scope where the pod is located.</p>
          * 
          * <strong>example:</strong>
          * <p>FDN</p>
@@ -232,7 +232,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         public Boolean resourceScope;
 
         /**
-         * <p>The status of the pod.</p>
+         * <p>The pod status.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>

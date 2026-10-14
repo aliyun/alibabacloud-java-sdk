@@ -7,9 +7,12 @@ public class PutBucketAclRequest extends TeaModel {
     /**
      * <p>The access control list (ACL) of the bucket.</p>
      * <ul>
-     * <li><strong>public-read-write</strong></li>
-     * <li><strong>public-read</strong></li>
-     * <li><strong>private</strong> (default)</li>
+     * <li><p><strong>public-read-write</strong></p>
+     * </li>
+     * <li><p><strong>public-read</strong></p>
+     * </li>
+     * <li><p><strong>private</strong> (default)</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

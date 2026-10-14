@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAICPublicKeyDeliveriesResponseBody extends TeaModel {
     /**
-     * <p>Current page number when paging</p>
+     * <p>The current page number in the paginated query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListAICPublicKeyDeliveriesResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of records to display per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,13 +23,13 @@ public class ListAICPublicKeyDeliveriesResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Public Key List</p>
+     * <p>The list of public keys.</p>
      */
     @NameInMap("PublicKeyDeliverInfo")
     public java.util.List<ListAICPublicKeyDeliveriesResponseBodyPublicKeyDeliverInfo> publicKeyDeliverInfo;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique identifier of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxsxxxxx</p>
@@ -38,7 +38,7 @@ public class ListAICPublicKeyDeliveriesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -111,7 +111,7 @@ public class ListAICPublicKeyDeliveriesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Public Key Grouping</p>
+         * <p>The group of the public key.</p>
          * 
          * <strong>example:</strong>
          * <p>test-group</p>
@@ -120,7 +120,7 @@ public class ListAICPublicKeyDeliveriesResponseBody extends TeaModel {
         public String keyGroup;
 
         /**
-         * <p>Public Key Name</p>
+         * <p>The name of the public key.</p>
          * 
          * <strong>example:</strong>
          * <p>mykey</p>
@@ -129,7 +129,7 @@ public class ListAICPublicKeyDeliveriesResponseBody extends TeaModel {
         public String keyName;
 
         /**
-         * <p>Public key type</p>
+         * <p>The type of the public key.</p>
          * 
          * <strong>example:</strong>
          * <p>adb</p>

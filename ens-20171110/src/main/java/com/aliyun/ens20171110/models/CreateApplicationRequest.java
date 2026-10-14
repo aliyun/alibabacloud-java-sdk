@@ -7,15 +7,19 @@ public class CreateApplicationRequest extends TeaModel {
     /**
      * <p>The edge application template. The value must be a JSON string that contains the following information:</p>
      * <ul>
-     * <li>Basic information such as the name of the application</li>
-     * <li>Information such as resource specifications and network security configurations</li>
-     * <li>Service specifications</li>
-     * <li>Required resources</li>
+     * <li><p>Basic information such as the name of the application</p>
+     * </li>
+     * <li><p>Information such as resource specifications and network security configurations</p>
+     * </li>
+     * <li><p>Service specifications</p>
+     * </li>
+     * <li><p>Required resources</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;appMetaData\&quot;:{        \&quot;appName\&quot;:\&quot;nginx\&quot;,        \&quot;clusterName\&quot;:\&quot;poc\&quot;,        \&quot;appType\&quot;:\&quot;Common\&quot;,        \&quot;description\&quot;:\&quot;test\&quot;    },    \&quot;resourceAttribute\&quot;:{        \&quot;resourceType\&quot;:\&quot;\&quot;,        \&quot;instanceSpec\&quot;:\&quot;ens.sn1.tiny\&quot;,        \&quot;systemDiskSize\&quot;:20,        \&quot;dataDiskSize\&quot;:0,        \&quot;bandwithOut\&quot;:10,        \&quot;areaLevel\&quot;:\&quot;National\&quot;,        \&quot;netSecurityStrategy\&quot;:null,        \&quot;initConfig\&quot;:null    },    \&quot;resourceSelector\&quot;:[        {            \&quot;count\&quot;:1        }    ],    \&quot;workload\&quot;:[        {            \&quot;podCount\&quot;:1,            \&quot;serviceConfig\&quot;:null,            \&quot;name\&quot;:\&quot;nginx\&quot;,            \&quot;podSpec\&quot;:{                \&quot;containers\&quot;:[                    {                        \&quot;name\&quot;:\&quot;android\&quot;,                        \&quot;image\&quot;:\&quot;edge-registry.alicdn.com/test/nginx\&quot;                    }                ]            },            \&quot;count\&quot;:1        }    ]}</p>
+     * <p>{\&quot;appMetaData\&quot;:{        \&quot;appName\&quot;:\&quot;nginx\&quot;,        \&quot;clusterName\&quot;:\&quot;poc\&quot;,        \&quot;appType\&quot;:\&quot;Common\&quot;,        \&quot;description\&quot;:\&quot; test service\&quot;    },    \&quot;resourceAttribute\&quot;:{        \&quot;resourceType\&quot;:\&quot;\&quot;,        \&quot;instanceSpec\&quot;:\&quot;ens.sn1.tiny\&quot;,        \&quot;systemDiskSize\&quot;:20,        \&quot;dataDiskSize\&quot;:0,        \&quot;bandwithOut\&quot;:10,        \&quot;areaLevel\&quot;:\&quot;National\&quot;,        \&quot;netSecurityStrategy\&quot;:null,        \&quot;initConfig\&quot;:null    },    \&quot;resourceSelector\&quot;:[        {            \&quot;count\&quot;:1        }    ],    \&quot;workload\&quot;:[        {            \&quot;podCount\&quot;:1,            \&quot;serviceConfig\&quot;:null,            \&quot;name\&quot;:\&quot;nginx\&quot;,            \&quot;podSpec\&quot;:{                \&quot;containers\&quot;:[                    {                        \&quot;name\&quot;:\&quot;android\&quot;,                        \&quot;image\&quot;:\&quot;edge-registry.alicdn.com/test/nginx\&quot;                    }                ]            },            \&quot;count\&quot;:1        }    ]}</p>
      */
     @NameInMap("Template")
     public String template;

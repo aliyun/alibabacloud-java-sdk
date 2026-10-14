@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFileSystemShrinkRequest extends TeaModel {
     /**
-     * <p>The information about the orders.</p>
+     * <p>The list of orders. Each element in the list contains the details of an order.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OrderDetails")

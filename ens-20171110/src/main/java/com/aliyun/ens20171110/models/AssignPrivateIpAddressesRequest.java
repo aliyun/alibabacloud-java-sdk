@@ -9,7 +9,7 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>eni-uf6533jbifugr5fo2j1w</p>
+     * <p>eni-uf6533jbifugr5f*****</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
@@ -18,7 +18,7 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
      * <p>The ID of the vSwitch.</p>
      * 
      * <strong>example:</strong>
-     * <p>vsw-5rllcjb3ol6duzjdnbm1ombn7</p>
+     * <p>vsw-5rllcjb3ol6duzjdnbm1o*****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

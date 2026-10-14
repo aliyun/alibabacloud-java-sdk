@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class CopySDGShrinkRequest extends TeaModel {
     /**
-     * <p>The destination nodes.</p>
+     * <p>The list of destination edge zones.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationRegionIds")
     public String destinationRegionIdsShrink;
 
     /**
-     * <p>The ID of the SDG that you want to copy.</p>
+     * <p>The ID of the SDG to copy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

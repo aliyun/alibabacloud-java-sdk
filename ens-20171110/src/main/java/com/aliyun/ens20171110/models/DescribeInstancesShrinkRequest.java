@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesShrinkRequest extends TeaModel {
+    /**
+     * <p>The list of EIP addresses used to filter instances.</p>
+     */
     @NameInMap("EipAddresses")
     public String eipAddressesShrink;
 
@@ -17,7 +20,7 @@ public class DescribeInstancesShrinkRequest extends TeaModel {
     public String ensRegionId;
 
     /**
-     * <p>The IDs of the regions. The value is a JSON array that consists of up to 100 IDs. Separate multiple IDs with commas (,).</p>
+     * <p>The list of edge zone IDs. This parameter is a formatted JSON array that contains up to 100 IDs separated by commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;cn-suzhou-telecom&quot;,&quot;cn-chengdu-telecom&quot;]</p>
@@ -26,7 +29,7 @@ public class DescribeInstancesShrinkRequest extends TeaModel {
     public String ensRegionIds;
 
     /**
-     * <p>The ID of the edge service. You can use the ID to query information about the instances that are created in the edge service.</p>
+     * <p>The Edge Node Service ID. You can use this ID to query the instances created under the edge service.</p>
      * 
      * <strong>example:</strong>
      * <p>ens-20190730202316s****</p>
@@ -35,7 +38,7 @@ public class DescribeInstancesShrinkRequest extends TeaModel {
     public String ensServiceId;
 
     /**
-     * <p>The ID of the image.</p>
+     * <p>The image ID.</p>
      * 
      * <strong>example:</strong>
      * <p>centos_6_08_64_20G_alibase_****</p>
@@ -44,7 +47,7 @@ public class DescribeInstancesShrinkRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i-5iqczfxps7csjrxeca****</p>
@@ -53,16 +56,16 @@ public class DescribeInstancesShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The IDs of the instances. The value is a JSON array that consists of up to 100 IDs. Separate IDs with commas (,).</p>
+     * <p>The list of instance IDs. This parameter is a formatted JSON array that contains up to 100 IDs separated by commas (,).</p>
      * 
      * <strong>example:</strong>
-     * <p>[&quot;i-5iqczfxps7csjrxeca07****&quot;, &quot;i-5iqczfxps7csjrxeca07****&quot;]]</p>
+     * <p>[&quot;i-5iqczfxps7csjrxeca07****&quot;, &quot;i-5iqczfxps7csjrxeca07****&quot;]</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
     /**
-     * <p>The name of the instance.</p>
+     * <p>The instance name.</p>
      * 
      * <strong>example:</strong>
      * <p>TestName</p>
@@ -71,13 +74,7 @@ public class DescribeInstancesShrinkRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The condition that you want to use to filter instances by category. Valid values:</p>
-     * <ul>
-     * <li>EnsInstance: ENS instances that you purchase.</li>
-     * <li>EnsService: ENS instances that belong to edge services.</li>
-     * <li>BuildMachine: ENS instances that are configured with image builders.</li>
-     * <li>EnsPostPaidInstance: Pay-as-you-go ENS instances that you purchase.</li>
-     * </ul>
+     * <p>The filter type. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>EnsService</p>
@@ -95,7 +92,7 @@ public class DescribeInstancesShrinkRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The internal IP address of the instance.</p>
+     * <p>The internal IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>47.100.XX.XX</p>
@@ -104,7 +101,7 @@ public class DescribeInstancesShrinkRequest extends TeaModel {
     public String intranetIp;
 
     /**
-     * <p>The ID of the network.</p>
+     * <p>The network ID.</p>
      * 
      * <strong>example:</strong>
      * <p>n-2zeuphj08tt7q3brd****</p>
@@ -113,18 +110,21 @@ public class DescribeInstancesShrinkRequest extends TeaModel {
     public String networkId;
 
     /**
-     * <p>The method that you want to use to sort instances. The value of this parameter is in the JSON format.</p>
-     * <p>You can sort instances by name, expiration time, node ID, or creation time. You can specify one or more methods.</p>
+     * <p>The sorting parameter in JSON format.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;InstanceNameSort&quot;:&quot;asc&quot;,&quot;ExpireTimeSort&quot;:&quot;asc&quot;,&quot;CreationTimeSort&quot;:&quot;desc&quot;}}</p>
+     * <p>{
+     *     &quot;InstanceNameSort&quot;: &quot;asc&quot;,
+     *     &quot;ExpireTimeSort&quot;: &quot;asc&quot;,
+     *     &quot;CreationTimeSort&quot;: &quot;desc&quot;,
+     *     &quot;EnsRegionId&quot;: &quot;desc&quot;
+     * }</p>
      */
     @NameInMap("OrderByParams")
     public String orderByParams;
 
     /**
-     * <p>The page number. Pages start from page <strong>1</strong>.</p>
-     * <p>Default value: <strong>1</strong>.</p>
+     * <p>The page number of the instance status list. The value starts from <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -133,8 +133,7 @@ public class DescribeInstancesShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. The maximum value is <strong>100</strong>.</p>
-     * <p>Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for a paged query. Maximum value: <strong>100</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -143,7 +142,7 @@ public class DescribeInstancesShrinkRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The keyword that you use to query the logs of the service. You can specify the values of parameters such as <strong>ip</strong>, <strong>InstanceName</strong>, and <strong>InstanceId</strong> as the keyword.</p>
+     * <p>The search keyword. Supports parameters such as <strong>ip</strong>, <strong>InstanceName</strong>, and <strong>InstanceId</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>Joshua</p>
@@ -152,7 +151,7 @@ public class DescribeInstancesShrinkRequest extends TeaModel {
     public String searchKey;
 
     /**
-     * <p>The ID of the security group.</p>
+     * <p>The security group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-5kyicq2kfcapxrdds6tar7jqb</p>
@@ -161,17 +160,17 @@ public class DescribeInstancesShrinkRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The status of the service. Valid values.</p>
+     * <p>The business status of the instance, which does not represent the actual running status of the instance.</p>
      */
     @NameInMap("ServiceStatus")
     public String serviceStatusShrink;
 
     /**
-     * <p>The status of the instance. Valid values:</p>
+     * <p>The instance status. Valid values:</p>
      * <ul>
-     * <li>Running</li>
-     * <li>Stopped</li>
-     * <li>Expired</li>
+     * <li>Running: Running.</li>
+     * <li>Stopped: Stopped.</li>
+     * <li>Expired: Expired.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -181,13 +180,13 @@ public class DescribeInstancesShrinkRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags that are added to the resource. This operation does not return tag information. You can call this operation in combination with the tag-related operations.</p>
+     * <p>The resource tags. This operation does not return tag information. Use this parameter in combination with the APIs in the tag category.</p>
      */
     @NameInMap("Tags")
     public String tagsShrink;
 
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <p>The vSwitch ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-2zeh0r1pabwtg6wcs****</p>
@@ -195,9 +194,21 @@ public class DescribeInstancesShrinkRequest extends TeaModel {
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <p>The VPD network ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpd-5s7xxxxxxx</p>
+     */
     @NameInMap("VpdId")
     public String vpdId;
 
+    /**
+     * <p>The VPD vSwitch ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-5s7xxxxxxx</p>
+     */
     @NameInMap("VpdVSwitchId")
     public String vpdVSwitchId;
 

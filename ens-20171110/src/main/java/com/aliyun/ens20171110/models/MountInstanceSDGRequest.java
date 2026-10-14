@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MountInstanceSDGRequest extends TeaModel {
     /**
-     * <p>The IDs of the instances.</p>
+     * <p>The list of instance IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")

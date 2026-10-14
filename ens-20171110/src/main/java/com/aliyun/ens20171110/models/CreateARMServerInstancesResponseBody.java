@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateARMServerInstancesResponseBody extends TeaModel {
     /**
-     * <p>The IDs of instances.</p>
+     * <p>The list of instance IDs.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>212630314490***</p>
@@ -20,7 +20,7 @@ public class CreateARMServerInstancesResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>

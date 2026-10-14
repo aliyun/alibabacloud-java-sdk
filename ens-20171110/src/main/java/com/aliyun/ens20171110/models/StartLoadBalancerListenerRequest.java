@@ -17,13 +17,17 @@ public class StartLoadBalancerListenerRequest extends TeaModel {
     /**
      * <p>The frontend protocol that is used by the ELB instance. Valid values:</p>
      * <ul>
-     * <li>tcp</li>
-     * <li>udp</li>
-     * <li>http</li>
-     * <li>https</li>
+     * <li><p>tcp</p>
+     * </li>
+     * <li><p>udp</p>
+     * </li>
+     * <li><p>http</p>
+     * </li>
+     * <li><p>https</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is required if the same port is used by listeners that use different protocols.</p>
+     * <p>This parameter is required if the same port is used by listeners that use different protocols.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

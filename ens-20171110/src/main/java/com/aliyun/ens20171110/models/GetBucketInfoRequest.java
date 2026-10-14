@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBucketInfoRequest extends TeaModel {
     /**
-     * <p>The name of the bucket.</p>
+     * <p>Bucket name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

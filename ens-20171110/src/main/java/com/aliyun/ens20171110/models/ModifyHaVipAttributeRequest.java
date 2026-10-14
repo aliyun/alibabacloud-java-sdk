@@ -15,7 +15,7 @@ public class ModifyHaVipAttributeRequest extends TeaModel {
     public String haVipId;
 
     /**
-     * <p>The name of the HAVIP. The name must be 1 to 128 characters in length and cannot start with http:// or https://.</p>
+     * <p>The name of the HAVIP. The name must be 1 to 128 characters in length and cannot start with http\:// or https\://.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

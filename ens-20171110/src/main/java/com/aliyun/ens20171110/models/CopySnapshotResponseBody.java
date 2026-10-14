@@ -5,20 +5,20 @@ import com.aliyun.tea.*;
 
 public class CopySnapshotResponseBody extends TeaModel {
     /**
-     * <p>The list of created snapshots.</p>
+     * <p>The list of successfully created snapshots.</p>
      */
     @NameInMap("AllocationId")
     public java.util.List<CopySnapshotResponseBodyAllocationId> allocationId;
 
     /**
-     * <p>The success status code.</p>
+     * <p>The status code indicating success. Valid values:</p>
      * <ul>
-     * <li><strong>PartSuccess</strong>: partially succeeded.</li>
-     * <li><strong>AllSuccess</strong>: all succeeded.</li>
+     * <li><strong>PartSuccess</strong>: Partially successful.</li>
+     * <li><strong>AllSuccess</strong>: All successful.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>AllSuccess</p>
+     * <p>PartSuccess</p>
      */
     @NameInMap("BizStatusCode")
     public String bizStatusCode;
@@ -33,7 +33,7 @@ public class CopySnapshotResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of nodes that are not created.</p>
+     * <p>The list of edge zones where snapshot creation failed.</p>
      */
     @NameInMap("UnAllocationId")
     public java.util.List<CopySnapshotResponseBodyUnAllocationId> unAllocationId;
@@ -77,16 +77,16 @@ public class CopySnapshotResponseBody extends TeaModel {
 
     public static class CopySnapshotResponseBodyAllocationId extends TeaModel {
         /**
-         * <p>The ID of the node.</p>
+         * <p>The ID of the edge zone where the snapshot resides.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-chengdu-telecom-4</p>
+         * <p>cn-hangzhou-27</p>
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
         /**
-         * <p>The IDs of the instances.</p>
+         * <p>The array of instance IDs.</p>
          */
         @NameInMap("InstanceId")
         public java.util.List<String> instanceId;
@@ -116,7 +116,7 @@ public class CopySnapshotResponseBody extends TeaModel {
 
     public static class CopySnapshotResponseBodyUnAllocationId extends TeaModel {
         /**
-         * <p>The ID of the node.</p>
+         * <p>The ID of the edge zone where the snapshot resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-chengdu-26</p>

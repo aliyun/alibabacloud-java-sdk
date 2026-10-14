@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateClusterNodePoolShrinkRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,16 +14,21 @@ public class CreateClusterNodePoolShrinkRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The cluster-related configurations.</p>
+     */
     @NameInMap("KubernetesConfig")
     public String kubernetesConfigShrink;
 
     /**
+     * <p>The node pool configurations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NodepoolInfo")
     public String nodepoolInfoShrink;
 
     /**
+     * <p>The scaling group configurations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingGroup")

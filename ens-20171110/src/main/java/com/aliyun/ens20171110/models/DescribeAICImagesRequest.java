@@ -8,13 +8,13 @@ public class DescribeAICImagesRequest extends TeaModel {
      * <p>The description of the image.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test operation of console</p>
+     * <p>Console test operation</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The image ID of the AIC instance.</p>
+     * <p>The ID of the Android in Container (AIC) image.</p>
      * 
      * <strong>example:</strong>
      * <p>m-ad0ddaddc2d54adeaa09b7c0f1e****</p>
@@ -23,10 +23,12 @@ public class DescribeAICImagesRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The type of the image. Valid values:</p>
+     * <p>The image type. Valid values:</p>
      * <ul>
-     * <li><strong>public</strong>: public image</li>
-     * <li><strong>private</strong>: custom image</li>
+     * <li><p><strong>public</strong>: public image.</p>
+     * </li>
+     * <li><p><strong>private</strong>: custom image.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +47,7 @@ public class DescribeAICImagesRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+     * <p>The end time of the query. Format: &quot;2006-01-02&quot;. By default, no time limit is applied.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-02-02</p>
@@ -54,7 +56,7 @@ public class DescribeAICImagesRequest extends TeaModel {
     public String maxDate;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+     * <p>The start time of the query. Format: &quot;2006-01-02&quot;. By default, no time limit is applied.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-01-02</p>
@@ -63,7 +65,8 @@ public class DescribeAICImagesRequest extends TeaModel {
     public String minDate;
 
     /**
-     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value starts from <strong>1</strong>.
+     * Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -72,7 +75,8 @@ public class DescribeAICImagesRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page. The maximum value is <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for paging. Maximum value: <strong>100</strong>.
+     * Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -81,11 +85,14 @@ public class DescribeAICImagesRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The status of the image. Valid values:</p>
+     * <p>The image status. Valid values:</p>
      * <ul>
-     * <li><strong>verifying</strong></li>
-     * <li><strong>disable</strong></li>
-     * <li><strong>available</strong></li>
+     * <li><p><strong>verifying</strong>: pending verification.</p>
+     * </li>
+     * <li><p><strong>disable</strong>: unavailable.</p>
+     * </li>
+     * <li><p><strong>available</strong>: available.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

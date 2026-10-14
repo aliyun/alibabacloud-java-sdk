@@ -7,11 +7,13 @@ public class ModifySnatEntryRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable IP affinity. Default value: true. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong></li>
-     * <li><strong>true</strong></li>
+     * <li><p><strong>false</strong></p>
+     * </li>
+     * <li><p><strong>true</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> Description After you enable IP affinity, if multiple EIPs are associated with an SNAT entry, one client uses the same EIP to for communication. If IP affinity is disabled, the client uses a random EIP for communication.</p>
+     * <p>Description After you enable IP affinity, if multiple EIPs are associated with an SNAT entry, one client uses the same EIP to for communication. If IP affinity is disabled, the client uses a random EIP for communication.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,6 +23,8 @@ public class ModifySnatEntryRequest extends TeaModel {
     public Boolean eipAffinity;
 
     /**
+     * <p>Specifies whether to enable carrier affinity.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -28,6 +32,7 @@ public class ModifySnatEntryRequest extends TeaModel {
     public Boolean ispAffinity;
 
     /**
+     * <p>The ID of the SNAT entry.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +42,8 @@ public class ModifySnatEntryRequest extends TeaModel {
     public String snatEntryId;
 
     /**
+     * <p>The name of the SNAT entry. The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>test0</p>
      */

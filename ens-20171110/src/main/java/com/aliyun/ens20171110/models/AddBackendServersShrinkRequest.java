@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class AddBackendServersShrinkRequest extends TeaModel {
     /**
-     * <p>The list of backend servers that you want to add to the Edge Load Balancer (ELB) instance. You can add up to 20 backend servers at a time.</p>
+     * <p>The list of backend servers to add. You can add up to 20 backend servers per invoke.</p>
      * <blockquote>
-     * <p> Only Edge Node Service (ENS) instances that are in the running state can be added to the ELB instance as backend servers.</p>
+     * <p>Backend servers (ENS instances) must be in the Running state before they can be added to a load balancing instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -15,7 +15,7 @@ public class AddBackendServersShrinkRequest extends TeaModel {
     public String backendServersShrink;
 
     /**
-     * <p>The frontend port that is used by the Edge Load Balance (ELB) instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>The frontend port used by the load balancing instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

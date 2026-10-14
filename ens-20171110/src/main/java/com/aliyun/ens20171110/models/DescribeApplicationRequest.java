@@ -26,11 +26,16 @@ public class DescribeApplicationRequest extends TeaModel {
     /**
      * <p>The region level by which edge resources of the application are collected. The value is of the enumeration type. Valid values:</p>
      * <ul>
-     * <li>National: Chinese mainland</li>
-     * <li>Big: area</li>
-     * <li>Middle: province</li>
-     * <li>Small: city</li>
-     * <li>RegionId: edge node</li>
+     * <li><p>National: Chinese mainland</p>
+     * </li>
+     * <li><p>Big: area</p>
+     * </li>
+     * <li><p>Middle: province</p>
+     * </li>
+     * <li><p>Small: city</p>
+     * </li>
+     * <li><p>RegionId: edge node</p>
+     * </li>
      * </ul>
      * <p>Default value: National.</p>
      * 

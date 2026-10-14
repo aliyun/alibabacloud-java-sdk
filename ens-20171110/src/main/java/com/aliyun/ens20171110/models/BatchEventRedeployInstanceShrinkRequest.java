@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchEventRedeployInstanceShrinkRequest extends TeaModel {
     /**
-     * <p>List of events.</p>
+     * <p>The list of events.</p>
      */
     @NameInMap("EventInfos")
     public String eventInfosShrink;

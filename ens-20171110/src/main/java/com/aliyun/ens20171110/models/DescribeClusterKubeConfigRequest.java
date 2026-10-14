@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class DescribeClusterKubeConfigRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * <p>This parameter is essentially required. If it is not provided, the service returns BadRequest. The target cluster must also have completed control plane deployment and certificate generation. You cannot obtain the kubeconfig for a cluster in the initial state.</p>
      * 
      * <strong>example:</strong>
      * <p>c8f0377146d104687ac562eef9403****</p>

@@ -16,10 +16,14 @@ public class DescribeEpnBandwitdhByInternetChargeTypeResponseBody extends TeaMod
     /**
      * <p>The metering method. Valid values:</p>
      * <ul>
-     * <li>BandwidthByDay: Pay by daily peak bandwidth</li>
-     * <li>95BandwidthByMonth: Pay by monthly 95th percentile bandwidth</li>
-     * <li>PayByBandwidth4thMonth: Pay by monthly fourth peak bandwidth</li>
-     * <li>PayByBandwidth: Pay by fixed bandwidth</li>
+     * <li><p>BandwidthByDay: Pay by daily peak bandwidth</p>
+     * </li>
+     * <li><p>95BandwidthByMonth: Pay by monthly 95th percentile bandwidth</p>
+     * </li>
+     * <li><p>PayByBandwidth4thMonth: Pay by monthly fourth peak bandwidth</p>
+     * </li>
+     * <li><p>PayByBandwidth: Pay by fixed bandwidth</p>
+     * </li>
      * </ul>
      * <p>You can specify only one metering method for network usage and cannot overwrite the existing metering method.</p>
      * 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateClusterCertificateResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>eck-xxxxxxxx</p>
      */
@@ -12,6 +14,8 @@ public class UpdateClusterCertificateResponseBody extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The response message. The value is success if the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */

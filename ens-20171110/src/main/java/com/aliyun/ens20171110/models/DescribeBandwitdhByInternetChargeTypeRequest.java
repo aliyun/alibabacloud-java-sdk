@@ -7,8 +7,10 @@ public class DescribeBandwitdhByInternetChargeTypeRequest extends TeaModel {
     /**
      * <p>The end of the time range to query.</p>
      * <ul>
-     * <li>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</li>
-     * <li>If the value of the seconds place is not 00, the start time is automatically set to the next minute.</li>
+     * <li><p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * </li>
+     * <li><p>If the value of the seconds place is not 00, the start time is automatically set to the next minute.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -30,10 +32,14 @@ public class DescribeBandwitdhByInternetChargeTypeRequest extends TeaModel {
     /**
      * <p>The Internet service provider (ISP). Valid values:</p>
      * <ul>
-     * <li>cmcc: China Mobile</li>
-     * <li>telecom: China Telecom</li>
-     * <li>unicom: China Unicom</li>
-     * <li>multiCarrier: multi-line ISP</li>
+     * <li><p>cmcc: China Mobile</p>
+     * </li>
+     * <li><p>telecom: China Telecom</p>
+     * </li>
+     * <li><p>unicom: China Unicom</p>
+     * </li>
+     * <li><p>multiCarrier: multi-line ISP</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,8 +51,10 @@ public class DescribeBandwitdhByInternetChargeTypeRequest extends TeaModel {
     /**
      * <p>The beginning of the time range to query.</p>
      * <ul>
-     * <li>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</li>
-     * <li>If the value of the seconds place is not 00, the start time is automatically set to the next minute.</li>
+     * <li><p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * </li>
+     * <li><p>If the value of the seconds place is not 00, the start time is automatically set to the next minute.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

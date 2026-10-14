@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceResponseBody extends TeaModel {
     /**
-     * <p>The return code. A value of 0 indicates that the request is successful.</p>
+     * <p>The return code. A value of 0 indicates success.</p>
      * <blockquote>
-     * <p> If you call this operation by using SDKs, the return value is of the integer type. If you call this operation by using common methods or HTTP requests, the return value is of the string type.</p>
+     * <p>If you call this API operation by using an SDK, the return type is Integer. If you call this API operation by using a common method or HTTP, the return type is String.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

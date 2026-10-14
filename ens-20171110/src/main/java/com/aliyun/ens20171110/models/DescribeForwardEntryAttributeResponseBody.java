@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeForwardEntryAttributeResponseBody extends TeaModel {
     /**
-     * <p>The creation time. The time is displayed in UTC.</p>
+     * <p>The creation time in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-04-26T15:38:27Z</p>
@@ -14,7 +14,7 @@ public class DescribeForwardEntryAttributeResponseBody extends TeaModel {
     public String creationTime;
 
     /**
-     * <p>The EIP in the DNAT entry. The public IP address is used to access the Internet.</p>
+     * <p>The Elastic IP Address (EIP) that provides public network access in the DNAT entry.</p>
      * 
      * <strong>example:</strong>
      * <p>36.XXX.XXX.72</p>
@@ -23,10 +23,12 @@ public class DescribeForwardEntryAttributeResponseBody extends TeaModel {
     public String externalIp;
 
     /**
-     * <p>The external port or port range that is used for port forwarding.</p>
+     * <p>The external port or port range for port forwarding.</p>
      * <ul>
-     * <li>Valid values: 1 to 65535.</li>
-     * <li>To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20.</li>
+     * <li><p>The port range must be between 1 and 65535.</p>
+     * </li>
+     * <li><p>To forward a port range, separate the start and end ports with a forward slash (/), such as 10/20.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +56,7 @@ public class DescribeForwardEntryAttributeResponseBody extends TeaModel {
     public String forwardEntryName;
 
     /**
-     * <p>The DNAT probe port. The port must be within the internal port range. By default, this parameter is empty.</p>
+     * <p>The probe port for DNAT. It must fall within the internal port range. The default value is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -63,7 +65,7 @@ public class DescribeForwardEntryAttributeResponseBody extends TeaModel {
     public String healthCheckPort;
 
     /**
-     * <p>The private IP address of the instance that uses the DNAT entry for Internet communication.</p>
+     * <p>The private IP address of the instance that communicates over the public network through the DNAT entry.</p>
      * 
      * <strong>example:</strong>
      * <p>10.XXX.XXX.50</p>
@@ -72,10 +74,12 @@ public class DescribeForwardEntryAttributeResponseBody extends TeaModel {
     public String internalIp;
 
     /**
-     * <p>The internal port or port range that is used for port forwarding.</p>
+     * <p>The internal port or port range for port forwarding.</p>
      * <ul>
-     * <li>Valid values: 1 to 65535.</li>
-     * <li>To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20.</li>
+     * <li><p>The port range must be between 1 and 65535.</p>
+     * </li>
+     * <li><p>To forward a port range, separate the start and end ports with a forward slash (/), such as 10/20.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,11 +89,14 @@ public class DescribeForwardEntryAttributeResponseBody extends TeaModel {
     public String internalPort;
 
     /**
-     * <p>The protocol. Valid values:</p>
+     * <p>The protocol type. Valid values:</p>
      * <ul>
-     * <li><strong>TCP</strong>: forwards TCP packets.</li>
-     * <li><strong>UDP</strong>: forwards UDP packets.</li>
-     * <li><strong>Any</strong>: forwards all packets.</li>
+     * <li><p><strong>TCP</strong>: Forwards TCP messages.</p>
+     * </li>
+     * <li><p><strong>UDP</strong>: Forwards UDP messages.</p>
+     * </li>
+     * <li><p><strong>Any</strong>: Forwards messages of all protocols.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,7 +106,7 @@ public class DescribeForwardEntryAttributeResponseBody extends TeaModel {
     public String ipProtocol;
 
     /**
-     * <p>The ID of the NAT gateway.</p>
+     * <p>The ID of the NAT Gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>nat-5t7nh1cfm6kxiszlttr38****</p>
@@ -117,7 +124,7 @@ public class DescribeForwardEntryAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The secondary EIP that is used to access the Internet. You need to select a secondary EIP that is bound to NAT. After the DNAT entry is created, the secondary EIP takes effect.</p>
+     * <p>The standby Elastic IP Address (EIP) that provides public network access. You must select a standby EIP attached to the NAT Gateway. The standby public IP becomes active after the DNAT entry is created.</p>
      * 
      * <strong>example:</strong>
      * <p>101.XXX.XXX.4</p>
@@ -126,12 +133,16 @@ public class DescribeForwardEntryAttributeResponseBody extends TeaModel {
     public String standbyExternalIp;
 
     /**
-     * <p>The status of the secondary EIP.</p>
+     * <p>The status of the standby EIP.</p>
      * <ul>
-     * <li>Running</li>
-     * <li>Stopping</li>
-     * <li>Stopped</li>
-     * <li>Starting</li>
+     * <li><p>Running: Enabled.</p>
+     * </li>
+     * <li><p>Stopping: Being disabled.</p>
+     * </li>
+     * <li><p>Stopped: Disabled.</p>
+     * </li>
+     * <li><p>Starting: Being enabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -143,9 +154,12 @@ public class DescribeForwardEntryAttributeResponseBody extends TeaModel {
     /**
      * <p>The status of the DNAT entry.</p>
      * <ul>
-     * <li>Pending: The DNAT entry is being created or modified.</li>
-     * <li>Available: The DNAT entry is available.</li>
-     * <li>Deleting: The DNAT entry is being deleted.</li>
+     * <li><p>Pending: The configuration is in progress, such as during creation or modification.</p>
+     * </li>
+     * <li><p>Available: The entry is active.</p>
+     * </li>
+     * <li><p>Deleting: The entry is being deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

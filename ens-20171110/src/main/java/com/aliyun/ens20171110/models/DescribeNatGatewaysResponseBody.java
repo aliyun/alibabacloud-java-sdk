@@ -113,9 +113,12 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         /**
          * <p>The association between the EIP and the Internet NAT gateway. Valid values:</p>
          * <ul>
-         * <li><strong>UsedByForwardTable</strong>: The EIP is specified in a DNAT entry.</li>
-         * <li><strong>UsedBySnatTable</strong>: The EIP is specified in an SNAT entry.</li>
-         * <li><strong>Idle</strong>: The EIP is not specified in an SNAT entry or a DNAT entry.</li>
+         * <li><p><strong>UsedByForwardTable</strong>: The EIP is specified in a DNAT entry.</p>
+         * </li>
+         * <li><p><strong>UsedBySnatTable</strong>: The EIP is specified in an SNAT entry.</p>
+         * </li>
+         * <li><p><strong>Idle</strong>: The EIP is not specified in an SNAT entry or a DNAT entry.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -157,6 +160,8 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
 
     public static class DescribeNatGatewaysResponseBodyNatGatewaysTags extends TeaModel {
         /**
+         * <p>Tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestKey</p>
          */
@@ -164,6 +169,8 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>Tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestKey</p>
          */
@@ -172,6 +179,8 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         public String tagKey;
 
         /**
+         * <p>Tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestValue</p>
          */
@@ -180,6 +189,8 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         public String tagValue;
 
         /**
+         * <p>Tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestValue</p>
          */
@@ -291,9 +302,12 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         /**
          * <p>The status of the NAT gateway. Valid values:</p>
          * <ul>
-         * <li><strong>Creating</strong>: After you send a request to create a NAT gateway, the system creates the NAT gateway in the background. The NAT gateway remains in the Creating state until the operation is completed.</li>
-         * <li><strong>Available</strong>: The NAT gateway is in the Available state after the creation is complete.</li>
-         * <li><strong>Deleting</strong>: After you send a request to delete a NAT gateway, the system deletes the NAT gateway in the background. The NAT gateway remains in the Deleting state until the operation is completed.</li>
+         * <li><p><strong>Creating</strong>: After you send a request to create a NAT gateway, the system creates the NAT gateway in the background. The NAT gateway remains in the Creating state until the operation is completed.</p>
+         * </li>
+         * <li><p><strong>Available</strong>: The NAT gateway is in the Available state after the creation is complete.</p>
+         * </li>
+         * <li><p><strong>Deleting</strong>: After you send a request to delete a NAT gateway, the system deletes the NAT gateway in the background. The NAT gateway remains in the Deleting state until the operation is completed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -302,6 +316,9 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The collection of tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeNatGatewaysResponseBodyNatGatewaysTags> tags;
 

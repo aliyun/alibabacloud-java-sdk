@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetBucketInfoResponseBody extends TeaModel {
     /**
-     * <p>The list of bucket information.</p>
+     * <p>Bucket information list.</p>
      */
     @NameInMap("BucketInfo")
     public GetBucketInfoResponseBodyBucketInfo bucketInfo;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C5831388-2D4B-46F4-A96B-D4E6BD06E7521</p>
@@ -42,11 +42,14 @@ public class GetBucketInfoResponseBody extends TeaModel {
 
     public static class GetBucketInfoResponseBodyBucketInfo extends TeaModel {
         /**
-         * <p>The ACL of the bucket.</p>
+         * <p>Bucket access control list type:</p>
          * <ul>
-         * <li><strong>public-read-write</strong></li>
-         * <li><strong>public-read</strong></li>
-         * <li><strong>private</strong> (default)</li>
+         * <li><p><strong>public-read-write</strong>: public-read-write</p>
+         * </li>
+         * <li><p><strong>public-read</strong>: public-read</p>
+         * </li>
+         * <li><p><strong>private</strong>: private (default)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -56,7 +59,7 @@ public class GetBucketInfoResponseBody extends TeaModel {
         public String bucketAcl;
 
         /**
-         * <p>The name of the bucket.</p>
+         * <p>Bucket name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -65,7 +68,7 @@ public class GetBucketInfoResponseBody extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The remarks.</p>
+         * <p>Comments.</p>
          * 
          * <strong>example:</strong>
          * <p>das</p>
@@ -74,7 +77,7 @@ public class GetBucketInfoResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The time when the bucket was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>Bucket creation time. Represented in ISO8601 standard, using UTC time. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-10-12T05:45:00Z</p>
@@ -83,7 +86,7 @@ public class GetBucketInfoResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Single-node storage. Set the value to sink.</p>
+         * <p>Single node storage. Value: sink.</p>
          * 
          * <strong>example:</strong>
          * <p>sink</p>
@@ -92,7 +95,7 @@ public class GetBucketInfoResponseBody extends TeaModel {
         public String logicalBucketType;
 
         /**
-         * <p>The time when the bucket was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>Bucket modification time. Represented in ISO8601 standard, using UTC time. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-10-12T06:45:00Z</p>

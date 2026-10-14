@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterUserKubeconfigResponseBody extends TeaModel {
     /**
+     * <p>The kubeconfig file of the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>apiVersion: v1
      * clusters:</p>
@@ -32,7 +34,7 @@ public class DescribeClusterUserKubeconfigResponseBody extends TeaModel {
     public Object config;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C0003E8B-B930-4F59-ADC0-0E209A9012A8</p>

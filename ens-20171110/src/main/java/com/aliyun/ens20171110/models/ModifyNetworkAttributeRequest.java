@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ModifyNetworkAttributeRequest extends TeaModel {
     /**
      * <p>The description of the network.</p>
-     * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with http:// or https://.</p>
+     * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with http\:// or https\://.</p>
      * 
      * <strong>example:</strong>
      * <p>this is my first network</p>
@@ -27,9 +27,12 @@ public class ModifyNetworkAttributeRequest extends TeaModel {
     /**
      * <p>The name of the network. The name must meet the following requirements:</p>
      * <ul>
-     * <li>The name must be 2 to 128 characters in length</li>
-     * <li>It must start with a letter but cannot start with http:// or https://.</li>
-     * <li>The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+     * <li><p>The name must be 2 to 128 characters in length</p>
+     * </li>
+     * <li><p>It must start with a letter but cannot start with http\:// or https\://.</p>
+     * </li>
+     * <li><p>The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

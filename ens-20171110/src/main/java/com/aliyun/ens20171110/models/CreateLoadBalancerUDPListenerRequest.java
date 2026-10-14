@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     /**
-     * <p>The port used by the backend ELB server of the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>The port used by the backend servers. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>8080</p>
@@ -14,9 +14,9 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     public Integer backendServerPort;
 
     /**
-     * <p>The name of the listener. The value must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
+     * <p>The name of the listener. The name must be <strong>1</strong> to <strong>80</strong> characters long.</p>
      * <blockquote>
-     * <p> The value cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name cannot start with <code>http://</code> or <code>https://</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,10 +26,12 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to enable Elastic IP address (EIP) pass-through. Valid values:</p>
+     * <p>Specifies whether EIP pass-through is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong></li>
-     * <li><strong>off</strong> (default)</li>
+     * <li><p><strong>on</strong>: Enables EIP pass-through.</p>
+     * </li>
+     * <li><p><strong>off</strong> (default): Disables EIP pass-through.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +41,7 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     public String eipTransmit;
 
     /**
-     * <p>The timeout period of a connection. Valid values: <strong>10</strong> to <strong>900</strong>. Default value: <strong>900</strong>. Unit: seconds.</p>
+     * <p>The timeout for established connections. Valid values: <strong>10</strong> to <strong>900</strong>. Default value: <strong>900</strong>. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -48,7 +50,7 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     public Integer establishedTimeout;
 
     /**
-     * <p>The port that is used for health checks. Valid values: <strong>1</strong> to <strong>65535</strong>. If you leave this parameter empty, the port specified by BackendServerPort is used for health checks.</p>
+     * <p>The port used for health checks. Valid values: <strong>1</strong> to <strong>65535</strong>. If you do not specify this parameter, the port specified by <code>BackendServerPort</code> is used.</p>
      * 
      * <strong>example:</strong>
      * <p>8080</p>
@@ -57,14 +59,17 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     public Integer healthCheckConnectPort;
 
     /**
-     * <p>The timeout period for a health check response. If a backend server does not respond within the specified timeout period, the server fails the health check.</p>
+     * <p>The maximum time to wait for a response to a health check. A health check fails if a backend ENS instance does not respond within this time.</p>
      * <ul>
-     * <li>Default value: 5.</li>
-     * <li>Valid values: <strong>1</strong> to <strong>300</strong>.</li>
-     * <li>Unit: seconds.</li>
+     * <li><p>Default value: 5.</p>
+     * </li>
+     * <li><p>Valid values: <strong>1</strong> to <strong>300</strong>.</p>
+     * </li>
+     * <li><p>Unit: seconds.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If the value of the HealthCheckConnectTimeout parameter is smaller than that of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckConnectTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.</p>
+     * <p>If this timeout is shorter than the health check interval (<code>HealthCheckInterval</code>), the interval value is used for the timeout instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -74,7 +79,7 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     public Integer healthCheckConnectTimeout;
 
     /**
-     * <p>The response string for UDP listener health checks. The string can be up to 64 characters in length and can contain only letters and digits.</p>
+     * <p>The expected response string for UDP health checks. The string must be up to 64 characters long and contain only letters and digits.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>
@@ -83,7 +88,7 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     public String healthCheckExp;
 
     /**
-     * <p>The interval at which health checks are performed. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>2</strong>. Unit: seconds.</p>
+     * <p>The interval between health checks, in seconds. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>2</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -92,7 +97,7 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     public Integer healthCheckInterval;
 
     /**
-     * <p>The request string for UDP listener health checks. The string can be up to 64 characters in length and can contain only letters and digits.</p>
+     * <p>The request string for UDP health checks. The string must be up to 64 characters long and contain only letters and digits.</p>
      * 
      * <strong>example:</strong>
      * <p>hello</p>
@@ -101,7 +106,7 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     public String healthCheckReq;
 
     /**
-     * <p>The number of consecutive successful health checks that must occur before an unhealthy and inaccessible backend server is declared healthy and accessible. Valid values: <strong>2</strong> to <strong>10</strong>. Default value: <strong>3</strong>.</p>
+     * <p>The number of consecutive successful health checks required for a backend server to be considered healthy. Valid values: <strong>2</strong> to <strong>10</strong>. Default value: <strong>3</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -110,9 +115,9 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     public Integer healthyThreshold;
 
     /**
-     * <p>The listener port that is used by Edge Load Balancer (ELB) to receive requests and forward the requests to backend servers. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>The listener port used to receive requests and forward them to backend servers. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * <blockquote>
-     * <p> You cannot specify ports 250, 4789, or 4790 for UDP listeners. They are system reserved ports.</p>
+     * <p>For UDP listeners, ports 250, 4789, and 4790 are system-reserved and not available for use.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -123,7 +128,7 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     public Integer listenerPort;
 
     /**
-     * <p>The ID of the Edge Load Balancer (ELB) instance.</p>
+     * <p>The ID of the load balancer instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -135,12 +140,20 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     /**
      * <p>The scheduling algorithm. Valid values:</p>
      * <ul>
-     * <li><strong>wrr</strong>: Backend servers with higher weights receive more requests than backend servers with lower weights. This is the default value.</li>
-     * <li><strong>wlc</strong>: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.</li>
-     * <li><strong>rr</strong>: Requests are distributed to backend servers in sequence.</li>
-     * <li><strong>sch</strong>: Consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</li>
-     * <li><strong>qch</strong>: Consistent hashing based on Quick UDP Internet Connection (QUIC) IDs. Requests that contain the same QUIC ID are scheduled to the same backend server.</li>
-     * <li><strong>iqch</strong>: Consistent hashing based on three specific bytes of iQUIC CID. Requests with the same second, third, and forth bytes are scheduled to the same backend server.</li>
+     * <li><p><strong>wrr</strong> (default): Weighted Round Robin. Backend servers with a higher weight receive more requests.</p>
+     * </li>
+     * <li><p><strong>wlc</strong>: Weighted Least Connections. Requests are distributed based on both the weight and the number of current connections of each backend server. If multiple backend servers have the same weight, the one with the fewest active connections receives the next request.</p>
+     * </li>
+     * <li><p><strong>rr</strong>: Round Robin. Requests are distributed to backend servers sequentially.</p>
+     * </li>
+     * <li><p><strong>sch</strong>: Source IP Hash. Requests from the same source IP address are routed to the same backend server.</p>
+     * </li>
+     * <li><p><strong>tch</strong>: Four-tuple Hash. Requests are routed to backend servers based on a hash of four values: source IP address, destination IP address, source port, and destination port. Flows with the same four values are routed to the same backend server.</p>
+     * </li>
+     * <li><p><strong>qch</strong>: QUIC Connection ID Hash. Requests with the same QUIC Connection ID are routed to the same backend server.</p>
+     * </li>
+     * <li><p><strong>iqch</strong>: A consistent hash algorithm for iQUIC Connection IDs. Flows with the same second, third, and fourth bytes in the iQUIC CID are routed to the same backend server.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -150,7 +163,7 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     public String scheduler;
 
     /**
-     * <p>The number of consecutive failed health checks that must occur before a healthy and accessible backend server is declared unhealthy and inaccessible. Valid values: <strong>2</strong> to <strong>10</strong>. Default value: <strong>3</strong>.</p>
+     * <p>The number of consecutive failed health checks required for a backend server to be considered unhealthy. Valid values: <strong>2</strong> to <strong>10</strong>. Default value: <strong>3</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>

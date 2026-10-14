@@ -4,10 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
+    /**
+     * <p>A list of the network peering connections.</p>
+     */
     @NameInMap("NetworkPeerConnects")
     public java.util.List<DescribeNetworkPeerConnectionsResponseBodyNetworkPeerConnects> networkPeerConnects;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -22,6 +29,8 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
      */
@@ -29,6 +38,8 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -81,10 +92,15 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkPeerConnectionsResponseBodyNetworkPeerConnectsAcceptingNetwork extends TeaModel {
+        /**
+         * <p>The CIDR blocks of the accepter network.</p>
+         */
         @NameInMap("Ipv4Cidrs")
         public java.util.List<String> ipv4Cidrs;
 
         /**
+         * <p>The network ID of the accepter.</p>
+         * 
          * <strong>example:</strong>
          * <p>n-5q28114****</p>
          */
@@ -115,10 +131,15 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkPeerConnectionsResponseBodyNetworkPeerConnectsNetwork extends TeaModel {
+        /**
+         * <p>The CIDR blocks of the requester network.</p>
+         */
         @NameInMap("Ipv4Cidrs")
         public java.util.List<String> ipv4Cidrs;
 
         /**
+         * <p>The network ID of the requester.</p>
+         * 
          * <strong>example:</strong>
          * <p>n-5q73bm****</p>
          */
@@ -149,10 +170,15 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkPeerConnectionsResponseBodyNetworkPeerConnects extends TeaModel {
+        /**
+         * <p>Details of the accepter network.</p>
+         */
         @NameInMap("AcceptingNetwork")
         public DescribeNetworkPeerConnectionsResponseBodyNetworkPeerConnectsAcceptingNetwork acceptingNetwork;
 
         /**
+         * <p>The network ID of the accepter.</p>
+         * 
          * <strong>example:</strong>
          * <p>n-5q28114****</p>
          */
@@ -160,6 +186,8 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
         public String acceptingNetworkId;
 
         /**
+         * <p>The creation time in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-31T06:43:29Z</p>
          */
@@ -167,6 +195,8 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
+         * <p>The description of the network peering connection.</p>
+         * 
          * <strong>example:</strong>
          * <p>desc</p>
          */
@@ -174,6 +204,8 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The ID of the ENS node.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-dongguan-9</p>
          */
@@ -181,6 +213,8 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
         public String ensRegionId;
 
         /**
+         * <p>The ID of the network peering connection.</p>
+         * 
          * <strong>example:</strong>
          * <p>pcc-521pzxdg****</p>
          */
@@ -188,16 +222,23 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The name of the network peering connection.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Details of the requester network.</p>
+         */
         @NameInMap("Network")
         public DescribeNetworkPeerConnectionsResponseBodyNetworkPeerConnectsNetwork network;
 
         /**
+         * <p>The network ID of the requester.</p>
+         * 
          * <strong>example:</strong>
          * <p>n-5q73bm****</p>
          */
@@ -205,6 +246,16 @@ public class DescribeNetworkPeerConnectionsResponseBody extends TeaModel {
         public String networkId;
 
         /**
+         * <p>The status of the network peering connection. Valid values:</p>
+         * <ul>
+         * <li><p><code>Creating</code>: The connection is being created.</p>
+         * </li>
+         * <li><p><code>Activated</code>: The connection is active.</p>
+         * </li>
+         * <li><p><code>Deleting</code>: The connection is being deleted.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Activated</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClustersV1Request extends TeaModel {
     /**
-     * <p>The name of the ECS instance.</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>eck-xxxxxxxx</p>
@@ -13,8 +13,11 @@ public class DescribeClustersV1Request extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    @NameInMap("ClusterType")
+    public String clusterType;
+
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ENS region ID where the cluster resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-58</p>
@@ -23,13 +26,16 @@ public class DescribeClustersV1Request extends TeaModel {
     public String ensRegionId;
 
     /**
-     * <p>System specified parameters. Set the value to <strong>DescribeClustersV1</strong>.</p>
+     * <p>The cluster name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-eck-name</p>
      */
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("Profile")
+    public String profile;
 
     public static DescribeClustersV1Request build(java.util.Map<String, ?> map) throws Exception {
         DescribeClustersV1Request self = new DescribeClustersV1Request();
@@ -42,6 +48,14 @@ public class DescribeClustersV1Request extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public DescribeClustersV1Request setClusterType(String clusterType) {
+        this.clusterType = clusterType;
+        return this;
+    }
+    public String getClusterType() {
+        return this.clusterType;
     }
 
     public DescribeClustersV1Request setEnsRegionId(String ensRegionId) {
@@ -58,6 +72,14 @@ public class DescribeClustersV1Request extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public DescribeClustersV1Request setProfile(String profile) {
+        this.profile = profile;
+        return this;
+    }
+    public String getProfile() {
+        return this.profile;
     }
 
 }

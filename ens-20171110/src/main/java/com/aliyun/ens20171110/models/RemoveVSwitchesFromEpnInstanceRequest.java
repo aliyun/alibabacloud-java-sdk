@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveVSwitchesFromEpnInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of theEPN instance.</p>
+     * <p>The Edge Private Network (EPN) instance ID. The NetworkingModel of the EPN instance must be Connection or SpeedUpAndConnection. The SpeedUp pattern does not support vSwitch operations.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,11 +15,11 @@ public class RemoveVSwitchesFromEpnInstanceRequest extends TeaModel {
     public String EPNInstanceId;
 
     /**
-     * <p>The internal networking information that you want to delete.</p>
+     * <p>The internal network configuration information to remove.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>VSwitchesInfo=[{&quot;VSwitchId&quot;:&quot;vs-ixxxx&quot;},{&quot;VSwitchId&quot;:&quot;vs-ixxxx&quot;}]</p>
+     * <p>[{&quot;VSwitchId&quot;:&quot;vs-ixxxx&quot;}]</p>
      */
     @NameInMap("VSwitchesInfo")
     public String vSwitchesInfo;

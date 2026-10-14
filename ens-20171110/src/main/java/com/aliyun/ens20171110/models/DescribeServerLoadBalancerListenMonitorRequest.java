@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeServerLoadBalancerListenMonitorRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. The maximum range between StartTime and EndTime is 24 hours.</p>
+     * <p>The end time. The maximum interval between StartTime and EndTime cannot exceed 24 hours.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeServerLoadBalancerListenMonitorRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the ELB instance.</p>
+     * <p>The load balancing instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DescribeServerLoadBalancerListenMonitorRequest extends TeaModel {
     public String loadBalancerId;
 
     /**
-     * <p>The request protocol, such as http, https, or tcp.</p>
+     * <p>The request protocol, such as http, https, and tcp.</p>
      * 
      * <strong>example:</strong>
      * <p>tcp</p>
@@ -34,7 +34,7 @@ public class DescribeServerLoadBalancerListenMonitorRequest extends TeaModel {
     public String proto;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+     * <p>The start time in the format of yyyy-MM-dd HH:mm:ss.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class DescribeServerLoadBalancerListenMonitorRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The virtual IP address (VIP) port, such as 80, 8080, or 443.</p>
+     * <p>The VIP port, such as 80, 8080, and 443.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>

@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateVSwitchRequest extends TeaModel {
     /**
-     * <p>The CIDR block of the vSwitch. Take note of the following limits:</p>
+     * <p>The CIDR block of the VSwitch. The following requirements apply:</p>
      * <ul>
-     * <li>The subnet mask must be 16 to 29 bits in length.</li>
-     * <li>The CIDR block of the vSwitch must fall within the CIDR block of the VPC to which the vSwitch belongs.</li>
-     * <li>The CIDR block of the vSwitch cannot be the same as the destination CIDR block in a route entry of the VPC. However, it can be a subset of the destination CIDR block.</li>
+     * <li><p>The prefix length must be an integer from 16 to 29.</p>
+     * </li>
+     * <li><p>The CIDR block of the VSwitch must be a subset of the CIDR block of the VPC to which the VSwitch belongs.</p>
+     * </li>
+     * <li><p>The CIDR block of the VSwitch cannot be the same as the destination CIDR block of an existing route in the VPC, but it can be a subset of the destination CIDR block.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -20,8 +23,8 @@ public class CreateVSwitchRequest extends TeaModel {
     public String cidrBlock;
 
     /**
-     * <p>The description of the vSwitch.</p>
-     * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with http:// or https://.</p>
+     * <p>The description of the VSwitch.</p>
+     * <p>The description must be 2 to 256 characters in length. It must start with a letter or a Chinese character, and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>This is my vswitch.</p>
@@ -30,7 +33,7 @@ public class CreateVSwitchRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the edge node.</p>
+     * <p>The ID of the ENS node.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +43,14 @@ public class CreateVSwitchRequest extends TeaModel {
     public String ensRegionId;
 
     /**
-     * <p>The ID of the network to which the vSwitch that you want to create belongs.</p>
+     * <strong>example:</strong>
+     * <p>2408:XXXX:0:a600::/110</p>
+     */
+    @NameInMap("Ipv6CidrBlock")
+    public String ipv6CidrBlock;
+
+    /**
+     * <p>The ID of the network to which the VSwitch belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>n-257gqcdfvx6n****</p>
@@ -49,21 +59,23 @@ public class CreateVSwitchRequest extends TeaModel {
     public String networkId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags of the resource. You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateVSwitchRequestTag> tag;
 
     /**
-     * <p>The name of the vSwitch. The name must meet the following requirements:</p>
+     * <p>The name of the VSwitch. The following requirements apply:</p>
      * <ul>
-     * <li>The name must be 2 to 128 characters in length.</li>
-     * <li>The name must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+     * <li><p>The name must be 2 to 128 characters in length.</p>
+     * </li>
+     * <li><p>The name must start with a letter or a Chinese character, and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, colons (:), underscores (_), and hyphens (-).</p>
+     * </li>
      * </ul>
-     * <p>Default value: null.</p>
+     * <p>Default value: an empty string.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>Test vSwitch</p>
      */
     @NameInMap("VSwitchName")
     public String vSwitchName;
@@ -97,6 +109,14 @@ public class CreateVSwitchRequest extends TeaModel {
         return this.ensRegionId;
     }
 
+    public CreateVSwitchRequest setIpv6CidrBlock(String ipv6CidrBlock) {
+        this.ipv6CidrBlock = ipv6CidrBlock;
+        return this;
+    }
+    public String getIpv6CidrBlock() {
+        return this.ipv6CidrBlock;
+    }
+
     public CreateVSwitchRequest setNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
@@ -123,11 +143,14 @@ public class CreateVSwitchRequest extends TeaModel {
 
     public static class CreateVSwitchRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag that are to add to the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+         * <p>The key of the tag.</p>
          * <ul>
-         * <li>The key cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
-         * <li>The key must be up to 64 characters in length.</li>
-         * <li>The tag key cannot be an empty string.</li>
+         * <li><p>The tag key cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</p>
+         * </li>
+         * <li><p>The tag key can be up to 64 characters long.</p>
+         * </li>
+         * <li><p>The tag key cannot be an empty string.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -137,7 +160,7 @@ public class CreateVSwitchRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N that is added to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with acs: or contain http:// or https://.</p>
+         * <p>The value of the tag. It can be up to 128 characters long, can be an empty string, and cannot start with <code>acs:</code> or contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Deep</p>

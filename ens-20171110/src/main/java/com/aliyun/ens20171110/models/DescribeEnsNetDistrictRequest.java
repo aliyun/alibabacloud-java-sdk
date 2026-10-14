@@ -15,15 +15,21 @@ public class DescribeEnsNetDistrictRequest extends TeaModel {
     @NameInMap("NetDistrictCode")
     public String netDistrictCode;
 
+    /**
+     * <p>Region code</p>
+     */
     @NameInMap("NetDistrictCodeNode")
     public Boolean netDistrictCodeNode;
 
     /**
      * <p>The level of the region.</p>
      * <ul>
-     * <li><strong>Big</strong>: area</li>
-     * <li><strong>Middle</strong>: province</li>
-     * <li><strong>Small</strong>: city</li>
+     * <li><p><strong>Big</strong>: area</p>
+     * </li>
+     * <li><p><strong>Middle</strong>: province</p>
+     * </li>
+     * <li><p><strong>Small</strong>: city</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

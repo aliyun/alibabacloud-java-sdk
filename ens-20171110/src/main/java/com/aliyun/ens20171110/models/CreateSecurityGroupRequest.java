@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSecurityGroupRequest extends TeaModel {
     /**
-     * <p>The description. The description must be 2 to 256 characters in length. It must start with a letter but cannot start with http:// or https://.</p>
+     * <p>The description of the security group. The description must be 2 to 256 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>testDescription</p>
@@ -14,13 +14,13 @@ public class CreateSecurityGroupRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>An array of security group rules. You can specify up to 200 IDs of security group rules.</p>
+     * <p>The rules of the security group. Valid values of N: 0 to 200.</p>
      */
     @NameInMap("Permissions")
     public java.util.List<CreateSecurityGroupRequestPermissions> permissions;
 
     /**
-     * <p>The name of the security group. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (<em>), and hyphens (-). It must start with a letter but cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (</em>), and hyphens (-). By default, this parameter is empty.</p>
+     * <p>The name of the security group. The name must be 2 to 128 characters in length, and can contain digits, colons (:), underscores (_), and hyphens (-). It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. By default, this parameter is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>Dcdn1:2_3-4</p>
@@ -59,7 +59,7 @@ public class CreateSecurityGroupRequest extends TeaModel {
 
     public static class CreateSecurityGroupRequestPermissions extends TeaModel {
         /**
-         * <p>The description. It must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
+         * <p>The description of the security group rule. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>testDescription</p>
@@ -68,7 +68,7 @@ public class CreateSecurityGroupRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The destination IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.</p>
+         * <p>The destination IPv4 CIDR block. CIDR blocks and IPv4 addresses are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.0.0/0</p>
@@ -77,10 +77,12 @@ public class CreateSecurityGroupRequest extends TeaModel {
         public String destCidrIp;
 
         /**
-         * <p>The direction in which the security group rule is applied.</p>
+         * <p>The direction of the security group rule. Valid values:</p>
          * <ul>
-         * <li>egress</li>
-         * <li>ingress</li>
+         * <li><p>egress: outbound</p>
+         * </li>
+         * <li><p>ingress: inbound</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -91,12 +93,16 @@ public class CreateSecurityGroupRequest extends TeaModel {
         public String direction;
 
         /**
-         * <p>The protocol type. Valid values:</p>
+         * <p>The transport layer protocol. Valid values:</p>
          * <ul>
-         * <li>TCP</li>
-         * <li>UDP</li>
-         * <li>ICMP</li>
-         * <li>ALL: All protocols are supported.</li>
+         * <li><p>TCP</p>
+         * </li>
+         * <li><p>UDP</p>
+         * </li>
+         * <li><p>ICMP</p>
+         * </li>
+         * <li><p>ALL</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -113,10 +119,12 @@ public class CreateSecurityGroupRequest extends TeaModel {
         public String ipv6SourceCidrIp;
 
         /**
-         * <p>The action of the security group rule. Valid values:</p>
+         * <p>The policy of the security group rule. Valid values:</p>
          * <ul>
-         * <li>Accept</li>
-         * <li>Drop</li>
+         * <li><p>Accept: allows access.</p>
+         * </li>
+         * <li><p>Drop: denies access.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -127,11 +135,14 @@ public class CreateSecurityGroupRequest extends TeaModel {
         public String policy;
 
         /**
-         * <p>The range of destination port numbers for the protocols specified in the security group rule. Valid values:</p>
+         * <p>The range of the destination ports for the security group rule. Valid values:</p>
          * <ul>
-         * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</li>
-         * <li>If you set IpProtocol to ICMP, the port number range is -1/-1.</li>
-         * <li>If you set IpProtocol to ALL, the port number range is -1/-1.</li>
+         * <li><p>If you set the IpProtocol to TCP or UDP, the port range is 1 to 65535. You must use a forward slash (/) to separate the start port and the end port, for example, 1/200.</p>
+         * </li>
+         * <li><p>If you set the IpProtocol to ICMP, the port range is -1/-1.</p>
+         * </li>
+         * <li><p>If you set the IpProtocol to ALL, the port range is -1/-1.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -142,7 +153,7 @@ public class CreateSecurityGroupRequest extends TeaModel {
         public String portRange;
 
         /**
-         * <p>The priority of the security group rule. A smaller value specifies a higher priority. Valid values: 1 to 100.</p>
+         * <p>The priority of the security group rule. A smaller value indicates a higher priority. Valid values: 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +163,7 @@ public class CreateSecurityGroupRequest extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The source IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.</p>
+         * <p>The source IPv4 CIDR block. CIDR blocks and IPv4 addresses are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.0.0/0</p>
@@ -161,11 +172,14 @@ public class CreateSecurityGroupRequest extends TeaModel {
         public String sourceCidrIp;
 
         /**
-         * <p>The range of source port numbers for the protocols specified in the security group rule. Valid values:</p>
+         * <p>The range of the source ports for the security group rule. Valid values:</p>
          * <ul>
-         * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</li>
-         * <li>If you set IpProtocol to ICMP, the port number range is -1/-1.</li>
-         * <li>If you set IpProtocol to ALL, the port number range is -1/-1, which indicates all port numbers.</li>
+         * <li><p>If you set the IpProtocol to TCP or UDP, the port range is 1 to 65535. You must use a forward slash (/) to separate the start port and the end port, for example, 1/200.</p>
+         * </li>
+         * <li><p>If you set the IpProtocol to ICMP, the port range is -1/-1.</p>
+         * </li>
+         * <li><p>If you set the IpProtocol to ALL, the port range is -1/-1.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

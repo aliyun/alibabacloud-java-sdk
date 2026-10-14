@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnloadRegionSDGResponseBody extends TeaModel {
     /**
-     * <p>The returned data object.</p>
+     * <p>The returned Data object.</p>
      */
     @NameInMap("Data")
     public UnloadRegionSDGResponseBodyData data;
@@ -42,7 +42,7 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
 
     public static class UnloadRegionSDGResponseBodyDataResultFailedItems extends TeaModel {
         /**
-         * <p>The ID of the destination node.</p>
+         * <p>The ID of the destination edge zone.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-xxx</p>
@@ -51,7 +51,7 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
         public String destinationRegionId;
 
         /**
-         * <p>The error message that is returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>region not found</p>
@@ -84,7 +84,7 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
 
     public static class UnloadRegionSDGResponseBodyDataResult extends TeaModel {
         /**
-         * <p>The number of failed tasks.</p>
+         * <p>The total number of failed requests.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -93,13 +93,13 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
         public Long failedCount;
 
         /**
-         * <p>Details about the failed tasks.</p>
+         * <p>The list of failure details.</p>
          */
         @NameInMap("FailedItems")
         public java.util.List<UnloadRegionSDGResponseBodyDataResultFailedItems> failedItems;
 
         /**
-         * <p>The number of successful tasks.</p>
+         * <p>The number of successes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -140,7 +140,7 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
 
     public static class UnloadRegionSDGResponseBodyData extends TeaModel {
         /**
-         * <p>The response message. Success is returned for a successful request.</p>
+         * <p>The response message. A value of success indicates a successful request.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -149,16 +149,16 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The execution result of the synchronization request.</p>
+         * <p>The execution result of the synchronous request.</p>
          */
         @NameInMap("Result")
         public UnloadRegionSDGResponseBodyDataResult result;
 
         /**
-         * <p>Indicates whether all tasks are successful. Valid values:</p>
+         * <p>Indicates whether all requests were successful. Valid values:</p>
          * <ul>
-         * <li>true: All tasks are successful.</li>
-         * <li>false: Failed tasks exist.</li>
+         * <li>true: All requests were successful.</li>
+         * <li>false: Some requests failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

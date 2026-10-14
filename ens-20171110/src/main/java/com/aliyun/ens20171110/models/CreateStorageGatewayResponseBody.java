@@ -13,8 +13,10 @@ public class CreateStorageGatewayResponseBody extends TeaModel {
     /**
      * <p>The success status code.</p>
      * <ul>
-     * <li><strong>PartSuccess</strong>: partially succeeded.</li>
-     * <li><strong>AllSuccess</strong>: all succeeded.</li>
+     * <li><p><strong>PartSuccess</strong>: partially succeeded.</p>
+     * </li>
+     * <li><p><strong>AllSuccess</strong>: all succeeded.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

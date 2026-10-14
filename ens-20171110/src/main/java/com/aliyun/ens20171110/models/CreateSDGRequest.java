@@ -4,36 +4,67 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateSDGRequest extends TeaModel {
+    /**
+     * <p>The billing logic for SDG child disks. This parameter specifies the billing method for the RBD child disks produced by this SDG. This parameter does not apply to standard cloud disks.
+     * Optional parameter values:</p>
+     * <ul>
+     * <li><p>Hour.</p>
+     * </li>
+     * <li><p>Day. This is the default value.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>Parameter description: The longer the cycle, the lower the cost. If the disk is released before the billing cycle ends, a service fee is charged.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Day</p>
+     */
     @NameInMap("BillingCycle")
     public String billingCycle;
 
     /**
      * <p>The description of the SDG.</p>
      * <blockquote>
-     * <p> We recommend that you specify this parameter in details for subsequent queries.</p>
+     * <p>Provide a detailed description for easier future queries.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>Testing SDGs</p>
+     * <p>Test SDG</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The type of the source disk.
+     * Optional parameter values:</p>
+     * <ul>
+     * <li>standard: standard cloud disk. This is the default value.</li>
+     * <li>rbd: RBD disk.</li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>Limits: RBD disk SDGs and standard disk SDGs cannot inherit from each other.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>standard</p>
+     */
     @NameInMap("DiskType")
     public String diskType;
 
     /**
-     * <p>The ID of the SDG from which you want to create an SDG.</p>
+     * <p>The ID of an existing SDG.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>The first time you create an SDG, the <strong>FromSDGId</strong> parameter is empty.</p>
-     * </li>
-     * <li><p>If the value of the <strong>FromSDGId</strong> parameter is invalid or does not correspond to an original disk, an error is reported.</p>
-     * </li>
-     * <li><p>If the value of the <strong>FromSDGId</strong> parameter is not empty, you have created an SDG, and the operation is performed on the existing SDG.</p>
-     * </li>
+     * <li>If you are creating an SDG for the first time, leave <strong>FromSDGId</strong> empty.</li>
+     * <li>If <strong>FromSDGId</strong> is invalid or the corresponding raw cloud disk cannot be found, an error is returned.</li>
+     * <li>If <strong>FromSDGId</strong> is not empty, this indicates that you are operating on an existing SDG rather than creating one for the first time.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>sdg-xxxxx</p>
@@ -42,7 +73,7 @@ public class CreateSDGRequest extends TeaModel {
     public String fromSDGId;
 
     /**
-     * <p>The ID of the AIC instance. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation to query the ID.</p>
+     * <p>The AIC instance ID. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation to obtain the InstanceId value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,6 +83,8 @@ public class CreateSDGRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The SDG sharing ratio parameter. This parameter supports cloud disks with different maximum sharing ratios.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -61,18 +94,16 @@ public class CreateSDGRequest extends TeaModel {
     /**
      * <p>The maximum capacity of the SDG. Unit: GB.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>To save costs, we recommend that you specify this parameter based on your business requirements.</p>
-     * </li>
-     * <li><p>The first time that you create an SDG, the <strong>Size</strong> parameter is required.</p>
-     * </li>
-     * <li><p>When the amount of data increases, you can pass a new <strong>Size</strong> parameter for resizing. If the value of the new <strong>Size</strong> parameter is greater than the value of the old <strong>Size</strong> parameter, the disk size of the SDG is increased to the size that is specified by the new <strong>Size</strong> parameter. If the value of the new <strong>Size</strong> parameter is empty or smaller than that of the old <strong>Size</strong> parameter, no operation is performed.</p>
-     * </li>
+     * <li>To reduce costs, evaluate the required capacity as needed.</li>
+     * <li>If you are creating an SDG for the first time, <strong>Size</strong> is required.</li>
+     * <li>If the data volume increases later, pass a new <strong>Size</strong> value to expand the capacity. If <strong>Size</strong> is not empty and is greater than the original <strong>Size</strong> value of the SDG, the raw cloud disk of the SDG is expanded to the specified <strong>Size</strong>. If <strong>Size</strong> is empty or the specified <strong>Size</strong> is less than the original <strong>Size</strong> value of the SDG, no action is taken.</li>
      * </ul>
+     * </blockquote>
+     * <p>The minimum tested usable value is 150 GB.</p>
      * 
      * <strong>example:</strong>
-     * <p>20</p>
+     * <p>150</p>
      */
     @NameInMap("Size")
     public String size;

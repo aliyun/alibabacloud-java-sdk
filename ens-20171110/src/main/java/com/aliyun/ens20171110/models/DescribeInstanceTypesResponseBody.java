@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceTypesResponseBody extends TeaModel {
     /**
-     * <p>The status code. If the request is successful, 0 is returned. If the request fails, a non-zero error code is returned.</p>
+     * <p>The business code. A value of 0 indicates success. An error code is returned upon failure.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -58,6 +58,15 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @NameInMap("CpuCoreCount")
         public Integer cpuCoreCount;
 
+        @NameInMap("InstanceBandwidthRx")
+        public Long instanceBandwidthRx;
+
+        @NameInMap("InstanceBandwidthTx")
+        public Long instanceBandwidthTx;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
+
         @NameInMap("InstanceTypeId")
         public String instanceTypeId;
 
@@ -78,6 +87,30 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
         public Integer getCpuCoreCount() {
             return this.cpuCoreCount;
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setInstanceBandwidthRx(Long instanceBandwidthRx) {
+            this.instanceBandwidthRx = instanceBandwidthRx;
+            return this;
+        }
+        public Long getInstanceBandwidthRx() {
+            return this.instanceBandwidthRx;
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setInstanceBandwidthTx(Long instanceBandwidthTx) {
+            this.instanceBandwidthTx = instanceBandwidthTx;
+            return this;
+        }
+        public Long getInstanceBandwidthTx() {
+            return this.instanceBandwidthTx;
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
         }
 
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setInstanceTypeId(String instanceTypeId) {

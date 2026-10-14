@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EventRebootInstanceResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the Request.</p>
      * 
      * <strong>example:</strong>
      * <p>125B04C7-3D0D-4245-AF96-14E3758E3F06</p>

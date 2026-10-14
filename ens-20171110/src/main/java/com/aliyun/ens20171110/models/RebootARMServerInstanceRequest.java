@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RebootARMServerInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the server.</p>
+     * <p>The server instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>yourInstance ID</p>

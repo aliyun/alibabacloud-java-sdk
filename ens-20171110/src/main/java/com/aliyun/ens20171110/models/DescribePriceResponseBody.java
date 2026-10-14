@@ -44,8 +44,10 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * <p>The type of currency.</p>
          * <ul>
-         * <li>USD: US dollar</li>
-         * <li>JPY: Japanese Yen</li>
+         * <li><p>USD: US dollar</p>
+         * </li>
+         * <li><p>JPY: Japanese Yen</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

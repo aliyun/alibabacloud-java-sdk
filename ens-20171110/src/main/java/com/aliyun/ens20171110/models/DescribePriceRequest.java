@@ -39,10 +39,14 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The bandwidth metering method of the instance. Valid values:</p>
      * <ul>
-     * <li>BandwidthByDay: Pay by daily peak bandwidth</li>
-     * <li>95BandwidthByMonth: Pay by monthly 95th percentile bandwidth</li>
-     * <li>PayByBandwidth4thMonth: Pay by monthly fourth peak bandwidth</li>
-     * <li>PayByBandwidth: Pay by fixed bandwidth</li>
+     * <li><p>BandwidthByDay: Pay by daily peak bandwidth</p>
+     * </li>
+     * <li><p>95BandwidthByMonth: Pay by monthly 95th percentile bandwidth</p>
+     * </li>
+     * <li><p>PayByBandwidth4thMonth: Pay by monthly fourth peak bandwidth</p>
+     * </li>
+     * <li><p>PayByBandwidth: Pay by fixed bandwidth</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -55,9 +59,12 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The subscription duration of the instance.</p>
      * <ul>
-     * <li>If you leave the PeriodUnit parameter empty, the instance is purchased on a monthly basis. Valid values: Day and Month.</li>
-     * <li>If you set PeriodUnit to Day, you can set Period only to 3.</li>
-     * <li>If you set PeriodUnit to Month, you can set Period to a number from 1 to 9, or set Period to 12.</li>
+     * <li><p>If you leave the PeriodUnit parameter empty, the instance is purchased on a monthly basis. Valid values: Day and Month.</p>
+     * </li>
+     * <li><p>If you set PeriodUnit to Day, you can set Period only to 3.</p>
+     * </li>
+     * <li><p>If you set PeriodUnit to Month, you can set Period to a number from 1 to 9, or set Period to 12.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -70,8 +77,10 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The billing cycle of the ENS instance. Valid values:</p>
      * <ul>
-     * <li>Month (default):</li>
-     * <li>Day</li>
+     * <li><p>Month (default):</p>
+     * </li>
+     * <li><p>Day</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -7,9 +7,12 @@ public class EventMigrateInstanceRequest extends TeaModel {
     /**
      * <p>The data migration policy. Valid values:</p>
      * <ul>
-     * <li>abandon: does not migrate data. This is the default value.</li>
-     * <li>force_transfer: forcibly migrates data.</li>
-     * <li>try_transfer: Migrate data as much as possible.</li>
+     * <li><p><code>abandon</code>: Does not migrate data. This is the default value.</p>
+     * </li>
+     * <li><p><code>force_transfer</code>: Forces data migration.</p>
+     * </li>
+     * <li><p><code>try_transfer</code>: Attempts to migrate data.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,8 +34,10 @@ public class EventMigrateInstanceRequest extends TeaModel {
     /**
      * <p>The type of the O\&amp;M task. Valid values:</p>
      * <ul>
-     * <li>immediate</li>
-     * <li>scheduled</li>
+     * <li><p><code>immediate</code>: Executes the task immediately.</p>
+     * </li>
+     * <li><p><code>scheduled</code>: Executes the task at the specified time.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -43,9 +48,9 @@ public class EventMigrateInstanceRequest extends TeaModel {
     public String opsType;
 
     /**
-     * <p>The password of the instance. This parameter is optional. If you do not specify this parameter, a random password is used.</p>
-     * <p>The password must be 8 to 30 characters in length. The password must contain uppercase letters, lowercase letters, digits, and special characters.</p>
-     * <p>Note that you cannot enter a password for scheduled execution.</p>
+     * <p>The instance password. This parameter is optional. If you do not specify a password, the system generates a random one.</p>
+     * <p>The password must be 8 to 30 characters long and contain uppercase letters, lowercase letters, and digits.</p>
+     * <p>Note: This parameter is not supported for scheduled execution.</p>
      * 
      * <strong>example:</strong>
      * <p>AAaa1234</p>
@@ -54,7 +59,7 @@ public class EventMigrateInstanceRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>The execution time of the reservation. The timestamp is measured in milliseconds. If the OpsType parameter is set to scheduled, this parameter is required.</p>
+     * <p>The scheduled execution time. This must be a Unix timestamp in milliseconds. This parameter is required when <code>OpsType</code> is set to <code>scheduled</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>1742452232000</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteBucketLifecycleRequest extends TeaModel {
     /**
-     * <p>The name of the bucket.</p>
+     * <p>The bucket name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteBucketLifecycleRequest extends TeaModel {
     public String bucketName;
 
     /**
-     * <p>The ID of the rule. If this parameter is not specified, all rules are removed.</p>
+     * <p>The rule ID. If this parameter is not specified, all rules are deleted.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

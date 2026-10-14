@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaModel {
     /**
-     * <p>The port used by the backend ELB server of the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>The port used by the backend servers. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>8080</p>
@@ -14,7 +14,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     public Integer backendServerPort;
 
     /**
-     * <p>The peak bandwidth of the Edge Load Balancer (ELB) instance. The default value is -1, which indicates that the bandwidth is not limited.</p>
+     * <p>The peak bandwidth of the load balancer. A value of -1 indicates that no rate limit is applied.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -23,7 +23,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     public Integer bandwidth;
 
     /**
-     * <p>The name of the listener.</p>
+     * <p>The listener name.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -32,10 +32,12 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     public String description;
 
     /**
-     * <p>Indicates whether EIP pass-through is enabled. Valid values:</p>
+     * <p>Specifies whether to enable EIP passthrough. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong></li>
-     * <li><strong>off</strong> (default)</li>
+     * <li><p><strong>on</strong>: Enabled.</p>
+     * </li>
+     * <li><p><strong>off</strong> (default): Disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +47,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     public String eipTransmit;
 
     /**
-     * <p>The timeout period of a connection. Valid values: <strong>10</strong> to <strong>900</strong>. Unit: seconds.</p>
+     * <p>The connection timeout period. Valid values: <strong>10</strong> to <strong>900</strong>. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -54,10 +56,12 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     public Integer establishedTimeout;
 
     /**
-     * <p>Specifies whether to enable the health check feature. Valid values:</p>
+     * <p>Specifies whether to enable health checks. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong></li>
-     * <li><strong>off</strong></li>
+     * <li><p><strong>on</strong>: Enabled.</p>
+     * </li>
+     * <li><p><strong>off</strong>: Disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,7 +71,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     public String healthCheck;
 
     /**
-     * <p>The port that is used for health checks. Valid values: <strong>1</strong> to <strong>65535</strong>. If you leave this parameter empty, the port specified by BackendServerPort is used for health checks.</p>
+     * <p>The port used for health checks. Valid values: <strong>1</strong> to <strong>65535</strong>. If you do not specify this parameter, the value of <code>BackendServerPort</code> is used.</p>
      * 
      * <strong>example:</strong>
      * <p>8000</p>
@@ -76,20 +80,23 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     public Integer healthCheckConnectPort;
 
     /**
-     * <p>The timeout period for a health check response. If a backend server does not respond within the specified timeout period, the server fails the health check.</p>
+     * <p>The timeout period for a health check response. If a backend ENS instance does not respond within the specified timeout period, the health check fails.</p>
      * <ul>
-     * <li>Default value: 5.</li>
-     * <li>Valid values: <strong>1</strong> to <strong>300</strong>.</li>
-     * <li>Unit: seconds.</li>
+     * <li><p>Default value: 5.</p>
+     * </li>
+     * <li><p>Valid values: <strong>1</strong> to <strong>300</strong>.</p>
+     * </li>
+     * <li><p>Unit: seconds.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>This parameter takes effect only if the HealthCheck parameter is set to on.</p>
+     * <li><p>This parameter takes effect only when <code>HealthCheck</code> is set to <code>on</code>.</p>
      * </li>
-     * <li><p>If the value of the HealthCheckTimeout property is smaller than the value of the HealthCheckInterval property, the timeout period specified by the HealthCheckTimeout property becomes invalid and the value of the HealthCheckInterval property is used as the timeout period.</p>
+     * <li><p>If the value of <code>HealthCheckConnectTimeout</code> is less than the value of <code>HealthCheckInterval</code>, the value of <code>HealthCheckInterval</code> is used as the timeout period.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -98,7 +105,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     public Integer healthCheckConnectTimeout;
 
     /**
-     * <p>The response string for UDP listener health checks. The string can be up to 64 characters in length and can contain only letters and digits.</p>
+     * <p>The response string for UDP health checks. The string can contain only letters and digits and can be up to 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>
@@ -107,9 +114,9 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     public String healthCheckExp;
 
     /**
-     * <p>The interval at which health checks are performed. Valid values: <strong>1</strong> to <strong>50</strong>. Unit: seconds.</p>
+     * <p>The interval between health checks. Valid values: <strong>1</strong> to <strong>50</strong>. Unit: seconds.</p>
      * <blockquote>
-     * <p> This parameter takes effect only if you set HealthCheck to on.</p>
+     * <p>This parameter takes effect only when <code>HealthCheck</code> is set to <code>on</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -119,7 +126,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     public Integer healthCheckInterval;
 
     /**
-     * <p>The request string for UDP listener health checks. The string can be up to 64 characters in length and can contain only letters and digits.</p>
+     * <p>The request string for UDP health checks. The string can contain only letters and digits and can be up to 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>hello</p>
@@ -128,9 +135,9 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     public String healthCheckReq;
 
     /**
-     * <p>The number of consecutive successful health checks that must occur before an unhealthy and inaccessible backend server is declared healthy and accessible. Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+     * <p>The number of consecutive successful health checks that must occur before a backend server can be declared healthy. Valid values: <strong>2</strong> to <strong>10</strong>.</p>
      * <blockquote>
-     * <p> This parameter takes effect only if you set HealthCheck to on.</p>
+     * <p>This parameter takes effect only when <code>HealthCheck</code> is set to <code>on</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -149,7 +156,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     public Integer listenerPort;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5D7597CF-1630-54EC-A945-624A33F2E7E8</p>
@@ -158,14 +165,22 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     public String requestId;
 
     /**
-     * <p>The routing algorithm. Valid values:</p>
+     * <p>The scheduling algorithm. Valid values:</p>
      * <ul>
-     * <li><strong>wrr</strong>: Backend servers with higher weights receive more requests than those with lower weights.</li>
-     * <li><strong>wlc</strong>: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections to a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.</li>
-     * <li><strong>rr</strong>: Requests are distributed to backend servers in sequence.</li>
-     * <li><strong>sch</strong>: consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</li>
-     * <li><strong>qch</strong>: consistent hashing that is based on QUIC connection IDs. Requests that contain the same QUIC connection ID are distributed to the same backend server.</li>
-     * <li><strong>iqch</strong>: consistent hashing that is based on specific three bytes of the iQUIC CIDs. Requests whose second to fourth bytes are the same are distributed to the same backend server.</li>
+     * <li><p><strong>wrr</strong> (Weighted Round Robin): Backend servers with higher weights receive a larger proportion of requests.</p>
+     * </li>
+     * <li><p><strong>wlc</strong> (Weighted Least Connections): Requests are distributed based on both the weight and the current connection count of each backend server. If backend servers have the same weight, the server with the fewest connections receives more new requests.</p>
+     * </li>
+     * <li><p><strong>rr</strong> (Round Robin): Requests are distributed to backend servers sequentially.</p>
+     * </li>
+     * <li><p><strong>sch</strong> (Source IP Hash): Routes requests from the same source IP address to the same backend server by using a consistent hash of the source IP address.</p>
+     * </li>
+     * <li><p><strong>tch</strong> (4-tuple Hash): Routes packets from the same flow to the same backend server by using a consistent hash of the 4-tuple (source IP address, destination IP address, source port, and destination port).</p>
+     * </li>
+     * <li><p><strong>qch</strong> (QUIC Connection ID Hash): Uses a consistent hashing algorithm on the QUIC Connection ID to ensure that requests with the same connection ID are always routed to the same backend server.</p>
+     * </li>
+     * <li><p><strong>iqch</strong> (iQUIC CID Hash): Uses a consistent hashing algorithm on bytes 2, 3, and 4 of the iQUIC CID. Requests where these three bytes are the same are routed to the same backend server.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -177,11 +192,16 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     /**
      * <p>The status of the listener. Valid values:</p>
      * <ul>
-     * <li><strong>Running</strong></li>
-     * <li><strong>Stopped</strong></li>
-     * <li><strong>Starting</strong></li>
-     * <li><strong>Configuring</strong></li>
-     * <li><strong>Stopping</strong></li>
+     * <li><p><strong>Running</strong>: The listener is running.</p>
+     * </li>
+     * <li><p><strong>Stopped</strong>: The listener is stopped.</p>
+     * </li>
+     * <li><p><strong>Starting</strong>: The listener is starting.</p>
+     * </li>
+     * <li><p><strong>Configuring</strong>: The listener is being configured.</p>
+     * </li>
+     * <li><p><strong>Stopping</strong>: The listener is being stopped.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -191,9 +211,9 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     public String status;
 
     /**
-     * <p>The number of consecutive failed health checks that must occur before a healthy and accessible backend server is declared unhealthy and inaccessible. Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+     * <p>The number of consecutive failed health checks that must occur before a backend server can be declared unhealthy. Valid values: <strong>2</strong> to <strong>10</strong>.</p>
      * <blockquote>
-     * <p> This parameter takes effect only if you set HealthCheck to on.</p>
+     * <p>This parameter takes effect only when <code>HealthCheck</code> is set to <code>on</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

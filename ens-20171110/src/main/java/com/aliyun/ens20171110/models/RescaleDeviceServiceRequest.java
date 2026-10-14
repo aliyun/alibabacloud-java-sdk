@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class RescaleDeviceServiceRequest extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The application ID.</p>
+     * <p>This parameter is required. If you do not specify this parameter, the service returns error code 100001. You can call ListApplications to obtain the application ID. To create an application, call CreateApplication first.</p>
      * 
      * <strong>example:</strong>
      * <p>7aedc50b-b1cb-4a7c-9e3d-4cf3c9ee55a4</p>
@@ -14,7 +15,7 @@ public class RescaleDeviceServiceRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The ID of the image.</p>
+     * <p>The image ID.</p>
      * 
      * <strong>example:</strong>
      * <p>m-5rynw9g1ow1e928lb83bqmbnf</p>
@@ -23,10 +24,12 @@ public class RescaleDeviceServiceRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The type of the network. The value must be of the enumerated data type. Valid values:</p>
+     * <p>The network type. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong> (default): Internet</li>
-     * <li><strong>2</strong>: internal network</li>
+     * <li><p><strong>1</strong> (default): Internet</p>
+     * </li>
+     * <li><p><strong>2</strong>: internal network</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +39,7 @@ public class RescaleDeviceServiceRequest extends TeaModel {
     public Integer ipType;
 
     /**
-     * <p>The region level of the scale-out. Set the value to RegionId. RegionId specifies that resource scale-out is performed based on the ID of the edge node.</p>
+     * <p>The region level for scaling out resources. Valid values: RegionId (specifies an edge node ID).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +49,7 @@ public class RescaleDeviceServiceRequest extends TeaModel {
     public String rescaleLevel;
 
     /**
-     * <p>The scaling operation. Set the value to Add to add new resources.</p>
+     * <p>The resource scaling method. Valid values: Add (provisions new resources).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,7 +59,7 @@ public class RescaleDeviceServiceRequest extends TeaModel {
     public String rescaleType;
 
     /**
-     * <p>The information about the resource specification template. The value must be a JSON string.</p>
+     * <p>The resource specification template information. The value is a string in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;imageId\&quot;:\&quot;m-5s4z4c10avgwvwtn33gl2vgob\&quot;,\&quot;ipType\&quot;:2,\&quot;specName\&quot;:\&quot;ens.pfb-c3m7.medium\&quot;}</p>
@@ -65,7 +68,7 @@ public class RescaleDeviceServiceRequest extends TeaModel {
     public String resourceInfo;
 
     /**
-     * <p>The required resources. The value must be a JSON string.</p>
+     * <p>The region requirements for scaling out resources. The value is a string in JSON array format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,7 +78,7 @@ public class RescaleDeviceServiceRequest extends TeaModel {
     public String resourceSelector;
 
     /**
-     * <p>The resource specification.</p>
+     * <p>The resource specification name.</p>
      * 
      * <strong>example:</strong>
      * <p>ens.a6e.large</p>
@@ -84,7 +87,7 @@ public class RescaleDeviceServiceRequest extends TeaModel {
     public String resourceSpec;
 
     /**
-     * <p>The ID of the service.</p>
+     * <p>The service ID.</p>
      * 
      * <strong>example:</strong>
      * <p>service-01c6dd6e93f040698566</p>
@@ -93,7 +96,7 @@ public class RescaleDeviceServiceRequest extends TeaModel {
     public String serviceId;
 
     /**
-     * <p>The timeout period for asynchronous scale-out. Unit: seconds. Default value: 300.</p>
+     * <p>The timeout period for asynchronous resource scaling, in seconds. Default value: 300.</p>
      * 
      * <strong>example:</strong>
      * <p>1800</p>

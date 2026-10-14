@@ -19,7 +19,7 @@ public class AddSnatIpForSnatEntryRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>219.152.82.144</p>
+     * <p>219.152.XX.XX</p>
      */
     @NameInMap("SnatIp")
     public String snatIp;

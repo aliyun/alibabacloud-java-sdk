@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteImageResponseBody extends TeaModel {
     /**
-     * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
+     * <p>The business code. The value 0 is returned for success.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,7 +14,7 @@ public class DeleteImageResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0D94920B-0349-5097-A57F-31876405F2E5</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMountTargetsRequest extends TeaModel {
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeMountTargetsRequest extends TeaModel {
     public String ensRegionId;
 
     /**
-     * <p>The ID of the file system.</p>
+     * <p>The file system ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DescribeMountTargetsRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The name of the mount target.</p>
+     * <p>The mount target name.</p>
      * 
      * <strong>example:</strong>
      * <p>TestMountPath</p>
@@ -34,7 +34,7 @@ public class DescribeMountTargetsRequest extends TeaModel {
     public String mountTargetName;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1</p>
+     * <p>The page number, starting from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -43,7 +43,7 @@ public class DescribeMountTargetsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page. Maximum value: 100. Default value: 10.</p>
+     * <p>The number of rows per page, with a maximum value of 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

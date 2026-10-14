@@ -8,7 +8,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
     public DescribeDataDistResultResponseBodyDistResults distResults;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number for the paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page for the paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -26,7 +26,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>50373E71-7710-4620-8AAB-133CCE49451C</p>
@@ -35,7 +35,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries in the dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>49</p>

@@ -9,7 +9,7 @@ public class ReinitInstanceRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>m-5wn1dhz5syoo9b48f440ntvad</p>
+     * <p>m-5wn1dh*******b48f440ntvad</p>
      */
     @NameInMap("ImageId")
     public String imageId;
@@ -19,7 +19,7 @@ public class ReinitInstanceRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>i-5vn4n3y4laeb2ii9zxxltlvzi</p>
+     * <p>i-5vn4n3y4laeb*******ltlvzi</p>
      * 
      * <strong>if can be null:</strong>
      * <p>false</p>
@@ -32,7 +32,7 @@ public class ReinitInstanceRequest extends TeaModel {
      * <p>It must be 8 to 30 characters in length. It must include at least three of the following characters types: uppercase letters, lowercase letters, digits, and special characters. The following special character are supported: <code>()\\&quot;~! @#$%^&amp;*-_+={}[]:;\\&quot;&lt;&gt;,.?/</code></p>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>Example123@</p>
      */
     @NameInMap("Password")
     public String password;

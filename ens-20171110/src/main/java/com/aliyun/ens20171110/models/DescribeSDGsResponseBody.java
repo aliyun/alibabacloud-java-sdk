@@ -14,7 +14,7 @@ public class DescribeSDGsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the SDGs.</p>
+     * <p>The list of SDG information.</p>
      */
     @NameInMap("SDGs")
     public java.util.List<DescribeSDGsResponseBodySDGs> SDGs;
@@ -42,7 +42,7 @@ public class DescribeSDGsResponseBody extends TeaModel {
 
     public static class DescribeSDGsResponseBodySDGsAvaliableRegionIds extends TeaModel {
         /**
-         * <p>The time when the SDG was created on the node.</p>
+         * <p>The creation time of the SDG in the edge zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-02-27 15:13:26</p>
@@ -51,7 +51,7 @@ public class DescribeSDGsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The ID of the edge node.</p>
+         * <p>The edge zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-26</p>
@@ -60,7 +60,7 @@ public class DescribeSDGsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the snapshot.</p>
+         * <p>The snapshot ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mock-clone_snapshot_id</p>
@@ -69,13 +69,13 @@ public class DescribeSDGsResponseBody extends TeaModel {
         public String snapshotId;
 
         /**
-         * <p>The status of the SDG on the node. Valid values:</p>
+         * <p>The status of the SDG in the edge zone. Valid values:</p>
          * <ul>
-         * <li><strong>sdg_making</strong></li>
-         * <li><strong>sdg_saving</strong></li>
-         * <li><strong>sdg_copying</strong></li>
-         * <li><strong>failed</strong></li>
-         * <li><strong>success</strong></li>
+         * <li><strong>sdg_making</strong>: Being created.</li>
+         * <li><strong>sdg_saving</strong>: Being saved.</li>
+         * <li><strong>sdg_copying</strong>: Being synchronized across edge zones.</li>
+         * <li><strong>failed</strong>: Creation failed.</li>
+         * <li><strong>success</strong>: Creation succeeded.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,10 +134,10 @@ public class DescribeSDGsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The deployment type of the SDG. Valid values:</p>
+         * <p>The SDG deployment type. Valid values:</p>
          * <ul>
-         * <li>common: common deployment.</li>
-         * <li>overlay: read/write splitting deployment.</li>
+         * <li>common: standard deployment</li>
+         * <li>overlay: read/write splitting deployment</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,7 +147,7 @@ public class DescribeSDGsResponseBody extends TeaModel {
         public String deploymentType;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The AIC instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>aic-5x20dyeos****</p>
@@ -158,9 +158,9 @@ public class DescribeSDGsResponseBody extends TeaModel {
         /**
          * <p>The deployment status. Valid values:</p>
          * <ul>
-         * <li><strong>sdg_deploying</strong></li>
-         * <li><strong>failed</strong></li>
-         * <li><strong>success</strong></li>
+         * <li><strong>sdg_deploying</strong>: Being deployed.</li>
+         * <li><strong>failed</strong>: Deployment failed.</li>
+         * <li><strong>success</strong>: Deployment succeeded.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,26 +210,40 @@ public class DescribeSDGsResponseBody extends TeaModel {
 
     public static class DescribeSDGsResponseBodySDGs extends TeaModel {
         /**
-         * <p>The IDs of available edge nodes.</p>
+         * <p>The list of available edge zones.</p>
          */
         @NameInMap("AvaliableRegionIds")
         public java.util.List<DescribeSDGsResponseBodySDGsAvaliableRegionIds> avaliableRegionIds;
 
+        /**
+         * <p>The billing cycle of the shared disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hour</p>
+         */
         @NameInMap("BillingCycle")
         public String billingCycle;
 
         /**
+         * <p>The billing type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Open</p>
          */
         @NameInMap("BillingType")
         public String billingType;
 
+        /**
+         * <p>The disk type of the source disk used to create the SDG.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
+         */
         @NameInMap("CreationDiskType")
         public String creationDiskType;
 
         /**
-         * <p>The ID of the instance on which the SDG is created.</p>
+         * <p>The instance ID of the instance used to create the SDG.</p>
          * 
          * <strong>example:</strong>
          * <p>aic-5x20dyeos****</p>
@@ -238,7 +252,7 @@ public class DescribeSDGsResponseBody extends TeaModel {
         public String creationInstanceId;
 
         /**
-         * <p>The ID of the node on which the SDG is created.</p>
+         * <p>The edge zone ID where the SDG was created.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-26</p>
@@ -256,7 +270,7 @@ public class DescribeSDGsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The deployment information.</p>
+         * <p>The list of deployment status information.</p>
          */
         @NameInMap("DeployedInstanceIds")
         public java.util.List<DescribeSDGsResponseBodySDGsDeployedInstanceIds> deployedInstanceIds;
@@ -265,13 +279,13 @@ public class DescribeSDGsResponseBody extends TeaModel {
          * <p>The description of the SDG.</p>
          * 
          * <strong>example:</strong>
-         * <p>Testing SDGs</p>
+         * <p>Test SDG</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the source SDG from which you want to create an SDG. The value of this parameter is the value of the <strong>FromSDGId</strong> parameter that you need to specify when you call the <a href="https://help.aliyun.com/document_detail/608128.html">CreateSDG</a> operation.</p>
+         * <p>The ID of the source SDG used for incremental creation. This is the <strong>FromSDGId</strong> parameter passed when calling <a href="https://help.aliyun.com/document_detail/608128.html">CreateSDG</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>sdg-xxxxx</p>
@@ -280,6 +294,8 @@ public class DescribeSDGsResponseBody extends TeaModel {
         public String parentSDGId;
 
         /**
+         * <p>The sharing ratio of the SDG.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -287,7 +303,7 @@ public class DescribeSDGsResponseBody extends TeaModel {
         public Long performanceLevel;
 
         /**
-         * <p>The ID of the SDG.</p>
+         * <p>The SDG ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sdg-30e1fdba7196bc****</p>
@@ -305,12 +321,12 @@ public class DescribeSDGsResponseBody extends TeaModel {
         public Long size;
 
         /**
-         * <p>The status of the SDG creation. Valid values:</p>
+         * <p>The creation status of the SDG. Valid values:</p>
          * <ul>
-         * <li><strong>sdg_making</strong></li>
-         * <li><strong>sdg_saving</strong></li>
-         * <li><strong>failed</strong></li>
-         * <li><strong>success</strong></li>
+         * <li><strong>sdg_making</strong>: Being created.</li>
+         * <li><strong>sdg_saving</strong>: Being saved.</li>
+         * <li><strong>failed</strong>: Creation failed.</li>
+         * <li><strong>success</strong>: Creation succeeded.</li>
          * </ul>
          * 
          * <strong>example:</strong>

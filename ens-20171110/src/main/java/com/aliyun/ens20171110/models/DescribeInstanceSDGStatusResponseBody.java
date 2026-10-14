@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
     /**
-     * <p>The deployment information of the SDGs.</p>
+     * <p>The list of SDG deployment information.</p>
      */
     @NameInMap("DeploymentStatus")
     public java.util.List<DescribeInstanceSDGStatusResponseBodyDeploymentStatus> deploymentStatus;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1</p>
+     * <p>The page number. Starting value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * <p>The Settings for the number of entries per page for paging in a paged query. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of queried deployment records.</p>
+     * <p>The total number of deployment records returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -92,20 +92,44 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceSDGStatusResponseBodyDeploymentStatus extends TeaModel {
+        /**
+         * <p>The size of the writable layer of the block device. Unit: GiB. A value of 0 indicates that this feature is disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("BlockRwSplitSize")
         public Integer blockRwSplitSize;
 
+        /**
+         * <p>The cache size. Unit: GiB. A value of 0 indicates that this feature is disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("CacheSize")
         public Integer cacheSize;
 
+        /**
+         * <p>The disk access protocol type of the mounted shared cloud disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iscsi</p>
+         */
         @NameInMap("DiskAccessProtocol")
         public String diskAccessProtocol;
 
+        /**
+         * <p>The disk type of the mounted shared cloud disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
+         */
         @NameInMap("DiskType")
         public String diskType;
 
         /**
-         * <p>The ID of the edge node.</p>
+         * <p>The edge zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-guangzhou-26</p>
@@ -114,7 +138,7 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
         public String ensRegionId;
 
         /**
-         * <p>The ID of the AIC instance.</p>
+         * <p>The AIC instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>aic-xxxx</p>
@@ -132,7 +156,7 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
         public String mountType;
 
         /**
-         * <p>Deployment Phase</p>
+         * <p>The deployment phase of the SDG.</p>
          * 
          * <strong>example:</strong>
          * <p>attach</p>
@@ -159,7 +183,7 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the status was last updated.</p>
+         * <p>The latest status update time. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-02-17T02:44:31Z</p>

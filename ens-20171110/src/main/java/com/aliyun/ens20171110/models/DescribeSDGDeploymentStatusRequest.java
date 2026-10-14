@@ -13,17 +13,20 @@ public class DescribeSDGDeploymentStatusRequest extends TeaModel {
     @NameInMap("DeploymentType")
     public String deploymentType;
 
+    /**
+     * <p>The list of disk IDs.</p>
+     */
     @NameInMap("DiskIds")
     public java.util.List<String> diskIds;
 
     /**
-     * <p>IDs of Android in Container (AIC) instances.</p>
+     * <p>The list of AIC instance IDs.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Pages start from <strong>1</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +35,7 @@ public class DescribeSDGDeploymentStatusRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,7 +44,7 @@ public class DescribeSDGDeploymentStatusRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The IDs of the nodes.</p>
+     * <p>The list of region IDs.</p>
      */
     @NameInMap("RegionIds")
     public java.util.List<String> regionIds;

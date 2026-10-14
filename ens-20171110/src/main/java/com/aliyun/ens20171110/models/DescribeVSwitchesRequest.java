@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeVSwitchesRequest extends TeaModel {
+    @NameInMap("EnableIpv6")
+    public Boolean enableIpv6;
+
     /**
      * <p>The ID of the ENS node.</p>
      * 
@@ -14,13 +17,13 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public String ensRegionId;
 
     /**
-     * <p>The IDs of edge nodes. You can specify 1 to 100 IDs.</p>
+     * <p>The IDs of the ENS nodes. You can specify 1 to 100 IDs.</p>
      */
     @NameInMap("EnsRegionIds")
     public java.util.List<String> ensRegionIds;
 
     /**
-     * <p>The ID of the VPC to which the vSwitch belongs.</p>
+     * <p>The ID of the VPC to which the VSwitch belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-25cdvfeq58pl****</p>
@@ -47,7 +50,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <p>The ID of the VSwitch.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-5m9xhlq8oh***</p>
@@ -56,13 +59,13 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The IDs of vSwitches. You can specify 1 to 100 IDs.</p>
+     * <p>The IDs of the vSwitches. You can specify 1 to 100 IDs.</p>
      */
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;
 
     /**
-     * <p>The name of the vSwitch.</p>
+     * <p>The name of the VSwitch.</p>
      * 
      * <strong>example:</strong>
      * <p>testVSwitchName</p>
@@ -73,6 +76,14 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public static DescribeVSwitchesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVSwitchesRequest self = new DescribeVSwitchesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVSwitchesRequest setEnableIpv6(Boolean enableIpv6) {
+        this.enableIpv6 = enableIpv6;
+        return this;
+    }
+    public Boolean getEnableIpv6() {
+        return this.enableIpv6;
     }
 
     public DescribeVSwitchesRequest setEnsRegionId(String ensRegionId) {

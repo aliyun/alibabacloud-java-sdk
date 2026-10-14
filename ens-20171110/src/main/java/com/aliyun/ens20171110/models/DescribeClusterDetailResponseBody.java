@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterDetailResponseBody extends TeaModel {
     /**
+     * <p>The user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1574790082031102</p>
      */
@@ -12,6 +14,8 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String aliUid;
 
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>eck-11111111</p>
      */
@@ -19,6 +23,8 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The cluster kubeconfig.</p>
+     * 
      * <strong>example:</strong>
      * <p>apiVersion: v1
      * clusters:</p>
@@ -46,16 +52,33 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public Object config;
 
     /**
+     * <p>The CIDR block for pods.</p>
+     * 
      * <strong>example:</strong>
      * <p>172.20.0.0/16</p>
      */
     @NameInMap("ContainerCidr")
     public String containerCidr;
 
+    /**
+     * <p>The control plane configuration.</p>
+     */
     @NameInMap("ControlPlaneConfig")
     public DescribeClusterDetailResponseBodyControlPlaneConfig controlPlaneConfig;
 
+    @NameInMap("ControlPlaneMeta")
+    public DescribeClusterDetailResponseBodyControlPlaneMeta controlPlaneMeta;
+
     /**
+     * <strong>example:</strong>
+     * <p>2025-04-07T09:57:26+08:00</p>
+     */
+    @NameInMap("Created")
+    public String created;
+
+    /**
+     * <p>The ENS edge zone ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-fuzhou-23</p>
      */
@@ -64,12 +87,23 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>unicom</p>
+     */
+    @NameInMap("Isp")
+    public String isp;
+
+    /**
+     * <p>The authentication token for cluster access.</p>
+     * 
+     * <strong>example:</strong>
      * <p>xxxx.yyy</p>
      */
     @NameInMap("JoinToken")
     public String joinToken;
 
     /**
+     * <p>The cluster version, which is consistent with the Kubernetes community baseline version. We recommend that you select the latest version. If you do not specify this parameter, the latest version is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.32.1.aliyunedge.1</p>
      */
@@ -77,6 +111,8 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String kubernetesVersion;
 
     /**
+     * <p>The CLB instance ID of the API server.</p>
+     * 
      * <strong>example:</strong>
      * <p>lb-5snthcyu1x10g7tywj7iu****</p>
      */
@@ -84,16 +120,36 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String loadBalancerId;
 
     /**
+     * <p>The cluster name.</p>
+     * 
      * <strong>example:</strong>
      * <p>your-cluster-name</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>nat-5tawjw5j7sgd2deujxuk0****</p>
+     */
+    @NameInMap("NatGatewayId")
+    public String natGatewayId;
+
+    @NameInMap("NodeCount")
+    public DescribeClusterDetailResponseBodyNodeCount nodeCount;
+
+    @NameInMap("PodStatus")
+    public DescribeClusterDetailResponseBodyPodStatus podStatus;
+
+    /**
+     * <p>The vSwitch IDs for pods.</p>
+     */
     @NameInMap("PodVswitchIds")
     public java.util.List<String> podVswitchIds;
 
     /**
+     * <p>Indicates whether public network access is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -110,6 +166,8 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The CIDR block for services.</p>
+     * 
      * <strong>example:</strong>
      * <p>172.19.0.0/20</p>
      */
@@ -117,6 +175,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String serviceCidr;
 
     /**
+     * <p>The cluster status. Valid values:</p>
+     * <ul>
+     * <li><strong>initial</strong>: Being created.</li>
+     * <li><strong>failed</strong>: Creation failed.</li>
+     * <li><strong>running</strong>: Running.</li>
+     * <li><strong>deleting</strong>: Being released.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>running</p>
      */
@@ -124,12 +190,17 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String state;
 
     /**
+     * <p>The VPC used by the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>n-xxxxxxxxx</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>The vSwitch IDs of the cluster nodes.</p>
+     */
     @NameInMap("VswitchIds")
     public java.util.List<String> vswitchIds;
 
@@ -178,12 +249,36 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         return this.controlPlaneConfig;
     }
 
+    public DescribeClusterDetailResponseBody setControlPlaneMeta(DescribeClusterDetailResponseBodyControlPlaneMeta controlPlaneMeta) {
+        this.controlPlaneMeta = controlPlaneMeta;
+        return this;
+    }
+    public DescribeClusterDetailResponseBodyControlPlaneMeta getControlPlaneMeta() {
+        return this.controlPlaneMeta;
+    }
+
+    public DescribeClusterDetailResponseBody setCreated(String created) {
+        this.created = created;
+        return this;
+    }
+    public String getCreated() {
+        return this.created;
+    }
+
     public DescribeClusterDetailResponseBody setEnsRegionId(String ensRegionId) {
         this.ensRegionId = ensRegionId;
         return this;
     }
     public String getEnsRegionId() {
         return this.ensRegionId;
+    }
+
+    public DescribeClusterDetailResponseBody setIsp(String isp) {
+        this.isp = isp;
+        return this;
+    }
+    public String getIsp() {
+        return this.isp;
     }
 
     public DescribeClusterDetailResponseBody setJoinToken(String joinToken) {
@@ -216,6 +311,30 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public DescribeClusterDetailResponseBody setNatGatewayId(String natGatewayId) {
+        this.natGatewayId = natGatewayId;
+        return this;
+    }
+    public String getNatGatewayId() {
+        return this.natGatewayId;
+    }
+
+    public DescribeClusterDetailResponseBody setNodeCount(DescribeClusterDetailResponseBodyNodeCount nodeCount) {
+        this.nodeCount = nodeCount;
+        return this;
+    }
+    public DescribeClusterDetailResponseBodyNodeCount getNodeCount() {
+        return this.nodeCount;
+    }
+
+    public DescribeClusterDetailResponseBody setPodStatus(DescribeClusterDetailResponseBodyPodStatus podStatus) {
+        this.podStatus = podStatus;
+        return this;
+    }
+    public DescribeClusterDetailResponseBodyPodStatus getPodStatus() {
+        return this.podStatus;
     }
 
     public DescribeClusterDetailResponseBody setPodVswitchIds(java.util.List<String> podVswitchIds) {
@@ -276,6 +395,8 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
 
     public static class DescribeClusterDetailResponseBodyControlPlaneConfig extends TeaModel {
         /**
+         * <p>The container runtime type.</p>
+         * 
          * <strong>example:</strong>
          * <p>containerd</p>
          */
@@ -283,6 +404,8 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public String containerRuntime;
 
         /**
+         * <p>The image ID of the control plane virtual machine.</p>
+         * 
          * <strong>example:</strong>
          * <p>m-5ul335umat4e2y9ynwi84p3f9</p>
          */
@@ -290,6 +413,8 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public String imageId;
 
         /**
+         * <p>The node instance type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ens.esk.sn1.medium</p>
          */
@@ -297,6 +422,8 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public String instanceSpec;
 
         /**
+         * <p>The node service port range.</p>
+         * 
          * <strong>example:</strong>
          * <p>30000-32767</p>
          */
@@ -304,6 +431,8 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public String nodePortRange;
 
         /**
+         * <p>The number of control plane nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -311,6 +440,8 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public Long size;
 
         /**
+         * <p>The system cloud disk type of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloud_efficiency</p>
          */
@@ -318,6 +449,8 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public String systemDiskCategory;
 
         /**
+         * <p>The system cloud disk size of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>120</p>
          */
@@ -383,6 +516,203 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
         public Long getSystemDiskSize() {
             return this.systemDiskSize;
+        }
+
+    }
+
+    public static class DescribeClusterDetailResponseBodyControlPlaneMetaMasterInstances extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>i-573utia8wbecrbgsm6o8fx132</p>
+         */
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>10.10.0.2</p>
+         */
+        @NameInMap("Ip")
+        public String ip;
+
+        /**
+         * <strong>example:</strong>
+         * <p>i-573utia8wbecrbgsm6o8fx132</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        public static DescribeClusterDetailResponseBodyControlPlaneMetaMasterInstances build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterDetailResponseBodyControlPlaneMetaMasterInstances self = new DescribeClusterDetailResponseBodyControlPlaneMetaMasterInstances();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneMetaMasterInstances setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneMetaMasterInstances setIp(String ip) {
+            this.ip = ip;
+            return this;
+        }
+        public String getIp() {
+            return this.ip;
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneMetaMasterInstances setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class DescribeClusterDetailResponseBodyControlPlaneMetaMasterUrl extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://10.0.0.1:6443">https://10.0.0.1:6443</a></p>
+         */
+        @NameInMap("PrivateUrl")
+        public String privateUrl;
+
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://0.0.0.0:6443">https://0.0.0.0:6443</a></p>
+         */
+        @NameInMap("PublicUrl")
+        public String publicUrl;
+
+        public static DescribeClusterDetailResponseBodyControlPlaneMetaMasterUrl build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterDetailResponseBodyControlPlaneMetaMasterUrl self = new DescribeClusterDetailResponseBodyControlPlaneMetaMasterUrl();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneMetaMasterUrl setPrivateUrl(String privateUrl) {
+            this.privateUrl = privateUrl;
+            return this;
+        }
+        public String getPrivateUrl() {
+            return this.privateUrl;
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneMetaMasterUrl setPublicUrl(String publicUrl) {
+            this.publicUrl = publicUrl;
+            return this;
+        }
+        public String getPublicUrl() {
+            return this.publicUrl;
+        }
+
+    }
+
+    public static class DescribeClusterDetailResponseBodyControlPlaneMeta extends TeaModel {
+        @NameInMap("MasterInstances")
+        public java.util.List<DescribeClusterDetailResponseBodyControlPlaneMetaMasterInstances> masterInstances;
+
+        @NameInMap("MasterUrl")
+        public DescribeClusterDetailResponseBodyControlPlaneMetaMasterUrl masterUrl;
+
+        public static DescribeClusterDetailResponseBodyControlPlaneMeta build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterDetailResponseBodyControlPlaneMeta self = new DescribeClusterDetailResponseBodyControlPlaneMeta();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneMeta setMasterInstances(java.util.List<DescribeClusterDetailResponseBodyControlPlaneMetaMasterInstances> masterInstances) {
+            this.masterInstances = masterInstances;
+            return this;
+        }
+        public java.util.List<DescribeClusterDetailResponseBodyControlPlaneMetaMasterInstances> getMasterInstances() {
+            return this.masterInstances;
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneMeta setMasterUrl(DescribeClusterDetailResponseBodyControlPlaneMetaMasterUrl masterUrl) {
+            this.masterUrl = masterUrl;
+            return this;
+        }
+        public DescribeClusterDetailResponseBodyControlPlaneMetaMasterUrl getMasterUrl() {
+            return this.masterUrl;
+        }
+
+    }
+
+    public static class DescribeClusterDetailResponseBodyNodeCount extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
+        @NameInMap("Ready")
+        public Integer ready;
+
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
+        @NameInMap("Total")
+        public Integer total;
+
+        public static DescribeClusterDetailResponseBodyNodeCount build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterDetailResponseBodyNodeCount self = new DescribeClusterDetailResponseBodyNodeCount();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterDetailResponseBodyNodeCount setReady(Integer ready) {
+            this.ready = ready;
+            return this;
+        }
+        public Integer getReady() {
+            return this.ready;
+        }
+
+        public DescribeClusterDetailResponseBodyNodeCount setTotal(Integer total) {
+            this.total = total;
+            return this;
+        }
+        public Integer getTotal() {
+            return this.total;
+        }
+
+    }
+
+    public static class DescribeClusterDetailResponseBodyPodStatus extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("Running")
+        public Integer running;
+
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("Total")
+        public Integer total;
+
+        public static DescribeClusterDetailResponseBodyPodStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterDetailResponseBodyPodStatus self = new DescribeClusterDetailResponseBodyPodStatus();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterDetailResponseBodyPodStatus setRunning(Integer running) {
+            this.running = running;
+            return this;
+        }
+        public Integer getRunning() {
+            return this.running;
+        }
+
+        public DescribeClusterDetailResponseBodyPodStatus setTotal(Integer total) {
+            this.total = total;
+            return this;
+        }
+        public Integer getTotal() {
+            return this.total;
         }
 
     }

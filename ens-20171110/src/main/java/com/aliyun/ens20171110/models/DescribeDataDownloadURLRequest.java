@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDataDownloadURLRequest extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The application ID.</p>
+     * <p>You can call ListApplications to obtain the AppId. The call chain is as follows: call CreateApplication to create an application, call PushApplicationData or DistApplicationData to upload data, and then call this operation to query the download URL.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +26,7 @@ public class DescribeDataDownloadURLRequest extends TeaModel {
     public String dataName;
 
     /**
-     * <p>The version number of the data file.</p>
+     * <p>The version number of the data.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +36,7 @@ public class DescribeDataDownloadURLRequest extends TeaModel {
     public String dataVersion;
 
     /**
-     * <p>This parameter is reserved.</p>
+     * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>600</p>
@@ -44,7 +45,7 @@ public class DescribeDataDownloadURLRequest extends TeaModel {
     public Long expireTimeout;
 
     /**
-     * <p>The condition that you want to use to filter file servers. You can specify multiple canary release policies. By default, all resources are queried.</p>
+     * <p>The filter condition for file servers. Multiple canary release strategies are supported. By default, all file servers are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;name\&quot;: \&quot;ScheduleToRegionId\&quot;,\&quot;parameters\&quot;:{\&quot;operator\&quot;: \&quot;In\&quot;,\&quot;values\&quot;: [\&quot;cn-shijiazhuang-telecom_unicom_cmcc\&quot;]}}</p>

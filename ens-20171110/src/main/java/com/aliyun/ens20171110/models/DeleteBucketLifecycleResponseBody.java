@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteBucketLifecycleResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C6583E8B-B930-4F59-ADC0-0E209A45E860</p>

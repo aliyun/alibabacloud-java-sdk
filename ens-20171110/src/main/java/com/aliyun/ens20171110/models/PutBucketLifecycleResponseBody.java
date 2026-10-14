@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PutBucketLifecycleResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>62373E71-5521-4620-8AAB-133CCE49357A</p>
@@ -14,7 +14,7 @@ public class PutBucketLifecycleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the rule.</p>
+     * <p>The rule ID.</p>
      * 
      * <strong>example:</strong>
      * <p>b8f93xxxxx4881xxxxxc71d991</p>

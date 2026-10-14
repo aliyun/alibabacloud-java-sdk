@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class AddBackendServersRequest extends TeaModel {
     /**
-     * <p>The list of backend servers that you want to add to the Edge Load Balancer (ELB) instance. You can add up to 20 backend servers at a time.</p>
+     * <p>The list of backend servers to add. You can add up to 20 backend servers per invoke.</p>
      * <blockquote>
-     * <p> Only Edge Node Service (ENS) instances that are in the running state can be added to the ELB instance as backend servers.</p>
+     * <p>Backend servers (ENS instances) must be in the Running state before they can be added to a load balancing instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -15,7 +15,7 @@ public class AddBackendServersRequest extends TeaModel {
     public java.util.List<AddBackendServersRequestBackendServers> backendServers;
 
     /**
-     * <p>The frontend port that is used by the Edge Load Balance (ELB) instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>The frontend port used by the load balancing instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,13 +50,13 @@ public class AddBackendServersRequest extends TeaModel {
          * <p>The IP address of the backend server.</p>
          * 
          * <strong>example:</strong>
-         * <p>192.168.X.X</p>
+         * <p>192.168.XXX</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
-         * <p>The backend port that is used by the ELB instance.</p>
+         * <p>The backend port used by the load balancing instance.</p>
          * 
          * <strong>example:</strong>
          * <p>3309</p>
@@ -65,7 +65,7 @@ public class AddBackendServersRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The ID of the ENS instance.</p>
+         * <p>The ENS instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -75,10 +75,10 @@ public class AddBackendServersRequest extends TeaModel {
         public String serverId;
 
         /**
-         * <p>The type of the backend server. Valid values:</p>
+         * <p>The backend server type. Valid values:</p>
          * <ul>
-         * <li><strong>ens</strong>: ENS instance</li>
-         * <li><strong>eni</strong>: elastic network interface (ENI)</li>
+         * <li><strong>ens</strong>: ENS instance.</li>
+         * <li><strong>eni</strong>: network interface controller (NIC) instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -90,7 +90,7 @@ public class AddBackendServersRequest extends TeaModel {
         /**
          * <p>The weight of the backend server. Default value: 100. Valid values: <strong>0</strong> to <strong>100</strong>.</p>
          * <blockquote>
-         * <p> The value 0 indicates that requests are not forwarded to the backend server.</p>
+         * <p>A value of 0 indicates that no requests are forwarded to the backend server.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

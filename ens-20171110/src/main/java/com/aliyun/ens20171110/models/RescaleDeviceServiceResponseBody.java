@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class RescaleDeviceServiceResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the devices.</p>
+     * <p>The list of device IDs.</p>
      */
     @NameInMap("DeviceIds")
     public java.util.List<String> deviceIds;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>b3b5bb9a-4e0b-4cac-8ebf-e5e015726723</p>
@@ -20,7 +20,7 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3F3F3570-E721-53F6-853F-37B7725AC6CB</p>
@@ -29,7 +29,7 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The key properties of the device.</p>
+     * <p>The list of primary device attributes.</p>
      */
     @NameInMap("ResourceDetailInfos")
     public java.util.List<RescaleDeviceServiceResponseBodyResourceDetailInfos> resourceDetailInfos;
@@ -73,7 +73,7 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
 
     public static class RescaleDeviceServiceResponseBodyResourceDetailInfos extends TeaModel {
         /**
-         * <p>The ID of the device.</p>
+         * <p>The device ID.</p>
          * 
          * <strong>example:</strong>
          * <p>h-uf6009zoa6hdbjyqxcn1</p>
@@ -82,7 +82,7 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
         public String ID;
 
         /**
-         * <p>The IP address of the device.</p>
+         * <p>The device IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>10.152.196.36</p>
@@ -91,7 +91,7 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
         public String IP;
 
         /**
-         * <p>The Internet service provider (ISP) to which the device belongs.</p>
+         * <p>The ISP of the device.</p>
          * 
          * <strong>example:</strong>
          * <p>telecom</p>
@@ -100,7 +100,7 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
         public String ISP;
 
         /**
-         * <p>The media access control (MAC) address of the device.</p>
+         * <p>The MAC address of the device.</p>
          * 
          * <strong>example:</strong>
          * <p>24:0B:88:04:71:E0</p>
@@ -109,7 +109,7 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
         public String mac;
 
         /**
-         * <p>The ID of the edge node to which the device belongs.</p>
+         * <p>The ID of the edge node where the device is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-chongqing-1</p>
@@ -118,7 +118,7 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
         public String regionID;
 
         /**
-         * <p>The name of the server on which the device is deployed.</p>
+         * <p>The name of the server NC where the device is located.</p>
          * 
          * <strong>example:</strong>
          * <p>ens-nc2</p>
@@ -127,7 +127,7 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
         public String server;
 
         /**
-         * <p>The status of the device.</p>
+         * <p>The device status.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -136,7 +136,7 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The type of the instance.</p>
+         * <p>The device type.</p>
          * 
          * <strong>example:</strong>
          * <p>ens.ac6.large</p>

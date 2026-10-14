@@ -7,10 +7,14 @@ public class DescribeExportImageStatusResponseBody extends TeaModel {
     /**
      * <p>The export status of the image. Valid values:</p>
      * <ul>
-     * <li>Exporting</li>
-     * <li>Exported</li>
-     * <li>ExportError</li>
-     * <li>Unexported</li>
+     * <li><p>Exporting</p>
+     * </li>
+     * <li><p>Exported</p>
+     * </li>
+     * <li><p>ExportError</p>
+     * </li>
+     * <li><p>Unexported</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

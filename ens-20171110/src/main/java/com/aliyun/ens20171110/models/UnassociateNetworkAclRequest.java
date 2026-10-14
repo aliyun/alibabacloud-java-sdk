@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnassociateNetworkAclRequest extends TeaModel {
     /**
-     * <p>The ID of the network ACL that you want to disassociate from a resource.</p>
+     * <p>The ID of the network ACL.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UnassociateNetworkAclRequest extends TeaModel {
     public String networkAclId;
 
     /**
-     * <p>Resources that you want to disassociate. Valid values of <strong>N</strong>: 0 to 29. A maximum of 30 resources can be unbound.</p>
+     * <p>The list of resources to disassociate. Valid values of N: 1 to 30. The resources must be associated with the network ACL by calling the AssociateNetworkAcl operation, and the current association status must be BINDED.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Resource")
@@ -44,7 +44,7 @@ public class UnassociateNetworkAclRequest extends TeaModel {
 
     public static class UnassociateNetworkAclRequestResource extends TeaModel {
         /**
-         * <p>The ID of the resource that you want to disassociate.</p>
+         * <p>The ID of the associated resource to disassociate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -54,9 +54,9 @@ public class UnassociateNetworkAclRequest extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The type of the resource that you want to disassociate. Valid values:</p>
+         * <p>The type of the associated resource to disassociate. Valid values:</p>
          * <ul>
-         * <li>Network</li>
+         * <li>Network: network.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateImageRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically release the instance after the image is packaged and uploaded. Only image builders are supported. Default value: false. Valid values:</p>
+     * <p>Specifies whether to enable automatic release of the instance after the image is packaged and uploaded. This parameter is supported only for build instances.</p>
      * <ul>
-     * <li>true: The image is released when the instance is released.</li>
+     * <li>true: The image is released together with the instance when the instance is released.</li>
      * <li>false: The image is retained when the instance is released.</li>
-     * <li>If you leave this property empty, false is used by default.</li>
+     * <li>If this parameter is left empty, the default value is false.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class CreateImageRequest extends TeaModel {
     public String deleteAfterImageUpload;
 
     /**
-     * <p>The name of the image. The name must be 2 to 128 characters in length. The name can contain letters, digits, colons (:), underscores (<em>), and hyphens (-). It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (</em>), and hyphens (-).</p>
+     * <p>The image name. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class CreateImageRequest extends TeaModel {
     public String imageName;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i-5rr1bnyrc4tswr8cq3w6y****</p>
@@ -38,7 +38,7 @@ public class CreateImageRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the snapshot.</p>
+     * <p>The snapshot ID.</p>
      * 
      * <strong>example:</strong>
      * <p>s-bp67acfmxazb4p****</p>
@@ -47,7 +47,7 @@ public class CreateImageRequest extends TeaModel {
     public String snapshotId;
 
     /**
-     * <p>The region of the destination OSS bucket where the image is to be stored.</p>
+     * <p>The region of the destination OSS bucket where the image is stored.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -56,10 +56,12 @@ public class CreateImageRequest extends TeaModel {
     public String targetOSSRegionId;
 
     /**
-     * <p>Specifies whether to include data disk snapshots in the custom image.</p>
+     * <p>Specifies whether to include data cloud disks when creating the image.</p>
      * 
      * <strong>example:</strong>
-     * <p>Value true false (default)</p>
+     * <p>Valid values:
+     * true: includes data cloud disks.
+     * false: default value. Does not include data cloud disks</p>
      */
     @NameInMap("WithDataDisks")
     public Boolean withDataDisks;

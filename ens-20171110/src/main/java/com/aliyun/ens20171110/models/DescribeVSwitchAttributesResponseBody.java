@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     /**
-     * <p>The number of available IP addresses in the VSwitch.</p>
+     * <p>The number of available IP addresses in the vSwitch.</p>
      * 
      * <strong>example:</strong>
      * <p>253</p>
@@ -23,7 +23,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     public String cidrBlock;
 
     /**
-     * <p>The creation time, in UTC format (yyyy-MM-ddTHH:mm:ssZ).</p>
+     * <p>The time when the vSwitch was created. This value uses UTC and follows the yyyy-MM-ddTHH:mm:ssZ format.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-06-01T00:00:00Z</p>
@@ -32,7 +32,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     public String createdTime;
 
     /**
-     * <p>The description of the VSwitch.</p>
+     * <p>The description of the vSwitch.</p>
      * 
      * <strong>example:</strong>
      * <p>This is my vswitch.</p>
@@ -41,7 +41,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The ENS node ID.</p>
+     * <p>The ID of the ENS edge zone.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-xian-unicom</p>
@@ -55,6 +55,13 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     @NameInMap("InstanceIds")
     public DescribeVSwitchAttributesResponseBodyInstanceIds instanceIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2408:XXXX:0:a600::/110</p>
+     */
+    @NameInMap("Ipv6CidrBlock")
+    public String ipv6CidrBlock;
+
     @NameInMap("LoadBalancerIds")
     public DescribeVSwitchAttributesResponseBodyLoadBalancerIds loadBalancerIds;
 
@@ -62,7 +69,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     public DescribeVSwitchAttributesResponseBodyNatGatewayIds natGatewayIds;
 
     /**
-     * <p>The network ID.</p>
+     * <p>The ID of the network.</p>
      * 
      * <strong>example:</strong>
      * <p>n-257gqcdfvx6n****</p>
@@ -74,7 +81,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     public DescribeVSwitchAttributesResponseBodyNetworkInterfaceIds networkInterfaceIds;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>C0003****2A8</p>
@@ -83,11 +90,14 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the VSwitch, as follows:</p>
+     * <p>The status of the vSwitch. Valid values:</p>
      * <ul>
-     * <li>Pending</li>
-     * <li>Available</li>
-     * <li>Releasing</li>
+     * <li><p>Pending: The vSwitch is being configured.</p>
+     * </li>
+     * <li><p>Available: The vSwitch is active.</p>
+     * </li>
+     * <li><p>Releasing: The vSwitch is being released.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +107,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The ID of the VSwitch.</p>
+     * <p>The ID of the vSwitch.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-5****</p>
@@ -106,7 +116,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The name of the VSwitch.</p>
+     * <p>The name of the vSwitch.</p>
      * 
      * <strong>example:</strong>
      * <p>Test-switch</p>
@@ -173,6 +183,14 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     }
     public DescribeVSwitchAttributesResponseBodyInstanceIds getInstanceIds() {
         return this.instanceIds;
+    }
+
+    public DescribeVSwitchAttributesResponseBody setIpv6CidrBlock(String ipv6CidrBlock) {
+        this.ipv6CidrBlock = ipv6CidrBlock;
+        return this;
+    }
+    public String getIpv6CidrBlock() {
+        return this.ipv6CidrBlock;
     }
 
     public DescribeVSwitchAttributesResponseBody setLoadBalancerIds(DescribeVSwitchAttributesResponseBodyLoadBalancerIds loadBalancerIds) {

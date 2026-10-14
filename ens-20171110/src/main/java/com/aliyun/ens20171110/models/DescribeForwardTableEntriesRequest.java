@@ -43,9 +43,12 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
     /**
      * <p>The protocol. Valid values:</p>
      * <ul>
-     * <li><strong>TCP</strong>: forwards TCP packets.</li>
-     * <li><strong>UDP</strong>: forwards UDP packets.</li>
-     * <li><strong>Any</strong>: forwards all packets.</li>
+     * <li><p><strong>TCP</strong>: forwards TCP packets.</p>
+     * </li>
+     * <li><p><strong>UDP</strong>: forwards UDP packets.</p>
+     * </li>
+     * <li><p><strong>Any</strong>: forwards all packets.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

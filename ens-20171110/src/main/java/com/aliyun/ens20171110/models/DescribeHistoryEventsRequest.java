@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeHistoryEventsRequest extends TeaModel {
     /**
-     * <p>The levels of the event-triggered alerts.</p>
+     * <p>The list of event levels.</p>
      */
     @NameInMap("EventLevels")
     public java.util.List<String> eventLevels;
 
     /**
-     * <p>Event status list.</p>
+     * <p>The list of event statuses.</p>
      */
     @NameInMap("EventStatus")
     public java.util.List<String> eventStatus;
@@ -24,7 +24,7 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public java.util.List<String> eventTypes;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,7 +33,7 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -42,7 +42,7 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The IDs of resources.</p>
+     * <p>The list of resource IDs.</p>
      */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;

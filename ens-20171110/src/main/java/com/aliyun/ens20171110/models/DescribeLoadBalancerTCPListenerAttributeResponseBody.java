@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaModel {
     /**
-     * <p>The port used by the backend server of the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>The port used by the backend servers. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>8080</p>
@@ -14,16 +14,16 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     public Integer backendServerPort;
 
     /**
-     * <p>The peak bandwidth of the Edge Load Balancer (ELB) instance. The default value is -1, which indicates that the bandwidth is not limited.</p>
+     * <p>The peak bandwidth of the load balancer. The default value is -1, which indicates unlimited bandwidth.</p>
      * 
      * <strong>example:</strong>
-     * <p>5</p>
+     * <p>-1</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
     /**
-     * <p>The name of the listener.</p>
+     * <p>The description of the listener.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -32,10 +32,12 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     public String description;
 
     /**
-     * <p>Indicates whether EIP pass-through is enabled. Valid values:</p>
+     * <p>Specifies whether EIP passthrough is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong></li>
-     * <li><strong>off</strong> (default)</li>
+     * <li><p><strong>on</strong>: enable</p>
+     * </li>
+     * <li><p><strong>off</strong> (Default): disable</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +47,7 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     public String eipTransmit;
 
     /**
-     * <p>The timeout period of a connection. Valid values: <strong>10</strong> to <strong>900</strong>. Unit: seconds.</p>
+     * <p>The connection timeout. Valid values: <strong>10</strong> to <strong>900</strong>. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -54,10 +56,12 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     public Integer establishedTimeout;
 
     /**
-     * <p>Indicates whether the health check feature is enabled. Valid values:</p>
+     * <p>Specifies whether to enable health checks. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong></li>
-     * <li><strong>off</strong></li>
+     * <li><p><strong>on</strong>: enable</p>
+     * </li>
+     * <li><p><strong>off</strong>: disable</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,9 +71,9 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     public String healthCheck;
 
     /**
-     * <p>The port that is used for health checks. Valid values: <strong>1</strong> to <strong>65535</strong>. If an empty string is returned for this parameter, the port specified by BackendServerPort is used for health checks.</p>
+     * <p>The port used for health checks. Valid values: <strong>1</strong> to <strong>65535</strong>. If this parameter is not specified, the value of <code>BackendServerPort</code> is used.</p>
      * <blockquote>
-     * <p> This parameter is returned only if you set HealthCheck to on.</p>
+     * <p>This parameter takes effect only when the HealthCheck parameter is set to <code>on</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -79,20 +83,23 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     public Integer healthCheckConnectPort;
 
     /**
-     * <p>The timeout period for a health check response. If a backend server does not respond within the specified timeout period, the server fails the health check.</p>
+     * <p>The response timeout for a health check. If a backend ENS instance does not respond within this timeout period, the health check fails.</p>
      * <ul>
-     * <li>Default value: 5.</li>
-     * <li>Valid values: <strong>1</strong> to <strong>300</strong>.</li>
-     * <li>Unit: seconds.</li>
+     * <li><p>Default value: 5.</p>
+     * </li>
+     * <li><p>Valid values: <strong>1</strong> to <strong>300</strong>.</p>
+     * </li>
+     * <li><p>Unit: seconds.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>This parameter takes effect only if the HealthCheck parameter is set to on.</p>
+     * <li><p>This parameter takes effect only when the HealthCheck parameter is set to <code>on</code>.</p>
      * </li>
-     * <li><p>If the value of the HealthCheckTimeout property is smaller than the value of the HealthCheckInterval property, the timeout period specified by the HealthCheckTimeout property becomes invalid and the value of the HealthCheckInterval property is used as the timeout period.</p>
+     * <li><p>If this value is less than the <code>HealthCheckInterval</code> value, the <code>HealthCheckInterval</code> value is used as the timeout period instead.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -101,9 +108,9 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     public Integer healthCheckConnectTimeout;
 
     /**
-     * <p>The domain name that is used for health checks.</p>
+     * <p>The domain name used for health checks.</p>
      * <blockquote>
-     * <p> This parameter is returned only if you set HealthCheck to on.</p>
+     * <p>This parameter takes effect only when the HealthCheck parameter is set to <code>on</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -113,15 +120,19 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     public String healthCheckDomain;
 
     /**
-     * <p>The HTTP status codes for a successful health check. Valid values:</p>
+     * <p>The HTTP status codes that indicate a successful health check. Valid values:</p>
      * <ul>
-     * <li><strong>http_2xx</strong> (default)</li>
-     * <li><strong>http_3xx</strong></li>
-     * <li><strong>http_4xx</strong></li>
-     * <li><strong>http_5xx</strong></li>
+     * <li><p><strong>http_2xx</strong> (Default)</p>
+     * </li>
+     * <li><p><strong>http_3xx</strong></p>
+     * </li>
+     * <li><p><strong>http_4xx</strong></p>
+     * </li>
+     * <li><p><strong>http_5xx</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is returned only if you set HealthCheck to on.</p>
+     * <p>This parameter takes effect only when the HealthCheck parameter is set to <code>on</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -131,7 +142,7 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     public String healthCheckHttpCode;
 
     /**
-     * <p>The interval at which health checks are performed. Valid values: <strong>1</strong> to <strong>50</strong>. Unit: seconds.</p>
+     * <p>The interval between health checks. Valid values: <strong>1</strong> to <strong>50</strong>. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -140,10 +151,12 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     public Integer healthCheckInterval;
 
     /**
-     * <p>The type of health checks. Valid values:</p>
+     * <p>The health check type. Valid values:</p>
      * <ul>
-     * <li><strong>tcp</strong> (default)</li>
-     * <li><strong>http</strong></li>
+     * <li><p><strong>tcp</strong> (Default)</p>
+     * </li>
+     * <li><p><strong>http</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -153,15 +166,15 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     public String healthCheckType;
 
     /**
-     * <p>The URI used for health checks. The URI must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
+     * <p>The URI used for health checks. Length: <strong>1</strong> to <strong>80</strong> characters.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>A URL must start with a forward slash (<code>/</code>) but cannot contain only forward slashes (<code>/</code>).</p>
+     * <li><p>The URI must start with <code>/</code> but cannot consist solely of <code>/</code>.</p>
      * </li>
-     * <li><p>This parameter takes effect only if the HealthCheck parameter is set to on.</p>
+     * <li><p>This parameter takes effect only when the HealthCheck parameter is set to <code>on</code>.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>/example/index.html</p>
@@ -170,9 +183,9 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     public String healthCheckURI;
 
     /**
-     * <p>The number of consecutive successful health checks that must occur before an unhealthy and inaccessible backend server is declared healthy and accessible. Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+     * <p>The number of consecutive successful health checks required to change the health status of a backend server from <code>fail</code> (unhealthy) to <code>success</code> (healthy). Valid values: <strong>2</strong> to <strong>10</strong>.</p>
      * <blockquote>
-     * <p> This parameter is returned only if you set HealthCheck to on.</p>
+     * <p>This parameter takes effect only when the HealthCheck parameter is set to <code>on</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -182,7 +195,7 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     public Integer healthyThreshold;
 
     /**
-     * <p>The frontend port that is used by the ELB instance.</p>
+     * <p>The frontend port used by the load balancer instance.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -191,11 +204,14 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     public Integer listenerPort;
 
     /**
-     * <p>The timeout period of session persistence.</p>
+     * <p>The session persistence timeout.</p>
      * <ul>
-     * <li>Default value: 0. If the default value is used, the system disables session persistence.</li>
-     * <li>Valid values: <strong>0</strong> to <strong>3600</strong>.</li>
-     * <li>Unit: seconds.</li>
+     * <li><p>Default value: 0. A value of 0 indicates that session persistence is disabled.</p>
+     * </li>
+     * <li><p>Valid values: <strong>0</strong> to <strong>3600</strong>.</p>
+     * </li>
+     * <li><p>Unit: seconds.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -205,7 +221,7 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     public Integer persistenceTimeout;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -214,14 +230,18 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     public String requestId;
 
     /**
-     * <p>The routing algorithm. Valid values:</p>
+     * <p>The scheduling algorithm. Valid values:</p>
      * <ul>
-     * <li><strong>wrr</strong>: Backend servers with higher weights receive more requests than those with lower weights.</li>
-     * <li><strong>wlc</strong>: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections to a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.</li>
-     * <li><strong>rr</strong>: Requests are distributed to backend servers in sequence.</li>
-     * <li><strong>sch</strong>: consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</li>
-     * <li><strong>qch</strong>: consistent hashing that is based on QUIC connection IDs. Requests that contain the same QUIC connection ID are distributed to the same backend server.</li>
-     * <li><strong>iqch</strong>: consistent hashing that is based on specific three bytes of the iQUIC CIDs. Requests whose second to fourth bytes are the same are distributed to the same backend server.</li>
+     * <li><p><strong>wrr</strong>: Weighted Round Robin. Backend servers with higher weights receive more requests.</p>
+     * </li>
+     * <li><p><strong>wlc</strong>: Weighted Least Connections. In addition to weights, the system considers the number of active connections to each backend server. If multiple backend servers have the same weight, the system selects the backend server with the fewest active connections.</p>
+     * </li>
+     * <li><p><strong>rr</strong>: Round Robin. The system distributes requests sequentially to the backend servers.</p>
+     * </li>
+     * <li><p><strong>sch</strong>: Source IP Hash. The system routes requests from the same source IP address to the same backend server.</p>
+     * </li>
+     * <li><p><strong>tch</strong>: 4-Tuple Hash. The system routes requests that share the same 4-tuple (source IP address, destination IP address, source port, and destination port) to the same backend server.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -233,11 +253,16 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     /**
      * <p>The status of the listener. Valid values:</p>
      * <ul>
-     * <li><strong>Running</strong></li>
-     * <li><strong>Stopped</strong></li>
-     * <li><strong>Starting</strong></li>
-     * <li><strong>Configuring</strong></li>
-     * <li><strong>Stopping</strong></li>
+     * <li><p><strong>Running</strong>: The listener is running.</p>
+     * </li>
+     * <li><p><strong>Stopped</strong>: The listener is stopped.</p>
+     * </li>
+     * <li><p><strong>Starting</strong>: The listener is being started.</p>
+     * </li>
+     * <li><p><strong>Configuring</strong>: The listener is being configured.</p>
+     * </li>
+     * <li><p><strong>Stopping</strong>: The listener is being stopped.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -247,9 +272,9 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     public String status;
 
     /**
-     * <p>The number of consecutive failed health checks that must occur before a healthy and accessible backend server is declared unhealthy and inaccessible. Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+     * <p>The number of consecutive failed health checks required to change the health status of a backend server from <code>success</code> (healthy) to <code>fail</code> (unhealthy). Valid values: <strong>2</strong> to <strong>10</strong>.</p>
      * <blockquote>
-     * <p> This parameter is returned only if you set HealthCheck to on.</p>
+     * <p>This parameter takes effect only when the HealthCheck parameter is set to <code>on</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

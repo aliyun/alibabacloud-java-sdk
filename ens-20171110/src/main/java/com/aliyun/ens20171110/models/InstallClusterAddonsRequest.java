@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class InstallClusterAddonsRequest extends TeaModel {
     /**
+     * <p>The component information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Addons")
     public java.util.List<InstallClusterAddonsRequestAddons> addons;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,8 @@ public class InstallClusterAddonsRequest extends TeaModel {
 
     public static class InstallClusterAddonsRequestAddonsConfigSchema extends TeaModel {
         /**
+         * <p>The application version.</p>
+         * 
          * <strong>example:</strong>
          * <p>859e9d595b2974ed79c444658d1dea89</p>
          */
@@ -49,6 +53,8 @@ public class InstallClusterAddonsRequest extends TeaModel {
         public String appVersion;
 
         /**
+         * <p>The configuration version.</p>
+         * 
          * <strong>example:</strong>
          * <p>4155709cd12a09bdb8cbaca71bf03233</p>
          */
@@ -56,6 +62,8 @@ public class InstallClusterAddonsRequest extends TeaModel {
         public String configVersion;
 
         /**
+         * <p>The component name.</p>
+         * 
          * <strong>example:</strong>
          * <p>edge-csi-lite</p>
          */
@@ -63,6 +71,8 @@ public class InstallClusterAddonsRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The custom parameters of the component.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;k1&quot;:&quot;v1&quot;}</p>
          */
@@ -109,10 +119,15 @@ public class InstallClusterAddonsRequest extends TeaModel {
     }
 
     public static class InstallClusterAddonsRequestAddons extends TeaModel {
+        /**
+         * <p>The schema for the custom parameters of the component.</p>
+         */
         @NameInMap("ConfigSchema")
         public java.util.List<InstallClusterAddonsRequestAddonsConfigSchema> configSchema;
 
         /**
+         * <p>The plug-in name.</p>
+         * 
          * <strong>example:</strong>
          * <p>edge-csi-lite</p>
          */
@@ -120,6 +135,8 @@ public class InstallClusterAddonsRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1</p>
          */

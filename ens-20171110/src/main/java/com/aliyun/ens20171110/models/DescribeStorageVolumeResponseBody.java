@@ -131,8 +131,10 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
         /**
          * <p>Indicates whether authentication is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Authentication is enabled.</li>
-         * <li><strong>0</strong> (default): Authentication is disabled.</li>
+         * <li><p><strong>1</strong>: Authentication is enabled.</p>
+         * </li>
+         * <li><p><strong>0</strong> (default): Authentication is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -144,8 +146,10 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the volume is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong> (default): The volume is enabled.</li>
-         * <li><strong>0</strong>: The volume is disabled.</li>
+         * <li><p><strong>1</strong> (default): The volume is enabled.</p>
+         * </li>
+         * <li><p><strong>0</strong>: The volume is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -157,10 +161,14 @@ public class DescribeStorageVolumeResponseBody extends TeaModel {
         /**
          * <p>The status of the volume. Valid values:</p>
          * <ul>
-         * <li>creating</li>
-         * <li>available</li>
-         * <li>deleting</li>
-         * <li>deleted</li>
+         * <li><p>creating</p>
+         * </li>
+         * <li><p>available</p>
+         * </li>
+         * <li><p>deleting</p>
+         * </li>
+         * <li><p>deleted</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

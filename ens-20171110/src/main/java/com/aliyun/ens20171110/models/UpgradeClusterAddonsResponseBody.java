@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpgradeClusterAddonsResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>eck-xxxxxxxx</p>
      */
@@ -12,7 +14,7 @@ public class UpgradeClusterAddonsResponseBody extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>C0003E8B-B930-4F59-ADC0-0E209A9012A8</p>

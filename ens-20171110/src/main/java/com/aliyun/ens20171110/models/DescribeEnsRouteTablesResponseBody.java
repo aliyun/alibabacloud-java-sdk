@@ -95,8 +95,10 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
         /**
          * <p>The type of the resource with which the route table is associated. Valid values:</p>
          * <ul>
-         * <li><strong>VSwitch</strong></li>
-         * <li><strong>Gateway</strong></li>
+         * <li><p><strong>VSwitch</strong></p>
+         * </li>
+         * <li><p><strong>Gateway</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,8 +186,10 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
         /**
          * <p>The type of the route table. Examples:</p>
          * <ul>
-         * <li>Custom: custom route table.</li>
-         * <li>System: system route table.</li>
+         * <li><p>Custom: custom route table.</p>
+         * </li>
+         * <li><p>System: system route table.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

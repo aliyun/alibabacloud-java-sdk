@@ -4,10 +4,14 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class UpgradeClusterAddonsRequest extends TeaModel {
+    /**
+     * <p>The component information.</p>
+     */
     @NameInMap("Addons")
     public java.util.List<UpgradeClusterAddonsRequestAddons> addons;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +43,8 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
 
     public static class UpgradeClusterAddonsRequestAddonsConfigSchema extends TeaModel {
         /**
+         * <p>The application version.</p>
+         * 
          * <strong>example:</strong>
          * <p>4155709cd12a09bdb8cbaca71bf03233</p>
          */
@@ -46,6 +52,8 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
         public String appVersion;
 
         /**
+         * <p>The configuration version.</p>
+         * 
          * <strong>example:</strong>
          * <p>4155709cd12a09bdb8cbaca71bf03233</p>
          */
@@ -53,6 +61,8 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
         public String configVersion;
 
         /**
+         * <p>The component name.</p>
+         * 
          * <strong>example:</strong>
          * <p>edge-csi-lite</p>
          */
@@ -60,6 +70,8 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The custom parameters for the component.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;k1&quot;:&quot;v1&quot;}</p>
          */
@@ -106,10 +118,15 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
     }
 
     public static class UpgradeClusterAddonsRequestAddons extends TeaModel {
+        /**
+         * <p>The schema of the custom parameters for the component.</p>
+         */
         @NameInMap("ConfigSchema")
         public java.util.List<UpgradeClusterAddonsRequestAddonsConfigSchema> configSchema;
 
         /**
+         * <p>The component name.</p>
+         * 
          * <strong>example:</strong>
          * <p>edge-csi-lite</p>
          */
@@ -117,6 +134,8 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The target version for the upgrade.</p>
+         * 
          * <strong>example:</strong>
          * <p>v2</p>
          */

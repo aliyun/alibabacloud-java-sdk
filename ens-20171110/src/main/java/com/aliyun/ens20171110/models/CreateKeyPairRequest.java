@@ -7,8 +7,10 @@ public class CreateKeyPairRequest extends TeaModel {
     /**
      * <p>The name of the key pair. The name must conform to the following naming conventions:</p>
      * <ul>
-     * <li>The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
-     * <li>It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li><p>The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * </li>
+     * <li><p>It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

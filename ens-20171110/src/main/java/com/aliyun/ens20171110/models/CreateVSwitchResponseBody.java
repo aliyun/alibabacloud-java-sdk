@@ -14,7 +14,7 @@ public class CreateVSwitchResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <p>The ID of the VSwitch.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-5****</p>

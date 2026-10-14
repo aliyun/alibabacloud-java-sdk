@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
     /**
-     * <p>The information about resources.</p>
+     * <p>The collection of resource information.</p>
      */
     @NameInMap("ElbAvailableResourceInfo")
     public java.util.List<DescribeElbAvailableResourceInfoResponseBodyElbAvailableResourceInfo> elbAvailableResourceInfo;
 
     /**
-     * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use the ID to troubleshoot issues.</p>
+     * <p>The common parameter. The ID of the request. Each request has a unique ID, which is active for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>25AAD194-4A37-51CF-B1CA-1E86FDAC23A6</p>
@@ -45,7 +45,7 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
         public java.util.List<String> ability;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The area.</p>
          * 
          * <strong>example:</strong>
          * <p>SouthEast</p>
@@ -54,7 +54,7 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
         public String area;
 
         /**
-         * <p>The number of resources that you can purchase.</p>
+         * <p>The quantity available for purchase.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -63,7 +63,7 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
         public String canBuyCount;
 
         /**
-         * <p>The name of the node.</p>
+         * <p>The English name of the edge zone.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-guangdong-10</p>
@@ -72,7 +72,7 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
         public String enName;
 
         /**
-         * <p>The ID of the Edge Node Service (ENS) node.</p>
+         * <p>The ID of the ENS edge zone.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-guangdong-10</p>
@@ -81,13 +81,13 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
         public String ensRegionId;
 
         /**
-         * <p>The specifications of the ELB instances.</p>
+         * <p>The specification of the load balancing instance.</p>
          */
         @NameInMap("LoadBalancerSpec")
         public java.util.List<String> loadBalancerSpec;
 
         /**
-         * <p>The Chinese name of the node.</p>
+         * <p>The name of the edge zone.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -96,7 +96,7 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The province where the node is deployed.</p>
+         * <p>The province.</p>
          * 
          * <strong>example:</strong>
          * <p>Shanghai</p>

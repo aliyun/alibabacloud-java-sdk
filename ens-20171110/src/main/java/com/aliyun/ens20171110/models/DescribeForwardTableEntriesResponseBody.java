@@ -158,9 +158,12 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         /**
          * <p>The protocol. Valid values:</p>
          * <ul>
-         * <li><strong>TCP</strong>: forwards TCP packets.</li>
-         * <li><strong>UDP</strong>: forwards UDP packets.</li>
-         * <li><strong>Any</strong>: forwards all packets.</li>
+         * <li><p><strong>TCP</strong>: forwards TCP packets.</p>
+         * </li>
+         * <li><p><strong>UDP</strong>: forwards UDP packets.</p>
+         * </li>
+         * <li><p><strong>Any</strong>: forwards all packets.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -190,10 +193,14 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         /**
          * <p>The status of the secondary EIP. Valid values:</p>
          * <ul>
-         * <li>Running</li>
-         * <li>Stopping</li>
-         * <li>Stopped</li>
-         * <li>Starting</li>
+         * <li><p>Running</p>
+         * </li>
+         * <li><p>Stopping</p>
+         * </li>
+         * <li><p>Stopped</p>
+         * </li>
+         * <li><p>Starting</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -205,9 +212,12 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         /**
          * <p>The status of the DNAT entry. Valid values:</p>
          * <ul>
-         * <li>Pending: The DNAT entry is being created or modified.</li>
-         * <li>Available: The DNAT entry is available.</li>
-         * <li>Deleting: The DNAT entry is being deleted.</li>
+         * <li><p>Pending: The DNAT entry is being created or modified.</p>
+         * </li>
+         * <li><p>Available: The DNAT entry is available.</p>
+         * </li>
+         * <li><p>Deleting: The DNAT entry is being deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

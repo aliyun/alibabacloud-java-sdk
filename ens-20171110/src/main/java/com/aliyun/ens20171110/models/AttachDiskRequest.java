@@ -7,9 +7,12 @@ public class AttachDiskRequest extends TeaModel {
     /**
      * <p>Specifies whether the disk to be attached is released with the instance. Valid values:</p>
      * <ul>
-     * <li>true: The disk will be released when the ECS instance is released.</li>
-     * <li>false: The disk will be retained when the ECS instance is released.</li>
-     * <li>If you leave this parameter empty, the default value is used.</li>
+     * <li><p>true: The disk will be released when the ECS instance is released.</p>
+     * </li>
+     * <li><p>false: The disk will be retained when the ECS instance is released.</p>
+     * </li>
+     * <li><p>If you leave this parameter empty, the default value is used.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

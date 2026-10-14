@@ -17,8 +17,10 @@ public class CreateEnsServiceRequest extends TeaModel {
     /**
      * <p>The operation to perform after you preview the created edge service. Valid values:</p>
      * <ul>
-     * <li><strong>Buy</strong>: create</li>
-     * <li><strong>Upgrade</strong>: change</li>
+     * <li><p><strong>Buy</strong>: create</p>
+     * </li>
+     * <li><p><strong>Upgrade</strong>: change</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

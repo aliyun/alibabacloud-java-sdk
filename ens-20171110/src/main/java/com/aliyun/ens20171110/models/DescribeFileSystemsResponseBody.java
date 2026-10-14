@@ -122,10 +122,14 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         /**
          * <p>The status of the mount target. Valid values:</p>
          * <ul>
-         * <li>active: The mount target is available.</li>
-         * <li>inactive: The mount target is unavailable.</li>
-         * <li>pending: The task is running.</li>
-         * <li>deleting: The mount target is being deleted.</li>
+         * <li><p>active: The mount target is available.</p>
+         * </li>
+         * <li><p>inactive: The mount target is unavailable.</p>
+         * </li>
+         * <li><p>pending: The task is running.</p>
+         * </li>
+         * <li><p>deleting: The mount target is being deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -192,6 +196,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>Description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Description")
         public String description;
 
@@ -249,8 +259,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         /**
          * <p>The protocol type of the file system. Valid values:</p>
          * <ul>
-         * <li>NFS: Network File System (NFS)</li>
-         * <li>SMB: Server Message Block (SMB)</li>
+         * <li><p>NFS: Network File System (NFS)</p>
+         * </li>
+         * <li><p>SMB: Server Message Block (SMB)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -262,12 +274,18 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         /**
          * <p>The status of the file system. Valid values:</p>
          * <ul>
-         * <li>pending: The file system is being created or modified.</li>
-         * <li>running: The file system is available. Before you create a mount target for the file system, make sure that the file system is in the running state.</li>
-         * <li>stopped: The file system is unavailable.</li>
-         * <li>extending: The file system is being scaled out.</li>
-         * <li>stopping: The file system is being disabled.</li>
-         * <li>deleting: The file system is being deleted.</li>
+         * <li><p>pending: The file system is being created or modified.</p>
+         * </li>
+         * <li><p>running: The file system is available. Before you create a mount target for the file system, make sure that the file system is in the running state.</p>
+         * </li>
+         * <li><p>stopped: The file system is unavailable.</p>
+         * </li>
+         * <li><p>extending: The file system is being scaled out.</p>
+         * </li>
+         * <li><p>stopping: The file system is being disabled.</p>
+         * </li>
+         * <li><p>deleting: The file system is being deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -279,8 +297,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         /**
          * <p>The storage type. Valid values:</p>
          * <ul>
-         * <li>capacity: Capacity NAS file systems</li>
-         * <li>performance: Performance NAS file systems</li>
+         * <li><p>capacity: Capacity NAS file systems</p>
+         * </li>
+         * <li><p>performance: Performance NAS file systems</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

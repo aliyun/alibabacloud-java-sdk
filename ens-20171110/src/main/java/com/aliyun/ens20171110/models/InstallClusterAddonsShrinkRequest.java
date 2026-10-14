@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class InstallClusterAddonsShrinkRequest extends TeaModel {
     /**
+     * <p>The component information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Addons")
     public String addonsShrink;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

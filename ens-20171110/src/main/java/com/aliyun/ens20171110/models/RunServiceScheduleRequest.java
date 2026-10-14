@@ -64,16 +64,23 @@ public class RunServiceScheduleRequest extends TeaModel {
      * <p>The scheduling operation. The value must be of the enumeration type. Valid values:</p>
      * <p>Container scenario:</p>
      * <ul>
-     * <li>Start: selects and activates an idle cloud device.</li>
-     * <li>Stop: stops and releases the cloud device.</li>
-     * <li>Console: performs the scheduling operation when the device is in the scheduling state.</li>
+     * <li><p>Start: selects and activates an idle cloud device.</p>
+     * </li>
+     * <li><p>Stop: stops and releases the cloud device.</p>
+     * </li>
+     * <li><p>Console: performs the scheduling operation when the device is in the scheduling state.</p>
+     * </li>
      * </ul>
      * <p>Bare metal instance or virtual machine scenario:</p>
      * <ul>
-     * <li>PreSchedule: locks a virtual machine instance for scheduling.</li>
-     * <li>Confirm: confirms the scheduling operation.</li>
-     * <li>Cancel: cancels the scheduling operation.</li>
-     * <li>Console: performs the scheduling operation when the device is in the scheduling state.</li>
+     * <li><p>PreSchedule: locks a virtual machine instance for scheduling.</p>
+     * </li>
+     * <li><p>Confirm: confirms the scheduling operation.</p>
+     * </li>
+     * <li><p>Cancel: cancels the scheduling operation.</p>
+     * </li>
+     * <li><p>Console: performs the scheduling operation when the device is in the scheduling state.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

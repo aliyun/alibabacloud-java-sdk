@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeployInstanceSDGRequest extends TeaModel {
     /**
-     * <p>The deployment type of the SDG. shared: shared read/write splitting deployment. The content of the SDG is read-only, and data updates are written to the local storage of the instance.</p>
+     * <p>The SDG deployment type. Set the value to shared, which indicates read/write splitting shared deployment. In this mode, the SDG content is read-only, and data updates are written to the local storage of the instance.</p>
+     * <p>This parameter is required. Currently, only the value shared is supported. If this parameter is not specified, the service returns a Parameter.Invalid error.</p>
      * 
      * <strong>example:</strong>
      * <p>shared</p>
@@ -13,14 +14,42 @@ public class DeployInstanceSDGRequest extends TeaModel {
     @NameInMap("DeploymentType")
     public String deploymentType;
 
+    /**
+     * <p>The access protocol type of the cloud disk. Valid values:</p>
+     * <ul>
+     * <li><p>iscsi: the default protocol for standard cloud disks. Both RBD cloud disks and standard cloud disks support this protocol.</p>
+     * </li>
+     * <li><p>rbd: the default protocol for RBD cloud disks. Only RBD cloud disks support this mount protocol.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>iscsi</p>
+     */
     @NameInMap("DiskAccessProtocol")
     public String diskAccessProtocol;
 
+    /**
+     * <p>The type of the shared cloud disk to be created. Valid values:</p>
+     * <ul>
+     * <li>standard: standard cloud disk.</li>
+     * <li>rbd: RBD cloud disk.</li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>If this parameter is not specified, a standard cloud disk is created by default.</li>
+     * <li>An RBD shared cloud disk can be created only when the source disk type is RBD.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>standard</p>
+     */
     @NameInMap("DiskType")
     public String diskType;
 
     /**
-     * <p>The IDs of the instances. The value is a JSON array that consists of up to 100 IDs.</p>
+     * <p>The list of instance IDs. The value is a JSON array. A maximum of 100 IDs can be specified.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")

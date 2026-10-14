@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNatGatewayRequest extends TeaModel {
     /**
-     * <p>The ID of the Edge Node Service (ENS) node.</p>
+     * <p>The ID of the ENS edge zone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,11 +14,17 @@ public class CreateNatGatewayRequest extends TeaModel {
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    /**
+     * <p>The billing cycle of the instance. Valid values: Hour and Month.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hour</p>
+     */
     @NameInMap("InstanceBillingCycle")
     public String instanceBillingCycle;
 
     /**
-     * <p>The instance type of the NAT gateway. Set the value to <strong>enat.default</strong>.</p>
+     * <p>The NAT gateway specification. Valid value: <strong>enat.default</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>enat.default</p>
@@ -27,7 +33,7 @@ public class CreateNatGatewayRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The name of the NAT gateway. The name must be 1 to 128 characters in length. The name cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name of the NAT gateway. The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>name</p>
@@ -36,7 +42,7 @@ public class CreateNatGatewayRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the network.</p>
+     * <p>The network ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,13 +52,13 @@ public class CreateNatGatewayRequest extends TeaModel {
     public String networkId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The resource tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateNatGatewayRequestTag> tag;
 
     /**
-     * <p>The ID of the new vSwitch.</p>
+     * <p>The vSwitch ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-5savh5ngxh8sbj14bu7n****</p>
@@ -123,11 +129,11 @@ public class CreateNatGatewayRequest extends TeaModel {
 
     public static class CreateNatGatewayRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+         * <p>The tag key of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
          * <ul>
-         * <li>The key cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
-         * <li>The key must be up to 64 characters in length.</li>
-         * <li>The tag key cannot be an empty string.</li>
+         * <li>Cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
+         * <li>Can be up to 64 characters in length.</li>
+         * <li>Cannot be an empty string.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -137,7 +143,7 @@ public class CreateNatGatewayRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N that is added to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with acs: or contain http:// or https://.</p>
+         * <p>The tag value of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length, cannot start with acs:, and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>Deep</p>

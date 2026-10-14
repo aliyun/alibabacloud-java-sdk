@@ -4,19 +4,50 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class AttachInstanceSDGShrinkRequest extends TeaModel {
+    /**
+     * <p>The cloud disk access protocol type. Valid values:</p>
+     * <ul>
+     * <li><p>iscsi: the default protocol for standard cloud disks. Both rbd cloud disks and standard cloud disks support this protocol.</p>
+     * </li>
+     * <li><p>rbd: the default protocol for rbd cloud disks. Only rbd cloud disks support this mount protocol.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>iscsi</p>
+     */
     @NameInMap("DiskAccessProtocol")
     public String diskAccessProtocol;
 
+    /**
+     * <p>The type of the shared cloud disk to be created. Valid values:</p>
+     * <ul>
+     * <li>standard: standard cloud disk.</li>
+     * <li>rbd: rbd cloud disk.</li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>If no shared cloud disk type is specified, a standard cloud disk is created by default.</li>
+     * <li>An rbd shared cloud disk can be created only when the parent disk type is rbd.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>standard</p>
+     */
     @NameInMap("DiskType")
     public String diskType;
 
     /**
-     * <p>The IDs of the instances.</p>
+     * <p>The list of instance IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIdsShrink;
 
+    /**
+     * <p>The file loading rate optimization parameter.</p>
+     */
     @NameInMap("LoadOpt")
     public String loadOptShrink;
 

@@ -141,10 +141,14 @@ public class DescribeStorageGatewayResponseBody extends TeaModel {
         /**
          * <p>The status of the storage gateway. Valid values:</p>
          * <ul>
-         * <li>creating</li>
-         * <li>available</li>
-         * <li>deleting</li>
-         * <li>deleted</li>
+         * <li><p>creating</p>
+         * </li>
+         * <li><p>available</p>
+         * </li>
+         * <li><p>deleting</p>
+         * </li>
+         * <li><p>deleted</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

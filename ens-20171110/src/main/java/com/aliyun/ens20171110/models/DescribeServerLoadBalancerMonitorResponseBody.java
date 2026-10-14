@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request。</p>
      * 
      * <strong>example:</strong>
      * <p>AAE90880-4970-4D81-A534-A6C0F3631F74</p>
@@ -14,7 +14,7 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The array of the monitoring data.</p>
+     * <p>The array of objects.</p>
      */
     @NameInMap("ServerLoadBalancerMonitorData")
     public java.util.List<DescribeServerLoadBalancerMonitorResponseBodyServerLoadBalancerMonitorData> serverLoadBalancerMonitorData;
@@ -51,7 +51,7 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
         public Integer acc;
 
         /**
-         * <p>The business time of the log. Logs are collected every minute.</p>
+         * <p>The log business time. The log collection granularity is 1 minute.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-15 16:00:00</p>
@@ -60,7 +60,7 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
         public String bizTime;
 
         /**
-         * <p>The ID of the node to which the ELB instance belongs.</p>
+         * <p>The ID of the edge zone.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-wuxi-10</p>
@@ -69,7 +69,7 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
         public String ensRegionId;
 
         /**
-         * <p>The ID of the ELB instance.</p>
+         * <p>The load balancing instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>lb-5sc1s9zrui8lpb8u7cl4f****</p>
@@ -78,7 +78,7 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
         public String loadBalancerId;
 
         /**
-         * <p>The name of the ELB instance.</p>
+         * <p>The load balancing instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>esk-edge-service-lb-a34****</p>
@@ -87,7 +87,7 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
         public String loadBalancerName;
 
         /**
-         * <p>The specification of the ELB instance.</p>
+         * <p>The load balancing instance specification.</p>
          * 
          * <strong>example:</strong>
          * <p>elb.s2.medium</p>
@@ -96,7 +96,7 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
         public String loadBalancerSpec;
 
         /**
-         * <p>The number of requests with HTTP 2xx status code returned.</p>
+         * <p>The number of requests with 2xx HTTP status codes.</p>
          * 
          * <strong>example:</strong>
          * <p>25</p>
@@ -105,7 +105,7 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
         public Integer reqs2xx;
 
         /**
-         * <p>The number of requests with HTTP 3xx status code returned.</p>
+         * <p>The number of requests with 3xx HTTP status codes.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -114,7 +114,7 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
         public Integer reqs3xx;
 
         /**
-         * <p>The number of requests with HTTP 4xx status code returned.</p>
+         * <p>The number of requests with 4xx HTTP status codes.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -123,7 +123,7 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
         public Integer reqs4xx;
 
         /**
-         * <p>The number of requests with HTTP 5xx status code returned.</p>
+         * <p>The number of requests with 5xx HTTP status codes.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -132,7 +132,7 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
         public Integer reqs5xx;
 
         /**
-         * <p>The average response time. Unit: milliseconds.</p>
+         * <p>The average request latency. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1404</p>
@@ -150,7 +150,7 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
         public String vip;
 
         /**
-         * <p>The ID of the tunnel.</p>
+         * <p>The tunnel ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3018</p>

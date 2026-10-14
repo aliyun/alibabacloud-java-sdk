@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveSDGRequest extends TeaModel {
     /**
-     * <p>The ID of the SDG to be saved.</p>
+     * <p>The ID of the SDG to save.</p>
+     * <p>This parameter is required. If this parameter is not specified, the service returns a Parameter.Invalid error.</p>
      * 
      * <strong>example:</strong>
      * <p>sdg-xxxx</p>

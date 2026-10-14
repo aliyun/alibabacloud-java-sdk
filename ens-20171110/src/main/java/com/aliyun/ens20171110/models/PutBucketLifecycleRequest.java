@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class PutBucketLifecycleRequest extends TeaModel {
     /**
-     * <p>Specifies whether to allow overlapped prefixes. Valid values:</p>
+     * <p>Whether to allow overlapping prefixes. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><p><strong>true</strong>: Overlapping prefixes are allowed.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): Overlapping prefixes are not allowed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,10 +30,10 @@ public class PutBucketLifecycleRequest extends TeaModel {
     public String bucketName;
 
     /**
-     * <p>The expiration time. EOS executes a lifecycle rule for objects that were last updated before the expiration time.</p>
-     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The date before which objects expire. The system applies the lifecycle rule to objects last modified before this date.</p>
+     * <p>Use ISO 8601 format and UTC time. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
      * <blockquote>
-     * <p> ExpirationDays and CreateBeforeDate are mutually exclusive.</p>
+     * <p>ExpirationDays and CreatedBeforeDate are mutually exclusive. Specify one.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,9 +43,9 @@ public class PutBucketLifecycleRequest extends TeaModel {
     public String createdBeforeDate;
 
     /**
-     * <p>The number of days from when the objects were last modified to when the lifecycle rule takes effect. The value must be a positive integer that is greater than 0.</p>
+     * <p>The number of days after an object\&quot;s last modification when the lifecycle rule takes effect. Must be a positive integer greater than zero.</p>
      * <blockquote>
-     * <p> ExpirationDays and CreateBeforeDate are mutually exclusive.</p>
+     * <p>ExpirationDays and CreatedBeforeDate are mutually exclusive. Specify one.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,10 +55,12 @@ public class PutBucketLifecycleRequest extends TeaModel {
     public Long expirationDays;
 
     /**
-     * <p>The prefix of a object name. The prefix must be unique.</p>
+     * <p>The prefix that the rule applies to. You cannot set duplicate prefixes.</p>
      * <ul>
-     * <li>If you specify a prefix, the rule applies only to objects in the bucket that match the prefix.</li>
-     * <li>If you do not specify a prefix, the rule applies to all objects in the bucket.</li>
+     * <li><p>If you specify a prefix, the rule applies only to objects in the bucket whose names start with that prefix.</p>
+     * </li>
+     * <li><p>If you leave Prefix empty, the rule applies to all objects in the bucket.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,14 +70,16 @@ public class PutBucketLifecycleRequest extends TeaModel {
     public String prefix;
 
     /**
-     * <p>The unique ID of the rule. The ID of a lifecycle rule can be up to 255 bytes in length.</p>
+     * <p>A unique ID that identifies the rule. Maximum length is 255 bytes.</p>
      * <ul>
-     * <li>You do not need to configure this parameter when you create a rule. The system automatically generates a unique ID.</li>
-     * <li>When you update a rule, you need to specify this parameter. Make sure that the rule specified by RuleId exists. Otherwise, an error occurs.</li>
+     * <li><p>Omit this parameter when creating a new rule. The system generates a unique ID automatically.</p>
+     * </li>
+     * <li><p>Specify RuleId when updating an existing rule. The rule must exist. Otherwise, the call fails.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>b8f93xxxxx4881xxxxxc71d991</p>
      */
     @NameInMap("RuleId")
     public String ruleId;
@@ -81,8 +87,10 @@ public class PutBucketLifecycleRequest extends TeaModel {
     /**
      * <p>The status of the rule. Valid values:</p>
      * <ul>
-     * <li><strong>Enabled</strong></li>
-     * <li><strong>Disabled</strong></li>
+     * <li><p><strong>Enabled</strong>: The system runs the rule on schedule.</p>
+     * </li>
+     * <li><p><strong>Disabled</strong>: The system ignores the rule.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveSDGShrinkRequest extends TeaModel {
     /**
-     * <p>IDs of Android in Container (AIC) instances.</p>
+     * <p>The list of AIC instance IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")

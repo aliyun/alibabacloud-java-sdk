@@ -4,10 +4,14 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ModifyClusterAddonShrinkRequest extends TeaModel {
+    /**
+     * <p>The parameter settings of the add-on.</p>
+     */
     @NameInMap("Addon")
     public String addonShrink;
 
     /**
+     * <p>The ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,7 @@ public class ModifyClusterAddonShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The name of the add-on. It must reference an installed add-on in the target cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

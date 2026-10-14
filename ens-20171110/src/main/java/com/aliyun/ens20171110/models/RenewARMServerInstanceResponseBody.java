@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenewARMServerInstanceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>370E61E0-6E6E-50FE-9259-EE706C55ABF1</p>

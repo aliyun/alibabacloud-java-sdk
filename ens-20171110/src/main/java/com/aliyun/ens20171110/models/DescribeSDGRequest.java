@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSDGRequest extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The page number for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeSDGRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of rows per page in a paging query.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DescribeSDGRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The IDs of SDGs that you want to query. By default, all SDGs are queried.</p>
+     * <p>The IDs of the SDGs to query. By default, all SDGs are queried.</p>
      */
     @NameInMap("SDGIds")
     public java.util.List<String> SDGIds;

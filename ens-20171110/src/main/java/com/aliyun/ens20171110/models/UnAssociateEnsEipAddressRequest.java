@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class UnAssociateEnsEipAddressRequest extends TeaModel {
     /**
-     * <p>The ID of the EIP.</p>
+     * <p>The instance ID of the edge elastic IP address (EIP).</p>
+     * <p>If the EIP is referenced by an SNAT entry, invoke DeleteSnatIpForSnatEntry to remove it first. If the EIP is referenced by a DNAT entry, invoke DeleteForwardEntry to delete it first, or set Force to true under Settings as needed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +16,10 @@ public class UnAssociateEnsEipAddressRequest extends TeaModel {
     public String allocationId;
 
     /**
-     * <p>Specifies whether to disassociate the EIP from a NAT gateway if a DNAT or SNAT entry is added to the NAT gateway. Valid values:</p>
+     * <p>Specifies whether to forcibly disassociate the EIP when the EIP is bound to a NAT gateway that has DNAT or SNAT entries. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): does not disassociate the EIP from a NAT gateway if a DNAT or SNAT entry is added to the NAT gateway.</li>
-     * <li><strong>true</strong>: disassociates the EIP from a NAT gateway if a DNAT or SNAT entry is added to the NAT gateway.</li>
+     * <li><strong>false</strong> (default): does not forcibly disassociate the EIP.</li>
+     * <li><strong>true</strong>: forcibly disassociates the EIP.</li>
      * </ul>
      * 
      * <strong>example:</strong>

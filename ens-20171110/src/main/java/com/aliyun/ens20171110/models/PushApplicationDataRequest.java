@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class PushApplicationDataRequest extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The application ID.</p>
+     * <p>Before calling this operation, activate the Edge Application Hosting service and create an application by calling CreateApplication. Obtain the AppId from the response of the CreateApplication operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +16,7 @@ public class PushApplicationDataRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The data files that you want to push. The value must be a JSON string.</p>
+     * <p>The list of data files to be pre-pushed, in the string format of a JSON array.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +26,7 @@ public class PushApplicationDataRequest extends TeaModel {
     public String data;
 
     /**
-     * <p>The push policy in the canary release environment. The value must be a JSON string. You can specify multiple push policies. By default, all data files are pushed.</p>
+     * <p>The canary pre-push policy in JSON string format. Multiple distribution policies are supported. By default, all data is pre-pushed.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;name\&quot;: \&quot;ScheduleToRegionId\&quot;,  \&quot;parameters\&quot;:{      \&quot;operator\&quot;: \&quot;In\&quot;,       \&quot;values\&quot;: [\&quot;cn-chegndu-telecom-4\&quot;, \&quot;cn-shanghai-cmcc-4\&quot;]  }}</p>
@@ -34,7 +35,7 @@ public class PushApplicationDataRequest extends TeaModel {
     public String pushStrategy;
 
     /**
-     * <p>This parameter does not take effect.</p>
+     * <p>This parameter is invalid.</p>
      * 
      * <strong>example:</strong>
      * <p>1800</p>

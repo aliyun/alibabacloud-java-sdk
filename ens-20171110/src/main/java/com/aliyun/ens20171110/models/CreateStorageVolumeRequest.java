@@ -63,8 +63,10 @@ public class CreateStorageVolumeRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable authentication. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Authentication is enabled.</li>
-     * <li><strong>0</strong> (default): Authentication is disabled.</li>
+     * <li><p><strong>1</strong>: Authentication is enabled.</p>
+     * </li>
+     * <li><p><strong>0</strong> (default): Authentication is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,8 +78,10 @@ public class CreateStorageVolumeRequest extends TeaModel {
     /**
      * <p>Indicates whether the volume is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong> (default): The volume is enabled.</li>
-     * <li><strong>0</strong>: The volume is disabled.</li>
+     * <li><p><strong>1</strong> (default): The volume is enabled.</p>
+     * </li>
+     * <li><p><strong>0</strong>: The volume is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

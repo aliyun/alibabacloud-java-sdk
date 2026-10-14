@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachInstancesToNodePoolShrinkRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class AttachInstancesToNodePoolShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The array of instances, including the instance information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Instances")
     public String instancesShrink;
 
     /**
+     * <p>The node pool ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

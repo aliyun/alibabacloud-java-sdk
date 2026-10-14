@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAddonResponseBody extends TeaModel {
     /**
+     * <p>The add-on information.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>false</p>
      */
@@ -43,6 +45,8 @@ public class DescribeAddonResponseBody extends TeaModel {
 
     public static class DescribeAddonResponseBodyAddonsConfigSchema extends TeaModel {
         /**
+         * <p>The application version.</p>
+         * 
          * <strong>example:</strong>
          * <p>859e9d595b2974ed79c444658d1dea89</p>
          */
@@ -50,6 +54,8 @@ public class DescribeAddonResponseBody extends TeaModel {
         public String appVersion;
 
         /**
+         * <p>The configuration version.</p>
+         * 
          * <strong>example:</strong>
          * <p>4155709cd12a09bdb8cbaca71bf03233</p>
          */
@@ -57,6 +63,8 @@ public class DescribeAddonResponseBody extends TeaModel {
         public String configVersion;
 
         /**
+         * <p>The name of the add-on.</p>
+         * 
          * <strong>example:</strong>
          * <p>edge-csi-lite</p>
          */
@@ -64,6 +72,8 @@ public class DescribeAddonResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The custom parameters of the add-on.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;key1&quot;:&quot;val1&quot;}</p>
          */
@@ -111,16 +121,23 @@ public class DescribeAddonResponseBody extends TeaModel {
 
     public static class DescribeAddonResponseBodyAddons extends TeaModel {
         /**
+         * <p>Indicates whether associated cloud resources are automatically cleaned up.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("CleanupCloudResources")
         public String cleanupCloudResources;
 
+        /**
+         * <p>The schema of custom parameters for the add-on.</p>
+         */
         @NameInMap("ConfigSchema")
         public java.util.List<DescribeAddonResponseBodyAddonsConfigSchema> configSchema;
 
         /**
+         * <p>The name of the add-on.</p>
+         * 
          * <strong>example:</strong>
          * <p>edge-csi-lite</p>
          */
@@ -128,6 +145,8 @@ public class DescribeAddonResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The add-on version.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1</p>
          */

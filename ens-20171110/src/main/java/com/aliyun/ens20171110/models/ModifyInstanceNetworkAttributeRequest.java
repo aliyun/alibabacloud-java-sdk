@@ -26,9 +26,12 @@ public class ModifyInstanceNetworkAttributeRequest extends TeaModel {
     /**
      * <p>The vSwitch IDs.</p>
      * <ul>
-     * <li>If you set this parameter to the ID of the current vSwitch, the vSwitch of the ECS instance remains unchanged.</li>
-     * <li>The input ID is a new vSwitch, and the new and old vSwitches must belong to the same node.</li>
-     * <li>By default, if this parameter is not specified, a private IP address is randomly assigned from within the CIDR block of the specified vSwitch.</li>
+     * <li><p>If you set this parameter to the ID of the current vSwitch, the vSwitch of the ECS instance remains unchanged.</p>
+     * </li>
+     * <li><p>The input ID is a new vSwitch, and the new and old vSwitches must belong to the same node.</p>
+     * </li>
+     * <li><p>By default, if this parameter is not specified, a private IP address is randomly assigned from within the CIDR block of the specified vSwitch.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

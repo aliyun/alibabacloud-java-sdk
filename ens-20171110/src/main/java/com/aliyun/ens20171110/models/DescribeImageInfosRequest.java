@@ -5,11 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeImageInfosRequest extends TeaModel {
     /**
-     * <p>The operating system (OS). You can specify only one OS in a request. If you do not specify a value for this parameter, images for all supported OSs are queried. Valid values:</p>
+     * <p>The operating system type. Only a single type can be specified. If this parameter is not specified, all types are queried.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>linux</li>
-     * <li>windows</li>
+     * <li><p>Linux</p>
+     * </li>
+     * <li><p>windows</p>
+     * </li>
      * </ul>
+     * <p>In practice, passing linux or Linux may return an empty list, whereas omitting this parameter can return images with an OSType of linux. Verify the actual results before relying on this filter.</p>
      * 
      * <strong>example:</strong>
      * <p>linux</p>

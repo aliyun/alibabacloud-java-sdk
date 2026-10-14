@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class CreateFileSystemResponseBody extends TeaModel {
     /**
-     * <p>The information about the file system that was created.</p>
+     * <p>The file systems that are created.</p>
      */
     @NameInMap("AllocationId")
     public java.util.List<String> allocationId;
 
+    /**
+     * <p>The list of instance allocation information for the file system across ENS edge zones.</p>
+     */
     @NameInMap("AllocationIds")
     public java.util.List<CreateFileSystemResponseBodyAllocationIds> allocationIds;
 
     /**
-     * <p>The status code for successful operations. Valid values:</p>
+     * <p>The status code that indicates the result. Valid values:  </p>
      * <ul>
-     * <li>PartSuccess: The operation is partially successful.</li>
-     * <li>AllSuccess: The operation is successful.</li>
+     * <li>PartSuccess: partially successful.</li>
+     * <li>AllSuccess: all successful.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +30,7 @@ public class CreateFileSystemResponseBody extends TeaModel {
     public String bizStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
@@ -36,7 +39,7 @@ public class CreateFileSystemResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the file system that failed to be created.</p>
+     * <p>The file systems that failed to be created.</p>
      */
     @NameInMap("UnAllocationId")
     public java.util.List<String> unAllocationId;
@@ -87,9 +90,21 @@ public class CreateFileSystemResponseBody extends TeaModel {
     }
 
     public static class CreateFileSystemResponseBodyAllocationIds extends TeaModel {
+        /**
+         * <p>The ENS edge zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-cm</p>
+         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5s7xxxxxxx</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 

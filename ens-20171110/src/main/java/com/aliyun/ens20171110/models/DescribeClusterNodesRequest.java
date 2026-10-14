@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterNodesRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +15,7 @@ public class DescribeClusterNodesRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>This parameter is required.</p>
+     * <p>The node pool ID.</p>
      * 
      * <strong>example:</strong>
      * <p>np751e9d5464cf4ef081087137f33e4528</p>
@@ -23,7 +24,7 @@ public class DescribeClusterNodesRequest extends TeaModel {
     public String nodepoolId;
 
     /**
-     * <p>This parameter is required.</p>
+     * <p>The page number. Pages start from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +33,7 @@ public class DescribeClusterNodesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>This parameter is required.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

@@ -12,7 +12,7 @@ public class CreateSecurityGroupPermissionsShrinkRequest extends TeaModel {
     public String permissionsShrink;
 
     /**
-     * <p>The IDs of the security groups.</p>
+     * <p>The security group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

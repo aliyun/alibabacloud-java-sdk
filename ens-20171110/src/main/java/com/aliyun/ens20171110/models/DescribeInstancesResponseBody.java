@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstancesResponseBody extends TeaModel {
     /**
-     * <p>The returned service code. 0 indicates that the request was successful.</p>
+     * <p>The business code returned. A value of 0 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -17,7 +17,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public DescribeInstancesResponseBodyInstances instances;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the instance list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +26,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page that was specified in the request.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -44,7 +44,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of instances returned.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

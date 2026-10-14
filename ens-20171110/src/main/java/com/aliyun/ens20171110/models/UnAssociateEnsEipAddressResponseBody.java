@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnAssociateEnsEipAddressResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4A431388-2D4B-46F4-A96B-D4E6BD0688C1</p>

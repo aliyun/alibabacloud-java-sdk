@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMeasurementDataRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end time in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeMeasurementDataRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The start time in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

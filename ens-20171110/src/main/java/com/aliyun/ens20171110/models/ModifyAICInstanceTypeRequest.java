@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyAICInstanceTypeRequest extends TeaModel {
     /**
+     * <p>One or more environment variables to set during instance initialization.</p>
+     * 
      * <strong>example:</strong>
      * <p>[object Object]</p>
      */
@@ -12,6 +14,13 @@ public class ModifyAICInstanceTypeRequest extends TeaModel {
     public String environmentVar;
 
     /**
+     * <p>The refresh rate. Unit: Hz. Valid values:</p>
+     * <ul>
+     * <li>30</li>
+     * <li>60</li>
+     * <li>120</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -19,6 +28,7 @@ public class ModifyAICInstanceTypeRequest extends TeaModel {
     public Long frequency;
 
     /**
+     * <p>The image ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +38,7 @@ public class ModifyAICInstanceTypeRequest extends TeaModel {
     public String imageId;
 
     /**
+     * <p>The ID of the instance whose specifications you want to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +48,7 @@ public class ModifyAICInstanceTypeRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The target AIC container instance specifications.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +58,18 @@ public class ModifyAICInstanceTypeRequest extends TeaModel {
     public String instanceType;
 
     /**
+     * <p>The resolution. Valid values:</p>
+     * <ul>
+     * <li>1920*1080</li>
+     * <li>1080*1920</li>
+     * <li>1280*720</li>
+     * <li>720*1280</li>
+     * <li>2400*1080</li>
+     * <li>1080*2400</li>
+     * <li>1920*864</li>
+     * <li>864*1920</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>720*1280</p>
      */

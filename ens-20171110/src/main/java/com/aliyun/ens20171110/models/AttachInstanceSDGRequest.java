@@ -4,19 +4,50 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class AttachInstanceSDGRequest extends TeaModel {
+    /**
+     * <p>The cloud disk access protocol type. Valid values:</p>
+     * <ul>
+     * <li><p>iscsi: the default protocol for standard cloud disks. Both rbd cloud disks and standard cloud disks support this protocol.</p>
+     * </li>
+     * <li><p>rbd: the default protocol for rbd cloud disks. Only rbd cloud disks support this mount protocol.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>iscsi</p>
+     */
     @NameInMap("DiskAccessProtocol")
     public String diskAccessProtocol;
 
+    /**
+     * <p>The type of the shared cloud disk to be created. Valid values:</p>
+     * <ul>
+     * <li>standard: standard cloud disk.</li>
+     * <li>rbd: rbd cloud disk.</li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>If no shared cloud disk type is specified, a standard cloud disk is created by default.</li>
+     * <li>An rbd shared cloud disk can be created only when the parent disk type is rbd.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>standard</p>
+     */
     @NameInMap("DiskType")
     public String diskType;
 
     /**
-     * <p>The IDs of the instances.</p>
+     * <p>The list of instance IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <p>The file loading rate optimization parameter.</p>
+     */
     @NameInMap("LoadOpt")
     public AttachInstanceSDGRequestLoadOpt loadOpt;
 
@@ -76,15 +107,39 @@ public class AttachInstanceSDGRequest extends TeaModel {
     }
 
     public static class AttachInstanceSDGRequestLoadOpt extends TeaModel {
+        /**
+         * <p>Specifies whether to enable block device read/write splitting. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("BlockRwSplit")
         public Boolean blockRwSplit;
 
+        /**
+         * <p>The size for block device read/write splitting, in GiB. A value of 0 indicates that the default size is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("BlockRwSplitSize")
         public Integer blockRwSplitSize;
 
+        /**
+         * <p>Specifies whether to enable caching. Block device read/write splitting must be enabled before caching can be used. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Cache")
         public Boolean cache;
 
+        /**
+         * <p>The cache size, in GiB. A value of 0 indicates that the default size is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("CacheSize")
         public Integer cacheSize;
 

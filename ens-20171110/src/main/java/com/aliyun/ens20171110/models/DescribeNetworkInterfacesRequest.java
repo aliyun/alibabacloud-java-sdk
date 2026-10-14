@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfacesRequest extends TeaModel {
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The ID of the region where the instance resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-tianjin-cmcc</p>
@@ -14,13 +14,13 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public String ensRegionId;
 
     /**
-     * <p>The IDs of edge nodes. N indicates the number of edge node IDs that you can specify at the same time. Valid values of N: 1 to 100.</p>
+     * <p>The IDs of the ENS edge zones. N indicates the sequence number of the edge zone ID. Valid values of N: 1 to 100.</p>
      */
     @NameInMap("EnsRegionIds")
     public java.util.List<String> ensRegionIds;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i-5t7z99n32gplriv</p>
@@ -29,7 +29,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>IPv6 addresses N of the ENI. You can specify multiple IPv6 addresses. Valid values of N: 1 to 100.</p>
+     * <p>The IPv6 addresses of the elastic network interfaces (ENIs). N indicates the settings for multiple IPv6 addresses. Valid values of N: 1 to 100.</p>
      */
     @NameInMap("Ipv6Address")
     public java.util.List<String> ipv6Address;
@@ -44,7 +44,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public String networkId;
 
     /**
-     * <p>The ID of the ENI.</p>
+     * <p>The ID of the elastic network interfaces (ENIs).</p>
      * 
      * <strong>example:</strong>
      * <p>eni-58z57orgmt6d1****</p>
@@ -53,13 +53,13 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public String networkInterfaceId;
 
     /**
-     * <p>The IDs of the elastic network interfaces (ENIs). N indicates the number of ENI IDs that you can specify at the same time. Valid values of N: 1 to 100.</p>
+     * <p>The list of IDs of the elastic network interfaces (ENIs). N indicates the settings for multiple elastic network interfaces (ENIs) IDs. Valid values of N: 1 to 100.</p>
      */
     @NameInMap("NetworkInterfaceIds")
     public java.util.List<String> networkInterfaceIds;
 
     /**
-     * <p>The name of the ENI.</p>
+     * <p>The name of the elastic network interfaces (ENIs).</p>
      * 
      * <strong>example:</strong>
      * <p>test-01</p>
@@ -68,7 +68,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public String networkInterfaceName;
 
     /**
-     * <p>The page number of the returned page. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number of the instance status list. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -77,7 +77,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 50.</p>
+     * <p>The number of entries per page for paging queries. Maximum value: 100. Default value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -86,16 +86,16 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The primary IP address of the ENI.</p>
+     * <p>The primary IP address of the elastic network interfaces (ENIs).</p>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>10.XXX.XXX.5</p>
      */
     @NameInMap("PrimaryIpAddress")
     public String primaryIpAddress;
 
     /**
-     * <p>The ID of the security group to which the secondary ENI belongs. To query the details of secondary ENIs based on the ID of a security group, specify this parameter.</p>
+     * <p>The ID of the security group to which the secondary ENI belongs. Specify this parameter if you want to query the information about secondary ENIs by security group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-5p1fg655nh68xyz9i***</p>
@@ -104,15 +104,15 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The status of the ENI. Valid values:</p>
+     * <p>The stateful status of the elastic network interfaces (ENIs). Valid values:</p>
      * <ul>
-     * <li>Available: The ENI is available.</li>
-     * <li>Attaching: The ENI is being attached to an instance.</li>
-     * <li>InUse: The ENI is attached to an instance.</li>
-     * <li>Detaching: The ENI is being detached from an instance.</li>
-     * <li>Deleting: The ENI is being deleted.</li>
+     * <li>Available: available.</li>
+     * <li>Attaching: attaching.</li>
+     * <li>InUse: in use.</li>
+     * <li>Detaching: detaching.</li>
+     * <li>Deleting: the delete operation is in progress.</li>
      * </ul>
-     * <p>This parameter is empty by default, which indicates that ENIs in all states are queried.</p>
+     * <p>Default value: empty, which indicates that all statuses are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>Available</p>
@@ -121,12 +121,12 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The type of the ENI. Valid values:</p>
+     * <p>The type of the elastic network interfaces (ENIs). Valid values:</p>
      * <ul>
-     * <li>Primary: the primary ENI.</li>
-     * <li>Secondary: the secondary ENI.</li>
+     * <li>Primary: primary network interface controller (NIC).</li>
+     * <li>Secondary: secondary network interface controller (NIC).</li>
      * </ul>
-     * <p>This parameter is empty by default, which indicates that both primary and secondary ENIs are queried.</p>
+     * <p>Default value: empty, which indicates that all types are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>Secondary</p>

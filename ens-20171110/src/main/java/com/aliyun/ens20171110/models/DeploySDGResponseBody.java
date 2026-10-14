@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeploySDGResponseBody extends TeaModel {
     /**
-     * <p>The returned data object.</p>
+     * <p>The returned Data object.</p>
      */
     @NameInMap("Data")
     public DeploySDGResponseBodyData data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A331CA96-3948-4BD2-B067-F6174F5C17EA</p>
@@ -51,7 +51,7 @@ public class DeploySDGResponseBody extends TeaModel {
         public String errMessage;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>aic-xxxxx-0</p>
@@ -93,7 +93,7 @@ public class DeploySDGResponseBody extends TeaModel {
         public Long failedCount;
 
         /**
-         * <p>Details of failed tasks.</p>
+         * <p>The list of failed task details.</p>
          */
         @NameInMap("FailedItems")
         public java.util.List<DeploySDGResponseBodyDataResultFailedItems> failedItems;
@@ -140,7 +140,7 @@ public class DeploySDGResponseBody extends TeaModel {
 
     public static class DeploySDGResponseBodyData extends TeaModel {
         /**
-         * <p>The response message. Success is returned for a successful request.</p>
+         * <p>The response message. A value of success indicates a successful request.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -155,10 +155,10 @@ public class DeploySDGResponseBody extends TeaModel {
         public DeploySDGResponseBodyDataResult result;
 
         /**
-         * <p>Indicates whether all tasks are successful. Valid values:</p>
+         * <p>Indicates whether all requests are successful. Valid values:</p>
          * <ul>
-         * <li>true: All tasks are successful.</li>
-         * <li>false: Failed tasks exist.</li>
+         * <li>true: All successful.</li>
+         * <li>false: Some tasks failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

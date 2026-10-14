@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchEventMigrateInstanceResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>FF53E96D-3F1A-42F0-8373-1C2B39D72D44</p>
@@ -14,7 +14,7 @@ public class BatchEventMigrateInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The results.</p>
+     * <p>The list of results.</p>
      */
     @NameInMap("Results")
     public java.util.List<BatchEventMigrateInstanceResponseBodyResults> results;
@@ -42,7 +42,7 @@ public class BatchEventMigrateInstanceResponseBody extends TeaModel {
 
     public static class BatchEventMigrateInstanceResponseBodyResults extends TeaModel {
         /**
-         * <p>The error code.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -51,7 +51,7 @@ public class BatchEventMigrateInstanceResponseBody extends TeaModel {
         public Integer code;
 
         /**
-         * <p>The ID of the event.</p>
+         * <p>The event ID.</p>
          * 
          * <strong>example:</strong>
          * <p>e-d71ff150945b9c02eb6ebc0016328468</p>
@@ -60,7 +60,7 @@ public class BatchEventMigrateInstanceResponseBody extends TeaModel {
         public String eventId;
 
         /**
-         * <p>When Code!=200, it indicates the specific error message.</p>
+         * <p>The error message returned when Code is not 200.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -69,7 +69,7 @@ public class BatchEventMigrateInstanceResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The resource IDs.</p>
+         * <p>The resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i-55qi8m11rr53c4i964md8a00l</p>

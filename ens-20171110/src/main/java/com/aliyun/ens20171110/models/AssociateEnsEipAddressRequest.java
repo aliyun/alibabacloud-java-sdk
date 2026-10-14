@@ -5,35 +5,35 @@ import com.aliyun.tea.*;
 
 public class AssociateEnsEipAddressRequest extends TeaModel {
     /**
-     * <p>The ID of the EIP that you want to associate.</p>
+     * <p>The ID of the EIP to be associated.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>eip-5sc1sgcrsrwgwdvx44hru3p63</p>
+     * <p>eip-5sc1sgcrsrwgwdvx44hru****</p>
      */
     @NameInMap("AllocationId")
     public String allocationId;
 
     /**
-     * <p>The ID of the cloud service with which the EIP is associated.</p>
+     * <p>The ID of the cloud product instance to attach the EIP to.</p>
      * <blockquote>
-     * <p> You can specify the ID of an Edge Load Balancer (ELB) instance ID.</p>
+     * <p>Load balancing (ELB) instance IDs are supported.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>lb-5saivuir6b1mupxjfbhmk1xkb</p>
+     * <p>lb-5saivuir6b1mupxjfbhmk****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The type of instance with which you want to associate the EIP. Valid values:</p>
+     * <p>The type of the EIP instance. Valid values:</p>
      * <ul>
      * <li><strong>Nat</strong>: NAT gateway.</li>
-     * <li><strong>SlbInstance</strong>: Edge Load Balancer (ELB) instance.</li>
-     * <li><strong>NetworkInterface</strong>: secondary elastic network interface (ENI).</li>
-     * <li><strong>NatSlbInstance</strong>: If you want to associate multiple EIPs with an ELB instance, you need to set the parameter to this value.</li>
+     * <li><strong>SlbInstance</strong>: load balancing (ELB).</li>
+     * <li><strong>NetworkInterface</strong>: secondary network interface controller (NIC).</li>
+     * <li><strong>NatSlbInstance</strong>: select this value when attaching multiple EIPs to an ELB.</li>
      * <li><strong>EnsInstance</strong> (default): ENS instance.</li>
      * </ul>
      * 
@@ -44,10 +44,12 @@ public class AssociateEnsEipAddressRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>Specifies whether the EIP is a secondary EIP. Valid values:</p>
+     * <p>Specifies whether the EIP is a standby EIP. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: standby.</p>
+     * </li>
+     * <li><p>false: not standby.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

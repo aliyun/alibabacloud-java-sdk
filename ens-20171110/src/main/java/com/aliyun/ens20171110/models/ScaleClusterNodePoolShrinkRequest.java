@@ -4,10 +4,14 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ScaleClusterNodePoolShrinkRequest extends TeaModel {
+    /**
+     * <p>The HTTP request body.</p>
+     */
     @NameInMap("Body")
     public String bodyShrink;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,7 @@ public class ScaleClusterNodePoolShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The node pool ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

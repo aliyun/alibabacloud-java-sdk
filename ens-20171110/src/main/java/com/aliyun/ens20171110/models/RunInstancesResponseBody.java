@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RunInstancesResponseBody extends TeaModel {
     /**
-     * <p>The IDs of instances.</p>
+     * <p>The list of instance IDs.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;

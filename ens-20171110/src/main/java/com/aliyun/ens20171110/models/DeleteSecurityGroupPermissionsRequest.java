@@ -55,8 +55,10 @@ public class DeleteSecurityGroupPermissionsRequest extends TeaModel {
         /**
          * <p>The direction in which the security group rule is applied.</p>
          * <ul>
-         * <li>egress</li>
-         * <li>ingress</li>
+         * <li><p>egress</p>
+         * </li>
+         * <li><p>ingress</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -69,11 +71,16 @@ public class DeleteSecurityGroupPermissionsRequest extends TeaModel {
         /**
          * <p>Protocol type. Valid values:</p>
          * <ul>
-         * <li>TCP</li>
-         * <li>UDP</li>
-         * <li>ICMP: the ICMP protocol</li>
-         * <li>ICMPv6: the IPv6 ICMP protocol.</li>
-         * <li>ALL: All protocols are supported.</li>
+         * <li><p>TCP</p>
+         * </li>
+         * <li><p>UDP</p>
+         * </li>
+         * <li><p>ICMP: the ICMP protocol</p>
+         * </li>
+         * <li><p>ICMPv6: the IPv6 ICMP protocol.</p>
+         * </li>
+         * <li><p>ALL: All protocols are supported.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -86,7 +93,7 @@ public class DeleteSecurityGroupPermissionsRequest extends TeaModel {
         /**
          * <p>The destination IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
          * <blockquote>
-         * <p> This parameter and the <code>DestCidrIp</code> parameter cannot be set at the same time.</p>
+         * <p>This parameter and the <code>DestCidrIp</code> parameter cannot be set at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -98,7 +105,7 @@ public class DeleteSecurityGroupPermissionsRequest extends TeaModel {
         /**
          * <p>The source IPv6 CIDR block of the security group rule. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
          * <blockquote>
-         * <p> This parameter and the <code>DestCidrIp</code> parameter cannot be set at the same time.</p>
+         * <p>This parameter and the <code>DestCidrIp</code> parameter cannot be set at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -110,8 +117,10 @@ public class DeleteSecurityGroupPermissionsRequest extends TeaModel {
         /**
          * <p>The action specified in the security group rule. Valid values:</p>
          * <ul>
-         * <li>Accept</li>
-         * <li>Drop</li>
+         * <li><p>Accept</p>
+         * </li>
+         * <li><p>Drop</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -124,9 +133,12 @@ public class DeleteSecurityGroupPermissionsRequest extends TeaModel {
         /**
          * <p>The destination port range of the security group rule. Valid values:</p>
          * <ul>
-         * <li>If you set IpProtocol to TCP or UDP, the valid values of this parameter are 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</li>
-         * <li>If you set IpProtocol to ICMP, the port range is -1/-1.</li>
-         * <li>If you set IpProtocol to ALL, the port number range is -1/-1.</li>
+         * <li><p>If you set IpProtocol to TCP or UDP, the valid values of this parameter are 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</p>
+         * </li>
+         * <li><p>If you set IpProtocol to ICMP, the port range is -1/-1.</p>
+         * </li>
+         * <li><p>If you set IpProtocol to ALL, the port number range is -1/-1.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -158,9 +170,12 @@ public class DeleteSecurityGroupPermissionsRequest extends TeaModel {
         /**
          * <p>The range of source port numbers for the protocols specified in the security group rule. Valid values:</p>
          * <ul>
-         * <li>If you set IpProtocol to TCP or UDP, the valid values of this parameter are 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</li>
-         * <li>If you set IpProtocol to ICMP, the port range is -1/-1.</li>
-         * <li>If you set IpProtocol to ALL, the port range is -1/-1.</li>
+         * <li><p>If you set IpProtocol to TCP or UDP, the valid values of this parameter are 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</p>
+         * </li>
+         * <li><p>If you set IpProtocol to ICMP, the port range is -1/-1.</p>
+         * </li>
+         * <li><p>If you set IpProtocol to ALL, the port range is -1/-1.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

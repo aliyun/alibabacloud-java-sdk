@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDisksResponseBody extends TeaModel {
     /**
-     * <p>The returned service code. 0 indicates that the request was successful.</p>
+     * <p>The returned business code. A value of 0 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -17,7 +17,7 @@ public class DescribeDisksResponseBody extends TeaModel {
     public DescribeDisksResponseBodyDisks disks;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +26,7 @@ public class DescribeDisksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -44,7 +44,7 @@ public class DescribeDisksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned pages.</p>
+     * <p>The total number of pages for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>13</p>

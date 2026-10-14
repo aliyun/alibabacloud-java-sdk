@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachKeyPairResponseBody extends TeaModel {
     /**
-     * <p>The number of instances from which the SSH key pair failed to be unbound.</p>
+     * <p>The number of instances where the attachment failed.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
     public Integer failCount;
 
     /**
-     * <p>The ID of the SSH key pair.</p>
+     * <p>The key pair ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ssh-xxx</p>
@@ -23,7 +23,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
     public String keyPairId;
 
     /**
-     * <p>The name of the SSH key pair.</p>
+     * <p>The key pair name.</p>
      * 
      * <strong>example:</strong>
      * <p>ssh-xxx</p>
@@ -41,13 +41,13 @@ public class AttachKeyPairResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result set of the unbind operation.</p>
+     * <p>The attachment results for each instance.</p>
      */
     @NameInMap("Results")
     public java.util.List<AttachKeyPairResponseBodyResults> results;
 
     /**
-     * <p>The total number of instances from which the SSH key pair is unbound.</p>
+     * <p>The total number of instances in the request.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -110,7 +110,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
 
     public static class AttachKeyPairResponseBodyResults extends TeaModel {
         /**
-         * <p>The status code of the operation. 200 indicates that the operation succeeded.</p>
+         * <p>The status code for the operation. A value of <code>200</code> indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -128,7 +128,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The message of the operation. If the value of the Code parameter is 200, the value of this parameter is successful.</p>
+         * <p>The response message. If the <code>Code</code> is <code>200</code>, this message is <code>successful</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -137,7 +137,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>Indicates whether the operation is successful.</p>
+         * <p>Indicates if the operation succeeded for the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkPeerConnectionsRequest extends TeaModel {
     /**
+     * <p>The ID of the ENS node.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-xian-unicom</p>
      */
@@ -12,6 +14,8 @@ public class DescribeNetworkPeerConnectionsRequest extends TeaModel {
     public String ensRegionId;
 
     /**
+     * <p>The ID of the network peer connection.</p>
+     * 
      * <strong>example:</strong>
      * <p>pcc-5inkeimcipxk26yqtzm4q****</p>
      */
@@ -19,16 +23,23 @@ public class DescribeNetworkPeerConnectionsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The name of the network peer connection.</p>
+     * 
      * <strong>example:</strong>
      * <p>test0</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The IDs of the networks involved in the connection. The query does not distinguish between the requester and accepter.</p>
+     */
     @NameInMap("NetworkIds")
     public java.util.List<String> networkIds;
 
     /**
+     * <p>The page number for the returned results. Default: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +47,8 @@ public class DescribeNetworkPeerConnectionsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. Default: <strong>10</strong>. Valid values: <strong>10</strong> to <strong>100</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

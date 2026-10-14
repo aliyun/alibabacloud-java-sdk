@@ -17,12 +17,18 @@ public class ReleaseInstanceResponseBody extends TeaModel {
      * <p>The type of the resource.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>instance</li>
-     * <li>eip</li>
-     * <li>disk</li>
-     * <li>network</li>
-     * <li>natgateway</li>
-     * <li>vswitch</li>
+     * <li><p>instance</p>
+     * </li>
+     * <li><p>eip</p>
+     * </li>
+     * <li><p>disk</p>
+     * </li>
+     * <li><p>network</p>
+     * </li>
+     * <li><p>natgateway</p>
+     * </li>
+     * <li><p>vswitch</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

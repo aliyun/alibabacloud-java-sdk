@@ -42,7 +42,7 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
 
     public static class DescribeEpnBandWidthDataResponseBodyMonitorDataBandWidthMonitorData extends TeaModel {
         /**
-         * <p>The outbound bandwidth. Unit: bit/s.</p>
+         * <p>The downstream bandwidth. Unit: bit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -51,7 +51,7 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
         public Long downBandWidth;
 
         /**
-         * <p>The Internet traffic to the instance. Unit: bytes.</p>
+         * <p>The inbound public network traffic of the instance. Unit: bits.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -60,7 +60,7 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
         public Long internetRX;
 
         /**
-         * <p>The Internet traffic from the instance. Unit: bytes.</p>
+         * <p>The outbound public network traffic of the instance. Unit: bits.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -69,7 +69,7 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
         public Long internetTX;
 
         /**
-         * <p>The timestamp when the monitoring data was queried. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The timestamp of the monitoring data. The time is in UTC and in the format of yyyy-MM-DDThh:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-10-12T05:45:00Z</p>
@@ -78,7 +78,7 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
         public String timeStamp;
 
         /**
-         * <p>The inbound bandwidth. Unit: bit/s.</p>
+         * <p>The upstream bandwidth. Unit: bit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -135,13 +135,13 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
 
     public static class DescribeEpnBandWidthDataResponseBodyMonitorData extends TeaModel {
         /**
-         * <p>The bandwidth data.</p>
+         * <p>The bandwidth monitoring data.</p>
          */
         @NameInMap("BandWidthMonitorData")
         public java.util.List<DescribeEpnBandWidthDataResponseBodyMonitorDataBandWidthMonitorData> bandWidthMonitorData;
 
         /**
-         * <p>The maximum outbound bandwidth within the queried time range. Unit: bit/s.</p>
+         * <p>The maximum downstream bandwidth within the queried time range. Unit: bit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>16817468</p>
@@ -150,7 +150,7 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
         public Long maxDownBandWidth;
 
         /**
-         * <p>The maximum inbound bandwidth within the queried time range. Unit: bit/s.</p>
+         * <p>The maximum upstream bandwidth within the queried time range. Unit: bit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>231008</p>

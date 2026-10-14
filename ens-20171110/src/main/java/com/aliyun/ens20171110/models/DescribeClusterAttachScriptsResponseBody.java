@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterAttachScriptsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
      */
@@ -12,6 +14,8 @@ public class DescribeClusterAttachScriptsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The cluster attachment script, Base64-encoded.</p>
+     * 
      * <strong>example:</strong>
      * <p>Y2QgWnhiU0o=</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The token of the first page to query.</p>
+     * <p>The token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>153ba0bbb2be03f84eb48b699f0a4123</p>
@@ -14,13 +14,14 @@ public class ListTagResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The IDs of resources. Valid values of N: 1 to 50.</p>
+     * <p>The resource ID. Valid values of N: 1 to 50.</p>
+     * <p>You must specify at least one of ResourceId and Tag. Otherwise, the MissingParameter.ResourceIdsOrTags error is returned.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. Set the value to instance.</p>
+     * <p>The resource type. Valid values: instance (instance).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +31,8 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tag list.</p>
+     * <p>You must specify at least one of ResourceId and Tag. Otherwise, the MissingParameter.ResourceIdsOrTags error is returned.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -74,10 +76,10 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+         * <p>The tag key of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
          * <ul>
-         * <li>The key cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
-         * <li>The key must be up to 64 characters in length.</li>
+         * <li>The tag key cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
+         * <li>The tag key can be up to 64 characters in length.</li>
          * <li>The tag key cannot be an empty string.</li>
          * </ul>
          * 
@@ -88,11 +90,11 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of a tag that is attached to the topics you want to query. This parameter is not required. If you configure this parameter, you must also configure the <strong>Key</strong> parameter.**** If you include the Key and Value parameters in a request, this operation queries only the topics that use the specified tags. If you do not include these parameters in a request, this operation queries all topics that you can access.</p>
+         * <p>The tag value of the topic. You must specify both <strong>Key</strong> and <strong>Value</strong> or neither. If both are specified, the system filters topics based on the tag. If neither is specified, all topics are queried.</p>
          * <ul>
          * <li>Valid values of N: 1 to 20.</li>
-         * <li>The value of this parameter can be an empty string.</li>
-         * <li>The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</li>
+         * <li>The tag value can be an empty string.</li>
+         * <li>The tag value can be up to 128 characters in length, and cannot start with aliyun or acs:, or contain http:// or https://.</li>
          * </ul>
          * 
          * <strong>example:</strong>

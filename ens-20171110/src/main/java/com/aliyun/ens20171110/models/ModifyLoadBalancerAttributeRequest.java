@@ -17,7 +17,7 @@ public class ModifyLoadBalancerAttributeRequest extends TeaModel {
     /**
      * <p>The name of the ELB instance. The name must be <strong>2</strong> to <strong>128</strong> characters in length.</p>
      * <blockquote>
-     * <p> The value cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The value cannot start with <code>http://</code> or <code>https://</code>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetachKeyPairResponseBody extends TeaModel {
     /**
-     * <p>The number of instances to which the SSH key pair failed to be bound.</p>
+     * <p>The number of instances for which the detach operation failed.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
     public Integer failCount;
 
     /**
-     * <p>The ID of the SSH key pair.</p>
+     * <p>The ID of the key pair.</p>
      * 
      * <strong>example:</strong>
      * <p>ssh-xxx</p>
@@ -23,7 +23,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
     public String keyPairId;
 
     /**
-     * <p>The name of the SSH key pair.</p>
+     * <p>The name of the key pair.</p>
      * 
      * <strong>example:</strong>
      * <p>test-kp</p>
@@ -41,13 +41,13 @@ public class DetachKeyPairResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The operation results.</p>
+     * <p>The results of the operation for each instance.</p>
      */
     @NameInMap("Results")
     public java.util.List<DetachKeyPairResponseBodyResults> results;
 
     /**
-     * <p>The total number of instances to which the SSH key pair is bound.</p>
+     * <p>The total number of instances specified in the request.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -110,7 +110,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
 
     public static class DetachKeyPairResponseBodyResults extends TeaModel {
         /**
-         * <p>The status code of the operation. 200 indicates that the operation succeeded.</p>
+         * <p>The status code for the operation on a specific instance. A value of <code>200</code> indicates a successful operation.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -128,7 +128,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The message of the operation. If the value of the Code parameter is 200, the value of this parameter is successful.</p>
+         * <p>The response message for the operation. If the <code>Code</code> is <code>200</code>, the message is <code>successful</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -137,7 +137,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>Indicates whether the operation is successful.</p>
+         * <p>Indicates whether the operation on the instance succeeded. Valid values: <code>true</code> and <code>false</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

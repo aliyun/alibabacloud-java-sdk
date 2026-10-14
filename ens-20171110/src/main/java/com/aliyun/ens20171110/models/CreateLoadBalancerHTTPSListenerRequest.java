@@ -16,7 +16,7 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
     /**
      * <p>The cookie that is configured on the server. The cookie must be <strong>1</strong> to <strong>200</strong> characters in length and contain only ASCII characters and digits.</p>
      * <blockquote>
-     * <p> This parameter is required if you set StickySession to on and StickySessionType to server.</p>
+     * <p>This parameter is required if you set StickySession to on and StickySessionType to server.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
     /**
      * <p>The timeout period of a cookie. Valid values: <strong>1</strong> to <strong>86400</strong>. Unit: seconds.</p>
      * <blockquote>
-     * <p> This parameter is required if you set StickySession to on and StickySessionType to insert.</p>
+     * <p>This parameter is required if you set StickySession to on and StickySessionType to insert.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -40,11 +40,11 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
     /**
      * <p>The description of the listener. The description must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
      * <blockquote>
-     * <p> The value cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The value cannot start with <code>http://</code> or <code>https://</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>https_80</p>
+     * <p>Listener description</p>
      */
     @NameInMap("Description")
     public String description;
@@ -61,8 +61,10 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
     /**
      * <p>Indicates whether the health check feature is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong></li>
-     * <li><strong>off</strong></li>
+     * <li><p><strong>on</strong></p>
+     * </li>
+     * <li><p><strong>off</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -75,7 +77,7 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
     /**
      * <p>The port that is used for health checks. Valid values: <strong>1</strong> to <strong>65535</strong>. If you leave this parameter empty, the port specified by BackendServerPort is used for health checks.</p>
      * <blockquote>
-     * <p> This parameter takes effect only if you set HealthCheck to on.</p>
+     * <p>This parameter takes effect only if you set HealthCheck to on.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -87,7 +89,7 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
     /**
      * <p>The domain name that you want to use for health checks.</p>
      * <blockquote>
-     * <p> This parameter takes effect only if you set HealthCheck to on.</p>
+     * <p>This parameter takes effect only if you set HealthCheck to on.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -99,13 +101,17 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
     /**
      * <p>The HTTP status code for a successful health check. Valid values:</p>
      * <ul>
-     * <li><strong>http_2xx</strong> (default)</li>
-     * <li><strong>http_3xx</strong></li>
-     * <li><strong>http_4xx</strong></li>
-     * <li><strong>http_5xx</strong></li>
+     * <li><p><strong>http_2xx</strong> (default)</p>
+     * </li>
+     * <li><p><strong>http_3xx</strong></p>
+     * </li>
+     * <li><p><strong>http_4xx</strong></p>
+     * </li>
+     * <li><p><strong>http_5xx</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter takes effect only if you set HealthCheck to on.</p>
+     * <p>This parameter takes effect only if you set HealthCheck to on.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -117,7 +123,7 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
     /**
      * <p>The interval at which health checks are performed. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>2</strong>. Unit: seconds.</p>
      * <blockquote>
-     * <p> This parameter takes effect only if you set HealthCheck to on.</p>
+     * <p>This parameter takes effect only if you set HealthCheck to on.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -129,11 +135,13 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
     /**
      * <p>The HTTP request method for health checks. Valid values:</p>
      * <ul>
-     * <li><strong>head</strong> (default): requests the head of the page.</li>
-     * <li><strong>get</strong>: requests the specified part of the page and returns the entity body.</li>
+     * <li><p><strong>head</strong> (default): requests the head of the page.</p>
+     * </li>
+     * <li><p><strong>get</strong>: requests the specified part of the page and returns the entity body.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter takes effect only if the HealthCheck parameter is set to on.</p>
+     * <p>This parameter takes effect only if the HealthCheck parameter is set to on.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -145,9 +153,12 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
     /**
      * <p>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.</p>
      * <ul>
-     * <li>Default value: 5.</li>
-     * <li>Valid values: <strong>1</strong> to <strong>300</strong>.</li>
-     * <li>Unit: seconds.</li>
+     * <li><p>Default value: 5.</p>
+     * </li>
+     * <li><p>Valid values: <strong>1</strong> to <strong>300</strong>.</p>
+     * </li>
+     * <li><p>Unit: seconds.</p>
+     * </li>
      * </ul>
      * <blockquote>
      * </blockquote>
@@ -167,7 +178,7 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
     /**
      * <p>The URI used for health checks. The URI must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
      * <blockquote>
-     * <p> A URL must start with a forward slash (<code>/</code>) but cannot contain only forward slashes (<code>/</code>).</p>
+     * <p>A URL must start with a forward slash (<code>/</code>) but cannot contain only forward slashes (<code>/</code>).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -179,7 +190,7 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
     /**
      * <p>The number of consecutive successful health checks that must occur before an unhealthy and inaccessible backend server is declared healthy and accessible. Valid values: <strong>2</strong> to <strong>10</strong>. Default value: <strong>3</strong>.</p>
      * <blockquote>
-     * <p> This parameter takes effect only if you set HealthCheck to on.</p>
+     * <p>This parameter takes effect only if you set HealthCheck to on.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -191,7 +202,7 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
     /**
      * <p>The timeout period for idle connections. Default value: 15. Valid values: <strong>1</strong> to <strong>60</strong>. Unit: seconds.</p>
      * <blockquote>
-     * <p> If no request is received within the specified timeout period, ELB closes the connection. When another request is received, ELB establishes a new connection.</p>
+     * <p>If no request is received within the specified timeout period, ELB closes the connection. When another request is received, ELB establishes a new connection.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -203,8 +214,10 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable redirection from HTTP to HTTPS. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong></li>
-     * <li><strong>off</strong> (default)</li>
+     * <li><p><strong>on</strong></p>
+     * </li>
+     * <li><p><strong>off</strong> (default)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -216,7 +229,7 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
     /**
      * <p>The listening port that is used by Edge Load Balancer (ELB) to receive requests and forward the requests to backend servers. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * <blockquote>
-     * <p> We recommend that you use port 443 for HTTPS.</p>
+     * <p>We recommend that you use port 443 for HTTPS.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -239,7 +252,7 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
     /**
      * <p>The timeout period of requests. Default value: 60. Valid values: <strong>1</strong> to <strong>180</strong>. Unit: seconds.</p>
      * <blockquote>
-     * <p> If no response is received from the backend server within the specified timeout period, ELB returns an HTTP 504 error code to the client.</p>
+     * <p>If no response is received from the backend server within the specified timeout period, ELB returns an HTTP 504 error code to the client.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -251,12 +264,18 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
     /**
      * <p>The scheduling algorithm. Valid values:</p>
      * <ul>
-     * <li><strong>wrr</strong> (default): Backend servers with higher weights receive more requests than backend servers with lower weights.</li>
-     * <li><strong>wlc</strong>: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.</li>
-     * <li><strong>rr</strong>: Requests are distributed to backend servers in sequence.</li>
-     * <li><strong>sch</strong>: consistent hashing based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</li>
-     * <li><strong>qch</strong>: consistent hashing based on QUIC connection IDs (CIDs). Requests that contain the same QUIC CID are distributed to the same backend server.</li>
-     * <li><strong>iqch</strong>: consistent hashing based on three specific bytes of iQUIC CIDs. Requests with the same second, third, and fourth bytes are distributed to the same backend server.</li>
+     * <li><p><strong>wrr</strong> (default): Backend servers with higher weights receive more requests than backend servers with lower weights.</p>
+     * </li>
+     * <li><p><strong>wlc</strong>: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.</p>
+     * </li>
+     * <li><p><strong>rr</strong>: Requests are distributed to backend servers in sequence.</p>
+     * </li>
+     * <li><p><strong>sch</strong>: consistent hashing based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</p>
+     * </li>
+     * <li><p><strong>qch</strong>: consistent hashing based on QUIC connection IDs (CIDs). Requests that contain the same QUIC CID are distributed to the same backend server.</p>
+     * </li>
+     * <li><p><strong>iqch</strong>: consistent hashing based on three specific bytes of iQUIC CIDs. Requests with the same second, third, and fourth bytes are distributed to the same backend server.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -278,11 +297,13 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
     /**
      * <p>The method that is used to handle cookies. Valid values:</p>
      * <ul>
-     * <li><strong>insert</strong>: inserts a cookie. ELB inserts a session cookie (SERVERID) into the first HTTP or HTTPS response that is sent to a client. Subsequent requests to ELB carry this cookie, and ELB determines the destination servers of the requests based on the cookies.</li>
-     * <li><strong>server</strong>: rewrites the original cookie. SLB rewrites the custom cookies in requests from a client. Subsequent requests from the client that carry the new cookie are forwarded to the same backend server as the first request.</li>
+     * <li><p><strong>insert</strong>: inserts a cookie. ELB inserts a session cookie (SERVERID) into the first HTTP or HTTPS response that is sent to a client. Subsequent requests to ELB carry this cookie, and ELB determines the destination servers of the requests based on the cookies.</p>
+     * </li>
+     * <li><p><strong>server</strong>: rewrites the original cookie. SLB rewrites the custom cookies in requests from a client. Subsequent requests from the client that carry the new cookie are forwarded to the same backend server as the first request.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is required when the StickySession parameter is set to on.</p>
+     * <p>This parameter is required when the StickySession parameter is set to on.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -294,7 +315,7 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
     /**
      * <p>The number of consecutive failed health checks that must occur before a healthy and accessible backend server is declared unhealthy and inaccessible. Valid values: <strong>2</strong> to <strong>10</strong>. Default value: <strong>3</strong>.</p>
      * <blockquote>
-     * <p> This parameter takes effect only if you set HealthCheck to on.</p>
+     * <p>This parameter takes effect only if you set HealthCheck to on.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

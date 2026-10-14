@@ -14,7 +14,7 @@ public class DescribeSDGSharedDisksRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The page number, which is used for paged query</p>
+     * <p>The page number for paging in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeSDGSharedDisksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,7 +41,7 @@ public class DescribeSDGSharedDisksRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>sdg ID</p>
+     * <p>The ID of the SDG. You can call the DescribeSDGs operation to query the IDs of existing SDGs. To create an SDG, call the CreateSDG and SaveSDG operations in sequence after the AIC instance is running.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

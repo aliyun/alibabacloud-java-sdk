@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateClusterNodePoolRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,16 +14,21 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The cluster-related configurations.</p>
+     */
     @NameInMap("KubernetesConfig")
     public CreateClusterNodePoolRequestKubernetesConfig kubernetesConfig;
 
     /**
+     * <p>The node pool configurations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NodepoolInfo")
     public CreateClusterNodePoolRequestNodepoolInfo nodepoolInfo;
 
     /**
+     * <p>The scaling group configurations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingGroup")
@@ -67,6 +73,8 @@ public class CreateClusterNodePoolRequest extends TeaModel {
 
     public static class CreateClusterNodePoolRequestKubernetesConfig extends TeaModel {
         /**
+         * <p>The script to be executed after the machine is created and before it is added to the cluster. The content must be Base64-encoded.</p>
+         * 
          * <strong>example:</strong>
          * <p>ZWNobyBvawo=</p>
          */
@@ -74,6 +82,8 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public String preUserData;
 
         /**
+         * <p>The script to be executed after the machine is created and added to the cluster. The content must be Base64-encoded.</p>
+         * 
          * <strong>example:</strong>
          * <p>ZWNobyBvawo=</p>
          */
@@ -105,6 +115,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
 
     public static class CreateClusterNodePoolRequestNodepoolInfo extends TeaModel {
         /**
+         * <p>The name of the node pool.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +141,8 @@ public class CreateClusterNodePoolRequest extends TeaModel {
 
     public static class CreateClusterNodePoolRequestScalingGroupDataDisks extends TeaModel {
         /**
+         * <p>The disk category.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloud_efficiency</p>
          */
@@ -137,6 +150,8 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public String category;
 
         /**
+         * <p>The size of the data cloud disk. Unit: GB. Minimum value: 20. The value must be a multiple of 10.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -167,10 +182,15 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     }
 
     public static class CreateClusterNodePoolRequestScalingGroup extends TeaModel {
+        /**
+         * <p>The size of the data cloud disk. Unit: GB.</p>
+         */
         @NameInMap("DataDisks")
         public java.util.List<CreateClusterNodePoolRequestScalingGroupDataDisks> dataDisks;
 
         /**
+         * <p>The expected number of instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -178,6 +198,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Integer desiredSize;
 
         /**
+         * <p>The image ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +208,8 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public String imageId;
 
         /**
+         * <p>The billing method of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
          */
@@ -194,12 +217,15 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public String instanceChargeType;
 
         /**
+         * <p>The list of instance types for the nodes in the node pool.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("InstanceTypes")
         public java.util.List<String> instanceTypes;
 
         /**
+         * <p>The key pair of the instance. This parameter and Password are mutually exclusive.</p>
+         * 
          * <strong>example:</strong>
          * <p>key-pair-name</p>
          */
@@ -207,6 +233,8 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public String keyPairName;
 
         /**
+         * <p>The password used when creating instances in the node pool. This parameter and KeyPairName are mutually exclusive.</p>
+         * 
          * <strong>example:</strong>
          * <p>some-test-password</p>
          */
@@ -214,6 +242,8 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public String password;
 
         /**
+         * <p>The category of the system cloud disk. Valid values: local_ssd, local_hdd, cloud_efficiency, and cloud_ssd.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloud_efficiency</p>
          */
@@ -221,6 +251,8 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public String systemDiskCategory;
 
         /**
+         * <p>The size of the system cloud disk. Unit: GB. Minimum value: 20. The value must be a multiple of 10.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -228,6 +260,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Integer systemDiskSize;
 
         /**
+         * <p>The vSwitches used by the instances.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("VswitchIds")

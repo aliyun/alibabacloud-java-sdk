@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceVncUrlRequest extends TeaModel {
     /**
-     * <p>The ID of the instance</p>
+     * <p>The instance ID. The instance must be in the Running state. You can call DescribeInstances to query the current state.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

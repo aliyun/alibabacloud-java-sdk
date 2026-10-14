@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyClusterNodePoolRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * <p>Only ECK cluster IDs with the eck- prefix are supported. You can obtain the ID by calling the DescribeClustersV1 operation. Serverless cluster IDs returned by the DescribeCluster operation are not supported. The cluster must be in the running state. After creation, it typically takes 10 to 20 minutes to complete initialization.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,15 +15,22 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The Kubernetes configuration.</p>
+     */
     @NameInMap("KubernetesConfig")
     public ModifyClusterNodePoolRequestKubernetesConfig kubernetesConfig;
 
     /**
+     * <p>The node pool information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NodepoolInfo")
     public ModifyClusterNodePoolRequestNodepoolInfo nodepoolInfo;
 
+    /**
+     * <p>The scaling group configuration.</p>
+     */
     @NameInMap("ScalingGroup")
     public ModifyClusterNodePoolRequestScalingGroup scalingGroup;
 
@@ -64,6 +73,8 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
 
     public static class ModifyClusterNodePoolRequestKubernetesConfig extends TeaModel {
         /**
+         * <p>The script to run after instance creation but before joining the cluster. The content must be Base64-encoded.</p>
+         * 
          * <strong>example:</strong>
          * <p>ZWNobyBvawo=</p>
          */
@@ -71,6 +82,8 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public String preUserData;
 
         /**
+         * <p>The script to run after instance creation and after joining the cluster. The content must be Base64-encoded.</p>
+         * 
          * <strong>example:</strong>
          * <p>ZWNobyBvawo=</p>
          */
@@ -102,6 +115,14 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
 
     public static class ModifyClusterNodePoolRequestNodepoolInfo extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>test1</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        /**
+         * <p>The node pool ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,6 +134,14 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public static ModifyClusterNodePoolRequestNodepoolInfo build(java.util.Map<String, ?> map) throws Exception {
             ModifyClusterNodePoolRequestNodepoolInfo self = new ModifyClusterNodePoolRequestNodepoolInfo();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyClusterNodePoolRequestNodepoolInfo setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public ModifyClusterNodePoolRequestNodepoolInfo setNodepoolId(String nodepoolId) {
@@ -127,6 +156,8 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
 
     public static class ModifyClusterNodePoolRequestScalingGroupDataDisks extends TeaModel {
         /**
+         * <p>The data cloud disk type.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloud_efficiency</p>
          */
@@ -134,6 +165,8 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public String category;
 
         /**
+         * <p>The data cloud disk size.</p>
+         * 
          * <strong>example:</strong>
          * <p>40</p>
          */
@@ -164,10 +197,15 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
     }
 
     public static class ModifyClusterNodePoolRequestScalingGroup extends TeaModel {
+        /**
+         * <p>The data cloud disk information.</p>
+         */
         @NameInMap("DataDisks")
         public java.util.List<ModifyClusterNodePoolRequestScalingGroupDataDisks> dataDisks;
 
         /**
+         * <p>The instance image ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>m-68bysm5a8gkm7oik7ngacf0in</p>
          */
@@ -175,16 +213,23 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public String imageId;
 
         /**
+         * <p>The instance billing type.</p>
+         * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
          */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
+        /**
+         * <p>The instance types.</p>
+         */
         @NameInMap("InstanceTypes")
         public java.util.List<String> instanceTypes;
 
         /**
+         * <p>The instance key pair. This parameter is mutually exclusive with password.</p>
+         * 
          * <strong>example:</strong>
          * <p>tf-testAcc</p>
          */
@@ -192,6 +237,8 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public String keyPairName;
 
         /**
+         * <p>The instance password. This parameter is mutually exclusive with key_pair_name.</p>
+         * 
          * <strong>example:</strong>
          * <p>@AN5Ejx1YyzzK</p>
          */
@@ -199,6 +246,8 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public String password;
 
         /**
+         * <p>The system cloud disk type.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloud_efficiency</p>
          */
@@ -206,12 +255,17 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public String systemDiskCategory;
 
         /**
+         * <p>The system cloud disk size.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;
 
+        /**
+         * <p>The vSwitches used by instances.</p>
+         */
         @NameInMap("VswitchIds")
         public java.util.List<String> vswitchIds;
 

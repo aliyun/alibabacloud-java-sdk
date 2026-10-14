@@ -157,8 +157,10 @@ public class UnmountInstanceSDGResponseBody extends TeaModel {
         /**
          * <p>Indicates whether all tasks are successful. Valid values:</p>
          * <ul>
-         * <li>true: All tasks are successful.</li>
-         * <li>false: Failed tasks exist.</li>
+         * <li><p>true: All tasks are successful.</p>
+         * </li>
+         * <li><p>false: Failed tasks exist.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

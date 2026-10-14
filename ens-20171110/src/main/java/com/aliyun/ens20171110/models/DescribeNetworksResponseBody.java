@@ -8,7 +8,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
     public DescribeNetworksResponseBodyNetworks networks;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>Current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>Number of entries per page in the current query.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -26,7 +26,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -35,7 +35,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries in the list.</p>
+     * <p>Total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -86,6 +86,78 @@ public class DescribeNetworksResponseBody extends TeaModel {
     }
     public Integer getTotalCount() {
         return this.totalCount;
+    }
+
+    public static class DescribeNetworksResponseBodyNetworksNetworkIpv6CidrBlocksIpv6CidrBlock extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2408:XXXX:0:a600::/110</p>
+         */
+        @NameInMap("Ipv6CidrBlock")
+        public String ipv6CidrBlock;
+
+        /**
+         * <strong>example:</strong>
+         * <p>telecom</p>
+         */
+        @NameInMap("Ipv6Isp")
+        public String ipv6Isp;
+
+        /**
+         * <strong>example:</strong>
+         * <p>system</p>
+         */
+        @NameInMap("Type")
+        public String type;
+
+        public static DescribeNetworksResponseBodyNetworksNetworkIpv6CidrBlocksIpv6CidrBlock build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworksResponseBodyNetworksNetworkIpv6CidrBlocksIpv6CidrBlock self = new DescribeNetworksResponseBodyNetworksNetworkIpv6CidrBlocksIpv6CidrBlock();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworksResponseBodyNetworksNetworkIpv6CidrBlocksIpv6CidrBlock setIpv6CidrBlock(String ipv6CidrBlock) {
+            this.ipv6CidrBlock = ipv6CidrBlock;
+            return this;
+        }
+        public String getIpv6CidrBlock() {
+            return this.ipv6CidrBlock;
+        }
+
+        public DescribeNetworksResponseBodyNetworksNetworkIpv6CidrBlocksIpv6CidrBlock setIpv6Isp(String ipv6Isp) {
+            this.ipv6Isp = ipv6Isp;
+            return this;
+        }
+        public String getIpv6Isp() {
+            return this.ipv6Isp;
+        }
+
+        public DescribeNetworksResponseBodyNetworksNetworkIpv6CidrBlocksIpv6CidrBlock setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class DescribeNetworksResponseBodyNetworksNetworkIpv6CidrBlocks extends TeaModel {
+        @NameInMap("Ipv6CidrBlock")
+        public java.util.List<DescribeNetworksResponseBodyNetworksNetworkIpv6CidrBlocksIpv6CidrBlock> ipv6CidrBlock;
+
+        public static DescribeNetworksResponseBodyNetworksNetworkIpv6CidrBlocks build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworksResponseBodyNetworksNetworkIpv6CidrBlocks self = new DescribeNetworksResponseBodyNetworksNetworkIpv6CidrBlocks();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworksResponseBodyNetworksNetworkIpv6CidrBlocks setIpv6CidrBlock(java.util.List<DescribeNetworksResponseBodyNetworksNetworkIpv6CidrBlocksIpv6CidrBlock> ipv6CidrBlock) {
+            this.ipv6CidrBlock = ipv6CidrBlock;
+            return this;
+        }
+        public java.util.List<DescribeNetworksResponseBodyNetworksNetworkIpv6CidrBlocksIpv6CidrBlock> getIpv6CidrBlock() {
+            return this.ipv6CidrBlock;
+        }
+
     }
 
     public static class DescribeNetworksResponseBodyNetworksNetworkRouteTableIds extends TeaModel {
@@ -236,6 +308,9 @@ public class DescribeNetworksResponseBody extends TeaModel {
         @NameInMap("GatewayRouteTableId")
         public String gatewayRouteTableId;
 
+        @NameInMap("Ipv6CidrBlocks")
+        public DescribeNetworksResponseBodyNetworksNetworkIpv6CidrBlocks ipv6CidrBlocks;
+
         @NameInMap("NetworkAclId")
         public String networkAclId;
 
@@ -309,6 +384,14 @@ public class DescribeNetworksResponseBody extends TeaModel {
         }
         public String getGatewayRouteTableId() {
             return this.gatewayRouteTableId;
+        }
+
+        public DescribeNetworksResponseBodyNetworksNetwork setIpv6CidrBlocks(DescribeNetworksResponseBodyNetworksNetworkIpv6CidrBlocks ipv6CidrBlocks) {
+            this.ipv6CidrBlocks = ipv6CidrBlocks;
+            return this;
+        }
+        public DescribeNetworksResponseBodyNetworksNetworkIpv6CidrBlocks getIpv6CidrBlocks() {
+            return this.ipv6CidrBlocks;
         }
 
         public DescribeNetworksResponseBodyNetworksNetwork setNetworkAclId(String networkAclId) {

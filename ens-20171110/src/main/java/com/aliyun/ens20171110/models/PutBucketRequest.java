@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PutBucketRequest extends TeaModel {
     /**
-     * <p>The access control list (ACL) of the bucket. private public-read-write public-read</p>
+     * <p>Bucket permission type: private (default). public-read-write: Allows public read and write access. public-read: Allows public read access.</p>
      * 
      * <strong>example:</strong>
      * <p>private</p>
@@ -14,48 +14,53 @@ public class PutBucketRequest extends TeaModel {
     public String bucketAcl;
 
     /**
-     * <p>The name of the bucket. This parameter can contain 3 to 50 characters in length and can contain only lowercase letters, digits, and hyphens (-). The name cannot start or end with a hyphen (-).</p>
+     * <p>Bucket name. Must be 3 to 50 characters long. Use only lowercase letters, numbers, and hyphens (-). Cannot start or end with a hyphen.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>my-bucket</p>
      */
     @NameInMap("BucketName")
     public String bucketName;
 
     /**
-     * <p>The description. The description can be 0 to 128 characters in length, and can contain Chinese characters and emoticons.</p>
+     * <p>Comment. Up to 128 characters, including letters, digits, Chinese characters, and emojis.</p>
      * 
      * <strong>example:</strong>
-     * <p>numb</p>
+     * <p>this is comment</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
-     * <p>The scheduling scope. This parameter takes effect only when the value of the LogicalBucketType parameter is standard. Valid values:</p>
+     * <p>Scheduling scope. Valid values:</p>
      * <ul>
-     * <li><strong>domestic</strong>: Chinese mainland.</li>
-     * <li><strong>oversea</strong>: outside the Chinese mainland.</li>
+     * <li><p>domestic (within China)</p>
+     * </li>
+     * <li><p>outside China</p>
+     * </li>
      * </ul>
+     * <blockquote>
+     * <p>You must specify this parameter when creating a global bucket.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>domestic</p>
+     * <p>sink</p>
      */
     @NameInMap("DispatchScope")
     public String dispatchScope;
 
     /**
-     * <p>The ID of the region where the node is located. If this parameter is not specified, the node is the global default node.</p>
+     * <p>Edge zone ID. If not specified, the global default edge zone is used.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-beijing-15</p>
+     * <p>xx-xx-xx</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
     /**
-     * <p>The type of the logical bucket. Valid values: sink standard (default)</p>
+     * <p>The logical type of the bucket. Valid values: sink: A sink bucket on a specified node. standard: A standard global bucket. This is the default value.</p>
      * 
      * <strong>example:</strong>
      * <p>sink</p>

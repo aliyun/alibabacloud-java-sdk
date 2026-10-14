@@ -5,16 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateDiskResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the instances.</p>
+     * <p>The collection of instance IDs.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The ID of the order. Multiple IDs are separated by commas (,).</p>
-     * <blockquote>
-     * <p> This parameter is not returned for the pay-as-you-go billing method.</p>
-     * </blockquote>
+     * <p>The order ID. Multiple IDs are separated by commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>21127020370****</p>

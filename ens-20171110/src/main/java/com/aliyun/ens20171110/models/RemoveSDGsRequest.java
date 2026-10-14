@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class RemoveSDGsRequest extends TeaModel {
     /**
-     * <p>The IDs of the instances.</p>
+     * <p>The list of instance IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The IDs of SDG.</p>
+     * <p>The list of SDG IDs.</p>
      */
     @NameInMap("SdgIds")
     public java.util.List<String> sdgIds;

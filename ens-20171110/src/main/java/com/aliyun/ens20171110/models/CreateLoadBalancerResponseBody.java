@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLoadBalancerResponseBody extends TeaModel {
     /**
-     * <p>The ID of the ELB instance.</p>
+     * <p>The ID of the load balancing instance.</p>
      * 
      * <strong>example:</strong>
      * <p>lb-5s7crik3yo3bp03gqrbp5****</p>
@@ -14,7 +14,7 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
     public String loadBalancerId;
 
     /**
-     * <p>The name of the ELB instance.</p>
+     * <p>The name of the load balancing instance.</p>
      * 
      * <strong>example:</strong>
      * <p>gcs-pre-websocket-****</p>
@@ -23,7 +23,7 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
     public String loadBalancerName;
 
     /**
-     * <p>The ID of the network.</p>
+     * <p>The network ID.</p>
      * 
      * <strong>example:</strong>
      * <p>n-5sax03dh2eyagujgsn7z9****</p>
@@ -32,7 +32,7 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
     public String networkId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1ECC937A-AE0E-4626-BE51-DED1D6D1C888</p>
@@ -41,7 +41,7 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the vSwitch to which the ELB instance belongs.</p>
+     * <p>The ID of the vSwitch to which the load balancing instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-5savh5ngxh8sbj14bu7n****</p>

@@ -8,7 +8,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-beijing", "ens.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "ens.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "ens.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "ens.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "ens.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "ens.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "ens.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("ens", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +37,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates a network access control list (ACL) with a network.</p>
+     * <p>Calls the AccosicateNetworkAcl operation to attach a network ACL to a network.</p>
      * 
      * @param request AccosicateNetworkAclRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -64,7 +73,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates a network access control list (ACL) with a network.</p>
+     * <p>Calls the AccosicateNetworkAcl operation to attach a network ACL to a network.</p>
      * 
      * @param request AccosicateNetworkAclRequest
      * @return AccosicateNetworkAclResponse
@@ -76,9 +85,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per account.</li>
+     * <li>API call rate limit: 100 calls per second.</li>
+     * <li>Per-user call rate limit: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -124,9 +133,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per account.</li>
+     * <li>API call rate limit: 100 calls per second.</li>
+     * <li>Per-user call rate limit: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -142,9 +151,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 5 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 5 times per second per user.</li>
      * <li>Internal networks and IPv4 addresses are not supported.</li>
      * </ul>
      * 
@@ -189,9 +198,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 5 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 5 times per second per user.</li>
      * <li>Internal networks and IPv4 addresses are not supported.</li>
      * </ul>
      * 
@@ -304,7 +313,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates an elastic IP address (EIP) with a cloud resource that is deployed in the same region.</p>
+     * <p>Associates an Elastic IP Address (EIP) with a cloud product instance on the same edge node.</p>
      * 
      * @param request AssociateEnsEipAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -348,7 +357,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates an elastic IP address (EIP) with a cloud resource that is deployed in the same region.</p>
+     * <p>Associates an Elastic IP Address (EIP) with a cloud product instance on the same edge node.</p>
      * 
      * @param request AssociateEnsEipAddressRequest
      * @return AssociateEnsEipAddressResponse
@@ -360,7 +369,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation to associate an HAVIP, take note of the following items:</p>
+     * <p>When you To associate an HAVIP, take note of the following items:</p>
      * <ul>
      * <li>An HAVIP immediately takes effect after it is associated. You do not need to restart the ENS instance. However, you need to associate the HAVIP with the ENI of the ENS instance.</li>
      * <li>The HAVIP and ENS instance must belong to the same vSwitch.</li>
@@ -414,7 +423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation to associate an HAVIP, take note of the following items:</p>
+     * <p>When you To associate an HAVIP, take note of the following items:</p>
      * <ul>
      * <li>An HAVIP immediately takes effect after it is associated. You do not need to restart the ENS instance. However, you need to associate the HAVIP with the ENI of the ENS instance.</li>
      * <li>The HAVIP and ENS instance must belong to the same vSwitch.</li>
@@ -492,15 +501,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h1><a href="#"></a>Usage notes</h1>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per account.</li>
-     * <li>After you execute the command, the instance restarts loading.</li>
-     * <li>Limits: The instance has at least two vCPUs and 4 GB memory. An image of CentOS 7.4 or later is required.</li>
+     * <li>Maximum request rate per user: 10 requests per second.</li>
+     * <li>After the command script runs successfully, the instance restarts and loads automatically.</li>
+     * <li>Instance requirements: minimum size of 2C4G and CentOS 7.4 or later image.
+     * &lt;props=&quot;china&quot;&gt;
+     * Before calling this operation, <a href="https://cs.console.aliyun.com/#/k8s/overview">activate Container Service for Kubernetes</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds an Edge Node Service (ENS) instance to Container Service for Kubernetes (ACK).</p>
+     * <p>Add ENS instances to Container Service for Kubernetes.</p>
      * 
      * @param request AttachEnsInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -536,15 +546,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h1><a href="#"></a>Usage notes</h1>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per account.</li>
-     * <li>After you execute the command, the instance restarts loading.</li>
-     * <li>Limits: The instance has at least two vCPUs and 4 GB memory. An image of CentOS 7.4 or later is required.</li>
+     * <li>Maximum request rate per user: 10 requests per second.</li>
+     * <li>After the command script runs successfully, the instance restarts and loads automatically.</li>
+     * <li>Instance requirements: minimum size of 2C4G and CentOS 7.4 or later image.
+     * &lt;props=&quot;china&quot;&gt;
+     * Before calling this operation, <a href="https://cs.console.aliyun.com/#/k8s/overview">activate Container Service for Kubernetes</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds an Edge Node Service (ENS) instance to Container Service for Kubernetes (ACK).</p>
+     * <p>Add ENS instances to Container Service for Kubernetes.</p>
      * 
      * @param request AttachEnsInstancesRequest
      * @return AttachEnsInstancesResponse
@@ -556,7 +567,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Attaches a shared data group (SDG) to the corresponding Android in Container (AIC) instance.</p>
+     * <p>Attaches an SDG to the corresponding AIC instance.</p>
      * 
      * @param tmpReq AttachInstanceSDGRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -614,7 +625,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Attaches a shared data group (SDG) to the corresponding Android in Container (AIC) instance.</p>
+     * <p>Attaches an SDG to the corresponding AIC instance.</p>
      * 
      * @param request AttachInstanceSDGRequest
      * @return AttachInstanceSDGResponse
@@ -626,7 +637,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds existing nodes to a specific node pool. You can add existing ENS instances to an ECK cluster as worker nodes. You can also add removed worker nodes back to the node pool by invoking AttachInstancesToNodePool.</p>
+     * <p>Adds existing instances to a node pool. You can call this operation to add existing Edge Node Service (ENS) instances to an ECK cluster as worker nodes, or to re-add node instances to a node pool after they are removed.</p>
      * 
      * @param tmpReq AttachInstancesToNodePoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -672,7 +683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds existing nodes to a specific node pool. You can add existing ENS instances to an ECK cluster as worker nodes. You can also add removed worker nodes back to the node pool by invoking AttachInstancesToNodePool.</p>
+     * <p>Adds existing instances to a node pool. You can call this operation to add existing Edge Node Service (ENS) instances to an ECK cluster as worker nodes, or to re-add node instances to a node pool after they are removed.</p>
      * 
      * @param request AttachInstancesToNodePoolRequest
      * @return AttachInstancesToNodePoolResponse
@@ -684,16 +695,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a></h2>
-     * <p>This operation is used to bind a key pair to instances. Only disabled instances are supported.</p>
+     * <p>You can only attach a key pair to stopped instances.</p>
      * <ul>
-     * <li>You can bind a maximum of 30 instances at a time.</li>
-     * <li>At least one of the key_pair_name and key_pair_id parameters is not empty.</li>
-     * <li>Specify the key_pair_id parameter when you call this parameter. The key_pair_name parameter will be discarded.</li>
+     * <li>Specify up to 30 instances per call.</li>
+     * <li>Specify either <code>KeyPairName</code> or <code>KeyPairId</code>.</li>
+     * <li>We recommend using <code>KeyPairId</code>, as <code>KeyPairName</code> will be deprecated.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Binds a Secure Shell (SSH) key pair to specific instances. You can bind a maximum of 30 instances at a time.</p>
+     * <p>Attaches an SSH key pair to up to 30 instances in a single call.</p>
      * 
      * @param tmpReq AttachKeyPairRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -739,16 +749,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a></h2>
-     * <p>This operation is used to bind a key pair to instances. Only disabled instances are supported.</p>
+     * <p>You can only attach a key pair to stopped instances.</p>
      * <ul>
-     * <li>You can bind a maximum of 30 instances at a time.</li>
-     * <li>At least one of the key_pair_name and key_pair_id parameters is not empty.</li>
-     * <li>Specify the key_pair_id parameter when you call this parameter. The key_pair_name parameter will be discarded.</li>
+     * <li>Specify up to 30 instances per call.</li>
+     * <li>Specify either <code>KeyPairName</code> or <code>KeyPairId</code>.</li>
+     * <li>We recommend using <code>KeyPairId</code>, as <code>KeyPairName</code> will be deprecated.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Binds a Secure Shell (SSH) key pair to specific instances. You can bind a maximum of 30 instances at a time.</p>
+     * <p>Attaches an SSH key pair to up to 30 instances in a single call.</p>
      * 
      * @param request AttachKeyPairRequest
      * @return AttachKeyPairResponse
@@ -766,7 +775,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>An ENI can be attached to only one instance that is the same zone and the same Virtual Private Cloud (VPC).</li>
      * <li>The instance must be in the Stopped state.</li>
      * <li>A maximum of 10 ENIs can be attached to an instance.</li>
-     * <li>This operation is an asynchronous operation. After you call this operation to attach an ENI, you can view the status of the ENI to check whether the ENI is attached.</li>
+     * <li>This operation is an asynchronous operation. After you To attach an ENI, you can view the status of the ENI to check whether the ENI is attached.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -812,7 +821,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>An ENI can be attached to only one instance that is the same zone and the same Virtual Private Cloud (VPC).</li>
      * <li>The instance must be in the Stopped state.</li>
      * <li>A maximum of 10 ENIs can be attached to an instance.</li>
-     * <li>This operation is an asynchronous operation. After you call this operation to attach an ENI, you can view the status of the ENI to check whether the ENI is attached.</li>
+     * <li>This operation is an asynchronous operation. After you To attach an ENI, you can view the status of the ENI to check whether the ENI is attached.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -828,7 +837,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an inbound security group rule. This operation allows or denies the inbound traffic from other devices to instances in the security group.</p>
+     * <p>Calls AuthorizeSecurityGroup to configure inbound access permissions for a security group, allowing or denying other devices from sending inbound traffic to instances in the security group.</p>
      * 
      * @param request AuthorizeSecurityGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -884,7 +893,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an inbound security group rule. This operation allows or denies the inbound traffic from other devices to instances in the security group.</p>
+     * <p>Calls AuthorizeSecurityGroup to configure inbound access permissions for a security group, allowing or denying other devices from sending inbound traffic to instances in the security group.</p>
      * 
      * @param request AuthorizeSecurityGroupRequest
      * @return AuthorizeSecurityGroupResponse
@@ -970,13 +979,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Request description</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>This O\&amp;M operation is supported only by the Instance:SystemUpgrade.Migrate event.</li>
+     * <li>This O&amp;M operation currently supports only the following event type: Instance:SystemUpgrade.Migrate (migration required due to underlying infrastructure upgrade).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Migrates multiple instances in a specified event at a time. You can execute the task immediately or schedule the task execution.</p>
+     * <p>Batch migrates instances under a specified event. Supports immediate or scheduled execution.</p>
      * 
      * @param tmpReq BatchEventMigrateInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1014,13 +1023,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Request description</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>This O\&amp;M operation is supported only by the Instance:SystemUpgrade.Migrate event.</li>
+     * <li>This O&amp;M operation currently supports only the following event type: Instance:SystemUpgrade.Migrate (migration required due to underlying infrastructure upgrade).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Migrates multiple instances in a specified event at a time. You can execute the task immediately or schedule the task execution.</p>
+     * <p>Batch migrates instances under a specified event. Supports immediate or scheduled execution.</p>
      * 
      * @param request BatchEventMigrateInstanceRequest
      * @return BatchEventMigrateInstanceResponse
@@ -1032,10 +1041,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This O\&amp;M operation supports only the following event types: Instance:SystemMaintenance.Reboot (instance reboot due to system problems)</p>
+     * <ul>
+     * <li>This O&amp;M operation currently supports only the following event type: Instance:SystemMaintenance.Reboot (instance restart due to system maintenance).</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>The event that is used to immediately redeploy specified resources in batches or by appointment</p>
+     * <p>Batch restarts specified resources immediately or at a scheduled time.</p>
      * 
      * @param tmpReq BatchEventRebootInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1073,10 +1084,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This O\&amp;M operation supports only the following event types: Instance:SystemMaintenance.Reboot (instance reboot due to system problems)</p>
+     * <ul>
+     * <li>This O&amp;M operation currently supports only the following event type: Instance:SystemMaintenance.Reboot (instance restart due to system maintenance).</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>The event that is used to immediately redeploy specified resources in batches or by appointment</p>
+     * <p>Batch restarts specified resources immediately or at a scheduled time.</p>
      * 
      * @param request BatchEventRebootInstanceRequest
      * @return BatchEventRebootInstanceResponse
@@ -1089,11 +1102,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation currently only supports event types: Instance:SystemFailure.Redeploy (redeploy instance due to system issues), Instance:SystemMaintenance.Redeploy (redeploy instance due to system maintenance)</li>
+     * <li>This O&amp;M operation currently supports only the following event types: Instance:SystemFailure.Redeploy (instance redeployment due to system failures) and Instance:SystemMaintenance.Redeploy (instance redeployment due to system maintenance).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Batch redeployment</p>
+     * <p>Batch redeploys specified resources immediately or at a scheduled time.</p>
      * 
      * @param tmpReq BatchEventRedeployInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1132,11 +1145,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation currently only supports event types: Instance:SystemFailure.Redeploy (redeploy instance due to system issues), Instance:SystemMaintenance.Redeploy (redeploy instance due to system maintenance)</li>
+     * <li>This O&amp;M operation currently supports only the following event types: Instance:SystemFailure.Redeploy (instance redeployment due to system failures) and Instance:SystemMaintenance.Redeploy (instance redeployment due to system maintenance).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Batch redeployment</p>
+     * <p>Batch redeploys specified resources immediately or at a scheduled time.</p>
      * 
      * @param request BatchEventRedeployInstanceRequest
      * @return BatchEventRedeployInstanceResponse
@@ -1204,7 +1217,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Copies a shared data group (SDG) across nodes.</p>
+     * <p>Copies an SDG across edge zones by calling CopySDG.</p>
      * 
      * @param tmpReq CopySDGRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1238,7 +1251,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Copies a shared data group (SDG) across nodes.</p>
+     * <p>Copies an SDG across edge zones by calling CopySDG.</p>
      * 
      * @param request CopySDGRequest
      * @return CopySDGResponse
@@ -1250,7 +1263,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Copies a snapshot across nodes.</p>
+     * <p>Calls CopySnapshot to copy a snapshot across edge zones.</p>
      * 
      * @param tmpReq CopySnapshotRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1304,7 +1317,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Copies a snapshot across nodes.</p>
+     * <p>Calls CopySnapshot to copy a snapshot across edge zones.</p>
      * 
      * @param request CopySnapshotRequest
      * @return CopySnapshotResponse
@@ -1316,7 +1329,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an ARM server.</p>
+     * <p>Creates ARM board card servers by calling CreateARMServerInstances.</p>
      * 
      * @param request CreateARMServerInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1420,7 +1433,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an ARM server.</p>
+     * <p>Creates ARM board card servers by calling CreateARMServerInstances.</p>
      * 
      * @param request CreateARMServerInstancesRequest
      * @return CreateARMServerInstancesResponse
@@ -1536,13 +1549,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 10 times per second per account.</p>
      * <ul>
-     * <li>Creating a cluster is an asynchronous operation. After this operation returns the response, it takes 10 to 20 minutes to initialize the cluster. You can call the DescribeCluster operation to query the cluster status. After you create a cluster, you can call the DescribeClusterKubeConfig operation to obtain the cluster certificate.</li>
+     * <li>Single-user call frequency: 10 calls per second.</li>
+     * <li>Creating a cluster is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster to finish initialization. During this process, call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Container Service for Kubernetes (ACK) edge cluster.</p>
+     * <p>Creates an edge container cluster.</p>
      * 
      * @param tmpReq CreateClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1581,6 +1594,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EnsRegionId", request.ensRegionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isp)) {
+            query.put("Isp", request.isp);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.kubernetesVersion)) {
             query.put("KubernetesVersion", request.kubernetesVersion);
         }
@@ -1591,6 +1608,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.natGatewayId)) {
+            query.put("NatGatewayId", request.natGatewayId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.podVswitchIdsShrink)) {
@@ -1636,13 +1657,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 10 times per second per account.</p>
      * <ul>
-     * <li>Creating a cluster is an asynchronous operation. After this operation returns the response, it takes 10 to 20 minutes to initialize the cluster. You can call the DescribeCluster operation to query the cluster status. After you create a cluster, you can call the DescribeClusterKubeConfig operation to obtain the cluster certificate.</li>
+     * <li>Single-user call frequency: 10 calls per second.</li>
+     * <li>Creating a cluster is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster to finish initialization. During this process, call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Container Service for Kubernetes (ACK) edge cluster.</p>
+     * <p>Creates an edge container cluster.</p>
      * 
      * @param request CreateClusterRequest
      * @return CreateClusterResponse
@@ -1653,8 +1674,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Rate limit per user: 10 calls per second.</li>
+     * <li>Creating a cluster is an asynchronous operation. After the API call returns, you must wait 10 to 20 minutes for the cluster initialization to complete. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建集群节点池</p>
+     * <p>A node pool is a logical collection of nodes with identical attributes that enables unified management and O&amp;M operations such as node upgrades and elastic scaling. You can further leverage the automated O&amp;M capabilities of node pools to reduce O&amp;M costs through features such as automatic OS CVE vulnerability remediation, automatic recovery of faulty nodes, and automatic version upgrades for kubelet and containerd. You can call the CreateClusterNodePool operation to create a node pool for a cluster.</p>
      * 
      * @param tmpReq CreateClusterNodePoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1711,8 +1738,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Rate limit per user: 10 calls per second.</li>
+     * <li>Creating a cluster is an asynchronous operation. After the API call returns, you must wait 10 to 20 minutes for the cluster initialization to complete. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建集群节点池</p>
+     * <p>A node pool is a logical collection of nodes with identical attributes that enables unified management and O&amp;M operations such as node upgrades and elastic scaling. You can further leverage the automated O&amp;M capabilities of node pools to reduce O&amp;M costs through features such as automatic OS CVE vulnerability remediation, automatic recovery of faulty nodes, and automatic version upgrades for kubelet and containerd. You can call the CreateClusterNodePool operation to create a node pool for a cluster.</p>
      * 
      * @param request CreateClusterNodePoolRequest
      * @return CreateClusterNodePoolResponse
@@ -1724,7 +1757,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a pay-as-you-go or subscription data disk.</p>
+     * <p>Creates a pay-as-you-go or subscription data cloud disk by calling CreateDisk.</p>
      * 
      * @param request CreateDiskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1792,7 +1825,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a pay-as-you-go or subscription data disk.</p>
+     * <p>Creates a pay-as-you-go or subscription data cloud disk by calling CreateDisk.</p>
      * 
      * @param request CreateDiskRequest
      * @return CreateDiskResponse
@@ -1804,13 +1837,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 5,000 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 50 times per second per user.</li>
+     * <li>API call frequency: 5000 calls per second.</li>
+     * <li>Per-user call frequency: 50 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Applies for an elastic IP address (EIP).</p>
+     * <p>Creates an elastic IP address (EIP) by calling the CreateEipInstance operation.</p>
      * 
      * @param request CreateEipInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1882,13 +1915,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 5,000 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 50 times per second per user.</li>
+     * <li>API call frequency: 5000 calls per second.</li>
+     * <li>Per-user call frequency: 50 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Applies for an elastic IP address (EIP).</p>
+     * <p>Creates an elastic IP address (EIP) by calling the CreateEipInstance operation.</p>
      * 
      * @param request CreateEipInstanceRequest
      * @return CreateEipInstanceResponse
@@ -2138,7 +2171,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a NAS file system.</p>
+     * <p>Creates a NAS file system by calling the CreateFileSystem operation.</p>
      * 
      * @param tmpReq CreateFileSystemRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2172,7 +2205,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a NAS file system.</p>
+     * <p>Creates a NAS file system by calling the CreateFileSystem operation.</p>
      * 
      * @param request CreateFileSystemRequest
      * @return CreateFileSystemResponse
@@ -2184,7 +2217,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a Destination Network Address Translation (DNAT) entry to a DNAT table.</p>
+     * <p>Adds a DNAT entry by calling CreateForwardEntry.</p>
      * 
      * @param request CreateForwardEntryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2248,7 +2281,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a Destination Network Address Translation (DNAT) entry to a DNAT table.</p>
+     * <p>Adds a DNAT entry by calling CreateForwardEntry.</p>
      * 
      * @param request CreateForwardEntryRequest
      * @return CreateForwardEntryResponse
@@ -2320,7 +2353,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an image from an instance.</p>
+     * <p>Creates an image from a specified instance.</p>
      * 
      * @param request CreateImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2372,7 +2405,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an image from an instance.</p>
+     * <p>Creates an image from a specified instance.</p>
      * 
      * @param request CreateImageRequest
      * @return CreateImageResponse
@@ -2384,14 +2417,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 10 times per second per account.</p>
      * <ul>
-     * <li>We recommend that you increase the request time because instance creation is an asynchronous operation. If the return code of the API operation is 0, it indicates that the request is successful, but does not indicate that the instance is created. If the request is successful, an instance ID is returned. You can check whether the instance is created based on the instance ID.</li>
-     * <li>InvalidUserData.NotInWhiteList operation restriction: You can create an instance only if you are in the whitelist in which members have the purchase permissions. Otherwise, an error is returned.</li>
+     * <li>Per-user call frequency: 10 calls per second.</li>
+     * <li>Because instance creation is an asynchronous operation, increase the request timeout as needed. When the API returns Code=0, this only indicates that the request was successful, not that the instance was created successfully. An instance ID is returned upon a successful request. You can then query the instance by its ID to check whether the instance is created.</li>
+     * <li>InvalidUserData.NotInWhiteList restriction: Only accounts that are added to the relevant whitelist with purchase permissions can create instances. Otherwise, an error is returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an instance.</p>
+     * <p>Creates a subscription instance. This operation can be replaced by RunInstances. No new features will be added to CreateInstance.</p>
      * 
      * @param request CreateInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2511,14 +2544,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 10 times per second per account.</p>
      * <ul>
-     * <li>We recommend that you increase the request time because instance creation is an asynchronous operation. If the return code of the API operation is 0, it indicates that the request is successful, but does not indicate that the instance is created. If the request is successful, an instance ID is returned. You can check whether the instance is created based on the instance ID.</li>
-     * <li>InvalidUserData.NotInWhiteList operation restriction: You can create an instance only if you are in the whitelist in which members have the purchase permissions. Otherwise, an error is returned.</li>
+     * <li>Per-user call frequency: 10 calls per second.</li>
+     * <li>Because instance creation is an asynchronous operation, increase the request timeout as needed. When the API returns Code=0, this only indicates that the request was successful, not that the instance was created successfully. An instance ID is returned upon a successful request. You can then query the instance by its ID to check whether the instance is created.</li>
+     * <li>InvalidUserData.NotInWhiteList restriction: Only accounts that are added to the relevant whitelist with purchase permissions can create instances. Otherwise, an error is returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an instance.</p>
+     * <p>Creates a subscription instance. This operation can be replaced by RunInstances. No new features will be added to CreateInstance.</p>
      * 
      * @param request CreateInstanceRequest
      * @return CreateInstanceResponse
@@ -2630,13 +2663,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 5 times per second per user.</li>
+     * <li>API call frequency: 100 times per second.</li>
+     * <li>Per-user call frequency: 5 times per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an Edge Load Balancer (ELB) instance.</p>
+     * <p>Creates a load balancing instance by calling the CreateLoadBalancer operation.</p>
      * 
      * @param request CreateLoadBalancerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2700,13 +2733,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 5 times per second per user.</li>
+     * <li>API call frequency: 100 times per second.</li>
+     * <li>Per-user call frequency: 5 times per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an Edge Load Balancer (ELB) instance.</p>
+     * <p>Creates a load balancing instance by calling the CreateLoadBalancer operation.</p>
      * 
      * @param request CreateLoadBalancerRequest
      * @return CreateLoadBalancerResponse
@@ -2718,9 +2751,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2832,9 +2865,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2850,9 +2883,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2976,9 +3009,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2994,13 +3027,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>API call rate: 100 requests per second.</li>
+     * <li>Per-user call rate: 10 requests per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Transmission Control Protocol (TCP) listener.</p>
+     * <p>To create a TCP listener, call <code>CreateLoadBalancerTCPListener</code>.</p>
      * 
      * @param request CreateLoadBalancerTCPListenerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3096,13 +3129,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>API call rate: 100 requests per second.</li>
+     * <li>Per-user call rate: 10 requests per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Transmission Control Protocol (TCP) listener.</p>
+     * <p>To create a TCP listener, call <code>CreateLoadBalancerTCPListener</code>.</p>
      * 
      * @param request CreateLoadBalancerTCPListenerRequest
      * @return CreateLoadBalancerTCPListenerResponse
@@ -3114,13 +3147,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Per-user call rate: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a User Datagram Protocol (UDP) listener.</p>
+     * <p>To create a UDP listener, call <code>CreateLoadBalancerUDPListener</code>.</p>
      * 
      * @param request CreateLoadBalancerUDPListenerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3204,13 +3237,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Per-user call rate: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a User Datagram Protocol (UDP) listener.</p>
+     * <p>To create a UDP listener, call <code>CreateLoadBalancerUDPListener</code>.</p>
      * 
      * @param request CreateLoadBalancerUDPListenerRequest
      * @return CreateLoadBalancerUDPListenerResponse
@@ -3286,7 +3319,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a network address translation (NAT) gateway.</p>
+     * <p>Creates a NAT gateway.</p>
      * 
      * @param request CreateNatGatewayRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3342,7 +3375,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a network address translation (NAT) gateway.</p>
+     * <p>Creates a NAT gateway.</p>
      * 
      * @param request CreateNatGatewayRequest
      * @return CreateNatGatewayResponse
@@ -3354,13 +3387,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
      * <ul>
-     * <li>You can call this operation up to 5 times per second per user.</li>
+     * <li>API call frequency: 100 calls per second.</li>
+     * <li>Per-user call frequency: 5 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a virtual private cloud (VPC).</p>
+     * <p>Call CreateNetwork to create a virtual private cloud (VPC).</p>
      * 
      * @param request CreateNetworkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3377,8 +3410,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableIpv6)) {
+            query.put("EnableIpv6", request.enableIpv6);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ensRegionId)) {
             query.put("EnsRegionId", request.ensRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv6Isp)) {
+            query.put("Ipv6Isp", request.ipv6Isp);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.networkName)) {
@@ -3408,13 +3449,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
      * <ul>
-     * <li>You can call this operation up to 5 times per second per user.</li>
+     * <li>API call frequency: 100 calls per second.</li>
+     * <li>Per-user call frequency: 5 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a virtual private cloud (VPC).</p>
+     * <p>Call CreateNetwork to create a virtual private cloud (VPC).</p>
      * 
      * @param request CreateNetworkRequest
      * @return CreateNetworkResponse
@@ -3474,7 +3515,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a network access control list (ACL) rule.</p>
+     * <p>You can invoke the CreateNetworkAclEntry API to create a network ACL rule.</p>
      * 
      * @param request CreateNetworkAclEntryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3542,7 +3583,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a network access control list (ACL) rule.</p>
+     * <p>You can invoke the CreateNetworkAclEntry API to create a network ACL rule.</p>
      * 
      * @param request CreateNetworkAclEntryRequest
      * @return CreateNetworkAclEntryResponse
@@ -3616,16 +3657,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A SDG can be regarded as a data partition image of a virtual device. You can save a data partition of a virtual device as an SDG. A created SDG can be deployed in data partitions of other virtual devices to achieve rapid data distribution and application. The procedure for calling SDG-related API operations:</p>
+     * <p>A Shared Data Group (SDG) is a data partition image of a virtual device. You can save the data partition of a virtual device as an SDG. The SDG can then be deployed to the data partition of other virtual devices for fast data sharing and application deployment. The following describes the workflow of SDG-related operations:</p>
      * <ul>
-     * <li>Call the <a href="~~CreateSDG~~">CreateSDG</a> operation to create an SDG, which is bound to AIC Instance A (InstanceId). After you create the SDG, a blank cloud disk (also known as an original cloud disk) is attached to Device A (InstanceId).</li>
-     * <li>Install applications on and deliver files to AIC Instance A (InstanceId).</li>
-     * <li>Call the <a href="~~SaveSDG~~">SaveSDG</a> operation to save the data disk of AIC instance A as SDG A.</li>
-     * <li>Call the <a href="~~DeploySDG~~">DeploySDG</a> operation to deploy SDG A to AIC Instance B. This operattion is executed asynchronously. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation to query the status of AIC Instance B. If the status of AIC Instance B changes to success, AIC insance B is available, and AIC Instances A and B have the same applications running.</li>
+     * <li>Call the <a href="~~CreateSDG~~">CreateSDG</a> operation to create an SDG. The SDG is bound to AIC instance A (InstanceId). After the SDG is created, a blank cloud disk (also called a raw cloud disk) is mounted to device A (InstanceId) for SDG creation.</li>
+     * <li>Install applications, deliver files, and perform other required operations on AIC instance A (InstanceId).</li>
+     * <li>Call the <a href="~~SaveSDG~~">SaveSDG</a> operation to save the data cloud disk of AIC instance A as SDG A.</li>
+     * <li>Call the <a href="~~DeploySDG~~">DeploySDG</a> operation to deploy SDG A to AIC instance B. This process is asynchronous. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation to query the status of AIC instance B. When the status changes back to success, AIC instance B is available and has the same applications as AIC instance A.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a shared data group (SDG) on an Android in Container (AIC) instance.</p>
+     * <p>Creates a Shared Data Group (SDG) on an Android in Container (AIC) instance.</p>
      * 
      * @param request CreateSDGRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3653,16 +3694,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A SDG can be regarded as a data partition image of a virtual device. You can save a data partition of a virtual device as an SDG. A created SDG can be deployed in data partitions of other virtual devices to achieve rapid data distribution and application. The procedure for calling SDG-related API operations:</p>
+     * <p>A Shared Data Group (SDG) is a data partition image of a virtual device. You can save the data partition of a virtual device as an SDG. The SDG can then be deployed to the data partition of other virtual devices for fast data sharing and application deployment. The following describes the workflow of SDG-related operations:</p>
      * <ul>
-     * <li>Call the <a href="~~CreateSDG~~">CreateSDG</a> operation to create an SDG, which is bound to AIC Instance A (InstanceId). After you create the SDG, a blank cloud disk (also known as an original cloud disk) is attached to Device A (InstanceId).</li>
-     * <li>Install applications on and deliver files to AIC Instance A (InstanceId).</li>
-     * <li>Call the <a href="~~SaveSDG~~">SaveSDG</a> operation to save the data disk of AIC instance A as SDG A.</li>
-     * <li>Call the <a href="~~DeploySDG~~">DeploySDG</a> operation to deploy SDG A to AIC Instance B. This operattion is executed asynchronously. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation to query the status of AIC Instance B. If the status of AIC Instance B changes to success, AIC insance B is available, and AIC Instances A and B have the same applications running.</li>
+     * <li>Call the <a href="~~CreateSDG~~">CreateSDG</a> operation to create an SDG. The SDG is bound to AIC instance A (InstanceId). After the SDG is created, a blank cloud disk (also called a raw cloud disk) is mounted to device A (InstanceId) for SDG creation.</li>
+     * <li>Install applications, deliver files, and perform other required operations on AIC instance A (InstanceId).</li>
+     * <li>Call the <a href="~~SaveSDG~~">SaveSDG</a> operation to save the data cloud disk of AIC instance A as SDG A.</li>
+     * <li>Call the <a href="~~DeploySDG~~">DeploySDG</a> operation to deploy SDG A to AIC instance B. This process is asynchronous. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation to query the status of AIC instance B. When the status changes back to success, AIC instance B is available and has the same applications as AIC instance A.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a shared data group (SDG) on an Android in Container (AIC) instance.</p>
+     * <p>Creates a Shared Data Group (SDG) on an Android in Container (AIC) instance.</p>
      * 
      * @param request CreateSDGRequest
      * @return CreateSDGResponse
@@ -3732,7 +3773,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create an ENS security group rule.</p>
+     * <p>Creates a security group rule for Edge Node Service (ENS).</p>
      * 
      * @param tmpReq CreateSecurityGroupPermissionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3774,7 +3815,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create an ENS security group rule.</p>
+     * <p>Creates a security group rule for Edge Node Service (ENS).</p>
      * 
      * @param request CreateSecurityGroupPermissionsRequest
      * @return CreateSecurityGroupPermissionsResponse
@@ -3786,7 +3827,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a snapshot.</p>
+     * <p>Creates a snapshot by calling CreateSnapshot.</p>
      * 
      * @param request CreateSnapshotRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3834,7 +3875,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a snapshot.</p>
+     * <p>Creates a snapshot by calling CreateSnapshot.</p>
      * 
      * @param request CreateSnapshotRequest
      * @return CreateSnapshotResponse
@@ -4056,7 +4097,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>A vSwitch is created.</p>
+     * <p>Creates a VSwitch.</p>
      * 
      * @param request CreateVSwitchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4075,6 +4116,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ensRegionId)) {
             query.put("EnsRegionId", request.ensRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv6CidrBlock)) {
+            query.put("Ipv6CidrBlock", request.ipv6CidrBlock);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.networkId)) {
@@ -4108,7 +4153,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>A vSwitch is created.</p>
+     * <p>Creates a VSwitch.</p>
      * 
      * @param request CreateVSwitchRequest
      * @return CreateVSwitchResponse
@@ -4120,7 +4165,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a specified AIC public key. You can delete a public key only if it is not associated with the public key.</p>
+     * <p>Deletes a specified AIC public key. The public key can be deleted only when it is not associated with any resource.</p>
      * 
      * @param request DeleteAICPublicKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4152,7 +4197,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a specified AIC public key. You can delete a public key only if it is not associated with the public key.</p>
+     * <p>Deletes a specified AIC public key. The public key can be deleted only when it is not associated with any resource.</p>
      * 
      * @param request DeleteAICPublicKeyRequest
      * @return DeleteAICPublicKeyResponse
@@ -4212,13 +4257,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Only the Alibaba Cloud Account ID owner of a bucket can delete the bucket from the account.</p>
      * <ul>
-     * <li>You cannot delete buckets that store objects. You can only delete empty buckets.</li>
+     * <li>Only the Alibaba Cloud account that owns the bucket can delete it.</li>
+     * <li>A bucket must be empty before it can be deleted.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a bucket.</p>
+     * <p>You can call the DeleteBucket operation to delete a bucket.</p>
      * 
      * @param request DeleteBucketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4250,13 +4295,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Only the Alibaba Cloud Account ID owner of a bucket can delete the bucket from the account.</p>
      * <ul>
-     * <li>You cannot delete buckets that store objects. You can only delete empty buckets.</li>
+     * <li>Only the Alibaba Cloud account that owns the bucket can delete it.</li>
+     * <li>A bucket must be empty before it can be deleted.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a bucket.</p>
+     * <p>You can call the DeleteBucket operation to delete a bucket.</p>
      * 
      * @param request DeleteBucketRequest
      * @return DeleteBucketResponse
@@ -4268,7 +4313,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the lifecycle rules for objects in a bucket.</p>
+     * <p>Deletes the lifecycle rules of a bucket.</p>
      * 
      * @param request DeleteBucketLifecycleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4304,7 +4349,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the lifecycle rules for objects in a bucket.</p>
+     * <p>Deletes the lifecycle rules of a bucket.</p>
      * 
      * @param request DeleteBucketLifecycleRequest
      * @return DeleteBucketLifecycleResponse
@@ -4315,8 +4360,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can specify the RetainResources parameter when you delete a cluster. The default value is false. If you set this parameter to true, the Edge Node Service (ENS) compute instances on which worker nodes run are retained.
+     * When you delete a cluster, all nodes and node pools in the cluster are automatically deleted. ENS compute instances that you manually added by using scripts obtained from the DescribeAttachScript operation are retained.
+     * If a node pool in the cluster is being scaled out or in, wait until the scaling process is complete before you delete the cluster.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除集群</p>
+     * <p>Deletes a cluster.</p>
      * 
      * @param request DeleteClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4351,8 +4401,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can specify the RetainResources parameter when you delete a cluster. The default value is false. If you set this parameter to true, the Edge Node Service (ENS) compute instances on which worker nodes run are retained.
+     * When you delete a cluster, all nodes and node pools in the cluster are automatically deleted. ENS compute instances that you manually added by using scripts obtained from the DescribeAttachScript operation are retained.
+     * If a node pool in the cluster is being scaled out or in, wait until the scaling process is complete before you delete the cluster.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除集群</p>
+     * <p>Deletes a cluster.</p>
      * 
      * @param request DeleteClusterRequest
      * @return DeleteClusterResponse
@@ -4363,8 +4418,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Each user is limited to 10 calls per second.</li>
+     * <li>Cluster creation is an asynchronous operation. After the API call is successful, wait 10 to 20 minutes for the cluster to initialize. During this time, you can call the DescribeClustersV1 operation to check the cluster status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster\&quot;s kubeconfig file.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除节点池</p>
+     * <p>You can call the DeleteClusterNodePool operation to delete a node pool that you no longer need. When you delete a node pool, all pods on its nodes are also deleted. This action may trigger descheduling. If the pods cannot be rescheduled, your services may be affected. Before you delete the node pool, ensure that the cluster has sufficient resources for rescheduling.</p>
      * 
      * @param request DeleteClusterNodePoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4399,8 +4460,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Each user is limited to 10 calls per second.</li>
+     * <li>Cluster creation is an asynchronous operation. After the API call is successful, wait 10 to 20 minutes for the cluster to initialize. During this time, you can call the DescribeClustersV1 operation to check the cluster status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster\&quot;s kubeconfig file.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除节点池</p>
+     * <p>You can call the DeleteClusterNodePool operation to delete a node pool that you no longer need. When you delete a node pool, all pods on its nodes are also deleted. This action may trigger descheduling. If the pods cannot be rescheduled, your services may be affected. Before you delete the node pool, ensure that the cluster has sufficient resources for rescheduling.</p>
      * 
      * @param request DeleteClusterNodePoolRequest
      * @return DeleteClusterNodePoolResponse
@@ -4411,8 +4478,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If ReleaseNode is set to false, you must manually stop the kubelet process on the node before you call DeleteClusterNodes. Otherwise, the node may automatically rejoin the cluster.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除节点池指定节点</p>
+     * <p>Removes nodes from a cluster when the nodes are no longer needed. The ReleaseNode parameter specifies whether to release the underlying Edge Node Service (ENS) compute instances. Default value: false. If the node to be removed is in the failed state, this parameter does not take effect and the corresponding compute instance is released by default. For ENS compute instances that you manually connect to the cluster by using the script obtained from the DescribeAttachScript operation, this parameter does not take effect and the corresponding compute instances are not released by default.</p>
      * 
      * @param tmpReq DeleteClusterNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4457,8 +4527,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If ReleaseNode is set to false, you must manually stop the kubelet process on the node before you call DeleteClusterNodes. Otherwise, the node may automatically rejoin the cluster.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除节点池指定节点</p>
+     * <p>Removes nodes from a cluster when the nodes are no longer needed. The ReleaseNode parameter specifies whether to release the underlying Edge Node Service (ENS) compute instances. Default value: false. If the node to be removed is in the failed state, this parameter does not take effect and the corresponding compute instance is released by default. For ENS compute instances that you manually connect to the cluster by using the script obtained from the DescribeAttachScript operation, this parameter does not take effect and the corresponding compute instances are not released by default.</p>
      * 
      * @param request DeleteClusterNodesRequest
      * @return DeleteClusterNodesResponse
@@ -4781,8 +4854,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a NAS file system. Before deleting the file system, call DeleteMountTarget to delete all mount targets of the file system. After DeleteMountTarget succeeds, there is an eventual consistency window. Poll DescribeFileSystems to confirm that MountTargets is empty before calling this API operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes a File Storage NAS file system.</p>
+     * <p>Calls DeleteFileSystem to delete a NAS service.</p>
      * 
      * @param request DeleteFileSystemRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4809,8 +4885,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a NAS file system. Before deleting the file system, call DeleteMountTarget to delete all mount targets of the file system. After DeleteMountTarget succeeds, there is an eventual consistency window. Poll DescribeFileSystems to confirm that MountTargets is empty before calling this API operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes a File Storage NAS file system.</p>
+     * <p>Calls DeleteFileSystem to delete a NAS service.</p>
      * 
      * @param request DeleteFileSystemRequest
      * @return DeleteFileSystemResponse
@@ -4960,8 +5039,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  After you delete an SSH key pair, you can no longer query the key pair by calling the DescribeKeyPairs operation.</p>
      * <ul>
+     * <li>After you delete an SSH key pair, you can no longer query the key pair by calling the DescribeKeyPairs operation.</li>
      * <li>If you delete an SSH key pair that is bound to an Edge Node Service (ENS) instance, ENS no longer stores the SSH key pair. However, you can still use the key pair to access the instance. When you call the DescribeInstance operation to query instance information, no other information but the name of the key pair (<strong>KeyPairName</strong>) is returned.</li>
      * </ul>
      * 
@@ -5002,8 +5081,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  After you delete an SSH key pair, you can no longer query the key pair by calling the DescribeKeyPairs operation.</p>
      * <ul>
+     * <li>After you delete an SSH key pair, you can no longer query the key pair by calling the DescribeKeyPairs operation.</li>
      * <li>If you delete an SSH key pair that is bound to an Edge Node Service (ENS) instance, ENS no longer stores the SSH key pair. However, you can still use the key pair to access the instance. When you call the DescribeInstance operation to query instance information, no other information but the name of the key pair (<strong>KeyPairName</strong>) is returned.</li>
      * </ul>
      * 
@@ -5020,9 +5099,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5066,9 +5145,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5372,7 +5451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases the VPC peering connection.</p>
+     * <p>Deletes a network peer connection.</p>
      * 
      * @param request DeleteNetworkPeerConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5404,7 +5483,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases the VPC peering connection.</p>
+     * <p>Deletes a network peer connection.</p>
      * 
      * @param request DeleteNetworkPeerConnectionRequest
      * @return DeleteNetworkPeerConnectionResponse
@@ -5464,10 +5543,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If all the SDGs corresponding to the original disk are deleted, the original disk is automatically cleared.</p>
+     * <p>If all SDGs associated with the original cloud disk are deleted, the original cloud disk is automatically cleaned up.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a shared data group (SDG).</p>
+     * <p>Deletes an SDG by calling DeleteSDG.</p>
      * 
      * @param tmpReq DeleteSDGRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5505,10 +5584,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If all the SDGs corresponding to the original disk are deleted, the original disk is automatically cleared.</p>
+     * <p>If all SDGs associated with the original cloud disk are deleted, the original cloud disk is automatically cleaned up.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a shared data group (SDG).</p>
+     * <p>Deletes an SDG by calling DeleteSDG.</p>
      * 
      * @param request DeleteSDGRequest
      * @return DeleteSDGResponse
@@ -5898,7 +5977,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deploys a shared data group (SDG) to compute instances.</p>
+     * <p>Deploys an SDG to compute instances.</p>
      * 
      * @param tmpReq DeployInstanceSDGRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5952,7 +6031,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deploys a shared data group (SDG) to compute instances.</p>
+     * <p>Deploys an SDG to compute instances.</p>
      * 
      * @param request DeployInstanceSDGRequest
      * @return DeployInstanceSDGResponse
@@ -5964,7 +6043,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deploys shared data groups (SDGs).</p>
+     * <p>Deploys an SDG.</p>
      * 
      * @param tmpReq DeploySDGRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5998,7 +6077,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deploys shared data groups (SDGs).</p>
+     * <p>Deploys an SDG.</p>
      * 
      * @param request DeploySDGRequest
      * @return DeploySDGResponse
@@ -6010,7 +6089,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about images of the Android in Container (AIC) instance.</p>
+     * <p>Retrieves image information.</p>
      * 
      * @param request DescribeAICImagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6074,7 +6153,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about images of the Android in Container (AIC) instance.</p>
+     * <p>Retrieves image information.</p>
      * 
      * @param request DescribeAICImagesRequest
      * @return DescribeAICImagesResponse
@@ -6086,7 +6165,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about ARM servers and Android in Container (AIC) instances.</p>
+     * <p>Retrieves information about ARM servers and AIC instances.</p>
      * 
      * @param tmpReq DescribeARMServerInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6140,7 +6219,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about ARM servers and Android in Container (AIC) instances.</p>
+     * <p>Retrieves information about ARM servers and AIC instances.</p>
      * 
      * @param request DescribeARMServerInstancesRequest
      * @return DescribeARMServerInstancesResponse
@@ -6151,8 +6230,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Rate limit per user: 100 calls per second.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询指定组件的信息</p>
+     * <p>Queries the details of a specified add-on.</p>
      * 
      * @param request DescribeAddonRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6187,8 +6271,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Rate limit per user: 100 calls per second.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询指定组件的信息</p>
+     * <p>Queries the details of a specified add-on.</p>
      * 
      * @param request DescribeAddonRequest
      * @return DescribeAddonResponse
@@ -6259,8 +6348,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries available resources. A successful business response is indicated by Code=0 in the response body. Do not confuse the business code in the response body with the HTTP status code.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the resources that can be created.</p>
+     * <p>Queries the instance resources that can be created by calling DescribeAvailableResource.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAvailableResourceResponse
@@ -6282,8 +6374,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries available resources. A successful business response is indicated by Code=0 in the response body. Do not confuse the business code in the response body with the HTTP status code.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the resources that can be created.</p>
+     * <p>Queries the instance resources that can be created by calling DescribeAvailableResource.</p>
      * @return DescribeAvailableResourceResponse
      */
     public DescribeAvailableResourceResponse describeAvailableResource() throws Exception {
@@ -6293,7 +6388,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the specifications of resources that you can purchase when you create an instance.</p>
+     * <p>You can call DescribeAvailableResourceInfo to query the specifications of purchasable resources for instance creation.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAvailableResourceInfoResponse
@@ -6316,7 +6411,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the specifications of resources that you can purchase when you create an instance.</p>
+     * <p>You can call DescribeAvailableResourceInfo to query the specifications of purchasable resources for instance creation.</p>
      * @return DescribeAvailableResourceInfoResponse
      */
     public DescribeAvailableResourceInfoResponse describeAvailableResourceInfo() throws Exception {
@@ -6494,10 +6589,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>Single-user call frequency: 100 calls per second.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries Container Service for Kubernetes (ACK) edge clusters.</p>
+     * <p>Queries edge container clusters.</p>
      * 
      * @param request DescribeClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6529,10 +6626,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>Single-user call frequency: 100 calls per second.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries Container Service for Kubernetes (ACK) edge clusters.</p>
+     * <p>Queries edge container clusters.</p>
      * 
      * @param request DescribeClusterRequest
      * @return DescribeClusterResponse
@@ -6544,7 +6643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>To add existing ENS instances to an ECK cluster as worker nodes, or to re-add node instances to a node pool after removing worker nodes, ECK supports manually adding existing nodes to a node pool. You can invoke the DescribeClusterAttachScripts interface to obtain the script for adding existing nodes.</p>
+     * <p>To add an existing ENS instance to an ECK cluster as a worker node or re-add a node to a node pool, call the DescribeClusterAttachScripts operation to get the required script.</p>
      * 
      * @param request DescribeClusterAttachScriptsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6584,7 +6683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>To add existing ENS instances to an ECK cluster as worker nodes, or to re-add node instances to a node pool after removing worker nodes, ECK supports manually adding existing nodes to a node pool. You can invoke the DescribeClusterAttachScripts interface to obtain the script for adding existing nodes.</p>
+     * <p>To add an existing ENS instance to an ECK cluster as a worker node or re-add a node to a node pool, call the DescribeClusterAttachScripts operation to get the required script.</p>
      * 
      * @param request DescribeClusterAttachScriptsRequest
      * @return DescribeClusterAttachScriptsResponse
@@ -6595,8 +6694,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Per-user call frequency: 100 calls per second.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询集群详细信息</p>
+     * <p>Queries the details of a cluster.</p>
      * 
      * @param request DescribeClusterDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6627,8 +6731,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Per-user call frequency: 100 calls per second.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询集群详细信息</p>
+     * <p>Queries the details of a cluster.</p>
      * 
      * @param request DescribeClusterDetailRequest
      * @return DescribeClusterDetailResponse
@@ -6640,10 +6749,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The maximum number of times that each user can call this operation per second is 100.</p>
+     * <ul>
+     * <li>Single-user call frequency: 100 calls per second.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the certificate of a Container Service for Kubernetes (ACK) edge cluster.</p>
+     * <p>Queries the certificate of an edge container cluster.</p>
      * 
      * @param request DescribeClusterKubeConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6675,10 +6786,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The maximum number of times that each user can call this operation per second is 100.</p>
+     * <ul>
+     * <li>Single-user call frequency: 100 calls per second.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the certificate of a Container Service for Kubernetes (ACK) edge cluster.</p>
+     * <p>Queries the certificate of an edge container cluster.</p>
      * 
      * @param request DescribeClusterKubeConfigRequest
      * @return DescribeClusterKubeConfigResponse
@@ -6689,8 +6802,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Rate limit per user: 100 calls per second.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询集群节点池信息</p>
+     * <p>Queries all node pools in a cluster.</p>
      * 
      * @param request DescribeClusterNodePoolsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6729,8 +6847,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Rate limit per user: 100 calls per second.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询集群节点池信息</p>
+     * <p>Queries all node pools in a cluster.</p>
      * 
      * @param request DescribeClusterNodePoolsRequest
      * @return DescribeClusterNodePoolsResponse
@@ -6741,8 +6864,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Rate limit per user: 100 calls per second.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询节点池节点</p>
+     * <p>Queries a list of nodes that meet specific conditions.</p>
      * 
      * @param request DescribeClusterNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6785,8 +6913,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Rate limit per user: 100 calls per second.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询节点池节点</p>
+     * <p>Queries a list of nodes that meet specific conditions.</p>
      * 
      * @param request DescribeClusterNodesRequest
      * @return DescribeClusterNodesResponse
@@ -6797,8 +6930,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>A single user is limited to 100 calls per second.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询集群KubeConfig</p>
+     * <p>A kubeconfig file contains the credentials required for a client to access an Elastic Container instance on Kubernetes (ECK) cluster. The file includes identity and authentication data for accessing the destination cluster. To manage a cluster using kubectl, you must first connect to the cluster with its kubeconfig file. You can call the DescribeClusterUserKubeconfig operation to query the kubeconfig file for a specific cluster.</p>
      * 
      * @param request DescribeClusterUserKubeconfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6833,8 +6971,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>A single user is limited to 100 calls per second.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询集群KubeConfig</p>
+     * <p>A kubeconfig file contains the credentials required for a client to access an Elastic Container instance on Kubernetes (ECK) cluster. The file includes identity and authentication data for accessing the destination cluster. To manage a cluster using kubectl, you must first connect to the cluster with its kubeconfig file. You can call the DescribeClusterUserKubeconfig operation to query the kubeconfig file for a specific cluster.</p>
      * 
      * @param request DescribeClusterUserKubeconfigRequest
      * @return DescribeClusterUserKubeconfigResponse
@@ -6859,12 +7002,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClusterId", request.clusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterType)) {
+            query.put("ClusterType", request.clusterType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ensRegionId)) {
             query.put("EnsRegionId", request.ensRegionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.profile)) {
+            query.put("Profile", request.profile);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -6942,7 +7093,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the distribution status of data files on edge instances of an application.</p>
+     * <p>Retrieves the distribution status of data files across edge resource instances of an application by calling DescribeDataDistResult.</p>
      * 
      * @param tmpReq DescribeDataDistResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7012,7 +7163,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the distribution status of data files on edge instances of an application.</p>
+     * <p>Retrieves the distribution status of data files across edge resource instances of an application by calling DescribeDataDistResult.</p>
      * 
      * @param request DescribeDataDistResultRequest
      * @return DescribeDataDistResultResponse
@@ -7024,7 +7175,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the download URLs of application data on file servers and returns the file servers on which data is pushed.</p>
+     * <p>Retrieves the download URL of application data from file servers and returns the list of file servers to which the data has been successfully pre-pushed.</p>
      * 
      * @param request DescribeDataDownloadURLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7052,7 +7203,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the download URLs of application data on file servers and returns the file servers on which data is pushed.</p>
+     * <p>Retrieves the download URL of application data from file servers and returns the list of file servers to which the data has been successfully pre-pushed.</p>
      * 
      * @param request DescribeDataDownloadURLRequest
      * @return DescribeDataDownloadURLResponse
@@ -7063,8 +7214,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the pre-push results of application data. Before calling this operation, make sure that your account has activated the Edge Node Service (ENS) edge application hosting service.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the push status of application data files on Edge Node Service (ENS) nodes.</p>
+     * <p>Queries the pre-push status of data files for an application on edge nodes.</p>
      * 
      * @param request DescribeDataPushResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7123,8 +7277,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the pre-push results of application data. Before calling this operation, make sure that your account has activated the Edge Node Service (ENS) edge application hosting service.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the push status of application data files on Edge Node Service (ENS) nodes.</p>
+     * <p>Queries the pre-push status of data files for an application on edge nodes.</p>
      * 
      * @param request DescribeDataPushResultRequest
      * @return DescribeDataPushResultResponse
@@ -7136,7 +7293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the properties of instances and virtual devices in a specific edge application.</p>
+     * <p>Queries the list of basic property information such as instances and virtual device network status under an edge application.</p>
      * 
      * @param request DescribeDeviceServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7164,7 +7321,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the properties of instances and virtual devices in a specific edge application.</p>
+     * <p>Queries the list of basic property information such as instances and virtual device network status under an edge application.</p>
      * 
      * @param request DescribeDeviceServiceRequest
      * @return DescribeDeviceServiceResponse
@@ -7176,7 +7333,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the disk IOPS monitoring data.</p>
+     * <p>Queries disk IOPS monitoring data.</p>
      * 
      * @param request DescribeDiskIopsListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7204,7 +7361,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the disk IOPS monitoring data.</p>
+     * <p>Queries disk IOPS monitoring data.</p>
      * 
      * @param request DescribeDiskIopsListRequest
      * @return DescribeDiskIopsListResponse
@@ -7216,7 +7373,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about one or more disks.</p>
+     * <p>Queries information about one or more created disks.</p>
      * 
      * @param request DescribeDisksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7304,7 +7461,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about one or more disks.</p>
+     * <p>Queries information about one or more created disks.</p>
      * 
      * @param request DescribeDisksRequest
      * @return DescribeDisksResponse
@@ -7316,7 +7473,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the specifications of resources that you can purchase when you create an instance.</p>
+     * <p>Queries the specifications of available resources for purchase when you create an instance by calling DescribeElbAvailableResourceInfo.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeElbAvailableResourceInfoResponse
@@ -7339,7 +7496,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the specifications of resources that you can purchase when you create an instance.</p>
+     * <p>Queries the specifications of available resources for purchase when you create an instance by calling DescribeElbAvailableResourceInfo.</p>
      * @return DescribeElbAvailableResourceInfoResponse
      */
     public DescribeElbAvailableResourceInfoResponse describeElbAvailableResourceInfo() throws Exception {
@@ -7441,7 +7598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries elastic IP addresses (EIPs).</p>
+     * <p>Queries elastic IP addresses (EIPs) in Edge Node Service (ENS).</p>
      * 
      * @param request DescribeEnsEipAddressesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7521,7 +7678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries elastic IP addresses (EIPs).</p>
+     * <p>Queries elastic IP addresses (EIPs) in Edge Node Service (ENS).</p>
      * 
      * @param request DescribeEnsEipAddressesRequest
      * @return DescribeEnsEipAddressesResponse
@@ -7533,7 +7690,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries regions in which ENS resources can be created.</p>
+     * <p>Invoke DescribeEnsNetDistrict to query the regions where edge service resources can be created.</p>
      * 
      * @param request DescribeEnsNetDistrictRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7573,7 +7730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries regions in which ENS resources can be created.</p>
+     * <p>Invoke DescribeEnsNetDistrict to query the regions where edge service resources can be created.</p>
      * 
      * @param request DescribeEnsNetDistrictRequest
      * @return DescribeEnsNetDistrictResponse
@@ -7713,7 +7870,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Queries node resources.</p>
+     * <p>Queries edge zone resource information by calling DescribeEnsRegionIdResource.</p>
      * 
      * @param request DescribeEnsRegionIdResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7768,7 +7925,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Queries node resources.</p>
+     * <p>Queries edge zone resource information by calling DescribeEnsRegionIdResource.</p>
      * 
      * @param request DescribeEnsRegionIdResourceRequest
      * @return DescribeEnsRegionIdResourceResponse
@@ -7780,7 +7937,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Edge Node Service (ENS) nodes that you can use.</p>
+     * <p>Queries a list of available ENS nodes.</p>
      * 
      * @param request DescribeEnsRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7812,7 +7969,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Edge Node Service (ENS) nodes that you can use.</p>
+     * <p>Queries a list of available ENS nodes.</p>
      * 
      * @param request DescribeEnsRegionsRequest
      * @return DescribeEnsRegionsResponse
@@ -8188,7 +8345,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the EPN bandwidth usage.</p>
+     * <p>Invokes DescribeEpnBandWidthData to query the network bandwidth usage of an edge-to-edge network.</p>
      * 
      * @param request DescribeEpnBandWidthDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8248,7 +8405,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the EPN bandwidth usage.</p>
+     * <p>Invokes DescribeEpnBandWidthData to query the network bandwidth usage of an edge-to-edge network.</p>
      * 
      * @param request DescribeEpnBandWidthDataRequest
      * @return DescribeEpnBandWidthDataResponse
@@ -8474,8 +8631,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to query information about all custom images in your account. The information include the image properties, image export status, and the Object Storage Service (OSS) download links.</p>
      * <ul>
+     * <li>to query information about all custom images in your account. The information include the image properties, image export status, and the Object Storage Service (OSS) download links.</li>
      * <li>Empty strings are returned for images that are not exported.</li>
      * <li>The download links may become invalid if you delete objects in OSS.</li>
      * </ul>
@@ -8525,8 +8682,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to query information about all custom images in your account. The information include the image properties, image export status, and the Object Storage Service (OSS) download links.</p>
      * <ul>
+     * <li>to query information about all custom images in your account. The information include the image properties, image export status, and the Object Storage Service (OSS) download links.</li>
      * <li>Empty strings are returned for images that are not exported.</li>
      * <li>The download links may become invalid if you delete objects in OSS.</li>
      * </ul>
@@ -8588,7 +8745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about Apsara File Storage NAS (NAS) file systems.</p>
+     * <p>Query NAS file system information.</p>
      * 
      * @param request DescribeFileSystemsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8616,7 +8773,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about Apsara File Storage NAS (NAS) file systems.</p>
+     * <p>Query NAS file system information.</p>
      * 
      * @param request DescribeFileSystemsRequest
      * @return DescribeFileSystemsResponse
@@ -8628,7 +8785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the DescribeForwardEntryAttribute operation to query the details of a DNAT rule.</p>
+     * <p>Queries a DNAT rule.</p>
      * 
      * @param request DescribeForwardEntryAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8660,7 +8817,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the DescribeForwardEntryAttribute operation to query the details of a DNAT rule.</p>
+     * <p>Queries a DNAT rule.</p>
      * 
      * @param request DescribeForwardEntryAttributeRequest
      * @return DescribeForwardEntryAttributeResponse
@@ -8744,7 +8901,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries high-availability virtual IP addresses (HAVIPs).</p>
+     * <p>Queries high-availability virtual IP addresses (HaVips).</p>
      * 
      * @param request DescribeHaVipsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8772,7 +8929,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries high-availability virtual IP addresses (HAVIPs).</p>
+     * <p>Queries high-availability virtual IP addresses (HaVips).</p>
      * 
      * @param request DescribeHaVipsRequest
      * @return DescribeHaVipsResponse
@@ -8784,10 +8941,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You must specify an event type to query. You can query multiple event types at the same time.</p>
+     * <ul>
+     * <li>EventTypes must specify at least one event type for the query. Multiple event types can be queried at the same time.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries instance system events.</p>
+     * <p>Queries system event information.</p>
      * 
      * @param tmpReq DescribeHistoryEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8857,10 +9016,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You must specify an event type to query. You can query multiple event types at the same time.</p>
+     * <ul>
+     * <li>EventTypes must specify at least one event type for the query. Multiple event types can be queried at the same time.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries instance system events.</p>
+     * <p>Queries system event information.</p>
      * 
      * @param request DescribeHistoryEventsRequest
      * @return DescribeHistoryEventsResponse
@@ -8872,7 +9033,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries available images.</p>
+     * <p>Queries available image resources.</p>
      * 
      * @param request DescribeImageInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8904,7 +9065,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries available images.</p>
+     * <p>Queries available image resources.</p>
      * 
      * @param request DescribeImageInfosRequest
      * @return DescribeImageInfosResponse
@@ -9040,7 +9201,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to query whether auto-renewal is enabled for an instance.</p>
+     * <p>to query whether auto-renewal is enabled for an instance.</p>
      * 
      * @param request DescribeInstanceAutoRenewAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9076,7 +9237,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to query whether auto-renewal is enabled for an instance.</p>
+     * <p>to query whether auto-renewal is enabled for an instance.</p>
      * 
      * @param request DescribeInstanceAutoRenewAttributeRequest
      * @return DescribeInstanceAutoRenewAttributeResponse
@@ -9088,14 +9249,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 800 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 100 times per second per user.</li>
-     * <li>You can specify multiple request parameters to filter query results. Specified request parameters have logical AND relations. Only the specified parameters are included in the filter conditions. However, if InstanceIds is set to an empty JSON array, this parameter is regarded as a valid filter condition and an empty result is returned.</li>
+     * <li>Request parameters act as filters. Filters are evaluated by using the logical AND operator. If a parameter is empty, the corresponding filter does not take effect. However, if InstanceIds is set to an empty JSON array, the filter is considered valid and an empty result is returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the detailed bandwidth data of an instance, which is collected every 5 minutes.</p>
+     * <p>Queries the bandwidth details of an instance at a 5-minute granularity.</p>
      * 
      * @param request DescribeInstanceBandwidthDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9123,14 +9282,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 800 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 100 times per second per user.</li>
-     * <li>You can specify multiple request parameters to filter query results. Specified request parameters have logical AND relations. Only the specified parameters are included in the filter conditions. However, if InstanceIds is set to an empty JSON array, this parameter is regarded as a valid filter condition and an empty result is returned.</li>
+     * <li>Request parameters act as filters. Filters are evaluated by using the logical AND operator. If a parameter is empty, the corresponding filter does not take effect. However, if InstanceIds is set to an empty JSON array, the filter is considered valid and an empty result is returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the detailed bandwidth data of an instance, which is collected every 5 minutes.</p>
+     * <p>Queries the bandwidth details of an instance at a 5-minute granularity.</p>
      * 
      * @param request DescribeInstanceBandwidthDetailRequest
      * @return DescribeInstanceBandwidthDetailResponse
@@ -9204,7 +9361,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the vCPU and memory usage of an instance.</p>
+     * <p>Queries the CPU and memory usage of an instance.</p>
      * 
      * @param request DescribeInstanceMonitorDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9248,7 +9405,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the vCPU and memory usage of an instance.</p>
+     * <p>Queries the CPU and memory usage of an instance.</p>
      * 
      * @param request DescribeInstanceMonitorDataRequest
      * @return DescribeInstanceMonitorDataResponse
@@ -9260,7 +9417,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries shared data groups (SDGs) that are mounted to an Android in Container (AIC) instance.</p>
+     * <p>Queries the mount status of SDGs under a specified AIC instance.</p>
      * 
      * @param tmpReq DescribeInstanceSDGStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9294,7 +9451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries shared data groups (SDGs) that are mounted to an Android in Container (AIC) instance.</p>
+     * <p>Queries the mount status of SDGs under a specified AIC instance.</p>
      * 
      * @param request DescribeInstanceSDGStatusRequest
      * @return DescribeInstanceSDGStatusResponse
@@ -9339,13 +9496,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the specifications of instance types.</p>
+     * <p>Queries the list of instance types by calling DescribeInstanceTypes.</p>
      * 
+     * @param request DescribeInstanceTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstanceTypesResponse
      */
-    public DescribeInstanceTypesResponse describeInstanceTypesWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+    public DescribeInstanceTypesResponse describeInstanceTypesWithOptions(DescribeInstanceTypesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
+            query.put("InstanceType", request.instanceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeInstanceTypes"),
             new TeaPair("version", "2017-11-10"),
@@ -9362,17 +9528,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the specifications of instance types.</p>
+     * <p>Queries the list of instance types by calling DescribeInstanceTypes.</p>
+     * 
+     * @param request DescribeInstanceTypesRequest
      * @return DescribeInstanceTypesResponse
      */
-    public DescribeInstanceTypesResponse describeInstanceTypes() throws Exception {
+    public DescribeInstanceTypesResponse describeInstanceTypes(DescribeInstanceTypesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeInstanceTypesWithOptions(runtime);
+        return this.describeInstanceTypesWithOptions(request, runtime);
     }
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Virtual Network Computing (VNC) URL of an Edge Node Service (ENS) instance.</p>
+     * <p>Queries the web management terminal URL of an ENS instance.</p>
      * 
      * @param request DescribeInstanceVncUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9404,7 +9572,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Virtual Network Computing (VNC) URL of an Edge Node Service (ENS) instance.</p>
+     * <p>Queries the web management terminal URL of an ENS instance.</p>
      * 
      * @param request DescribeInstanceVncUrlRequest
      * @return DescribeInstanceVncUrlResponse
@@ -9416,14 +9584,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 800 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 100 times per second per user.</li>
-     * <li>You can specify multiple request parameters to be queried. Specified parameters are evaluated by using the AND operator. Only the specified parameters are included in the filter conditions. However, if InstanceIds is set to an empty JSON array, it is regarded as a valid filter condition and an empty result is returned.</li>
+     * <li>API call frequency: 800 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>You can call this operation to view the details of one or more instances.</p>
+     * <p>Queries the details of one or more instances.</p>
      * 
      * @param tmpReq DescribeInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9557,14 +9723,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 800 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 100 times per second per user.</li>
-     * <li>You can specify multiple request parameters to be queried. Specified parameters are evaluated by using the AND operator. Only the specified parameters are included in the filter conditions. However, if InstanceIds is set to an empty JSON array, it is regarded as a valid filter condition and an empty result is returned.</li>
+     * <li>API call frequency: 800 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>You can call this operation to view the details of one or more instances.</p>
+     * <p>Queries the details of one or more instances.</p>
      * 
      * @param request DescribeInstancesRequest
      * @return DescribeInstancesResponse
@@ -9632,13 +9796,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per account.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Per-user call rate: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries detailed information about an Edge Load Balancer (ELB) instance.</p>
+     * <p>Queries the details of a specified load balancing instance.</p>
      * 
      * @param request DescribeLoadBalancerAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9670,13 +9834,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per account.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Per-user call rate: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries detailed information about an Edge Load Balancer (ELB) instance.</p>
+     * <p>Queries the details of a specified load balancing instance.</p>
      * 
      * @param request DescribeLoadBalancerAttributeRequest
      * @return DescribeLoadBalancerAttributeResponse
@@ -9688,9 +9852,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9730,9 +9894,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9748,9 +9912,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9790,9 +9954,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9808,9 +9972,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9842,9 +10006,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9960,13 +10124,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Per-user call rate: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the configurations of a Transmission Control Protocol (TCP) listener.</p>
+     * <p>Call the <code>DescribeLoadBalancerTCPListenerAttribute</code> operation to query the configuration of a TCP listener.</p>
      * 
      * @param request DescribeLoadBalancerTCPListenerAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10002,13 +10166,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Per-user call rate: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the configurations of a Transmission Control Protocol (TCP) listener.</p>
+     * <p>Call the <code>DescribeLoadBalancerTCPListenerAttribute</code> operation to query the configuration of a TCP listener.</p>
      * 
      * @param request DescribeLoadBalancerTCPListenerAttributeRequest
      * @return DescribeLoadBalancerTCPListenerAttributeResponse
@@ -10020,13 +10184,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>API rate limit: 100 requests per second (RPS).</li>
+     * <li>Per-user rate limit: 10 RPS.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the configuration of a User Datagram Protocol (UDP) listener.</p>
+     * <p>Call <code>DescribeLoadBalancerUDPListenerAttribute</code> to get a UDP listener\&quot;s configuration.</p>
      * 
      * @param request DescribeLoadBalancerUDPListenerAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10062,13 +10226,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>API rate limit: 100 requests per second (RPS).</li>
+     * <li>Per-user rate limit: 10 RPS.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the configuration of a User Datagram Protocol (UDP) listener.</p>
+     * <p>Call <code>DescribeLoadBalancerUDPListenerAttribute</code> to get a UDP listener\&quot;s configuration.</p>
      * 
      * @param request DescribeLoadBalancerUDPListenerAttributeRequest
      * @return DescribeLoadBalancerUDPListenerAttributeResponse
@@ -10080,13 +10244,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Call rate per user: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the Edge Load Balance (ELB) instances that you have created.</p>
+     * <p>Invokes the DescribeLoadBalancers operation to query the list of created load balancing instances.</p>
      * 
      * @param request DescribeLoadBalancersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10114,13 +10278,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Call rate per user: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the Edge Load Balance (ELB) instances that you have created.</p>
+     * <p>Invokes the DescribeLoadBalancers operation to query the list of created load balancing instances.</p>
      * 
      * @param request DescribeLoadBalancersRequest
      * @return DescribeLoadBalancersResponse
@@ -10132,7 +10296,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the metering data of the user.</p>
+     * <p>Retrieves user metering data.</p>
      * 
      * @param request DescribeMeasurementDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10168,7 +10332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the metering data of the user.</p>
+     * <p>Retrieves user metering data.</p>
      * 
      * @param request DescribeMeasurementDataRequest
      * @return DescribeMeasurementDataResponse
@@ -10180,7 +10344,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about mount targets.</p>
+     * <p>Queries mount target information by calling DescribeMountTargets.</p>
      * 
      * @param request DescribeMountTargetsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10228,7 +10392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about mount targets.</p>
+     * <p>Queries mount target information by calling DescribeMountTargets.</p>
      * 
      * @param request DescribeMountTargetsRequest
      * @return DescribeMountTargetsResponse
@@ -10240,7 +10404,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the specifications of resources that you can purchase when you create a NAS.</p>
+     * <p>Query the resources that you can purchase when creating a NAS file system.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeNASAvailableResourceInfoResponse
@@ -10263,7 +10427,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the specifications of resources that you can purchase when you create a NAS.</p>
+     * <p>Query the resources that you can purchase when creating a NAS file system.</p>
      * @return DescribeNASAvailableResourceInfoResponse
      */
     public DescribeNASAvailableResourceInfoResponse describeNASAvailableResourceInfo() throws Exception {
@@ -10313,7 +10477,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries created Network Address Translation (NAT) gateways.</p>
+     * <p>Invoke DescribeNatGateways to query created NAT Gateways.</p>
      * 
      * @param request DescribeNatGatewaysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10341,7 +10505,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries created Network Address Translation (NAT) gateways.</p>
+     * <p>Invoke DescribeNatGateways to query created NAT Gateways.</p>
      * 
      * @param request DescribeNatGatewaysRequest
      * @return DescribeNatGatewaysResponse
@@ -10353,7 +10517,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries network access control lists (ACLs).</p>
+     * <p>You can invoke the DescribeNetworkAcls API to query created network ACLs.</p>
      * 
      * @param request DescribeNetworkAclsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10401,7 +10565,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries network access control lists (ACLs).</p>
+     * <p>You can invoke the DescribeNetworkAcls API to query created network ACLs.</p>
      * 
      * @param request DescribeNetworkAclsRequest
      * @return DescribeNetworkAclsResponse
@@ -10413,13 +10577,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per account.</li>
+     * <li>API rate limit: 100 calls/sec.</li>
+     * <li>Per-user rate limit: 10 calls/sec.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the configuration of a specified network.</p>
+     * <p>Use DescribeNetworkAttribute to query the configuration of a specific network.</p>
      * 
      * @param request DescribeNetworkAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10451,13 +10615,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per account.</li>
+     * <li>API rate limit: 100 calls/sec.</li>
+     * <li>Per-user rate limit: 10 calls/sec.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the configuration of a specified network.</p>
+     * <p>Use DescribeNetworkAttribute to query the configuration of a specific network.</p>
      * 
      * @param request DescribeNetworkAttributeRequest
      * @return DescribeNetworkAttributeResponse
@@ -10469,7 +10633,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries Elastic Network Interfaces (ENIs).</p>
+     * <p>Queries a list of elastic network interfaces (ENIs).</p>
      * 
      * @param request DescribeNetworkInterfacesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10557,7 +10721,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries Elastic Network Interfaces (ENIs).</p>
+     * <p>Queries a list of elastic network interfaces (ENIs).</p>
      * 
      * @param request DescribeNetworkInterfacesRequest
      * @return DescribeNetworkInterfacesResponse
@@ -10569,7 +10733,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries VPC peering connections.</p>
+     * <p>Call <code>DescribeNetworkPeerConnections</code> to query network peer connections.</p>
      * 
      * @param request DescribeNetworkPeerConnectionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10621,7 +10785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries VPC peering connections.</p>
+     * <p>Call <code>DescribeNetworkPeerConnections</code> to query network peer connections.</p>
      * 
      * @param request DescribeNetworkPeerConnectionsRequest
      * @return DescribeNetworkPeerConnectionsResponse
@@ -10633,13 +10797,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per account.</li>
+     * <li>API call frequency: 100 calls per second.</li>
+     * <li>Per-user call frequency: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Query the network list.</p>
+     * <p>Call DescribeNetworks to retrieve a list of networks.</p>
      * 
      * @param request DescribeNetworksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10695,13 +10859,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per account.</li>
+     * <li>API call frequency: 100 calls per second.</li>
+     * <li>Per-user call frequency: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Query the network list.</p>
+     * <p>Call DescribeNetworks to retrieve a list of networks.</p>
      * 
      * @param request DescribeNetworksRequest
      * @return DescribeNetworksResponse
@@ -10851,7 +11015,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about the Internet service providers (ISPs) of edge nodes.</p>
+     * <p>Queries the Internet Service Provider (ISP) information of an ENS edge node.</p>
      * 
      * @param request DescribeRegionIspsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10879,7 +11043,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about the Internet service providers (ISPs) of edge nodes.</p>
+     * <p>Queries the Internet Service Provider (ISP) information of an ENS edge node.</p>
      * 
      * @param request DescribeRegionIspsRequest
      * @return DescribeRegionIspsResponse
@@ -11004,7 +11168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries basic information about shared data groups (SDGs), including node preload information.</p>
+     * <p>Queries basic SDG information, including node preload information.</p>
      * 
      * @param tmpReq DescribeSDGRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11054,7 +11218,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries basic information about shared data groups (SDGs), including node preload information.</p>
+     * <p>Queries basic SDG information, including node preload information.</p>
      * 
      * @param request DescribeSDGRequest
      * @return DescribeSDGResponse
@@ -11066,7 +11230,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the deployment status of the shared data group (SDG).</p>
+     * <p>Queries the deployment status of an SDG.</p>
      * 
      * @param tmpReq DescribeSDGDeploymentStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11140,7 +11304,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the deployment status of the shared data group (SDG).</p>
+     * <p>Queries the deployment status of an SDG.</p>
      * 
      * @param request DescribeSDGDeploymentStatusRequest
      * @return DescribeSDGDeploymentStatusResponse
@@ -11152,7 +11316,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can query the information of shared disks in a specified SDG.</p>
+     * <p>Queries the information about shared disks in a specified SDG.</p>
      * 
      * @param request DescribeSDGSharedDisksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11200,7 +11364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can query the information of shared disks in a specified SDG.</p>
+     * <p>Queries the information about shared disks in a specified SDG.</p>
      * 
      * @param request DescribeSDGSharedDisksRequest
      * @return DescribeSDGSharedDisksResponse
@@ -11270,7 +11434,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries created secondary public IP addresses.</p>
+     * <p>Queries the secondary public IP addresses that have been created.</p>
      * 
      * @param request DescribeSecondaryPublicIpAddressesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11326,7 +11490,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries created secondary public IP addresses.</p>
+     * <p>Queries the secondary public IP addresses that have been created.</p>
      * 
      * @param request DescribeSecondaryPublicIpAddressesRequest
      * @return DescribeSecondaryPublicIpAddressesResponse
@@ -11338,7 +11502,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the rules of a security group.</p>
+     * <p>You can invoke DescribeSecurityGroupAttribute to query the security group rules of a security group.</p>
      * 
      * @param request DescribeSecurityGroupAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11370,7 +11534,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the rules of a security group.</p>
+     * <p>You can invoke DescribeSecurityGroupAttribute to query the security group rules of a security group.</p>
      * 
      * @param request DescribeSecurityGroupAttributeRequest
      * @return DescribeSecurityGroupAttributeResponse
@@ -11498,7 +11662,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the DescribeServcieSchedule to query the real-time status of the instance device or container that is being occupied by the UUID.</p>
+     * <p>Queries the real-time status of the instance devices or containers that are being scheduled and occupied by the specified UUID.</p>
      * 
      * @param request DescribeServcieScheduleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11538,7 +11702,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the DescribeServcieSchedule to query the real-time status of the instance device or container that is being occupied by the UUID.</p>
+     * <p>Queries the real-time status of the instance devices or containers that are being scheduled and occupied by the specified UUID.</p>
      * 
      * @param request DescribeServcieScheduleRequest
      * @return DescribeServcieScheduleResponse
@@ -11550,13 +11714,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Per-user call rate: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the monitoring data of an edge load balancer (ELB) instance based on the listener.</p>
+     * <p>Queries listener-level monitoring data for an ESLB instance.</p>
      * 
      * @param request DescribeServerLoadBalancerListenMonitorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11584,13 +11748,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Per-user call rate: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the monitoring data of an edge load balancer (ELB) instance based on the listener.</p>
+     * <p>Queries listener-level monitoring data for an ESLB instance.</p>
      * 
      * @param request DescribeServerLoadBalancerListenMonitorRequest
      * @return DescribeServerLoadBalancerListenMonitorResponse
@@ -11602,13 +11766,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>API call frequency: 100 calls per second.</li>
+     * <li>Per-user call frequency: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the request monitoring data of an edge load balancer (ELB) instance.</p>
+     * <p>Queries request monitoring data of an ESLB instance.</p>
      * 
      * @param request DescribeServerLoadBalancerMonitorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11636,13 +11800,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>API call frequency: 100 calls per second.</li>
+     * <li>Per-user call frequency: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the request monitoring data of an edge load balancer (ELB) instance.</p>
+     * <p>Queries request monitoring data of an ESLB instance.</p>
      * 
      * @param request DescribeServerLoadBalancerMonitorRequest
      * @return DescribeServerLoadBalancerMonitorResponse
@@ -11654,7 +11818,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about snapshots.</p>
+     * <p>Queries snapshot information by calling DescribeSnapshots.</p>
      * 
      * @param request DescribeSnapshotsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11714,7 +11878,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about snapshots.</p>
+     * <p>Queries snapshot information by calling DescribeSnapshots.</p>
      * 
      * @param request DescribeSnapshotsRequest
      * @return DescribeSnapshotsResponse
@@ -11726,7 +11890,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a specific source network address translation (SNAT) entry.</p>
+     * <p>Queries a specific source network address translation (SNAT) entry.</p>
      * 
      * @param request DescribeSnatAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11758,7 +11922,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a specific source network address translation (SNAT) entry.</p>
+     * <p>Queries a specific source network address translation (SNAT) entry.</p>
      * 
      * @param request DescribeSnatAttributeRequest
      * @return DescribeSnatAttributeResponse
@@ -12006,7 +12170,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call the DescribeVSwitchAttributes interface to query the configuration of a specified VSwitch.</p>
+     * <p>Call the DescribeVSwitchAttributes operation to query the configuration of a specified vSwitch.</p>
      * 
      * @param request DescribeVSwitchAttributesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12038,7 +12202,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call the DescribeVSwitchAttributes interface to query the configuration of a specified VSwitch.</p>
+     * <p>Call the DescribeVSwitchAttributes operation to query the configuration of a specified vSwitch.</p>
      * 
      * @param request DescribeVSwitchAttributesRequest
      * @return DescribeVSwitchAttributesResponse
@@ -12050,7 +12214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about available vSwitches.</p>
+     * <p>Call the DescribeVSwitches operation to retrieve information about VSwitches. You use VSwitches to configure private networks.</p>
      * 
      * @param request DescribeVSwitchesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12059,6 +12223,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeVSwitchesResponse describeVSwitchesWithOptions(DescribeVSwitchesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enableIpv6)) {
+            query.put("EnableIpv6", request.enableIpv6);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ensRegionId)) {
             query.put("EnsRegionId", request.ensRegionId);
         }
@@ -12110,7 +12278,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about available vSwitches.</p>
+     * <p>Call the DescribeVSwitches operation to retrieve information about VSwitches. You use VSwitches to configure private networks.</p>
      * 
      * @param request DescribeVSwitchesRequest
      * @return DescribeVSwitchesResponse
@@ -12122,7 +12290,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Detaches a pay-as-you-go disk from an Edge Node Service (ENS) instance. You cannot call this operation to detach a disk that is created together with an instance.</p>
+     * <p>Detaches a pay-as-you-go disk from an Edge Node Service (ENS) instance. You cannot To detach a disk that is created together with an instance.</p>
      * 
      * @param request DetachDiskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12158,7 +12326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Detaches a pay-as-you-go disk from an Edge Node Service (ENS) instance. You cannot call this operation to detach a disk that is created together with an instance.</p>
+     * <p>Detaches a pay-as-you-go disk from an Edge Node Service (ENS) instance. You cannot To detach a disk that is created together with an instance.</p>
      * 
      * @param request DetachDiskRequest
      * @return DetachDiskResponse
@@ -12224,17 +12392,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a></h2>
-     * <p>This operation is used to unbind a key pair from instances. Only disabled instances are supported.</p>
+     * <h2>Usage notes</h2>
+     * <p>This operation detaches a key pair from multiple instances in a batch. The target instances must be in a stopped state.</p>
      * <ul>
-     * <li>You can unbind a maximum of 30 instances at a time.</li>
-     * <li>If the name of the SSH key pair that is bound to an instance is not same as the value of the keyPairName parameter, an exception is thrown.</li>
-     * <li>At least one of key_pair_name and key_pair_id is not empty.</li>
-     * <li>Specify the key_pair_id parameter when you call this parameter. The key_pair_name parameter will be discarded.</li>
+     * <li>You can detach a key pair from a maximum of 30 instances in a single request.</li>
+     * <li>The operation returns an error if you specify the <code>KeyPairName</code> parameter and any of the specified instances are not associated with that key pair name.</li>
+     * <li>You must specify either the <code>KeyPairName</code> or <code>KeyPairId</code> parameter.</li>
+     * <li>We recommend using the <code>KeyPairId</code> parameter. The <code>KeyPairName</code> parameter will be deprecated in a future release.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Unbinds a Secure Shell (SSH) key pair from specific instances by specifying the name or ID of the SSH key pair.</p>
+     * <p>Detaches a key pair from up to 30 instances in a single request. You can specify the key pair by its key pair name or key pair ID.</p>
      * 
      * @param tmpReq DetachKeyPairRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12280,17 +12448,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a></h2>
-     * <p>This operation is used to unbind a key pair from instances. Only disabled instances are supported.</p>
+     * <h2>Usage notes</h2>
+     * <p>This operation detaches a key pair from multiple instances in a batch. The target instances must be in a stopped state.</p>
      * <ul>
-     * <li>You can unbind a maximum of 30 instances at a time.</li>
-     * <li>If the name of the SSH key pair that is bound to an instance is not same as the value of the keyPairName parameter, an exception is thrown.</li>
-     * <li>At least one of key_pair_name and key_pair_id is not empty.</li>
-     * <li>Specify the key_pair_id parameter when you call this parameter. The key_pair_name parameter will be discarded.</li>
+     * <li>You can detach a key pair from a maximum of 30 instances in a single request.</li>
+     * <li>The operation returns an error if you specify the <code>KeyPairName</code> parameter and any of the specified instances are not associated with that key pair name.</li>
+     * <li>You must specify either the <code>KeyPairName</code> or <code>KeyPairId</code> parameter.</li>
+     * <li>We recommend using the <code>KeyPairId</code> parameter. The <code>KeyPairName</code> parameter will be deprecated in a future release.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Unbinds a Secure Shell (SSH) key pair from specific instances by specifying the name or ID of the SSH key pair.</p>
+     * <p>Detaches a key pair from up to 30 instances in a single request. You can specify the key pair by its key pair name or key pair ID.</p>
      * 
      * @param request DetachKeyPairRequest
      * @return DetachKeyPairResponse
@@ -12416,10 +12584,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This O\&amp;M operation is supported only by the Instance:SystemUpgrade.Migrate event.</p>
+     * <ul>
+     * <li>This O\&amp;M task currently supports only the <code>Instance:SystemUpgrade.Migrate</code> event type for migrations due to an underlying upgrade.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Migrates the instance across nodes after an O\\\&amp;M event occurs on an instance.</p>
+     * <p>Migrates an instance across physical nodes in response to an O&amp;M event.</p>
      * 
      * @param request EventMigrateInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12475,10 +12645,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This O\&amp;M operation is supported only by the Instance:SystemUpgrade.Migrate event.</p>
+     * <ul>
+     * <li>This O\&amp;M task currently supports only the <code>Instance:SystemUpgrade.Migrate</code> event type for migrations due to an underlying upgrade.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Migrates the instance across nodes after an O\\\&amp;M event occurs on an instance.</p>
+     * <p>Migrates an instance across physical nodes in response to an O&amp;M event.</p>
      * 
      * @param request EventMigrateInstanceRequest
      * @return EventMigrateInstanceResponse
@@ -12490,10 +12662,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This O\&amp;M operation supports only the Instance:SystemMaintenance.Reboot event</p>
+     * <ul>
+     * <li>This operation currently supports only the following Event Type: Instance:SystemMaintenance.Reboot (an Instance Reboot due to System Maintenance).</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Restart the instance across nodes after an O\\\&amp;M event occurs on an instance.</p>
+     * <p>Reboots an Instance affected by an Operational Event.</p>
      * 
      * @param request EventRebootInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12541,10 +12715,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This O\&amp;M operation supports only the Instance:SystemMaintenance.Reboot event</p>
+     * <ul>
+     * <li>This operation currently supports only the following Event Type: Instance:SystemMaintenance.Reboot (an Instance Reboot due to System Maintenance).</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Restart the instance across nodes after an O\\\&amp;M event occurs on an instance.</p>
+     * <p>Reboots an Instance affected by an Operational Event.</p>
      * 
      * @param request EventRebootInstanceRequest
      * @return EventRebootInstanceResponse
@@ -12556,10 +12732,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This O\&amp;M operation supports only the following event types: Instance:SystemFailure.Redeploy (instance redeployment due to system problems) and Instance:SystemMaintenance.Redeploy (instance redeployment due to system maintenance).</p>
+     * <ul>
+     * <li>This O\&amp;M operation supports only the following event types: <code>Instance:SystemFailure.Redeploy</code> (redeployment due to a system failure) and <code>Instance:SystemMaintenance.Redeploy</code> (redeployment for system maintenance).</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>The event that is used to immediately redeploy a specified resource or by appointment</p>
+     * <p>Redeploys a specified instance either immediately or at a scheduled time.</p>
      * 
      * @param request EventRedeployInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12607,10 +12785,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This O\&amp;M operation supports only the following event types: Instance:SystemFailure.Redeploy (instance redeployment due to system problems) and Instance:SystemMaintenance.Redeploy (instance redeployment due to system maintenance).</p>
+     * <ul>
+     * <li>This O\&amp;M operation supports only the following event types: <code>Instance:SystemFailure.Redeploy</code> (redeployment due to a system failure) and <code>Instance:SystemMaintenance.Redeploy</code> (redeployment for system maintenance).</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>The event that is used to immediately redeploy a specified resource or by appointment</p>
+     * <p>Redeploys a specified instance either immediately or at a scheduled time.</p>
      * 
      * @param request EventRedeployInstanceRequest
      * @return EventRedeployInstanceResponse
@@ -12822,7 +13002,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the detailed information about a bucket.</p>
+     * <p>You can call GetBucketInfo to retrieve detailed Bucket information.</p>
      * 
      * @param request GetBucketInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12854,7 +13034,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the detailed information about a bucket.</p>
+     * <p>You can call GetBucketInfo to retrieve detailed Bucket information.</p>
      * 
      * @param request GetBucketInfoRequest
      * @return GetBucketInfoResponse
@@ -12866,7 +13046,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries lifecycle rules.</p>
+     * <p>Retrieves lifecycle rule information.</p>
      * 
      * @param request GetBucketLifecycleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12902,7 +13082,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries lifecycle rules.</p>
+     * <p>Retrieves lifecycle rule information.</p>
      * 
      * @param request GetBucketLifecycleRequest
      * @return GetBucketLifecycleResponse
@@ -12913,8 +13093,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>It can be deleted only when the instance group information is empty.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询集群内指定组件实例信息</p>
+     * <p>Queries the details of a specified add-on in a cluster, including the version, parameter settings, and status of the add-on instance.</p>
      * 
      * @param request GetClusterAddonInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12949,8 +13132,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>It can be deleted only when the instance group information is empty.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询集群内指定组件实例信息</p>
+     * <p>Queries the details of a specified add-on in a cluster, including the version, parameter settings, and status of the add-on instance.</p>
      * 
      * @param request GetClusterAddonInstanceRequest
      * @return GetClusterAddonInstanceResponse
@@ -12962,7 +13148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the storage usage in the previous billing cycle and the cumulative number of calls in this month.</p>
+     * <p>Queries the storage usage of the previous billing cycle and the cumulative number of calls for the current month by bucket.</p>
      * 
      * @param request GetOssStorageAndAccByBucketsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12990,7 +13176,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the storage usage in the previous billing cycle and the cumulative number of calls in this month.</p>
+     * <p>Queries the storage usage of the previous billing cycle and the cumulative number of calls for the current month by bucket.</p>
      * 
      * @param request GetOssStorageAndAccByBucketsRequest
      * @return GetOssStorageAndAccByBucketsResponse
@@ -13048,7 +13234,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call ImportImage to import your image file to the cloud server.</p>
+     * <p>Imports image information.</p>
      * 
      * @param tmpReq ImportImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13134,7 +13320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call ImportImage to import your image file to the cloud server.</p>
+     * <p>Imports image information.</p>
      * 
      * @param request ImportImageRequest
      * @return ImportImageResponse
@@ -13146,8 +13332,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  After the key pair is imported, ENS stores the public key. You must securely store the private key.</p>
      * <ul>
+     * <li>After the key pair is imported, ENS stores the public key. You must securely store the private key.</li>
      * <li>The key pair can be only in the ssh-rsa format.</li>
      * </ul>
      * 
@@ -13188,8 +13374,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  After the key pair is imported, ENS stores the public key. You must securely store the private key.</p>
      * <ul>
+     * <li>After the key pair is imported, ENS stores the public key. You must securely store the private key.</li>
      * <li>The key pair can be only in the ssh-rsa format.</li>
      * </ul>
      * 
@@ -13206,7 +13392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a service-linked role (SLR) for ENS for the current user to manage resources.</p>
+     * <p>Creates a service-linked role (SLR) that grants ENS the permissions to manage your resources.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return InitializeENSECKServiceRoleResponse
@@ -13229,7 +13415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a service-linked role (SLR) for ENS for the current user to manage resources.</p>
+     * <p>Creates a service-linked role (SLR) that grants ENS the permissions to manage your resources.</p>
      * @return InitializeENSECKServiceRoleResponse
      */
     public InitializeENSECKServiceRoleResponse initializeENSECKServiceRole() throws Exception {
@@ -13238,8 +13424,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The call frequency for a single user is limited to 10 calls per second.</li>
+     * <li>Cluster creation is an asynchronous operation. After the API call returns, the cluster requires 10 to 20 minutes to complete initialization. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>安装集群组件</p>
+     * <p>To enhance the capabilities of Kubernetes, Edge Kubernetes (ECK) clusters support a variety of components, such as managed core components, applications, logging and monitoring, networking, storage, and security components. You can call the InstallClusterAddons operation to install components by specifying their names and versions.</p>
      * 
      * @param tmpReq InstallClusterAddonsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13280,8 +13472,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The call frequency for a single user is limited to 10 calls per second.</li>
+     * <li>Cluster creation is an asynchronous operation. After the API call returns, the cluster requires 10 to 20 minutes to complete initialization. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>安装集群组件</p>
+     * <p>To enhance the capabilities of Kubernetes, Edge Kubernetes (ECK) clusters support a variety of components, such as managed core components, applications, logging and monitoring, networking, storage, and security components. You can call the InstallClusterAddons operation to install components by specifying their names and versions.</p>
      * 
      * @param request InstallClusterAddonsRequest
      * @return InstallClusterAddonsResponse
@@ -13341,7 +13539,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation to add an instance to a security group, make sure that the instance is in the Stopped or Running state.</p>
+     * <p>Before you To add an instance to a security group, make sure that the instance is in the Stopped or Running state.</p>
      * 
      * <b>summary</b> : 
      * <p>Adds an Edge Node Service (ENS) instance to a specified security group.</p>
@@ -13384,7 +13582,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation to add an instance to a security group, make sure that the instance is in the Stopped or Running state.</p>
+     * <p>Before you To add an instance to a security group, make sure that the instance is in the Stopped or Running state.</p>
      * 
      * <b>summary</b> : 
      * <p>Adds an Edge Node Service (ENS) instance to a specified security group.</p>
@@ -13399,10 +13597,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the Internal Connection mode and the Intelligent Acceleration and Internal Connection mode, instances of the vSwitch take effect automatically. You do not need to manually add instances. For public connections such as intelligent acceleration, you need to call an operation to manually add the instances to Internet-facing instances.</p>
+     * <p>For the internal network connection and internal network connection with intelligent acceleration modes, instances in the vSwitch take effect automatically and do not require manual addition. For the intelligent acceleration public public mode, you only need to call the API operation to add instances to the public public mode instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs networking.</p>
+     * <p>Joins vSwitches to an Edge Private Network (EPN) instance for networking.</p>
      * 
      * @param request JoinVSwitchesToEpnInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13438,10 +13636,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the Internal Connection mode and the Intelligent Acceleration and Internal Connection mode, instances of the vSwitch take effect automatically. You do not need to manually add instances. For public connections such as intelligent acceleration, you need to call an operation to manually add the instances to Internet-facing instances.</p>
+     * <p>For the internal network connection and internal network connection with intelligent acceleration modes, instances in the vSwitch take effect automatically and do not require manual addition. For the intelligent acceleration public public mode, you only need to call the API operation to add instances to the public public mode instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs networking.</p>
+     * <p>Joins vSwitches to an Edge Private Network (EPN) instance for networking.</p>
      * 
      * @param request JoinVSwitchesToEpnInstanceRequest
      * @return JoinVSwitchesToEpnInstanceResponse
@@ -13511,7 +13709,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the related information of AIC public keys. Paged query is supported.</p>
+     * <p>Queries the list of association information for AIC public keys. Paging is supported.</p>
      * 
      * @param request ListAICPublicKeyDeliveriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13563,7 +13761,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the related information of AIC public keys. Paged query is supported.</p>
+     * <p>Queries the list of association information for AIC public keys. Paging is supported.</p>
      * 
      * @param request ListAICPublicKeyDeliveriesRequest
      * @return ListAICPublicKeyDeliveriesResponse
@@ -13575,7 +13773,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of AIC public keys that meet the conditions. Paged query is supported.</p>
+     * <p>Queries a list of AIC public key information that meets the specified conditions. Paging is supported.</p>
      * 
      * @param request ListAICPublicKeysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13623,7 +13821,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of AIC public keys that meet the conditions. Paged query is supported.</p>
+     * <p>Queries a list of AIC public key information that meets the specified conditions. Paging is supported.</p>
      * 
      * @param request ListAICPublicKeysRequest
      * @return ListAICPublicKeysResponse
@@ -13635,7 +13833,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Querying the details of a cluster component</p>
+     * <p>Retrieves details about cluster components.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAddonsResponse
@@ -13658,7 +13856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Querying the details of a cluster component</p>
+     * <p>Retrieves details about cluster components.</p>
      * @return ListAddonsResponse
      */
     public ListAddonsResponse listAddons() throws Exception {
@@ -13792,7 +13990,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List of Installed Addon Instances in the Cluster</p>
+     * <p>Retrieves a list of installed add-on instances in a specified cluster and queries related information about the add-on instances, such as the add-on version and status.</p>
      * 
      * @param request ListClusterAddonInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13824,7 +14022,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List of Installed Addon Instances in the Cluster</p>
+     * <p>Retrieves a list of installed add-on instances in a specified cluster and queries related information about the add-on instances, such as the add-on version and status.</p>
      * 
      * @param request ListClusterAddonInstancesRequest
      * @return ListClusterAddonInstancesResponse
@@ -13937,7 +14135,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries tags that are added to Edge Node Service (ENS) instances.</p>
+     * <p>Queries the tags bound to one or more Edge Node Service (ENS) resources. Currently, only instance resources are supported.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13981,7 +14179,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries tags that are added to Edge Node Service (ENS) instances.</p>
+     * <p>Queries the tags bound to one or more Edge Node Service (ENS) resources. Currently, only instance resources are supported.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -13993,7 +14191,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Log on to the AIC instance. You can associate or disassociate an AIC instance based on the uploaded AIC public key.</p>
+     * <p>Manages the logon of AIC instances by associating or dissociating instances based on uploaded AIC public keys.</p>
      * 
      * @param request ManageAICLoginRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14037,7 +14235,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Log on to the AIC instance. You can associate or disassociate an AIC instance based on the uploaded AIC public key.</p>
+     * <p>Manages the logon of AIC instances by associating or dissociating instances based on uploaded AIC public keys.</p>
      * 
      * @param request ManageAICLoginRequest
      * @return ManageAICLoginResponse
@@ -14049,7 +14247,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>aic实例变配接口</p>
+     * <p>Modifies the specifications of an Android in Container (AIC) instance.</p>
      * 
      * @param request ModifyAICInstanceTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14101,7 +14299,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>aic实例变配接口</p>
+     * <p>Modifies the specifications of an Android in Container (AIC) instance.</p>
      * 
      * @param request ModifyAICInstanceTypeRequest
      * @return ModifyAICInstanceTypeResponse
@@ -14112,8 +14310,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Modifies an installed add-on in an ECK cluster. The target cluster must be in the running state, and ComponentName must reference an installed add-on.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改集群组件实例配置</p>
+     * <p>Modifies the configuration of an installed cluster add-on instance. Modifying the configuration may affect your services. Evaluate the impact, perform this operation during off-peak hours, and back up your data in advance.</p>
      * 
      * @param tmpReq ModifyClusterAddonRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14158,8 +14359,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Modifies an installed add-on in an ECK cluster. The target cluster must be in the running state, and ComponentName must reference an installed add-on.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改集群组件实例配置</p>
+     * <p>Modifies the configuration of an installed cluster add-on instance. Modifying the configuration may affect your services. Evaluate the impact, perform this operation during off-peak hours, and back up your data in advance.</p>
      * 
      * @param request ModifyClusterAddonRequest
      * @return ModifyClusterAddonResponse
@@ -14170,8 +14374,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Single-user call frequency: 10 calls per second.</li>
+     * <li>Creating a cluster is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster to finish initialization. During this process, call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新集群节点池</p>
+     * <p>Modifies the node configurations in a cluster node pool, such as kubelet configurations and node rotation configurations. Modifying node configurations changes node configurations and restarts kubelet in batches, which may affect node operations and workload execution. Perform this operation during off-peak hours.</p>
      * 
      * @param tmpReq ModifyClusterNodePoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14228,8 +14438,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Single-user call frequency: 10 calls per second.</li>
+     * <li>Creating a cluster is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster to finish initialization. During this process, call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新集群节点池</p>
+     * <p>Modifies the node configurations in a cluster node pool, such as kubelet configurations and node rotation configurations. Modifying node configurations changes node configurations and restarts kubelet in batches, which may affect node operations and workload execution. Perform this operation during off-peak hours.</p>
      * 
      * @param request ModifyClusterNodePoolRequest
      * @return ModifyClusterNodePoolResponse
@@ -14677,14 +14893,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  If an instance is in the Starting state, you cannot reset the password of the instance.</p>
      * <ul>
-     * <li>When the instance is in the Running state, you cannot change the password of the instance.</li>
-     * <li>After resetting the password, you must Restart the instance in the ECS console or call the RebootInstance operation to validate the modifications. The restart operation within the instance does not validate the modifications.</li>
+     * <li>You cannot reset the instance password when the instance status is Starting.</li>
+     * <li>You cannot modify the instance password when the instance status is Running.</li>
+     * <li>After resetting the password, restart the instance in the console or invoke the RebootInstance operation for the change to take effect. Restarting the instance from within the operating system does not take effect.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Changes the attributes of an instance, such as the name and the password.</p>
+     * <p>Calls ModifyInstanceAttribute to modify instance attributes, including the instance password and name.</p>
      * 
      * @param request ModifyInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14736,14 +14952,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  If an instance is in the Starting state, you cannot reset the password of the instance.</p>
      * <ul>
-     * <li>When the instance is in the Running state, you cannot change the password of the instance.</li>
-     * <li>After resetting the password, you must Restart the instance in the ECS console or call the RebootInstance operation to validate the modifications. The restart operation within the instance does not validate the modifications.</li>
+     * <li>You cannot reset the instance password when the instance status is Starting.</li>
+     * <li>You cannot modify the instance password when the instance status is Running.</li>
+     * <li>After resetting the password, restart the instance in the console or invoke the RebootInstance operation for the change to take effect. Restarting the instance from within the operating system does not take effect.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Changes the attributes of an instance, such as the name and the password.</p>
+     * <p>Calls ModifyInstanceAttribute to modify instance attributes, including the instance password and name.</p>
      * 
      * @param request ModifyInstanceAttributeRequest
      * @return ModifyInstanceAttributeResponse
@@ -14815,14 +15031,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  If an instance is in the Starting state, you cannot reset the password of the instance.</p>
-     * <ul>
-     * <li>If the instance is in the Running state, you cannot change the password of the instance.</li>
-     * <li>After resetting the password, you must restart the instance in the ENS console or call the RebootInstance operation to apply the change. The restart operation within the instance does not apply the change.</li>
-     * </ul>
+     * <p>Modifies the boot configuration of a heterogeneous instance (PCFarm bare metal instance, where InstanceTypeFamily is pc_bmi). If the current state of the instance does not support this operation, the API returns IncorrectInstanceStatus.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the boot configuration of a heterogeneous PC Farm bare metal instance.</p>
+     * <p>Modifies the boot configuration of a heterogeneous instance (PCFarm bare metal instance).</p>
      * 
      * @param request ModifyInstanceBootConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14850,14 +15062,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  If an instance is in the Starting state, you cannot reset the password of the instance.</p>
-     * <ul>
-     * <li>If the instance is in the Running state, you cannot change the password of the instance.</li>
-     * <li>After resetting the password, you must restart the instance in the ENS console or call the RebootInstance operation to apply the change. The restart operation within the instance does not apply the change.</li>
-     * </ul>
+     * <p>Modifies the boot configuration of a heterogeneous instance (PCFarm bare metal instance, where InstanceTypeFamily is pc_bmi). If the current state of the instance does not support this operation, the API returns IncorrectInstanceStatus.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the boot configuration of a heterogeneous PC Farm bare metal instance.</p>
+     * <p>Modifies the boot configuration of a heterogeneous instance (PCFarm bare metal instance).</p>
      * 
      * @param request ModifyInstanceBootConfigurationRequest
      * @return ModifyInstanceBootConfigurationResponse
@@ -14869,11 +15077,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the billing methods and pricing of ENS.
-     * The instances must be in the Running or Stopped state, and you have no overdue payments for them.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and pricing of Edge Node Service (ENS).
+     * The target instance must be in the Running or Stopped state and must not have an overdue payment before you can change the billing method.</p>
      * 
      * <b>summary</b> : 
-     * <p>Changes the billing method of Edge Node Service (ENS) instances. You can switch between the pay-as-you-go and subscription billing methods for instances. You can also change the billing method for disks that you created with pay-as-you-go instances to subscription.</p>
+     * <p>Invokes ModifyInstanceChargeType to convert the billing method of one or more Edge Node Service (ENS) instances. You can convert between instance-level pay-as-you-go and subscription instances. For instance-level pay-as-you-go instances, you can also convert pay-as-you-go cloud disks created with the instances to subscription cloud disks.</p>
      * 
      * @param tmpReq ModifyInstanceChargeTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14939,11 +15147,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the billing methods and pricing of ENS.
-     * The instances must be in the Running or Stopped state, and you have no overdue payments for them.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and pricing of Edge Node Service (ENS).
+     * The target instance must be in the Running or Stopped state and must not have an overdue payment before you can change the billing method.</p>
      * 
      * <b>summary</b> : 
-     * <p>Changes the billing method of Edge Node Service (ENS) instances. You can switch between the pay-as-you-go and subscription billing methods for instances. You can also change the billing method for disks that you created with pay-as-you-go instances to subscription.</p>
+     * <p>Invokes ModifyInstanceChargeType to convert the billing method of one or more Edge Node Service (ENS) instances. You can convert between instance-level pay-as-you-go and subscription instances. For instance-level pay-as-you-go instances, you can also convert pay-as-you-go cloud disks created with the instances to subscription cloud disks.</p>
      * 
      * @param request ModifyInstanceChargeTypeRequest
      * @return ModifyInstanceChargeTypeResponse
@@ -15041,9 +15249,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -15083,9 +15291,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -15101,9 +15309,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
      * <ul>
-     * <li>You can call this operation up to 5 times per second per user.</li>
+     * <li>Rate limit: 100 requests per second.</li>
+     * <li>up to 5 times per second per user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -15147,9 +15355,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
      * <ul>
-     * <li>You can call this operation up to 5 times per second per user.</li>
+     * <li>Rate limit: 100 requests per second.</li>
+     * <li>up to 5 times per second per user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -15216,8 +15424,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Modifies the instance type of a subscription instance. Before calling this operation, stop the instance by calling StopInstance. After the specification change is complete, start the instance by calling StartInstance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Upgrades or downgrades the instance type of a subscription Edge Node Service (ENS) instance. The new instance type takes effect for the remaining lifecycle of the instance.</p>
+     * <p>Calls ModifyPrepayInstanceSpec to upgrade or downgrade the instance type of a subscription ENS instance. The new instance type takes effect for the entire lifecycle of the instance.</p>
      * 
      * @param request ModifyPrepayInstanceSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15252,8 +15463,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Modifies the instance type of a subscription instance. Before calling this operation, stop the instance by calling StopInstance. After the specification change is complete, start the instance by calling StartInstance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Upgrades or downgrades the instance type of a subscription Edge Node Service (ENS) instance. The new instance type takes effect for the remaining lifecycle of the instance.</p>
+     * <p>Calls ModifyPrepayInstanceSpec to upgrade or downgrade the instance type of a subscription ENS instance. The new instance type takes effect for the entire lifecycle of the instance.</p>
      * 
      * @param request ModifyPrepayInstanceSpecRequest
      * @return ModifyPrepayInstanceSpecResponse
@@ -15265,9 +15479,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
      * <ul>
-     * <li>You can call this operation up to 5 times per second per user.</li>
+     * <li>Rate limit: 100 requests per second.</li>
+     * <li>up to 5 times per second per user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -15311,9 +15525,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
      * <ul>
-     * <li>You can call this operation up to 5 times per second per user.</li>
+     * <li>Rate limit: 100 requests per second.</li>
+     * <li>up to 5 times per second per user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -15381,7 +15595,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a specified SNAT entry.</p>
+     * <p>Invoke the ModifySnatEntry API to modify an SNAT entry.</p>
      * 
      * @param request ModifySnatEntryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15429,7 +15643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a specified SNAT entry.</p>
+     * <p>Invoke the ModifySnatEntry API to modify an SNAT entry.</p>
      * 
      * @param request ModifySnatEntryRequest
      * @return ModifySnatEntryResponse
@@ -15441,13 +15655,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
      * <ul>
-     * <li>You can call this operation up to 5 times per second per user.</li>
+     * <li>API call frequency: 100 calls per second.</li>
+     * <li>Per-user call frequency: 5 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies information about a vSwitch.</p>
+     * <p>Call ModifyVSwitchAttribute to modify network information.</p>
      * 
      * @param request ModifyVSwitchAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15458,6 +15672,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableIPv6)) {
+            query.put("EnableIPv6", request.enableIPv6);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv6CidrBlock)) {
+            query.put("Ipv6CidrBlock", request.ipv6CidrBlock);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
@@ -15487,13 +15709,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
      * <ul>
-     * <li>You can call this operation up to 5 times per second per user.</li>
+     * <li>API call frequency: 100 calls per second.</li>
+     * <li>Per-user call frequency: 5 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies information about a vSwitch.</p>
+     * <p>Call ModifyVSwitchAttribute to modify network information.</p>
      * 
      * @param request ModifyVSwitchAttributeRequest
      * @return ModifyVSwitchAttributeResponse
@@ -15505,7 +15727,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deploys the SDG that has been attached to instances on the corresponding Android in Container (AIC) instance.</p>
+     * <p>Deploys an SDG that is already attached to an instance to the corresponding AIC.</p>
      * 
      * @param tmpReq MountInstanceSDGRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15547,7 +15769,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deploys the SDG that has been attached to instances on the corresponding Android in Container (AIC) instance.</p>
+     * <p>Deploys an SDG that is already attached to an instance to the corresponding AIC.</p>
      * 
      * @param request MountInstanceSDGRequest
      * @return MountInstanceSDGResponse
@@ -15559,7 +15781,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Preloads a shared data group (SDG).</p>
+     * <p>Preloads an SDG.</p>
      * 
      * @param tmpReq PreloadRegionSDGRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15617,7 +15839,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Preloads a shared data group (SDG).</p>
+     * <p>Preloads an SDG.</p>
      * 
      * @param request PreloadRegionSDGRequest
      * @return PreloadRegionSDGResponse
@@ -15629,7 +15851,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Prepares the upload and obtains the location of the bucket.</p>
+     * <p>Prepares for an upload and retrieves information about the physical storage location.</p>
      * 
      * @param request PrepareUploadRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15665,7 +15887,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Prepares the upload and obtains the location of the bucket.</p>
+     * <p>Prepares for an upload and retrieves information about the physical storage location.</p>
      * 
      * @param request PrepareUploadRequest
      * @return PrepareUploadResponse
@@ -15677,7 +15899,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Pushes the business or service data of an application to file servers.</p>
+     * <p>Pre-pushes the business or service data of an application to a file server.</p>
      * 
      * @param request PushApplicationDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15721,7 +15943,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Pushes the business or service data of an application to file servers.</p>
+     * <p>Pre-pushes the business or service data of an application to a file server.</p>
      * 
      * @param request PushApplicationDataRequest
      * @return PushApplicationDataResponse
@@ -15733,7 +15955,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an Edge Object Storage (EOS) bucket.</p>
+     * <p>Create a bucket for collaborative storage.</p>
      * 
      * @param request PutBucketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15785,7 +16007,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an Edge Object Storage (EOS) bucket.</p>
+     * <p>Create a bucket for collaborative storage.</p>
      * 
      * @param request PutBucketRequest
      * @return PutBucketResponse
@@ -15845,13 +16067,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can configure up to 1,000 rules.</p>
      * <ul>
-     * <li>If an object meets multiple rules, the rule that has the earliest expiration time prevails.</li>
+     * <li>You can configure up to 1,000 rules.</li>
+     * <li>If an object matches multiple rules, the rule with the earliest expiration time applies.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Configures lifecycle rules for objects.</p>
+     * <p>You can call the PutBucketLifecycle operation to set lifecycle rules for a bucket.</p>
      * 
      * @param request PutBucketLifecycleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15907,13 +16129,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can configure up to 1,000 rules.</p>
      * <ul>
-     * <li>If an object meets multiple rules, the rule that has the earliest expiration time prevails.</li>
+     * <li>You can configure up to 1,000 rules.</li>
+     * <li>If an object matches multiple rules, the rule with the earliest expiration time applies.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Configures lifecycle rules for objects.</p>
+     * <p>You can call the PutBucketLifecycle operation to set lifecycle rules for a bucket.</p>
      * 
      * @param request PutBucketLifecycleRequest
      * @return PutBucketLifecycleResponse
@@ -16019,7 +16241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reboots an Android in Container (AIC) server.</p>
+     * <p>Restarts an AIC server.</p>
      * 
      * @param request RebootARMServerInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16047,7 +16269,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reboots an Android in Container (AIC) server.</p>
+     * <p>Restarts an AIC server.</p>
      * 
      * @param request RebootARMServerInstanceRequest
      * @return RebootARMServerInstanceResponse
@@ -16059,8 +16281,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Only instances that are in the Running state can be restarted.</p>
      * <ul>
+     * <li>Only instances that are in the Running state can be restarted.</li>
      * <li>If the operation is successful, the status of the instance becomes Starting.</li>
      * </ul>
      * 
@@ -16101,8 +16323,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Only instances that are in the Running state can be restarted.</p>
      * <ul>
+     * <li>Only instances that are in the Running state can be restarted.</li>
      * <li>If the operation is successful, the status of the instance becomes Starting.</li>
      * </ul>
      * 
@@ -16169,7 +16391,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Recovers an Android in Container (AIC) instance on the server.</p>
+     * <p>Resumes an AIC on a card by calling RecoverAICInstance.</p>
      * 
      * @param request RecoverAICInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16197,7 +16419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Recovers an Android in Container (AIC) instance on the server.</p>
+     * <p>Resumes an AIC on a card by calling RecoverAICInstance.</p>
      * 
      * @param request RecoverAICInstanceRequest
      * @return RecoverAICInstanceResponse
@@ -16319,7 +16541,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases an Android in Container (AIC) instance from the server.</p>
+     * <p>Releases an AIC on a card.</p>
      * 
      * @param request ReleaseAICInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16351,7 +16573,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases an Android in Container (AIC) instance from the server.</p>
+     * <p>Releases an AIC on a card.</p>
      * 
      * @param request ReleaseAICInstanceRequest
      * @return ReleaseAICInstanceResponse
@@ -16363,7 +16585,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases an ARM server.</p>
+     * <p>Releases a cloud application server.</p>
      * 
      * @param request ReleaseARMServerInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16395,7 +16617,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases an ARM server.</p>
+     * <p>Releases a cloud application server.</p>
      * 
      * @param request ReleaseARMServerInstanceRequest
      * @return ReleaseARMServerInstanceResponse
@@ -16407,13 +16629,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 10,000 times per second per account.</p>
      * <ul>
+     * <li>up to 10,000 times per second per account.</li>
      * <li>The maximum number of times that each user can call this operation per second is 50.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Releases an instance. You can call this operation to release only Elastic IP Addresses (EIPs), Edge Load Balancer (ELB) instances, and cloud disk-based instances. We recommend that you call service-specific operations to release or unsubscribe from instances.</p>
+     * <p>Releases an instance. to release only Elastic IP Addresses (EIPs), Edge Load Balancer (ELB) instances, and cloud disk-based instances. We recommend that you call service-specific operations to release or unsubscribe from instances.</p>
      * 
      * @param request ReleaseInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16445,13 +16667,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 10,000 times per second per account.</p>
      * <ul>
+     * <li>up to 10,000 times per second per account.</li>
      * <li>The maximum number of times that each user can call this operation per second is 50.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Releases an instance. You can call this operation to release only Elastic IP Addresses (EIPs), Edge Load Balancer (ELB) instances, and cloud disk-based instances. We recommend that you call service-specific operations to release or unsubscribe from instances.</p>
+     * <p>Releases an instance. to release only Elastic IP Addresses (EIPs), Edge Load Balancer (ELB) instances, and cloud disk-based instances. We recommend that you call service-specific operations to release or unsubscribe from instances.</p>
      * 
      * @param request ReleaseInstanceRequest
      * @return ReleaseInstanceResponse
@@ -16550,12 +16772,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
-     * <ul>
-     * <li>You can call this operation up to 10 times per second per account.</li>
-     * </ul>
-     * 
      * <b>summary</b> : 
      * <p>Removes backend servers.</p>
      * 
@@ -16598,12 +16814,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
-     * <ul>
-     * <li>You can call this operation up to 10 times per second per account.</li>
-     * </ul>
-     * 
      * <b>summary</b> : 
      * <p>Removes backend servers.</p>
      * 
@@ -16617,7 +16827,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes a shared data group (SDG) that is attached to the compute instance.</p>
+     * <p>Unmounts an SDG from compute instances.</p>
      * 
      * @param tmpReq RemoveInstanceSDGRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16655,7 +16865,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes a shared data group (SDG) that is attached to the compute instance.</p>
+     * <p>Unmounts an SDG from compute instances.</p>
      * 
      * @param request RemoveInstanceSDGRequest
      * @return RemoveInstanceSDGResponse
@@ -16715,7 +16925,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes a deployed shared data group (SDG) and restore local storage.</p>
+     * <p>Removes a deployed SDG and restores local storage.</p>
      * 
      * @param tmpReq RemoveSDGRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16749,7 +16959,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes a deployed shared data group (SDG) and restore local storage.</p>
+     * <p>Removes a deployed SDG and restores local storage.</p>
      * 
      * @param request RemoveSDGRequest
      * @return RemoveSDGResponse
@@ -16761,7 +16971,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes all versions of SDG and restores the mount to the local disk.</p>
+     * <p>Removes all versions of SDGs and restores local disk mounting.</p>
      * 
      * @param tmpReq RemoveSDGsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16807,7 +17017,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes all versions of SDG and restores the mount to the local disk.</p>
+     * <p>Removes all versions of SDGs and restores local disk mounting.</p>
      * 
      * @param request RemoveSDGsRequest
      * @return RemoveSDGsResponse
@@ -16819,7 +17029,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the networking information. This operation is applicable only for instances that reside in the internal network.</p>
+     * <p>Removes networking information from an Edge Private Network (EPN) instance. This operation applies only to internal networks.</p>
      * 
      * @param request RemoveVSwitchesFromEpnInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16855,7 +17065,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the networking information. This operation is applicable only for instances that reside in the internal network.</p>
+     * <p>Removes networking information from an Edge Private Network (EPN) instance. This operation applies only to internal networks.</p>
      * 
      * @param request RemoveVSwitchesFromEpnInstanceRequest
      * @return RemoveVSwitchesFromEpnInstanceResponse
@@ -16866,8 +17076,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Renews a subscription AIC server instance. The instance State must be success. You can call DescribeARMServerInstances to query the instance status. Instances in intermediate states such as creating cannot be renewed.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Renews a subscription Android in Container (AIC) instance.</p>
+     * <p>Renews a subscription AIC instance.</p>
      * 
      * @param request RenewARMServerInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16910,8 +17123,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Renews a subscription AIC server instance. The instance State must be success. You can call DescribeARMServerInstances to query the instance status. Instances in intermediate states such as creating cannot be renewed.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Renews a subscription Android in Container (AIC) instance.</p>
+     * <p>Renews a subscription AIC instance.</p>
      * 
      * @param request RenewARMServerInstanceRequest
      * @return RenewARMServerInstanceResponse
@@ -16963,7 +17179,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Scales resources in an asynchronous manner and deploys or releases the container.</p>
+     * <p>Calls the RescaleApplication operation to asynchronously scale resources in or out and complete container deployment or release operations.</p>
      * 
      * @param request RescaleApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17015,7 +17231,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Scales resources in an asynchronous manner and deploys or releases the container.</p>
+     * <p>Calls the RescaleApplication operation to asynchronously scale resources in or out and complete container deployment or release operations.</p>
      * 
      * @param request RescaleApplicationRequest
      * @return RescaleApplicationResponse
@@ -17027,7 +17243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Scales out a bare metal device.</p>
+     * <p>Rescales bare metal devices.</p>
      * 
      * @param request RescaleDeviceServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17097,7 +17313,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Scales out a bare metal device.</p>
+     * <p>Rescales bare metal devices.</p>
      * 
      * @param request RescaleDeviceServiceRequest
      * @return RescaleDeviceServiceResponse
@@ -17109,7 +17325,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resets an Android in Container (AIC) instance.</p>
+     * <p>Resets an AIC instance.</p>
      * 
      * @param request ResetAICInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17137,7 +17353,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resets an Android in Container (AIC) instance.</p>
+     * <p>Resets an AIC instance.</p>
      * 
      * @param request ResetAICInstanceRequest
      * @return ResetAICInstanceResponse
@@ -17263,14 +17479,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  In the security group-related API documents, inbound traffic refers to the traffic sent by the source and received by the destination.</p>
      * <ul>
-     * <li>You can determine an inbound security group rule by specifying one of the following groups of parameters. You cannot determine a security group rule by specifying only one parameter.</li>
-     * <li>You can specify one or more of the following parameters to remove access control for a CIDR block: IpProtocol, PortRange, Policy, and SourceCidrIp.</li>
+     * <li>In security group API documentation, the traffic initiator is referred to as the source (Source), and the data transmission receiver is referred to as the destination (Dest).</li>
+     * <li>Any one of the following sets of parameters can identify an inbound security group rule. Specifying only a single parameter cannot identify a security group rule.</li>
+     * <li>Revoke permission settings for a specified IP address range: IpProtocol, PortRange, Policy, SourceCidrIp.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an inbound security group rule. After the rule is deleted, the access control implemented by the rule is removed.</p>
+     * <p>Revokes an inbound rule of a security group to remove the inbound access permission settings.</p>
      * 
      * @param request RevokeSecurityGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17326,14 +17542,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  In the security group-related API documents, inbound traffic refers to the traffic sent by the source and received by the destination.</p>
      * <ul>
-     * <li>You can determine an inbound security group rule by specifying one of the following groups of parameters. You cannot determine a security group rule by specifying only one parameter.</li>
-     * <li>You can specify one or more of the following parameters to remove access control for a CIDR block: IpProtocol, PortRange, Policy, and SourceCidrIp.</li>
+     * <li>In security group API documentation, the traffic initiator is referred to as the source (Source), and the data transmission receiver is referred to as the destination (Dest).</li>
+     * <li>Any one of the following sets of parameters can identify an inbound security group rule. Specifying only a single parameter cannot identify a security group rule.</li>
+     * <li>Revoke permission settings for a specified IP address range: IpProtocol, PortRange, Policy, SourceCidrIp.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an inbound security group rule. After the rule is deleted, the access control implemented by the rule is removed.</p>
+     * <p>Revokes an inbound rule of a security group to remove the inbound access permission settings.</p>
      * 
      * @param request RevokeSecurityGroupRequest
      * @return RevokeSecurityGroupResponse
@@ -17346,11 +17562,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> In the security group-related API documents, outbound traffic refers to the traffic sent by the source and received by the destination.</p>
+     * <p>In the API documentation for security groups, the end that initiates traffic is referred to as the source, and the end that receives data is referred to as the destination (Dest).</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an outbound security group rule. After the rule is deleted, the access control implemented by the rule is removed.</p>
+     * <p>Calls RevokeSecurityGroupEgress to delete an outbound security group rule and revoke outbound access permissions of the security group.</p>
      * 
      * @param request RevokeSecurityGroupEgressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17407,11 +17623,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> In the security group-related API documents, outbound traffic refers to the traffic sent by the source and received by the destination.</p>
+     * <p>In the API documentation for security groups, the end that initiates traffic is referred to as the source, and the end that receives data is referred to as the destination (Dest).</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an outbound security group rule. After the rule is deleted, the access control implemented by the rule is removed.</p>
+     * <p>Calls RevokeSecurityGroupEgress to delete an outbound security group rule and revoke outbound access permissions of the security group.</p>
      * 
      * @param request RevokeSecurityGroupEgressRequest
      * @return RevokeSecurityGroupEgressResponse
@@ -17423,7 +17639,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Rolls back the container version of a specific application.</p>
+     * <p>Rolls back the container version of edge resources under an application to a historical version.</p>
      * 
      * @param request RollbackApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17467,7 +17683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Rolls back the container version of a specific application.</p>
+     * <p>Rolls back the container version of edge resources under an application to a historical version.</p>
      * 
      * @param request RollbackApplicationRequest
      * @return RollbackApplicationResponse
@@ -17479,7 +17695,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a pay-as-you-go or subscription ENS instance.</p>
+     * <p>Creates pay-as-you-go or subscription ENS compute instances.</p>
      * 
      * @param tmpReq RunInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17506,6 +17722,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Amount", request.amount);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.autoInstallCloudAssistant)) {
+            query.put("AutoInstallCloudAssistant", request.autoInstallCloudAssistant);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoReleaseTime)) {
             query.put("AutoReleaseTime", request.autoReleaseTime);
         }
@@ -17524,6 +17744,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.carrier)) {
             query.put("Carrier", request.carrier);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudAssistantRegion)) {
+            query.put("CloudAssistantRegion", request.cloudAssistantRegion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.dataDiskShrink)) {
@@ -17701,7 +17925,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a pay-as-you-go or subscription ENS instance.</p>
+     * <p>Creates pay-as-you-go or subscription ENS compute instances.</p>
      * 
      * @param request RunInstancesRequest
      * @return RunInstancesResponse
@@ -17788,8 +18012,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Saves a Shared Data Group (SDG). SDGs in the failed status cannot be saved. Before calling this operation, call DescribeSDGs to query the current status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Saves the disk of a specific device as a shared data group (SDG).</p>
+     * <p>Saves the cloud disk of a specified device as a Shared Data Group (SDG).</p>
      * 
      * @param request SaveSDGRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17816,8 +18043,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Saves a Shared Data Group (SDG). SDGs in the failed status cannot be saved. Before calling this operation, call DescribeSDGs to query the current status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Saves the disk of a specific device as a shared data group (SDG).</p>
+     * <p>Saves the cloud disk of a specified device as a Shared Data Group (SDG).</p>
      * 
      * @param request SaveSDGRequest
      * @return SaveSDGResponse
@@ -17828,8 +18058,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Rate limit per user: 10 calls per second.</li>
+     * <li>Scaling out a node pool is an asynchronous operation. After you call the operation, you must wait 5 to 10 minutes for the task to complete.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>调整节点池节点数</p>
+     * <p>Scales out a node pool to ensure that the number of nodes is sufficient to support your workloads. The Count parameter must be greater than the current number of nodes in the node pool. If the node pool contains nodes that failed to scale out, you must call the DeleteClusterNodes operation to delete the failed nodes before you scale out the node pool. A scale-out task typically takes 5 to 10 minutes. If the task takes more than 1 hour, the scale-out fails. In this case, contact technical support.</p>
      * 
      * @param tmpReq ScaleClusterNodePoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17874,8 +18110,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Rate limit per user: 10 calls per second.</li>
+     * <li>Scaling out a node pool is an asynchronous operation. After you call the operation, you must wait 5 to 10 minutes for the task to complete.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>调整节点池节点数</p>
+     * <p>Scales out a node pool to ensure that the number of nodes is sufficient to support your workloads. The Count parameter must be greater than the current number of nodes in the node pool. If the node pool contains nodes that failed to scale out, you must call the DeleteClusterNodes operation to delete the failed nodes before you scale out the node pool. A scale-out task typically takes 5 to 10 minutes. If the task takes more than 1 hour, the scale-out fails. In this case, contact technical support.</p>
      * 
      * @param request ScaleClusterNodePoolRequest
      * @return ScaleClusterNodePoolResponse
@@ -17886,14 +18128,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
-     * <ul>
-     * <li>You can call this operation up to 10 times per second per account.</li>
-     * </ul>
-     * 
      * <b>summary</b> : 
-     * <p>Sets the weights of backend servers.</p>
+     * <p>Sets the weights of backend servers by calling SetBackendServers.</p>
      * 
      * @param tmpReq SetBackendServersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17934,14 +18170,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
-     * <ul>
-     * <li>You can call this operation up to 10 times per second per account.</li>
-     * </ul>
-     * 
      * <b>summary</b> : 
-     * <p>Sets the weights of backend servers.</p>
+     * <p>Sets the weights of backend servers by calling SetBackendServers.</p>
      * 
      * @param request SetBackendServersRequest
      * @return SetBackendServersResponse
@@ -17953,13 +18183,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>API call frequency: 100 calls per second.</li>
+     * <li>Per-user call frequency: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of an HTTP listener.</p>
+     * <p>Modifies the configuration of an HTTP listener.</p>
      * 
      * @param request SetLoadBalancerHTTPListenerAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18055,13 +18285,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>API call frequency: 100 calls per second.</li>
+     * <li>Per-user call frequency: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of an HTTP listener.</p>
+     * <p>Modifies the configuration of an HTTP listener.</p>
      * 
      * @param request SetLoadBalancerHTTPListenerAttributeRequest
      * @return SetLoadBalancerHTTPListenerAttributeResponse
@@ -18073,13 +18303,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of an HTTPS listener.</p>
+     * <p>Modifies an HTTPS listener.</p>
      * 
      * @param request SetLoadBalancerHTTPSListenerAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18175,13 +18405,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of an HTTPS listener.</p>
+     * <p>Modifies an HTTPS listener.</p>
      * 
      * @param request SetLoadBalancerHTTPSListenerAttributeRequest
      * @return SetLoadBalancerHTTPSListenerAttributeResponse
@@ -18193,9 +18423,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -18235,9 +18465,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -18253,13 +18483,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>API call rate limit: 100 calls per second.</li>
+     * <li>Per-user call rate limit: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a TCP listener.</p>
+     * <p>Modifies the configuration of a TCP listener.</p>
      * 
      * @param request SetLoadBalancerTCPListenerAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18351,13 +18581,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>API call rate limit: 100 calls per second.</li>
+     * <li>Per-user call rate limit: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a TCP listener.</p>
+     * <p>Modifies the configuration of a TCP listener.</p>
      * 
      * @param request SetLoadBalancerTCPListenerAttributeRequest
      * @return SetLoadBalancerTCPListenerAttributeResponse
@@ -18369,13 +18599,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per account.</li>
+     * <li>API call rate limit: 100 requests/second.</li>
+     * <li>Per-user rate limit: 10 requests/second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a UDP listener.</p>
+     * <p>Call <code>SetLoadBalancerUDPListenerAttribute</code> to modify a UDP listener.</p>
      * 
      * @param request SetLoadBalancerUDPListenerAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18455,13 +18685,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per account.</li>
+     * <li>API call rate limit: 100 requests/second.</li>
+     * <li>Per-user rate limit: 10 requests/second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a UDP listener.</p>
+     * <p>Call <code>SetLoadBalancerUDPListenerAttribute</code> to modify a UDP listener.</p>
      * 
      * @param request SetLoadBalancerUDPListenerAttributeRequest
      * @return SetLoadBalancerUDPListenerAttributeResponse
@@ -18473,7 +18703,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Share the specified AIC image to other users.</p>
+     * <p>Shares a specified AIC image with other users.</p>
      * 
      * @param tmpReq ShareAICImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18515,7 +18745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Share the specified AIC image to other users.</p>
+     * <p>Shares a specified AIC image with other users.</p>
      * 
      * @param request ShareAICImageRequest
      * @return ShareAICImageResponse
@@ -18571,8 +18801,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call the operation only when the instance is in the Stopped state.</p>
      * <ul>
+     * <li>You can call the operation only when the instance is in the Stopped state.</li>
      * <li>If the operation is successful, the status of the instance becomes Starting.</li>
      * </ul>
      * 
@@ -18609,8 +18839,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call the operation only when the instance is in the Stopped state.</p>
      * <ul>
+     * <li>You can call the operation only when the instance is in the Stopped state.</li>
      * <li>If the operation is successful, the status of the instance becomes Starting.</li>
      * </ul>
      * 
@@ -18677,9 +18907,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -18723,9 +18953,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -18833,8 +19063,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to stop instances that are only in the Running state.</p>
      * <ul>
+     * <li>to stop instances that are only in the Running state.</li>
      * <li>If the call is successful, the state of the instance becomes Stopping.</li>
      * <li>Once the instance is stopped, the state of the instance becomes Stopped.</li>
      * <li>Force stop is supported, which is equivalent to power-off. Data that is not written to disks on the instance may be lost.</li>
@@ -18877,8 +19107,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to stop instances that are only in the Running state.</p>
      * <ul>
+     * <li>to stop instances that are only in the Running state.</li>
      * <li>If the call is successful, the state of the instance becomes Stopping.</li>
      * <li>Once the instance is stopped, the state of the instance becomes Stopped.</li>
      * <li>Force stop is supported, which is equivalent to power-off. Data that is not written to disks on the instance may be lost.</li>
@@ -18947,9 +19177,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -18993,9 +19223,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 10 times per second per user.</li>
+     * <li>up to 100 times per second per account.</li>
+     * <li>up to 10 times per second per user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -19117,7 +19347,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disassociates an elastic IP address (EIP) from an instance.</p>
+     * <p>Disassociates an elastic IP address (EIP) from the cloud resource to which it is bound.</p>
      * 
      * @param request UnAssociateEnsEipAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19153,7 +19383,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disassociates an elastic IP address (EIP) from an instance.</p>
+     * <p>Disassociates an elastic IP address (EIP) from the cloud resource to which it is bound.</p>
      * 
      * @param request UnAssociateEnsEipAddressRequest
      * @return UnAssociateEnsEipAddressResponse
@@ -19164,8 +19394,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Uninstalls add-ons from an ECK cluster. The target cluster must be in the running state. You can call DescribeClustersV1 to query the cluster state and wait until the cluster initialization is complete before you call this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>卸载集群组件</p>
+     * <p>Uninstalls specified add-ons from a cluster.</p>
      * 
      * @param tmpReq UnInstallClusterAddonsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19206,8 +19439,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Uninstalls add-ons from an ECK cluster. The target cluster must be in the running state. You can call DescribeClustersV1 to query the cluster state and wait until the cluster initialization is complete before you call this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>卸载集群组件</p>
+     * <p>Uninstalls specified add-ons from a cluster.</p>
      * 
      * @param request UnInstallClusterAddonsRequest
      * @return UnInstallClusterAddonsResponse
@@ -19315,7 +19551,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disassociates a network access control list (ACL) from a network.</p>
+     * <p>Invokes the UnassociateNetworkAcl operation to disassociate a network ACL from a network, which reverses the attach of the network ACL.</p>
      * 
      * @param request UnassociateNetworkAclRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19351,7 +19587,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disassociates a network access control list (ACL) from a network.</p>
+     * <p>Invokes the UnassociateNetworkAcl operation to disassociate a network ACL from a network, which reverses the attach of the network ACL.</p>
      * 
      * @param request UnassociateNetworkAclRequest
      * @return UnassociateNetworkAclResponse
@@ -19363,7 +19599,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes preloaded data.</p>
+     * <p>Calls UnloadRegionSDG to delete preloaded data.</p>
      * 
      * @param tmpReq UnloadRegionSDGRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19413,7 +19649,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes preloaded data.</p>
+     * <p>Calls UnloadRegionSDG to delete preloaded data.</p>
      * 
      * @param request UnloadRegionSDGRequest
      * @return UnloadRegionSDGResponse
@@ -19479,7 +19715,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes tags from resources.</p>
+     * <p>Removes user tags from a resource.</p>
      * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19523,7 +19759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes tags from resources.</p>
+     * <p>Removes user tags from a resource.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -19534,8 +19770,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Rate limit per user: 10 calls per second.</li>
+     * <li>Updating the cluster certificate is an asynchronous operation. After you call the API operation, wait 5 to 10 minutes for the cluster certificate to be updated and the control components to restart. During this process, you can call the DescribeClustersV1 operation to query the update status of the cluster certificate. After the cluster certificate is updated, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Update cluster certificates</p>
+     * <p>Updates the cluster certificate.</p>
      * 
      * @param request UpdateClusterCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19566,8 +19808,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Rate limit per user: 10 calls per second.</li>
+     * <li>Updating the cluster certificate is an asynchronous operation. After you call the API operation, wait 5 to 10 minutes for the cluster certificate to be updated and the control components to restart. During this process, you can call the DescribeClustersV1 operation to query the update status of the cluster certificate. After the cluster certificate is updated, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Update cluster certificates</p>
+     * <p>Updates the cluster certificate.</p>
      * 
      * @param request UpdateClusterCertificateRequest
      * @return UpdateClusterCertificateResponse
@@ -19738,8 +19986,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Each user can call this operation up to 10 times per second.</li>
+     * <li>Creating a cluster is an asynchronous operation. After calling the operation, wait 10 to 20 minutes for the cluster to initialize. During this time, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>升级集群实例组件</p>
+     * <p>Call the UpgradeClusterAddons operation to upgrade cluster component instances.</p>
      * 
      * @param tmpReq UpgradeClusterAddonsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19780,8 +20034,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Each user can call this operation up to 10 times per second.</li>
+     * <li>Creating a cluster is an asynchronous operation. After calling the operation, wait 10 to 20 minutes for the cluster to initialize. During this time, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>升级集群实例组件</p>
+     * <p>Call the UpgradeClusterAddons operation to upgrade cluster component instances.</p>
      * 
      * @param request UpgradeClusterAddonsRequest
      * @return UpgradeClusterAddonsResponse
@@ -19793,7 +20053,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upload a new AIC public key.</p>
+     * <p>Uploads a new AIC public key.</p>
      * 
      * @param request UploadAICPublicKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19841,7 +20101,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upload a new AIC public key.</p>
+     * <p>Uploads a new AIC public key.</p>
      * 
      * @param request UploadAICPublicKeyRequest
      * @return UploadAICPublicKeyResponse

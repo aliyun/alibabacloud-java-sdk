@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEipInstanceRequest extends TeaModel {
     /**
-     * <p>The maximum bandwidth of the EIP. Default value: 5. Valid values: 5 to 10000. Unit: Mbit/s.</p>
+     * <p>The peak bandwidth of the EIP. Default value: 5. Valid values: 5 to 10000. Unit: Mbit/s.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -14,12 +14,16 @@ public class CreateEipInstanceRequest extends TeaModel {
     public Long bandwidth;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. This prevents repeated operations caused by multiple retries.</p>
+     * <p>Ensures the idempotence of the request to prevent duplicate operations caused by multiple retries.</p>
      * <ul>
-     * <li>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</li>
-     * <li>If you use a ClientToken that has been used and other request parameters remain unchanged in a repeated request, the client will receive the same result as the first request. This does not affect the status of your server.</li>
-     * <li>You can initiate a retry when the operation times out or the error code is PROCESSING. The idempotence is valid. If HTTP status code 200 is returned, the client receives the same result as the last request. However, your server status is not affected. If HTTP status code 4xx is returned and error code is not PROCESSING, the idempotence is invalid.</li>
-     * <li>A client token is valid for 10 minutes.</li>
+     * <li><p>Generate a parameter value from your client and make sure that the value is unique among different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     * </li>
+     * <li><p>If you use a ClientToken that has been used before and the other request parameters remain unchanged, the client receives the same result as the first submission, without affecting the server-side state.</p>
+     * </li>
+     * <li><p>You can retry when the API times out or returns the PROCESSING error code. Idempotence is effective in this case. If the response returns an HTTP 200 status code, the retry returns the same result as the previous call without affecting the server-side state. If the response returns an HTTP 4xx status code and the error code is not PROCESSING, idempotence is not effective.</p>
+     * </li>
+     * <li><p>The ClientToken is valid for 10 minutes.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +33,7 @@ public class CreateEipInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the EIP.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>yourDescription</p>
@@ -38,7 +42,7 @@ public class CreateEipInstanceRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the Edge Node Service (ENS) node.</p>
+     * <p>The ID of the Edge Node Service (ENS) edge zone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +52,7 @@ public class CreateEipInstanceRequest extends TeaModel {
     public String ensRegionId;
 
     /**
-     * <p>The billing method of the EIP. Set the value to <strong>PostPaid</strong>.</p>
+     * <p>Billable methods of the EIP. Currently, only <strong>PostPaid</strong> (pay-as-you-go billing method) is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,11 +61,14 @@ public class CreateEipInstanceRequest extends TeaModel {
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
+    /**
+     * <p>The instance ID of the EIP.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The metering method of the EIP. Set the value to <strong>95BandwidthByMonth</strong>.</p>
+     * <p>Billable methods of the EIP. Currently, only <strong>95BandwidthByMonth</strong> (monthly 95th percentile bandwidth billing) is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,11 +77,14 @@ public class CreateEipInstanceRequest extends TeaModel {
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
+    /**
+     * <p>The IP address.</p>
+     */
     @NameInMap("IpAddress")
     public String ipAddress;
 
     /**
-     * <p>The Internet service provider. Valid values:</p>
+     * <p>The Internet service provider (ISP). Valid values:</p>
      * <ul>
      * <li><strong>cmcc</strong>: China Mobile.</li>
      * <li><strong>unicom</strong>: China Unicom.</li>
@@ -88,7 +98,7 @@ public class CreateEipInstanceRequest extends TeaModel {
     public String isp;
 
     /**
-     * <p>The name of the EIP.</p>
+     * <p>The name of the EIP instance.</p>
      * 
      * <strong>example:</strong>
      * <p>EIP1</p>
@@ -97,7 +107,7 @@ public class CreateEipInstanceRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The tags.</p>
+     * <p>The resource tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateEipInstanceRequestTag> tag;
@@ -197,11 +207,11 @@ public class CreateEipInstanceRequest extends TeaModel {
 
     public static class CreateEipInstanceRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+         * <p>The tag key of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
          * <ul>
-         * <li>The key cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
-         * <li>The key must be up to 64 characters in length.</li>
-         * <li>The tag key cannot be an empty string.</li>
+         * <li>Cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
+         * <li>Can be up to 64 characters in length.</li>
+         * <li>Cannot be an empty string.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -211,7 +221,7 @@ public class CreateEipInstanceRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N that is added to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with acs: or contain http:// or https://.</p>
+         * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>tagValue</p>

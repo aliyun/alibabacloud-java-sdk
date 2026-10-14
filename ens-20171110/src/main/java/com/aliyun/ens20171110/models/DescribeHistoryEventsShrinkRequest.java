@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeHistoryEventsShrinkRequest extends TeaModel {
     /**
-     * <p>The levels of the event-triggered alerts.</p>
+     * <p>The list of event levels.</p>
      */
     @NameInMap("EventLevels")
     public String eventLevelsShrink;
 
     /**
-     * <p>Event status list.</p>
+     * <p>The list of event statuses.</p>
      */
     @NameInMap("EventStatus")
     public String eventStatusShrink;
@@ -24,7 +24,7 @@ public class DescribeHistoryEventsShrinkRequest extends TeaModel {
     public String eventTypesShrink;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,7 +33,7 @@ public class DescribeHistoryEventsShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -42,7 +42,7 @@ public class DescribeHistoryEventsShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The IDs of resources.</p>
+     * <p>The list of resource IDs.</p>
      */
     @NameInMap("ResourceIds")
     public String resourceIdsShrink;

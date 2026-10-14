@@ -95,10 +95,12 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         /**
          * <p>Specifies whether to enable EIP affinity. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: no</li>
-         * <li><strong>1</strong>: yes</li>
+         * <li><p><strong>0</strong>: no</p>
+         * </li>
+         * <li><p><strong>1</strong>: yes</p>
+         * </li>
          * </ul>
-         * <p>**</p>
+         * <p>\<em>\</em></p>
          * <p><strong>Description</strong> After you enable EIP affinity, if multiple EIPs are associated with an SNAT entry, each client uses one EIP to access the Internet. If EIP affinity is disabled, each client uses a random EIP to access the Internet.</p>
          * 
          * <strong>example:</strong>
@@ -188,10 +190,14 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         /**
          * <p>The status of the secondary EIP. Valid values:</p>
          * <ul>
-         * <li>Running</li>
-         * <li>Stopping</li>
-         * <li>Stopped</li>
-         * <li>Starting</li>
+         * <li><p>Running</p>
+         * </li>
+         * <li><p>Stopping</p>
+         * </li>
+         * <li><p>Stopped</p>
+         * </li>
+         * <li><p>Starting</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -203,9 +209,12 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         /**
          * <p>The status of the SNAT entry. Valid values:</p>
          * <ul>
-         * <li>Pending: The SNAT entry is being created or modified.</li>
-         * <li>Available: The SNAT entry is available.</li>
-         * <li>Deleting: The SNAT entry is being deleted.</li>
+         * <li><p>Pending: The SNAT entry is being created or modified.</p>
+         * </li>
+         * <li><p>Available: The SNAT entry is available.</p>
+         * </li>
+         * <li><p>Deleting: The SNAT entry is being deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

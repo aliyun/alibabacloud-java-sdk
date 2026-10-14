@@ -44,10 +44,14 @@ public class DescribeCreatePrePaidInstanceResultResponseBody extends TeaModel {
         /**
          * <p>The status of the instance creation.</p>
          * <ul>
-         * <li>Accepted</li>
-         * <li>Creating</li>
-         * <li>Failed</li>
-         * <li>Successed</li>
+         * <li><p>Accepted</p>
+         * </li>
+         * <li><p>Creating</p>
+         * </li>
+         * <li><p>Failed</p>
+         * </li>
+         * <li><p>Successed</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

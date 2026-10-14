@@ -15,7 +15,7 @@ public class DescribeClusterNodePoolsRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>This parameter is required.</p>
+     * <p>The page number. Pages start from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,7 +24,7 @@ public class DescribeClusterNodePoolsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>This parameter is required.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

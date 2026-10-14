@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CopySnapshotRequest extends TeaModel {
     /**
-     * <p>The IDs of destination nodes.</p>
+     * <p>The list of destination edge zone IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationRegionIds")
@@ -21,7 +21,7 @@ public class CopySnapshotRequest extends TeaModel {
     public String destinationSnapshotDescription;
 
     /**
-     * <p>The name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The display name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. It can contain digits, colons (:), underscores (_), or hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>testSnapshotName</p>
@@ -29,6 +29,17 @@ public class CopySnapshotRequest extends TeaModel {
     @NameInMap("DestinationSnapshotName")
     public String destinationSnapshotName;
 
+    /**
+     * <p>The billing cycle of the instance. Valid values:</p>
+     * <ul>
+     * <li>Hour</li>
+     * <li>Day</li>
+     * <li>Month</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Hour</p>
+     */
     @NameInMap("InstanceBillingCycle")
     public String instanceBillingCycle;
 

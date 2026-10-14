@@ -16,10 +16,14 @@ public class CreateMountTargetResponseBody extends TeaModel {
     /**
      * <p>The state of the mount target. Valid values:</p>
      * <ul>
-     * <li>active</li>
-     * <li>inactive</li>
-     * <li>pending</li>
-     * <li>deleting</li>
+     * <li><p>active</p>
+     * </li>
+     * <li><p>inactive</p>
+     * </li>
+     * <li><p>pending</p>
+     * </li>
+     * <li><p>deleting</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

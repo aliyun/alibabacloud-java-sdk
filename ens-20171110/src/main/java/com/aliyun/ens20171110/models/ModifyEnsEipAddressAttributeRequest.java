@@ -24,7 +24,7 @@ public class ModifyEnsEipAddressAttributeRequest extends TeaModel {
     public Integer bandwidth;
 
     /**
-     * <p>The new description of the EIP. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
+     * <p>The new description of the EIP. The description must be 2 to 256 characters in length and cannot start with http\:// or https\://.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -33,7 +33,7 @@ public class ModifyEnsEipAddressAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The new name of the EIP. The name must be 2 to 128 characters in length and cannot start with http:// or https://.</p>
+     * <p>The new name of the EIP. The name must be 2 to 128 characters in length and cannot start with http\:// or https\://.</p>
      * 
      * <strong>example:</strong>
      * <p>test-api-modify</p>

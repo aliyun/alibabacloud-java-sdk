@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSDGsShrinkRequest extends TeaModel {
     /**
-     * <p>The AIC instance ID to be queried.</p>
+     * <p>The list of AIC instance IDs to query.</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIdsShrink;
 
     /**
-     * <p>The IDs of SDGs that you want to query. By default, all SDGs are queried.</p>
+     * <p>The list of SDG IDs to query.</p>
      */
     @NameInMap("SDGIds")
     public String SDGIdsShrink;

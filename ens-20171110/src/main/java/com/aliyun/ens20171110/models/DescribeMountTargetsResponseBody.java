@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMountTargetsResponseBody extends TeaModel {
     /**
-     * <p>The information about mount targets.</p>
+     * <p>The collection of mount target information.</p>
      */
     @NameInMap("MountTargets")
     public java.util.List<DescribeMountTargetsResponseBodyMountTargets> mountTargets;
@@ -20,7 +20,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of rows per page.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -29,7 +29,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>762DD527-358B-1E48-8005-CCE3ED4EB9E0</p>
@@ -38,7 +38,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of mount targets.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,7 +93,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
 
     public static class DescribeMountTargetsResponseBodyMountTargets extends TeaModel {
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing-cmcc</p>
@@ -102,7 +102,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         public String ensRegionId;
 
         /**
-         * <p>The ID of the file system.</p>
+         * <p>The file system ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c50f8*****</p>
@@ -111,7 +111,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         public String fileSystemId;
 
         /**
-         * <p>The path of the mount target.</p>
+         * <p>The mount target path.</p>
          * 
          * <strong>example:</strong>
          * <p>LB:/fileSystemName/mountTargetName</p>
@@ -120,7 +120,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         public String mountTargetDomain;
 
         /**
-         * <p>The name of the mount target.</p>
+         * <p>The mount target name.</p>
          * 
          * <strong>example:</strong>
          * <p>TestMountPath</p>
@@ -129,7 +129,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         public String mountTargetName;
 
         /**
-         * <p>The ID of the network.</p>
+         * <p>The network ID.</p>
          * 
          * <strong>example:</strong>
          * <p>n-***</p>
@@ -138,12 +138,12 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         public String netWorkId;
 
         /**
-         * <p>The state of the mount target. Valid values:</p>
+         * <p>The mount target status. Valid values:</p>
          * <ul>
-         * <li>active: The mount target is available.</li>
-         * <li>inactive: The mount target is unavailable.</li>
-         * <li>pending: A task is being queued for the mount target.</li>
-         * <li>deleting: The mount target is being deleted.</li>
+         * <li>active: Active.</li>
+         * <li>inactive: Inactive.</li>
+         * <li>pending: Queued.</li>
+         * <li>deleting: Being deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>

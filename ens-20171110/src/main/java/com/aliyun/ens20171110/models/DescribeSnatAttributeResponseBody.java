@@ -17,7 +17,9 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
      * <p>The destination CIDR block. The rule takes effect only on requests that access the destination CIDR block.</p>
      * 
      * <strong>example:</strong>
-     * <p>101.10. XX.XX/24</p>
+     * <ol start="101">
+     * <li>XXX. XXX.0/24</li>
+     * </ol>
      */
     @NameInMap("DestCIDR")
     public String destCIDR;
@@ -25,11 +27,13 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
     /**
      * <p>Specifies whether to enable IP affinity. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong></li>
-     * <li><strong>true</strong></li>
+     * <li><p><strong>false</strong></p>
+     * </li>
+     * <li><p><strong>true</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> After you enable IP affinity, if multiple EIPs are associated with an SNAT entry, one client uses the same EIP to for communication. If IP affinity is disabled, the client uses a random EIP for communication.</p>
+     * <p>After you enable IP affinity, if multiple EIPs are associated with an SNAT entry, one client uses the same EIP to for communication. If IP affinity is disabled, the client uses a random EIP for communication.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -50,8 +54,10 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
     /**
      * <p>Whether to enable operator affinity. Value taking:</p>
      * <ul>
-     * <li>false:Do not open.</li>
-     * <li>true:Open.</li>
+     * <li><p>false:Do not open.</p>
+     * </li>
+     * <li><p>true:Open.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +106,9 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
      * <p>The EIP specified in the SNAT entry. Multiple EIPs are separated by commas (,).</p>
      * 
      * <strong>example:</strong>
-     * <p>120.72.XX.XX</p>
+     * <ol start="120">
+     * <li>XXX. XXX.71</li>
+     * </ol>
      */
     @NameInMap("SnatIp")
     public String snatIp;
@@ -115,7 +123,9 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
      * <p>The source CIDR block specified in the SNAT entry.</p>
      * 
      * <strong>example:</strong>
-     * <p>10.0.XX.XX/24</p>
+     * <ol start="10">
+     * <li>XXX. XXX.0/24</li>
+     * </ol>
      */
     @NameInMap("SourceCIDR")
     public String sourceCIDR;
@@ -124,7 +134,9 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
      * <p>The secondary EIP specified in the SNAT entry. Multiple secondary EIPs are separated by commas (,).</p>
      * 
      * <strong>example:</strong>
-     * <p>101.23. XX.XX</p>
+     * <ol start="101">
+     * <li>XXX. XXX.4</li>
+     * </ol>
      */
     @NameInMap("StandbySnatIp")
     public String standbySnatIp;
@@ -132,10 +144,14 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
     /**
      * <p>The status of the secondary EIP.</p>
      * <ul>
-     * <li>Running</li>
-     * <li>Stopping</li>
-     * <li>Stopped</li>
-     * <li>Starting</li>
+     * <li><p>Running</p>
+     * </li>
+     * <li><p>Stopping</p>
+     * </li>
+     * <li><p>Stopped</p>
+     * </li>
+     * <li><p>Starting</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -147,9 +163,12 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
     /**
      * <p>The status of the SNAT entry.</p>
      * <ul>
-     * <li>Pending: The SNAT entry is being created or modified.</li>
-     * <li>Available: The SNAT entry is available.</li>
-     * <li>Deleting: The SNAT entry is being deleted.</li>
+     * <li><p>Pending: The SNAT entry is being created or modified.</p>
+     * </li>
+     * <li><p>Available: The SNAT entry is available.</p>
+     * </li>
+     * <li><p>Deleting: The SNAT entry is being deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -161,8 +180,10 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
     /**
      * <p>The type of the NAT.</p>
      * <ul>
-     * <li>Empty: symmetric NAT.</li>
-     * <li>FullCone: full cone NAT.</li>
+     * <li><p>Empty: symmetric NAT.</p>
+     * </li>
+     * <li><p>FullCone: full cone NAT.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -318,7 +339,9 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
          * <p>The IP address.</p>
          * 
          * <strong>example:</strong>
-         * <p>203.132.XX.XX</p>
+         * <ol start="203">
+         * <li>XXX. XXX.139</li>
+         * </ol>
          */
         @NameInMap("Ip")
         public String ip;
@@ -326,11 +349,16 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
         /**
          * <p>The status of the IP address.</p>
          * <ul>
-         * <li>Running</li>
-         * <li>Stopping</li>
-         * <li>Stopped</li>
-         * <li>Starting</li>
-         * <li>Releasing</li>
+         * <li><p>Running</p>
+         * </li>
+         * <li><p>Stopping</p>
+         * </li>
+         * <li><p>Stopped</p>
+         * </li>
+         * <li><p>Starting</p>
+         * </li>
+         * <li><p>Releasing</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
