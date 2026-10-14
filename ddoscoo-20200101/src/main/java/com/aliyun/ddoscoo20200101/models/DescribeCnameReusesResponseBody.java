@@ -4,9 +4,18 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCnameReusesResponseBody extends TeaModel {
+    /**
+     * <p>The CNAME reuse information.</p>
+     */
     @NameInMap("CnameReuses")
     public java.util.List<DescribeCnameReusesResponseBodyCnameReuses> cnameReuses;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bcf28g5-d57c-11e7-9bs0-d89d6717dxbc</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +41,36 @@ public class DescribeCnameReusesResponseBody extends TeaModel {
     }
 
     public static class DescribeCnameReusesResponseBodyCnameReuses extends TeaModel {
+        /**
+         * <p>The reused canonical name value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4o6ep6q217k9****.aliyunddos0004.com</p>
+         */
         @NameInMap("Cname")
         public String cname;
 
+        /**
+         * <p>The domain name of the website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>Indicates whether CNAME reuse is enabled. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: disabled</p>
+         * </li>
+         * <li><p><strong>1</strong>: enabled</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Enable")
         public Integer enable;
 

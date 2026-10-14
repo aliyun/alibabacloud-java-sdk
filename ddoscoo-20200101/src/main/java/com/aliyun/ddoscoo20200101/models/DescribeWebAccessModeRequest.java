@@ -5,7 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeWebAccessModeRequest extends TeaModel {
     /**
+     * <p>The domain names of website businesses.</p>
+     * <blockquote>
+     * <p>The domain names must have website forwarding rules configured. You can call <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> to query all domain names.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
      */
     @NameInMap("Domains")
     public java.util.List<String> domains;

@@ -4,9 +4,25 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class CreateSceneDefensePolicyResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F65DF043-E0EB-4796-9467-23DDCDF92C1D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the policy is created. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The policy is created.</li>
+     * <li><strong>false</strong>: The policy failed to be created.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

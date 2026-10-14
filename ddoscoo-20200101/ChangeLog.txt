@@ -1,3 +1,7 @@
+2026-10-14 Version: 5.0.4
+- Update API DescribeInstanceSpecs: add response parameters Body.InstanceSpecs.$.BaseProtectionBandwidth.
+
+
 2026-08-14 Version: 5.0.3
 - Update API CreateNetworkRules: add request parameters IpMode.
 - Update API CreatePort: add request parameters IpMode.

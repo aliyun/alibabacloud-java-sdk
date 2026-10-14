@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteDomainResourceRequest extends TeaModel {
     /**
+     * <p>The domain name corresponding to the website business forwarding rule to be deleted.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.example.com">www.example.com</a></p>
      */
     @NameInMap("Domain")
     public String domain;

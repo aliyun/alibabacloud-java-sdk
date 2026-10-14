@@ -4,9 +4,18 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainViewSourceCountriesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about request source countries for the website service.</p>
+     */
     @NameInMap("SourceCountrys")
     public java.util.List<DescribeDomainViewSourceCountriesResponseBodySourceCountrys> sourceCountrys;
 
@@ -32,9 +41,21 @@ public class DescribeDomainViewSourceCountriesResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainViewSourceCountriesResponseBodySourceCountrys extends TeaModel {
+        /**
+         * <p>The number of requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3390671</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The abbreviation of the country. For more information, see the <strong>Chinese mainland and regions outside China</strong> section in <a href="https://help.aliyun.com/document_detail/167926.html">Country codes</a>. For example, <strong>cn</strong> indicates China and <strong>us</strong> indicates the United States.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn</p>
+         */
         @NameInMap("CountryId")
         public String countryId;
 

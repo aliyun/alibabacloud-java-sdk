@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeWebAccessLogDispatchStatusRequest extends TeaModel {
     /**
+     * <p>The page number of the current page in a paginated query. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,12 +14,21 @@ public class DescribeWebAccessLogDispatchStatusRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of domain names on each page in a paginated query. Default value: <strong>10</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the resource group to which the Anti-DDoS Pro instance belongs in Resource Management.</p>
+     * <p>If you do not set this parameter, the default resource group is used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm2pz25js****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

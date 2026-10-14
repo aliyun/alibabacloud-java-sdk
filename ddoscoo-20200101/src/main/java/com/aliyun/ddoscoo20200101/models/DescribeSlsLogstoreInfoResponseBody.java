@@ -4,21 +4,60 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlsLogstoreInfoResponseBody extends TeaModel {
+    /**
+     * <p>The log store that is associated with Anti-DDoS Pro and Anti-DDoS Premium.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddoscoo-logstore</p>
+     */
     @NameInMap("LogStore")
     public String logStore;
 
+    /**
+     * <p>The log project that is associated with Anti-DDoS Pro and Anti-DDoS Premium.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddoscoo-project-181071506993****-cn-hangzhou</p>
+     */
     @NameInMap("Project")
     public String project;
 
+    /**
+     * <p>The available log storage capacity. Unit: bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3298534883328</p>
+     */
     @NameInMap("Quota")
     public Long quota;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The storage duration of logs. Unit: days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>180</p>
+     */
     @NameInMap("Ttl")
     public Integer ttl;
 
+    /**
+     * <p>The used storage capacity. Unit: bytes.</p>
+     * <blockquote>
+     * <p>The statistics from Simple Log Service have a delay of approximately two hours.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Used")
     public Long used;
 

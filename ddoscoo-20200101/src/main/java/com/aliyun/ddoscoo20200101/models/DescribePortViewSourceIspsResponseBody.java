@@ -4,9 +4,18 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribePortViewSourceIspsResponseBody extends TeaModel {
+    /**
+     * <p>The request source ISP information of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+     */
     @NameInMap("Isps")
     public java.util.List<DescribePortViewSourceIspsResponseBodyIsps> isps;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +41,24 @@ public class DescribePortViewSourceIspsResponseBody extends TeaModel {
     }
 
     public static class DescribePortViewSourceIspsResponseBodyIsps extends TeaModel {
+        /**
+         * <p>The relative number of requests.</p>
+         * <blockquote>
+         * <p>This value does not represent the actual number of requests. You can use this value to calculate the proportion of requests from different ISPs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3390671</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The ISP ID. For more information, see the ISP code table below the response parameters. The ISP ID corresponds to the code in the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100017</p>
+         */
         @NameInMap("IspId")
         public String ispId;
 

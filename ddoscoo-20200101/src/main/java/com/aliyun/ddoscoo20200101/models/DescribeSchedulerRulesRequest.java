@@ -4,18 +4,40 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSchedulerRulesRequest extends TeaModel {
+    /**
+     * <p>The page number of the returned page. For example, to query the results on the first page, enter <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
+     * <p>The number of records displayed on each page.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The resource group ID of the Anti-DDoS Proxy instance in Resource Management. The default value is empty, which indicates that the instance belongs to the default resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The rule name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testrule</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 

@@ -4,12 +4,27 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebCCRulesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EAED912D-909E-45F0-AF74-AC0CCDCAE314</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of frequency control (HTTP flood mitigation) custom rules.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <p>The frequency control (HTTP flood mitigation) custom rules.</p>
+     */
     @NameInMap("WebCCRules")
     public java.util.List<DescribeWebCCRulesResponseBodyWebCCRules> webCCRules;
 
@@ -43,24 +58,74 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeWebCCRulesResponseBodyWebCCRules extends TeaModel {
+        /**
+         * <p>The blocking type. Valid values:</p>
+         * <ul>
+         * <li><strong>close</strong>: blocks the request.</li>
+         * <li><strong>captcha</strong>: implements CAPTCHA verification.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>close</p>
+         */
         @NameInMap("Act")
         public String act;
 
+        /**
+         * <p>The number of visits from a single IP address. Valid values: <strong>2</strong> to <strong>2000</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The detection interval. Valid values: <strong>5</strong> to <strong>10800</strong>. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Interval")
         public Integer interval;
 
+        /**
+         * <p>The matching mode. Valid values:</p>
+         * <ul>
+         * <li><strong>prefix</strong>: prefix match.</li>
+         * <li><strong>match</strong>: exact match.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>prefix</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <p>The rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wq</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The blocking duration. Valid values: <strong>1</strong> to <strong>1440</strong>. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("Ttl")
         public Integer ttl;
 
+        /**
+         * <p>The detection path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/hello</p>
+         */
         @NameInMap("Uri")
         public String uri;
 

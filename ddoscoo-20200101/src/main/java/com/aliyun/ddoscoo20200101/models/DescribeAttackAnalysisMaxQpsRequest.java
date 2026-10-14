@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeAttackAnalysisMaxQpsRequest extends TeaModel {
     /**
+     * <p>The end time of the query. Use the UNIX timestamp format. Unit: seconds.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1619798400</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
@@ -14,7 +18,11 @@ public class DescribeAttackAnalysisMaxQpsRequest extends TeaModel {
     public String ip;
 
     /**
+     * <p>The start time of the query. Use the UNIX timestamp format. Unit: seconds.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1622476799</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

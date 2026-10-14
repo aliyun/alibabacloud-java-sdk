@@ -5,22 +5,47 @@ import com.aliyun.tea.*;
 
 public class DescribeDDosEventAreaRequest extends TeaModel {
     /**
+     * <p>The event type of the attack event to query. Valid values:</p>
+     * <ul>
+     * <li><strong>defense</strong>: traffic scrubbing events for volumetric attacks.</li>
+     * <li><strong>blackhole</strong>: blackhole filtering events for volumetric attacks.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>defense</p>
      */
     @NameInMap("EventType")
     public String eventType;
 
     /**
+     * <p>The attacked IP Address of Anti-DDoS Proxy instance of Anti-DDoS Pro and Anti-DDoS Premium.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>203.XX.XX.199</p>
      */
     @NameInMap("Ip")
     public String ip;
 
+    /**
+     * <p>The number of data entries to return. Unit: entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Range")
     public Long range;
 
     /**
+     * <p>The start timestamp of the event to query. Unit: seconds.</p>
+     * <blockquote>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/188604.html">DescribeDDosAllEventList</a> to query the start time of all events.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1598948471</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

@@ -4,6 +4,12 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class EmptySlsLogstoreRequest extends TeaModel {
+    /**
+     * <p>The resource group ID to which the Anti-DDoS Proxy instance belongs in Resource Management. The default value is empty, which indicates that the instance belongs to the default resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

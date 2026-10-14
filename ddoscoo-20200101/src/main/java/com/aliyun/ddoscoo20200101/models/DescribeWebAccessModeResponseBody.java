@@ -4,9 +4,18 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebAccessModeResponseBody extends TeaModel {
+    /**
+     * <p>The access mode information of website businesses.</p>
+     */
     @NameInMap("DomainModes")
     public java.util.List<DescribeWebAccessModeResponseBodyDomainModes> domainModes;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bcf28g5-d57c-11e7-9bs0-d89d6717dxbc</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +41,29 @@ public class DescribeWebAccessModeResponseBody extends TeaModel {
     }
 
     public static class DescribeWebAccessModeResponseBodyDomainModes extends TeaModel {
+        /**
+         * <p>The access mode. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: A record access</p>
+         * </li>
+         * <li><p><strong>1</strong>: Anti-DDoS Proxy mode</p>
+         * </li>
+         * <li><p><strong>2</strong>: Back-to-origin mode</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AccessMode")
         public Integer accessMode;
 
+        /**
+         * <p>The domain name of the website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
+         */
         @NameInMap("Domain")
         public String domain;
 

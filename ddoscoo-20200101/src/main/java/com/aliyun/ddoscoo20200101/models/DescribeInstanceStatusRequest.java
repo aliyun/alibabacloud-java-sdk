@@ -5,13 +5,30 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceStatusRequest extends TeaModel {
     /**
+     * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance that you want to query.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all Anti-DDoS Proxy (Chinese Mainland) or Anti-DDoS Proxy (Outside Chinese Mainland) instances.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddoscoo-cn-6ja1y6p5****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
+     * <p>The type of the Anti-DDoS Pro or Anti-DDoS Premium instance that you want to query. Valid values:</p>
+     * <ul>
+     * <li><p><strong>1</strong>: an Anti-DDoS Proxy (Chinese Mainland) instance.</p>
+     * </li>
+     * <li><p><strong>2</strong>: an Anti-DDoS Proxy (Outside Chinese Mainland) instance.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ProductType")
     public Integer productType;

@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeWebCCRulesV2Request extends TeaModel {
     /**
+     * <p>The domain name of the website that is added to Anti-DDoS Pro and Anti-DDoS Premium for protection.</p>
+     * 
      * <strong>example:</strong>
-     * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
+     * <p>example.com</p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
+     * <p>The start index, which specifies the position from which the results are displayed. Default value: <strong>0</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -19,6 +23,12 @@ public class DescribeWebCCRulesV2Request extends TeaModel {
     public String offset;
 
     /**
+     * <p>The source of the rule. Valid values:</p>
+     * <ul>
+     * <li><strong>manual</strong> (default): manually added.</li>
+     * <li><strong>clover</strong>: automatically generated.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>manual</p>
      */
@@ -26,8 +36,10 @@ public class DescribeWebCCRulesV2Request extends TeaModel {
     public String owner;
 
     /**
+     * <p>The number of entries per page. Maximum value: <strong>20</strong>. Default value: <strong>20</strong>.</p>
+     * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public String pageSize;

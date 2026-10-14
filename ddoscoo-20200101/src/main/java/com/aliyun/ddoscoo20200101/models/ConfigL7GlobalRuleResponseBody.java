@@ -4,6 +4,12 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ConfigL7GlobalRuleResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request that can be used for troubleshooting.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

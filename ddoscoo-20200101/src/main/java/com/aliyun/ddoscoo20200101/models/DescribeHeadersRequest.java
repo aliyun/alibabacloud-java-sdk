@@ -5,11 +5,24 @@ import com.aliyun.tea.*;
 
 public class DescribeHeadersRequest extends TeaModel {
     /**
+     * <p>The domain name for which to query custom headers.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.aliyundoc.com</p>
      */
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <p>The ID of the resource group in Resource Management to which the Anti-DDoS Pro or Anti-DDoS Premium instance belongs. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek3cmuvpia****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

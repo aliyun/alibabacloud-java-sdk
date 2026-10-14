@@ -4,9 +4,18 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0222382B-5FE5-4FF7-BC9B-97EE31D58818</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about Anti-DDoS Pro or Anti-DDoS Premium instances associated with website services.</p>
+     */
     @NameInMap("WebInstanceRelations")
     public java.util.List<DescribeWebInstanceRelationsResponseBodyWebInstanceRelations> webInstanceRelations;
 
@@ -32,12 +41,31 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
     }
 
     public static class DescribeWebInstanceRelationsResponseBodyWebInstanceRelationsInstanceDetails extends TeaModel {
+        /**
+         * <p>The list of IP addresses of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+         */
         @NameInMap("EipList")
         public java.util.List<String> eipList;
 
+        /**
+         * <p>The function plan type. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong>: Standard function.</li>
+         * <li><strong>enhance</strong>: Enhanced function.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enhance</p>
+         */
         @NameInMap("FunctionVersion")
         public String functionVersion;
 
+        /**
+         * <p>The Anti-DDoS Pro or Anti-DDoS Premium instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-0pp163pd****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -73,9 +101,18 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
     }
 
     public static class DescribeWebInstanceRelationsResponseBodyWebInstanceRelations extends TeaModel {
+        /**
+         * <p>The domain name of the website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The information about the associated Anti-DDoS Pro or Anti-DDoS Premium instances.</p>
+         */
         @NameInMap("InstanceDetails")
         public java.util.List<DescribeWebInstanceRelationsResponseBodyWebInstanceRelationsInstanceDetails> instanceDetails;
 

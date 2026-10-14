@@ -5,19 +5,34 @@ import com.aliyun.tea.*;
 
 public class AttachSceneDefenseObjectRequest extends TeaModel {
     /**
+     * <p>The object type. Set the value to <strong>Domain</strong>, which indicates a domain name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Domain</p>
      */
     @NameInMap("ObjectType")
     public String objectType;
 
     /**
+     * <p>The protected objects to add. Separate multiple objects with commas (,).</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
      */
     @NameInMap("Objects")
     public String objects;
 
     /**
+     * <p>The policy ID.</p>
+     * <blockquote>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/159382.html">DescribeSceneDefensePolicies</a> to query all policy IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>321a-fd31-df51-****</p>
      */
     @NameInMap("PolicyId")
     public String policyId;

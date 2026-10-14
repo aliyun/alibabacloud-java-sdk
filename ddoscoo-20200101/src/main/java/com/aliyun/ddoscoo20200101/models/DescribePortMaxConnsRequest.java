@@ -5,22 +5,49 @@ import com.aliyun.tea.*;
 
 public class DescribePortMaxConnsRequest extends TeaModel {
     /**
+     * <p>The end time of the query. This value is a UNIX timestamp. Unit: seconds.</p>
+     * <blockquote>
+     * <p>The value must be on the minute.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1583683200</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
+     * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+     * <blockquote>
+     * <p>You can invoke <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> to query the IDs of all Anti-DDoS Pro or Anti-DDoS Premium instances.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddoscoo-cn-mp91j1ao****</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <p>The ID of the resource group to which the Anti-DDoS Pro or Anti-DDoS Premium instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
+     * <p>The start time of the query. This value is a UNIX timestamp. Unit: seconds.</p>
+     * <blockquote>
+     * <p>The value must be on the minute.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1582992000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

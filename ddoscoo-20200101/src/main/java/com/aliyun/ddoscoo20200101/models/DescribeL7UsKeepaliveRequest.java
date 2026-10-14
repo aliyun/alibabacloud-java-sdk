@@ -4,6 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeL7UsKeepaliveRequest extends TeaModel {
+    /**
+     * <p>The domain name of the website service.</p>
+     * <blockquote>
+     * <p>The domain name must have a website service forwarding rule configured. You can call <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> to query all domain names.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
+     */
     @NameInMap("Domain")
     public String domain;
 

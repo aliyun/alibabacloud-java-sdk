@@ -5,7 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeBlackholeStatusRequest extends TeaModel {
     /**
+     * <p>The ID of the Anti-DDoS Proxy instance.</p>
+     * <blockquote>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> to query the IDs of all Anti-DDoS Pro or Anti-DDoS Premium instances.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddoscoo-cn-mp91j1ao****</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;

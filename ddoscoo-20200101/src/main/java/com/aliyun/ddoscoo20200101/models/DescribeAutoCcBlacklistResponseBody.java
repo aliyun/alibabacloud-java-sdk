@@ -4,12 +4,27 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
+    /**
+     * <p>The list of blacklisted IP addresses for the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+     */
     @NameInMap("AutoCcBlacklist")
     public java.util.List<DescribeAutoCcBlacklistResponseBodyAutoCcBlacklist> autoCcBlacklist;
 
+    /**
+     * <p>The ID of the request. Alibaba Cloud generates a unique ID for each request. You can use this ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E78C8472-0B15-42D5-AF22-A32A78818AB2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of blacklisted IP addresses.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,15 +58,45 @@ public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
     }
 
     public static class DescribeAutoCcBlacklistResponseBodyAutoCcBlacklist extends TeaModel {
+        /**
+         * <p>The IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
+         */
         @NameInMap("DestIp")
         public String destIp;
 
+        /**
+         * <p>The expiration time of the blacklisted IP address. This value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1584093569</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The blacklisted IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.100.XX.XX</p>
+         */
         @NameInMap("SourceIp")
         public String sourceIp;
 
+        /**
+         * <p>The source of the blacklisted IP address. Valid values:</p>
+         * <ul>
+         * <li><p><strong>manual</strong>: The IP address is manually added.</p>
+         * </li>
+         * <li><p><strong>auto</strong>: The IP address is automatically added.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>manual</p>
+         */
         @NameInMap("Type")
         public String type;
 

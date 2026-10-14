@@ -4,9 +4,18 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainTopAttackListResponseBody extends TeaModel {
+    /**
+     * <p>The peak QPS data of website services.</p>
+     */
     @NameInMap("AttackList")
     public java.util.List<DescribeDomainTopAttackListResponseBodyAttackList> attackList;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +41,30 @@ public class DescribeDomainTopAttackListResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainTopAttackListResponseBodyAttackList extends TeaModel {
+        /**
+         * <p>The attack QPS. Unit: QPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Attack")
         public Long attack;
 
+        /**
+         * <p>The total QPS, including normal service requests and attacks. Unit: QPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>294</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The website domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
+         */
         @NameInMap("Domain")
         public String domain;
 

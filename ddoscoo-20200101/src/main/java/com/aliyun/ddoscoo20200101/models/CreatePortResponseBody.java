@@ -4,6 +4,12 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class CreatePortResponseBody extends TeaModel {
+    /**
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each request, which can be used to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4787A9A6-8230-4B4A-8211-AFBF7C416B4D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

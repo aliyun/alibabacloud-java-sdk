@@ -4,9 +4,18 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeBlackholeStatusResponseBody extends TeaModel {
+    /**
+     * <p>The blackhole filtering status information of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+     */
     @NameInMap("BlackholeStatus")
     public java.util.List<DescribeBlackholeStatusResponseBodyBlackholeStatus> blackholeStatus;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +41,45 @@ public class DescribeBlackholeStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeBlackholeStatusResponseBodyBlackholeStatus extends TeaModel {
+        /**
+         * <p>The blackhole filtering status. Valid values:</p>
+         * <ul>
+         * <li><p><strong>blackhole</strong>: Black Hole Activated</p>
+         * </li>
+         * <li><p><strong>normal</strong>: Normal</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>blackhole</p>
+         */
         @NameInMap("BlackStatus")
         public String blackStatus;
 
+        /**
+         * <p>The end time of blackhole filtering. This value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1540196323</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The IP address of the Anti-DDoS Proxy instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.<em><strong>.</strong></em>.132</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The start time of blackhole filtering. This value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1540195323</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 

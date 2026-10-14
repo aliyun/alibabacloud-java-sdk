@@ -4,9 +4,18 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDDosEventAreaResponseBody extends TeaModel {
+    /**
+     * <p>The information about the attack source regions.</p>
+     */
     @NameInMap("Areas")
     public java.util.List<DescribeDDosEventAreaResponseBodyAreas> areas;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11710C9F-BC5E-481A-BEC5-C6D8FBFCA827</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +41,24 @@ public class DescribeDDosEventAreaResponseBody extends TeaModel {
     }
 
     public static class DescribeDDosEventAreaResponseBodyAreas extends TeaModel {
+        /**
+         * <p>The code of the attack source region, including Chinese regions (at the province or city level) and international regions (at the country level). For example, <strong>110000</strong> indicates Beijing, China, and <strong>us</strong> indicates the United States.</p>
+         * <blockquote>
+         * <p>For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/167926.html">China and international regions</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>110000</p>
+         */
         @NameInMap("Area")
         public String area;
 
+        /**
+         * <p>The number of request packets from the attack source region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>228</p>
+         */
         @NameInMap("InPkts")
         public Long inPkts;
 

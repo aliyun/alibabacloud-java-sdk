@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeDDosEventMaxRequest extends TeaModel {
     /**
+     * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1604073600</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
@@ -14,7 +18,11 @@ public class DescribeDDosEventMaxRequest extends TeaModel {
     public String ip;
 
     /**
+     * <p>The start of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1598889600</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

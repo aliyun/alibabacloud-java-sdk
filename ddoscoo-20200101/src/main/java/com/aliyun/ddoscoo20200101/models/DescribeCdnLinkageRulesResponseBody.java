@@ -4,12 +4,27 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>02FE96D9-C77B-5735-B36D-329E052C8047</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The traffic scheduling rules.</p>
+     */
     @NameInMap("SchedulerRules")
     public java.util.List<DescribeCdnLinkageRulesResponseBodySchedulerRules> schedulerRules;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -43,9 +58,21 @@ public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnLinkageRulesResponseBodySchedulerRulesCdnLinkageRuleParamParamData extends TeaModel {
+        /**
+         * <p>The QPS threshold that triggers a resource switch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("AccessQps")
         public Long accessQps;
 
+        /**
+         * <p>A reserved field. The default value is 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("UpstreamQps")
         public Long upstreamQps;
 
@@ -73,9 +100,24 @@ public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnLinkageRulesResponseBodySchedulerRulesCdnLinkageRuleParam extends TeaModel {
+        /**
+         * <p>The interaction conditions.</p>
+         */
         @NameInMap("ParamData")
         public DescribeCdnLinkageRulesResponseBodySchedulerRulesCdnLinkageRuleParamParamData paramData;
 
+        /**
+         * <p>The type of the resource for interaction. Valid values:</p>
+         * <ul>
+         * <li><p><strong>cdn</strong>: Alibaba Cloud CDN</p>
+         * </li>
+         * <li><p><strong>dcdn</strong>: DCDN</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cdn</p>
+         */
         @NameInMap("ParamType")
         public String paramType;
 
@@ -103,21 +145,77 @@ public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnLinkageRulesResponseBodySchedulerRulesCdnLinkageRuleRules extends TeaModel {
+        /**
+         * <p>The priority of the rule. Valid values: 0 to 100. A larger value indicates a higher priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <p>The region ID. The default value is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The status of the rule. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: Inactive</p>
+         * </li>
+         * <li><p><strong>1</strong>: Active</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The format of the resource address. Valid values:</p>
+         * <ul>
+         * <li><p><strong>A</strong>: IPv4 address</p>
+         * </li>
+         * <li><p><strong>AAAA</strong>: IPv6 address</p>
+         * </li>
+         * <li><p><strong>CNAME</strong>: canonical name</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>A</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The resource address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.107.XX.XX</p>
+         */
         @NameInMap("Value")
         public String value;
 
+        /**
+         * <p>The type of the resource address. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: Anti-DDoS IP</p>
+         * </li>
+         * <li><p><strong>5</strong>: Accelerated domain name for CDN interaction</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ValueType")
         public Integer valueType;
 
@@ -177,15 +275,33 @@ public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnLinkageRulesResponseBodySchedulerRulesCdnLinkageRule extends TeaModel {
+        /**
+         * <p>The canonical name of the Anti-DDoS instance that is associated with the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
+         */
         @NameInMap("Cname")
         public String cname;
 
+        /**
+         * <p>The resource for interaction.</p>
+         */
         @NameInMap("Param")
         public DescribeCdnLinkageRulesResponseBodySchedulerRulesCdnLinkageRuleParam param;
 
+        /**
+         * <p>The name of the traffic scheduling rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDDos</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The rule information.</p>
+         */
         @NameInMap("Rules")
         public java.util.List<DescribeCdnLinkageRulesResponseBodySchedulerRulesCdnLinkageRuleRules> rules;
 
@@ -229,12 +345,33 @@ public class DescribeCdnLinkageRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnLinkageRulesResponseBodySchedulerRules extends TeaModel {
+        /**
+         * <p>Specifies whether CDN interaction is enabled. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: Disabled</p>
+         * </li>
+         * <li><p><strong>1</strong>: Enabled</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CdnLinkageEnable")
         public Integer cdnLinkageEnable;
 
+        /**
+         * <p>The CDN interaction rule.</p>
+         */
         @NameInMap("CdnLinkageRule")
         public DescribeCdnLinkageRulesResponseBodySchedulerRulesCdnLinkageRule cdnLinkageRule;
 
+        /**
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
+         */
         @NameInMap("Domain")
         public String domain;
 

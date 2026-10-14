@@ -5,34 +5,80 @@ import com.aliyun.tea.*;
 
 public class DescribeOpEntitiesRequest extends TeaModel {
     /**
+     * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <blockquote>
+     * <p>The time range cannot exceed 30 days.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1583683200000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The operation object used to filter results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>203.<em><strong>.</strong></em>.132</p>
+     */
     @NameInMap("EntityObject")
     public String entityObject;
 
+    /**
+     * <p>The type of the operation object used to filter results. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: IP Address of Anti-DDoS Proxy instance</li>
+     * <li><strong>2</strong>: Anti-DDoS Pro and Anti-DDoS Premium mitigation plan</li>
+     * <li><strong>3</strong>: ECS instance</li>
+     * <li><strong>4</strong>: full logs</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("EntityType")
     public Integer entityType;
 
     /**
+     * <p>The page number to return in a paging query. For example, to query the first page, set the value to <strong>1</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the resource group to which the Anti-DDoS Pro and Anti-DDoS Premium instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
+     * <p>The beginning of the time range to query. This value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <blockquote>
+     * <p>The time range cannot exceed 30 days.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1582992000000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

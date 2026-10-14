@@ -5,11 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeL7GlobalRuleRequest extends TeaModel {
     /**
+     * <p>The domain name of the website service to operate on.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <p>The language type for the request and response messages. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

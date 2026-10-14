@@ -4,23 +4,47 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainTopFingerprintRequest extends TeaModel {
+    /**
+     * <p>The domain name of the website.</p>
+     * <blockquote>
+     * <p>The domain name must have a website traffic forwarding rule configured. You can call <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> to query all domain names.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>example.aliyundoc.com</p>
+     */
     @NameInMap("Domain")
     public String domain;
 
     /**
+     * <p>The end time of the query. Specify a UNIX timestamp. Unit: seconds.</p>
+     * <blockquote>
+     * <p>The value must be on the exact minute.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1723552200</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
+     * <p>The step size for returned data. Unit: seconds. This specifies the interval between consecutive results.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("Interval")
     public Long interval;
 
     /**
+     * <p>The number of data entries to return.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Limit")
     public Long limit;
@@ -29,13 +53,28 @@ public class DescribeDomainTopFingerprintRequest extends TeaModel {
     public String queryType;
 
     /**
+     * <p>The region of the service. Valid values:</p>
+     * <ul>
+     * <li><strong>cn</strong>: the Chinese mainland.</li>
+     * <li><strong>cn-hongkong</strong>: outside the Chinese mainland.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
+     * <p>The start time of the query. Specify a UNIX timestamp. Unit: seconds.</p>
+     * <blockquote>
+     * <p>The value must be on the exact minute.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1719211800</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

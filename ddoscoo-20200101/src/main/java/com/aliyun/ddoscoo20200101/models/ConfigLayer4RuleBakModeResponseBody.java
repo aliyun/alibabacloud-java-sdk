@@ -4,6 +4,12 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ConfigLayer4RuleBakModeResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CC042262-15A3-4A49-ADF0-130968EA47BC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

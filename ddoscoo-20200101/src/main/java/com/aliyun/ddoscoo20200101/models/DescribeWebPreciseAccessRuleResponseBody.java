@@ -4,9 +4,18 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
+    /**
+     * <p>The precise access control rules for the website.</p>
+     */
     @NameInMap("PreciseAccessConfigList")
     public java.util.List<DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigList> preciseAccessConfigList;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>209EEFBF-B0C7-441E-8C28-D0945A57A638</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +41,64 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
     }
 
     public static class DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList extends TeaModel {
+        /**
+         * <p>The match content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1.1</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The match conditions of the rule. The value is a JSON string. The value contains the following fields:</p>
+         * <blockquote>
+         * <p>If you specify multiple match conditions, the logical relation between these conditions is AND.</p>
+         * </blockquote>
+         * <ul>
+         * <li><p><strong>field</strong>: The match field. This parameter is of the string type.</p>
+         * </li>
+         * <li><p><strong>match_method</strong>: The match method. This parameter is of the string type.</p>
+         * <blockquote>
+         * <p>For more information about the valid values of <strong>field</strong> and <strong>match_method</strong>, see the &quot;Additional information about field and match_method&quot; section in this topic.</p>
+         * </blockquote>
+         * </li>
+         * <li><p><strong>content</strong>: The match content. This parameter is of the string type.</p>
+         * </li>
+         * <li><p><strong>header_name</strong>: The name of the header field. This parameter is of the string type. This parameter is required only when <strong>field</strong> is set to <strong>header</strong>.</p>
+         * </li>
+         * </ul>
+         */
         @NameInMap("ContentList")
         public java.util.List<String> contentList;
 
+        /**
+         * <p>The match field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip</p>
+         */
         @NameInMap("Field")
         public String field;
 
+        /**
+         * <p>The name of the custom HTTP header field.</p>
+         * <blockquote>
+         * <p>This parameter is required only when <strong>Field</strong> is set to <strong>header</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("HeaderName")
         public String headerName;
 
+        /**
+         * <p>The logical operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>belong</p>
+         */
         @NameInMap("MatchMethod")
         public String matchMethod;
 
@@ -95,21 +150,68 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
     }
 
     public static class DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleList extends TeaModel {
+        /**
+         * <p>The action that is performed on requests that match the rule. Valid values:</p>
+         * <ul>
+         * <li><p><strong>accept</strong>: allows the requests.</p>
+         * </li>
+         * <li><p><strong>block</strong>: blocks the requests.</p>
+         * </li>
+         * <li><p><strong>challenge</strong>: triggers a JavaScript Challenge for the requests.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>accept</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The list of match conditions.</p>
+         */
         @NameInMap("ConditionList")
         public java.util.List<DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList> conditionList;
 
+        /**
+         * <p>The validity period of the rule. This value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1598889600</p>
+         */
         @NameInMap("ExpirePeriod")
         public Long expirePeriod;
 
+        /**
+         * <p>The validity period of the rule. Unit: seconds. This parameter is required only when the <strong>action</strong> of the rule is <strong>block</strong>. Requests that match the rule are blocked within the validity period. A value of <strong>0</strong> indicates that the rule is permanently valid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Expires")
         public Long expires;
 
+        /**
+         * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testrule</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The source of the rule. Valid values:</p>
+         * <ul>
+         * <li><p><strong>manual</strong> (default): The rule is manually created.</p>
+         * </li>
+         * <li><p><strong>clover</strong>: The rule is automatically generated.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>manual</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
@@ -169,9 +271,18 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
     }
 
     public static class DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigList extends TeaModel {
+        /**
+         * <p>The domain name of the website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The list of rules.</p>
+         */
         @NameInMap("RuleList")
         public java.util.List<DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleList> ruleList;
 

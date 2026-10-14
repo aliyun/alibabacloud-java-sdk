@@ -4,9 +4,18 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainTopFingerprintResponseBody extends TeaModel {
+    /**
+     * <p>The list of client fingerprints for the website.</p>
+     */
     @NameInMap("DomainTopFp")
     public java.util.List<DescribeDomainTopFingerprintResponseBodyDomainTopFp> domainTopFp;
 
+    /**
+     * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +41,30 @@ public class DescribeDomainTopFingerprintResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainTopFingerprintResponseBodyDomainTopFp extends TeaModel {
+        /**
+         * <p>The domain name of the website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The client fingerprint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8a374c9724582b14a4cfa58c8c9fb2bc</p>
+         */
         @NameInMap("Fingerprinting")
         public String fingerprinting;
 
+        /**
+         * <p>The number of request matches.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22121</p>
+         */
         @NameInMap("Pv")
         public Long pv;
 

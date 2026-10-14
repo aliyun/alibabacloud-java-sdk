@@ -4,10 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeHeadersResponseBody extends TeaModel {
+    /**
+     * <p>The custom header information.</p>
+     */
     @NameInMap("CustomHeader")
     public DescribeHeadersResponseBodyCustomHeader customHeader;
 
     /**
+     * <p>The request header that can be used to mark the Layer 7 attack. The value is a string that consists of a JSON object. The JSON object contains the following fields:</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;X-Client-IP&quot;:true,&quot;X-True-IP&quot;:true,&quot;Web-Server-Type&quot;:true,&quot;WL-Proxy-Client-IP&quot;:true,&quot;X-Forwarded-Proto&quot;:true}</p>
      * 
@@ -17,6 +22,12 @@ public class DescribeHeadersResponseBody extends TeaModel {
     @NameInMap("EmbeddedHeaders")
     public String embeddedHeaders;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>48BC7BA5-69BE-5C31-A080-AFF2431AE48D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -50,9 +61,21 @@ public class DescribeHeadersResponseBody extends TeaModel {
     }
 
     public static class DescribeHeadersResponseBodyCustomHeader extends TeaModel {
+        /**
+         * <p>The domain name of the website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The custom headers. The value is a string that consists of a JSON object. The JSON object contains the following fields:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;X-Forwarded-ClientSrcPort&quot;:&quot;&quot;,&quot;header1&quot;:&quot;hLeLele&quot;}</p>
+         */
         @NameInMap("Headers")
         public String headers;
 

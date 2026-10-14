@@ -4,6 +4,12 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyWebAreaBlockResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5AA2BD65-E289-4E91-9DD9-3E1FB2140D17</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

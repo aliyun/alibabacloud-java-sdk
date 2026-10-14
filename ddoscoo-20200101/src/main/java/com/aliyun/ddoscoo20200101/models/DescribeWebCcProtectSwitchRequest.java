@@ -5,11 +5,24 @@ import com.aliyun.tea.*;
 
 public class DescribeWebCcProtectSwitchRequest extends TeaModel {
     /**
+     * <p>The domain names of website services. You can specify up to 5 domain names.</p>
+     * <blockquote>
+     * <p>The domain names must have website configuration forwarding rules configured. You can call <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> to query all domain names.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
      */
     @NameInMap("Domains")
     public java.util.List<String> domains;
 
+    /**
+     * <p>The ID of the resource group to which the Anti-DDoS Pro or Anti-DDoS Premium instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

@@ -4,9 +4,18 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainTopHttpMethodResponseBody extends TeaModel {
+    /**
+     * <p>The list of top HTTP methods for the domain name.</p>
+     */
     @NameInMap("DomainTopMethod")
     public java.util.List<DescribeDomainTopHttpMethodResponseBodyDomainTopMethod> domainTopMethod;
 
+    /**
+     * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +41,30 @@ public class DescribeDomainTopHttpMethodResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainTopHttpMethodResponseBodyDomainTopMethod extends TeaModel {
+        /**
+         * <p>The domain name of the website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The HTTP method of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GET</p>
+         */
         @NameInMap("HttpMethod")
         public String httpMethod;
 
+        /**
+         * <p>The number of matching requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22121</p>
+         */
         @NameInMap("Pv")
         public Long pv;
 

@@ -4,12 +4,33 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceStatusResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddoscoo-cn-6ja1y6p5****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The status of the Anti-DDoS Pro or Anti-DDoS Premium instance. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: Normal.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("InstanceStatus")
     public Integer instanceStatus;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>112777CC-2AD6-46FC-A263-00B931406FCD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

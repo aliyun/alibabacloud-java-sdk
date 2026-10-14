@@ -4,9 +4,18 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainTopUserAgentResponseBody extends TeaModel {
+    /**
+     * <p>The list of User-Agent data.</p>
+     */
     @NameInMap("DomainTopUa")
     public java.util.List<DescribeDomainTopUserAgentResponseBodyDomainTopUa> domainTopUa;
 
+    /**
+     * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +41,30 @@ public class DescribeDomainTopUserAgentResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainTopUserAgentResponseBodyDomainTopUa extends TeaModel {
+        /**
+         * <p>The website domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The number of request matches.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22121</p>
+         */
         @NameInMap("Pv")
         public Long pv;
 
+        /**
+         * <p>The Base64-encoded value of the User-Agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvOTYuMC40NjY0LjExMCACYWZhcmkvNTM3LjM2</p>
+         */
         @NameInMap("UserAgent")
         public String userAgent;
 

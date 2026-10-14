@@ -4,18 +4,43 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ConfigWebIpSetRequest extends TeaModel {
+    /**
+     * <p>The list of IP addresses or address segments to add to the blacklist. You can add up to 200 IP addresses or address segments.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.1.1.1</p>
+     */
     @NameInMap("BlackList")
     public java.util.List<String> blackList;
 
     /**
+     * <p>The domain name of the website.</p>
+     * <blockquote>
+     * <p>A website forwarding rule must be configured for the domain name. Call <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> to query all domain names.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
      */
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <p>The ID of the resource group in Resource Management to which the Anti-DDoS instance belongs. If you leave this parameter empty, the instance is added to the default resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The IP addresses or CIDR blocks for the whitelist. You can add up to 200 IP addresses or CIDR blocks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2.2.2.2/24</p>
+     */
     @NameInMap("WhiteList")
     public java.util.List<String> whiteList;
 

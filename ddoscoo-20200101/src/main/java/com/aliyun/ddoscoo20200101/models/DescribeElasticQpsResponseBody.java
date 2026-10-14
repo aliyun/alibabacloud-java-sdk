@@ -4,9 +4,18 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeElasticQpsResponseBody extends TeaModel {
+    /**
+     * <p>The time-series data of elastic QPS.</p>
+     */
     @NameInMap("ElasticQps")
     public java.util.List<DescribeElasticQpsResponseBodyElasticQps> elasticQps;
 
+    /**
+     * <p>The unique ID generated for the request. Use this ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2E7F7F7B-39A8-5D92-BAB4-D89D9DCE7D4F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,33 +41,93 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
     }
 
     public static class DescribeElasticQpsResponseBodyElasticQps extends TeaModel {
+        /**
+         * <p>The index of the returned data point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Index")
         public Long index;
 
+        /**
+         * <p>The peak normal business QPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
+         */
         @NameInMap("MaxNormalQps")
         public Long maxNormalQps;
 
+        /**
+         * <p>The peak inbound QPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("MaxQps")
         public Long maxQps;
 
+        /**
+         * <p>The total number of requests within the sampling interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15104</p>
+         */
         @NameInMap("Pv")
         public Long pv;
 
+        /**
+         * <p>The number of 2xx status codes within the sampling interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>455</p>
+         */
         @NameInMap("Status2")
         public Long status2;
 
+        /**
+         * <p>The number of 3xx status codes within the sampling interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Status3")
         public Long status3;
 
+        /**
+         * <p>The number of 4xx status codes within the sampling interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34</p>
+         */
         @NameInMap("Status4")
         public Long status4;
 
+        /**
+         * <p>The number of 410 status codes within the sampling interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("Status410Pv")
         public Long status410Pv;
 
+        /**
+         * <p>The number of 5xx status codes within the sampling interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Status5")
         public Long status5;
 
+        /**
+         * <p>The total number of origin-pull requests within the sampling interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1223</p>
+         */
         @NameInMap("Ups")
         public Long ups;
 

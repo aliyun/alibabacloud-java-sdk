@@ -4,12 +4,30 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeUnBlackholeCountResponseBody extends TeaModel {
+    /**
+     * <p>The remaining number of times that blackhole filtering can be deactivated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("RemainCount")
     public Integer remainCount;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>232929FA-40B6-4C53-9476-EE335ABA44CD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of times that blackhole filtering can be deactivated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

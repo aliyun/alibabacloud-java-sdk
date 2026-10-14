@@ -5,22 +5,46 @@ import com.aliyun.tea.*;
 
 public class DescribeAutoCcBlacklistRequest extends TeaModel {
     /**
+     * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+     * <blockquote>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all Anti-DDoS Pro and Anti-DDoS Premium instances.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddoscoo-cn-mp91j1ao****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The keyword for a fuzzy search. The value is a prefix of the source IP address that you want to query.</p>
+     * <blockquote>
+     * <p>The keyword must be more than three characters long.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>138</p>
+     */
     @NameInMap("KeyWord")
     public String keyWord;
 
     /**
+     * <p>The number of the page to return for a paged query. For example, to query the results on the first page, set the value to <strong>1</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
+     * <p>The number of records to display on each page.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

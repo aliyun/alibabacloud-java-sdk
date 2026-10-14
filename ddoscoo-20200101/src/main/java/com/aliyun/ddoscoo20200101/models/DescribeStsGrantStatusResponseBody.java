@@ -4,9 +4,18 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeStsGrantStatusResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6623EA1F-30FB-5BC8-BEC9-74D55F6F08F1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The authorization status of Anti-DDoS Pro and Anti-DDoS Premium.</p>
+     */
     @NameInMap("StsGrant")
     public DescribeStsGrantStatusResponseBodyStsGrant stsGrant;
 
@@ -32,6 +41,18 @@ public class DescribeStsGrantStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeStsGrantStatusResponseBodyStsGrant extends TeaModel {
+        /**
+         * <p>The authorization status. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: Anti-DDoS Proxy are not authorized to access resources of other cloud services.</p>
+         * </li>
+         * <li><p><strong>1</strong>: Anti-DDoS Proxy are authorized to access resources of other cloud services.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 

@@ -5,33 +5,71 @@ import com.aliyun.tea.*;
 
 public class ModifyPortRequest extends TeaModel {
     /**
+     * <p>The origin server port. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>55</p>
      */
     @NameInMap("BackendPort")
     public String backendPort;
 
     /**
+     * <p>The forwarding port. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>55</p>
      */
     @NameInMap("FrontendPort")
     public String frontendPort;
 
     /**
+     * <p>The type of the forwarding protocol. Valid values:</p>
+     * <ul>
+     * <li><p><strong>tcp</strong>: TCP protocol.</p>
+     * </li>
+     * <li><p><strong>udp</strong>: UDP protocol.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tcp</p>
      */
     @NameInMap("FrontendProtocol")
     public String frontendProtocol;
 
     /**
+     * <p>The ID of the Anti-DDoS Proxy instance to which the port forwarding rule belongs.</p>
+     * <blockquote>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> to query the IDs of all Anti-DDoS Proxy instances.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddoscoo-cn-st21zbyq****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Indicates whether the traffic diversion switch is on. Valid values:</p>
+     * <ul>
+     * <li><p><strong>0</strong>: off.</p>
+     * </li>
+     * <li><p><strong>1</strong>: on.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("ProxyEnable")
     public Long proxyEnable;
 
     /**
+     * <p>The IP addresses of origin servers.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RealServers")

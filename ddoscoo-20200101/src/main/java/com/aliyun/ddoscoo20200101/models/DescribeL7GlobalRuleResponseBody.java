@@ -4,9 +4,18 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeL7GlobalRuleResponseBody extends TeaModel {
+    /**
+     * <p>The global template rule information.</p>
+     */
     @NameInMap("GlobalRules")
     public java.util.List<DescribeL7GlobalRuleResponseBodyGlobalRules> globalRules;
 
+    /**
+     * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request. You can use the ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +41,71 @@ public class DescribeL7GlobalRuleResponseBody extends TeaModel {
     }
 
     public static class DescribeL7GlobalRuleResponseBodyGlobalRules extends TeaModel {
+        /**
+         * <p>The action that the rule performs. Valid values:</p>
+         * <ul>
+         * <li><strong>watch</strong>: Monitor.</li>
+         * <li><strong>block</strong>: Block.</li>
+         * <li><strong>challenge</strong>: JavaScript Challenge.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>watch</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The default action of the rule. Valid values:</p>
+         * <ul>
+         * <li><strong>watch</strong>: Monitor.</li>
+         * <li><strong>block</strong>: Block.</li>
+         * <li><strong>challenge</strong>: JavaScript Challenge.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>watch</p>
+         */
         @NameInMap("ActionDefault")
         public String actionDefault;
 
+        /**
+         * <p>The rule description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP请求疑似模拟浏览器，校验浏览器Header等组合特征#4</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Indicates whether the rule is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Enabled.</li>
+         * <li><strong>0</strong>: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Enabled")
         public Long enabled;
 
+        /**
+         * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>global_1</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <p>The rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>模拟浏览器请求</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 

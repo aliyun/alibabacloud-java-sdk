@@ -5,17 +5,32 @@ import com.aliyun.tea.*;
 
 public class DescribeAsyncTasksRequest extends TeaModel {
     /**
+     * <p>The page number for the paged query.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
+     * <p>The number of asynchronous export tasks to return on each page for the paged query.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The resource group ID of the Anti-DDoS instance in Resource Management.</p>
+     * <p>If this parameter is not specified, the default resource group is used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm2pz25js****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

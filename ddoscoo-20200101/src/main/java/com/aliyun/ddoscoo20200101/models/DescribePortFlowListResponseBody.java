@@ -4,9 +4,18 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribePortFlowListResponseBody extends TeaModel {
+    /**
+     * <p>The traffic data.</p>
+     */
     @NameInMap("PortFlowList")
     public java.util.List<DescribePortFlowListResponseBodyPortFlowList> portFlowList;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FFC77501-BDF8-4BC8-9BF5-B295FBC3189B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,54 +41,167 @@ public class DescribePortFlowListResponseBody extends TeaModel {
     }
 
     public static class DescribePortFlowListResponseBodyPortFlowList extends TeaModel {
+        /**
+         * <p>The attack bandwidth. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AttackBps")
         public Long attackBps;
 
+        /**
+         * <p>The attack packet forwarding rate. Unit: pps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AttackPps")
         public Long attackPps;
 
+        /**
+         * <p>The inbound bandwidth. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2176000</p>
+         */
         @NameInMap("InBps")
         public Long inBps;
 
+        /**
+         * <p>The inbound packet forwarding rate. Unit: pps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2934</p>
+         */
         @NameInMap("InPps")
         public Long inPps;
 
+        /**
+         * <p>The index number of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Index")
         public Long index;
 
+        /**
+         * <p>The outbound bandwidth. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4389</p>
+         */
         @NameInMap("OutBps")
         public Long outBps;
 
+        /**
+         * <p>The outbound packet forwarding rate. Unit: pps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("OutPps")
         public Long outPps;
 
+        /**
+         * <p>The source location of the access traffic. Valid values:</p>
+         * <ul>
+         * <li><strong>cn</strong>: the Chinese mainland.</li>
+         * <li><strong>alb-ap-northeast-1-gf-x</strong>: Japan.</li>
+         * <li><strong>alb-ap-southeast-gf-x</strong>: Singapore.</li>
+         * <li><strong>alb-cn-hongkong-gf-x</strong>: Hong Kong (China).</li>
+         * <li><strong>alb-eu-central-1-gf-x</strong>: Germany.</li>
+         * <li><strong>alb-us-west-1-gf-x</strong>: US West.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Values other than <strong>cn</strong> are available only for Anti-DDoS Pro and Anti-DDoS Premium (<strong>RegionId</strong> is <strong>ap-southeast-1</strong>).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The destination bandwidth rate limiting. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SlaBpsDropBps")
         public Long slaBpsDropBps;
 
+        /**
+         * <p>The destination bandwidth packet forwarding rate. Unit: pps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SlaBpsDropPps")
         public Long slaBpsDropPps;
 
+        /**
+         * <p>The destination concurrent connections rate limiting. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SlaConnDropBps")
         public Long slaConnDropBps;
 
+        /**
+         * <p>The destination concurrent connections packet forwarding rate. Unit: pps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SlaConnDropPps")
         public Long slaConnDropPps;
 
+        /**
+         * <p>The destination new connections rate limiting. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SlaCpsDropBps")
         public Long slaCpsDropBps;
 
+        /**
+         * <p>The destination new connections packet forwarding rate. Unit: pps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SlaCpsDropPps")
         public Long slaCpsDropPps;
 
+        /**
+         * <p>The destination packets rate limiting. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SlaPpsDropBps")
         public Long slaPpsDropBps;
 
+        /**
+         * <p>The destination packets packet forwarding rate. Unit: pps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SlaPpsDropPps")
         public Long slaPpsDropPps;
 
+        /**
+         * <p>The statistics time. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1582992000</p>
+         */
         @NameInMap("Time")
         public Long time;
 

@@ -4,9 +4,18 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainTopRefererResponseBody extends TeaModel {
+    /**
+     * <p>The top referer data of the website.</p>
+     */
     @NameInMap("DomainTopReferer")
     public java.util.List<DescribeDomainTopRefererResponseBodyDomainTopReferer> domainTopReferer;
 
+    /**
+     * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +41,30 @@ public class DescribeDomainTopRefererResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainTopRefererResponseBodyDomainTopReferer extends TeaModel {
+        /**
+         * <p>The domain name of the website service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The number of request matches.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>257031</p>
+         */
         @NameInMap("Pv")
         public Long pv;
 
+        /**
+         * <p>The Base64-encoded value of the referer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aHR0cHM6Ly9zZXJ2aWNld2VjaGF0LmNvbS93eGY3ZDc5YWY0YzU4ZDH3NTEvNC9wYWdlLWZyYW1lLmh0bWw=</p>
+         */
         @NameInMap("Referer")
         public String referer;
 

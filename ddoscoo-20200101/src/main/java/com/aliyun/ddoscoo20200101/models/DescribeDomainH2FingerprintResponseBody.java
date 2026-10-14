@@ -4,9 +4,18 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainH2FingerprintResponseBody extends TeaModel {
+    /**
+     * <p>The list of top N HTTP/2.0 fingerprints for the domain name.</p>
+     */
     @NameInMap("DomainH2Fp")
     public java.util.List<DescribeDomainH2FingerprintResponseBodyDomainH2Fp> domainH2Fp;
 
+    /**
+     * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>112777CC-2AD6-46FC-A263-00B931406FCD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +41,30 @@ public class DescribeDomainH2FingerprintResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainH2FingerprintResponseBodyDomainH2Fp extends TeaModel {
+        /**
+         * <p>The domain name of the website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The HTTP/2.0 fingerprint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>532501bc316d02c8b1a007db76f2c796</p>
+         */
         @NameInMap("H2Fingerprint")
         public String h2Fingerprint;
 
+        /**
+         * <p>The number of times the HTTP/2.0 fingerprint is matched for the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>471755</p>
+         */
         @NameInMap("Pv")
         public Long pv;
 

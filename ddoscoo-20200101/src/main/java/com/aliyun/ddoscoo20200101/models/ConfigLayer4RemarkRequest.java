@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ConfigLayer4RemarkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\&quot;InstanceId\&quot;:\&quot;ddosDip-sg-4hr2b3l****\&quot;,\&quot;FrontendPort\&quot;:2020,\&quot;Protocol\&quot;:\&quot;udp\&quot;,\&quot;Remark\&quot;:\&quot;test\&quot;}]</p>
      */
     @NameInMap("Listeners")
     public String listeners;

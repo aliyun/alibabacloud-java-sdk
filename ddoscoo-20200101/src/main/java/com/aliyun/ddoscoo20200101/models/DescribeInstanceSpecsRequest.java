@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceSpecsRequest extends TeaModel {
     /**
+     * <p>The IDs of the Anti-DDoS Pro or Anti-DDoS Premium instances to query.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")

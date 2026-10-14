@@ -4,9 +4,18 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
+    /**
+     * <p>The configuration of the location blacklist.</p>
+     */
     @NameInMap("Config")
     public DescribeNetworkRegionBlockResponseBodyConfig config;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +41,28 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkRegionBlockResponseBodyConfig extends TeaModel {
+        /**
+         * <p>The list of blocked region codes outside China.</p>
+         */
         @NameInMap("Countries")
         public java.util.List<Long> countries;
 
+        /**
+         * <p>The list of blocked region codes in China.</p>
+         */
         @NameInMap("Provinces")
         public java.util.List<Long> provinces;
 
+        /**
+         * <p>The status of the location blacklist. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong>: enabled</li>
+         * <li><strong>off</strong>: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("RegionBlockSwitch")
         public String regionBlockSwitch;
 
