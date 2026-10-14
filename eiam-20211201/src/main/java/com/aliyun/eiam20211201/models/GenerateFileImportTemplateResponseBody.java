@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateFileImportTemplateResponseBody extends TeaModel {
     /**
-     * <p>The download URL of the template.</p>
+     * <p>The template download URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://test.oss-cn-hangzhou.aliyuncs.com/idaas_ly77wa2oexrciw5v672vxxxx/tmp/eiam_v2_user_import_1766469463365.csv">https://test.oss-cn-hangzhou.aliyuncs.com/idaas_ly77wa2oexrciw5v672vxxxx/tmp/eiam_v2_user_import_1766469463365.csv</a></p>

@@ -7693,8 +7693,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GenerateFileImportTemplateResponse generateFileImportTemplateWithOptions(GenerateFileImportTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fieldSelectionEnabled)) {
+            query.put("FieldSelectionEnabled", request.fieldSelectionEnabled);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.selectedFieldNames)) {
+            query.put("SelectedFieldNames", request.selectedFieldNames);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.targetType)) {
@@ -9846,7 +9854,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a specified network access endpoint.</p>
+     * <p>Queries the details of a specified network access endpoint.</p>
      * 
      * @param request GetNetworkAccessEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9882,7 +9890,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a specified network access endpoint.</p>
+     * <p>Queries the details of a specified network access endpoint.</p>
      * 
      * @param request GetNetworkAccessEndpointRequest
      * @return GetNetworkAccessEndpointResponse
@@ -12278,7 +12286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information of one or more credentials by using paging.</p>
+     * <p>Performs a paging query to retrieve the information of one or more credentials.</p>
      * 
      * @param request ListCredentialsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12342,7 +12350,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information of one or more credentials by using paging.</p>
+     * <p>Performs a paging query to retrieve the information of one or more credentials.</p>
      * 
      * @param request ListCredentialsRequest
      * @return ListCredentialsResponse
@@ -13929,15 +13937,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The following two methods are supported for viewing returned data:</p>
+     * <p>You can view the returned data in one of the following ways:</p>
      * <ul>
-     * <li>Method 1: When querying the first page, you only need to set MaxResults to limit the number of entries returned. The NextToken in the response serves as the credential for querying subsequent pages. When querying subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response as the query credential, and set MaxResults to limit the number of entries returned. If there are no more pages, NextToken is no longer returned. The maximum value of MaxResults is 100.</li>
-     * <li>Method 2: Set the number of entries returned per page using PageSize, and set the page number using PageNumber.
-     * You can only choose one of the above two methods. When a large number of entries are returned, Method 1 is recommended. If the MaxResults or NextToken parameter is set, the PageSize and PageNumber request parameters become invalid.</li>
+     * <li>Method 1: When performing a paged query for the first page, specify only MaxResults to limit the number of entries to return. The NextToken value in the response is used as the token to query the next page. When querying subsequent pages, set the NextToken parameter to the value obtained from the previous response and specify MaxResults to limit the number of entries to return. If no more pages exist, NextToken is not returned. The maximum value of MaxResults is 100.</li>
+     * <li>Method 2: Use PageSize to specify the number of entries to return per page, and use PageNumber to specify the page number.
+     * You can use only one of the preceding methods. Method 1 is recommended when a large number of entries are returned. If you specify MaxResults or NextToken, the PageSize and PageNumber request parameters become invalid.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Query the list of synchronization job details.</p>
+     * <p>Lists the details of synchronization tasks.</p>
      * 
      * @param request ListSynchronizationJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14013,15 +14021,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The following two methods are supported for viewing returned data:</p>
+     * <p>You can view the returned data in one of the following ways:</p>
      * <ul>
-     * <li>Method 1: When querying the first page, you only need to set MaxResults to limit the number of entries returned. The NextToken in the response serves as the credential for querying subsequent pages. When querying subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response as the query credential, and set MaxResults to limit the number of entries returned. If there are no more pages, NextToken is no longer returned. The maximum value of MaxResults is 100.</li>
-     * <li>Method 2: Set the number of entries returned per page using PageSize, and set the page number using PageNumber.
-     * You can only choose one of the above two methods. When a large number of entries are returned, Method 1 is recommended. If the MaxResults or NextToken parameter is set, the PageSize and PageNumber request parameters become invalid.</li>
+     * <li>Method 1: When performing a paged query for the first page, specify only MaxResults to limit the number of entries to return. The NextToken value in the response is used as the token to query the next page. When querying subsequent pages, set the NextToken parameter to the value obtained from the previous response and specify MaxResults to limit the number of entries to return. If no more pages exist, NextToken is not returned. The maximum value of MaxResults is 100.</li>
+     * <li>Method 2: Use PageSize to specify the number of entries to return per page, and use PageNumber to specify the page number.
+     * You can use only one of the preceding methods. Method 1 is recommended when a large number of entries are returned. If you specify MaxResults or NextToken, the PageSize and PageNumber request parameters become invalid.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Query the list of synchronization job details.</p>
+     * <p>Lists the details of synchronization tasks.</p>
      * 
      * @param request ListSynchronizationJobsRequest
      * @return ListSynchronizationJobsResponse
@@ -15611,7 +15619,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Runs a synchronization task. This operation creates a new synchronization task and immediately executes it.</p>
+     * <p>Runs a synchronization task. This creates a new synchronization task and immediately executes it.</p>
      * 
      * @param request RunSynchronizationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15624,12 +15632,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.fieldSelectionEnabled)) {
+            query.put("FieldSelectionEnabled", request.fieldSelectionEnabled);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.passwordInitialization)) {
             query.put("PasswordInitialization", request.passwordInitialization);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.selectedFieldNames)) {
+            query.put("SelectedFieldNames", request.selectedFieldNames);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.synchronizationScopeConfig)) {
@@ -15667,7 +15683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Runs a synchronization task. This operation creates a new synchronization task and immediately executes it.</p>
+     * <p>Runs a synchronization task. This creates a new synchronization task and immediately executes it.</p>
      * 
      * @param request RunSynchronizationJobRequest
      * @return RunSynchronizationJobResponse

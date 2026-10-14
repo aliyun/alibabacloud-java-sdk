@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSynchronizationJobsRequest extends TeaModel {
     /**
-     * <p>Synchronization job direction. Valid values:</p>
+     * <p>The direction of the synchronization task. Valid values:</p>
      * <ul>
      * <li><p>ingress: inbound</p>
      * </li>
@@ -20,7 +20,7 @@ public class ListSynchronizationJobsRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>Synchronization end time in Unix timestamp format, in milliseconds.</p>
+     * <p>The end time of the synchronization. The time is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1649830226000</p>
@@ -29,13 +29,13 @@ public class ListSynchronizationJobsRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>Filter parameters</p>
+     * <p>The filter parameters.</p>
      */
     @NameInMap("Filters")
     public java.util.List<ListSynchronizationJobsRequestFilters> filters;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class ListSynchronizationJobsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Number of rows per page for paginated queries. Maximum value: 100.</p>
+     * <p>The number of entries per page for a paged query. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -54,7 +54,7 @@ public class ListSynchronizationJobsRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>Token for querying the next page. This parameter is not returned when there are no more pages.</p>
+     * <p>The token used to query the next page. If no more pages exist, this parameter is not returned.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>
@@ -63,7 +63,7 @@ public class ListSynchronizationJobsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Page number, starting from 1.</p>
+     * <p>The page number. Pages start from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -72,7 +72,7 @@ public class ListSynchronizationJobsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>Page size. Maximum value: 100.</p>
+     * <p>The number of entries per page. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -81,7 +81,7 @@ public class ListSynchronizationJobsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Synchronization start time in Unix timestamp format, in milliseconds.</p>
+     * <p>The start time of the synchronization. The time is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1649830226000</p>
@@ -90,7 +90,7 @@ public class ListSynchronizationJobsRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>Synchronization job status. Valid values:</p>
+     * <p>The status of the synchronization task. Valid values:</p>
      * <ul>
      * <li><p>pending: initial state</p>
      * </li>
@@ -98,9 +98,9 @@ public class ListSynchronizationJobsRequest extends TeaModel {
      * </li>
      * <li><p>failed: failed</p>
      * </li>
-     * <li><p>partial_success: partially succeeded</p>
+     * <li><p>partial_success: partially successful</p>
      * </li>
-     * <li><p>success: succeeded</p>
+     * <li><p>success: successful</p>
      * </li>
      * </ul>
      * 
@@ -111,7 +111,7 @@ public class ListSynchronizationJobsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>List of synchronization target IDs. [idp_111XXXX,idp_222XXXX]</p>
+     * <p>The list of synchronization target IDs. Example: [idp_111XXXX,idp_222XXXX].</p>
      * 
      * <strong>example:</strong>
      * <p>target_001</p>
@@ -120,7 +120,7 @@ public class ListSynchronizationJobsRequest extends TeaModel {
     public java.util.List<String> targetIds;
 
     /**
-     * <p>Synchronization target type. Valid values:</p>
+     * <p>The type of the synchronization target. Valid values:</p>
      * <ul>
      * <li><p>identity_provider: identity provider</p>
      * </li>
@@ -237,7 +237,7 @@ public class ListSynchronizationJobsRequest extends TeaModel {
 
     public static class ListSynchronizationJobsRequestFilters extends TeaModel {
         /**
-         * <p>Dynamic parameter name</p>
+         * <p>The name of the dynamic parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>qps</p>
@@ -246,7 +246,7 @@ public class ListSynchronizationJobsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>Dynamic parameter values</p>
+         * <p>The value of the dynamic parameter.</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;

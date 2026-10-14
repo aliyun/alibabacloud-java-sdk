@@ -14,6 +14,12 @@ public class RunSynchronizationJobRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>Specifies whether field selection is enabled.</p>
+     */
+    @NameInMap("FieldSelectionEnabled")
+    public Boolean fieldSelectionEnabled;
+
+    /**
      * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -33,13 +39,19 @@ public class RunSynchronizationJobRequest extends TeaModel {
     public Boolean passwordInitialization;
 
     /**
+     * <p>The selected fields.</p>
+     */
+    @NameInMap("SelectedFieldNames")
+    public java.util.List<String> selectedFieldNames;
+
+    /**
      * <p>The synchronization scope configuration.</p>
      */
     @NameInMap("SynchronizationScopeConfig")
     public RunSynchronizationJobRequestSynchronizationScopeConfig synchronizationScopeConfig;
 
     /**
-     * <p>The synchronization target ID.</p>
+     * <p>The ID of the synchronization target.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,10 +61,12 @@ public class RunSynchronizationJobRequest extends TeaModel {
     public String targetId;
 
     /**
-     * <p>The synchronization target type. Valid values:</p>
+     * <p>The type of the synchronization target. Valid values:</p>
      * <ul>
-     * <li>identity_provider: identity provider</li>
-     * <li>application: application</li>
+     * <li><p>identity_provider: identity provider</p>
+     * </li>
+     * <li><p>application: application</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -81,6 +95,14 @@ public class RunSynchronizationJobRequest extends TeaModel {
         return this.description;
     }
 
+    public RunSynchronizationJobRequest setFieldSelectionEnabled(Boolean fieldSelectionEnabled) {
+        this.fieldSelectionEnabled = fieldSelectionEnabled;
+        return this;
+    }
+    public Boolean getFieldSelectionEnabled() {
+        return this.fieldSelectionEnabled;
+    }
+
     public RunSynchronizationJobRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -95,6 +117,14 @@ public class RunSynchronizationJobRequest extends TeaModel {
     }
     public Boolean getPasswordInitialization() {
         return this.passwordInitialization;
+    }
+
+    public RunSynchronizationJobRequest setSelectedFieldNames(java.util.List<String> selectedFieldNames) {
+        this.selectedFieldNames = selectedFieldNames;
+        return this;
+    }
+    public java.util.List<String> getSelectedFieldNames() {
+        return this.selectedFieldNames;
     }
 
     public RunSynchronizationJobRequest setSynchronizationScopeConfig(RunSynchronizationJobRequestSynchronizationScopeConfig synchronizationScopeConfig) {

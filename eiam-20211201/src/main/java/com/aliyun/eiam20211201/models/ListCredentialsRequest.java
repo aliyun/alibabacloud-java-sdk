@@ -4,6 +4,9 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListCredentialsRequest extends TeaModel {
+    /**
+     * <p>The external unique identifiers of the credentials.</p>
+     */
     @NameInMap("CredentialExternalIds")
     public java.util.List<String> credentialExternalIds;
 
@@ -13,9 +16,15 @@ public class ListCredentialsRequest extends TeaModel {
     @NameInMap("CredentialIds")
     public java.util.List<String> credentialIds;
 
+    /**
+     * <p>The list of credential sharing scopes.</p>
+     */
     @NameInMap("CredentialSharingScopes")
     public java.util.List<String> credentialSharingScopes;
 
+    /**
+     * <p>The list of credential types.</p>
+     */
     @NameInMap("CredentialTypes")
     public java.util.List<String> credentialTypes;
 
@@ -36,10 +45,10 @@ public class ListCredentialsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of entries per page.</p>
+     * <p>The maximum number of entries to return on each page.</p>
      * <ul>
-     * <li>Default value: 20.</li>
-     * <li>Maximum value: 100.</li>
+     * <li>If you do not specify this parameter, the default value is 20.</li>
+     * <li>The maximum value is 100.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -144,7 +153,7 @@ public class ListCredentialsRequest extends TeaModel {
         /**
          * <p>The name of the filter field. Valid values:</p>
          * <ul>
-         * <li>CredentialIdentifier: the credential identifier.</li>
+         * <li>CredentialIdentifier: credential identifier</li>
          * </ul>
          * 
          * <strong>example:</strong>

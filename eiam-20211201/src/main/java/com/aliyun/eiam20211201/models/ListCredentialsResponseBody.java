@@ -11,7 +11,7 @@ public class ListCredentialsResponseBody extends TeaModel {
     public java.util.List<ListCredentialsResponseBodyCredentials> credentials;
 
     /**
-     * <p>The maximum number of entries per page for paging.</p>
+     * <p>The maximum number of rows per page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListCredentialsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token returned in this call.</p>
+     * <p>The pagination token returned by this call.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -38,7 +38,7 @@ public class ListCredentialsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of items.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -93,7 +93,7 @@ public class ListCredentialsResponseBody extends TeaModel {
 
     public static class ListCredentialsResponseBodyCredentialsCredentialContentOAuthClientContent extends TeaModel {
         /**
-         * <p>The client_id of the OAuth protocol.</p>
+         * <p>The client ID of the OAuth protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>dmvncmxersdxxxxxx</p>
@@ -118,7 +118,7 @@ public class ListCredentialsResponseBody extends TeaModel {
 
     public static class ListCredentialsResponseBodyCredentialsCredentialContent extends TeaModel {
         /**
-         * <p>The credential content of the OAuth client authentication credential type.</p>
+         * <p>The credential content for the OAuth client authentication credential type.</p>
          */
         @NameInMap("OAuthClientContent")
         public ListCredentialsResponseBodyCredentialsCredentialContentOAuthClientContent OAuthClientContent;
@@ -140,7 +140,7 @@ public class ListCredentialsResponseBody extends TeaModel {
 
     public static class ListCredentialsResponseBodyCredentials extends TeaModel {
         /**
-         * <p>The creation time, in UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830225000</p>
@@ -167,6 +167,12 @@ public class ListCredentialsResponseBody extends TeaModel {
         @NameInMap("CredentialCreationType")
         public String credentialCreationType;
 
+        /**
+         * <p>The external unique identifiers of the credentials.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23528e9957304f57b98112c72788b5xxxxx</p>
+         */
         @NameInMap("CredentialExternalId")
         public String credentialExternalId;
 
@@ -198,10 +204,10 @@ public class ListCredentialsResponseBody extends TeaModel {
         public String credentialName;
 
         /**
-         * <p>The scenarios label of the credential. Valid values:</p>
+         * <p>The usage scenario label of the credential. Valid values:</p>
          * <ul>
-         * <li>llm: large language model.</li>
-         * <li>saas: third-party SaaS service.</li>
+         * <li>llm: Large language model.</li>
+         * <li>saas: Third-party SaaS service.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,11 +216,21 @@ public class ListCredentialsResponseBody extends TeaModel {
         @NameInMap("CredentialScenarioLabel")
         public String credentialScenarioLabel;
 
+        /**
+         * <p>The credential sharing scope. Valid values:</p>
+         * <ul>
+         * <li>common: common</li>
+         * <li>user_exclusive: account-exclusive</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>common</p>
+         */
         @NameInMap("CredentialSharingScope")
         public String credentialSharingScope;
 
         /**
-         * <p>The subject ID to which the credential belongs.</p>
+         * <p>The subject ID of the credential.</p>
          * 
          * <strong>example:</strong>
          * <p>apt_werthgfdsasffxxxxx</p>
@@ -223,9 +239,9 @@ public class ListCredentialsResponseBody extends TeaModel {
         public String credentialSubjectId;
 
         /**
-         * <p>The subject type to which the credential belongs. Valid values:</p>
+         * <p>The subject type of the credential. Valid values:</p>
          * <ul>
-         * <li>authentication_token_provider: authentication token provider.</li>
+         * <li>authentication_token_provider: Authentication token provider.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -256,6 +272,12 @@ public class ListCredentialsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The exclusive user ID of the credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
+         */
         @NameInMap("ExclusiveUserId")
         public String exclusiveUserId;
 
@@ -282,7 +304,7 @@ public class ListCredentialsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The update time, in UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830227000</p>
