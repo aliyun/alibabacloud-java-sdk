@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetKeywordLibRequest extends TeaModel {
     /**
-     * <p>The keyword library ID.</p>
+     * <p>The ID of the keyword library.</p>
      * 
      * <strong>example:</strong>
      * <p>customxx_xxx</p>
@@ -23,9 +23,18 @@ public class GetKeywordLibRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The library code.</p>
+     * <p>The service code. This parameter is required when you query the preprocessing configurations (PreprocessList) of the library.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ugc_moderation_byllm_pro</p>
+     */
+    @NameInMap("ServiceCode")
+    public String serviceCode;
+
+    /**
+     * <p>The code of the keyword library.</p>
      * <ul>
-     * <li>desensitize: masking library</li>
+     * <li>desensitize: Desensitization keyword library.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,6 +62,14 @@ public class GetKeywordLibRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public GetKeywordLibRequest setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+        return this;
+    }
+    public String getServiceCode() {
+        return this.serviceCode;
     }
 
     public GetKeywordLibRequest setTenantCode(String tenantCode) {

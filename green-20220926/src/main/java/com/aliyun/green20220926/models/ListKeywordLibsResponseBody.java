@@ -20,7 +20,7 @@ public class ListKeywordLibsResponseBody extends TeaModel {
     public java.util.List<ListKeywordLibsResponseBodyData> data;
 
     /**
-     * <p>The description of the error code.</p>
+     * <p>The detailed description of the error code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -29,7 +29,7 @@ public class ListKeywordLibsResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>The request ID assigned by the backend, which uniquely identifies the request. You can use this ID to troubleshoot issues.</p>
+     * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -111,7 +111,7 @@ public class ListKeywordLibsResponseBody extends TeaModel {
         public String keywordCount;
 
         /**
-         * <p>The library ID.</p>
+         * <p>The ID of the library.</p>
          * 
          * <strong>example:</strong>
          * <p>custom_xxxxx</p>
@@ -120,16 +120,22 @@ public class ListKeywordLibsResponseBody extends TeaModel {
         public String libId;
 
         /**
-         * <p>The library name.</p>
+         * <p>The name of the library.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>Test</p>
          */
         @NameInMap("LibName")
         public String libName;
 
         /**
-         * <p>The service codes.</p>
+         * <p>The preprocessing list of the library. If ServiceCode is not specified or not configured, an empty array is returned.</p>
+         */
+        @NameInMap("PreprocessList")
+        public java.util.List<String> preprocessList;
+
+        /**
+         * <p>The associated services.</p>
          * 
          * <strong>example:</strong>
          * <p>service1,service2</p>
@@ -138,7 +144,7 @@ public class ListKeywordLibsResponseBody extends TeaModel {
         public String serviceCodes;
 
         /**
-         * <p>UID。</p>
+         * <p>The UID.</p>
          * 
          * <strong>example:</strong>
          * <p>19964*****086772</p>
@@ -181,6 +187,14 @@ public class ListKeywordLibsResponseBody extends TeaModel {
         }
         public String getLibName() {
             return this.libName;
+        }
+
+        public ListKeywordLibsResponseBodyData setPreprocessList(java.util.List<String> preprocessList) {
+            this.preprocessList = preprocessList;
+            return this;
+        }
+        public java.util.List<String> getPreprocessList() {
+            return this.preprocessList;
         }
 
         public ListKeywordLibsResponseBodyData setServiceCodes(String serviceCodes) {

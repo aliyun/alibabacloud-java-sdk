@@ -3601,7 +3601,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves keyword library information.</p>
+     * <p>Retrieves the information about a keyword library.</p>
      * 
      * @param request GetKeywordLibRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3621,6 +3621,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.libId)) {
             body.put("LibId", request.libId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceCode)) {
+            body.put("ServiceCode", request.serviceCode);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3643,7 +3647,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves keyword library information.</p>
+     * <p>Retrieves the information about a keyword library.</p>
      * 
      * @param request GetKeywordLibRequest
      * @return GetKeywordLibResponse
@@ -5445,7 +5449,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of keyword libraries.</p>
+     * <p>Queries a list of keyword libraries.</p>
      * 
      * @param request ListKeywordLibsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5456,6 +5460,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceCode)) {
+            query.put("ServiceCode", request.serviceCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tenantCode)) {
@@ -5481,7 +5489,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of keyword libraries.</p>
+     * <p>Queries a list of keyword libraries.</p>
      * 
      * @param request ListKeywordLibsRequest
      * @return ListKeywordLibsResponse
@@ -7469,6 +7477,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.keywordHitLibs)) {
             body.put("KeywordHitLibs", request.keywordHitLibs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keywordLibProcessConf)) {
+            body.put("KeywordLibProcessConf", request.keywordLibProcessConf);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.manualMachineConfig)) {

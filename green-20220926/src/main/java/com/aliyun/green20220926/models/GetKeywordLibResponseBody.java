@@ -20,7 +20,7 @@ public class GetKeywordLibResponseBody extends TeaModel {
     public GetKeywordLibResponseBodyData data;
 
     /**
-     * <p>The description of the error code.</p>
+     * <p>The detailed description of the error code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -29,7 +29,7 @@ public class GetKeywordLibResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>The request ID assigned by the backend, which uniquely identifies the request. You can use this ID to troubleshoot issues.</p>
+     * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -111,7 +111,7 @@ public class GetKeywordLibResponseBody extends TeaModel {
         public String keywordCount;
 
         /**
-         * <p>The keyword library ID.</p>
+         * <p>The ID of the keyword library.</p>
          * 
          * <strong>example:</strong>
          * <p>customxx_xxx</p>
@@ -120,16 +120,22 @@ public class GetKeywordLibResponseBody extends TeaModel {
         public String libId;
 
         /**
-         * <p>The library name.</p>
+         * <p>The name of the keyword library.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestLibrary.</p>
+         * <p>Test keyword library</p>
          */
         @NameInMap("LibName")
         public String libName;
 
         /**
-         * <p>The Alibaba Cloud account ID.</p>
+         * <p>The preprocessing list of the keyword library. If ServiceCode is not specified or no preprocessing is configured, an empty array is returned.</p>
+         */
+        @NameInMap("PreprocessList")
+        public java.util.List<String> preprocessList;
+
+        /**
+         * <p>The ID of the Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>1825457112123838</p>
@@ -172,6 +178,14 @@ public class GetKeywordLibResponseBody extends TeaModel {
         }
         public String getLibName() {
             return this.libName;
+        }
+
+        public GetKeywordLibResponseBodyData setPreprocessList(java.util.List<String> preprocessList) {
+            this.preprocessList = preprocessList;
+            return this;
+        }
+        public java.util.List<String> getPreprocessList() {
+            return this.preprocessList;
         }
 
         public GetKeywordLibResponseBodyData setUid(String uid) {

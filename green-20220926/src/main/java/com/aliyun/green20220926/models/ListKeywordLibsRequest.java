@@ -14,9 +14,18 @@ public class ListKeywordLibsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The service code. If specified, the PreprocessList for each library under this service dimension is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ugc_moderation_byllm_pro</p>
+     */
+    @NameInMap("ServiceCode")
+    public String serviceCode;
+
+    /**
      * <p>The library code.</p>
      * <ul>
-     * <li>desensitize: desensitization library.</li>
+     * <li>desensitize: Desensitization library</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,6 +45,14 @@ public class ListKeywordLibsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListKeywordLibsRequest setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+        return this;
+    }
+    public String getServiceCode() {
+        return this.serviceCode;
     }
 
     public ListKeywordLibsRequest setTenantCode(String tenantCode) {
