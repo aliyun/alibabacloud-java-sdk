@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWorkspaceQueuesResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of records returned per request.</p>
+     * <p>The maximum number of records to return per request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -93,7 +93,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
 
     public static class ListWorkspaceQueuesResponseBodyQueuesAllowActions extends TeaModel {
         /**
-         * <p>The action ARN.</p>
+         * <p>The ARN of the action.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:emr::workspaceId:action/create_queue</p>
@@ -111,7 +111,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         public String actionName;
 
         /**
-         * <p>The list of action dependencies.</p>
+         * <p>The list of dependencies for the action.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;view&quot;]</p>
@@ -120,7 +120,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         public java.util.List<String> dependencies;
 
         /**
-         * <p>The action description.</p>
+         * <p>The description of the action.</p>
          * 
          * <strong>example:</strong>
          * <p>Directory traversal and file browsing</p>
@@ -132,7 +132,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
          * <p>The display name of the permission.</p>
          * 
          * <strong>example:</strong>
-         * <p>File directory traversal, file browsing</p>
+         * <p>Directory traversal and file browsing</p>
          */
         @NameInMap("displayName")
         public String displayName;
@@ -186,13 +186,13 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
 
     public static class ListWorkspaceQueuesResponseBodyQueues extends TeaModel {
         /**
-         * <p>The list of allowed actions on the queue.</p>
+         * <p>The list of allowed operations for the queue.</p>
          */
         @NameInMap("allowActions")
         public java.util.List<ListWorkspaceQueuesResponseBodyQueuesAllowActions> allowActions;
 
         /**
-         * <p>The time when the workspace was created.</p>
+         * <p>The time when the workspace was created. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1684115879955</p>
@@ -201,7 +201,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The UID of the user who created the queue.</p>
+         * <p>The UID of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>237109</p>
@@ -219,20 +219,29 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The list of queue environment types.</p>
+         * <p>The list of environment types for the queue.</p>
          */
         @NameInMap("environments")
         public java.util.List<String> environments;
 
+        /**
+         * <p>The number of GPU machines.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("gpuMachineNum")
         public Integer gpuMachineNum;
 
         /**
-         * <p>The list of GPU models.</p>
+         * <p>The list of GPU instance types.</p>
          */
         @NameInMap("gpuSpec")
         public java.util.List<String> gpuSpec;
 
+        /**
+         * <p>The ID of the resource instance associated with the queue.</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
@@ -255,10 +264,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         public String minResource;
 
         /**
-         * <p>The billing type. Valid values:</p>
+         * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>PayAsYouGo: pay-as-you-go.</li>
-         * <li>Pre: subscription.</li>
+         * <li>PayAsYouGo: pay-as-you-go</li>
+         * <li>Pre: subscription</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -268,7 +277,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         public String paymentType;
 
         /**
-         * <p>Indicates whether resource prefetch is enabled.</p>
+         * <p>Specifies whether resource prefetching is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("preheat")
         public Boolean preheat;
@@ -283,7 +295,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         public String properties;
 
         /**
-         * <p>The queue category, CPU or GPU.</p>
+         * <p>The queue category, such as CPU or GPU.</p>
          * 
          * <strong>example:</strong>
          * <p>CPU</p>

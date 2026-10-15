@@ -23,16 +23,19 @@ public class ListJobRunsShrinkRequest extends TeaModel {
     public String creator;
 
     /**
-     * <p>The end time range of the job.</p>
+     * <p>The time range for the end time of the job run.</p>
      */
     @NameInMap("endTime")
     public String endTimeShrink;
 
+    /**
+     * <p>Specifies whether to aggregate and return statistical results by job run state.</p>
+     */
     @NameInMap("groupByState")
     public Boolean groupByState;
 
     /**
-     * <p>Specifies whether the job is a workflow job.</p>
+     * <p>Specifies whether the job run is a workflow job.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -41,7 +44,7 @@ public class ListJobRunsShrinkRequest extends TeaModel {
     public String isWorkflow;
 
     /**
-     * <p>The job ID of the streaming job deployment.</p>
+     * <p>The ID of the streaming job deployment.</p>
      * 
      * <strong>example:</strong>
      * <p>jd-b6d003f1930f****</p>
@@ -50,7 +53,7 @@ public class ListJobRunsShrinkRequest extends TeaModel {
     public String jobRunDeploymentId;
 
     /**
-     * <p>The job ID.</p>
+     * <p>The ID of the job run.</p>
      * 
      * <strong>example:</strong>
      * <p>j-xxx</p>
@@ -59,7 +62,7 @@ public class ListJobRunsShrinkRequest extends TeaModel {
     public String jobRunId;
 
     /**
-     * <p>The maximum number of records to retrieve in a single request. Maximum value: 100.</p>
+     * <p>The maximum number of entries to return in a single call. The maximum value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -68,7 +71,7 @@ public class ListJobRunsShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The minimum execution duration of the job, in milliseconds.</p>
+     * <p>The minimum execution duration of the job run, in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>60000</p>
@@ -77,7 +80,7 @@ public class ListJobRunsShrinkRequest extends TeaModel {
     public Long minDuration;
 
     /**
-     * <p>The job name.</p>
+     * <p>The name of the job.</p>
      * 
      * <strong>example:</strong>
      * <p>emr-spark-demo-job</p>
@@ -86,7 +89,7 @@ public class ListJobRunsShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The pagination token that marks the position from which to start reading.</p>
+     * <p>The pagination token that specifies the starting position for the query.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
@@ -104,7 +107,7 @@ public class ListJobRunsShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the resource queue on which the Spark job runs.</p>
+     * <p>The name of the resource queue in which the Spark job runs.</p>
      * 
      * <strong>example:</strong>
      * <p>dev_queue</p>
@@ -122,13 +125,13 @@ public class ListJobRunsShrinkRequest extends TeaModel {
     public String runtimeConfigs;
 
     /**
-     * <p>The start time range of the job.</p>
+     * <p>The time range for the start time of the job run.</p>
      */
     @NameInMap("startTime")
     public String startTimeShrink;
 
     /**
-     * <p>The job states.</p>
+     * <p>The states of the job runs.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;Running&quot;,&quot;Submitted&quot;]</p>

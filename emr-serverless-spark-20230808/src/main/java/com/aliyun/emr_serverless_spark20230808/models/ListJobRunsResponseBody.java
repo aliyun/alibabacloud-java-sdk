@@ -4,17 +4,20 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class ListJobRunsResponseBody extends TeaModel {
+    /**
+     * <p>The statistical results aggregated by job state.</p>
+     */
     @NameInMap("aggregations")
     public java.util.Map<String, String> aggregations;
 
     /**
-     * <p>The list of Spark jobs.</p>
+     * <p>The list of Spark job runs.</p>
      */
     @NameInMap("jobRuns")
     public java.util.List<ListJobRunsResponseBodyJobRuns> jobRuns;
 
     /**
-     * <p>The maximum number of records returned in this request.</p>
+     * <p>The maximum number of records returned for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +26,7 @@ public class ListJobRunsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The position from which the data was read.</p>
+     * <p>The position of the data read.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +44,7 @@ public class ListJobRunsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records that match the request conditions.</p>
+     * <p>The total number of records that meet the request conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -168,7 +171,7 @@ public class ListJobRunsResponseBody extends TeaModel {
 
     public static class ListJobRunsResponseBodyJobRuns extends TeaModel {
         /**
-         * <p>The job code type. Valid values:</p>
+         * <p>The code type of the job. Valid values:</p>
          * <p>SQL</p>
          * <p>JAR</p>
          * <p>PYTHON.</p>
@@ -180,7 +183,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public String codeType;
 
         /**
-         * <p>The Spark advanced configurations. This parameter is not returned by the List operation.</p>
+         * <p>The advanced Spark configurations. This parameter is not returned by the List operation.</p>
          */
         @NameInMap("configurationOverrides")
         public ListJobRunsResponseBodyJobRunsConfigurationOverrides configurationOverrides;
@@ -195,7 +198,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>The number of compute units (CUs) consumed during the job run cycle. This value is an estimate. The actual value is subject to the bill.</p>
+         * <p>The number of compute units (CUs) consumed during the job run. This value is an estimate and the final value is subject to the bill.</p>
          * 
          * <strong>example:</strong>
          * <p>2.059</p>
@@ -204,7 +207,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public Double cuHours;
 
         /**
-         * <p>The version of the Spark DPI engine used to run the job.</p>
+         * <p>The Spark DPI engine version of the running job.</p>
          * 
          * <strong>example:</strong>
          * <p>esr-3.0.0 (Spark 3.4.3, Scala 2.12)</p>
@@ -213,7 +216,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public String displayReleaseVersion;
 
         /**
-         * <p>The job end time.</p>
+         * <p>The time when the job ended. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1684119314000</p>
@@ -222,7 +225,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The execution timeout period, in seconds.</p>
+         * <p>The execution timeout period.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -231,7 +234,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public Integer executionTimeoutSeconds;
 
         /**
-         * <p>Indicates whether the Fusion engine acceleration is enabled.</p>
+         * <p>Specifies whether Fusion engine acceleration is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -240,13 +243,13 @@ public class ListJobRunsResponseBody extends TeaModel {
         public Boolean fusion;
 
         /**
-         * <p>The Spark Driver information. This parameter is not returned by the List operation.</p>
+         * <p>The information about the Spark driver. This parameter is not returned by the List operation.</p>
          */
         @NameInMap("jobDriver")
         public JobDriver jobDriver;
 
         /**
-         * <p>The job ID.</p>
+         * <p>The ID of the job run.</p>
          * 
          * <strong>example:</strong>
          * <p>jr-231231</p>
@@ -255,13 +258,13 @@ public class ListJobRunsResponseBody extends TeaModel {
         public String jobRunId;
 
         /**
-         * <p>The path of the run log.</p>
+         * <p>The path to the execution log.</p>
          */
         @NameInMap("log")
         public RunLog log;
 
         /**
-         * <p>The total amount of allocated memory multiplied by the number of seconds the job has been running.</p>
+         * <p>The total amount of memory allocated to the job multiplied by the number of seconds the job has run.</p>
          * 
          * <strong>example:</strong>
          * <p>33030784</p>
@@ -270,7 +273,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public Long mbSeconds;
 
         /**
-         * <p>The job name.</p>
+         * <p>The name of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>jobName</p>
@@ -279,6 +282,8 @@ public class ListJobRunsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The priority of the Spark job.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -286,7 +291,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public String priority;
 
         /**
-         * <p>The version of the Spark DPI engine used to run the job.</p>
+         * <p>The Spark DPI engine version of the running job.</p>
          * 
          * <strong>example:</strong>
          * <p>esr-3.0.0 (Spark 3.4.3, Scala 2.12, Native Runtime)</p>
@@ -295,6 +300,8 @@ public class ListJobRunsResponseBody extends TeaModel {
         public String releaseVersion;
 
         /**
+         * <p>The name of the resource queue in which the Spark job runs.</p>
+         * 
          * <strong>example:</strong>
          * <p>dev_queue</p>
          */
@@ -302,7 +309,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public String resourceQueueId;
 
         /**
-         * <p>The job states.</p>
+         * <p>The states of the job runs.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -317,7 +324,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public ListJobRunsResponseBodyJobRunsStateChangeReason stateChangeReason;
 
         /**
-         * <p>The job submission time.</p>
+         * <p>The time when the job was submitted. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1684119314000</p>
@@ -332,7 +339,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public java.util.List<Tag> tags;
 
         /**
-         * <p>The total number of allocated vcores multiplied by the number of seconds the job has been running.</p>
+         * <p>The total number of vcores allocated to the job multiplied by the number of seconds the job has run.</p>
          * 
          * <strong>example:</strong>
          * <p>8236</p>
@@ -341,7 +348,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public Long vcoreSeconds;
 
         /**
-         * <p>The job Web UI.</p>
+         * <p>The web UI of the job.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://spark-ui">http://spark-ui</a></p>
@@ -350,7 +357,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public String webUI;
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The ID of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>w-d2d82aa09155****</p>

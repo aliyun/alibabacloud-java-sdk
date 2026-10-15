@@ -42,7 +42,7 @@ public class GetJobRunResponseBody extends TeaModel {
 
     public static class GetJobRunResponseBodyJobRunConfigurationOverrides extends TeaModel {
         /**
-         * <p>The list of configurations.</p>
+         * <p>The configuration list.</p>
          */
         @NameInMap("configurations")
         public java.util.List<Configuration> configurations;
@@ -104,9 +104,121 @@ public class GetJobRunResponseBody extends TeaModel {
 
     }
 
+    public static class GetJobRunResponseBodyJobRunTokenDetails extends TeaModel {
+        /**
+         * <p>Specifies whether thinking mode is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("enableThinking")
+        public String enableThinking;
+
+        /**
+         * <p>The input modality.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
+        @NameInMap("inputModality")
+        public String inputModality;
+
+        /**
+         * <p>The model name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-plus</p>
+         */
+        @NameInMap("modelName")
+        public String modelName;
+
+        /**
+         * <p>The input token range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0&lt;Token≤256K</p>
+         */
+        @NameInMap("tokenRange")
+        public String tokenRange;
+
+        /**
+         * <p>The token source. Valid values: input and output.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>input</p>
+         */
+        @NameInMap("tokenSource")
+        public String tokenSource;
+
+        /**
+         * <p>The number of tokens consumed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
+        @NameInMap("tokenUsed")
+        public Long tokenUsed;
+
+        public static GetJobRunResponseBodyJobRunTokenDetails build(java.util.Map<String, ?> map) throws Exception {
+            GetJobRunResponseBodyJobRunTokenDetails self = new GetJobRunResponseBodyJobRunTokenDetails();
+            return TeaModel.build(map, self);
+        }
+
+        public GetJobRunResponseBodyJobRunTokenDetails setEnableThinking(String enableThinking) {
+            this.enableThinking = enableThinking;
+            return this;
+        }
+        public String getEnableThinking() {
+            return this.enableThinking;
+        }
+
+        public GetJobRunResponseBodyJobRunTokenDetails setInputModality(String inputModality) {
+            this.inputModality = inputModality;
+            return this;
+        }
+        public String getInputModality() {
+            return this.inputModality;
+        }
+
+        public GetJobRunResponseBodyJobRunTokenDetails setModelName(String modelName) {
+            this.modelName = modelName;
+            return this;
+        }
+        public String getModelName() {
+            return this.modelName;
+        }
+
+        public GetJobRunResponseBodyJobRunTokenDetails setTokenRange(String tokenRange) {
+            this.tokenRange = tokenRange;
+            return this;
+        }
+        public String getTokenRange() {
+            return this.tokenRange;
+        }
+
+        public GetJobRunResponseBodyJobRunTokenDetails setTokenSource(String tokenSource) {
+            this.tokenSource = tokenSource;
+            return this;
+        }
+        public String getTokenSource() {
+            return this.tokenSource;
+        }
+
+        public GetJobRunResponseBodyJobRunTokenDetails setTokenUsed(Long tokenUsed) {
+            this.tokenUsed = tokenUsed;
+            return this;
+        }
+        public Long getTokenUsed() {
+            return this.tokenUsed;
+        }
+
+    }
+
     public static class GetJobRunResponseBodyJobRun extends TeaModel {
         /**
-         * <p>The code type of the job. Valid values:</p>
+         * <p>The job code type. Valid values:</p>
          * <ul>
          * <li><p>SQL</p>
          * </li>
@@ -138,7 +250,7 @@ public class GetJobRunResponseBody extends TeaModel {
         public String displayReleaseVersion;
 
         /**
-         * <p>The time when the job ended.</p>
+         * <p>The job end time. The value is a Unix timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1684122914000</p>
@@ -156,7 +268,7 @@ public class GetJobRunResponseBody extends TeaModel {
         public String environmentId;
 
         /**
-         * <p>The execution timeout period, in seconds.</p>
+         * <p>The execution timeout period.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -165,7 +277,7 @@ public class GetJobRunResponseBody extends TeaModel {
         public Integer executionTimeoutSeconds;
 
         /**
-         * <p>Indicates whether the Fusion engine acceleration is enabled.</p>
+         * <p>Specifies whether the Fusion engine acceleration is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -195,7 +307,7 @@ public class GetJobRunResponseBody extends TeaModel {
         public RunLog log;
 
         /**
-         * <p>The job run name.</p>
+         * <p>The job name.</p>
          * 
          * <strong>example:</strong>
          * <p>jobName</p>
@@ -204,7 +316,7 @@ public class GetJobRunResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The download URL of the NOTEBOOK file. This parameter is returned only when the job type is NOTEBOOK.</p>
+         * <p>The download URL of the NOTEBOOK file. This parameter is returned only if the job type is NOTEBOOK.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://workflow-ide-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/spark-notebook-output/w-xxxxxxxxx/xxxxxxx">http://workflow-ide-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/spark-notebook-output/w-xxxxxxxxx/xxxxxxx</a></p>
@@ -222,7 +334,7 @@ public class GetJobRunResponseBody extends TeaModel {
         public String priority;
 
         /**
-         * <p>The Spark DPI engine version used to run the job.</p>
+         * <p>The Spark DPI engine version used to run the node.</p>
          * 
          * <strong>example:</strong>
          * <p>esr-3.3.1</p>
@@ -249,7 +361,7 @@ public class GetJobRunResponseBody extends TeaModel {
         public String resourceQueueId;
 
         /**
-         * <p>The job run state.</p>
+         * <p>The job status.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -258,13 +370,13 @@ public class GetJobRunResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The reason for the state change.</p>
+         * <p>The reason for the status change.</p>
          */
         @NameInMap("stateChangeReason")
         public GetJobRunResponseBodyJobRunStateChangeReason stateChangeReason;
 
         /**
-         * <p>The time when the job was submitted.</p>
+         * <p>The job submission time. The value is a Unix timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1684119314000</p>
@@ -273,10 +385,16 @@ public class GetJobRunResponseBody extends TeaModel {
         public Long submitTime;
 
         /**
-         * <p>The list of tags.</p>
+         * <p>The tag list.</p>
          */
         @NameInMap("tags")
         public java.util.List<Tag> tags;
+
+        /**
+         * <p>The details of token consumption.</p>
+         */
+        @NameInMap("tokenDetails")
+        public java.util.List<GetJobRunResponseBodyJobRunTokenDetails> tokenDetails;
 
         /**
          * <p>The total number of tokens consumed.</p>
@@ -468,6 +586,14 @@ public class GetJobRunResponseBody extends TeaModel {
         }
         public java.util.List<Tag> getTags() {
             return this.tags;
+        }
+
+        public GetJobRunResponseBodyJobRun setTokenDetails(java.util.List<GetJobRunResponseBodyJobRunTokenDetails> tokenDetails) {
+            this.tokenDetails = tokenDetails;
+            return this;
+        }
+        public java.util.List<GetJobRunResponseBodyJobRunTokenDetails> getTokenDetails() {
+            return this.tokenDetails;
         }
 
         public GetJobRunResponseBodyJobRun setTotalTokens(Long totalTokens) {

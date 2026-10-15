@@ -24,7 +24,7 @@ public class Task extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The business ID of the folder.</p>
+     * <p>The category business ID.</p>
      */
     @NameInMap("categoryBizId")
     public String categoryBizId;
@@ -36,14 +36,17 @@ public class Task extends TeaModel {
     public String content;
 
     /**
-     * <p>The UID of the creator.</p>
+     * <p>The creator UID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>150978934701****</p>
      */
     @NameInMap("creator")
     public Long creator;
 
     /**
-     * <p>The credential for direct OSS upload.</p>
+     * <p>The direct upload information for OSS.</p>
      */
     @NameInMap("credential")
     public TaskCredential credential;
@@ -56,6 +59,9 @@ public class Task extends TeaModel {
 
     /**
      * <p>The default database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("defaultDatabase")
     public String defaultDatabase;
@@ -80,18 +86,21 @@ public class Task extends TeaModel {
 
     /**
      * <p>The environment ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>env-cpv569tlhtgndjl8****</p>
      */
     @NameInMap("environmentId")
     public String environmentId;
 
     /**
-     * <p>The IDs of extra Spark artifacts.</p>
+     * <p>The IDs of additional Spark resources.</p>
      */
     @NameInMap("extraArtifactIds")
     public java.util.List<String> extraArtifactIds;
 
     /**
-     * <p>The custom spark-submit configuration parameters.</p>
+     * <p>The custom Spark submit parameters.</p>
      */
     @NameInMap("extraSparkSubmitParams")
     public String extraSparkSubmitParams;
@@ -103,7 +112,10 @@ public class Task extends TeaModel {
     public java.util.List<String> files;
 
     /**
-     * <p>Indicates whether the fusion feature is enabled.</p>
+     * <p>The Fusion status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("fusion")
     public Boolean fusion;
@@ -111,6 +123,9 @@ public class Task extends TeaModel {
     /**
      * <p>The creation time.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-03-10T02:02:41.000+00:00</p>
      */
     @NameInMap("gmtCreated")
     public String gmtCreated;
@@ -118,25 +133,28 @@ public class Task extends TeaModel {
     /**
      * <p>The last modified time.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-03-10T02:02:41.000+00:00</p>
      */
     @NameInMap("gmtModified")
     public String gmtModified;
 
     /**
-     * <p>Indicates whether the task has been changed after the last commit.</p>
+     * <p>The change status after the last commit.</p>
      */
     @NameInMap("hasChanged")
     public Boolean hasChanged;
 
     /**
-     * <p>Indicates whether the task has been submitted.</p>
+     * <p>The commit status.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("hasCommited")
     public Boolean hasCommited;
 
     /**
-     * <p>Indicates whether the task is a streaming task.</p>
+     * <p>The streaming task status.</p>
      */
     @NameInMap("isStreaming")
     public Boolean isStreaming;
@@ -151,14 +169,17 @@ public class Task extends TeaModel {
     public String kernelId;
 
     /**
-     * <p>The ID of the resource queue used in the last run.</p>
+     * <p>The ID of the resource queue for the last run.</p>
      */
     @NameInMap("lastRunResourceQueueId")
     public String lastRunResourceQueueId;
 
     /**
-     * <p>The UID of the last modifier.</p>
+     * <p>The UID of the last updater.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>150978934701****</p>
      */
     @NameInMap("modifier")
     public Long modifier;
@@ -166,6 +187,9 @@ public class Task extends TeaModel {
     /**
      * <p>The task name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ods_transform_task</p>
      */
     @NameInMap("name")
     public String name;
@@ -174,7 +198,7 @@ public class Task extends TeaModel {
     public java.util.Map<String, String> params;
 
     /**
-     * <p>The PySpark dependency pyfiles for the Spark task.</p>
+     * <p>The PyFiles for PySpark dependencies.</p>
      */
     @NameInMap("pyFiles")
     public java.util.List<String> pyFiles;
@@ -203,6 +227,9 @@ public class Task extends TeaModel {
     @NameInMap("rayExtraParam")
     public String rayExtraParam;
 
+    /**
+     * <p>The Ray cluster head node parameters.</p>
+     */
     @NameInMap("rayHeadSpec")
     public TaskRayHeadSpec rayHeadSpec;
 
@@ -224,23 +251,38 @@ public class Task extends TeaModel {
     @NameInMap("rayTtlSecondsAfterFinished")
     public Long rayTtlSecondsAfterFinished;
 
+    /**
+     * <p>The database engine version of the Ray DPI engine.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>err-1.3.0 (Ray 2.55.1, Python 3.12)</p>
+     */
     @NameInMap("rayVersion")
     public String rayVersion;
 
     @NameInMap("rayVolumeIds")
     public java.util.List<String> rayVolumeIds;
 
+    /**
+     * <p>The list of worker node parameters for the Ray cluster. A maximum of 50 groups are supported.</p>
+     */
     @NameInMap("rayWorkerSpec")
     public java.util.List<TaskRayWorkerSpec> rayWorkerSpec;
 
     @NameInMap("rayWorkingDir")
     public String rayWorkingDir;
 
+    /**
+     * <p>The interactive job session ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234abcd-12ab-34cd-56ef-1234567890ab</p>
+     */
     @NameInMap("sessionClusterId")
     public String sessionClusterId;
 
     /**
-     * <p>The Spark arguments.</p>
+     * <p>The Spark parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -249,7 +291,7 @@ public class Task extends TeaModel {
     public String sparkArgs;
 
     /**
-     * <p>The list of Spark configurations.</p>
+     * <p>The Spark configuration list.</p>
      */
     @NameInMap("sparkConf")
     public java.util.List<SparkConf> sparkConf;
@@ -257,6 +299,9 @@ public class Task extends TeaModel {
     /**
      * <p>The number of Spark driver cores.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("sparkDriverCores")
     public Integer sparkDriverCores;
@@ -264,12 +309,15 @@ public class Task extends TeaModel {
     /**
      * <p>The Spark driver memory.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1073741824</p>
      */
     @NameInMap("sparkDriverMemory")
     public Long sparkDriverMemory;
 
     /**
-     * <p>The Spark main class entrypoint.</p>
+     * <p>The Spark entry point.</p>
      */
     @NameInMap("sparkEntrypoint")
     public String sparkEntrypoint;
@@ -277,6 +325,9 @@ public class Task extends TeaModel {
     /**
      * <p>The number of Spark executor cores.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("sparkExecutorCores")
     public Integer sparkExecutorCores;
@@ -284,6 +335,9 @@ public class Task extends TeaModel {
     /**
      * <p>The Spark executor memory.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1073741824</p>
      */
     @NameInMap("sparkExecutorMemory")
     public Long sparkExecutorMemory;
@@ -291,6 +345,9 @@ public class Task extends TeaModel {
     /**
      * <p>The Spark log level.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INFO</p>
      */
     @NameInMap("sparkLogLevel")
     public String sparkLogLevel;
@@ -298,12 +355,15 @@ public class Task extends TeaModel {
     /**
      * <p>The Spark log path.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://your_bucket/path/to/your/log</p>
      */
     @NameInMap("sparkLogPath")
     public String sparkLogPath;
 
     /**
-     * <p>The spark-submit task submission clause.</p>
+     * <p>The Spark submit statement.</p>
      */
     @NameInMap("sparkSubmitClause")
     public String sparkSubmitClause;
@@ -311,18 +371,24 @@ public class Task extends TeaModel {
     /**
      * <p>The Spark version.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>esr-4.1.1</p>
      */
     @NameInMap("sparkVersion")
     public String sparkVersion;
 
     /**
-     * <p>The task labels.</p>
+     * <p>The task tags.</p>
      */
     @NameInMap("tags")
     public java.util.Map<String, String> tags;
 
     /**
-     * <p>The task timeout period.</p>
+     * <p>The task timeout.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1200</p>
      */
     @NameInMap("timeout")
     public Integer timeout;
@@ -330,6 +396,9 @@ public class Task extends TeaModel {
     /**
      * <p>The task type.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SQL</p>
      */
     @NameInMap("type")
     public String type;
@@ -964,14 +1033,26 @@ public class Task extends TeaModel {
     }
 
     public static class TaskRayHeadSpec extends TeaModel {
+        /**
+         * <p>The number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("cpu")
         public String cpu;
 
+        /**
+         * <p>Specifies whether to enable auto scaling for worker nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("enableAutoScaling")
         public Boolean enableAutoScaling;
 
         /**
-         * <p>The environment variables of the Ray node.</p>
+         * <p>The environment variables for Ray nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>MY_ENV=123456</p>
@@ -979,20 +1060,44 @@ public class Task extends TeaModel {
         @NameInMap("env")
         public String env;
 
+        /**
+         * <p>The GPU instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.gn6i-c4g1.xlarge</p>
+         */
         @NameInMap("gpuSpec")
         public String gpuSpec;
 
+        /**
+         * <p>The idle timeout period for worker nodes after auto scaling is enabled, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("idleTimeoutSeconds")
         public Long idleTimeoutSeconds;
 
+        /**
+         * <p>The memory size, in GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8Gi</p>
+         */
         @NameInMap("memory")
         public String memory;
 
+        /**
+         * <p>The queue name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root_queue</p>
+         */
         @NameInMap("queueName")
         public String queueName;
 
         /**
-         * <p>The startup parameters of Ray.</p>
+         * <p>The Ray startup parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>--num-cpus=0</p>
@@ -1001,7 +1106,7 @@ public class Task extends TeaModel {
         public String rayStartParams;
 
         /**
-         * <p>The DPI engine version of Ray.</p>
+         * <p>The database engine version of the Ray DPI engine.</p>
          * 
          * <strong>example:</strong>
          * <p>err-1.3.0 (Ray 2.55.1, Python 3.12)</p>
@@ -1009,6 +1114,12 @@ public class Task extends TeaModel {
         @NameInMap("rayVersion")
         public String rayVersion;
 
+        /**
+         * <p>The number of head nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("replica")
         public Integer replica;
 
@@ -1100,11 +1211,17 @@ public class Task extends TeaModel {
     }
 
     public static class TaskRayWorkerSpec extends TeaModel {
+        /**
+         * <p>The number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("cpu")
         public String cpu;
 
         /**
-         * <p>The environment variables of Ray.</p>
+         * <p>The environment variables for Ray.</p>
          * 
          * <strong>example:</strong>
          * <p>MY_ENV=123456</p>
@@ -1112,26 +1229,62 @@ public class Task extends TeaModel {
         @NameInMap("env")
         public String env;
 
+        /**
+         * <p>The GPU instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.gn6i-c4g1.xlarge</p>
+         */
         @NameInMap("gpuSpec")
         public String gpuSpec;
 
+        /**
+         * <p>The worker group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WorkerGroup1</p>
+         */
         @NameInMap("groupName")
         public String groupName;
 
+        /**
+         * <p>The maximum number of worker nodes after auto scaling is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("maxReplica")
         public Integer maxReplica;
 
+        /**
+         * <p>The memory size, in GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16Gi</p>
+         */
         @NameInMap("memory")
         public String memory;
 
+        /**
+         * <p>The minimum number of worker nodes after auto scaling is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("minReplica")
         public Integer minReplica;
 
+        /**
+         * <p>The queue name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root_queue</p>
+         */
         @NameInMap("queueName")
         public String queueName;
 
         /**
-         * <p>The startup parameters of Ray.</p>
+         * <p>The Ray startup parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>--num-cpus=0</p>
@@ -1140,7 +1293,7 @@ public class Task extends TeaModel {
         public String rayStartParams;
 
         /**
-         * <p>The DPI engine version of Ray.</p>
+         * <p>The database engine version of the Ray DPI engine.</p>
          * 
          * <strong>example:</strong>
          * <p>err-1.3.0 (Ray 2.55.1, Python 3.12)</p>
@@ -1148,6 +1301,12 @@ public class Task extends TeaModel {
         @NameInMap("rayVersion")
         public String rayVersion;
 
+        /**
+         * <p>The number of worker nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("replica")
         public Integer replica;
 

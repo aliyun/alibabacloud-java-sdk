@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListKyuubiTokenResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public ListKyuubiTokenResponseBodyData data;
@@ -42,13 +42,13 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
 
     public static class ListKyuubiTokenResponseBodyDataTokens extends TeaModel {
         /**
-         * <p>The names of authorized RAM users.</p>
+         * <p>The list of RAM user names of authorized users.</p>
          */
         @NameInMap("accountNames")
         public java.util.List<String> accountNames;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1755496031000</p>
@@ -57,7 +57,7 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The creator\&quot;s name.</p>
+         * <p>The name of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>admin</p>
@@ -66,7 +66,7 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
         public String createdBy;
 
         /**
-         * <p>The expiration time.</p>
+         * <p>The expiration time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1787033891000</p>
@@ -75,7 +75,7 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
         public Long expireTime;
 
         /**
-         * <p>The last used time.</p>
+         * <p>The last usage time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1760366232121</p>
@@ -84,7 +84,7 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
         public Long lastUsedTime;
 
         /**
-         * <p>The ARNs of authorized users.</p>
+         * <p>The list of ARNs of authorized users.</p>
          */
         @NameInMap("memberArns")
         public java.util.List<String> memberArns;
@@ -208,7 +208,7 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
 
     public static class ListKyuubiTokenResponseBodyData extends TeaModel {
         /**
-         * <p>A list of tokens.</p>
+         * <p>The list of tokens.</p>
          */
         @NameInMap("tokens")
         public java.util.List<ListKyuubiTokenResponseBodyDataTokens> tokens;

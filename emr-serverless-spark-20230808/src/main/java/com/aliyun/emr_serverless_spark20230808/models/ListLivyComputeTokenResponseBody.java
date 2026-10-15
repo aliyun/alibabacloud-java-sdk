@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLivyComputeTokenResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of 1000000 indicates success. Any other value indicates failure. You can view the specific error description in the message field.</p>
+     * <p>The return code of the request. A value of 1000000 indicates that the request was successful. Other values indicate that the request failed. For details about the error cause, see the message.</p>
      * 
      * <strong>example:</strong>
      * <p>1000000</p>
@@ -14,7 +14,7 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public ListLivyComputeTokenResponseBodyData data;
@@ -76,7 +76,7 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
 
     public static class ListLivyComputeTokenResponseBodyDataTokens extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1749456094000</p>
@@ -94,7 +94,7 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
         public String createdby;
 
         /**
-         * <p>The expiration time.</p>
+         * <p>The expiration time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1749456994000</p>
@@ -103,7 +103,7 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
         public Long expireTime;
 
         /**
-         * <p>The last used time.</p>
+         * <p>The time when the token was last used. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1749456098000</p>
@@ -130,7 +130,7 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
         public String token;
 
         /**
-         * <p>Token ID。</p>
+         * <p>The token ID.</p>
          * 
          * <strong>example:</strong>
          * <p>lctk-xxxxxxxxxxx</p>
@@ -203,7 +203,7 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
 
     public static class ListLivyComputeTokenResponseBodyData extends TeaModel {
         /**
-         * <p>The list of tokens.</p>
+         * <p>The token list.</p>
          */
         @NameInMap("tokens")
         public java.util.List<ListLivyComputeTokenResponseBodyDataTokens> tokens;

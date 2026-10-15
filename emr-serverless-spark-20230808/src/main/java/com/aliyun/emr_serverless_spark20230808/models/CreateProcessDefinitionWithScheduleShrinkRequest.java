@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateProcessDefinitionWithScheduleShrinkRequest extends TeaModel {
     /**
-     * <p>The email address to which alerts are sent.</p>
+     * <p>The email address for alert notifications.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:foo_bar@spark.alert.invalid.com">foo_bar@spark.alert.invalid.com</a></p>
@@ -14,7 +14,7 @@ public class CreateProcessDefinitionWithScheduleShrinkRequest extends TeaModel {
     public String alertEmailAddress;
 
     /**
-     * <p>The description of the workflow.</p>
+     * <p>The workflow description.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CreateProcessDefinitionWithScheduleShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The execution policy.</p>
+     * <p>The execution strategy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class CreateProcessDefinitionWithScheduleShrinkRequest extends TeaModel {
     public String globalParamsShrink;
 
     /**
-     * <p>The name of the workflow.</p>
+     * <p>The workflow name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -93,7 +93,7 @@ public class CreateProcessDefinitionWithScheduleShrinkRequest extends TeaModel {
     public Integer retryTimes;
 
     /**
-     * <p>The Alibaba Cloud UID of the user who runs the workflow.</p>
+     * <p>The Alibaba Cloud UID of the execution user.</p>
      * 
      * <strong>example:</strong>
      * <p>113***************</p>
@@ -102,7 +102,7 @@ public class CreateProcessDefinitionWithScheduleShrinkRequest extends TeaModel {
     public String runAs;
 
     /**
-     * <p>The scheduling configuration.</p>
+     * <p>The scheduling structure.</p>
      */
     @NameInMap("schedule")
     public String scheduleShrink;
@@ -114,14 +114,14 @@ public class CreateProcessDefinitionWithScheduleShrinkRequest extends TeaModel {
     public String tagsShrink;
 
     /**
-     * <p>A JSON array of task definitions. This array contains the details for all tasks in the workflow.</p>
+     * <p>The JSON array of task definitions. It contains the description information of all tasks in the workflow.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("taskDefinitionJson")
     public String taskDefinitionJsonShrink;
 
     /**
-     * <p>The degree of parallelism for tasks.</p>
+     * <p>The task concurrency.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -130,14 +130,14 @@ public class CreateProcessDefinitionWithScheduleShrinkRequest extends TeaModel {
     public Integer taskParallelism;
 
     /**
-     * <p>A JSON array of task dependencies. \<code>preTaskCode\\</code> specifies the upstream task ID and \<code>postTaskCode\\</code> specifies the downstream task ID. Each task must have a unique ID. For tasks without an upstream dependency, set \<code>preTaskCode\\</code> to 0.</p>
+     * <p>The JSON array of task dependencies. It contains the dependencies among all tasks in the workflow. preTaskCode specifies the upstream task ID, and postTaskCode specifies the downstream task ID. Each task must have a unique ID. If a task node does not have an upstream task, you must add a dependency with preTaskCode set to 0.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("taskRelationJson")
     public String taskRelationJsonShrink;
 
     /**
-     * <p>The default timeout period for a workflow run.</p>
+     * <p>The default timeout period for workflow execution, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>

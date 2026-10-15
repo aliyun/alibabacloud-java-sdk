@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWorkspacesResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of records to retrieve in a single request.</p>
+     * <p>The maximum number of records to return in a single request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next page.</p>
+     * <p>The next token.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -102,10 +102,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String allocatedResource;
 
         /**
-         * <p>Indicates whether auto-renewal is enabled for the resource. Valid values:</p>
+         * <p>Specifies whether auto-renewal is enabled for the resource. Valid values:</p>
          * <ul>
          * <li>true: Auto-renewal is enabled. The resource is automatically renewed upon expiration.</li>
-         * <li>false: Auto-renewal is not enabled. The resource stops being available upon expiration.</li>
+         * <li>false: Auto-renewal is disabled. The resource is stopped upon expiration.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public Boolean autoRenewal;
 
         /**
-         * <p>The time when the resource quota was created.</p>
+         * <p>The time when the resource quota was created. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1745683200000</p>
@@ -124,7 +124,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The time when the resource quota expires.</p>
+         * <p>The expiration time of the resource quota. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1740537153000</p>
@@ -142,7 +142,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The maximum amount of resources available.</p>
+         * <p>The maximum amount of resources that can be used.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;cpu\&quot;:\&quot;1\&quot;,\&quot;memory\&quot;:\&quot;4Gi\&quot;,\&quot;cu\&quot;:\&quot;1\&quot;}</p>
@@ -151,6 +151,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String maxResource;
 
         /**
+         * <p>The order ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>23464687565</p>
          */
@@ -160,8 +162,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         /**
          * <p>The payment status of the current resource. Valid values:</p>
          * <ul>
-         * <li>NORMAL: Active.</li>
-         * <li>WAIT_FOR_EXPIRE: About to expire.</li>
+         * <li>NORMAL: Valid.</li>
+         * <li>WAIT_FOR_EXPIRE: Expiring.</li>
          * <li>EXPIRED: Expired.</li>
          * </ul>
          * 
@@ -260,13 +262,24 @@ public class ListWorkspacesResponseBody extends TeaModel {
     }
 
     public static class ListWorkspacesResponseBodyWorkspacesPrePaidQuotaGpu extends TeaModel {
+        /**
+         * <p>Specifies whether auto-renewal is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("autoRenewal")
         public Boolean autoRenewal;
 
+        /**
+         * <p>The number of CPU cores.</p>
+         */
         @NameInMap("cpuCoreCount")
         public String cpuCoreCount;
 
         /**
+         * <p>The time when the GPU subscription quota was created. The value is a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1782292672000</p>
          */
@@ -274,26 +287,44 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The expiration time of the GPU subscription quota. The value is a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1782292772000</p>
          */
         @NameInMap("expireTime")
         public Long expireTime;
 
+        /**
+         * <p>The number of GPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("gpuAmount")
         public Integer gpuAmount;
 
         /**
+         * <p>The number of GPU machines.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
         @NameInMap("gpuMachineNum")
         public Integer gpuMachineNum;
 
+        /**
+         * <p>The GPU memory size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("gpuMemorySize")
         public Long gpuMemorySize;
 
         /**
+         * <p>The number of GPUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -301,6 +332,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public Integer gpuNum;
 
         /**
+         * <p>The GPU model.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs.gn7i-c8g1.2xlarge</p>
          */
@@ -308,22 +341,35 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String gpuSpec;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>w-xxxxxxxxx-gpu-quota-xxxx</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <p>The instance family.</p>
+         */
         @NameInMap("instanceTypeFamily")
         public String instanceTypeFamily;
 
+        /**
+         * <p>The instance type ID.</p>
+         */
         @NameInMap("instanceTypeId")
         public String instanceTypeId;
 
+        /**
+         * <p>The memory size.</p>
+         */
         @NameInMap("memorySize")
         public String memorySize;
 
         /**
+         * <p>The order ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2534863936</p>
          */
@@ -331,6 +377,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String orderId;
 
         /**
+         * <p>The order status.</p>
+         * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
          */
@@ -507,9 +555,15 @@ public class ListWorkspacesResponseBody extends TeaModel {
     }
 
     public static class ListWorkspacesResponseBodyWorkspacesTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("tagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("tagValue")
         public String tagValue;
 
@@ -538,7 +592,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
 
     public static class ListWorkspacesResponseBodyWorkspaces extends TeaModel {
         /**
-         * <p>Indicates whether auto-renewal is enabled. This parameter is required for the prepaid type.</p>
+         * <p>Specifies whether to enable auto-renewal. This parameter is required for subscription resources.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -547,7 +601,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public Boolean autoRenew;
 
         /**
-         * <p>The auto-renewal duration. This parameter is required for the prepaid type.</p>
+         * <p>The auto-renewal duration. This parameter is required for subscription resources.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -556,7 +610,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public Integer autoRenewPeriod;
 
         /**
-         * <p>The auto-renewal epoch unit. This parameter is required for the prepaid type.</p>
+         * <p>The auto-renewal epoch. This parameter is required for subscription resources.</p>
          * 
          * <strong>example:</strong>
          * <p>YEAR, MONTH, WEEK, DAY, HOUR, MINUTE</p>
@@ -565,7 +619,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String autoRenewPeriodUnit;
 
         /**
-         * <p>The time when the workspace was created.</p>
+         * <p>The time when the workspace was created. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1684115879955</p>
@@ -574,7 +628,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The DLF Catalog information.</p>
+         * <p>The DLF catalog information.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -583,7 +637,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String dlfCatalogId;
 
         /**
-         * <p>The DLF binding type.</p>
+         * <p>The type of the associated DLF.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0</p>
@@ -592,7 +646,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String dlfType;
 
         /**
-         * <p>The subscription period quantity. This parameter is required for the prepaid type.</p>
+         * <p>The duration of the subscription. This parameter is required for subscription resources.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -601,7 +655,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public Integer duration;
 
         /**
-         * <p>The time when the workspace was released.</p>
+         * <p>The time when the workspace was released. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1687103999999</p>
@@ -610,7 +664,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The failure reason.</p>
+         * <p>The reason for the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>out of stock</p>
@@ -618,14 +672,20 @@ public class ListWorkspacesResponseBody extends TeaModel {
         @NameInMap("failReason")
         public String failReason;
 
+        /**
+         * <p>The list of GPU models.</p>
+         */
         @NameInMap("gpuSpec")
         public java.util.List<String> gpuSpec;
 
+        /**
+         * <p>The IP whitelist of the workspace.</p>
+         */
         @NameInMap("ipWhiteList")
         public java.util.List<String> ipWhiteList;
 
         /**
-         * <p>The subscription period unit. This parameter is required for the prepaid type.</p>
+         * <p>The unit of the subscription period. This parameter is required for subscription resources.</p>
          * 
          * <strong>example:</strong>
          * <p>YEAR, MONTH, WEEK, DAY, HOUR, MINUTE</p>
@@ -643,7 +703,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String paymentStatus;
 
         /**
-         * <p>The payment type.</p>
+         * <p>The billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>PayAsYouGo or Subscription</p>
@@ -652,11 +712,14 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String paymentType;
 
         /**
-         * <p>The prepaid resource quota information.</p>
+         * <p>The information about the subscription resource quota.</p>
          */
         @NameInMap("prePaidQuota")
         public ListWorkspacesResponseBodyWorkspacesPrePaidQuota prePaidQuota;
 
+        /**
+         * <p>The list of GPU subscription quotas.</p>
+         */
         @NameInMap("prePaidQuotaGpu")
         public java.util.List<ListWorkspacesResponseBodyWorkspacesPrePaidQuotaGpu> prePaidQuotaGpu;
 
@@ -679,6 +742,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String releaseType;
 
         /**
+         * <p>The resource group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-xxxxxxxxxx</p>
          */
@@ -695,7 +760,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String resourceSpec;
 
         /**
-         * <p>The state change information of the workspace.</p>
+         * <p>The information about the workspace status change.</p>
          */
         @NameInMap("stateChangeReason")
         public ListWorkspacesResponseBodyWorkspacesStateChangeReason stateChangeReason;
@@ -709,11 +774,14 @@ public class ListWorkspacesResponseBody extends TeaModel {
         @NameInMap("storage")
         public String storage;
 
+        /**
+         * <p>The list of workspace tags.</p>
+         */
         @NameInMap("tags")
         public java.util.List<ListWorkspacesResponseBodyWorkspacesTags> tags;
 
         /**
-         * <p>Workspace ID。</p>
+         * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>w-******</p>
@@ -722,16 +790,16 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String workspaceId;
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * 
          * <strong>example:</strong>
-         * <p>Spark batch workspace-1</p>
+         * <p>spark-batch-job-workspace-1</p>
          */
         @NameInMap("workspaceName")
         public String workspaceName;
 
         /**
-         * <p>The workspace status.</p>
+         * <p>The status of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>STARTING,RUNNING,TERMINATED</p>

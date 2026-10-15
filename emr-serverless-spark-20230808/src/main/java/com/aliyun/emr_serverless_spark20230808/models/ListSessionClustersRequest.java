@@ -14,7 +14,7 @@ public class ListSessionClustersRequest extends TeaModel {
     public String kind;
 
     /**
-     * <p>The maximum number of records to return.</p>
+     * <p>The maximum number of records to return in a single request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class ListSessionClustersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that marks the start of the next page of results.</p>
+     * <p>The token that indicates the position from which to start reading.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,7 +50,7 @@ public class ListSessionClustersRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the job.</p>
+     * <p>The job name.</p>
      * 
      * <strong>example:</strong>
      * <p>emr-spark-demo-job</p>

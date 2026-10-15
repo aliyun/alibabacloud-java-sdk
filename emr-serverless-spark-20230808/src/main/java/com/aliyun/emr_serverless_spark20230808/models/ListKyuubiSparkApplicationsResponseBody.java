@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
     /**
-     * <p>A list of application details.</p>
+     * <p>The list of application details.</p>
      */
     @NameInMap("applications")
     public java.util.List<ListKyuubiSparkApplicationsResponseBodyApplications> applications;
 
     /**
-     * <p>The maximum number of records returned.</p>
+     * <p>The maximum number of records to retrieve at a time.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results.</p>
+     * <p>The token for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -111,7 +111,7 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         public String applicationName;
 
         /**
-         * <p>The number of CUs consumed during the task lifecycle. This is an estimated value. The final amount is subject to your bill.</p>
+         * <p>The number of compute units (CUs) consumed during the task execution. This value is an estimate. The actual value is subject to the bill.</p>
          * 
          * <strong>example:</strong>
          * <p>0.238302</p>
@@ -120,7 +120,7 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         public Double cuHours;
 
         /**
-         * <p>The time when the task ended.</p>
+         * <p>The end time of the task. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-02-12 20:02:02</p>
@@ -129,7 +129,7 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The exit code.</p>
+         * <p>The exit reason of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>Exit Code: 137, Exit Reason: OOMKilled</p>
@@ -138,6 +138,8 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         public String exitReason;
 
         /**
+         * <p>The ID of the Kyuubi service that submitted the Spark application.</p>
+         * 
          * <strong>example:</strong>
          * <p>kb-2b93ec*******c9440c</p>
          */
@@ -145,7 +147,7 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         public String kyuubiServiceId;
 
         /**
-         * <p>The status of the last task execution in the session.</p>
+         * <p>The execution status of the latest SQL statement in the application.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -154,7 +156,7 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         public String latestSqlStatementStatus;
 
         /**
-         * <p>The total memory allocated to the task in MB, multiplied by the number of seconds the task ran.</p>
+         * <p>The total memory allocated to the task multiplied by the task execution duration in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3513900</p>
@@ -163,6 +165,8 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         public Long mbSeconds;
 
         /**
+         * <p>The priority of the Spark application.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -170,7 +174,7 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         public String priority;
 
         /**
-         * <p>The name of the resource queue where the Spark task runs.</p>
+         * <p>The name of the resource queue in which the Spark task runs.</p>
          * 
          * <strong>example:</strong>
          * <p>dev_queue</p>
@@ -178,11 +182,17 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         @NameInMap("resourceQueueId")
         public String resourceQueueId;
 
+        /**
+         * <p>The application log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;driverStdOut&quot;:&quot;oss://bucket/path/to/stdout&quot;,&quot;driverStdError&quot;:&quot;oss://bucket/path/to/stderr&quot;,&quot;driverSyslog&quot;:&quot;oss://bucket/path/to/syslog&quot;,&quot;driverStartup&quot;:&quot;oss://bucket/path/to/startup&quot;}</p>
+         */
         @NameInMap("runLog")
         public RunLog runLog;
 
         /**
-         * <p>The time when the task started.</p>
+         * <p>The start time of the task. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-02-12 19:59:16</p>
@@ -191,14 +201,11 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The status of the Spark application.</p>
+         * <p>The state of the Spark application. Valid values:</p>
          * <ul>
-         * <li><p>STARTING: The application is starting.</p>
-         * </li>
-         * <li><p>RUNNING: The application is running.</p>
-         * </li>
-         * <li><p>TERMINATED: The application is terminated.</p>
-         * </li>
+         * <li>STARTING: The application is starting.</li>
+         * <li>RUNNING: The application is running.</li>
+         * <li>TERMINATED: The application is terminated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -207,11 +214,14 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         @NameInMap("state")
         public String state;
 
+        /**
+         * <p>The list of tags for the Spark application.</p>
+         */
         @NameInMap("tags")
         public java.util.List<Tag> tags;
 
         /**
-         * <p>The total vCores allocated to the task, multiplied by the number of seconds the task ran.</p>
+         * <p>The total number of vcores allocated to the task multiplied by the task execution duration in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>780</p>

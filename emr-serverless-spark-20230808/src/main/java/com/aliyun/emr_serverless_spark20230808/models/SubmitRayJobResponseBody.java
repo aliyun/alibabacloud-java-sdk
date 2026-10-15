@@ -14,7 +14,7 @@ public class SubmitRayJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Ray Job ID。</p>
+     * <p>The Ray job ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rj-k7nm8ahl5te4tg91</p>

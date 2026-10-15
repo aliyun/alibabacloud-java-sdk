@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWorkspacesRequest extends TeaModel {
     /**
-     * <p>The maximum number of records to retrieve in a single request.</p>
+     * <p>The maximum number of records to return in a single request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListWorkspacesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The name of the workspace. Fuzzy match is supported.</p>
+     * <p>The name of the workspace. Fuzzy search by workspace name is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>test_workspace</p>
@@ -23,7 +23,7 @@ public class ListWorkspacesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The pagination token that marks the current read position.</p>
+     * <p>The token that indicates the position from which to start reading.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,6 +41,8 @@ public class ListWorkspacesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aek2thxggoqhmhq</p>
      */
@@ -48,7 +50,14 @@ public class ListWorkspacesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The workspace status.</p>
+     * <p>The state of the workspace. Valid values:</p>
+     * <ul>
+     * <li>Starting: The workspace is starting.</li>
+     * <li>Running: The workspace is running.</li>
+     * <li>Stopping: The workspace is stopping.</li>
+     * <li>Stopped: The workspace is stopped.</li>
+     * <li>Error: The workspace failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>running</p>
@@ -56,6 +65,9 @@ public class ListWorkspacesRequest extends TeaModel {
     @NameInMap("state")
     public String state;
 
+    /**
+     * <p>The list of tags used to filter workspaces.</p>
+     */
     @NameInMap("tag")
     public java.util.List<ListWorkspacesRequestTag> tag;
 
@@ -122,6 +134,8 @@ public class ListWorkspacesRequest extends TeaModel {
 
     public static class ListWorkspacesRequestTag extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shenzhen-finance.edas.config.server</p>
          */
@@ -129,8 +143,10 @@ public class ListWorkspacesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
-         * <p>iPhone disk space remaining rate</p>
+         * <p>iPhone remaining disk space percentage</p>
          */
         @NameInMap("value")
         public String value;

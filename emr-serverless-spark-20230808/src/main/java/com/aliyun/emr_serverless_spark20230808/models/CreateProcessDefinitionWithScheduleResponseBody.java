@@ -14,7 +14,7 @@ public class CreateProcessDefinitionWithScheduleResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("data")
     public CreateProcessDefinitionWithScheduleResponseBodyData data;
@@ -38,7 +38,7 @@ public class CreateProcessDefinitionWithScheduleResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>A detailed message for the return code.</p>
+     * <p>The detailed description corresponding to the request code.</p>
      * 
      * <strong>example:</strong>
      * <p>No permission for resource action</p>
@@ -47,7 +47,7 @@ public class CreateProcessDefinitionWithScheduleResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -56,7 +56,7 @@ public class CreateProcessDefinitionWithScheduleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -127,7 +127,7 @@ public class CreateProcessDefinitionWithScheduleResponseBody extends TeaModel {
 
     public static class CreateProcessDefinitionWithScheduleResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the workflow definition.</p>
+         * <p>The workflow definition ID.</p>
          * 
          * <strong>example:</strong>
          * <p>160************</p>
@@ -136,7 +136,7 @@ public class CreateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         public Long code;
 
         /**
-         * <p>The serial number of the workflow definition.</p>
+         * <p>The workflow definition number.</p>
          * 
          * <strong>example:</strong>
          * <p>12342</p>

@@ -32,13 +32,13 @@ public class UpdateRayClusterRequest extends TeaModel {
     public String extraParam;
 
     /**
-     * <p>The Ray cluster head node information.</p>
+     * <p>The head node information for the Ray cluster.</p>
      */
     @NameInMap("headSpec")
     public UpdateRayClusterRequestHeadSpec headSpec;
 
     /**
-     * <p>The Ray cluster name. The name must be 1 to 64 characters in length.</p>
+     * <p>The name of the Ray cluster. The name must be 1 to 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>myRayCluster</p>
@@ -47,7 +47,7 @@ public class UpdateRayClusterRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The network connectivity name.</p>
+     * <p>The network connection name.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc</p>
@@ -56,13 +56,13 @@ public class UpdateRayClusterRequest extends TeaModel {
     public String networkServiceName;
 
     /**
-     * <p>The list of managed folder IDs to mount.</p>
+     * <p>The list of managed directory IDs to mount.</p>
      */
     @NameInMap("volumeIds")
     public java.util.List<String> volumeIds;
 
     /**
-     * <p>The Ray cluster worker node information. A maximum of 50 groups are supported.</p>
+     * <p>The worker node information for the Ray cluster. A maximum of 50 worker groups are supported.</p>
      */
     @NameInMap("workerSpec")
     public java.util.List<UpdateRayClusterRequestWorkerSpec> workerSpec;
@@ -215,7 +215,7 @@ public class UpdateRayClusterRequest extends TeaModel {
         public String displayReleaseVersion;
 
         /**
-         * <p>Specifies whether to enable automatic scaling.</p>
+         * <p>Specifies whether to enable auto scaling.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -233,13 +233,13 @@ public class UpdateRayClusterRequest extends TeaModel {
         public String env;
 
         /**
-         * <p>The GCS Fault Tolerance configuration.</p>
+         * <p>The GCS fault tolerance configuration.</p>
          */
         @NameInMap("gftConfig")
         public UpdateRayClusterRequestHeadSpecGftConfig gftConfig;
 
         /**
-         * <p>Specifies whether to enable GCS Fault Tolerance.</p>
+         * <p>Specifies whether to enable GCS fault tolerance.</p>
          * 
          * <strong>if can be null:</strong>
          * <p>true</p>
@@ -257,7 +257,7 @@ public class UpdateRayClusterRequest extends TeaModel {
         public String gpuSpec;
 
         /**
-         * <p>The idle timeout period of workers after automatic scaling is enabled.</p>
+         * <p>The idle timeout period for workers after auto scaling is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -452,7 +452,7 @@ public class UpdateRayClusterRequest extends TeaModel {
         public String memory;
 
         /**
-         * <p>The minimum number of workers. Minimum value: 1. The value must be less than or equal to maxReplica.</p>
+         * <p>The minimum number of workers. Minimum value: 1. The value must be less than or equal to the value of maxReplica.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

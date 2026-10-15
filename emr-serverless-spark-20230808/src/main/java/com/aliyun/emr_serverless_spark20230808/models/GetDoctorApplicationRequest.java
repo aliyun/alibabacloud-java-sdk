@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDoctorApplicationRequest extends TeaModel {
     /**
-     * <p>The language of diagnostic information.</p>
+     * <p>The language of the diagnostic information.</p>
      * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
@@ -14,7 +14,7 @@ public class GetDoctorApplicationRequest extends TeaModel {
     public String locale;
 
     /**
-     * <p>The query time.</p>
+     * <p>The query date in the YYYY-MM-DD format.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-01</p>

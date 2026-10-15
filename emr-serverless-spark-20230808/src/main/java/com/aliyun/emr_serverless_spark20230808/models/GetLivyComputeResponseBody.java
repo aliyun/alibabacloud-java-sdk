@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLivyComputeResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of 1000000 indicates a successful request. Other values indicate a failed request. Check the message parameter for the error details.</p>
+     * <p>The return code of the request. The value 1000000 indicates that the request succeeded. Other values indicate that the request failed. For details about the error, see the message field.</p>
      * 
      * <strong>example:</strong>
      * <p>1000000</p>
@@ -14,7 +14,7 @@ public class GetLivyComputeResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("data")
     public GetLivyComputeResponseBodyData data;
@@ -76,12 +76,10 @@ public class GetLivyComputeResponseBody extends TeaModel {
 
     public static class GetLivyComputeResponseBodyDataAutoStopConfiguration extends TeaModel {
         /**
-         * <p>Indicates whether to automatically start the gateway after it is created.</p>
+         * <p>Specifies whether to automatically start after creation. Valid values:</p>
          * <ul>
-         * <li><p>true: Yes.</p>
-         * </li>
-         * <li><p>false: No.</p>
-         * </li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -91,7 +89,7 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The number of minutes after which the Livy Gateway is automatically stopped if it is idle.</p>
+         * <p>The number of idle minutes after which the Livy Gateway automatically stops.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -148,7 +146,12 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public String computeId;
 
         /**
-         * <p>The number of CPU cores for the Livy server.</p>
+         * <p>The number of CPU cores for the Livy Server. Valid values:</p>
+         * <ul>
+         * <li>1</li>
+         * <li>2</li>
+         * <li>4</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -166,7 +169,7 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public String createdBy;
 
         /**
-         * <p>The version number of the Spark engine.</p>
+         * <p>The Spark DPI engine version number.</p>
          * 
          * <strong>example:</strong>
          * <p>esr-4.3.0 (Spark 3.5.2, Scala 2.12)</p>
@@ -175,7 +178,7 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public String displayReleaseVersion;
 
         /**
-         * <p>The status of the public endpoint switch.</p>
+         * <p>The status of the public network address switch.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -184,7 +187,7 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public Boolean enablePublic;
 
         /**
-         * <p>The public endpoint.</p>
+         * <p>The public network connection address.</p>
          * 
          * <strong>example:</strong>
          * <p>emr-spark-livy-gateway-cn-hangzhou.data.aliyun.com/api/v1/workspace/w-xxxxxxxxx/livycompute/lc-xxxxxxxxxxx</p>
@@ -193,7 +196,7 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The internal endpoint.</p>
+         * <p>The internal network connection address.</p>
          * 
          * <strong>example:</strong>
          * <p>emr-spark-livy-gateway-cn-hangzhou-internal.aliyun.com/api/v1/workspace/w-xxxxxxxxx/livycompute/lc-xxxxxxxxxxx</p>
@@ -202,7 +205,7 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public String endpointInner;
 
         /**
-         * <p>The ID of the runtime environment.</p>
+         * <p>The runtime environment ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ev-cq31c7tlhtgm9nrrlj4g</p>
@@ -211,7 +214,7 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public String environmentId;
 
         /**
-         * <p>Indicates whether the fusion switch is enabled.</p>
+         * <p>Specifies whether the fusion feature is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -231,14 +234,10 @@ public class GetLivyComputeResponseBody extends TeaModel {
         /**
          * <p>The Livy Gateway configuration in JSON format. The following files are supported:</p>
          * <ul>
-         * <li><p>sparkDefaultsConf</p>
-         * </li>
-         * <li><p>sparkBlackListConf</p>
-         * </li>
-         * <li><p>livyConf</p>
-         * </li>
-         * <li><p>livyClientConf</p>
-         * </li>
+         * <li>sparkDefaultsConf</li>
+         * <li>sparkBlackListConf</li>
+         * <li>livyConf</li>
+         * <li>livyClientConf</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -262,7 +261,12 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public String livyVersion;
 
         /**
-         * <p>The memory size of the Livy server.</p>
+         * <p>The memory size of the Livy Server. Valid values:</p>
+         * <ul>
+         * <li>4Gi</li>
+         * <li>8Gi</li>
+         * <li>16Gi</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>4Gi</p>
@@ -280,7 +284,7 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The name of the network connection.</p>
+         * <p>The network connectivity name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -307,7 +311,7 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public String ramUserId;
 
         /**
-         * <p>The version number of the Spark engine. This parameter is deprecated. Use displayReleaseVersion instead.</p>
+         * <p>The Spark DPI engine version number. This field is deprecated. Use displayReleaseVersion instead.</p>
          * 
          * <strong>example:</strong>
          * <p>esr-4.3.0 (Spark 3.5.2, Scala 2.12, Java Runtime)</p>
@@ -316,7 +320,7 @@ public class GetLivyComputeResponseBody extends TeaModel {
         public String releaseVersion;
 
         /**
-         * <p>The start time.</p>
+         * <p>The start time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1749456094000</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLivyComputeRequest extends TeaModel {
     /**
-     * <p>The environment ID.</p>
+     * <p>The runtime environment ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ev-cq31c7tlhtgm9nrrlj4g</p>

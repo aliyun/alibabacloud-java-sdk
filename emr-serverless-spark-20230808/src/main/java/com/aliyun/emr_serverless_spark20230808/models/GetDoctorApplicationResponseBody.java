@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDoctorApplicationResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("data")
     public GetDoctorApplicationResponseBodyData data;
@@ -25,10 +25,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
 
     public static class GetDoctorApplicationResponseBodyData extends TeaModel {
         /**
-         * <p>The diagnostics list.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Normal.</p>
+         * <p>The list of diagnostic information.</p>
          */
         @NameInMap("suggestions")
         public java.util.List<String> suggestions;

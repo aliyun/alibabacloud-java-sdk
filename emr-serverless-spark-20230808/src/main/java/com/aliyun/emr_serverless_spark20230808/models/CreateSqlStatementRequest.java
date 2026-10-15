@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSqlStatementRequest extends TeaModel {
     /**
-     * <p>The SQL code. This parameter accepts one or more SQL statements for execution.</p>
+     * <p>The SQL code. You can specify one or more SQL statements to execute.</p>
      * 
      * <strong>example:</strong>
      * <p>SHOW TABLES</p>
@@ -14,7 +14,7 @@ public class CreateSqlStatementRequest extends TeaModel {
     public String codeContent;
 
     /**
-     * <p>The ID of the default DLF Catalog.</p>
+     * <p>The default DLF catalog ID.</p>
      * 
      * <strong>example:</strong>
      * <p>default_catalog</p>
@@ -23,7 +23,7 @@ public class CreateSqlStatementRequest extends TeaModel {
     public String defaultCatalog;
 
     /**
-     * <p>The name of the default database.</p>
+     * <p>The default database name.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -32,7 +32,7 @@ public class CreateSqlStatementRequest extends TeaModel {
     public String defaultDatabase;
 
     /**
-     * <p>The limit value. The value must be between 1 and 10000, inclusive.</p>
+     * <p>The limit value. Valid values: 1 to 10000.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -41,7 +41,7 @@ public class CreateSqlStatementRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The ID of the SQL session. The session must be created in the Session Manager module of the EMR Serverless Spark workspace.</p>
+     * <p>The SQL session ID. Create the session in the session management module of the EMR Serverless Spark workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>sc-dfahdfjafhajd****</p>
@@ -49,6 +49,12 @@ public class CreateSqlStatementRequest extends TeaModel {
     @NameInMap("sqlComputeId")
     public String sqlComputeId;
 
+    /**
+     * <p>The data development node ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TSK-d87******************</p>
+     */
     @NameInMap("taskBizId")
     public String taskBizId;
 

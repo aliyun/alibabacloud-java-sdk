@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSessionClustersResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries returned for the request.</p>
+     * <p>The maximum number of records returned in the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that marks the start of the next page of results.</p>
+     * <p>The token that indicates the position of the returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,13 +32,13 @@ public class ListSessionClustersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of sessions.</p>
+     * <p>The list of sessions.</p>
      */
     @NameInMap("sessionClusters")
     public java.util.List<ListSessionClustersResponseBodySessionClusters> sessionClusters;
 
     /**
-     * <p>The total number of entries that match the query criteria.</p>
+     * <p>The total number of records that meet the current request conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -152,7 +152,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
 
     public static class ListSessionClustersResponseBodySessionClustersAutoStartConfiguration extends TeaModel {
         /**
-         * <p>Indicates whether auto-start is enabled.</p>
+         * <p>Specifies whether auto-start is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -177,7 +177,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
 
     public static class ListSessionClustersResponseBodySessionClustersAutoStopConfiguration extends TeaModel {
         /**
-         * <p>Indicates whether auto-stop is enabled.</p>
+         * <p>Specifies whether auto-stop is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -186,7 +186,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The number of minutes of inactivity before the session is automatically stopped.</p>
+         * <p>The number of idle minutes after which the session is automatically stopped.</p>
          * 
          * <strong>example:</strong>
          * <p>45</p>
@@ -219,7 +219,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
 
     public static class ListSessionClustersResponseBodySessionClustersStateChangeReason extends TeaModel {
         /**
-         * <p>The state change code.</p>
+         * <p>The status change code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -228,7 +228,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The state change message.</p>
+         * <p>The status change message.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -261,7 +261,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
 
     public static class ListSessionClustersResponseBodySessionClusters extends TeaModel {
         /**
-         * <p>The session configurations. These are equivalent to the configurations of the underlying Spark job.</p>
+         * <p>The session configurations, which are equivalent to the configurations of the underlying Spark job.</p>
          */
         @NameInMap("applicationConfigs")
         public java.util.List<ListSessionClustersResponseBodySessionClustersApplicationConfigs> applicationConfigs;
@@ -278,11 +278,14 @@ public class ListSessionClustersResponseBody extends TeaModel {
         @NameInMap("autoStopConfiguration")
         public ListSessionClustersResponseBodySessionClustersAutoStopConfiguration autoStopConfiguration;
 
+        /**
+         * <p>The token used to connect to the session cluster.</p>
+         */
         @NameInMap("connectionToken")
         public String connectionToken;
 
         /**
-         * <p>The version displayed in the console.</p>
+         * <p>The version actually displayed in the console.</p>
          * 
          * <strong>example:</strong>
          * <p>esr-4.0.0 (Spark 3.5.2, Scala 2.12)</p>
@@ -291,7 +294,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         public String displayReleaseVersion;
 
         /**
-         * <p>The public endpoint of the Thrift server.</p>
+         * <p>The public domain name of the Thrift server.</p>
          * 
          * <strong>example:</strong>
          * <p>emr-spark-gateway-cn-hangzhou.data.aliyun.com</p>
@@ -300,7 +303,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>The internal same-region endpoint of the Thrift server.</p>
+         * <p>The internal domain name of the Thrift server.</p>
          * 
          * <strong>example:</strong>
          * <p>emr-spark-gateway-cn-hangzhou-internal.data.aliyuncs.com</p>
@@ -309,7 +312,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         public String domainInner;
 
         /**
-         * <p>The ID of the developer job that is attached to the session.</p>
+         * <p>The ID of the development job bound to the session.</p>
          * 
          * <strong>example:</strong>
          * <p>TSK-xxxxxxxxx</p>
@@ -327,7 +330,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         public String extra;
 
         /**
-         * <p>Indicates whether acceleration by the Fusion engine is enabled.</p>
+         * <p>Specifies whether Fusion engine acceleration is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -336,7 +339,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         public Boolean fusion;
 
         /**
-         * <p>The time when the session was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1732267598000</p>
@@ -362,11 +365,17 @@ public class ListSessionClustersResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Specifies whether the public network access endpoint is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("publicEndpointEnabled")
         public Boolean publicEndpointEnabled;
 
         /**
-         * <p>The name of the queue in which the session runs.</p>
+         * <p>The name of the queue where the session runs.</p>
          * 
          * <strong>example:</strong>
          * <p>dev_queue</p>
@@ -393,7 +402,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         public String sessionClusterId;
 
         /**
-         * <p>The time when the session was started.</p>
+         * <p>The start time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1732267598000</p>
@@ -402,18 +411,13 @@ public class ListSessionClustersResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The session state.</p>
+         * <p>The session status. Valid values:</p>
          * <ul>
-         * <li><p>Starting: The session is starting.</p>
-         * </li>
-         * <li><p>Running: The session is running.</p>
-         * </li>
-         * <li><p>Stopping: The session is stopping.</p>
-         * </li>
-         * <li><p>Stopped: The session is stopped.</p>
-         * </li>
-         * <li><p>Error: The session has failed.</p>
-         * </li>
+         * <li>Starting: Starting.</li>
+         * <li>Running: Running.</li>
+         * <li>Stopping: Stopping.</li>
+         * <li>Stopped: Stopped.</li>
+         * <li>Error: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -423,7 +427,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The details of the last state change of the session.</p>
+         * <p>The details of the most recent session status change.</p>
          */
         @NameInMap("stateChangeReason")
         public ListSessionClustersResponseBodySessionClustersStateChangeReason stateChangeReason;
@@ -447,7 +451,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         public String userName;
 
         /**
-         * <p>The URL of the Spark UI for the session.</p>
+         * <p>The Spark UI URL of the session.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://spark-ui-xxxx">http://spark-ui-xxxx</a></p>

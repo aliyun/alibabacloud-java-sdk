@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLivyComputeSessionsRequest extends TeaModel {
     /**
-     * <p>The page number. The default value is 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

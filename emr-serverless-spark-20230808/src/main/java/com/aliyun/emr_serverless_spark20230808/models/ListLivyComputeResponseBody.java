@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLivyComputeResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of 1000000 indicates that the request is successful. For other values, see the message parameter for error details.</p>
+     * <p>The return code of the request. A value of 1000000 indicates that the request is successful. Other values indicate that the request failed. For specific error details, see the message.</p>
      * 
      * <strong>example:</strong>
      * <p>1000000</p>
@@ -14,7 +14,7 @@ public class ListLivyComputeResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public ListLivyComputeResponseBodyData data;
@@ -76,7 +76,7 @@ public class ListLivyComputeResponseBody extends TeaModel {
 
     public static class ListLivyComputeResponseBodyDataLivyComputes extends TeaModel {
         /**
-         * <p>The ID of the Livy Gateway.</p>
+         * <p>The ID of the Livy gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>lc-xxxxxxxxxxxx</p>
@@ -94,7 +94,7 @@ public class ListLivyComputeResponseBody extends TeaModel {
         public String createdBy;
 
         /**
-         * <p>The public endpoint.</p>
+         * <p>The public network connection endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>emr-spark-livy-gateway-cn-hangzhou.data.aliyun.com/api/v1/workspace/w-xxxxxxxxx/livycompute/lc-xxxxxxxxxxx</p>
@@ -103,7 +103,7 @@ public class ListLivyComputeResponseBody extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The internal endpoint.</p>
+         * <p>The internal network connection endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>emr-spark-livy-gateway-cn-hangzhou-internal.aliyun.com/api/v1/workspace/w-xxxxxxxxx/livycompute/lc-xxxxxxxxxxx</p>
@@ -112,7 +112,7 @@ public class ListLivyComputeResponseBody extends TeaModel {
         public String endpointInner;
 
         /**
-         * <p>The time when the resource was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1749456094000</p>
@@ -139,7 +139,7 @@ public class ListLivyComputeResponseBody extends TeaModel {
         public String queueName;
 
         /**
-         * <p>The time when the resource was started.</p>
+         * <p>The start time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1749456094000</p>
@@ -237,7 +237,7 @@ public class ListLivyComputeResponseBody extends TeaModel {
 
     public static class ListLivyComputeResponseBodyData extends TeaModel {
         /**
-         * <p>A list of Livy Gateways.</p>
+         * <p>The list of Livy gateways.</p>
          */
         @NameInMap("livyComputes")
         public java.util.List<ListLivyComputeResponseBodyDataLivyComputes> livyComputes;

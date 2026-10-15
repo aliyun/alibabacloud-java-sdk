@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListKyuubiServicesRequest extends TeaModel {
     /**
-     * <p>The token of the Kyuubi Gateway.</p>
+     * <p>The Kyuubi Gateway token.</p>
      * 
      * <strong>example:</strong>
      * <p>6w3s2e7y7t9fxnvtai9sv1uebw8b7bvc</p>
