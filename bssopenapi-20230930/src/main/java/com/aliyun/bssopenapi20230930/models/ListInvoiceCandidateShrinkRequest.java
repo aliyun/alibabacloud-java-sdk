@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListInvoiceCandidateShrinkRequest extends TeaModel {
     /**
-     * <p>List of billing cycles.</p>
+     * <p>The list of billing cycles.</p>
      */
     @NameInMap("BillingCycles")
     public String billingCyclesShrink;
 
     /**
-     * <p>List of business document numbers.</p>
+     * <p>The list of business document numbers.</p>
      */
     @NameInMap("BusinessIds")
     public String businessIdsShrink;
@@ -26,7 +26,7 @@ public class ListInvoiceCandidateShrinkRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>List of enterprises and accounts. If empty, the current account itself is queried.</p>
+     * <p>The list of enterprises and accounts. If this parameter is left empty, the current account is queried.</p>
      */
     @NameInMap("EcIdAccountIds")
     public String ecIdAccountIdsShrink;
@@ -41,13 +41,13 @@ public class ListInvoiceCandidateShrinkRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>List of invoice issuers.</p>
+     * <p>The list of invoice issuers.</p>
      */
     @NameInMap("InvoiceIssuers")
     public String invoiceIssuersShrink;
 
     /**
-     * <p>Primary marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+     * <p>The level-1 marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
@@ -74,13 +74,13 @@ public class ListInvoiceCandidateShrinkRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>List of invoice candidate statuses.</p>
+     * <p>The list of invoice object statuses.</p>
      */
     @NameInMap("Status")
     public String statusShrink;
 
     /**
-     * <p>List of invoice candidate types.</p>
+     * <p>The list of invoice object types.</p>
      */
     @NameInMap("Types")
     public String typesShrink;

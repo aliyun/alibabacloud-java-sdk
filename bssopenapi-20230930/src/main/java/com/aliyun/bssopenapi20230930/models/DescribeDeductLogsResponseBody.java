@@ -105,7 +105,7 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
          * <p>The property name.</p>
          * 
          * <strong>example:</strong>
-         * <p>云服务器ECS-快照</p>
+         * <p>Elastic Compute Service (ECS) - Snapshot</p>
          */
         @NameInMap("Name")
         public String name;
@@ -147,7 +147,7 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
          * <p>The property name.</p>
          * 
          * <strong>example:</strong>
-         * <p>零折使用容量</p>
+         * <p>Zero-discount used capacity</p>
          */
         @NameInMap("Name")
         public String name;
@@ -189,7 +189,7 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
          * <p>The property name.</p>
          * 
          * <strong>example:</strong>
-         * <p>总量恒定型</p>
+         * <p>Fixed total capacity</p>
          */
         @NameInMap("Name")
         public String name;
@@ -231,7 +231,7 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
          * <p>The property name.</p>
          * 
          * <strong>example:</strong>
-         * <p>对象存储OSS资源包(包月)</p>
+         * <p>Object Storage Service (OSS) resource plan (subscription)</p>
          */
         @NameInMap("Name")
         public String name;
@@ -261,7 +261,7 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
 
     public static class DescribeDeductLogsResponseBodyDataCycleType extends TeaModel {
         /**
-         * <p>The commitment cycle code.</p>
+         * <p>The commitment period code.</p>
          * 
          * <strong>example:</strong>
          * <p>hour</p>
@@ -270,10 +270,10 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The commitment cycle name.</p>
+         * <p>The commitment period name.</p>
          * 
          * <strong>example:</strong>
-         * <p>小时</p>
+         * <p>Hour</p>
          */
         @NameInMap("Name")
         public String name;
@@ -315,7 +315,7 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
          * <p>The property name.</p>
          * 
          * <strong>example:</strong>
-         * <p>对象存储</p>
+         * <p>Object Storage Service</p>
          */
         @NameInMap("Name")
         public String name;
@@ -357,7 +357,7 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
          * <p>The property name.</p>
          * 
          * <strong>example:</strong>
-         * <p>标准存储包</p>
+         * <p>Standard storage plan</p>
          */
         @NameInMap("Name")
         public String name;
@@ -420,16 +420,16 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
         public String billingCommodityCode;
 
         /**
-         * <p>The deducted commodity name.</p>
+         * <p>The name of the offset commodity.</p>
          * 
          * <strong>example:</strong>
-         * <p>云服务器ECS-快照</p>
+         * <p>Elastic Compute Service (ECS) - Snapshot</p>
          */
         @NameInMap("BillingCommodityName")
         public String billingCommodityName;
 
         /**
-         * <p>The expiration time.</p>
+         * <p>The expiration time, specified as a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1679036400000</p>
@@ -438,7 +438,7 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
         public Long billingEndTime;
 
         /**
-         * <p>The deduction instance.</p>
+         * <p>The offset instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -447,13 +447,13 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
         public String billingInstanceId;
 
         /**
-         * <p>The deduction billable item.</p>
+         * <p>The offset billable item.</p>
          */
         @NameInMap("BillingPriceField")
         public DescribeDeductLogsResponseBodyDataBillingPriceField billingPriceField;
 
         /**
-         * <p>The deduction billable item code.</p>
+         * <p>The offset billable item code.</p>
          * 
          * <strong>example:</strong>
          * <p>Storage</p>
@@ -462,16 +462,16 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
         public String billingPriceFieldCode;
 
         /**
-         * <p>The deduction billable item name.</p>
+         * <p>The offset billable item name.</p>
          * 
          * <strong>example:</strong>
-         * <p>零折使用容量</p>
+         * <p>Zero-discount used capacity</p>
          */
         @NameInMap("BillingPriceFieldName")
         public String billingPriceFieldName;
 
         /**
-         * <p>The effective period.</p>
+         * <p>The effective period, specified as a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1679032800000</p>
@@ -552,7 +552,7 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
          * <p>The capacity type name.</p>
          * 
          * <strong>example:</strong>
-         * <p>总量恒定型</p>
+         * <p>Fixed total capacity</p>
          */
         @NameInMap("CapacityTypeName")
         public String capacityTypeName;
@@ -576,19 +576,19 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
          * <p>The commodity name.</p>
          * 
          * <strong>example:</strong>
-         * <p>对象存储OSS资源包(包月)</p>
+         * <p>Object Storage Service (OSS) resource plan (subscription)</p>
          */
         @NameInMap("CommodityName")
         public String commodityName;
 
         /**
-         * <p>The commitment cycle.</p>
+         * <p>The commitment period.</p>
          */
         @NameInMap("CycleType")
         public DescribeDeductLogsResponseBodyDataCycleType cycleType;
 
         /**
-         * <p>The commitment cycle code.</p>
+         * <p>The commitment period code.</p>
          * 
          * <strong>example:</strong>
          * <p>hour</p>
@@ -597,16 +597,16 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
         public String cycleTypeCode;
 
         /**
-         * <p>The commitment cycle name.</p>
+         * <p>The commitment period name.</p>
          * 
          * <strong>example:</strong>
-         * <p>小时</p>
+         * <p>Hour</p>
          */
         @NameInMap("CycleTypeName")
         public String cycleTypeName;
 
         /**
-         * <p>The deduction time.</p>
+         * <p>The deduction time. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1679039572000</p>
@@ -615,7 +615,7 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
         public Long deductTime;
 
         /**
-         * <p>The deduction factor.</p>
+         * <p>The offset factor.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -624,7 +624,7 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
         public String factor;
 
         /**
-         * <p>The ID of the account to which the instance belongs.</p>
+         * <p>The account ID of the instance owner.</p>
          * 
          * <strong>example:</strong>
          * <p>1990699401005016</p>
@@ -633,7 +633,7 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
         public Long instanceBelongAccountId;
 
         /**
-         * <p>The name of the account to which the instance belongs.</p>
+         * <p>The account name of the instance owner.</p>
          * 
          * <strong>example:</strong>
          * <p>icloudtest</p>
@@ -651,7 +651,7 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The display unit of the metering amount after deduction.</p>
+         * <p>The display unit of the metered amount after offset.</p>
          * 
          * <strong>example:</strong>
          * <p>Byte</p>
@@ -660,7 +660,7 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
         public String measureAfterDeductViewUnit;
 
         /**
-         * <p>The display value of the metering amount after deduction.</p>
+         * <p>The display value of the metered amount after offset.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -669,7 +669,7 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
         public String measureAfterDeductViewValue;
 
         /**
-         * <p>The display unit of the metering amount before deduction.</p>
+         * <p>The display unit of the metered amount before offset.</p>
          * 
          * <strong>example:</strong>
          * <p>GB</p>
@@ -678,7 +678,7 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
         public String measureBeforeDeductViewUnit;
 
         /**
-         * <p>The display value of the metering amount before deduction.</p>
+         * <p>The display value of the metered amount before offset.</p>
          * 
          * <strong>example:</strong>
          * <p>16.103515</p>
@@ -687,7 +687,7 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
         public String measureBeforeDeductViewValue;
 
         /**
-         * <p>The display unit of the deducted metering amount.</p>
+         * <p>The display unit of the metered offset amount.</p>
          * 
          * <strong>example:</strong>
          * <p>GB</p>
@@ -696,7 +696,7 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
         public String measureDeductedViewUnit;
 
         /**
-         * <p>The display value of the deducted metering amount.</p>
+         * <p>The display value of the metered offset amount.</p>
          * 
          * <strong>example:</strong>
          * <p>16.103515</p>
@@ -723,13 +723,13 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
          * <p>The product name.</p>
          * 
          * <strong>example:</strong>
-         * <p>对象存储</p>
+         * <p>Object Storage Service</p>
          */
         @NameInMap("ProductName")
         public String productName;
 
         /**
-         * <p>The deduction account ID.</p>
+         * <p>The ID of the account for deduction.</p>
          * 
          * <strong>example:</strong>
          * <p>1990699401005016</p>
@@ -738,7 +738,7 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
         public Long relationAccountId;
 
         /**
-         * <p>The deduction account name.</p>
+         * <p>The name of the deduction account.</p>
          * 
          * <strong>example:</strong>
          * <p>icloudtest</p>
@@ -765,7 +765,7 @@ public class DescribeDeductLogsResponseBody extends TeaModel {
          * <p>The template name.</p>
          * 
          * <strong>example:</strong>
-         * <p>标准存储包</p>
+         * <p>Standard storage plan</p>
          */
         @NameInMap("TemplateName")
         public String templateName;

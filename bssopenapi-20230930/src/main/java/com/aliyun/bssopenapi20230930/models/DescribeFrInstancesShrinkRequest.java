@@ -32,13 +32,13 @@ public class DescribeFrInstancesShrinkRequest extends TeaModel {
     public String cycleType;
 
     /**
-     * <p>The enterprise and account list. If empty, the current account is queried.</p>
+     * <p>The list of enterprises and accounts. If this parameter is left empty, the current account is queried.</p>
      */
     @NameInMap("EcIdAccountIds")
     public String ecIdAccountIdsShrink;
 
     /**
-     * <p>The end time.</p>
+     * <p>The end time, specified as a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1710604800000</p>
@@ -47,7 +47,7 @@ public class DescribeFrInstancesShrinkRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The resource dimension for the query.</p>
+     * <p>The resource dimension.</p>
      * 
      * <strong>example:</strong>
      * <p>cu</p>
@@ -65,7 +65,7 @@ public class DescribeFrInstancesShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The instance tag label value of the resource plan instance.</p>
+     * <p>The label value of the resource plan instance tag.</p>
      * 
      * <strong>example:</strong>
      * <p>FR-***</p>
@@ -74,7 +74,7 @@ public class DescribeFrInstancesShrinkRequest extends TeaModel {
     public String instanceTag;
 
     /**
-     * <p>The primary marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+     * <p>The primary marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>2684202000018</p>
@@ -119,7 +119,7 @@ public class DescribeFrInstancesShrinkRequest extends TeaModel {
     public String sortField;
 
     /**
-     * <p>The collation for sorting.</p>
+     * <p>The sorting collation.</p>
      * 
      * <strong>example:</strong>
      * <p>asc</p>
@@ -128,7 +128,7 @@ public class DescribeFrInstancesShrinkRequest extends TeaModel {
     public String sortRule;
 
     /**
-     * <p>The specification.</p>
+     * <p>The specifications.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -139,7 +139,7 @@ public class DescribeFrInstancesShrinkRequest extends TeaModel {
     public String spec;
 
     /**
-     * <p>The start time.</p>
+     * <p>The start time, specified as a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1678939035000</p>

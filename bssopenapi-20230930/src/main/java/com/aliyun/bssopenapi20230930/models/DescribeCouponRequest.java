@@ -22,6 +22,9 @@ public class DescribeCouponRequest extends TeaModel {
     @NameInMap("CouponNo")
     public String couponNo;
 
+    /**
+     * <p>The list of coupon template IDs.</p>
+     */
     @NameInMap("CouponTemplateIdList")
     public java.util.List<Long> couponTemplateIdList;
 
@@ -45,13 +48,13 @@ public class DescribeCouponRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The enterprise and account list. If this parameter is left empty, the current account is queried.</p>
+     * <p>The list of enterprises and accounts. If this parameter is left empty, the coupons of the current account are queried.</p>
      */
     @NameInMap("EcIdAccountIds")
     public java.util.List<DescribeCouponRequestEcIdAccountIds> ecIdAccountIds;
 
     /**
-     * <p>The effective end time.</p>
+     * <p>The effective end time, specified as a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1708423156000</p>
@@ -60,7 +63,7 @@ public class DescribeCouponRequest extends TeaModel {
     public Long effectiveEndTime;
 
     /**
-     * <p>The effective start time.</p>
+     * <p>The effective start time, specified as a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1684750028000</p>
@@ -69,7 +72,7 @@ public class DescribeCouponRequest extends TeaModel {
     public Long effectiveStartTime;
 
     /**
-     * <p>The expiration end time.</p>
+     * <p>The expiration end time, specified as a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1708423156000</p>
@@ -78,7 +81,7 @@ public class DescribeCouponRequest extends TeaModel {
     public Long expireEndDate;
 
     /**
-     * <p>The expiration start time.</p>
+     * <p>The expiration start time, specified as a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1684750028000</p>
@@ -86,14 +89,20 @@ public class DescribeCouponRequest extends TeaModel {
     @NameInMap("ExpireStartDate")
     public Long expireStartDate;
 
+    /**
+     * <p>Specifies whether to include shared coupons.</p>
+     */
     @NameInMap("IncludeShare")
     public Boolean includeShare;
 
+    /**
+     * <p>The maximum number of entries to return for a single request.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The primary campaign information.</p>
+     * <p>The first-level site information.</p>
      * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
@@ -101,11 +110,14 @@ public class DescribeCouponRequest extends TeaModel {
     @NameInMap("Nbid")
     public String nbid;
 
+    /**
+     * <p>The token for the next query. If this parameter is empty, no more pages are available.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -114,6 +126,9 @@ public class DescribeCouponRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The product code.</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
@@ -269,7 +284,7 @@ public class DescribeCouponRequest extends TeaModel {
 
     public static class DescribeCouponRequestEcIdAccountIds extends TeaModel {
         /**
-         * <p>The list of accessed accounts. If this parameter is left empty, all accounts under the current entity ID are selected.</p>
+         * <p>The list of accounts to access. If this parameter is left empty, all accounts under the current entity ID are selected.</p>
          */
         @NameInMap("AccountIds")
         public java.util.List<Long> accountIds;

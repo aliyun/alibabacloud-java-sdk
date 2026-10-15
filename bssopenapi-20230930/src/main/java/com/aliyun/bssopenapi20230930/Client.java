@@ -646,7 +646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an account transfer or revocation.</p>
+     * <p>Creates a fund allocation or revocation for an account.</p>
      * 
      * @param request CreateFundAccountTransferRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -702,7 +702,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an account transfer or revocation.</p>
+     * <p>Creates a fund allocation or revocation for an account.</p>
      * 
      * @param request CreateFundAccountTransferRequest
      * @return CreateFundAccountTransferResponse
@@ -714,7 +714,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Apply for Invoice</p>
+     * <p>Applies for an invoice.</p>
      * 
      * @param tmpReq CreateInvoiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -792,7 +792,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Apply for Invoice</p>
+     * <p>Applies for an invoice.</p>
      * 
      * @param request CreateInvoiceRequest
      * @return CreateInvoiceResponse
@@ -806,37 +806,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>When you call this operation, note the following items:</p>
      * <ul>
-     * <li>You can subscribe to one type of bill file at a time.</li>
-     * <li>Except for monthly bill PDFs, after you subscribe, the system pushes a bill file that contains full detailed data from the beginning of the current month to the present day starting from the next day. Before the 4th of each month, the system pushes the full bill file for the entire previous billing cycle.</li>
-     * <li>Monthly bill PDFs are pushed before the 4th of each month for the previous month.</li>
-     * <li>Bill files generated on a daily basis may be delayed. Delayed bills are pushed the day after they are generated and may include bills from before the previous day that were delayed until the previous day. We recommend that you pull the full file for the previous month at the beginning of each month.<blockquote>
-     * <p>Apply for permissions by following the instructions in <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Billing subscription</a>.</p>
+     * <li>You can subscribe to only one type of billing file at a time.</li>
+     * <li>Except for monthly billing PDFs, starting from the day after the subscription is created, a billing file containing all detailed data from the beginning of the current month to the current day is pushed daily. A full billing file for the entire previous billing cycle is pushed before the 4th day of each month.</li>
+     * <li>Monthly billing PDFs for the previous month are pushed before the 4th day of each month.</li>
+     * <li>Billing files generated on a daily basis may be delayed. Delayed bills are pushed on the day after they are generated and may include bills that were delayed and generated on the previous day. Pull the full files for the previous month at the beginning of each month.<blockquote>
+     * <p>Apply for the billing subscription permissions as described in the documentation: <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Billing subscription</a>.</p>
      * </blockquote>
      * </li>
-     * <li>This subscription shares the same functionality as the Expenses and Costs - Billing Subscription feature. Subscriptions are synchronized between the two.</li>
-     * <li>When you subscribe to a directory under a bucket, make sure the directory name complies with the naming conventions:<ul>
+     * <li>This subscription and the billing subscription in the Expenses and Costs console are the same feature, and subscriptions are interoperable.</li>
+     * <li>When you subscribe to a directory under a bucket, make sure that the directory naming conventions are met:<ul>
      * <li>Emojis are not allowed. Use valid UTF-8 characters.</li>
-     * <li>Use / to separate paths and quickly create subdirectories. Do not start with / or \, and do not use consecutive / characters.</li>
+     * <li>The forward slash (/) is used to separate paths and create subdirectories. Do not start the path with a forward slash (/) or a backslash (\), and do not use consecutive forward slashes.</li>
      * <li>Subdirectories named .. are not allowed.</li>
      * <li>The total length must be 1 to 254 characters.</li>
      * </ul>
      * </li>
      * <li>File names:<ul>
-     * <li><p>Example: <strong>consumeDetailBillV2</strong> (billing item bill details)</p>
+     * <li><p>Example: <strong>consumeDetailBillV2</strong> (billing item details)</p>
      * <ul>
-     * <li><p>Daily push file name format: <code>{Account UID}_{Sales site ID}_{Bill type}_{YYYYMM|YYYYMMDD}</code>, for example: <code>169**_2688801000001_consumeDetailBillV2_20190312</code>.</p>
+     * <li><p>Format of the file name pushed daily: <code>{Account UID}_{Site ID}_{Bill type}_{YYYYMM|YYYYMMDD}</code>. Example: <code>169**_2688801000001_consumeDetailBillV2_20190312</code>.</p>
      * </li>
-     * <li><p>Full file name format at the beginning of the next month: <code>{Account UID}_{Sales site ID}_{Bill type}_{YYYYMM|YYYYMM}</code>, for example: <code>169**_2688801000001_consumeDetailBillV2_201903</code>.</p>
-     * </li>
-     * </ul>
+     * <li><p>Format of the complete file name pushed at the beginning of the next month: <code>{Account UID}_{Site ID}_{Bill type}_{YYYYMM|YYYYMM}</code>. Example: <code>169**_2688801000001_consumeDetailBillV2_201903</code>.</p>
      * </li>
      * </ul>
      * </li>
-     * <li>Monthly bill PDF files are in .pdf format. All other file types are .csv files. When the data volume is large, the system automatically splits the exported bill into multiple files and compresses them into one or more zip files. The zip file name format remains the same.</li>
+     * </ul>
+     * </li>
+     * <li>Monthly billing PDF files are in the .pdf format, and other files are in the .csv format. When the data volume is large, the system automatically splits an exported bill into multiple files and compresses them into one or more ZIP files. The ZIP file names follow the same format.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a bill report subscription.</p>
+     * <p>Creates a billing report subscription.</p>
      * 
      * @param tmpReq CreateReportDefinitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -930,37 +930,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>When you call this operation, note the following items:</p>
      * <ul>
-     * <li>You can subscribe to one type of bill file at a time.</li>
-     * <li>Except for monthly bill PDFs, after you subscribe, the system pushes a bill file that contains full detailed data from the beginning of the current month to the present day starting from the next day. Before the 4th of each month, the system pushes the full bill file for the entire previous billing cycle.</li>
-     * <li>Monthly bill PDFs are pushed before the 4th of each month for the previous month.</li>
-     * <li>Bill files generated on a daily basis may be delayed. Delayed bills are pushed the day after they are generated and may include bills from before the previous day that were delayed until the previous day. We recommend that you pull the full file for the previous month at the beginning of each month.<blockquote>
-     * <p>Apply for permissions by following the instructions in <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Billing subscription</a>.</p>
+     * <li>You can subscribe to only one type of billing file at a time.</li>
+     * <li>Except for monthly billing PDFs, starting from the day after the subscription is created, a billing file containing all detailed data from the beginning of the current month to the current day is pushed daily. A full billing file for the entire previous billing cycle is pushed before the 4th day of each month.</li>
+     * <li>Monthly billing PDFs for the previous month are pushed before the 4th day of each month.</li>
+     * <li>Billing files generated on a daily basis may be delayed. Delayed bills are pushed on the day after they are generated and may include bills that were delayed and generated on the previous day. Pull the full files for the previous month at the beginning of each month.<blockquote>
+     * <p>Apply for the billing subscription permissions as described in the documentation: <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Billing subscription</a>.</p>
      * </blockquote>
      * </li>
-     * <li>This subscription shares the same functionality as the Expenses and Costs - Billing Subscription feature. Subscriptions are synchronized between the two.</li>
-     * <li>When you subscribe to a directory under a bucket, make sure the directory name complies with the naming conventions:<ul>
+     * <li>This subscription and the billing subscription in the Expenses and Costs console are the same feature, and subscriptions are interoperable.</li>
+     * <li>When you subscribe to a directory under a bucket, make sure that the directory naming conventions are met:<ul>
      * <li>Emojis are not allowed. Use valid UTF-8 characters.</li>
-     * <li>Use / to separate paths and quickly create subdirectories. Do not start with / or \, and do not use consecutive / characters.</li>
+     * <li>The forward slash (/) is used to separate paths and create subdirectories. Do not start the path with a forward slash (/) or a backslash (\), and do not use consecutive forward slashes.</li>
      * <li>Subdirectories named .. are not allowed.</li>
      * <li>The total length must be 1 to 254 characters.</li>
      * </ul>
      * </li>
      * <li>File names:<ul>
-     * <li><p>Example: <strong>consumeDetailBillV2</strong> (billing item bill details)</p>
+     * <li><p>Example: <strong>consumeDetailBillV2</strong> (billing item details)</p>
      * <ul>
-     * <li><p>Daily push file name format: <code>{Account UID}_{Sales site ID}_{Bill type}_{YYYYMM|YYYYMMDD}</code>, for example: <code>169**_2688801000001_consumeDetailBillV2_20190312</code>.</p>
+     * <li><p>Format of the file name pushed daily: <code>{Account UID}_{Site ID}_{Bill type}_{YYYYMM|YYYYMMDD}</code>. Example: <code>169**_2688801000001_consumeDetailBillV2_20190312</code>.</p>
      * </li>
-     * <li><p>Full file name format at the beginning of the next month: <code>{Account UID}_{Sales site ID}_{Bill type}_{YYYYMM|YYYYMM}</code>, for example: <code>169**_2688801000001_consumeDetailBillV2_201903</code>.</p>
-     * </li>
-     * </ul>
+     * <li><p>Format of the complete file name pushed at the beginning of the next month: <code>{Account UID}_{Site ID}_{Bill type}_{YYYYMM|YYYYMM}</code>. Example: <code>169**_2688801000001_consumeDetailBillV2_201903</code>.</p>
      * </li>
      * </ul>
      * </li>
-     * <li>Monthly bill PDF files are in .pdf format. All other file types are .csv files. When the data volume is large, the system automatically splits the exported bill into multiple files and compresses them into one or more zip files. The zip file name format remains the same.</li>
+     * </ul>
+     * </li>
+     * <li>Monthly billing PDF files are in the .pdf format, and other files are in the .csv format. When the data volume is large, the system automatically splits an exported bill into multiple files and compresses them into one or more ZIP files. The ZIP file names follow the same format.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a bill report subscription.</p>
+     * <p>Creates a billing report subscription.</p>
      * 
      * @param request CreateReportDefinitionRequest
      * @return CreateReportDefinitionResponse
@@ -1944,7 +1944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query fund account transaction details</p>
+     * <p>Queries the transaction details of a fund account.</p>
      * 
      * @param tmpReq GetFundAccountTransactionDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2032,7 +2032,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query fund account transaction details</p>
+     * <p>Queries the transaction details of a fund account.</p>
      * 
      * @param request GetFundAccountTransactionDetailsRequest
      * @return GetFundAccountTransactionDetailsResponse
@@ -2044,7 +2044,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a specific order for a user or a reseller customer.</p>
+     * <p>Queries the details of a specific order for a user or a distribution customer.</p>
      * 
      * @param request GetOrderDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2084,7 +2084,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a specific order for a user or a reseller customer.</p>
+     * <p>Queries the details of a specific order for a user or a distribution customer.</p>
      * 
      * @param request GetOrderDetailRequest
      * @return GetOrderDetailResponse
@@ -2096,7 +2096,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the order list of a user or a reseller customer. By default, orders created within the most recent 1 hour are queried. To query orders over a longer time range, set the CreateTimeStart and CreateTimeEnd parameters.</p>
+     * <p>Queries the order list of a user or a distribution customer. By default, this operation queries orders created within the last hour. To query orders within a longer time range, specify the CreateTimeStart and CreateTimeEnd parameters.</p>
      * 
      * @param request GetOrdersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2168,7 +2168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the order list of a user or a reseller customer. By default, orders created within the most recent 1 hour are queried. To query orders over a longer time range, set the CreateTimeStart and CreateTimeEnd parameters.</p>
+     * <p>Queries the order list of a user or a distribution customer. By default, this operation queries orders created within the last hour. To query orders within a longer time range, specify the CreateTimeStart and CreateTimeEnd parameters.</p>
      * 
      * @param request GetOrdersRequest
      * @return GetOrdersResponse
@@ -2424,7 +2424,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query fund account list</p>
+     * <p>Queries the list of fund accounts.</p>
      * 
      * @param request ListFundAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2466,7 +2466,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query fund account list</p>
+     * <p>Queries the list of fund accounts.</p>
      * 
      * @param request ListFundAccountRequest
      * @return ListFundAccountResponse
@@ -2478,7 +2478,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query payment relationships of an account</p>
+     * <p>Queries the payment relationships of an account.</p>
      * 
      * @param request ListFundAccountPayRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2528,7 +2528,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query payment relationships of an account</p>
+     * <p>Queries the payment relationships of an account.</p>
      * 
      * @param request ListFundAccountPayRelationRequest
      * @return ListFundAccountPayRelationResponse
@@ -2540,7 +2540,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query invoice candidate data, which can be used for invoicing.</p>
+     * <p>Queries invoice object data that can be used for invoicing.</p>
      * 
      * @param tmpReq ListInvoiceCandidateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2638,7 +2638,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query invoice candidate data, which can be used for invoicing.</p>
+     * <p>Queries invoice object data that can be used for invoicing.</p>
      * 
      * @param request ListInvoiceCandidateRequest
      * @return ListInvoiceCandidateResponse
@@ -2650,7 +2650,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of available invoice titles</p>
+     * <p>Queries available invoice titles.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListInvoiceTitleResponse
@@ -2673,7 +2673,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of available invoice titles</p>
+     * <p>Queries available invoice titles.</p>
      * @return ListInvoiceTitleResponse
      */
     public ListInvoiceTitleResponse listInvoiceTitle() throws Exception {
@@ -2683,7 +2683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of subscribed reports.</p>
+     * <p>View subscribed report list</p>
      * 
      * @param request ListReportDefinitionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2715,7 +2715,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of subscribed reports.</p>
+     * <p>View subscribed report list</p>
      * 
      * @param request ListReportDefinitionsRequest
      * @return ListReportDefinitionsResponse
@@ -2991,7 +2991,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries a parent cost center and its child cost centers.</p>
+     * <p>Queries parent cost centers and their child cost centers.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries cost centers.</p>
@@ -3052,7 +3052,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries a parent cost center and its child cost centers.</p>
+     * <p>Queries parent cost centers and their child cost centers.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries cost centers.</p>
@@ -3067,7 +3067,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of resource instances that belong to a financial unit of a user. If CostCenterId is set to 0, unallocated primary and sub-resource instances are queried.</p>
+     * <p>Queries the resource instances associated with a financial unit. If CostCenterId is set to 0, the operation queries unassigned parent and child resource instances.</p>
      * 
      * @param request QueryCostCenterResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3121,7 +3121,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of resource instances that belong to a financial unit of a user. If CostCenterId is set to 0, unallocated primary and sub-resource instances are queried.</p>
+     * <p>Queries the resource instances associated with a financial unit. If CostCenterId is set to 0, the operation queries unassigned parent and child resource instances.</p>
      * 
      * @param request QueryCostCenterResourceRequest
      * @return QueryCostCenterResourceResponse
@@ -3714,13 +3714,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>Call QueryMonthlySlaList to retrieve the claimable months and records.</li>
+     * <li>Call QueryMonthlySlaList to obtain the claimable months and records.</li>
      * <li>Claim by month or by record.
-     * Note: Only compensation for the last two months can be claimed. Historical compensation has been automatically issued.</li>
+     * Note: You can only claim compensation for the recent two months. Historical compensation has been automatically issued.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Claims SLA compensation coupons for the last two months.</p>
+     * <p>Claims SLA compensation coupons for the recent two months.</p>
      * 
      * @param request SubmitSlaCouponApplyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3767,13 +3767,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>Call QueryMonthlySlaList to retrieve the claimable months and records.</li>
+     * <li>Call QueryMonthlySlaList to obtain the claimable months and records.</li>
      * <li>Claim by month or by record.
-     * Note: Only compensation for the last two months can be claimed. Historical compensation has been automatically issued.</li>
+     * Note: You can only claim compensation for the recent two months. Historical compensation has been automatically issued.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Claims SLA compensation coupons for the last two months.</p>
+     * <p>Claims SLA compensation coupons for the recent two months.</p>
      * 
      * @param request SubmitSlaCouponApplyRequest
      * @return SubmitSlaCouponApplyResponse

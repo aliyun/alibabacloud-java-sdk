@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListReportDefinitionsResponseBody extends TeaModel {
     /**
-     * <p>The metadata of the response struct.</p>
+     * <p>Response structure metadata</p>
      */
     @NameInMap("Metadata")
     public Object metadata;
 
     /**
-     * <p>The list of report definitions.</p>
+     * <p>Report definition list</p>
      */
     @NameInMap("ReportDefinitions")
     public java.util.List<ListReportDefinitionsResponseBodyReportDefinitions> reportDefinitions;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
@@ -56,7 +56,13 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
 
     public static class ListReportDefinitionsResponseBodyReportDefinitions extends TeaModel {
         /**
-         * <p>The start billing cycle for push. After the subscription is created, the system automatically pushes data from the start billing cycle to the current time. This parameter does not take effect for monthly bill PDF subscriptions, and historical data is not re-pushed. Data within the last year can be pushed at most.</p>
+         * <p>Whether to enable tag fields</p>
+         */
+        @NameInMap("AutoTagFields")
+        public Boolean autoTagFields;
+
+        /**
+         * <p>Push start billing cycle. After the subscription is successfully created, the system automatically pushes data from the start billing cycle to the current time. This parameter is invalid for monthly billing PDF subscriptions and does not re-push historical data. A maximum of data from the last 1 year can be pushed.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05</p>
@@ -65,7 +71,7 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
         public String beginBillingCycle;
 
         /**
-         * <p>The name of the OSS bucket for file storage.</p>
+         * <p>Name of the OSS bucket where files are stored.</p>
          * 
          * <strong>example:</strong>
          * <p>oss-bill</p>
@@ -74,7 +80,7 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
         public String ossBucketName;
 
         /**
-         * <p>The UID of the OSS owner that stores the files. If a Bid/Reseller subscription is used and data needs to be pushed to the OSS bucket of a sub-account, specify this parameter. The specified account must be a sub-account of the calling account, and the AliyunConsumeDump2OSSRole permission must be granted to this account. Regular users do not need to specify this parameter. The calling account is used by default.</p>
+         * <p>UID of the OSS owner that stores the files. Specify this parameter if you subscribe as a BID/ReSeller and want to push data to the OSS of a sub-account. The specified account must be a sub-account of the calling account and must be granted the AliyunConsumeDump2OSSRole permission. Regular users do not need to specify this parameter. The default value is the calling account.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567812345678</p>
@@ -83,7 +89,7 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
         public Long ossBucketOwnerAccountId;
 
         /**
-         * <p>The storage path of the OSS bucket.</p>
+         * <p>OSS bucket storage path.</p>
          * 
          * <strong>example:</strong>
          * <p>bill/</p>
@@ -92,7 +98,7 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
         public String ossBucketPath;
 
         /**
-         * <p>The name of the subscription source.</p>
+         * <p>Name of the subscription source.</p>
          * 
          * <strong>example:</strong>
          * <p>OSS</p>
@@ -101,7 +107,7 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
         public String reportSourceName;
 
         /**
-         * <p>The subscription source. Valid values: OSS and MC.</p>
+         * <p>Type of the subscription source. Valid values: OSS and MC.</p>
          * 
          * <strong>example:</strong>
          * <p>OSS</p>
@@ -110,7 +116,7 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
         public String reportSourceType;
 
         /**
-         * <p>The ID of the bill subscription task.</p>
+         * <p>Billing subscription task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123321</p>
@@ -119,7 +125,7 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
         public Long reportTaskId;
 
         /**
-         * <p>The subscription type. Valid values:</p>
+         * <p>Subscription type. Valid values:</p>
          * <ul>
          * <li>BillingItemDetailForBillingPeriod: billing item consumption details.</li>
          * <li>InstanceDetailForBillingPeriod: instance consumption details.</li>
@@ -133,13 +139,13 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
         public String reportType;
 
         /**
-         * <p>The fields specified by the user for the subscription.</p>
+         * <p>Specified subscribed fields</p>
          */
         @NameInMap("SelectedFields")
         public java.util.List<String> selectedFields;
 
         /**
-         * <p>The time when the subscription was created.</p>
+         * <p>Time when the subscription was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-21 10:36:31</p>
@@ -150,6 +156,14 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
         public static ListReportDefinitionsResponseBodyReportDefinitions build(java.util.Map<String, ?> map) throws Exception {
             ListReportDefinitionsResponseBodyReportDefinitions self = new ListReportDefinitionsResponseBodyReportDefinitions();
             return TeaModel.build(map, self);
+        }
+
+        public ListReportDefinitionsResponseBodyReportDefinitions setAutoTagFields(Boolean autoTagFields) {
+            this.autoTagFields = autoTagFields;
+            return this;
+        }
+        public Boolean getAutoTagFields() {
+            return this.autoTagFields;
         }
 
         public ListReportDefinitionsResponseBodyReportDefinitions setBeginBillingCycle(String beginBillingCycle) {

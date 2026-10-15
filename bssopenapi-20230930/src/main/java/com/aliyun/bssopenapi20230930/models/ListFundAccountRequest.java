@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFundAccountRequest extends TeaModel {
     /**
-     * <p>Level-1 marketplace ID. If this parameter is left empty, the ID of the marketplace to which the current user belongs is used by default.</p>
+     * <p>The ID of the primary marketplace. If this parameter is left empty, the ID of the marketplace to which the current user belongs is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>2084210001</p>
@@ -14,13 +14,13 @@ public class ListFundAccountRequest extends TeaModel {
     public String nbid;
 
     /**
-     * <p>Specifies whether to query only the active account list. Default value: false.</p>
+     * <p>Specifies whether to query only in-use accounts. Default value: false.</p>
      */
     @NameInMap("QueryOnlyInUse")
     public Boolean queryOnlyInUse;
 
     /**
-     * <p>Specifies whether to query only the managed account list. Default value: false.</p>
+     * <p>Specifies whether to query only managed accounts. Default value: false.</p>
      */
     @NameInMap("QueryOnlyManage")
     public Boolean queryOnlyManage;

@@ -21,7 +21,7 @@ public class QueryCostCenterShrinkRequest extends TeaModel {
     public String ecIdAccountIdsShrink;
 
     /**
-     * <p>The ID of the primary marketplace. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
+     * <p>The ID of the level-1 sales site. If this parameter is left empty, the ID of the sales site to which the current user belongs is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
@@ -30,7 +30,7 @@ public class QueryCostCenterShrinkRequest extends TeaModel {
     public String nbid;
 
     /**
-     * <p>The ID of the user who owns the cost center.</p>
+     * <p>The ID of the owner account for the cost center.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

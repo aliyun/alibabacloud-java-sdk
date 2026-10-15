@@ -38,7 +38,7 @@ public class GetOrdersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -328,7 +328,7 @@ public class GetOrdersResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
-         * <p>The number of entries per page. A maximum of 20 entries per page is recommended. Excessive entries may cause a timeout.</p>
+         * <p>The number of entries per page. Set this parameter to a maximum of 20. A larger value may cause a timeout.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -337,7 +337,7 @@ public class GetOrdersResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

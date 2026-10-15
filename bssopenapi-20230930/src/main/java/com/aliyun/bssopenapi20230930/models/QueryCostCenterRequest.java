@@ -21,7 +21,7 @@ public class QueryCostCenterRequest extends TeaModel {
     public java.util.List<QueryCostCenterRequestEcIdAccountIds> ecIdAccountIds;
 
     /**
-     * <p>The ID of the primary marketplace. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
+     * <p>The ID of the level-1 sales site. If this parameter is left empty, the ID of the sales site to which the current user belongs is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
@@ -30,7 +30,7 @@ public class QueryCostCenterRequest extends TeaModel {
     public String nbid;
 
     /**
-     * <p>The ID of the user who owns the cost center.</p>
+     * <p>The ID of the owner account for the cost center.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -114,13 +114,13 @@ public class QueryCostCenterRequest extends TeaModel {
 
     public static class QueryCostCenterRequestEcIdAccountIds extends TeaModel {
         /**
-         * <p>The list of account IDs to access. If this parameter is left empty, all accounts under the current entity ID are selected.</p>
+         * <p>The list of accessed accounts. If this parameter is left empty, all accounts under the current entity ID are selected.</p>
          */
         @NameInMap("AccountIds")
         public java.util.List<Long> accountIds;
 
         /**
-         * <p>The enterprise entity ID.</p>
+         * <p>The ID of the enterprise entity.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

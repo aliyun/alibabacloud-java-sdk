@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitSlaCouponApplyRequest extends TeaModel {
     /**
-     * <p>The IDs of the damaged records. This parameter is optional.</p>
+     * <p>Optional. The IDs of the damaged records.</p>
      */
     @NameInMap("DamagedIds")
     public java.util.List<String> damagedIds;
@@ -17,7 +17,7 @@ public class SubmitSlaCouponApplyRequest extends TeaModel {
     public java.util.List<SubmitSlaCouponApplyRequestEcIdAccountIds> ecIdAccountIds;
 
     /**
-     * <p>The claim month. This parameter is required. Format: yyyyMM.</p>
+     * <p>Required. The application month in the yyyyMM format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class SubmitSlaCouponApplyRequest extends TeaModel {
     public Integer month;
 
     /**
-     * <p>The primary marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
+     * <p>The ID of the primary marketplace. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>2084210001</p>
@@ -80,7 +80,7 @@ public class SubmitSlaCouponApplyRequest extends TeaModel {
         public java.util.List<Long> accountIds;
 
         /**
-         * <p>The enterprise entity ID.</p>
+         * <p>The ID of the enterprise entity.</p>
          * 
          * <strong>example:</strong>
          * <p>1501603440974415</p>

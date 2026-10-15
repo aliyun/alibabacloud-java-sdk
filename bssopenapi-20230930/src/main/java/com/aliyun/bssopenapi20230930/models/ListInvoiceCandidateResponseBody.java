@@ -14,13 +14,13 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The list of data entries.</p>
+     * <p>The data list.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListInvoiceCandidateResponseBodyData> data;
 
     /**
-     * <p>The metadata of the response.</p>
+     * <p>The response structure metadata.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -131,7 +131,7 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
          * <p>The account name.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试账号</p>
+         * <p>Test account</p>
          */
         @NameInMap("AccountName")
         public String accountName;
@@ -155,7 +155,7 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
         public String businessId;
 
         /**
-         * <p>The time when the business event occurred.</p>
+         * <p>The time when the transaction occurred, in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-01 00:00:00</p>
@@ -176,13 +176,13 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
          * <p>The commodity name.</p>
          * 
          * <strong>example:</strong>
-         * <p>性能测试</p>
+         * <p>Performance testing</p>
          */
         @NameInMap("CommodityName")
         public String commodityName;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time, in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-91 00:00:00</p>
@@ -191,7 +191,7 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The ID of the invoice candidate.</p>
+         * <p>The ID of the invoicing object.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -248,13 +248,13 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
          * <p>The product name.</p>
          * 
          * <strong>example:</strong>
-         * <p>性能测试</p>
+         * <p>Performance testing</p>
          */
         @NameInMap("ProductName")
         public String productName;
 
         /**
-         * <p>The ID of the resource owner account.</p>
+         * <p>The resource ownership account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1990699401005016</p>
@@ -263,16 +263,16 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
         public Long resourceOwnerAccountId;
 
         /**
-         * <p>The name of the resource owner account.</p>
+         * <p>The resource ownership account name.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试账号</p>
+         * <p>Test account</p>
          */
         @NameInMap("ResourceOwnerAccountName")
         public String resourceOwnerAccountName;
 
         /**
-         * <p>The status of the invoice candidate.</p>
+         * <p>The invoice object status.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -290,7 +290,7 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
         public String totalAmount;
 
         /**
-         * <p>The type of the invoice candidate.</p>
+         * <p>The invoice object type.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

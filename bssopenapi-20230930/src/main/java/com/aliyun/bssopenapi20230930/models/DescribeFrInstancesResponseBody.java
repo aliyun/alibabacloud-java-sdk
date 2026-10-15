@@ -92,12 +92,21 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeFrInstancesResponseBodyDataAutoPurchase extends TeaModel {
+        /**
+         * <p>Indicates whether the resource has been auto-purchased.</p>
+         */
         @NameInMap("AlreadyAutoPurchase")
         public Boolean alreadyAutoPurchase;
 
+        /**
+         * <p>Indicates whether auto-purchase is configured.</p>
+         */
         @NameInMap("SettingAutoPurchase")
         public Boolean settingAutoPurchase;
 
+        /**
+         * <p>Indicates whether auto-purchase is supported.</p>
+         */
         @NameInMap("SupportAutoPurchase")
         public Boolean supportAutoPurchase;
 
@@ -134,7 +143,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
 
     public static class DescribeFrInstancesResponseBodyDataCapacityType extends TeaModel {
         /**
-         * <p>The property code.</p>
+         * <p>The attribute code.</p>
          * 
          * <strong>example:</strong>
          * <p>deadlineAcc</p>
@@ -143,10 +152,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The property name.</p>
+         * <p>The attribute name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Total decrement</p>
+         * <p>Decreasing total capacity</p>
          */
         @NameInMap("Name")
         public String name;
@@ -176,7 +185,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
 
     public static class DescribeFrInstancesResponseBodyDataCommodity extends TeaModel {
         /**
-         * <p>The property code.</p>
+         * <p>The attribute code.</p>
          * 
          * <strong>example:</strong>
          * <p>slb_albcubag_dp_cn</p>
@@ -185,10 +194,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The property name.</p>
+         * <p>The attribute name.</p>
          * 
          * <strong>example:</strong>
-         * <p>ALB Resource Plan</p>
+         * <p>ALB resource plan</p>
          */
         @NameInMap("Name")
         public String name;
@@ -218,7 +227,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
 
     public static class DescribeFrInstancesResponseBodyDataCycleType extends TeaModel {
         /**
-         * <p>The commitment cycle code.</p>
+         * <p>The commitment period code.</p>
          * 
          * <strong>example:</strong>
          * <p>hour</p>
@@ -227,7 +236,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The commitment cycle name.</p>
+         * <p>The commitment period name.</p>
          * 
          * <strong>example:</strong>
          * <p>Hour</p>
@@ -260,7 +269,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
 
     public static class DescribeFrInstancesResponseBodyDataDeductRegions extends TeaModel {
         /**
-         * <p>The deductible region code.</p>
+         * <p>The code of the region where deductions are applicable.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -269,7 +278,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The deductible region.</p>
+         * <p>The region where deductions are applicable.</p>
          * 
          * <strong>example:</strong>
          * <p>Beijing</p>
@@ -302,7 +311,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
 
     public static class DescribeFrInstancesResponseBodyDataProduct extends TeaModel {
         /**
-         * <p>The property code.</p>
+         * <p>The attribute code.</p>
          * 
          * <strong>example:</strong>
          * <p>slb</p>
@@ -311,7 +320,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The property name.</p>
+         * <p>The attribute name.</p>
          * 
          * <strong>example:</strong>
          * <p>Server Load Balancer</p>
@@ -344,7 +353,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
 
     public static class DescribeFrInstancesResponseBodyDataStatus extends TeaModel {
         /**
-         * <p>The property code.</p>
+         * <p>The attribute code.</p>
          * 
          * <strong>example:</strong>
          * <p>valid</p>
@@ -353,7 +362,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The property name.</p>
+         * <p>The attribute name.</p>
          * 
          * <strong>example:</strong>
          * <p>Valid</p>
@@ -386,7 +395,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
 
     public static class DescribeFrInstancesResponseBodyDataTemplate extends TeaModel {
         /**
-         * <p>The property code.</p>
+         * <p>The attribute code.</p>
          * 
          * <strong>example:</strong>
          * <p>alb_cubag*******</p>
@@ -395,10 +404,10 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The property name.</p>
+         * <p>The attribute name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Chinese mainland regions</p>
+         * <p>Mainland China</p>
          */
         @NameInMap("Name")
         public String name;
@@ -445,6 +454,9 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <p>The auto-purchase information.</p>
+         */
         @NameInMap("AutoPurchase")
         public DescribeFrInstancesResponseBodyDataAutoPurchase autoPurchase;
 
@@ -452,7 +464,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
          * <p>The capacity type name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Total decrement</p>
+         * <p>Decreasing total capacity</p>
          */
         @NameInMap("CapacitiyTypeName")
         public String capacitiyTypeName;
@@ -533,13 +545,13 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         public String currCapacityViewValue;
 
         /**
-         * <p>The commitment cycle.</p>
+         * <p>The commitment period.</p>
          */
         @NameInMap("CycleType")
         public DescribeFrInstancesResponseBodyDataCycleType cycleType;
 
         /**
-         * <p>The commitment cycle code.</p>
+         * <p>The commitment period code.</p>
          * 
          * <strong>example:</strong>
          * <p>hour</p>
@@ -548,7 +560,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         public String cycleTypeCode;
 
         /**
-         * <p>The commitment cycle name.</p>
+         * <p>The commitment period name.</p>
          * 
          * <strong>example:</strong>
          * <p>Hour</p>
@@ -557,16 +569,19 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         public String cycleTypeName;
 
         /**
-         * <p>The list of deductible regions.</p>
+         * <p>The list of regions where deductions are applicable.</p>
          */
         @NameInMap("DeductRegions")
         public java.util.List<DescribeFrInstancesResponseBodyDataDeductRegions> deductRegions;
 
+        /**
+         * <p>Indicates whether the deduction rule is enabled.</p>
+         */
         @NameInMap("EnableDeductRule")
         public Boolean enableDeductRule;
 
         /**
-         * <p>Indicates whether exchange is supported.</p>
+         * <p>Indicates whether exchanges are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -584,7 +599,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         public Boolean enableRenew;
 
         /**
-         * <p>Indicates whether upgrade is supported.</p>
+         * <p>Indicates whether upgrades are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -593,7 +608,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         public Boolean enableUpgrade;
 
         /**
-         * <p>The expiration time.</p>
+         * <p>The expiration time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1710604800000</p>
@@ -602,7 +617,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The exchange commodity code.</p>
+         * <p>The commodity code for exchange.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -674,7 +689,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         public String periodCapacityViewValue;
 
         /**
-         * <p>The period time.</p>
+         * <p>The period time unit, such as hour for hours.</p>
          * 
          * <strong>example:</strong>
          * <p>hour</p>
@@ -707,7 +722,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         public String productName;
 
         /**
-         * <p>The purchase time.</p>
+         * <p>The purchase time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1678939036000</p>
@@ -736,7 +751,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         public String regionName;
 
         /**
-         * <p>The specification.</p>
+         * <p>The specifications.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -747,7 +762,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         public String spec;
 
         /**
-         * <p>The effective period.</p>
+         * <p>The effective period. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1678939035000</p>

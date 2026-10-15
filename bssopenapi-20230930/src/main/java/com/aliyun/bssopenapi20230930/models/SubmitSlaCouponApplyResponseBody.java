@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitSlaCouponApplyResponseBody extends TeaModel {
     /**
-     * <p>The response struct metadata.</p>
+     * <p>The metadata of the response structure.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class SubmitSlaCouponApplyResponseBody extends TeaModel {
     public Object metadata;
 
     /**
-     * <p>The unique request ID, which is used to identify a request and troubleshoot issues.</p>
+     * <p>The unique identifier of the request, which is used to mark the request and facilitate troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
@@ -32,7 +32,7 @@ public class SubmitSlaCouponApplyResponseBody extends TeaModel {
     public Double sumCoupon;
 
     /**
-     * <p>The end time.</p>
+     * <p>The end time in the EEE MMM dd HH:mm:ss z yyyy format, such as Mon Apr 27 00:00:00 CST 2026.</p>
      * 
      * <strong>example:</strong>
      * <p>Mon Apr 27 00:00:00 CST 2026</p>
@@ -41,7 +41,7 @@ public class SubmitSlaCouponApplyResponseBody extends TeaModel {
     public String validEndTime;
 
     /**
-     * <p>The start time.</p>
+     * <p>The start time in the EEE MMM dd HH:mm:ss z yyyy format, such as Tue Oct 27 13:15:58 CST 2026.</p>
      * 
      * <strong>example:</strong>
      * <p>Tue Oct 27 13:15:58 CST 2026</p>

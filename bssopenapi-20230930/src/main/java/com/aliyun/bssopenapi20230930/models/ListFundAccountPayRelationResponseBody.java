@@ -20,7 +20,7 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
     public java.util.List<ListFundAccountPayRelationResponseBodyData> data;
 
     /**
-     * <p>The response metadata.</p>
+     * <p>The metadata of the response structure.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -110,7 +110,7 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
 
     public static class ListFundAccountPayRelationResponseBodyData extends TeaModel {
         /**
-         * <p>The account ID of the user associated with the payment relationship, that is, the account that uses this account for payment.</p>
+         * <p>The account ID of the user associated with the payment relationship, which is the account that uses this account for payment.</p>
          * 
          * <strong>example:</strong>
          * <p>32812132121</p>
@@ -119,10 +119,10 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The user name.</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
-         * <p>云某的名称</p>
+         * <p>Sample username</p>
          */
         @NameInMap("AccountName")
         public String accountName;
@@ -137,7 +137,7 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
         public String ecid;
 
         /**
-         * <p>The time when the payment relationship takes effect.</p>
+         * <p>The effective period of the payment relationship. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-01 12:00:10</p>
@@ -164,7 +164,7 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
         public String fundAccountOwnerAccountId;
 
         /**
-         * <p>The time when the payment relationship expires.</p>
+         * <p>The time when the payment relationship expires. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-01 12:12:12</p>
@@ -173,7 +173,7 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
         public String ineffectiveTime;
 
         /**
-         * <p>The primary marketplace.</p>
+         * <p>The level-1 marketplace.</p>
          * 
          * <strong>example:</strong>
          * <p>2684210001</p>
@@ -182,19 +182,16 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
         public String nbid;
 
         /**
-         * <p>The operator name.
-         * When the operator type is aliyun_pk, the operator name is the Alibaba Cloud nickname.
-         * When the operator type is system, the operator name is &quot;Alibaba Cloud assistant&quot;.</p>
+         * <p>The name of the operator. If the operator type is aliyun_pk, the value is the Alibaba Cloud nickname. If the operator type is system, the value is &quot;Alibaba Cloud Support&quot;.</p>
          * 
          * <strong>example:</strong>
-         * <p>云某的名称</p>
+         * <p>Sample username</p>
          */
         @NameInMap("OperatorName")
         public String operatorName;
 
         /**
-         * <p>The authorized operator.
-         * When the operator type is aliyun_pk, operatorNo is the Alibaba Cloud account ID.</p>
+         * <p>The authorized operator. If the operator type is aliyun_pk, the value is the Alibaba Cloud account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1232343423</p>
@@ -203,9 +200,11 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
         public String operatorNo;
 
         /**
-         * <p>The type of the authorized operator.
-         * aliyun_pk: user.
-         * system: Alibaba Cloud system.</p>
+         * <p>The type of the authorized operator. Valid values:</p>
+         * <ul>
+         * <li>aliyun_pk: User.</li>
+         * <li>system: Alibaba Cloud system.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>aliyun_pk</p>
@@ -214,7 +213,7 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
         public String operatorType;
 
         /**
-         * <p>The relationship type, which can be collection relationship or payment relationship.</p>
+         * <p>The relationship type, which can be a collection relationship or a payment relationship.</p>
          * 
          * <strong>example:</strong>
          * <p>PAYMENT</p>
@@ -232,9 +231,11 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
         public String site;
 
         /**
-         * <p>The relationship status.
-         * valid: valid.
-         * expired: invalid.</p>
+         * <p>The relationship status. Valid values:</p>
+         * <ul>
+         * <li>valid: Valid.</li>
+         * <li>expired: Invalid.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>valid</p>

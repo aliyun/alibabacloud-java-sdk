@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDeductLogsShrinkRequest extends TeaModel {
     /**
-     * <p>The instance ID for billing deduction.</p>
+     * <p>The ID of the instance for which the billing is deducted.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs-******</p>
@@ -14,7 +14,7 @@ public class DescribeDeductLogsShrinkRequest extends TeaModel {
     public String billInstanceId;
 
     /**
-     * <p>The commodity code of the deducted item.</p>
+     * <p>The commodity code for deduction.</p>
      * 
      * <strong>example:</strong>
      * <p>snapshot</p>
@@ -23,7 +23,7 @@ public class DescribeDeductLogsShrinkRequest extends TeaModel {
     public String billingCommodityCode;
 
     /**
-     * <p>The billing end time.</p>
+     * <p>The billing end time. The value is a UNIX timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class DescribeDeductLogsShrinkRequest extends TeaModel {
     public Long billingEndTime;
 
     /**
-     * <p>The billing start time.</p>
+     * <p>The billing start time. The value is a UNIX timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,13 +52,13 @@ public class DescribeDeductLogsShrinkRequest extends TeaModel {
     public String commodityCode;
 
     /**
-     * <p>The enterprise and account list. If this parameter is empty, the current account is queried.</p>
+     * <p>The list of enterprises and accounts. If this parameter is left empty, the current account is queried.</p>
      */
     @NameInMap("EcIdAccountIds")
     public String ecIdAccountIdsShrink;
 
     /**
-     * <p>The resource dimension for the query.</p>
+     * <p>The resource dimension.</p>
      * 
      * <strong>example:</strong>
      * <p>oss_rc</p>
@@ -76,7 +76,7 @@ public class DescribeDeductLogsShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The primary marketplace ID. If this parameter is empty, the marketplace ID of the current user is used by default.</p>
+     * <p>The level-1 marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
@@ -103,7 +103,7 @@ public class DescribeDeductLogsShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The list of deduction accounts.</p>
+     * <p>The list of accounts for deduction.</p>
      */
     @NameInMap("RelationAccountIds")
     public String relationAccountIdsShrink;

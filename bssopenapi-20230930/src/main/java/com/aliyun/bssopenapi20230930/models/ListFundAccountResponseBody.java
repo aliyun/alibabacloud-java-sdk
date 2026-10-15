@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListFundAccountResponseBody extends TeaModel {
     /**
-     * <p>Data list</p>
+     * <p>The data list.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListFundAccountResponseBodyData> data;
 
     /**
-     * <p>Response metadata</p>
+     * <p>The metadata of the response structure.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -20,7 +20,7 @@ public class ListFundAccountResponseBody extends TeaModel {
     public Object metadata;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
@@ -59,7 +59,7 @@ public class ListFundAccountResponseBody extends TeaModel {
 
     public static class ListFundAccountResponseBodyData extends TeaModel {
         /**
-         * <p>Account creation time</p>
+         * <p>The time when the account was created. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-30 12:00:00</p>
@@ -68,7 +68,7 @@ public class ListFundAccountResponseBody extends TeaModel {
         public String createDate;
 
         /**
-         * <p>Account ID of the MA user associated with the account</p>
+         * <p>The account ID of the MA user corresponding to the account.</p>
          * 
          * <strong>example:</strong>
          * <p>1232121</p>
@@ -77,16 +77,16 @@ public class ListFundAccountResponseBody extends TeaModel {
         public String fundAccountAdminAccountId;
 
         /**
-         * <p>Name of the MA user associated with the account</p>
+         * <p>The username of the MA user corresponding to the account.</p>
          * 
          * <strong>example:</strong>
-         * <p>云某的账户</p>
+         * <p>Yun\&quot;s account</p>
          */
         @NameInMap("FundAccountAdminAccountName")
         public String fundAccountAdminAccountName;
 
         /**
-         * <p>Account ID</p>
+         * <p>The fund account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1022231</p>
@@ -95,16 +95,16 @@ public class ListFundAccountResponseBody extends TeaModel {
         public String fundAccountId;
 
         /**
-         * <p>Account name</p>
+         * <p>The fund account name.</p>
          * 
          * <strong>example:</strong>
-         * <p>云某的账户</p>
+         * <p>Yun\&quot;s account</p>
          */
         @NameInMap("FundAccountName")
         public String fundAccountName;
 
         /**
-         * <p>Account ID of the fund account owner</p>
+         * <p>The account ID of the fund account owner.</p>
          * 
          * <strong>example:</strong>
          * <p>132123211</p>
@@ -113,10 +113,12 @@ public class ListFundAccountResponseBody extends TeaModel {
         public String fundAccountOwnerAccountId;
 
         /**
-         * <p>Account status.
-         * VALID: valid.
-         * FROZEN: frozen.
-         * CLOSED: closed.</p>
+         * <p>The account status. Valid values:</p>
+         * <ul>
+         * <li>VALID: Valid.</li>
+         * <li>FROZEN: Frozen. </li>
+         * <li>CLOSED: Closed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>VALID</p>
@@ -125,9 +127,11 @@ public class ListFundAccountResponseBody extends TeaModel {
         public String fundAccountStatus;
 
         /**
-         * <p>Account type.
-         * DIRECT_USER: Alibaba Cloud direct customer account.
-         * RESELLER_QUOTA: ecosystem account.</p>
+         * <p>The account type. Valid values:</p>
+         * <ul>
+         * <li>DIRECT_USER: Alibaba Cloud direct customer account. </li>
+         * <li>RESELLER_QUOTA: Ecosystem account.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>DIRECT_USER</p>
@@ -136,7 +140,7 @@ public class ListFundAccountResponseBody extends TeaModel {
         public String fundAccountType;
 
         /**
-         * <p>Level-1 marketplace</p>
+         * <p>The primary marketplace.</p>
          * 
          * <strong>example:</strong>
          * <p>2684210001</p>
@@ -145,16 +149,18 @@ public class ListFundAccountResponseBody extends TeaModel {
         public String nbid;
 
         /**
-         * <p>Set of account permissions that the user has.
-         * using: use.
-         * manage: manage.
-         * owner: own.</p>
+         * <p>The set of account permissions owned by the user. Valid values:</p>
+         * <ul>
+         * <li>using: Use.</li>
+         * <li>manage: Manage.</li>
+         * <li>owner: Own.</li>
+         * </ul>
          */
         @NameInMap("Permissions")
         public java.util.List<String> permissions;
 
         /**
-         * <p>Site</p>
+         * <p>The site.</p>
          * 
          * <strong>example:</strong>
          * <p>26842</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFundAccountTransactionDetailsRequest extends TeaModel {
     /**
-     * <p>Transaction order number</p>
+     * <p>The transaction order number.</p>
      * 
      * <strong>example:</strong>
      * <p>2023212312321</p>
@@ -14,7 +14,7 @@ public class GetFundAccountTransactionDetailsRequest extends TeaModel {
     public String billNumber;
 
     /**
-     * <p>Transaction channel serial number</p>
+     * <p>The payment reference No.</p>
      * 
      * <strong>example:</strong>
      * <p>20250312334312322</p>
@@ -23,7 +23,7 @@ public class GetFundAccountTransactionDetailsRequest extends TeaModel {
     public String channelTransactionNumber;
 
     /**
-     * <p>Current page number</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class GetFundAccountTransactionDetailsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Query end timestamp (milliseconds)</p>
+     * <p>The end timestamp for the query. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1735664561000</p>
@@ -41,7 +41,7 @@ public class GetFundAccountTransactionDetailsRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>Fund account ID. If not specified, the account ID owned by the current account (owner) is used by default.</p>
+     * <p>The ID of the fund account. If you do not specify this parameter, the ID of the account owned by the current user is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>123221232</p>
@@ -50,7 +50,7 @@ public class GetFundAccountTransactionDetailsRequest extends TeaModel {
     public Long fundAccountId;
 
     /**
-     * <p>Page size (maximum 200)</p>
+     * <p>The number of entries per page. Maximum value: 200.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -59,7 +59,7 @@ public class GetFundAccountTransactionDetailsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Query start timestamp (milliseconds)</p>
+     * <p>The start timestamp for the query. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1735664461000</p>
@@ -68,21 +68,23 @@ public class GetFundAccountTransactionDetailsRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>Transaction channel. If specified, the query filters by transaction channel. If not specified, all channels are queried by default.</p>
-     * <p>User balance: ACCT_CASH.</p>
-     * <p>Alipay: ALIPAY.</p>
-     * <p>Alipay Zhifutong: ALIPAY_ZHIFUTONG.</p>
-     * <p>Offline remittance: OFFLINE_REMIT.</p>
-     * <p>Credit control quota refund: REFUND.</p>
-     * <p>Online banking: UNION_PAY_BANK.</p>
-     * <p>Credit card: CREDIT_CARD. (International site only)</p>
-     * <p>PayPal: PAYPAL. (International site only)</p>
+     * <p>The list of transaction channels. If you specify this parameter, transactions are queried by channel. If you do not specify this parameter, all channels are queried by default. Valid values:</p>
+     * <ul>
+     * <li>ACCT_CASH: User balance.</li>
+     * <li>ALIPAY: Alipay.</li>
+     * <li>ALIPAY_ZHIFUTONG: Alipay Zhifutong.</li>
+     * <li>OFFLINE_REMIT: Corporate remittance.</li>
+     * <li>REFUND: Credit limit refund.</li>
+     * <li>UNION_PAY_BANK: Online banking.</li>
+     * <li>CREDIT_CARD: Credit card. Available only on the international site.</li>
+     * <li>AYPAL: PayPal. Available only on the international site.</li>
+     * </ul>
      */
     @NameInMap("TransactionChannelList")
     public java.util.List<String> transactionChannelList;
 
     /**
-     * <p>Transaction direction: in/out (fund inflow/outflow)</p>
+     * <p>The direction of the transaction.</p>
      * 
      * <strong>example:</strong>
      * <p>IN</p>
@@ -91,7 +93,7 @@ public class GetFundAccountTransactionDetailsRequest extends TeaModel {
     public String transactionDirection;
 
     /**
-     * <p>Transaction serial number</p>
+     * <p>The transaction number.</p>
      * 
      * <strong>example:</strong>
      * <p>543231231</p>
@@ -100,14 +102,16 @@ public class GetFundAccountTransactionDetailsRequest extends TeaModel {
     public Long transactionNumber;
 
     /**
-     * <p>Transaction type. If a transaction type is specified, only results of that type are returned. If the specified type does not exist, the result is empty. If not specified, all types are returned by default.</p>
-     * <p>Top-up: CHARGE.</p>
-     * <p>Withdrawal: WITHDRAW.</p>
-     * <p>Refund: REFUND.</p>
-     * <p>Payment: PAY.</p>
-     * <p>Transfer: TRANSFER.</p>
-     * <p>Adjustment: ADJUST.</p>
-     * <p>Order expiration refund: PAY_FAILED.</p>
+     * <p>The transaction type. If you specify a transaction type, the query returns results of the corresponding type. If no results exist, an empty result is returned. If you do not specify this parameter, all types are returned by default. Valid values:</p>
+     * <ul>
+     * <li>CHARGE: Top-up.</li>
+     * <li>WITHDRAW: Withdrawal.</li>
+     * <li>REFUND: Refund.</li>
+     * <li>PAY: Payment.</li>
+     * <li>TRANSFER: Transfer.</li>
+     * <li>ADJUST: Adjustment.</li>
+     * <li>PAY_FAILED: Refund for failed order.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>CHARGE</p>
@@ -116,7 +120,7 @@ public class GetFundAccountTransactionDetailsRequest extends TeaModel {
     public String transactionType;
 
     /**
-     * <p>Transaction type list. Supports querying with multiple parameters.</p>
+     * <p>The list of transaction types. You can specify multiple parameters for a parameter query.</p>
      */
     @NameInMap("TransactionTypeList")
     public java.util.List<String> transactionTypeList;

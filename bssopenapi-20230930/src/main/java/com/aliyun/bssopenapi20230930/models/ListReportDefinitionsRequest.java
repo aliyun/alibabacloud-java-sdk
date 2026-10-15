@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListReportDefinitionsRequest extends TeaModel {
     /**
-     * <p>The level-1 marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
+     * <p>Primary sales site ID. If empty, the current user\&quot;s site ID is used by default</p>
      * 
      * <strong>example:</strong>
      * <p>2684201000001</p>

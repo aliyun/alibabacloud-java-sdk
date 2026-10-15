@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListInvoiceCandidateRequest extends TeaModel {
     /**
-     * <p>List of billing cycles.</p>
+     * <p>The list of billing cycles.</p>
      */
     @NameInMap("BillingCycles")
     public java.util.List<Integer> billingCycles;
 
     /**
-     * <p>List of business document numbers.</p>
+     * <p>The list of business document numbers.</p>
      */
     @NameInMap("BusinessIds")
     public java.util.List<String> businessIds;
@@ -26,7 +26,7 @@ public class ListInvoiceCandidateRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>List of enterprises and accounts. If empty, the current account itself is queried.</p>
+     * <p>The list of enterprises and accounts. If this parameter is left empty, the current account is queried.</p>
      */
     @NameInMap("EcIdAccountIds")
     public java.util.List<ListInvoiceCandidateRequestEcIdAccountIds> ecIdAccountIds;
@@ -41,13 +41,13 @@ public class ListInvoiceCandidateRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>List of invoice issuers.</p>
+     * <p>The list of invoice issuers.</p>
      */
     @NameInMap("InvoiceIssuers")
     public java.util.List<String> invoiceIssuers;
 
     /**
-     * <p>Primary marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+     * <p>The level-1 marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
@@ -74,13 +74,13 @@ public class ListInvoiceCandidateRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>List of invoice candidate statuses.</p>
+     * <p>The list of invoice object statuses.</p>
      */
     @NameInMap("Status")
     public java.util.List<Integer> status;
 
     /**
-     * <p>List of invoice candidate types.</p>
+     * <p>The list of invoice object types.</p>
      */
     @NameInMap("Types")
     public java.util.List<Integer> types;
@@ -180,13 +180,13 @@ public class ListInvoiceCandidateRequest extends TeaModel {
 
     public static class ListInvoiceCandidateRequestEcIdAccountIds extends TeaModel {
         /**
-         * <p>List of accounts to access. If empty, all accounts under the current entity ID are selected.</p>
+         * <p>The list of accessed accounts. If this parameter is left empty, all accounts under the current entity ID are selected.</p>
          */
         @NameInMap("AccountIds")
         public java.util.List<Long> accountIds;
 
         /**
-         * <p>Enterprise entity ID.</p>
+         * <p>The enterprise entity ID.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
