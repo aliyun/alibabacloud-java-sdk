@@ -4,17 +4,32 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class AppAiStaff extends TeaModel {
+    /**
+     * <p>The employee ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>370196</p>
+     */
     @NameInMap("StaffId")
     public String staffId;
 
+    /**
+     * <p>The employee name.</p>
+     */
     @NameInMap("StaffName")
     public String staffName;
 
+    /**
+     * <p>The employee type.</p>
+     */
     @NameInMap("StaffType")
     public String staffType;
 
     /**
-     * <p>可能的值：unknown, init, testing, online</p>
+     * <p>Valid values: unknown, init, testing, and online.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>online</p>
      */
     @NameInMap("Status")
     public String status;

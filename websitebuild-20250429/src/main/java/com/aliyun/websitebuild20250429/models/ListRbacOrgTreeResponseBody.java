@@ -41,9 +41,9 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace the <code>%s</code> variable in the <strong>ErrMessage</strong> parameter.</p>
+     * <p>The dynamic error message, which is used to replace the <code>%s</code> variable in the <strong>ErrMessage</strong> return parameter.</p>
      * <blockquote>
-     * <p>For example, if <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
+     * <p>For example, if <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -105,7 +105,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
      * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
@@ -230,7 +230,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
 
     public static class ListRbacOrgTreeResponseBodyModuleData extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time is in ISO 8601 format in the UTC (Z) time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-05-08T02:28:26Z</p>
@@ -260,7 +260,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
          * <p>The file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>文件名</p>
+         * <p>FileName</p>
          */
         @NameInMap("Name")
         public String name;
@@ -320,7 +320,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
 
     public static class ListRbacOrgTreeResponseBodyModuleNext extends TeaModel {
         /**
-         * <p>The creation date.</p>
+         * <p>The creation date. The time is in ISO 8601 format in the UTC (Z) time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-15T02:29:22Z</p>
@@ -422,7 +422,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         public Integer currentPageNum;
 
         /**
-         * <p>The request results.</p>
+         * <p>The query results.</p>
          */
         @NameInMap("Data")
         public java.util.List<ListRbacOrgTreeResponseBodyModuleData> data;
@@ -461,7 +461,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         public Boolean prePage;
 
         /**
-         * <p>Indicates whether the server processes a maximum of 1,000 most recent records beyond the pagination limit. If the results exceed 1,000 entries, <strong>ResultLimit</strong> is <strong>true</strong>, and you must narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+         * <p>In addition to pagination limits, the server processes up to 1,000 recent records for the current query. If the results exceed 1,000 records, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>

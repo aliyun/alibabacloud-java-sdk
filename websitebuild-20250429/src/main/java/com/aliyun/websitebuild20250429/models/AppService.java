@@ -4,51 +4,123 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class AppService extends TeaModel {
+    /**
+     * <p>The business ID of the application instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WS20251211153330000001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>The creation time in ISO 8601 format in the UTC time zone (Z).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-07-30T02:08:40Z</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The deletion flag.</p>
+     */
     @NameInMap("Deleted")
     public Integer deleted;
 
+    /**
+     * <p>The end time in ISO 8601 format in the UTC time zone (Z).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-07-18T02:23:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>esp bizId</p>
+     */
     @NameInMap("EspBizId")
     public String espBizId;
 
+    /**
+     * <p>The modification time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Tue Sep 09 10:27:49 CST 2025</p>
+     */
     @NameInMap("GmtModified")
     public String gmtModified;
 
+    /**
+     * <p>The associated business ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WS20250915163734000001</p>
+     */
     @NameInMap("InstanceBizId")
     public String instanceBizId;
 
+    /**
+     * <p>The service name.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The list of flow nodes.</p>
+     */
     @NameInMap("NodeList")
     public java.util.List<TreeNode> nodeList;
 
+    /**
+     * <p>The application service configuration information.</p>
+     */
     @NameInMap("Profile")
     public AppServiceProfile profile;
 
+    /**
+     * <p>The service type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WEBSITE_DESIGN</p>
+     */
     @NameInMap("ServiceType")
     public String serviceType;
 
+    /**
+     * <p>The service type description.</p>
+     */
     @NameInMap("ServiceTypeText")
     public String serviceTypeText;
 
+    /**
+     * <p>The application identifier.</p>
+     */
     @NameInMap("Slug")
     public String slug;
 
+    /**
+     * <p>The start time as a UNIX timestamp in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1754447102000</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The user ID.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppInstanceTempShortUrlResponseBody extends TeaModel {
     /**
-     * <p>The details of the permission verification failure.</p>
+     * <p>The details of the permission check failure.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class GetAppInstanceTempShortUrlResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Indicates whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -32,7 +32,7 @@ public class GetAppInstanceTempShortUrlResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>The dynamic code. This parameter is not in use. Ignore this parameter.</p>
+     * <p>The dynamic code. This field is currently unused and can be ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -50,7 +50,7 @@ public class GetAppInstanceTempShortUrlResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -80,10 +80,10 @@ public class GetAppInstanceTempShortUrlResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
@@ -192,7 +192,7 @@ public class GetAppInstanceTempShortUrlResponseBody extends TeaModel {
 
     public static class GetAppInstanceTempShortUrlResponseBodyModule extends TeaModel {
         /**
-         * <p>The expiration time.</p>
+         * <p>The expiration time in UTC format yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.SSS\&quot;Z\&quot;.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +202,7 @@ public class GetAppInstanceTempShortUrlResponseBody extends TeaModel {
         public String expireAtTime;
 
         /**
-         * <p>The temporary short URL.</p>
+         * <p>The temporary short link.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>

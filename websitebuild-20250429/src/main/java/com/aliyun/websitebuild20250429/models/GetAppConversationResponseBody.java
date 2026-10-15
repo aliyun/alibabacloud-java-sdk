@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppConversationResponseBody extends TeaModel {
     /**
-     * <p>The details of the permission verification failure.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class GetAppConversationResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether a retry is allowed.</p>
+     * <p>Specifies whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class GetAppConversationResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name.</p>
+     * <p>The app name.</p>
      * 
      * <strong>example:</strong>
      * <p>dewuApp</p>
@@ -41,9 +41,9 @@ public class GetAppConversationResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace the <code>%s</code> variable in the <strong>ErrMessage</strong> response parameter.</p>
+     * <p>The dynamic error message, which is used to replace <code>%s</code> in the error message of the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class GetAppConversationResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -83,16 +83,16 @@ public class GetAppConversationResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System error</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request is synchronously processed.</p>
+     * <p>Specifies whether the request is processed synchronously.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -231,17 +231,17 @@ public class GetAppConversationResponseBody extends TeaModel {
         public String conversationId;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The value is a UNIX timestamp in seconds.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
-         * <p>None</p>
+         * <p>1740479834</p>
          */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time in ISO 8601 format in the UTC time zone.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -269,7 +269,7 @@ public class GetAppConversationResponseBody extends TeaModel {
         public String sectionId;
 
         /**
-         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
+         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to query the site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>865181640657408</p>
@@ -290,7 +290,7 @@ public class GetAppConversationResponseBody extends TeaModel {
          * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>用户id</p>
+         * <p>User ID</p>
          */
         @NameInMap("UserId")
         public String userId;

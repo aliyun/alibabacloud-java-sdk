@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PublishAppInstanceResponseBody extends TeaModel {
     /**
-     * <p>Permission denied information</p>
+     * <p>The access denied details.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class PublishAppInstanceResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed</p>
+     * <p>Indicates whether retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class PublishAppInstanceResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>App Name.</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>dewuApp</p>
@@ -32,7 +32,7 @@ public class PublishAppInstanceResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>Dynamic error code.</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,7 +41,7 @@ public class PublishAppInstanceResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic message. Not currently used. Ignore this field.</p>
+     * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -50,13 +50,13 @@ public class PublishAppInstanceResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>Returned error parameters</p>
+     * <p>The error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Response data</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Module")
     public PublishAppInstanceResponseBodyModule module;
@@ -71,7 +71,7 @@ public class PublishAppInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -80,16 +80,16 @@ public class PublishAppInstanceResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>Abnormal message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception.</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>Reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -192,7 +192,7 @@ public class PublishAppInstanceResponseBody extends TeaModel {
 
     public static class PublishAppInstanceResponseBodyModule extends TeaModel {
         /**
-         * <p>Publish order ID</p>
+         * <p>The publish order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>231</p>

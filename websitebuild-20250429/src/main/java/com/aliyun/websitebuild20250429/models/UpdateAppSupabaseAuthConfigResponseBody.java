@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAppSupabaseAuthConfigResponseBody extends TeaModel {
     /**
-     * <p>Permission information unavailable</p>
+     * <p>The access denied detail.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class UpdateAppSupabaseAuthConfigResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed</p>
+     * <p>Indicates whether retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class UpdateAppSupabaseAuthConfigResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>App Name.</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
@@ -32,7 +32,7 @@ public class UpdateAppSupabaseAuthConfigResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>Dynamic code. Not currently used. Ignore it.</p>
+     * <p>The dynamic code. This parameter is not in use. Ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,7 +41,7 @@ public class UpdateAppSupabaseAuthConfigResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic message.</p>
+     * <p>The dynamic message.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -50,13 +50,13 @@ public class UpdateAppSupabaseAuthConfigResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>Returned error parameters</p>
+     * <p>The error arguments.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Task object</p>
+     * <p>The task object.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -74,7 +74,7 @@ public class UpdateAppSupabaseAuthConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -83,16 +83,16 @@ public class UpdateAppSupabaseAuthConfigResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>Abnormal message</p>
+     * <p>The root error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception.</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether processing is synchronous</p>
+     * <p>Indicates whether the request is synchronously processed.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

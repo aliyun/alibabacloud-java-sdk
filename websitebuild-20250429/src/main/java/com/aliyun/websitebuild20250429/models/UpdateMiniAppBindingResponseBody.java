@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateMiniAppBindingResponseBody extends TeaModel {
     /**
-     * <p>Request result.</p>
+     * <p>The request result.</p>
      */
     @NameInMap("Data")
     public UpdateMiniAppBindingResponseBodyData data;
@@ -42,7 +42,7 @@ public class UpdateMiniAppBindingResponseBody extends TeaModel {
 
     public static class UpdateMiniAppBindingResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the operation succeeded.</p>
+         * <p>Indicates whether the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

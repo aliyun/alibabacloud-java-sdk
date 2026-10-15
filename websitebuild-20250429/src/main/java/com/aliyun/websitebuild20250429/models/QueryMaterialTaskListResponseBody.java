@@ -14,10 +14,10 @@ public class QueryMaterialTaskListResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed. Valid values:</p>
+     * <p>Indicates whether a retry is allowed. Valid values:</p>
      * <ul>
-     * <li>false: Retry is not allowed.</li>
-     * <li>true: Retry is allowed.</li>
+     * <li>false: No retry is allowed.</li>
+     * <li>true: A retry is allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class QueryMaterialTaskListResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic message. This parameter is currently not in use. Ignore this parameter.</p>
+     * <p>The dynamic message. Currently not in use. Ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -54,13 +54,13 @@ public class QueryMaterialTaskListResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The returned error parameters.</p>
+     * <p>The error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The error code. The ErrorCode parameter is not returned if the request is successful. If the request fails, the ErrorCode parameter is returned. For more information, see the error codes section.</p>
+     * <p>The error code. If the request is successful, the ErrorCode field is not returned. If the request fails, the ErrorCode field is returned. For more information, see the error codes in this topic.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -112,7 +112,7 @@ public class QueryMaterialTaskListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The error code.</p>
+     * <p>The root error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -121,16 +121,16 @@ public class QueryMaterialTaskListResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The exception message.</p>
+     * <p>The root error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -139,7 +139,7 @@ public class QueryMaterialTaskListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>Indicates whether synchronous processing is used.</p>
+     * <p>Indicates whether the request is synchronously processed.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -291,7 +291,7 @@ public class QueryMaterialTaskListResponseBody extends TeaModel {
         public Integer currentPageNum;
 
         /**
-         * <p>The request results.</p>
+         * <p>The request result.</p>
          */
         @NameInMap("Data")
         public java.util.List<AppMaterialTask> data;
@@ -324,7 +324,10 @@ public class QueryMaterialTaskListResponseBody extends TeaModel {
         public Boolean prePage;
 
         /**
-         * <p>In addition to the pagination limit, the server processes up to the 1000 most recent records for the current query. If the results exceed 1000 records, <strong>ResultLimit</strong> is set to <strong>true</strong>, and you need to narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is set to <strong>false</strong>.</p>
+         * <p>Apart from pagination limits, the server processes up to 1000 recent records per query. If the results exceed 1000 records, <strong>ResultLimit</strong> is <strong>true</strong>. Narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         @NameInMap("ResultLimit")
         public Boolean resultLimit;

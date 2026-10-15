@@ -102,13 +102,13 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
      * <p>The root error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request is processed synchronously.</p>
+     * <p>Indicates whether the request is synchronously processed.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -239,7 +239,7 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
          * <p>The activity name.</p>
          * 
          * <strong>example:</strong>
-         * <p>IP网段过滤统计</p>
+         * <p>IP segment filtering statistics</p>
          */
         @NameInMap("ActivityName")
         public String activityName;
@@ -263,7 +263,7 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
         public Long consumedQuota;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The value is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-02-14 11:57:51</p>
@@ -290,7 +290,7 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
         public String eligibilityConfig;
 
         /**
-         * <p>The end date.</p>
+         * <p>The end date. The value is in the YYYY-MM-DD HH:mm:ss Z format, where Z is the time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-22 10:18:51 +0800</p>
@@ -326,7 +326,7 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
         public Long remainingQuota;
 
         /**
-         * <p>The start date.</p>
+         * <p>The start date. The value is in the ISO 8601 format with the time zone set to UTC (Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-05-12T16:00:00.000Z</p>
@@ -362,7 +362,7 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
         public String touchpointConfig;
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time. The value is in the ISO 8601 format with a time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-11T21:13:38.164526965+08:00</p>

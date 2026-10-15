@@ -56,7 +56,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The number of entries per query.</p>
+     * <p>The maximum number of entries to return per query.</p>
      * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
@@ -227,7 +227,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
 
     public static class ListRbacRolesResponseBodyModuleData extends TeaModel {
         /**
-         * <p>The creation date.</p>
+         * <p>The creation date. The value is in ISO 8601 format with the time zone set to UTC (Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-05-28T17:59:55Z</p>
@@ -258,7 +258,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>Indicates whether this is a system-defined approval template. Valid values:</p>
+         * <p>Indicates whether the approval template is system-defined. Valid values:</p>
          * <ul>
          * <li>1: Yes.</li>
          * <li>0: No.</li>
@@ -280,7 +280,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
          * <p>The file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>文件名</p>
+         * <p>FileName</p>
          */
         @NameInMap("Name")
         public String name;
@@ -342,7 +342,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
 
     public static class ListRbacRolesResponseBodyModuleNext extends TeaModel {
         /**
-         * <p>The time when the task was created.</p>
+         * <p>The time when the task was created. The value is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-27 16:02:28</p>
@@ -360,7 +360,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Indicates whether this is the default private gateway.</p>
+         * <p>Indicates whether this is the default dedicated gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -369,7 +369,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>Indicates whether this is a system-defined approval template. Valid values:</p>
+         * <p>Indicates whether the approval template is system-defined. Valid values:</p>
          * <ul>
          * <li>1: Yes.</li>
          * <li>0: No.</li>
@@ -501,7 +501,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
         public Boolean prePage;
 
         /**
-         * <p>Indicates whether the query results exceed the server-side limit of 1,000 records (excluding pagination limits). If the results exceed 1,000 entries, <strong>ResultLimit</strong> is <strong>true</strong>. Narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+         * <p>Indicates whether the server-side result limit is reached. The server processes up to 1,000 recent records beyond pagination limits. If the results exceed 1,000, <strong>ResultLimit</strong> is <strong>true</strong> and you must narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>

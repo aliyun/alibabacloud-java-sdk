@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppPluginsResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access was denied.</p>
+     * <p>The detailed reason why access is denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class ListAppPluginsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Indicates whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class ListAppPluginsResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name to query.</p>
+     * <p>The name of the application to query.</p>
      * 
      * <strong>example:</strong>
      * <p>dewuApp</p>
@@ -41,9 +41,9 @@ public class ListAppPluginsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace the <code>%s</code> variable in the <strong>ErrMessage</strong> response parameter.</p>
+     * <p>The dynamic error message, which is used to replace <code>%s</code> in the error message of the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the DtsJobId request parameter is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the value of the <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,14 +53,13 @@ public class ListAppPluginsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error arguments.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The number of entries per query.</p>
-     * <p>Valid values: 10 to 100. Default value: 20.</p>
+     * <p>The maximum number of results to return per query. Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -75,7 +74,7 @@ public class ListAppPluginsResponseBody extends TeaModel {
     public java.util.List<ListAppPluginsResponseBodyModule> module;
 
     /**
-     * <p>The token for the next query. This parameter is empty if no more results are available.</p>
+     * <p>The token used to start the next query. If there is no next query, this value is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
@@ -105,7 +104,7 @@ public class ListAppPluginsResponseBody extends TeaModel {
      * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
@@ -230,7 +229,7 @@ public class ListAppPluginsResponseBody extends TeaModel {
 
     public static class ListAppPluginsResponseBodyModule extends TeaModel {
         /**
-         * <p>The plug-in code.</p>
+         * <p>The code of the plugin.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -248,7 +247,7 @@ public class ListAppPluginsResponseBody extends TeaModel {
         public String configItems;
 
         /**
-         * <p>The plug-in description.</p>
+         * <p>The description of the plugin.</p>
          * 
          * <strong>example:</strong>
          * <p>fail to decode json</p>
@@ -257,7 +256,7 @@ public class ListAppPluginsResponseBody extends TeaModel {
         public String desc;
 
         /**
-         * <p>The image display mode. Valid values:</p>
+         * <p>The image display setting. Valid values:</p>
          * <ul>
          * <li><strong>0</strong> (None): Not displayed.</li>
          * <li><strong>1</strong> (Always): Always displayed.</li>
@@ -270,8 +269,7 @@ public class ListAppPluginsResponseBody extends TeaModel {
         public Integer display;
 
         /**
-         * <p>Specifies whether scheduled delivery of resource snapshots is enabled.</p>
-         * <p>Valid values:</p>
+         * <p>Specifies whether to enable scheduled delivery of resource snapshots. Valid values:</p>
          * <ul>
          * <li>true: Enabled.</li>
          * <li>false: Disabled.</li>
@@ -293,7 +291,7 @@ public class ListAppPluginsResponseBody extends TeaModel {
         public String env;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The value is a UNIX timestamp in seconds.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -303,7 +301,7 @@ public class ListAppPluginsResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The modification time. The value is in the ISO 8601 format and the UTC time zone.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -322,7 +320,7 @@ public class ListAppPluginsResponseBody extends TeaModel {
         public String hooks;
 
         /**
-         * <p>The plug-in description.</p>
+         * <p>The description of the plugin.</p>
          * 
          * <strong>example:</strong>
          * <p>@lALPM2AwTOg9IUHNAUDNAUA</p>
@@ -340,7 +338,11 @@ public class ListAppPluginsResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Indicates whether the entry is deleted. Valid values: 0 (no) and 1 (yes).</p>
+         * <p>Indicates whether the plugin is deleted. Valid values:</p>
+         * <ul>
+         * <li>0: No.</li>
+         * <li>1: Yes.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -349,10 +351,10 @@ public class ListAppPluginsResponseBody extends TeaModel {
         public Integer isDeleted;
 
         /**
-         * <p>The plug-in name.</p>
+         * <p>The name of the plugin.</p>
          * 
          * <strong>example:</strong>
-         * <p>文件名</p>
+         * <p>File name</p>
          */
         @NameInMap("Name")
         public String name;
@@ -367,7 +369,7 @@ public class ListAppPluginsResponseBody extends TeaModel {
         public String skillHeader;
 
         /**
-         * <p>The category labels.</p>
+         * <p>The category tags.</p>
          * 
          * <strong>example:</strong>
          * <p>[{\&quot;Key\&quot;: \&quot;kubernetes.io/cluster-id\&quot;, \&quot;Value\&quot;: \&quot;cc67198b13db948c9848599654da5586e\&quot;}, {\&quot;Key\&quot;: \&quot;created-by\&quot;, \&quot;Value\&quot;: \&quot;alibabacloud-imagecache-controller\&quot;}]</p>

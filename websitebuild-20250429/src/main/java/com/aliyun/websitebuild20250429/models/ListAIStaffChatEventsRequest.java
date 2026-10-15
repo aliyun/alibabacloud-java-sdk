@@ -14,7 +14,7 @@ public class ListAIStaffChatEventsRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The chat ID. This parameter is optional. If not specified, the latest chat ID is used.</p>
+     * <p>The chat ID. This parameter is optional. If you do not specify this parameter, the latest chat ID is used.</p>
      * 
      * <strong>example:</strong>
      * <p>20833ba4-d189-4c50-9a44-a6bcbda2c93b</p>
@@ -32,7 +32,7 @@ public class ListAIStaffChatEventsRequest extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>The ID of the last event, used for incremental retrieval.</p>
+     * <p>The ID of the last event. This parameter is used to retrieve incremental events.</p>
      * 
      * <strong>example:</strong>
      * <p>event-71ece53b7d474e01b755a9b5fa5305e6</p>

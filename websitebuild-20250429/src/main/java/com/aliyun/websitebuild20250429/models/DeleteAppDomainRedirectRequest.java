@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAppDomainRedirectRequest extends TeaModel {
     /**
-     * <p>Application instance business ID.</p>
+     * <p>The business ID of the application instance.</p>
      * 
      * <strong>example:</strong>
      * <p>WD20250703155602000001</p>
@@ -14,7 +14,16 @@ public class DeleteAppDomainRedirectRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>Domain name redirect record ID.</p>
+     * <p>aliyun.com</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
+     */
+    @NameInMap("DomainName")
+    public String domainName;
+
+    /**
+     * <p>The ID of the domain name redirect record.</p>
      * 
      * <strong>example:</strong>
      * <p>803858889404426240</p>
@@ -33,6 +42,14 @@ public class DeleteAppDomainRedirectRequest extends TeaModel {
     }
     public String getBizId() {
         return this.bizId;
+    }
+
+    public DeleteAppDomainRedirectRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public DeleteAppDomainRedirectRequest setRecordId(Long recordId) {

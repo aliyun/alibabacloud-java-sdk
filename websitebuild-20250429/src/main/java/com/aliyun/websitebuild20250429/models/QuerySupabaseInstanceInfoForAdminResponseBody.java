@@ -41,9 +41,9 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which replaces the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response element.</p>
+     * <p>The dynamic error message, which replaces the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the value of the <strong>DtsJobId</strong> request parameter is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the value of the request parameter <strong>DtsJobId</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The error parameters returned.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -83,16 +83,16 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -213,7 +213,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
         public String bizId;
 
         /**
-         * <p>The time when the database instance was created.</p>
+         * <p>The creation time of the database instance.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -240,11 +240,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
         public String dbPublicUrl;
 
         /**
-         * <p>The database type. Valid values:</p>
-         * <ul>
-         * <li>rds</li>
-         * <li>polardb.</li>
-         * </ul>
+         * <p>The database type (rds/polardb).</p>
          * 
          * <strong>example:</strong>
          * <p>ORACLE</p>
@@ -253,7 +249,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
         public String dbType;
 
         /**
-         * <p>The additional information.</p>
+         * <p>The extra information.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;appId\&quot;:\&quot;APP_NTJAK8P11SNZDJ3M6BWC\&quot;}</p>
@@ -271,7 +267,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
         public String instanceCreateFinishedTime;
 
         /**
-         * <p>The creation status of the instance.</p>
+         * <p>The instance creation status.</p>
          * 
          * <strong>example:</strong>
          * <p>1111</p>
@@ -289,7 +285,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
         public Integer isDeleted;
 
         /**
-         * <p>The password for accessing the ApsaraDB RDS database.</p>
+         * <p>The access password of the RDS database.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -307,7 +303,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
         public String serviceKey;
 
         /**
-         * <p>The instance status. Valid values:</p>
+         * <p>The status. Valid values:</p>
          * <ul>
          * <li>0: Paused.</li>
          * <li>1: Running.</li>
@@ -338,7 +334,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
         public String supabaseDashboardUserName;
 
         /**
-         * <p>The time when the Supabase instance was created.</p>
+         * <p>The creation time of the Supabase instance.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>

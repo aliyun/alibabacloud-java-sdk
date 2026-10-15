@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAIStaffChatEventsResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access is denied.</p>
+     * <p>The detailed reasons for access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether a retry is allowed.</p>
+     * <p>Specifies whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name.</p>
+     * <p>The app name.</p>
      * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
@@ -41,9 +41,9 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the ErrMessage response element.</p>
+     * <p>The dynamic error message, which is used to replace the <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
      * <blockquote>
-     * <p>For example, if ErrMessage returns <strong>The Value of Input Parameter %s is not valid</strong> and DynamicMessage returns <strong>DtsJobId</strong>, the DtsJobId request parameter is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,13 +53,13 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The invalid parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The response object.</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("Module")
     public ListAIStaffChatEventsResponseBodyModule module;
@@ -83,16 +83,16 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The root error message.</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request is synchronously processed.</p>
+     * <p>Specifies whether the request is processed synchronously.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -195,7 +195,7 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
 
     public static class ListAIStaffChatEventsResponseBodyModuleEvents extends TeaModel {
         /**
-         * <p>The fault information.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;Recorded\&quot;: False}</p>
@@ -213,10 +213,10 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
         public Integer id;
 
         /**
-         * <p>The event name.</p>
+         * <p>The website name.</p>
          * 
          * <strong>example:</strong>
-         * <p>文章素材2026050704</p>
+         * <p>Article material 2026050704</p>
          */
         @NameInMap("Name")
         public String name;
@@ -254,7 +254,7 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
 
     public static class ListAIStaffChatEventsResponseBodyModule extends TeaModel {
         /**
-         * <p>The unique ID of a single utterance.</p>
+         * <p>The unique ID of the message.</p>
          * 
          * <strong>example:</strong>
          * <p>chat-xrz3etcl2bsygwlx8g</p>
@@ -272,7 +272,7 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
         public String conversationId;
 
         /**
-         * <p>The event list.</p>
+         * <p>The object ID.</p>
          */
         @NameInMap("Events")
         public java.util.List<ListAIStaffChatEventsResponseBodyModuleEvents> events;

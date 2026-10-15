@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadMaterialFileResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The detailed reason why access was denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -50,7 +50,7 @@ public class UploadMaterialFileResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The error parameters returned.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -92,7 +92,7 @@ public class UploadMaterialFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The root error code.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -101,10 +101,10 @@ public class UploadMaterialFileResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The root error message.</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;

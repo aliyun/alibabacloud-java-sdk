@@ -4,33 +4,81 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class TreeNode extends TeaModel {
+    /**
+     * <p>The list of child nodes.</p>
+     */
     @NameInMap("Children")
     public java.util.List<TreeNode> children;
 
+    /**
+     * <p>The final step number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("FinalStepNo")
     public Integer finalStepNo;
 
+    /**
+     * <p>The completion time.</p>
+     */
     @NameInMap("FinishTime")
     public Long finishTime;
 
+    /**
+     * <p>Specifies whether the node is a container node.</p>
+     */
     @NameInMap("IsContainerNode")
     public Boolean isContainerNode;
 
+    /**
+     * <p>The node ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2927b500-c4e2-4241-bacf-0a2991c4be12</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
+    /**
+     * <p>The node name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Single-channel output</p>
+     */
     @NameInMap("NodeName")
     public String nodeName;
 
+    /**
+     * <p>The node status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UP</p>
+     */
     @NameInMap("NodeStatus")
     public String nodeStatus;
 
+    /**
+     * <p>The operator role.</p>
+     */
     @NameInMap("OperatorRole")
     public String operatorRole;
 
+    /**
+     * <p>The parent node ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dpYLaezmVNRMGX56Cg4gLjrrVrMqPxX6</p>
+     */
     @NameInMap("ParentNodeId")
     public String parentNodeId;
 
+    /**
+     * <p>The step number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("StepNo")
     public Integer stepNo;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppConversationMessagesRequest extends TeaModel {
     /**
-     * <p>Session ID.</p>
+     * <p>The conversation ID.</p>
      * 
      * <strong>example:</strong>
      * <p>81bc5a34-1d8d-4ef7-a208-7401c51b054b</p>
@@ -14,8 +14,8 @@ public class ListAppConversationMessagesRequest extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>Number of results per query.</p>
-     * <p>Valid values: 10 to 100. Default Value: 20.</p>
+     * <p>The number of entries per query.</p>
+     * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -24,7 +24,7 @@ public class ListAppConversationMessagesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Token indicating the start of the next query. This value is empty if there is no subsequent query.</p>
+     * <p>The token for the next query. This parameter is empty if no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>FFh3Xqm+JgZ/U9Jyb7wdVr9LWk80Tghn5UZjbcWEVEderBcbVF+Y6PS0i8PpCL4PQZ3e0C9oEH0Asd4tJEuGtkl2WuKdiWZpEwadNydQdJPFM=</p>
@@ -33,7 +33,7 @@ public class ListAppConversationMessagesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Number of entries per page (10–100).</p>
+     * <p>The number of entries per page (10-100).</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -42,7 +42,7 @@ public class ListAppConversationMessagesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Site ID.</p>
+     * <p>The site ID.</p>
      * 
      * <strong>example:</strong>
      * <p>734600510965856</p>
@@ -51,7 +51,7 @@ public class ListAppConversationMessagesRequest extends TeaModel {
     public String siteId;
 
     /**
-     * <p>Creation Time of the last entry on the previous page (in ISO 8601 format).</p>
+     * <p>The creation time of the last entry on the previous page (ISO 8601 format).</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>

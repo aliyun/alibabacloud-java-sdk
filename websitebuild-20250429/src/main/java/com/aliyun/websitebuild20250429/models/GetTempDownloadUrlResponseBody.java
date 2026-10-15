@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetTempDownloadUrlResponseBody extends TeaModel {
     /**
+     * <p>The details of the permission verification failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class GetTempDownloadUrlResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Indicates whether retry is allowed.</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class GetTempDownloadUrlResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>The application name.</p>
+     * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
      */
@@ -26,6 +32,8 @@ public class GetTempDownloadUrlResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,16 +41,26 @@ public class GetTempDownloadUrlResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic error message, which is used to replace the <code>%s</code> variable in the <strong>ErrMessage</strong> return parameter.</p>
+     * <blockquote>
+     * <p>For example, if <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The error parameters.</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
+     * <p>The response data.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +68,8 @@ public class GetTempDownloadUrlResponseBody extends TeaModel {
     public String module;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
      */
@@ -57,6 +77,8 @@ public class GetTempDownloadUrlResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
@@ -64,13 +86,17 @@ public class GetTempDownloadUrlResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception.</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>Indicates whether the request is processed synchronously.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

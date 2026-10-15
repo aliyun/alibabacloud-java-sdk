@@ -14,7 +14,7 @@ public class ReconnectAppChatRequest extends TeaModel {
     public String chatId;
 
     /**
-     * <p>The session ID.</p>
+     * <p>The conversation ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5b7105a2-2999-430b-ba23-ba09149d5434</p>
@@ -23,13 +23,16 @@ public class ReconnectAppChatRequest extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>The ID of the last event.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>event-71ece53b7d474e01b755a9b5fa5305e6</p>
+     * <p>The last event ID.</p>
      */
     @NameInMap("LastEventId")
     public Integer lastEventId;
+
+    /**
+     * <p>The creation time of the latest message.</p>
+     */
+    @NameInMap("LatestMessageCreateTime")
+    public String latestMessageCreateTime;
 
     public static ReconnectAppChatRequest build(java.util.Map<String, ?> map) throws Exception {
         ReconnectAppChatRequest self = new ReconnectAppChatRequest();
@@ -58,6 +61,14 @@ public class ReconnectAppChatRequest extends TeaModel {
     }
     public Integer getLastEventId() {
         return this.lastEventId;
+    }
+
+    public ReconnectAppChatRequest setLatestMessageCreateTime(String latestMessageCreateTime) {
+        this.latestMessageCreateTime = latestMessageCreateTime;
+        return this;
+    }
+    public String getLatestMessageCreateTime() {
+        return this.latestMessageCreateTime;
     }
 
 }

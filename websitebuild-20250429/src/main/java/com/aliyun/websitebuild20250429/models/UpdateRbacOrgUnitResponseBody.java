@@ -4,36 +4,99 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class UpdateRbacOrgUnitResponseBody extends TeaModel {
+    /**
+     * <p>The detailed reason why access is denied.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>Indicates whether retry is allowed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>False</p>
+     */
     @NameInMap("AllowRetry")
     public Boolean allowRetry;
 
+    /**
+     * <p>The application name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>spring-cloud-b</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>The dynamic error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ERROR-oo1</p>
+     */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
+    /**
+     * <p>The dynamic message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SYSTEM_ERROR</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The returned error parameters.</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>The returned object.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Module")
     public String module;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SYSTEM.ERROR</p>
+     */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
+    /**
+     * <p>Indicates whether the request is synchronously processed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Synchro")
     public Boolean synchro;
 

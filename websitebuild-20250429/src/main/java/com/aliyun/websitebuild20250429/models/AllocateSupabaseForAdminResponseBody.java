@@ -80,16 +80,16 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The root error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request is processed synchronously.</p>
+     * <p>Indicates whether the request is synchronously processed.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -246,7 +246,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String dbType;
 
         /**
-         * <p>The additional information.</p>
+         * <p>The extra information.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;appId\&quot;:\&quot;APP_NTJAK8P11SNZDJ3M6BWC\&quot;}</p>
@@ -264,7 +264,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String instanceCreateFinishedTime;
 
         /**
-         * <p>The creation status of the instance.</p>
+         * <p>The instance creation status.</p>
          * 
          * <strong>example:</strong>
          * <p>1111</p>
@@ -302,8 +302,8 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         /**
          * <p>The instance status. Valid values:</p>
          * <ul>
-         * <li>0: paused</li>
-         * <li>1: running</li>
+         * <li>0: Paused.</li>
+         * <li>1: Running.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -41,7 +41,7 @@ public class NotifyAppNotificationForAdminResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace the %s variable in the ErrMessage response parameter.</p>
+     * <p>The dynamic error message. This parameter is used to replace the %s placeholder in the ErrMessage error message.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -86,13 +86,13 @@ public class NotifyAppNotificationForAdminResponseBody extends TeaModel {
      * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

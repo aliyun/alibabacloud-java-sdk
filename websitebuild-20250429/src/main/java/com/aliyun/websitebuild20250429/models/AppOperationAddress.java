@@ -4,33 +4,63 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class AppOperationAddress extends TeaModel {
+    /**
+     * <p>The operation button list.</p>
+     */
     @NameInMap("Actions")
     public java.util.List<AppOperateAction> actions;
 
+    /**
+     * <p>The customer service design URL.</p>
+     */
     @NameInMap("AiCustomerConfigUrl")
     public String aiCustomerConfigUrl;
 
+    /**
+     * <p>The AI design URL.</p>
+     */
     @NameInMap("AiDesignUrl")
     public String aiDesignUrl;
 
+    /**
+     * <p>The application publishing URL.</p>
+     */
     @NameInMap("AppPublishUrl")
     public String appPublishUrl;
 
+    /**
+     * <p>The overview page operation button list.</p>
+     */
     @NameInMap("DashboardActions")
     public java.util.List<AppOperateAction> dashboardActions;
 
+    /**
+     * <p>The professional design URL.</p>
+     */
     @NameInMap("DesignUrl")
     public String designUrl;
 
+    /**
+     * <p>The application instance logon URL.</p>
+     */
     @NameInMap("InstanceLoginUrl")
     public String instanceLoginUrl;
 
+    /**
+     * <p>The renewal purchase URL.</p>
+     */
     @NameInMap("RenewBuyUrl")
     public String renewBuyUrl;
 
+    /**
+     * <p>The service delivery URL.</p>
+     */
     @NameInMap("ServerDeliveryUrl")
     public String serverDeliveryUrl;
 
+    /**
+     * <p>The upgrade purchase URL.</p>
+     */
     @NameInMap("UpgradeBuyUrl")
     public String upgradeBuyUrl;
 

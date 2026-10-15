@@ -4,9 +4,21 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class DeleteRbacPermissionRequest extends TeaModel {
+    /**
+     * <p>The business instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WD20250814102215000001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>The permission ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>804a6b2a-82ac-49f2-960a-a6c2ed9e73dd</p>
+     */
     @NameInMap("PermissionId")
     public String permissionId;
 

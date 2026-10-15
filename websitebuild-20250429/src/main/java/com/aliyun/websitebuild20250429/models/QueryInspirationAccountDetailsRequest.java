@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryInspirationAccountDetailsRequest extends TeaModel {
     /**
-     * <p>The end time of the query.</p>
+     * <p>The end time of the query. The time is in ISO 8601 format and in the UTC (Z) time zone.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-07-23T16:00:00Z</p>
@@ -23,11 +23,7 @@ public class QueryInspirationAccountDetailsRequest extends TeaModel {
     public String orderColumn;
 
     /**
-     * <p>The sort order. Valid values:</p>
-     * <ul>
-     * <li>ASC: ascending order</li>
-     * <li>DESC: descending order</li>
-     * </ul>
+     * <p>The sort order. Valid values: ASC and DESC.</p>
      * 
      * <strong>example:</strong>
      * <p>BUY</p>
@@ -54,7 +50,7 @@ public class QueryInspirationAccountDetailsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The source type used to filter results, such as FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, or PURCHASED.</p>
+     * <p>The filter for the source type. Examples: FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, and PURCHASED.</p>
      * 
      * <strong>example:</strong>
      * <p>MARKET_CLOUD_DREAM</p>
@@ -63,7 +59,7 @@ public class QueryInspirationAccountDetailsRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The start time of the query.</p>
+     * <p>The start time of the query. The time is in ISO 8601 format and in the UTC (Z) time zone.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-06-21T16:00:00Z</p>

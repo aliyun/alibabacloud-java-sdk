@@ -25,8 +25,7 @@ public class UploadMaterialFileRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The path of the file.</p>
-     * <p>This parameter is required.</p>
+     * <p>The file path.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://docmind-api-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/4a7f_209934244261306272_14fd429b731245a79f291c64acf3ac77">http://docmind-api-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/4a7f_209934244261306272_14fd429b731245a79f291c64acf3ac77</a></p>
@@ -35,13 +34,22 @@ public class UploadMaterialFileRequest extends TeaModel {
     public String fileUrl;
 
     /**
-     * <p>The name of the file.</p>
+     * <p>The file name.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试文件</p>
+     * <p>TestFile</p>
      */
     @NameInMap("Name")
     public String name;
+
+    /**
+     * <p>The OSS object key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>backend/detection/objects/r-0008ujvfksltf5j45n81/task-000hckiuwyau0gwn17vq.jpg</p>
+     */
+    @NameInMap("OssKey")
+    public String ossKey;
 
     public static UploadMaterialFileRequest build(java.util.Map<String, ?> map) throws Exception {
         UploadMaterialFileRequest self = new UploadMaterialFileRequest();
@@ -78,6 +86,14 @@ public class UploadMaterialFileRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public UploadMaterialFileRequest setOssKey(String ossKey) {
+        this.ossKey = ossKey;
+        return this;
+    }
+    public String getOssKey() {
+        return this.ossKey;
     }
 
 }

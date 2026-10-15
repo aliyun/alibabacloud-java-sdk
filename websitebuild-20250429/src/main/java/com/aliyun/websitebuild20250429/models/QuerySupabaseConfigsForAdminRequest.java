@@ -14,6 +14,9 @@ public class QuerySupabaseConfigsForAdminRequest extends TeaModel {
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>The environment identifier.</p>
+     */
     @NameInMap("Env")
     public String env;
 

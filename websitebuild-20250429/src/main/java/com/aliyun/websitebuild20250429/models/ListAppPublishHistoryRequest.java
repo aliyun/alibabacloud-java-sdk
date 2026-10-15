@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppPublishHistoryRequest extends TeaModel {
     /**
-     * <p>Business ID</p>
+     * <p>The business ID.</p>
      * 
      * <strong>example:</strong>
      * <p>WD20250703155602000001</p>
@@ -13,21 +13,23 @@ public class ListAppPublishHistoryRequest extends TeaModel {
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>The deployment channel.</p>
+     */
     @NameInMap("DeployChannel")
     public String deployChannel;
 
     /**
-     * <p>Search keyword</p>
+     * <p>The search keyword.</p>
      * 
      * <strong>example:</strong>
-     * <p>1_运营支持部_销售运营</p>
+     * <p>1_Operations Support Department_Sales Operations</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
-     * <p>Number of results per query.  </p>
-     * <p>Value range: 10 to 100. Default value: 20.</p>
+     * <p>The maximum number of entries to return for a single query. Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -36,7 +38,7 @@ public class ListAppPublishHistoryRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Token indicating the start of the next query. Empty if there is no next query.</p>
+     * <p>The token used to start the next query. This parameter is empty if no next query is available.</p>
      * 
      * <strong>example:</strong>
      * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
@@ -45,7 +47,7 @@ public class ListAppPublishHistoryRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Page number</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -54,7 +56,7 @@ public class ListAppPublishHistoryRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>Page size</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -62,11 +64,14 @@ public class ListAppPublishHistoryRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The release environment.</p>
+     */
     @NameInMap("PublishEnv")
     public String publishEnv;
 
     /**
-     * <p>Sorting method</p>
+     * <p>The sort order.</p>
      * 
      * <strong>example:</strong>
      * <p>EndTime</p>
@@ -75,7 +80,7 @@ public class ListAppPublishHistoryRequest extends TeaModel {
     public String sort;
 
     /**
-     * <p>Publish status</p>
+     * <p>The release status.</p>
      * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
@@ -83,11 +88,14 @@ public class ListAppPublishHistoryRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The release subchannel.</p>
+     */
     @NameInMap("Subchannel")
     public String subchannel;
 
     /**
-     * <p>Website domain name</p>
+     * <p>The website domain name.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>

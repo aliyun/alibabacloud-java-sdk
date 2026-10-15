@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAppDatabaseTableSchemasRequest extends TeaModel {
     /**
+     * <p>The business ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>WD20250703155602000001</p>
      */
@@ -12,6 +14,8 @@ public class GetAppDatabaseTableSchemasRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>The table name.</p>
+     * 
      * <strong>example:</strong>
      * <p>default.ai_advertising_material_rec_train_v1103</p>
      */

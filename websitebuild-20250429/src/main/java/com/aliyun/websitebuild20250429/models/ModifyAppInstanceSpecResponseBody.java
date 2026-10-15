@@ -14,7 +14,7 @@ public class ModifyAppInstanceSpecResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether a retry is allowed.</p>
+     * <p>Indicates whether retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -80,10 +80,10 @@ public class ModifyAppInstanceSpecResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;

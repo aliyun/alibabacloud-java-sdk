@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryInspirationConsumeRecordsRequest extends TeaModel {
     /**
-     * <p>The end time of the query.</p>
+     * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1762999521</p>
@@ -14,7 +14,7 @@ public class QueryInspirationConsumeRecordsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The field used for sorting.</p>
+     * <p>The field by which to sort the results.</p>
      * 
      * <strong>example:</strong>
      * <p>CreationTime</p>
@@ -23,7 +23,7 @@ public class QueryInspirationConsumeRecordsRequest extends TeaModel {
     public String orderColumn;
 
     /**
-     * <p>The sort order. Valid values: ASC and DESC.</p>
+     * <p>The sort order. Valid values: ASC, DESC.</p>
      * 
      * <strong>example:</strong>
      * <p>DESC</p>
@@ -50,16 +50,16 @@ public class QueryInspirationConsumeRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The scenario name.</p>
+     * <p>The name of the scenario.</p>
      * 
      * <strong>example:</strong>
-     * <p>百灵鸟-人员认证</p>
+     * <p>Skylark-Personnel Authentication</p>
      */
     @NameInMap("SceneName")
     public String sceneName;
 
     /**
-     * <p>The start time of the query.</p>
+     * <p>The start time of the query. The time is in ISO 8601 format and the time zone is UTC (Z).</p>
      * 
      * <strong>example:</strong>
      * <p>2025-10-19T16:00:00Z</p>

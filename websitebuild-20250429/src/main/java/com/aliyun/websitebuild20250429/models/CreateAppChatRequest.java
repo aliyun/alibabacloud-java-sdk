@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAppChatRequest extends TeaModel {
     /**
-     * <p>Bot ID</p>
+     * <p>The bot ID.</p>
      * 
      * <strong>example:</strong>
      * <p>Zero2</p>
@@ -14,7 +14,7 @@ public class CreateAppChatRequest extends TeaModel {
     public String botId;
 
     /**
-     * <p>Chat ID to be provided when recovering a conversation after an execution break</p>
+     * <p>The chat ID passed in to resume a conversation after execution is interrupted.</p>
      * 
      * <strong>example:</strong>
      * <p>3b465fe1-6f06-4899-af9f-d43d9338df25</p>
@@ -23,7 +23,7 @@ public class CreateAppChatRequest extends TeaModel {
     public String chatId;
 
     /**
-     * <p>Session ID; required from the second turn onward in a multi-turn conversation scenario</p>
+     * <p>The conversation ID. This parameter is required from the second round onward in multi-turn conversation scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>593fe1a2-d0b4-4fde-a2b0-78ad6a438d41</p>
@@ -32,7 +32,7 @@ public class CreateAppChatRequest extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>List of conversation messages (in JSON array format)</p>
+     * <p>The list of conversation messages in JSON array format.</p>
      * 
      * <strong>example:</strong>
      * <p>[\r\n  {\r\n    \&quot;role\&quot;: \&quot;user\&quot;,\r\n    \&quot;content\&quot;: \&quot;Prove that there are only five platonic solids, namely the tetrahedron, octahedron, icosahedron, cube, and dodecahedron.\&quot;\r\n  }\r\n]</p>
@@ -41,7 +41,7 @@ public class CreateAppChatRequest extends TeaModel {
     public String messages;
 
     /**
-     * <p>Site ID</p>
+     * <p>The site ID.</p>
      * 
      * <strong>example:</strong>
      * <p>857240041851344</p>

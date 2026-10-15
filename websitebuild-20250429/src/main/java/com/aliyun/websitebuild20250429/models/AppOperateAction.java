@@ -5,25 +5,28 @@ import com.aliyun.tea.*;
 
 public class AppOperateAction extends TeaModel {
     /**
-     * <p>用于唯一标识一个操作行为</p>
+     * <p>The key used to uniquely identify an action.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BeginDialogue</p>
      */
     @NameInMap("ActionKey")
     public String actionKey;
 
     /**
-     * <p>用于在界面中展示操作名称</p>
+     * <p>The text used to display the action name in the user interface.</p>
      */
     @NameInMap("ActionText")
     public String actionText;
 
     /**
-     * <p>标识该操作是否可用</p>
+     * <p>Indicates whether the action is available.</p>
      */
     @NameInMap("Enable")
     public Boolean enable;
 
     /**
-     * <p>点击操作时跳转的URL地址</p>
+     * <p>The URL to navigate to when the action is clicked.</p>
      */
     @NameInMap("Href")
     public String href;

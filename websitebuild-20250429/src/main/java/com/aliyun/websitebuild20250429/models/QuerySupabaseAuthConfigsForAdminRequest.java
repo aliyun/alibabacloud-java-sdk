@@ -24,6 +24,9 @@ public class QuerySupabaseAuthConfigsForAdminRequest extends TeaModel {
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>The environment identifier.</p>
+     */
     @NameInMap("Env")
     public String env;
 
@@ -37,11 +40,7 @@ public class QuerySupabaseAuthConfigsForAdminRequest extends TeaModel {
     public String orderColumn;
 
     /**
-     * <p>The sort order. Valid values:</p>
-     * <ul>
-     * <li>ASC: ascending order.</li>
-     * <li>DESC: descending order.</li>
-     * </ul>
+     * <p>The sort type. Valid values: ASC and DESC.</p>
      * 
      * <strong>example:</strong>
      * <p>DESC</p>

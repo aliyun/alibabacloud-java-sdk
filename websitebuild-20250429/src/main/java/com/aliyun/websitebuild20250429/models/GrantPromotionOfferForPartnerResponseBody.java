@@ -14,7 +14,7 @@ public class GrantPromotionOfferForPartnerResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Indicates whether a retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -32,7 +32,7 @@ public class GrantPromotionOfferForPartnerResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>The dynamic code. This parameter is not in use. Ignore this parameter.</p>
+     * <p>The dynamic code. This parameter is not in use. Ignore it.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -80,16 +80,16 @@ public class GrantPromotionOfferForPartnerResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The root error message.</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request is synchronously processed.</p>
+     * <p>Indicates whether the request is processed synchronously.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -195,7 +195,7 @@ public class GrantPromotionOfferForPartnerResponseBody extends TeaModel {
          * <p>The message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         @NameInMap("Message")
         public String message;

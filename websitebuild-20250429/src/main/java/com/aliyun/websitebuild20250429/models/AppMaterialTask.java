@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class AppMaterialTask extends TeaModel {
     /**
+     * <p>The business group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>111</p>
+     */
+    @NameInMap("BizGroupId")
+    public String bizGroupId;
+
+    /**
      * <p>The task completion time.</p>
      * 
      * <strong>example:</strong>
@@ -17,7 +26,7 @@ public class AppMaterialTask extends TeaModel {
      * <p>The display format of the completion time.</p>
      * 
      * <strong>example:</strong>
-     * <p>1分钟前</p>
+     * <p>1 minute ago</p>
      */
     @NameInMap("CompleteTimeFormat")
     public String completeTimeFormat;
@@ -26,7 +35,7 @@ public class AppMaterialTask extends TeaModel {
      * <p>The failure reason.</p>
      * 
      * <strong>example:</strong>
-     * <p>参数不合规</p>
+     * <p>Invalid parameters</p>
      */
     @NameInMap("FailReason")
     public String failReason;
@@ -74,13 +83,13 @@ public class AppMaterialTask extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The task parameter.</p>
+     * <p>The task parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>{
-     *     &quot;brandName&quot;: &quot;品牌名称&quot;,
+     *     &quot;brandName&quot;: &quot;Brand name&quot;,
      *     &quot;direction&quot;: &quot;HORIZONTAL&quot;,
-     *     &quot;userPrompt&quot;: &quot;设计要求&quot;
+     *     &quot;userPrompt&quot;: &quot;Design requirements&quot;
      * }</p>
      */
     @NameInMap("TaskParam")
@@ -98,6 +107,14 @@ public class AppMaterialTask extends TeaModel {
     public static AppMaterialTask build(java.util.Map<String, ?> map) throws Exception {
         AppMaterialTask self = new AppMaterialTask();
         return TeaModel.build(map, self);
+    }
+
+    public AppMaterialTask setBizGroupId(String bizGroupId) {
+        this.bizGroupId = bizGroupId;
+        return this;
+    }
+    public String getBizGroupId() {
+        return this.bizGroupId;
     }
 
     public AppMaterialTask setCompleteTime(String completeTime) {

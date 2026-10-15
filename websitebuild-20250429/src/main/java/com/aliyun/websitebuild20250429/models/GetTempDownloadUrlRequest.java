@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetTempDownloadUrlRequest extends TeaModel {
     /**
+     * <p>The key of the OSS object.</p>
+     * 
      * <strong>example:</strong>
      * <p>backend/detection/objects/r-0008ujvfksltf5j45n81/task-000hckiuwyau0gwn17vq.jpg</p>
      */

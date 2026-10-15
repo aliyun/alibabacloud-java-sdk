@@ -4,36 +4,100 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class QueryRbacRoleResponseBody extends TeaModel {
+    /**
+     * <p>The detailed reason why access was denied.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>Indicates whether retry is allowed. Valid values:</p>
+     * <ul>
+     * <li>false: Retry is not allowed.</li>
+     * <li>true: Retry is allowed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>False</p>
+     */
     @NameInMap("AllowRetry")
     public Boolean allowRetry;
 
+    /**
+     * <p>The application name. The application with this name is queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>spring-cloud-b</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>The dynamic error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ERROR-oo1</p>
+     */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
+    /**
+     * <p>The dynamic message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SYSTEM_ERROR</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The error parameters returned.</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Module")
     public QueryRbacRoleResponseBodyModule module;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SYSTEM.ERROR</p>
+     */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>The exception message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
+    /**
+     * <p>The reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Synchro")
     public Boolean synchro;
 
@@ -131,21 +195,62 @@ public class QueryRbacRoleResponseBody extends TeaModel {
     }
 
     public static class QueryRbacRoleResponseBodyModule extends TeaModel {
+        /**
+         * <p>The time when the task was created, in ISO 8601 format (such as 2024-01-01T00:00:00+Z).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-02-06T10:20:09Z</p>
+         */
         @NameInMap("CreatedAt")
         public String createdAt;
 
+        /**
+         * <p>The scenario ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16257</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The default status. Valid values:</p>
+         * <ul>
+         * <li>0: not default.</li>
+         * <li>1: default.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
+        /**
+         * <p>Indicates whether the approval template is system-defined. Valid values:</p>
+         * <ul>
+         * <li>1: Yes.</li>
+         * <li>0: No.</li>
+         * </ul>
+         */
         @NameInMap("IsSystem")
         public Boolean isSystem;
 
+        /**
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://anchashiscan.oss-cn-hangzhou.aliyuncs.com/prodpopscansDZBFBGr</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文件名</p>
+         */
         @NameInMap("Name")
         public String name;
 

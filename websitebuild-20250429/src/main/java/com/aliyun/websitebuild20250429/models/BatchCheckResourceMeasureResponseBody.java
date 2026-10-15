@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchCheckResourceMeasureResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access was denied.</p>
+     * <p>The detailed reasons for access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retries are allowed.</p>
+     * <p>Specifies whether a retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name.</p>
+     * <p>The name of the app.</p>
      * 
      * <strong>example:</strong>
      * <p>watermark</p>
@@ -50,13 +50,13 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The response object.</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("Module")
     public BatchCheckResourceMeasureResponseBodyModule module;
@@ -83,13 +83,13 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
      * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request is synchronously processed.</p>
+     * <p>Specifies whether synchronous processing is used.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -192,13 +192,13 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
 
     public static class BatchCheckResourceMeasureResponseBodyModule extends TeaModel {
         /**
-         * <p>Indicates whether all checks passed.</p>
+         * <p>Indicates whether all checks are passed.</p>
          */
         @NameInMap("AllPassed")
         public Boolean allPassed;
 
         /**
-         * <p>The check result for each resource, where the key is resourceCode.</p>
+         * <p>The check results for each resource. The key is the resourceCode.</p>
          */
         @NameInMap("Results")
         public java.util.Map<String, ModuleResultsValue> results;

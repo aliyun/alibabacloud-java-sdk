@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppCodeWorkspaceDetailRequest extends TeaModel {
     /**
-     * <p>Site ID</p>
+     * <p>The site ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1071596645435968</p>

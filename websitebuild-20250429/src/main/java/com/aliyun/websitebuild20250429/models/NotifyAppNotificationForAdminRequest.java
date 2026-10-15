@@ -22,6 +22,9 @@ public class NotifyAppNotificationForAdminRequest extends TeaModel {
     @NameInMap("Env")
     public String env;
 
+    /**
+     * <p>The notification content.</p>
+     */
     @NameInMap("Payload")
     public String payload;
 

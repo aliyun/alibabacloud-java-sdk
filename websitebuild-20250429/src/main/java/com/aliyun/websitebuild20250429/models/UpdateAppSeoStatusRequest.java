@@ -23,12 +23,17 @@ public class UpdateAppSeoStatusRequest extends TeaModel {
     public String domain;
 
     /**
+     * <p>The security authentication information.</p>
+     * 
      * <strong>example:</strong>
      * <p>123123</p>
      */
     @NameInMap("SeAuthInfo")
     public String seAuthInfo;
 
+    /**
+     * <p>The index status.</p>
+     */
     @NameInMap("SeIndexStatus")
     public Integer seIndexStatus;
 

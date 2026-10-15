@@ -4,6 +4,9 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class GrantPromotionOfferForPartnerRequest extends TeaModel {
+    /**
+     * <p>The activity code.</p>
+     */
     @NameInMap("ActivityCode")
     public String activityCode;
 
@@ -44,7 +47,7 @@ public class GrantPromotionOfferForPartnerRequest extends TeaModel {
     public String employeeCode;
 
     /**
-     * <p>The operation remarks (audit information).</p>
+     * <p>The operation remark (audit information).</p>
      * 
      * <strong>example:</strong>
      * <p>hz-maven</p>

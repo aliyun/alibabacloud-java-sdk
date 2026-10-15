@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class QueryMaterialTaskListShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the business group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xx</p>
+     */
+    @NameInMap("BizGroupId")
+    public String bizGroupId;
+
+    /**
      * <p>The number of entries per query.</p>
      * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
@@ -24,7 +33,7 @@ public class QueryMaterialTaskListShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Sort field</p>
+     * <p>The field used for sorting.</p>
      * 
      * <strong>example:</strong>
      * <p>gmtCreated</p>
@@ -33,7 +42,7 @@ public class QueryMaterialTaskListShrinkRequest extends TeaModel {
     public String orderColumn;
 
     /**
-     * <p>Sort type ASC|DESC</p>
+     * <p>The sort type. Valid values: ASC and DESC.</p>
      * 
      * <strong>example:</strong>
      * <p>DESC</p>
@@ -42,7 +51,7 @@ public class QueryMaterialTaskListShrinkRequest extends TeaModel {
     public String orderType;
 
     /**
-     * <p>Page number. Default value: 1</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,7 +60,7 @@ public class QueryMaterialTaskListShrinkRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>Page size. Default value: 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -60,13 +69,13 @@ public class QueryMaterialTaskListShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Task status list</p>
+     * <p>The list of task statuses.</p>
      */
     @NameInMap("StatusList")
     public String statusListShrink;
 
     /**
-     * <p>Task type list</p>
+     * <p>The list of task types.</p>
      */
     @NameInMap("TaskTypeList")
     public String taskTypeListShrink;
@@ -74,6 +83,14 @@ public class QueryMaterialTaskListShrinkRequest extends TeaModel {
     public static QueryMaterialTaskListShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryMaterialTaskListShrinkRequest self = new QueryMaterialTaskListShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryMaterialTaskListShrinkRequest setBizGroupId(String bizGroupId) {
+        this.bizGroupId = bizGroupId;
+        return this;
+    }
+    public String getBizGroupId() {
+        return this.bizGroupId;
     }
 
     public QueryMaterialTaskListShrinkRequest setMaxResults(Integer maxResults) {

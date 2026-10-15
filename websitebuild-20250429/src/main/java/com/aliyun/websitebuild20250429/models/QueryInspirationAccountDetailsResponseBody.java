@@ -14,10 +14,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether a retry is allowed. Valid values:</p>
+     * <p>Indicates whether retries are allowed. Valid values:</p>
      * <ul>
-     * <li>false: Not allowed.</li>
-     * <li>true: Allowed.</li>
+     * <li>false: Retries are not allowed.</li>
+     * <li>true: Retries are allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name. The application with this name is queried.</p>
+     * <p>The name of the application. The system queries the application with this name.</p>
      * 
      * <strong>example:</strong>
      * <p>or</p>
@@ -54,7 +54,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters returned.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -84,10 +84,10 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
@@ -196,7 +196,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
 
     public static class QueryInspirationAccountDetailsResponseBodyModuleData extends TeaModel {
         /**
-         * <p>The time when the inspiration points were acquired.</p>
+         * <p>The acquisition time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-03-03 12:00:00</p>
@@ -205,7 +205,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public String acquisitionTime;
 
         /**
-         * <p>The remaining balance (initQuota - used).</p>
+         * <p>The balance, which is calculated by subtracting the used amount from the initial quota (initQuota - used).</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -213,11 +213,17 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         @NameInMap("Balance")
         public Long balance;
 
+        /**
+         * <p>The exact value of the balance. The value is of the String type to support decimal display.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("BalanceStr")
         public String balanceStr;
 
         /**
-         * <p>The time when the quota expires.</p>
+         * <p>The expiration time of the validity period. The time is in the YYYY-MM-DD HH:mm:ss Z format, where Z is the time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-11 10:26:27 +0800</p>
@@ -226,7 +232,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public String endDate;
 
         /**
-         * <p>Indicates whether the quota has expired (endDate is earlier than the current time). The frontend uses this flag to gray out expired entries.</p>
+         * <p>Indicates whether the quota has expired (endDate &lt; current time). The frontend displays the item in gray based on this value.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -235,7 +241,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public Boolean expired;
 
         /**
-         * <p>The quantity acquired (initial quota).</p>
+         * <p>The acquired amount, which is the initial quota.</p>
          * 
          * <strong>example:</strong>
          * <p>123123</p>
@@ -243,11 +249,17 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         @NameInMap("InitQuota")
         public Long initQuota;
 
+        /**
+         * <p>The exact value of the acquired amount. The value is of the String type to support decimal display.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123</p>
+         */
         @NameInMap("InitQuotaStr")
         public String initQuotaStr;
 
         /**
-         * <p>The source type code, such as FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, or PURCHASED.</p>
+         * <p>The code of the source type. Examples: FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, and PURCHASED.</p>
          * 
          * <strong>example:</strong>
          * <p>MARKET_CLOUD_DREAM</p>
@@ -256,7 +268,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The display name of the source type.</p>
+         * <p>The Chinese name of the source type.</p>
          * 
          * <strong>example:</strong>
          * <p>FREE_TRIAL_GIFT</p>
@@ -264,6 +276,9 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         @NameInMap("SourceTypeName")
         public String sourceTypeName;
 
+        /**
+         * <p>The status of the inspiration credit account.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -356,7 +371,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
 
     public static class QueryInspirationAccountDetailsResponseBodyModuleNext extends TeaModel {
         /**
-         * <p>The time when the inspiration points were acquired.</p>
+         * <p>The acquisition time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-03-03 12:00:00</p>
@@ -365,7 +380,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public String acquisitionTime;
 
         /**
-         * <p>The remaining balance (initQuota - used).</p>
+         * <p>The balance, which is calculated by subtracting the used amount from the initial quota (initQuota - used).</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -373,11 +388,17 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         @NameInMap("Balance")
         public Long balance;
 
+        /**
+         * <p>The exact value of the balance. The value is of the String type to support decimal display.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("BalanceStr")
         public String balanceStr;
 
         /**
-         * <p>The time when the quota expires.</p>
+         * <p>The expiration time of the validity period. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-02-25 10:11:25</p>
@@ -386,7 +407,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public String endDate;
 
         /**
-         * <p>Indicates whether the quota has expired (endDate is earlier than the current time). The frontend uses this flag to gray out expired entries.</p>
+         * <p>Indicates whether the quota has expired (endDate &lt; current time). The frontend displays the item in gray based on this value.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -395,7 +416,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public Boolean expired;
 
         /**
-         * <p>The quantity acquired (initial quota).</p>
+         * <p>The acquired amount, which is the initial quota.</p>
          * 
          * <strong>example:</strong>
          * <p>123123</p>
@@ -403,11 +424,17 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         @NameInMap("InitQuota")
         public Long initQuota;
 
+        /**
+         * <p>The exact value of the acquired amount. The value is of the String type to support decimal display.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123</p>
+         */
         @NameInMap("InitQuotaStr")
         public String initQuotaStr;
 
         /**
-         * <p>The source type code, such as FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, or PURCHASED.</p>
+         * <p>The code of the source type. Examples: FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, and PURCHASED.</p>
          * 
          * <strong>example:</strong>
          * <p>MARKET_CLOUD_DREAM</p>
@@ -416,7 +443,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The display name of the source type.</p>
+         * <p>The Chinese name of the source type.</p>
          * 
          * <strong>example:</strong>
          * <p>FREE_TRIAL_GIFT</p>
@@ -514,7 +541,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public Integer currentPageNum;
 
         /**
-         * <p>The query results.</p>
+         * <p>The request results.</p>
          */
         @NameInMap("Data")
         public java.util.List<QueryInspirationAccountDetailsResponseBodyModuleData> data;
@@ -535,7 +562,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public Boolean nextPage;
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -553,7 +580,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public Boolean prePage;
 
         /**
-         * <p>Indicates whether the result set exceeds the server-side limit of 1,000 records (excluding pagination). If the results exceed 1,000 records, <strong>ResultLimit</strong> is <strong>true</strong>. Narrow the time range and search again. If the results do not exceed 1,000 records, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+         * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow down the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
          */
         @NameInMap("ResultLimit")
         public Boolean resultLimit;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAppNotificationSceneResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access is denied.</p>
+     * <p>The detailed reason why access was denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -80,16 +80,16 @@ public class CreateAppNotificationSceneResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The exception message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request is synchronously processed.</p>
+     * <p>Indicates whether the request is processed synchronously.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -192,7 +192,7 @@ public class CreateAppNotificationSceneResponseBody extends TeaModel {
 
     public static class CreateAppNotificationSceneResponseBodyModule extends TeaModel {
         /**
-         * <p>The ID of the created scenario.</p>
+         * <p>The ID of the newly created scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>16257</p>

@@ -13,11 +13,26 @@ public class ListAppInstanceDomainsRequest extends TeaModel {
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>The domain name keyword for fuzzy match. This parameter is optional.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainKeyword")
     public String domainKeyword;
 
     /**
-     * <p>The maximum number of entries per query.</p>
+     * <p>The domain name management type. Valid values: CUSTOM and PLATFORM_PREFIX. If this parameter is not specified, the default value is CUSTOM.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CUSTOM</p>
+     */
+    @NameInMap("DomainType")
+    public String domainType;
+
+    /**
+     * <p>The number of entries to return for a single query.</p>
      * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +42,7 @@ public class ListAppInstanceDomainsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+     * <p>The token used to start the next query. If no next query is available, this value is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
@@ -45,7 +60,7 @@ public class ListAppInstanceDomainsRequest extends TeaModel {
     public String orderColumn;
 
     /**
-     * <p>The sort type. Valid values: ASC and DESC.</p>
+     * <p>The sort order. Valid values: ASC and DESC.</p>
      * 
      * <strong>example:</strong>
      * <p>BUY</p>
@@ -71,6 +86,15 @@ public class ListAppInstanceDomainsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The query mode for the domain name status. Valid values: BASIC and REALTIME. BASIC returns only the persisted status. REALTIME refreshes the status from external services. If this parameter is not specified, the default value is REALTIME.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>REALTIME</p>
+     */
+    @NameInMap("StatusQueryMode")
+    public String statusQueryMode;
+
     public static ListAppInstanceDomainsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAppInstanceDomainsRequest self = new ListAppInstanceDomainsRequest();
         return TeaModel.build(map, self);
@@ -90,6 +114,14 @@ public class ListAppInstanceDomainsRequest extends TeaModel {
     }
     public String getDomainKeyword() {
         return this.domainKeyword;
+    }
+
+    public ListAppInstanceDomainsRequest setDomainType(String domainType) {
+        this.domainType = domainType;
+        return this;
+    }
+    public String getDomainType() {
+        return this.domainType;
     }
 
     public ListAppInstanceDomainsRequest setMaxResults(Integer maxResults) {
@@ -138,6 +170,14 @@ public class ListAppInstanceDomainsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListAppInstanceDomainsRequest setStatusQueryMode(String statusQueryMode) {
+        this.statusQueryMode = statusQueryMode;
+        return this;
+    }
+    public String getStatusQueryMode() {
+        return this.statusQueryMode;
     }
 
 }

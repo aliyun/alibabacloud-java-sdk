@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppConversationMessagesResponseBody extends TeaModel {
     /**
-     * <p>permission denied information</p>
+     * <p>The access denied details.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>is retry allowed</p>
+     * <p>Indicates whether retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>App Name.</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>or</p>
@@ -32,7 +32,7 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>dynamic error code.</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,9 +41,9 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>dynamic error message used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response parameter.  </p>
+     * <p>The dynamic error message, which is used to replace the <code>%s</code> in the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,14 +53,14 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>faulty parameter(s).</p>
+     * <p>The error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Number of results per query.  </p>
-     * <p>Value range: 10–100. Default Value: 20.</p>
+     * <p>The number of entries per query.</p>
+     * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -69,13 +69,13 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Response Data</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Module")
     public java.util.List<ListAppConversationMessagesResponseBodyModule> module;
 
     /**
-     * <p>Token for the start of the next query. It is empty if there is no next query.</p>
+     * <p>The token for the next query. This parameter is empty if no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>FFh3Xqm+JgZ/U9Jyb7wdVr9LWk80Tghn5UZjbcWEVEderBcbVF+Y6PS0i8PpCL4PQZ3e0C9oEH0Asd4tJEuGtkl2WuKdiWZpEwadNydQdJPFM=</p>
@@ -93,7 +93,7 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -102,16 +102,16 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>abnormal message</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception.</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>Reserved parameter.</p>
+     * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -230,7 +230,7 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
 
     public static class ListAppConversationMessagesResponseBodyModule extends TeaModel {
         /**
-         * <p>Bot ID</p>
+         * <p>The bot ID.</p>
          * 
          * <strong>example:</strong>
          * <p>Zero2</p>
@@ -239,7 +239,7 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public String botId;
 
         /**
-         * <p>Chat ID.</p>
+         * <p>The chat ID.</p>
          * 
          * <strong>example:</strong>
          * <p>chat-xrz3etcl2bsygwlx8g</p>
@@ -248,7 +248,7 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public String chatId;
 
         /**
-         * <p>Current chat status.</p>
+         * <p>The current chat status.</p>
          * 
          * <strong>example:</strong>
          * <p>created</p>
@@ -257,7 +257,7 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public String chatStatus;
 
         /**
-         * <p>The ID of the data class API invoked.</p>
+         * <p>The ID of the data API that is called.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;DeviceName\&quot;: u\&quot;\u667a\u80fd\u63d2\u5ea716A\&quot;, \&quot;BlidMac\&quot;: \&quot;18bc5a53351c\&quot;, \&quot;DeviceModel\&quot;: \&quot;ABSP21-16M\&quot;, \&quot;DeviceCategory\&quot;: u\&quot;\u63d2\u5ea7\&quot;, \&quot;DeviceManufacturer\&quot;: \&quot;\&quot;, \&quot;DeviceType\&quot;: 140}</p>
@@ -266,7 +266,7 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>Content type</p>
+         * <p>The content type.</p>
          * 
          * <strong>example:</strong>
          * <p>image/png</p>
@@ -275,7 +275,7 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public String contentType;
 
         /**
-         * <p>Session ID</p>
+         * <p>The conversation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>872be9bc-3097-433d-b462-596202455102</p>
@@ -284,7 +284,7 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public String conversationId;
 
         /**
-         * <p>Creation Time</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1740479834</p>
@@ -293,7 +293,7 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>Updated At</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-08-28T02:25:41Z</p>
@@ -302,7 +302,7 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>Message ID.</p>
+         * <p>The message ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5f9e88ce-f223-4447-a23e-cb574df6c97a</p>
@@ -311,7 +311,7 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public String messageId;
 
         /**
-         * <p>Business extension metadata (in Map format, must be a JSON string).</p>
+         * <p>The business extension metadata (in Map format, must be a JSON string).</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;appId\&quot;:\&quot;WS20260507200853000001\&quot;,\&quot;inputTokens\&quot;:1411,\&quot;outputTokens\&quot;:51}</p>
@@ -320,7 +320,7 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public String metaData;
 
         /**
-         * <p>Region ordinal number. This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong> The region sequence number. This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -329,19 +329,19 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public Integer no;
 
         /**
-         * <p>Role of the conversation participant. Valid values include:</p>
+         * <p>The role of the conversation participant. Valid values:</p>
          * <ul>
-         * <li><p>user: User</p>
+         * <li><p>user: User.</p>
          * </li>
-         * <li><p>assistant: Assistant</p>
+         * <li><p>assistant: Assistant.</p>
          * </li>
-         * <li><p>system: System</p>
+         * <li><p>system: System.</p>
          * </li>
-         * <li><p>function: Function</p>
+         * <li><p>function: Function.</p>
          * </li>
-         * <li><p>plugin: Plugin</p>
+         * <li><p>plugin: Plugin.</p>
          * </li>
-         * <li><p>tool: Tool</p>
+         * <li><p>tool: Tool.</p>
          * </li>
          * </ul>
          * 
@@ -352,7 +352,7 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public String role;
 
         /**
-         * <p>Section ID of the inspection item.</p>
+         * <p>The section ID of the check item.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>
@@ -361,7 +361,7 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public String sectionId;
 
         /**
-         * <p>Site ID, which can be obtained by invoking the <a href="~~ListSites~~">ListSites</a> API.</p>
+         * <p>The site ID. You can obtain this value by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>865181640657408</p>
@@ -370,7 +370,7 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public String siteId;
 
         /**
-         * <p>File type</p>
+         * <p>The file type.</p>
          * 
          * <strong>example:</strong>
          * <p>IMAGE</p>

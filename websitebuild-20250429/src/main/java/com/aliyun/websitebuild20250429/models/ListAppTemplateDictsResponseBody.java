@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppTemplateDictsResponseBody extends TeaModel {
     /**
-     * <p>Detailed reason why access was denied.</p>
+     * <p>The detailed reason why access is denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>is retry allowed</p>
+     * <p>Indicates whether retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>application name; queries the application with this name</p>
+     * <p>The application name to query.</p>
      * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
@@ -32,7 +32,7 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>dynamic error code.</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,9 +41,9 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>dynamic error message used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response parameter.  </p>
+     * <p>The dynamic error message, which is used to replace the <code>%s</code> in the <strong>ErrMessage</strong> return parameter.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,14 +53,14 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>faulty parameters</p>
+     * <p>The error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Number of results per query.  </p>
-     * <p>Value range: 10–100. Default Value: 20.</p>
+     * <p>The number of entries per query.</p>
+     * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -69,13 +69,13 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>response Data</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Module")
     public java.util.List<ListAppTemplateDictsResponseBodyModule> module;
 
     /**
-     * <p>Token for the start of the next query. It is empty when there is no next query.</p>
+     * <p>The token for the next query. This parameter is empty if no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
@@ -93,7 +93,7 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -102,16 +102,16 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>abnormal message</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception.</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>is processing synchronous</p>
+     * <p>Indicates whether the request is synchronously processed.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -230,7 +230,7 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
 
     public static class ListAppTemplateDictsResponseBodyModule extends TeaModel {
         /**
-         * <p>Dictionary Code</p>
+         * <p>The dictionary code.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -239,7 +239,7 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
         public String dictCode;
 
         /**
-         * <p>Dictionary label</p>
+         * <p>The dictionary label.</p>
          * 
          * <strong>example:</strong>
          * <p>label</p>
@@ -248,7 +248,7 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
         public String dictLabel;
 
         /**
-         * <p>Enumeration of template dictionary types</p>
+         * <p>The template dictionary type enumeration.</p>
          * 
          * <strong>example:</strong>
          * <p>product_version</p>
@@ -257,7 +257,7 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
         public String dictType;
 
         /**
-         * <p>Dictionary value</p>
+         * <p>The dictionary value.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -266,16 +266,20 @@ public class ListAppTemplateDictsResponseBody extends TeaModel {
         public String dictValue;
 
         /**
-         * <p>Indicates whether a template exists.</p>
+         * <p>Indicates whether templates exist.</p>
          */
         @NameInMap("HasTemplates")
         public Boolean hasTemplates;
 
         /**
-         * <p>Sorting order. The default is descending.  </p>
-         * <p>Enumeration values:  </p>
-         * <p>ASC: ascending.  </p>
-         * <p>DESC: descending.</p>
+         * <p>The sort order. Default value: DESC.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>ASC: Ascending order.</p>
+         * </li>
+         * <li><p>DESC: Descending order.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>desc</p>

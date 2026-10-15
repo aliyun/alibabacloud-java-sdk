@@ -14,8 +14,7 @@ public class ListAppPluginsRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The number of entries per query.</p>
-     * <p>Valid values: 10 to 100. Default value: 20.</p>
+     * <p>The maximum number of results to return per query. Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -24,7 +23,7 @@ public class ListAppPluginsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query. This parameter is empty if no more results are available.</p>
+     * <p>The token used to start the next query. If there is no next query, this value is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
@@ -33,11 +32,11 @@ public class ListAppPluginsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The status of the Dataset Accelerator instance. Valid values:</p>
+     * <p>The status of the dataset acceleration instance. Valid values:</p>
      * <ul>
-     * <li>Created: init.</li>
-     * <li>Running: running.</li>
-     * <li>Stopped: stopped.</li>
+     * <li>Created: Initialized.</li>
+     * <li>Running: Running.</li>
+     * <li>Stopped: Stopped.</li>
      * </ul>
      * 
      * <strong>example:</strong>

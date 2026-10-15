@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAppLlmApiKeyForPartnerResponseBody extends TeaModel {
     /**
-     * <p>Detailed reason for access denial.</p>
+     * <p>The detailed reason why access was denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class CreateAppLlmApiKeyForPartnerResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>is retry allowed</p>
+     * <p>Indicates whether retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class CreateAppLlmApiKeyForPartnerResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>App Name.</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>watermark</p>
@@ -32,7 +32,7 @@ public class CreateAppLlmApiKeyForPartnerResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>dynamic error code.</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,7 +41,7 @@ public class CreateAppLlmApiKeyForPartnerResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>dynamic error message.</p>
+     * <p>The dynamic error message.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -50,13 +50,13 @@ public class CreateAppLlmApiKeyForPartnerResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>returned error parameters</p>
+     * <p>The error arguments returned.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>response data</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Module")
     public CreateAppLlmApiKeyForPartnerResponseBodyModule module;
@@ -71,7 +71,7 @@ public class CreateAppLlmApiKeyForPartnerResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.EROR</p>
@@ -80,16 +80,16 @@ public class CreateAppLlmApiKeyForPartnerResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>abnormal message</p>
+     * <p>The root error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception.</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>is processed synchronously</p>
+     * <p>Indicates whether the request is processed synchronously.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -192,7 +192,7 @@ public class CreateAppLlmApiKeyForPartnerResponseBody extends TeaModel {
 
     public static class CreateAppLlmApiKeyForPartnerResponseBodyModule extends TeaModel {
         /**
-         * <p>ciphertext of the API key encrypted by AES</p>
+         * <p>The AES-encrypted API key ciphertext.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx-xxxxxx</p>

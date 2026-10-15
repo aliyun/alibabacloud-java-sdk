@@ -83,7 +83,7 @@ public class QuerySupabaseAuthConfigsForAdminResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
@@ -194,7 +194,7 @@ public class QuerySupabaseAuthConfigsForAdminResponseBody extends TeaModel {
         /**
          * <p>The configuration value. Valid values:</p>
          * <ul>
-         * <li><p>cc_rule: HTTP flood mitigation rule.</p>
+         * <li><p>cc_rule: HTTP flood protection rule.</p>
          * </li>
          * <li><p>ddos_dispatch: DDoS interaction scheduling.</p>
          * </li>

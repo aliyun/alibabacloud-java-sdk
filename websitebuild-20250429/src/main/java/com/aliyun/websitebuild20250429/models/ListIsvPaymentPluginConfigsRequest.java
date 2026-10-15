@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIsvPaymentPluginConfigsRequest extends TeaModel {
     /**
-     * <p>Business ID</p>
+     * <p>The business ID.</p>
      * 
      * <strong>example:</strong>
      * <p>WD20250821161210000001</p>
@@ -14,8 +14,8 @@ public class ListIsvPaymentPluginConfigsRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>Number of results per query.</p>
-     * <p>Valid range: 10 to 100. Default Value: 20.</p>
+     * <p>The maximum number of results to return per query.</p>
+     * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -24,7 +24,7 @@ public class ListIsvPaymentPluginConfigsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Token indicating the start of the next query. It is empty when there is no next query.</p>
+     * <p>The token that is used to start the next query. If no more results are available, this value is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>FFh3Xqm+JgZ/U9Jyb7wdVr9LWk80Tghn5UZjbcWEVEderBcbVF+Y6PS0i8PpCL4PQZ3e0C9oEH0Asd4tJEuGtkl2WuKdiWZpEwadNydQdJPFM=</p>

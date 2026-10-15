@@ -23,7 +23,7 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name to query.</p>
+     * <p>The application name. The application with this name is queried.</p>
      * 
      * <strong>example:</strong>
      * <p>or</p>
@@ -50,7 +50,7 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters returned.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -86,7 +86,7 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
      * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;

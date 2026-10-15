@@ -41,8 +41,7 @@ public class ListAppTemplatesRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The number of entries per query.</p>
-     * <p>Valid values: 10 to 100. Default value: 20.</p>
+     * <p>The number of results returned per query. Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -51,13 +50,27 @@ public class ListAppTemplatesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+     * <p>The token used to start the next query. This parameter is empty if there is no next query.</p>
      * 
      * <strong>example:</strong>
      * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
+
+    /**
+     * <strong>example:</strong>
+     * <p>copyCount</p>
+     */
+    @NameInMap("OrderColumn")
+    public String orderColumn;
+
+    /**
+     * <strong>example:</strong>
+     * <p>DESC</p>
+     */
+    @NameInMap("OrderType")
+    public String orderType;
 
     /**
      * <p>The page number.</p>
@@ -78,7 +91,7 @@ public class ListAppTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The Edition.</p>
+     * <p>The edition.</p>
      * 
      * <strong>example:</strong>
      * <p>V2</p>
@@ -146,6 +159,22 @@ public class ListAppTemplatesRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListAppTemplatesRequest setOrderColumn(String orderColumn) {
+        this.orderColumn = orderColumn;
+        return this;
+    }
+    public String getOrderColumn() {
+        return this.orderColumn;
+    }
+
+    public ListAppTemplatesRequest setOrderType(String orderType) {
+        this.orderType = orderType;
+        return this;
+    }
+    public String getOrderType() {
+        return this.orderType;
     }
 
     public ListAppTemplatesRequest setPageNum(Integer pageNum) {

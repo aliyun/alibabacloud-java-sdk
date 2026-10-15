@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAppDomainRedirectResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason for the access denial.</p>
+     * <p>The detailed reason why access was denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -23,7 +23,7 @@ public class DeleteAppDomainRedirectResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name.</p>
+     * <p>The application name used for the query.</p>
      * 
      * <strong>example:</strong>
      * <p>watermark</p>
@@ -32,7 +32,7 @@ public class DeleteAppDomainRedirectResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>Dynamic error code.</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,10 +41,10 @@ public class DeleteAppDomainRedirectResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic message.</p>
+     * <p>The dynamic message.</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/gl3d6l3817id8p1/gl3d6l3817id8p1.diff.zip?Expires=1750392068&OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&Signature=Bcj3eohy8nmlSQ7AAGdq7JZoLjM%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/gl3d6l3817id8p1/gl3d6l3817id8p1.diff.zip?Expires=1750392068&amp;OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&amp;Signature=Bcj3eohy8nmlSQ7AAGdq7JZoLjM%3D</a></p>
+     * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
@@ -83,13 +83,13 @@ public class DeleteAppDomainRedirectResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request is synchronously processed.</p>
+     * <p>Indicates whether the request was processed synchronously.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -192,7 +192,7 @@ public class DeleteAppDomainRedirectResponseBody extends TeaModel {
 
     public static class DeleteAppDomainRedirectResponseBodyModule extends TeaModel {
         /**
-         * <p>Indicates whether the operation is successful.</p>
+         * <p>Indicates whether the operation was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

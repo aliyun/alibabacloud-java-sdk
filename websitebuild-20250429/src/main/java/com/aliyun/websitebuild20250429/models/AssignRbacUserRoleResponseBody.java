@@ -4,36 +4,103 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class AssignRbacUserRoleResponseBody extends TeaModel {
+    /**
+     * <p>The detailed reason why access was denied.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>Indicates whether retry is allowed. Valid values:</p>
+     * <ul>
+     * <li>false: Retry is not allowed.</li>
+     * <li>true: Retry is allowed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>False</p>
+     */
     @NameInMap("AllowRetry")
     public Boolean allowRetry;
 
+    /**
+     * <p>The application name. The application with this name is queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>or</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>The dynamic error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ERROR-oo1</p>
+     */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
+    /**
+     * <p>The dynamic error message, used to replace the %s variable in the ErrMessage response parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SYSTEM.ERROR</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The error parameters.</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>Indicates whether the deletion was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Module")
     public String module;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SYSTEM.EROR</p>
+     */
     @NameInMap("RootErrorCode")
     public String rootErrorCode;
 
+    /**
+     * <p>The exception message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
+    /**
+     * <p>A reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Synchro")
     public Boolean synchro;
 

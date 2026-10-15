@@ -14,6 +14,9 @@ public class OperateSupabaseForAdminRequest extends TeaModel {
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>The environment identifier.</p>
+     */
     @NameInMap("Env")
     public String env;
 
@@ -45,7 +48,7 @@ public class OperateSupabaseForAdminRequest extends TeaModel {
     public String orderByClause;
 
     /**
-     * <p>The field by which to sort the results.</p>
+     * <p>The column used for sorting.</p>
      * 
      * <strong>example:</strong>
      * <p>CreationTime</p>
@@ -54,7 +57,7 @@ public class OperateSupabaseForAdminRequest extends TeaModel {
     public String orderColumn;
 
     /**
-     * <p>The sort order. Valid values: ASC and DESC.</p>
+     * <p>The sort type. Valid values: ASC and DESC.</p>
      * 
      * <strong>example:</strong>
      * <p>DESC</p>

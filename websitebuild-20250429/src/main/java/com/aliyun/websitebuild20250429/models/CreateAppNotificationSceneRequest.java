@@ -14,6 +14,24 @@ public class CreateAppNotificationSceneRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>The list of mobile butler delivery platform types in a JSON string array. Valid values: wechat, dingtalk, wecom, and feishu.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;feishu&quot;]</p>
+     */
+    @NameInMap("ButlerChannelTypesJson")
+    public String butlerChannelTypesJson;
+
+    /**
+     * <p>The list of mobile butler notification fields in a JSON string array. This parameter is required when the butler channel is selected. A maximum of 10 fields are supported. The butler fields in JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;id&quot;,&quot;phone&quot;,&quot;name&quot;,&quot;city&quot;,&quot;message&quot;,&quot;is_deleted&quot;,&quot;updated_at&quot;,&quot;created_at&quot;,&quot;status&quot;,&quot;budget&quot;]</p>
+     */
+    @NameInMap("ButlerFieldsJson")
+    public String butlerFieldsJson;
+
+    /**
      * <p>The notification channels in a JSON array string, such as [&quot;sms&quot;,&quot;email&quot;].</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +80,7 @@ public class CreateAppNotificationSceneRequest extends TeaModel {
      * <p>The name of the scenario.</p>
      * 
      * <strong>example:</strong>
-     * <p>设备能力手册</p>
+     * <p>Device Capability Manual</p>
      */
     @NameInMap("Name")
     public String name;
@@ -123,6 +141,22 @@ public class CreateAppNotificationSceneRequest extends TeaModel {
     }
     public String getBizId() {
         return this.bizId;
+    }
+
+    public CreateAppNotificationSceneRequest setButlerChannelTypesJson(String butlerChannelTypesJson) {
+        this.butlerChannelTypesJson = butlerChannelTypesJson;
+        return this;
+    }
+    public String getButlerChannelTypesJson() {
+        return this.butlerChannelTypesJson;
+    }
+
+    public CreateAppNotificationSceneRequest setButlerFieldsJson(String butlerFieldsJson) {
+        this.butlerFieldsJson = butlerFieldsJson;
+        return this;
+    }
+    public String getButlerFieldsJson() {
+        return this.butlerFieldsJson;
     }
 
     public CreateAppNotificationSceneRequest setChannelsJson(String channelsJson) {

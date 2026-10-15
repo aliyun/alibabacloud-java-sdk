@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteAppNotificationSceneRequest extends TeaModel {
     /**
+     * <p>The business ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>WS20250801154628000001</p>
      */
@@ -12,6 +14,8 @@ public class DeleteAppNotificationSceneRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>The scenario ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000006921</p>
      */

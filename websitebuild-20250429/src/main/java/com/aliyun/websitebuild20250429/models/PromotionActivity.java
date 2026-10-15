@@ -4,57 +4,165 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class PromotionActivity extends TeaModel {
+    /**
+     * <p>The campaign code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acwfradoj5u</p>
+     */
     @NameInMap("ActivityCode")
     public String activityCode;
 
+    /**
+     * <p>The campaign name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IP CIDR block filtering statistics</p>
+     */
     @NameInMap("ActivityName")
     public String activityName;
 
+    /**
+     * <p>The campaign type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SCALE_IN</p>
+     */
     @NameInMap("ActivityType")
     public String activityType;
 
+    /**
+     * <p>The consumed quota.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("ConsumedQuota")
     public Long consumedQuota;
 
+    /**
+     * <p>The creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-10-11T21:13:38.164526965+08:00</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The creator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123414</p>
+     */
     @NameInMap("CreatedBy")
     public String createdBy;
 
+    /**
+     * <p>The eligibility configuration in JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("EligibilityConfig")
     public String eligibilityConfig;
 
+    /**
+     * <p>The end date.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-04-22 10:18:51 +0800</p>
+     */
     @NameInMap("EndDate")
     public String endDate;
 
+    /**
+     * <p>The privilege configuration in JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("OfferConfig")
     public String offerConfig;
 
+    /**
+     * <p>The privilege configuration summary.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("OfferConfigSummary")
     public String offerConfigSummary;
 
+    /**
+     * <p>The remaining quota.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("RemainingQuota")
     public Long remainingQuota;
 
+    /**
+     * <p>The start date.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-05-12T16:00:00.000Z</p>
+     */
     @NameInMap("StartDate")
     public String startDate;
 
+    /**
+     * <p>The campaign status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FE_ABORTING</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The total quota.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalQuota")
     public Long totalQuota;
 
+    /**
+     * <p>The touchpoint configuration in JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("TouchpointConfig")
     public String touchpointConfig;
 
+    /**
+     * <p>The update time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-10-11T21:13:38.164526965+08:00</p>
+     */
     @NameInMap("UpdateTime")
     public String updateTime;
 
+    /**
+     * <p>The updater.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123414</p>
+     */
     @NameInMap("UpdatedBy")
     public String updatedBy;
 
+    /**
+     * <p>The warning threshold.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("WarningThreshold")
     public Integer warningThreshold;
 

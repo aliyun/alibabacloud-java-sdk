@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppSandboxPreviewUrlRequest extends TeaModel {
     /**
-     * <p>session ID</p>
+     * <p>The session ID.</p>
      * 
      * <strong>example:</strong>
      * <p>593fe1a2-d0b4-4fde-a2b0-78ad6a438d41</p>
@@ -14,7 +14,7 @@ public class GetAppSandboxPreviewUrlRequest extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>Specifies whether to restart the application process. This parameter is optional and defaults to false.</p>
+     * <p>Specifies whether to restart the application process. This parameter is optional. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

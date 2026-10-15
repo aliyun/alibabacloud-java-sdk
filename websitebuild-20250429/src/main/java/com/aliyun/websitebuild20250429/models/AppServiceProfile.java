@@ -4,24 +4,54 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class AppServiceProfile extends TeaModel {
+    /**
+     * <p>The business ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WS20250801003834000003</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>The design type.</p>
+     */
     @NameInMap("DesignType")
     public String designType;
 
+    /**
+     * <p>The design type description.</p>
+     */
     @NameInMap("DesignTypeText")
     public String designTypeText;
 
+    /**
+     * <p>The Lingxiao instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The order ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>256146659280026</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <p>The service specification.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("ServiceSpec")
     public String serviceSpec;
 
+    /**
+     * <p>The service specification description.</p>
+     */
     @NameInMap("ServiceSpecText")
     public String serviceSpecText;
 

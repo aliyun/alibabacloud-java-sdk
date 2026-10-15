@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppConversationsResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access was denied.</p>
+     * <p>The detailed reason why access is denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Indicates whether a retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -56,7 +56,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The maximum number of entries to return per query.</p>
+     * <p>The number of entries per query.</p>
      * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
      * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
@@ -263,7 +263,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
         public String conversationId;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time in ISO 8601 format with a time zone offset.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -273,7 +273,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The modification time in ISO 8601 format with the UTC (Z) time zone.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -310,7 +310,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
         public String siteId;
 
         /**
-         * <p>The current viewpoint, which is equivalent to the news title.</p>
+         * <p>The current viewpoint, equivalent to the news title.</p>
          * 
          * <strong>example:</strong>
          * <p>Sometimes When We Touch</p>

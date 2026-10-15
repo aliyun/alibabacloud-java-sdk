@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppPublishStatusResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access is denied.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Indicates whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -50,7 +50,7 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -83,7 +83,7 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
      * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
@@ -210,6 +210,12 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         public String currentStep;
 
         /**
+         * <p>The code of the current publish step.</p>
+         */
+        @NameInMap("CurrentStepCode")
+        public String currentStepCode;
+
+        /**
          * <p>The deployment channel.</p>
          * 
          * <strong>example:</strong>
@@ -237,7 +243,13 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         public String errorStep;
 
         /**
-         * <p>Indicates whether the task is complete.</p>
+         * <p>The code of the publish step where the error occurred.</p>
+         */
+        @NameInMap("ErrorStepCode")
+        public String errorStepCode;
+
+        /**
+         * <p>Indicates whether the task is completed.</p>
          */
         @NameInMap("IsFinish")
         public Boolean isFinish;
@@ -247,7 +259,7 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
          * <ul>
          * <li><p><code>true</code>: The call is successful.</p>
          * </li>
-         * <li><p><code>false</code>: The call failed.</p>
+         * <li><p><code>false</code>: The call fails.</p>
          * </li>
          * </ul>
          * 
@@ -258,7 +270,7 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         public Boolean isSuccess;
 
         /**
-         * <p>The additional description.</p>
+         * <p>The additional information.</p>
          * 
          * <strong>example:</strong>
          * <p>common notify successfully.</p>
@@ -267,13 +279,19 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         public String msg;
 
         /**
-         * <p>The sort type. Valid values: ASC and DESC.</p>
+         * <p>The sort order.</p>
          * 
          * <strong>example:</strong>
          * <p>DESC</p>
          */
         @NameInMap("OrderType")
         public String orderType;
+
+        /**
+         * <p>The code of the publish order type.</p>
+         */
+        @NameInMap("OrderTypeCode")
+        public String orderTypeCode;
 
         /**
          * <p>The task completion percentage.</p>
@@ -303,7 +321,7 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         public Long publishOrderId;
 
         /**
-         * <p>The scheduled publish time.</p>
+         * <p>The scheduled publish time in the UTC format yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.SSS\&quot;Z\&quot;.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -322,11 +340,20 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         public String siteId;
 
         /**
+         * <p>The list of publish step codes.</p>
+         */
+        @NameInMap("StepCodes")
+        public java.util.List<String> stepCodes;
+
+        /**
          * <p>The error level. Valid values: FATAL, ERROR, WARNING, and CRITICAL.</p>
          */
         @NameInMap("Steps")
         public java.util.List<String> steps;
 
+        /**
+         * <p>The publish subchannel.</p>
+         */
         @NameInMap("Subchannel")
         public String subchannel;
 
@@ -351,6 +378,14 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             return this.currentStep;
         }
 
+        public GetAppPublishStatusResponseBodyModule setCurrentStepCode(String currentStepCode) {
+            this.currentStepCode = currentStepCode;
+            return this;
+        }
+        public String getCurrentStepCode() {
+            return this.currentStepCode;
+        }
+
         public GetAppPublishStatusResponseBodyModule setDeployChannel(String deployChannel) {
             this.deployChannel = deployChannel;
             return this;
@@ -373,6 +408,14 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         }
         public String getErrorStep() {
             return this.errorStep;
+        }
+
+        public GetAppPublishStatusResponseBodyModule setErrorStepCode(String errorStepCode) {
+            this.errorStepCode = errorStepCode;
+            return this;
+        }
+        public String getErrorStepCode() {
+            return this.errorStepCode;
         }
 
         public GetAppPublishStatusResponseBodyModule setIsFinish(Boolean isFinish) {
@@ -405,6 +448,14 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         }
         public String getOrderType() {
             return this.orderType;
+        }
+
+        public GetAppPublishStatusResponseBodyModule setOrderTypeCode(String orderTypeCode) {
+            this.orderTypeCode = orderTypeCode;
+            return this;
+        }
+        public String getOrderTypeCode() {
+            return this.orderTypeCode;
         }
 
         public GetAppPublishStatusResponseBodyModule setPercent(Integer percent) {
@@ -445,6 +496,14 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         }
         public String getSiteId() {
             return this.siteId;
+        }
+
+        public GetAppPublishStatusResponseBodyModule setStepCodes(java.util.List<String> stepCodes) {
+            this.stepCodes = stepCodes;
+            return this;
+        }
+        public java.util.List<String> getStepCodes() {
+            return this.stepCodes;
         }
 
         public GetAppPublishStatusResponseBodyModule setSteps(java.util.List<String> steps) {

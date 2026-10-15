@@ -14,7 +14,7 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether a retry is allowed.</p>
+     * <p>Indicates whether retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -41,7 +41,7 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace the %s variable in the ErrMessage response parameter.</p>
+     * <p>The dynamic error message. This message is used to replace the %s variable in the ErrMessage response parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -99,10 +99,10 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
@@ -239,7 +239,7 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
          * <p>The activity name.</p>
          * 
          * <strong>example:</strong>
-         * <p>IP网段过滤统计</p>
+         * <p>IP segment filtering statistics</p>
          */
         @NameInMap("ActivityName")
         public String activityName;
@@ -263,7 +263,7 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
         public String failReason;
 
         /**
-         * <p>The issuance time.</p>
+         * <p>The issuance time. Format: YYYY-MM-DD.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-01</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppInstancesResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access was denied.</p>
+     * <p>The detailed reasons for access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Indicates whether a retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name.</p>
+     * <p>The app name.</p>
      * 
      * <strong>example:</strong>
      * <p>dewuApp</p>
@@ -56,7 +56,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
+     * <p>The dynamic message. This parameter is not used and can be ignored.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/u6qw3gxzu3b7sbj/u6qw3gxzu3b7sbj.diff.zip?Expires=1740975709&OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&Signature=FP7dDnkrLlOZHmRRORVqbLOtv9c%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/u6qw3gxzu3b7sbj/u6qw3gxzu3b7sbj.diff.zip?Expires=1740975709&amp;OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&amp;Signature=FP7dDnkrLlOZHmRRORVqbLOtv9c%3D</a></p>
@@ -65,7 +65,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error arguments returned.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -90,7 +90,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public Boolean nextPage;
 
     /**
-     * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+     * <p>The token used to start the next query. This parameter is empty if no next query exists.</p>
      * 
      * <strong>example:</strong>
      * <p>dw+qdTi1EjVSWX/INJdYNw==</p>
@@ -126,7 +126,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>In addition to pagination limits, the server processes a maximum of 1,000 recent records per query. If the results exceed 1,000 records, <strong>ResultLimit</strong> is <strong>true</strong>, and you must narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+     * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is <strong>true</strong>. Narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -135,7 +135,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public Boolean resultLimit;
 
     /**
-     * <p>The error code.</p>
+     * <p>The root error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -147,12 +147,14 @@ public class ListAppInstancesResponseBody extends TeaModel {
      * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
+     * <p>The start position.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

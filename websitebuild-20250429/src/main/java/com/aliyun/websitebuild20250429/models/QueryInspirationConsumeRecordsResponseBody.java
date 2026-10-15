@@ -14,7 +14,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Specifies whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name. The application with this name is queried.</p>
+     * <p>The name of the application to query.</p>
      * 
      * <strong>example:</strong>
      * <p>ish-intelligence-store-platform-admin-web</p>
@@ -41,7 +41,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
+     * <p>The dynamic message. This parameter is not used. Ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -50,13 +50,13 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Indicates whether the deletion is successful.</p>
+     * <p>Specifies whether the deletion is successful.</p>
      */
     @NameInMap("Module")
     public QueryInspirationConsumeRecordsResponseBodyModule module;
@@ -80,16 +80,16 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request is synchronously processed.</p>
+     * <p>Specifies whether the request is processed synchronously.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -192,7 +192,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
 
     public static class QueryInspirationConsumeRecordsResponseBodyModuleData extends TeaModel {
         /**
-         * <p>The number of inspiration points consumed.</p>
+         * <p>The number of consumed inspiration points.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -200,11 +200,17 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         @NameInMap("Amount")
         public Long amount;
 
+        /**
+         * <p>The exact number of consumed inspiration points. The value is a string that supports decimal display.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
+         */
         @NameInMap("AmountStr")
         public String amountStr;
 
         /**
-         * <p>The consumption time.</p>
+         * <p>The consumption time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-01 12:00:00</p>
@@ -212,6 +218,9 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         @NameInMap("ConsumeTime")
         public String consumeTime;
 
+        /**
+         * <p>The consumption type.</p>
+         */
         @NameInMap("ConsumeType")
         public String consumeType;
 
@@ -224,14 +233,17 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         @NameInMap("MetaData")
         public String metaData;
 
+        /**
+         * <p>The unique identifier of the consumption record.</p>
+         */
         @NameInMap("RecordKey")
         public String recordKey;
 
         /**
-         * <p>The consumption scenario name, such as AI application development, AI creative illustration, AI video creation, or AI content creation.</p>
+         * <p>The name of the consumption scenario, such as AI application development, AI creative image generation, AI video creation, or AI content creation.</p>
          * 
          * <strong>example:</strong>
-         * <p>家装</p>
+         * <p>Home improvement</p>
          */
         @NameInMap("SceneName")
         public String sceneName;
@@ -301,7 +313,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
 
     public static class QueryInspirationConsumeRecordsResponseBodyModuleNext extends TeaModel {
         /**
-         * <p>The number of inspiration points consumed.</p>
+         * <p>The number of consumed inspiration points.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -309,11 +321,17 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         @NameInMap("Amount")
         public Long amount;
 
+        /**
+         * <p>The exact number of consumed inspiration points. The value is a string that supports decimal display.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
+         */
         @NameInMap("AmountStr")
         public String amountStr;
 
         /**
-         * <p>The consumption time.</p>
+         * <p>The consumption time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-01 12:00:00</p>
@@ -321,6 +339,9 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         @NameInMap("ConsumeTime")
         public String consumeTime;
 
+        /**
+         * <p>The consumption type.</p>
+         */
         @NameInMap("ConsumeType")
         public String consumeType;
 
@@ -334,10 +355,10 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         public String metaData;
 
         /**
-         * <p>The consumption scenario name, such as AI application development, AI creative illustration, AI video creation, or AI content creation.</p>
+         * <p>The name of the consumption scenario, such as AI application development, AI creative image generation, AI video creation, or AI content creation.</p>
          * 
          * <strong>example:</strong>
-         * <p>家装</p>
+         * <p>Home improvement</p>
          */
         @NameInMap("SceneName")
         public String sceneName;
@@ -408,7 +429,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         public Integer currentPageNum;
 
         /**
-         * <p>The request result.</p>
+         * <p>The request results.</p>
          */
         @NameInMap("Data")
         public java.util.List<QueryInspirationConsumeRecordsResponseBodyModuleData> data;
@@ -420,7 +441,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         public QueryInspirationConsumeRecordsResponseBodyModuleNext next;
 
         /**
-         * <p>Indicates whether a next page exists.</p>
+         * <p>Specifies whether a next page exists.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -429,7 +450,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         public Boolean nextPage;
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -438,7 +459,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>Indicates whether a previous page exists.</p>
+         * <p>Specifies whether a previous page exists.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -447,7 +468,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         public Boolean prePage;
 
         /**
-         * <p>In addition to pagination limits, the server processes up to 1,000 recent records for the current query. If the results exceed 1,000 records, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+         * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
          */
         @NameInMap("ResultLimit")
         public Boolean resultLimit;

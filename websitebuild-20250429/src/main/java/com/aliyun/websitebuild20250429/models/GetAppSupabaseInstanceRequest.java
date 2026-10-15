@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppSupabaseInstanceRequest extends TeaModel {
     /**
-     * <p>business ID</p>
+     * <p>The business ID.</p>
      * 
      * <strong>example:</strong>
      * <p>WD20250703155602000001</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetOssUploadPolicyResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access is denied.</p>
+     * <p>The detailed reason why access was denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,10 +14,10 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether a retry is allowed. Valid values:</p>
+     * <p>Indicates whether retry is allowed. Valid values:</p>
      * <ul>
-     * <li>false: No retry is allowed.</li>
-     * <li>true: A retry is allowed.</li>
+     * <li>false: Retry is not allowed.</li>
+     * <li>true: Retry is allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
      * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
@@ -223,7 +223,7 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
         public String policy;
 
         /**
-         * <p>The Security Token Service (STS) token. This parameter is null in non-STS scenarios.</p>
+         * <p>The Security Token Service (STS) token. This value is null in non-STS scenarios.</p>
          * 
          * <strong>example:</strong>
          * <hr>

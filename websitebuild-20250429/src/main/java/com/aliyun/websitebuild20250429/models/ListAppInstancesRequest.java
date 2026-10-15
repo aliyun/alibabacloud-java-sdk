@@ -13,11 +13,14 @@ public class ListAppInstancesRequest extends TeaModel {
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>The list of business IDs for the application instances.</p>
+     */
     @NameInMap("BizIds")
     public java.util.List<String> bizIds;
 
     /**
-     * <p>The start of the expiration time range.</p>
+     * <p>The expiration start time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-12-18T14:30:00Z</p>
@@ -26,7 +29,7 @@ public class ListAppInstancesRequest extends TeaModel {
     public String endTimeBegin;
 
     /**
-     * <p>The end of the expiration time range.</p>
+     * <p>The expiration end time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-12-31T14:30:00Z</p>
@@ -54,7 +57,7 @@ public class ListAppInstancesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+     * <p>The token used to start the next query. This parameter is empty if no next query exists.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
@@ -63,7 +66,7 @@ public class ListAppInstancesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The field used for sorting.</p>
+     * <p>The sort field.</p>
      * 
      * <strong>example:</strong>
      * <p>gmtCreated</p>
@@ -72,7 +75,7 @@ public class ListAppInstancesRequest extends TeaModel {
     public String orderColumn;
 
     /**
-     * <p>The sort type. Valid values: ASC and DESC.</p>
+     * <p>The sort order. Valid values: ASC and DESC.</p>
      * 
      * <strong>example:</strong>
      * <p>DOWNGRADE</p>
@@ -99,13 +102,22 @@ public class ListAppInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The query parameter.</p>
+     * <p>The query parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;RequestId\&quot;:\&quot;\&quot;}</p>
      */
     @NameInMap("Query")
     public String query;
+
+    /**
+     * <p>The query mode. A value of CONTENT_CREATION indicates a lightweight query for the content creation site selector, which queries only published sites and does not load aggregated information such as profiles, services, and AI staff.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CONTENT_CREATION</p>
+     */
+    @NameInMap("QueryMode")
+    public String queryMode;
 
     /**
      * <p>The status range.</p>
@@ -212,6 +224,14 @@ public class ListAppInstancesRequest extends TeaModel {
     }
     public String getQuery() {
         return this.query;
+    }
+
+    public ListAppInstancesRequest setQueryMode(String queryMode) {
+        this.queryMode = queryMode;
+        return this;
+    }
+    public String getQueryMode() {
+        return this.queryMode;
     }
 
     public ListAppInstancesRequest setStatusList(java.util.List<String> statusList) {

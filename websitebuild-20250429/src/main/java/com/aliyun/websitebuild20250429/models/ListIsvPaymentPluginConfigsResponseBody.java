@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
     /**
-     * <p>Detailed reason for access denial.</p>
+     * <p>The detailed reasons why access is denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Specifies whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>App name.</p>
+     * <p>The app name.</p>
      * 
      * <strong>example:</strong>
      * <p>dewuApp</p>
@@ -32,7 +32,7 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>Dynamic code; currently unused. Ignore this field.</p>
+     * <p>The dynamic code. This parameter is not used and can be ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,9 +41,9 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic error message used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> error message.  </p>
+     * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> error message.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the provided request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,14 +53,14 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>Returned error parameters</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Number of results per query.  </p>
-     * <p>Value range: 10–100. Default Value: 20.</p>
+     * <p>The maximum number of results to return per query.</p>
+     * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -69,13 +69,13 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Response data</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Module")
     public java.util.List<ListIsvPaymentPluginConfigsResponseBodyModule> module;
 
     /**
-     * <p>Token for starting the next query. It is empty if there is no next query.</p>
+     * <p>The token that is used to start the next query. If no more results are available, this value is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
@@ -93,7 +93,7 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -102,16 +102,16 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>abnormal message</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>Reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -230,7 +230,7 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
 
     public static class ListIsvPaymentPluginConfigsResponseBodyModule extends TeaModel {
         /**
-         * <p>Business ID</p>
+         * <p>The business ID.</p>
          * 
          * <strong>example:</strong>
          * <p>WS20250915163734000001</p>
@@ -239,13 +239,13 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
         public String bizId;
 
         /**
-         * <p>Extension information</p>
+         * <p>The extended information.</p>
          */
         @NameInMap("Extend")
         public java.util.Map<String, String> extend;
 
         /**
-         * <p>Creation Time</p>
+         * <p>The creation time. The value is a UNIX timestamp in seconds.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -255,7 +255,7 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>Updated At</p>
+         * <p>The update time. The value is in the ISO 8601 format and the UTC time zone.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -265,7 +265,7 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
-         * <p>Primary key</p>
+         * <p>The primary key.</p>
          * 
          * <strong>example:</strong>
          * <p>16257</p>
@@ -274,7 +274,7 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Plugin configuration</p>
+         * <p>The plugin configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -283,7 +283,7 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
         public String pluginConfig;
 
         /**
-         * <p>Plugin description</p>
+         * <p>The plugin description.</p>
          * 
          * <strong>example:</strong>
          * <p>a simple test plugin</p>
@@ -292,7 +292,7 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
         public String pluginDesc;
 
         /**
-         * <p>Plugin ID</p>
+         * <p>The plugin ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1bae9ceaceea432d91c7069fab0dfc02</p>
@@ -301,7 +301,7 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
         public String pluginId;
 
         /**
-         * <p>Plugin name</p>
+         * <p>The plugin name.</p>
          * 
          * <strong>example:</strong>
          * <p>tf_testaccapigatewayplugin29311</p>
@@ -310,7 +310,7 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
         public String pluginName;
 
         /**
-         * <p>Site name</p>
+         * <p>The site name.</p>
          * 
          * <strong>example:</strong>
          * <p>jugaocai.com</p>
@@ -319,7 +319,7 @@ public class ListIsvPaymentPluginConfigsResponseBody extends TeaModel {
         public String siteName;
 
         /**
-         * <p>User ID</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>

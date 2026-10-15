@@ -44,7 +44,7 @@ public class ModifyAppInstanceSpecRequest extends TeaModel {
      * <p>The extended information.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;deliveryNodeName\&quot;:\&quot;网站验收\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Reject\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Customer\&quot;}</p>
+     * <p>{\&quot;deliveryNodeName\&quot;:\&quot;Website acceptance\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Reject\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Customer\&quot;}</p>
      */
     @NameInMap("Extend")
     public String extend;

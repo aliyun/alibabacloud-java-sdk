@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppTemplateRequest extends TeaModel {
     /**
-     * <p>Template ID</p>
+     * <p>The template ID.</p>
      * 
      * <strong>example:</strong>
      * <p>JKSVNY04LH7DRI6F</p>

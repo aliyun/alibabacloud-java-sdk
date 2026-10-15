@@ -60,7 +60,7 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The error code. The ErrorCode field is not returned if the request is successful. The ErrorCode field is returned if the request fails. For more information, see the error codes in this topic.</p>
+     * <p>The error code. The ErrorCode field is not returned if the request is successful. If the request fails, the ErrorCode field is returned. For more information, see the error codes in this topic.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -105,7 +105,7 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
      * <p>The root error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
@@ -247,6 +247,15 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
 
     public static class SubmitMaterialTaskResponseBodyModule extends TeaModel {
         /**
+         * <p>The business group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
+        @NameInMap("BizGroupId")
+        public String bizGroupId;
+
+        /**
          * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
@@ -258,6 +267,14 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
         public static SubmitMaterialTaskResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
             SubmitMaterialTaskResponseBodyModule self = new SubmitMaterialTaskResponseBodyModule();
             return TeaModel.build(map, self);
+        }
+
+        public SubmitMaterialTaskResponseBodyModule setBizGroupId(String bizGroupId) {
+            this.bizGroupId = bizGroupId;
+            return this;
+        }
+        public String getBizGroupId() {
+            return this.bizGroupId;
         }
 
         public SubmitMaterialTaskResponseBodyModule setTaskId(String taskId) {

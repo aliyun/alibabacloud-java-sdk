@@ -14,7 +14,7 @@ public class ListRbacRolesRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The number of entries per query.</p>
+     * <p>The maximum number of entries to return per query.</p>
      * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
@@ -42,11 +42,7 @@ public class ListRbacRolesRequest extends TeaModel {
     public String orderColumn;
 
     /**
-     * <p>The sort order. Valid values:</p>
-     * <ul>
-     * <li>ASC</li>
-     * <li>DESC</li>
-     * </ul>
+     * <p>The sort order. Valid values: ASC and DESC.</p>
      * 
      * <strong>example:</strong>
      * <p>BUY</p>

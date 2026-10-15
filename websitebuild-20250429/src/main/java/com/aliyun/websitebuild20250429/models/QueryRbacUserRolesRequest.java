@@ -4,21 +4,57 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class QueryRbacUserRolesRequest extends TeaModel {
+    /**
+     * <p>The site end-user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11</p>
+     */
     @NameInMap("ApplicationUserId")
     public String applicationUserId;
 
+    /**
+     * <p>The business instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WD20250703155602000001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>The field used for sorting.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gmtCreated</p>
+     */
     @NameInMap("OrderColumn")
     public String orderColumn;
 
+    /**
+     * <p>The sort type. Valid values: ASC and DESC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BUY</p>
+     */
     @NameInMap("OrderType")
     public String orderType;
 
+    /**
+     * <p>The page number. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

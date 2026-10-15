@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryInspirationBalanceResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access is denied.</p>
+     * <p>The detailed reason for the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether the request can be retried.</p>
+     * <p>Specifies whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name. The system queries the application with this name.</p>
+     * <p>The name of the application to query.</p>
      * 
      * <strong>example:</strong>
      * <p>dewuApp</p>
@@ -41,10 +41,7 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
-     * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
-     * </blockquote>
+     * <p>The dynamic error message used to replace <code>%s</code> in the error message of the <strong>ErrMessage</strong> response parameter. If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -86,13 +83,13 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
      * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request is synchronously processed.</p>
+     * <p>Specifies whether the request is processed synchronously.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -195,7 +192,7 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
 
     public static class QueryInspirationBalanceResponseBodyModule extends TeaModel {
         /**
-         * <p>The remaining amount, calculated as totalQuota minus totalUsed.</p>
+         * <p>The remaining quota, which is calculated by subtracting totalUsed from totalQuota.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -203,11 +200,17 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
         @NameInMap("Remaining")
         public Long remaining;
 
+        /**
+         * <p>The string representation of the remaining quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("RemainingStr")
         public String remainingStr;
 
         /**
-         * <p>The total quota, which is the sum of initQuota values across all valid accounts.</p>
+         * <p>The total quota, which is the sum of the initQuota values of all valid accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -215,11 +218,17 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
         @NameInMap("TotalQuota")
         public Long totalQuota;
 
+        /**
+         * <p>The string representation of the total quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("TotalQuotaStr")
         public String totalQuotaStr;
 
         /**
-         * <p>The total consumed amount, which is the sum of used values across all valid accounts.</p>
+         * <p>The used quota, which is the sum of the used values of all valid accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -227,6 +236,12 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
         @NameInMap("TotalUsed")
         public Long totalUsed;
 
+        /**
+         * <p>The string representation of the used quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalUsedStr")
         public String totalUsedStr;
 

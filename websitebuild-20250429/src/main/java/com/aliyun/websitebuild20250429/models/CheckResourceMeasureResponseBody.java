@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckResourceMeasureResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access was denied.</p>
+     * <p>The detailed reason for the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Indicates whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -41,9 +41,9 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response element.</p>
+     * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -86,13 +86,13 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
      * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -195,7 +195,16 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
 
     public static class CheckResourceMeasureResponseBodyModule extends TeaModel {
         /**
-         * <p>The error code when the check fails. This value is null when the check passes.</p>
+         * <p>This field is returned only for APP_WORKSPACE quantity pre-checks. It specifies the final total quantity to be saved, not the current increment. The issue quantity is the sum of common issues and word-of-mouth issues, and the competitor quantity is the total number of competitors after editing. This field is empty for APP and USER checks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21</p>
+         */
+        @NameInMap("DesiredTotal")
+        public Long desiredTotal;
+
+        /**
+         * <p>The error code returned when the check fails. This field is null when the check passes.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -204,13 +213,22 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error message when the check fails. This value is null when the check passes.</p>
+         * <p>The error message returned when the check fails. This field is null when the check passes.</p>
          * 
          * <strong>example:</strong>
          * <p>stream push failed</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
+
+        /**
+         * <p>This field is returned only for APP_WORKSPACE quantity pre-checks. It specifies the maximum number of issues or competitors allowed by the current commodity edition, not the remaining quota. This field is empty for APP and USER checks, or when the edition benefits cannot be determined.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
+        @NameInMap("Limit")
+        public Long limit;
 
         /**
          * <p>Indicates whether the check is passed.</p>
@@ -230,9 +248,26 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
         @NameInMap("ResourceCode")
         public String resourceCode;
 
+        /**
+         * <p>Indicates whether a purchasable higher edition exists that can accommodate the DesiredTotal. This field is true only when the capacity of the current edition is insufficient and a higher edition meets the requirement. Otherwise, it is false. This field may be empty for APP and USER checks. This field does not indicate that an upgrade has been performed or an upgrade order has been created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("UpgradeAvailable")
+        public Boolean upgradeAvailable;
+
         public static CheckResourceMeasureResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
             CheckResourceMeasureResponseBodyModule self = new CheckResourceMeasureResponseBodyModule();
             return TeaModel.build(map, self);
+        }
+
+        public CheckResourceMeasureResponseBodyModule setDesiredTotal(Long desiredTotal) {
+            this.desiredTotal = desiredTotal;
+            return this;
+        }
+        public Long getDesiredTotal() {
+            return this.desiredTotal;
         }
 
         public CheckResourceMeasureResponseBodyModule setErrorCode(String errorCode) {
@@ -251,6 +286,14 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
             return this.errorMessage;
         }
 
+        public CheckResourceMeasureResponseBodyModule setLimit(Long limit) {
+            this.limit = limit;
+            return this;
+        }
+        public Long getLimit() {
+            return this.limit;
+        }
+
         public CheckResourceMeasureResponseBodyModule setPassed(Boolean passed) {
             this.passed = passed;
             return this;
@@ -265,6 +308,14 @@ public class CheckResourceMeasureResponseBody extends TeaModel {
         }
         public String getResourceCode() {
             return this.resourceCode;
+        }
+
+        public CheckResourceMeasureResponseBodyModule setUpgradeAvailable(Boolean upgradeAvailable) {
+            this.upgradeAvailable = upgradeAvailable;
+            return this;
+        }
+        public Boolean getUpgradeAvailable() {
+            return this.upgradeAvailable;
         }
 
     }

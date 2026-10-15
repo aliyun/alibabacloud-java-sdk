@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckResourceMeasureRequest extends TeaModel {
     /**
-     * <p>The owner ID, which can be a website ID or an Alibaba Cloud account ID.</p>
+     * <p>The owner ID, which can be a website ID or an Alibaba Cloud user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -14,11 +14,7 @@ public class CheckResourceMeasureRequest extends TeaModel {
     public String belongId;
 
     /**
-     * <p>The type of the owner ID. Valid values:</p>
-     * <ul>
-     * <li>siteId</li>
-     * <li>uid.</li>
-     * </ul>
+     * <p>The owner ID type. Valid values: siteId and uid.</p>
      * 
      * <strong>example:</strong>
      * <p>USER</p>
@@ -36,6 +32,15 @@ public class CheckResourceMeasureRequest extends TeaModel {
     public String bizType;
 
     /**
+     * <p>This parameter is used only for APP_WORKSPACE. It specifies the final total amount of issues or competitors after editing. For legacy APP or USER, it retains the incremental semantics of ResourceValue.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21</p>
+     */
+    @NameInMap("DesiredTotal")
+    public Long desiredTotal;
+
+    /**
      * <p>The ESP business ID.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +50,7 @@ public class CheckResourceMeasureRequest extends TeaModel {
     public String espBizId;
 
     /**
-     * <p>The order module information. If this parameter is empty, espBizId and bizType cannot be empty.</p>
+     * <p>The order component parameters. If this parameter is empty, EspBizId and BizType cannot be empty.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;siteversion&quot;:&quot;test&quot;}</p>
@@ -63,10 +68,10 @@ public class CheckResourceMeasureRequest extends TeaModel {
     public String resourceCode;
 
     /**
-     * <p>The resource value. This parameter is empty by default and is required only for feature-type resources. Valid values:</p>
+     * <p>The resource value. This parameter is required only for feature resources and is empty by default. Valid values:</p>
      * <ul>
-     * <li>0: not supported</li>
-     * <li>1: supported.</li>
+     * <li>0: Not supported.</li>
+     * <li>1: Supported.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,6 +107,14 @@ public class CheckResourceMeasureRequest extends TeaModel {
     }
     public String getBizType() {
         return this.bizType;
+    }
+
+    public CheckResourceMeasureRequest setDesiredTotal(Long desiredTotal) {
+        this.desiredTotal = desiredTotal;
+        return this;
+    }
+    public Long getDesiredTotal() {
+        return this.desiredTotal;
     }
 
     public CheckResourceMeasureRequest setEspBizId(String espBizId) {

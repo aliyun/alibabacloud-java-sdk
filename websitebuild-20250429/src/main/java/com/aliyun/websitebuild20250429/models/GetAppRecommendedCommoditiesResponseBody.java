@@ -14,7 +14,7 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Indicates whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -41,9 +41,9 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> parameter.</p>
+     * <p>The dynamic error message, which is used to replace <code>%s</code> in the error message returned by <strong>ErrMessage</strong>.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the value of the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,19 +53,19 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The data table module. Valid values:</p>
+     * <p>The data table module.</p>
      * <ul>
      * <li><p>ABTest: experiment data table</p>
      * </li>
      * <li><p>ExperimentTool: experiment tool table</p>
      * </li>
-     * <li><p>DataDiagnosis: data modeling diagnostics</p>
+     * <li><p>DataDiagnosis: data diagnosis</p>
      * </li>
      * </ul>
      */
@@ -94,7 +94,7 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
      * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
@@ -202,11 +202,17 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
     }
 
     public static class GetAppRecommendedCommoditiesResponseBodyModuleCommodities extends TeaModel {
+        /**
+         * <p>The click action type. Valid values: CONSULT (add WeCom), BUY (purchase), and AUTO (automatic issuance).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONSULT</p>
+         */
         @NameInMap("ActionType")
         public String actionType;
 
         /**
-         * <p>The commodity code. Applicable to both resource plans and marketing commodities.</p>
+         * <p>The commodity code. This parameter applies to both resource plans and marketing commodities.</p>
          * 
          * <strong>example:</strong>
          * <p>rds</p>
@@ -214,21 +220,20 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         @NameInMap("CommodityCode")
         public String commodityCode;
 
+        /**
+         * <p>The display description of the recommendation.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The extension fields, such as unsupportedReason.</p>
+         * <p>The extended fields, such as unsupportedReason.</p>
          */
         @NameInMap("Extend")
         public java.util.Map<String, String> extend;
 
         /**
-         * <p>The order type. Valid values:</p>
-         * <ul>
-         * <li>BUY: purchase.</li>
-         * <li>UPGRADE: upgrade.</li>
-         * </ul>
+         * <p>The order type. Valid values: BUY (purchase) and UPGRADE (upgrade).</p>
          * 
          * <strong>example:</strong>
          * <p>DESC</p>
@@ -246,7 +251,7 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The marketing commodity ID. Returned only for new purchases.</p>
+         * <p>The ID of the marketing commodity. This parameter is returned only for new purchases.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -254,11 +259,17 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         @NameInMap("PromotionCommodityId")
         public String promotionCommodityId;
 
+        /**
+         * <p>The recommendation type. Valid values: COMMODITY (commodity recommendation) and ACTIVITY (promotion activity recommendation).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COMMODITY</p>
+         */
         @NameInMap("RecommendType")
         public String recommendType;
 
         /**
-         * <p>The redirect URL. Returned when redirection is required, such as for upgrades.</p>
+         * <p>The redirect URL. This parameter is returned when a redirect is required in scenarios such as upgrades.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://ecs-workbench-disposable.aliyun.com/account/disposable/login/sst/1291612921555690/edvo2gevfh">https://ecs-workbench-disposable.aliyun.com/account/disposable/login/sst/1291612921555690/edvo2gevfh</a></p>
@@ -267,7 +278,7 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         public String redirectUrl;
 
         /**
-         * <p>The commodity status.</p>
+         * <p>The status of the commodity.</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -275,6 +286,9 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The display title of the recommendation.</p>
+         */
         @NameInMap("Title")
         public String title;
 

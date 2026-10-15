@@ -102,7 +102,7 @@ public class SyncAppInstanceForPartnerRequest extends TeaModel {
         public String deployArea;
 
         /**
-         * <p>The LingXiao instance ID.</p>
+         * <p>The Lingxiao instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>12313213</p>
@@ -221,7 +221,7 @@ public class SyncAppInstanceForPartnerRequest extends TeaModel {
         public String bizId;
 
         /**
-         * <p>Specifies whether the instance is logically deleted.</p>
+         * <p>Indicates whether the instance is logically deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>fase</p>
@@ -239,7 +239,7 @@ public class SyncAppInstanceForPartnerRequest extends TeaModel {
         public String domain;
 
         /**
-         * <p>The end time of the event, in UNIX timestamp format.</p>
+         * <p>The end time of the event. The value is a UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-08-23T02:14:00Z</p>
@@ -257,7 +257,7 @@ public class SyncAppInstanceForPartnerRequest extends TeaModel {
         public String gmtDelete;
 
         /**
-         * <p>The timestamp when the vulnerability was published, in milliseconds.</p>
+         * <p>The timestamp when the vulnerability was published. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-01 00:00:00</p>
@@ -278,7 +278,7 @@ public class SyncAppInstanceForPartnerRequest extends TeaModel {
          * <p>The website name.</p>
          * 
          * <strong>example:</strong>
-         * <p>AI建站</p>
+         * <p>AI Website Builder</p>
          */
         @NameInMap("Name")
         public String name;
@@ -287,7 +287,7 @@ public class SyncAppInstanceForPartnerRequest extends TeaModel {
          * <p>The website configuration information.</p>
          * 
          * <strong>example:</strong>
-         * <p>网站配置信息</p>
+         * <p>Website configuration information</p>
          */
         @NameInMap("Profile")
         public SyncAppInstanceForPartnerRequestAppInstanceProfile profile;
@@ -311,7 +311,7 @@ public class SyncAppInstanceForPartnerRequest extends TeaModel {
         public String slug;
 
         /**
-         * <p>The start time of the query. If you do not specify the start time or end time, all historical deployment records of the instance are queried.</p>
+         * <p>The start time of the query. If you do not specify the start time or end time, all historical deployment records of the instance are queried. Specify the time in the ISO 8601 standard in the UTC (Z) time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-07-15T16:00:00Z</p>
@@ -322,14 +322,14 @@ public class SyncAppInstanceForPartnerRequest extends TeaModel {
         /**
          * <p>The running status of the instance. Valid values:</p>
          * <ul>
-         * <li>NotRun: not running.</li>
-         * <li>Running: running.</li>
-         * <li>WaitTime: waiting for TriggerTime.</li>
-         * <li>CheckingCondition: checking branch conditions.</li>
-         * <li>WaitResource: waiting for resources.</li>
-         * <li>Failure: execution failed.</li>
-         * <li>Success: execution succeeded.</li>
-         * <li>Checking: submitted for data quality check.</li>
+         * <li>NotRun: Not running.</li>
+         * <li>Running: Running.</li>
+         * <li>WaitTime: Waiting for the trigger time.</li>
+         * <li>CheckingCondition: Checking branch conditions.</li>
+         * <li>WaitResource: Waiting for resources.</li>
+         * <li>Failure: Execution failed.</li>
+         * <li>Success: Execution succeeded.</li>
+         * <li>Checking: Submitted for data quality check.</li>
          * </ul>
          * 
          * <strong>example:</strong>
