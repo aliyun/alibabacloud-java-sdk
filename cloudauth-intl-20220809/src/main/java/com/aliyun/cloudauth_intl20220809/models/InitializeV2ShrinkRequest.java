@@ -27,6 +27,10 @@ public class InitializeV2ShrinkRequest extends TeaModel {
     @NameInMap("Authorize")
     public String authorize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;BRA01001&quot;:&quot;01&quot;,&quot;BRA01002&quot;:&quot;01,02&quot;}</p>
+     */
     @NameInMap("AutoDocPageConfig")
     public String autoDocPageConfig;
 
@@ -204,6 +208,10 @@ public class InitializeV2ShrinkRequest extends TeaModel {
     @NameInMap("ExperienceCode")
     public String experienceCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>N</p>
+     */
     @NameInMap("FaceAttributeCheck")
     public String faceAttributeCheck;
 
@@ -370,6 +378,9 @@ public class InitializeV2ShrinkRequest extends TeaModel {
      */
     @NameInMap("Model")
     public String model;
+
+    @NameInMap("NeedMultiFaceCheck")
+    public String needMultiFaceCheck;
 
     /**
      * <p>Specifies whether to enable OCR. This is an input parameter for the IDV product.</p>
@@ -602,6 +613,9 @@ public class InitializeV2ShrinkRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to overwrite the existing face with the current face when the MerchantUserId already exists during automatic registration. Valid values: Y (overwrite) and N (do not overwrite and return a message indicating that the UserId already exists).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>N</p>
      */
     @NameInMap("UpdateFaceIfUserExists")
     public String updateFaceIfUserExists;
@@ -927,6 +941,14 @@ public class InitializeV2ShrinkRequest extends TeaModel {
     }
     public String getModel() {
         return this.model;
+    }
+
+    public InitializeV2ShrinkRequest setNeedMultiFaceCheck(String needMultiFaceCheck) {
+        this.needMultiFaceCheck = needMultiFaceCheck;
+        return this;
+    }
+    public String getNeedMultiFaceCheck() {
+        return this.needMultiFaceCheck;
     }
 
     public InitializeV2ShrinkRequest setOcr(String ocr) {

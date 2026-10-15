@@ -29,6 +29,9 @@ public class InitializeRequest extends TeaModel {
 
     /**
      * <p>The automatic document classification configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;BRA01001&quot;:&quot;01&quot;,&quot;BRA01002&quot;:&quot;01,02&quot;}</p>
      */
     @NameInMap("AutoDocPageConfig")
     public String autoDocPageConfig;
@@ -206,6 +209,9 @@ public class InitializeRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable face attribute check.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>N</p>
      */
     @NameInMap("FaceAttributeCheck")
     public String faceAttributeCheck;
@@ -370,6 +376,9 @@ public class InitializeRequest extends TeaModel {
      */
     @NameInMap("Model")
     public String model;
+
+    @NameInMap("NeedMultiFaceCheck")
+    public String needMultiFaceCheck;
 
     /**
      * <p>Specifies whether to enable OCR. This is an input parameter for the IDV product.</p>
@@ -595,6 +604,9 @@ public class InitializeRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to overwrite the existing face with the current face when MerchantUserId already exists during automatic registration. Y: overwrite. N: do not overwrite and return a message indicating that the UserId already exists.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>N</p>
      */
     @NameInMap("UpdateFaceIfUserExists")
     public String updateFaceIfUserExists;
@@ -912,6 +924,14 @@ public class InitializeRequest extends TeaModel {
     }
     public String getModel() {
         return this.model;
+    }
+
+    public InitializeRequest setNeedMultiFaceCheck(String needMultiFaceCheck) {
+        this.needMultiFaceCheck = needMultiFaceCheck;
+        return this;
+    }
+    public String getNeedMultiFaceCheck() {
+        return this.needMultiFaceCheck;
     }
 
     public InitializeRequest setOcr(String ocr) {

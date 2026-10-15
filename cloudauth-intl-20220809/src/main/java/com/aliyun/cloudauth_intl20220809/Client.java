@@ -3385,7 +3385,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Server-side API for the international Face Guard service.</p>
+     * <p>Provides the server-side API for international Face Guard.</p>
      * 
      * @param request FaceGuardRiskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3433,7 +3433,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Server-side API for the international Face Guard service.</p>
+     * <p>Provides the server-side API for international Face Guard.</p>
      * 
      * @param request FaceGuardRiskRequest
      * @return FaceGuardRiskResponse
@@ -4456,6 +4456,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Model", request.model);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.needMultiFaceCheck)) {
+            query.put("NeedMultiFaceCheck", request.needMultiFaceCheck);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ocr)) {
             query.put("Ocr", request.ocr);
         }
@@ -4742,6 +4746,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.model)) {
             query.put("Model", request.model);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needMultiFaceCheck)) {
+            query.put("NeedMultiFaceCheck", request.needMultiFaceCheck);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ocr)) {
