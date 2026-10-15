@@ -16,6 +16,12 @@ public class PublicUpdateTemplateBuildConfig extends TeaModel {
     @NameInMap("envdInject")
     public PublicUpdateTemplateEnvdInjectAction envdInject;
 
+    /**
+     * <p>The client installation required for storage mounting.</p>
+     */
+    @NameInMap("installStorageClients")
+    public Boolean installStorageClients;
+
     public static PublicUpdateTemplateBuildConfig build(java.util.Map<String, ?> map) throws Exception {
         PublicUpdateTemplateBuildConfig self = new PublicUpdateTemplateBuildConfig();
         return TeaModel.build(map, self);
@@ -35,6 +41,14 @@ public class PublicUpdateTemplateBuildConfig extends TeaModel {
     }
     public PublicUpdateTemplateEnvdInjectAction getEnvdInject() {
         return this.envdInject;
+    }
+
+    public PublicUpdateTemplateBuildConfig setInstallStorageClients(Boolean installStorageClients) {
+        this.installStorageClients = installStorageClients;
+        return this;
+    }
+    public Boolean getInstallStorageClients() {
+        return this.installStorageClients;
     }
 
 }

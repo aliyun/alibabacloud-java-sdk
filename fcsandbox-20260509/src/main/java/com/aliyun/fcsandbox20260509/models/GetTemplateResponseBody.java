@@ -14,7 +14,7 @@ public class GetTemplateResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The time when the template was created.</p>
+     * <p>The creation time in UTC format that complies with RFC 3339, such as 2026-08-31T12:00:00Z.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-08-31T12:00:00Z</p>
@@ -32,7 +32,7 @@ public class GetTemplateResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The template name.</p>
+     * <p>The name of the template.</p>
      * 
      * <strong>example:</strong>
      * <p>my-template</p>
@@ -50,7 +50,7 @@ public class GetTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmwxqyrgwabcd</p>
@@ -65,7 +65,7 @@ public class GetTemplateResponseBody extends TeaModel {
     public PublicTemplateRuntimeConfig runtimeConfig;
 
     /**
-     * <p>The template status.</p>
+     * <p>The status of the template.</p>
      */
     @NameInMap("status")
     public PublicTemplateStatus status;
@@ -80,7 +80,7 @@ public class GetTemplateResponseBody extends TeaModel {
     public String teamID;
 
     /**
-     * <p>The team name.</p>
+     * <p>The name of the team.</p>
      * 
      * <strong>example:</strong>
      * <p>codeclaw-localenv</p>

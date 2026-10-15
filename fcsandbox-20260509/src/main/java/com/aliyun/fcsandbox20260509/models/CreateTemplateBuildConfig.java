@@ -16,6 +16,12 @@ public class CreateTemplateBuildConfig extends TeaModel {
     @NameInMap("envdInject")
     public CreateTemplateEnvdInjectAction envdInject;
 
+    /**
+     * <p>The installation of clients required for storage mounting.</p>
+     */
+    @NameInMap("installStorageClients")
+    public Boolean installStorageClients;
+
     public static CreateTemplateBuildConfig build(java.util.Map<String, ?> map) throws Exception {
         CreateTemplateBuildConfig self = new CreateTemplateBuildConfig();
         return TeaModel.build(map, self);
@@ -35,6 +41,14 @@ public class CreateTemplateBuildConfig extends TeaModel {
     }
     public CreateTemplateEnvdInjectAction getEnvdInject() {
         return this.envdInject;
+    }
+
+    public CreateTemplateBuildConfig setInstallStorageClients(Boolean installStorageClients) {
+        this.installStorageClients = installStorageClients;
+        return this;
+    }
+    public Boolean getInstallStorageClients() {
+        return this.installStorageClients;
     }
 
 }

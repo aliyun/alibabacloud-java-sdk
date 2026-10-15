@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class E2BTeam extends TeaModel {
     /**
-     * <p>Indicates whether the team name can be modified.</p>
+     * <p>Specifies whether the team name can be modified.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +14,7 @@ public class E2BTeam extends TeaModel {
     public Boolean allowUpdateTeamName;
 
     /**
-     * <p>The time when the team was created.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-05-23T11:26:25Z</p>
@@ -31,14 +31,23 @@ public class E2BTeam extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The plan used by the team.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Pro</p>
+     */
     @NameInMap("plan")
     public String plan;
 
+    /**
+     * <p>Specifies whether the team is read-only.</p>
+     */
     @NameInMap("readOnly")
     public Boolean readOnly;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmwxqyrgwabcd</p>
@@ -47,7 +56,7 @@ public class E2BTeam extends TeaModel {
     public String resourceGroupID;
 
     /**
-     * <p>The status of the team.</p>
+     * <p>The status.</p>
      * 
      * <strong>example:</strong>
      * <p>active</p>

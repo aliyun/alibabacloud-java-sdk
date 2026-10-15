@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTemplateRequest extends TeaModel {
     /**
-     * <p>The request struct.</p>
+     * <p>The request structure.</p>
      */
     @NameInMap("body")
     public CreateTemplateInput body;

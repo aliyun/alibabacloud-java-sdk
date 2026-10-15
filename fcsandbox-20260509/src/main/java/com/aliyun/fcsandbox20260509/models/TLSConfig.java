@@ -4,12 +4,27 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class TLSConfig extends TeaModel {
+    /**
+     * <p>The list of allowed TLS cipher suites.</p>
+     */
     @NameInMap("cipherSuites")
     public java.util.List<String> cipherSuites;
 
+    /**
+     * <p>The maximum allowed TLS version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TLSv1.3</p>
+     */
     @NameInMap("maxVersion")
     public String maxVersion;
 
+    /**
+     * <p>The minimum allowed TLS version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TLSv1.2</p>
+     */
     @NameInMap("minVersion")
     public String minVersion;
 

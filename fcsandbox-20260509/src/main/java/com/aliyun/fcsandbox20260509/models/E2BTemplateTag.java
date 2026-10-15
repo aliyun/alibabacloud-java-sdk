@@ -4,12 +4,30 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class E2BTemplateTag extends TeaModel {
+    /**
+     * <p>The ID of the template build associated with the tag.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>your-build-id</p>
+     */
     @NameInMap("buildID")
     public String buildID;
 
+    /**
+     * <p>The creation time of the tag.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-01-01T00:00:00Z</p>
+     */
     @NameInMap("createdAt")
     public String createdAt;
 
+    /**
+     * <p>The name of the template tag.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>staging</p>
+     */
     @NameInMap("tag")
     public String tag;
 

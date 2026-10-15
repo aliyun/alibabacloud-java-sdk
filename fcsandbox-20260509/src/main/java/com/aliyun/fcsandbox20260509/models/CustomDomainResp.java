@@ -4,21 +4,45 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class CustomDomainResp extends TeaModel {
+    /**
+     * <p>The certificate configuration used by the domain name.</p>
+     */
     @NameInMap("certConfig")
     public CertConfig certConfig;
 
+    /**
+     * <p>The creation time of the custom domain name.</p>
+     */
     @NameInMap("createdAt")
     public Long createdAt;
 
+    /**
+     * <p>The description of the custom domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Custom domain name for the production cloud sandbox</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The custom domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>api.example.com</p>
+     */
     @NameInMap("domainName")
     public String domainName;
 
+    /**
+     * <p>The TLS configuration used by the domain name.</p>
+     */
     @NameInMap("tlsConfig")
     public TLSConfig tlsConfig;
 
+    /**
+     * <p>The last update time of the custom domain name.</p>
+     */
     @NameInMap("updatedAt")
     public Long updatedAt;
 

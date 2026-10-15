@@ -4,9 +4,18 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class UpdateVolumeInput extends TeaModel {
+    /**
+     * <p>The target status of the volume.</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The unique identifier of the team to which the volume belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>70d1c834-0383-58d8-97ac-5336eb91abcd</p>
+     */
     @NameInMap("teamID")
     public String teamID;
 

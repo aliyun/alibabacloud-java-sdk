@@ -13,6 +13,12 @@ public class UpdateTeamInput extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The plan used by the team.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Pro</p>
+     */
     @NameInMap("plan")
     public String plan;
 

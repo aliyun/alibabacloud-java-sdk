@@ -22,9 +22,15 @@ public class ResetApiKeyResponseBody extends TeaModel {
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The list of IP addresses blocked from using the API key.</p>
+     */
     @NameInMap("ipBlacklist")
     public java.util.List<IPConfig> ipBlacklist;
 
+    /**
+     * <p>The list of IP addresses allowed to use the API key.</p>
+     */
     @NameInMap("ipWhitelist")
     public java.util.List<IPConfig> ipWhitelist;
 

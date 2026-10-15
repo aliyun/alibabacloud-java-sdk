@@ -4,15 +4,33 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class CreateCustomDomainInput extends TeaModel {
+    /**
+     * <p>The certificate configuration for the domain name.</p>
+     */
     @NameInMap("certConfig")
     public CertConfig certConfig;
 
+    /**
+     * <p>The description of the custom domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>生产环境云沙箱自定义域名</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The custom domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>api.example.com</p>
+     */
     @NameInMap("domainName")
     public String domainName;
 
+    /**
+     * <p>The TLS configuration for the domain name.</p>
+     */
     @NameInMap("tlsConfig")
     public TLSConfig tlsConfig;
 

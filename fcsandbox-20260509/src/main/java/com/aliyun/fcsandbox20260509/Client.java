@@ -154,7 +154,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建模板缓存</p>
+     * <p>Creates a template cache.</p>
      * 
      * @param request CreateTemplateCacheRequest
      * @param headers map
@@ -183,7 +183,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建模板缓存</p>
+     * <p>Creates a template cache.</p>
      * 
      * @param request CreateTemplateCacheRequest
      * @return CreateTemplateCacheResponse
@@ -414,7 +414,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除模板缓存</p>
+     * <p>Deletes the template cache.</p>
      * 
      * @param request DeleteTemplateCacheRequest
      * @param headers map
@@ -448,7 +448,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除模板缓存</p>
+     * <p>Deletes the template cache.</p>
      * 
      * @param request DeleteTemplateCacheRequest
      * @return DeleteTemplateCacheResponse
@@ -508,7 +508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries an API key.</p>
+     * <p>Retrieves an API key.</p>
      * 
      * @param request DescribeApiKeyRequest
      * @param headers map
@@ -536,7 +536,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries an API key.</p>
+     * <p>Retrieves an API key.</p>
      * 
      * @param request DescribeApiKeyRequest
      * @return DescribeApiKeyResponse
@@ -1026,7 +1026,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of templates.</p>
+     * <p>Lists templates.</p>
      * 
      * @param request ListTemplatesRequest
      * @param headers map
@@ -1068,7 +1068,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of templates.</p>
+     * <p>Lists templates.</p>
      * 
      * @param request ListTemplatesRequest
      * @return ListTemplatesResponse

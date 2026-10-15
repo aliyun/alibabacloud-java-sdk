@@ -4,15 +4,39 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class OSSVolumeConfig extends TeaModel {
+    /**
+     * <p>The name of the OSS bucket.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-bucket</p>
+     */
     @NameInMap("bucketName")
     public String bucketName;
 
+    /**
+     * <p>The path to mount within the bucket.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/agent-workspace</p>
+     */
     @NameInMap("bucketPath")
     public String bucketPath;
 
+    /**
+     * <p>The OSS access endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://oss-cn-hangzhou.aliyuncs.com">https://oss-cn-hangzhou.aliyuncs.com</a></p>
+     */
     @NameInMap("endpoint")
     public String endpoint;
 
+    /**
+     * <p>Specifies whether to mount the volume in read-only mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("readOnly")
     public Boolean readOnly;
 

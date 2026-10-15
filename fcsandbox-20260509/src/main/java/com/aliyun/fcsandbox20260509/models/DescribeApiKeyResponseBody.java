@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApiKeyResponseBody extends TeaModel {
     /**
-     * <p>The Bailian API key.</p>
+     * <p>The Model Studio API key.</p>
      * 
      * <strong>example:</strong>
      * <p>asdfjoY87-9IUHH</p>
@@ -22,9 +22,15 @@ public class DescribeApiKeyResponseBody extends TeaModel {
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The set of permissions currently in effect for the API key.</p>
+     */
     @NameInMap("effectivePermissions")
     public EffectivePermissions effectivePermissions;
 
+    /**
+     * <p>The list of IP addresses that are blocked from using the API key.</p>
+     */
     @NameInMap("ipBlacklist")
     public java.util.List<IPConfig> ipBlacklist;
 
@@ -43,6 +49,9 @@ public class DescribeApiKeyResponseBody extends TeaModel {
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The access policy configured for the API key.</p>
+     */
     @NameInMap("permissionPolicy")
     public PermissionPolicy permissionPolicy;
 

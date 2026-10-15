@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTemplateRequest extends TeaModel {
     /**
-     * <p>The request struct for updating a template. Specify only the fields that you want to change.</p>
+     * <p>The request struct for updating a template. Specify only the fields to be updated.</p>
      */
     @NameInMap("body")
     public PublicUpdateTemplateInput body;

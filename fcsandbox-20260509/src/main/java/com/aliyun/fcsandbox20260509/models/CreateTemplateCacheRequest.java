@@ -4,6 +4,9 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateCacheRequest extends TeaModel {
+    /**
+     * <p>The request struct for creating a template cache.</p>
+     */
     @NameInMap("body")
     public CreateTemplateCacheInput body;
 

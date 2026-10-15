@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PublicTemplateSandboxConfig extends TeaModel {
     /**
-     * <p>The ACR Enterprise instance ID.</p>
+     * <p>The ID of the ACR Enterprise instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cri-abcd1234efgh</p>
@@ -14,7 +14,7 @@ public class PublicTemplateSandboxConfig extends TeaModel {
     public String acrInstanceId;
 
     /**
-     * <p>The sandbox generation. A value of 1 indicates the first-generation sandbox. A value of 2 indicates the second-generation sandbox.</p>
+     * <p>The sandbox generation. A value of 1 indicates the first-generation sandbox, and a value of 2 indicates the second-generation sandbox.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -63,6 +63,12 @@ public class PublicTemplateSandboxConfig extends TeaModel {
      */
     @NameInMap("startCommand")
     public String startCommand;
+
+    /**
+     * <p>The list of custom build steps.</p>
+     */
+    @NameInMap("steps")
+    public java.util.List<PublicTemplateStep> steps;
 
     public static PublicTemplateSandboxConfig build(java.util.Map<String, ?> map) throws Exception {
         PublicTemplateSandboxConfig self = new PublicTemplateSandboxConfig();
@@ -123,6 +129,14 @@ public class PublicTemplateSandboxConfig extends TeaModel {
     }
     public String getStartCommand() {
         return this.startCommand;
+    }
+
+    public PublicTemplateSandboxConfig setSteps(java.util.List<PublicTemplateStep> steps) {
+        this.steps = steps;
+        return this;
+    }
+    public java.util.List<PublicTemplateStep> getSteps() {
+        return this.steps;
     }
 
 }

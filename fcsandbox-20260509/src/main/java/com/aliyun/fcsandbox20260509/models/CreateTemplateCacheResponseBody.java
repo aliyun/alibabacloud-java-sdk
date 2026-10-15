@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateTemplateCacheResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class CreateTemplateCacheResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class CreateTemplateCacheResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>B5AD8B54-4358-5F5B-ACAA-52F2016459C6</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The template cache object.</p>
+     */
     @NameInMap("templateCache")
     public PublicTemplateCache templateCache;
 

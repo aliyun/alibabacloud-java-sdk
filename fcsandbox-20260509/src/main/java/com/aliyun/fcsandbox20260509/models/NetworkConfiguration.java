@@ -4,15 +4,39 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class NetworkConfiguration extends TeaModel {
+    /**
+     * <p>The network mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc</p>
+     */
     @NameInMap("networkMode")
     public String networkMode;
 
+    /**
+     * <p>The security group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp1gx7yj8ud5mabcde</p>
+     */
     @NameInMap("securityGroupID")
     public String securityGroupID;
 
+    /**
+     * <p>The VPC ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1mwrqm3wkq7abcde</p>
+     */
     @NameInMap("vpcID")
     public String vpcID;
 
+    /**
+     * <p>The list of vSwitch IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;vsw-bp1s5fnlk4jl2abcde&quot;]</p>
+     */
     @NameInMap("vswitchIDs")
     public java.util.List<String> vswitchIDs;
 

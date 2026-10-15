@@ -4,9 +4,21 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class IPConfig extends TeaModel {
+    /**
+     * <p>The description of the IP configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>应用固定出口</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The IP address or CIDR block.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>203.0.113.10</p>
+     */
     @NameInMap("ipAddress")
     public String ipAddress;
 
