@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class VideoTranslationRequest extends TeaModel {
     /**
-     * <p>The array of translation capabilities. Current valid value: [&quot;visual&quot;].</p>
+     * <p>The list of translation features. Valid values: <code>speech</code> and <code>visual</code>. You can select both. At least one feature is required. Duplicate values are not accepted.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Capabilities")
     public java.util.List<String> capabilities;
 
     /**
-     * <p>Specifies whether to enable the visual quality check. This parameter takes effect only when Capabilities includes visual.</p>
+     * <p>Default value: false. If <code>visual</code> is included and this parameter is explicitly set to true, the quality check for on-screen text processing is enabled. If only <code>speech</code> is selected, this parameter is ignored. No quality check is performed, no quality check fields are returned, and no errors are reported due to this parameter. Enabling the quality check may increase the waiting time. Do not enable it unless necessary.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -21,7 +21,7 @@ public class VideoTranslationRequest extends TeaModel {
     public Boolean enableQualityCheck;
 
     /**
-     * <p>The source language. This parameter is optional. Default value: auto, which indicates automatic recognition.</p>
+     * <p>The source language. For supported languages, see &quot;Supported languages&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -44,7 +44,7 @@ public class VideoTranslationRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="https://example.com/video.mp4">https://example.com/video.mp4</a></p>
+     * <p><a href="https://cdn.example.com/product-demo.mp4">https://cdn.example.com/product-demo.mp4</a></p>
      */
     @NameInMap("VideoUrl")
     public String videoUrl;
