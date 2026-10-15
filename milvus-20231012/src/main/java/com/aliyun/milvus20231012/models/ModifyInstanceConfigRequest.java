@@ -25,13 +25,19 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public String reason;
 
     /**
-     * <p>The user-defined configuration.</p>
+     * <p>The custom configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>dataCoord:\n  segment:\n    maxSize: 1024</p>
      */
     @NameInMap("UserConfig")
     public String userConfig;
+
+    /**
+     * <p>Submits the instance configurations to be updated as a JSON object.</p>
+     */
+    @NameInMap("body")
+    public ModifyInstanceConfigRequestBody body;
 
     public static ModifyInstanceConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceConfigRequest self = new ModifyInstanceConfigRequest();
@@ -60,6 +66,39 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     }
     public String getUserConfig() {
         return this.userConfig;
+    }
+
+    public ModifyInstanceConfigRequest setBody(ModifyInstanceConfigRequestBody body) {
+        this.body = body;
+        return this;
+    }
+    public ModifyInstanceConfigRequestBody getBody() {
+        return this.body;
+    }
+
+    public static class ModifyInstanceConfigRequestBody extends TeaModel {
+        /**
+         * <p>The configuration content to write to the instance, formatted as a YAML string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dataCoord:\n  segment:\n    maxSize: 1024</p>
+         */
+        @NameInMap("userConfig")
+        public String userConfig;
+
+        public static ModifyInstanceConfigRequestBody build(java.util.Map<String, ?> map) throws Exception {
+            ModifyInstanceConfigRequestBody self = new ModifyInstanceConfigRequestBody();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyInstanceConfigRequestBody setUserConfig(String userConfig) {
+            this.userConfig = userConfig;
+            return this;
+        }
+        public String getUserConfig() {
+            return this.userConfig;
+        }
+
     }
 
 }

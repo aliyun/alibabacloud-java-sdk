@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PriceInfo extends TeaModel {
     /**
-     * <p>The currency of the price.</p>
+     * <p>The pricing currency.</p>
      */
     @NameInMap("currency")
     public String currency;
@@ -17,25 +17,25 @@ public class PriceInfo extends TeaModel {
     public String discountAmount;
 
     /**
-     * <p>The optional promotions.</p>
+     * <p>The list of optional promotions.</p>
      */
     @NameInMap("optionalPromotions")
     public java.util.List<PromotionInfo> optionalPromotions;
 
     /**
-     * <p>The original price.</p>
+     * <p>The original amount.</p>
      */
     @NameInMap("originalAmount")
     public String originalAmount;
 
     /**
-     * <p>The price modules.</p>
+     * <p>The pricing details by module.</p>
      */
     @NameInMap("priceModules")
     public java.util.List<PriceInfoPriceModules> priceModules;
 
     /**
-     * <p>The pricing rules.</p>
+     * <p>The list of discount rules.</p>
      */
     @NameInMap("rules")
     public java.util.List<PriceInfoRules> rules;
@@ -47,7 +47,7 @@ public class PriceInfo extends TeaModel {
     public String taxAmount;
 
     /**
-     * <p>The actual trade price.</p>
+     * <p>The final transaction amount.</p>
      */
     @NameInMap("tradeAmount")
     public String tradeAmount;
@@ -123,13 +123,13 @@ public class PriceInfo extends TeaModel {
 
     public static class PriceInfoPriceModules extends TeaModel {
         /**
-         * <p>The original amount of the price module.</p>
+         * <p>The original amount of the module.</p>
          */
         @NameInMap("originalAmount")
         public String originalAmount;
 
         /**
-         * <p>The type of the price module.</p>
+         * <p>The type of the pricing module.</p>
          */
         @NameInMap("type")
         public String type;
@@ -159,19 +159,19 @@ public class PriceInfo extends TeaModel {
 
     public static class PriceInfoRules extends TeaModel {
         /**
-         * <p>The amount associated with the pricing rule.</p>
+         * <p>The discount amount of the rule.</p>
          */
         @NameInMap("amount")
         public String amount;
 
         /**
-         * <p>The name of the pricing rule.</p>
+         * <p>The name of the discount rule.</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The ID of the pricing rule.</p>
+         * <p>The ID of the discount rule.</p>
          */
         @NameInMap("ruleId")
         public String ruleId;

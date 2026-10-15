@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DlfTable extends TeaModel {
     /**
-     * <p>A description of the table.</p>
+     * <p>The table description.</p>
      * 
      * <strong>example:</strong>
      * <p>Test table</p>
@@ -14,7 +14,7 @@ public class DlfTable extends TeaModel {
     public String description;
 
     /**
-     * <p>The location of the table data, specified as an Object Storage Service (OSS) URI.</p>
+     * <p>The table storage location.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://bucket/path</p>
@@ -23,7 +23,7 @@ public class DlfTable extends TeaModel {
     public String location;
 
     /**
-     * <p>The table format, such as <code>PAIMON</code>.</p>
+     * <p>The table format.</p>
      * 
      * <strong>example:</strong>
      * <p>PAIMON</p>
@@ -41,7 +41,7 @@ public class DlfTable extends TeaModel {
     public String tableName;
 
     /**
-     * <p>The table type. For example, <code>MANAGED</code> indicates that DLF manages the data and metadata lifecycle.</p>
+     * <p>The table type.</p>
      * 
      * <strong>example:</strong>
      * <p>MANAGED</p>

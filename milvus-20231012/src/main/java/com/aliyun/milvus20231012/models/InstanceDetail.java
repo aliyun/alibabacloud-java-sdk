@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InstanceDetail extends TeaModel {
     /**
-     * <p>The automatic backup configuration.</p>
+     * <p>The automatic backup.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,7 +50,7 @@ public class InstanceDetail extends TeaModel {
     public String dbVersion;
 
     /**
-     * <p>Indicates whether data encryption is enabled.</p>
+     * <p>Specifies whether data encryption is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -69,7 +69,7 @@ public class InstanceDetail extends TeaModel {
     public String expireTime;
 
     /**
-     * <p>Indicates whether high availability is enabled.</p>
+     * <p>Specifies whether high availability is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -96,7 +96,7 @@ public class InstanceDetail extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>kms key Id。</p>
+     * <p>The KMS key ID.</p>
      * 
      * <strong>example:</strong>
      * <p>key-xxx</p>
@@ -105,7 +105,7 @@ public class InstanceDetail extends TeaModel {
     public String kmsKeyId;
 
     /**
-     * <p>The multi-zone deployment mode.</p>
+     * <p>The multi-zone mode.</p>
      * 
      * <strong>example:</strong>
      * <p>Single</p>
@@ -123,7 +123,11 @@ public class InstanceDetail extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The billing method. Valid values: PayAsYouGo: pay-as-you-go billing method. Subscription: subscription.</p>
+     * <p>The billing method. Valid values:</p>
+     * <ul>
+     * <li>PayAsYouGo: pay-as-you-go billing method.</li>
+     * <li>Subscription: subscription.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>PayAsYouGo</p>
@@ -167,12 +171,12 @@ public class InstanceDetail extends TeaModel {
     /**
      * <p>The instance status. Valid values:</p>
      * <ul>
-     * <li>creating: Being created.</li>
-     * <li>running: Running.</li>
-     * <li>updating: Being upgraded. This includes specification changes, configuration changes, and public network access changes.</li>
-     * <li>disable: Unavailable. The cluster has expired and requires renewal to reactivate.</li>
-     * <li>deleting: Being deleted.</li>
-     * <li>deleted: Deleted.</li>
+     * <li>creating: The instance is being created.</li>
+     * <li>running: The instance is running.</li>
+     * <li>updating: The instance is being upgraded, such as cluster scaling, configuration changes, and enabling or disabling public network access.</li>
+     * <li>disable: The instance is unavailable. The cluster has expired and must be renewed for activation.</li>
+     * <li>deleting: The instance is being deleted.</li>
+     * <li>deleted: The instance is deleted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -401,15 +405,27 @@ public class InstanceDetail extends TeaModel {
     }
 
     public static class InstanceDetailComponentsDataDisk extends TeaModel {
+        /**
+         * <p>Specifies whether to enable the data cloud disk for the query node.</p>
+         */
         @NameInMap("enabled")
         public Boolean enabled;
 
+        /**
+         * <p>The performance level of the ESSD.</p>
+         */
         @NameInMap("performanceLevel")
         public String performanceLevel;
 
+        /**
+         * <p>The capacity of the data cloud disk, in GiB.</p>
+         */
         @NameInMap("size")
         public Integer size;
 
+        /**
+         * <p>The storage class of the data cloud disk.</p>
+         */
         @NameInMap("storageClass")
         public String storageClass;
 
@@ -453,9 +469,15 @@ public class InstanceDetail extends TeaModel {
     }
 
     public static class InstanceDetailComponentsPodsList extends TeaModel {
+        /**
+         * <p>The Pod ID.</p>
+         */
         @NameInMap("podId")
         public String podId;
 
+        /**
+         * <p>The pod name.</p>
+         */
         @NameInMap("podName")
         public String podName;
 
@@ -501,11 +523,14 @@ public class InstanceDetail extends TeaModel {
         @NameInMap("cuType")
         public String cuType;
 
+        /**
+         * <p>The query node data cloud disk configuration.</p>
+         */
         @NameInMap("dataDisk")
         public InstanceDetailComponentsDataDisk dataDisk;
 
         /**
-         * <p>The disk size type for the Query Node. Set this parameter to Large for storage-optimized configurations, and to Normal for other configurations.</p>
+         * <p>The disk size type of the query node. The value is Large for storage-optimized configurations, and Normal for other configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -513,9 +538,15 @@ public class InstanceDetail extends TeaModel {
         @NameInMap("diskSizeType")
         public String diskSizeType;
 
+        /**
+         * <p>The billing method of the component.</p>
+         */
         @NameInMap("payType")
         public String payType;
 
+        /**
+         * <p>The pod list of the component.</p>
+         */
         @NameInMap("podsList")
         public java.util.List<InstanceDetailComponentsPodsList> podsList;
 

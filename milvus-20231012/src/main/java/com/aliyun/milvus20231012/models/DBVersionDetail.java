@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DBVersionDetail extends TeaModel {
     /**
-     * <p>The specifications supported by the version.</p>
+     * <p>The list of specifications supported by the database version.</p>
      */
     @NameInMap("specs")
     public java.util.List<DBVersionDetailSpecs> specs;
 
     /**
-     * <p>The status of the version.</p>
+     * <p>The status of the database version.</p>
      */
     @NameInMap("status")
     public String status;
 
     /**
-     * <p>The version number.</p>
+     * <p>The database version.</p>
      */
     @NameInMap("version")
     public String version;
@@ -59,13 +59,13 @@ public class DBVersionDetail extends TeaModel {
         public Integer defaultReplicas;
 
         /**
-         * <p>The maximum number of replicas for the component.</p>
+         * <p>The maximum number of replicas allowed for the component.</p>
          */
         @NameInMap("maxReplicas")
         public Integer maxReplicas;
 
         /**
-         * <p>The minimum number of replicas for the component.</p>
+         * <p>The minimum number of replicas allowed for the component.</p>
          */
         @NameInMap("minReplicas")
         public Integer minReplicas;
@@ -77,13 +77,13 @@ public class DBVersionDetail extends TeaModel {
         public String name;
 
         /**
-         * <p>The available specifications for the component.</p>
+         * <p>The list of specifications supported by the component.</p>
          */
         @NameInMap("specs")
         public java.util.List<String> specs;
 
         /**
-         * <p>The step size for scaling the number of replicas.</p>
+         * <p>The step size for adjusting the number of replicas for the component.</p>
          */
         @NameInMap("step")
         public Integer step;
@@ -159,31 +159,31 @@ public class DBVersionDetail extends TeaModel {
 
     public static class DBVersionDetailSpecs extends TeaModel {
         /**
-         * <p>The component specifications.</p>
+         * <p>The list of component specification configurations.</p>
          */
         @NameInMap("componentSpecs")
         public java.util.List<DBVersionDetailSpecsComponentSpecs> componentSpecs;
 
         /**
-         * <p>Indicates whether the high availability (HA) edition is supported.</p>
+         * <p>Specifies whether high-availability deployment is supported.</p>
          */
         @NameInMap("isHA")
         public Boolean isHA;
 
         /**
-         * <p>Indicates whether the Standalone edition is supported.</p>
+         * <p>Specifies whether standalone deployment is supported.</p>
          */
         @NameInMap("isStandalone")
         public Boolean isStandalone;
 
         /**
-         * <p>Indicates whether the Standalone Pro edition is supported.</p>
+         * <p>Specifies whether Standalone Pro deployment is supported.</p>
          */
         @NameInMap("isStandalonePro")
         public Boolean isStandalonePro;
 
         /**
-         * <p>The zone mode of the specification.</p>
+         * <p>The zone deployment mode supported by the specification.</p>
          */
         @NameInMap("zoneMode")
         public String zoneMode;

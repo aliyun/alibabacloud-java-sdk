@@ -14,13 +14,13 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("data")
     public CreateInstanceResponseBodyData data;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

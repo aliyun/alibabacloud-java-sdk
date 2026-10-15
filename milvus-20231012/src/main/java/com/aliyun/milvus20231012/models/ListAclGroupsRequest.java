@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAclGroupsRequest extends TeaModel {
     /**
-     * <p>The instance ID.</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>c-123xxx</p>

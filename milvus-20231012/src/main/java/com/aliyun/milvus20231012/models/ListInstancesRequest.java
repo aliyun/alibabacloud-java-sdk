@@ -127,7 +127,7 @@ public class ListInstancesRequest extends TeaModel {
 
     public static class ListInstancesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key1</p>
@@ -136,7 +136,7 @@ public class ListInstancesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value1</p>

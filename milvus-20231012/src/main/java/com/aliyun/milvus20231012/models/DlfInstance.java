@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DlfInstance extends TeaModel {
     /**
-     * <p>The unique ID of the DLF instance.</p>
+     * <p>The DLF instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dlf-cn-xxx</p>
@@ -14,7 +14,7 @@ public class DlfInstance extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The name of the DLF instance.</p>
+     * <p>The DLF instance name.</p>
      * 
      * <strong>example:</strong>
      * <p>my-dlf-instance</p>
@@ -23,7 +23,7 @@ public class DlfInstance extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The type of the DLF instance.</p>
+     * <p>The instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>DLF_2_0</p>
@@ -32,7 +32,7 @@ public class DlfInstance extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The ID of the region where the DLF instance is located.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -41,7 +41,7 @@ public class DlfInstance extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The current status of the DLF instance.</p>
+     * <p>The instance status.</p>
      * 
      * <strong>example:</strong>
      * <p>RUNNING</p>

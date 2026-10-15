@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DlfFieldSchema extends TeaModel {
     /**
-     * <p>A comment for the field.</p>
+     * <p>The field comment.</p>
      * 
      * <strong>example:</strong>
      * <p>Primary key field</p>
@@ -14,7 +14,7 @@ public class DlfFieldSchema extends TeaModel {
     public String comment;
 
     /**
-     * <p>The dimension of the vector field. This parameter applies only when <code>isVectorField</code> is <code>true</code>.</p>
+     * <p>The vector dimensions.</p>
      * 
      * <strong>example:</strong>
      * <p>128</p>
@@ -50,7 +50,7 @@ public class DlfFieldSchema extends TeaModel {
     public Boolean isPrimaryKey;
 
     /**
-     * <p>Indicates whether the DLF field type can be mapped to a Milvus field type.</p>
+     * <p>Indicates whether mapping is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -68,7 +68,7 @@ public class DlfFieldSchema extends TeaModel {
     public Boolean isVectorField;
 
     /**
-     * <p>The corresponding Milvus field type.</p>
+     * <p>The Milvus field type.</p>
      * 
      * <strong>example:</strong>
      * <p>Int64</p>
@@ -86,7 +86,7 @@ public class DlfFieldSchema extends TeaModel {
     public Boolean nullable;
 
     /**
-     * <p>The reason the DLF field type is unsupported. This field is present only when <code>isSupported</code> is <code>false</code>.</p>
+     * <p>The reason mapping is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Unsupported type</p>

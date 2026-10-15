@@ -4,12 +4,21 @@ package com.aliyun.milvus20231012.models;
 import com.aliyun.tea.*;
 
 public class ComponentCapacityConstraint extends TeaModel {
+    /**
+     * <p>The component type.</p>
+     */
     @NameInMap("componentType")
     public String componentType;
 
+    /**
+     * <p>The maximum capacity allowed for the component.</p>
+     */
     @NameInMap("maxCapacity")
     public Integer maxCapacity;
 
+    /**
+     * <p>The minimum capacity allowed for the component.</p>
+     */
     @NameInMap("minCapacity")
     public Integer minCapacity;
 

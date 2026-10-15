@@ -150,7 +150,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates the server role required by Milvus to access other cloud products.</p>
+     * <p>Creates the service role required by Milvus to access other cloud products.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -176,7 +176,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates the server role required by Milvus to access other cloud products.</p>
+     * <p>Creates the service role required by Milvus to access other cloud products.</p>
      * @return CreateDefaultRoleResponse
      */
     public CreateDefaultRoleResponse createDefaultRole() throws Exception {
@@ -442,7 +442,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get information about the custom configuration of each component of Milvus.</p>
+     * <p>Retrieves the custom configuration information of each Milvus component.</p>
      * 
      * @param request DescribeInstanceConfigsRequest
      * @param headers map
@@ -476,7 +476,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get information about the custom configuration of each component of Milvus.</p>
+     * <p>Retrieves the custom configuration information of each Milvus component.</p>
      * 
      * @param request DescribeInstanceConfigsRequest
      * @return DescribeInstanceConfigsResponse
@@ -587,7 +587,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves one or more access control list (ACL) groups.</p>
+     * <p>Retrieves the group information and content for the current user.</p>
      * 
      * @param request ListAclGroupsRequest
      * @param headers map
@@ -625,7 +625,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves one or more access control list (ACL) groups.</p>
+     * <p>Retrieves the group information and content for the current user.</p>
      * 
      * @param request ListAclGroupsRequest
      * @return ListAclGroupsResponse
@@ -638,7 +638,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of Milvus instances under the current account.</p>
+     * <p>Retrieves a list of Milvus instances under the current account.</p>
      * 
      * @param tmpReq ListInstancesRequest
      * @param headers map
@@ -702,7 +702,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of Milvus instances under the current account.</p>
+     * <p>Retrieves a list of Milvus instances under the current account.</p>
      * 
      * @param request ListInstancesRequest
      * @return ListInstancesResponse
@@ -800,15 +800,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the configuration parameters of various Milvus components.</p>
+     * <p>Updates the configuration parameters of Milvus components.</p>
      * 
-     * @param request ModifyInstanceConfigRequest
+     * @param tmpReq ModifyInstanceConfigRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyInstanceConfigResponse
      */
-    public ModifyInstanceConfigResponse modifyInstanceConfigWithOptions(ModifyInstanceConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ModifyInstanceConfigResponse modifyInstanceConfigWithOptions(ModifyInstanceConfigRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyInstanceConfigShrinkRequest request = new ModifyInstanceConfigShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
@@ -822,9 +828,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("UserConfig", request.userConfig);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ModifyInstanceConfig"),
@@ -834,7 +846,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyInstanceConfigResponse());
@@ -842,7 +854,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the configuration parameters of various Milvus components.</p>
+     * <p>Updates the configuration parameters of Milvus components.</p>
      * 
      * @param request ModifyInstanceConfigRequest
      * @return ModifyInstanceConfigResponse
@@ -1229,7 +1241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables public network access for a Milvus instance.</p>
+     * <p>Enables or disables public network access for a Milvus cluster.</p>
      * 
      * @param request UpdatePublicNetworkStatusRequest
      * @param headers map
@@ -1275,7 +1287,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables public network access for a Milvus instance.</p>
+     * <p>Enables or disables public network access for a Milvus cluster.</p>
      * 
      * @param request UpdatePublicNetworkStatusRequest
      * @return UpdatePublicNetworkStatusResponse

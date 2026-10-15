@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class PromotionInfo extends TeaModel {
     /**
-     * <p>The fee that can be covered by the promotion.</p>
+     * <p>The available discount amount.</p>
      */
     @NameInMap("canPromFee")
     public String canPromFee;
 
     /**
-     * <p>Indicates whether the promotion is selected.</p>
+     * <p>Specifies whether the promotion is selected.</p>
      */
     @NameInMap("isSelected")
     public Boolean isSelected;
 
     /**
-     * <p>The description of the promotion.</p>
+     * <p>The promotion description.</p>
      */
     @NameInMap("promotionDesc")
     public String promotionDesc;
 
     /**
-     * <p>The name of the promotion.</p>
+     * <p>The promotion name.</p>
      */
     @NameInMap("promotionName")
     public String promotionName;
 
     /**
-     * <p>The code of the promotion option.</p>
+     * <p>The promotion option code.</p>
      */
     @NameInMap("promotionOptionCode")
     public String promotionOptionCode;
 
     /**
-     * <p>The number of the promotion option.</p>
+     * <p>The promotion option number.</p>
      */
     @NameInMap("promotionOptionNo")
     public String promotionOptionNo;

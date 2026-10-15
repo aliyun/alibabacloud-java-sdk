@@ -5,49 +5,52 @@ import com.aliyun.tea.*;
 
 public class ScalingRule extends TeaModel {
     /**
-     * <p>The adjustment information of the scaling rule.</p>
+     * <p>The list of target resource configurations for each component.</p>
      */
     @NameInMap("adjustInfos")
     public java.util.List<ScalingRuleAdjustInfos> adjustInfos;
 
     /**
-     * <p>The cron expression for the scaling schedule.</p>
+     * <p>The scheduled execution expression of the rule.</p>
      */
     @NameInMap("cronStr")
     public String cronStr;
 
     /**
-     * <p>Indicates whether the scaling rule is disabled.</p>
+     * <p>Indicates whether the rule is disabled.</p>
      */
     @NameInMap("disabled")
     public Boolean disabled;
 
     /**
-     * <p>The end time of the scaling rule. Unit: milliseconds.</p>
+     * <p>The end time of the effective period for the rule.</p>
      */
     @NameInMap("endTime")
     public Long endTime;
 
     /**
-     * <p>The ID of the scaling rule.</p>
+     * <p>The ID of the elastic scaling rule.</p>
      */
     @NameInMap("ruleId")
     public String ruleId;
 
     /**
-     * <p>The name of the scaling rule.</p>
+     * <p>The name of the elastic scaling rule.</p>
      */
     @NameInMap("scalingRuleName")
     public String scalingRuleName;
 
     /**
-     * <p>The start time of the scaling rule. Unit: milliseconds.</p>
+     * <p>The start time of the effective period for the rule.</p>
      */
     @NameInMap("startTime")
     public Long startTime;
 
     /**
-     * <p>The time zone of the scaling rule.</p>
+     * <p>The time zone used for the execution time of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Asia/Shanghai</p>
      */
     @NameInMap("timeZone")
     public String timeZone;
@@ -123,13 +126,16 @@ public class ScalingRule extends TeaModel {
 
     public static class ScalingRuleAdjustInfos extends TeaModel {
         /**
-         * <p>The type of the component to be adjusted.</p>
+         * <p>index  query data proxy streaming mix_coordinator</p>
          */
         @NameInMap("componentType")
         public String componentType;
 
         /**
-         * <p>The target value for the adjustment.</p>
+         * <p>The target number of nodes for the component after the rule is executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("targetValue")
         public String targetValue;

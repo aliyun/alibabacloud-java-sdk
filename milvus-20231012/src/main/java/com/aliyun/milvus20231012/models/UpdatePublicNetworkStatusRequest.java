@@ -14,7 +14,7 @@ public class UpdatePublicNetworkStatusRequest extends TeaModel {
     public String cidr;
 
     /**
-     * <p>The component type. Valid value:</p>
+     * <p>The component type. Valid values:</p>
      * <ul>
      * <li>Proxy</li>
      * </ul>
@@ -37,7 +37,7 @@ public class UpdatePublicNetworkStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Specifies whether to enable public network access.</p>
+     * <p>Specifies whether public network access is enabled.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

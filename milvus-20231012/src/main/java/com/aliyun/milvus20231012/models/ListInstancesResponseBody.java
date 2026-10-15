@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial.</p>
+     * <p>The access denial details.</p>
      * 
      * <strong>example:</strong>
      * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;SubUser&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;milvus:xxxx&quot; }</p>
@@ -14,7 +14,7 @@ public class ListInstancesResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListInstancesResponseBodyData> data;
@@ -56,7 +56,7 @@ public class ListInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -161,7 +161,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String componentType;
 
         /**
-         * <p>The number of CUs.</p>
+         * <p>The number of compute units (CUs).</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -287,7 +287,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer proxyPort;
 
         /**
-         * <p>The ID of the resource owner account.</p>
+         * <p>The account ID of the resource owner.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890123456</p>
@@ -296,7 +296,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String resourceOwnerId;
 
         /**
-         * <p>The number of CUs.</p>
+         * <p>The number of compute units (CUs).</p>
          * 
          * <strong>example:</strong>
          * <p>24</p>
@@ -386,7 +386,7 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyDataTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key1</p>
@@ -395,7 +395,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value1</p>
@@ -437,7 +437,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Boolean autoBackup;
 
         /**
-         * <p>The start time.</p>
+         * <p>The start time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1718608505000</p>
@@ -461,7 +461,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String clusterName;
 
         /**
-         * <p>The expiration time.</p>
+         * <p>The expiration time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1721232000000</p>
@@ -481,12 +481,12 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * <p>The instance status. Valid values:</p>
          * <ul>
-         * <li>creating: Being created.</li>
-         * <li>running: Running.</li>
-         * <li>updating: Being upgraded. This includes specification changes, configuration changes, and enabling or disabling public network access.</li>
-         * <li>disable: Unavailable. The cluster has expired and requires renewal to reactivate.</li>
-         * <li>deleting: Being deleted.</li>
-         * <li>deleted: Deleted.</li>
+         * <li>creating: The instance is being created.</li>
+         * <li>running: The instance is running.</li>
+         * <li>updating: The instance is being upgraded, such as cluster specification changes, configuration modifications, and public endpoint toggling.</li>
+         * <li>disable: The instance is unavailable because the cluster has expired and requires renewal.</li>
+         * <li>deleting: The instance is being deleted.</li>
+         * <li>deleted: The instance is deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -505,7 +505,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String nodeType;
 
         /**
-         * <p>Indicates whether public network access is enabled.</p>
+         * <p>Indicates whether the public endpoint is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -514,10 +514,10 @@ public class ListInstancesResponseBody extends TeaModel {
         public Boolean openPublicNet;
 
         /**
-         * <p>The edition. Valid values:</p>
+         * <p>The edition details. Valid values:</p>
          * <ul>
-         * <li>trial: Trial Edition.</li>
-         * <li>standard: Standard Edition.</li>
+         * <li>trial: trial edition</li>
+         * <li>standard: standard edition</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -527,10 +527,10 @@ public class ListInstancesResponseBody extends TeaModel {
         public String packageType;
 
         /**
-         * <p>The billing type. Valid values:</p>
+         * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>0: Pay-as-you-go.</li>
-         * <li>1: Subscription.</li>
+         * <li>0: pay-as-you-go</li>
+         * <li>1: subscription</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -567,7 +567,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The ID of the resource owner account.</p>
+         * <p>The account ID of the resource owner.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890123456</p>
@@ -576,7 +576,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String resourceOwnerId;
 
         /**
-         * <p>The running time.</p>
+         * <p>The running duration of the instance, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>536611</p>
@@ -599,9 +599,15 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("Tags")
         public java.util.List<ListInstancesResponseBodyDataTags> tags;
 
+        /**
+         * <p>The software stack version.</p>
+         */
         @NameInMap("TemplateVersion")
         public String templateVersion;
 
+        /**
+         * <p>The Milvus version.</p>
+         */
         @NameInMap("Version")
         public String version;
 

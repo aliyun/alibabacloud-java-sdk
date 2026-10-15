@@ -5,79 +5,79 @@ import com.aliyun.tea.*;
 
 public class ScalingActivity extends TeaModel {
     /**
-     * <p>The types of components involved in the scaling activity.</p>
+     * <p>The types of components involved in the auto scaling activity.</p>
      */
     @NameInMap("componentTypes")
     public String componentTypes;
 
     /**
-     * <p>The description of the scaling activity.</p>
+     * <p>The detailed description of the auto scaling activity, which can be used to identify the cause when the activity fails.</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The end time of the scaling activity.</p>
+     * <p>The end time of the auto scaling activity.</p>
      */
     @NameInMap("endTime")
     public String endTime;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the Milvus instance.</p>
      */
     @NameInMap("instanceId")
     public String instanceId;
 
     /**
-     * <p>The type of the scaling policy.</p>
+     * <p>The type of the elastic scaling policy.</p>
      */
     @NameInMap("policyType")
     public String policyType;
 
     /**
-     * <p>The ID of the scaling activity.</p>
+     * <p>The ID of the elastic scaling activity.</p>
      */
     @NameInMap("scalingActivityId")
     public String scalingActivityId;
 
     /**
-     * <p>The state of the scaling activity.</p>
+     * <p>The execution status of the auto scaling activity.</p>
      */
     @NameInMap("scalingActivityState")
     public String scalingActivityState;
 
     /**
-     * <p>The ID of the scaling policy.</p>
+     * <p>The ID of the elastic scaling policy.</p>
      */
     @NameInMap("scalingPolicyId")
     public String scalingPolicyId;
 
     /**
-     * <p>The details of the scaling rule.</p>
+     * <p>The details of the elastic scaling rule.</p>
      */
     @NameInMap("scalingRuleDetail")
     public String scalingRuleDetail;
 
     /**
-     * <p>The ID of the scaling rule.</p>
+     * <p>The ID of the elastic scaling rule.</p>
      */
     @NameInMap("scalingRuleId")
     public String scalingRuleId;
 
     /**
-     * <p>The name of the scaling rule that triggered the activity.</p>
+     * <p>The name of the rule that triggered the auto scaling activity.</p>
      */
     @NameInMap("scalingRuleName")
     public String scalingRuleName;
 
     /**
-     * <p>The start time of the scaling activity.</p>
+     * <p>The start time of the auto scaling activity.</p>
      */
     @NameInMap("startTime")
     public String startTime;
 
     /**
-     * <p>The time zone of the scaling activity.</p>
+     * <p>The time zone used by the elastic scaling rule.</p>
      */
     @NameInMap("timeZone")
     public String timeZone;

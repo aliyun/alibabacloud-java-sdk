@@ -11,7 +11,7 @@ public class MigrationSource extends TeaModel {
     public MigrationSourceAuthInfo authInfo;
 
     /**
-     * <p>The name of the database to migrate.</p>
+     * <p>The name of the database to be migrated.</p>
      */
     @NameInMap("database")
     public String database;
@@ -117,7 +117,7 @@ public class MigrationSource extends TeaModel {
 
     public static class MigrationSourceEndpoint extends TeaModel {
         /**
-         * <p>The endpoint address of the migration source.</p>
+         * <p>The endpoint of the migration source.</p>
          */
         @NameInMap("endpoint")
         public String endpoint;
