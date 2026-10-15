@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PublicUpdateTemplateSandboxConfig extends TeaModel {
     /**
+     * <p>The ID of the Container Registry Enterprise instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cri-abc123</p>
      */
@@ -12,6 +14,8 @@ public class PublicUpdateTemplateSandboxConfig extends TeaModel {
     public String acrInstanceId;
 
     /**
+     * <p>The sandbox generation. A value of 1 indicates rund, and a value of 2 indicates micro.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -19,6 +23,8 @@ public class PublicUpdateTemplateSandboxConfig extends TeaModel {
     public Integer generation;
 
     /**
+     * <p>The image address.</p>
+     * 
      * <strong>example:</strong>
      * <p>registry.cn-hangzhou.aliyuncs.com/my/ns:v1</p>
      */
@@ -26,6 +32,8 @@ public class PublicUpdateTemplateSandboxConfig extends TeaModel {
     public String image;
 
     /**
+     * <p>The operating system type.</p>
+     * 
      * <strong>example:</strong>
      * <p>linux</p>
      */
@@ -33,16 +41,23 @@ public class PublicUpdateTemplateSandboxConfig extends TeaModel {
     public String osType;
 
     /**
+     * <p>The readiness probe command for the micro sandbox. Only the second generation supports this parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>/ready</p>
      */
     @NameInMap("readyCommand")
     public String readyCommand;
 
+    /**
+     * <p>The image repository configuration.</p>
+     */
     @NameInMap("registryConfig")
     public PublicUpdateTemplateRegistryConfig registryConfig;
 
     /**
+     * <p>The image repository type.</p>
+     * 
      * <strong>example:</strong>
      * <p>acr</p>
      */
@@ -50,6 +65,8 @@ public class PublicUpdateTemplateSandboxConfig extends TeaModel {
     public String registryType;
 
     /**
+     * <p>The startup command for the micro sandbox. Only the second generation supports this parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>/start-coroutines.sh</p>
      */

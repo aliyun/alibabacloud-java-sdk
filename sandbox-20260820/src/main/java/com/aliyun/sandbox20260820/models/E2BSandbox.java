@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class E2BSandbox extends TeaModel {
     /**
+     * <p>The access endpoint.</p>
+     * 
      * <strong>example:</strong>
      * <p>sbx-xxxx.ap-southeast-1.sandbox.aliyun.com</p>
      */
     @NameInMap("accessEndpoint")
     public String accessEndpoint;
 
+    /**
+     * <p>Specifies whether the sandbox is allowed to access external networks.</p>
+     */
     @NameInMap("allowInternetAccess")
     public Boolean allowInternetAccess;
 
     /**
+     * <p>The vCPU specifications.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -22,6 +29,8 @@ public class E2BSandbox extends TeaModel {
     public Integer cpuCount;
 
     /**
+     * <p>The ephemeral disk specifications.</p>
+     * 
      * <strong>example:</strong>
      * <p>10240</p>
      */
@@ -29,6 +38,8 @@ public class E2BSandbox extends TeaModel {
     public Integer diskSizeMB;
 
     /**
+     * <p>The access domain name of the sandbox.</p>
+     * 
      * <strong>example:</strong>
      * <p>ap-southeast-1.sandbox.aliyun.com</p>
      */
@@ -36,16 +47,23 @@ public class E2BSandbox extends TeaModel {
     public String domain;
 
     /**
+     * <p>The end time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-09-04T02:03:43.826Z</p>
      */
     @NameInMap("endAt")
     public String endAt;
 
+    /**
+     * <p>The environment variables.</p>
+     */
     @NameInMap("envVars")
     public java.util.Map<String, String> envVars;
 
     /**
+     * <p>The authentication credential for accessing the envd daemon process inside the sandbox, in UUID format. Automatically generated only when secure is set to true.</p>
+     * 
      * <strong>example:</strong>
      * <p>4b1e9d07-****</p>
      */
@@ -53,6 +71,8 @@ public class E2BSandbox extends TeaModel {
     public String envdAccessToken;
 
     /**
+     * <p>The Function Compute function name.</p>
+     * 
      * <strong>example:</strong>
      * <p>template-d391c80b5d1527de</p>
      */
@@ -60,6 +80,8 @@ public class E2BSandbox extends TeaModel {
     public String fcFunctionName;
 
     /**
+     * <p>The Function Compute instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-6a9d1501-133e6f48-b3f07782dd47</p>
      */
@@ -67,6 +89,8 @@ public class E2BSandbox extends TeaModel {
     public String fcInstanceID;
 
     /**
+     * <p>The Function Compute session ID corresponding to the sandbox, in UUID format. Used to locate the underlying session when pausing, resuming, or deleting the sandbox.</p>
+     * 
      * <strong>example:</strong>
      * <p>3a7ecd09-****</p>
      */
@@ -74,6 +98,8 @@ public class E2BSandbox extends TeaModel {
     public String fcSessionID;
 
     /**
+     * <p>The sandbox version.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -81,29 +107,44 @@ public class E2BSandbox extends TeaModel {
     public Integer generation;
 
     /**
+     * <p>The memory specifications.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("memoryMB")
     public Integer memoryMB;
 
+    /**
+     * <p>The metadata configuration.</p>
+     */
     @NameInMap("metadata")
     public java.util.Map<String, String> metadata;
 
+    /**
+     * <p>The network configuration.</p>
+     */
     @NameInMap("network")
     public E2BNetwork network;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-****</p>
      */
     @NameInMap("resourceGroupID")
     public String resourceGroupID;
 
+    /**
+     * <p>The runtime configuration.</p>
+     */
     @NameInMap("runtime")
     public InnerSandboxRuntimeConfig runtime;
 
     /**
+     * <p>The unique identifier of the sandbox.</p>
+     * 
      * <strong>example:</strong>
      * <p>sbx-xxxx</p>
      */
@@ -111,6 +152,8 @@ public class E2BSandbox extends TeaModel {
     public String sandboxID;
 
     /**
+     * <p>The start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-09-04T02:02:43.826Z</p>
      */
@@ -118,6 +161,19 @@ public class E2BSandbox extends TeaModel {
     public String startedAt;
 
     /**
+     * <p>The sandbox status. Valid values:</p>
+     * <ul>
+     * <li>running: Running.</li>
+     * <li>pausing: Pausing.</li>
+     * <li>paused: Paused.</li>
+     * <li>resuming: Resuming.</li>
+     * <li>pause_fail: Pause failed.</li>
+     * <li>resume_fail: Resume failed.</li>
+     * <li>snapshotting: Creating a snapshot.</li>
+     * <li>snapshot_failed: Snapshot creation failed.</li>
+     * <li>terminated: Terminated.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>running</p>
      */
@@ -125,6 +181,8 @@ public class E2BSandbox extends TeaModel {
     public String state;
 
     /**
+     * <p>The unique identifier of the team.</p>
+     * 
      * <strong>example:</strong>
      * <p>eea033af-****</p>
      */
@@ -132,6 +190,8 @@ public class E2BSandbox extends TeaModel {
     public String teamID;
 
     /**
+     * <p>The team name.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -139,6 +199,8 @@ public class E2BSandbox extends TeaModel {
     public String teamName;
 
     /**
+     * <p>The QoS version.</p>
+     * 
      * <strong>example:</strong>
      * <p>eco</p>
      */
@@ -146,6 +208,8 @@ public class E2BSandbox extends TeaModel {
     public String teamPlan;
 
     /**
+     * <p>The unique identifier of the template.</p>
+     * 
      * <strong>example:</strong>
      * <p>v9vjyzw64bsu83vw0dgs</p>
      */
@@ -153,6 +217,8 @@ public class E2BSandbox extends TeaModel {
     public String templateID;
 
     /**
+     * <p>The template name.</p>
+     * 
      * <strong>example:</strong>
      * <p>base</p>
      */
@@ -160,12 +226,17 @@ public class E2BSandbox extends TeaModel {
     public String templateName;
 
     /**
+     * <p>The UID of the creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>2000****</p>
      */
     @NameInMap("userID")
     public String userID;
 
+    /**
+     * <p>The mount configuration.</p>
+     */
     @NameInMap("volumeMounts")
     public InnerSandboxVolumeMount volumeMounts;
 

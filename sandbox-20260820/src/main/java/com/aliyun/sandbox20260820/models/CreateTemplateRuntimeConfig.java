@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateTemplateRuntimeConfig extends TeaModel {
     /**
+     * <p>The CPU specification of the sandboxed container instance, in cores.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -12,28 +14,44 @@ public class CreateTemplateRuntimeConfig extends TeaModel {
     public Float cpu;
 
     /**
+     * <p>The disk specification of the sandboxed container instance, in MB.</p>
+     * 
      * <strong>example:</strong>
      * <p>10240</p>
      */
     @NameInMap("diskSize")
     public Integer diskSize;
 
+    /**
+     * <p>Specifies whether the sandboxed container instance is allowed to access the Internet.</p>
+     */
     @NameInMap("internetAccess")
     public Boolean internetAccess;
 
+    /**
+     * <p>The log delivery configuration of the sandboxed container instance.</p>
+     */
     @NameInMap("logConfig")
     public CreateTemplateLogConfig logConfig;
 
     /**
+     * <p>The memory specification of the sandboxed container instance, in MB.</p>
+     * 
      * <strong>example:</strong>
      * <p>2048</p>
      */
     @NameInMap("memorySize")
     public Integer memorySize;
 
+    /**
+     * <p>The image and startup configuration of the sandboxed container instance.</p>
+     */
     @NameInMap("sandboxConfig")
     public CreateTemplateSandboxConfig sandboxConfig;
 
+    /**
+     * <p>The VPC configuration of the sandboxed container instance.</p>
+     */
     @NameInMap("vpcConfig")
     public CreateTemplateVPCConfig vpcConfig;
 

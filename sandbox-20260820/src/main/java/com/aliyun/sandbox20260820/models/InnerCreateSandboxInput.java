@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class InnerCreateSandboxInput extends TeaModel {
     /**
+     * <p>Specifies whether the sandbox is allowed to access external networks.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class InnerCreateSandboxInput extends TeaModel {
     public Boolean allowInternetAccess;
 
     /**
+     * <p>Specifies whether to automatically pause after timeout.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,25 +23,41 @@ public class InnerCreateSandboxInput extends TeaModel {
     public Boolean autoPause;
 
     /**
+     * <p>Specifies whether to automatically resume.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("autoResume")
     public Boolean autoResume;
 
+    /**
+     * <p>The environment variable configuration.</p>
+     */
     @NameInMap("envVars")
     public java.util.Map<String, String> envVars;
 
+    /**
+     * <p>The metadata configuration.</p>
+     */
     @NameInMap("metadata")
     public java.util.Map<String, String> metadata;
 
+    /**
+     * <p>The network configuration.</p>
+     */
     @NameInMap("network")
     public E2BNetwork network;
 
+    /**
+     * <p>The runtime configuration.</p>
+     */
     @NameInMap("runtime")
     public InnerSandboxRuntimeConfig runtime;
 
     /**
+     * <p>Specifies whether authentication is required to access the sandbox envd.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -45,6 +65,8 @@ public class InnerCreateSandboxInput extends TeaModel {
     public Boolean secure;
 
     /**
+     * <p>The unique identifier of the team.</p>
+     * 
      * <strong>example:</strong>
      * <p>76eeecaa-****</p>
      */
@@ -52,6 +74,8 @@ public class InnerCreateSandboxInput extends TeaModel {
     public String teamID;
 
     /**
+     * <p>The unique identifier of the template.</p>
+     * 
      * <strong>example:</strong>
      * <p>v9vjyzw64bsu83vw0dgs</p>
      */
@@ -59,12 +83,17 @@ public class InnerCreateSandboxInput extends TeaModel {
     public String templateID;
 
     /**
+     * <p>The timeout period. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>180</p>
      */
     @NameInMap("timeout")
     public Integer timeout;
 
+    /**
+     * <p>The volume mount configuration.</p>
+     */
     @NameInMap("volumeMounts")
     public InnerCreateSandboxVolumeMounts volumeMounts;
 

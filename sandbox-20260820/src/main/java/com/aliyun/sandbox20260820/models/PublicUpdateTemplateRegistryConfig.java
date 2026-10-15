@@ -4,12 +4,21 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class PublicUpdateTemplateRegistryConfig extends TeaModel {
+    /**
+     * <p>The image repository authentication configuration.</p>
+     */
     @NameInMap("authConfig")
     public PublicUpdateTemplateRegistryAuthConfig authConfig;
 
+    /**
+     * <p>The image repository certificate configuration.</p>
+     */
     @NameInMap("certConfig")
     public PublicUpdateTemplateRegistryCertConfig certConfig;
 
+    /**
+     * <p>The image repository network configuration.</p>
+     */
     @NameInMap("networkConfig")
     public PublicUpdateTemplateRegistryNetworkConfig networkConfig;
 

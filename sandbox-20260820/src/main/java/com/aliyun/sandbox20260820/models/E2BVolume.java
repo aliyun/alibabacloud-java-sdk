@@ -4,29 +4,48 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class E2BVolume extends TeaModel {
+    /**
+     * <p>The AgenticBucket volume configuration.</p>
+     */
     @NameInMap("agenticBucketVolumeConfig")
     public AgenticBucketVolumeConfig agenticBucketVolumeConfig;
 
+    /**
+     * <p>The AgenticFS volume configuration.</p>
+     */
     @NameInMap("agenticFSVolumeConfig")
     public AgenticFSVolumeConfig agenticFSVolumeConfig;
 
     /**
+     * <p>The time when the volume was created, in UTC. The time is in the yyyy-MM-ddTHH:mm:ss.SSSSSSZ format, with exactly 6 decimal places for fractional seconds (microsecond precision).</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-09-07T02:12:36.531000Z</p>
      */
     @NameInMap("createdAt")
     public String createdAt;
 
+    /**
+     * <p>The JuiceFS volume configuration.</p>
+     */
     @NameInMap("juiceFSVolumeConfig")
     public JuiceFSVolumeConfig juiceFSVolumeConfig;
 
+    /**
+     * <p>The mount configuration.</p>
+     */
     @NameInMap("mountConfig")
     public VolumeMountConfig mountConfig;
 
+    /**
+     * <p>The OSS volume configuration.</p>
+     */
     @NameInMap("ossVolumeConfig")
     public OSSVolumeConfig ossVolumeConfig;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-****</p>
      */
@@ -34,6 +53,11 @@ public class E2BVolume extends TeaModel {
     public String resourceGroupID;
 
     /**
+     * <p>The volume status. Valid values:</p>
+     * <ul>
+     * <li>AVAILABLE</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>AVAILABLE</p>
      */
@@ -41,13 +65,21 @@ public class E2BVolume extends TeaModel {
     public String status;
 
     /**
+     * <p>The status reason.</p>
+     * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("statusReason")
     public String statusReason;
 
     /**
+     * <p>The storage type. Valid values:</p>
+     * <ul>
+     * <li>OSS</li>
+     * <li>AGENTIC_FS</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OSS</p>
      */
@@ -55,6 +87,8 @@ public class E2BVolume extends TeaModel {
     public String storageClass;
 
     /**
+     * <p>The unique identifier of the team.</p>
+     * 
      * <strong>example:</strong>
      * <p>9f5a1fe9-****</p>
      */
@@ -62,6 +96,8 @@ public class E2BVolume extends TeaModel {
     public String teamID;
 
     /**
+     * <p>The time when the volume was last updated, in UTC. The time is in the yyyy-MM-ddTHH:mm:ss.SSSSSSZ format, with exactly 6 decimal places for fractional seconds (microsecond precision).</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-09-07T03:48:05.274000Z</p>
      */
@@ -69,6 +105,8 @@ public class E2BVolume extends TeaModel {
     public String updatedAt;
 
     /**
+     * <p>The UID of the creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>2000****</p>
      */
@@ -76,6 +114,8 @@ public class E2BVolume extends TeaModel {
     public String userID;
 
     /**
+     * <p>The unique identifier of the volume.</p>
+     * 
      * <strong>example:</strong>
      * <p>25878d34-****</p>
      */
@@ -83,6 +123,8 @@ public class E2BVolume extends TeaModel {
     public String volumeID;
 
     /**
+     * <p>The name, which is unique within the team.</p>
+     * 
      * <strong>example:</strong>
      * <p>workspace</p>
      */

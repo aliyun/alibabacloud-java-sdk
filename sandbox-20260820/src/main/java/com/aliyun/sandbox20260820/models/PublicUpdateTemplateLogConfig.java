@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PublicUpdateTemplateLogConfig extends TeaModel {
     /**
+     * <p>The name of the SLS Logstore.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-logstore</p>
      */
@@ -12,6 +14,8 @@ public class PublicUpdateTemplateLogConfig extends TeaModel {
     public String logstore;
 
     /**
+     * <p>The name of the Simple Log Service (SLS) project.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-sls-project</p>
      */

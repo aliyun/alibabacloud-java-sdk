@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class PublicTemplateStatusReason extends TeaModel {
     /**
+     * <p>The details of the failure reason.</p>
+     * 
      * <strong>example:</strong>
-     * <p>拉取源镜像失败：认证信息无效</p>
+     * <p>Failed to pull the source image: invalid authentication information</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
+     * <p>The identity of the failed step.</p>
+     * 
      * <strong>example:</strong>
      * <p>build-context</p>
      */

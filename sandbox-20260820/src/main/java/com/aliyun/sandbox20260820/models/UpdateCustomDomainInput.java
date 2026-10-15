@@ -4,16 +4,24 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class UpdateCustomDomainInput extends TeaModel {
+    /**
+     * <p>The new HTTPS certificate configuration for the domain name. When specified, this overwrites the existing configuration.</p>
+     */
     @NameInMap("certConfig")
     public CertConfig certConfig;
 
     /**
+     * <p>The new description of the custom domain name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>沙箱生产环境入口域名</p>
+     * <p>Entry domain name for the sandbox production environment</p>
      */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The new TLS protocol configuration for the domain name. When specified, this overwrites the existing configuration.</p>
+     */
     @NameInMap("tlsConfig")
     public TLSConfig tlsConfig;
 

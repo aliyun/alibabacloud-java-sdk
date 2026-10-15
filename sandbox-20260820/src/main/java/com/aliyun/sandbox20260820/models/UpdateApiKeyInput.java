@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateApiKeyInput extends TeaModel {
     /**
+     * <p>The new name of the API key. The name can be up to 128 characters in length and can contain letters, digits, spaces, hyphens (-), underscores (_), and periods (.).</p>
+     * 
      * <strong>example:</strong>
      * <p>ci-pipeline-key-v2</p>
      */
@@ -12,19 +14,33 @@ public class UpdateApiKeyInput extends TeaModel {
     public String apiKeyName;
 
     /**
+     * <p>The expiration time of the API key, in UTC, in RFC 3339 format. Leave this parameter empty to indicate that the API key never expires.</p>
+     * 
      * <strong>example:</strong>
      * <p>2099-12-31T23:59:59Z</p>
      */
     @NameInMap("expireTime")
     public String expireTime;
 
+    /**
+     * <p>The IP blacklist. If specified, the existing blacklist is entirely overwritten. This parameter is mutually exclusive with ipWhitelist.</p>
+     */
     @NameInMap("ipBlacklist")
     public java.util.List<IPConfig> ipBlacklist;
 
+    /**
+     * <p>The IP whitelist. If specified, the existing whitelist is entirely overwritten. This parameter is mutually exclusive with ipBlacklist.</p>
+     */
     @NameInMap("ipWhitelist")
     public java.util.List<IPConfig> ipWhitelist;
 
     /**
+     * <p>The new status of the API key. Valid values:</p>
+     * <ul>
+     * <li>active: Enabled.</li>
+     * <li>inactive: Disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>inactive</p>
      */

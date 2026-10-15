@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateTemplateRegistryAuthConfig extends TeaModel {
     /**
+     * <p>The logon password or access token for the image repository. The value is encrypted on the server side and is not returned in plaintext when queried.</p>
+     * 
      * <strong>example:</strong>
      * <p>Passw0rd****</p>
      */
@@ -12,6 +14,8 @@ public class CreateTemplateRegistryAuthConfig extends TeaModel {
     public String password;
 
     /**
+     * <p>The username for logging on to the image repository.</p>
+     * 
      * <strong>example:</strong>
      * <p>sandbox-puller</p>
      */

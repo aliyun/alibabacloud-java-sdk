@@ -5,26 +5,38 @@ import com.aliyun.tea.*;
 
 public class PublicUpdateTemplateCopyAction extends TeaModel {
     /**
+     * <p>The ID of the destination ACR Enterprise instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cri-abc123</p>
      */
     @NameInMap("acrInstanceId")
     public String acrInstanceId;
 
+    /**
+     * <p>Indicates whether image replication is enabled.</p>
+     */
     @NameInMap("enabled")
     public Boolean enabled;
 
     /**
+     * <p>The destination image address for replication.</p>
+     * 
      * <strong>example:</strong>
      * <p>registry.cn-hangzhou.aliyuncs.com/my/ns:v2</p>
      */
     @NameInMap("image")
     public String image;
 
+    /**
+     * <p>The image repository configuration.</p>
+     */
     @NameInMap("registryConfig")
     public PublicUpdateTemplateRegistryConfig registryConfig;
 
     /**
+     * <p>The type of the destination repository.</p>
+     * 
      * <strong>example:</strong>
      * <p>acr</p>
      */

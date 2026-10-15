@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Quota extends TeaModel {
     /**
+     * <p>The vCPU quota. Unit: cores.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,6 +14,8 @@ public class Quota extends TeaModel {
     public Integer cpuCores;
 
     /**
+     * <p>The quota for the number of running instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -19,6 +23,8 @@ public class Quota extends TeaModel {
     public Integer instanceCount;
 
     /**
+     * <p>The memory quota. Unit: GB.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class Quota extends TeaModel {
     public Integer memoryGB;
 
     /**
+     * <p>The quota tag value, which is set to the team ID. Quotas are independently calculated based on this dimension.</p>
+     * 
      * <strong>example:</strong>
      * <p>7696f4cf-****</p>
      */

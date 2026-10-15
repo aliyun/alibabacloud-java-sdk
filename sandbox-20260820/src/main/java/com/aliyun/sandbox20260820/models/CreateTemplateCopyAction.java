@@ -5,26 +5,38 @@ import com.aliyun.tea.*;
 
 public class CreateTemplateCopyAction extends TeaModel {
     /**
+     * <p>The ID of the destination Container Registry Enterprise instance. This field does not inherit the instance ID from the source image.</p>
+     * 
      * <strong>example:</strong>
      * <p>cri-****</p>
      */
     @NameInMap("acrInstanceId")
     public String acrInstanceId;
 
+    /**
+     * <p>Specifies whether to enable the image replication action. Required when this action block is included.</p>
+     */
     @NameInMap("enabled")
     public Boolean enabled;
 
     /**
+     * <p>The destination image address to push to. If not specified, the service derives a new tag under the repository where the source image resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>registry-vpc.cn-hangzhou.aliyuncs.com/sandbox-demo/python:3.12-envd</p>
      */
     @NameInMap("image")
     public String image;
 
+    /**
+     * <p>The credentials, TLS, and network configuration required to access the destination image repository.</p>
+     */
     @NameInMap("registryConfig")
     public CreateTemplateRegistryConfig registryConfig;
 
     /**
+     * <p>The type of the destination image repository. Valid values: oci (standard OCI repository), acr (Container Registry Personal Edition), acree (Container Registry Enterprise Edition). If not specified, the type is inferred from the destination image address.</p>
+     * 
      * <strong>example:</strong>
      * <p>acree</p>
      */

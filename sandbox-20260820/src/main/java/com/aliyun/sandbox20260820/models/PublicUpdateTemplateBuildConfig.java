@@ -4,11 +4,23 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class PublicUpdateTemplateBuildConfig extends TeaModel {
+    /**
+     * <p>The image replication action configuration.</p>
+     */
     @NameInMap("copy")
     public PublicUpdateTemplateCopyAction copy;
 
+    /**
+     * <p>The envd injection action configuration.</p>
+     */
     @NameInMap("envdInject")
     public PublicUpdateTemplateEnvdInjectAction envdInject;
+
+    /**
+     * <p>Installs the clients required for storage mounting.</p>
+     */
+    @NameInMap("installStorageClients")
+    public Boolean installStorageClients;
 
     public static PublicUpdateTemplateBuildConfig build(java.util.Map<String, ?> map) throws Exception {
         PublicUpdateTemplateBuildConfig self = new PublicUpdateTemplateBuildConfig();
@@ -29,6 +41,14 @@ public class PublicUpdateTemplateBuildConfig extends TeaModel {
     }
     public PublicUpdateTemplateEnvdInjectAction getEnvdInject() {
         return this.envdInject;
+    }
+
+    public PublicUpdateTemplateBuildConfig setInstallStorageClients(Boolean installStorageClients) {
+        this.installStorageClients = installStorageClients;
+        return this;
+    }
+    public Boolean getInstallStorageClients() {
+        return this.installStorageClients;
     }
 
 }

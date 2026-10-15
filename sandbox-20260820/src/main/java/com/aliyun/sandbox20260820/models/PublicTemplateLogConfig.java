@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PublicTemplateLogConfig extends TeaModel {
     /**
+     * <p>The name of the Simple Log Service Logstore that receives sandbox runtime logs.</p>
+     * 
      * <strong>example:</strong>
      * <p>sandbox-runtime</p>
      */
@@ -12,6 +14,8 @@ public class PublicTemplateLogConfig extends TeaModel {
     public String logstore;
 
     /**
+     * <p>The name of the Simple Log Service project that receives sandbox runtime logs.</p>
+     * 
      * <strong>example:</strong>
      * <p>sandbox-log-cn-hangzhou</p>
      */

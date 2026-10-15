@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ContainerConfiguration extends TeaModel {
     /**
+     * <p>The instance ID of the Container Registry Enterprise instance. Required when registryType is set to acree.</p>
+     * 
      * <strong>example:</strong>
      * <p>cri-****</p>
      */
@@ -12,12 +14,17 @@ public class ContainerConfiguration extends TeaModel {
     public String acrInstanceId;
 
     /**
+     * <p>The base image address of the sandbox.</p>
+     * 
      * <strong>example:</strong>
      * <p>registry-vpc.cn-hangzhou.aliyuncs.com/sandbox-demo/python:3.12</p>
      */
     @NameInMap("image")
     public String image;
 
+    /**
+     * <p>The repository access credentials used to pull the image. Not required when using a public image.</p>
+     */
     @NameInMap("registryCredential")
     public ContainerConfigurationRegistryCredential registryCredential;
 
@@ -52,6 +59,8 @@ public class ContainerConfiguration extends TeaModel {
 
     public static class ContainerConfigurationRegistryCredential extends TeaModel {
         /**
+         * <p>The logon password or access token for the image repository. Stored with server-side encryption and not returned in plaintext when queried.</p>
+         * 
          * <strong>example:</strong>
          * <p>Passw0rd****</p>
          */
@@ -59,6 +68,8 @@ public class ContainerConfiguration extends TeaModel {
         public String password;
 
         /**
+         * <p>The username for logging on to the image repository.</p>
+         * 
          * <strong>example:</strong>
          * <p>sandbox-puller</p>
          */

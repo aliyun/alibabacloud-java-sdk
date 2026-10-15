@@ -4,6 +4,9 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class PublicTemplateRegistryConfig extends TeaModel {
+    /**
+     * <p>The VPC configuration used to access the image repository.</p>
+     */
     @NameInMap("networkConfig")
     public PublicTemplateRegistryNetworkConfig networkConfig;
 

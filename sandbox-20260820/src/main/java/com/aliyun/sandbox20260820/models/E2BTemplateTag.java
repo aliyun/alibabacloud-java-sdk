@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class E2BTemplateTag extends TeaModel {
     /**
+     * <p>The ID of the template build output that this label points to, in UUID format.</p>
+     * 
      * <strong>example:</strong>
      * <p>b7e21c05-****</p>
      */
@@ -12,6 +14,8 @@ public class E2BTemplateTag extends TeaModel {
     public String buildID;
 
     /**
+     * <p>The creation time of the label, in UTC and RFC 3339 format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-08-20T08:35:12Z</p>
      */
@@ -19,6 +23,8 @@ public class E2BTemplateTag extends TeaModel {
     public String createdAt;
 
     /**
+     * <p>The label name.</p>
+     * 
      * <strong>example:</strong>
      * <p>latest</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PublicUpdateTemplateRuntimeConfig extends TeaModel {
     /**
+     * <p>The number of vCPUs.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -12,28 +14,44 @@ public class PublicUpdateTemplateRuntimeConfig extends TeaModel {
     public Float cpu;
 
     /**
+     * <p>The system cloud disk size, in MB.</p>
+     * 
      * <strong>example:</strong>
      * <p>512</p>
      */
     @NameInMap("diskSize")
     public Integer diskSize;
 
+    /**
+     * <p>Specifies whether the sandbox is allowed to access the Internet.</p>
+     */
     @NameInMap("internetAccess")
     public Boolean internetAccess;
 
+    /**
+     * <p>The log configuration.</p>
+     */
     @NameInMap("logConfig")
     public PublicUpdateTemplateLogConfig logConfig;
 
     /**
+     * <p>The memory size, in MB.</p>
+     * 
      * <strong>example:</strong>
      * <p>2048</p>
      */
     @NameInMap("memorySize")
     public Integer memorySize;
 
+    /**
+     * <p>The sandbox configuration.</p>
+     */
     @NameInMap("sandboxConfig")
     public PublicUpdateTemplateSandboxConfig sandboxConfig;
 
+    /**
+     * <p>The VPC network configuration.</p>
+     */
     @NameInMap("vpcConfig")
     public PublicUpdateTemplateVPCConfig vpcConfig;
 

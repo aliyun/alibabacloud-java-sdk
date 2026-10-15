@@ -4,12 +4,21 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class InnerSandboxVolumeMount extends TeaModel {
+    /**
+     * <p>The AgenticFS mount configuration.</p>
+     */
     @NameInMap("agenticFs")
     public InnerSandboxVolumeMountAgenticFs agenticFs;
 
+    /**
+     * <p>The predefined volume mount configuration.</p>
+     */
     @NameInMap("named")
     public InnerSandboxVolumeMountNamed named;
 
+    /**
+     * <p>The OSS mount configuration.</p>
+     */
     @NameInMap("oss")
     public InnerSandboxVolumeMountOss oss;
 
@@ -44,6 +53,8 @@ public class InnerSandboxVolumeMount extends TeaModel {
 
     public static class InnerSandboxVolumeMountAgenticFsMountPoints extends TeaModel {
         /**
+         * <p>The access point ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ap-xxxx</p>
          */
@@ -51,6 +62,8 @@ public class InnerSandboxVolumeMount extends TeaModel {
         public String accessPointID;
 
         /**
+         * <p>The AgenticSpace workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agentic-xxxx</p>
          */
@@ -58,6 +71,8 @@ public class InnerSandboxVolumeMount extends TeaModel {
         public String agenticSpaceID;
 
         /**
+         * <p>The file system ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>03204sl2qjiax4oxxxx</p>
          */
@@ -65,6 +80,8 @@ public class InnerSandboxVolumeMount extends TeaModel {
         public String fileSystemID;
 
         /**
+         * <p>The local mount directory.</p>
+         * 
          * <strong>example:</strong>
          * <p>/mnt/agenticfs</p>
          */
@@ -72,6 +89,8 @@ public class InnerSandboxVolumeMount extends TeaModel {
         public String mountDir;
 
         /**
+         * <p>The access point mount address.</p>
+         * 
          * <strong>example:</strong>
          * <p>ap-xxxx.xxxx-ljs60.cn-shanghai.nas.aliyuncs.com</p>
          */
@@ -127,16 +146,23 @@ public class InnerSandboxVolumeMount extends TeaModel {
 
     public static class InnerSandboxVolumeMountAgenticFs extends TeaModel {
         /**
+         * <p>The local mount group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
         @NameInMap("groupID")
         public Integer groupID;
 
+        /**
+         * <p>The AgenticFS mount point configuration.</p>
+         */
         @NameInMap("mountPoints")
         public java.util.List<InnerSandboxVolumeMountAgenticFsMountPoints> mountPoints;
 
         /**
+         * <p>The local mount user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -176,6 +202,8 @@ public class InnerSandboxVolumeMount extends TeaModel {
 
     public static class InnerSandboxVolumeMountNamedMountPoints extends TeaModel {
         /**
+         * <p>The local mount directory.</p>
+         * 
          * <strong>example:</strong>
          * <p>/mnt/named</p>
          */
@@ -183,6 +211,8 @@ public class InnerSandboxVolumeMount extends TeaModel {
         public String mountDir;
 
         /**
+         * <p>The volume name.</p>
+         * 
          * <strong>example:</strong>
          * <p>workspace</p>
          */
@@ -213,6 +243,9 @@ public class InnerSandboxVolumeMount extends TeaModel {
     }
 
     public static class InnerSandboxVolumeMountNamed extends TeaModel {
+        /**
+         * <p>The mount point configuration.</p>
+         */
         @NameInMap("mountPoints")
         public java.util.List<InnerSandboxVolumeMountNamedMountPoints> mountPoints;
 
@@ -233,6 +266,8 @@ public class InnerSandboxVolumeMount extends TeaModel {
 
     public static class InnerSandboxVolumeMountOssMountPoints extends TeaModel {
         /**
+         * <p>The bucket name.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss-bucket-test</p>
          */
@@ -240,6 +275,8 @@ public class InnerSandboxVolumeMount extends TeaModel {
         public String bucketName;
 
         /**
+         * <p>The OSS bucket path to mount.</p>
+         * 
          * <strong>example:</strong>
          * <p>/</p>
          */
@@ -247,6 +284,8 @@ public class InnerSandboxVolumeMount extends TeaModel {
         public String bucketPath;
 
         /**
+         * <p>The OSS endpoint address.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss-cn-shenzhen-internal.aliyuncs.com</p>
          */
@@ -254,6 +293,8 @@ public class InnerSandboxVolumeMount extends TeaModel {
         public String endpoint;
 
         /**
+         * <p>The local mount directory.</p>
+         * 
          * <strong>example:</strong>
          * <p>/mnt/oss</p>
          */
@@ -261,6 +302,14 @@ public class InnerSandboxVolumeMount extends TeaModel {
         public String mountDir;
 
         /**
+         * <p>Specifies whether the mount is read-only. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Read-only.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Not read-only.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -315,6 +364,9 @@ public class InnerSandboxVolumeMount extends TeaModel {
     }
 
     public static class InnerSandboxVolumeMountOss extends TeaModel {
+        /**
+         * <p>The mount point configuration.</p>
+         */
         @NameInMap("mountPoints")
         public java.util.List<InnerSandboxVolumeMountOssMountPoints> mountPoints;
 

@@ -9,9 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-hangzhou", "sandbox-vpc.cn-hangzhou.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("sandbox", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }

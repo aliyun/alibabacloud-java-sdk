@@ -4,6 +4,9 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateRegistryCertConfig extends TeaModel {
+    /**
+     * <p>Specifies whether to skip HTTPS certificate validation for the image repository. Enable this option only for private repositories that use self-signed certificates.</p>
+     */
     @NameInMap("insecure")
     public Boolean insecure;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PublicUpdateTemplateRegistryAuthConfig extends TeaModel {
     /**
+     * <p>The repository password.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
@@ -12,6 +14,8 @@ public class PublicUpdateTemplateRegistryAuthConfig extends TeaModel {
     public String password;
 
     /**
+     * <p>The repository username.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-user</p>
      */

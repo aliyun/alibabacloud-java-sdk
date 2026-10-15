@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ImportApiKeyInput extends TeaModel {
     /**
+     * <p>The API key name. The name can be up to 128 characters in length and can contain letters, digits, spaces, hyphens (-), underscores (_), and periods (.).</p>
+     * 
      * <strong>example:</strong>
      * <p>migrated-key</p>
      */
@@ -12,6 +14,8 @@ public class ImportApiKeyInput extends TeaModel {
     public String apiKeyName;
 
     /**
+     * <p>The plaintext value of the API key to import. After the import, the source of the key is set to custom.</p>
+     * 
      * <strong>example:</strong>
      * <p>e2b_****</p>
      */
@@ -19,6 +23,8 @@ public class ImportApiKeyInput extends TeaModel {
     public String apiKeyValue;
 
     /**
+     * <p>The expiration time of the API key in UTC. The time is in RFC 3339 format. If this parameter is left empty, the API key never expires.</p>
+     * 
      * <strong>example:</strong>
      * <p>2099-12-31T23:59:59Z</p>
      */
@@ -26,6 +32,8 @@ public class ImportApiKeyInput extends TeaModel {
     public String expireTime;
 
     /**
+     * <p>The ID of the team to which the API key belongs, in UUID format. If this parameter is not specified, the default team of the current account is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>5f4a2c18-****</p>
      */

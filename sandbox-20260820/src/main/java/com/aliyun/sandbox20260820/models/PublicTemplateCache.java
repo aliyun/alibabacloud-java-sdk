@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PublicTemplateCache extends TeaModel {
     /**
+     * <p>The creation time in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-09-18T10:00:00Z</p>
      */
@@ -12,6 +14,8 @@ public class PublicTemplateCache extends TeaModel {
     public String createdTime;
 
     /**
+     * <p>The digest of the cached image.</p>
+     * 
      * <strong>example:</strong>
      * <p>sha256:8f3c2a1b</p>
      */
@@ -19,6 +23,8 @@ public class PublicTemplateCache extends TeaModel {
     public String imageDigest;
 
     /**
+     * <p>The size of the cached image, in MB.</p>
+     * 
      * <strong>example:</strong>
      * <p>512</p>
      */
@@ -26,6 +32,8 @@ public class PublicTemplateCache extends TeaModel {
     public Integer imageSizeMB;
 
     /**
+     * <p>The prefetch progress percentage.</p>
+     * 
      * <strong>example:</strong>
      * <p>80</p>
      */
@@ -33,6 +41,8 @@ public class PublicTemplateCache extends TeaModel {
     public Integer progress;
 
     /**
+     * <p>The ready time in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-09-18T10:05:00Z</p>
      */
@@ -40,6 +50,8 @@ public class PublicTemplateCache extends TeaModel {
     public String readyTime;
 
     /**
+     * <p>The cache status. Valid values: InProgress, Success, Failed, Deleting, and Evicted.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -47,13 +59,17 @@ public class PublicTemplateCache extends TeaModel {
     public String status;
 
     /**
+     * <p>The reason for the status. This parameter is backfilled when the status is not Success.</p>
+     * 
      * <strong>example:</strong>
-     * <p>镜像预热任务排队中</p>
+     * <p>The image prefetch task is queued</p>
      */
     @NameInMap("statusReason")
     public String statusReason;
 
     /**
+     * <p>The team ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>13b721e6-8cc8-5df2-af13-80316f7508af</p>
      */
@@ -61,6 +77,8 @@ public class PublicTemplateCache extends TeaModel {
     public String teamID;
 
     /**
+     * <p>The unique identifier of the template.</p>
+     * 
      * <strong>example:</strong>
      * <p>us7dxqaezw5uu7aa2cm5</p>
      */

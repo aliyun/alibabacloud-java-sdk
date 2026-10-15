@@ -4,9 +4,15 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class PublicUpdateTemplateInput extends TeaModel {
+    /**
+     * <p>The build configuration.</p>
+     */
     @NameInMap("buildConfig")
     public PublicUpdateTemplateBuildConfig buildConfig;
 
+    /**
+     * <p>The runtime configuration.</p>
+     */
     @NameInMap("runtimeConfig")
     public PublicUpdateTemplateRuntimeConfig runtimeConfig;
 

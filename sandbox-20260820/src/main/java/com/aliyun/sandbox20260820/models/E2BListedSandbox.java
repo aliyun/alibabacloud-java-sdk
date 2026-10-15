@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class E2BListedSandbox extends TeaModel {
     /**
+     * <p>The number of vCPUs.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -12,6 +14,8 @@ public class E2BListedSandbox extends TeaModel {
     public Integer cpuCount;
 
     /**
+     * <p>The temporary disk specification.</p>
+     * 
      * <strong>example:</strong>
      * <p>10240</p>
      */
@@ -19,6 +23,8 @@ public class E2BListedSandbox extends TeaModel {
     public Integer diskSizeMB;
 
     /**
+     * <p>The end time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-09-03T02:06:37.932Z</p>
      */
@@ -26,6 +32,8 @@ public class E2BListedSandbox extends TeaModel {
     public String endAt;
 
     /**
+     * <p>The sandbox version.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -33,16 +41,23 @@ public class E2BListedSandbox extends TeaModel {
     public Integer generation;
 
     /**
+     * <p>The memory specification.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("memoryMB")
     public Integer memoryMB;
 
+    /**
+     * <p>The metadata.</p>
+     */
     @NameInMap("metadata")
     public java.util.Map<String, String> metadata;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-****</p>
      */
@@ -50,6 +65,8 @@ public class E2BListedSandbox extends TeaModel {
     public String resourceGroupID;
 
     /**
+     * <p>The sandbox ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>sbx-xxxx</p>
      */
@@ -57,6 +74,8 @@ public class E2BListedSandbox extends TeaModel {
     public String sandboxID;
 
     /**
+     * <p>The start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-09-03T02:05:37.932Z</p>
      */
@@ -64,6 +83,19 @@ public class E2BListedSandbox extends TeaModel {
     public String startedAt;
 
     /**
+     * <p>The sandbox status. Valid values:</p>
+     * <ul>
+     * <li>running: Running.</li>
+     * <li>pausing: Being paused.</li>
+     * <li>paused: Paused.</li>
+     * <li>resuming: Being resumed.</li>
+     * <li>pause_fail: Failed to pause.</li>
+     * <li>resume_fail: Failed to resume.</li>
+     * <li>snapshotting: Creating a snapshot.</li>
+     * <li>snapshot_failed: Failed to create a snapshot.</li>
+     * <li>terminated: Terminated.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>running</p>
      */
@@ -71,6 +103,8 @@ public class E2BListedSandbox extends TeaModel {
     public String state;
 
     /**
+     * <p>The unique identifier of the team.</p>
+     * 
      * <strong>example:</strong>
      * <p>9f5a1fe9-****</p>
      */
@@ -78,6 +112,8 @@ public class E2BListedSandbox extends TeaModel {
     public String teamID;
 
     /**
+     * <p>The team name.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -85,6 +121,8 @@ public class E2BListedSandbox extends TeaModel {
     public String teamName;
 
     /**
+     * <p>The QoS version.</p>
+     * 
      * <strong>example:</strong>
      * <p>eco</p>
      */
@@ -92,6 +130,8 @@ public class E2BListedSandbox extends TeaModel {
     public String teamPlan;
 
     /**
+     * <p>The unique identifier of the template.</p>
+     * 
      * <strong>example:</strong>
      * <p>f1l97phhfw6ox18iwcfk</p>
      */
@@ -99,6 +139,8 @@ public class E2BListedSandbox extends TeaModel {
     public String templateID;
 
     /**
+     * <p>The template name.</p>
+     * 
      * <strong>example:</strong>
      * <p>base</p>
      */
@@ -106,6 +148,8 @@ public class E2BListedSandbox extends TeaModel {
     public String templateName;
 
     /**
+     * <p>The UID of the creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>2000****</p>
      */

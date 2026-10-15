@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PublicUpdateTemplateRegistryNetworkConfig extends TeaModel {
     /**
+     * <p>The ID of the security group used to access the repository.</p>
+     * 
      * <strong>example:</strong>
      * <p>sg-bp1abc123</p>
      */
@@ -12,6 +14,8 @@ public class PublicUpdateTemplateRegistryNetworkConfig extends TeaModel {
     public String securityGroupId;
 
     /**
+     * <p>The ID of the vSwitch where the repository resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-bp1abc123</p>
      */
@@ -19,6 +23,8 @@ public class PublicUpdateTemplateRegistryNetworkConfig extends TeaModel {
     public String vSwitchId;
 
     /**
+     * <p>The ID of the VPC where the repository resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-bp1abc123</p>
      */

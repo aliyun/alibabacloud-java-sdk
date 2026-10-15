@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PublicTemplateVPCConfig extends TeaModel {
     /**
+     * <p>The ARN of the RAM role that the sandbox instance assumes when accessing the VPC. The format is acs:ram::{account ID}:role/{role name}.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::1234567890123456:role/aliyunfcdefaultrole</p>
      */
@@ -12,16 +14,23 @@ public class PublicTemplateVPCConfig extends TeaModel {
     public String role;
 
     /**
+     * <p>The ID of the security group used by the sandbox instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>sg-****</p>
      */
     @NameInMap("securityGroupId")
     public String securityGroupId;
 
+    /**
+     * <p>The list of vSwitch IDs that the sandbox instance connects to.</p>
+     */
     @NameInMap("vSwitchIds")
     public java.util.List<String> vSwitchIds;
 
     /**
+     * <p>The ID of the VPC that the sandbox instance connects to.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-****</p>
      */

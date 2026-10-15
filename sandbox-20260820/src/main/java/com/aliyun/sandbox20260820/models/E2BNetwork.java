@@ -4,16 +4,27 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class E2BNetwork extends TeaModel {
+    /**
+     * <p>The allowlist for outbound access from the sandbox. After configuration, the sandbox can access only the destinations in the list.</p>
+     */
     @NameInMap("allowOut")
     public java.util.List<String> allowOut;
 
+    /**
+     * <p>Specifies whether to allow Direct Internet Access to the sandbox.</p>
+     */
     @NameInMap("allowPublicTraffic")
     public Boolean allowPublicTraffic;
 
+    /**
+     * <p>The denylist for outbound access from the sandbox. After configuration, the sandbox cannot access the destinations in the list.</p>
+     */
     @NameInMap("denyOut")
     public java.util.List<String> denyOut;
 
     /**
+     * <p>The domain name used to rewrite the request Host header when accessing the sandbox. If this parameter is not specified, the original Host is retained.</p>
+     * 
      * <strong>example:</strong>
      * <p>sandbox.example.com</p>
      */

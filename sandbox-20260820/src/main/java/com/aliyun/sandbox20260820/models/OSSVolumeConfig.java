@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class OSSVolumeConfig extends TeaModel {
     /**
+     * <p>The name of the OSS bucket to mount as a storage volume.</p>
+     * 
      * <strong>example:</strong>
      * <p>sandbox-shared-data</p>
      */
@@ -12,6 +14,8 @@ public class OSSVolumeConfig extends TeaModel {
     public String bucketName;
 
     /**
+     * <p>The path prefix within the bucket to use as the mount source. If this parameter is not specified, the entire bucket is mounted.</p>
+     * 
      * <strong>example:</strong>
      * <p>/workspace/</p>
      */
@@ -19,12 +23,17 @@ public class OSSVolumeConfig extends TeaModel {
     public String bucketPath;
 
     /**
+     * <p>The OSS service registration address used to access the bucket. Use an internal network address in the same region as the sandboxed container.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss-cn-hangzhou-internal.aliyuncs.com</p>
      */
     @NameInMap("endpoint")
     public String endpoint;
 
+    /**
+     * <p>Specifies whether the storage volume is mounted as read-only in the sandboxed container.</p>
+     */
     @NameInMap("readOnly")
     public Boolean readOnly;
 

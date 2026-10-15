@@ -4,10 +4,15 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class JuiceFSVolumeConfig extends TeaModel {
+    /**
+     * <p>The additional mount parameters.</p>
+     */
     @NameInMap("args")
     public java.util.List<String> args;
 
     /**
+     * <p>The access point address.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://127.0.0.1:8080">http://127.0.0.1:8080</a></p>
      */
@@ -15,6 +20,8 @@ public class JuiceFSVolumeConfig extends TeaModel {
     public String baseURL;
 
     /**
+     * <p>The remote mount directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>/sandbox/workspace</p>
      */
@@ -22,6 +29,8 @@ public class JuiceFSVolumeConfig extends TeaModel {
     public String remoteDir;
 
     /**
+     * <p>The access token.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxx</p>
      */
@@ -29,6 +38,8 @@ public class JuiceFSVolumeConfig extends TeaModel {
     public String token;
 
     /**
+     * <p>The JuiceFS volume name.</p>
+     * 
      * <strong>example:</strong>
      * <p>data</p>
      */

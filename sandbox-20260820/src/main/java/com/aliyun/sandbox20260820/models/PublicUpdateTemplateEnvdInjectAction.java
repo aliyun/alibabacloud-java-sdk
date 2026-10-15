@@ -4,6 +4,9 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class PublicUpdateTemplateEnvdInjectAction extends TeaModel {
+    /**
+     * <p>Specifies whether envd injection is enabled.</p>
+     */
     @NameInMap("enabled")
     public Boolean enabled;
 

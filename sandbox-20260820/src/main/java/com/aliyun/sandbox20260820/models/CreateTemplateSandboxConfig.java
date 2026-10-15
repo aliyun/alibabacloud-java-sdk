@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateTemplateSandboxConfig extends TeaModel {
     /**
+     * <p>The ID of the Container Registry Enterprise instance. This parameter is required when registryType is set to acree.</p>
+     * 
      * <strong>example:</strong>
      * <p>cri-****</p>
      */
@@ -12,6 +14,8 @@ public class CreateTemplateSandboxConfig extends TeaModel {
     public String acrInstanceId;
 
     /**
+     * <p>The sandbox generation. Valid values: 1 (first generation) and 2 (second generation). Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class CreateTemplateSandboxConfig extends TeaModel {
     public Integer generation;
 
     /**
+     * <p>The address of the sandbox base image.</p>
+     * 
      * <strong>example:</strong>
      * <p>registry-vpc.cn-hangzhou.aliyuncs.com/sandbox-demo/python:3.12</p>
      */
@@ -26,6 +32,8 @@ public class CreateTemplateSandboxConfig extends TeaModel {
     public String image;
 
     /**
+     * <p>The operating system type of the second-generation sandbox. Valid values: linux-amd64, android-36-osworld, and windows-osworld.</p>
+     * 
      * <strong>example:</strong>
      * <p>linux-amd64</p>
      */
@@ -33,16 +41,23 @@ public class CreateTemplateSandboxConfig extends TeaModel {
     public String osType;
 
     /**
+     * <p>The sandbox readiness probe command. A successful execution indicates that the sandbox is ready to accept requests. This parameter is supported only for first-generation sandboxes.</p>
+     * 
      * <strong>example:</strong>
      * <p>curl -sf <a href="http://127.0.0.1:49983/health">http://127.0.0.1:49983/health</a></p>
      */
     @NameInMap("readyCommand")
     public String readyCommand;
 
+    /**
+     * <p>The credential, TLS, and network configuration required to access the source image repository.</p>
+     */
     @NameInMap("registryConfig")
     public CreateTemplateRegistryConfig registryConfig;
 
     /**
+     * <p>The image repository type. Valid values: oci (standard OCI repository), acr (Container Registry Personal Edition), and acree (Container Registry Enterprise Edition). If not specified, the type is inferred from the image address.</p>
+     * 
      * <strong>example:</strong>
      * <p>acree</p>
      */
@@ -50,12 +65,17 @@ public class CreateTemplateSandboxConfig extends TeaModel {
     public String registryType;
 
     /**
+     * <p>The startup command for the sandbox container. This parameter is supported only for first-generation sandboxes.</p>
+     * 
      * <strong>example:</strong>
      * <p>/usr/local/bin/start.sh</p>
      */
     @NameInMap("startCommand")
     public String startCommand;
 
+    /**
+     * <p>The list of custom build instructions. This is not supported in the current version. Passing a non-empty list returns an error.</p>
+     */
     @NameInMap("steps")
     public java.util.List<CreateTemplateStep> steps;
 

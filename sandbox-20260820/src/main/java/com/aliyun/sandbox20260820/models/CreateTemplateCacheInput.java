@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateTemplateCacheInput extends TeaModel {
     /**
+     * <p>The team ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>13b721e6-8cc8-5df2-af13-80316f7508af</p>
      */
@@ -12,6 +14,8 @@ public class CreateTemplateCacheInput extends TeaModel {
     public String teamID;
 
     /**
+     * <p>The unique identifier of the template.</p>
+     * 
      * <strong>example:</strong>
      * <p>us7dxqaezw5uu7aa2cm5</p>
      */

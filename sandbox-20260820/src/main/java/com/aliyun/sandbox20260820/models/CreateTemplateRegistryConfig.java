@@ -4,12 +4,21 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateRegistryConfig extends TeaModel {
+    /**
+     * <p>The logon credentials for the image repository. No configuration is required when accessing a public repository.</p>
+     */
     @NameInMap("authConfig")
     public CreateTemplateRegistryAuthConfig authConfig;
 
+    /**
+     * <p>The certificate validation configuration for accessing the image repository.</p>
+     */
     @NameInMap("certConfig")
     public CreateTemplateRegistryCertConfig certConfig;
 
+    /**
+     * <p>The VPC configuration used to access the image repository. Configuration is required only when the repository is reachable only within a VPC.</p>
+     */
     @NameInMap("networkConfig")
     public CreateTemplateRegistryNetworkConfig networkConfig;
 

@@ -4,10 +4,15 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class E2BTeam extends TeaModel {
+    /**
+     * <p>Specifies whether the team name can be modified. The default team does not allow modification.</p>
+     */
     @NameInMap("allowUpdateTeamName")
     public Boolean allowUpdateTeamName;
 
     /**
+     * <p>The creation time of the team in UTC, in RFC 3339 format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-08-20T08:30:00Z</p>
      */
@@ -15,23 +20,38 @@ public class E2BTeam extends TeaModel {
     public String createdTime;
 
     /**
+     * <p>The team description.</p>
+     * 
      * <strong>example:</strong>
-     * <p>算法团队的沙箱环境</p>
+     * <p>Sandbox environment for the algorithm team</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>The team plan specification. Valid values:</p>
+     * <ul>
+     * <li>eco: economy.</li>
+     * <li>std: standard.</li>
+     * <li>pro: professional.</li>
+     * <li>ent: enterprise.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>std</p>
      */
     @NameInMap("plan")
     public String plan;
 
+    /**
+     * <p>Indicates whether the current caller has read-only access to the team. If the value is true, the team configuration cannot be modified.</p>
+     */
     @NameInMap("readOnly")
     public Boolean readOnly;
 
     /**
+     * <p>The ID of the Alibaba Cloud resource group to which the team belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-****</p>
      */
@@ -39,6 +59,13 @@ public class E2BTeam extends TeaModel {
     public String resourceGroupID;
 
     /**
+     * <p>The team status. Valid values:</p>
+     * <ul>
+     * <li>active: Normal.</li>
+     * <li>deleting: Being deleted.</li>
+     * <li>delete_failed: Failed to delete.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>active</p>
      */
@@ -46,6 +73,8 @@ public class E2BTeam extends TeaModel {
     public String status;
 
     /**
+     * <p>The ID of the team to which the resource belongs, in UUID format.</p>
+     * 
      * <strong>example:</strong>
      * <p>5f4a2c18-****</p>
      */
@@ -53,6 +82,8 @@ public class E2BTeam extends TeaModel {
     public String teamID;
 
     /**
+     * <p>The team name.</p>
+     * 
      * <strong>example:</strong>
      * <p>sandbox-dev</p>
      */
@@ -60,6 +91,8 @@ public class E2BTeam extends TeaModel {
     public String teamName;
 
     /**
+     * <p>The user ID of the team creator, in UUID format.</p>
+     * 
      * <strong>example:</strong>
      * <p>9c1d4e72-****</p>
      */

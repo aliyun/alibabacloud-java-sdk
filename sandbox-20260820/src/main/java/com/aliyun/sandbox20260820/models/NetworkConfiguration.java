@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class NetworkConfiguration extends TeaModel {
     /**
+     * <p>The network access mode. Valid values: PUBLIC (public network only), PRIVATE (VPC only), PUBLIC_AND_PRIVATE (both public network and VPC are reachable).</p>
+     * 
      * <strong>example:</strong>
      * <p>PUBLIC_AND_PRIVATE</p>
      */
@@ -12,6 +14,8 @@ public class NetworkConfiguration extends TeaModel {
     public String networkMode;
 
     /**
+     * <p>The ID of the security group used by the sandboxed container instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>sg-****</p>
      */
@@ -19,12 +23,17 @@ public class NetworkConfiguration extends TeaModel {
     public String securityGroupID;
 
     /**
+     * <p>The ID of the VPC to which the sandboxed container instances are connected.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-****</p>
      */
     @NameInMap("vpcID")
     public String vpcID;
 
+    /**
+     * <p>The list of vSwitch IDs to which the sandboxed container instances are connected. Configure vSwitches in multiple zones to improve availability.</p>
+     */
     @NameInMap("vswitchIDs")
     public java.util.List<String> vswitchIDs;
 

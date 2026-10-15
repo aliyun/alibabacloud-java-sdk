@@ -4,6 +4,9 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class PublicUpdateTemplateRegistryCertConfig extends TeaModel {
+    /**
+     * <p>Specifies whether to skip repository certificate verification.</p>
+     */
     @NameInMap("insecure")
     public Boolean insecure;
 

@@ -4,11 +4,23 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateBuildConfig extends TeaModel {
+    /**
+     * <p>The action configuration for pulling the source image and pushing it to the destination repository.</p>
+     */
     @NameInMap("copy")
     public CreateTemplateCopyAction copy;
 
+    /**
+     * <p>The action configuration for packaging the envd daemon process into the image. This is an optional intermediate step in the copy process and is supported only by first-generation sandboxes.</p>
+     */
     @NameInMap("envdInject")
     public CreateTemplateEnvdInjectAction envdInject;
+
+    /**
+     * <p>The installation of clients required for storage mounting.</p>
+     */
+    @NameInMap("installStorageClients")
+    public Boolean installStorageClients;
 
     public static CreateTemplateBuildConfig build(java.util.Map<String, ?> map) throws Exception {
         CreateTemplateBuildConfig self = new CreateTemplateBuildConfig();
@@ -29,6 +41,14 @@ public class CreateTemplateBuildConfig extends TeaModel {
     }
     public CreateTemplateEnvdInjectAction getEnvdInject() {
         return this.envdInject;
+    }
+
+    public CreateTemplateBuildConfig setInstallStorageClients(Boolean installStorageClients) {
+        this.installStorageClients = installStorageClients;
+        return this;
+    }
+    public Boolean getInstallStorageClients() {
+        return this.installStorageClients;
     }
 
 }

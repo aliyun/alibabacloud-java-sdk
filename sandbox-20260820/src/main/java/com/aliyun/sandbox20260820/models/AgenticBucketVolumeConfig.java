@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AgenticBucketVolumeConfig extends TeaModel {
     /**
+     * <p>The name of the AgenticBucket.</p>
+     * 
      * <strong>example:</strong>
      * <p>workspace01</p>
      */
@@ -12,6 +14,8 @@ public class AgenticBucketVolumeConfig extends TeaModel {
     public String agenticBucket;
 
     /**
+     * <p>The name of the OSS bucket.</p>
+     * 
      * <strong>example:</strong>
      * <p>sandbox-test</p>
      */
@@ -19,6 +23,8 @@ public class AgenticBucketVolumeConfig extends TeaModel {
     public String bucketName;
 
     /**
+     * <p>The path of the mounted OSS bucket.</p>
+     * 
      * <strong>example:</strong>
      * <p>/</p>
      */
@@ -26,6 +32,8 @@ public class AgenticBucketVolumeConfig extends TeaModel {
     public String bucketPath;
 
     /**
+     * <p>The OSS endpoint address.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://oss-cn-hangzhou.aliyuncs.com">https://oss-cn-hangzhou.aliyuncs.com</a></p>
      */
@@ -33,6 +41,12 @@ public class AgenticBucketVolumeConfig extends TeaModel {
     public String endpoint;
 
     /**
+     * <p>Specifies whether the mount directory has read-only access permissions after the OSS bucket is mounted. Valid values:</p>
+     * <ul>
+     * <li>true: Read-only.</li>
+     * <li>false: Read and write.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

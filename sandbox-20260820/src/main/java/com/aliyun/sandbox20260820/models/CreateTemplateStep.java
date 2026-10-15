@@ -4,10 +4,15 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateStep extends TeaModel {
+    /**
+     * <p>The instruction parameter list.</p>
+     */
     @NameInMap("args")
     public java.util.List<String> args;
 
     /**
+     * <p>The instruction type.</p>
+     * 
      * <strong>example:</strong>
      * <p>RUN</p>
      */

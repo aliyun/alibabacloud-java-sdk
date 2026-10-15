@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpdateTeamInput extends TeaModel {
     /**
+     * <p>The new description of the team.</p>
+     * 
      * <strong>example:</strong>
-     * <p>算法团队的生产沙箱环境</p>
+     * <p>Production sandbox environment for the algorithm team</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>The new plan specification of the team. Valid values: eco (economy), std (standard), pro (professional), ent (enterprise).</p>
+     * 
      * <strong>example:</strong>
      * <p>pro</p>
      */
@@ -19,6 +23,8 @@ public class UpdateTeamInput extends TeaModel {
     public String plan;
 
     /**
+     * <p>The ID of the new Alibaba Cloud resource group to which the team belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-****</p>
      */
@@ -26,6 +32,8 @@ public class UpdateTeamInput extends TeaModel {
     public String resourceGroupID;
 
     /**
+     * <p>The new name of the team. The name can be modified only when allowUpdateTeamName of the team is set to true.</p>
+     * 
      * <strong>example:</strong>
      * <p>sandbox-prod</p>
      */
