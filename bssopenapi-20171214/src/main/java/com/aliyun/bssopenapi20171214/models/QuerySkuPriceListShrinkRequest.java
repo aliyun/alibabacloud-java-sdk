@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuerySkuPriceListShrinkRequest extends TeaModel {
     /**
-     * <p>The code of the service.</p>
+     * <p>The commodity code. You can call the <strong>QueryCommodityList</strong> operation to query the commodity code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,11 +14,17 @@ public class QuerySkuPriceListShrinkRequest extends TeaModel {
     @NameInMap("CommodityCode")
     public String commodityCode;
 
+    /**
+     * <p>The language. Default value: zh (Chinese).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The token that is used to retrieve the next page. You do not need to set this parameter if you query coverage details for the first time. The response returns a token that you can use to query coverage details of the next page. If a null value is returned for the NextPageToken parameter, no more coverage details can be queried.</p>
+     * <p>The pagination token. Leave this parameter empty for the first page query. The query result returns a token for the next page. An empty token in the result indicates that all data has been retrieved. You can obtain the next page token from the <strong>NextPageToken</strong> field in the query result.</p>
      * 
      * <strong>example:</strong>
      * <p>080112060a0422020800180022490a470342000000315333303332363436363336333433393636333136333338333733373333333133373336363336323634363336363337333836333636333636313336363433363332</p>
@@ -27,7 +33,7 @@ public class QuerySkuPriceListShrinkRequest extends TeaModel {
     public String nextPageToken;
 
     /**
-     * <p>The number of entries to be returned on each page. Maximum value: 50.</p>
+     * <p>The number of entries per page. Maximum value: 50.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +43,7 @@ public class QuerySkuPriceListShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The code of the pricing object.</p>
+     * <p>The pricing entity code. You can call the <strong>QueryPriceEntityList</strong> operation to query the pricing entity code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +53,7 @@ public class QuerySkuPriceListShrinkRequest extends TeaModel {
     public String priceEntityCode;
 
     /**
-     * <p>The conditions of the pricing factors.</p>
+     * <p>The collection of pricing factor conditions. You can call the <strong>QueryPriceEntityList</strong> operation to query pricing factor codes and pricing factor values.</p>
      */
     @NameInMap("PriceFactorConditionMap")
     public String priceFactorConditionMapShrink;

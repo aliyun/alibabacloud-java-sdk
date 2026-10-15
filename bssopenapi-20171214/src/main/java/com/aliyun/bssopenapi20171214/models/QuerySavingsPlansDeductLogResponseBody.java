@@ -14,19 +14,22 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The return data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public QuerySavingsPlansDeductLogResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>请校验入参正确性</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>61293E7A-3406-4447-8620-EC88B0AA66AD</p>
@@ -35,7 +38,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -90,25 +93,43 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
 
     public static class QuerySavingsPlansDeductLogResponseBodyDataItems extends TeaModel {
         /**
-         * <p>The billable item for which the fee is deducted.</p>
+         * <p>The deducted billable item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>云服务器配置</p>
          */
         @NameInMap("BillModule")
         public String billModule;
 
+        /**
+         * <p>The billing cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202312</p>
+         */
         @NameInMap("BillingCycle")
         public String billingCycle;
 
+        /**
+         * <p>The list price of the deducted bill, in CNY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>375.35</p>
+         */
         @NameInMap("BillingOfficialPrice")
         public String billingOfficialPrice;
 
         /**
-         * <p>The service for which the fee is deducted.</p>
+         * <p>The deducted service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>云服务器ECS-按量付费</p>
          */
         @NameInMap("DeductCommodity")
         public String deductCommodity;
 
         /**
-         * <p>The deducted amount.</p>
+         * <p>The deducted fee, in CNY.</p>
          * 
          * <strong>example:</strong>
          * <p>0.52</p>
@@ -117,7 +138,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         public String deductFee;
 
         /**
-         * <p>The ID of the instance for which the fee is deducted.</p>
+         * <p>The ID of the deducted cloud service instance.</p>
          * 
          * <strong>example:</strong>
          * <p>i-XXXXXXXXX</p>
@@ -134,11 +155,17 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         @NameInMap("DeductRate")
         public String deductRate;
 
+        /**
+         * <p>The list price of the deducted amount, in CNY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>375.37</p>
+         */
         @NameInMap("DeductedOfficialPrice")
         public String deductedOfficialPrice;
 
         /**
-         * <p>The discount used for the current deduction.</p>
+         * <p>The discount that is used for the deduction.</p>
          * 
          * <strong>example:</strong>
          * <p>0.069</p>
@@ -147,7 +174,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         public String discountRate;
 
         /**
-         * <p>The end of the billing cycle for which the fee is deducted.</p>
+         * <p>The end time.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-01 01:00:00</p>
@@ -164,27 +191,49 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The instance type of the deducted instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g7.xlarge</p>
+         */
         @NameInMap("InstanceSpec")
         public String instanceSpec;
 
+        /**
+         * <p>The instance family of the deducted instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g7</p>
+         */
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
 
         /**
+         * <p>The ID of the owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>1906589291020438</p>
          */
         @NameInMap("OwnerId")
         public Long ownerId;
 
+        /**
+         * <p>The region of the deducted instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-eu13-a01</p>
+         */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The type of the savings plan. Valid values:</p>
          * <ul>
-         * <li>universal: general-purpose</li>
-         * <li>ecs: ECS compute</li>
+         * <li><p>universal: general-purpose</p>
+         * </li>
+         * <li><p>ecs: compute-optimized</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -194,7 +243,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         public String savingsType;
 
         /**
-         * <p>The beginning of the billing cycle for which the fee is deducted. The time is in the format of yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The start time.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-01 00:00:00</p>
@@ -203,7 +252,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1906589291020438</p>
@@ -364,7 +413,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
 
     public static class QuerySavingsPlansDeductLogResponseBodyData extends TeaModel {
         /**
-         * <p>The deduction details.</p>
+         * <p>The list of deduction details.</p>
          */
         @NameInMap("Items")
         public java.util.List<QuerySavingsPlansDeductLogResponseBodyDataItems> items;
@@ -379,7 +428,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

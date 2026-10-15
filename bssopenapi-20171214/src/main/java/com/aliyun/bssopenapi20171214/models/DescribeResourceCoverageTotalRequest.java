@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeResourceCoverageTotalRequest extends TeaModel {
     /**
-     * <p>The ID of the account for which you want to query total coverage data. If you do not set this parameter, the data of the current Alibaba Cloud account and its RAM users is queried. To query the data of a RAM user, specify the ID of the RAM user.</p>
+     * <p>The ID of the resource ownership account. The resource ownership account is the account that actually uses the resource.</p>
      * 
      * <strong>example:</strong>
      * <p>123745698925000</p>
@@ -14,7 +14,7 @@ public class DescribeResourceCoverageTotalRequest extends TeaModel {
     public Long billOwnerId;
 
     /**
-     * <p>The end of the time range to query. The end is excluded from the time range. If you do not set this parameter, the end time is the current time. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The end of the query time range. Format: yyyy-MM-dd HH:mm:ss. The query excludes this time. If this parameter is left empty, the current time is used.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-02 00:00:00</p>
@@ -23,7 +23,12 @@ public class DescribeResourceCoverageTotalRequest extends TeaModel {
     public String endPeriod;
 
     /**
-     * <p>The time granularity at which total coverage data is queried. Valid values: MONTH, DAY, and HOUR.</p>
+     * <p>The time granularity. Valid values:</p>
+     * <ul>
+     * <li>MONTH: month</li>
+     * <li>DAY: day</li>
+     * <li>HOUR: hour</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +38,11 @@ public class DescribeResourceCoverageTotalRequest extends TeaModel {
     public String periodType;
 
     /**
-     * <p>The type of deduction plans whose total coverage data is queried. Valid values: RI and SCU.</p>
+     * <p>The resource type. Valid values:</p>
+     * <ul>
+     * <li>RI: reserved instance</li>
+     * <li>SCU: storage capacity unit</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +52,7 @@ public class DescribeResourceCoverageTotalRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The beginning of the time range to query. The beginning is included in the time range. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The start of the query time range. Format: yyyy-MM-dd HH:mm:ss. The query includes this time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

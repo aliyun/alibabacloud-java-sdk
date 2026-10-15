@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSavingsPlansCoverageDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the account for which you want to query coverage details.</p>
+     * <p>The ID of the resource ownership account. The resource ownership account is the account that actually uses the resource.</p>
      * 
      * <strong>example:</strong>
      * <p>123745698925000</p>
@@ -14,10 +14,10 @@ public class DescribeSavingsPlansCoverageDetailRequest extends TeaModel {
     public Long billOwnerId;
 
     /**
-     * <p>The end of the time range to query. The end is excluded from the time range. If you do not set this parameter, the end time is the current time. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The end of the time range to query. The end time is excluded from the time range. If you do not set this parameter, the end time is the current time. Format: yyyy-MM-dd HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
-     * <p>2021-08-09 00:00:00</p>
+     * <p>2021-01-01 00:00:00</p>
      */
     @NameInMap("EndPeriod")
     public String endPeriod;
@@ -26,36 +26,36 @@ public class DescribeSavingsPlansCoverageDetailRequest extends TeaModel {
     public DescribeSavingsPlansCoverageDetailRequestFilterParam filterParam;
 
     /**
-     * <p>The maximum number of entries to return. Default value: 20. Maximum value: 300.</p>
+     * <p>The maximum number of entries to return.</p>
      * 
      * <strong>example:</strong>
-     * <p>300</p>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The time granularity at which coverage details are queried. Valid values: MONTH, DAY, and HOUR.</p>
+     * <p>The time granularity for querying the usage summary. Valid values: MONTH, DAY, HOUR.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>DAY</p>
+     * <p>HOUR</p>
      */
     @NameInMap("PeriodType")
     public String periodType;
 
     /**
-     * <p>The beginning of the time range to query. The beginning is included in the time range. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The beginning of the time range to query. The start time is included in the time range. Format: yyyy-MM-dd HH:mm:ss.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2021-07-15 13:40:45</p>
+     * <p>2021-01-01 00:00:00</p>
      */
     @NameInMap("StartPeriod")
     public String startPeriod;
 
     /**
-     * <p>The token that is used to retrieve the next page of results. You do not need to set this parameter if you query coverage details within a specific time range for the first time. The response returns a token that you can use to query coverage details that are displayed on the next page. If a null value is returned for the NextToken parameter, no more coverage details can be queried.</p>
+     * <p>The pagination token. Leave this parameter empty for the first page. The response returns the token for the next page. An empty token in the response indicates that all data has been returned.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJwYWdlTnVtIjoyLCJwYWdlU2l6ZSI6MTB9</p>

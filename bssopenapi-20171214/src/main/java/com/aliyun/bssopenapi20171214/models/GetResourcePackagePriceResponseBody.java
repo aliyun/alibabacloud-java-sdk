@@ -92,21 +92,9 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
     }
 
     public static class GetResourcePackagePriceResponseBodyDataPromotionsPromotion extends TeaModel {
-        /**
-         * <p>The ID of the promotion.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1000680914</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The description of the discount.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>A discount of 17% is offered if you purchase a resource plan for six months.</p>
-         */
         @NameInMap("Name")
         public String name;
 
@@ -180,9 +168,6 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
-        /**
-         * <p>The details of the discount.</p>
-         */
         @NameInMap("Promotions")
         public GetResourcePackagePriceResponseBodyDataPromotions promotions;
 

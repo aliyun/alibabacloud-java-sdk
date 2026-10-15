@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryRIUtilizationDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the instance whose fees are deducted by using the RI. If this parameter is left empty, the usage details of all instances are queried.</p>
+     * <p>The ID of the deducted instance. If this parameter is left empty, the details of all instances are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>jsdgfsdhgsdjh</p>
@@ -14,7 +14,7 @@ public class QueryRIUtilizationDetailRequest extends TeaModel {
     public String deductedInstanceId;
 
     /**
-     * <p>The time when the RI expires. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
+     * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class QueryRIUtilizationDetailRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The instance type of the RI.</p>
+     * <p>The instance type corresponding to the reserved instance.</p>
      * 
      * <strong>example:</strong>
      * <p>Instancetyp</p>
@@ -33,7 +33,7 @@ public class QueryRIUtilizationDetailRequest extends TeaModel {
     public String instanceSpec;
 
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -42,7 +42,7 @@ public class QueryRIUtilizationDetailRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 20. Maximum value: 300.</p>
+     * <p>The number of entries per page. Default value: 20. Maximum value: 300.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -51,10 +51,10 @@ public class QueryRIUtilizationDetailRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The code of the service to which the RI is applied. Default value: ecsRi. Valid values:</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>ecsRi: ECS RI.</li>
-     * <li>scu_bag: storage capacity unit (SCU).</li>
+     * <li>ecsRi: ECS reserved instances. This is the default value.</li>
+     * <li>scu_bag: Storage capacity unit (SCU) plans.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -65,7 +65,7 @@ public class QueryRIUtilizationDetailRequest extends TeaModel {
     public String RICommodityCode;
 
     /**
-     * <p>The ID of the RI. If this parameter is left empty, the usage details of all RIs are queried.</p>
+     * <p>The instance ID of the reserved instance for the filtered query. If this parameter is left empty, the details of all used reserved instances are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>dsudfgdsjh</p>
@@ -74,7 +74,7 @@ public class QueryRIUtilizationDetailRequest extends TeaModel {
     public String RIInstanceId;
 
     /**
-     * <p>The time when the RI was created. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
+     * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

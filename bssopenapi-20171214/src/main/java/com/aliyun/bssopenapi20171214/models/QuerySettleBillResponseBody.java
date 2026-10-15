@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class QuerySettleBillResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public QuerySettleBillResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Successful!</p>
      */
@@ -22,6 +29,8 @@ public class QuerySettleBillResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AE3F4057-DFC9-4B81-8858-F620651010C9</p>
      */
@@ -29,6 +38,8 @@ public class QuerySettleBillResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -81,171 +92,75 @@ public class QuerySettleBillResponseBody extends TeaModel {
     }
 
     public static class QuerySettleBillResponseBodyDataItemsItem extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("AdjustAmount")
         public Float adjustAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("AfterTaxAmount")
         public Float afterTaxAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>185xxxxx489</p>
-         */
         @NameInMap("BillAccountID")
         public String billAccountID;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
-         */
         @NameInMap("BillAccountName")
         public String billAccountName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>trusteeship</p>
-         */
         @NameInMap("BizType")
         public String bizType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("CashAmount")
         public Float cashAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>rds</p>
-         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CNY</p>
-         */
         @NameInMap("Currency")
         public String currency;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("DeductedByCashCoupons")
         public Float deductedByCashCoupons;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("DeductedByCoupons")
         public Float deductedByCoupons;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("DeductedByPrepaidCard")
         public Float deductedByPrepaidCard;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("InvoiceDiscount")
         public Float invoiceDiscount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>SubscriptionOrder</p>
-         */
         @NameInMap("Item")
         public String item;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("OutstandingAmount")
         public Float outstandingAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>3532535235</p>
-         */
         @NameInMap("OwnerID")
         public String ownerID;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PaymentAmount")
         public Float paymentAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>USD</p>
-         */
         @NameInMap("PaymentCurrency")
         public String paymentCurrency;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-03-11 08:00:00</p>
-         */
         @NameInMap("PaymentTime")
         public String paymentTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2O3AADJFEAF2PDKSFAMFCB11918</p>
-         */
         @NameInMap("PaymentTransactionID")
         public String paymentTransactionID;
 
-        /**
-         * <strong>example:</strong>
-         * <p>rds</p>
-         */
         @NameInMap("PipCode")
         public String pipCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("PretaxAmount")
         public Float pretaxAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PretaxAmountLocal")
         public Float pretaxAmountLocal;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PretaxGrossAmount")
         public Float pretaxGrossAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>rds</p>
-         */
         @NameInMap("ProductCode")
         public String productCode;
 
@@ -255,66 +170,30 @@ public class QuerySettleBillResponseBody extends TeaModel {
         @NameInMap("ProductName")
         public String productName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>rds</p>
-         */
         @NameInMap("ProductType")
         public String productType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020xxxx5912</p>
-         */
         @NameInMap("RecordID")
         public String recordID;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("RoundDownDiscount")
         public String roundDownDiscount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>PayFinish</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <strong>example:</strong>
-         * <p>325345254353</p>
-         */
         @NameInMap("SubOrderId")
         public String subOrderId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>PayAsYouGo</p>
-         */
         @NameInMap("SubscriptionType")
         public String subscriptionType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Tax")
         public Float tax;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-03-11 08:00:00</p>
-         */
         @NameInMap("UsageEndTime")
         public String usageEndTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-03-11 07:00:00</p>
-         */
         @NameInMap("UsageStartTime")
         public String usageStartTime;
 
@@ -626,6 +505,8 @@ public class QuerySettleBillResponseBody extends TeaModel {
 
     public static class QuerySettleBillResponseBodyData extends TeaModel {
         /**
+         * <p>The account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>185xxxxx489</p>
          */
@@ -633,6 +514,8 @@ public class QuerySettleBillResponseBody extends TeaModel {
         public String accountID;
 
         /**
+         * <p>The account name.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
          */
@@ -640,6 +523,8 @@ public class QuerySettleBillResponseBody extends TeaModel {
         public String accountName;
 
         /**
+         * <p>The billing cycle, in the format of YYYY-MM.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-02</p>
          */
@@ -650,6 +535,8 @@ public class QuerySettleBillResponseBody extends TeaModel {
         public QuerySettleBillResponseBodyDataItems items;
 
         /**
+         * <p>The maximum number of records returned in this request.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -657,6 +544,8 @@ public class QuerySettleBillResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
+         * <p>The token that indicates the position where the current call reads to. An empty value indicates that all data has been read.</p>
+         * 
          * <strong>example:</strong>
          * <p>CAESEgoQCg4KCmdtdF9jcmVhdGUQARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</p>
          */
@@ -664,6 +553,8 @@ public class QuerySettleBillResponseBody extends TeaModel {
         public String nextToken;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */

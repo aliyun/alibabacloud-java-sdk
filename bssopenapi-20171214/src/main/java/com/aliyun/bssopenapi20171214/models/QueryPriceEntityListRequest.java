@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryPriceEntityListRequest extends TeaModel {
     /**
-     * <p>The code of the service.</p>
+     * <p>The commodity code. You can call the <strong>QueryCommodityList</strong> operation to query the commodity code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +14,12 @@ public class QueryPriceEntityListRequest extends TeaModel {
     @NameInMap("CommodityCode")
     public String commodityCode;
 
+    /**
+     * <p>The language. Default value: zh (Chinese).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

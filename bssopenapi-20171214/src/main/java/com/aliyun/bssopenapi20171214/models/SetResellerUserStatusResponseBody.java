@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetResellerUserStatusResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call failed. For more information, see the &quot;Error codes&quot; section of this topic.</p>
+     * <p>The error code returned if the call fails. For more information, see the Error codes section.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class SetResellerUserStatusResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the operation was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class SetResellerUserStatusResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The message returned for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful!</p>
@@ -41,7 +41,7 @@ public class SetResellerUserStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. A value of true indicates that the call is successful. A value of false indicates that the call failed.</p>
+     * <p>Indicates whether the request was successful. <code>true</code>: success. <code>false</code>: an error occurred.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

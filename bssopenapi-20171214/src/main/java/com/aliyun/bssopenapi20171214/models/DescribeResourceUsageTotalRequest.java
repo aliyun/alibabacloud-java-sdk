@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeResourceUsageTotalRequest extends TeaModel {
     /**
-     * <p>The ID of the account whose data you want to query. If you do not specify this parameter, the data of the current account and its linked accounts is queried. To query the data of a linked account, specify the ID of the linked account. You can specify only one account ID.</p>
+     * <p>The ID of the resource ownership account. The resource ownership account is the account that actually uses the resource. Only one account ID can be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>123745698925000</p>
@@ -14,7 +14,7 @@ public class DescribeResourceUsageTotalRequest extends TeaModel {
     public Long billOwnerId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format. The specified time is excluded from the time range. If you do not specify this parameter, this parameter is set to the current time.</p>
+     * <p>The end time. Format: yyyy-MM-dd HH:mm:ss. The query excludes data at this time. If this parameter is left empty, the query range extends to the current time. This value specifies the end time of the query range.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-02 00:00:00</p>
@@ -23,7 +23,12 @@ public class DescribeResourceUsageTotalRequest extends TeaModel {
     public String endPeriod;
 
     /**
-     * <p>The time granularity at which the data is queried. Valid values: MONTH, DAY, and HOUR.</p>
+     * <p>The time granularity. Valid values:</p>
+     * <ul>
+     * <li>MONTH: month</li>
+     * <li>DAY: day</li>
+     * <li>HOUR: hour</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +38,11 @@ public class DescribeResourceUsageTotalRequest extends TeaModel {
     public String periodType;
 
     /**
-     * <p>The type of the resource plan. Valid values: RI and SCU.</p>
+     * <p>The resource plan type. Valid values:</p>
+     * <ul>
+     * <li>RI: reserved instance.</li>
+     * <li>SCU: storage capacity unit.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +52,7 @@ public class DescribeResourceUsageTotalRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format. The specified time is included in the time range.</p>
+     * <p>The start time. Format: yyyy-MM-dd HH:mm:ss. The query includes data at this time. This value specifies the start time of the query range.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

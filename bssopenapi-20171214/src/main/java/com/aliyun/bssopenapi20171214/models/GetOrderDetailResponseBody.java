@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetOrderDetailResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -38,7 +38,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -92,30 +92,12 @@ public class GetOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfigBillModulePropertiesBillModuleProperties extends TeaModel {
-        /**
-         * <p>The attribute code of the configured item.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cloud_ssd</p>
-         */
         @NameInMap("AttrApiCode")
         public String attrApiCode;
 
-        /**
-         * <p>The API code of the configured item.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cloud_ssd</p>
-         */
         @NameInMap("ModuleApiCode")
         public String moduleApiCode;
 
-        /**
-         * <p>The attribute value of the configuration item.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cloud_ssd</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -170,36 +152,15 @@ public class GetOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfig extends TeaModel {
-        /**
-         * <p>The API code of the configuration item.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>datadisk</p>
-         */
         @NameInMap("ApiCode")
         public String apiCode;
 
-        /**
-         * <p>The attributes of the configured item.</p>
-         */
         @NameInMap("BillModuleProperties")
         public GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfigBillModuleProperties billModuleProperties;
 
-        /**
-         * <p>The code of the configuration item.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>datadisk</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <p>The name of the configuration item.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Data disk</p>
-         */
         @NameInMap("Name")
         public String name;
 
@@ -262,30 +223,12 @@ public class GetOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfigModulePropertiesModuleProperties extends TeaModel {
-        /**
-         * <p>The attribute code of the configured item.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cloud_efficiency</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <p>The attribute name of the configured item.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cloud_efficiency</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The attribute value of the configured item.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cloud_efficiency</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -340,27 +283,12 @@ public class GetOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfig extends TeaModel {
-        /**
-         * <p>The code of the configuration item.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>systemdisk</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <p>The attributes of the configured item.</p>
-         */
         @NameInMap("ModuleProperties")
         public GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfigModuleProperties moduleProperties;
 
-        /**
-         * <p>The name of the configuration item.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>System disk</p>
-         */
         @NameInMap("Name")
         public String name;
 
@@ -415,264 +343,93 @@ public class GetOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetOrderDetailResponseBodyDataOrderListOrder extends TeaModel {
-        /**
-         * <p>The aftertaxt amount of the order.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("AfterTaxAmount")
         public String afterTaxAmount;
 
-        /**
-         * <p>The billing information about the configurations.</p>
-         */
         @NameInMap("BillModuleConfig")
         public GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfig billModuleConfig;
 
-        /**
-         * <p>The commodity code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rds</p>
-         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
-        /**
-         * <p>The configurations of the main service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DBInstanceClass:[DBInstanceClass:rds.mysql.s1.small;EngineVersion:8.0;Region:cn-qingdao;]DBFlowType:[Region:cn-qingdao;]</p>
-         */
         @NameInMap("Config")
         public String config;
 
-        /**
-         * <p>The time when the order was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-06-08T09:41:30Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The currency. Valid values: CNY, USD, and JPY.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CNY</p>
-         */
         @NameInMap("Currency")
         public String currency;
 
-        /**
-         * <p>The additional information about the order.</p>
-         */
         @NameInMap("ExtendInfos")
         public java.util.Map<String, String> extendInfos;
 
-        /**
-         * <p>The instance IDs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[&quot;rm-bp1a2vsr018313t6o&quot;]</p>
-         */
         @NameInMap("InstanceIDs")
         public String instanceIDs;
 
-        /**
-         * <p>The ID of the Resource Access Management (RAM) user that performs operations on the order. If no RAM user is involved, this parameter is empty.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>23424243432</p>
-         */
         @NameInMap("Operator")
         public String operator;
 
-        /**
-         * <p>The order ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3453425324</p>
-         */
         @NameInMap("OrderId")
         public String orderId;
 
-        /**
-         * <p>The type of the suborder. A value of productsuborder indicates service suborder. A value of refundsuborder indicates refund suborder.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ProductSubOrder</p>
-         */
         @NameInMap("OrderSubType")
         public String orderSubType;
 
-        /**
-         * <p>The type of the order. Valid values: new, renew, upgrade, and refund.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>New</p>
-         */
         @NameInMap("OrderType")
         public String orderType;
 
-        /**
-         * <p>The configuration information that is not formatted.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DBInstanceClass:[DBInstanceClass:rds.mysql.s1.small;EngineVersion:8.0;Region:cn-qingdao;]DBFlowType:[Region:cn-qingdao;]</p>
-         */
         @NameInMap("OriginalConfig")
         public String originalConfig;
 
-        /**
-         * <p>The information about the configurations.</p>
-         */
         @NameInMap("OriginalModuleConfig")
         public GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfig originalModuleConfig;
 
-        /**
-         * <p>The currency used for payment. Valid values: CNY, USD, and JPY.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CNY</p>
-         */
         @NameInMap("PaymentCurrency")
         public String paymentCurrency;
 
-        /**
-         * <p>The payment state. Valid values: unpaid, paid, and canceled.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Paid</p>
-         */
         @NameInMap("PaymentStatus")
         public String paymentStatus;
 
-        /**
-         * <p>The time of payment.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-06-08T09:41:30Z</p>
-         */
         @NameInMap("PaymentTime")
         public String paymentTime;
 
-        /**
-         * <p>The pretax amount of the order.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PretaxAmount")
         public String pretaxAmount;
 
-        /**
-         * <p>The pretax amount of the order in local currency.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PretaxAmountLocal")
         public String pretaxAmountLocal;
 
-        /**
-         * <p>The pretax gross amount of the order.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PretaxGrossAmount")
         public String pretaxGrossAmount;
 
-        /**
-         * <p>The code of the main service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rds</p>
-         */
         @NameInMap("ProductCode")
         public String productCode;
 
-        /**
-         * <p>The type of the main service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rds</p>
-         */
         @NameInMap("ProductType")
         public String productType;
 
-        /**
-         * <p>The number of main services.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Quantity")
         public String quantity;
 
-        /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("Region")
         public String region;
 
-        /**
-         * <p>The ID of the associated order.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4353453534543</p>
-         */
         @NameInMap("RelatedOrderId")
         public String relatedOrderId;
 
-        /**
-         * <p>The ID of the suborder.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>234343</p>
-         */
         @NameInMap("SubOrderId")
         public String subOrderId;
 
-        /**
-         * <p>The billing method. Valid values: Subscription and PayAsYouGo.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PayAsYouGo</p>
-         */
         @NameInMap("SubscriptionType")
         public String subscriptionType;
 
-        /**
-         * <p>The tax of the order.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Tax")
         public String tax;
 
-        /**
-         * <p>The time when the service ends.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2117-06-08T16:00:00Z</p>
-         */
         @NameInMap("UsageEndTime")
         public String usageEndTime;
 
-        /**
-         * <p>The time when the service starts.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2017-06-08T16:00:00Z</p>
-         */
         @NameInMap("UsageStartTime")
         public String usageStartTime;
 
@@ -952,9 +709,6 @@ public class GetOrderDetailResponseBody extends TeaModel {
         @NameInMap("HostName")
         public String hostName;
 
-        /**
-         * <p>The orders returned.</p>
-         */
         @NameInMap("OrderList")
         public GetOrderDetailResponseBodyDataOrderList orderList;
 
@@ -977,7 +731,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

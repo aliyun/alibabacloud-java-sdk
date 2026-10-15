@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryAccountTransactionsRequest extends TeaModel {
     /**
-     * <p>The end of the creation time range to query. By default, the transactions in the last month are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. Example: 2018-01-01T00:00:00Z.</p>
+     * <p>The end time of the creation time range. If not specified, the default value is the current time. Example: 2018-01-01T00:00:00Z.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-03-06T01:55:00Z</p>
@@ -14,7 +14,7 @@ public class QueryAccountTransactionsRequest extends TeaModel {
     public String createTimeEnd;
 
     /**
-     * <p>The beginning of the creation time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. Example: 2018-01-01T00:00:00Z.</p>
+     * <p>The start time of the creation time range. If not specified, the default value is one month before the current time. Example: 2018-01-01T00:00:00Z.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-03-05T01:46:09Z</p>
@@ -23,7 +23,7 @@ public class QueryAccountTransactionsRequest extends TeaModel {
     public String createTimeStart;
 
     /**
-     * <p>The number of the page to return. Default value is 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class QueryAccountTransactionsRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page. Default value is 20.</p>
+     * <p>The number of entries per page. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,7 +41,7 @@ public class QueryAccountTransactionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the order or bill.</p>
+     * <p>The order or bill number.</p>
      * 
      * <strong>example:</strong>
      * <p>20200302</p>
@@ -50,18 +50,18 @@ public class QueryAccountTransactionsRequest extends TeaModel {
     public String recordID;
 
     /**
-     * <p>The transaction channel. If you specify one of the following transaction channels for this parameter, the results for the specified transaction channel are returned. If the transaction channel that you specify does not belong to the following transaction channels, no result is returned. If you leave this parameter empty, the results for all the following transaction channels are returned by default. Valid values:</p>
+     * <p>The transaction channel. If you specify a transaction channel, the query returns results of the corresponding type. If no results exist, an empty result is returned. If you do not specify this parameter, all types are returned by default. Valid values:</p>
      * <ul>
-     * <li>AccountBalance</li>
-     * <li>BankTransfer</li>
-     * <li>Alipay</li>
-     * <li>AntCreditPay</li>
-     * <li>OfflineRemittance</li>
-     * <li>RegularBankCreditRefund</li>
-     * <li>CreditCard</li>
-     * <li>MyBankCredit</li>
-     * <li>HuaxiaBankCInstallment</li>
-     * <li>ApplePay</li>
+     * <li>AccountBalance: Account balance.</li>
+     * <li>BankTransfer: Bank transfer.</li>
+     * <li>Alipay: Alipay.</li>
+     * <li>AntCreditPay: Ant Credit Pay.</li>
+     * <li>OfflineRemittance: Offline remittance.</li>
+     * <li>RegularBankCreditRefund: Credit-based payment refund.</li>
+     * <li>CreditCard: Credit card.</li>
+     * <li>MyBankCredit: MYbank Credit.</li>
+     * <li>HuaxiaBankCInstallment: Huaxia Bank installment.</li>
+     * <li>ApplePay: Apple Pay.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +71,7 @@ public class QueryAccountTransactionsRequest extends TeaModel {
     public String transactionChannel;
 
     /**
-     * <p>The serial number of the transaction channel.</p>
+     * <p>The payment reference No.</p>
      * 
      * <strong>example:</strong>
      * <p>12342134</p>
@@ -80,10 +80,10 @@ public class QueryAccountTransactionsRequest extends TeaModel {
     public String transactionChannelSN;
 
     /**
-     * <p>The type of the transaction flow. If you specify one of the following types for this parameter, the results for the specified type are returned. If the type that you specify does not belong to the following types, no result is returned. If you leave this parameter empty, the results for the following two types are returned by default. Valid values:</p>
+     * <p>The income and expense type. If you specify an income and expense type, the query returns results of the corresponding type. If no results exist, an empty result is returned. If you do not specify this parameter, all types are returned by default. Valid values:</p>
      * <ul>
-     * <li>Income</li>
-     * <li>Expense</li>
+     * <li>Income: Income.</li>
+     * <li>Expense: Expense.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -93,7 +93,7 @@ public class QueryAccountTransactionsRequest extends TeaModel {
     public String transactionFlow;
 
     /**
-     * <p>The number of the transaction.</p>
+     * <p>The transaction number.</p>
      * 
      * <strong>example:</strong>
      * <p>133314076</p>
@@ -102,14 +102,14 @@ public class QueryAccountTransactionsRequest extends TeaModel {
     public String transactionNumber;
 
     /**
-     * <p>The type of the transaction. If you specify one of the following transaction types for this parameter, the results for the specified transaction type are returned. If the transaction type that you specify does not belong to the following types, no result is returned. If you leave this parameter empty, the results for all the following transaction types are returned by default. Valid values:</p>
+     * <p>The transaction type. If you specify a transaction type, the query returns results of the corresponding type. If no results exist, an empty result is returned. If you do not specify this parameter, all types are returned by default. Valid values:</p>
      * <ul>
-     * <li>Payment</li>
-     * <li>Withdraw</li>
-     * <li>Refund</li>
-     * <li>Consumption</li>
-     * <li>Transfer</li>
-     * <li>Adjust</li>
+     * <li>Payment: Top-up.</li>
+     * <li>Withdraw: Withdrawal.</li>
+     * <li>Refund: Refund.</li>
+     * <li>Consumption: Consumption.</li>
+     * <li>Transfer: Transfer.</li>
+     * <li>Adjust: Adjustment.</li>
      * </ul>
      * 
      * <strong>example:</strong>

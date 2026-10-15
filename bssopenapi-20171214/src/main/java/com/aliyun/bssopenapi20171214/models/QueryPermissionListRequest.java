@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryPermissionListRequest extends TeaModel {
     /**
-     * <p>The ID of the relationship. Set this parameter to the value of the RelationId response parameter returned by calling the QueryRelationList operation.</p>
+     * <p>The relationship ID. Obtain this ID from the RelationId parameter in the response of the QueryRelationList operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

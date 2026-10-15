@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenewResourcePackageResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,13 +14,13 @@ public class RenewResourcePackageResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public RenewResourcePackageResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful!</p>
@@ -47,7 +47,7 @@ public class RenewResourcePackageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class RenewResourcePackageResponseBody extends TeaModel {
 
     public static class RenewResourcePackageResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the resource plan.</p>
+         * <p>The ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>OSSBAG-cn-0xl0n****003</p>

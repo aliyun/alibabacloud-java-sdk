@@ -5,21 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateResourcePackageRequest extends TeaModel {
     /**
-     * <p>The ID of the resource plan.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>6</p>
      */
     @NameInMap("Duration")
     public Integer duration;
 
-    /**
-     * <p>The data returned.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2020-03-03T12:00:00Z</p>
-     */
     @NameInMap("EffectiveDate")
     public String effectiveDate;
 
@@ -27,38 +17,22 @@ public class CreateResourcePackageRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the order.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>FPT_ossbag_absolute_Storage_sh</p>
      */
     @NameInMap("PackageType")
     public String packageType;
 
-    /**
-     * <strong>example:</strong>
-     * <p>Month</p>
-     */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ossbag</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
-     * <p>The ID of the order.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>40</p>
      */
     @NameInMap("Specification")
     public String specification;

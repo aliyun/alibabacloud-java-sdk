@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryBillOverviewRequest extends TeaModel {
     /**
-     * <p>The ID of the member. If you specify a value for this parameter, you can query the bills of the specified member. If you leave this parameter empty, the bills of the current account are queried by default.</p>
+     * <p>The ID of the resource ownership account. The resource ownership account is the account that actually uses the resource.</p>
      * 
      * <strong>example:</strong>
      * <p>1234</p>
@@ -14,7 +14,7 @@ public class QueryBillOverviewRequest extends TeaModel {
     public Long billOwnerId;
 
     /**
-     * <p>The billing cycle, in the YYYY-MM format.</p>
+     * <p>The billing date in the YYYY-MM format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class QueryBillOverviewRequest extends TeaModel {
     public String billingCycle;
 
     /**
-     * <p>The code of the service.</p>
+     * <p>The product code.</p>
      * 
      * <strong>example:</strong>
      * <p>rds</p>
@@ -33,7 +33,7 @@ public class QueryBillOverviewRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The type of the service.</p>
+     * <p>The product type.</p>
      * 
      * <strong>example:</strong>
      * <p>rds</p>
@@ -42,10 +42,10 @@ public class QueryBillOverviewRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The billing method. Valid values:</p>
+     * <p>The subscription type. Valid values:</p>
      * <ul>
-     * <li>Subscription: the subscription billing method</li>
-     * <li>PayAsYouGo: the pay-as-you-go billing method</li>
+     * <li>Subscription: upfront.</li>
+     * <li>PayAsYouGo: pay-as-you-go.</li>
      * </ul>
      * 
      * <strong>example:</strong>

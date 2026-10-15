@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryCommodityListResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>NotApplicable</p>
@@ -20,7 +20,7 @@ public class QueryCommodityListResponseBody extends TeaModel {
     public QueryCommodityListResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The additional information about the call result.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful!</p>
@@ -38,7 +38,7 @@ public class QueryCommodityListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the information about the service was queried.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -93,7 +93,11 @@ public class QueryCommodityListResponseBody extends TeaModel {
 
     public static class QueryCommodityListResponseBodyDataCommodityList extends TeaModel {
         /**
-         * <p>The payment type. Valid values: POSTPAY (pay-as-you-go) and PREPAY (subscription).</p>
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>POSTPAY: pay-as-you-go.</li>
+         * <li>PREPAY: subscription.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>POSTPAY</p>
@@ -102,7 +106,7 @@ public class QueryCommodityListResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The code of the service, which is the same as that on the Billing Management page.</p>
+         * <p>The commodity code, which is the same as the product detail code in Billing Management.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>
@@ -111,10 +115,10 @@ public class QueryCommodityListResponseBody extends TeaModel {
         public String commodityCode;
 
         /**
-         * <p>The name of the service.</p>
+         * <p>The commodity name.</p>
          * 
          * <strong>example:</strong>
-         * <p>ECS (Pay-As-You-Go)</p>
+         * <p>Elastic Compute Service (Pay-As-You-Go)</p>
          */
         @NameInMap("CommodityName")
         public String commodityName;
@@ -152,7 +156,7 @@ public class QueryCommodityListResponseBody extends TeaModel {
 
     public static class QueryCommodityListResponseBodyData extends TeaModel {
         /**
-         * <p>The information about the service.</p>
+         * <p>The commodity list.</p>
          */
         @NameInMap("CommodityList")
         public java.util.List<QueryCommodityListResponseBodyDataCommodityList> commodityList;

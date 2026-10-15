@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryResourcePackageInstancesResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,13 +14,13 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public QueryResourcePackageInstancesResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful!</p>
@@ -29,7 +29,7 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
     public Integer page;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -47,7 +47,7 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
@@ -65,7 +65,7 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -162,127 +162,45 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
     }
 
     public static class QueryResourcePackageInstancesResponseBodyDataInstancesInstance extends TeaModel {
-        /**
-         * <p>The services to which the resource plan is applicable.</p>
-         */
         @NameInMap("ApplicableProducts")
         public QueryResourcePackageInstancesResponseBodyDataInstancesInstanceApplicableProducts applicableProducts;
 
-        /**
-         * <p>The commodity code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rds</p>
-         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
-        /**
-         * <p>The deduction type. Example: Absolute.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Absolute</p>
-         */
         @NameInMap("DeductType")
         public String deductType;
 
-        /**
-         * <p>The time when the resource plan took effect.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-09-12T09:51:56Z</p>
-         */
         @NameInMap("EffectiveTime")
         public String effectiveTime;
 
-        /**
-         * <p>The time when the resource plan expired.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-03-12T16:00:00Z</p>
-         */
         @NameInMap("ExpiryTime")
         public String expiryTime;
 
-        /**
-         * <p>The ID of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OSSBAG-cn-v0h1s4hma01</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The type of the resource plan.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FPT_ossbag_absolute_Storage_sh</p>
-         */
         @NameInMap("PackageType")
         public String packageType;
 
-        /**
-         * <p>The ID of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("Region")
         public String region;
 
-        /**
-         * <p>The remaining quota.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>40.000</p>
-         */
         @NameInMap("RemainingAmount")
         public String remainingAmount;
 
-        /**
-         * <p>The unit of the remaining quota.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>GB</p>
-         */
         @NameInMap("RemainingAmountUnit")
         public String remainingAmountUnit;
 
-        /**
-         * <p>The remarks on the resource plan. The remarks must be made in Chinese.</p>
-         */
         @NameInMap("Remark")
         public String remark;
 
-        /**
-         * <p>The status of the resource plan. Valid values:</p>
-         * <ul>
-         * <li>Available</li>
-         * <li>Expired</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Available</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The total quota of the resource plan.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>40.000</p>
-         */
         @NameInMap("TotalAmount")
         public String totalAmount;
 
-        /**
-         * <p>The unit of the total quota.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>GB</p>
-         */
         @NameInMap("TotalAmountUnit")
         public String totalAmountUnit;
 
@@ -426,7 +344,7 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
 
     public static class QueryResourcePackageInstancesResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the host.</p>
+         * <p>The host ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn</p>
@@ -434,14 +352,11 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
         @NameInMap("HostId")
         public String hostId;
 
-        /**
-         * <p>The details of the instances.</p>
-         */
         @NameInMap("Instances")
         public QueryResourcePackageInstancesResponseBodyDataInstances instances;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -450,7 +365,7 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
         public String pageNum;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -459,7 +374,7 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
         public String pageSize;
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>

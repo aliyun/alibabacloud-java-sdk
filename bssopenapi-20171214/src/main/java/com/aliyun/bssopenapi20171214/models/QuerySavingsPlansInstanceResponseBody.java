@@ -14,13 +14,13 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The return data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public QuerySavingsPlansInstanceResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful</p>
@@ -38,7 +38,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,13 +93,19 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
 
     public static class QuerySavingsPlansInstanceResponseBodyDataItemsTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>标签1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>标签1</p>
          */
         @NameInMap("Value")
         public String value;
@@ -129,11 +135,14 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
 
     public static class QuerySavingsPlansInstanceResponseBodyDataItems extends TeaModel {
         /**
-         * <p>The allocation status. Valid values:</p>
+         * <p>The allocation status.</p>
          * <ul>
-         * <li>unallocated</li>
-         * <li>allocated</li>
-         * <li>beAllocated</li>
+         * <li><p>unallocated: Not allocated.</p>
+         * </li>
+         * <li><p>allocated: Allocating.</p>
+         * </li>
+         * <li><p>beAllocated: Allocated to this account.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,6 +152,8 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         public String allocationStatus;
 
         /**
+         * <p>The commodity code.</p>
+         * 
          * <strong>example:</strong>
          * <p>savingplan_common_public_cn</p>
          */
@@ -150,7 +161,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         public String commodityCode;
 
         /**
-         * <p>The currency. Valid values: CNY and USD.</p>
+         * <p>The currency. Valid values: CNY: Chinese Yuan. USD: US Dollar.</p>
          * 
          * <strong>example:</strong>
          * <p>CNY</p>
@@ -159,6 +170,8 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>For a savings plan with a monthly cycle, this is the commitment for the current cycle. Unit: CNY.</p>
+         * 
          * <strong>example:</strong>
          * <p>100.0</p>
          */
@@ -166,6 +179,8 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         public String currentPoolValue;
 
         /**
+         * <p>The purchased duration.</p>
+         * 
          * <strong>example:</strong>
          * <p>1:Year</p>
          */
@@ -173,6 +188,11 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         public String cycle;
 
         /**
+         * <p>The deduction cycle.
+         * HOUR: hourly
+         * DAY: daily
+         * ONCE: one-time (the total amount decreases over time)</p>
+         * 
          * <strong>example:</strong>
          * <p>HOUR</p>
          */
@@ -180,7 +200,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         public String deductCycleType;
 
         /**
-         * <p>The time when the instance expires. The time is in the format of yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The expiration time of the instance. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-01 00:00:00</p>
@@ -189,6 +209,8 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The end timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1663135741039</p>
          */
@@ -196,7 +218,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         public Long endTimestamp;
 
         /**
-         * <p>The instance family information. For an instance of the Elastic Compute Service (ECS) compute type, the value indicates the ECS instance family or the ECS instance family package.</p>
+         * <p>For a compute-optimized savings plan, this parameter indicates the corresponding instance family or instance family package.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.g6</p>
@@ -214,6 +236,8 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The total deduction amount in the previous cycle. Unit: CNY.</p>
+         * 
          * <strong>example:</strong>
          * <p>100.0</p>
          */
@@ -221,6 +245,8 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         public String lastBillTotalUsage;
 
         /**
+         * <p>The utilization in the previous cycle.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.8</p>
          */
@@ -228,11 +254,14 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         public String lastBillUtilization;
 
         /**
-         * <p>The payment type. Valid values:</p>
+         * <p>The payment type.</p>
          * <ul>
-         * <li>total: All Upfront</li>
-         * <li>half: Partial Upfront</li>
-         * <li>zero: No Upfront</li>
+         * <li><p>total: All Upfront</p>
+         * </li>
+         * <li><p>half: Partial Upfront</p>
+         * </li>
+         * <li><p>zero: No Upfront</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -242,7 +271,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         public String payMode;
 
         /**
-         * <p>The commitment.</p>
+         * <p>The commitment. Unit: CNY.</p>
          * 
          * <strong>example:</strong>
          * <p>1.00</p>
@@ -251,7 +280,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         public String poolValue;
 
         /**
-         * <p>The prepaid amount.</p>
+         * <p>The upfront payment. Unit: CNY.</p>
          * 
          * <strong>example:</strong>
          * <p>8760.00</p>
@@ -269,6 +298,8 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>For a flexible savings plan with a monthly or daily commitment, this is the remaining amount in the current cycle. Unit: CNY.</p>
+         * 
          * <strong>example:</strong>
          * <p>100.0</p>
          */
@@ -276,10 +307,12 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         public String restPoolValue;
 
         /**
-         * <p>The type of the savings plan. Valid values:</p>
+         * <p>The type of the savings plan.</p>
          * <ul>
-         * <li>universal: general-purpose</li>
-         * <li>ecs: ECS compute</li>
+         * <li><p>unversal: general-purpose</p>
+         * </li>
+         * <li><p>ecs: compute-optimized</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -289,7 +322,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         public String savingsType;
 
         /**
-         * <p>The time when the instance takes effect. The time is in the format of yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The effective time of the instance. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-01-01 00:00:00</p>
@@ -298,6 +331,8 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The start timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1663135741039</p>
          */
@@ -305,11 +340,14 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         public Long startTimestamp;
 
         /**
-         * <p>The status of the instance. Valid values:</p>
+         * <p>The current status.</p>
          * <ul>
-         * <li>NORMAL: normal</li>
-         * <li>LIMIT: stopped due to overdue payment</li>
-         * <li>RELEASE: released</li>
+         * <li><p>NORMAL: The instance is active.</p>
+         * </li>
+         * <li><p>LIMIT: The instance is suspended due to an overdue payment.</p>
+         * </li>
+         * <li><p>RELEASE: The instance is released.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -319,13 +357,13 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The details about the tags.</p>
+         * <p>The list of tag information.</p>
          */
         @NameInMap("Tags")
         public java.util.List<QuerySavingsPlansInstanceResponseBodyDataItemsTags> tags;
 
         /**
-         * <p>The total amount that is saved.</p>
+         * <p>The total savings. Unit: CNY.</p>
          * 
          * <strong>example:</strong>
          * <p>20.00</p>
@@ -334,7 +372,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         public String totalSave;
 
         /**
-         * <p>The total usage.</p>
+         * <p>The total utilization.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0</p>
@@ -543,7 +581,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
 
     public static class QuerySavingsPlansInstanceResponseBodyData extends TeaModel {
         /**
-         * <p>The details about the instances.</p>
+         * <p>The list of instance information.</p>
          */
         @NameInMap("Items")
         public java.util.List<QuerySavingsPlansInstanceResponseBodyDataItems> items;

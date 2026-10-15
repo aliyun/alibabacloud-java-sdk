@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAccountRelationRequest extends TeaModel {
     /**
-     * <p>The ID of the financial relationship. Value returned by calling the AddAccountRelation operation.</p>
+     * <p>The account linking ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1234</p>
@@ -14,10 +14,10 @@ public class GetAccountRelationRequest extends TeaModel {
     public Long relationId;
 
     /**
-     * <p>The unique ID of the request. The ID is used to mark a request and troubleshoot a problem.</p>
+     * <p>The unique request ID, used to identify the request and facilitate troubleshooting.</p>
      * 
      * <strong>example:</strong>
-     * <p>requestId</p>
+     * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -4,11 +4,17 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryCommodityListRequest extends TeaModel {
+    /**
+     * <p>The language. If this parameter is not specified, the default value zh (Chinese) is used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The code of the service.</p>
+     * <p>The product code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

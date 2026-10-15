@@ -8,19 +8,19 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
      * <p>The status code.</p>
      * 
      * <strong>example:</strong>
-     * <p>Success</p>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The return data.</p>
+     * <p>The returned query data.</p>
      */
     @NameInMap("Data")
     public DescribeSavingsPlansUsageTotalResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The message returned for the API call.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful!</p>
@@ -29,7 +29,7 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
@@ -38,7 +38,7 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful.</p>
+     * <p>Indicates whether the API call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
 
     public static class DescribeSavingsPlansUsageTotalResponseBodyDataPeriodCoverage extends TeaModel {
         /**
-         * <p>The usage.</p>
+         * <p>The usage percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -102,8 +102,7 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
         public Float percentage;
 
         /**
-         * <p>The period.</p>
-         * <p>The value is in the format of yyyyMMddHH.</p>
+         * <p>The time period to which the data belongs. Format: yyyyMMddHH.</p>
          * 
          * <strong>example:</strong>
          * <p>2021041500</p>
@@ -136,7 +135,7 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
 
     public static class DescribeSavingsPlansUsageTotalResponseBodyDataTotalUsage extends TeaModel {
         /**
-         * <p>The total amount of the savings plan.</p>
+         * <p>The total amount of savings plans.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -154,7 +153,7 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
         public Float postpaidCost;
 
         /**
-         * <p>The amount that is saved.</p>
+         * <p>The amount saved.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -163,7 +162,7 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
         public Float savedCost;
 
         /**
-         * <p>The total usage.</p>
+         * <p>The total usage percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -212,13 +211,13 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
 
     public static class DescribeSavingsPlansUsageTotalResponseBodyData extends TeaModel {
         /**
-         * <p>The usage in different periods.</p>
+         * <p>The usage data for each time period.</p>
          */
         @NameInMap("PeriodCoverage")
         public java.util.List<DescribeSavingsPlansUsageTotalResponseBodyDataPeriodCoverage> periodCoverage;
 
         /**
-         * <p>The usage summary.</p>
+         * <p>The total usage overview.</p>
          */
         @NameInMap("TotalUsage")
         public DescribeSavingsPlansUsageTotalResponseBodyDataTotalUsage totalUsage;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryBillRequest extends TeaModel {
     /**
-     * <p>The ID of the member.</p>
+     * <p>The ID of the resource ownership account. The resource ownership account is the account that actually uses the resource.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -23,20 +23,14 @@ public class QueryBillRequest extends TeaModel {
     @NameInMap("BillingCycle")
     public String billingCycle;
 
-    /**
-     * <p>Specifies whether to display local currency information in bills. The parameter will be discontinued.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("IsDisplayLocalCurrency")
     public Boolean isDisplayLocalCurrency;
 
     /**
-     * <p>Specifies whether to filter out a bill whose pretax gross amount is 0. By default, a bill whose pretax gross amount is 0 is not filtered out. Valid values:</p>
+     * <p>Specifies whether to filter out bills with a original price (PretaxGrossAmount) of 0. Default value: false (compatible with existing logic). Valid values:</p>
      * <ul>
-     * <li>true: filters out a bill whose pretax gross amount is 0.</li>
-     * <li>false: does not filter out a bill whose pretax gross amount is 0.</li>
+     * <li>true: filters out zero-charge bills.</li>
+     * <li>false: does not filter out zero-charge bills.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +43,7 @@ public class QueryBillRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -58,7 +52,7 @@ public class QueryBillRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 20. Maximum value: 300.</p>
+     * <p>The number of entries per page. Default value: 20. Maximum value: 300.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -67,7 +61,7 @@ public class QueryBillRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The code of the service.</p>
+     * <p>The product code.</p>
      * 
      * <strong>example:</strong>
      * <p>rds</p>
@@ -76,7 +70,7 @@ public class QueryBillRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The type of the service.</p>
+     * <p>The product type.</p>
      * 
      * <strong>example:</strong>
      * <p>rds</p>
@@ -85,12 +79,14 @@ public class QueryBillRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The billing method. Valid values:</p>
+     * <p>The subscription type. Valid values:</p>
      * <ul>
      * <li>Subscription</li>
      * <li>PayAsYouGo</li>
      * </ul>
+     * <blockquote>
      * <p>This parameter must be used together with the ProductCode parameter.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Subscription</p>
@@ -99,7 +95,7 @@ public class QueryBillRequest extends TeaModel {
     public String subscriptionType;
 
     /**
-     * <p>The type of the bill. Valid values:</p>
+     * <p>The type. Valid values:</p>
      * <ul>
      * <li>SubscriptionOrder</li>
      * <li>PayAsYouGoBill</li>

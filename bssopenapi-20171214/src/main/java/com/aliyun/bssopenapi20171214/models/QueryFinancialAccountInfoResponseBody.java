@@ -14,13 +14,13 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The data message body.</p>
      */
     @NameInMap("Data")
     public QueryFinancialAccountInfoResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The message description.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful!</p>
@@ -29,7 +29,7 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>97426BC2-792E-41F5-92B8-73C710DA7779</p>
@@ -93,7 +93,11 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
 
     public static class QueryFinancialAccountInfoResponseBodyData extends TeaModel {
         /**
-         * <p>The type of the financial account. A value of MASTER indicates that the account is a management account. A value of MEMBER indicates that the account is a member.</p>
+         * <p>The enterprise financial account type. Valid values:</p>
+         * <ul>
+         * <li>MASTER: primary account.</li>
+         * <li>MEMBER: member accounts.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>MEMBER</p>
@@ -102,7 +106,11 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
         public String accountType;
 
         /**
-         * <p>Indicates whether the account is a financial account. A value of true indicates that the account is a financial account. A value of false indicates that the account is not a financial account.</p>
+         * <p>Indicates whether the account is an enterprise financial account. Valid values:</p>
+         * <ul>
+         * <li>true: The account is an enterprise financial account.</li>
+         * <li>false: The account is not an enterprise financial account.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -111,7 +119,7 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
         public Boolean isFinancialAccount;
 
         /**
-         * <p>The ID of the group to which the member belongs.</p>
+         * <p>The ID of the group to which the member accounts belong.</p>
          * 
          * <strong>example:</strong>
          * <p>124</p>
@@ -120,16 +128,16 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
         public Long memberGroupId;
 
         /**
-         * <p>The name of the group to which the member belongs.</p>
+         * <p>The name of the group to which the member accounts belong.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test group</p>
+         * <p>TestGroup</p>
          */
         @NameInMap("MemberGroupName")
         public String memberGroupName;
 
         /**
-         * <p>The display name of the member.</p>
+         * <p>The display name of the member accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>Test</p>
@@ -138,7 +146,7 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
         public String memberNickName;
 
         /**
-         * <p>The username of the account.</p>
+         * <p>The logon name of the account.</p>
          * 
          * <strong>example:</strong>
          * <p>killortop3</p>

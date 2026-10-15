@@ -14,13 +14,13 @@ public class QueryCostUnitResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public QueryCostUnitResponseBodyData data;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful!</p>
@@ -29,7 +29,7 @@ public class QueryCostUnitResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
@@ -93,7 +93,7 @@ public class QueryCostUnitResponseBody extends TeaModel {
 
     public static class QueryCostUnitResponseBodyDataCostUnitDtoList extends TeaModel {
         /**
-         * <p>The user ID of the cost center owner.</p>
+         * <p>The owner of the financial unit.</p>
          * 
          * <strong>example:</strong>
          * <p>2343464</p>
@@ -102,7 +102,7 @@ public class QueryCostUnitResponseBody extends TeaModel {
         public Long ownerUid;
 
         /**
-         * <p>The ID of the parent cost center. A value of -1 indicates the root cost center.</p>
+         * <p>The ID of the parent financial unit. A value of -1 indicates the root of the financial unit tree.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -111,7 +111,7 @@ public class QueryCostUnitResponseBody extends TeaModel {
         public Long parentUnitId;
 
         /**
-         * <p>The ID of the cost center.</p>
+         * <p>The ID of the financial unit.</p>
          * 
          * <strong>example:</strong>
          * <p>23534</p>
@@ -120,7 +120,7 @@ public class QueryCostUnitResponseBody extends TeaModel {
         public Long unitId;
 
         /**
-         * <p>The name of the cost center.</p>
+         * <p>The name of the financial unit.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -169,13 +169,13 @@ public class QueryCostUnitResponseBody extends TeaModel {
 
     public static class QueryCostUnitResponseBodyData extends TeaModel {
         /**
-         * <p>The cost centers.</p>
+         * <p>The list of financial units.</p>
          */
         @NameInMap("CostUnitDtoList")
         public java.util.List<QueryCostUnitResponseBodyDataCostUnitDtoList> costUnitDtoList;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -184,7 +184,7 @@ public class QueryCostUnitResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
-         * <p>The number of entries returned on each page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -193,7 +193,7 @@ public class QueryCostUnitResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

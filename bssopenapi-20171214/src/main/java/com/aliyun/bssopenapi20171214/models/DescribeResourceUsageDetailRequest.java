@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeResourceUsageDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the account whose data you want to query. If you do not specify this parameter, the data of the current Alibaba Cloud account and its Resource Access Management (RAM) users is queried. To query the data of a RAM user, specify the ID of the RAM user.</p>
+     * <p>The ID of the account whose data you want to query. If this parameter is left empty, the data of the current account and its trusteeship linked accounts is queried. You can specify the ID of a trusteeship linked account to query only the data of that account.</p>
      * 
      * <strong>example:</strong>
      * <p>123745698925000</p>
@@ -14,7 +14,7 @@ public class DescribeResourceUsageDetailRequest extends TeaModel {
     public Long billOwnerId;
 
     /**
-     * <p>The end of the time range to query. The end is excluded from the time range. If you do not set this parameter, the end time is the current time. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The end time of the query. Format: yyyy-MM-dd HH:mm:ss. The specified time is excluded from the query. If this parameter is left empty, the current time is used.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-02 00:00:00</p>
@@ -23,7 +23,7 @@ public class DescribeResourceUsageDetailRequest extends TeaModel {
     public String endPeriod;
 
     /**
-     * <p>The maximum number of entries to return. Default value: 20. The maximum value is 300.</p>
+     * <p>The maximum number of entries to return in a single request. Default value: 20. Maximum value: 300.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,7 +32,7 @@ public class DescribeResourceUsageDetailRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken. If NextToken is empty, no next page exists.</p>
+     * <p>The pagination token. Leave this parameter empty when you query the first page. The token for the next page is returned in the response. If the returned token is empty, all results have been returned.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJwYWdlTnVtIjoyLCJwYWdlU2l6ZSI6MTB9</p>
@@ -41,7 +41,12 @@ public class DescribeResourceUsageDetailRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The time granularity at which usage details are queried. Valid values: MONTH, DAY, and HOUR.</p>
+     * <p>The time granularity. Valid values:</p>
+     * <ul>
+     * <li>MONTH: Monthly.</li>
+     * <li>DAY: Daily.</li>
+     * <li>HOUR: Hourly.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +56,11 @@ public class DescribeResourceUsageDetailRequest extends TeaModel {
     public String periodType;
 
     /**
-     * <p>The type of deduction plan whose usage details are queried. Valid values: RI and SCU.</p>
+     * <p>The type of the resource plan. Valid values:</p>
+     * <ul>
+     * <li>RI: reserved instance.</li>
+     * <li>SCU: storage capacity unit.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +70,7 @@ public class DescribeResourceUsageDetailRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The beginning of the time range to query. The beginning is included in the time range. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
+     * <p>The start time of the query. Format: yyyy-MM-dd HH:mm:ss. The specified time is included in the query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

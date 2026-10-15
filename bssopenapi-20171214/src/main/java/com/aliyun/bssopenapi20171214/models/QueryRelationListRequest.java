@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryRelationListRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The page number. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class QueryRelationListRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 20.</p>
+     * <p>The number of entries per page. The default value is 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class QueryRelationListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The states of the relationships between the management account and its members. The valid values of this parameter are the enumeration members of the RelationshipStatusEnum data type. If you do not specify this parameter, valid relationship states are queried by default.</p>
+     * <p>A list of relationship statuses. The value is an enumeration of RelationshipStatusEnum. If you do not specify this parameter, only relationships that are in effect are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>RELATED</p>
@@ -32,7 +32,7 @@ public class QueryRelationListRequest extends TeaModel {
     public java.util.List<String> statusList;
 
     /**
-     * <p>The ID of the Alibaba Cloud account.</p>
+     * <p>The UID of the Alibaba Cloud account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

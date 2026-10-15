@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAccountRelationResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The request status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,16 +20,16 @@ public class GetAccountRelationResponseBody extends TeaModel {
     public GetAccountRelationResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Message returned</p>
+     * <p>Message</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>RequestId</p>
@@ -38,7 +38,7 @@ public class GetAccountRelationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,16 +93,16 @@ public class GetAccountRelationResponseBody extends TeaModel {
 
     public static class GetAccountRelationResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account that is used as a member.</p>
+         * <p>The UID of the child account.</p>
          * 
          * <strong>example:</strong>
-         * <p>ID of the Alibaba Cloud account that is used as a member</p>
+         * <p>Alibaba Cloud account UID of the child account</p>
          */
         @NameInMap("ChildUserId")
         public Long childUserId;
 
         /**
-         * <p>The time when the financial relationship between the management account and the member was terminated.</p>
+         * <p>The end time of the account linking, in the YYYY-MM-DD format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-01</p>
@@ -111,7 +111,7 @@ public class GetAccountRelationResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The time when the financial relationship between the management account and the member was modified.</p>
+         * <p>The update time of the account linking.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-01</p>
@@ -120,25 +120,25 @@ public class GetAccountRelationResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>The ID of the financial relationship.</p>
+         * <p>The account linking ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>ID of the financial relationship</p>
+         * <p>Account linking ID</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that is used as the management account.</p>
+         * <p>The UID of the parent account.</p>
          * 
          * <strong>example:</strong>
-         * <p>ID of the Alibaba Cloud account that is used as the management account</p>
+         * <p>Alibaba Cloud UID of the main account</p>
          */
         @NameInMap("ParentUserId")
         public Long parentUserId;
 
         /**
-         * <p>The time when the financial relationship between the management account and the member was established.</p>
+         * <p>The start time of the account linking, in the YYYY-MM-DD format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-01</p>
@@ -147,25 +147,25 @@ public class GetAccountRelationResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The status of the financial relationship between the management account and the member.</p>
+         * <p>The account linking status. Valid values:</p>
          * <ul>
-         * <li>RELATED [Association established]</li>
-         * <li>CONFIRMING [To be confirmed by the other party]</li>
-         * <li>REJECTED [Refused by the other party]</li>
-         * <li>CONNECTION_CANCELED [Financial sub-account cancel request]</li>
-         * <li>CONNECTION_MASTER_CANCEL [Financial master account cancel invitation]</li>
-         * <li>CHANGE_CONFIRMING [Relationship change to be confirmed]</li>
-         * <li>INITIAL [Initial new relationship status]</li>
+         * <li>RELATED: linked.</li>
+         * <li>CONFIRMING: pending confirmation from the other party.</li>
+         * <li>REJECTED: rejected by the other party.</li>
+         * <li>CONNECTION_CANCELED: application canceled by the child account.</li>
+         * <li>CONNECTION_MASTER_CANCEL: invitation canceled by the main account.</li>
+         * <li>CHANGE_CONFIRMING: pending confirmation for relationship change.</li>
+         * <li>INITIAL: initial status of a newly created linking.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>RELATED</p>
+         * <p>RELATED: linked</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The type of the financial relationship.</p>
+         * <p>The account linking type.</p>
          * 
          * <strong>example:</strong>
          * <p>enterprise_group</p>

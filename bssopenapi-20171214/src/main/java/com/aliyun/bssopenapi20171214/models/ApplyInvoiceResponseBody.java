@@ -14,13 +14,13 @@ public class ApplyInvoiceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public ApplyInvoiceResponseBodyData data;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful!</p>
@@ -29,7 +29,7 @@ public class ApplyInvoiceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
@@ -38,7 +38,7 @@ public class ApplyInvoiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class ApplyInvoiceResponseBody extends TeaModel {
 
     public static class ApplyInvoiceResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The ID of the invoice application record.</p>
          * 
          * <strong>example:</strong>
          * <p>1323125534</p>

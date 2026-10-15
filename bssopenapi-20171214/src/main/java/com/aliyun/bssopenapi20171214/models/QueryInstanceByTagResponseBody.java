@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryInstanceByTagResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>PARAM_ERROR</p>
@@ -14,7 +14,7 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>param is null</p>
@@ -23,7 +23,7 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The token that determines the start point of the query. The return value is the value of the NextToken response parameter that was returned last time the QueryInstanceByTag operation was called.</p>
+     * <p>The token used to query the next page of results. This is the <code>NextToken</code> value returned from the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>CAESEgoQCg4KCm</p>
@@ -41,7 +41,7 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,7 +50,7 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The instances returned.</p>
+     * <p>A list of instance information.</p>
      */
     @NameInMap("TagResource")
     public java.util.List<QueryInstanceByTagResponseBodyTagResource> tagResource;
@@ -161,7 +161,7 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The type of the resource. The returned resource type indicates a savings plan instance.</p>
+         * <p>The type of the resource. <code>instance</code> indicates a savings plan instance.</p>
          * 
          * <strong>example:</strong>
          * <p>instance</p>
@@ -170,7 +170,7 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The tags.</p>
+         * <p>A list of tags.</p>
          */
         @NameInMap("Tag")
         public java.util.List<QueryInstanceByTagResponseBodyTagResourceTag> tag;

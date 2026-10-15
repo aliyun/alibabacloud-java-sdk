@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConfirmRelationResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The backend business status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,22 +14,22 @@ public class ConfirmRelationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public ConfirmRelationResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Message returned</p>
+     * <p>The returned message</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The unique ID of the request.</p>
+     * <p>The unique identifier of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>request_id</p>
@@ -93,7 +93,7 @@ public class ConfirmRelationResponseBody extends TeaModel {
 
     public static class ConfirmRelationResponseBodyData extends TeaModel {
         /**
-         * <p>HostId</p>
+         * <p>The host ID.</p>
          * 
          * <strong>example:</strong>
          * <p>HostId</p>

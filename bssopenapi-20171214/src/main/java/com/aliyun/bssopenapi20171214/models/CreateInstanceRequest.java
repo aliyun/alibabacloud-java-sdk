@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. The server checks whether a request that uses the same client token has been received. If a request that uses the same client token has been received, the server returns the same request result as the previous request.</p>
+     * <p>The client idempotency token. The server checks whether a request with the same ClientToken has been made. If yes, the server returns the result of the previous call.</p>
      * 
      * <strong>example:</strong>
      * <p>JASIOFKVNVIXXXXXX</p>
@@ -14,10 +14,10 @@ public class CreateInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The logistics address of this order. This parameter is generally valid for physical orders.</p>
+     * <p>The logistics address for this order. This parameter is typically valid for orders of physical products.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;cityCode&quot;:&quot;330100&quot;,&quot;cityName&quot;:&quot;Hangzhou&quot;,&quot;contactName&quot;:&quot;Test&quot;,&quot;countryCode&quot;:&quot;&quot;,&quot;districtName&quot;:&quot;Puyan Street&quot;,&quot;email&quot;:&quot;\<em>\</em>@example.com&quot;,&quot;mobilePhone&quot;:&quot;153564848844&quot;,&quot;phone&quot;:&quot;1234567&quot;,&quot;provCode&quot;:&quot;330000&quot;,&quot;provName&quot;:&quot;Zhejiang&quot;,&quot;streetCode&quot;:&quot;33010610&quot;,&quot;streetName&quot;:&quot;Zhuantang&quot;,&quot;zipCode&quot;:&quot;0000&quot;}</p>
+     * <p>{&quot;cityCode&quot;:&quot;330100&quot;,&quot;cityName&quot;:&quot;Hangzhou&quot;,&quot;contactName&quot;:&quot;Test&quot;,&quot;countryCode&quot;:&quot;&quot;,&quot;districtName&quot;:&quot;Puyan Street&quot;,&quot;email&quot;:&quot;**@example.com&quot;,&quot;mobilePhone&quot;:&quot;153564848844&quot;,&quot;phone&quot;:&quot;1234567&quot;,&quot;provCode&quot;:&quot;330000&quot;,&quot;provName&quot;:&quot;Zhejiang Province&quot;,&quot;streetCode&quot;:&quot;33010610&quot;,&quot;streetName&quot;:&quot;Zhuantang&quot;,&quot;zipCode&quot;:&quot;0000&quot;}</p>
      */
     @NameInMap("Logistics")
     public String logistics;
@@ -26,16 +26,13 @@ public class CreateInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The details of the modules.</p>
+     * <p>The list of modules.</p>
      */
     @NameInMap("Parameter")
     public java.util.List<CreateInstanceRequestParameter> parameter;
 
     /**
-     * <p>The subscription duration. Unit: month. The value must be an integral multiple of 12.</p>
-     * <blockquote>
-     * <p> This parameter is required if you create a subscription instance.</p>
-     * </blockquote>
+     * <p>The subscription period. Unit: months. For yearly subscription products, specify a multiple of 12.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -44,14 +41,17 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The cycle type of the prepaid period</p>
+     * <p>The unit of the subscription period.</p>
      * <ul>
-     * <li>PricingCycle=1 indicates that the unit of the prepaid period is in years; </li>
-     * <li>PricingCycle=2 indicates that the unit of the prepaid period is in months; </li>
-     * <li>PricingCycle=3 indicates that the unit of the prepaid period is in days;</li>
-     * <li>Default value: PricingCycle=2</li>
+     * <li><p>PricingCycle=1: The unit of the subscription period is year.</p>
+     * </li>
+     * <li><p>PricingCycle=2: The unit of the subscription period is month.</p>
+     * </li>
+     * <li><p>PricingCycle=3: The unit of the subscription period is day.</p>
+     * </li>
      * </ul>
-     * <p>Applicable only to certain product types (ProductType being ddos_originpre_public_cn, ddosDip, ddoscoo, ddos_originpre_public_intl, ddosDip_intl, ddoscoo_intl)</p>
+     * <p>Default value: PricingCycle=2.</p>
+     * <p>This parameter is applicable only to specific product types (ProductType is ddos_originpre_public_cn, ddosDip, ddoscoo, ddos_originpre_public_intl, ddosDip_intl, or ddoscoo_intl).</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -60,28 +60,28 @@ public class CreateInstanceRequest extends TeaModel {
     public Long pricingCycle;
 
     /**
-     * <p>The code of the service to which the instance belongs. You can query the service code by calling the <strong>QueryProductList</strong> operation or viewing <strong>Codes of Alibaba Cloud Services</strong>.</p>
+     * <p>The product code. You can call the <strong>QueryProductList</strong> operation to query the product code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rds</p>
+     * <p>Cdn</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
-     * <p>The type of the service.</p>
+     * <p>The product type.</p>
      * 
      * <strong>example:</strong>
-     * <p>rds</p>
+     * <p>Cdn</p>
      */
     @NameInMap("ProductType")
     public String productType;
 
     /**
-     * <p>The auto-renewal period. Unit: month.</p>
+     * <p>The auto-renewal epoch. Unit: months.</p>
      * <blockquote>
-     * <p> This parameter is required if the <strong>RenewalStatus</strong> parameter is set to <strong>AutoRenewal</strong>.</p>
+     * <p>This parameter is required when you set <strong>RenewalStatus</strong> to <strong>AutoRenewal</strong> in Settings.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -91,10 +91,10 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer renewPeriod;
 
     /**
-     * <p>The renewal method. Valid values:</p>
+     * <p>The auto-renewal status. Valid values:</p>
      * <ul>
-     * <li>AutoRenewal: The instance is automatically renewed.</li>
-     * <li>ManualRenewal: The instance is manually renewed.</li>
+     * <li>AutoRenewal: auto-renewal is enabled.</li>
+     * <li>ManualRenewal: manual renewal.</li>
      * </ul>
      * <p>Default value: ManualRenewal.</p>
      * 
@@ -107,8 +107,8 @@ public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li>Subscription: the subscription billing method.</li>
-     * <li>PayAsYouGo: the pay-as-you-go billing method.</li>
+     * <li>Subscription: subscription.</li>
+     * <li>PayAsYouGo: pay-as-you-go.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -213,7 +213,7 @@ public class CreateInstanceRequest extends TeaModel {
 
     public static class CreateInstanceRequestParameter extends TeaModel {
         /**
-         * <p>The code property of the Nth module. Value of N: 1 to 100. If multiple module property parameters are involved, concatenate multiple parameters based on the value of N in sequence.</p>
+         * <p>The code of the Nth module property. Valid values of N: 1 to 100. If multiple module properties exist, concatenate them in the format of N=1, 2, 3...N.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,7 +223,7 @@ public class CreateInstanceRequest extends TeaModel {
         public String code;
 
         /**
-         * <p>The value property of the Nth module. Value of N: 1 to 100.</p>
+         * <p>The value of the Nth module property. Valid values of N: 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

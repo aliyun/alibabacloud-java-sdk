@@ -14,13 +14,13 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The information about the service price.</p>
+     * <p>The product price information.</p>
      */
     @NameInMap("Data")
     public GetSubscriptionPriceResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful</p>
@@ -29,7 +29,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>30E7066E-AE6F-4E59-AFE6-11386CE3AFA7</p>
@@ -92,48 +92,18 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
     }
 
     public static class GetSubscriptionPriceResponseBodyDataModuleDetailsModuleDetail extends TeaModel {
-        /**
-         * <p>The discount price.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("CostAfterDiscount")
         public Float costAfterDiscount;
 
-        /**
-         * <p>The discount that was applied.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("InvoiceDiscount")
         public Float invoiceDiscount;
 
-        /**
-         * <p>The identifier of the pricing module.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PackageCode</p>
-         */
         @NameInMap("ModuleCode")
         public String moduleCode;
 
-        /**
-         * <p>The original price of the service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
-         */
         @NameInMap("OriginalCost")
         public Float originalCost;
 
-        /**
-         * <p>The unit price.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("UnitPrice")
         public Float unitPrice;
 
@@ -203,31 +173,110 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
 
     }
 
-    public static class GetSubscriptionPriceResponseBodyDataPromotionDetailsPromotionDetail extends TeaModel {
+    public static class GetSubscriptionPriceResponseBodyDataPaymentScheme extends TeaModel {
         /**
-         * <p>The description of the discount.</p>
+         * <p>The payable amount for the order, in cents.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>35092</p>
          */
+        @NameInMap("OrderDownPaymentFee")
+        public String orderDownPaymentFee;
+
+        /**
+         * <p>The payable amount in the settlement currency for the order, in cents.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35092</p>
+         */
+        @NameInMap("OrderDownPaymentSettleFee")
+        public String orderDownPaymentSettleFee;
+
+        /**
+         * <p>The total payable amount for the order, including the prepayment and installment parts, in cents.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70184</p>
+         */
+        @NameInMap("OrderTotalFee")
+        public String orderTotalFee;
+
+        /**
+         * <p>The total payable amount in the settlement currency for the order, including the prepayment and installment parts, in cents.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70184</p>
+         */
+        @NameInMap("OrderTotalSettleFee")
+        public String orderTotalSettleFee;
+
+        /**
+         * <p>The fixed-fee installment type. Valid values:</p>
+         * <ul>
+         * <li>PAYMENT_NORMAL: non-fixed-fee installment products.</li>
+         * <li>PAYMENT_PHASED: fixed-fee installment products.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PAYMENT_NORMAL</p>
+         */
+        @NameInMap("PaymentType")
+        public String paymentType;
+
+        public static GetSubscriptionPriceResponseBodyDataPaymentScheme build(java.util.Map<String, ?> map) throws Exception {
+            GetSubscriptionPriceResponseBodyDataPaymentScheme self = new GetSubscriptionPriceResponseBodyDataPaymentScheme();
+            return TeaModel.build(map, self);
+        }
+
+        public GetSubscriptionPriceResponseBodyDataPaymentScheme setOrderDownPaymentFee(String orderDownPaymentFee) {
+            this.orderDownPaymentFee = orderDownPaymentFee;
+            return this;
+        }
+        public String getOrderDownPaymentFee() {
+            return this.orderDownPaymentFee;
+        }
+
+        public GetSubscriptionPriceResponseBodyDataPaymentScheme setOrderDownPaymentSettleFee(String orderDownPaymentSettleFee) {
+            this.orderDownPaymentSettleFee = orderDownPaymentSettleFee;
+            return this;
+        }
+        public String getOrderDownPaymentSettleFee() {
+            return this.orderDownPaymentSettleFee;
+        }
+
+        public GetSubscriptionPriceResponseBodyDataPaymentScheme setOrderTotalFee(String orderTotalFee) {
+            this.orderTotalFee = orderTotalFee;
+            return this;
+        }
+        public String getOrderTotalFee() {
+            return this.orderTotalFee;
+        }
+
+        public GetSubscriptionPriceResponseBodyDataPaymentScheme setOrderTotalSettleFee(String orderTotalSettleFee) {
+            this.orderTotalSettleFee = orderTotalSettleFee;
+            return this;
+        }
+        public String getOrderTotalSettleFee() {
+            return this.orderTotalSettleFee;
+        }
+
+        public GetSubscriptionPriceResponseBodyDataPaymentScheme setPaymentType(String paymentType) {
+            this.paymentType = paymentType;
+            return this;
+        }
+        public String getPaymentType() {
+            return this.paymentType;
+        }
+
+    }
+
+    public static class GetSubscriptionPriceResponseBodyDataPromotionDetailsPromotionDetail extends TeaModel {
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
-        /**
-         * <p>The ID of the discount.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1021199213</p>
-         */
         @NameInMap("PromotionId")
         public Long promotionId;
 
-        /**
-         * <p>The name of the discount.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("PromotionName")
         public String promotionName;
 
@@ -283,11 +332,11 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
 
     public static class GetSubscriptionPriceResponseBodyData extends TeaModel {
         /**
-         * <p>The type of currency. Valid values:</p>
+         * <p>The currency. Valid values:</p>
          * <ul>
-         * <li>CNY: Chinese Yuan</li>
-         * <li>USD: US dollar</li>
-         * <li>JPY: Japanese Yen</li>
+         * <li>CNY: Chinese yuan.</li>
+         * <li>USD: US dollar.</li>
+         * <li>JPY: Japanese yen.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -297,7 +346,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>The discount that was applied.</p>
+         * <p>The discount amount.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -305,14 +354,11 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
-        /**
-         * <p>The price details of the pricing module.</p>
-         */
         @NameInMap("ModuleDetails")
         public GetSubscriptionPriceResponseBodyDataModuleDetails moduleDetails;
 
         /**
-         * <p>The original price of the service.</p>
+         * <p>The original price.</p>
          * 
          * <strong>example:</strong>
          * <p>900</p>
@@ -321,8 +367,11 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         public Float originalPrice;
 
         /**
-         * <p>The details of the discount.</p>
+         * <p>The parameters for fixed-fee installments.</p>
          */
+        @NameInMap("PaymentScheme")
+        public GetSubscriptionPriceResponseBodyDataPaymentScheme paymentScheme;
+
         @NameInMap("PromotionDetails")
         public GetSubscriptionPriceResponseBodyDataPromotionDetails promotionDetails;
 
@@ -336,7 +385,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         public Integer quantity;
 
         /**
-         * <p>The discount price.</p>
+         * <p>The discounted price.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -379,6 +428,14 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         }
         public Float getOriginalPrice() {
             return this.originalPrice;
+        }
+
+        public GetSubscriptionPriceResponseBodyData setPaymentScheme(GetSubscriptionPriceResponseBodyDataPaymentScheme paymentScheme) {
+            this.paymentScheme = paymentScheme;
+            return this;
+        }
+        public GetSubscriptionPriceResponseBodyDataPaymentScheme getPaymentScheme() {
+            return this.paymentScheme;
         }
 
         public GetSubscriptionPriceResponseBodyData setPromotionDetails(GetSubscriptionPriceResponseBodyDataPromotionDetails promotionDetails) {

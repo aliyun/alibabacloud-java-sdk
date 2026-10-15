@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceBillRequest extends TeaModel {
     /**
-     * <p>The ID of the member. If you specify this parameter, the bills of the member are queried. If you do not specify this parameter, the bills of the current account are queried by default.</p>
+     * <p>The ID of the resource ownership account. The resource ownership account is the account that actually uses the resource.</p>
      * 
      * <strong>example:</strong>
      * <p>122</p>
@@ -14,8 +14,7 @@ public class DescribeInstanceBillRequest extends TeaModel {
     public Long billOwnerId;
 
     /**
-     * <p>The billing cycle. Specify the parameter in the YYYY-MM format.
-     * Only the latest 18 month billing cycle is supported.</p>
+     * <p>The billing cycle in the YYYY-MM format. Only the last 18 billing cycles are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +24,10 @@ public class DescribeInstanceBillRequest extends TeaModel {
     public String billingCycle;
 
     /**
-     * <p>The billing date. This parameter is required only when the Granularity parameter is set to DAILY. Format: YYYY-MM-DD.</p>
+     * <p>The billing date. This parameter is required only when Granularity is set to DAILY. Format: YYYY-MM-DD.</p>
+     * <blockquote>
+     * <p>The value of BillingDate must be in the same month as the value of BillingCycle. For example, if BillingCycle is set to 2020-03, BillingDate must be set to 2020-03-DD. If the months are inconsistent, the query results are returned based on the time specified by BillingCycle.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2020-03-02</p>
@@ -36,10 +38,12 @@ public class DescribeInstanceBillRequest extends TeaModel {
     /**
      * <p>The granularity at which bills are queried. Valid values:</p>
      * <ul>
-     * <li>MONTHLY: queries bills on a monthly basis. The data that you query is the same as the data searched by instances on the Billing Details tab of the Bill Details page in the User Center console.</li>
-     * <li>DAILY: queries bills on a daily basis. The data that you query is the same as the data searched by days on the Billing Details tab of the Bill Details page in the User Center console.</li>
+     * <li>MONTHLY: monthly. The data is consistent with the monthly bills in Expenses and Costs &gt; Bills &gt; Bill Details &gt; Monthly Bills.</li>
+     * <li>DAILY: daily. The data is consistent with the daily bills in Expenses and Costs &gt; Bills &gt; Bill Details &gt; Daily Bills.</li>
      * </ul>
-     * <p>The BillingDate parameter is required if you set the Granularity parameter to DAILY.</p>
+     * <blockquote>
+     * <p>If you select DAILY, you must specify BillingDate.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>MONTHLY</p>
@@ -48,7 +52,7 @@ public class DescribeInstanceBillRequest extends TeaModel {
     public String granularity;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -57,12 +61,11 @@ public class DescribeInstanceBillRequest extends TeaModel {
     public String instanceID;
 
     /**
-     * <p>Specifies whether to query data by billable items. Valid values:</p>
+     * <p>Specifies whether to retrieve data by billable item. Valid values:</p>
      * <ul>
-     * <li>false: The data that you query is the same as the data searched by instances on the Billing Details tab of the Bill Details page in the User Center console.</li>
-     * <li>true: The data that you query is the same as the data searched by billable items on the Billing Details tab of the Bill Details page in the User Center console.</li>
+     * <li>false (default): The data is consistent with the instance bills in Expenses and Costs &gt; Bills &gt; Bill Details &gt; Instance Bills.</li>
+     * <li>true: The data is consistent with the billable item bills in Expenses and Costs &gt; Bills &gt; Bill Details &gt; Billable Item Bills.</li>
      * </ul>
-     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -71,10 +74,10 @@ public class DescribeInstanceBillRequest extends TeaModel {
     public Boolean isBillingItem;
 
     /**
-     * <p>Specifies whether to filter bills if both the pretax gross amount and pretax amount are 0. Valid values:</p>
+     * <p>Specifies whether to filter out records where both the original price (PretaxGrossAmount) and the payable amount (PretaxAmount) are 0. Valid values:</p>
      * <ul>
-     * <li>false: does not filter bills.</li>
-     * <li>true: filters bills.</li>
+     * <li>false</li>
+     * <li>true</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,7 +87,7 @@ public class DescribeInstanceBillRequest extends TeaModel {
     public Boolean isHideZeroCharge;
 
     /**
-     * <p>The maximum number of entries to return. Default value: 20. Maximum value: 300.</p>
+     * <p>The maximum number of data records to read in the current call. Default value: 20. Maximum value: 300.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -93,7 +96,7 @@ public class DescribeInstanceBillRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to indicate the position where the results for the current call start. The parameter must be left empty or set to the value of the NextToken parameter that is returned from the last call. Otherwise, an error is returned. If the parameter is left empty, data is queried from the first item.</p>
+     * <p>The position from which the current call starts to read data. The value must be empty or set to the NextToken value returned in the previous response. Otherwise, an error occurs. An empty value indicates that the reading starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>CAESEgoQCg4KCm</p>
@@ -105,7 +108,7 @@ public class DescribeInstanceBillRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The code of the service. The code is the same as that in Cost Center.</p>
+     * <p>The product code, which is consistent with the product code in the bills of the User Center.</p>
      * 
      * <strong>example:</strong>
      * <p>rds</p>
@@ -114,7 +117,7 @@ public class DescribeInstanceBillRequest extends TeaModel {
     public String pipCode;
 
     /**
-     * <p>The code of the service.</p>
+     * <p>The product code.</p>
      * 
      * <strong>example:</strong>
      * <p>rds</p>
@@ -123,7 +126,7 @@ public class DescribeInstanceBillRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The type of the service.</p>
+     * <p>The product type.</p>
      * 
      * <strong>example:</strong>
      * <p>rds</p>
@@ -132,10 +135,10 @@ public class DescribeInstanceBillRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The billing method. Valid values:</p>
+     * <p>The subscription type. Valid values:</p>
      * <ul>
-     * <li>Subscription: the subscription billing method.</li>
-     * <li>PayAsYouGo: the pay-as-you-go billing method.</li>
+     * <li>Subscription: subscription.</li>
+     * <li>PayAsYouGo: pay-as-you-go.</li>
      * </ul>
      * 
      * <strong>example:</strong>

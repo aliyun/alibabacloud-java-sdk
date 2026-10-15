@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryBillResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -20,7 +20,7 @@ public class QueryBillResponseBody extends TeaModel {
     public QueryBillResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful!</p>
@@ -29,7 +29,7 @@ public class QueryBillResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AE3F4057-DFC9-4B81-8858-F620651010C9</p>
@@ -38,7 +38,7 @@ public class QueryBillResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -92,312 +92,99 @@ public class QueryBillResponseBody extends TeaModel {
     }
 
     public static class QueryBillResponseBodyDataItemsItem extends TeaModel {
-        /**
-         * <p>The amount deducted by using credit refunds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("AdjustAmount")
         public Float adjustAmount;
 
-        /**
-         * <p>The amount paid after tax is deducted.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("AfterTaxAmount")
         public Float afterTaxAmount;
 
-        /**
-         * <p>The amount paid in cash. The amount that was deducted by using credit refunds is not included.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("CashAmount")
         public Float cashAmount;
 
-        /**
-         * <p>The code of the commodity.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rds</p>
-         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
-        /**
-         * <p>The type of the currency.</p>
-         * <ul>
-         * <li>CNY</li>
-         * <li>USD</li>
-         * <li>JPY</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>CNY</p>
-         */
         @NameInMap("Currency")
         public String currency;
 
-        /**
-         * <p>The amount deducted by using vouchers.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("DeductedByCashCoupons")
         public Float deductedByCashCoupons;
 
-        /**
-         * <p>The amount deducted by using coupons.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("DeductedByCoupons")
         public Float deductedByCoupons;
 
-        /**
-         * <p>The amount deducted by using prepaid cards.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("DeductedByPrepaidCard")
         public Float deductedByPrepaidCard;
 
-        /**
-         * <p>The discount amount.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("InvoiceDiscount")
         public Float invoiceDiscount;
 
-        /**
-         * <p>The type of the bill.</p>
-         * <ul>
-         * <li>SubscriptionOrder</li>
-         * <li>PayAsYouGoBill</li>
-         * <li>Refund</li>
-         * <li>Adjustment</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>SubscriptionOrder</p>
-         */
         @NameInMap("Item")
         public String item;
 
-        /**
-         * <p>The unsettled amount of the bill.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("OutstandingAmount")
         public Float outstandingAmount;
 
-        /**
-         * <p>The ID of the member. This parameter is returned in a multi-account payment scenario.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3532535235</p>
-         */
         @NameInMap("OwnerID")
         public String ownerID;
 
-        /**
-         * <p>The amount paid with cash.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PaymentAmount")
         public Float paymentAmount;
 
-        /**
-         * <p>The currency used for payment.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>USD</p>
-         */
         @NameInMap("PaymentCurrency")
         public String paymentCurrency;
 
-        /**
-         * <p>The time when the order was paid.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-03-11 08:00:00</p>
-         */
         @NameInMap("PaymentTime")
         public String paymentTime;
 
-        /**
-         * <p>The ID of the transaction.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2O3AADJFEAF2PDKSFAMFCB11918</p>
-         */
         @NameInMap("PaymentTransactionID")
         public String paymentTransactionID;
 
-        /**
-         * <p>The code of the service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rds</p>
-         */
         @NameInMap("PipCode")
         public String pipCode;
 
-        /**
-         * <p>The pretax amount</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("PretaxAmount")
         public Float pretaxAmount;
 
-        /**
-         * <p>The pretax amount paid in local currency.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PretaxAmountLocal")
         public Float pretaxAmountLocal;
 
-        /**
-         * <p>The pretax gross amount.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PretaxGrossAmount")
         public Float pretaxGrossAmount;
 
-        /**
-         * <p>The code of the service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rds</p>
-         */
         @NameInMap("ProductCode")
         public String productCode;
 
-        /**
-         * <p>The details of the service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ApsaraDB RDS (subscription)</p>
-         */
         @NameInMap("ProductDetail")
         public String productDetail;
 
-        /**
-         * <p>The name of the service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ApsaraDB RDS</p>
-         */
         @NameInMap("ProductName")
         public String productName;
 
-        /**
-         * <p>The type of the service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rds</p>
-         */
         @NameInMap("ProductType")
         public String productType;
 
-        /**
-         * <p>The ID of the order or bill.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020xxxx5912</p>
-         */
         @NameInMap("RecordID")
         public String recordID;
 
-        /**
-         * <p>The round down discount.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("RoundDownDiscount")
         public String roundDownDiscount;
 
-        /**
-         * <p>The payment status of the bill. Valid values:</p>
-         * <ul>
-         * <li>PayFinish: The bill is paid.</li>
-         * <li>PayUnclear: The bill is not cleared.</li>
-         * <li>PayUnsettle: The bill is not settled.</li>
-         * <li>NoSettle: The bill is free of settlement.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>PayFinish</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The ID of the order corresponding to the bill.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>325345254353</p>
-         */
         @NameInMap("SubOrderId")
         public String subOrderId;
 
-        /**
-         * <p>The billing method. Valid values:</p>
-         * <ul>
-         * <li>Subscription</li>
-         * <li>PayAsYouGo</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>PayAsYouGo</p>
-         */
         @NameInMap("SubscriptionType")
         public String subscriptionType;
 
-        /**
-         * <p>The tax.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Tax")
         public Float tax;
 
-        /**
-         * <p>The time when the bill ends.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-03-11 08:00:00</p>
-         */
         @NameInMap("UsageEndTime")
         public String usageEndTime;
 
-        /**
-         * <p>The time when the bill starts.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-03-11 07:00:00</p>
-         */
         @NameInMap("UsageStartTime")
         public String usageStartTime;
 
@@ -685,7 +472,7 @@ public class QueryBillResponseBody extends TeaModel {
 
     public static class QueryBillResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the account.</p>
+         * <p>The account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>185xxxxx489</p>
@@ -694,7 +481,7 @@ public class QueryBillResponseBody extends TeaModel {
         public String accountID;
 
         /**
-         * <p>The name of the account.</p>
+         * <p>The account name.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
@@ -711,14 +498,11 @@ public class QueryBillResponseBody extends TeaModel {
         @NameInMap("BillingCycle")
         public String billingCycle;
 
-        /**
-         * <p>The details of the bills.</p>
-         */
         @NameInMap("Items")
         public QueryBillResponseBodyDataItems items;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -727,7 +511,7 @@ public class QueryBillResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -736,7 +520,7 @@ public class QueryBillResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

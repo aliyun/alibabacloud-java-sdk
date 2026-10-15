@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeResourceUsageDetailResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -20,7 +20,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
     public DescribeResourceUsageDetailResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful!</p>
@@ -38,7 +38,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,13 +93,16 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
 
     public static class DescribeResourceUsageDetailResponseBodyDataItems extends TeaModel {
         /**
-         * <p>The unit that is used to measure the resources that are deducted.</p>
+         * <p>The deduction unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Compute hours</p>
          */
         @NameInMap("CapacityUnit")
         public String capacityUnit;
 
         /**
-         * <p>The type of the currency.</p>
+         * <p>The currency.</p>
          * 
          * <strong>example:</strong>
          * <p>CNY</p>
@@ -108,7 +111,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>The amount of the deducted resources.</p>
+         * <p>The deducted amount.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +120,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         public Float deductQuantity;
 
         /**
-         * <p>The end of the time range in which the usage details were queried.</p>
+         * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-04-01 01:00:00</p>
@@ -144,7 +147,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         public String instanceSpec;
 
         /**
-         * <p>The equivalent of pay-as-you-go costs.</p>
+         * <p>The equivalent pay-as-you-go cost.</p>
          * 
          * <strong>example:</strong>
          * <p>0.06</p>
@@ -162,7 +165,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         public String potentialSavedCost;
 
         /**
-         * <p>The number of deduction plans.</p>
+         * <p>The resource count.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -172,12 +175,15 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
 
         /**
          * <p>The region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China (Hangzhou)</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
-         * <p>The code of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-dg-a01</p>
@@ -186,7 +192,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         public String regionNo;
 
         /**
-         * <p>The fee of the deduction plan.</p>
+         * <p>The purchase cost of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -195,7 +201,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         public String reservationCost;
 
         /**
-         * <p>The ID of the deduction plan.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ecsri-bp147nnfz21225k9mpix00</p>
@@ -213,7 +219,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         public String savedCost;
 
         /**
-         * <p>The beginning of the time range in which the usage details were queried.</p>
+         * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-04-01 00:00:00</p>
@@ -222,7 +228,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The status of the deduction plan.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>Valid</p>
@@ -231,13 +237,16 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The name of the status.</p>
+         * <p>The status name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("StatusName")
         public String statusName;
 
         /**
-         * <p>The total capacity of the deduction plan.</p>
+         * <p>The total number of resources.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -246,7 +255,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         public Float totalQuantity;
 
         /**
-         * <p>The usage rate of the deduction plan.</p>
+         * <p>The usage rate.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -264,7 +273,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The username of the account.</p>
+         * <p>The account name.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:test@aliyun.com">test@aliyun.com</a></p>
@@ -282,7 +291,10 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         public String zone;
 
         /**
-         * <p>The code of the zone.</p>
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou Zone I</p>
          */
         @NameInMap("ZoneName")
         public String zoneName;
@@ -486,7 +498,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         public java.util.List<DescribeResourceUsageDetailResponseBodyDataItems> items;
 
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The maximum number of entries to return in a single request. Default value: 20. Maximum value: 300.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -495,7 +507,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>The token for the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJwYWdlTnVtIjoyLCJwYWdlU2l6ZSI6MTB9</p>
@@ -504,7 +516,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuerySavingsPlansDiscountRequest extends TeaModel {
     /**
-     * <p>The code of the service.</p>
+     * <p>The commodity code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class QuerySavingsPlansDiscountRequest extends TeaModel {
     public String commodityCode;
 
     /**
-     * <p>The cycle based on which queries are performed.</p>
+     * <p>The query cycle.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,12 +25,7 @@ public class QuerySavingsPlansDiscountRequest extends TeaModel {
     public String cycle;
 
     /**
-     * <p>The identifier of the language.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>EN: English.</li>
-     * <li>ZH: Chinese.</li>
-     * </ul>
+     * <p>The language of the response.</p>
      * 
      * <strong>example:</strong>
      * <p>ZH</p>
@@ -39,7 +34,7 @@ public class QuerySavingsPlansDiscountRequest extends TeaModel {
     public String locale;
 
     /**
-     * <p>The code of the pricing module.</p>
+     * <p>The code of the module.</p>
      * 
      * <strong>example:</strong>
      * <p>instance_type</p>
@@ -48,7 +43,7 @@ public class QuerySavingsPlansDiscountRequest extends TeaModel {
     public String moduleCode;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -57,7 +52,7 @@ public class QuerySavingsPlansDiscountRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -66,7 +61,7 @@ public class QuerySavingsPlansDiscountRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The payment mode. Valid values: total: all upfront. half: half upfront. zero: no upfront.</p>
+     * <p>The payment mode. Valid values: total: all upfront. half: partial upfront. zero: no upfront.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,7 +71,7 @@ public class QuerySavingsPlansDiscountRequest extends TeaModel {
     public String payMode;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -85,7 +80,7 @@ public class QuerySavingsPlansDiscountRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The type of the resource.</p>
+     * <p>The resource type.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.g6</p>
@@ -93,11 +88,17 @@ public class QuerySavingsPlansDiscountRequest extends TeaModel {
     @NameInMap("Spec")
     public String spec;
 
+    /**
+     * <p>The commodity code of the savings plan.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>savingplan_common_public_cn</p>
+     */
     @NameInMap("SpnCommodityCode")
     public String spnCommodityCode;
 
     /**
-     * <p>The type of the savings plan. Valid values: ecs: Elastic Compute Service (ECS) compute type. universal: general-purpose type.</p>
+     * <p>The type of the savings plan. Valid values: ecs: compute-optimized. universal: universal.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

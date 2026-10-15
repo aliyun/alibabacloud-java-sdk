@@ -14,13 +14,13 @@ public class ModifyCostUnitResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public java.util.List<ModifyCostUnitResponseBodyData> data;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful!</p>
@@ -29,7 +29,7 @@ public class ModifyCostUnitResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F5B803CF-94D8-43AF-ADB3-D819AAD30E27</p>
@@ -38,7 +38,7 @@ public class ModifyCostUnitResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the operation was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class ModifyCostUnitResponseBody extends TeaModel {
 
     public static class ModifyCostUnitResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the cost center was modified.</p>
+         * <p>Indicates whether the operation was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -102,7 +102,7 @@ public class ModifyCostUnitResponseBody extends TeaModel {
         public Boolean isSuccess;
 
         /**
-         * <p>The user ID of the cost center owner.</p>
+         * <p>The user ID of the financial unit owner.</p>
          * 
          * <strong>example:</strong>
          * <p>823756287</p>
@@ -111,7 +111,7 @@ public class ModifyCostUnitResponseBody extends TeaModel {
         public Long ownerUid;
 
         /**
-         * <p>The ID of the cost center.</p>
+         * <p>The ID of the new financial unit.</p>
          * 
          * <strong>example:</strong>
          * <p>356349875</p>

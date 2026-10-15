@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryAccountBillRequest extends TeaModel {
     /**
-     * <p>The ID of the member. If you specify a value for this parameter, you can query the bills of the specified member. If you leave this parameter empty, the bills of the current account are queried by default.</p>
+     * <p>The ID of the account that owns and actually uses the resource.</p>
      * 
      * <strong>example:</strong>
      * <p>122</p>
@@ -14,7 +14,7 @@ public class QueryAccountBillRequest extends TeaModel {
     public Long billOwnerId;
 
     /**
-     * <p>The billing cycle. Format: YYYY-MM.</p>
+     * <p>The billing date. Format: YYYY-MM.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class QueryAccountBillRequest extends TeaModel {
     public String billingCycle;
 
     /**
-     * <p>The billing date. This parameter is required only if the Granularity parameter is set to DAILY. Format: YYYY-MM-DD.</p>
+     * <p>The billing date. This parameter is required only when you set Granularity to DAILY. Format: YYYY-MM-DD.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-06-01</p>
@@ -33,24 +33,30 @@ public class QueryAccountBillRequest extends TeaModel {
     public String billingDate;
 
     /**
-     * <p>The granularity at which bills are queried. Valid values:</p>
+     * <p>The granularity for querying the bill. Valid values:</p>
      * <ul>
-     * <li>MONTHLY: queries bills by month. The data queried is consistent with the data that is displayed for the specified billing cycle on the Billing Details tab of the Bill Details page in User Center.</li>
-     * <li>DAILY: queries bills by day. The data queried is consistent with the data that is displayed for the specified day on the Billing Details tab of the Bill Details page in User Center.</li>
+     * <li><p>MONTHLY: Queries bills on a monthly basis. Corresponds to the monthly bills in <strong>Expenses &amp; Costs&#xA;</strong>&gt; <strong>Bills&#xA;</strong>&gt; <strong>Bill Details&#xA;</strong>.</p>
+     * </li>
+     * <li><p>DAILY: Queries bills on a daily basis. Corresponds to the daily bills in <strong>Expenses &amp; Costs&#xA;</strong>&gt; <strong>Bills&#xA;</strong>&gt; <strong>Bill Details&#xA;</strong>.</p>
+     * </li>
      * </ul>
-     * <p>You must set the BillingDate parameter before you can set the Granularity parameter to DAILY.</p>
+     * <blockquote>
+     * <p>If you set <code>Granularity</code> to <code>DAILY</code>, you must also specify the <code>BillingDate</code> parameter.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>Monthly</p>
+     * <p>MONTHLY</p>
      */
     @NameInMap("Granularity")
     public String granularity;
 
     /**
-     * <p>Specifies whether to summarize bills based on service codes. Valid values:</p>
+     * <p>Specifies whether to aggregate the results by product code.</p>
      * <ul>
-     * <li>true: summarizes bills based on service codes.</li>
-     * <li>false: does not summarize bills based on service codes.</li>
+     * <li><p>true: Results are aggregated by product code.</p>
+     * </li>
+     * <li><p>false: Results are not aggregated by product code.</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -64,7 +70,7 @@ public class QueryAccountBillRequest extends TeaModel {
     public Long ownerID;
 
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The page number. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -73,7 +79,7 @@ public class QueryAccountBillRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 20. Maximum value: 300.</p>
+     * <p>The number of entries per page. The default value is 20. The maximum value is 300.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -82,7 +88,7 @@ public class QueryAccountBillRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The code of the service.</p>
+     * <p>The product code.</p>
      * 
      * <strong>example:</strong>
      * <p>rds</p>

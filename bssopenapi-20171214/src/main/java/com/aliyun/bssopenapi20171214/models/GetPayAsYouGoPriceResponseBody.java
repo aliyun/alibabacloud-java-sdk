@@ -14,13 +14,13 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public GetPayAsYouGoPriceResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful</p>
@@ -29,7 +29,7 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1537A007-72D7-4165-8A26-8694A38E219A</p>
@@ -38,7 +38,7 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -92,48 +92,18 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
     }
 
     public static class GetPayAsYouGoPriceResponseBodyDataModuleDetailsModuleDetail extends TeaModel {
-        /**
-         * <p>The discount price.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("CostAfterDiscount")
         public Float costAfterDiscount;
 
-        /**
-         * <p>The discount that was applied.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("InvoiceDiscount")
         public Float invoiceDiscount;
 
-        /**
-         * <p>The code of the pricing module.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>InstanceType</p>
-         */
         @NameInMap("ModuleCode")
         public String moduleCode;
 
-        /**
-         * <p>The original price.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1.77</p>
-         */
         @NameInMap("OriginalCost")
         public Float originalCost;
 
-        /**
-         * <p>The unit price.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("UnitPrice")
         public Float unitPrice;
 
@@ -204,30 +174,12 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
     }
 
     public static class GetPayAsYouGoPriceResponseBodyDataPromotionDetailsPromotionDetail extends TeaModel {
-        /**
-         * <p>The description of the discount.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>This discount allows you to use a service at the minimum price and is provided for testing purposes only.</p>
-         */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
-        /**
-         * <p>The ID of the discount.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10200210</p>
-         */
         @NameInMap("PromotionId")
         public Long promotionId;
 
-        /**
-         * <p>The name of the discount.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>This discount allows you to use a service at the minimum price and is provided for testing purposes only.</p>
-         */
         @NameInMap("PromotionName")
         public String promotionName;
 
@@ -283,11 +235,11 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
 
     public static class GetPayAsYouGoPriceResponseBodyData extends TeaModel {
         /**
-         * <p>The type of the currency. Valid values:</p>
+         * <p>The currency. Valid values:</p>
          * <ul>
-         * <li>CNY: Chinese Yuan</li>
-         * <li>USD: US dollar</li>
-         * <li>JPY: Japanese Yen</li>
+         * <li>CNY: Chinese Yuan.</li>
+         * <li>USD: US Dollar.</li>
+         * <li>JPY: Japanese Yen.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -296,15 +248,9 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
         @NameInMap("Currency")
         public String currency;
 
-        /**
-         * <p>The price details of the pricing module.</p>
-         */
         @NameInMap("ModuleDetails")
         public GetPayAsYouGoPriceResponseBodyDataModuleDetails moduleDetails;
 
-        /**
-         * <p>The details of the discount.</p>
-         */
         @NameInMap("PromotionDetails")
         public GetPayAsYouGoPriceResponseBodyDataPromotionDetails promotionDetails;
 

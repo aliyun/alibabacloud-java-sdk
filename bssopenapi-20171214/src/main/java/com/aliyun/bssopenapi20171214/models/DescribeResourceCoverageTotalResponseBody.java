@@ -20,7 +20,7 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
     public DescribeResourceCoverageTotalResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful!</p>
@@ -29,7 +29,7 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
@@ -38,7 +38,7 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
 
     public static class DescribeResourceCoverageTotalResponseBodyDataPeriodCoverage extends TeaModel {
         /**
-         * <p>The coverage rate of deduction plans within the specified period.</p>
+         * <p>The coverage rate.</p>
          * 
          * <strong>example:</strong>
          * <p>0.1</p>
@@ -102,8 +102,7 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
         public Float coveragePercentage;
 
         /**
-         * <p>The period.</p>
-         * <p>The value is in the format of yyyyMMddHH.</p>
+         * <p>The time period. Format: yyyyMMddHH.</p>
          * 
          * <strong>example:</strong>
          * <p>2020110100</p>
@@ -136,13 +135,16 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
 
     public static class DescribeResourceCoverageTotalResponseBodyDataTotalCoverage extends TeaModel {
         /**
-         * <p>The unit that is used to measure the resources deducted from deduction plans.</p>
+         * <p>The offset unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Computing power*hours</p>
          */
         @NameInMap("CapacityUnit")
         public String capacityUnit;
 
         /**
-         * <p>The total coverage rate of deduction plans.</p>
+         * <p>The total coverage rate.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -151,7 +153,7 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
         public Float coveragePercentage;
 
         /**
-         * <p>The total amount of the resources deducted from deduction plans.</p>
+         * <p>The total offset amount.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -160,7 +162,7 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
         public Float deductQuantity;
 
         /**
-         * <p>The total amount of resources consumed.</p>
+         * <p>The total usage.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -209,13 +211,13 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
 
     public static class DescribeResourceCoverageTotalResponseBodyData extends TeaModel {
         /**
-         * <p>The information about the coverage rate of deduction plans within a period.</p>
+         * <p>The coverage rate by time period.</p>
          */
         @NameInMap("PeriodCoverage")
         public java.util.List<DescribeResourceCoverageTotalResponseBodyDataPeriodCoverage> periodCoverage;
 
         /**
-         * <p>The information about the total coverage data of deduction plans.</p>
+         * <p>The total coverage rate.</p>
          */
         @NameInMap("TotalCoverage")
         public DescribeResourceCoverageTotalResponseBodyDataTotalCoverage totalCoverage;

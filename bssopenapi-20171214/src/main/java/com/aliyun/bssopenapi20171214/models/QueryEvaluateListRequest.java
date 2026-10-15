@@ -8,16 +8,13 @@ public class QueryEvaluateListRequest extends TeaModel {
      * <p>The billing cycle.</p>
      * 
      * <strong>example:</strong>
-     * <p>202003</p>
+     * <p>202502</p>
      */
     @NameInMap("BillCycle")
     public String billCycle;
 
     /**
-     * <p>The market types in invoices.</p>
-     * <blockquote>
-     * <p> By default, this parameter is left empty. If this parameter is left empty, all market types are queried.</p>
-     * </blockquote>
+     * <p>The list of invoicing entities to which the invoiceable objects belong.</p>
      * 
      * <strong>example:</strong>
      * <p>ALIYUN</p>
@@ -26,7 +23,7 @@ public class QueryEvaluateListRequest extends TeaModel {
     public java.util.List<String> bizTypeList;
 
     /**
-     * <p>The maximum amount to be queried.</p>
+     * <p>The maximum amount for the query.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -35,10 +32,10 @@ public class QueryEvaluateListRequest extends TeaModel {
     public Long endAmount;
 
     /**
-     * <p>The latest time when an order is paid Specify the time in the yyyy-mm-dd hh:mm:ss format.</p>
+     * <p>The end of the time range to query based on the successful payment time. The format is yyyy-mm-dd hh:mm:ss.</p>
      * 
      * <strong>example:</strong>
-     * <p>2020-02-02 15:00:00</p>
+     * <p>2025-03-01 00:00:00</p>
      */
     @NameInMap("EndBizTime")
     public String endBizTime;
@@ -47,13 +44,13 @@ public class QueryEvaluateListRequest extends TeaModel {
      * <p>The end of the time range to query.</p>
      * 
      * <strong>example:</strong>
-     * <p>2020-03-02 12:00:00</p>
+     * <p>2025-03-01 00:00:00</p>
      */
     @NameInMap("EndSearchTime")
     public String endSearchTime;
 
     /**
-     * <p>The ID of the external order.</p>
+     * <p>The order ID, bill ID, or contract ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2387432832696</p>
@@ -65,7 +62,7 @@ public class QueryEvaluateListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -74,7 +71,7 @@ public class QueryEvaluateListRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page. Default value: 20. Maximum value: 300.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -83,11 +80,14 @@ public class QueryEvaluateListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The type of the sort. Valid values:</p>
+     * <p>The sorting type. Valid values:</p>
      * <ul>
-     * <li>1: Sort invoices by ID in descending order.</li>
-     * <li>2: Sort invoices by invoice type in descending order, and then sort invoices of the same type by ID in descending order.</li>
-     * <li>3: Sort invoices by invoice type in ascending order, and then sort invoices of the same type by ID in descending order.</li>
+     * <li><p>1: sorts the results by ID in descending order.</p>
+     * </li>
+     * <li><p>2: sorts the results by type in descending order, and then by ID in descending order.</p>
+     * </li>
+     * <li><p>3: sorts the results by type in ascending order, and then by ID in descending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +97,7 @@ public class QueryEvaluateListRequest extends TeaModel {
     public Integer sortType;
 
     /**
-     * <p>The minimum amount to be queried.</p>
+     * <p>The minimum amount for the query.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -106,33 +106,37 @@ public class QueryEvaluateListRequest extends TeaModel {
     public Long startAmount;
 
     /**
-     * <p>The earliest time when an order is paid. Specify the time in the yyyy-mm-dd hh:mm:ss format.</p>
+     * <p>The beginning of the time range to query based on the successful payment time. The format is yyyy-mm-dd hh:mm:ss.</p>
      * 
      * <strong>example:</strong>
-     * <p>2020-02-02 12:00:00</p>
+     * <p>2025-02-01 00:00:00</p>
      */
     @NameInMap("StartBizTime")
     public String startBizTime;
 
     /**
-     * <p>The beginning of the time range to query.</p>
+     * <p>The start of the time range to query.</p>
      * 
      * <strong>example:</strong>
-     * <p>2020-02-02 12:00:00</p>
+     * <p>2025-02-01 00:00:00</p>
      */
     @NameInMap("StartSearchTime")
     public String startSearchTime;
 
     /**
-     * <p>The type of orders to be queried. Valid values:</p>
+     * <p>The type. Valid values:</p>
      * <ul>
-     * <li>1: the orders in which the invoiceable amount is negative.</li>
-     * <li>2: the orders in which the invoiceable amount is positive.</li>
-     * <li>3: the orders in which the invoiceable amount is not 0.</li>
-     * <li>4: the orders in which the amount that has been invoiced is greater than 0.</li>
+     * <li><p>1: queries objects with a negative invoiceable amount.</p>
+     * </li>
+     * <li><p>2: queries objects with a positive invoiceable amount.</p>
+     * </li>
+     * <li><p>3: queries all objects with a non-zero invoiceable amount.</p>
+     * </li>
+     * <li><p>4: queries objects with an invoiced amount greater than 0.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> By default, this parameter is left empty. If this parameter is left empty, all orders are queried.</p>
+     * <p>If you leave this parameter empty, all objects are queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

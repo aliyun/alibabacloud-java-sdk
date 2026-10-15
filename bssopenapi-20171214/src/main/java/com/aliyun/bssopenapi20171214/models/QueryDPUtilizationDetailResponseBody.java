@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryDPUtilizationDetailResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -29,7 +29,7 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DF58589C-A06C-4224-8615-7797E6474FA3</p>
@@ -92,133 +92,45 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
     }
 
     public static class QueryDPUtilizationDetailResponseBodyDataDetailListDetailList extends TeaModel {
-        /**
-         * <p>The deduction date.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019/5/23 12:00</p>
-         */
         @NameInMap("DeductDate")
         public String deductDate;
 
-        /**
-         * <p>The total computing capacity or storage capacity of the RI or SCU during the deduction.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("DeductFactorTotal")
         public Float deductFactorTotal;
 
-        /**
-         * <p>The deduct factor. This parameter is returned only if the CommodityCode parameter is set to ecsRi.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>24</p>
-         */
         @NameInMap("DeductHours")
         public Float deductHours;
 
-        /**
-         * <p>The original measured amount.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("DeductMeasure")
         public Float deductMeasure;
 
-        /**
-         * <p>The computing capacity or storage capacity that is deducted in a pay-as-you-go instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("DeductQuantity")
         public Float deductQuantity;
 
-        /**
-         * <p>The code of the deducted service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rds</p>
-         */
         @NameInMap("DeductedCommodityCode")
         public String deductedCommodityCode;
 
-        /**
-         * <p>The ID of the deducted instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>oss-123123</p>
-         */
         @NameInMap("DeductedInstanceId")
         public String deductedInstanceId;
 
-        /**
-         * <p>The name of the deducted service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ApsaraDB RDS</p>
-         */
         @NameInMap("DeductedProductDetail")
         public String deductedProductDetail;
 
-        /**
-         * <p>The ID of the RI.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>oss-123123</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The instance type of the deducted instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rds.mysql.s3.large</p>
-         */
         @NameInMap("InstanceSpec")
         public String instanceSpec;
 
-        /**
-         * <p>The region in which the instance resides. This parameter can be left empty.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("Region")
         public String region;
 
-        /**
-         * <p>The billable item.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PutRequest</p>
-         */
         @NameInMap("ResCode")
         public String resCode;
 
-        /**
-         * <p>The UID of the deducted instance.</p>
-         * <ul>
-         * <li>If the deduction is shared, the value of this parameter indicates the UID of the deducted instance.</li>
-         * <li>If the deduction is not shared, the value of this parameter is the same as that of the uid parameter.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1111111111</p>
-         */
         @NameInMap("ShareUid")
         public Long shareUid;
 
-        /**
-         * <p>The UID of the deducted instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1111111111</p>
-         */
         @NameInMap("Uid")
         public Long uid;
 
@@ -361,14 +273,11 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
     }
 
     public static class QueryDPUtilizationDetailResponseBodyData extends TeaModel {
-        /**
-         * <p>The detailed resource plan usage.</p>
-         */
         @NameInMap("DetailList")
         public QueryDPUtilizationDetailResponseBodyDataDetailList detailList;
 
         /**
-         * <p>The token that is used to retrieve the next page of results. You can set the LastToken parameter to this value in the next request. If null is returned, all results are queried.</p>
+         * <p>The token that specifies the start position of the next query. Pass this value to the LastToken parameter in the next request. If this parameter is returned as null, the query is complete.</p>
          * 
          * <strong>example:</strong>
          * <p>CAESF***zNTAw</p>

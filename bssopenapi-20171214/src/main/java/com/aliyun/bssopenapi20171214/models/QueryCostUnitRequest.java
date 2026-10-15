@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryCostUnitRequest extends TeaModel {
     /**
-     * <p>The user ID of the cost center owner.</p>
+     * <p>The owner of the financial unit.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class QueryCostUnitRequest extends TeaModel {
     public Long ownerUid;
 
     /**
-     * <p>The page number of the page to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,7 +24,7 @@ public class QueryCostUnitRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries per page. A maximum of 300 entries can be returned per page.</p>
+     * <p>The number of entries per page. Maximum value: 300.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -33,7 +33,7 @@ public class QueryCostUnitRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the parent cost center. A value of -1 indicates the root cost center.</p>
+     * <p>The ID of the parent financial unit. A value of -1 indicates the root of the financial unit tree.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SetResellerUserAlarmThresholdResponseBody extends TeaModel {
     /**
+     * <p>The error code returned when the call fails. For more information, see Error codes.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class SetResellerUserAlarmThresholdResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class SetResellerUserAlarmThresholdResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The additional information about the call result.</p>
+     * 
      * <strong>example:</strong>
      * <p>Successful!</p>
      */
@@ -26,6 +32,8 @@ public class SetResellerUserAlarmThresholdResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
      */
@@ -33,6 +41,8 @@ public class SetResellerUserAlarmThresholdResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. A value of true indicates that the call was completed. A value of false indicates that an error occurred.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

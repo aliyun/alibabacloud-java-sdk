@@ -20,7 +20,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
     public DescribeResourceCoverageDetailResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful!</p>
@@ -29,7 +29,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
@@ -38,7 +38,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,13 +93,16 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
 
     public static class DescribeResourceCoverageDetailResponseBodyDataItems extends TeaModel {
         /**
-         * <p>The unit that is used to measure the resources deducted from deduction plans.</p>
+         * <p>The deduction unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Compute power × hour</p>
          */
         @NameInMap("CapacityUnit")
         public String capacityUnit;
 
         /**
-         * <p>The code of the service.</p>
+         * <p>The code of the product detail.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>
@@ -108,13 +111,16 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         public String commodityCode;
 
         /**
-         * <p>The name and billing method of the service.</p>
+         * <p>The product detail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS - Pay-as-you-go</p>
          */
         @NameInMap("CommodityName")
         public String commodityName;
 
         /**
-         * <p>The coverage rate of a deduction plan.</p>
+         * <p>The coverage percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -123,7 +129,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         public Float coveragePercentage;
 
         /**
-         * <p>The currency in which deduction plans were priced.</p>
+         * <p>The currency.</p>
          * 
          * <strong>example:</strong>
          * <p>CNY</p>
@@ -132,7 +138,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>The amount of the resources deducted from a deduction plan.</p>
+         * <p>The deducted quantity.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,7 +147,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         public Float deductQuantity;
 
         /**
-         * <p>The end of the time range in which the coverage details were queried.</p>
+         * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-04-01 01:00:00</p>
@@ -150,7 +156,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The ID of a pay-as-you-go instance.</p>
+         * <p>The pay-as-you-go instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp1d9x623987rlj0dx4xx</p>
@@ -159,7 +165,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The specifications of a deduction plan.</p>
+         * <p>The instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.t5-lc2m1.nano</p>
@@ -168,7 +174,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         public String instanceSpec;
 
         /**
-         * <p>The amount of the bill.</p>
+         * <p>The bill amount.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -177,7 +183,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         public Float paymentAmount;
 
         /**
-         * <p>The code of the service.</p>
+         * <p>The product code.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>
@@ -186,19 +192,25 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         public String productCode;
 
         /**
-         * <p>The name of the service.</p>
+         * <p>The product name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         @NameInMap("ProductName")
         public String productName;
 
         /**
          * <p>The region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China (Hangzhou)</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
-         * <p>The code of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-dg-a01</p>
@@ -207,7 +219,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         public String regionNo;
 
         /**
-         * <p>The beginning of the time range in which the coverage details were queried.</p>
+         * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-04-01 00:00:00</p>
@@ -216,7 +228,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The total amount of resources consumed.</p>
+         * <p>The total usage.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -225,7 +237,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         public Float totalQuantity;
 
         /**
-         * <p>The ID of the account.</p>
+         * <p>The account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123745698925000</p>
@@ -234,7 +246,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The username of the account.</p>
+         * <p>The account name.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:test13@test.aliyun.com">test13@test.aliyun.com</a></p>
@@ -243,7 +255,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         public String userName;
 
         /**
-         * <p>The code of the zone.</p>
+         * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>
@@ -253,6 +265,9 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
 
         /**
          * <p>The zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou Zone I</p>
          */
         @NameInMap("ZoneName")
         public String zoneName;
@@ -426,7 +441,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
 
     public static class DescribeResourceCoverageDetailResponseBodyData extends TeaModel {
         /**
-         * <p>The data entries.</p>
+         * <p>The data items.</p>
          */
         @NameInMap("Items")
         public java.util.List<DescribeResourceCoverageDetailResponseBodyDataItems> items;
@@ -441,7 +456,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The token of the next page.</p>
+         * <p>The token for the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJwYWdlTnVtIjoyLCJwYWdlU2l6ZSI6MTB9</p>
@@ -450,7 +465,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

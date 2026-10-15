@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RenewChangeInstanceRequest extends TeaModel {
     /**
+     * <p>Ensures the idempotence of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>JASIOFKVNVIXXXXXX</p>
      */
@@ -12,6 +14,7 @@ public class RenewChangeInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,10 +26,14 @@ public class RenewChangeInstanceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>Module list</p>
+     */
     @NameInMap("Parameter")
     public java.util.List<RenewChangeInstanceRequestParameter> parameter;
 
     /**
+     * <p>The product code. To obtain it, call <strong>QueryProductList</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,6 +43,8 @@ public class RenewChangeInstanceRequest extends TeaModel {
     public String productCode;
 
     /**
+     * <p>Product type</p>
+     * 
      * <strong>example:</strong>
      * <p>rds</p>
      */
@@ -43,6 +52,17 @@ public class RenewChangeInstanceRequest extends TeaModel {
     public String productType;
 
     /**
+     * <p>The subscription renewal duration, in months. Valid values:</p>
+     * <ul>
+     * <li><p>1-9</p>
+     * </li>
+     * <li><p>12</p>
+     * </li>
+     * <li><p>24</p>
+     * </li>
+     * <li><p>36</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -114,6 +134,7 @@ public class RenewChangeInstanceRequest extends TeaModel {
 
     public static class RenewChangeInstanceRequestParameter extends TeaModel {
         /**
+         * <p>The code configuration for the Nth module property. The value of N can be an integer from 1 to 100. If you have multiple module properties, create a separate parameter for each by setting n to 1, 2, 3, and so on.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,6 +144,7 @@ public class RenewChangeInstanceRequest extends TeaModel {
         public String code;
 
         /**
+         * <p>The value configuration for the nth module property. The value of n ranges from 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

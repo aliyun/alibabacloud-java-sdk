@@ -14,13 +14,13 @@ public class CreateCostUnitResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public CreateCostUnitResponseBodyData data;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful！</p>
@@ -29,7 +29,7 @@ public class CreateCostUnitResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F5B803CF-94D8-43AF-ADB3-D819AAD30E27</p>
@@ -38,7 +38,7 @@ public class CreateCostUnitResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class CreateCostUnitResponseBody extends TeaModel {
 
     public static class CreateCostUnitResponseBodyDataCostUnitDtoList extends TeaModel {
         /**
-         * <p>The user ID of the owner of the cost center.</p>
+         * <p>The ID of the owner of the new financial unit.</p>
          * 
          * <strong>example:</strong>
          * <p>26387563</p>
@@ -102,7 +102,7 @@ public class CreateCostUnitResponseBody extends TeaModel {
         public Long ownerUid;
 
         /**
-         * <p>The ID of the parent cost center. A value of -1 indicates the root cost center.</p>
+         * <p>The ID of the parent financial unit. A value of -1 indicates the root financial unit.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -111,7 +111,7 @@ public class CreateCostUnitResponseBody extends TeaModel {
         public Long parentUnitId;
 
         /**
-         * <p>The ID of the cost center.</p>
+         * <p>The ID of the financial unit.</p>
          * 
          * <strong>example:</strong>
          * <p>84327659328</p>
@@ -120,7 +120,7 @@ public class CreateCostUnitResponseBody extends TeaModel {
         public Long unitId;
 
         /**
-         * <p>The name of the cost center.</p>
+         * <p>The name of the financial unit.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -169,7 +169,7 @@ public class CreateCostUnitResponseBody extends TeaModel {
 
     public static class CreateCostUnitResponseBodyData extends TeaModel {
         /**
-         * <p>The list of cost center entities.</p>
+         * <p>The list of financial unit entities.</p>
          */
         @NameInMap("CostUnitDtoList")
         public java.util.List<CreateCostUnitResponseBodyDataCostUnitDtoList> costUnitDtoList;

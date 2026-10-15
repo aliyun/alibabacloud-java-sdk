@@ -4,41 +4,21 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class CreateResourcePackageResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>Success</p>
-     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public CreateResourcePackageResponseBodyData data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>Successful!</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <strong>example:</strong>
-     * <p>202407022550621</p>
-     */
     @NameInMap("OrderId")
     public Long orderId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -96,17 +76,9 @@ public class CreateResourcePackageResponseBody extends TeaModel {
     }
 
     public static class CreateResourcePackageResponseBodyData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>OSSBAG-cn-****s</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>202407022550621</p>
-         */
         @NameInMap("OrderId")
         public Long orderId;
 

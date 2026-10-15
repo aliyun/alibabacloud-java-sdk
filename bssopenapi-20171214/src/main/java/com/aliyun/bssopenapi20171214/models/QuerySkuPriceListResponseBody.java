@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuerySkuPriceListResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,13 +14,13 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data that is returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public QuerySkuPriceListResponseBodyData data;
 
     /**
-     * <p>The message that is returned.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful!</p>
@@ -29,7 +29,7 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>F5B803CF-94D8-43AF-ADB3-D819AAD30E27</p>
@@ -38,7 +38,7 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
 
     public static class QuerySkuPriceListResponseBodyDataSkuPricePageSkuPriceListCskuPriceListRangeList extends TeaModel {
         /**
-         * <p>The code of the pricing factor.</p>
+         * <p>The factor code.</p>
          * 
          * <strong>example:</strong>
          * <p>212fbd27866307fc79ecf06934a88b2c</p>
@@ -120,7 +120,7 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
         public String min;
 
         /**
-         * <p>The closure type of the interval.</p>
+         * <p>The interval closure type.</p>
          * 
          * <strong>example:</strong>
          * <p>LORC</p>
@@ -169,7 +169,7 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
 
     public static class QuerySkuPriceListResponseBodyDataSkuPricePageSkuPriceListCskuPriceList extends TeaModel {
         /**
-         * <p>The unique code of the SKU price.</p>
+         * <p>The CSKU code, which is the unique price identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>ac74dd7b52ae6389ddef099283fb8275</p>
@@ -205,7 +205,7 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
         public String priceMode;
 
         /**
-         * <p>The pricing type.</p>
+         * <p>The price type.</p>
          * 
          * <strong>example:</strong>
          * <p>hourPrice</p>
@@ -214,16 +214,16 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
         public String priceType;
 
         /**
-         * <p>The unit of the price.</p>
+         * <p>The price unit.</p>
          * 
          * <strong>example:</strong>
-         * <p>USD (per unit)</p>
+         * <p>USD/unit</p>
          */
         @NameInMap("PriceUnit")
         public String priceUnit;
 
         /**
-         * <p>If the PriceMode parameter is set to STEP_ACCUMULATION or STEP_ARRIVE, the value of this field exists and specifies the range. If the PriceMode parameter is set to NORMAL_PRICE, the value of this field is null.</p>
+         * <p>This field has a value when PriceMode is STEP_ACCUMULATION or STEP_ARRIVE, specifying the range. When PriceMode is NORMAL_PRICE, this field is NULL.</p>
          */
         @NameInMap("RangeList")
         public java.util.List<QuerySkuPriceListResponseBodyDataSkuPricePageSkuPriceListCskuPriceListRangeList> rangeList;
@@ -232,7 +232,7 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
          * <p>The usage unit.</p>
          * 
          * <strong>example:</strong>
-         * <p>Count</p>
+         * <p>unit</p>
          */
         @NameInMap("UsageUnit")
         public String usageUnit;
@@ -310,13 +310,13 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
 
     public static class QuerySkuPriceListResponseBodyDataSkuPricePageSkuPriceList extends TeaModel {
         /**
-         * <p>The prices of the SKUs.</p>
+         * <p>The SKU price list.</p>
          */
         @NameInMap("CskuPriceList")
         public java.util.List<QuerySkuPriceListResponseBodyDataSkuPricePageSkuPriceListCskuPriceList> cskuPriceList;
 
         /**
-         * <p>The code of the SKU.</p>
+         * <p>sku code</p>
          * 
          * <strong>example:</strong>
          * <p>017c15a31507bc6de22aa93777461adc</p>
@@ -325,7 +325,7 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
         public String skuCode;
 
         /**
-         * <p>The values of the pricing factors.</p>
+         * <p>The collection of factor values. Different commodities have their own factors under pricing entities. For example, the instance_type pricing entity of the ECS commodity has factors such as <code>vm_region_no, iooptimized, vm_os_kind, instance_type</code>.</p>
          */
         @NameInMap("SkuFactorMap")
         public java.util.Map<String, String> skuFactorMap;
@@ -363,7 +363,7 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
 
     public static class QuerySkuPriceListResponseBodyDataSkuPricePage extends TeaModel {
         /**
-         * <p>The token that is used to query the next page.</p>
+         * <p>The token for the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>080112060a0422020800180022490a470342000000315333303332363436363336333433393636333136333338333733373333333133373336363336323634363336363337333836333636333636313336363433363332</p>
@@ -372,7 +372,7 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
         public String nextPageToken;
 
         /**
-         * <p>The SKUs.</p>
+         * <p>The SKU list.</p>
          */
         @NameInMap("SkuPriceList")
         public java.util.List<QuerySkuPriceListResponseBodyDataSkuPricePageSkuPriceList> skuPriceList;
@@ -419,7 +419,7 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
 
     public static class QuerySkuPriceListResponseBodyData extends TeaModel {
         /**
-         * <p>The SKUs of the pricing object.</p>
+         * <p>The pricing entity SKU information.</p>
          */
         @NameInMap("SkuPricePage")
         public QuerySkuPriceListResponseBodyDataSkuPricePage skuPricePage;

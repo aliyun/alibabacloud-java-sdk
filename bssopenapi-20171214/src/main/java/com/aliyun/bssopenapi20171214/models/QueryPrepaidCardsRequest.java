@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class QueryPrepaidCardsRequest extends TeaModel {
     /**
-     * <p>Specifies whether the prepaid card takes effect. Valid values:</p>
+     * <p>Specifies whether the card package is effective. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>true: Effective.</li>
+     * <li>false: Ineffective.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,19 +18,19 @@ public class QueryPrepaidCardsRequest extends TeaModel {
     public Boolean effectiveOrNot;
 
     /**
-     * <p>The end of the expiration time of prepaid cards to query. The value must be in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+     * <p>The end time of card package expiration. Format: yyyy-MM-dd HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
-     * <p>2018-08-01T00:00:00Z</p>
+     * <p>2018-08-01 00:00:00</p>
      */
     @NameInMap("ExpiryTimeEnd")
     public String expiryTimeEnd;
 
     /**
-     * <p>The start of the expiration time of prepaid cards to query. The value must be in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+     * <p>The start time of card package expiration. Format: yyyy-MM-dd.</p>
      * 
      * <strong>example:</strong>
-     * <p>2018-08-01T00:00:00Z</p>
+     * <p>2018-08-01 00:00:00</p>
      */
     @NameInMap("ExpiryTimeStart")
     public String expiryTimeStart;

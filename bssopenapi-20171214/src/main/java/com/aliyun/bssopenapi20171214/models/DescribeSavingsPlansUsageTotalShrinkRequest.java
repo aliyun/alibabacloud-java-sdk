@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSavingsPlansUsageTotalShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the account for which you want to query usage summary. If you do not set this parameter, the data of the current Alibaba Cloud account and its RAM users is queried. To query the data of a RAM user, specify the ID of the RAM user.</p>
+     * <p>The ID of the resource ownership account. The resource ownership account is the account that actually uses the resources.</p>
      * 
      * <strong>example:</strong>
      * <p>123745698925000</p>
@@ -14,7 +14,7 @@ public class DescribeSavingsPlansUsageTotalShrinkRequest extends TeaModel {
     public Long billOwnerId;
 
     /**
-     * <p>The end of the time range to query. The end is excluded from the time range. If you do not set this parameter, the end time is the current time. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The end of the time range to query. The end time is excluded from the time range. If you do not set this parameter, the end time is the current time. Format: yyyy-MM-dd HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-02 00:00:00</p>
@@ -26,7 +26,7 @@ public class DescribeSavingsPlansUsageTotalShrinkRequest extends TeaModel {
     public String filterParamShrink;
 
     /**
-     * <p>The time granularity at which usage summary are queried. Valid values: MONTH, DAY, and HOUR.</p>
+     * <p>The time granularity of the usage summary. Valid values: MONTH, DAY, HOUR.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class DescribeSavingsPlansUsageTotalShrinkRequest extends TeaModel {
     public String periodType;
 
     /**
-     * <p>The beginning of the time range to query. The beginning is included in the time range. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The start of the time range to query. The start time is included in the time range. Format: yyyy-MM-dd HH:mm:ss.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

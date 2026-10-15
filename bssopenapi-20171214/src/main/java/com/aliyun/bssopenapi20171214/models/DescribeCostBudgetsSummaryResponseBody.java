@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -38,7 +38,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,15 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
 
     public static class DescribeCostBudgetsSummaryResponseBodyDataItems extends TeaModel {
         /**
-         * <p>The information about the budget. The BudgetCycleType parameter indicates the cycle of the budget. Valid values: daily, monthly, quarterly, and yearly. The TotalBudgetAmount parameter indicates the total budget. The BudgetMemo parameter indicates the remarks of the budget.</p>
+         * <p>Information about the budget.</p>
+         * <ul>
+         * <li><p>BudgetCycleType: The budget period. Valid values: daily, monthly, quarterly, and yearly.</p>
+         * </li>
+         * <li><p>TotalBudgetAmount: The total budget amount.</p>
+         * </li>
+         * <li><p>BudgetMemo: The notes for the budget.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>{           &quot;budgetCycleType&quot;: &quot;monthly&quot;,           &quot;budgetMemo&quot;: &quot;&quot;,           &quot;totalBudgetAmount&quot;: 220         }</p>
@@ -105,7 +113,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
          * <p>The name of the budget.</p>
          * 
          * <strong>example:</strong>
-         * <p>Annual budget</p>
+         * <p>全年预算</p>
          */
         @NameInMap("BudgetName")
         public String budgetName;
@@ -129,7 +137,15 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
         public String budgetType;
 
         /**
-         * <p>The information about the estimate-to-actual analysis. The ActualConsumeSum parameter indicates the accumulated actual value. The ActualAddForecastedAmount parameter indicates the sum of accumulated actual value and predicted value. If the BudgetType parameter is set to cost, the sum of actual value and predicted value includes the actual cost incurred from the budget start date to the current date and the predicted cost from the current date to the budget end date. If the BudgetType parameter is set to asset, the sum of actual value and predicted value includes the actual usage or coverage from the budget start date to the budget end date. If the budget end date minus the current date is more than one year, the part that exceeds one year is not included. The ActualAndBudgetComparison parameter indicates the comparison between the actual value and the predicted value. The value of the ActualAndBudgetComparison parameter is calculated based on the following formula: Accumulated actual value/Total budget × 100%.</p>
+         * <p>Information about the estimate-to-actual comparison.</p>
+         * <ul>
+         * <li><p>ActualConsumeSum: The accumulated actual consumption.</p>
+         * </li>
+         * <li><p>ActualAddForecastedAmount: The sum of the accumulated actual value and the predicted value. For a cost budget, this value represents the actual spending to date plus the forecasted spending until the budget period ends.</p>
+         * </li>
+         * <li><p>ActualAndBudgetComparison: The comparison of the actual consumption to the budget. This value is calculated using the following formula: (Accumulated actual value / Total budget amount) × 100%.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>{           &quot;actualConsumeSum&quot;: 88.6,           &quot;actualAddForecastedAmount&quot;: 89.6,           &quot;actualAndBudgetComparison&quot;: &quot;20.73%&quot;         }</p>
@@ -138,7 +154,13 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
         public java.util.Map<String, ?> calculatedValues;
 
         /**
-         * <p>The information about the billing cycle. The ConsumePeriodBegin parameter indicates the start date of the budget. The ConsumePeriodEnd parameter indicates the end date of the budget.</p>
+         * <p>Information about the billing cycle.</p>
+         * <ul>
+         * <li><p>ConsumePeriodBegin: The start date of the budget.</p>
+         * </li>
+         * <li><p>ConsumePeriodEnd: The end date of the budget.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>{           &quot;consumePeriodBegin&quot;: &quot;2022-10&quot;,           &quot;consumePeriodEnd&quot;: &quot;2022-11&quot;         }</p>
@@ -203,7 +225,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
 
     public static class DescribeCostBudgetsSummaryResponseBodyData extends TeaModel {
         /**
-         * <p>The site of the host.</p>
+         * <p>The website.</p>
          * 
          * <strong>example:</strong>
          * <p>cn</p>
@@ -212,13 +234,13 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
         public String hostId;
 
         /**
-         * <p>The data that is returned.</p>
+         * <p>The list of items.</p>
          */
         @NameInMap("Items")
         public java.util.List<DescribeCostBudgetsSummaryResponseBodyDataItems> items;
 
         /**
-         * <p>The maximum number of entries that are returned.</p>
+         * <p>The maximum number of entries returned on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -227,7 +249,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The token that is used to retrieve the next page</p>
+         * <p>The token for the next page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJwYWdlTnVtIjoyLCJwYWdlU2l6ZSI6NH0=</p>
@@ -236,7 +258,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>The total number of entries that are returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

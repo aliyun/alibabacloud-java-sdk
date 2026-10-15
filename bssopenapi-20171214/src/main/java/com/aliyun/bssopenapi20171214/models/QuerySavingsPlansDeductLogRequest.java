@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuerySavingsPlansDeductLogRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The end of the time range to query.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-01-05 00:00:00</p>
@@ -14,7 +14,7 @@ public class QuerySavingsPlansDeductLogRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>spn-XXXXXXX</p>
@@ -23,10 +23,12 @@ public class QuerySavingsPlansDeductLogRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The type of the instance ID based on which the data is queried. Valid values:</p>
+     * <p>The query type. Valid values:</p>
      * <ul>
-     * <li>spn: queries data based on the ID of the savings plan instance.</li>
-     * <li>product: queries data based on the ID of the cloud service instance.</li>
+     * <li><p>spn: savings plan instance</p>
+     * </li>
+     * <li><p>product: deducted cloud service instance</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,11 +38,7 @@ public class QuerySavingsPlansDeductLogRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The language of the return data. Valid values:</p>
-     * <ul>
-     * <li>ZH: Chinese</li>
-     * <li>EN: English</li>
-     * </ul>
+     * <p>The language of the response. Default value: ZH. Valid values: \<code>ZH\\</code>: Chinese. \<code>EN\\</code>: English.</p>
      * 
      * <strong>example:</strong>
      * <p>ZH</p>
@@ -49,7 +47,7 @@ public class QuerySavingsPlansDeductLogRequest extends TeaModel {
     public String locale;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -58,7 +56,7 @@ public class QuerySavingsPlansDeductLogRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -67,7 +65,7 @@ public class QuerySavingsPlansDeductLogRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The beginning of the time range to query.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-01-01 00:00:00</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCostUnitRequest extends TeaModel {
     /**
-     * <p>The cost centers to be modified.</p>
+     * <p>The list of financial units.</p>
      */
     @NameInMap("UnitEntityList")
     public java.util.List<ModifyCostUnitRequestUnitEntityList> unitEntityList;
@@ -25,7 +25,7 @@ public class ModifyCostUnitRequest extends TeaModel {
 
     public static class ModifyCostUnitRequestUnitEntityList extends TeaModel {
         /**
-         * <p>The new name of the cost center.</p>
+         * <p>The new name of the financial unit.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class ModifyCostUnitRequest extends TeaModel {
         public String newUnitName;
 
         /**
-         * <p>The user ID of the cost center owner.</p>
+         * <p>The user ID of the financial unit owner.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class ModifyCostUnitRequest extends TeaModel {
         public Long ownerUid;
 
         /**
-         * <p>The ID of the cost center.</p>
+         * <p>The ID of the financial unit.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

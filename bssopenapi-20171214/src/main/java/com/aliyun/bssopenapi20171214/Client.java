@@ -164,7 +164,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Transfers resource instances from the source cost center to the destination cost center.</p>
+     * <p>Allocates resource instances (instance-based and attached-resource-based) from a source financial unit to a destination financial unit.</p>
      * 
      * @param request AllocateCostUnitResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -212,7 +212,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Transfers resource instances from the source cost center to the destination cost center.</p>
+     * <p>Allocates resource instances (instance-based and attached-resource-based) from a source financial unit to a destination financial unit.</p>
      * 
      * @param request AllocateCostUnitResourceRequest
      * @return AllocateCostUnitResourceResponse
@@ -224,7 +224,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits an application for an invoice.</p>
+     * <p>Submits an invoice application.</p>
      * 
      * @param request ApplyInvoiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -296,7 +296,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits an application for an invoice.</p>
+     * <p>Submits an invoice application.</p>
      * 
      * @param request ApplyInvoiceRequest
      * @return ApplyInvoiceResponse
@@ -355,6 +355,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deducts user quota consumption.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deducts user quota consumption.</p>
+     * 
      * @param request ChangeResellerConsumeAmountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ChangeResellerConsumeAmountResponse
@@ -412,6 +418,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deducts user quota consumption.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deducts user quota consumption.</p>
+     * 
      * @param request ChangeResellerConsumeAmountRequest
      * @return ChangeResellerConsumeAmountResponse
      */
@@ -422,10 +434,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>1\. A member needs to confirm an invitation only if a financial management relationship is established between the management account and the member and enterprise names used by the management account and the member for real-name verification are different. 2. The permissions to be confirmed must be the same as those granted to the member when the management account initiates the invitation.</p>
+     * <ol>
+     * <li>Currently, only financial management linking is supported. The linked account needs to confirm the invitation only when the real-name verification information of the main account and the linked account is inconsistent.</li>
+     * <li>The permissions to be confirmed must be exactly the same as the permissions specified in the invitation initiated by the main account for the confirmation to succeed.</li>
+     * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Confirms the invitation initiated by the master account.</p>
+     * <p>Confirms an invitation initiated by the main account for a linked account.</p>
      * 
      * @param request ConfirmRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -481,10 +496,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>1\. A member needs to confirm an invitation only if a financial management relationship is established between the management account and the member and enterprise names used by the management account and the member for real-name verification are different. 2. The permissions to be confirmed must be the same as those granted to the member when the management account initiates the invitation.</p>
+     * <ol>
+     * <li>Currently, only financial management linking is supported. The linked account needs to confirm the invitation only when the real-name verification information of the main account and the linked account is inconsistent.</li>
+     * <li>The permissions to be confirmed must be exactly the same as the permissions specified in the invitation initiated by the main account for the confirmation to succeed.</li>
+     * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Confirms the invitation initiated by the master account.</p>
+     * <p>Confirms an invitation initiated by the main account for a linked account.</p>
      * 
      * @param request ConfirmRelationRequest
      * @return ConfirmRelationResponse
@@ -496,7 +514,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the billing method of an instance. You can call this operation to switch the billing method from pay-as-you-go to subscription for Server Load Balancer (SLB) instances, elastic IP addresses (EIPs), and NAT gateways, and switch the billing method from subscription to pay-as-you-go for SLB instances and EIPs.</p>
+     * <p>Changes the subscription type for an instance. Currently, this operation supports converting pay-as-you-go instances of SLB, EIP, and NAT Gateway to subscription instances, and converting subscription instances of SLB and EIP to pay-as-you-go instances.</p>
      * 
      * @param request ConvertChargeTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -548,7 +566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the billing method of an instance. You can call this operation to switch the billing method from pay-as-you-go to subscription for Server Load Balancer (SLB) instances, elastic IP addresses (EIPs), and NAT gateways, and switch the billing method from subscription to pay-as-you-go for SLB instances and EIPs.</p>
+     * <p>Changes the subscription type for an instance. Currently, this operation supports converting pay-as-you-go instances of SLB, EIP, and NAT Gateway to subscription instances, and converting subscription instances of SLB and EIP to pay-as-you-go instances.</p>
      * 
      * @param request ConvertChargeTypeRequest
      * @return ConvertChargeTypeResponse
@@ -560,10 +578,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to create an account so as to establish a master-member financial relationship.</p>
+     * <p>Creates a master-member relationship for financial management.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an account to establish a financial relationship.</p>
+     * <p>Creates an account linking relationship.</p>
      * 
      * @param request CreateAgAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -627,10 +645,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to create an account so as to establish a master-member financial relationship.</p>
+     * <p>Creates a master-member relationship for financial management.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an account to establish a financial relationship.</p>
+     * <p>Creates an account linking relationship.</p>
      * 
      * @param request CreateAgAccountRequest
      * @return CreateAgAccountResponse
@@ -642,7 +660,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a cost center. You can create multiple cost centers at a time.</p>
+     * <p>Creates financial units. Batch creation is supported.</p>
      * 
      * @param request CreateCostUnitRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -674,7 +692,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a cost center. You can create multiple cost centers at a time.</p>
+     * <p>Creates financial units. Batch creation is supported.</p>
      * 
      * @param request CreateCostUnitRequest
      * @return CreateCostUnitResponse
@@ -686,7 +704,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an instance. If you call this operation, an order for a new instance is created and the order is automatically paid for. You cannot create Elastic Compute Service (ECS) instances or ApsaraDB RDS instances by calling the operation.</p>
+     * <p>Creates an instance resource. This operation creates an order for a new instance resource and completes automatic payment. ECS and RDS product series are not supported.</p>
      * 
      * @param request CreateInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -758,7 +776,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an instance. If you call this operation, an order for a new instance is created and the order is automatically paid for. You cannot create Elastic Compute Service (ECS) instances or ApsaraDB RDS instances by calling the operation.</p>
+     * <p>Creates an instance resource. This operation creates an order for a new instance resource and completes automatic payment. ECS and RDS product series are not supported.</p>
      * 
      * @param request CreateInstanceRequest
      * @return CreateInstanceResponse
@@ -770,7 +788,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Indicates whether the call is successful. A value of true indicates that the call is successful. A value of false indicates that the call failed.</p>
+     * <p>Creates a user quota ledger and a quota consumption ledger.</p>
      * 
      * @param request CreateResellerUserQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -814,7 +832,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Indicates whether the call is successful. A value of true indicates that the call is successful. A value of false indicates that the call failed.</p>
+     * <p>Creates a user quota ledger and a quota consumption ledger.</p>
      * 
      * @param request CreateResellerUserQuotaRequest
      * @return CreateResellerUserQuotaResponse
@@ -826,7 +844,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a resource plan.</p>
+     * <p>创建资源包</p>
      * 
      * @param request CreateResourcePackageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -882,7 +900,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a resource plan.</p>
+     * <p>创建资源包</p>
      * 
      * @param request CreateResourcePackageRequest
      * @return CreateResourcePackageResponse
@@ -894,7 +912,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a savings plan. After you call this operation, a savings plan is purchased and paid for.</p>
+     * <p>创建节省计划实例</p>
      * 
      * @param tmpReq CreateSavingsPlansInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -976,7 +994,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a savings plan. After you call this operation, a savings plan is purchased and paid for.</p>
+     * <p>创建节省计划实例</p>
      * 
      * @param request CreateSavingsPlansInstanceRequest
      * @return CreateSavingsPlansInstanceResponse
@@ -988,7 +1006,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a cost center.</p>
+     * <p>Deletes a financial unit.</p>
      * 
      * @param request DeleteCostUnitRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1024,7 +1042,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a cost center.</p>
+     * <p>Deletes a financial unit.</p>
      * 
      * @param request DeleteCostUnitRequest
      * @return DeleteCostUnitResponse
@@ -1036,10 +1054,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is in beta testing and is only available for specific users in the whitelist. Excessive calls may result in performance issues. For example, the response times out.</p>
+     * <p>This OpenAPI is in beta and available only to whitelisted users. Excessive calls may cause performance issues, such as response timeouts.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query the summary information of the user &quot;Cost Management-Budget&quot;.</p>
+     * <p>Queries a summary of cost budgets.</p>
      * 
      * @param request DescribeCostBudgetsSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1087,10 +1105,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is in beta testing and is only available for specific users in the whitelist. Excessive calls may result in performance issues. For example, the response times out.</p>
+     * <p>This OpenAPI is in beta and available only to whitelisted users. Excessive calls may cause performance issues, such as response timeouts.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query the summary information of the user &quot;Cost Management-Budget&quot;.</p>
+     * <p>Queries a summary of cost budgets.</p>
      * 
      * @param request DescribeCostBudgetsSummaryRequest
      * @return DescribeCostBudgetsSummaryResponse
@@ -1102,10 +1120,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can view and export the allocated costs of the current month after 10:00 on the fourth day of the next month. The allocated costs of a single allocation month may involve orders or bills in different billing cycles. If a historical allocated amount is incorrect, the historical allocated costs need to be adjusted. As a result, the allocated costs displayed for a single allocation month may be different at different time points.</p>
+     * <ul>
+     * <li>Amortized costs cannot be used for settlement or reconciliation. They are used to allocate your subscription and pay-as-you-go fees based on specified allocation rules.</li>
+     * <li>The final data for a month is available after 12:00 on the sixth day of the following month. The reason for this delay is that scenarios such as delayed billing, refunds, bill adjustments, and overdue payment write-offs can occur during the month. The data for the current month does not include unsettled pay-as-you-go fees for which bills have not yet been generated.</li>
+     * <li>Amortized cost data from the last 12 months is available.</li>
+     * <li>Data for attached resources is reflected in the amortized costs 48 hours after the split bill is generated. To use this feature, you must first enable <a href="https://usercenter2.aliyun.com/finance/split-bill">split bills</a>. Data for items that are not attached resources is updated 48 hours after the detailed bill is generated.</li>
+     * <li>For months before August 2021, amortized costs are not updated intra-month. They are updated only after 12:00 on the sixth day of the following month. Consequently, specific costs for attached resources, such as domain names, buckets, and EIPs, for products such as CDN, OSS, and Internet Shared Bandwidth are not available for these months.</li>
+     * <li>Amortized cost data is available for querying 48 hours after you enable the <a href="https://usercenter2.aliyun.com/finance/amortized-costs">Amortized Cost</a> feature.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the monthly allocated costs of instances by allocation month.</p>
+     * <p>Queries the monthly amortized costs of instances for a specified amortization month.</p>
      * 
      * @param request DescribeInstanceAmortizedCostByAmortizationPeriodRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1177,10 +1202,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can view and export the allocated costs of the current month after 10:00 on the fourth day of the next month. The allocated costs of a single allocation month may involve orders or bills in different billing cycles. If a historical allocated amount is incorrect, the historical allocated costs need to be adjusted. As a result, the allocated costs displayed for a single allocation month may be different at different time points.</p>
+     * <ul>
+     * <li>Amortized costs cannot be used for settlement or reconciliation. They are used to allocate your subscription and pay-as-you-go fees based on specified allocation rules.</li>
+     * <li>The final data for a month is available after 12:00 on the sixth day of the following month. The reason for this delay is that scenarios such as delayed billing, refunds, bill adjustments, and overdue payment write-offs can occur during the month. The data for the current month does not include unsettled pay-as-you-go fees for which bills have not yet been generated.</li>
+     * <li>Amortized cost data from the last 12 months is available.</li>
+     * <li>Data for attached resources is reflected in the amortized costs 48 hours after the split bill is generated. To use this feature, you must first enable <a href="https://usercenter2.aliyun.com/finance/split-bill">split bills</a>. Data for items that are not attached resources is updated 48 hours after the detailed bill is generated.</li>
+     * <li>For months before August 2021, amortized costs are not updated intra-month. They are updated only after 12:00 on the sixth day of the following month. Consequently, specific costs for attached resources, such as domain names, buckets, and EIPs, for products such as CDN, OSS, and Internet Shared Bandwidth are not available for these months.</li>
+     * <li>Amortized cost data is available for querying 48 hours after you enable the <a href="https://usercenter2.aliyun.com/finance/amortized-costs">Amortized Cost</a> feature.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the monthly allocated costs of instances by allocation month.</p>
+     * <p>Queries the monthly amortized costs of instances for a specified amortization month.</p>
      * 
      * @param request DescribeInstanceAmortizedCostByAmortizationPeriodRequest
      * @return DescribeInstanceAmortizedCostByAmortizationPeriodResponse
@@ -1279,8 +1311,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Amortized costs are not used for settlement or reconciliation. They are used to allocate your cloud expenses, including both subscription and pay-as-you-go fees, based on specified allocation rules.</li>
+     * <li>The final data for a month is available after 12:00 on the sixth day of the following month. This delay accounts for events such as delayed billing, refunds, bill adjustments, and overdue payment write-offs. Data for the current month does not include unsettled pay-as-you-go fees.</li>
+     * <li>Amortized cost data is available for the past 12 months.</li>
+     * <li>Data for attached resources in the amortized costs is updated 48 hours after the split bill is generated. To view the costs of attached resources, you must first enable <a href="https://usercenter2.aliyun.com/finance/split-bill">split bills</a>. Data for other resources is updated 48 hours after the detailed bill is generated.</li>
+     * <li>For months before August 2021, amortized costs are not updated mid-month. They are updated only after 12:00 on the sixth day of the following month. In addition, specific costs for attached resources, such as domain names, buckets, and EIPs, of products such as CDN, OSS, and Internet Shared Bandwidth, are not provided for this period.</li>
+     * <li>Amortized cost data is available only after you enable the <a href="https://usercenter2.aliyun.com/finance/amortized-costs">Amortized Costs</a> feature. The data becomes available 48 hours after enablement.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>实例账期月摊销成本</p>
+     * <p>Queries the monthly amortized cost of an instance by billing cycle.</p>
      * 
      * @param request DescribeInstanceAmortizedCostByConsumePeriodRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1351,8 +1393,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Amortized costs are not used for settlement or reconciliation. They are used to allocate your cloud expenses, including both subscription and pay-as-you-go fees, based on specified allocation rules.</li>
+     * <li>The final data for a month is available after 12:00 on the sixth day of the following month. This delay accounts for events such as delayed billing, refunds, bill adjustments, and overdue payment write-offs. Data for the current month does not include unsettled pay-as-you-go fees.</li>
+     * <li>Amortized cost data is available for the past 12 months.</li>
+     * <li>Data for attached resources in the amortized costs is updated 48 hours after the split bill is generated. To view the costs of attached resources, you must first enable <a href="https://usercenter2.aliyun.com/finance/split-bill">split bills</a>. Data for other resources is updated 48 hours after the detailed bill is generated.</li>
+     * <li>For months before August 2021, amortized costs are not updated mid-month. They are updated only after 12:00 on the sixth day of the following month. In addition, specific costs for attached resources, such as domain names, buckets, and EIPs, of products such as CDN, OSS, and Internet Shared Bandwidth, are not provided for this period.</li>
+     * <li>Amortized cost data is available only after you enable the <a href="https://usercenter2.aliyun.com/finance/amortized-costs">Amortized Costs</a> feature. The data becomes available 48 hours after enablement.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>实例账期月摊销成本</p>
+     * <p>Queries the monthly amortized cost of an instance by billing cycle.</p>
      * 
      * @param request DescribeInstanceAmortizedCostByConsumePeriodRequest
      * @return DescribeInstanceAmortizedCostByConsumePeriodResponse
@@ -1364,14 +1416,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Instance bills are generated after the total bill is split. In most cases, the instance bills do not include data generated on the last day of the specified billing cycle.</p>
      * <ul>
-     * <li>The instance information may change during the billing cycle. The instance configurations and types in monthly bills are subject to the point in time when you query bills. For more information, see the corresponding bill details.</li>
-     * <li>You can query data generated after June 2020 for Cloud Communications services. You can query data generated after November 2020 for Alibaba Cloud Domains.</li>
+     * <li>The query results for the current month are for reference only and cannot be used as the basis for reconciliation. The final bill for the current month can be viewed or exported after 12:00 on the 3rd day of the next month. During the month, a few scenarios may occur, including but not limited to delayed billing, refunds, bill adjustments, and overdue payment write-offs.</li>
+     * <li>The bill data for the current month does not include unsettled pay-as-you-go data that is unbilled or accumulating.</li>
+     * <li>Data for the last 18 months is supported. </li>
+     * <li>Bill data is updated with a 24-hour delay compared to actual consumption. Information related to the instance ID, such as instance configuration, instance type, instance alias, resource group, public IP address, private IP address, and zone, is updated with a 48-hour delay.  </li>
+     * <li>Bill data does not provide the specific costs of individual split items, such as domain names, buckets, and EIPs, for split-type cloud services, such as CDN, OSS, and Internet Shared Bandwidth. To view data that includes split items, go to the split bill page.</li>
+     * <li>For cloud communication products, only detail data from June 2020 onwards is supported. For HiChina products, including domain names and trademarks, only detail data from November 2020 onwards is supported.</li>
+     * <li>The rate limit is 10 requests per second per user. If a timeout occurs, retry the request.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the billing information about instances or billable items in a billing cycle.</p>
+     * <p>Queries the consumption summary of all product instances or billable items for a user within a specific billing cycle.</p>
      * 
      * @param request DescribeInstanceBillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1455,14 +1511,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Instance bills are generated after the total bill is split. In most cases, the instance bills do not include data generated on the last day of the specified billing cycle.</p>
      * <ul>
-     * <li>The instance information may change during the billing cycle. The instance configurations and types in monthly bills are subject to the point in time when you query bills. For more information, see the corresponding bill details.</li>
-     * <li>You can query data generated after June 2020 for Cloud Communications services. You can query data generated after November 2020 for Alibaba Cloud Domains.</li>
+     * <li>The query results for the current month are for reference only and cannot be used as the basis for reconciliation. The final bill for the current month can be viewed or exported after 12:00 on the 3rd day of the next month. During the month, a few scenarios may occur, including but not limited to delayed billing, refunds, bill adjustments, and overdue payment write-offs.</li>
+     * <li>The bill data for the current month does not include unsettled pay-as-you-go data that is unbilled or accumulating.</li>
+     * <li>Data for the last 18 months is supported. </li>
+     * <li>Bill data is updated with a 24-hour delay compared to actual consumption. Information related to the instance ID, such as instance configuration, instance type, instance alias, resource group, public IP address, private IP address, and zone, is updated with a 48-hour delay.  </li>
+     * <li>Bill data does not provide the specific costs of individual split items, such as domain names, buckets, and EIPs, for split-type cloud services, such as CDN, OSS, and Internet Shared Bandwidth. To view data that includes split items, go to the split bill page.</li>
+     * <li>For cloud communication products, only detail data from June 2020 onwards is supported. For HiChina products, including domain names and trademarks, only detail data from November 2020 onwards is supported.</li>
+     * <li>The rate limit is 10 requests per second per user. If a timeout occurs, retry the request.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the billing information about instances or billable items in a billing cycle.</p>
+     * <p>Queries the consumption summary of all product instances or billable items for a user within a specific billing cycle.</p>
      * 
      * @param request DescribeInstanceBillRequest
      * @return DescribeInstanceBillResponse
@@ -1554,7 +1614,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the pricing information about an Alibaba Cloud service.</p>
+     * <p>Queries the module information of a specific Alibaba Cloud product.</p>
      * 
      * @param request DescribePricingModuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1598,7 +1658,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the pricing information about an Alibaba Cloud service.</p>
+     * <p>Queries the module information of a specific Alibaba Cloud product.</p>
      * 
      * @param request DescribePricingModuleRequest
      * @return DescribePricingModuleResponse
@@ -1610,10 +1670,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can view and export the allocated costs of the current month after 10:00 on the fourth day of the next month. The allocated costs of a single allocation month may involve orders or bills in different billing cycles. If a historical allocated amount is incorrect, the historical allocated costs need to be adjusted. As a result, the allocated costs displayed for a single allocation month may be different at different time points.</p>
+     * <ul>
+     * <li>Amortized costs are for cost allocation purposes only and cannot be used for settlement or reconciliation. This feature allocates your cloud expenses, including both subscription and pay-as-you-go fees, based on specified allocation rules.</li>
+     * <li>The final data for a month is available after 12:00 on the sixth day of the following month. Data for the current month is not final. This is because it does not include unsettled pay-as-you-go fees and may change due to events such as delayed billing, refunds, bill adjustments, and overdue payment write-offs.</li>
+     * <li>Amortized cost data for the past 12 months is available.</li>
+     * <li>Data for attached resources, which requires you to enable <a href="https://usercenter2.aliyun.com/finance/split-bill">split bills</a>, is updated 48 hours after the split bill is generated. Data for other resources is updated 48 hours after the detailed bill is generated.</li>
+     * <li>For months before August 2021, amortized costs were not updated during the month. They were updated only after 12:00 on the sixth day of the following month. In addition, cost details for attached resources, such as domain names, buckets, and EIPs, for products such as CDN, OSS, and Internet Shared Bandwidth are not available for this period.</li>
+     * <li>Amortized cost data becomes available 48 hours after you enable the <a href="https://usercenter2.aliyun.com/finance/amortized-costs">Amortized Cost</a> feature.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the allocated costs of services by allocation month.</p>
+     * <p>Queries the monthly amortized cost of products for a specified month.</p>
      * 
      * @param request DescribeProductAmortizedCostByAmortizationPeriodRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1681,10 +1748,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can view and export the allocated costs of the current month after 10:00 on the fourth day of the next month. The allocated costs of a single allocation month may involve orders or bills in different billing cycles. If a historical allocated amount is incorrect, the historical allocated costs need to be adjusted. As a result, the allocated costs displayed for a single allocation month may be different at different time points.</p>
+     * <ul>
+     * <li>Amortized costs are for cost allocation purposes only and cannot be used for settlement or reconciliation. This feature allocates your cloud expenses, including both subscription and pay-as-you-go fees, based on specified allocation rules.</li>
+     * <li>The final data for a month is available after 12:00 on the sixth day of the following month. Data for the current month is not final. This is because it does not include unsettled pay-as-you-go fees and may change due to events such as delayed billing, refunds, bill adjustments, and overdue payment write-offs.</li>
+     * <li>Amortized cost data for the past 12 months is available.</li>
+     * <li>Data for attached resources, which requires you to enable <a href="https://usercenter2.aliyun.com/finance/split-bill">split bills</a>, is updated 48 hours after the split bill is generated. Data for other resources is updated 48 hours after the detailed bill is generated.</li>
+     * <li>For months before August 2021, amortized costs were not updated during the month. They were updated only after 12:00 on the sixth day of the following month. In addition, cost details for attached resources, such as domain names, buckets, and EIPs, for products such as CDN, OSS, and Internet Shared Bandwidth are not available for this period.</li>
+     * <li>Amortized cost data becomes available 48 hours after you enable the <a href="https://usercenter2.aliyun.com/finance/amortized-costs">Amortized Cost</a> feature.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the allocated costs of services by allocation month.</p>
+     * <p>Queries the monthly amortized cost of products for a specified month.</p>
      * 
      * @param request DescribeProductAmortizedCostByAmortizationPeriodRequest
      * @return DescribeProductAmortizedCostByAmortizationPeriodResponse
@@ -1695,8 +1769,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Amortized costs are used for cost allocation and cannot be used for settlement or reconciliation. This feature allocates your cloud expenses, including both subscription and pay-as-you-go fees, based on specified rules.</li>
+     * <li>The final data for a given month is available after 12:00 on the sixth day of the following month. This delay ensures that potential mid-month events, such as delayed billing, refunds, bill adjustments, and overdue payment write-offs, are included. Data for the current month does not include unsettled pay-as-you-go fees that have not yet been billed or are still accumulating.</li>
+     * <li>Amortized cost data for the past 12 months is available.</li>
+     * <li>Data related to attached resources is updated in the amortized costs 48 hours after the corresponding split bill is generated. To view the costs of attached resources, you must first enable <a href="https://usercenter2.aliyun.com/finance/split-bill">split bills</a>. Data that is not related to attached resources is updated 48 hours after the detailed bill is generated.</li>
+     * <li>For months before August 2021, amortized costs were not updated mid-month and were only updated after 12:00 on the sixth day of the following month. Additionally, for this period, specific costs for attached resources, such as domain names, buckets, and EIPs, for products such as CDN, OSS, and Internet Shared Bandwidth are not available.</li>
+     * <li>Amortized cost data is provided only after you enable the <a href="https://usercenter2.aliyun.com/finance/amortized-costs">Amortized Cost</a> feature. The data is available 48 hours after you enable it.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>产品账期月摊销成本</p>
+     * <p>Queries the monthly amortized cost of a product for a specific billing cycle.</p>
      * 
      * @param request DescribeProductAmortizedCostByConsumePeriodRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1763,8 +1847,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Amortized costs are used for cost allocation and cannot be used for settlement or reconciliation. This feature allocates your cloud expenses, including both subscription and pay-as-you-go fees, based on specified rules.</li>
+     * <li>The final data for a given month is available after 12:00 on the sixth day of the following month. This delay ensures that potential mid-month events, such as delayed billing, refunds, bill adjustments, and overdue payment write-offs, are included. Data for the current month does not include unsettled pay-as-you-go fees that have not yet been billed or are still accumulating.</li>
+     * <li>Amortized cost data for the past 12 months is available.</li>
+     * <li>Data related to attached resources is updated in the amortized costs 48 hours after the corresponding split bill is generated. To view the costs of attached resources, you must first enable <a href="https://usercenter2.aliyun.com/finance/split-bill">split bills</a>. Data that is not related to attached resources is updated 48 hours after the detailed bill is generated.</li>
+     * <li>For months before August 2021, amortized costs were not updated mid-month and were only updated after 12:00 on the sixth day of the following month. Additionally, for this period, specific costs for attached resources, such as domain names, buckets, and EIPs, for products such as CDN, OSS, and Internet Shared Bandwidth are not available.</li>
+     * <li>Amortized cost data is provided only after you enable the <a href="https://usercenter2.aliyun.com/finance/amortized-costs">Amortized Cost</a> feature. The data is available 48 hours after you enable it.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>产品账期月摊销成本</p>
+     * <p>Queries the monthly amortized cost of a product for a specific billing cycle.</p>
      * 
      * @param request DescribeProductAmortizedCostByConsumePeriodRequest
      * @return DescribeProductAmortizedCostByConsumePeriodResponse
@@ -1776,12 +1870,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>1\. The queried coverage details are the same as those displayed in the table on the Coverage tab of the Manage Reserved Instances page in the Billing Management console.
-     * 2\. You can call this operation to query the coverage details of RIs or SCUs.
-     * 3\. You can call this operation to query coverage details at an hourly, daily, or monthly granularity.</p>
+     * <ol>
+     * <li>The data is consistent with the list data in the Coverage Overview section of the Resource Instance Management menu in the User Center.</li>
+     * <li>Currently, coverage queries are supported for reserved instances (RIs) and storage capacity units (SCUs).</li>
+     * <li>Coverage queries are provided in three dimensions: hour, day, and month.</li>
+     * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the coverage details of reserved instances (RIs) or storage capacity units (SCUs).</p>
+     * <p>Queries the coverage details of reserved instances and storage capacity units (SCUs).</p>
      * 
      * @param request DescribeResourceCoverageDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1837,12 +1933,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>1\. The queried coverage details are the same as those displayed in the table on the Coverage tab of the Manage Reserved Instances page in the Billing Management console.
-     * 2\. You can call this operation to query the coverage details of RIs or SCUs.
-     * 3\. You can call this operation to query coverage details at an hourly, daily, or monthly granularity.</p>
+     * <ol>
+     * <li>The data is consistent with the list data in the Coverage Overview section of the Resource Instance Management menu in the User Center.</li>
+     * <li>Currently, coverage queries are supported for reserved instances (RIs) and storage capacity units (SCUs).</li>
+     * <li>Coverage queries are provided in three dimensions: hour, day, and month.</li>
+     * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the coverage details of reserved instances (RIs) or storage capacity units (SCUs).</p>
+     * <p>Queries the coverage details of reserved instances and storage capacity units (SCUs).</p>
      * 
      * @param request DescribeResourceCoverageDetailRequest
      * @return DescribeResourceCoverageDetailResponse
@@ -1854,11 +1952,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The queried total coverage data is the same as the aggregated data displayed on the Coverage tab of the Manage Reserved Instances page in the Billing Management console.
-     * You can call this operation to query the total coverage data of RIs or SCUs.</p>
+     * <p>Returns the same summary data as the Coverage Overview in the Resource Instance Management menu of the User Center.
+     * Currently, coverage queries are supported for two resource types: reserved instances (RIs) and storage capacity units (SCUs).</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the total coverage data of reserved instances (RIs) or storage capacity units (SCUs).</p>
+     * <p>Queries the coverage summary of reserved instances and storage capacity units (SCUs).</p>
      * 
      * @param request DescribeResourceCoverageTotalRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1906,11 +2004,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The queried total coverage data is the same as the aggregated data displayed on the Coverage tab of the Manage Reserved Instances page in the Billing Management console.
-     * You can call this operation to query the total coverage data of RIs or SCUs.</p>
+     * <p>Returns the same summary data as the Coverage Overview in the Resource Instance Management menu of the User Center.
+     * Currently, coverage queries are supported for two resource types: reserved instances (RIs) and storage capacity units (SCUs).</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the total coverage data of reserved instances (RIs) or storage capacity units (SCUs).</p>
+     * <p>Queries the coverage summary of reserved instances and storage capacity units (SCUs).</p>
      * 
      * @param request DescribeResourceCoverageTotalRequest
      * @return DescribeResourceCoverageTotalResponse
@@ -1966,7 +2064,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the usage details of reserved instances (RIs) or storage capacity units (SCUs).</p>
+     * <p>Queries the usage details of reserved instances and storage capacity units (SCUs).</p>
      * 
      * @param request DescribeResourceUsageDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2022,7 +2120,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the usage details of reserved instances (RIs) or storage capacity units (SCUs).</p>
+     * <p>Queries the usage details of reserved instances and storage capacity units (SCUs).</p>
      * 
      * @param request DescribeResourceUsageDetailRequest
      * @return DescribeResourceUsageDetailResponse
@@ -2034,7 +2132,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the total usage data of reserved instances or storage capacity units (SCUs).</p>
+     * <p>Queries the usage summary of reserved instances and storage capacity units (SCUs).</p>
      * 
      * @param request DescribeResourceUsageTotalRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2082,7 +2180,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the total usage data of reserved instances or storage capacity units (SCUs).</p>
+     * <p>Queries the usage summary of reserved instances and storage capacity units (SCUs).</p>
      * 
      * @param request DescribeResourceUsageTotalRequest
      * @return DescribeResourceUsageTotalResponse
@@ -2168,7 +2266,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the coverage summary of savings plans.</p>
+     * <p>Queries the summary of savings plan coverage.</p>
      * 
      * @param tmpReq DescribeSavingsPlansCoverageTotalRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2222,7 +2320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the coverage summary of savings plans.</p>
+     * <p>Queries the summary of savings plan coverage.</p>
      * 
      * @param request DescribeSavingsPlansCoverageTotalRequest
      * @return DescribeSavingsPlansCoverageTotalResponse
@@ -2374,10 +2472,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The data that you query by calling this operation is the same as the data that is queried by billing cycles in the Split Bill module of Cost Allocation.</p>
      * <ul>
-     * <li>You can query split bills that were generated within the last 12 months by calling this operation.</li>
-     * <li>You can query split bills only after you enable the <a href="https://usercenter2-intl.aliyun.com/finance/split-bill">Split Bill</a> service in the User Center console.</li>
+     * <li>The query results for the current month\&quot;s split bills are for reference only and cannot be used as the basis for reconciliation. The final bill for the current month can be queried after 12:00 on the 4th day of the next month. The split bill data for the current month does not include unsettled pay-as-you-go data (unbilled or being accumulated).</li>
+     * <li>Split bill data is available for the last 12 months.</li>
+     * <li>Split bill data is updated with a 48-hour delay compared to actual expenses. For split cloud services (such as CDN, OSS, and Internet Shared Bandwidth), the specific expenses for each attached resource (such as domain names, buckets, and EIPs) are updated with a 72-hour delay.</li>
+     * <li>Split bill data is available only after you enable the feature on the &lt;props=&quot;china&quot;&gt;<a href="https://usercenter2.aliyun.com/finance/split-bill">Split Bill</a>&lt;props=&quot;intl&quot;&gt;<a href="https://usercenter2-intl.aliyun.com/finance/split-bill">Split Bill</a> page in the console. The data becomes available 24 hours after you enable the feature.</li>
+     * <li>The rate limit is 10 requests per second per user. If a timeout occurs, retry the request.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2469,10 +2569,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The data that you query by calling this operation is the same as the data that is queried by billing cycles in the Split Bill module of Cost Allocation.</p>
      * <ul>
-     * <li>You can query split bills that were generated within the last 12 months by calling this operation.</li>
-     * <li>You can query split bills only after you enable the <a href="https://usercenter2-intl.aliyun.com/finance/split-bill">Split Bill</a> service in the User Center console.</li>
+     * <li>The query results for the current month\&quot;s split bills are for reference only and cannot be used as the basis for reconciliation. The final bill for the current month can be queried after 12:00 on the 4th day of the next month. The split bill data for the current month does not include unsettled pay-as-you-go data (unbilled or being accumulated).</li>
+     * <li>Split bill data is available for the last 12 months.</li>
+     * <li>Split bill data is updated with a 48-hour delay compared to actual expenses. For split cloud services (such as CDN, OSS, and Internet Shared Bandwidth), the specific expenses for each attached resource (such as domain names, buckets, and EIPs) are updated with a 72-hour delay.</li>
+     * <li>Split bill data is available only after you enable the feature on the &lt;props=&quot;china&quot;&gt;<a href="https://usercenter2.aliyun.com/finance/split-bill">Split Bill</a>&lt;props=&quot;intl&quot;&gt;<a href="https://usercenter2-intl.aliyun.com/finance/split-bill">Split Bill</a> page in the console. The data becomes available 24 hours after you enable the feature.</li>
+     * <li>The rate limit is 10 requests per second per user. If a timeout occurs, retry the request.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2488,7 +2590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a financial relationship.</p>
+     * <p>Queries the details of an account linking.</p>
      * 
      * @param request GetAccountRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2516,7 +2618,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a financial relationship.</p>
+     * <p>Queries the details of an account linking.</p>
      * 
      * @param request GetAccountRelationRequest
      * @return GetAccountRelationResponse
@@ -2528,7 +2630,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the account information about a customer of a virtual network operator (VNO).</p>
+     * <p>Queries the account information of an end customer under a partner.</p>
      * 
      * @param request GetCustomerAccountInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2560,7 +2662,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the account information about a customer of a virtual network operator (VNO).</p>
+     * <p>Queries the account information of an end customer under a partner.</p>
      * 
      * @param request GetCustomerAccountInfoRequest
      * @return GetCustomerAccountInfoResponse
@@ -2572,12 +2674,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The system queries the IDs of customers of a VNO based on the AccessKey pair used in the request.</p>
+     * <p>The system queries the list of associated end customer UIDs based on the AccessKey pair in the request.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the IDs of customers of a virtual network operator (VNO).</p>
+     * <p>Queries the list of end customer UIDs under a partner.</p>
      * 
-     * @param request GetCustomerListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetCustomerListResponse
      */
@@ -2599,10 +2700,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The system queries the IDs of customers of a VNO based on the AccessKey pair used in the request.</p>
+     * <p>The system queries the list of associated end customer UIDs based on the AccessKey pair in the request.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the IDs of customers of a virtual network operator (VNO).</p>
+     * <p>Queries the list of end customer UIDs under a partner.</p>
      * @return GetCustomerListResponse
      */
     public GetCustomerListResponse getCustomerList() throws Exception {
@@ -2612,7 +2713,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an order that belongs to your Alibaba Cloud account or distributors.</p>
+     * <p>Queries the details of a specific order for a user or a distribution customer.</p>
      * 
      * @param request GetOrderDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2648,7 +2749,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an order that belongs to your Alibaba Cloud account or distributors.</p>
+     * <p>Queries the details of a specific order for a user or a distribution customer.</p>
      * 
      * @param request GetOrderDetailRequest
      * @return GetOrderDetailResponse
@@ -2660,15 +2761,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Usage notes</h3>
+     * <h3>Operation description</h3>
      * <ol>
-     * <li>Call the QueryProductList operation to obtain the code of the service. For more information, see <a href="https://help.aliyun.com/document_detail/95984.html">QueryProductList</a>.</li>
-     * <li>Call the DescribePricingModule operation to obtain the configuration parameters of the service. For more information, see <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a>.</li>
-     * <li>Call the GetPayAsYouGoPrice operation to obtain the pay-as-you-go price of the service based on the returned configuration parameters.</li>
+     * <li>Call QueryProductList to obtain the product code. For more information, see <a href="https://help.aliyun.com/document_detail/95984.html">Query product information</a>.</li>
+     * <li>Call the DescribePricingModule operation to obtain the configuration parameters of a product. For more information, see <a href="https://help.aliyun.com/document_detail/96469.html">Query pricing module information</a>.</li>
+     * <li>Call this operation with the obtained product configuration parameters to query the price of a pay-as-you-go product.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the pay-as-you-go price of an Alibaba Cloud service.</p>
+     * <p>Queries the price of a pay-as-you-go product.</p>
      * 
      * @param request GetPayAsYouGoPriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2720,15 +2821,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Usage notes</h3>
+     * <h3>Operation description</h3>
      * <ol>
-     * <li>Call the QueryProductList operation to obtain the code of the service. For more information, see <a href="https://help.aliyun.com/document_detail/95984.html">QueryProductList</a>.</li>
-     * <li>Call the DescribePricingModule operation to obtain the configuration parameters of the service. For more information, see <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a>.</li>
-     * <li>Call the GetPayAsYouGoPrice operation to obtain the pay-as-you-go price of the service based on the returned configuration parameters.</li>
+     * <li>Call QueryProductList to obtain the product code. For more information, see <a href="https://help.aliyun.com/document_detail/95984.html">Query product information</a>.</li>
+     * <li>Call the DescribePricingModule operation to obtain the configuration parameters of a product. For more information, see <a href="https://help.aliyun.com/document_detail/96469.html">Query pricing module information</a>.</li>
+     * <li>Call this operation with the obtained product configuration parameters to query the price of a pay-as-you-go product.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the pay-as-you-go price of an Alibaba Cloud service.</p>
+     * <p>Queries the price of a pay-as-you-go product.</p>
      * 
      * @param request GetPayAsYouGoPriceRequest
      * @return GetPayAsYouGoPriceResponse
@@ -2817,13 +2918,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>Call the QueryProductList operation to obtain the code of the service. For more information, see <a href="https://help.aliyun.com/document_detail/95984.html">QueryProductList</a>.</li>
-     * <li>Call the DescribePricingModule operation to obtain the configuration parameters of the service. For more information, see <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a>.</li>
-     * <li>Call the GetSubscriptionPrice operation to obtain the pricing of the service based on the returned configuration parameters.</li>
+     * <li>Call QueryProductList to obtain the product code. For more information, see <a href="https://help.aliyun.com/document_detail/95984.html">Query product information</a>.</li>
+     * <li>Call the DescribePricingModule operation to obtain the configuration parameters of the product. For more information, see <a href="https://help.aliyun.com/document_detail/96469.html">Query product module information</a>.</li>
+     * <li>Call this operation to query the prices of subscription products based on the obtained product configuration parameters.</li>
+     * <li>Concatenate the Config parameter under ModuleList based on the config parameter returned by the DescribePricingModule operation. Do not omit any parameters. Otherwise, an error occurs during the price inquiry.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the subscription price of an Alibaba Cloud service.</p>
+     * <p>Queries the prices of subscription products.</p>
      * 
      * @param request GetSubscriptionPriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2896,13 +2998,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>Call the QueryProductList operation to obtain the code of the service. For more information, see <a href="https://help.aliyun.com/document_detail/95984.html">QueryProductList</a>.</li>
-     * <li>Call the DescribePricingModule operation to obtain the configuration parameters of the service. For more information, see <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a>.</li>
-     * <li>Call the GetSubscriptionPrice operation to obtain the pricing of the service based on the returned configuration parameters.</li>
+     * <li>Call QueryProductList to obtain the product code. For more information, see <a href="https://help.aliyun.com/document_detail/95984.html">Query product information</a>.</li>
+     * <li>Call the DescribePricingModule operation to obtain the configuration parameters of the product. For more information, see <a href="https://help.aliyun.com/document_detail/96469.html">Query product module information</a>.</li>
+     * <li>Call this operation to query the prices of subscription products based on the obtained product configuration parameters.</li>
+     * <li>Concatenate the Config parameter under ModuleList based on the config parameter returned by the DescribePricingModule operation. Do not omit any parameters. Otherwise, an error occurs during the price inquiry.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the subscription price of an Alibaba Cloud service.</p>
+     * <p>Queries the prices of subscription products.</p>
      * 
      * @param request GetSubscriptionPriceRequest
      * @return GetSubscriptionPriceResponse
@@ -2915,13 +3018,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li><strong>Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.</strong></li>
-     * <li>Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.</li>
-     * <li>For more information, see <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/refund-rules">Rules for unsubscribing from resources</a>.</li>
+     * <li><strong>Carefully verify the information about the resource to be unsubscribed, and confirm the unsubscription terms and refund amount. Resources cannot be recovered after unsubscription.</strong></li>
+     * <li>Only the actual paid amount is refunded. Used vouchers are not refunded.</li>
+     * <li>For other questions, refer to: &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM">Refund rules</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules">Refund rules for Alibaba Cloud International Website</a></li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the refundable amount for an instance from which you want to unsubscribe.</p>
+     * <p>Queries the refund amount for an instance that you want to unsubscribe from.</p>
      * 
      * @param request InquiryPriceRefundInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2966,13 +3069,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li><strong>Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.</strong></li>
-     * <li>Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.</li>
-     * <li>For more information, see <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/refund-rules">Rules for unsubscribing from resources</a>.</li>
+     * <li><strong>Carefully verify the information about the resource to be unsubscribed, and confirm the unsubscription terms and refund amount. Resources cannot be recovered after unsubscription.</strong></li>
+     * <li>Only the actual paid amount is refunded. Used vouchers are not refunded.</li>
+     * <li>For other questions, refer to: &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM">Refund rules</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules">Refund rules for Alibaba Cloud International Website</a></li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the refundable amount for an instance from which you want to unsubscribe.</p>
+     * <p>Queries the refund amount for an instance that you want to unsubscribe from.</p>
      * 
      * @param request InquiryPriceRefundInstanceRequest
      * @return InquiryPriceRefundInstanceResponse
@@ -2984,7 +3087,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds or removes permissions granted to a member in a financial relationship.</p>
+     * <p>Adds or deletes permissions for an account linking relationship.</p>
      * 
      * @param request ModifyAccountRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3048,7 +3151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds or removes permissions granted to a member in a financial relationship.</p>
+     * <p>Adds or deletes permissions for an account linking relationship.</p>
      * 
      * @param request ModifyAccountRelationRequest
      * @return ModifyAccountRelationResponse
@@ -3060,7 +3163,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies one or more cost centers.</p>
+     * <p>Modifies financial units. Batch modification is supported.</p>
      * 
      * @param request ModifyCostUnitRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3092,7 +3195,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies one or more cost centers.</p>
+     * <p>Modifies financial units. Batch modification is supported.</p>
      * 
      * @param request ModifyCostUnitRequest
      * @return ModifyCostUnitResponse
@@ -3104,7 +3207,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configurations of an instance. When you call this operation, the system generates a modification order and automatically completes the payment. You cannot call this operation to modify the configurations of an Elastic Compute Service (ECS) instance or ApsaraDB RDS instance. To modify the configurations of an ECS or ApsaraDB RDS instance, call the dedicated operation of the corresponding service.</p>
+     * <p>Modifies the resource configuration of an instance. Invoking this operation creates an order for the Upgrade/Downgrade of instance resources and processes automatic payment. This operation does not support configuration changes for ECS or RDS products. Use the dedicated API of the corresponding product to execute the Upgrade/Downgrade.</p>
      * 
      * @param request ModifyInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3164,7 +3267,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configurations of an instance. When you call this operation, the system generates a modification order and automatically completes the payment. You cannot call this operation to modify the configurations of an Elastic Compute Service (ECS) instance or ApsaraDB RDS instance. To modify the configurations of an ECS or ApsaraDB RDS instance, call the dedicated operation of the corresponding service.</p>
+     * <p>Modifies the resource configuration of an instance. Invoking this operation creates an order for the Upgrade/Downgrade of instance resources and processes automatic payment. This operation does not support configuration changes for ECS or RDS products. Use the dedicated API of the corresponding product to execute the Upgrade/Downgrade.</p>
      * 
      * @param request ModifyInstanceRequest
      * @return ModifyInstanceResponse
@@ -3244,9 +3347,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the balance of your account.</p>
+     * <p>Queries the user\&quot;s account balance.</p>
      * 
-     * @param request QueryAccountBalanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryAccountBalanceResponse
      */
@@ -3268,7 +3370,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the balance of your account.</p>
+     * <p>Queries the user\&quot;s account balance.</p>
      * @return QueryAccountBalanceResponse
      */
     public QueryAccountBalanceResponse queryAccountBalance() throws Exception {
@@ -3278,14 +3380,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, take note of the following items:</p>
      * <ul>
-     * <li>Account bills are summarized based on instance bills. In most cases, the account bills do not include the data generated on the last day of the specified period.</li>
-     * <li>You can query the data generated in June 2020 or later for Cloud Communications services. However, the query results do not include the data of Alibaba Cloud Domains.</li>
+     * <li>Data for the current month is for reference only. Do not use it for reconciliation. The final bill for the current month is available to view or export after 12:00 on the third day of the next month. This delay accounts for mid-month events such as delayed billing, refunds, bill adjustments, and overdue payment write-offs.</li>
+     * <li>Data from the last 18 months is available.</li>
+     * <li>Billing data is updated 24 hours after actual resource consumption. Information related to instance IDs, such as instance configurations, instance types, instance nicknames, resource groups, public IP addresses, private IP addresses, and zones, is updated with a 48-hour delay.</li>
+     * <li>Billing data does not include the costs of attached resources, such as domain names, buckets, and elastic IP addresses (EIPs), for products such as CDN, OSS, and Internet Shared Bandwidth. To view statistics that include data for attached resources, go to Split Bill.</li>
+     * <li>For Alibaba Cloud Communications products, detailed data is available only from June 2020 onwards. For HiChina products, such as Domain Names and trademarks, detailed data is available only from November 2020 onwards.</li>
+     * <li>Each account is limited to 10 queries per second. If a timeout occurs, retry the request.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the bills of your Alibaba Cloud account within a billing cycle. You can summarize the bills by resource owner.</p>
+     * <p>Queries account spending within a billing cycle and aggregates the data by resource owner.</p>
      * 
      * @param request QueryAccountBillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3349,14 +3454,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, take note of the following items:</p>
      * <ul>
-     * <li>Account bills are summarized based on instance bills. In most cases, the account bills do not include the data generated on the last day of the specified period.</li>
-     * <li>You can query the data generated in June 2020 or later for Cloud Communications services. However, the query results do not include the data of Alibaba Cloud Domains.</li>
+     * <li>Data for the current month is for reference only. Do not use it for reconciliation. The final bill for the current month is available to view or export after 12:00 on the third day of the next month. This delay accounts for mid-month events such as delayed billing, refunds, bill adjustments, and overdue payment write-offs.</li>
+     * <li>Data from the last 18 months is available.</li>
+     * <li>Billing data is updated 24 hours after actual resource consumption. Information related to instance IDs, such as instance configurations, instance types, instance nicknames, resource groups, public IP addresses, private IP addresses, and zones, is updated with a 48-hour delay.</li>
+     * <li>Billing data does not include the costs of attached resources, such as domain names, buckets, and elastic IP addresses (EIPs), for products such as CDN, OSS, and Internet Shared Bandwidth. To view statistics that include data for attached resources, go to Split Bill.</li>
+     * <li>For Alibaba Cloud Communications products, detailed data is available only from June 2020 onwards. For HiChina products, such as Domain Names and trademarks, detailed data is available only from November 2020 onwards.</li>
+     * <li>Each account is limited to 10 queries per second. If a timeout occurs, retry the request.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the bills of your Alibaba Cloud account within a billing cycle. You can summarize the bills by resource owner.</p>
+     * <p>Queries account spending within a billing cycle and aggregates the data by resource owner.</p>
      * 
      * @param request QueryAccountBillRequest
      * @return QueryAccountBillResponse
@@ -3368,7 +3476,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of transactions within your account.</p>
+     * <p>Queries the income and expenditure details of account transactions.</p>
      * 
      * @param request QueryAccountTransactionDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3432,7 +3540,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of transactions within your account.</p>
+     * <p>Queries the income and expenditure details of account transactions.</p>
      * 
      * @param request QueryAccountTransactionDetailsRequest
      * @return QueryAccountTransactionDetailsResponse
@@ -3444,7 +3552,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries transactions within your Alibaba Cloud account.</p>
+     * <p>Queries the transaction records of a user account.</p>
      * 
      * @param request QueryAccountTransactionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3512,7 +3620,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries transactions within your Alibaba Cloud account.</p>
+     * <p>Queries the transaction records of a user account.</p>
      * 
      * @param request QueryAccountTransactionsRequest
      * @return QueryAccountTransactionsResponse
@@ -3524,7 +3632,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries available instances.</p>
+     * <p>Queries the list of available instances for the user.</p>
      * 
      * @param request QueryAvailableInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3604,7 +3712,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries available instances.</p>
+     * <p>Queries the list of available instances for the user.</p>
      * 
      * @param request QueryAvailableInstancesRequest
      * @return QueryAvailableInstancesResponse
@@ -3616,7 +3724,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the bills in a billing cycle.</p>
+     * <p>Queries the settlement bills of a user within a specific billing cycle.</p>
      * 
      * @param request QueryBillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3688,7 +3796,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the bills in a billing cycle.</p>
+     * <p>Queries the settlement bills of a user within a specific billing cycle.</p>
      * 
      * @param request QueryBillRequest
      * @return QueryBillResponse
@@ -3700,7 +3808,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the bill overview information in a billing cycle.</p>
+     * <p>Queries the bill overview of a user for a specific billing cycle.</p>
      * 
      * @param request QueryBillOverviewRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3748,7 +3856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the bill overview information in a billing cycle.</p>
+     * <p>Queries the bill overview of a user for a specific billing cycle.</p>
      * 
      * @param request QueryBillOverviewRequest
      * @return QueryBillOverviewResponse
@@ -3760,9 +3868,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the subscribed bills that are stored in Object Storage Service (OSS) bucket.</p>
+     * <p>Queries the records of bill subscriptions to OSS buckets.</p>
      * 
-     * @param request QueryBillToOSSSubscriptionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryBillToOSSSubscriptionResponse
      */
@@ -3784,7 +3891,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the subscribed bills that are stored in Object Storage Service (OSS) bucket.</p>
+     * <p>Queries the records of bill subscriptions to OSS buckets.</p>
      * @return QueryBillToOSSSubscriptionResponse
      */
     public QueryBillToOSSSubscriptionResponse queryBillToOSSSubscription() throws Exception {
@@ -3794,7 +3901,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about vouchers.</p>
+     * <p>Queries user voucher information.</p>
      * 
      * @param request QueryCashCouponsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3834,7 +3941,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about vouchers.</p>
+     * <p>Queries user voucher information.</p>
      * 
      * @param request QueryCashCouponsRequest
      * @return QueryCashCouponsResponse
@@ -3846,10 +3953,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the information about a service based on the service code.</p>
+     * <p>Retrieves a list of commodity information based on a product code.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a service based on the service code.</p>
+     * <p>Retrieves a list of commodity information based on a product code.</p>
      * 
      * @param request QueryCommodityListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3877,10 +3984,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the information about a service based on the service code.</p>
+     * <p>Retrieves a list of commodity information based on a product code.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a service based on the service code.</p>
+     * <p>Retrieves a list of commodity information based on a product code.</p>
      * 
      * @param request QueryCommodityListRequest
      * @return QueryCommodityListResponse
@@ -3892,7 +3999,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all cost centers within the current node of the cost center tree. If the ParentUnitId parameter is set to -1, all cost centers are queried.</p>
+     * <p>Queries all financial unit nodes under the current node of the financial unit tree. If ParentUnitId is set to -1, all financial units are queried.</p>
      * 
      * @param request QueryCostUnitRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3936,7 +4043,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all cost centers within the current node of the cost center tree. If the ParentUnitId parameter is set to -1, all cost centers are queried.</p>
+     * <p>Queries all financial unit nodes under the current node of the financial unit tree. If ParentUnitId is set to -1, all financial units are queried.</p>
      * 
      * @param request QueryCostUnitRequest
      * @return QueryCostUnitResponse
@@ -3948,7 +4055,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the resource instances that are allocated to a cost center. If the unitId parameter is set to 0, the unallocated primary resource instances and sub-resource instances are queried.</p>
+     * <p>Queries the list of resource instances that belong to a financial unit of a user. When UnitId is set to 0, the query returns unallocated primary and sub-resource instances.</p>
      * 
      * @param request QueryCostUnitResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3992,7 +4099,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the resource instances that are allocated to a cost center. If the unitId parameter is set to 0, the unallocated primary resource instances and sub-resource instances are queried.</p>
+     * <p>Queries the list of resource instances that belong to a financial unit of a user. When UnitId is set to 0, the query returns unallocated primary and sub-resource instances.</p>
      * 
      * @param request QueryCostUnitResourceRequest
      * @return QueryCostUnitResourceResponse
@@ -4004,7 +4111,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the addresses to which invoices are mailed.</p>
+     * <p>Queries the Alibaba Cloud invoice mailing address information service.</p>
      * 
      * @param request QueryCustomerAddressListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4036,7 +4143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the addresses to which invoices are mailed.</p>
+     * <p>Queries the Alibaba Cloud invoice mailing address information service.</p>
      * 
      * @param request QueryCustomerAddressListRequest
      * @return QueryCustomerAddressListResponse
@@ -4050,7 +4157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Limits:</p>
      * <ul>
-     * <li>Only the usage records within the past year can be queried.</li>
+     * <li>Only usage records from the past year are supported.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4124,7 +4231,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Limits:</p>
      * <ul>
-     * <li>Only the usage records within the past year can be queried.</li>
+     * <li>Only usage records from the past year are supported.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4140,7 +4247,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the orders for which you want to apply for invoices.</p>
+     * <p>Queries a list of objects that are eligible for invoicing.</p>
      * 
      * @param request QueryEvaluateListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4224,7 +4331,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the orders for which you want to apply for invoices.</p>
+     * <p>Queries a list of objects that are eligible for invoicing.</p>
      * 
      * @param request QueryEvaluateListRequest
      * @return QueryEvaluateListResponse
@@ -4236,7 +4343,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a financial account.</p>
+     * <p>Queries the enterprise financial account information of an account that has primary-subsidiary relationship permissions.</p>
      * 
      * @param request QueryFinancialAccountInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4268,7 +4375,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a financial account.</p>
+     * <p>Queries the enterprise financial account information of an account that has primary-subsidiary relationship permissions.</p>
      * 
      * @param request QueryFinancialAccountInfoRequest
      * @return QueryFinancialAccountInfoResponse
@@ -4280,16 +4387,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2></h2>
+     * <h2>API description</h2>
+     * <p>Note the following when you call this operation:</p>
      * <ul>
-     * <li>This API operation has been upgraded to DescribeInstanceBill. We recommend that you call the <a href="https://help.aliyun.com/document_detail/209402.html">DescribeInstanceBill</a> operation to query the bills of instances or billable items in a billing cycle. You can call the QueryInstanceBill operation to query a maximum of 50,000 data rows in a bill.</li>
-     * <li>Instance bills are generated after bills are split. In most cases, the instance bills do not include data generated on the last day of the specified period.</li>
-     * <li>The instance information changes within a billing cycle. The instance configurations and specifications and the time when the instance was used in the billing cycle are all recorded. For more information, see the corresponding bill details.</li>
-     * <li>You can query the data generated in June 2020 or later for Cloud Communications services, and the data generated in November 2020 or later for Alibaba Cloud Domains.</li>
+     * <li>The API for instance bills has been upgraded. We recommend that you use the new operation <a href="https://help.aliyun.com/document_detail/209402.html">DescribeInstanceBill</a>. This operation no longer supports querying data beyond the 50,000th row.</li>
+     * <li>Instance bills are generated based on split billing data. A delay of about one day may occur.</li>
+     * <li>Instance information may change within a billing cycle. The instance Config and Spec in the monthly summary reflect the information at the time the record was generated. For more information, see the corresponding detailed bill.</li>
+     * <li>Data for Alibaba Cloud Communications products is available from June 2020. Data for HiChina products is available from November 2020.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>For the international site (alibabacloud.com), select Singapore as the endpoint.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the bills of instances or billable items in a billing cycle.</p>
+     * <p>Queries the usage summary of all product instances or billable items for an account in a billing cycle. This operation has been upgraded to DescribeInstanceBill. This operation no longer queries data beyond the 50,000th row.</p>
      * 
      * @param request QueryInstanceBillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4365,16 +4475,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2></h2>
+     * <h2>API description</h2>
+     * <p>Note the following when you call this operation:</p>
      * <ul>
-     * <li>This API operation has been upgraded to DescribeInstanceBill. We recommend that you call the <a href="https://help.aliyun.com/document_detail/209402.html">DescribeInstanceBill</a> operation to query the bills of instances or billable items in a billing cycle. You can call the QueryInstanceBill operation to query a maximum of 50,000 data rows in a bill.</li>
-     * <li>Instance bills are generated after bills are split. In most cases, the instance bills do not include data generated on the last day of the specified period.</li>
-     * <li>The instance information changes within a billing cycle. The instance configurations and specifications and the time when the instance was used in the billing cycle are all recorded. For more information, see the corresponding bill details.</li>
-     * <li>You can query the data generated in June 2020 or later for Cloud Communications services, and the data generated in November 2020 or later for Alibaba Cloud Domains.</li>
+     * <li>The API for instance bills has been upgraded. We recommend that you use the new operation <a href="https://help.aliyun.com/document_detail/209402.html">DescribeInstanceBill</a>. This operation no longer supports querying data beyond the 50,000th row.</li>
+     * <li>Instance bills are generated based on split billing data. A delay of about one day may occur.</li>
+     * <li>Instance information may change within a billing cycle. The instance Config and Spec in the monthly summary reflect the information at the time the record was generated. For more information, see the corresponding detailed bill.</li>
+     * <li>Data for Alibaba Cloud Communications products is available from June 2020. Data for HiChina products is available from November 2020.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>For the international site (alibabacloud.com), select Singapore as the endpoint.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the bills of instances or billable items in a billing cycle.</p>
+     * <p>Queries the usage summary of all product instances or billable items for an account in a billing cycle. This operation has been upgraded to DescribeInstanceBill. This operation no longer queries data beyond the 50,000th row.</p>
      * 
      * @param request QueryInstanceBillRequest
      * @return QueryInstanceBillResponse
@@ -4386,7 +4499,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries instances by tag.</p>
+     * <p>Queries a list of instances by tags.</p>
      * 
      * @param request QueryInstanceByTagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4426,7 +4539,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries instances by tag.</p>
+     * <p>Queries a list of instances by tags.</p>
      * 
      * @param request QueryInstanceByTagRequest
      * @return QueryInstanceByTagResponse
@@ -4438,7 +4551,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The code of the service.</p>
+     * <p>This API is deprecated. Use the following APIs to retrieve the amortized cost: <code>DescribeInstanceAmortizedCostByAmortizationPeriod</code> - retrieves instance costs by amortization period; <code>DescribeProductAmortizedCostByAmortizationPeriod</code> - retrieves product costs by amortization period; <code>DescribeInstanceAmortizedCostByConsumePeriod</code> - retrieves instance costs by consume period; <code>DescribeProductAmortizedCostByConsumePeriod</code> - retrieves product costs by consume period.</p>
      * 
      * @param request QueryInstanceGaapCostRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4490,7 +4603,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The code of the service.</p>
+     * <p>This API is deprecated. Use the following APIs to retrieve the amortized cost: <code>DescribeInstanceAmortizedCostByAmortizationPeriod</code> - retrieves instance costs by amortization period; <code>DescribeProductAmortizedCostByAmortizationPeriod</code> - retrieves product costs by amortization period; <code>DescribeInstanceAmortizedCostByConsumePeriod</code> - retrieves instance costs by consume period; <code>DescribeProductAmortizedCostByConsumePeriod</code> - retrieves product costs by consume period.</p>
      * 
      * @param request QueryInstanceGaapCostRequest
      * @return QueryInstanceGaapCostResponse
@@ -4502,7 +4615,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about invoice titles.</p>
+     * <p>Queries the invoicing information of an Alibaba Cloud user.</p>
      * 
      * @param request QueryInvoicingCustomerListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4534,7 +4647,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about invoice titles.</p>
+     * <p>Queries the invoicing information of an Alibaba Cloud user.</p>
      * 
      * @param request QueryInvoicingCustomerListRequest
      * @return QueryInvoicingCustomerListResponse
@@ -4546,7 +4659,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the orders of your Alibaba Cloud account or distributors. By default, orders within the last hour are queried. To query earlier orders, specify the CreateTimeStart and CreateTimeEnd parameters.</p>
+     * <p>Queries the orders of users or distribution customers. By default, this operation queries orders created within the last hour. To query orders over a longer period, specify the CreateTimeStart and CreateTimeEnd parameters.</p>
      * 
      * @param request QueryOrdersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4614,7 +4727,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the orders of your Alibaba Cloud account or distributors. By default, orders within the last hour are queried. To query earlier orders, specify the CreateTimeStart and CreateTimeEnd parameters.</p>
+     * <p>Queries the orders of users or distribution customers. By default, this operation queries orders created within the last hour. To query orders over a longer period, specify the CreateTimeStart and CreateTimeEnd parameters.</p>
      * 
      * @param request QueryOrdersRequest
      * @return QueryOrdersResponse
@@ -4626,7 +4739,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries, by relationship ID, permissions granted to accounts between which a management-member relationship is established.</p>
+     * <p>Queries the permissions for a master-member relationship based on the relationship ID.</p>
      * 
      * @param request QueryPermissionListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4658,7 +4771,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries, by relationship ID, permissions granted to accounts between which a management-member relationship is established.</p>
+     * <p>Queries the permissions for a master-member relationship based on the relationship ID.</p>
      * 
      * @param request QueryPermissionListRequest
      * @return QueryPermissionListResponse
@@ -4670,7 +4783,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries prepaid cards.</p>
+     * <p>Queries user card package information.</p>
      * 
      * @param request QueryPrepaidCardsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4710,7 +4823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries prepaid cards.</p>
+     * <p>Queries user card package information.</p>
      * 
      * @param request QueryPrepaidCardsRequest
      * @return QueryPrepaidCardsResponse
@@ -4722,10 +4835,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the billable items of a service. A billable item is the minimum unit used to calculate costs.</p>
+     * <p>Queries the pricing entities under a commodity. A pricing entity is the smallest product capability used for metering and cost calculation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the billable items of a service.</p>
+     * <p>Queries the pricing entities under a commodity. A pricing entity is the smallest product capability used for metering and cost calculation.</p>
      * 
      * @param request QueryPriceEntityListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4753,10 +4866,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the billable items of a service. A billable item is the minimum unit used to calculate costs.</p>
+     * <p>Queries the pricing entities under a commodity. A pricing entity is the smallest product capability used for metering and cost calculation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the billable items of a service.</p>
+     * <p>Queries the pricing entities under a commodity. A pricing entity is the smallest product capability used for metering and cost calculation.</p>
      * 
      * @param request QueryPriceEntityListRequest
      * @return QueryPriceEntityListResponse
@@ -4768,7 +4881,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about all Alibaba Cloud services.</p>
+     * <p>Queries the list of products available for the current account to order. The response includes the product code, product name, and subscription type (subscription or pay-as-you-go).</p>
      * 
      * @param request QueryProductListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4808,7 +4921,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about all Alibaba Cloud services.</p>
+     * <p>Queries the list of products available for the current account to order. The response includes the product code, product name, and subscription type (subscription or pay-as-you-go).</p>
      * 
      * @param request QueryProductListRequest
      * @return QueryProductListResponse
@@ -4820,7 +4933,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the usage details of a reserved instance (RI).</p>
+     * <p>Queries the usage of reserved instances (RIs).</p>
      * 
      * @param request QueryRIUtilizationDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4880,7 +4993,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the usage details of a reserved instance (RI).</p>
+     * <p>Queries the usage of reserved instances (RIs).</p>
      * 
      * @param request QueryRIUtilizationDetailRequest
      * @return QueryRIUtilizationDetailResponse
@@ -4892,7 +5005,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a redemption coupon.</p>
+     * <p>Queries the redemption ticket information of a user.</p>
      * 
      * @param request QueryRedeemRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4920,7 +5033,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a redemption coupon.</p>
+     * <p>Queries the redemption ticket information of a user.</p>
      * 
      * @param request QueryRedeemRequest
      * @return QueryRedeemResponse
@@ -4932,7 +5045,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the members of a management account.</p>
+     * <p>Queries a list of the relationships of member accounts.</p>
      * 
      * @param request QueryRelationListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4976,7 +5089,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the members of a management account.</p>
+     * <p>Queries a list of the relationships of member accounts.</p>
      * 
      * @param request QueryRelationListRequest
      * @return QueryRelationListResponse
@@ -4988,7 +5101,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Indicates whether the call is successful. A value of true indicates that the call is successful. A value of false indicates that the call failed.</p>
+     * <p>Queries the available quota for a user in a reseller payment scenario.</p>
      * 
      * @param request QueryResellerAvailableQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5024,7 +5137,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Indicates whether the call is successful. A value of true indicates that the call is successful. A value of false indicates that the call failed.</p>
+     * <p>Queries the available quota for a user in a reseller payment scenario.</p>
      * 
      * @param request QueryResellerAvailableQuotaRequest
      * @return QueryResellerAvailableQuotaResponse
@@ -5035,8 +5148,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>查询用户的信控预警阀值,该接口暂未测试启用</p>
+     * <b>description</b> :
+     * <p>Queries the alarm thresholds for low quotas.</p>
      * 
      * @param request QueryResellerUserAlarmThresholdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5071,8 +5184,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>查询用户的信控预警阀值,该接口暂未测试启用</p>
+     * <b>description</b> :
+     * <p>Queries the alarm thresholds for low quotas.</p>
      * 
      * @param request QueryResellerUserAlarmThresholdRequest
      * @return QueryResellerUserAlarmThresholdResponse
@@ -5084,7 +5197,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the instances of a resource plan. You can query the resource plans that are expired within one year.</p>
+     * <p>Queries the instances of a specific resource plan for a user. Only valid resource plans are supported.</p>
      * 
      * @param request QueryResourcePackageInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5140,7 +5253,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the instances of a resource plan. You can query the resource plans that are expired within one year.</p>
+     * <p>Queries the instances of a specific resource plan for a user. Only valid resource plans are supported.</p>
      * 
      * @param request QueryResourcePackageInstancesRequest
      * @return QueryResourcePackageInstancesResponse
@@ -5152,7 +5265,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the deduction details of savings plans.</p>
+     * <p>Queries the details of savings plan deductions.</p>
      * 
      * @param request QuerySavingsPlansDeductLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5208,7 +5321,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the deduction details of savings plans.</p>
+     * <p>Queries the details of savings plan deductions.</p>
      * 
      * @param request QuerySavingsPlansDeductLogRequest
      * @return QuerySavingsPlansDeductLogResponse
@@ -5220,7 +5333,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries discounts on savings plans.</p>
+     * <p>Queries the discount information for savings plans.</p>
      * 
      * @param request QuerySavingsPlansDiscountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5248,7 +5361,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries discounts on savings plans.</p>
+     * <p>Queries the discount information for savings plans.</p>
      * 
      * @param request QuerySavingsPlansDiscountRequest
      * @return QuerySavingsPlansDiscountResponse
@@ -5260,7 +5373,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about savings plan instances of the current user.</p>
+     * <p>Queries information about your savings plan instances.</p>
      * 
      * @param request QuerySavingsPlansInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5324,7 +5437,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about savings plan instances of the current user.</p>
+     * <p>Queries information about your savings plan instances.</p>
      * 
      * @param request QuerySavingsPlansInstanceRequest
      * @return QuerySavingsPlansInstanceResponse
@@ -5335,8 +5448,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The query results for the current month are for reference only and cannot be used for reconciliation. The final bill for the current month is available for viewing or export after 12:00 on the 2nd of the following month. During the month, a few scenarios may occur, including but not limited to delayed billing, refunds, adjustments, and overdue payment write-offs.</li>
+     * <li>Bill data is updated with a 5-hour delay relative to actual cost consumption.</li>
+     * <li>For bills in the &quot;Unsettled&quot; state in historical billing cycles, the status is updated to settled 5 hours after payment. For bills in the &quot;Unsettled&quot; state in the current month, the status is updated to settled when the bill is generated at 12:00 on the 2nd of the following month.</li>
+     * <li>This API supports graceful backoff with a request rate of 600/60(s).</li>
+     * <li>The rate limit per user is 10 requests per second. If a timeout occurs, retry the request.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>The code of the service.</p>
+     * <p>Queries the settlement bills of a user for a specific billing cycle. Supports domestic accounts with more than 50,000 bill entries.</p>
      * 
      * @param request QuerySettleBillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5411,8 +5533,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The query results for the current month are for reference only and cannot be used for reconciliation. The final bill for the current month is available for viewing or export after 12:00 on the 2nd of the following month. During the month, a few scenarios may occur, including but not limited to delayed billing, refunds, adjustments, and overdue payment write-offs.</li>
+     * <li>Bill data is updated with a 5-hour delay relative to actual cost consumption.</li>
+     * <li>For bills in the &quot;Unsettled&quot; state in historical billing cycles, the status is updated to settled 5 hours after payment. For bills in the &quot;Unsettled&quot; state in the current month, the status is updated to settled when the bill is generated at 12:00 on the 2nd of the following month.</li>
+     * <li>This API supports graceful backoff with a request rate of 600/60(s).</li>
+     * <li>The rate limit per user is 10 requests per second. If a timeout occurs, retry the request.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>The code of the service.</p>
+     * <p>Queries the settlement bills of a user for a specific billing cycle. Supports domestic accounts with more than 50,000 bill entries.</p>
      * 
      * @param request QuerySettleBillRequest
      * @return QuerySettleBillResponse
@@ -5424,7 +5555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the stock keeping units (SKUs) of a service. In most cases, a service has one or more SKUs. A service may even have tens of thousands of SKUs. You can call this operation to query the SKUs of a specific service and the prices of the SKUs. You can configure request parameters to query the specified SKUs based on the configurations of the SKUs.</p>
+     * <p>Queries the list of SKUs and their list prices under a specified pricing entity of a commodity. A product feature typically has 1 to multiple SKUs, and some products can have tens of thousands of SKUs. The request parameters support filtered queries based on specific SKU configuration conditions.</p>
      * 
      * @param tmpReq QuerySkuPriceListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5458,7 +5589,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the stock keeping units (SKUs) of a service. In most cases, a service has one or more SKUs. A service may even have tens of thousands of SKUs. You can call this operation to query the SKUs of a specific service and the prices of the SKUs. You can configure request parameters to query the specified SKUs based on the configurations of the SKUs.</p>
+     * <p>Queries the list of SKUs and their list prices under a specified pricing entity of a commodity. A product feature typically has 1 to multiple SKUs, and some products can have tens of thousands of SKUs. The request parameters support filtered queries based on specific SKU configuration conditions.</p>
      * 
      * @param request QuerySkuPriceListRequest
      * @return QuerySkuPriceListResponse
@@ -5470,15 +5601,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This API operation has been upgraded to DescribeSplitItemBill. We recommend that you call the <a href="https://help.aliyun.com/document_detail/208169.html">DescribeSplitItemBill</a> operation to query split bills. You can call the QuerySplitItemBill operation to query a maximum of 50,000 data rows in a bill.</p>
      * <ul>
-     * <li>The data queried by calling the QuerySplitItemBill operation is consistent with the data that is displayed for the specified billing cycle on the Split Bill page in User Center.</li>
-     * <li>You can call this operation to query split bills generated within the last 12 months.</li>
-     * <li>This operation returns split bills only after you activate the <a href="https://usercenter2.aliyun.com/finance/split-bill">Split Bill</a> service in User Center.</li>
+     * <li>The API for split bills is upgraded. We recommend that you use the new <a href="https://help.aliyun.com/document_detail/208169.html">DescribeSplitItemBill</a> operation. This operation no longer supports querying more than 50,000 rows of data.</li>
+     * <li>The data is consistent with the split bill data for the specified billing cycle in the User Center.</li>
+     * <li>You can query split bills that were generated within the last 12 months.</li>
+     * <li>To use this feature, you must first enable it on the <a href="https://usercenter2.aliyun.com/finance/split-bill">Split Bill</a> page in the console.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries split bills.</p>
+     * <p>Queries split bills. This API has been upgraded. We recommend that you use the new DescribeSplitItemBill operation.</p>
      * 
      * @param request QuerySplitItemBillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5538,15 +5669,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This API operation has been upgraded to DescribeSplitItemBill. We recommend that you call the <a href="https://help.aliyun.com/document_detail/208169.html">DescribeSplitItemBill</a> operation to query split bills. You can call the QuerySplitItemBill operation to query a maximum of 50,000 data rows in a bill.</p>
      * <ul>
-     * <li>The data queried by calling the QuerySplitItemBill operation is consistent with the data that is displayed for the specified billing cycle on the Split Bill page in User Center.</li>
-     * <li>You can call this operation to query split bills generated within the last 12 months.</li>
-     * <li>This operation returns split bills only after you activate the <a href="https://usercenter2.aliyun.com/finance/split-bill">Split Bill</a> service in User Center.</li>
+     * <li>The API for split bills is upgraded. We recommend that you use the new <a href="https://help.aliyun.com/document_detail/208169.html">DescribeSplitItemBill</a> operation. This operation no longer supports querying more than 50,000 rows of data.</li>
+     * <li>The data is consistent with the split bill data for the specified billing cycle in the User Center.</li>
+     * <li>You can query split bills that were generated within the last 12 months.</li>
+     * <li>To use this feature, you must first enable it on the <a href="https://usercenter2.aliyun.com/finance/split-bill">Split Bill</a> page in the console.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries split bills.</p>
+     * <p>Queries split bills. This API has been upgraded. We recommend that you use the new DescribeSplitItemBill operation.</p>
      * 
      * @param request QuerySplitItemBillRequest
      * @return QuerySplitItemBillResponse
@@ -5558,18 +5689,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the usage data of an Alibaba Cloud service. Take note of the following items:</p>
+     * <h2>API description</h2>
      * <ul>
-     * <li>The service code that you specify for querying the usage data of a specific Alibaba Cloud service must be valid. You can query the usage data by hour or by day.</li>
-     * <li>The time that you specify must follow the ISO8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.<ul>
-     * <li>Latency exists in data pushes. Therefore, if you set the DataType parameter to Hour, the integrity of usage data recorded in the last 24 hours can be ensured. If you set the DataType parameter to Day, the integrity of usage data recorded in the last two days can be ensured.</li>
-     * <li>You can query the usage data that is recorded in the last quarter.</li>
+     * <li>The specified cloud service parameter must be one of the following cloud service codes. The metering data types include hourly and daily.</li>
+     * <li>The time format must comply with the ISO 8601 standard. Time specification constraints:<ul>
+     * <li>   Due to delays in data push, the data integrity of hourly metering data is guaranteed for the past 24 hours, and the data integrity of daily metering data is guaranteed for the past 2 days.</li>
+     * <li>   The time span can cover the metering data of the most recent quarter.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the usage data of an Alibaba Cloud service.</p>
+     * <p>Queries the metering records for the specified cloud service.</p>
      * 
      * @param request QueryUserOmsDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5625,18 +5756,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the usage data of an Alibaba Cloud service. Take note of the following items:</p>
+     * <h2>API description</h2>
      * <ul>
-     * <li>The service code that you specify for querying the usage data of a specific Alibaba Cloud service must be valid. You can query the usage data by hour or by day.</li>
-     * <li>The time that you specify must follow the ISO8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.<ul>
-     * <li>Latency exists in data pushes. Therefore, if you set the DataType parameter to Hour, the integrity of usage data recorded in the last 24 hours can be ensured. If you set the DataType parameter to Day, the integrity of usage data recorded in the last two days can be ensured.</li>
-     * <li>You can query the usage data that is recorded in the last quarter.</li>
+     * <li>The specified cloud service parameter must be one of the following cloud service codes. The metering data types include hourly and daily.</li>
+     * <li>The time format must comply with the ISO 8601 standard. Time specification constraints:<ul>
+     * <li>   Due to delays in data push, the data integrity of hourly metering data is guaranteed for the past 24 hours, and the data integrity of daily metering data is guaranteed for the past 2 days.</li>
+     * <li>   The time span can cover the metering data of the most recent quarter.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the usage data of an Alibaba Cloud service.</p>
+     * <p>Queries the metering records for the specified cloud service.</p>
      * 
      * @param request QueryUserOmsDataRequest
      * @return QueryUserOmsDataResponse
@@ -5649,9 +5780,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.</li>
-     * <li>Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.</li>
-     * <li>For more information, see <a href="https://www.alibabacloud.com/help/en/user-center/refund-rules">Rules for unsubscribing from resources</a>.</li>
+     * <li>Only the actual paid amount is refunded. Used vouchers are not refunded.</li>
+     * <li>Carefully verify the information about the resource to be unsubscribed, and confirm the unsubscription terms and refund amount. Resources cannot be recovered after unsubscription.</li>
+     * <li>This operation can be called only by direct customers. Reseller customers cannot use this operation.</li>
+     * <li>For other questions, refer to: &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM">Refund policy</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules">Refund rules for Alibaba Cloud International site</a></li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -5704,9 +5836,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.</li>
-     * <li>Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.</li>
-     * <li>For more information, see <a href="https://www.alibabacloud.com/help/en/user-center/refund-rules">Rules for unsubscribing from resources</a>.</li>
+     * <li>Only the actual paid amount is refunded. Used vouchers are not refunded.</li>
+     * <li>Carefully verify the information about the resource to be unsubscribed, and confirm the unsubscription terms and refund amount. Resources cannot be recovered after unsubscription.</li>
+     * <li>This operation can be called only by direct customers. Reseller customers cannot use this operation.</li>
+     * <li>For other questions, refer to: &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM">Refund policy</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules">Refund rules for Alibaba Cloud International site</a></li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -5796,7 +5929,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Terminates a financial relationship between the management account and a member.</p>
+     * <p>Disassociates a RAM user from an Alibaba Cloud account.</p>
      * 
      * @param request RelieveAccountRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5844,7 +5977,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Terminates a financial relationship between the management account and a member.</p>
+     * <p>Disassociates a RAM user from an Alibaba Cloud account.</p>
      * 
      * @param request RelieveAccountRelationRequest
      * @return RelieveAccountRelationResponse
@@ -5856,7 +5989,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>续费变配接口</p>
+     * <p>Renews an instance and changes its configuration. The configuration change is applied after the renewal order takes effect. Payment is processed automatically. This operation cannot be used to create ECS or RDS instances.</p>
      * 
      * @param request RenewChangeInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5912,7 +6045,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>续费变配接口</p>
+     * <p>Renews an instance and changes its configuration. The configuration change is applied after the renewal order takes effect. Payment is processed automatically. This operation cannot be used to create ECS or RDS instances.</p>
      * 
      * @param request RenewChangeInstanceRequest
      * @return RenewChangeInstanceResponse
@@ -5924,7 +6057,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews a specified instance. You cannot call this operation to renew Elastic Compute Service (ECS) instances, ApsaraDB RDS instances, or ApsaraDB for Redis instances. To renew these types of instances, call the dedicated operation of the corresponding service.</p>
+     * <p>Renews a specified instance. This operation does not support renewing ECS, RDS, or Redis instances. To renew these instances, call the dedicated renewal API of the corresponding service.</p>
      * 
      * @param request RenewInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5976,7 +6109,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews a specified instance. You cannot call this operation to renew Elastic Compute Service (ECS) instances, ApsaraDB RDS instances, or ApsaraDB for Redis instances. To renew these types of instances, call the dedicated operation of the corresponding service.</p>
+     * <p>Renews a specified instance. This operation does not support renewing ECS, RDS, or Redis instances. To renew these instances, call the dedicated renewal API of the corresponding service.</p>
      * 
      * @param request RenewInstanceRequest
      * @return RenewInstanceResponse
@@ -5988,7 +6121,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews a resource plan.</p>
+     * <p>Renews a resource package instance.</p>
      * 
      * @param request RenewResourcePackageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6036,7 +6169,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews a resource plan.</p>
+     * <p>Renews a resource package instance.</p>
      * 
      * @param request RenewResourcePackageRequest
      * @return RenewResourcePackageResponse
@@ -6167,6 +6300,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Configures low-balance alert rules for quotas.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Configures low-balance alert rules for quotas.</p>
+     * 
      * @param request SetResellerUserAlarmThresholdRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetResellerUserAlarmThresholdResponse
@@ -6204,6 +6343,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Configures low-balance alert rules for quotas.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Configures low-balance alert rules for quotas.</p>
+     * 
      * @param request SetResellerUserAlarmThresholdRequest
      * @return SetResellerUserAlarmThresholdResponse
      */
@@ -6213,6 +6358,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>设置用户配额账本的Quota额度</p>
+     * 
      * <b>summary</b> : 
      * <p>Modify the quota ledger and consumption ledger.</p>
      * 
@@ -6257,6 +6405,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>设置用户配额账本的Quota额度</p>
+     * 
      * <b>summary</b> : 
      * <p>Modify the quota ledger and consumption ledger.</p>
      * 
@@ -6269,6 +6420,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Sets the status of a reseller\&quot;s user account, such as frozen or hosted.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables or disables the SQL audit feature for users.</p>
+     * 
      * @param request SetResellerUserStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetResellerUserStatusResponse
@@ -6310,6 +6467,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Sets the status of a reseller\&quot;s user account, such as frozen or hosted.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables or disables the SQL audit feature for users.</p>
+     * 
      * @param request SetResellerUserStatusRequest
      * @return SetResellerUserStatusResponse
      */
@@ -6388,68 +6551,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, take note of the following items:</p>
+     * <p>Before calling this operation, note the following information:</p>
      * <ul>
-     * <li>You can subscribe to only one type of bill at a time.</li>
-     * <li>The bills generated on the previous day are pushed on a daily basis the next day after you subscribe to the bills. The full-data bills for the previous month are pushed on the fourth day of each month. The monthly bills in the PDF format for the previous month are pushed on the fourth day of each month.</li>
-     * <li>The daily bills may be delayed. The delayed bills are pushed the next day after they are generated. The delayed bills may include the bills that should have been pushed on the previous day. We recommend that you query the full-data bills for the previous month at the beginning of each month.</li>
-     * <li>The bill subscriber must have the <a href="https://ram.console.aliyun.com/#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunConsumeDump2OSSRole%22,%20%22TemplateId%22:%20%22Dump2OSSRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fusercenter2.aliyun.com%22,%20%22Service%22:%20%22Consume%22%7D">AliyunConsumeDump2OSSRole</a> permission.</li>
-     * <li>The SubscribeBillToOSS operation has the same functionality as the Save Expense Details to OSS Bucket feature in User Center.</li>
-     * <li>To subscribe to the bills stored in an OSS bucket, make sure that the directory name specified for the OSS bucket conforms to the following naming rules:</li>
+     * <li>You can subscribe to one type of bill file at a time.</li>
+     * <li>After subscription, the bill file generated on the previous day is pushed daily starting from the next day. On the 4th of each month, the full bill files for the entire billing cycle of the previous month are pushed. The monthly bill PDF is pushed on the 4th of each month for the previous month.</li>
+     * <li>Bill files generated on a daily basis may be delayed. Delayed bills are pushed the day after they are generated and may include bills from earlier days that were delayed until the previous day. Pull the full files for the previous month at the beginning of each month.<blockquote>
+     * <p>To use OSS subscription for the first time, grant the <a href="https://ram.console.aliyun.com/#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunConsumeDump2OSSRole%22,%20%22TemplateId%22:%20%22Dump2OSSRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fusercenter2.aliyun.com%22,%20%22Service%22:%20%22Consume%22%7D">AliyunConsumeDump2OSSRole</a> permission to the subscribing user. If the authorization is revoked, the system stops pushing files, and the user must re-authorize.</p>
+     * </blockquote>
+     * </li>
+     * <li>This subscription is the same feature as &quot;Bill Data Storage&quot; in the Expenses and Costs console. Subscriptions are synchronized between the two.</li>
+     * <li>When subscribing to a directory under a bucket, follow the directory naming conventions:<ul>
+     * <li>Emojis are not allowed. Use valid UTF-8 characters.</li>
+     * <li>Use / to separate paths and quickly create subdirectories. Do not start with / or \, and do not use consecutive / characters.</li>
+     * <li>A subdirectory named .. is not allowed.</li>
+     * <li>The total length must be 1 to 254 characters.</li>
      * </ul>
-     * <ol>
-     * <li><ol>
-     * <li>The directory name can contain only UTF-8 characters and cannot contain emoticons.</li>
-     * </ol>
      * </li>
-     * <li><ol start="2">
-     * <li>Forward slashes (/) are used to separate paths and can be used to create subdirectories with ease. The directory name cannot start with a forward slash (/), a backslash (\\), or consecutive forward slashes (/).</li>
-     * </ol>
-     * </li>
-     * <li><ol start="3">
-     * <li>The name of a subdirectory cannot be set to two consecutive periods (..).</li>
-     * </ol>
-     * </li>
-     * <li><ol start="4">
-     * <li>The directory name must be 1 to 254 characters in length.</li>
-     * </ol>
-     * </li>
-     * </ol>
-     * <ul>
      * <li>File names:<ul>
-     * <li><strong>BillingItemDetailForBillingPeriod</strong> (Detailed bills of billable items)<ul>
-     * <li>File name format for a daily push: <code>UID_BillingItemDetail_YYYYMMDD</code>. Example: <code>169**_BillingItemDetail_20190310</code>.</li>
-     * <li>File name format for a full-data push at the beginning of the next month: <code>UID_BillingItemDetail_YYYYMM</code>. Example: <code>169**_BillingItemDetail_201903</code>.</li>
-     * </ul>
+     * <li><p><strong>BillingItemDetailForBillingPeriod</strong> (billing item details)</p>
+     * <ul>
+     * <li><p>Daily push file name format: <code>UID_BillingItemDetail_YYYYMMDD</code>, for example, <code>169**_BillingItemDetail_20190310</code>.</p>
      * </li>
-     * <li><strong>InstanceDetailForBillingPeriod</strong> (Detailed bills of instances)<ul>
-     * <li>File name format for a daily push: <code>UID_InstanceDetail_YYYYMMDD</code>. Example: <code>169**_InstanceDetail_20190310</code>.</li>
-     * <li>File name format for a full-data push at the beginning of the next month: <code>UID_InstanceDetail_YYYYMM</code>. Example: <code>169**_InstanceDetail_201903</code>.</li>
-     * </ul>
-     * </li>
-     * <li><strong>InstanceDetailMonthly</strong> (Instance-based bills summarized by billing cycle)<ul>
-     * <li>File name format for a daily push: <code>UID_InstanceDetailMonthly_YYYYMM</code>. Example: <code>169**_InstanceDetailMonthly_201903</code>. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.</li>
-     * </ul>
-     * </li>
-     * <li><strong>BillingItemDetailMonthly</strong> (Billable item-based bills summarized by billing cycle)<ul>
-     * <li>File name format for a daily push: <code>UID_BillingItemDetailMonthly_YYYYMM</code>. Example: <code>169**_BillingItemDetailMonthly_201903</code>. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.</li>
-     * </ul>
-     * </li>
-     * <li><strong>SplitItemDetailDaily</strong> (Split bills summarized by day)<ul>
-     * <li>File name format for a daily push: <code>UID_SplitItemDetailDaily_YYYYMM</code>. Example: <code>169**_SplitItemDetailDaily_201903</code>. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.</li>
-     * </ul>
-     * </li>
-     * <li><strong>MonthBill</strong> (Monthly bill in the PDF format)<ul>
-     * <li>File name format for a monthly push: <code>UID_MonthBill_YYYYMM</code>. Example: <code>169**_MonthBill_201903</code>. The bill for the previous month is pushed on the fourth day of each month.</li>
-     * </ul>
+     * <li><p>Full file name format at the beginning of the next month: <code>UID_BillingItemDetail_YYYYMM</code>, for example, <code>169**_BillingItemDetail_201903</code>.</p>
      * </li>
      * </ul>
      * </li>
-     * <li>The bills of the MonthBill type are PDF files, whereas the bills of other types are CSV files. If the number of data rows in a bill exceeds a threshold, the bill is automatically split into multiple CSV files. Then, the multiple CSV files are automatically merged and compressed into a ZIP file that has the same name format as the original file.</li>
+     * <li><p><strong>InstanceDetailForBillingPeriod</strong> (instance bill details)</p>
+     * <ul>
+     * <li><p>Daily push file name format: <code>UID_InstanceDetail_YYYYMMDD</code>, for example, <code>169**_InstanceDetail_20190310</code>.</p>
+     * </li>
+     * <li><p>Full file name format at the beginning of the next month: <code>UID_InstanceDetail_YYYYMM</code>, for example, <code>169**_InstanceDetail_201903</code>.</p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li><p><strong>InstanceDetailMonthly</strong> (instance bill summary by billing cycle)</p>
+     * <ul>
+     * <li>Daily push file name format: <code>UID_InstanceDetailMonthly_YYYYMM</code>, for example, <code>169**_InstanceDetailMonthly_201903</code>. This file is updated daily with full data from the beginning of the month to the current day, until the 4th of the next month.</li>
+     * </ul>
+     * </li>
+     * <li><p><strong>BillingItemDetailMonthly</strong> (billing item summary by billing cycle)</p>
+     * <ul>
+     * <li>Daily push file name format: <code>UID_BillingItemDetailMonthly_YYYYMM</code>, for example, <code>169**_BillingItemDetailMonthly_201903</code>. This file is updated daily with full data from the beginning of the month to the current day, until the 4th of the next month.</li>
+     * </ul>
+     * </li>
+     * <li><p><strong>SplitItemDetailDaily</strong> (split bill daily summary)</p>
+     * <ul>
+     * <li>Daily push file name format: <code>UID_SplitItemDetailDaily_YYYYMM</code>, for example, <code>169**_SplitItemDetailDaily_201903</code>. This file is updated daily with full data from the beginning of the month to the current day, until the 4th of the next month.</li>
+     * </ul>
+     * </li>
+     * <li><p><strong>MonthBill</strong> (monthly bill PDF)</p>
+     * <ul>
+     * <li>Monthly push file name format: <code>UID_MonthBill_YYYYMM</code>, for example, <code>169**_MonthBill_201903</code>. The file for the previous month is pushed on the 4th of each month.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>Except for MonthBill, which is a PDF file, all other file types are CSV files. If the number of rows in a bill file exceeds a certain threshold, the file is automatically split into multiple CSV files, which are then compressed into a single ZIP file. The ZIP file name follows the same format.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Subscribes to the bills that are stored in Object Storage Service (OSS) buckets.</p>
+     * <p>Subscribes to bill files by using Object Storage Service (OSS), which stores billing data in a specified OSS bucket.</p>
      * 
      * @param request SubscribeBillToOSSRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6509,68 +6670,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, take note of the following items:</p>
+     * <p>Before calling this operation, note the following information:</p>
      * <ul>
-     * <li>You can subscribe to only one type of bill at a time.</li>
-     * <li>The bills generated on the previous day are pushed on a daily basis the next day after you subscribe to the bills. The full-data bills for the previous month are pushed on the fourth day of each month. The monthly bills in the PDF format for the previous month are pushed on the fourth day of each month.</li>
-     * <li>The daily bills may be delayed. The delayed bills are pushed the next day after they are generated. The delayed bills may include the bills that should have been pushed on the previous day. We recommend that you query the full-data bills for the previous month at the beginning of each month.</li>
-     * <li>The bill subscriber must have the <a href="https://ram.console.aliyun.com/#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunConsumeDump2OSSRole%22,%20%22TemplateId%22:%20%22Dump2OSSRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fusercenter2.aliyun.com%22,%20%22Service%22:%20%22Consume%22%7D">AliyunConsumeDump2OSSRole</a> permission.</li>
-     * <li>The SubscribeBillToOSS operation has the same functionality as the Save Expense Details to OSS Bucket feature in User Center.</li>
-     * <li>To subscribe to the bills stored in an OSS bucket, make sure that the directory name specified for the OSS bucket conforms to the following naming rules:</li>
+     * <li>You can subscribe to one type of bill file at a time.</li>
+     * <li>After subscription, the bill file generated on the previous day is pushed daily starting from the next day. On the 4th of each month, the full bill files for the entire billing cycle of the previous month are pushed. The monthly bill PDF is pushed on the 4th of each month for the previous month.</li>
+     * <li>Bill files generated on a daily basis may be delayed. Delayed bills are pushed the day after they are generated and may include bills from earlier days that were delayed until the previous day. Pull the full files for the previous month at the beginning of each month.<blockquote>
+     * <p>To use OSS subscription for the first time, grant the <a href="https://ram.console.aliyun.com/#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunConsumeDump2OSSRole%22,%20%22TemplateId%22:%20%22Dump2OSSRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fusercenter2.aliyun.com%22,%20%22Service%22:%20%22Consume%22%7D">AliyunConsumeDump2OSSRole</a> permission to the subscribing user. If the authorization is revoked, the system stops pushing files, and the user must re-authorize.</p>
+     * </blockquote>
+     * </li>
+     * <li>This subscription is the same feature as &quot;Bill Data Storage&quot; in the Expenses and Costs console. Subscriptions are synchronized between the two.</li>
+     * <li>When subscribing to a directory under a bucket, follow the directory naming conventions:<ul>
+     * <li>Emojis are not allowed. Use valid UTF-8 characters.</li>
+     * <li>Use / to separate paths and quickly create subdirectories. Do not start with / or \, and do not use consecutive / characters.</li>
+     * <li>A subdirectory named .. is not allowed.</li>
+     * <li>The total length must be 1 to 254 characters.</li>
      * </ul>
-     * <ol>
-     * <li><ol>
-     * <li>The directory name can contain only UTF-8 characters and cannot contain emoticons.</li>
-     * </ol>
      * </li>
-     * <li><ol start="2">
-     * <li>Forward slashes (/) are used to separate paths and can be used to create subdirectories with ease. The directory name cannot start with a forward slash (/), a backslash (\\), or consecutive forward slashes (/).</li>
-     * </ol>
-     * </li>
-     * <li><ol start="3">
-     * <li>The name of a subdirectory cannot be set to two consecutive periods (..).</li>
-     * </ol>
-     * </li>
-     * <li><ol start="4">
-     * <li>The directory name must be 1 to 254 characters in length.</li>
-     * </ol>
-     * </li>
-     * </ol>
-     * <ul>
      * <li>File names:<ul>
-     * <li><strong>BillingItemDetailForBillingPeriod</strong> (Detailed bills of billable items)<ul>
-     * <li>File name format for a daily push: <code>UID_BillingItemDetail_YYYYMMDD</code>. Example: <code>169**_BillingItemDetail_20190310</code>.</li>
-     * <li>File name format for a full-data push at the beginning of the next month: <code>UID_BillingItemDetail_YYYYMM</code>. Example: <code>169**_BillingItemDetail_201903</code>.</li>
-     * </ul>
+     * <li><p><strong>BillingItemDetailForBillingPeriod</strong> (billing item details)</p>
+     * <ul>
+     * <li><p>Daily push file name format: <code>UID_BillingItemDetail_YYYYMMDD</code>, for example, <code>169**_BillingItemDetail_20190310</code>.</p>
      * </li>
-     * <li><strong>InstanceDetailForBillingPeriod</strong> (Detailed bills of instances)<ul>
-     * <li>File name format for a daily push: <code>UID_InstanceDetail_YYYYMMDD</code>. Example: <code>169**_InstanceDetail_20190310</code>.</li>
-     * <li>File name format for a full-data push at the beginning of the next month: <code>UID_InstanceDetail_YYYYMM</code>. Example: <code>169**_InstanceDetail_201903</code>.</li>
-     * </ul>
-     * </li>
-     * <li><strong>InstanceDetailMonthly</strong> (Instance-based bills summarized by billing cycle)<ul>
-     * <li>File name format for a daily push: <code>UID_InstanceDetailMonthly_YYYYMM</code>. Example: <code>169**_InstanceDetailMonthly_201903</code>. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.</li>
-     * </ul>
-     * </li>
-     * <li><strong>BillingItemDetailMonthly</strong> (Billable item-based bills summarized by billing cycle)<ul>
-     * <li>File name format for a daily push: <code>UID_BillingItemDetailMonthly_YYYYMM</code>. Example: <code>169**_BillingItemDetailMonthly_201903</code>. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.</li>
-     * </ul>
-     * </li>
-     * <li><strong>SplitItemDetailDaily</strong> (Split bills summarized by day)<ul>
-     * <li>File name format for a daily push: <code>UID_SplitItemDetailDaily_YYYYMM</code>. Example: <code>169**_SplitItemDetailDaily_201903</code>. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.</li>
-     * </ul>
-     * </li>
-     * <li><strong>MonthBill</strong> (Monthly bill in the PDF format)<ul>
-     * <li>File name format for a monthly push: <code>UID_MonthBill_YYYYMM</code>. Example: <code>169**_MonthBill_201903</code>. The bill for the previous month is pushed on the fourth day of each month.</li>
-     * </ul>
+     * <li><p>Full file name format at the beginning of the next month: <code>UID_BillingItemDetail_YYYYMM</code>, for example, <code>169**_BillingItemDetail_201903</code>.</p>
      * </li>
      * </ul>
      * </li>
-     * <li>The bills of the MonthBill type are PDF files, whereas the bills of other types are CSV files. If the number of data rows in a bill exceeds a threshold, the bill is automatically split into multiple CSV files. Then, the multiple CSV files are automatically merged and compressed into a ZIP file that has the same name format as the original file.</li>
+     * <li><p><strong>InstanceDetailForBillingPeriod</strong> (instance bill details)</p>
+     * <ul>
+     * <li><p>Daily push file name format: <code>UID_InstanceDetail_YYYYMMDD</code>, for example, <code>169**_InstanceDetail_20190310</code>.</p>
+     * </li>
+     * <li><p>Full file name format at the beginning of the next month: <code>UID_InstanceDetail_YYYYMM</code>, for example, <code>169**_InstanceDetail_201903</code>.</p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li><p><strong>InstanceDetailMonthly</strong> (instance bill summary by billing cycle)</p>
+     * <ul>
+     * <li>Daily push file name format: <code>UID_InstanceDetailMonthly_YYYYMM</code>, for example, <code>169**_InstanceDetailMonthly_201903</code>. This file is updated daily with full data from the beginning of the month to the current day, until the 4th of the next month.</li>
+     * </ul>
+     * </li>
+     * <li><p><strong>BillingItemDetailMonthly</strong> (billing item summary by billing cycle)</p>
+     * <ul>
+     * <li>Daily push file name format: <code>UID_BillingItemDetailMonthly_YYYYMM</code>, for example, <code>169**_BillingItemDetailMonthly_201903</code>. This file is updated daily with full data from the beginning of the month to the current day, until the 4th of the next month.</li>
+     * </ul>
+     * </li>
+     * <li><p><strong>SplitItemDetailDaily</strong> (split bill daily summary)</p>
+     * <ul>
+     * <li>Daily push file name format: <code>UID_SplitItemDetailDaily_YYYYMM</code>, for example, <code>169**_SplitItemDetailDaily_201903</code>. This file is updated daily with full data from the beginning of the month to the current day, until the 4th of the next month.</li>
+     * </ul>
+     * </li>
+     * <li><p><strong>MonthBill</strong> (monthly bill PDF)</p>
+     * <ul>
+     * <li>Monthly push file name format: <code>UID_MonthBill_YYYYMM</code>, for example, <code>169**_MonthBill_201903</code>. The file for the previous month is pushed on the 4th of each month.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>Except for MonthBill, which is a PDF file, all other file types are CSV files. If the number of rows in a bill file exceeds a certain threshold, the file is automatically split into multiple CSV files, which are then compressed into a single ZIP file. The ZIP file name follows the same format.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Subscribes to the bills that are stored in Object Storage Service (OSS) buckets.</p>
+     * <p>Subscribes to bill files by using Object Storage Service (OSS), which stores billing data in a specified OSS bucket.</p>
      * 
      * @param request SubscribeBillToOSSRequest
      * @return SubscribeBillToOSSResponse
@@ -6582,7 +6741,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add tags to resources.</p>
+     * <p>Adds tags to resources.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6622,7 +6781,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add tags to resources.</p>
+     * <p>Adds tags to resources.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -6634,7 +6793,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unsubscribes from the bills that are stored in Object Storage Service (OSS) buckets.</p>
+     * <p>Cancels a detailed list export subscription.</p>
      * 
      * @param request UnsubscribeBillToOSSRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6670,7 +6829,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unsubscribes from the bills that are stored in Object Storage Service (OSS) buckets.</p>
+     * <p>Cancels a detailed list export subscription.</p>
      * 
      * @param request UnsubscribeBillToOSSRequest
      * @return UnsubscribeBillToOSSResponse

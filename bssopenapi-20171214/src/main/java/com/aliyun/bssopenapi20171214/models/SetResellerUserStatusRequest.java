@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class SetResellerUserStatusRequest extends TeaModel {
     /**
-     * <p>The type of the business. Valid values: FREEZE: the frozen business of the account. TRUSTEESHIP: the hosted business of the account.</p>
+     * <p>The type of business operation. Valid values:
+     * FREEZE: Freeze operations.
+     * TRUSTEESHIP: Hosting operations.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +23,11 @@ public class SetResellerUserStatusRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The account status that you want to set. Valid values: Freeze: The account is frozen. Thaw: The account is unfrozen. Trusteeship: The account is hosted. TrusteeshipCancel: The account is not hosted.</p>
+     * <p>The status to set for the user account. Valid values:
+     * Freeze: The user account is frozen.
+     * Thaw: The user account is restored.
+     * Trusteeship: The user account is hosted.
+     * TrusteeshipCancel: The user account is not hosted.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,10 +37,9 @@ public class SetResellerUserStatusRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>停机模式
-     * 取值：
-     *     0：普通停机
-     *     1：立即停机</p>
+     * <p>The stopping mode. Valid values:
+     * 0: Normal shutdown.
+     * 1: Immediate shutdown.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

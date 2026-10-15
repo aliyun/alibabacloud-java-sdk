@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class QueryInstanceGaapCostResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public QueryInstanceGaapCostResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Successful!</p>
      */
@@ -22,6 +29,8 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CCBB1BB9-22F1-4177-867B-7A75D665B488</p>
      */
@@ -29,6 +38,8 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -84,356 +95,156 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
         @NameInMap("AccountingUnit")
         public String accountingUnit;
 
-        /**
-         * <strong>example:</strong>
-         * <p>SubscriptionOrder</p>
-         */
         @NameInMap("BillType")
         public String billType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-03</p>
-         */
         @NameInMap("BillingCycle")
         public String billingCycle;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CNY</p>
-         */
         @NameInMap("Currency")
         public String currency;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("DeductedByCashCoupons")
         public String deductedByCashCoupons;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("DeductedByCoupons")
         public String deductedByCoupons;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("DeductedByPrepaidCard")
         public String deductedByPrepaidCard;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("GaapDeductedByCashCoupons")
         public String gaapDeductedByCashCoupons;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("GaapDeductedByCoupons")
         public String gaapDeductedByCoupons;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("GaapDeductedByPrepaidCard")
         public String gaapDeductedByPrepaidCard;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("GaapPaymentAmount")
         public String gaapPaymentAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("GaapPretaxAmount")
         public String gaapPretaxAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("GaapPretaxAmountLocal")
         public String gaapPretaxAmountLocal;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("GaapPretaxGrossAmount")
         public String gaapPretaxGrossAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("GaapPricingDiscount")
         public String gaapPricingDiscount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>OSSBAG-cn-0xl0xxxxxx</p>
-         */
         @NameInMap("InstanceID")
         public String instanceID;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.75</p>
-         */
         @NameInMap("MonthGaapDeductedByCashCoupons")
         public String monthGaapDeductedByCashCoupons;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("MonthGaapDeductedByCoupons")
         public String monthGaapDeductedByCoupons;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("MonthGaapDeductedByPrepaidCard")
         public String monthGaapDeductedByPrepaidCard;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("MonthGaapPaymentAmount")
         public String monthGaapPaymentAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("MonthGaapPretaxAmount")
         public String monthGaapPretaxAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.99</p>
-         */
         @NameInMap("MonthGaapPretaxAmountLocal")
         public String monthGaapPretaxAmountLocal;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.99</p>
-         */
         @NameInMap("MonthGaapPretaxGrossAmount")
         public String monthGaapPretaxGrossAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0,.25</p>
-         */
         @NameInMap("MonthGaapPricingDiscount")
         public String monthGaapPricingDiscount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>213123213123</p>
-         */
         @NameInMap("OrderId")
         public String orderId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>New</p>
-         */
         @NameInMap("OrderType")
         public String orderType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123213123123</p>
-         */
         @NameInMap("OwnerID")
         public String ownerID;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2018-06-15 15:59:57</p>
-         */
         @NameInMap("PayTime")
         public String payTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>23534534</p>
-         */
         @NameInMap("PayerAccount")
         public String payerAccount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PaymentAmount")
         public String paymentAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CNY</p>
-         */
         @NameInMap("PaymentCurrency")
         public String paymentCurrency;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PretaxAmount")
         public String pretaxAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PretaxAmountLocal")
         public String pretaxAmountLocal;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("PretaxGrossAmount")
         public String pretaxGrossAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("PricingDiscount")
         public String pricingDiscount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>rds</p>
-         */
         @NameInMap("ProductCode")
         public String productCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>rds</p>
-         */
         @NameInMap("ProductType")
         public String productType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("Region")
         public String region;
 
         @NameInMap("ResourceGroup")
         public String resourceGroup;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12434345</p>
-         */
         @NameInMap("SubOrderId")
         public String subOrderId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>PayAsYouGo</p>
-         */
         @NameInMap("SubscriptionType")
         public String subscriptionType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>tag</p>
-         */
         @NameInMap("Tag")
         public String tag;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("UnallocatedDeductedByCashCoupons")
         public String unallocatedDeductedByCashCoupons;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("UnallocatedDeductedByCoupons")
         public String unallocatedDeductedByCoupons;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("UnallocatedDeductedByPrepaidCard")
         public String unallocatedDeductedByPrepaidCard;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("UnallocatedPaymentAmount")
         public String unallocatedPaymentAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("UnallocatedPretaxAmount")
         public String unallocatedPretaxAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("UnallocatedPretaxAmountLocal")
         public String unallocatedPretaxAmountLocal;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("UnallocatedPretaxGrossAmount")
         public String unallocatedPretaxGrossAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("UnallocatedPricingDiscount")
         public String unallocatedPricingDiscount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2019-05-01 00:00:00</p>
-         */
         @NameInMap("UsageEndDate")
         public String usageEndDate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2019-04-01 00:00:00</p>
-         */
         @NameInMap("UsageStartDate")
         public String usageStartDate;
 
@@ -881,16 +692,23 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
 
     public static class QueryInstanceGaapCostResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the host.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.1.1.1</p>
          */
         @NameInMap("HostId")
         public String hostId;
 
+        /**
+         * <p>A container for cost details.</p>
+         */
         @NameInMap("Modules")
         public QueryInstanceGaapCostResponseBodyDataModules modules;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -898,6 +716,8 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -905,6 +725,8 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */

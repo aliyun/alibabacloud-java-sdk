@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateAgAccountResponseBody extends TeaModel {
     /**
-     * <p>The relationship between the account that is used to call the CreateAgAccount operation and the account that is created.</p>
+     * <p>The level 2 relationship between the master account (MPK) and the member account (PK).</p>
      */
     @NameInMap("AgRelationDto")
     public CreateAgAccountResponseBodyAgRelationDto agRelationDto;
 
     /**
-     * <p>The status code returned.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>LOGIN_EMAIL_HAS_BEEN_USED</p>
@@ -20,7 +20,7 @@ public class CreateAgAccountResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>loginEmail=<a href="mailto:685741089H@chinaunicom.cn">685741089H@chinaunicom.cn</a>,has used</p>
@@ -29,7 +29,7 @@ public class CreateAgAccountResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EAE08A27-386C-579E-966D-8853EC3C5D0E</p>
@@ -38,7 +38,7 @@ public class CreateAgAccountResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class CreateAgAccountResponseBody extends TeaModel {
 
     public static class CreateAgAccountResponseBodyAgRelationDto extends TeaModel {
         /**
-         * <p>The ID of the account that is used to call the CreateAgAccount operation.</p>
+         * <p>The UID of the master account (MPK).</p>
          * 
          * <strong>example:</strong>
          * <p>1785287436011964</p>
@@ -102,7 +102,7 @@ public class CreateAgAccountResponseBody extends TeaModel {
         public String mpk;
 
         /**
-         * <p>The ID of the account that is created.</p>
+         * <p>The UID of the member account (PK) that is managed by the master account (MPK).</p>
          * 
          * <strong>example:</strong>
          * <p>1728240534507590</p>
@@ -111,7 +111,7 @@ public class CreateAgAccountResponseBody extends TeaModel {
         public String pk;
 
         /**
-         * <p>The role of the account that is created.</p>
+         * <p>The name of the RAM role.</p>
          * 
          * <strong>example:</strong>
          * <p>admin-role</p>
@@ -120,7 +120,7 @@ public class CreateAgAccountResponseBody extends TeaModel {
         public String ramAdminRoleName;
 
         /**
-         * <p>The type of the relationship.</p>
+         * <p>The type of the account linking relationship.</p>
          * 
          * <strong>example:</strong>
          * <p>FINACE_CLOUD</p>

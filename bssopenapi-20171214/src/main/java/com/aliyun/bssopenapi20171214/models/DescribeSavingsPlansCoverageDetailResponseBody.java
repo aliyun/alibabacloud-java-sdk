@@ -8,19 +8,19 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
      * <p>The status code.</p>
      * 
      * <strong>example:</strong>
-     * <p>Success</p>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The return data.</p>
+     * <p>The returned query data.</p>
      */
     @NameInMap("Data")
     public DescribeSavingsPlansCoverageDetailResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The message returned for the API call.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful!</p>
@@ -29,7 +29,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
@@ -38,7 +38,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful.</p>
+     * <p>Indicates whether the API call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
 
     public static class DescribeSavingsPlansCoverageDetailResponseBodyDataItems extends TeaModel {
         /**
-         * <p>The coverage.</p>
+         * <p>The coverage percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>0.9</p>
@@ -114,7 +114,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
          * <p>The deducted amount.</p>
          * 
          * <strong>example:</strong>
-         * <p>100</p>
+         * <p>5.5</p>
          */
         @NameInMap("DeductAmount")
         public Float deductAmount;
@@ -123,30 +123,32 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
          * <p>The end time.</p>
          * 
          * <strong>example:</strong>
-         * <p>2021-05-05 15:00:00</p>
+         * <p>2023-05-01 00:00:00</p>
          */
         @NameInMap("EndPeriod")
         public String endPeriod;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>spn-a1fhs54c243hP22</p>
+         * <p>i-bp1d9x623987rlj0dx4xx</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The specifications.</p>
+         * <p>The instance type.</p>
          * 
          * <strong>example:</strong>
-         * <p>7th_generation_X86_group</p>
+         * <p>ecs.sn1ne.3xlarge</p>
          */
         @NameInMap("InstanceSpec")
         public String instanceSpec;
 
         /**
+         * <p>The ID of the owner of the deducted commodity.</p>
+         * 
          * <strong>example:</strong>
          * <p>1906589291020438</p>
          */
@@ -164,6 +166,9 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
 
         /**
          * <p>The region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China (Hangzhou)</p>
          */
         @NameInMap("Region")
         public String region;
@@ -172,7 +177,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
          * <p>The start time.</p>
          * 
          * <strong>example:</strong>
-         * <p>2021-05-05 14:00:00</p>
+         * <p>2023-04-01 00:00:00</p>
          */
         @NameInMap("StartPeriod")
         public String startPeriod;
@@ -181,25 +186,25 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
          * <p>The total expenditure.</p>
          * 
          * <strong>example:</strong>
-         * <p>100</p>
+         * <p>6.11</p>
          */
         @NameInMap("TotalAmount")
         public Float totalAmount;
 
         /**
-         * <p>The ID of the account.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>2831685687844416</p>
+         * <p>1906589291020438</p>
          */
         @NameInMap("UserId")
         public Long userId;
 
         /**
-         * <p>The username of the account.</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="mailto:tester1@test.aliyun.com">tester1@test.aliyun.com</a></p>
+         * <p><a href="mailto:xxx@test.aliyunid.com">xxx@test.aliyunid.com</a></p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -317,13 +322,13 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
 
     public static class DescribeSavingsPlansCoverageDetailResponseBodyData extends TeaModel {
         /**
-         * <p>The data entries.</p>
+         * <p>The data items.</p>
          */
         @NameInMap("Items")
         public java.util.List<DescribeSavingsPlansCoverageDetailResponseBodyDataItems> items;
 
         /**
-         * <p>The token of the next page.</p>
+         * <p>The token for the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJwYWdlTnVtIjoyLCJwYWdlU2l6ZSI6MTB9</p>
@@ -335,7 +340,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
          * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
-         * <p>400</p>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

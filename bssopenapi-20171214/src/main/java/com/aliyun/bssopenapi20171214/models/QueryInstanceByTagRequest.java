@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class QueryInstanceByTagRequest extends TeaModel {
     /**
-     * <p>The IDs of resources.</p>
+     * <p>A list of resource IDs.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource. Specify the savings plan instance as the type of the resource.</p>
+     * <p>The type of the resource. Set this parameter to <code>instance</code> to query savings plan instances.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class QueryInstanceByTagRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags.</p>
+     * <p>A list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<QueryInstanceByTagRequestTag> tag;

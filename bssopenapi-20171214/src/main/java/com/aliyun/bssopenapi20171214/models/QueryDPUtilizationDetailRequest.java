@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryDPUtilizationDetailRequest extends TeaModel {
     /**
-     * <p>The code of the resource, such as ecsRi and scu_bag. If this parameter is specified, the ProdCode parameter does not take effect for the request.</p>
+     * <p>The commodity code, such as ecsRi and scu_bag. If this parameter is specified, the ProdCode parameter does not take effect.</p>
      * 
      * <strong>example:</strong>
      * <p>ecsRi</p>
@@ -14,7 +14,7 @@ public class QueryDPUtilizationDetailRequest extends TeaModel {
     public String commodityCode;
 
     /**
-     * <p>The ID of the deducted instance. If this parameter is not specified, the details of all instances are returned.</p>
+     * <p>The ID of the deducted instance. If this parameter is left empty, the details of all instances are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>oss-123123</p>
@@ -23,7 +23,7 @@ public class QueryDPUtilizationDetailRequest extends TeaModel {
     public String deductedInstanceId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
+     * <p>The end time. Format: YYYY-MM-dd HH:mm:ss.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,10 +33,10 @@ public class QueryDPUtilizationDetailRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Specifies whether to query the resource plan usage of linked accounts. Valid values:</p>
+     * <p>Specifies whether to include the resource plan usage of member accounts in finance trusteeship. Valid values:</p>
      * <ul>
-     * <li>true: queries the resource plan usage of linked accounts.</li>
-     * <li>false: does not query the resource plan usage of linked accounts.</li>
+     * <li>true: Included.</li>
+     * <li>false: Not included.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -47,7 +47,7 @@ public class QueryDPUtilizationDetailRequest extends TeaModel {
     public Boolean includeShare;
 
     /**
-     * <p>The ID of the instance to query. If this parameter is not specified, the details of all used instances are returned.</p>
+     * <p>The instance ID for the filtered query. If this parameter is left empty, the details of all used instances are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>oss-123123</p>
@@ -56,7 +56,7 @@ public class QueryDPUtilizationDetailRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The instance type of the instance.</p>
+     * <p>The instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>Instancetyp</p>
@@ -65,7 +65,7 @@ public class QueryDPUtilizationDetailRequest extends TeaModel {
     public String instanceSpec;
 
     /**
-     * <p>The token that is used to retrieve the next page of results. For the first query, set the value to null. For subsequent queries, set the value to the token that is obtained from the NextToken parameter.</p>
+     * <p>The token that specifies the start position of the query. Set this parameter to null for the first query. For subsequent queries, use the NextToken value returned in the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>CAESF***zNTAw</p>
@@ -74,7 +74,7 @@ public class QueryDPUtilizationDetailRequest extends TeaModel {
     public String lastToken;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 20. Maximum value: 300.</p>
+     * <p>The number of entries to return per query. Default value: 20. Maximum value: 300.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -83,7 +83,7 @@ public class QueryDPUtilizationDetailRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The code of the service. Example: ecs.</p>
+     * <p>The product code, such as ecs.</p>
      * 
      * <strong>example:</strong>
      * <p>oss</p>
@@ -92,7 +92,7 @@ public class QueryDPUtilizationDetailRequest extends TeaModel {
     public String prodCode;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
+     * <p>The start time. Format: YYYY-MM-dd HH:mm:ss.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

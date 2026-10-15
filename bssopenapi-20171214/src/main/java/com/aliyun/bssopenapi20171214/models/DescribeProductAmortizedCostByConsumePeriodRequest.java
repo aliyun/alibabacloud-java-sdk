@@ -4,16 +4,32 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class DescribeProductAmortizedCostByConsumePeriodRequest extends TeaModel {
+    /**
+     * <p>The filter conditions for the amortization month.
+     * Maximum number of elements: 10.</p>
+     */
     @NameInMap("AmortizationPeriodFilter")
     public java.util.List<String> amortizationPeriodFilter;
 
+    /**
+     * <p>The filter conditions for the IDs of resource owners.
+     * The resource owner is the account that actually uses the resources.
+     * Maximum number of elements: 10.</p>
+     */
     @NameInMap("BillOwnerIdList")
     public java.util.List<String> billOwnerIdList;
 
+    /**
+     * <p>The filter conditions for the IDs of bill purchasers.
+     * This is the ID of a RAM user. Set this parameter to view the bills of a RAM user. If you do not set this parameter, the bills of the current account and all its RAM users are returned.
+     * Maximum number of elements: 10.</p>
+     */
     @NameInMap("BillUserIdList")
     public java.util.List<String> billUserIdList;
 
     /**
+     * <p>The billing cycle.
+     * Format: YYYY-MM.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +39,8 @@ public class DescribeProductAmortizedCostByConsumePeriodRequest extends TeaModel
     public String billingCycle;
 
     /**
+     * <p>The code of the cost center.</p>
+     * 
      * <strong>example:</strong>
      * <p>123#</p>
      */
@@ -30,6 +48,8 @@ public class DescribeProductAmortizedCostByConsumePeriodRequest extends TeaModel
     public String costUnitCode;
 
     /**
+     * <p>The maximum number of data records to return in this call. Default value: 20. Maximum value: 300.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -37,6 +57,8 @@ public class DescribeProductAmortizedCostByConsumePeriodRequest extends TeaModel
     public Integer maxResults;
 
     /**
+     * <p>The token that marks the position from which to start the query. If you leave this parameter empty, the query starts from the beginning. If you specify this parameter, set it to the value of <code>NextToken</code> that is returned in the last call.</p>
+     * 
      * <strong>example:</strong>
      * <p>CAESEgoQCg4KCmdtdF9jcmVhdGUEARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</p>
      */
@@ -44,6 +66,8 @@ public class DescribeProductAmortizedCostByConsumePeriodRequest extends TeaModel
     public String nextToken;
 
     /**
+     * <p>The product code. To obtain this value, call the QueryProductList operation to query product information or the DescribeResourcePackageProduct operation to query information about a resource plan.</p>
+     * 
      * <strong>example:</strong>
      * <p>rds</p>
      */
@@ -51,6 +75,8 @@ public class DescribeProductAmortizedCostByConsumePeriodRequest extends TeaModel
     public String productCode;
 
     /**
+     * <p>The details of the product.</p>
+     * 
      * <strong>example:</strong>
      * <p>rds</p>
      */
@@ -58,6 +84,14 @@ public class DescribeProductAmortizedCostByConsumePeriodRequest extends TeaModel
     public String productDetail;
 
     /**
+     * <p>The subscription type. Valid values:</p>
+     * <ul>
+     * <li><p>Subscription: subscription.</p>
+     * </li>
+     * <li><p>PayAsYouGo: pay-as-you-go.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Subscription</p>
      */

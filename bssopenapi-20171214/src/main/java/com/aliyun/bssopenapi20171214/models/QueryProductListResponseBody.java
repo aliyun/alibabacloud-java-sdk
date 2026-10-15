@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryProductListResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,13 +14,13 @@ public class QueryProductListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The information about all Alibaba Cloud services.</p>
+     * <p>The Alibaba Cloud product information.</p>
      */
     @NameInMap("Data")
     public QueryProductListResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>This API is not applicable for caller.</p>
@@ -29,7 +29,7 @@ public class QueryProductListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>94858229-2758-4663-A7D0-99490D541F15</p>
@@ -92,43 +92,15 @@ public class QueryProductListResponseBody extends TeaModel {
     }
 
     public static class QueryProductListResponseBodyDataProductListProduct extends TeaModel {
-        /**
-         * <p>The code of the service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cdn</p>
-         */
         @NameInMap("ProductCode")
         public String productCode;
 
-        /**
-         * <p>The name of the service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CDN (Pay-as-you-go)</p>
-         */
         @NameInMap("ProductName")
         public String productName;
 
-        /**
-         * <p>The type of the service.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CDN</p>
-         */
         @NameInMap("ProductType")
         public String productType;
 
-        /**
-         * <p>The billing method. Valid values:</p>
-         * <ul>
-         * <li>Subscription: subscription</li>
-         * <li>PayAsYouGo: pay-as-you-go</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>PayAsYouGo</p>
-         */
         @NameInMap("SubscriptionType")
         public String subscriptionType;
 
@@ -192,7 +164,7 @@ public class QueryProductListResponseBody extends TeaModel {
 
     public static class QueryProductListResponseBodyData extends TeaModel {
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -201,7 +173,7 @@ public class QueryProductListResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
-         * <p>The number of entries returned on each page.</p>
+         * <p>The number of records displayed per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -209,14 +181,11 @@ public class QueryProductListResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        /**
-         * <p>The service definitions.</p>
-         */
         @NameInMap("ProductList")
         public QueryProductListResponseBodyDataProductList productList;
 
         /**
-         * <p>The total number of services.</p>
+         * <p>The total number of product records.</p>
          * 
          * <strong>example:</strong>
          * <p>449</p>

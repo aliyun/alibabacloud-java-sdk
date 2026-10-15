@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryPermissionListResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -29,7 +29,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F6E29451-A3CD-4705-806D-0112D08F5C49</p>
@@ -38,7 +38,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
 
     public static class QueryPermissionListResponseBodyDataPermissionList extends TeaModel {
         /**
-         * <p>The time when the permission expired. If no value is returned, the permission is still valid. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. For example, 2016-05-23T12:00:00Z indicates that the permission expired at 20:00:00 on May 23, 2016 (UTC+8).</p>
+         * <p>The time when the permission expires. If this parameter is empty, the permission is still valid. The time is in UTC and follows the ISO 8601 standard. The format is YYYY-MM-DDThh:mm:ssZ. For example, 2016-05-23T12:00:00Z is 20:00:00 on May 23, 2016 in UTC+8.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-03-05T15:12Z</p>
@@ -102,7 +102,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The code of the permission.</p>
+         * <p>The permission code.</p>
          * 
          * <strong>example:</strong>
          * <p>allow_synchronize_finance_identity</p>
@@ -111,16 +111,16 @@ public class QueryPermissionListResponseBody extends TeaModel {
         public String permissionCode;
 
         /**
-         * <p>The name of the permission.</p>
+         * <p>The permission name.</p>
          * 
          * <strong>example:</strong>
-         * <p>The management account shares the credit control identity with the member.</p>
+         * <p>主账号 子账号共享主账号信控身份</p>
          */
         @NameInMap("PermissionName")
         public String permissionName;
 
         /**
-         * <p>The time when the permission took effect. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. For example, 2016-05-23T12:00:00Z indicates that the permission took effect at 20:00:00 on May 23, 2016 (UTC+8).</p>
+         * <p>The time when the permission takes effect. The time is in UTC and follows the ISO 8601 standard. The format is YYYY-MM-DDThh:mm:ssZ. For example, 2016-05-23T12:00:00Z is 20:00:00 on May 23, 2016 in UTC+8.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-03-02T15:12Z</p>
@@ -169,7 +169,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
 
     public static class QueryPermissionListResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the relationship expired. If no value is returned, the relationship is still valid.</p>
+         * <p>The time when the relationship expires. If this parameter is empty, the relationship has not expired.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-03-06T15:12Z</p>
@@ -178,7 +178,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The ID of the management account.</p>
+         * <p>The ID of the Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>1990699401005016</p>
@@ -187,7 +187,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
         public Long masterId;
 
         /**
-         * <p>The ID of the member.</p>
+         * <p>The ID of the member account.</p>
          * 
          * <strong>example:</strong>
          * <p>1851253838840762</p>
@@ -211,7 +211,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
         public String relationType;
 
         /**
-         * <p>The time when the relationship was established. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. For example, 2016-05-23T12:00:00Z indicates that the relationship was established at 20:00:00 on May 23, 2016 (UTC+8).</p>
+         * <p>The time when the relationship was established. The time is in UTC and follows the ISO 8601 standard. The format is YYYY-MM-DDThh:mm:ssZ. For example, 2016-05-23T12:00:00Z is 20:00:00 on May 23, 2016 in UTC+8.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-03-02T15:12Z</p>
@@ -220,7 +220,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
         public String setupTime;
 
         /**
-         * <p>The time when the relationship took effect. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. For example, 2016-05-23T12:00:00Z indicates that the relationship took effect at 20:00:00 on May 23, 2016 (UTC+8).</p>
+         * <p>The time when the relationship takes effect. The time is in UTC and follows the ISO 8601 standard. The format is YYYY-MM-DDThh:mm:ssZ. For example, 2016-05-23T12:00:00Z is 20:00:00 on May 23, 2016 in UTC+8.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-03-02T15:12Z</p>
@@ -229,7 +229,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The status of the relationship. For more information about valid values of this parameter, see the enumeration values of the RelationshipStatusEnum type in the following table.</p>
+         * <p>The status of the relationship. The value is an enumeration member of RelationshipStatusEnum.</p>
          * 
          * <strong>example:</strong>
          * <p>RELATED</p>

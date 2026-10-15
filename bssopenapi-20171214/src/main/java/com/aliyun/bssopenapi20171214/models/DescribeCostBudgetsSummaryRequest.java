@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeCostBudgetsSummaryRequest extends TeaModel {
     /**
-     * <p>The name of the budget. Fuzzy match is supported.</p>
+     * <p>The name of the budget. Supports fuzzy search.</p>
      * 
      * <strong>example:</strong>
-     * <p>Annual budget</p>
+     * <p>全年预算</p>
      */
     @NameInMap("BudgetName")
     public String budgetName;
 
     /**
-     * <p>The status of the budget. Valid values: overdue and notOverdue. A value of overdue specifies to filter expired budgets. A value of notOverdue specifies to filter budgets that do not expire. By default, if you do not specify this parameter, information about all budgets is to be returned.</p>
+     * <p>The status of the budget. If you do not specify this parameter, budgets in all statuses are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>notOverdue</p>
@@ -23,7 +23,7 @@ public class DescribeCostBudgetsSummaryRequest extends TeaModel {
     public String budgetStatus;
 
     /**
-     * <p>The type of the budget. Valid values: cost, byquantity, and asset. A value of cost specifies to filter expense budgets. A value of byquantity specifies to filter budgets calculated based on the resource usage. A value of asset specifies to filter usage or coverage budgets. By default, information about all budgets is returned if you do not specify this parameter.</p>
+     * <p>The type of the budget. If you do not specify this parameter, budgets of all types are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>cost</p>
@@ -32,7 +32,7 @@ public class DescribeCostBudgetsSummaryRequest extends TeaModel {
     public String budgetType;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 10. Minimum value: 1.</p>
+     * <p>The maximum number of items to return. Valid values: 1 to 10. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -41,7 +41,7 @@ public class DescribeCostBudgetsSummaryRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The position in which the query starts. You must set this parameter to null or the token that is obtained from the previous query. Otherwise, an error is returned. If you set the NextToken parameter to null, the query starts from the beginning. The default value is null.</p>
+     * <p>The token that is used to retrieve the next page of results. Set this parameter to the NextToken value that is returned in the response to the previous request. If you do not specify this parameter, the query starts from the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJwYWdlTnVtIjoyLCJwYWdlU2l6ZSI6NH0=</p>

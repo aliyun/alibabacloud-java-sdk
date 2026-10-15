@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The Tracing Analysis character string for the execute operation. You can provide this string to the platform for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>UUID</p>
@@ -38,7 +38,7 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     * <p>Indicates whether the call is successful. A value of true indicates that the call is complete. A value of false indicates that an error occurred.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -96,13 +96,13 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
          * <p>The currency.</p>
          * 
          * <strong>example:</strong>
-         * <p>CNY. CNY: Chinese Yuan. USD: United States dollar. JPY: Japanese Yen.</p>
+         * <p>The currency of the refund amount: CNY: Chinese Yuan. USD: US Dollar. JPY: Japanese Yen</p>
          */
         @NameInMap("Currency")
         public String currency;
 
         /**
-         * <p>The site of the execution host.</p>
+         * <p>The site where the execution host resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn</p>
@@ -111,7 +111,7 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
         public String hostId;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp1etb69sqxgl4*******</p>
@@ -120,7 +120,7 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The refundable amount.</p>
+         * <p>The refund amount.</p>
          * 
          * <strong>example:</strong>
          * <p>12.34</p>

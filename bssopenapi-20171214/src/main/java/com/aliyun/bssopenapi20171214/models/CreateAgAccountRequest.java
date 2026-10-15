@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAgAccountRequest extends TeaModel {
     /**
-     * <p>The attribute of the account. To view the attribute of the account, use the account to log on to the Alibaba Cloud Management Console, move the pointer over the profile picture in the upper-right corner, and then click <strong>Security Settings</strong>.</p>
+     * <p>The properties of the new account. In the console, click Account Properties in the top menu bar to go to the <strong>Security Settings</strong> page and view the properties.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,44 +14,44 @@ public class CreateAgAccountRequest extends TeaModel {
     public String accountAttr;
 
     /**
-     * <p>The name of the city.</p>
+     * <p>The name of the city in English.</p>
      * 
      * <strong>example:</strong>
-     * <p>Beijing</p>
+     * <p>北京</p>
      */
     @NameInMap("CityName")
     public String cityName;
 
     /**
-     * <p>The name of the enterprise.</p>
+     * <p>The name of the enterprise. This is the enterprise name that corresponds to the Unified Social Credit Code.</p>
      * 
      * <strong>example:</strong>
-     * <p>Dongguan ChuangNeng Electric Appliance Co., Ltd</p>
+     * <p>阿里云测试有限公司</p>
      */
     @NameInMap("EnterpriseName")
     public String enterpriseName;
 
     /**
-     * <p>The first name.</p>
+     * <p>The first name of the user under the level 1 category.</p>
      * 
      * <strong>example:</strong>
-     * <p>Zhicheng</p>
+     * <p>志成</p>
      */
     @NameInMap("FirstName")
     public String firstName;
 
     /**
-     * <p>The last name.</p>
-     * <p>The last name can be up to 64 characters in length.</p>
+     * <p>The last name of the user.</p>
+     * <p>Maximum length: 64 characters.</p>
      * 
      * <strong>example:</strong>
-     * <p>Wu</p>
+     * <p>吴</p>
      */
     @NameInMap("LastName")
     public String lastName;
 
     /**
-     * <p>The email address used to log on to the account.</p>
+     * <p>The logon email address of the member account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,7 +70,7 @@ public class CreateAgAccountRequest extends TeaModel {
     public String nationCode;
 
     /**
-     * <p>The zip code.</p>
+     * <p>The postal code.</p>
      * 
      * <strong>example:</strong>
      * <p>350000</p>
@@ -82,7 +82,7 @@ public class CreateAgAccountRequest extends TeaModel {
      * <p>The name of the province. This parameter is optional.</p>
      * 
      * <strong>example:</strong>
-     * <p>Beijing</p>
+     * <p>北京</p>
      */
     @NameInMap("ProvinceName")
     public String provinceName;

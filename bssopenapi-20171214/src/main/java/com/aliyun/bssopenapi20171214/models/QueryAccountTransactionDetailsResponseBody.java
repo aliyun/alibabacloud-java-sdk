@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public QueryAccountTransactionDetailsResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The result description.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -29,7 +29,7 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>asadadad-edafafafaasd</p>
@@ -92,123 +92,42 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
     }
 
     public static class QueryAccountTransactionDetailsResponseBodyDataAccountTransactionsListAccountTransactionsList extends TeaModel {
-        /**
-         * <p>The amount of the transaction.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1.00</p>
-         */
         @NameInMap("Amount")
         public String amount;
 
-        /**
-         * <p>The balance of the account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Balance")
         public String balance;
 
-        /**
-         * <p>The billing cycle.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-10</p>
-         */
         @NameInMap("BillingCycle")
         public String billingCycle;
 
-        /**
-         * <p>The type of transaction payment. Valid values:</p>
-         * <p>Cash: pay for the transaction in cash. Deposit: pay for the transaction with deposit. RegularBankCreditRefund: pay for the transaction with credit refund controlled by a bank. DirectPay: directly pay for the transaction.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Cash</p>
-         */
         @NameInMap("FundType")
         public String fundType;
 
-        /**
-         * <p>The ID of the order or bill.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022120336190912</p>
-         */
         @NameInMap("RecordID")
         public String recordID;
 
-        /**
-         * <p>The remarks.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Test</p>
-         */
         @NameInMap("Remarks")
         public String remarks;
 
-        /**
-         * <p>The transaction account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:fortune_test@xxx.com">fortune_test@xxx.com</a></p>
-         */
         @NameInMap("TransactionAccount")
         public String transactionAccount;
 
-        /**
-         * <p>The transaction channel.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ALIPAY</p>
-         */
         @NameInMap("TransactionChannel")
         public String transactionChannel;
 
-        /**
-         * <p>The serial number of the transaction channel.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123232434343532</p>
-         */
         @NameInMap("TransactionChannelSN")
         public String transactionChannelSN;
 
-        /**
-         * <p>Indicates whether the transaction is of the income type or the expenditure type. If one of the following types is specified, results for the specific type are returned. If the type that you specified for the parameter does not belong to the following types, no result is returned. If the parameter is left empty, results for transactions of the income and expenditure types are all returned. Valid values:</p>
-         * <p>Income and Expense.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Income</p>
-         */
         @NameInMap("TransactionFlow")
         public String transactionFlow;
 
-        /**
-         * <p>The number of the transaction.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>43342334</p>
-         */
         @NameInMap("TransactionNumber")
         public String transactionNumber;
 
-        /**
-         * <p>The time when the transaction was made.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-10-01</p>
-         */
         @NameInMap("TransactionTime")
         public String transactionTime;
 
-        /**
-         * <p>The type of the transaction. If one of the following transaction types is specified, results for the specified transaction type are returned. If the transaction type that you specified does not belong to the following transaction types, no result is returned. If the parameter is left empty, results for all transaction types are returned. Valid values:</p>
-         * <p>Payment, Withdraw, Refund, Consumption, Transfer, and Adjust.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Consumption</p>
-         */
         @NameInMap("TransactionType")
         public String transactionType;
 
@@ -344,7 +263,7 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
 
     public static class QueryAccountTransactionDetailsResponseBodyData extends TeaModel {
         /**
-         * <p>The name of the account.</p>
+         * <p>The account name.</p>
          * 
          * <strong>example:</strong>
          * <p>yidi</p>
@@ -352,14 +271,11 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
         @NameInMap("AccountName")
         public String accountName;
 
-        /**
-         * <p>The details of the transactions within the account.</p>
-         */
         @NameInMap("AccountTransactionsList")
         public QueryAccountTransactionDetailsResponseBodyDataAccountTransactionsList accountTransactionsList;
 
         /**
-         * <p>This parameter is invalid.</p>
+         * <p>An invalid parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -368,7 +284,7 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The token that is used for paging.</p>
+         * <p>The pagination token.</p>
          * 
          * <strong>example:</strong>
          * <p>ASHDADS</p>
@@ -377,7 +293,7 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of query results.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

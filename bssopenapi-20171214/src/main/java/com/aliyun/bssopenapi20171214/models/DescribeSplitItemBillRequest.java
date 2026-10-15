@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSplitItemBillRequest extends TeaModel {
     /**
-     * <p>The ID of the member. If you specify this parameter, the bills of the member are queried. If you do not specify this parameter, the bills of the current account are queried by default.</p>
+     * <p>The ID of the resource ownership account. The resource ownership account is the account that actually uses the resource.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -14,7 +14,7 @@ public class DescribeSplitItemBillRequest extends TeaModel {
     public Long billOwnerId;
 
     /**
-     * <p>The billing cycle. Specify the parameter in the YYYY-MM format.</p>
+     * <p>The billing cycle. Format: YYYY-MM.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DescribeSplitItemBillRequest extends TeaModel {
     public String billingCycle;
 
     /**
-     * <p>The billing date. This parameter is required only when the Granularity parameter is set to DAILY. Format: YYYY-MM-DD.</p>
+     * <p>The billing date. This parameter is required only when Granularity is set to DAILY. Format: YYYY-MM-DD.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-03-02</p>
@@ -35,10 +35,12 @@ public class DescribeSplitItemBillRequest extends TeaModel {
     /**
      * <p>The granularity at which bills are queried. Valid values:</p>
      * <ul>
-     * <li>MONTHLY: queries bills on a monthly basis. The data that you query is the same as the data that is queried by billing cycles in the Split Bill module of the User Center console.</li>
-     * <li>DAILY: queries bills on a daily basis. The data that you query is the same as the data that is queried by days in the Split Bill module of the User Center console.</li>
+     * <li>MONTHLY: monthly. This value corresponds to the monthly bills on the Split Bill page in the User Center.</li>
+     * <li>DAILY: daily. This value corresponds to the daily bills on the Split Bill page in the User Center.</li>
      * </ul>
-     * <p>If you specify DAILY for this parameter, the BillingDate parameter is required.</p>
+     * <blockquote>
+     * <p>If you set this parameter to DAILY, you must specify the BillingDate parameter.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Monthly</p>
@@ -47,7 +49,7 @@ public class DescribeSplitItemBillRequest extends TeaModel {
     public String granularity;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i-kjhdskjgshfdlkjfdh</p>
@@ -56,10 +58,10 @@ public class DescribeSplitItemBillRequest extends TeaModel {
     public String instanceID;
 
     /**
-     * <p>Specifies whether to filter bills if both the pretax gross amount and pretax amount are 0. Valid values:</p>
+     * <p>Specifies whether to filter out bills where both the original price (PretaxGrossAmount) and the payable amount (PretaxAmount) are 0. Valid values:</p>
      * <ul>
-     * <li>false: does not filter bills.</li>
-     * <li>true: filters bills.</li>
+     * <li>false: does not filter out the bills.</li>
+     * <li>true: filters out the bills.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,7 +71,7 @@ public class DescribeSplitItemBillRequest extends TeaModel {
     public Boolean isHideZeroCharge;
 
     /**
-     * <p>The maximum number of entries to query. Default value: 20. Maximum value: 300.</p>
+     * <p>The maximum number of entries to return in the current call. Default value: 20. Maximum value: 300.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -78,7 +80,7 @@ public class DescribeSplitItemBillRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used for the next query. The parameter must be left empty or set to the value of the NextToken parameter returned in the last call. Otherwise, an error is returned. If the parameter is left empty, the data is queried from the first entry.</p>
+     * <p>The token that specifies the position from which the current call starts to read data. The value must be empty or the value of NextToken returned in the previous response. Otherwise, an error occurs. An empty value indicates that the read operation starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>CAESEgoQCg4KCmd</p>
@@ -90,7 +92,7 @@ public class DescribeSplitItemBillRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The code of the service. The code is the same as that in Cost Center.</p>
+     * <p>The product code. This value is the same as the product code in the bills of the User Center.</p>
      * 
      * <strong>example:</strong>
      * <p>rds</p>
@@ -99,7 +101,7 @@ public class DescribeSplitItemBillRequest extends TeaModel {
     public String pipCode;
 
     /**
-     * <p>The code of the service.</p>
+     * <p>The product code.</p>
      * 
      * <strong>example:</strong>
      * <p>rds</p>
@@ -108,7 +110,7 @@ public class DescribeSplitItemBillRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The type of the service.</p>
+     * <p>The product type.</p>
      * 
      * <strong>example:</strong>
      * <p>rds</p>
@@ -117,7 +119,7 @@ public class DescribeSplitItemBillRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The ID of the split item.</p>
+     * <p>The ID of the attached resource.</p>
      * 
      * <strong>example:</strong>
      * <p>i-kjhdskjgshfdlkjfdh</p>
@@ -126,7 +128,14 @@ public class DescribeSplitItemBillRequest extends TeaModel {
     public String splitItemID;
 
     /**
-     * <p>The billing method. Valid values: Subscription: the subscription billing method. PayAsYouGo: the pay-as-you-go billing method. This parameter must be used with the ProductCode parameter.</p>
+     * <p>The subscription type. Valid values:</p>
+     * <ul>
+     * <li>Subscription: subscription.</li>
+     * <li>PayAsYouGo: pay-as-you-go.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter must be used together with the ProductCode parameter.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>PayAsYouGo</p>
@@ -135,7 +144,7 @@ public class DescribeSplitItemBillRequest extends TeaModel {
     public String subscriptionType;
 
     /**
-     * <p>The tags that are used to filter split bills. You can specify multiple tag values. If you specify multiple tag values, split bills that match one of the tag values are queried.</p>
+     * <p>The tag filter conditions. Multiple sets of TagValues query conditions are supported. The logical relationship between multiple sets of TagValues conditions is OR.</p>
      */
     @NameInMap("TagFilter")
     public java.util.List<DescribeSplitItemBillRequestTagFilter> tagFilter;
@@ -267,11 +276,11 @@ public class DescribeSplitItemBillRequest extends TeaModel {
 
     public static class DescribeSplitItemBillRequestTagFilter extends TeaModel {
         /**
-         * <p>The TagFilter.N parameter is used to query bills that match a specified tag. The value of the TagFilter.N parameter must be a key-value pair. The tag key must be 1 to 128 characters in length. Valid values of N: 1 to 20.</p>
+         * <p>TagFilter.N is used to query bills that match the specified tags. It consists of a key-value pair. The tag key must be 1 to 128 characters in length. Valid values of N: 1 to 20.</p>
          * <ul>
-         * <li>If only the TagFilter.N.TagKey parameter is specified, all bills associated with the tag key are queried.</li>
-         * <li>If you specify multiple tag key-value pairs at the same time, bills that meet any one of the tag key-value pairs are queried.</li>
-         * <li>If the tags added to resources change, you can query only the bills that are generated within the period in which the tags and resources are associated.</li>
+         * <li>If you specify only TagFilter.N.TagKey, all bills associated with the tag key are returned.</li>
+         * <li>If you specify multiple tag key-value pairs, bills that match any of the tag key-value pairs are returned.</li>
+         * <li>If the tags on a resource change, you can only query the bills generated during the period when the tags were attached to the resource.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -281,10 +290,10 @@ public class DescribeSplitItemBillRequest extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>You can specify the TagValues.N parameter to query bills that match the specified tag value. The value of the TagValues.N parameter must be a string. The tag value must be 1 to 128 characters in length. Valid values of N: 1 to 20.</p>
+         * <p>TagValues.N is used to query bills that match the specified tag values. It consists of a list of strings. The tag value must be 1 to 128 characters in length. Valid values of N: 1 to 20.</p>
          * <ul>
-         * <li>If you specify the TagValues.N parameter, the TagFilter.N.TagKey parameter is required. Otherwise, the error message InvalidParameter.TagValues is returned.</li>
-         * <li>If you specify multiple tag values, split bills that match one of the tag values are queried.</li>
+         * <li>If you specify TagValues.N, you must also specify TagFilter.N.TagKey. Otherwise, the InvalidParameter.TagValues error is reported.</li>
+         * <li>If you specify multiple tag values, bills that match any of the tag values are returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>

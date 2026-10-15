@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryPriceEntityListResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,13 +14,13 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data that is returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public QueryPriceEntityListResponseBodyData data;
 
     /**
-     * <p>The message that is returned.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful！</p>
@@ -29,7 +29,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
@@ -38,7 +38,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
 
     public static class QueryPriceEntityListResponseBodyDataPriceEntityInfoListPriceFactorList extends TeaModel {
         /**
-         * <p>The code of the factor.</p>
+         * <p>The code of the pricing factor.</p>
          * 
          * <strong>example:</strong>
          * <p>vm_region_no</p>
@@ -102,7 +102,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
         public String priceFactorCode;
 
         /**
-         * <p>The name of the factor.</p>
+         * <p>The name of the pricing factor.</p>
          * 
          * <strong>example:</strong>
          * <p>Region</p>
@@ -111,7 +111,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
         public String priceFactorName;
 
         /**
-         * <p>The values of the factor.</p>
+         * <p>The list of pricing factor values.</p>
          */
         @NameInMap("PriceFactorValueList")
         public java.util.List<String> priceFactorValueList;
@@ -149,7 +149,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
 
     public static class QueryPriceEntityListResponseBodyDataPriceEntityInfoList extends TeaModel {
         /**
-         * <p>The code of the billable item.</p>
+         * <p>The code of the pricing entity.</p>
          * 
          * <strong>example:</strong>
          * <p>instance_type</p>
@@ -158,16 +158,16 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
         public String priceEntityCode;
 
         /**
-         * <p>The name of the billable item.</p>
+         * <p>The name of the pricing entity.</p>
          * 
          * <strong>example:</strong>
-         * <p>Elastic Compute Service (ECS) instance</p>
+         * <p>ECS Instance</p>
          */
         @NameInMap("PriceEntityName")
         public String priceEntityName;
 
         /**
-         * <p>The factors of the billable item.</p>
+         * <p>The list of pricing factors for the pricing entity.</p>
          */
         @NameInMap("PriceFactorList")
         public java.util.List<QueryPriceEntityListResponseBodyDataPriceEntityInfoListPriceFactorList> priceFactorList;
@@ -205,7 +205,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
 
     public static class QueryPriceEntityListResponseBodyData extends TeaModel {
         /**
-         * <p>The information about the billable items.</p>
+         * <p>The list of pricing entities.</p>
          */
         @NameInMap("PriceEntityInfoList")
         public java.util.List<QueryPriceEntityListResponseBodyDataPriceEntityInfoList> priceEntityInfoList;

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UnsubscribeBillToOSSRequest extends TeaModel {
     /**
-     * <p>The type of accounts whose bills are to be pushed if multi-tier accounts are involved. Valid values:</p>
+     * <p>For multi-level accounts, specifies the type of bill to push. Valid values:</p>
      * <ul>
-     * <li>MA: management account.</li>
-     * <li>ACP1: member account of a virtual network operator (VNO).</li>
+     * <li>MA: Pushes the bill of the main account.</li>
+     * <li>ACP1: Pushes the bill of the Partner Platform V2.0 sub-account.</li>
      * </ul>
      * <p>Default value: MA.</p>
      * 
@@ -19,14 +19,14 @@ public class UnsubscribeBillToOSSRequest extends TeaModel {
     public String multAccountRelSubscribe;
 
     /**
-     * <p>The type of the bill to which you want to subscribe. Valid values:</p>
+     * <p>The subscription type. Valid values:</p>
      * <ul>
-     * <li>BillingItemDetailForBillingPeriod: bills of billable items</li>
-     * <li>InstanceDetailForBillingPeriod: bills of instances</li>
-     * <li>BillingItemDetailMonthly: billable item-based bills summarized by billing cycle</li>
-     * <li>InstanceDetailMonthly: instance-based bills summarized by billing cycle</li>
-     * <li>SplitItemDetailDaily: split bills summarized by day</li>
-     * <li>MonthBill: monthly bills in the PDF format You can subscribe to the monthly PDF bills only of the master account.</li>
+     * <li>BillingItemDetailForBillingPeriod: billable item-level consumption details.</li>
+     * <li>InstanceDetailForBillingPeriod: instance-level consumption details.</li>
+     * <li>BillingItemDetailMonthly: billable item-level consumption summary by billing cycle.</li>
+     * <li>InstanceDetailMonthly: instance-level consumption summary by billing cycle.</li>
+     * <li>SplitItemDetailDaily: split bill summarized by day.</li>
+     * <li>MonthBill: monthly bill in PDF format. Only MA subscriptions are supported.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

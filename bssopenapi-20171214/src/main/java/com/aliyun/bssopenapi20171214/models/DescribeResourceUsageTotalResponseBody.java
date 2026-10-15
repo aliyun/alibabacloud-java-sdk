@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeResourceUsageTotalResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,13 +14,13 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The queried data.</p>
+     * <p>The data.</p>
      */
     @NameInMap("Data")
     public DescribeResourceUsageTotalResponseBodyData data;
 
     /**
-     * <p>The returned message. If the request was successful, a success message is returned. If the request failed, an error message is returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful!</p>
@@ -102,7 +102,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
         public String period;
 
         /**
-         * <p>The usage of resource plans.</p>
+         * <p>The usage percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>0.1</p>
@@ -135,7 +135,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
 
     public static class DescribeResourceUsageTotalResponseBodyDataTotalUsage extends TeaModel {
         /**
-         * <p>The total costs of pay-as-you-go instances.</p>
+         * <p>The total cost of pay-as-you-go instances.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -144,7 +144,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
         public Float postpaidCost;
 
         /**
-         * <p>The total potential savings.</p>
+         * <p>The potential total savings.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -153,7 +153,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
         public Float potentialSavedCost;
 
         /**
-         * <p>The fee of purchased resource plans.</p>
+         * <p>The total resource purchase cost.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -171,7 +171,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
         public Float savedCost;
 
         /**
-         * <p>The total usage of resource plans.</p>
+         * <p>The total usage.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -228,13 +228,13 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
 
     public static class DescribeResourceUsageTotalResponseBodyData extends TeaModel {
         /**
-         * <p>The usage of resource plans in the specified period.</p>
+         * <p>The usage by period.</p>
          */
         @NameInMap("PeriodCoverage")
         public java.util.List<DescribeResourceUsageTotalResponseBodyDataPeriodCoverage> periodCoverage;
 
         /**
-         * <p>The total usage of resource plans.</p>
+         * <p>The total usage.</p>
          */
         @NameInMap("TotalUsage")
         public DescribeResourceUsageTotalResponseBodyDataTotalUsage totalUsage;

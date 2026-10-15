@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryProductListRequest extends TeaModel {
     /**
-     * <p>The page number of the page to return.</p>
+     * <p>The current page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class QueryProductListRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 20.</p>
+     * <p>The number of records per page. Maximum value: 300. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -24,7 +24,7 @@ public class QueryProductListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Specifies whether to return the total number of services. Default value: false.</p>
+     * <p>Specifies whether to return the total number of products. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

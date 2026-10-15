@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryAccountBalanceResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public QueryAccountBalanceResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>16176743-6DC7-4CB3-BB25-A13982D8DFAD</p>
@@ -38,7 +38,7 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
 
     public static class QueryAccountBalanceResponseBodyData extends TeaModel {
         /**
-         * <p>The available balance of the account.</p>
+         * <p>The available credit.</p>
          * 
          * <strong>example:</strong>
          * <p>10000.00</p>
@@ -102,7 +102,7 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
         public String availableAmount;
 
         /**
-         * <p>The available balance in cash.</p>
+         * <p>The available cash balance.</p>
          * 
          * <strong>example:</strong>
          * <p>10000.00</p>
@@ -111,7 +111,7 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
         public String availableCashAmount;
 
         /**
-         * <p>The credit balance of the account.</p>
+         * <p>The credit limit.</p>
          * 
          * <strong>example:</strong>
          * <p>0.00</p>
@@ -120,11 +120,14 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
         public String creditAmount;
 
         /**
-         * <p>The type of the currency. Valid values:</p>
+         * <p>The currency. Valid values:</p>
          * <ul>
-         * <li>CNY: Chinese Yuan</li>
-         * <li>USD: US dollar</li>
-         * <li>JPY: Japanese Yen</li>
+         * <li><p>CNY: Chinese Yuan</p>
+         * </li>
+         * <li><p>USD: US Dollar</p>
+         * </li>
+         * <li><p>JPY: Japanese Yen</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,7 +137,7 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>The credit line controlled by MYbank.</p>
+         * <p>The credit limit granted by MYbank.</p>
          * 
          * <strong>example:</strong>
          * <p>0.00</p>
@@ -143,7 +146,7 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
         public String mybankCreditAmount;
 
         /**
-         * <p>The quota limit for eco customers.</p>
+         * <p>The quota limit for ecosystem customers.</p>
          * 
          * <strong>example:</strong>
          * <p>10000.00</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSavingsPlansUsageDetailShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the account for which you want to query usage details. If you do not set this parameter, the data of the current Alibaba Cloud account and its RAM users is queried. To query the data of a RAM user, specify the ID of the RAM user.</p>
+     * <p>The ID of the account. If this parameter is left empty, data of the current account and its trusteeship linked accounts is queried. You can specify a trusteeship linked account ID to query data of that account.</p>
      * 
      * <strong>example:</strong>
      * <p>123745698925000</p>
@@ -14,7 +14,7 @@ public class DescribeSavingsPlansUsageDetailShrinkRequest extends TeaModel {
     public Long billOwnerId;
 
     /**
-     * <p>The end of the time range to query. The end is excluded from the time range. If you do not set this parameter, the end time is the current time. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The end time. Format: yyyy-MM-dd HH:mm:ss. The query excludes data at this time. If this parameter is left empty, the query covers data up to the current time.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-02 00:00:00</p>
@@ -26,7 +26,7 @@ public class DescribeSavingsPlansUsageDetailShrinkRequest extends TeaModel {
     public String filterParamShrink;
 
     /**
-     * <p>The maximum number of entries to return. Default value: 20. Maximum value: 300.</p>
+     * <p>The maximum number of data records to return. Default value: 20. Maximum value: 300.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -35,7 +35,12 @@ public class DescribeSavingsPlansUsageDetailShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The time granularity at which usage details are queried. Valid values: MONTH, DAY, and HOUR.</p>
+     * <p>The time granularity for querying usage details. Valid values:</p>
+     * <ul>
+     * <li>MONTH: monthly granularity.</li>
+     * <li>DAY: daily granularity.</li>
+     * <li>HOUR: hourly granularity.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +50,7 @@ public class DescribeSavingsPlansUsageDetailShrinkRequest extends TeaModel {
     public String periodType;
 
     /**
-     * <p>The beginning of the time range to query. The beginning is included in the time range. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The start time. Format: yyyy-MM-dd HH:mm:ss. The query includes data at this time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +60,7 @@ public class DescribeSavingsPlansUsageDetailShrinkRequest extends TeaModel {
     public String startPeriod;
 
     /**
-     * <p>The token that is used to retrieve the next page of results. You do not need to set this parameter if you query usage details within a specific time range for the first time. The response returns a token that you can use to query usage details that are displayed on the next page. If a null value is returned for the NextToken parameter, no more coverage details can be queried.</p>
+     * <p>The pagination token. Leave this parameter empty for the first page. The query result returns the token for the next page. If the returned token is empty, all data has been retrieved.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJwYWdlTnVtIjoyLCJwYWdlU2l6ZSI6MTB9</p>
