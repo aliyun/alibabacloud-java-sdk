@@ -5,8 +5,9 @@ import com.aliyun.tea.*;
 
 public class SmartqQueryAbilityRequest extends TeaModel {
     /**
-     * <p>The ID of the dataset. To obtain the ID, navigate to \<em>\<em>Workbench\</em>\</em> &gt; \<em>\<em>Dataset\</em>\</em> in the Quick BI console. Open the dataset and find the \<code>cubeId\\</code> in the URL.</p>
-     * <p>In multi-table scenarios, this parameter must be empty.</p>
+     * <p>The dataset ID.</p>
+     * <p>Navigate to Workbench &gt; Datasets, open the desired dataset, and find the cubeId in the URL.</p>
+     * <p>In multi-table scenarios, leave this parameter empty.</p>
      * 
      * <strong>example:</strong>
      * <p>7c7223ae-****-3c744528014b</p>
@@ -15,7 +16,8 @@ public class SmartqQueryAbilityRequest extends TeaModel {
     public String cubeId;
 
     /**
-     * <p>A list of dataset IDs. The model selects one or more tables from the list to generate an answer based on the question. This parameter is required for multi-table scenarios and is not used for single-table scenarios.</p>
+     * <p>The list of multiple dataset IDs.
+     * The model selects one or more tables from the list based on the question to generate an answer. This parameter is required in multi-table scenarios and is not needed in single-table scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>7c7****-3c744528014b,a876asd***yhashd2</p>
@@ -24,9 +26,9 @@ public class SmartqQueryAbilityRequest extends TeaModel {
     public String multipleCubeIds;
 
     /**
-     * <p>The ID of the user.</p>
+     * <p>The user ID.</p>
      * <blockquote>
-     * <p>Notice: If you do not specify this parameter, data is queried as the organization owner by default.</p>
+     * <p>Notice: If this parameter is not specified, data is queried as the organization owner by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -36,7 +38,7 @@ public class SmartqQueryAbilityRequest extends TeaModel {
     public String userId;
 
     /**
-     * <p>The question in text format.</p>
+     * <p>The question text.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

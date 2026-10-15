@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SmartqQueryAbilityResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D787E1A3-A************2B05DF8D885</p>
@@ -60,7 +60,7 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
 
     public static class SmartqQueryAbilityResponseBodyResultMetaType extends TeaModel {
         /**
-         * <p>The name of the column tuple.</p>
+         * <p>The column tuple name.</p>
          * 
          * <strong>example:</strong>
          * <p>Polar***STPS</p>
@@ -69,12 +69,10 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The type of the metadata. Valid values:</p>
+         * <p>The metadata row or column type.</p>
          * <ul>
-         * <li><p>Dimension</p>
-         * </li>
-         * <li><p>Measure</p>
-         * </li>
+         * <li>Dimension: dimension</li>
+         * <li>Measure: measure</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -87,7 +85,7 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The type of the column tuple.</p>
+         * <p>The column tuple type.</p>
          * 
          * <strong>example:</strong>
          * <p>string</p>
@@ -128,7 +126,7 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
 
     public static class SmartqQueryAbilityResponseBodyResultValues extends TeaModel {
         /**
-         * <p>The data values in a row.</p>
+         * <p>The data values for each row.</p>
          * 
          * <strong>if can be null:</strong>
          * <p>true</p>
@@ -153,7 +151,7 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
 
     public static class SmartqQueryAbilityResponseBodyResult extends TeaModel {
         /**
-         * <p>The recommended chart type.</p>
+         * <p>The suggested chart type.</p>
          * 
          * <strong>example:</strong>
          * <p>NEW_TABLE</p>
@@ -162,7 +160,7 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
         public String chartType;
 
         /**
-         * <p>The summary.</p>
+         * <p>The summary information.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -174,13 +172,13 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
         public String conclusionText;
 
         /**
-         * <p>The list of data that is returned only in multi-step scenarios. Each element corresponds to a set of chart data.</p>
+         * <p>The data list returned only in multi-step scenarios. Each element corresponds to a chart dataset.</p>
          */
         @NameInMap("DataList")
         public java.util.List<String> dataList;
 
         /**
-         * <p>The visual logical SQL statement.</p>
+         * <p>The visualization logic SQL.</p>
          * 
          * <strong>example:</strong>
          * <p>select * ****</p>
@@ -189,13 +187,13 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
         public String logicSql;
 
         /**
-         * <p>A list of column tuple types.</p>
+         * <p>The list of column tuple types.</p>
          */
         @NameInMap("MetaType")
         public java.util.List<SmartqQueryAbilityResponseBodyResultMetaType> metaType;
 
         /**
-         * <p>An array of data value lists.</p>
+         * <p>The array of data value lists.</p>
          */
         @NameInMap("Values")
         public java.util.List<SmartqQueryAbilityResponseBodyResultValues> values;

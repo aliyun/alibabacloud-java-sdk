@@ -14,7 +14,7 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The acceleration task model.</p>
+     * <p>The acceleration task information model.</p>
      */
     @NameInMap("Result")
     public ListAccelerationOfWorkspaceResponseBodyResult result;
@@ -22,10 +22,8 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The request was successful.</p>
-     * </li>
-     * <li><p>false: The request failed.</p>
-     * </li>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -92,7 +90,7 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
         public String cubeName;
 
         /**
-         * <p>The time when acceleration was enabled.</p>
+         * <p>The time when acceleration was enabled, in the format of YYYYMMDD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>20250911 00:00:00</p>
@@ -119,20 +117,14 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The status of the task. Valid values:</p>
+         * <p>The status. Valid values:</p>
          * <ul>
-         * <li><p>0: Pending</p>
-         * </li>
-         * <li><p>1: Running</p>
-         * </li>
-         * <li><p>2: Succeeded</p>
-         * </li>
-         * <li><p>3: Failed</p>
-         * </li>
-         * <li><p>4: Canceled</p>
-         * </li>
-         * <li><p>5: Warning</p>
-         * </li>
+         * <li>0: pending</li>
+         * <li>1: running</li>
+         * <li>2: completed</li>
+         * <li>3: failed</li>
+         * <li>4: canceled</li>
+         * <li>5: warning</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -142,7 +134,7 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
         public Integer jobStatus;
 
         /**
-         * <p>The time when the task was last modified.</p>
+         * <p>The last modification time, in the format of YYYYMMDD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>20250911 00:00:00</p>
@@ -240,13 +232,13 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
 
     public static class ListAccelerationOfWorkspaceResponseBodyResult extends TeaModel {
         /**
-         * <p>An array of acceleration task information.</p>
+         * <p>The array of acceleration task information.</p>
          */
         @NameInMap("Data")
         public java.util.List<ListAccelerationOfWorkspaceResponseBodyResultData> data;
 
         /**
-         * <p>The next page. A value of NULL or 0 indicates that there is no next page.</p>
+         * <p>The next page number. A value of NULL or 0 indicates that there is no next page.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -264,7 +256,7 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
-         * <p>The number of rows per page that you set when you call the operation.</p>
+         * <p>The number of rows per page specified in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -273,7 +265,7 @@ public class ListAccelerationOfWorkspaceResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The previous page. A value of NULL or 0 indicates that there is no previous page.</p>
+         * <p>The previous page number. A value of NULL or 0 indicates that there is no previous page.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

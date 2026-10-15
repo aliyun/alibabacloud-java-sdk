@@ -14,7 +14,7 @@ public class IpWhiteListConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The IP address whitelist.</p>
+     * <p>The IP whitelist.</p>
      */
     @NameInMap("Result")
     public IpWhiteListConfigResponseBodyResult result;
@@ -59,7 +59,7 @@ public class IpWhiteListConfigResponseBody extends TeaModel {
 
     public static class IpWhiteListConfigResponseBodyResult extends TeaModel {
         /**
-         * <p>The IP address whitelist array.</p>
+         * <p>The IP whitelist array.</p>
          */
         @NameInMap("IpWhiteList")
         public java.util.List<String> ipWhiteList;

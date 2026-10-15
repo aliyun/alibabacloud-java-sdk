@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListByUserGroupIdRequest extends TeaModel {
     /**
-     * <p>The ID of the user group that you want to query. Separate multiple user groups with commas (,).</p>
+     * <p>The IDs of the user groups to query. Separate multiple IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

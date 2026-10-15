@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class IpWhiteListConfigRequest extends TeaModel {
     /**
-     * <p>Required for increase and delete operations. The IP whitelist. Separate multiple IP addresses with commas.</p>
+     * <p>Required for add and delete operations. The IP whitelist. Separate multiple IP addresses with commas.</p>
      * 
      * <strong>example:</strong>
      * <p>60.205.254.120</p>
@@ -16,9 +16,9 @@ public class IpWhiteListConfigRequest extends TeaModel {
     /**
      * <p>The operation type. Valid values:</p>
      * <ul>
-     * <li>ADD: incrementally adds entries.</li>
-     * <li>DELETE: deletes entries.</li>
-     * <li>QUERY: queries entries.</li>
+     * <li>ADD: Incrementally adds entries.</li>
+     * <li>DELETE: Deletes entries.</li>
+     * <li>QUERY: Queries entries.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

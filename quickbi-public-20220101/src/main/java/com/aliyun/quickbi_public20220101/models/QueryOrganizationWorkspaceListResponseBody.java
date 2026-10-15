@@ -14,18 +14,16 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The paginated query results. The Data parameter contains the details of each workspace.</p>
+     * <p>The paginated result of the workspace list. The detailed information of workspaces is stored in the Data response parameter.</p>
      */
     @NameInMap("Result")
     public QueryOrganizationWorkspaceListResponseBodyResult result;
 
     /**
-     * <p>Whether the request succeeded. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The request succeeded.</p>
-     * </li>
-     * <li><p>false: The request failed.</p>
-     * </li>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,6 +63,13 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
 
     public static class QueryOrganizationWorkspaceListResponseBodyResultDataWorkspaceExportConfig extends TeaModel {
         /**
+         * <p>Specifies how images are handled when exporting Excel files with formatting. This field takes effect only when configured at the organization level.
+         * Valid values:</p>
+         * <ul>
+         * <li>false: Image fields are not converted to images.</li>
+         * <li>true: Image fields can be converted to images. The option appears on the report export page, and users must manually select it to convert images.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -72,6 +77,8 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public Boolean allowExcelImageFile;
 
         /**
+         * <p>Specifies whether to allow exporting data as an Excel file.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -79,6 +86,8 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public Boolean dataExport;
 
         /**
+         * <p>The default export type (with formatting: true. Without formatting: false).</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -86,6 +95,8 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public Boolean defaultExportType;
 
         /**
+         * <p>The master switch for export. If set to false, all export settings below do not take effect.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -93,6 +104,8 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public Boolean exportMainSwitch;
 
         /**
+         * <p>Specifies whether to allow exporting to a local device.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -100,6 +113,8 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public Boolean exportToLocal;
 
         /**
+         * <p>Specifies whether public links of works support export.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -107,6 +122,8 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public Boolean exportToPublicWork;
 
         /**
+         * <p>Specifies whether to allow exporting to a server.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -114,6 +131,8 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public Boolean exportToServer;
 
         /**
+         * <p>Specifies whether to allow exporting as an image.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -121,6 +140,8 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public Boolean imageExport;
 
         /**
+         * <p>Specifies whether to allow exporting as a PDF.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -208,12 +229,10 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
 
     public static class QueryOrganizationWorkspaceListResponseBodyResultData extends TeaModel {
         /**
-         * <p>Whether works in the workspace can be published. Valid values:</p>
+         * <p>Indicates whether works can be made public. Valid values:</p>
          * <ul>
-         * <li><p>true: Publishing is allowed.</p>
-         * </li>
-         * <li><p>false: Publishing is not allowed.</p>
-         * </li>
+         * <li>true: Public.</li>
+         * <li>false: Not public.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -223,12 +242,10 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public Boolean allowPublishOperation;
 
         /**
-         * <p>Whether works in the workspace can be shared. Valid values:</p>
+         * <p>Indicates whether works can be shared with authorization. Valid values:</p>
          * <ul>
-         * <li><p>true: Sharing is allowed.</p>
-         * </li>
-         * <li><p>false: Sharing is not allowed.</p>
-         * </li>
+         * <li>true: Authorized.</li>
+         * <li>false: Not authorized.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -247,7 +264,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The creator\&quot;s Quick BI user ID.</p>
+         * <p>The Quick BI user ID of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>de4bc5f9429141cc8091cdd1c15b****</p>
@@ -256,7 +273,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public String createUser;
 
         /**
-         * <p>The creator\&quot;s Alibaba Cloud account name.</p>
+         * <p>The Alibaba Cloud account name of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>pop****@aliyun.com</p>
@@ -274,7 +291,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The modifier\&quot;s Quick BI user ID.</p>
+         * <p>The Quick BI user ID of the modifier.</p>
          * 
          * <strong>example:</strong>
          * <p>de4bc5f9429141cc8091cdd1c15b****</p>
@@ -283,7 +300,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public String modifyUser;
 
         /**
-         * <p>The modifier\&quot;s Alibaba Cloud account name.</p>
+         * <p>The Alibaba Cloud account name of the modifier.</p>
          * 
          * <strong>example:</strong>
          * <p>pop****@aliyun.com</p>
@@ -292,7 +309,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public String modifyUserAccountName;
 
         /**
-         * <p>The ID of the workspace\&quot;s organization.</p>
+         * <p>The ID of the organization to which the workspace belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>2fe4fbd8-588f-489a-b3e1-e92c7af0****</p>
@@ -301,7 +318,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public String organizationId;
 
         /**
-         * <p>The workspace owner\&quot;s Quick BI user ID.</p>
+         * <p>The Quick BI user ID of the workspace owner.</p>
          * 
          * <strong>example:</strong>
          * <p>de4bc5f9429141cc8091cdd1c15b****</p>
@@ -310,7 +327,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The workspace owner\&quot;s Alibaba Cloud account name.</p>
+         * <p>The Alibaba Cloud account name of the workspace owner.</p>
          * 
          * <strong>example:</strong>
          * <p>pop****@aliyun.com</p>
@@ -319,7 +336,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public String ownerAccountName;
 
         /**
-         * <p>The workspace owner\&quot;s Quick BI account name.</p>
+         * <p>The Quick BI account name of the workspace owner.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -328,14 +345,17 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public String realOwnerAccountName;
 
         /**
-         * <p>The workspace description.</p>
+         * <p>The description of the workspace.</p>
          * 
          * <strong>example:</strong>
-         * <p>该空间是测试空间</p>
+         * <p>This workspace is a test workspace</p>
          */
         @NameInMap("WorkspaceDescription")
         public String workspaceDescription;
 
+        /**
+         * <p>The workspace export configuration.</p>
+         */
         @NameInMap("WorkspaceExportConfig")
         public QueryOrganizationWorkspaceListResponseBodyResultDataWorkspaceExportConfig workspaceExportConfig;
 
@@ -352,7 +372,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
          * <p>The workspace name.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试空间</p>
+         * <p>Test workspace</p>
          */
         @NameInMap("WorkspaceName")
         public String workspaceName;
@@ -494,7 +514,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
 
     public static class QueryOrganizationWorkspaceListResponseBodyResult extends TeaModel {
         /**
-         * <p>An array of workspace objects.</p>
+         * <p>The list of workspaces.</p>
          */
         @NameInMap("Data")
         public java.util.List<QueryOrganizationWorkspaceListResponseBodyResultData> data;
@@ -509,7 +529,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of rows per page specified in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -518,7 +538,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of workspaces.</p>
+         * <p>The total number of rows.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

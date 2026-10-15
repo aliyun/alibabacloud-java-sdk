@@ -14,7 +14,7 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The user information of the organization member.</p>
+     * <p>The organization user information returned.</p>
      */
     @NameInMap("Result")
     public QueryUserInfoByAccountResponseBodyResult result;
@@ -22,10 +22,8 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The request was successful.</p>
-     * </li>
-     * <li><p>false: The request failed.</p>
-     * </li>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +63,7 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
 
     public static class QueryUserInfoByAccountResponseBodyResult extends TeaModel {
         /**
-         * <p>The Alibaba Cloud ID. For users not added through RAM self-service, this ID becomes available only after the user\&quot;s first login.</p>
+         * <p>The Alibaba Cloud account ID. For users who are not added through RAM self-service reading, the Alibaba Cloud ID can be obtained only after logon.</p>
          * 
          * <strong>example:</strong>
          * <p>135****5848</p>
@@ -74,7 +72,7 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The Alibaba Cloud account name. For a RAM user, the domain suffix (the part after the @ symbol) is omitted. For example, for the user <code>test@test.com</code>, the value <code>test</code> is returned.</p>
+         * <p>The Alibaba Cloud account name. For RAM users, the domain name after the at sign (@) is removed. For example, <a href="mailto:test@test.com">test@test.com</a> returns test.</p>
          * 
          * <strong>example:</strong>
          * <p>1386587****@163.com</p>
@@ -83,17 +81,12 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>Indicates whether the user is assigned the organization administrator role. Valid values:</p>
+         * <p>Indicates whether the organization administrator role is bound. Valid values:</p>
          * <ul>
-         * <li><p>true: Yes</p>
-         * </li>
-         * <li><p>false: No</p>
-         * </li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
-         * <blockquote>
-         * <p>Notice: </p>
-         * </blockquote>
-         * <p>This parameter is deprecated. Use the <code>RoleIdList</code> parameter instead.</p>
+         * <p><notice>This parameter is deprecated. Use the RoleIdList parameter instead.</notice></p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -102,17 +95,12 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
         public Boolean adminUser;
 
         /**
-         * <p>Indicates whether the user is assigned the permission administrator role. Valid values:</p>
+         * <p>Indicates whether the permission management administrator role is attached. Valid values:</p>
          * <ul>
-         * <li><p>true: Yes</p>
-         * </li>
-         * <li><p>false: No</p>
-         * </li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
-         * <blockquote>
-         * <p>Notice: </p>
-         * </blockquote>
-         * <p>This parameter is deprecated. Use the <code>RoleIdList</code> parameter instead.</p>
+         * <p><notice>This parameter has expired and is no longer recommended. Use the RoleIdList parameter instead.</notice></p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -121,13 +109,13 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
         public Boolean authAdminUser;
 
         /**
-         * <p>The intelligent modules for which the user has a quota.</p>
+         * <p>The intelligent modules with quota.</p>
          */
         @NameInMap("CopilotModules")
         public java.util.List<String> copilotModules;
 
         /**
-         * <p>The user\&quot;s email address.</p>
+         * <p>The email address.</p>
          * 
          * <strong>example:</strong>
          * <p>1386587****@163.com</p>
@@ -136,6 +124,12 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
         public String email;
 
         /**
+         * <p>Indicates whether the user is disabled. Valid values:</p>
+         * <ul>
+         * <li>true: Disabled.</li>
+         * <li>false: Active.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -143,16 +137,16 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
         public Boolean isDeleted;
 
         /**
-         * <p>The user\&quot;s nickname.</p>
+         * <p>The nickname.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试用户</p>
+         * <p>TestUser</p>
          */
         @NameInMap("NickName")
         public String nickName;
 
         /**
-         * <p>The user\&quot;s phone number.</p>
+         * <p>The phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>1386587****</p>
@@ -161,7 +155,7 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
         public String phone;
 
         /**
-         * <p>The IDs of the organization roles assigned to the user.</p>
+         * <p>The list of organization role IDs bound to the user.</p>
          */
         @NameInMap("RoleIdList")
         public java.util.List<Long> roleIdList;
@@ -178,12 +172,9 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
         /**
          * <p>The user type of the organization member. Valid values:</p>
          * <ul>
-         * <li><p>1: developer</p>
-         * </li>
-         * <li><p>2: viewer</p>
-         * </li>
-         * <li><p>3: analyst</p>
-         * </li>
+         * <li>1: Developer.</li>
+         * <li>2: Visitor.</li>
+         * <li>3: Analyst.</li>
          * </ul>
          * 
          * <strong>example:</strong>

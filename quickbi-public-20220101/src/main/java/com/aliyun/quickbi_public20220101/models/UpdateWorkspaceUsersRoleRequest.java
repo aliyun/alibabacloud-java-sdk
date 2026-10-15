@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkspaceUsersRoleRequest extends TeaModel {
     /**
-     * <p>Preset space role ID, existing roles will be overwritten. Value range:</p>
+     * <p>The ID of the preset workspace role. Existing roles are overwritten. Valid values:</p>
      * <ul>
-     * <li>25: Space Administrator</li>
-     * <li>26: Space Developer</li>
-     * <li>27: Space Analyst</li>
-     * <li>30: Space Viewer</li>
+     * <li>25: workspace administrator</li>
+     * <li>26: workspace developer</li>
+     * <li>27: workspace analyst</li>
+     * <li>30: workspace viewer</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -21,9 +21,9 @@ public class UpdateWorkspaceUsersRoleRequest extends TeaModel {
     public Long roleId;
 
     /**
-     * <p>User ID. This is the UserID for Quick BI, not the UID for Alibaba Cloud.</p>
+     * <p>The user IDs. The IDs are Quick BI user IDs, not Alibaba Cloud UIDs.</p>
      * <ul>
-     * <li>Supports batch parameters, separate user IDs with a comma (,).</li>
+     * <li>You can specify multiple user IDs separated by commas (,).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -34,7 +34,7 @@ public class UpdateWorkspaceUsersRoleRequest extends TeaModel {
     public String userIds;
 
     /**
-     * <p>Workspace ID.</p>
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

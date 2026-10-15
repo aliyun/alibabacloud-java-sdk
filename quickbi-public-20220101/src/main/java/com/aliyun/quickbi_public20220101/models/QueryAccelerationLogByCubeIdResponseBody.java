@@ -14,24 +14,20 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of the API request.</p>
+     * <p>The execution result of the operation. Valid values:</p>
      * <ul>
-     * <li><p>true: The execution succeeded.</p>
-     * </li>
-     * <li><p>false: The execution failed.</p>
-     * </li>
+     * <li>true: The execution succeeded.</li>
+     * <li>false: The execution failed.</li>
      * </ul>
      */
     @NameInMap("Result")
     public QueryAccelerationLogByCubeIdResponseBodyResult result;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The request was successful.</p>
-     * </li>
-     * <li><p>false: The request failed.</p>
-     * </li>
+     * <li>true: The request succeeded.</li>
+     * <li>false: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +67,7 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
 
     public static class QueryAccelerationLogByCubeIdResponseBodyResultData extends TeaModel {
         /**
-         * <p>The task duration in seconds.</p>
+         * <p>The duration. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -98,20 +94,14 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The status of the task.</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><p>0: Pending</p>
-         * </li>
-         * <li><p>1: Running</p>
-         * </li>
-         * <li><p>2: Succeeded</p>
-         * </li>
-         * <li><p>3: Failed</p>
-         * </li>
-         * <li><p>4: Canceled</p>
-         * </li>
-         * <li><p>5: Warning</p>
-         * </li>
+         * <li>0: pending</li>
+         * <li>1: running</li>
+         * <li>2: succeeded</li>
+         * <li>3: failed</li>
+         * <li>4: canceled</li>
+         * <li>5: warning</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -121,16 +111,16 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
         public String jobStatus;
 
         /**
-         * <p>The start time of the task.</p>
+         * <p>The task start time. Format: yyyy/MM/dd HH:mm:ss. Time zone: UTC+8.</p>
          * 
          * <strong>example:</strong>
-         * <p>REST_A***************6a8</p>
+         * <p>2025/09/10 13:59:19</p>
          */
         @NameInMap("JonStartDate")
         public String jonStartDate;
 
         /**
-         * <p>The log content.</p>
+         * <p>The log.</p>
          * 
          * <strong>example:</strong>
          * <p>asdav************</p>
@@ -195,7 +185,7 @@ public class QueryAccelerationLogByCubeIdResponseBody extends TeaModel {
 
     public static class QueryAccelerationLogByCubeIdResponseBodyResult extends TeaModel {
         /**
-         * <p>An array of acceleration task logs.</p>
+         * <p>The array of acceleration task logs.</p>
          */
         @NameInMap("Data")
         public java.util.List<QueryAccelerationLogByCubeIdResponseBodyResultData> data;

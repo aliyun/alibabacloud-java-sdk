@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class QueryWorksByOrganizationRequest extends TeaModel {
     /**
-     * <p>Page number.</p>
+     * <p>The page number.</p>
      * <ul>
-     * <li>Default value is 1.</li>
+     * <li>Default value: 1.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class QueryWorksByOrganizationRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>Number of items per page.</p>
+     * <p>The number of rows per page.</p>
      * <ul>
-     * <li>Default value is 10.</li>
+     * <li>Default value: 10.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,12 +29,12 @@ public class QueryWorksByOrganizationRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The status of the work to query. Possible values:</p>
+     * <p>The status of the works to query. Valid values:</p>
      * <ul>
-     * <li>0: Unpublished</li>
-     * <li>1: Published</li>
-     * <li>2: Modified but not published</li>
-     * <li>3: Offline</li>
+     * <li>0: Unpublished.</li>
+     * <li>1: Published.</li>
+     * <li>2: Modified but not published.</li>
+     * <li>3: Offline.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,10 +44,10 @@ public class QueryWorksByOrganizationRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>Third-party embedding status. Possible values:</p>
+     * <p>The third-party embedding status. Valid values:</p>
      * <ul>
-     * <li>0: Embedding not enabled</li>
-     * <li>1: Embedding enabled</li>
+     * <li>0: Embedding is not enabled.</li>
+     * <li>1: Embedding is enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,12 +57,12 @@ public class QueryWorksByOrganizationRequest extends TeaModel {
     public Integer thirdPartAuthFlag;
 
     /**
-     * <p>The type of work to query. Leave blank to query all types. Possible values:</p>
+     * <p>The type of works to query. Leave this parameter empty to query all types. Valid values:</p>
      * <ul>
-     * <li>DATAPRODUCT: Data Portal</li>
-     * <li>PAGE: Dashboard</li>
-     * <li>REPORT: Spreadsheet</li>
-     * <li>dashboardOfflineQuery: Self-service Data Retrieval</li>
+     * <li>DATAPRODUCT: data portal</li>
+     * <li>PAGE: dashboard</li>
+     * <li>REPORT: workbook</li>
+     * <li>dashboardOfflineQuery: custom query</li>
      * </ul>
      * 
      * <strong>example:</strong>

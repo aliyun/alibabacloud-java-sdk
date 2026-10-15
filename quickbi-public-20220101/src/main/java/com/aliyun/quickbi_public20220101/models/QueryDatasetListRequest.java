@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class QueryDatasetListRequest extends TeaModel {
     /**
-     * <p>The ID of the folder.</p>
+     * <p>The directory ID.</p>
      * <ul>
-     * <li>If you specify this parameter, all datasets in the folder are returned.</li>
+     * <li>If this parameter is specified, all datasets in the specified directory are returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class QueryDatasetListRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The keyword used to search for datasets by name.</p>
+     * <p>The keyword used to search for dataset names.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -28,10 +28,8 @@ public class QueryDatasetListRequest extends TeaModel {
     /**
      * <p>The page number of the dataset list.</p>
      * <ul>
-     * <li><p>Start value: 1</p>
-     * </li>
-     * <li><p>Default value: 1</p>
-     * </li>
+     * <li>Minimum value: 1</li>
+     * <li>Default value: 1</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,12 +39,10 @@ public class QueryDatasetListRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of rows per page for a paged query.</p>
      * <ul>
-     * <li><p>Default value: 10</p>
-     * </li>
-     * <li><p>Maximum value: 1000</p>
-     * </li>
+     * <li>Default value: 10</li>
+     * <li>Maximum value: 1000</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,10 +54,8 @@ public class QueryDatasetListRequest extends TeaModel {
     /**
      * <p>Specifies whether to recursively include datasets in subdirectories. Valid values:</p>
      * <ul>
-     * <li><p>true: Returns all datasets in the folder specified by DirectoryId and its subdirectories.</p>
-     * </li>
-     * <li><p>false: Returns only the datasets in the folder specified by DirectoryId.</p>
-     * </li>
+     * <li>true: Returns datasets in all recursive subdirectories under the directory specified by directoryId.</li>
+     * <li>false: Returns only datasets in the directory specified by directoryId, excluding subdirectories.</li>
      * </ul>
      * 
      * <strong>example:</strong>

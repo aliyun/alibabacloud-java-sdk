@@ -16,8 +16,8 @@ public class UpdateUserResponseBody extends TeaModel {
     /**
      * <p>The execution result of the operation. Valid values:</p>
      * <ul>
-     * <li>true: Successful.</li>
-     * <li>false: Failed.</li>
+     * <li>true: The operation was successful.</li>
+     * <li>false: The operation failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

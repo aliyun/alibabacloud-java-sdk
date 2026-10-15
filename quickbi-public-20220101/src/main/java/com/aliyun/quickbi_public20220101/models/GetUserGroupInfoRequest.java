@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetUserGroupInfoRequest extends TeaModel {
     /**
-     * <p>Keyword of the user group name.</p>
+     * <p>The keyword of the user group name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试用户组</p>
+     * <p>Test user group</p>
      */
     @NameInMap("Keyword")
     public String keyword;

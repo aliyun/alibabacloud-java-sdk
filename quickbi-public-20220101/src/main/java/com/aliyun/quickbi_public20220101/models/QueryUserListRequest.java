@@ -27,7 +27,7 @@ public class QueryUserListRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of rows per page in a paged query.</p>
+     * <p>The number of rows per page for a paged query.</p>
      * <ul>
      * <li>Default value: 10</li>
      * <li>Maximum value: 1000</li>

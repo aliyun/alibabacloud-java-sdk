@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class AddShareReportRequest extends TeaModel {
     /**
-     * <p>The scope of authorization. Valid values:</p>
+     * <p>The authorization type. Valid values:</p>
      * <ul>
-     * <li>1: view only</li>
-     * <li>3: View and export</li>
+     * <li>1: View only.</li>
+     * <li>3: View and export.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,7 +19,7 @@ public class AddShareReportRequest extends TeaModel {
     public Integer authPoint;
 
     /**
-     * <p>The validity period of the share. The value is a timestamp in milliseconds.</p>
+     * <p>The expiration time of the sharing, in millisecond-level UNIX timestamp format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,11 +29,11 @@ public class AddShareReportRequest extends TeaModel {
     public Long expireDate;
 
     /**
-     * <p>The ID of the person to be shared, which may be the user ID of the Quick BI or the user group ID.</p>
+     * <p>The ID of the share recipient. The value can be a Quick BI user ID or a user group ID.</p>
      * <ul>
-     * <li>If ShareToType is 0 (user), ShareTo is the user ID.</li>
-     * <li>When ShareToType is set to 1 (user group), ShareTo is the user group ID.</li>
-     * <li>When ShareToType=2 (organization), ShareTo is the ID of the organization.</li>
+     * <li>ShareToType=0 (user): ShareTo is the user ID.</li>
+     * <li>ShareToType=1 (user group): ShareTo is the user group ID.</li>
+     * <li>ShareToType=2 (organization): ShareTo is the organization ID.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class AddShareReportRequest extends TeaModel {
     public String shareToId;
 
     /**
-     * <p>The share type of the template. Valid values:</p>
+     * <p>The sharing type. Valid values:</p>
      * <ul>
      * <li>0: user</li>
      * <li>1: user group</li>
@@ -58,7 +58,7 @@ public class AddShareReportRequest extends TeaModel {
     public Integer shareToType;
 
     /**
-     * <p>The ID of the shared work. The works here include BI portal, dashboards, spreadsheets, and self-service access.</p>
+     * <p>The ID of the work to share. Works include data portals, dashboards, workbooks, and ad hoc queries.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

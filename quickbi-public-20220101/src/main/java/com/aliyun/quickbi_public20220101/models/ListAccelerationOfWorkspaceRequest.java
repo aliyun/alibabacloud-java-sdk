@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAccelerationOfWorkspaceRequest extends TeaModel {
     /**
-     * <p>The user ID in Quick BI. This is not your Alibaba Cloud account ID. Call the QueryUserInfoByAccount operation to obtain the user ID.</p>
+     * <p>The user ID in Quick BI, not your Alibaba Cloud account ID. You can call the QueryUserInfoByAccount operation to obtain the user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1***************139</p>
@@ -14,7 +14,7 @@ public class ListAccelerationOfWorkspaceRequest extends TeaModel {
     public String creatorId;
 
     /**
-     * <p>The name of the dataset.</p>
+     * <p>The dataset name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -23,7 +23,7 @@ public class ListAccelerationOfWorkspaceRequest extends TeaModel {
     public String cubeName;
 
     /**
-     * <p>The page number. If this parameter is left empty, the default value is 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,10 +32,8 @@ public class ListAccelerationOfWorkspaceRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of rows on each page for a paged query.</p>
-     * <ul>
-     * <li>Default value: 10.</li>
-     * </ul>
+     * <p>The number of rows per page for a paged query.</p>
+     * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryUserInfoByUserIdRequest extends TeaModel {
     /**
-     * <p>The user ID. This is the user ID in Quick BI, not an Alibaba Cloud UID.</p>
+     * <p>The user ID. The UserID here refers to the Quick BI UserID, not the Alibaba Cloud UID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -22,10 +22,8 @@ public class AddUserResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,17 +72,12 @@ public class AddUserResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>Indicates whether the organization administrator role is assigned. Valid values:</p>
+         * <p>Indicates whether the organization administrator role is bound. Valid values:</p>
          * <ul>
-         * <li><p>true</p>
-         * </li>
-         * <li><p>false</p>
-         * </li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
-         * <blockquote>
-         * <p>Notice: </p>
-         * </blockquote>
-         * <p>This parameter is deprecated. It does not take effect when <code>RoleIdList</code> is specified.</p>
+         * <p><notice>This parameter is deprecated. When RoleIdList is specified, this parameter does not take effect.</notice></p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -93,17 +86,12 @@ public class AddUserResponseBody extends TeaModel {
         public Boolean adminUser;
 
         /**
-         * <p>Indicates whether the permission administrator role is assigned. Valid values:</p>
+         * <p>Indicates whether the permission management administrator role is attached. Valid values:</p>
          * <ul>
-         * <li><p>true</p>
-         * </li>
-         * <li><p>false</p>
-         * </li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
-         * <blockquote>
-         * <p>Notice: </p>
-         * </blockquote>
-         * <p>This parameter is deprecated. It does not take effect when <code>RoleIdList</code> is specified.</p>
+         * <p><notice>This parameter has expired and is no longer recommended. When RoleIdList is specified, this parameter does not take effect.</notice></p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -112,7 +100,7 @@ public class AddUserResponseBody extends TeaModel {
         public Boolean authAdminUser;
 
         /**
-         * <p>The Copilot modules for which the user has a quota.</p>
+         * <p>The intelligent module quotas owned by the user.</p>
          */
         @NameInMap("CopilotModules")
         public java.util.List<String> copilotModules;
@@ -121,13 +109,13 @@ public class AddUserResponseBody extends TeaModel {
          * <p>The nickname of the Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>John</p>
          */
         @NameInMap("NickName")
         public String nickName;
 
         /**
-         * <p>A list of organization role IDs assigned to the user.</p>
+         * <p>The list of organization role IDs bound to the user.</p>
          */
         @NameInMap("RoleIdList")
         public java.util.List<Long> roleIdList;
@@ -142,14 +130,11 @@ public class AddUserResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The user type. Valid values:</p>
+         * <p>The user type of the organization member. Valid values:</p>
          * <ul>
-         * <li><p>1: developer</p>
-         * </li>
-         * <li><p>2: viewer</p>
-         * </li>
-         * <li><p>3: analyst</p>
-         * </li>
+         * <li>1: Developer.</li>
+         * <li>2: Visitor.</li>
+         * <li>3: Analyst.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataLevelPermissionWhiteListRequest extends TeaModel {
     /**
-     * <p>Dataset ID.</p>
+     * <p>The dataset ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class ListDataLevelPermissionWhiteListRequest extends TeaModel {
     public String cubeId;
 
     /**
-     * <p>Type of row and column permission that the whitelist belongs to:</p>
+     * <p>The type of row and column permission to which the whitelist belongs. Valid values:</p>
      * <ul>
-     * <li>ROW_LEVEL: Row-level permission</li>
-     * <li>COLUMN_LEVEL: Column-level permission</li>
+     * <li>ROW_LEVEL: row-level permission</li>
+     * <li>COLUMN_LEVEL: column-level permission</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

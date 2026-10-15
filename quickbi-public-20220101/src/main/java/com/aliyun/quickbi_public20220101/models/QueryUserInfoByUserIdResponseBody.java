@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryUserInfoByUserIdResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
@@ -14,18 +14,16 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the organization user.</p>
+     * <p>The organization user information returned.</p>
      */
     @NameInMap("Result")
     public QueryUserInfoByUserIdResponseBodyResult result;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The request is successful.</p>
-     * </li>
-     * <li><p>false: The request failed.</p>
-     * </li>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,17 +81,12 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>Indicates whether the organization administrator role is assigned to the user. Valid values:</p>
+         * <p>Indicates whether the user is an organization administrator. Valid values:</p>
          * <ul>
-         * <li><p>true: The role is assigned.</p>
-         * </li>
-         * <li><p>false: The role is not assigned.</p>
-         * </li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
-         * <blockquote>
-         * <p>Notice: </p>
-         * </blockquote>
-         * <p>This parameter is deprecated. Use the <code>RoleIdList</code> parameter instead.</p>
+         * <p><notice>This parameter is deprecated. Use the RoleIdList parameter instead.</notice></p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -102,17 +95,12 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
         public Boolean adminUser;
 
         /**
-         * <p>Indicates whether the permission administrator role is assigned to the user. Valid values:</p>
+         * <p>Indicates whether the user has the permission management administrator role attached. Valid values:</p>
          * <ul>
-         * <li><p>true: The role is assigned.</p>
-         * </li>
-         * <li><p>false: The role is not assigned.</p>
-         * </li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
-         * <blockquote>
-         * <p>Notice: </p>
-         * </blockquote>
-         * <p>This parameter is deprecated. Use the <code>RoleIdList</code> parameter instead.</p>
+         * <p><notice>This parameter has expired and is no longer recommended. Use the RoleIList parameter instead.</notice></p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -121,13 +109,13 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
         public Boolean authAdminUser;
 
         /**
-         * <p>The list of <code>CopilotModules</code> available to the user.</p>
+         * <p>The intelligent quota owned by the user.</p>
          */
         @NameInMap("CopilotModules")
         public java.util.List<String> copilotModules;
 
         /**
-         * <p>The email address of the user.</p>
+         * <p>The email address.</p>
          * 
          * <strong>example:</strong>
          * <p>1386587****@163.com</p>
@@ -136,6 +124,12 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
         public String email;
 
         /**
+         * <p>Indicates whether the user is disabled. Valid values:</p>
+         * <ul>
+         * <li>true: Disabled.</li>
+         * <li>false: Active.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -143,16 +137,16 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
         public Boolean isDeleted;
 
         /**
-         * <p>The nickname of the user.</p>
+         * <p>The nickname.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试用户</p>
+         * <p>Test user</p>
          */
         @NameInMap("NickName")
         public String nickName;
 
         /**
-         * <p>The phone number of the user.</p>
+         * <p>The phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>1386587****</p>
@@ -161,13 +155,13 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
         public String phone;
 
         /**
-         * <p>The list of organization role IDs that are assigned to the user.</p>
+         * <p>The list of organization role IDs bound to the user.</p>
          */
         @NameInMap("RoleIdList")
         public java.util.List<Long> roleIdList;
 
         /**
-         * <p>The user ID in Quick BI.</p>
+         * <p>The UserID in Quick BI.</p>
          * 
          * <strong>example:</strong>
          * <p>fe67f61a35a94b7da1a34ba174a7****</p>
@@ -178,12 +172,9 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
         /**
          * <p>The user type of the organization member. Valid values:</p>
          * <ul>
-         * <li><p><code>1</code>: developer</p>
-         * </li>
-         * <li><p><code>2</code>: viewer</p>
-         * </li>
-         * <li><p><code>3</code>: analyst</p>
-         * </li>
+         * <li>1: Developer.</li>
+         * <li>2: Viewer.</li>
+         * <li>3: Analyst.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class QueryUserInfoByAccountRequest extends TeaModel {
     /**
-     * <p>The Alibaba Cloud account name or Alibaba Cloud ID of the user.</p>
+     * <p>The Alibaba Cloud account name or Alibaba Cloud ID to query.</p>
      * <ul>
-     * <li><p>If you enter an account name:</p>
-     * <ul>
-     * <li><p>If the organization member is a root account, such as <code>main_account</code>, enter the root account name. For example, <code>main_account</code>.</p>
-     * </li>
-     * <li><p>If the organization member is a RAM user, such as <code>zhangsan@test.onaliyun.com</code>, enter the prefix of the username before the at sign (@). For example, <code>zhangsan</code>.</p>
-     * </li>
+     * <li>When you enter an account name:<ul>
+     * <li>If the organization user is a primary account (for example, main_account), the query account format is the primary account. That is, enter the primary account main_account. </li>
+     * <li>If the organization user is a RAM user (for example, <a href="mailto:zhangsan@test.onaliyun.com">zhangsan@test.onaliyun.com</a>), the query account format is the prefix of the RAM user. That is, enter zhangsan.</li>
      * </ul>
      * </li>
-     * <li><p>If you enter an Alibaba Cloud ID:</p>
-     * <ul>
-     * <li>Enter the complete user ID (UID) of the account.</li>
+     * <li>When you enter an Alibaba Cloud ID:<ul>
+     * <li>Enter the complete account UID to query the corresponding account information.</li>
      * </ul>
      * </li>
      * </ul>
@@ -30,7 +26,7 @@ public class QueryUserInfoByAccountRequest extends TeaModel {
     public String account;
 
     /**
-     * <p>To resolve a &quot;duplicate user&quot; error when querying a RAM user, specify the name of the root account to which the user belongs.</p>
+     * <p>The account name of the primary account when a duplicate error occurs during RAM user query. For example, <a href="mailto:zhangsan@test.onaliyun.com">zhangsan@test.onaliyun.com</a>.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:zhangsan@test.onaliyun.com">zhangsan@test.onaliyun.com</a></p>

@@ -63,7 +63,7 @@ public class QueryUserListResponseBody extends TeaModel {
 
     public static class QueryUserListResponseBodyResultData extends TeaModel {
         /**
-         * <p>The Alibaba Cloud account ID. For users who are not added through RAM self-service, the Alibaba Cloud ID can only be obtained after they log on.</p>
+         * <p>The Alibaba Cloud account ID. For users who are not added through RAM self-service reading, the Alibaba Cloud account ID can be obtained only after they log on.</p>
          * 
          * <strong>example:</strong>
          * <p>1355********</p>
@@ -81,7 +81,7 @@ public class QueryUserListResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>Indicates whether the user is bound to the organization administrator role. Valid values:</p>
+         * <p>Indicates whether the organization administrator role is bound. Valid values:</p>
          * <ul>
          * <li>true: Yes.</li>
          * <li>false: No.</li>
@@ -95,12 +95,12 @@ public class QueryUserListResponseBody extends TeaModel {
         public Boolean adminUser;
 
         /**
-         * <p>Indicates whether the user is attached to the permission management administrator role. Valid values:</p>
+         * <p>Indicates whether the permission management administrator role is attached. Valid values:</p>
          * <ul>
          * <li>true: Yes.</li>
          * <li>false: No.</li>
          * </ul>
-         * <p><notice>This parameter has expired and is no longer recommended. Use the RoleIdList parameter instead.</notice></p>
+         * <p><notice>This parameter is expired and no longer recommended. Use the RoleIdList parameter instead.</notice></p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -112,8 +112,8 @@ public class QueryUserListResponseBody extends TeaModel {
          * <p>The intelligent module quota of the user.</p>
          * <ul>
          * <li>qreport: Q report</li>
-         * <li>qExploreNum: Q exploration edition</li>
-         * <li>smartQAskNum: Q data inquiry</li>
+         * <li>qExploreNum: Q explore edition</li>
+         * <li>smartQAskNum: Q data query</li>
          * <li>smartQDevNum: Q builder</li>
          * </ul>
          */
@@ -123,8 +123,8 @@ public class QueryUserListResponseBody extends TeaModel {
         /**
          * <p>The user status. Valid values: </p>
          * <ul>
-         * <li>false: active</li>
-         * <li>true: inactive</li>
+         * <li>false: activated</li>
+         * <li>true: deactivated</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,7 +134,7 @@ public class QueryUserListResponseBody extends TeaModel {
         public Boolean isDeleted;
 
         /**
-         * <p>The date when the member joined the organization.</p>
+         * <p>The date when the member joined the organization. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1718691704000</p>
@@ -143,7 +143,7 @@ public class QueryUserListResponseBody extends TeaModel {
         public Long joinedDate;
 
         /**
-         * <p>The last logon time.</p>
+         * <p>The last logon time. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1718761320681</p>

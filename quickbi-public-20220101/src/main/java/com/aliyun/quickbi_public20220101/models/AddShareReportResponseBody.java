@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddShareReportResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>05739b8e-3de0-4204-9669-7f04f02522b9</p>
@@ -14,10 +14,10 @@ public class AddShareReportResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The execution result of the interface is returned. Valid values:</p>
+     * <p>The execution result of the operation. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request fails.</li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class AddShareReportResponseBody extends TeaModel {
     public Boolean result;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
      * <li>true: The request was successful.</li>
      * <li>false: The request failed.</li>

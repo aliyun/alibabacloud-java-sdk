@@ -14,7 +14,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The paged results of the dataset list. The details of the datasets are returned in the Data parameter.</p>
+     * <p>The paginated result of the dataset list. The detailed information of the dataset list is stored in the Data response parameter.</p>
      */
     @NameInMap("Result")
     public QueryDatasetListResponseBodyResult result;
@@ -22,10 +22,8 @@ public class QueryDatasetListResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The request was successful.</p>
-     * </li>
-     * <li><p>false: The request failed.</p>
-     * </li>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -124,7 +122,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
 
     public static class QueryDatasetListResponseBodyResultDataDirectory extends TeaModel {
         /**
-         * <p>The folder ID.</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>schemaad8aad00-9c55-4984-a767-b4e0ec60****</p>
@@ -133,7 +131,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The folder name.</p>
+         * <p>The directory name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -142,7 +140,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the folder path.</p>
+         * <p>The ID of the directory path.</p>
          * 
          * <strong>example:</strong>
          * <p>schemaad8aad00-9c55-4984-a767-b4e0ec60****</p>
@@ -151,7 +149,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
         public String pathId;
 
         /**
-         * <p>The name of the folder path.</p>
+         * <p>The name of the directory path.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -200,7 +198,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
 
     public static class QueryDatasetListResponseBodyResultData extends TeaModel {
         /**
-         * <p>The time when the dataset was created.</p>
+         * <p>The creation time, in the yyyy-MM-dd HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-02 10:36:05</p>
@@ -209,7 +207,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The information about the data source to which the dataset belongs.</p>
+         * <p>The data source information of the dataset.</p>
          */
         @NameInMap("DataSource")
         public QueryDatasetListResponseBodyResultDataDataSource dataSource;
@@ -242,13 +240,13 @@ public class QueryDatasetListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The information about the folder in which the dataset is located.</p>
+         * <p>The directory information of the dataset.</p>
          */
         @NameInMap("Directory")
         public QueryDatasetListResponseBodyResultDataDirectory directory;
 
         /**
-         * <p>The time when the dataset was last modified.</p>
+         * <p>The modification time, in the yyyy-MM-dd HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-02 10:36:05</p>
@@ -257,12 +255,10 @@ public class QueryDatasetListResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>Indicates whether extraction-based acceleration is enabled. Valid values:</p>
+         * <p>Indicates whether extraction acceleration is enabled. Valid values:</p>
          * <ul>
-         * <li><p>true: Enabled</p>
-         * </li>
-         * <li><p>false: Disabled</p>
-         * </li>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -272,7 +268,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
         public Boolean openOfflineAcceleration;
 
         /**
-         * <p>The user ID of the dataset owner in Quick BI.</p>
+         * <p>The Quick BI user ID of the dataset owner.</p>
          * 
          * <strong>example:</strong>
          * <p>136516262323****</p>
@@ -292,10 +288,8 @@ public class QueryDatasetListResponseBody extends TeaModel {
         /**
          * <p>Indicates whether row-level permissions are enabled. Valid values:</p>
          * <ul>
-         * <li><p>true: Enabled</p>
-         * </li>
-         * <li><p>false: Disabled</p>
-         * </li>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -450,7 +444,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
-         * <p>The number of entries per page specified in the request.</p>
+         * <p>The number of rows per page specified in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -459,7 +453,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of rows.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

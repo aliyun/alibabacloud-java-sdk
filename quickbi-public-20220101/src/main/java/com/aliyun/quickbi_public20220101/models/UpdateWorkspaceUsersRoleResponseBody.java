@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkspaceUsersRoleResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7AAB95D7-2E11-4FE2-94BC-858E4FC0C976</p>
@@ -14,16 +14,16 @@ public class UpdateWorkspaceUsersRoleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returns the result of the interface execution.</p>
+     * <p>The execution result of the operation.</p>
      */
     @NameInMap("Result")
     public UpdateWorkspaceUsersRoleResponseBodyResult result;
 
     /**
-     * <p>Indicates whether the request was successful. Value range:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful, some members may have been updated successfully while others failed, refer to FailureDetail in the response for reasons of failure</li>
-     * <li>false: The request failed, no data will be persisted</li>
+     * <li>true: The request is successful. Some members may be updated successfully while others fail. For the failure reasons, refer to FailureDetail in the response.</li>
+     * <li>false: The request fails and no data is persisted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class UpdateWorkspaceUsersRoleResponseBody extends TeaModel {
 
     public static class UpdateWorkspaceUsersRoleResponseBodyResult extends TeaModel {
         /**
-         * <p>Number of users that failed to update.</p>
+         * <p>The number of users whose roles failed to be updated.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -72,13 +72,13 @@ public class UpdateWorkspaceUsersRoleResponseBody extends TeaModel {
         public Integer failure;
 
         /**
-         * <p>Reasons for the update failures.</p>
+         * <p>The reasons for the update failures.</p>
          */
         @NameInMap("FailureDetail")
         public java.util.Map<String, ?> failureDetail;
 
         /**
-         * <p>Number of users that were updated successfully.</p>
+         * <p>The number of users whose roles were successfully updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -87,7 +87,7 @@ public class UpdateWorkspaceUsersRoleResponseBody extends TeaModel {
         public Integer success;
 
         /**
-         * <p>Modify the total number of users.</p>
+         * <p>The total number of users to be updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

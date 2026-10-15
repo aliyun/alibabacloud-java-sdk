@@ -40,9 +40,9 @@ public class UpdateUserRequest extends TeaModel {
      * <p>Pass the parameter as a JSON array. Each array element contains the following fields:</p>
      * <p>moduleType -- The intelligent module.</p>
      * <ul>
-     * <li>smartQAskNum -- Smart Q questions.</li>
+     * <li>smartQAskNum -- Smart Q question count.</li>
      * <li>smartQDevNum -- Smart Q building.</li>
-     * <li>qreport -- Smart Q reports.</li>
+     * <li>qreport -- Smart Q report.</li>
      * <li>qExploreNum -- Smart Q exploration edition.</li>
      * </ul>
      * <p>status -- Specifies whether to enable the module.</p>
@@ -83,7 +83,7 @@ public class UpdateUserRequest extends TeaModel {
      * <p>The nickname.</p>
      * <ul>
      * <li>Format check: The maximum length is 50 characters.</li>
-     * <li>Special format check: Chinese characters, English characters, digits, _ \ / | () ] [</li>
+     * <li>Special format check: Chinese characters, English letters, digits, _ \ / | () ] [</li>
      * </ul>
      * 
      * <strong>example:</strong>
