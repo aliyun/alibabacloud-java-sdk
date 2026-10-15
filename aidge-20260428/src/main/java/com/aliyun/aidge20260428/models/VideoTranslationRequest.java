@@ -5,14 +5,23 @@ import com.aliyun.tea.*;
 
 public class VideoTranslationRequest extends TeaModel {
     /**
-     * <p>The array of translation capabilities. Valid values: [&quot;visual&quot;].</p>
+     * <p>The array of translation capabilities. Current valid value: [&quot;visual&quot;].</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Capabilities")
     public java.util.List<String> capabilities;
 
     /**
-     * <p>The source language. This parameter is optional. Default value: auto, which indicates automatic detection.</p>
+     * <p>Specifies whether to enable the visual quality check. This parameter takes effect only when Capabilities includes visual.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("EnableQualityCheck")
+    public Boolean enableQualityCheck;
+
+    /**
+     * <p>The source language. This parameter is optional. Default value: auto, which indicates automatic recognition.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -31,7 +40,7 @@ public class VideoTranslationRequest extends TeaModel {
     public String targetLanguage;
 
     /**
-     * <p>The URL of the video (MP4/MOV, ≤ 200 MB).</p>
+     * <p>The video URL. Supported formats: MP4 and MOV. Maximum size: 200 MB.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +60,14 @@ public class VideoTranslationRequest extends TeaModel {
     }
     public java.util.List<String> getCapabilities() {
         return this.capabilities;
+    }
+
+    public VideoTranslationRequest setEnableQualityCheck(Boolean enableQualityCheck) {
+        this.enableQualityCheck = enableQualityCheck;
+        return this;
+    }
+    public Boolean getEnableQualityCheck() {
+        return this.enableQualityCheck;
     }
 
     public VideoTranslationRequest setSourceLanguage(String sourceLanguage) {

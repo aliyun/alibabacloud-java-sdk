@@ -5,23 +5,16 @@ import com.aliyun.tea.*;
 
 public class PetHealthAnalysisResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
-     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The asynchronous task submit status.</p>
-     */
     @NameInMap("Data")
     public PetHealthAnalysisResponseBodyData data;
 
     /**
-     * <p>The response message or failure description.</p>
-     * 
      * <strong>example:</strong>
      * <p>Task submitted</p>
      */
@@ -29,8 +22,6 @@ public class PetHealthAnalysisResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>70CBEFDF-BB17-1EB3-8A21-569F3124738F</p>
      */
@@ -38,8 +29,6 @@ public class PetHealthAnalysisResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful.</p>
-     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -93,8 +82,6 @@ public class PetHealthAnalysisResponseBody extends TeaModel {
 
     public static class PetHealthAnalysisResponseBodyData extends TeaModel {
         /**
-         * <p>The asynchronous task ID used for QueryAsyncTaskResult queries.</p>
-         * 
          * <strong>example:</strong>
          * <p>task_778fa8bd21804828a5d147050e30edac</p>
          */

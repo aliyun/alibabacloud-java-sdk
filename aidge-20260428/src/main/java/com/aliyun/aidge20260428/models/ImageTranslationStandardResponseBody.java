@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageTranslationStandardResponseBody extends TeaModel {
     /**
-     * <p>The response code. 200 indicates a successful call. For other response codes, refer to the error code information.</p>
+     * <p>The response code. A value of 200 indicates a successful call. For other response codes, refer to the error code information.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The translation result data, including the URL of the translated image and usage information.</p>
+     * <p>The translation result data, including the translated image URL and usage information.</p>
      */
     @NameInMap("Data")
     public ImageTranslationStandardResponseBodyData data;
@@ -369,7 +369,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
         public String language;
 
         /**
-         * <p>The number of lines.</p>
+         * <p>The line count.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -535,7 +535,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
         public String horizontalLayout;
 
         /**
-         * <p>The number of lines.</p>
+         * <p>The line count.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -632,13 +632,13 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
         public java.util.List<String> font;
 
         /**
-         * <p>The rectangle of the product area.</p>
+         * <p>The product area rectangles.</p>
          */
         @NameInMap("GoodsRects")
         public ImageTranslationStandardResponseBodyDataEditInfoGoodsRects goodsRects;
 
         /**
-         * <p>The URL of the product image.</p>
+         * <p>The product image URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xiuxiu-pro.meitudata.com/posters/34d78f9157e5560a4d612949ca6f6485.jpg">https://xiuxiu-pro.meitudata.com/posters/34d78f9157e5560a4d612949ca6f6485.jpg</a></p>
@@ -656,7 +656,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
         public java.util.List<String> languages;
 
         /**
-         * <p>The URL of the original image.</p>
+         * <p>The original image URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xiuxiu-pro.meitudata.com/posters/34d78f9157e5560a4d612949ca6f6485.jpg">https://xiuxiu-pro.meitudata.com/posters/34d78f9157e5560a4d612949ca6f6485.jpg</a></p>
@@ -665,7 +665,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
         public String pictUrl;
 
         /**
-         * <p>The URL of the repaired image.</p>
+         * <p>The repaired image URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.png">http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.png</a></p>

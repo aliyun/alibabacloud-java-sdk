@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class EcomVideoRecreationRequest extends TeaModel {
     /**
-     * <p>The input parameters for video multiplication.</p>
+     * <p>The input parameters for video variation generation.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Input")
     public EcomVideoRecreationRequestInput input;
 
     /**
-     * <p>The output specifications for the final video.</p>
+     * <p>The output specifications for the generated video.</p>
      */
     @NameInMap("Output")
     public EcomVideoRecreationRequestOutput output;
@@ -40,7 +40,7 @@ public class EcomVideoRecreationRequest extends TeaModel {
 
     public static class EcomVideoRecreationRequestInputProductInfo extends TeaModel {
         /**
-         * <p>The product category.<br>Example: Womenswear/Sun-protective clothing</p>
+         * <p>The product category.<br>Example value: Women\&quot;s clothing/Sun protection clothing.</p>
          * 
          * <strong>example:</strong>
          * <p>Women\&quot;s clothing/sun protection clothing</p>
@@ -49,7 +49,7 @@ public class EcomVideoRecreationRequest extends TeaModel {
         public String category;
 
         /**
-         * <p>The actual product information (SKU, brand, color, material, size, specifications, logo, and usage), used to constrain voiceover facts.<br>Example: Light yellow, cooling fabric, sun protection to the back of the hand, UPF50+</p>
+         * <p>The actual product information, such as SKU, brand, color, material, size, specifications, logo, and usage instructions. This information is used to constrain the facts in the voiceover.<br>Example value: Pale moon yellow, cool-touch fabric, sun protection down to the back of the hand, UPF50+</p>
          * 
          * <strong>example:</strong>
          * <p>Light moon yellow, cool-touch fabric, sun protection extending to the back of the hand, UPF50+</p>
@@ -58,7 +58,7 @@ public class EcomVideoRecreationRequest extends TeaModel {
         public String detail;
 
         /**
-         * <p>The name of the target product. This parameter is required for product replacement mode. Maximum length: 200 characters.<br>Example: Light yellow cooling sun-protective jacket</p>
+         * <p>The name of the target product. This parameter is required for product replacement. The maximum length is 200 characters.<br>Example value: Pale moon yellow cool-touch sun protection clothing.</p>
          * 
          * <strong>example:</strong>
          * <p>Light moon yellow cool-touch sun protection clothing</p>
@@ -99,7 +99,7 @@ public class EcomVideoRecreationRequest extends TeaModel {
 
     public static class EcomVideoRecreationRequestInput extends TeaModel {
         /**
-         * <p>The description or supplementary constraints for the target person in person replacement mode. The value must be 1 to 500 characters in length. This parameter is required if PersonReferenceImageUrls is not provided.<br>Example: The target person is an adult male. Retain the original clothing and actions.</p>
+         * <p>The description or supplementary constraints for the target person in person replacement. The length is 1 to 500 characters. This parameter is required when PersonReferenceImageUrls is not provided.<br>Example value: The target person is an adult male, retaining the original clothing and actions.</p>
          * 
          * <strong>example:</strong>
          * <p>The target character is an adult male, with the original costume and movements preserved.</p>
@@ -117,25 +117,34 @@ public class EcomVideoRecreationRequest extends TeaModel {
         public String mode;
 
         /**
-         * <p>The URLs of reference images for the target person in person replacement mode. You can specify 1 to 5 images, which must be of the same person. Arrange the images in the following order: facial close-up, front view, 45-degree view, side view, and back view.<br>Example: [&quot;<a href="https://example.com/person.jpg%22%5D">https://example.com/person.jpg&quot;]</a></p>
+         * <p>The URLs of the reference images for the target person in person replacement. You can provide 1 to 5 images, which must be of the same person. We recommend that you arrange the images in the order of facial close-up, front, 45-degree angle, side, and back.<br>Example value: [&quot;<a href="https://example.com/person.jpg%22%5D">https://example.com/person.jpg&quot;]</a></p>
          */
         @NameInMap("PersonReferenceImageUrls")
         public java.util.List<String> personReferenceImageUrls;
 
         /**
-         * <p>The URLs of target product images. This parameter is required for product replacement mode. You can upload 1 to 8 images for the same SKU. Use images with a clear subject, no occlusion, and a clean background.<br>Example: [&quot;<a href="https://example.com/product.png%22%5D">https://example.com/product.png&quot;]</a></p>
+         * <p>The URLs of the target product images. This parameter is required for product replacement. You can upload 1 to 8 images for the same SKU. We recommend that the main subject is clear, unobstructed, and has a clean background.<br>Example value: [&quot;<a href="https://example.com/product.png%22%5D">https://example.com/product.png&quot;]</a></p>
          */
         @NameInMap("ProductImageUrls")
         public java.util.List<String> productImageUrls;
 
         /**
-         * <p>The target product information. Specify this parameter to improve voiceover accuracy.</p>
+         * <p>The target product information. We recommend that you specify this parameter to improve the accuracy of the voiceover.</p>
          */
         @NameInMap("ProductInfo")
         public EcomVideoRecreationRequestInputProductInfo productInfo;
 
         /**
-         * <p>The HTTP(S) URL of the reference video. The video duration must be 2 to 360 seconds. The URL must remain accessible during task execution. A validity period of at least 24 hours is recommended.</p>
+         * <p>The generation mode. Default value: <code>reference</code>. Valid values: <code>reference</code> (directly references the original video) and <code>rebuild</code> (breaks down the original video before regenerating it).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reference</p>
+         */
+        @NameInMap("RecreateMode")
+        public String recreateMode;
+
+        /**
+         * <p>The HTTP(S) URL of the reference video. The duration ranges from 2 to 360 seconds. The URL must remain accessible during task execution. We recommend that the validity period is no less than 24 hours.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,6 +198,14 @@ public class EcomVideoRecreationRequest extends TeaModel {
             return this.productInfo;
         }
 
+        public EcomVideoRecreationRequestInput setRecreateMode(String recreateMode) {
+            this.recreateMode = recreateMode;
+            return this;
+        }
+        public String getRecreateMode() {
+            return this.recreateMode;
+        }
+
         public EcomVideoRecreationRequestInput setSourceVideoUrl(String sourceVideoUrl) {
             this.sourceVideoUrl = sourceVideoUrl;
             return this;
@@ -201,7 +218,7 @@ public class EcomVideoRecreationRequest extends TeaModel {
 
     public static class EcomVideoRecreationRequestOutput extends TeaModel {
         /**
-         * <p>The target duration in seconds. Set to <code>&quot;auto&quot;</code> (default) to let the system decide. For product replacement, specify an integer from 5 to 60. For person replacement, only <code>&quot;auto&quot;</code> is supported.</p>
+         * <p>The target duration in seconds. In <code>reference</code> mode, the input value is ignored and forced to -1, which follows the duration of the original video. In <code>rebuild</code> mode, you can pass an integer from 5 to 60, or pass -1 to indicate an automatic duration.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>

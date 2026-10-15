@@ -20,7 +20,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
     public ImageTranslationProResponseBodyData data;
 
     /**
-     * <p>The error message. &quot;Success&quot; is returned for successful calls. A specific error message is returned for failed calls, such as &quot;The content contains sensitive data. Try other input.&quot;</p>
+     * <p>The error message. &quot;Success&quot; is returned if the call is successful. A specific error message is returned if the call fails, such as &quot;The content contains sensitive data. Try other input.&quot;</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -38,7 +38,11 @@ public class ImageTranslationProResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

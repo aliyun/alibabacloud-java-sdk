@@ -21,7 +21,7 @@ public class DocumentTranslateResponseBody extends TeaModel {
 
     /**
      * <p>The error message, such as &quot;The parameters contain sensitive information. Try other input.&quot;
-     * This parameter is not returned for successful calls.</p>
+     * This parameter is not returned if the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -30,7 +30,7 @@ public class DocumentTranslateResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique request identity. Use this ID for troubleshooting and Tracing Analysis.</p>
+     * <p>The unique identity of the request. Use this ID for troubleshooting and Tracing Analysis.</p>
      * 
      * <strong>example:</strong>
      * <p>39E8A74B-F99E-1195-A5FF-3ECC5F94F304</p>
@@ -94,7 +94,7 @@ public class DocumentTranslateResponseBody extends TeaModel {
 
     public static class DocumentTranslateResponseBodyData extends TeaModel {
         /**
-         * <p>The unique identifier of the asynchronous task. Use this ID to query the task status and results.</p>
+         * <p>The unique identifier of the asynchronous task. Use this ID to query the task status and result.</p>
          * 
          * <strong>example:</strong>
          * <p>6071a030-5c92-9df1-96d0-44952343439a</p>

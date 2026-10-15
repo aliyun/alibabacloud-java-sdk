@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EcomVideoRecreationResponseBody extends TeaModel {
     /**
-     * <p>The result code. A value of <code>success</code> indicates success. An error code is returned upon failure.</p>
+     * <p>The result code. A value of <code>success</code> indicates success. If the call fails, the corresponding error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,13 +14,13 @@ public class EcomVideoRecreationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The asynchronous task submit status.</p>
+     * <p>The submission result of the asynchronous task.</p>
      */
     @NameInMap("Data")
     public EcomVideoRecreationResponseBodyData data;
 
     /**
-     * <p>The response message. An error description is returned upon failure.</p>
+     * <p>The return message. If the call fails, an error description is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>Task submitted</p>
@@ -29,7 +29,7 @@ public class EcomVideoRecreationResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, used to identify a unique call.</p>
+     * <p>The request ID, which is used to identify a unique call.</p>
      * 
      * <strong>example:</strong>
      * <p>70CBEFDF-BB17-1EB3-8A21-569F3124738F</p>
@@ -93,7 +93,7 @@ public class EcomVideoRecreationResponseBody extends TeaModel {
 
     public static class EcomVideoRecreationResponseBodyData extends TeaModel {
         /**
-         * <p>The asynchronous task ID used to query results with QueryAsyncTaskResult.</p>
+         * <p>The ID of the asynchronous task, which is used to query the task result by calling QueryAsyncTaskResult.</p>
          * 
          * <strong>example:</strong>
          * <p>task_778fa8bd21804828a5d147050e30edac</p>
