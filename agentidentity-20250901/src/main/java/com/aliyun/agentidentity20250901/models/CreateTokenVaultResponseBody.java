@@ -4,9 +4,18 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class CreateTokenVaultResponseBody extends TeaModel {
+    /**
+     * <p>The unique identifier of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2A48EB1D-D645-5758-91AF-EDF8E36E257B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the token vault.</p>
+     */
     @NameInMap("TokenVault")
     public CreateTokenVaultResponseBodyTokenVault tokenVault;
 
@@ -32,9 +41,25 @@ public class CreateTokenVaultResponseBody extends TeaModel {
     }
 
     public static class CreateTokenVaultResponseBodyTokenVaultEncryptionConfig extends TeaModel {
+        /**
+         * <p>The type of the encryption key. Valid values:</p>
+         * <ul>
+         * <li>SERVICE_MANAGED_KEY: service-managed key</li>
+         * <li>CUSTOMER_MANAGED_KEY: customer-managed KMS key</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SERVICE_MANAGED_KEY</p>
+         */
         @NameInMap("KeyType")
         public String keyType;
 
+        /**
+         * <p>The ARN of the KMS key used when KeyType is set to CUSTOMER_MANAGED_KEY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:kms:cn-beijing:123456:key/key-bjxxxxxxxx</p>
+         */
         @NameInMap("KmsKeyArn")
         public String kmsKeyArn;
 
@@ -62,21 +87,54 @@ public class CreateTokenVaultResponseBody extends TeaModel {
     }
 
     public static class CreateTokenVaultResponseBodyTokenVault extends TeaModel {
+        /**
+         * <p>The time when the token vault was created, in UTC ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-08T06:19:17Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the token vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example description</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The encryption configuration of the token vault.</p>
+         */
         @NameInMap("EncryptionConfig")
         public CreateTokenVaultResponseBodyTokenVaultEncryptionConfig encryptionConfig;
 
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role used to authorize the AgentIdentity service to access other cloud resources such as KMS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::123456:role/AliyunAgentIdentityVaultRole</p>
+         */
         @NameInMap("RoleArn")
         public String roleArn;
 
+        /**
+         * <p>The ARN of the token vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:agentidentity:cn-beijing:123456:tokenvault/default</p>
+         */
         @NameInMap("TokenVaultArn")
         public String tokenVaultArn;
 
+        /**
+         * <p>The name of the token vault. The name must be unique within the current Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("TokenVaultName")
         public String tokenVaultName;
 

@@ -4,9 +4,18 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class CreateRoleResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The role information.</p>
+     */
     @NameInMap("Role")
     public CreateRoleResponseBodyRole role;
 
@@ -32,21 +41,61 @@ public class CreateRoleResponseBody extends TeaModel {
     }
 
     public static class CreateRoleResponseBodyRole extends TeaModel {
+        /**
+         * <p>The time when the role was created. The time is displayed in ISO 8601 format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-07T06:19:17Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Data analyst role</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>role_xxxxxxxxxxxxxxxxxxxx</p>
+         */
         @NameInMap("RoleId")
         public String roleId;
 
+        /**
+         * <p>The name of the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Analyst</p>
+         */
         @NameInMap("RoleName")
         public String roleName;
 
+        /**
+         * <p>The type of the role. Valid values:</p>
+         * <ul>
+         * <li>Default: the default role that is automatically provisioned when the user pool is created</li>
+         * <li>Manual: a custom role that is manually created by calling an API operation</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The time when the role was updated. The time is displayed in ISO 8601 format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-07T06:19:17Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

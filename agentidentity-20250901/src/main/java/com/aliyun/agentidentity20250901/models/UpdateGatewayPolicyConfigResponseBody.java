@@ -4,9 +4,18 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class UpdateGatewayPolicyConfigResponseBody extends TeaModel {
+    /**
+     * <p>The gateway policy configuration.</p>
+     */
     @NameInMap("GatewayPolicyConfig")
     public UpdateGatewayPolicyConfigResponseBodyGatewayPolicyConfig gatewayPolicyConfig;
 
+    /**
+     * <p>The unique identifier of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2A48EB1D-D645-5758-91AF-EDF8E36E257B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +41,25 @@ public class UpdateGatewayPolicyConfigResponseBody extends TeaModel {
     }
 
     public static class UpdateGatewayPolicyConfigResponseBodyGatewayPolicyConfig extends TeaModel {
+        /**
+         * <p>The policy enforcement mode. Valid values:</p>
+         * <ul>
+         * <li>ENFORCE: Intercepts non-compliant requests and allows compliant requests.</li>
+         * <li>LOG_ONLY: Only logs non-compliant requests without intercepting them.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ENFORCE</p>
+         */
         @NameInMap("EnforcementMode")
         public String enforcementMode;
 
+        /**
+         * <p>The ARN of the policy set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:agentidentity:cn-beijing:123456:policyset/default-policy-set</p>
+         */
         @NameInMap("PolicySetArn")
         public String policySetArn;
 

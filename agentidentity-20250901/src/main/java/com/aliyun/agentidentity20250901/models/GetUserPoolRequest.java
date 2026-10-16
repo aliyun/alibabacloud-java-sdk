@@ -4,6 +4,12 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class GetUserPoolRequest extends TeaModel {
+    /**
+     * <p>The name of the user pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-agent-userpool</p>
+     */
     @NameInMap("UserPoolName")
     public String userPoolName;
 

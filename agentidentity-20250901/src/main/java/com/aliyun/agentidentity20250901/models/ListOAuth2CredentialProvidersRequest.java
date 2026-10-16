@@ -4,12 +4,29 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class ListOAuth2CredentialProvidersRequest extends TeaModel {
+    /**
+     * <p>The maximum number of results to return per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token used to retrieve the next page of results.</p>
+     * <p>Leave this parameter empty for the first request.
+     * For subsequent requests, specify the NextToken value returned in the previous response.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6mmxm9MUzOLyiXaWmj3GOT8</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The name of the TokenVault.</p>
+     */
     @NameInMap("TokenVaultName")
     public String tokenVaultName;
 

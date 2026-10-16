@@ -4,9 +4,26 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class GetGatewayPolicyConfigRequest extends TeaModel {
+    /**
+     * <p>The ARN of the target gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:agentidentity:cn-beijing:123456:gateway/my-gateway</p>
+     */
     @NameInMap("GatewayArn")
     public String gatewayArn;
 
+    /**
+     * <p>The gateway type. Valid values:</p>
+     * <ul>
+     * <li>AIGateway: Alibaba Cloud AI gateway.</li>
+     * <li>AgentRunMCP: AgentRun MCP tool.</li>
+     * </ul>
+     * <p>If this parameter is not specified, the default value is AIGateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AIGateway</p>
+     */
     @NameInMap("GatewayType")
     public String gatewayType;
 

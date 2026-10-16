@@ -4,9 +4,18 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class CreateUserResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The user information.</p>
+     */
     @NameInMap("User")
     public CreateUserResponseBodyUser user;
 
@@ -32,24 +41,76 @@ public class CreateUserResponseBody extends TeaModel {
     }
 
     public static class CreateUserResponseBodyUser extends TeaModel {
+        /**
+         * <p>The description of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Data Analyst</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The display name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The email address of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:alice@example.com">alice@example.com</a></p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <p>The status of the user. Valid values:</p>
+         * <ul>
+         * <li>Enabled: Enabled.</li>
+         * <li>Disabled: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The type of the user. Valid values:</p>
+         * <ul>
+         * <li>Manual: The user is manually created by calling an API operation.</li>
+         * <li>JIT: The user is created through JIT.</li>
+         * <li>SCIM: The user is synchronized through the System for Cross-domain Identity Management protocol.</li>
+         * <li>SYNC_DINGTALK: The user is synchronized from DingTalk.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_xxxxxxxxxxxxxxxxxxxx</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
         @NameInMap("UserName")
         public String userName;
 

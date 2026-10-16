@@ -4,18 +4,45 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class ListAPIKeyCredentialProvidersResponseBody extends TeaModel {
+    /**
+     * <p>The list of API key credential provider summaries.</p>
+     */
     @NameInMap("APIKeyCredentialProviders")
     public java.util.List<ListAPIKeyCredentialProvidersResponseBodyAPIKeyCredentialProviders> APIKeyCredentialProviders;
 
+    /**
+     * <p>The maximum number of results to return per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token used to retrieve the next page of results. Leave this parameter empty for the first request. For subsequent requests, specify the NextToken value returned in the previous response.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAWbTEdBU0yvszsl8EEXALb8=</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The unique identifier of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4D51596A-8A87-565B-8EDE-45141A02F11C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of credential providers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>452</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,24 +92,57 @@ public class ListAPIKeyCredentialProvidersResponseBody extends TeaModel {
     }
 
     public static class ListAPIKeyCredentialProvidersResponseBodyAPIKeyCredentialProviders extends TeaModel {
+        /**
+         * <p>The name of the credential provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-key-dash-scope</p>
+         */
         @NameInMap("APIKeyCredentialProviderName")
         public String APIKeyCredentialProviderName;
 
+        /**
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-12-18T06:19:17Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The ARN of the credential provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:agentidentity:cn-beijing:123456:tokenvault/default/apikeycredentialprovider/api-key-dash-scope</p>
+         */
         @NameInMap("CredentialProviderArn")
         public String credentialProviderArn;
 
+        /**
+         * <p>The description of the credential provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example provider</p>
+         */
         @NameInMap("Description")
         public String description;
 
         @NameInMap("SourcePlatform")
         public String sourcePlatform;
 
+        /**
+         * <p>The name of the TokenVault.</p>
+         */
         @NameInMap("TokenVaultName")
         public String tokenVaultName;
 
+        /**
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-12-18T06:19:17Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

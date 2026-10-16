@@ -4,18 +4,45 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class ListWorkloadIdentitiesResponseBody extends TeaModel {
+    /**
+     * <p>The maximum number of results to return per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token used to retrieve the next page of results. This field is not returned if no more results are available.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAcCoknY19uiBwPrAe1W7XMikkA6+rCQddIGHccphiDPypD8zCxQkHV2pg8CkZvyRKg==</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>173C69C9-9C07-5B25-9477-603A33E5DA32</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of workload identities.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>33</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The list of workload identities.</p>
+     */
     @NameInMap("WorkloadIdentities")
     public java.util.List<ListWorkloadIdentitiesResponseBodyWorkloadIdentities> workloadIdentities;
 
@@ -65,39 +92,105 @@ public class ListWorkloadIdentitiesResponseBody extends TeaModel {
     }
 
     public static class ListWorkloadIdentitiesResponseBodyWorkloadIdentities extends TeaModel {
+        /**
+         * <p>The whitelist of consent authorization callback URLs for the workload identity. This whitelist restricts the allowed callback addresses in the offline delegation (OfflineAccess) authorization flow.</p>
+         */
         @NameInMap("AllowedConsentCallbackURLs")
         public java.util.List<String> allowedConsentCallbackURLs;
 
+        /**
+         * <p>The list of allowed OAuth2 return URLs.</p>
+         */
         @NameInMap("AllowedResourceOAuth2ReturnURLs")
         public java.util.List<String> allowedResourceOAuth2ReturnURLs;
 
+        /**
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-12-18T06:19:17Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example agent</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The configured identity provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Operations Center single sign-on</p>
+         */
         @NameInMap("IdentityProviderName")
         public String identityProviderName;
 
+        /**
+         * <p>The ARN of the RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1953507478506681:role/test-rrsa-cb5ca90a20f854671adbac6ed4559a654</p>
+         */
         @NameInMap("RoleArn")
         public String roleArn;
 
+        /**
+         * <p>Specifies whether session binding is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("SessionBindingEnabled")
         public Boolean sessionBindingEnabled;
 
+        /**
+         * <p>The ARN of the source agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:agentidentity:cn-beijing:123456:workloadidentity/my-identity</p>
+         */
         @NameInMap("SourceAgentArn")
         public String sourceAgentArn;
 
+        /**
+         * <p>The creation source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual</p>
+         */
         @NameInMap("SourcePlatform")
         public String sourcePlatform;
 
+        /**
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-12-18T06:19:17Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <p>The ARN of the workload identity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:agentidentity:cn-beijing:123456:workloadidentitydirectory/default/workloadidentity/agent-101</p>
+         */
         @NameInMap("WorkloadIdentityArn")
         public String workloadIdentityArn;
 
+        /**
+         * <p>The unique name of the workload identity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent-101</p>
+         */
         @NameInMap("WorkloadIdentityName")
         public String workloadIdentityName;
 

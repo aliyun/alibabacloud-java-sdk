@@ -4,6 +4,12 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class DeleteTokenVaultRequest extends TeaModel {
+    /**
+     * <p>The name of the token vault. The name must be unique within the current Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("TokenVaultName")
     public String tokenVaultName;
 

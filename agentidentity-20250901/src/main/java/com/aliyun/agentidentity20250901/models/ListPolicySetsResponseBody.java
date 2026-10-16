@@ -4,18 +4,34 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class ListPolicySetsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("PolicySets")
     public java.util.List<ListPolicySetsResponseBodyPolicySets> policySets;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2A48EB1D-D645-5758-91AF-EDF8E36E257B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,18 +81,45 @@ public class ListPolicySetsResponseBody extends TeaModel {
     }
 
     public static class ListPolicySetsResponseBodyPolicySets extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2026-05-08T06:19:17Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example description</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>acs:agentidentity:cn-beijing:123456:policyset/default-policy-set</p>
+         */
         @NameInMap("PolicySetArn")
         public String policySetArn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>default-policy-set</p>
+         */
         @NameInMap("PolicySetName")
         public String policySetName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Manuel</p>
+         */
+        @NameInMap("SourcePlatform")
+        public String sourcePlatform;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2026-05-08T06:19:17Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
@@ -115,6 +158,14 @@ public class ListPolicySetsResponseBody extends TeaModel {
         }
         public String getPolicySetName() {
             return this.policySetName;
+        }
+
+        public ListPolicySetsResponseBodyPolicySets setSourcePlatform(String sourcePlatform) {
+            this.sourcePlatform = sourcePlatform;
+            return this;
+        }
+        public String getSourcePlatform() {
+            return this.sourcePlatform;
         }
 
         public ListPolicySetsResponseBodyPolicySets setUpdateTime(String updateTime) {

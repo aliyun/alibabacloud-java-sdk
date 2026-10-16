@@ -4,9 +4,18 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class GetUserPoolResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The user pool information.</p>
+     */
     @NameInMap("UserPool")
     public GetUserPoolResponseBodyUserPool userPool;
 
@@ -32,27 +41,75 @@ public class GetUserPoolResponseBody extends TeaModel {
     }
 
     public static class GetUserPoolResponseBodyUserPool extends TeaModel {
+        /**
+         * <p>The creation time in ISO 8601 format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-07T06:19:17Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the user pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample user pool</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The discovery URL for the OpenID Connect (OIDC) protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://signin-cn-beijing.aliyunagentid.com/up_7b6908bcb9ba4c****c8e187/.well-known/openid-configuration">https://signin-cn-beijing.aliyunagentid.com/up_7b6908bcb9ba4c****c8e187/.well-known/openid-configuration</a></p>
+         */
         @NameInMap("OIDCDiscoveryURL")
         public String OIDCDiscoveryURL;
 
+        /**
+         * <p>The base URL for logon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://pre-signin-cn-hangzhou.aliyunagentid.com/up_e14d889*****716841">https://pre-signin-cn-hangzhou.aliyunagentid.com/up_e14d889*****716841</a></p>
+         */
         @NameInMap("SigninBaseURL")
         public String signinBaseURL;
 
+        /**
+         * <p>The source platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual</p>
+         */
         @NameInMap("SourcePlatform")
         public String sourcePlatform;
 
+        /**
+         * <p>The update time in ISO 8601 format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-07T06:19:17Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <p>The ID of the user pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>up_xxxxxxxxxxxxxxxxxxxx</p>
+         */
         @NameInMap("UserPoolId")
         public String userPoolId;
 
+        /**
+         * <p>The name of the user pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-userpool</p>
+         */
         @NameInMap("UserPoolName")
         public String userPoolName;
 

@@ -4,9 +4,18 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class GetRoleResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The role information.</p>
+     */
     @NameInMap("Role")
     public GetRoleResponseBodyRole role;
 
@@ -32,21 +41,57 @@ public class GetRoleResponseBody extends TeaModel {
     }
 
     public static class GetRoleResponseBodyRole extends TeaModel {
+        /**
+         * <p>The creation time in ISO 8601 format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-07T06:19:17Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Data analyst role</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The role ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>role_xxxxxxxxxxxxxxxxxxxx</p>
+         */
         @NameInMap("RoleId")
         public String roleId;
 
+        /**
+         * <p>The name of the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Analyst</p>
+         */
         @NameInMap("RoleName")
         public String roleName;
 
+        /**
+         * <p>The type of the role. Default indicates a default role, and Manual indicates a custom role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The update time in ISO 8601 format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-07T06:19:17Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

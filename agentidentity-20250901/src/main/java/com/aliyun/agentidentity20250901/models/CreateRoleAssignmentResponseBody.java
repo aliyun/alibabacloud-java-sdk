@@ -4,9 +4,18 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class CreateRoleAssignmentResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The role assignment.</p>
+     */
     @NameInMap("RoleAssignment")
     public CreateRoleAssignmentResponseBodyRoleAssignment roleAssignment;
 
@@ -32,24 +41,66 @@ public class CreateRoleAssignmentResponseBody extends TeaModel {
     }
 
     public static class CreateRoleAssignmentResponseBodyRoleAssignment extends TeaModel {
+        /**
+         * <p>The time when the role assignment was created, in ISO 8601 format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-07T06:19:17Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The ID of the principal. When PrincipalType is User, this is the user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_xxxxxxxxxxxxxxxxxxxx</p>
+         */
         @NameInMap("PrincipalId")
         public String principalId;
 
+        /**
+         * <p>The name of the principal. When PrincipalType is User, this is the username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
         @NameInMap("PrincipalName")
         public String principalName;
 
+        /**
+         * <p>The type of the principal. Only User is currently supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User</p>
+         */
         @NameInMap("PrincipalType")
         public String principalType;
 
+        /**
+         * <p>The ID of the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>role_xxxxxxxxxxxxxxxxxxxx</p>
+         */
         @NameInMap("RoleId")
         public String roleId;
 
+        /**
+         * <p>The name of the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Analyst</p>
+         */
         @NameInMap("RoleName")
         public String roleName;
 
+        /**
+         * <p>The ID of the user pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>up_xxxxxxxxxxxxxxxxxxxx</p>
+         */
         @NameInMap("UserPoolId")
         public String userPoolId;
 

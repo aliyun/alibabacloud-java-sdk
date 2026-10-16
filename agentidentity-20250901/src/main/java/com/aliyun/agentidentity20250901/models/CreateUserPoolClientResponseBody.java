@@ -4,9 +4,18 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class CreateUserPoolClientResponseBody extends TeaModel {
+    /**
+     * <p>The client information.</p>
+     */
     @NameInMap("Client")
     public CreateUserPoolClientResponseBodyClient client;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +41,21 @@ public class CreateUserPoolClientResponseBody extends TeaModel {
     }
 
     public static class CreateUserPoolClientResponseBodyClientClientScopes extends TeaModel {
+        /**
+         * <p>The description of the scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenID Connect authentication</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openid</p>
+         */
         @NameInMap("ScopeName")
         public String scopeName;
 
@@ -62,39 +83,105 @@ public class CreateUserPoolClientResponseBody extends TeaModel {
     }
 
     public static class CreateUserPoolClientResponseBodyClient extends TeaModel {
+        /**
+         * <p>The validity period of the access token, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
+         */
         @NameInMap("AccessTokenValidity")
         public String accessTokenValidity;
 
+        /**
+         * <p>The ID of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client_xxxxxxxxxxxxxxxxxxxx</p>
+         */
         @NameInMap("ClientId")
         public String clientId;
 
+        /**
+         * <p>The name of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-web-app</p>
+         */
         @NameInMap("ClientName")
         public String clientName;
 
+        /**
+         * <p>The list of default scopes for the client.</p>
+         */
         @NameInMap("ClientScopes")
         public java.util.List<CreateUserPoolClientResponseBodyClientClientScopes> clientScopes;
 
+        /**
+         * <p>The type of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
+         */
         @NameInMap("ClientType")
         public String clientType;
 
+        /**
+         * <p>The time when the client was created, in the ISO 8601 format in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-07T06:19:17Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>Indicates whether PKCE is enforced.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnforcePKCE")
         public Boolean enforcePKCE;
 
+        /**
+         * <p>The list of OAuth redirect URIs.</p>
+         */
         @NameInMap("RedirectURIs")
         public java.util.List<String> redirectURIs;
 
+        /**
+         * <p>The validity period of the refresh token, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
+         */
         @NameInMap("RefreshTokenValidity")
         public String refreshTokenValidity;
 
+        /**
+         * <p>Indicates whether an application secret is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SecretRequired")
         public Boolean secretRequired;
 
+        /**
+         * <p>The time when the client was updated, in the ISO 8601 format in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-07T06:19:17Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <p>The name of the user pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-userpool</p>
+         */
         @NameInMap("UserPoolName")
         public String userPoolName;
 

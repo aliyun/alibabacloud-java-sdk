@@ -7,12 +7,24 @@ public class GetUserRequest extends TeaModel {
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <p>The username.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
     @NameInMap("UserName")
     public String userName;
 
     @NameInMap("UserPoolId")
     public String userPoolId;
 
+    /**
+     * <p>The name of the user pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-agent-userpool</p>
+     */
     @NameInMap("UserPoolName")
     public String userPoolName;
 

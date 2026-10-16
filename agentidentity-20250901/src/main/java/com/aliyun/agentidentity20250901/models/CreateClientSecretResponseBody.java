@@ -4,9 +4,18 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class CreateClientSecretResponseBody extends TeaModel {
+    /**
+     * <p>The client secret information.</p>
+     */
     @NameInMap("ClientSecret")
     public CreateClientSecretResponseBodyClientSecret clientSecret;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +41,57 @@ public class CreateClientSecretResponseBody extends TeaModel {
     }
 
     public static class CreateClientSecretResponseBodyClientSecret extends TeaModel {
+        /**
+         * <p>The ID of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client_xxxxxxxxxxxxxxxxxxxx</p>
+         */
         @NameInMap("ClientId")
         public String clientId;
 
+        /**
+         * <p>The name of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-web-app</p>
+         */
         @NameInMap("ClientName")
         public String clientName;
 
+        /**
+         * <p>The client key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>secret_xxxxxxxxxxxxxxxxxxxx</p>
+         */
         @NameInMap("ClientSecretId")
         public String clientSecretId;
 
+        /**
+         * <p>The plaintext client secret. This value is returned only once upon creation and cannot be retrieved later. Store it securely.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxxxxxxxxxxx</p>
+         */
         @NameInMap("ClientSecretValue")
         public String clientSecretValue;
 
+        /**
+         * <p>The time when the client secret was created, in ISO 8601 format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-07T06:19:17Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The name of the user pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-userpool</p>
+         */
         @NameInMap("UserPoolName")
         public String userPoolName;
 

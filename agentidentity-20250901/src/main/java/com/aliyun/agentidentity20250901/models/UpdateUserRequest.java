@@ -4,21 +4,61 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class UpdateUserRequest extends TeaModel {
+    /**
+     * <p>The description of the user. The description must be 0 to 256 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Senior data analyst</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The display name of the user. The display name must be 0 to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Alice Wang</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <p>The email address of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:alice.wang@example.com">alice.wang@example.com</a></p>
+     */
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <p>The status of the user. Valid values:</p>
+     * <ul>
+     * <li>Enabled: The user is enabled.</li>
+     * <li>Disabled: The user is disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Enabled</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The username of the user to be updated. The username can contain letters, digits, underscores (_), periods (.), and hyphens (-), and must be 3 to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
     @NameInMap("UserName")
     public String userName;
 
+    /**
+     * <p>The name of the user pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-agent-userpool</p>
+     */
     @NameInMap("UserPoolName")
     public String userPoolName;
 

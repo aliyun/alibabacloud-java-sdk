@@ -4,9 +4,18 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class GetAPIKeyCredentialProviderResponseBody extends TeaModel {
+    /**
+     * <p>The API key credential provider.</p>
+     */
     @NameInMap("APIKeyCredentialProvider")
     public GetAPIKeyCredentialProviderResponseBodyAPIKeyCredentialProvider APIKeyCredentialProvider;
 
+    /**
+     * <p>The unique identifier of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>76BF2570-76F5-5093-87CE-0918DD85752C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +41,57 @@ public class GetAPIKeyCredentialProviderResponseBody extends TeaModel {
     }
 
     public static class GetAPIKeyCredentialProviderResponseBodyAPIKeyCredentialProvider extends TeaModel {
+        /**
+         * <p>The name of the credential provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-key-dash-scope</p>
+         */
         @NameInMap("APIKeyCredentialProviderName")
         public String APIKeyCredentialProviderName;
 
+        /**
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-12-18T06:19:17Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The ARN of the credential provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:agentidentity:cn-beijing:123456:tokenvault/default/apikeycredentialprovider/api-key-dash-scope</p>
+         */
         @NameInMap("CredentialProviderArn")
         public String credentialProviderArn;
 
+        /**
+         * <p>The description of the credential provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example provider</p>
+         */
         @NameInMap("Description")
         public String description;
 
         @NameInMap("SourcePlatform")
         public String sourcePlatform;
 
+        /**
+         * <p>The name of the TokenVault.</p>
+         */
         @NameInMap("TokenVaultName")
         public String tokenVaultName;
 
+        /**
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-12-18T06:19:17Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

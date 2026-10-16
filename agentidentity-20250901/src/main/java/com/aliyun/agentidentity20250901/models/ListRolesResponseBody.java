@@ -4,18 +4,45 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class ListRolesResponseBody extends TeaModel {
+    /**
+     * <p>The maximum number of entries returned for the current request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token used to query the next page of data. An empty value indicates that no more data is available.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TGlzdFJvbGVzOjoyMA==</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of roles.</p>
+     */
     @NameInMap("Roles")
     public java.util.List<ListRolesResponseBodyRoles> roles;
 
+    /**
+     * <p>The total number of roles that meet the query conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,21 +92,57 @@ public class ListRolesResponseBody extends TeaModel {
     }
 
     public static class ListRolesResponseBodyRoles extends TeaModel {
+        /**
+         * <p>The creation time in ISO 8601 format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-07T06:19:17Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The role description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Data analytics role</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The role ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>role_xxxxxxxxxxxxxxxxxxxx</p>
+         */
         @NameInMap("RoleId")
         public String roleId;
 
+        /**
+         * <p>The role name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Analyst</p>
+         */
         @NameInMap("RoleName")
         public String roleName;
 
+        /**
+         * <p>The role type. Default indicates a default role. Manual indicates a custom role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The update time in ISO 8601 format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-07T06:19:17Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

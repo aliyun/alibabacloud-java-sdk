@@ -4,9 +4,18 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class DeleteOAuth2CredentialProviderRequest extends TeaModel {
+    /**
+     * <p>The name of the credential provider.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oauth2-provider-aliyun</p>
+     */
     @NameInMap("OAuth2CredentialProviderName")
     public String OAuth2CredentialProviderName;
 
+    /**
+     * <p>The name of the TokenVault.</p>
+     */
     @NameInMap("TokenVaultName")
     public String tokenVaultName;
 

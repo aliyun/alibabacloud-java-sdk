@@ -4,6 +4,12 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class DeletePolicySetRequest extends TeaModel {
+    /**
+     * <p>The name of the policy set. The name must be unique within the current Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default-policy-set</p>
+     */
     @NameInMap("PolicySetName")
     public String policySetName;
 

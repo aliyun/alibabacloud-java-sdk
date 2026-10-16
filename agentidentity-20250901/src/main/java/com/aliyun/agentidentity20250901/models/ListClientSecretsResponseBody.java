@@ -4,9 +4,18 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class ListClientSecretsResponseBody extends TeaModel {
+    /**
+     * <p>The list of client secrets.</p>
+     */
     @NameInMap("ClientSecrets")
     public java.util.List<ListClientSecretsResponseBodyClientSecrets> clientSecrets;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +41,48 @@ public class ListClientSecretsResponseBody extends TeaModel {
     }
 
     public static class ListClientSecretsResponseBodyClientSecrets extends TeaModel {
+        /**
+         * <p>The client ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client_xxxxxxxxxxxxxxxxxxxx</p>
+         */
         @NameInMap("ClientId")
         public String clientId;
 
+        /**
+         * <p>The client name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-web-app</p>
+         */
         @NameInMap("ClientName")
         public String clientName;
 
+        /**
+         * <p>The client key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>secret_xxxxxxxxxxxxxxxxxxxx</p>
+         */
         @NameInMap("ClientSecretId")
         public String clientSecretId;
 
+        /**
+         * <p>The creation time of the client secret in ISO 8601 format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-07T06:19:17Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The user pool name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-userpool</p>
+         */
         @NameInMap("UserPoolName")
         public String userPoolName;
 

@@ -4,9 +4,21 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class GetUserPoolSyncJobRequest extends TeaModel {
+    /**
+     * <p>The ID of the synchronization task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>syncjob_8d713b14a63b4a559753492ab51c31f3</p>
+     */
     @NameInMap("SynchronizationJobId")
     public String synchronizationJobId;
 
+    /**
+     * <p>The name of the user pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UserpoolName</p>
+     */
     @NameInMap("UserPoolName")
     public String userPoolName;
 

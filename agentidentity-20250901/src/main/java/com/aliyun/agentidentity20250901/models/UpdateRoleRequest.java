@@ -4,12 +4,30 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class UpdateRoleRequest extends TeaModel {
+    /**
+     * <p>The new description of the role. The description must be 0 to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Updated role description</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The name of the role.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Analyst</p>
+     */
     @NameInMap("RoleName")
     public String roleName;
 
+    /**
+     * <p>The name of the user pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-agent-userpool</p>
+     */
     @NameInMap("UserPoolName")
     public String userPoolName;
 

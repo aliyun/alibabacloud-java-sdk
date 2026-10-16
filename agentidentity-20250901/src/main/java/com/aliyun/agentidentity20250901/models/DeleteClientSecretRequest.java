@@ -4,15 +4,39 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class DeleteClientSecretRequest extends TeaModel {
+    /**
+     * <p>The client ID. Specify either this parameter or ClientName. If both are specified, ClientId takes precedence.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>client-xxxxxxxxxxxxxxxxxxxx</p>
+     */
     @NameInMap("ClientId")
     public String clientId;
 
+    /**
+     * <p>The client name. Specify either this parameter or ClientId.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-web-app</p>
+     */
     @NameInMap("ClientName")
     public String clientName;
 
+    /**
+     * <p>The key ID of the client secret to delete.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>secret-xxxxxxxxxxxxxxxxxxxx</p>
+     */
     @NameInMap("ClientSecretId")
     public String clientSecretId;
 
+    /**
+     * <p>The user pool name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-agent-userpool</p>
+     */
     @NameInMap("UserPoolName")
     public String userPoolName;
 

@@ -4,6 +4,12 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class UpdateWorkloadIdentityResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>69469F02-DFA8-5733-960F-AEE7CBC7C436</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,9 +4,17 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class ListIdentityProvidersRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6m6UfcO+UDmLjng/InRW9IU</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 

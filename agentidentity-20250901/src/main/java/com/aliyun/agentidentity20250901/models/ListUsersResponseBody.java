@@ -4,18 +4,45 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class ListUsersResponseBody extends TeaModel {
+    /**
+     * <p>The maximum number of entries returned for the current request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token used to query the next page of data. An empty value indicates that no more data is available.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TGlzdFVzZXJzOjoyMA==</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of users that meet the conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The list of users.</p>
+     */
     @NameInMap("Users")
     public java.util.List<ListUsersResponseBodyUsers> users;
 
@@ -65,12 +92,30 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     public static class ListUsersResponseBodyUsers extends TeaModel {
+        /**
+         * <p>The creation time. The time is in the ISO 8601 format in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-07T06:19:17Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample user</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The display name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice Wang</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
@@ -83,12 +128,30 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The update time. The time is in the ISO 8601 format in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-07T06:19:17Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_xxxxxxxxxxxxxxxxxxxx</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
         @NameInMap("UserName")
         public String userName;
 

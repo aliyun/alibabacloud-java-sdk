@@ -4,9 +4,18 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class GetSAMLIdentityProviderResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The detailed configuration of the identity provider.</p>
+     */
     @NameInMap("SSOIdentityProviderConfiguration")
     public GetSAMLIdentityProviderResponseBodySSOIdentityProviderConfiguration SSOIdentityProviderConfiguration;
 
@@ -32,9 +41,23 @@ public class GetSAMLIdentityProviderResponseBody extends TeaModel {
     }
 
     public static class GetSAMLIdentityProviderResponseBodySSOIdentityProviderConfigurationX509Certificates extends TeaModel {
+        /**
+         * <p>The certificate ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cert-xxxxxxxxxxxxxxxxxxxx</p>
+         */
         @NameInMap("CertificateId")
         public String certificateId;
 
+        /**
+         * <p>The content of the X509 certificate in PEM format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----
+         * MIIDdz...
+         * -----END CERTIFICATE-----</p>
+         */
         @NameInMap("X509Certificate")
         public String x509Certificate;
 
@@ -62,24 +85,79 @@ public class GetSAMLIdentityProviderResponseBody extends TeaModel {
     }
 
     public static class GetSAMLIdentityProviderResponseBodySSOIdentityProviderConfiguration extends TeaModel {
+        /**
+         * <p>The IdP identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
+         */
         @NameInMap("EntityId")
         public String entityId;
 
+        /**
+         * <p>The enabling status of just-in-time (JIT) user provisioning. Valid values:</p>
+         * <ul>
+         * <li>Enabled: JIT user provisioning is enabled.</li>
+         * <li>Disabled: JIT user provisioning is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
         @NameInMap("JITProvisionStatus")
         public String JITProvisionStatus;
 
+        /**
+         * <p>The enabling status of updating user information through synchronization. Valid values:</p>
+         * <ul>
+         * <li>Enabled: The feature is enabled.</li>
+         * <li>Disabled: The feature is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
         @NameInMap("JITUpdateStatus")
         public String JITUpdateStatus;
 
+        /**
+         * <p>The logon URL of the IdP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com/sso/saml">https://idp.example.com/sso/saml</a></p>
+         */
         @NameInMap("LoginURL")
         public String loginURL;
 
+        /**
+         * <p>The SAML protocol binding type. Valid values:</p>
+         * <ul>
+         * <li>HTTP-Redirect</li>
+         * <li>HTTP-POST</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP-Redirect</p>
+         */
         @NameInMap("SAMLBindingType")
         public String SAMLBindingType;
 
+        /**
+         * <p>The enabling status of single sign-on (SSO). Valid values:</p>
+         * <ul>
+         * <li>Enabled: SSO is enabled.</li>
+         * <li>Disabled: SSO is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
         @NameInMap("SSOStatus")
         public String SSOStatus;
 
+        /**
+         * <p>The list of X509 certificates.</p>
+         */
         @NameInMap("X509Certificates")
         public java.util.List<GetSAMLIdentityProviderResponseBodySSOIdentityProviderConfigurationX509Certificates> x509Certificates;
 

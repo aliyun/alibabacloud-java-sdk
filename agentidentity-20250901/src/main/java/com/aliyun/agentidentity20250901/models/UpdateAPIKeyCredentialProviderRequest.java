@@ -4,15 +4,39 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class UpdateAPIKeyCredentialProviderRequest extends TeaModel {
+    /**
+     * <p>The new API key value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>new example api key</p>
+     */
     @NameInMap("APIKey")
     public String APIKey;
 
+    /**
+     * <p>The name of the credential provider to update.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>api-key-dash-scope</p>
+     */
     @NameInMap("APIKeyCredentialProviderName")
     public String APIKeyCredentialProviderName;
 
+    /**
+     * <p>The new description of the credential provider.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>new example provider</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The name of the token vault. Default value: default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("TokenVaultName")
     public String tokenVaultName;
 

@@ -4,12 +4,35 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class DetachPolicySetFromGatewayRequest extends TeaModel {
+    /**
+     * <p>The ARN of the target gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:agentidentity:cn-beijing:123456:gateway/my-gateway</p>
+     */
     @NameInMap("GatewayArn")
     public String gatewayArn;
 
+    /**
+     * <p>The gateway type. Valid values:</p>
+     * <ul>
+     * <li>AIGateway: Alibaba Cloud AI Gateway.</li>
+     * <li>AgentRunMCP: AgentRun MCP tool.</li>
+     * </ul>
+     * <p>Default value: AIGateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AIGateway</p>
+     */
     @NameInMap("GatewayType")
     public String gatewayType;
 
+    /**
+     * <p>The name of the policy set. The name must be unique within the current Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default-policy-set</p>
+     */
     @NameInMap("PolicySetName")
     public String policySetName;
 

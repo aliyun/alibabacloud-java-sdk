@@ -4,9 +4,18 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class GetUserResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The user information.</p>
+     */
     @NameInMap("User")
     public GetUserResponseBodyUser user;
 
@@ -32,12 +41,30 @@ public class GetUserResponseBody extends TeaModel {
     }
 
     public static class GetUserResponseBodyUser extends TeaModel {
+        /**
+         * <p>The creation time in ISO 8601 format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-07T06:19:17Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample user</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The display name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice Wang</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
@@ -50,12 +77,30 @@ public class GetUserResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The update time in ISO 8601 format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-07T06:19:17Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_xxxxxxxxxxxxxxxxxxxx</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
         @NameInMap("UserName")
         public String userName;
 

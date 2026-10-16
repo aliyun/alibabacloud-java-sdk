@@ -4,18 +4,34 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class ListUserPoolSyncJobsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SynchronizationJobs")
     public java.util.List<ListUserPoolSyncJobsResponseBodySynchronizationJobs> synchronizationJobs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,15 +81,31 @@ public class ListUserPoolSyncJobsResponseBody extends TeaModel {
     }
 
     public static class ListUserPoolSyncJobsResponseBodySynchronizationJobsJobSummary extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;total&quot;:0,&quot;success&quot;:0,&quot;failed&quot;:0,&quot;skipped&quot;:0}</p>
+         */
         @NameInMap("Created")
         public String created;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;total&quot;:0,&quot;success&quot;:0,&quot;failed&quot;:0,&quot;skipped&quot;:0}</p>
+         */
         @NameInMap("Deleted")
         public String deleted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;total&quot;:0,&quot;success&quot;:0,&quot;failed&quot;:0,&quot;skipped&quot;:0}</p>
+         */
         @NameInMap("Same")
         public String same;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;total&quot;:0,&quot;success&quot;:0,&quot;failed&quot;:0,&quot;skipped&quot;:0}</p>
+         */
         @NameInMap("Updated")
         public String updated;
 
@@ -117,27 +149,55 @@ public class ListUserPoolSyncJobsResponseBody extends TeaModel {
     }
 
     public static class ListUserPoolSyncJobsResponseBodySynchronizationJobs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2025-12-15T01:50:00Z</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DingTalk</p>
+         */
         @NameInMap("IdentityProviderType")
         public String identityProviderType;
 
         @NameInMap("JobSummary")
         public ListUserPoolSyncJobsResponseBodySynchronizationJobsJobSummary jobSummary;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2026-01-13T16:00:00Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>syncjob_8d713b14a63b4a559753492ab51c31f3</p>
+         */
         @NameInMap("SynchronizationJobId")
         public String synchronizationJobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Manual</p>
+         */
         @NameInMap("TriggerType")
         public String triggerType;
 

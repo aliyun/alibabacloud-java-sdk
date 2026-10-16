@@ -4,9 +4,21 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class DeleteUserRequest extends TeaModel {
+    /**
+     * <p>The username of the user to delete.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
     @NameInMap("UserName")
     public String userName;
 
+    /**
+     * <p>The name of the user pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-agent-userpool</p>
+     */
     @NameInMap("UserPoolName")
     public String userPoolName;
 

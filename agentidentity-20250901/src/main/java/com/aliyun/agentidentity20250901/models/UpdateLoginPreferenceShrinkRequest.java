@@ -7,9 +7,18 @@ public class UpdateLoginPreferenceShrinkRequest extends TeaModel {
     @NameInMap("AllowedPostLogoutRedirectUris")
     public String allowedPostLogoutRedirectUrisShrink;
 
+    /**
+     * <p>The logon preference configuration object. It contains the logon configuration fields to be updated.</p>
+     */
     @NameInMap("LoginPreference")
     public String loginPreferenceShrink;
 
+    /**
+     * <p>The name of the user pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-agent-userpool</p>
+     */
     @NameInMap("UserPoolName")
     public String userPoolName;
 

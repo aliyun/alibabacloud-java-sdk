@@ -4,9 +4,17 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class UpdateUserPoolRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>更新后的用户池描述</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>my-agent-userpool</p>
+     */
     @NameInMap("UserPoolName")
     public String userPoolName;
 

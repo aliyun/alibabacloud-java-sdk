@@ -7,9 +7,18 @@ public class UpdateLoginPreferenceRequest extends TeaModel {
     @NameInMap("AllowedPostLogoutRedirectUris")
     public java.util.List<String> allowedPostLogoutRedirectUris;
 
+    /**
+     * <p>The logon preference configuration object. It contains the logon configuration fields to be updated.</p>
+     */
     @NameInMap("LoginPreference")
     public UpdateLoginPreferenceRequestLoginPreference loginPreference;
 
+    /**
+     * <p>The name of the user pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-agent-userpool</p>
+     */
     @NameInMap("UserPoolName")
     public String userPoolName;
 
@@ -43,6 +52,12 @@ public class UpdateLoginPreferenceRequest extends TeaModel {
     }
 
     public static class UpdateLoginPreferenceRequestLoginPreference extends TeaModel {
+        /**
+         * <p>Specifies whether to enable password logon for users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnablePasswordLogin")
         public Boolean enablePasswordLogin;
 

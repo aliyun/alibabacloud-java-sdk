@@ -4,9 +4,21 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class RunUserPoolSyncJobResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the created synchronization task. You can call GetUserPoolSyncJob to query the execution details of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sync_job_xxxxxxxxxxxxxxxxxxxx</p>
+     */
     @NameInMap("SynchronizationJobId")
     public String synchronizationJobId;
 

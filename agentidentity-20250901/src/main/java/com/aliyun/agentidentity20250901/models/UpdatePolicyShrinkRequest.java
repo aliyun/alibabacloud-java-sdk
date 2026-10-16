@@ -4,15 +4,36 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class UpdatePolicyShrinkRequest extends TeaModel {
+    /**
+     * <p>The definition of the policy.</p>
+     */
     @NameInMap("Definition")
     public String definitionShrink;
 
+    /**
+     * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example description</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The name of the policy. The name must be unique within the policy set to which the policy belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rate-limit-policy</p>
+     */
     @NameInMap("PolicyName")
     public String policyName;
 
+    /**
+     * <p>The name of the policy set. The name must be unique within the current Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default-policy-set</p>
+     */
     @NameInMap("PolicySetName")
     public String policySetName;
 

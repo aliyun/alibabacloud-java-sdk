@@ -4,9 +4,18 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class GetSpecificIdentityProviderResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The identity provider configuration information.</p>
+     */
     @NameInMap("SpecificIdentityProviderConfiguration")
     public GetSpecificIdentityProviderResponseBodySpecificIdentityProviderConfiguration specificIdentityProviderConfiguration;
 
@@ -32,12 +41,30 @@ public class GetSpecificIdentityProviderResponseBody extends TeaModel {
     }
 
     public static class GetSpecificIdentityProviderResponseBodySpecificIdentityProviderConfiguration extends TeaModel {
+        /**
+         * <p>The IdP metadata content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;corpId&quot;:&quot;dingxxxxxxxxxx&quot;,&quot;appKey&quot;:&quot;dingxxxxxxxxxx&quot;,&quot;syncCallbackStatus&quot;:&quot;Enabled&quot;}</p>
+         */
         @NameInMap("IDPMetadata")
         public String IDPMetadata;
 
+        /**
+         * <p>The type of the identity provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DingTalk</p>
+         */
         @NameInMap("IdentityProviderType")
         public String identityProviderType;
 
+        /**
+         * <p>The SSO enabling status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
         @NameInMap("SSOStatus")
         public String SSOStatus;
 
