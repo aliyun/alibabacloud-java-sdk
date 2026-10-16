@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PutSecretValueRequest extends TeaModel {
     /**
-     * <p>The secret value. The value is encrypted and stored in the specified new version.</p>
+     * <p>The secret value. The secret value is encrypted and stored in the specified new version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,10 +17,8 @@ public class PutSecretValueRequest extends TeaModel {
     /**
      * <p>The type of the secret value. Valid values:</p>
      * <ul>
-     * <li><p>text (default)</p>
-     * </li>
-     * <li><p>binary</p>
-     * </li>
+     * <li>text (default)</li>
+     * <li>binary</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,7 +30,7 @@ public class PutSecretValueRequest extends TeaModel {
     /**
      * <p>The name or Alibaba Cloud Resource Name (ARN) of the secret.</p>
      * <blockquote>
-     * <p>When you access a secret in another Alibaba Cloud account, you must specify the ARN of the secret. The ARN of a secret is in the format of <code>acs:kms:${region}:${account}:secret/${secret-name}</code>.</p>
+     * <p>When you access a secret that belongs to another Alibaba Cloud account, you must specify the ARN of the secret. The ARN of a secret is in the <code>acs:kms:${region}:${account}:secret/${secret-name}</code> format.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -43,7 +41,7 @@ public class PutSecretValueRequest extends TeaModel {
     public String secretName;
 
     /**
-     * <p>The version number of the secret. The value must be unique in the secret.</p>
+     * <p>The version ID of the secret. The version ID must be unique within the secret.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +51,7 @@ public class PutSecretValueRequest extends TeaModel {
     public String versionId;
 
     /**
-     * <p>The stage labels that are used to mark the new version. If you do not specify this parameter, KMS marks the new version with ACSCurrent.</p>
+     * <p>The version stages that are attached to the secret version when it is stored. If you do not specify this parameter, KMS attaches ACSCurrent to the new version by default.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;ACSCurrent&quot;,&quot;ACSNext&quot;]</p>

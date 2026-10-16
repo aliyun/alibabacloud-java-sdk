@@ -1,3 +1,6 @@
+2026-10-16 Version: 2.3.1
+- Generated java 2016-01-20 for Kms.
+
 2026-08-25 Version: 2.3.0
 - Support API GetChallenge.
 - Update API AsymmetricDecrypt: add request parameters Recipient.

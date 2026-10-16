@@ -5,21 +5,16 @@ import com.aliyun.tea.*;
 
 public class GenerateDataKeyRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the DryRun mode.</p>
+     * <p>Specifies whether to enable DryRun mode.</p>
      * <ul>
-     * <li><p>true: enables the DryRun mode.</p>
-     * </li>
-     * <li><p>false (default): disables the DryRun mode.</p>
-     * </li>
+     * <li>true: enabled.</li>
+     * <li>false (default): disabled.</li>
      * </ul>
-     * <p>The DryRun mode is used to test the API call. It verifies whether you have the permissions to access the specified resources and whether the request parameters are valid. If you enable the DryRun mode, KMS always returns a failure response and a failure reason. The failure reasons include the following:</p>
+     * <p>DryRun mode is used to test API calls, verify that you have the required permissions on the relevant resources, and check whether request parameters are configured correctly. When DryRun mode is enabled, KMS always returns a failure with a reason. Possible failure reasons include:</p>
      * <ul>
-     * <li><p>DryRunOperationError: The request succeeds if the DryRun parameter is not specified.</p>
-     * </li>
-     * <li><p>ValidationError: The parameters specified in the request are invalid.</p>
-     * </li>
-     * <li><p>AccessDeniedError: You are not authorized to perform this operation on the KMS resource.</p>
-     * </li>
+     * <li>DryRunOperationError: The request would succeed if the DryRun parameter were not set.</li>
+     * <li>ValidationError: A parameter specified in the request is invalid.</li>
+     * <li>AccessDeniedError: You do not have permission to perform the operation on the KMS resource.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,8 +24,8 @@ public class GenerateDataKeyRequest extends TeaModel {
     public String dryRun;
 
     /**
-     * <p>A JSON string that consists of key-value pairs.</p>
-     * <p>If you specify this parameter, you must also specify the same parameter when you call the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation. For more information, see <a href="https://help.aliyun.com/document_detail/42975.html">EncryptionContext</a>.</p>
+     * <p>A JSON string of key-value pairs.</p>
+     * <p>If you specify this parameter, you must provide the same parameter when you call the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation. For more information, see <a href="https://help.aliyun.com/document_detail/42975.html">EncryptionContext</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Example&quot;:&quot;Example&quot;}</p>
@@ -39,9 +34,9 @@ public class GenerateDataKeyRequest extends TeaModel {
     public java.util.Map<String, ?> encryptionContext;
 
     /**
-     * <p>The ID of the key. You can also specify the alias or the key resource name (ARN) of the key. For more information about aliases, see <a href="https://help.aliyun.com/document_detail/480655.html">Manage aliases</a>.</p>
+     * <p>The ID of the key. You can also specify a key alias or a key Amazon Resource Name (ARN). For more information about aliases, see <a href="https://help.aliyun.com/document_detail/480655.html">Manage key aliases</a>.</p>
      * <blockquote>
-     * <p>When you access a key in another Alibaba Cloud account, you must enter the ARN of the key. The key ARN is in the format of <code>acs:kms:${region}:${account}:key/${keyid}</code>.</p>
+     * <p>To access a key in another Alibaba Cloud account, you must specify the key ARN. The key ARN format is <code>acs:kms:${region}:${account}:key/${keyid}</code>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -52,7 +47,7 @@ public class GenerateDataKeyRequest extends TeaModel {
     public String keyId;
 
     /**
-     * <p>The length of the data key to be generated. Valid values:</p>
+     * <p>The length of the data key (DK) to generate. Valid values:</p>
      * <ul>
      * <li><p>AES_256: a 256-bit symmetric key.</p>
      * </li>
@@ -60,7 +55,7 @@ public class GenerateDataKeyRequest extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * <p>We recommend that you use the KeySpec or NumberOfBytes parameter to specify the length of a data key. If you do not specify either of the parameters, KMS generates a 256-bit data key. If you specify both parameters, KMS ignores the KeySpec parameter.</p>
+     * <p>Use KeySpec or NumberOfBytes to specify the DK length. If neither is specified, KMS generates a 256-bit DK. If both are specified, KMS ignores the KeySpec parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -70,14 +65,12 @@ public class GenerateDataKeyRequest extends TeaModel {
     public String keySpec;
 
     /**
-     * <p>The length of the data key that you want to generate. Unit: bytes.</p>
+     * <p>The length of the data key (DK) to generate, in bytes.</p>
      * <p>Valid values: 1 to 1024.</p>
-     * <p>Default values:</p>
+     * <p>Default value:</p>
      * <ul>
-     * <li><p>If you set KeySpec to AES_256, the default value of NumberOfBytes is 32.</p>
-     * </li>
-     * <li><p>If you set KeySpec to AES_128, the default value of NumberOfBytes is 16.</p>
-     * </li>
+     * <li>When KeySpec is set to AES_256, the default value of NumberOfBytes is 32.</li>
+     * <li>When KeySpec is set to AES_128, the default value of NumberOfBytes is 16.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -88,7 +81,10 @@ public class GenerateDataKeyRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>{ &quot;AttestationDocument&quot;:&quot;base64-encoded-attestion-document&quot;,  &quot;KeyEncryptionAlgorithm&quot;:&quot;RSAES_OAEP_SHA_256&quot; }</p>
+     * <p>{
+     * &quot;AttestationDocument&quot;:&quot;base64-encoded-attestion-document&quot;, 
+     * &quot;KeyEncryptionAlgorithm&quot;:&quot;RSAES_OAEP_SHA_256&quot;
+     * }</p>
      */
     @NameInMap("Recipient")
     public String recipient;

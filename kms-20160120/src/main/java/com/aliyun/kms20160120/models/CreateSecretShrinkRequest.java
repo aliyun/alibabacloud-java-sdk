@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSecretShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the KMS instance.</p>
+     * <p>The instance ID of the KMS instance.</p>
      * 
      * <strong>example:</strong>
      * <p>kst-bjj62d8f5e0sgtx8h****</p>
@@ -25,13 +25,11 @@ public class CreateSecretShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic rotation. Valid values:</p>
      * <ul>
-     * <li><p>true: enables automatic rotation.</p>
-     * </li>
-     * <li><p>false (default): disables automatic rotation.</p>
-     * </li>
+     * <li>true: enables automatic rotation.</li>
+     * <li>false: disables automatic rotation. This is the default value.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is valid only if SecretType is set to Rds, PolarDB, Redis, RAMCredentials, or ECS. If SecretType is set to Generic, automatic rotation is not supported. You can call the <a href="https://help.aliyun.com/document_detail/154503.html">PutSecretValue</a> operation to manually rotate the secret.</p>
+     * <p>This parameter takes effect only when SecretType is set to Rds (ApsaraDB RDS secret), PolarDB (PolarDB secret), Redis (Redis secret), RAMCredentials (RAM secret), or ECS (ECS secret). When SecretType is set to Generic (generic secret), automatic rotation is not supported. You can call the <a href="https://help.aliyun.com/document_detail/154503.html">PutSecretValue</a> operation to manually rotate the secret.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,7 +41,7 @@ public class CreateSecretShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the key used to encrypt the secret value.</p>
      * <blockquote>
-     * <p>The key and the secret must be in the same KMS instance. The key must be a symmetric key.</p>
+     * <p>The key and the secret must belong to the same KMS instance, and the key must be a symmetric key.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,102 +51,88 @@ public class CreateSecretShrinkRequest extends TeaModel {
     public String encryptionKeyId;
 
     /**
-     * <p>The extended configuration of the secret. This parameter specifies the properties of the secret of a specific type. The value can be up to 1,024 characters in length.</p>
+     * <p>The extended configuration of the secret, which is used to specify the property of a specific secret type. The value can be up to 1,024 characters in length.</p>
      * <ul>
-     * <li><p>If SecretType is set to Generic, this parameter is ignored.</p>
+     * <li><p>When SecretType is set to Generic (generic secret), this parameter is ignored.</p>
      * </li>
-     * <li><p>If SecretType is set to Rds, you must specify the following parameters in ExtendedConfig:</p>
+     * <li><p>When SecretType is set to Rds (ApsaraDB RDS secret), you must specify the following parameters in ExtendedConfig:</p>
      * <ul>
-     * <li><p>SecretSubType (Required): The subtype of the secret. Valid values:</p>
+     * <li><p>SecretSubType (required): the child class of the secret. Valid values:  </p>
      * <ul>
-     * <li><p>SingleUser: Secrets Manager manages the RDS secret in single-account mode. When the secret is rotated, the password of the specified account is reset to a new random password.</p>
+     * <li>SingleUser: specifies that Secrets Manager manages the ApsaraDB RDS secret in single-account pattern. During secret rotation, the password of the specified account is reset to a new random password.</li>
+     * <li>DoubleUsers: specifies that Secrets Manager manages the ApsaraDB RDS secret in dual-account pattern. ACSCurrent and ACSPrevious reference one account each. During secret rotation, the password of the account referenced by ACSPrevious is reset to a new random password, and then Secrets Manager swaps the accounts referenced by ACSCurrent and ACSPrevious.</li>
+     * </ul>
      * </li>
-     * <li><p>DoubleUsers: Secrets Manager manages the RDS secret in double-account mode. ACSCurrent and ACSPrevious point to one of the accounts. When the secret is rotated, the password of the account pointed to by ACSPrevious is reset to a new random password. Then, Secrets Manager swaps the accounts that ACSCurrent and ACSPrevious point to.</p>
+     * <li><p>DBInstanceId (required): instance ID of the ApsaraDB RDS instance to which the account belongs.</p>
+     * </li>
+     * <li><p>CustomData (optional): custom data. The value is a JSON-formatted key-value pair. You can specify up to 10 key-value pairs, separated by commas (,). Example: <code>{&quot;Key1&quot;: &quot;v1&quot;, &quot;fds&quot;:&quot;fdsf&quot;}</code>. Default value: <code>{}</code>.</p>
      * </li>
      * </ul>
      * </li>
-     * <li><p>DBInstanceId (Required): The ID of the RDS instance to which the account belongs.</p>
+     * <li><p>When SecretType is set to Redis (Redis secret), you must specify the following parameters in ExtendedConfig:</p>
+     * <ul>
+     * <li>SecretSubType (required): the child class of the secret. Valid values:  <ul>
+     * <li>DoubleUsers: specifies that Secrets Manager manages the Redis secret in dual-account pattern. ACSCurrent and ACSPrevious reference one account each. During secret rotation, the password of the account referenced by ACSPrevious is reset to a new random password, and then Secrets Manager swaps the accounts referenced by ACSCurrent and ACSPrevious.</li>
+     * </ul>
      * </li>
-     * <li><p>CustomData (Optional): The custom data. The value is a key-value pair in the JSON format. You can specify up to 10 key-value pairs. Separate multiple key-value pairs with commas (,). Example: <code>{&quot;Key1&quot;: &quot;v1&quot;, &quot;fds&quot;:&quot;fdsf&quot;}</code>. The default value is <code>{}</code>.</p>
+     * <li>AccountName (required): the database username.</li>
+     * <li>CloneAccountName (required): the database username, which is the value of AccountName appended with the <code>_clone</code> suffix.</li>
+     * <li>AccountPrivilege (required): the permissions to access the database.</li>
+     * <li>InstanceId (required): instance ID of the Redis instance.</li>
+     * <li>RegionId (required): the region ID of the Redis instance.</li>
+     * <li>CustomData (optional): custom data. The value is a JSON-formatted key-value pair. You can specify up to 10 key-value pairs, separated by commas (,). Example: <code>{&quot;Key1&quot;: &quot;v1&quot;, &quot;fds&quot;:&quot;fdsf&quot;}</code>. Default value: <code>{}</code>.</li>
+     * </ul>
+     * </li>
+     * <li><p>When SecretType is set to RAMCredentials (RAM secret), you must specify the following parameters in ExtendedConfig:</p>
+     * <ul>
+     * <li>SecretSubType (required): the child class of the secret. Valid value: RamUserAccessKey.</li>
+     * <li>UserName (required): the name of the Resource Access Management (RAM) user.</li>
+     * <li>CustomData (optional): custom data. The value is a JSON-formatted key-value pair. You can specify up to 10 key-value pairs, separated by commas (,). Default value: <code>{}</code>.</li>
+     * </ul>
+     * </li>
+     * <li><p>When SecretType is set to ECS (ECS secret), you must specify the following parameters in ExtendedConfig:</p>
+     * <ul>
+     * <li><p>SecretSubType (required): the child class of the secret. Valid values:  </p>
+     * <ul>
+     * <li>Password: ECS password.</li>
+     * <li>SSHKey: ECS SSH public and private keys.</li>
+     * </ul>
+     * </li>
+     * <li><p>RegionId (required): the region ID of the ECS instance.  </p>
+     * </li>
+     * <li><p>InstanceId (required): instance ID of the ECS instance.</p>
+     * </li>
+     * <li><p>CustomData (optional): custom data. The value is a JSON-formatted key-value pair. You can specify up to 10 key-value pairs, separated by commas (,). Default value: <code>{}</code>.</p>
      * </li>
      * </ul>
      * </li>
-     * <li><p>If SecretType is set to Redis, you must specify the following parameters in ExtendedConfig:</p>
+     * <li><p>When SecretType is set to PolarDB, you must specify the following parameters in ExtendedConfig:</p>
      * <ul>
-     * <li><p>SecretSubType (Required): The subtype of the secret. Valid values:</p>
-     * <ul>
-     * <li>DoubleUsers: Secrets Manager manages the Redis secret in double-account mode. ACSCurrent and ACSPrevious point to one of the accounts. When the secret is rotated, the password of the account pointed to by ACSPrevious is reset to a new random password. Then, Secrets Manager swaps the accounts that ACSCurrent and ACSPrevious point to.</li>
-     * </ul>
+     * <li><p>SecretSubType (required): DoubleUsers (fixed value).</p>
      * </li>
-     * <li><p>AccountName (Required): The database username.</p>
+     * <li><p>RegionId (required): the region ID.</p>
      * </li>
-     * <li><p>CloneAccountName (Required): The database username, which is the value of AccountName with the <code>_clone</code> suffix.</p>
+     * <li><p>DBClusterId (required): instance ID of the PolarDB cluster.</p>
      * </li>
-     * <li><p>AccountPrivilege (Required): The permissions to access the database.</p>
+     * <li><p>DBType (required): MySQL or PostgreSQL.</p>
      * </li>
-     * <li><p>InstanceId (Required): The ID of the Redis instance.</p>
+     * <li><p>AccountName (required): the account name.</p>
      * </li>
-     * <li><p>RegionId (Required): The ID of the region where the Redis instance resides.</p>
+     * <li><p>CloneAccountName: the value of AccountName appended with <code>_clone</code>.</p>
      * </li>
-     * <li><p>CustomData (Optional): The custom data. The value is a key-value pair in the JSON format. You can specify up to 10 key-value pairs. Separate multiple key-value pairs with commas (,). Example: <code>{&quot;Key1&quot;: &quot;v1&quot;, &quot;fds&quot;:&quot;fdsf&quot;}</code>. The default value is <code>{}</code>.</p>
+     * <li><p>AccountType: the account type. Only Normal is supported.</p>
      * </li>
-     * </ul>
+     * <li><p>AccountPrivilege: the account permissions. This parameter is available only for MySQL.</p>
      * </li>
-     * <li><p>If SecretType is set to RAMCredentials, you must specify the following parameters in ExtendedConfig:</p>
-     * <ul>
-     * <li><p>SecretSubType (Required): The subtype of the secret. The value is RamUserAccessKey.</p>
+     * <li><p>DBName: the database name. This parameter is available only for MySQL.</p>
      * </li>
-     * <li><p>UserName (Required): The name of the RAM user.</p>
-     * </li>
-     * <li><p>CustomData (Optional): The custom data. The value is a key-value pair in the JSON format. You can specify up to 10 key-value pairs. Separate multiple key-value pairs with commas (,). The default value is <code>{}</code>.</p>
-     * </li>
-     * </ul>
-     * </li>
-     * <li><p>If SecretType is set to ECS, you must specify the following parameters in ExtendedConfig:</p>
-     * <ul>
-     * <li><p>SecretSubType (Required): The subtype of the secret. Valid values:</p>
-     * <ul>
-     * <li><p>Password: an ECS password.</p>
-     * </li>
-     * <li><p>SSHKey: an ECS SSH key pair.</p>
-     * </li>
-     * </ul>
-     * </li>
-     * <li><p>RegionId (Required): The ID of the region where the ECS instance resides.</p>
-     * </li>
-     * <li><p>InstanceId (Required): The ID of the ECS instance.</p>
-     * </li>
-     * <li><p>CustomData (Optional): The custom data. The value is a key-value pair in the JSON format. You can specify up to 10 key-value pairs. Separate multiple key-value pairs with commas (,). The default value is <code>{}</code>.</p>
-     * </li>
-     * </ul>
-     * </li>
-     * <li><p>If SecretType is set to PolarDB, you must specify the following parameters in ExtendedConfig:</p>
-     * <ul>
-     * <li><p>SecretSubType (Required): The fixed value is DoubleUsers.</p>
-     * </li>
-     * <li><p>RegionId (Required): The region.</p>
-     * </li>
-     * <li><p>DBClusterId (Required): The ID of the PolarDB instance.</p>
-     * </li>
-     * <li><p>DBType (Required): MySQL or PostgreSQL.</p>
-     * </li>
-     * <li><p>AccountName (Required): The account name.</p>
-     * </li>
-     * <li><p>CloneAccountName: The value is AccountName_clone.</p>
-     * </li>
-     * <li><p>AccountType: Only Normal is supported.</p>
-     * </li>
-     * <li><p>AccountPrivilege: This parameter is available only for MySQL.</p>
-     * </li>
-     * <li><p>DBName: This parameter is available only for MySQL.</p>
-     * </li>
-     * <li><p>CustomData (Optional): The custom data. The value is a key-value pair in the JSON format. You can specify up to 10 key-value pairs. Separate multiple key-value pairs with commas (,). Example: {&quot;Key1&quot;: &quot;v1&quot;, &quot;fds&quot;:&quot;fdsf&quot;}. The default value is {}.</p>
+     * <li><p>CustomData (optional): custom data. The value is a JSON-formatted key-value pair. You can specify up to 10 key-value pairs, separated by commas (,). Example: <code>{&quot;Key1&quot;: &quot;v1&quot;, &quot;fds&quot;:&quot;fdsf&quot;}</code>. Default value: <code>{}</code>.</p>
      * </li>
      * </ul>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>If SecretType is set to Rds, Redis, PolarDB, RAMCredentials, or ECS, you must configure this parameter.</p>
+     * <p>When SecretType is set to Rds, Redis, PolarDB, RAMCredentials, or ECS, you must set this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -158,16 +142,14 @@ public class CreateSecretShrinkRequest extends TeaModel {
     public String extendedConfigShrink;
 
     /**
-     * <p>The content of the secret policy. The value is in the JSON format. The value can be up to 32,768 bytes in length.</p>
-     * <p>For more information about secret policies, see <a href="https://help.aliyun.com/document_detail/2716465.html">Overview of secret policies</a>. If you do not specify this parameter, the default secret policy is used.</p>
-     * <p>A secret policy contains the following parts:</p>
+     * <p>The content of the access policy in JSON format. The maximum length is 32,768 bytes.</p>
+     * <p>For more information about secret policies, see <a href="https://help.aliyun.com/document_detail/2716465.html">Overview of secret policies</a>. If you do not specify this parameter, the default access policy is used.</p>
+     * <p>The access policy includes the following fields:</p>
      * <ul>
-     * <li><p>Version: The version of the secret policy. Only 1 is supported.</p>
-     * </li>
-     * <li><p>Statement: The statements of the secret policy. Each secret policy can contain one or more statements.</p>
-     * </li>
+     * <li>Version: the version of the access policy. Currently, only version 1 is supported.</li>
+     * <li>Statement: the statements in the access policy. Each access policy contains one or more statements.</li>
      * </ul>
-     * <p>The following is the format of a secret policy:</p>
+     * <p>The access policy uses the following format:</p>
      * <pre><code>{
      *     &quot;Version&quot;: &quot;1&quot;,
      *     &quot;Statement&quot;: [
@@ -187,23 +169,23 @@ public class CreateSecretShrinkRequest extends TeaModel {
      *     ]
      * }
      * </code></pre>
-     * <p>Details about a statement:</p>
+     * <p>Statement details:</p>
      * <ul>
-     * <li><p>Sid: (Optional) The custom identifier of the statement. The value can be up to 128 characters in length and can contain uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), and special characters, including underscores (_), forward slashes (/), plus signs (+), equal signs (=), periods (.), at signs (@), and hyphens (-).</p>
+     * <li><p>Sid: optional. The custom statement identifier. The value can be up to 128 characters in length and can contain uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), and special characters (_/+=.@-).</p>
      * </li>
-     * <li><p>Effect: (Required) The effect of the policy statement. Valid values: Allow and Deny.</p>
+     * <li><p>Effect: required. Specifies whether to allow or deny the permissions in the policy statement. Valid values: Allow and Deny.</p>
      * </li>
-     * <li><p>Principal: (Required) The principal that is authorized by the policy. You can specify the current Alibaba Cloud account (the account to which the secret belongs), a RAM user or RAM role of the current Alibaba Cloud account, or a RAM user or RAM role of another Alibaba Cloud account.</p>
+     * <li><p>Principal: required. The principal to which the policy is attached. You can set this field to the current Alibaba Cloud account (the account to which the secret belongs), a RAM user or RAM role under the current Alibaba Cloud account, or a RAM user or RAM role under another Alibaba Cloud account.</p>
      * </li>
-     * <li><p>Action: (Required) The API operations that are allowed or denied. The value must start with &quot;kms:&quot;. For the list of supported operations, see <a href="https://help.aliyun.com/document_detail/2716465.html">Overview of secret policies</a>. If you specify an operation that is not in the list, the setting does not take effect.</p>
+     * <li><p>Action: required. The API operations to allow or deny. The value must start with &quot;kms:&quot;. For the list of available operations, see <a href="https://help.aliyun.com/document_detail/2716465.html">Overview of secret policies</a>. If you specify an operation that is not in the list, the setting does not take effect.</p>
      * </li>
-     * <li><p>Resource: (Required) The resource. The value can only be \*, which indicates the current KMS secret.</p>
+     * <li><p>Resource: required. The value can only be *, which indicates the current KMS secret.</p>
      * </li>
-     * <li><p>Condition: (Optional) The conditions for the authorization to take effect. You can use conditions to evaluate the context of an API request to determine whether to apply the policy statement. The format is <code>&quot;Condition&quot;: {&quot;condition operator&quot;: {&quot;condition key&quot;: &quot;condition value&quot;}}</code>. For more information, see <a href="https://help.aliyun.com/document_detail/2716465.html">Overview of secret policies</a>.</p>
+     * <li><p>Condition: optional. The conditions that must be met for the authorization to take effect. You can use conditions to evaluate the context of an API request to determine whether the policy statement applies. The format is <code>&quot;Condition&quot;: {&quot;condition operator&quot;: {&quot;condition key&quot;: &quot;condition value&quot;}}</code>. For more information, see <a href="https://help.aliyun.com/document_detail/2716465.html">Overview of secret policies</a>.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>After you grant permissions to a RAM user or RAM role of another Alibaba Cloud account, you must use the Alibaba Cloud account to which the RAM user or RAM role belongs to grant the RAM user or RAM role the permissions to use the secret in the RAM console. Then, the RAM user or RAM role can use the secret. For more information, see <a href="https://help.aliyun.com/document_detail/480682.html">Custom policies for KMS</a>, <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>, and <a href="https://help.aliyun.com/document_detail/116147.html">Grant permissions to a RAM role</a>.</p>
+     * <p>After you grant Resource Access Management (RAM) user or RAM role under another Alibaba Cloud account, you must also use the Alibaba Cloud account of the RAM user or RAM role to authorize them to use the secret in the RAM console. Only then can the RAM user or RAM role use the secret. For more information, see <a href="https://help.aliyun.com/document_detail/480682.html">Custom policy examples for Key Management Service</a>, <a href="https://help.aliyun.com/document_detail/116146.html">Grant Resource Access Management (RAM) user</a>, and <a href="https://help.aliyun.com/document_detail/116147.html">Grant permissions to a RAM role</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -213,11 +195,9 @@ public class CreateSecretShrinkRequest extends TeaModel {
     public String policy;
 
     /**
-     * <p>The interval for automatic rotation. The value is in the range of 6 hours to 8,760 hours (365 days).<br>
-     * The value is in the <code>integer[unit]</code> format. <code>integer</code> indicates the interval. <code>unit</code> indicates the unit of time.<br>
-     * Valid values for unit: d (day), h (hour), m (minute), and s (second). For example, both 7d and 604,800s indicate a rotation interval of 7 days.<br><br></p>
+     * <p>The interval for automatic rotation. Valid values: 6 hours to 8,760 hours (365 days).<br>The value must be in the <code>integer[unit]</code> format. <code>integer</code> specifies the time length, and <code>unit</code> specifies the time unit.<br>Valid values for <code>unit</code>: d (days), h (hours), m (minutes), and s (seconds). For example, both 7d and 604,800s indicate a 7-day interval.  </p>
      * <blockquote>
-     * <p>You must specify this parameter if you set EnableAutomaticRotation to true. You do not need to specify this parameter if you set EnableAutomaticRotation to false.</p>
+     * <p>You must set this parameter only when EnableAutomaticRotation is set to true.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -227,23 +207,23 @@ public class CreateSecretShrinkRequest extends TeaModel {
     public String rotationInterval;
 
     /**
-     * <p>The value of the secret. The value can be up to 30,720 bytes (30 KB) in length. KMS encrypts the secret value with the specified key and stores the encrypted value in the initial version.</p>
+     * <p>The secret value. The value can be up to 30,720 bytes (30 KB) in length. KMS encrypts the value by using the specified key and stores it in the initial version.</p>
      * <ul>
-     * <li><p>If SecretType is set to Generic, you can specify a custom secret value.</p>
+     * <li><p>When SecretType is set to Generic (generic secret), you can customize the secret value.</p>
      * </li>
-     * <li><p>If SecretType is set to Rds, the secret value must be in the following format: <code>{&quot;Accounts&quot;:[{&quot;AccountName&quot;:&quot;&quot;,&quot;AccountPassword&quot;:&quot;&quot;}]}</code>. In the format, <code>AccountName</code> specifies the username of the account for the RDS instance and <code>AccountPassword</code> specifies the password of the account.</p>
+     * <li><p>When SecretType is set to Rds (ApsaraDB RDS secret), the secret value must be in the following format: <code>{&quot;Accounts&quot;:[{&quot;AccountName&quot;:&quot;&quot;,&quot;AccountPassword&quot;:&quot;&quot;}]}</code>. <code>AccountName</code> specifies the username of the ApsaraDB RDS instance, and <code>AccountPassword</code> specifies the password of the account.  </p>
      * </li>
-     * <li><p>If SecretType is set to Redis, set this parameter to <code>$Auto</code>.</p>
+     * <li><p>When SecretType is set to Redis (Redis secret), set this parameter to <code>$Auto</code>.</p>
      * </li>
-     * <li><p>If SecretType is set to RAMCredentials, the secret value must be in the following format: <code>{&quot;AccessKeys&quot;:[{&quot;AccessKeyId&quot;:&quot;&quot;,&quot;AccessKeySecret&quot;:&quot;&quot;}]}</code>. In the format, <code>AccessKeyId</code> specifies the AccessKey ID and <code>AccessKeySecret</code> specifies the AccessKey secret. You must specify all AccessKey pairs of the RAM user.</p>
+     * <li><p>When SecretType is set to RAMCredentials (RAM secret), the secret value must be in the following format: <code>{&quot;AccessKeys&quot;:[{&quot;AccessKeyId&quot;:&quot;&quot;,&quot;AccessKeySecret&quot;:&quot;&quot;}]}</code>. <code>AccessKeyId</code> specifies the AccessKey ID, and <code>AccessKeySecret</code> specifies the AccessKey secret. You must specify all AccessKey pairs of the Resource Access Management (RAM) user.</p>
      * </li>
-     * <li><p>If SecretType is set to PolarDB, set this parameter to <code>$Auto</code>.</p>
+     * <li><p>When SecretType is set to PolarDB, set this parameter to <code>$Auto</code>.</p>
      * </li>
-     * <li><p>If SecretType is set to ECS, the secret value must be in one of the following formats:</p>
+     * <li><p>When SecretType is set to ECS (ECS secret), the secret value must be in one of the following formats:  </p>
      * <ul>
-     * <li><p>If SecretSubType in the ExtendedConfig parameter is set to Password: <code>{&quot;UserName&quot;:&quot;&quot;,&quot;Password&quot;: &quot;&quot;}</code>. In the format, <code>UserName</code> specifies the username used to log on to the ECS instance and <code>Password</code> specifies the password used to log on to the ECS instance.</p>
+     * <li><p>When SecretSubType in the ExtendedConfig parameter is set to Password: <code>{&quot;UserName&quot;:&quot;&quot;,&quot;Password&quot;: &quot;&quot;}</code>. <code>UserName</code> specifies the username used to log on to the ECS instance, and <code>Password</code> specifies the logon password.  </p>
      * </li>
-     * <li><p>If SecretSubType in the ExtendedConfig parameter is set to SSHKey: <code>{&quot;UserName&quot;:&quot;&quot;,&quot;PublicKey&quot;: &quot;&quot;, &quot;PrivateKey&quot;: &quot;&quot;}</code>. In the format, <code>PublicKey</code> specifies the SSH-formatted public key used to log on to the ECS instance and <code>PrivateKey</code> specifies the private key used to log on to the ECS instance.</p>
+     * <li><p>When SecretSubType in the ExtendedConfig parameter is set to SSHKey: <code>{&quot;UserName&quot;:&quot;&quot;,&quot;PublicKey&quot;: &quot;&quot;, &quot;PrivateKey&quot;: &quot;&quot;}</code>. <code>PublicKey</code> specifies the SSH public key used to log on to the ECS instance, and <code>PrivateKey</code> specifies the private key.</p>
      * </li>
      * </ul>
      * </li>
@@ -259,13 +239,11 @@ public class CreateSecretShrinkRequest extends TeaModel {
     /**
      * <p>The type of the secret value. Valid values:</p>
      * <ul>
-     * <li><p>text (default): The secret value is a text string.</p>
-     * </li>
-     * <li><p>binary: The secret value is a binary string.</p>
-     * </li>
+     * <li>text: text. This is the default value.</li>
+     * <li>binary: binary data.</li>
      * </ul>
      * <blockquote>
-     * <p>If SecretType is set to Rds, Redis, PolarDB, RAMCredentials, or ECS, SecretDataType must be set to text.</p>
+     * <p>When SecretType is set to Rds, Redis, PolarDB, RAMCredentials, or ECS, SecretDataType can only be set to text.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -275,14 +253,14 @@ public class CreateSecretShrinkRequest extends TeaModel {
     public String secretDataType;
 
     /**
-     * <p>The name of the secret. The name must be unique in the same region.
-     * The name can be up to 192 characters in length and can contain letters, digits, underscores (_), forward slashes (/), plus signs (+), equal signs (=), periods (.), hyphens (-), and at signs (@). The following limits apply to secret names for different types of secrets:</p>
+     * <p>The secret name. The secret name must be unique within the current region.
+     * The name can be up to 192 characters in length and can contain letters, digits, underscores (_), forward slashes (/), plus signs (+), equal signs (=), periods (.), hyphens (-), and at signs (@). The naming requirements vary based on the secret type:  </p>
      * <ul>
-     * <li><p>If SecretType is set to Generic, Rds, or Redis, the name cannot start with <code>acs/</code>.</p>
+     * <li><p>When SecretType is set to Generic (generic secret), Rds (ApsaraDB RDS secret), or Redis (Redis or Tair secret), the name cannot start with <code>acs/</code>.  </p>
      * </li>
-     * <li><p>If SecretType is set to RAMCredentials, set this parameter to the fixed value <code>$Auto</code>. In this case, KMS automatically generates a secret name that starts with <code>acs/ram/user/</code> and contains the display name of the RAM user.</p>
+     * <li><p>When SecretType is set to RAMCredentials (RAM secret), use the fixed value <code>$Auto</code>. In this case, KMS automatically generates the secret name, which starts with <code>acs/ram/user/</code> and includes the display name of the Resource Access Management (RAM) user.</p>
      * </li>
-     * <li><p>If SecretType is set to ECS, the name must start with <code>acs/ecs/</code>.</p>
+     * <li><p>When SecretType is set to ECS (ECS secret), the name must start with <code>acs/ecs/</code>.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -296,17 +274,17 @@ public class CreateSecretShrinkRequest extends TeaModel {
     /**
      * <p>The type of the secret. Valid values:</p>
      * <ul>
-     * <li><p>Generic (default): a generic secret.</p>
+     * <li><p>Generic: generic secret. This is the default value.  </p>
      * </li>
-     * <li><p>Rds: an RDS secret.</p>
+     * <li><p>Rds: ApsaraDB RDS secret.  </p>
      * </li>
-     * <li><p>Redis: a Redis secret.</p>
+     * <li><p>Redis: Redis secret.</p>
      * </li>
-     * <li><p>RAMCredentials: a RAM secret.</p>
+     * <li><p>RAMCredentials: RAM secret.  </p>
      * </li>
-     * <li><p>ECS: an ECS secret.</p>
+     * <li><p>ECS: ECS secret.</p>
      * </li>
-     * <li><p>PolarDB: a PolarDB secret.</p>
+     * <li><p>PolarDB: PolarDB secret.</p>
      * </li>
      * </ul>
      * 
@@ -317,12 +295,12 @@ public class CreateSecretShrinkRequest extends TeaModel {
     public String secretType;
 
     /**
-     * <p>The tags of the secret. Each tag consists of a key-value pair. A tag consists of a tag key and a tag value.</p>
-     * <p>The tag key and tag value can be up to 128 characters in length and can contain letters, digits, forward slashes (/), backslashes (\), underscores (_), hyphens (-), periods (.), plus signs (+), equal signs (=), colons (:), and at signs (@).</p>
+     * <p>The tags of the secret. Each tag is a key-value pair that consists of a tag key and a tag value.</p>
+     * <p>The tag key and tag value can be up to 128 characters in length and can contain uppercase and lowercase letters, digits, forward slashes (/), backslashes (\), underscores (_), hyphens (-), periods (.), plus signs (+), equal signs (=), colons (:), and at signs (@).</p>
      * <ul>
-     * <li><p>The tag key cannot start with aliyun or acs:.</p>
+     * <li><p>A tag key cannot start with aliyun or acs:.</p>
      * </li>
-     * <li><p>You can specify up to 20 key-value pairs for each secret.</p>
+     * <li><p>You can add up to 20 tags to each secret.</p>
      * </li>
      * </ul>
      * 
@@ -333,8 +311,8 @@ public class CreateSecretShrinkRequest extends TeaModel {
     public String tags;
 
     /**
-     * <p>The version number of the initial version. The version number must be unique within the secret.
-     * The version number can be up to 64 characters in length.</p>
+     * <p>The version ID of the initial version. The version ID must be unique within the secret.
+     * The version ID can be up to 64 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

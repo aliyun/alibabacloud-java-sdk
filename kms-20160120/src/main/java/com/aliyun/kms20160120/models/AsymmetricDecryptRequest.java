@@ -15,9 +15,9 @@ public class AsymmetricDecryptRequest extends TeaModel {
     public String algorithm;
 
     /**
-     * <p>The ciphertext to be decrypted. The ciphertext is encoded in Base64.</p>
+     * <p>The ciphertext to decrypt, encoded in Base64. </p>
      * <blockquote>
-     * <p>You can generate a ciphertext by calling the <a href="https://help.aliyun.com/document_detail/148131.html">AsymmetricEncrypt</a> operation.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/148131.html">AsymmetricEncrypt</a> operation to generate the ciphertext.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -28,21 +28,16 @@ public class AsymmetricDecryptRequest extends TeaModel {
     public String ciphertextBlob;
 
     /**
-     * <p>Specifies whether to enable the dry run feature.</p>
+     * <p>Specifies whether to enable DryRun mode. Valid values:</p>
      * <ul>
-     * <li><p>true: enables the dry run feature.</p>
-     * </li>
-     * <li><p>false: disables the dry run feature. This is the default value.</p>
-     * </li>
+     * <li>true: Enabled.</li>
+     * <li>false (default): Disabled.</li>
      * </ul>
-     * <p>The dry run feature is used to test API calls, verify the permissions on the specified resources, and check the validity of the request parameters. If you enable the dry run feature, KMS always returns a failure response and the cause of the failure. The causes of the failure include the following:</p>
+     * <p>DryRun mode is used to test API calls, verify that you have the required permissions on the relevant resources, and check whether the request parameters are configured correctly. When DryRun mode is enabled, KMS always returns a failure with a reason. The failure reasons include the following:</p>
      * <ul>
-     * <li><p>DryRunOperationError: The request would have succeeded if the DryRun parameter is not specified.</p>
-     * </li>
-     * <li><p>ValidationError: The specified parameter in the request is invalid.</p>
-     * </li>
-     * <li><p>AccessDeniedError: You are not authorized to perform this operation on the KMS resource.</p>
-     * </li>
+     * <li>DryRunOperationError: The request would succeed if the DryRun parameter were not specified.</li>
+     * <li>ValidationError: A parameter specified in the request is invalid.</li>
+     * <li>AccessDeniedError: You do not have permission to perform this operation on the KMS resource.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,9 +47,9 @@ public class AsymmetricDecryptRequest extends TeaModel {
     public String dryRun;
 
     /**
-     * <p>The ID of the key. You can also specify the alias or Amazon Resource Name (ARN) of the key. For more information about aliases, see <a href="https://help.aliyun.com/document_detail/480655.html">Manage aliases</a>.</p>
+     * <p>The ID of the key. You can also specify a key alias or a key Amazon Resource Name (ARN). For more information about aliases, see <a href="https://help.aliyun.com/document_detail/480655.html">Manage key aliases</a>.</p>
      * <blockquote>
-     * <p>When you access a key in another Alibaba Cloud account, you must specify the ARN of the key. The ARN of a key is in the <code>acs:kms:${region}:${account}:key/${keyid}</code> format.</p>
+     * <p>To access a key that belongs to another Alibaba Cloud account, you must specify the key ARN. The key ARN format is <code>acs:kms:${region}:${account}:key/${keyid}</code>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -65,7 +60,7 @@ public class AsymmetricDecryptRequest extends TeaModel {
     public String keyId;
 
     /**
-     * <p>The ID of the key version. The globally unique identifier of the key version.</p>
+     * <p>The key version ID. The globally unique identifier of the key version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
