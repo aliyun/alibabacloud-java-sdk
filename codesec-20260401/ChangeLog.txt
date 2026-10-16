@@ -1,3 +1,7 @@
+2026-10-16 Version: 1.2.1
+- Update API DescribeScans: add request parameters query.
+
+
 2026-09-18 Version: 1.2.0
 - Support API CreateScanSbomExport.
 - Update API CreateProject: add request parameters engines.sastConfig.

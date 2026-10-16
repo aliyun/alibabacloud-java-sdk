@@ -258,7 +258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生成 SBOM / 许可证清单的短时下载链接</p>
+     * <p>Generates a download link for an SBOM or license manifest that includes producer metadata.</p>
      * 
      * @param request CreateScanSbomExportRequest
      * @param headers map
@@ -296,7 +296,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生成 SBOM / 许可证清单的短时下载链接</p>
+     * <p>Generates a download link for an SBOM or license manifest that includes producer metadata.</p>
      * 
      * @param request CreateScanSbomExportRequest
      * @return CreateScanSbomExportResponse
@@ -476,7 +476,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists scan tasks under a specified project with pagination.</p>
+     * <p>Queries the scan tasks of a specific project in a paginated manner.</p>
      * 
      * @param request DescribeScansRequest
      * @param headers map
@@ -492,6 +492,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
             query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("query", request.query);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
@@ -522,7 +526,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists scan tasks under a specified project with pagination.</p>
+     * <p>Queries the scan tasks of a specific project in a paginated manner.</p>
      * 
      * @param request DescribeScansRequest
      * @return DescribeScansResponse

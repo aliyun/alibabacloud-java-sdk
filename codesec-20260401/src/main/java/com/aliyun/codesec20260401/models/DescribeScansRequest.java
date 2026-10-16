@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeScansRequest extends TeaModel {
     /**
-     * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
+     * <p>The maximum number of entries per page. Default value: 20. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,7 +14,7 @@ public class DescribeScansRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The pagination token. Do not specify this parameter or set it to an empty string for the first page. For subsequent pages, pass the nextToken value from the previous response without any modification. If the nextToken value in the response is empty, the last page has been reached.</p>
+     * <p>The pagination token. To query the first page, leave this parameter empty or do not specify it. To query subsequent pages, pass the nextToken value returned in the previous response. If the nextToken value in the response is empty, the last page is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJ0IjoiMjAyNi0wNy0xNlQwNzo1MzozOC4wMjFaIiwiaSI6MTAwMDQ0OH0</p>
@@ -23,11 +23,20 @@ public class DescribeScansRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The task status. Valid values:</p>
+     * <p>The query string. You can perform a fuzzy match by project name or prompt.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name</p>
+     */
+    @NameInMap("query")
+    public String query;
+
+    /**
+     * <p>The status of the task. Valid values:</p>
      * <ul>
-     * <li>running: Running.</li>
-     * <li>completed: Completed.</li>
-     * <li>failed: Failed.</li>
+     * <li>running: The task is running.</li>
+     * <li>completed: The task is completed.</li>
+     * <li>failed: The task failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +46,7 @@ public class DescribeScansRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The task name.</p>
+     * <p>The name of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>name</p>
@@ -64,6 +73,14 @@ public class DescribeScansRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public DescribeScansRequest setQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    public String getQuery() {
+        return this.query;
     }
 
     public DescribeScansRequest setStatus(String status) {
