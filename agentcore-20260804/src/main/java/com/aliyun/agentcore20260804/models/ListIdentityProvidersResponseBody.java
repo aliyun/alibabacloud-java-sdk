@@ -29,7 +29,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
     public java.util.List<ListIdentityProvidersResponseBodyItems> items;
 
     /**
-     * <p>The maximum number of records per page that took effect for this query.</p>
+     * <p>The maximum number of records per page that takes effect for the current query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The response message. An error description is returned if the request failed.</p>
+     * <p>The response message. An error description is returned if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -47,7 +47,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The pagination token for the next page. This parameter is empty if no more pages are available.</p>
+     * <p>The cursor for the next page. This parameter is empty if no next page exists.</p>
      * 
      * <strong>example:</strong>
      * <p>aWRlbnRpdHktcHJvdmlkZXItb2Zmc2V0OjEw</p>
@@ -65,13 +65,13 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("success")
     public Boolean success;
 
     /**
-     * <p>The total number of external identity providers that match the query conditions.</p>
+     * <p>The total number of external identity providers that meet the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>42</p>
@@ -176,7 +176,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String appKey;
 
         /**
-         * <p>The CorpId of the DingTalk organization. This parameter is required when the binding type is DingTalk.</p>
+         * <p>The CorpId of the DingTalk enterprise. This parameter is required when the binding type is DingTalk.</p>
          * 
          * <strong>example:</strong>
          * <p>dingexamplecorpid01</p>
@@ -217,7 +217,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
 
     public static class ListIdentityProvidersResponseBodyItems extends TeaModel {
         /**
-         * <p>The creation time in UTC, formatted according to RFC 3339.</p>
+         * <p>The creation time in UTC format that complies with RFC 3339.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>
@@ -226,7 +226,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The event subscription callback URL. Configure this URL in the external identity provider application to receive organization change events. An empty string is returned if the user pool has not been activated.</p>
+         * <p>The callback URL for event subscription. You must configure this URL in the application of the external identity provider to receive organization change events. An empty string is returned if the user pool is not activated.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://auth.cn-hangzhou.agentteams.aliyuncs.com/roa/dingtalk/event/up-123456">http://auth.cn-hangzhou.agentteams.aliyuncs.com/roa/dingtalk/event/up-123456</a></p>
@@ -235,7 +235,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String eventSubscriptionCallbackUrl;
 
         /**
-         * <p>The type of the external identity provider. Valid values: DingTalk, Feishu.</p>
+         * <p>The type of the external identity provider. Valid values: DingTalk and Feishu.</p>
          * 
          * <strong>example:</strong>
          * <p>DingTalk</p>
@@ -244,7 +244,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String identityProviderType;
 
         /**
-         * <p>The logon callback URL. Configure this URL in the external identity provider application. An empty string is returned if the user pool has not been activated.</p>
+         * <p>The login callback URL. You must configure this URL in the application of the external identity provider. An empty string is returned if the user pool is not activated.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://signin-cn-hangzhou.aliyunagentid.com/up-123456/dingtalk/callback">https://signin-cn-hangzhou.aliyunagentid.com/up-123456/dingtalk/callback</a></p>
@@ -253,19 +253,30 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String loginCallbackUrl;
 
         /**
-         * <p>Indicates whether workspace users are allowed to log on through this external identity provider.</p>
+         * <p>Indicates whether workspace users are allowed to log on through the external identity provider.</p>
          */
         @NameInMap("loginEnabled")
         public Boolean loginEnabled;
 
         /**
-         * <p>The application configuration of the external identity provider. Application secret configurations are not returned.</p>
+         * <p>The application configurations of the external identity provider. Application secret configurations are not returned.</p>
          */
         @NameInMap("metadata")
         public ListIdentityProvidersResponseBodyItemsMetadata metadata;
 
         /**
-         * <p>The binding status. Valid values: CONFIGURED (The configuration has been accepted and the user pool is pending activation.), SYNCING (Organization members are being synchronized.), SYNCED (Organization member synchronization is complete.), READY (The binding is active.), SYNC_FAILED (Organization member synchronization failed.), UPDATING (The configuration is being updated.), UPDATE_FAILED (The configuration update failed.), DISCONNECTING (The binding is being removed.), DISCONNECT_FAILED (The unbinding failed.).</p>
+         * <p>The binding status. Valid values:</p>
+         * <ul>
+         * <li>CONFIGURED: The configuration is accepted and the system is waiting for the user pool to be activated.</li>
+         * <li>SYNCING: Organization members are being synchronized.</li>
+         * <li>SYNCED: Organization members are synchronized.</li>
+         * <li>READY: The binding is effective.</li>
+         * <li>SYNC_FAILED: The synchronization of organization members failed.</li>
+         * <li>UPDATING: The configuration is being updated.</li>
+         * <li>UPDATE_FAILED: The configuration update failed.</li>
+         * <li>DISCONNECTING: The binding is being removed.</li>
+         * <li>DISCONNECT_FAILED: The unbinding failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>READY</p>
@@ -274,13 +285,13 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Indicates whether organization member synchronization is enabled. When enabled, the external identity provider synchronizes organization members as workspace users.</p>
+         * <p>Indicates whether organization member synchronization is enabled. After this feature is enabled, organization members are synchronized as workspace users by the external identity provider.</p>
          */
         @NameInMap("syncEnabled")
         public Boolean syncEnabled;
 
         /**
-         * <p>The time of the last modification in UTC, formatted according to RFC 3339.</p>
+         * <p>The time of the last update in UTC format that complies with RFC 3339.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>

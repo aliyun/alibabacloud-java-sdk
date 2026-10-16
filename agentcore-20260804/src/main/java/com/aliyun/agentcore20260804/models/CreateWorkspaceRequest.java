@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateWorkspaceRequest extends TeaModel {
     /**
-     * <p>The request body for creating a workspace.</p>
+     * <p>The workspace creation request body.</p>
      */
     @NameInMap("body")
     public CreateWorkspaceRequestBody body;
@@ -42,7 +42,7 @@ public class CreateWorkspaceRequest extends TeaModel {
 
     public static class CreateWorkspaceRequestBodyNetworkConfigurationVpc extends TeaModel {
         /**
-         * <p>Specifies whether to enable VPC networking.</p>
+         * <p>Specifies whether to enable the VPC network.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -51,13 +51,13 @@ public class CreateWorkspaceRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The list of vSwitch IDs. When VPC networking is enabled, at least one vSwitch must be included, and all vSwitches must belong to the VPC specified by VpcId.</p>
+         * <p>The list of vSwitch IDs. When the VPC network is enabled, the list must contain at least one vSwitch, and all vSwitches must belong to the VPC specified by VpcId.</p>
          */
         @NameInMap("vSwitchIds")
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The ID of the user VPC.</p>
+         * <p>The user VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1234567890</p>
@@ -98,8 +98,25 @@ public class CreateWorkspaceRequest extends TeaModel {
 
     public static class CreateWorkspaceRequestBodyNetworkConfiguration extends TeaModel {
         /**
-         * <p>The VPC network configuration of the user.</p>
-         * <p>This parameter is required.</p>
+         * <p>Specifies whether to allow public outbound access from the platform. If this parameter is not specified, the default value is true. This setting only controls whether the latest versions of managed and custom agents use the public outbound endpoint of the platform. It does not affect fixed historical versions, model or MCP proxy endpoints, or the public outbound endpoint of the user VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("publicEgressEnabled")
+        public Boolean publicEgressEnabled;
+
+        /**
+         * <p>Specifies whether to allow public inbound access. If this parameter is not specified, the default value is true. If disabled, the public inbound endpoints of all agent endpoints in the workspace are closed, and the original public inbound endpoints are restored when re-enabled. INNER_DIRECT and user VPC endpoints are not affected. Collaboration and Element Web endpoints are not controlled by this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("publicIngressEnabled")
+        public Boolean publicIngressEnabled;
+
+        /**
+         * <p>The user VPC network configuration.</p>
          */
         @NameInMap("vpc")
         public CreateWorkspaceRequestBodyNetworkConfigurationVpc vpc;
@@ -107,6 +124,22 @@ public class CreateWorkspaceRequest extends TeaModel {
         public static CreateWorkspaceRequestBodyNetworkConfiguration build(java.util.Map<String, ?> map) throws Exception {
             CreateWorkspaceRequestBodyNetworkConfiguration self = new CreateWorkspaceRequestBodyNetworkConfiguration();
             return TeaModel.build(map, self);
+        }
+
+        public CreateWorkspaceRequestBodyNetworkConfiguration setPublicEgressEnabled(Boolean publicEgressEnabled) {
+            this.publicEgressEnabled = publicEgressEnabled;
+            return this;
+        }
+        public Boolean getPublicEgressEnabled() {
+            return this.publicEgressEnabled;
+        }
+
+        public CreateWorkspaceRequestBodyNetworkConfiguration setPublicIngressEnabled(Boolean publicIngressEnabled) {
+            this.publicIngressEnabled = publicIngressEnabled;
+            return this;
+        }
+        public Boolean getPublicIngressEnabled() {
+            return this.publicIngressEnabled;
         }
 
         public CreateWorkspaceRequestBodyNetworkConfiguration setVpc(CreateWorkspaceRequestBodyNetworkConfigurationVpc vpc) {
@@ -121,7 +154,7 @@ public class CreateWorkspaceRequest extends TeaModel {
 
     public static class CreateWorkspaceRequestBody extends TeaModel {
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,11 +170,7 @@ public class CreateWorkspaceRequest extends TeaModel {
         public CreateWorkspaceRequestBodyNetworkConfiguration networkConfiguration;
 
         /**
-         * <p>The storage type of the workspace. Valid values:</p>
-         * <ul>
-         * <li>PLATFORM: Platform-managed storage.</li>
-         * <li>PRIVATE: User-owned private OSS storage.</li>
-         * </ul>
+         * <p>The workspace storage type. PLATFORM indicates platform-managed storage, and PRIVATE indicates user private OSS storage.</p>
          * 
          * <strong>example:</strong>
          * <p>PRIVATE</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPredefinedModelsResponseBody extends TeaModel {
     /**
-     * <p>The business status code. The value SUCCESS indicates success.</p>
+     * <p>The business status code. The value is SUCCESS if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -20,7 +20,7 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
     public java.util.List<ListPredefinedModelsResponseBodyData> data;
 
     /**
-     * <p>The HTTP status code. The value 200 indicates success.</p>
+     * <p>The HTTP status code. The value is 200 if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request processing result message.</p>
+     * <p>The message indicating the request processing result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -47,7 +47,7 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -119,7 +119,7 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
         public Boolean document;
 
         /**
-         * <p>Indicates whether the model is able to invoke multiple tool calling requests in a single response.</p>
+         * <p>Specifies whether the model is able to invoke multiple tool calling in a single response.</p>
          */
         @NameInMap("multiToolCall")
         public Boolean multiToolCall;
@@ -131,7 +131,7 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
         public Boolean reasoning;
 
         /**
-         * <p>Indicates whether the model supports streaming tool calling.</p>
+         * <p>Specifies whether the model is able to invoke streaming tool calling.</p>
          */
         @NameInMap("streamToolCall")
         public Boolean streamToolCall;
@@ -227,13 +227,13 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
 
     public static class ListPredefinedModelsResponseBodyData extends TeaModel {
         /**
-         * <p>The model capability configuration.</p>
+         * <p>The model capability configurations.</p>
          */
         @NameInMap("capabilities")
         public ListPredefinedModelsResponseBodyDataCapabilities capabilities;
 
         /**
-         * <p>The model context window size in tokens. The value must be a positive integer.</p>
+         * <p>The context window size of the model, in tokens. The value must be a positive integer.</p>
          * 
          * <strong>example:</strong>
          * <p>128000</p>
@@ -260,7 +260,7 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
         public String modelName;
 
         /**
-         * <p>The model release date in the format of YYYY-MM-DD.</p>
+         * <p>The release date of the model. The format is YYYY-MM-DD.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-02-01</p>

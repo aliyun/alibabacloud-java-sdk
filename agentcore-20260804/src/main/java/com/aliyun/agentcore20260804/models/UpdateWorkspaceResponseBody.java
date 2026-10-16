@@ -38,7 +38,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>request-123456</p>
@@ -47,7 +47,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
 
     public static class UpdateWorkspaceResponseBodyDataNetworkConfigurationVpc extends TeaModel {
         /**
-         * <p>Specifies whether to enable VPC networking.</p>
+         * <p>Specifies whether to enable the VPC network.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -125,7 +125,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The VPC ID of the user.</p>
+         * <p>The ID of the user VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1234567890</p>
@@ -166,6 +166,24 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
 
     public static class UpdateWorkspaceResponseBodyDataNetworkConfiguration extends TeaModel {
         /**
+         * <p>Returns the target configuration value. Updating indicates that the change is still in progress, and UpdateFailed indicates that the current change failed. This parameter only controls whether the latest versions of managed and custom agents use the public egress of the platform. It does not control fixed historical versions, model or MCP proxy egress, or the public egress of the user VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("publicEgressEnabled")
+        public Boolean publicEgressEnabled;
+
+        /**
+         * <p>Returns the target configuration value. Updating indicates that the change is in progress, and UpdateFailed indicates that the change failed. After this feature is disabled, the public ingress for all agent endpoints in the workspace is closed. After this feature is re-enabled, the original public ingress is restored. INNER_DIRECT and user VPC ingress are not affected. Collaboration and Element Web ingress are not controlled by this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("publicIngressEnabled")
+        public Boolean publicIngressEnabled;
+
+        /**
          * <p>The VPC network configuration of the user.</p>
          */
         @NameInMap("vpc")
@@ -174,6 +192,22 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
         public static UpdateWorkspaceResponseBodyDataNetworkConfiguration build(java.util.Map<String, ?> map) throws Exception {
             UpdateWorkspaceResponseBodyDataNetworkConfiguration self = new UpdateWorkspaceResponseBodyDataNetworkConfiguration();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateWorkspaceResponseBodyDataNetworkConfiguration setPublicEgressEnabled(Boolean publicEgressEnabled) {
+            this.publicEgressEnabled = publicEgressEnabled;
+            return this;
+        }
+        public Boolean getPublicEgressEnabled() {
+            return this.publicEgressEnabled;
+        }
+
+        public UpdateWorkspaceResponseBodyDataNetworkConfiguration setPublicIngressEnabled(Boolean publicIngressEnabled) {
+            this.publicIngressEnabled = publicIngressEnabled;
+            return this;
+        }
+        public Boolean getPublicIngressEnabled() {
+            return this.publicIngressEnabled;
         }
 
         public UpdateWorkspaceResponseBodyDataNetworkConfiguration setVpc(UpdateWorkspaceResponseBodyDataNetworkConfigurationVpc vpc) {
@@ -188,7 +222,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
 
     public static class UpdateWorkspaceResponseBodyData extends TeaModel {
         /**
-         * <p>The OSS storage authorization status.</p>
+         * <p>The authorization status of OSS storage.</p>
          * 
          * <strong>example:</strong>
          * <p>AUTHORIZED</p>
@@ -206,7 +240,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>production-agents-v2</p>
@@ -221,7 +255,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
         public UpdateWorkspaceResponseBodyDataNetworkConfiguration networkConfiguration;
 
         /**
-         * <p>The region ID of the workspace.</p>
+         * <p>The ID of the region where the workspace resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -230,7 +264,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The workspace status. Valid values: Initializing, Initialized, Deleting, and Deleted.</p>
+         * <p>The status of the workspace. Valid values: Initializing, Initialized, Deleting, and Deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>Initialized</p>
@@ -248,7 +282,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
         public String storageType;
 
         /**
-         * <p>The tenant ID to which the workspace belongs.</p>
+         * <p>The ID of the tenant to which the workspace belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>tenant-123456</p>
@@ -257,7 +291,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
         public String tenantId;
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The ID of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>ws-123456</p>

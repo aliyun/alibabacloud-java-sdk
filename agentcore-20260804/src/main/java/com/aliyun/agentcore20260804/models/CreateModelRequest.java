@@ -11,7 +11,7 @@ public class CreateModelRequest extends TeaModel {
     public CreateModelRequestBody body;
 
     /**
-     * <p>The client token for idempotence. Not currently supported.</p>
+     * <p>The client token used for idempotence. This parameter is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-1</p>
@@ -54,7 +54,7 @@ public class CreateModelRequest extends TeaModel {
         public Boolean document;
 
         /**
-         * <p>Specifies whether the model is able to invoke multiple tools in a single response.</p>
+         * <p>Specifies whether the model is able to invoke multiple tool calling operations in a single response.</p>
          */
         @NameInMap("multiToolCall")
         public Boolean multiToolCall;
@@ -66,7 +66,7 @@ public class CreateModelRequest extends TeaModel {
         public Boolean reasoning;
 
         /**
-         * <p>Specifies whether the model supports streaming tool calling.</p>
+         * <p>Specifies whether the model is able to invoke tool calling in a streaming manner.</p>
          */
         @NameInMap("streamToolCall")
         public Boolean streamToolCall;
@@ -162,7 +162,7 @@ public class CreateModelRequest extends TeaModel {
 
     public static class CreateModelRequestBody extends TeaModel {
         /**
-         * <p>The model capability configuration.</p>
+         * <p>The model capability configurations.</p>
          */
         @NameInMap("capabilities")
         public CreateModelRequestBodyCapabilities capabilities;
@@ -178,7 +178,7 @@ public class CreateModelRequest extends TeaModel {
         public String connectionId;
 
         /**
-         * <p>The model context window size, in tokens. The value must be a positive integer.</p>
+         * <p>The context window size of the model, in tokens. It must be a positive integer.</p>
          * 
          * <strong>example:</strong>
          * <p>128000</p>
@@ -196,7 +196,7 @@ public class CreateModelRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The maximum number of output tokens supported per model generation.</p>
+         * <p>The maximum number of output tokens supported per generation.</p>
          * 
          * <strong>example:</strong>
          * <p>131072</p>

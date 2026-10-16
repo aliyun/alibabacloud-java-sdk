@@ -47,7 +47,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -125,7 +125,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The user VPC ID.</p>
+         * <p>The VPC ID of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1234567890</p>
@@ -166,6 +166,15 @@ public class GetWorkspaceResponseBody extends TeaModel {
 
     public static class GetWorkspaceResponseBodyDataNetworkConfiguration extends TeaModel {
         /**
+         * <p>Returns the target configuration value. Updating indicates that the change is still being executed, and UpdateFailed indicates that the current change failed. This setting only controls the use of the platform public egress for the latest versions of managed and custom agents. It does not control fixed historical versions, model or MCP proxy egress, or the public egress of the user VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("publicEgressEnabled")
+        public Boolean publicEgressEnabled;
+
+        /**
          * <p>The public egress IP address of the workspace.</p>
          * 
          * <strong>example:</strong>
@@ -175,7 +184,16 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String publicEgressIp;
 
         /**
-         * <p>The user VPC network configuration.</p>
+         * <p>Returns the target configuration value. Updating indicates that the change is in progress, and UpdateFailed indicates that the change failed. When disabled, the public ingress for all agent endpoints in the workspace is closed. When re-enabled, the original public ingress is restored. INNER_DIRECT and user VPC ingress are not affected. Collaboration and Element Web ingress are not controlled by this setting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("publicIngressEnabled")
+        public Boolean publicIngressEnabled;
+
+        /**
+         * <p>The VPC network configuration of the user.</p>
          */
         @NameInMap("vpc")
         public GetWorkspaceResponseBodyDataNetworkConfigurationVpc vpc;
@@ -185,12 +203,28 @@ public class GetWorkspaceResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetWorkspaceResponseBodyDataNetworkConfiguration setPublicEgressEnabled(Boolean publicEgressEnabled) {
+            this.publicEgressEnabled = publicEgressEnabled;
+            return this;
+        }
+        public Boolean getPublicEgressEnabled() {
+            return this.publicEgressEnabled;
+        }
+
         public GetWorkspaceResponseBodyDataNetworkConfiguration setPublicEgressIp(String publicEgressIp) {
             this.publicEgressIp = publicEgressIp;
             return this;
         }
         public String getPublicEgressIp() {
             return this.publicEgressIp;
+        }
+
+        public GetWorkspaceResponseBodyDataNetworkConfiguration setPublicIngressEnabled(Boolean publicIngressEnabled) {
+            this.publicIngressEnabled = publicIngressEnabled;
+            return this;
+        }
+        public Boolean getPublicIngressEnabled() {
+            return this.publicIngressEnabled;
         }
 
         public GetWorkspaceResponseBodyDataNetworkConfiguration setVpc(GetWorkspaceResponseBodyDataNetworkConfigurationVpc vpc) {
@@ -223,7 +257,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The time when the workspace was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-06T03:56:56Z</p>
@@ -241,7 +275,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The workspace network configuration.</p>
+         * <p>The network configuration of the workspace.</p>
          */
         @NameInMap("networkConfiguration")
         public GetWorkspaceResponseBodyDataNetworkConfiguration networkConfiguration;
@@ -274,7 +308,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String statusReason;
 
         /**
-         * <p>The workspace storage type.</p>
+         * <p>The storage type of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>PRIVATE</p>

@@ -47,7 +47,7 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. A successful creation, update, or deletion does not mean that the background operation is complete.</p>
+     * <p>Indicates whether the request was successful. A value of true indicates success. A successful creation, update, or deletion does not mean that the background operation is complete.</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
 
     public static class DeleteCustomAgentResponseBodyData extends TeaModel {
         /**
-         * <p>The unique identifier of the custom agent. You can retrieve it from the response of CreateCustomAgent or ListCustomAgents.</p>
+         * <p>The unique identifier of the custom agent. You can obtain it from the response of CreateCustomAgent or ListCustomAgents.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-550e8400e29b41d4a716446655440000</p>
@@ -134,7 +134,7 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The deployment method of the agent. Custom agents are deployed and managed by the platform, and the value is MANAGED.</p>
+         * <p>The deployment method of the agent. Custom agents are deployed and managed by the platform. The value is MANAGED.</p>
          * 
          * <strong>example:</strong>
          * <p>MANAGED</p>
@@ -179,7 +179,16 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
         public String runtime;
 
         /**
-         * <p>The overall status of the agent. Valid values: Creating: The agent is being created. Running: The agent is running. Failed: The agent failed. Updating: The agent is being updated. Deleting: The agent is being deleted. Deleted: The agent is deleted. To query the execution progress of the latest configuration, call GetCustomAgent.</p>
+         * <p>The overall status of the agent. Valid values:</p>
+         * <ul>
+         * <li>Creating: The agent is being created.</li>
+         * <li>Running: The agent is running.</li>
+         * <li>Failed: The agent is in a failed state.</li>
+         * <li>Updating: The agent is being updated.</li>
+         * <li>Deleting: The agent is being deleted.</li>
+         * <li>Deleted: The agent has been deleted.
+         * Call GetCustomAgent to retrieve the latest configuration execution progress.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Running</p>

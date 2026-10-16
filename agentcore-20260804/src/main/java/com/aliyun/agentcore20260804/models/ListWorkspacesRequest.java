@@ -14,7 +14,7 @@ public class ListWorkspacesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token used to retrieve the next page.</p>
+     * <p>The cursor used to query the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>d29ya3NwYWNlLW9mZnNldDoyMA</p>

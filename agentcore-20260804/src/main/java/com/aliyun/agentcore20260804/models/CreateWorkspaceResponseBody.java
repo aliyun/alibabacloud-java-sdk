@@ -47,7 +47,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
 
     public static class CreateWorkspaceResponseBodyDataNetworkConfigurationVpc extends TeaModel {
         /**
-         * <p>Specifies whether to enable VPC networking.</p>
+         * <p>Specifies whether to enable the VPC network.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -125,7 +125,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The ID of the user VPC.</p>
+         * <p>The user VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1234567890</p>
@@ -166,7 +166,25 @@ public class CreateWorkspaceResponseBody extends TeaModel {
 
     public static class CreateWorkspaceResponseBodyDataNetworkConfiguration extends TeaModel {
         /**
-         * <p>The VPC network configuration of the user.</p>
+         * <p>Returns the target configuration value. Updating indicates that the change is still in progress, and UpdateFailed indicates that the current change failed. This parameter only controls whether the latest versions of managed and custom agents use the public network egress of the platform. It does not control fixed historical versions, model or MCP proxy egress, or the public network egress of the user VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("publicEgressEnabled")
+        public Boolean publicEgressEnabled;
+
+        /**
+         * <p>Returns the target configuration value. Updating indicates that the change is in progress, and UpdateFailed indicates that the change failed. When disabled, the public network ingress for all agent endpoints in the workspace is closed. The original public network ingress is restored when re-enabled. INNER_DIRECT and user VPC ingress are not affected. Collaboration and Element Web ingress are not controlled by this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("publicIngressEnabled")
+        public Boolean publicIngressEnabled;
+
+        /**
+         * <p>The user VPC network configuration.</p>
          */
         @NameInMap("vpc")
         public CreateWorkspaceResponseBodyDataNetworkConfigurationVpc vpc;
@@ -174,6 +192,22 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public static CreateWorkspaceResponseBodyDataNetworkConfiguration build(java.util.Map<String, ?> map) throws Exception {
             CreateWorkspaceResponseBodyDataNetworkConfiguration self = new CreateWorkspaceResponseBodyDataNetworkConfiguration();
             return TeaModel.build(map, self);
+        }
+
+        public CreateWorkspaceResponseBodyDataNetworkConfiguration setPublicEgressEnabled(Boolean publicEgressEnabled) {
+            this.publicEgressEnabled = publicEgressEnabled;
+            return this;
+        }
+        public Boolean getPublicEgressEnabled() {
+            return this.publicEgressEnabled;
+        }
+
+        public CreateWorkspaceResponseBodyDataNetworkConfiguration setPublicIngressEnabled(Boolean publicIngressEnabled) {
+            this.publicIngressEnabled = publicIngressEnabled;
+            return this;
+        }
+        public Boolean getPublicIngressEnabled() {
+            return this.publicIngressEnabled;
         }
 
         public CreateWorkspaceResponseBodyDataNetworkConfiguration setVpc(CreateWorkspaceResponseBodyDataNetworkConfigurationVpc vpc) {
@@ -232,7 +266,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
 
     public static class CreateWorkspaceResponseBodyData extends TeaModel {
         /**
-         * <p>The AI Registry namespace ID. This value is returned after the related resources are bound. It may be empty during initialization.</p>
+         * <p>The AI Registry namespace ID. It is returned after related resources are bound and may be empty during initialization.</p>
          * 
          * <strong>example:</strong>
          * <p>namespace-0123456789abcdef</p>
@@ -262,7 +296,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The CloudMonitor workspace ID. This value is returned after the related resources are bound. It may be empty during initialization.</p>
+         * <p>The CloudMonitor workspace ID. It is returned after related resources are bound and may be empty during initialization.</p>
          * 
          * <strong>example:</strong>
          * <p>cms-ws-0123456789abcdef</p>
@@ -284,7 +318,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>production-agents</p>
@@ -299,7 +333,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public CreateWorkspaceResponseBodyDataNetworkConfiguration networkConfiguration;
 
         /**
-         * <p>The region ID of the workspace.</p>
+         * <p>The ID of the region where the workspace resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -308,7 +342,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the resource group to which the workspace belongs. This value may be empty if no resource group is specified.</p>
+         * <p>The ID of the resource group to which the workspace belongs. It may be empty if no resource group is specified.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm1234567890</p>
@@ -320,7 +354,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The workspace status.</p>
+         * <p>The status of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>Initialized</p>
@@ -329,7 +363,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The supplementary reason for the current workspace status. This value is used to display the specific reason when initialization fails or authorization is pending. It may be empty under normal conditions.</p>
+         * <p>The supplementary reason for the current status of the workspace. It is used to display the specific reason when initialization fails or when waiting for authorization. It may be empty under normal circumstances.</p>
          * 
          * <strong>example:</strong>
          * <p>Waiting for OSS RAM authorization</p>
@@ -350,14 +384,14 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public String storageType;
 
         /**
-         * <p>The list of workspace tags. An empty array is returned if no tags are set.</p>
+         * <p>The list of tags for the workspace. An empty array is returned if no tags are set.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("tags")
         public java.util.List<CreateWorkspaceResponseBodyDataTags> tags;
 
         /**
-         * <p>The ID of the tenant to which the workspace belongs.</p>
+         * <p>The ID of the tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>tenant-123456</p>

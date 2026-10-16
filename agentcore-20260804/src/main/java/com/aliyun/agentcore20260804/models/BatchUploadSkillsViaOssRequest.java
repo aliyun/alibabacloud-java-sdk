@@ -35,7 +35,7 @@ public class BatchUploadSkillsViaOssRequest extends TeaModel {
         public String ossObjectName;
 
         /**
-         * <p>Specifies whether to overwrite an existing Skill. Default value: false.</p>
+         * <p>Specifies whether to overwrite existing skills. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

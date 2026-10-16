@@ -4,21 +4,51 @@ package com.aliyun.agentcore20260804.models;
 import com.aliyun.tea.*;
 
 public class ListPredefinedModelProvidersResponseBody extends TeaModel {
+    /**
+     * <p>The business status code. The value is SUCCESS if the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The list of predefined model providers.</p>
+     */
     @NameInMap("data")
     public java.util.List<ListPredefinedModelProvidersResponseBodyData> data;
 
+    /**
+     * <p>The HTTP status code. The value is 200 if the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The message about the request processing result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>request-1</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -76,15 +106,39 @@ public class ListPredefinedModelProvidersResponseBody extends TeaModel {
     }
 
     public static class ListPredefinedModelProvidersResponseBodyData extends TeaModel {
+        /**
+         * <p>The default model service endpoint of the provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></p>
+         */
         @NameInMap("defaultEndpoint")
         public String defaultEndpoint;
 
+        /**
+         * <p>The default model invocation protocol of the provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenAI/v1</p>
+         */
         @NameInMap("defaultProtocol")
         public String defaultProtocol;
 
+        /**
+         * <p>The display name of the model provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba Cloud Model Studio</p>
+         */
         @NameInMap("displayName")
         public String displayName;
 
+        /**
+         * <p>The model provider type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen</p>
+         */
         @NameInMap("providerType")
         public String providerType;
 

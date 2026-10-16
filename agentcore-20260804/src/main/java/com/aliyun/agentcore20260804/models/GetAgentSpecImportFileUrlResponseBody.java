@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAgentSpecImportFileUrlResponseBody extends TeaModel {
     /**
-     * <p>The response data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public GetAgentSpecImportFileUrlResponseBodyData data;
@@ -42,7 +42,7 @@ public class GetAgentSpecImportFileUrlResponseBody extends TeaModel {
 
     public static class GetAgentSpecImportFileUrlResponseBodyData extends TeaModel {
         /**
-         * <p>The Content-Type to use for the OSS PUT request.</p>
+         * <p>The Content-Type used for the OSS PUT request.</p>
          * 
          * <strong>example:</strong>
          * <p>application/zip</p>
@@ -69,7 +69,7 @@ public class GetAgentSpecImportFileUrlResponseBody extends TeaModel {
         public String ossObjectName;
 
         /**
-         * <p>The OSS pre-signed upload URL.</p>
+         * <p>The OSS presigned upload URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/artifacts/example.zip">https://example.com/artifacts/example.zip</a></p>

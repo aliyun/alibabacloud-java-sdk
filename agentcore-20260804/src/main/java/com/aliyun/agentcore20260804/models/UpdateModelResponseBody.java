@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateModelResponseBody extends TeaModel {
     /**
-     * <p>The business status code. The value is SUCCESS when the request succeeds.</p>
+     * <p>The business status code. The value is SUCCESS when the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -20,7 +20,7 @@ public class UpdateModelResponseBody extends TeaModel {
     public UpdateModelResponseBodyData data;
 
     /**
-     * <p>The HTTP status code. The value is 200 when the request succeeds.</p>
+     * <p>The HTTP status code. The value is 200 when the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class UpdateModelResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request processing result message.</p>
+     * <p>The message about the request processing result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -47,7 +47,7 @@ public class UpdateModelResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -119,25 +119,25 @@ public class UpdateModelResponseBody extends TeaModel {
         public Boolean document;
 
         /**
-         * <p>Indicates whether the model supports invoking multiple tools in a single response.</p>
+         * <p>Indicates whether the model is able to invoke tool calling multiple times in a single response.</p>
          */
         @NameInMap("multiToolCall")
         public Boolean multiToolCall;
 
         /**
-         * <p>Indicates whether the model supports reasoning.</p>
+         * <p>Indicates whether the model supports reasoning capabilities.</p>
          */
         @NameInMap("reasoning")
         public Boolean reasoning;
 
         /**
-         * <p>Indicates whether the model supports streaming tool invocation.</p>
+         * <p>Indicates whether the model is able to invoke streaming tool calling.</p>
          */
         @NameInMap("streamToolCall")
         public Boolean streamToolCall;
 
         /**
-         * <p>Indicates whether the model supports tool invocation.</p>
+         * <p>Indicates whether the model is able to invoke tool calling.</p>
          */
         @NameInMap("toolCall")
         public Boolean toolCall;
@@ -242,7 +242,7 @@ public class UpdateModelResponseBody extends TeaModel {
         public String connectionId;
 
         /**
-         * <p>The model context window size, in tokens. The value must be a positive integer.</p>
+         * <p>The context window size of the model, in tokens. The value must be a positive integer.</p>
          * 
          * <strong>example:</strong>
          * <p>128000</p>
@@ -251,7 +251,7 @@ public class UpdateModelResponseBody extends TeaModel {
         public Long contextSize;
 
         /**
-         * <p>The time when the resource was created, in RFC 3339 UTC format.</p>
+         * <p>The time when the resource was created. The time is in RFC 3339 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-09T00:00:00Z</p>
@@ -269,7 +269,7 @@ public class UpdateModelResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The maximum number of output tokens supported per generation.</p>
+         * <p>The maximum number of output tokens supported for a single generation of the model.</p>
          * 
          * <strong>example:</strong>
          * <p>131072</p>
@@ -296,7 +296,7 @@ public class UpdateModelResponseBody extends TeaModel {
         public String modelName;
 
         /**
-         * <p>The time when the resource was last updated, in RFC 3339 UTC format.</p>
+         * <p>The time when the resource was last updated. The time is in RFC 3339 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-09T00:00:00Z</p>

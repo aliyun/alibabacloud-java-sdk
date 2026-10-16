@@ -42,7 +42,7 @@ public class InstallWorkspacePluginRequest extends TeaModel {
 
     public static class InstallWorkspacePluginRequestBodyConfigNetworkInternet extends TeaModel {
         /**
-         * <p>Specifies whether to enable public network access. If set to true without a VPC specified, PUB_NET is used. If set to true with a VPC specified, PRIVATE_PUBNET is used. If only a VPC is specified, PRIVATE_NET is used. At least one of public network or VPC must be configured.</p>
+         * <p>Specifies whether to enable Internet access. If set to true and no VPC is specified, PUB_NET is used. If set to true and a VPC is specified, PRIVATE_PUBNET is used. If only a VPC is specified, PRIVATE_NET is used. At least one of Internet access and VPC must be configured.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -67,7 +67,7 @@ public class InstallWorkspacePluginRequest extends TeaModel {
 
     public static class InstallWorkspacePluginRequestBodyConfigNetworkVpc extends TeaModel {
         /**
-         * <p>Specifies whether the collaboration plugin uses VPC networking. If set to false, vpcId and vSwitchIds are ignored. If set to true, you must provide both vpcId and at least two vSwitchIds.</p>
+         * <p>Explicitly controls whether the collaboration plugin uses the VPC network. If set to false, vpcId and vSwitchIds are ignored. If set to true, you must provide both vpcId and at least two vSwitchIds.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -83,7 +83,7 @@ public class InstallWorkspacePluginRequest extends TeaModel {
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The user VPC ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,13 +125,13 @@ public class InstallWorkspacePluginRequest extends TeaModel {
 
     public static class InstallWorkspacePluginRequestBodyConfigNetwork extends TeaModel {
         /**
-         * <p>Controls whether the collaboration component is allowed to access the public network. This configuration only controls public network access capability and does not expose the component service to the public network.</p>
+         * <p>Specifies whether to allow public network access for collaboration components. This configuration only controls public network access capabilities and does not expose component services to the public network.</p>
          */
         @NameInMap("internet")
         public InstallWorkspacePluginRequestBodyConfigNetworkInternet internet;
 
         /**
-         * <p>The user VPC and vSwitch list used for deploying the collaboration plugin. The zones corresponding to the vSwitches are queried by the server and do not need to be provided by the user.</p>
+         * <p>The user VPC and vSwitch list used for deploying the collaboration plugin. The zones corresponding to the vSwitches are queried by the server, and users do not need to pass in Zones.</p>
          */
         @NameInMap("vpc")
         public InstallWorkspacePluginRequestBodyConfigNetworkVpc vpc;

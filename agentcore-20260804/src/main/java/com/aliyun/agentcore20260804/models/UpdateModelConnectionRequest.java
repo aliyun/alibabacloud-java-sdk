@@ -11,7 +11,7 @@ public class UpdateModelConnectionRequest extends TeaModel {
     public UpdateModelConnectionRequestBody body;
 
     /**
-     * <p>The client token used for idempotence. Not currently supported.</p>
+     * <p>The client token used for idempotence. This parameter is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-1</p>
@@ -57,7 +57,7 @@ public class UpdateModelConnectionRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The absolute HTTP or HTTPS address of the upstream model service. The address can be up to 1024 characters in length.</p>
+         * <p>The absolute HTTP or HTTPS URL of the upstream model service. The URL can be up to 1,024 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></p>
@@ -66,7 +66,7 @@ public class UpdateModelConnectionRequest extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The model connection name. The name must be 1 to 128 non-whitespace characters in length.</p>
+         * <p>The name of the model connection. The name must be 1 to 128 non-whitespace characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -75,7 +75,7 @@ public class UpdateModelConnectionRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The model invocation protocol. Currently, only OpenAI/v1 is supported. If not specified in Settings when the model connection is created, this default value is used.</p>
+         * <p>The model invoke protocol. Currently, only OpenAI/v1 is supported. If the Settings are not specified during model creation, this default value is used.</p>
          * 
          * <strong>example:</strong>
          * <p>OpenAI/v1</p>

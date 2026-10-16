@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
     /**
-     * <p>The business status code. The value SUCCESS is returned if the request is successful.</p>
+     * <p>The business status code. The value is SUCCESS when the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,13 +14,13 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The bootstrap token and CMS configuration required for connecting the external agent.</p>
+     * <p>The Bootstrap token and CMS configuration required to onboard the external agent.</p>
      */
     @NameInMap("data")
     public CreateExternalAgentBootstrapTokenResponseBodyData data;
 
     /**
-     * <p>The HTTP status code. The value 200 is returned if the request is successful.</p>
+     * <p>The HTTP status code. The value is 200 when the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message that indicates the result of the request.</p>
+     * <p>The result message of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -47,7 +47,7 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -175,7 +175,7 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
         public String agentId;
 
         /**
-         * <p>The bootstrap token used for connecting the external agent.</p>
+         * <p>The Bootstrap token used to onboard the external agent.</p>
          * 
          * <strong>example:</strong>
          * <p>bootstrap-token</p>
@@ -184,17 +184,13 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
         public String bootstrapToken;
 
         /**
-         * <p>The CMS configuration used for connecting the external agent.</p>
+         * <p>The CMS configuration used to onboard the external agent.</p>
          */
         @NameInMap("cms")
         public CreateExternalAgentBootstrapTokenResponseBodyDataCms cms;
 
         /**
-         * <p>The network type for connection. Valid values:</p>
-         * <ul>
-         * <li>INTERNET: public network</li>
-         * <li>INTRANET: internal network</li>
-         * </ul>
+         * <p>The network type for onboarding. Valid values: INTRANET (internal network) and INTERNET (Internet).</p>
          * 
          * <strong>example:</strong>
          * <p>INTERNET</p>
@@ -203,7 +199,7 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
         public String networkType;
 
         /**
-         * <p>The fingerprint of the bootstrap token.</p>
+         * <p>The fingerprint of the Bootstrap token.</p>
          * 
          * <strong>example:</strong>
          * <p>fingerprint</p>

@@ -26,13 +26,13 @@ public class DeleteMcpResponseBody extends TeaModel {
      * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Request processed successfully</p>
+     * <p>The request is processed successfully</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>A1B2C3D4-E5F6-47A8-90AB-CDEF12345678</p>
@@ -41,7 +41,7 @@ public class DeleteMcpResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("success")
     public Boolean success;

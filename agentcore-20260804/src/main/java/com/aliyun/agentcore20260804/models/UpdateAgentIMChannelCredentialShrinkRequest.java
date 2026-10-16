@@ -11,7 +11,7 @@ public class UpdateAgentIMChannelCredentialShrinkRequest extends TeaModel {
     public String bodyShrink;
 
     /**
-     * <p>Reserved idempotency token. The backend does not provide persistent idempotence guarantees in the current version.</p>
+     * <p>The reserved idempotence token. The backend does not provide persistent idempotence guarantees in the current phase.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-1</p>

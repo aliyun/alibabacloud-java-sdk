@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSkillReferencesRequest extends TeaModel {
     /**
-     * <p>The page number, starting from 1. Default value: 1.</p>
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListSkillReferencesRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page. If this parameter is not specified, the server-side default value is used.</p>
+     * <p>The number of entries per page. If not specified, the default value on the server is used.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class ListSkillReferencesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Filters results by reference selector type. Valid values: LABEL and VERSION.</p>
+     * <p>The reference selector type used for filtering. Valid values: LABEL and VERSION.</p>
      * 
      * <strong>example:</strong>
      * <p>LABEL</p>
@@ -32,7 +32,7 @@ public class ListSkillReferencesRequest extends TeaModel {
     public String selectorType;
 
     /**
-     * <p>Filters results by reference selector value, such as latest, a named label, HEAD, or a specific version.</p>
+     * <p>The reference selector value used for filtering. Valid values: latest, a named label, HEAD, or a specific version.</p>
      * 
      * <strong>example:</strong>
      * <p>HEAD</p>

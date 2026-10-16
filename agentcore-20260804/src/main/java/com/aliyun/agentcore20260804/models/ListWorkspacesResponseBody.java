@@ -23,13 +23,13 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The list of workspaces.</p>
+     * <p>The workspace list.</p>
      */
     @NameInMap("items")
     public java.util.List<ListWorkspacesResponseBodyItems> items;
 
     /**
-     * <p>The maximum number of records per page used in this request.</p>
+     * <p>The maximum number of records per page used for this request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -47,7 +47,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The pagination token for the next page. This parameter is empty if no more pages are available.</p>
+     * <p>The cursor for the next page. This parameter is empty if there is no next page.</p>
      * 
      * <strong>example:</strong>
      * <p>d29ya3NwYWNlLW9mZnNldDo0MA</p>
@@ -65,7 +65,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -74,7 +74,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of workspaces that match the query conditions.</p>
+     * <p>The total number of workspaces that meet the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>42</p>
@@ -217,7 +217,25 @@ public class ListWorkspacesResponseBody extends TeaModel {
 
     public static class ListWorkspacesResponseBodyItemsNetworkConfiguration extends TeaModel {
         /**
-         * <p>The VPC network configuration of the user.</p>
+         * <p>Returns the target configuration value. Updating indicates that the change is still in progress, and UpdateFailed indicates that the current change failed. This setting only controls whether the latest versions of managed and custom agents use the public network egress of the platform. It does not control fixed historical versions, model or MCP proxy egresses, or the public network egress of the user VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("publicEgressEnabled")
+        public Boolean publicEgressEnabled;
+
+        /**
+         * <p>Returns the target configuration value. Updating indicates that the change is in progress, and UpdateFailed indicates that the change failed. After this setting is disabled, the public network ingress for all agent endpoints in the workspace is closed. After it is re-enabled, the original public network ingress is restored. INNER_DIRECT and user VPC ingress are not affected. Collaboration and Element Web ingress are not controlled by this setting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("publicIngressEnabled")
+        public Boolean publicIngressEnabled;
+
+        /**
+         * <p>The network configuration of the user VPC.</p>
          */
         @NameInMap("vpc")
         public ListWorkspacesResponseBodyItemsNetworkConfigurationVpc vpc;
@@ -225,6 +243,22 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public static ListWorkspacesResponseBodyItemsNetworkConfiguration build(java.util.Map<String, ?> map) throws Exception {
             ListWorkspacesResponseBodyItemsNetworkConfiguration self = new ListWorkspacesResponseBodyItemsNetworkConfiguration();
             return TeaModel.build(map, self);
+        }
+
+        public ListWorkspacesResponseBodyItemsNetworkConfiguration setPublicEgressEnabled(Boolean publicEgressEnabled) {
+            this.publicEgressEnabled = publicEgressEnabled;
+            return this;
+        }
+        public Boolean getPublicEgressEnabled() {
+            return this.publicEgressEnabled;
+        }
+
+        public ListWorkspacesResponseBodyItemsNetworkConfiguration setPublicIngressEnabled(Boolean publicIngressEnabled) {
+            this.publicIngressEnabled = publicIngressEnabled;
+            return this;
+        }
+        public Boolean getPublicIngressEnabled() {
+            return this.publicIngressEnabled;
         }
 
         public ListWorkspacesResponseBodyItemsNetworkConfiguration setVpc(ListWorkspacesResponseBodyItemsNetworkConfigurationVpc vpc) {
@@ -239,7 +273,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
 
     public static class ListWorkspacesResponseBodyItems extends TeaModel {
         /**
-         * <p>The time when the workspace was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-06T03:56:56Z</p>
@@ -248,7 +282,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The name of the workspace.</p>
+         * <p>The workspace name.</p>
          * 
          * <strong>example:</strong>
          * <p>production-agents</p>
@@ -263,7 +297,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public ListWorkspacesResponseBodyItemsNetworkConfiguration networkConfiguration;
 
         /**
-         * <p>The region ID of the workspace.</p>
+         * <p>The ID of the region where the workspace resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -272,13 +306,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The workspace status. Valid values:</p>
-         * <ul>
-         * <li>Initializing</li>
-         * <li>Initialized</li>
-         * <li>Deleting</li>
-         * <li>Deleted.</li>
-         * </ul>
+         * <p>The workspace status. Valid values: Initializing, Initialized, Deleting, and Deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>Initialized</p>

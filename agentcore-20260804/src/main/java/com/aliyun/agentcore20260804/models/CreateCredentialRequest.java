@@ -51,7 +51,7 @@ public class CreateCredentialRequest extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The resource name. This value is empty if the resource has been deleted.</p>
+         * <p>The name of the resource. This parameter is empty if the resource is deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>my-agent</p>
@@ -60,7 +60,7 @@ public class CreateCredentialRequest extends TeaModel {
         public String resourceName;
 
         /**
-         * <p>The resource type, such as agent.</p>
+         * <p>The type of the resource, such as agent.</p>
          * 
          * <strong>example:</strong>
          * <p>agent</p>
@@ -101,7 +101,7 @@ public class CreateCredentialRequest extends TeaModel {
 
     public static class CreateCredentialRequestBody extends TeaModel {
         /**
-         * <p>The credential content. The value is a JSON string. When credentialType is set to apiKey, the content can contain only the apiKey field, and the value cannot be empty. After being written, the content can only be queried in masked form.</p>
+         * <p>The credential content, which is a JSON string. If credentialType is apiKey, this parameter can only contain the apiKey field, and the value cannot be empty. After the credential is written, only desensitized queries are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -121,16 +121,16 @@ public class CreateCredentialRequest extends TeaModel {
         public String credentialType;
 
         /**
-         * <p>The credential description. The description can be up to 256 characters in length.</p>
+         * <p>The description of the credential. The description can be up to 256 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>API Key used for calling model services in the production environment</p>
+         * <p>API key used to call the model service in the production environment</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The credential name. The name must be unique within the workspace and can contain only letters, digits, periods (.), underscores (_), and hyphens (-). The name must be 3 to 128 characters in length and cannot use runtime reserved names.</p>
+         * <p>The name of the credential. The name must be unique within the workspace, can only contain letters, digits, periods, underscores, and hyphens, and must be 3 to 128 characters in length. Runtime reserved names cannot be used.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,13 +140,13 @@ public class CreateCredentialRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>This parameter is required and must be a non-empty array when resourceScope is set to SPECIFIED. Each item contains resourceType and resourceId. resourceName is optional.</p>
+         * <p>If resourceScope is SPECIFIED, this parameter must be a non-empty array. Each item must contain resourceType and resourceId. resourceName is optional.</p>
          */
         @NameInMap("resourceRefs")
         public java.util.List<CreateCredentialRequestBodyResourceRefs> resourceRefs;
 
         /**
-         * <p>ALL indicates all resources. SPECIFIED indicates that the credential applies only to the resources specified in resourceRefs.</p>
+         * <p>The application scope of the credential resource. A value of ALL indicates all resources. A value of SPECIFIED indicates that the credential is applied only to the resources specified by resourceRefs.</p>
          * 
          * <strong>example:</strong>
          * <p>ALL</p>

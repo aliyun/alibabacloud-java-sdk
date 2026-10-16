@@ -47,7 +47,7 @@ public class GetWorkspaceAcrRamAuthorizeUrlResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class GetWorkspaceAcrRamAuthorizeUrlResponseBody extends TeaModel {
 
     public static class GetWorkspaceAcrRamAuthorizeUrlResponseBodyData extends TeaModel {
         /**
-         * <p>The ACR Enterprise instance ID.</p>
+         * <p>The ID of the ACR Enterprise instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-1234567890abcdef</p>
@@ -119,7 +119,7 @@ public class GetWorkspaceAcrRamAuthorizeUrlResponseBody extends TeaModel {
         public String acrInstanceId;
 
         /**
-         * <p>The RAM authorization URL used to create or append ACR permissions for the shared role on the target repository.</p>
+         * <p>The RAM authorization URL used to create or append target ACR permissions for the shared role.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://ram.console.aliyun.com/authorize?request=%7B%22referrer%22%3A%22AgentCore%22%2C%22payloads%22%3A%5B%7B%22missionId%22%3A%22AgentCore.CustomRoleForOSSObjectRestore%22%2C%22roleName%22%3A%22AliyunAgentCoreWorkspace-ws-1234567890abcdef12345%22%2C%22rolePolicies%22%3A%5B%7B%22policyName%22%3A%22AgentCoreAcrPull-63373f3802583663d49465d8061e410a899d8f2936b8fc0cb9ec905b71f273c6%22%2C%22policyType%22%3A%22Custom%22%2C%22templateId%22%3A%22CrPullInstanceImage%22%2C%22templateValue%22%3A%7B%22crInstance%22%3A%22acs%3Acr%3Acn-hangzhou%3A1234567890123456%3Ainstance%2Fcri-1234567890abcdef%22%2C%22crRepository%22%3A%22acs%3Acr%3Acn-hangzhou%3A1234567890123456%3Arepository%2Fcri-1234567890abcdef%2Fexample%2Fagent-image%22%7D%7D%5D%7D%5D%7D">https://ram.console.aliyun.com/authorize?request=%7B%22referrer%22%3A%22AgentCore%22%2C%22payloads%22%3A%5B%7B%22missionId%22%3A%22AgentCore.CustomRoleForOSSObjectRestore%22%2C%22roleName%22%3A%22AliyunAgentCoreWorkspace-ws-1234567890abcdef12345%22%2C%22rolePolicies%22%3A%5B%7B%22policyName%22%3A%22AgentCoreAcrPull-63373f3802583663d49465d8061e410a899d8f2936b8fc0cb9ec905b71f273c6%22%2C%22policyType%22%3A%22Custom%22%2C%22templateId%22%3A%22CrPullInstanceImage%22%2C%22templateValue%22%3A%7B%22crInstance%22%3A%22acs%3Acr%3Acn-hangzhou%3A1234567890123456%3Ainstance%2Fcri-1234567890abcdef%22%2C%22crRepository%22%3A%22acs%3Acr%3Acn-hangzhou%3A1234567890123456%3Arepository%2Fcri-1234567890abcdef%2Fexample%2Fagent-image%22%7D%7D%5D%7D%5D%7D</a></p>
@@ -128,7 +128,7 @@ public class GetWorkspaceAcrRamAuthorizeUrlResponseBody extends TeaModel {
         public String authorizeUrl;
 
         /**
-         * <p>The shared role name selected by the backend. This value is not editable on the frontend.</p>
+         * <p>The shared role name selected by the backend. This field is not editable on the frontend.</p>
          * 
          * <strong>example:</strong>
          * <p>AliyunAgentCoreWorkspace-ws-1234567890abcdef12345</p>
@@ -137,7 +137,7 @@ public class GetWorkspaceAcrRamAuthorizeUrlResponseBody extends TeaModel {
         public String roleName;
 
         /**
-         * <p>The source of the shared role. This value does not indicate that authorization is complete.</p>
+         * <p>The source of the shared role. This does not indicate that authorization is complete.</p>
          * 
          * <strong>example:</strong>
          * <p>WORKSPACE_SHARED</p>

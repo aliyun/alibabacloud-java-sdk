@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteManagedAgentResponseBody extends TeaModel {
     /**
-     * <p>The business status code. The value SUCCESS is returned if the request succeeds.</p>
+     * <p>The business status code. The value is SUCCESS if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -20,7 +20,7 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
     public DeleteManagedAgentResponseBodyData data;
 
     /**
-     * <p>The HTTP status code. The value 200 is returned if the request succeeds.</p>
+     * <p>The HTTP status code. The value is 200 if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned for the request processing result.</p>
+     * <p>The request processing result message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -47,7 +47,7 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -149,13 +149,13 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
          * <p>The description of the managed agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>An agent for code review</p>
+         * <p>Agent for code review</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The latest specification version number.</p>
+         * <p>The latest specification version.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

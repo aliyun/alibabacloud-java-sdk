@@ -11,7 +11,7 @@ public class CreateModelConnectionShrinkRequest extends TeaModel {
     public String bodyShrink;
 
     /**
-     * <p>The client token used for idempotence. Not supported.</p>
+     * <p>The client token used for idempotence. This parameter is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-1</p>

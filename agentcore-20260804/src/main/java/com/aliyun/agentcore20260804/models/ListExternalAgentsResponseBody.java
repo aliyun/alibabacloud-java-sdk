@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListExternalAgentsResponseBody extends TeaModel {
     /**
-     * <p>The business status code. The value SUCCESS is returned for a successful request.</p>
+     * <p>The business status code. The value is SUCCESS if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,7 +14,7 @@ public class ListExternalAgentsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The HTTP status code. The value 200 is returned for a successful request.</p>
+     * <p>The HTTP status code. The value is 200 if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -26,7 +26,7 @@ public class ListExternalAgentsResponseBody extends TeaModel {
      * <p>The list of external agents.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;agentId&quot;:&quot;agent-1&quot;,&quot;workspaceId&quot;:&quot;ws-1&quot;,&quot;name&quot;:&quot;my-external-agent&quot;,&quot;description&quot;:&quot;A code review agent running in the user environment&quot;,&quot;status&quot;:&quot;Running&quot;,&quot;latestSpecVersion&quot;:1,&quot;effectiveSpecVersion&quot;:1,&quot;createMode&quot;:&quot;CUSTOM&quot;,&quot;runtime&quot;:&quot;qwenpaw&quot;,&quot;deployType&quot;:&quot;SELF_HOSTED&quot;,&quot;createdAt&quot;:&quot;2026-01-01T00:00:00Z&quot;,&quot;updatedAt&quot;:&quot;2026-01-01T00:00:00Z&quot;}]</p>
+     * <p>[{&quot;agentId&quot;:&quot;agent-1&quot;,&quot;workspaceId&quot;:&quot;ws-1&quot;,&quot;name&quot;:&quot;my-external-agent&quot;,&quot;description&quot;:&quot;Code review agent running in the user environment&quot;,&quot;status&quot;:&quot;Running&quot;,&quot;latestSpecVersion&quot;:1,&quot;effectiveSpecVersion&quot;:1,&quot;createMode&quot;:&quot;CUSTOM&quot;,&quot;runtime&quot;:&quot;qwenpaw&quot;,&quot;deployType&quot;:&quot;SELF_HOSTED&quot;,&quot;createdAt&quot;:&quot;2026-01-01T00:00:00Z&quot;,&quot;updatedAt&quot;:&quot;2026-01-01T00:00:00Z&quot;}]</p>
      */
     @NameInMap("items")
     public java.util.List<ListExternalAgentsResponseBodyItems> items;
@@ -41,7 +41,7 @@ public class ListExternalAgentsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The message that indicates the result of the request.</p>
+     * <p>The message about the request processing result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -50,7 +50,7 @@ public class ListExternalAgentsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The token for the next page. An empty value indicates that the last page has been reached.</p>
+     * <p>The token for the next page. An empty value indicates that the last page is reached.</p>
      * 
      * <strong>example:</strong>
      * <p>next-token-1</p>
@@ -68,7 +68,7 @@ public class ListExternalAgentsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -77,7 +77,7 @@ public class ListExternalAgentsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of records that match the query conditions.</p>
+     * <p>The total number of records that meet the conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -164,7 +164,7 @@ public class ListExternalAgentsResponseBody extends TeaModel {
 
     public static class ListExternalAgentsResponseBodyItems extends TeaModel {
         /**
-         * <p>The external agent ID.</p>
+         * <p>The ID of the external agent.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-1</p>
@@ -203,7 +203,7 @@ public class ListExternalAgentsResponseBody extends TeaModel {
          * <p>The description of the external agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>A code review agent running in the user environment</p>
+         * <p>Code review agent running in the user environment</p>
          */
         @NameInMap("description")
         public String description;
@@ -236,15 +236,7 @@ public class ListExternalAgentsResponseBody extends TeaModel {
         public String runtime;
 
         /**
-         * <p>The status of the external agent. Valid values:</p>
-         * <ul>
-         * <li>Creating: The agent is being created.</li>
-         * <li>Running: The agent is running.</li>
-         * <li>Failed: The agent has failed.</li>
-         * <li>Updating: The agent is being updated.</li>
-         * <li>Deleting: The agent is being deleted.</li>
-         * <li>Deleted: The agent has been deleted.</li>
-         * </ul>
+         * <p>The status of the external agent. Valid values: Creating, Running, Failed, Updating, Deleting, and Deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>

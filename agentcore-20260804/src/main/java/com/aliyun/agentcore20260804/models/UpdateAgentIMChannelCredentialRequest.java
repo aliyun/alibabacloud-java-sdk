@@ -11,7 +11,7 @@ public class UpdateAgentIMChannelCredentialRequest extends TeaModel {
     public UpdateAgentIMChannelCredentialRequestBody body;
 
     /**
-     * <p>Reserved idempotency token. The backend does not provide persistent idempotence guarantees in the current version.</p>
+     * <p>The reserved idempotence token. The backend does not provide persistent idempotence guarantees in the current phase.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-1</p>
@@ -42,7 +42,7 @@ public class UpdateAgentIMChannelCredentialRequest extends TeaModel {
 
     public static class UpdateAgentIMChannelCredentialRequestBody extends TeaModel {
         /**
-         * <p>The channel credential. All fields must be provided and field values must be non-empty strings. DingTalk uses clientID and clientSecret. Lark uses appId and appSecret. WeCom uses botId and secret.</p>
+         * <p>The channel credentials. All fields must be provided and the field values must be non-empty strings. For DingTalk, use clientID and clientSecret. For Lark, use appId and appSecret. For WeCom, use botId and secret.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("credential")

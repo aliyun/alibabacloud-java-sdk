@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTeamRequest extends TeaModel {
     /**
-     * <p>The request body for updating the team.</p>
+     * <p>The request body for updating a team.</p>
      */
     @NameInMap("body")
     public UpdateTeamRequestBody body;
@@ -51,11 +51,7 @@ public class UpdateTeamRequest extends TeaModel {
         public String agentId;
 
         /**
-         * <p>The role of the agent in the team. Valid values:</p>
-         * <ul>
-         * <li>LEADER</li>
-         * <li>WORKER</li>
-         * </ul>
+         * <p>The role of the agent in the team. Valid values: LEADER, WORKER.</p>
          * 
          * <strong>example:</strong>
          * <p>WORKER</p>
@@ -88,12 +84,7 @@ public class UpdateTeamRequest extends TeaModel {
 
     public static class UpdateTeamRequestBodyUsers extends TeaModel {
         /**
-         * <p>The role of the user in the team. Valid values:</p>
-         * <ul>
-         * <li>ADMIN</li>
-         * <li>MEMBER</li>
-         * </ul>
-         * <p>Each team must have exactly one ADMIN.</p>
+         * <p>The role of the user in the team. Valid values: ADMIN, MEMBER. Each team must have exactly one ADMIN.</p>
          * 
          * <strong>example:</strong>
          * <p>ADMIN</p>
@@ -135,22 +126,22 @@ public class UpdateTeamRequest extends TeaModel {
 
     public static class UpdateTeamRequestBody extends TeaModel {
         /**
-         * <p>The new agent member list. Replaces the existing agent members using full overwrite semantics. If not specified, the existing agent members remain unchanged.</p>
+         * <p>The new list of agent members. The existing agent members are replaced based on full overwrite semantics. If this parameter is not specified, the existing agent members remain unchanged.</p>
          */
         @NameInMap("agents")
         public java.util.List<UpdateTeamRequestBodyAgents> agents;
 
         /**
-         * <p>The new team description. If not specified, the existing description remains unchanged.</p>
+         * <p>The new team description. If this parameter is not specified, the existing description remains unchanged.</p>
          * 
          * <strong>example:</strong>
-         * <p>A team responsible for intelligent customer service</p>
+         * <p>Team responsible for intelligent customer service</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The new user member list. Replaces the existing user members using full overwrite semantics. When specified, the list must contain exactly one member with the ADMIN role. If not specified, the existing user members remain unchanged.</p>
+         * <p>The new list of user members. The existing user members are replaced based on full overwrite semantics. If this parameter is specified, it must contain exactly one member with the ADMIN role. If this parameter is not specified, the existing user members remain unchanged.</p>
          */
         @NameInMap("users")
         public java.util.List<UpdateTeamRequestBodyUsers> users;

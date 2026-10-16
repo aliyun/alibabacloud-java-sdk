@@ -42,16 +42,16 @@ public class UpdateUserRequest extends TeaModel {
 
     public static class UpdateUserRequestBody extends TeaModel {
         /**
-         * <p>The display name of the user. The name must be 1 to 32 characters in length. At least one of displayName, email, and note must be specified.</p>
+         * <p>The display name of the user. The name must be 1 to 32 characters in length. You must specify at least one of the displayName, email, and note parameters.</p>
          * 
          * <strong>example:</strong>
-         * <p>John</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("displayName")
         public String displayName;
 
         /**
-         * <p>The email address of the user. The address can be up to 256 characters in length.</p>
+         * <p>The email address of the user. The email address can be up to 256 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:user-01@example.com">user-01@example.com</a></p>

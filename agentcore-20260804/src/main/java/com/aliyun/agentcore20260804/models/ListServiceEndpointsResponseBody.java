@@ -29,7 +29,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
     public java.util.List<ListServiceEndpointsResponseBodyItems> items;
 
     /**
-     * <p>The maximum number of records per page that takes effect for this query.</p>
+     * <p>The maximum number of records per page that takes effect in this query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -47,7 +47,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The pagination token for the next page. This value is empty when no more pages are available.</p>
+     * <p>The cursor for the next page. This parameter is empty if no next page exists.</p>
      * 
      * <strong>example:</strong>
      * <p>djE6YWdlbnRjb3JlLnNlcnZpY2UtZW5kcG9pbnQubGlzdDoyMA</p>
@@ -65,13 +65,13 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("success")
     public Boolean success;
 
     /**
-     * <p>The total number of service endpoints that match the query conditions.</p>
+     * <p>The total number of service endpoints that meet the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>42</p>
@@ -158,7 +158,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
 
     public static class ListServiceEndpointsResponseBodyItemsAccessUrls extends TeaModel {
         /**
-         * <p>The access URL type. Valid values: INTERNET, VPC.</p>
+         * <p>The access URL type. Valid values: INTERNET and VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>INTERNET</p>
@@ -167,7 +167,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public String accessType;
 
         /**
-         * <p>The access URL status. Valid values: CREATING, READY, DEGRADED.</p>
+         * <p>The access URL status. Valid values: CREATING, READY, and DEGRADED.</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>
@@ -176,7 +176,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The reason for the access URL status. A specific reason is returned when the status is abnormal.</p>
+         * <p>The reason for the access URL status. The specific reason is returned when the status is abnormal.</p>
          * 
          * <strong>example:</strong>
          * <p>ServiceEndpoint.Provider.Unavailable: no provider for the target type</p>
@@ -234,7 +234,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
 
     public static class ListServiceEndpointsResponseBodyItemsAuthentication extends TeaModel {
         /**
-         * <p>The authentication method. NONE indicates that no authentication is required. API_KEY indicates that authentication is performed by passing an API key through the x-api-key request header.</p>
+         * <p>The authentication method. NONE indicates that no authentication is required. API_KEY indicates that authentication is performed by passing an API key in the x-api-key request header.</p>
          * 
          * <strong>example:</strong>
          * <p>API_KEY</p>
@@ -259,7 +259,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
 
     public static class ListServiceEndpointsResponseBodyItemsTarget extends TeaModel {
         /**
-         * <p>The target agent ID. Returned when the target type is AGENT_VERSION.</p>
+         * <p>The target agent ID. This parameter is returned when the target type is AGENT_VERSION.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-123456</p>
@@ -268,7 +268,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public String agentId;
 
         /**
-         * <p>The target agent version number. Returned when the target type is AGENT_VERSION.</p>
+         * <p>The target agent version. This parameter is returned when the target type is AGENT_VERSION.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -277,7 +277,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public String agentVersion;
 
         /**
-         * <p>The collaboration component type. Returned when the target type is TEAM_COLLABORATION.</p>
+         * <p>The collaboration component type. This parameter is returned when the target type is TEAM_COLLABORATION.</p>
          * 
          * <strong>example:</strong>
          * <p>ELEMENT_WEB</p>
@@ -286,7 +286,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public String collaborationComponent;
 
         /**
-         * <p>The workspace resource binding ID associated with the target collaboration component. Returned when the target type is TEAM_COLLABORATION.</p>
+         * <p>The workspace resource binding ID associated with the target collaboration component. This parameter is returned when the target type is TEAM_COLLABORATION.</p>
          * 
          * <strong>example:</strong>
          * <p>wrb-123456</p>
@@ -295,7 +295,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public String resourceBindingId;
 
         /**
-         * <p>The target type. Valid values: AGENT_VERSION, TEAM_COLLABORATION.</p>
+         * <p>The target type. Valid values: AGENT_VERSION and TEAM_COLLABORATION.</p>
          * 
          * <strong>example:</strong>
          * <p>AGENT_VERSION</p>
@@ -364,7 +364,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public ListServiceEndpointsResponseBodyItemsAuthentication authentication;
 
         /**
-         * <p>The creation time in UTC, formatted in RFC 3339.</p>
+         * <p>The creation time in UTC format compliant with RFC 3339.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>
@@ -373,7 +373,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The service endpoint type. DEFAULT indicates a default endpoint created and maintained by the platform. NAMED indicates a named endpoint explicitly created by the user.</p>
+         * <p>The service endpoint type. DEFAULT indicates a default endpoint created and maintained by the platform. NAMED indicates a named endpoint explicitly created by a user.</p>
          * 
          * <strong>example:</strong>
          * <p>NAMED</p>
@@ -382,7 +382,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public String endpointType;
 
         /**
-         * <p>The service endpoint name. The name is unique within the workspace and is 1 to 128 characters in length.</p>
+         * <p>The service endpoint name. The name must be unique within the workspace and 1 to 128 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>my-agent-endpoint</p>
@@ -409,7 +409,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public String serviceEndpointId;
 
         /**
-         * <p>The service endpoint status. Valid values: CREATING, READY, UPDATING, DEGRADED, DISABLED, DELETING.</p>
+         * <p>The service endpoint status. Valid values: CREATING, READY, UPDATING, DEGRADED, DISABLED, and DELETING.</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>
@@ -418,7 +418,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The reason for the service endpoint status. A specific reason is returned when the status is abnormal.</p>
+         * <p>The reason for the service endpoint status. The specific reason is returned when the status is abnormal.</p>
          * 
          * <strong>example:</strong>
          * <p>ServiceEndpoint.Provider.Unavailable: no provider for the target type</p>
@@ -433,7 +433,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public ListServiceEndpointsResponseBodyItemsTarget target;
 
         /**
-         * <p>The time of the last modification in UTC, formatted in RFC 3339.</p>
+         * <p>The last update time in UTC format compliant with RFC 3339.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>

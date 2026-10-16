@@ -23,7 +23,7 @@ public class ListAgentTeamsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The list of agent-team membership relationships.</p>
+     * <p>The list of membership relationships between agents and teams.</p>
      */
     @NameInMap("items")
     public java.util.List<ListAgentTeamsResponseBodyItems> items;
@@ -38,7 +38,7 @@ public class ListAgentTeamsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The response message. An error description is returned if the request failed.</p>
+     * <p>The response message. Returns an error description when the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -47,7 +47,7 @@ public class ListAgentTeamsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The cursor used to retrieve the next page. An empty value indicates that no more data exists.</p>
+     * <p>The cursor used to retrieve the next page. An empty value indicates that no more data is available.</p>
      * 
      * <strong>example:</strong>
      * <p>dXNlci1vZmZzZXQ6MTA</p>
@@ -65,13 +65,13 @@ public class ListAgentTeamsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("success")
     public Boolean success;
 
     /**
-     * <p>The total number of records that match the specified conditions.</p>
+     * <p>The total number of records that match the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -179,7 +179,7 @@ public class ListAgentTeamsResponseBody extends TeaModel {
          * <p>The team name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Default Team</p>
+         * <p>Default team</p>
          */
         @NameInMap("teamName")
         public String teamName;

@@ -14,7 +14,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response data.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("data")
     public ConvertMcpToFreeEditResponseBodyData data;
@@ -38,7 +38,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, which is used to locate and troubleshoot requests.</p>
+     * <p>The request ID used to locate and troubleshoot requests.</p>
      * 
      * <strong>example:</strong>
      * <p>request-123456</p>
@@ -47,7 +47,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
 
     public static class ConvertMcpToFreeEditResponseBodyDataDeploymentConfigAccessControl extends TeaModel {
         /**
-         * <p>The AgentCore credential referenced when mode is set to CREDENTIAL.</p>
+         * <p>The ID of the AgentCore credential that is referenced when the mode is CREDENTIAL.</p>
          * 
          * <strong>example:</strong>
          * <p>credential-id</p>
@@ -116,13 +116,13 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
         public String credentialId;
 
         /**
-         * <p>Specifies whether to enable ingress access control.</p>
+         * <p>Specifies whether to enable entry access control.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
 
         /**
-         * <p>The access control mode. ANONYMOUS indicates anonymous access. CREDENTIAL indicates access by using an AgentCore credential.</p>
+         * <p>The access control mode. A value of ANONYMOUS indicates anonymous access. A value of CREDENTIAL indicates access by using AgentCore credentials.</p>
          * 
          * <strong>example:</strong>
          * <p>CREDENTIAL</p>
@@ -163,13 +163,13 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
 
     public static class ConvertMcpToFreeEditResponseBodyDataDeploymentConfigAgentIdentityConfiguration extends TeaModel {
         /**
-         * <p>Indicates whether authorization is enabled.</p>
+         * <p>Specifies whether authorization is enabled.</p>
          */
         @NameInMap("authorizationEnabled")
         public Boolean authorizationEnabled;
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the credential provider.</p>
+         * <p>The ARN of the credential provider.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:agentidentity:cn-hangzhou:1234567890123456:provider/example</p>
@@ -187,7 +187,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
         public String credentialProviderType;
 
         /**
-         * <p>Indicates whether agent identity is enabled.</p>
+         * <p>Specifies whether agent identity is enabled.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
@@ -233,7 +233,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
 
     public static class ConvertMcpToFreeEditResponseBodyDataDeploymentConfigCodeConfiguration extends TeaModel {
         /**
-         * <p>The temporary code package token returned by GetMcpCodePackageUploadUrl. This token is used to create or update a code deployment after the pre-signed upload is complete.</p>
+         * <p>The temporary code package token returned by GetMcpCodePackageUploadUrl, which is used to create or update a code deployment after a presigned upload is completed.</p>
          * 
          * <strong>example:</strong>
          * <p>upload-token</p>
@@ -242,7 +242,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
         public String codePackageToken;
 
         /**
-         * <p>The full startup command, with arguments passed in order by parameter boundary. For example, when using supergateway to start a stdio MCP, pass supergateway, --stdio, the full subcommand, and the remaining arguments.</p>
+         * <p>The complete startup command, passed sequentially by parameter boundaries. For example, when using supergateway to start a stdio MCP, pass supergateway, --stdio, the complete subcommand, and the remaining parameters.</p>
          */
         @NameInMap("command")
         public java.util.List<String> command;
@@ -304,7 +304,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
         public java.util.List<String> command;
 
         /**
-         * <p>The container entrypoint arguments.</p>
+         * <p>The container entrypoint parameters.</p>
          */
         @NameInMap("entrypoint")
         public java.util.List<String> entrypoint;
@@ -319,7 +319,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
         public String image;
 
         /**
-         * <p>The image registry type.</p>
+         * <p>The image repository type.</p>
          * 
          * <strong>example:</strong>
          * <p>ACR</p>
@@ -328,7 +328,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
         public String imageRegistryType;
 
         /**
-         * <p>The MCP runtime mode. Custom containers must expose a standard MCP on their own. The value is SELF_HOSTED.</p>
+         * <p>The MCP runtime mode. Custom containers must currently expose the standard MCP by themselves. The value is SELF_HOSTED.</p>
          * 
          * <strong>example:</strong>
          * <p>SELF_HOSTED</p>
@@ -337,7 +337,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
         public String mcpRuntimeMode;
 
         /**
-         * <p>The container source type. Currently fixed to CONTAINER_IMAGE.</p>
+         * <p>The container source type. The value is fixed as CONTAINER_IMAGE.</p>
          * 
          * <strong>example:</strong>
          * <p>CONTAINER_IMAGE</p>
@@ -422,19 +422,19 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
          * <p>The description of the hook.</p>
          * 
          * <strong>example:</strong>
-         * <p>Log MCP tool invocations</p>
+         * <p>Record MCP tool calls</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>Indicates whether the hook is enabled.</p>
+         * <p>Specifies whether the hook is enabled.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
 
         /**
-         * <p>The event that triggers the hook.</p>
+         * <p>The event of the hook.</p>
          * 
          * <strong>example:</strong>
          * <p>PRE_CALL_TOOL</p>
@@ -449,7 +449,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
         public java.util.Map<String, String> headers;
 
         /**
-         * <p>The timeout period of the hook. Unit: milliseconds.</p>
+         * <p>The timeout period of the hook, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3000</p>
@@ -531,7 +531,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
 
     public static class ConvertMcpToFreeEditResponseBodyDataDeploymentConfigHookConfiguration extends TeaModel {
         /**
-         * <p>The hooks are executed in array order for PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL events.</p>
+         * <p>Executes the PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in the order of the array.</p>
          */
         @NameInMap("hooks")
         public java.util.List<ConvertMcpToFreeEditResponseBodyDataDeploymentConfigHookConfigurationHooks> hooks;
@@ -565,7 +565,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
         public Boolean enableRequestMetrics;
 
         /**
-         * <p>The log segmentation begin rule for Function Compute (FC).</p>
+         * <p>The start rule for log splitting in Function Compute.</p>
          * 
          * <strong>example:</strong>
          * <p>DefaultRegex</p>
@@ -649,7 +649,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
         public String endpointPath;
 
         /**
-         * <p>The number of concurrent sessions per instance. Currently fixed to 1.</p>
+         * <p>The session concurrency per instance. This value is currently fixed at 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -658,7 +658,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
         public Integer sessionConcurrencyPerInstance;
 
         /**
-         * <p>The session idle timeout period, in seconds. Default value: 1800.</p>
+         * <p>The session idle timeout in seconds. Default value: 1800.</p>
          * 
          * <strong>example:</strong>
          * <p>1800</p>
@@ -667,7 +667,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
         public Integer sessionIdleTimeoutSeconds;
 
         /**
-         * <p>The maximum session lifetime, in seconds. Default value: 21600.</p>
+         * <p>The maximum session lifetime in seconds. Default value: 21600.</p>
          * 
          * <strong>example:</strong>
          * <p>21600</p>
@@ -772,7 +772,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
 
     public static class ConvertMcpToFreeEditResponseBodyDataDeploymentConfigNasConfiguration extends TeaModel {
         /**
-         * <p>The ID of the runtime user group.</p>
+         * <p>The group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -787,7 +787,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
         public java.util.List<ConvertMcpToFreeEditResponseBodyDataDeploymentConfigNasConfigurationMountPoints> mountPoints;
 
         /**
-         * <p>The ID of the runtime user.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -910,7 +910,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The path within the OSS bucket.</p>
+         * <p>The path in the OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>/data</p>
@@ -919,7 +919,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
         public String bucketPath;
 
         /**
-         * <p>The OSS service endpoint.</p>
+         * <p>The OSS endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://oss-cn-hangzhou.aliyuncs.com">https://oss-cn-hangzhou.aliyuncs.com</a></p>
@@ -1013,13 +1013,13 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
 
     public static class ConvertMcpToFreeEditResponseBodyDataDeploymentConfigParameterTransformConfiguration extends TeaModel {
         /**
-         * <p>Indicates whether parameter transform and result enhancement is enabled.</p>
+         * <p>Specifies whether parameter transformation and result enhancement are enabled.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
 
         /**
-         * <p>The reserved reference to the parameter transform and result enhancement rule set.</p>
+         * <p>The reserved reference to the rule set for parameter transformation and result enhancement.</p>
          * 
          * <strong>example:</strong>
          * <p>rules-1</p>
@@ -1028,7 +1028,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
         public String ruleSetId;
 
         /**
-         * <p>The version of the transform rule.</p>
+         * <p>The version of the transformation rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0</p>
@@ -1091,7 +1091,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
 
     public static class ConvertMcpToFreeEditResponseBodyDataDeploymentConfigRuntimeConfiguration extends TeaModel {
         /**
-         * <p>The CPU specification. Unit: cores. Default value: 0.25.</p>
+         * <p>The CPU specification, in cores. Default value: 0.25.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -1100,7 +1100,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
         public Double cpu;
 
         /**
-         * <p>The ephemeral disk size. Unit: MB. Valid values: 512 and 10240.</p>
+         * <p>The ephemeral disk size, in MB. Valid values: 512 and 10240.</p>
          * 
          * <strong>example:</strong>
          * <p>512</p>
@@ -1115,7 +1115,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
         public java.util.Map<String, String> environmentVariables;
 
         /**
-         * <p>The ARN of the RAM role used when user code accesses downstream Alibaba Cloud resources.</p>
+         * <p>The ARN of the RAM role used by user code to access downstream Alibaba Cloud resources.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::1234567890123456:role/agentcore-mcp-execution</p>
@@ -1124,7 +1124,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
         public String executionRoleArn;
 
         /**
-         * <p>The number of concurrent requests per instance. Default value: 200.</p>
+         * <p>The instance concurrency. Default value: 200.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -1133,7 +1133,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
         public Integer instanceConcurrency;
 
         /**
-         * <p>The memory specification. Unit: MB. Default value: 512.</p>
+         * <p>The memory specification, in MB. Default value: 512.</p>
          * 
          * <strong>example:</strong>
          * <p>512</p>
@@ -1151,7 +1151,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The function timeout. Unit: seconds. Default value: 300.</p>
+         * <p>The function timeout period, in seconds. Default value: 300.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -1232,7 +1232,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
 
     public static class ConvertMcpToFreeEditResponseBodyDataDeploymentConfig extends TeaModel {
         /**
-         * <p>The MCP ingress access control configuration.</p>
+         * <p>The MCP entry access control.</p>
          */
         @NameInMap("accessControl")
         public ConvertMcpToFreeEditResponseBodyDataDeploymentConfigAccessControl accessControl;
@@ -1244,7 +1244,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
         public ConvertMcpToFreeEditResponseBodyDataDeploymentConfigAgentIdentityConfiguration agentIdentityConfiguration;
 
         /**
-         * <p>The artifact type. Code indicates a ZIP code package. Container indicates a custom container.</p>
+         * <p>The artifact type. A value of Code indicates a ZIP code package, and a value of Container indicates a custom container.</p>
          * 
          * <strong>example:</strong>
          * <p>Code</p>
@@ -1301,7 +1301,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
         public ConvertMcpToFreeEditResponseBodyDataDeploymentConfigOssMountConfiguration ossMountConfiguration;
 
         /**
-         * <p>The parameter transform and result enhancement configuration.</p>
+         * <p>The configuration for parameter transformation and result enhancement.</p>
          */
         @NameInMap("parameterTransformConfiguration")
         public ConvertMcpToFreeEditResponseBodyDataDeploymentConfigParameterTransformConfiguration parameterTransformConfiguration;
@@ -1464,7 +1464,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
 
     public static class ConvertMcpToFreeEditResponseBodyDataTemplate extends TeaModel {
         /**
-         * <p>The template version currently applied to the MCP service.</p>
+         * <p>The template version currently applied to the MCP.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -1500,7 +1500,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
         public String templateInputSchema;
 
         /**
-         * <p>Indicates whether a newer template version is available for update.</p>
+         * <p>Specifies whether an updated template version is available.</p>
          */
         @NameInMap("updateAvailable")
         public Boolean updateAvailable;
@@ -1566,22 +1566,22 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
         public java.util.List<String> customTags;
 
         /**
-         * <p>The deployment configuration for the code deployment MCP.</p>
+         * <p>The deployment configuration for the code-deployed MCP.</p>
          */
         @NameInMap("deploymentConfig")
         public ConvertMcpToFreeEditResponseBodyDataDeploymentConfig deploymentConfig;
 
         /**
-         * <p>The MCP service description.</p>
+         * <p>The description of the MCP service.</p>
          * 
          * <strong>example:</strong>
-         * <p>An MCP service for querying knowledge bases</p>
+         * <p>MCP service for querying the knowledge base</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The MCP service access endpoint.</p>
+         * <p>The access endpoint of the MCP service.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/mcp">https://example.com/mcp</a></p>
@@ -1590,7 +1590,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The Function Compute function name that corresponds to the code deployment MCP.</p>
+         * <p>The name of the Function Compute function corresponding to the code-deployed MCP.</p>
          * 
          * <strong>example:</strong>
          * <p>agentcore-mcp-example</p>
@@ -1599,7 +1599,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
         public String functionName;
 
         /**
-         * <p>The marketplace template from which the MCP service originates.</p>
+         * <p>The source marketplace template of the MCP.</p>
          */
         @NameInMap("marketSource")
         public ConvertMcpToFreeEditResponseBodyDataMarketSource marketSource;
@@ -1623,7 +1623,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The official usage tag, managed by the server.</p>
+         * <p>The official usage tag, which is managed by the server.</p>
          * 
          * <strong>example:</strong>
          * <p>KNOWLEDGE_BASE</p>
@@ -1659,7 +1659,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
         public String statusReason;
 
         /**
-         * <p>The template version and input schema bound to the MCP service.</p>
+         * <p>The bound template version and input schema of the MCP.</p>
          */
         @NameInMap("template")
         public ConvertMcpToFreeEditResponseBodyDataTemplate template;
@@ -1674,7 +1674,7 @@ public class ConvertMcpToFreeEditResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Indicates whether the MCP service is still subject to the usage constraints of the official template.</p>
+         * <p>Specifies whether the MCP is still subject to the usage constraints of the official template.</p>
          */
         @NameInMap("usageActive")
         public Boolean usageActive;

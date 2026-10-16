@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAgentSpecImportFileUrlRequest extends TeaModel {
     /**
-     * <p>The Content-Type of the file to upload. The client must use the same value from the response when performing the PUT request.</p>
+     * <p>The Content-Type of the uploaded file. The client must use the same value in the PUT request as the one returned in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>application/zip</p>

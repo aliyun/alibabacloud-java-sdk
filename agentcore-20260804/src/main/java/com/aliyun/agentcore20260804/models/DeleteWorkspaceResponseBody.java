@@ -14,7 +14,7 @@ public class DeleteWorkspaceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The result of the delete request.</p>
+     * <p>The deletion request result.</p>
      */
     @NameInMap("data")
     public DeleteWorkspaceResponseBodyData data;

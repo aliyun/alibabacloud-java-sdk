@@ -14,7 +14,7 @@ public class GetModelResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The model details.</p>
+     * <p>The detailed information about the model.</p>
      */
     @NameInMap("data")
     public GetModelResponseBodyData data;
@@ -47,7 +47,7 @@ public class GetModelResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -119,7 +119,7 @@ public class GetModelResponseBody extends TeaModel {
         public Boolean document;
 
         /**
-         * <p>Indicates whether the model is able to invoke multiple tool calling requests in a single response.</p>
+         * <p>Indicates whether the model supports tool calling and is able to invoke multiple tools in a single response.</p>
          */
         @NameInMap("multiToolCall")
         public Boolean multiToolCall;
@@ -131,7 +131,7 @@ public class GetModelResponseBody extends TeaModel {
         public Boolean reasoning;
 
         /**
-         * <p>Indicates whether the model supports streaming tool calling.</p>
+         * <p>Indicates whether the model supports tool calling and is able to invoke tools in a streaming manner.</p>
          */
         @NameInMap("streamToolCall")
         public Boolean streamToolCall;
@@ -227,7 +227,7 @@ public class GetModelResponseBody extends TeaModel {
 
     public static class GetModelResponseBodyData extends TeaModel {
         /**
-         * <p>The model capability configuration.</p>
+         * <p>The capability configurations of the model.</p>
          */
         @NameInMap("capabilities")
         public GetModelResponseBodyDataCapabilities capabilities;
@@ -242,7 +242,7 @@ public class GetModelResponseBody extends TeaModel {
         public String connectionId;
 
         /**
-         * <p>The model context window size, in tokens. The value must be a positive integer.</p>
+         * <p>The context window size of the model, in tokens. It must be a positive integer.</p>
          * 
          * <strong>example:</strong>
          * <p>128000</p>
@@ -260,7 +260,7 @@ public class GetModelResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The model description, up to 255 characters.</p>
+         * <p>The description of the model, up to 255 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>description</p>
@@ -269,7 +269,7 @@ public class GetModelResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The maximum number of output tokens supported per model generation.</p>
+         * <p>The maximum number of output tokens supported by the model in a single generation.</p>
          * 
          * <strong>example:</strong>
          * <p>131072</p>
@@ -287,7 +287,7 @@ public class GetModelResponseBody extends TeaModel {
         public String modelId;
 
         /**
-         * <p>The upstream model name.</p>
+         * <p>The name of the upstream model.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen-max</p>
@@ -296,7 +296,7 @@ public class GetModelResponseBody extends TeaModel {
         public String modelName;
 
         /**
-         * <p>The region ID to which the resource belongs.</p>
+         * <p>The ID of the region to which the resource belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
