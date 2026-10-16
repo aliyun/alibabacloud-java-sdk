@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateResourceAccountResponseBody extends TeaModel {
     /**
-     * <p>The information about the member.</p>
+     * <p>The member information.</p>
      */
     @NameInMap("Account")
     public CreateResourceAccountResponseBodyAccount account;
@@ -51,7 +51,7 @@ public class CreateResourceAccountResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The Alibaba Cloud account ID of the member.</p>
+         * <p>The name of the account.</p>
          * 
          * <strong>example:</strong>
          * <p>alice@rd-3g****.aliyunid.com</p>
@@ -78,10 +78,10 @@ public class CreateResourceAccountResponseBody extends TeaModel {
         public String folderId;
 
         /**
-         * <p>The way in which the member joins the resource directory. Valid values:</p>
+         * <p>The method used by the member to join the resource directory. Valid values:</p>
          * <ul>
-         * <li>invited: The member is invited to join the resource directory.</li>
-         * <li>created: The member is directly created in the resource directory.</li>
+         * <li>invited: invited.</li>
+         * <li>created: created.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -91,7 +91,7 @@ public class CreateResourceAccountResponseBody extends TeaModel {
         public String joinMethod;
 
         /**
-         * <p>The time when the member joined the resource directory. The time is displayed in UTC.</p>
+         * <p>The time when the member joined the resource directory (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-31T03:37:39.456Z</p>
@@ -100,7 +100,7 @@ public class CreateResourceAccountResponseBody extends TeaModel {
         public String joinTime;
 
         /**
-         * <p>The time when the member was modified. The time is displayed in UTC.</p>
+         * <p>The time when the member was last modified (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-31T03:37:39.456Z</p>
@@ -118,7 +118,7 @@ public class CreateResourceAccountResponseBody extends TeaModel {
         public String resourceDirectoryId;
 
         /**
-         * <p>The status of the member. The value CreateSuccess indicates that the member is created.</p>
+         * <p>The join status of the member. The value CreateSuccess indicates that the member is created.</p>
          * 
          * <strong>example:</strong>
          * <p>CreateSuccess</p>
@@ -127,7 +127,7 @@ public class CreateResourceAccountResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The type of the member. The value ResourceAccount indicates that the member is a resource account.</p>
+         * <p>The type of the member. The value ResourceAccount indicates a resource account.</p>
          * 
          * <strong>example:</strong>
          * <p>ResourceAccount</p>

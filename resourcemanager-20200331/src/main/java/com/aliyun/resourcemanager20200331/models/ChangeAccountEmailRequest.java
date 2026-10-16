@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeAccountEmailRequest extends TeaModel {
     /**
-     * <p>The Alibaba Cloud account ID of the member.</p>
+     * <p>The member account ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class ChangeAccountEmailRequest extends TeaModel {
     public String accountId;
 
     /**
-     * <p>The email address to be bound to the member.</p>
+     * <p>The email address of the member account.</p>
      * <blockquote>
-     * <p> The system automatically sends a verification email to the email address. After the verification is passed, the email address takes effect, and the system changes both the logon email address and secure email address of the member.</p>
+     * <p>The system automatically sends a verification email to the specified email address. The modification takes effect only after the verification is complete. After the verification is complete, the system synchronously updates the email address and security email address of the account.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

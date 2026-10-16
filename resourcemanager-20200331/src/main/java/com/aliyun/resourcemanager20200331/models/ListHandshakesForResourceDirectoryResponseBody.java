@@ -8,7 +8,7 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
     public ListHandshakesForResourceDirectoryResponseBodyHandshakes handshakes;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -26,7 +26,7 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>
@@ -35,7 +35,7 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

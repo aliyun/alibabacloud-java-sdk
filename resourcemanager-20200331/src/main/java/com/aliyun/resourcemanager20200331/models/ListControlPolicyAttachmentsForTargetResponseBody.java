@@ -8,7 +8,7 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
     public ListControlPolicyAttachmentsForTargetResponseBodyControlPolicyAttachments controlPolicyAttachments;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C276B600-7B7A-49E8-938C-E16CFA955A82</p>

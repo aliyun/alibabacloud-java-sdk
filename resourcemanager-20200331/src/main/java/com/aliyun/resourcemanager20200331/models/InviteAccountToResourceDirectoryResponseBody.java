@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
     /**
-     * <p>The information of the invitation.</p>
+     * <p>The invitation information.</p>
      */
     @NameInMap("Handshake")
     public InviteAccountToResourceDirectoryResponseBodyHandshake handshake;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>
@@ -42,7 +42,7 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
 
     public static class InviteAccountToResourceDirectoryResponseBodyHandshake extends TeaModel {
         /**
-         * <p>The time when the invitation was created. The time is displayed in UTC.</p>
+         * <p>The creation time of the invitation (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2018-08-10T09:55:41Z</p>
@@ -51,7 +51,7 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The time when the invitation expires. The time is displayed in UTC.</p>
+         * <p>The expiration time of the invitation (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2018-08-24T09:55:41Z</p>
@@ -87,7 +87,7 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
         public String masterAccountName;
 
         /**
-         * <p>The time when the invitation was modified. The time is displayed in UTC.</p>
+         * <p>The modification time of the invitation (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2018-08-10T09:55:41Z</p>
@@ -96,10 +96,10 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>The comment on the invitation.</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
-         * <p>Welcome</p>
+         * <p>Welcome to join</p>
          */
         @NameInMap("Note")
         public String note;
@@ -114,13 +114,13 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
         public String resourceDirectoryId;
 
         /**
-         * <p>The status of the invitation.</p>
+         * <p>The status of the invitation. Valid values:</p>
          * <ul>
-         * <li>Pending: The invitation is waiting for confirmation.</li>
-         * <li>Accepted: The invitation is accepted.</li>
-         * <li>Cancelled: The invitation is canceled.</li>
-         * <li>Declined: The invitation is rejected.</li>
-         * <li>Expired: The invitation expires.</li>
+         * <li>Pending: Waiting for confirmation.</li>
+         * <li>Accepted: Accepted.</li>
+         * <li>Cancelled: Canceled.</li>
+         * <li>Declined: Rejected.</li>
+         * <li>Expired: Expired.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID or logon email address of the invited account.</p>
+         * <p>The ID or logon email address of the account that is invited.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
@@ -141,8 +141,8 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
         /**
          * <p>The type of the invited account. Valid values:</p>
          * <ul>
-         * <li>Account: indicates the ID of the account.</li>
-         * <li>Email: indicates the logon email address of the account.</li>
+         * <li>Account: account ID.</li>
+         * <li>Email: logon email address of the account.</li>
          * </ul>
          * 
          * <strong>example:</strong>

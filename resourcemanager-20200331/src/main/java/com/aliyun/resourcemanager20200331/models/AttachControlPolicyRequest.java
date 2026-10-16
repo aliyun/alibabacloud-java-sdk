@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachControlPolicyRequest extends TeaModel {
     /**
-     * <p>The ID of the access control policy.</p>
+     * <p>The ID of the control policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,11 +15,11 @@ public class AttachControlPolicyRequest extends TeaModel {
     public String policyId;
 
     /**
-     * <p>The ID of the object to which you want to attach the access control policy. Access control policies can be attached to the following objects:</p>
+     * <p>The target node. Valid values:</p>
      * <ul>
-     * <li>Root folder</li>
-     * <li>Subfolders of the Root folder</li>
-     * <li>Members</li>
+     * <li>Root ID: attaches the control policy to the Root resource folder.</li>
+     * <li>Resource folder ID: attaches the control policy to a resource folder.</li>
+     * <li>Member ID: attaches the control policy to a member.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

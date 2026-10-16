@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeregisterDelegatedAdministratorResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DF5D5C52-7BD0-40E7-94C6-23A1505038A2</p>

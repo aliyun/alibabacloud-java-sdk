@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class AttachPolicyRequest extends TeaModel {
     /**
-     * <p>The name of the permission policy.</p>
-     * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p>
+     * <p>Policy Name of the access policy.</p>
+     * <p>Policy Name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,10 +16,10 @@ public class AttachPolicyRequest extends TeaModel {
     public String policyName;
 
     /**
-     * <p>The type of the permission policy. Valid values:</p>
+     * <p>The type of the access policy. Valid values:</p>
      * <ul>
-     * <li>Custom</li>
-     * <li>System</li>
+     * <li>Custom: custom access policy.</li>
+     * <li>System: system access policy.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -30,14 +30,14 @@ public class AttachPolicyRequest extends TeaModel {
     public String policyType;
 
     /**
-     * <p>The name of the object to which you want to attach the permission policy.</p>
+     * <p>The name of the authorization object. The format varies based on the object type:</p>
      * <ul>
-     * <li>If you want to attach the permission policy to a RAM user, specify the name in the @.onaliyun.com format. indicates the name of the RAM user, and indicates the alias of the Alibaba Cloud account to which the RAM user belongs.</li>
-     * <li>If you want to attach the permission policy to a RAM user group, specify the name in the @group..onaliyun.com format. indicates the name of the RAM user group, and indicates the alias of the Alibaba Cloud account to which the RAM user group belongs.</li>
-     * <li>If you want to attach the permission policy to a RAM role, specify the name in the @role..onaliyunservice.com format. indicates the name of the RAM role, and indicates the alias of the Alibaba Cloud account to which the RAM role belongs.</li>
+     * <li>Resource Access Management (RAM) user: <UserName>@<AccountAlias>.onaliyun.com, where <UserName> is the RAM username and <AccountAlias> is the account alias.</li>
+     * <li>RAM user group: <GroupName>@group.<AccountAlias>.onaliyun.com, where <GroupName> is the RAM user group name and <AccountAlias> is the account alias.</li>
+     * <li>RAM role: <RoleName>@role.<AccountAlias>.onaliyunservice.com, where <RoleName> is the RAM role name and <AccountAlias> is the account alias.</li>
      * </ul>
      * <blockquote>
-     * <p> The alias of an Alibaba Cloud account is a part of the default domain name. You can call the <a href="https://help.aliyun.com/document_detail/186720.html">GetDefaultDomain</a> operation to obtain the alias of an Alibaba Cloud account.</p>
+     * <p>The account alias is part of the default domain name. Invoke <a href="https://help.aliyun.com/document_detail/186720.html">GetDefaultDomain</a> to obtain the account alias.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -48,11 +48,11 @@ public class AttachPolicyRequest extends TeaModel {
     public String principalName;
 
     /**
-     * <p>The type of the object to which you want to attach the permission policy. Valid values:</p>
+     * <p>The authorization object type. Valid values:</p>
      * <ul>
-     * <li>IMSUser: RAM user</li>
-     * <li>IMSGroup: RAM user group</li>
-     * <li>ServiceRole: RAM role</li>
+     * <li>IMSUser: Resource Access Management (RAM) user.</li>
+     * <li>IMSGroup: RAM user group.</li>
+     * <li>ServiceRole: RAM role.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -63,10 +63,10 @@ public class AttachPolicyRequest extends TeaModel {
     public String principalType;
 
     /**
-     * <p>The effective scope of the permission policy. Valid values:</p>
+     * <p>The authorization scope. Valid values:</p>
      * <ul>
-     * <li>ID of a resource group: indicates that the permission policy takes effect for the resources in the resource group.</li>
-     * <li>ID of the Alibaba Cloud account to which the authorized object belongs: indicates that the permission policy takes effect for the resources within the Alibaba Cloud account.</li>
+     * <li>Resource group ID: The permissions take effect within the specified resource group.</li>
+     * <li>Alibaba Cloud account ID: The ID of the Alibaba Cloud account to which the principal belongs. The permissions take effect within the Alibaba Cloud account.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

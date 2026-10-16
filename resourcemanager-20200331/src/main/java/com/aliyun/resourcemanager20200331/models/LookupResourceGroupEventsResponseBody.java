@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class LookupResourceGroupEventsResponseBody extends TeaModel {
     /**
-     * <p>The queried events.</p>
+     * <p>The list of events.</p>
      */
     @NameInMap("Events")
     public java.util.List<LookupResourceGroupEventsResponseBodyEvents> events;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <p>The pagination token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>TGlzdFJlc291cm****</p>
@@ -143,7 +143,7 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
 
     public static class LookupResourceGroupEventsResponseBodyEvents extends TeaModel {
         /**
-         * <p>The type of the resource change event.</p>
+         * <p>The change type of the event.</p>
          * 
          * <strong>example:</strong>
          * <p>Add</p>
@@ -152,7 +152,7 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
         public String changeType;
 
         /**
-         * <p>The time when the event was triggered.</p>
+         * <p>The event time in RFC 3339 UTC format, indicated by Z for UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-04T18:35:17Z</p>
@@ -198,7 +198,7 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
 
         /**
          * <p>The resource type.</p>
-         * <p>You can obtain the resource type from the <strong>Resource type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+         * <p>You can obtain the value from the <strong>Resource Type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>instance</p>
@@ -207,8 +207,8 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The service code.</p>
-         * <p>You can obtain the code from the <strong>Service code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+         * <p>The cloud service code.</p>
+         * <p>You can obtain the value from the <strong>Cloud Service Code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>
@@ -223,7 +223,7 @@ public class LookupResourceGroupEventsResponseBody extends TeaModel {
         public LookupResourceGroupEventsResponseBodyEventsSourceResourceGroupInfo sourceResourceGroupInfo;
 
         /**
-         * <p>The destination resource group.</p>
+         * <p>The target resource group.</p>
          */
         @NameInMap("TargetResourceGroupInfo")
         public LookupResourceGroupEventsResponseBodyEventsTargetResourceGroupInfo targetResourceGroupInfo;

@@ -8,7 +8,7 @@ public class ListControlPoliciesResponseBody extends TeaModel {
     public ListControlPoliciesResponseBodyControlPolicies controlPolicies;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class ListControlPoliciesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -26,7 +26,7 @@ public class ListControlPoliciesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9424A34C-3471-45AD-B6AB-924BBDFE42F9</p>
@@ -35,7 +35,7 @@ public class ListControlPoliciesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of access control policies.</p>
+     * <p>The total number of control policies.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

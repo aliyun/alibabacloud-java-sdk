@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListHandshakesForResourceDirectoryRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
-     * <p>Pages start from page 1. Default value: 1.</p>
+     * <p>The page number.</p>
+     * <p>Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -15,7 +15,7 @@ public class ListHandshakesForResourceDirectoryRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <p>Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>

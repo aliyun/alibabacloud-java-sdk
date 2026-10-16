@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class EnableControlPolicyResponseBody extends TeaModel {
     /**
-     * <p>The status of the Control Policy feature. Valid values:</p>
+     * <p>The status of the control policy feature. Valid values:</p>
      * <ul>
-     * <li>Enabled: The Control Policy feature is enabled.</li>
-     * <li>PendingEnable: The Control Policy feature is being enabled.</li>
-     * <li>Disabled: The Control Policy feature is disabled.</li>
-     * <li>PendingDisable: The Control Policy feature is being disabled.</li>
+     * <li>Enabled: Enabled.</li>
+     * <li>PendingEnable: Being enabled.</li>
+     * <li>Disabled: Disabled.</li>
+     * <li>PendingDisable: Being disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +20,7 @@ public class EnableControlPolicyResponseBody extends TeaModel {
     public String enablementStatus;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8CE7BD95-EFFA-4911-A1E0-BD4412697FEB</p>

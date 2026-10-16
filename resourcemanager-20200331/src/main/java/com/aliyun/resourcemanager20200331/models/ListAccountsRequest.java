@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListAccountsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return the information of tags. Valid values:</p>
+     * <p>Specifies whether to return tag information. Valid values:</p>
      * <ul>
-     * <li>false (default value)</li>
-     * <li>true</li>
+     * <li>false (default): does not return tag information.</li>
+     * <li>true: returns tag information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,8 +18,8 @@ public class ListAccountsRequest extends TeaModel {
     public Boolean includeTags;
 
     /**
-     * <p>The number of the page to return.</p>
-     * <p>Pages start from page 1. Default value: 1.</p>
+     * <p>The page number.</p>
+     * <p>Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -28,7 +28,7 @@ public class ListAccountsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <p>Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class ListAccountsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The tag key and value.</p>
+     * <p>The tags used to filter member accounts.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListAccountsRequestTag> tag;
@@ -82,7 +82,7 @@ public class ListAccountsRequest extends TeaModel {
 
     public static class ListAccountsRequestTag extends TeaModel {
         /**
-         * <p>A tag key.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>tag_key</p>
@@ -91,7 +91,7 @@ public class ListAccountsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>A tag value.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>tag_value</p>

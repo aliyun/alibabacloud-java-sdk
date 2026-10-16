@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateAutoGroupingConfigRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the Transfer Existing Associated Resources feature. Valid values:</p>
+     * <p>Specifies whether to enable existing associated resources to follow the group transfer task. Valid values:</p>
      * <ul>
-     * <li>false</li>
-     * <li>true</li>
+     * <li>false: Existing associated resources do not follow the group transfer task.</li>
+     * <li>true: Existing associated resources follow the group transfer task.</li>
      * </ul>
      * 
      * <strong>example:</strong>

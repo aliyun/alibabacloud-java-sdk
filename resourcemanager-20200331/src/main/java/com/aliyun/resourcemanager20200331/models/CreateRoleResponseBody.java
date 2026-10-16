@@ -14,7 +14,7 @@ public class CreateRoleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the role.</p>
+     * <p>The role information.</p>
      */
     @NameInMap("Role")
     public CreateRoleResponseBodyRole role;
@@ -42,7 +42,7 @@ public class CreateRoleResponseBody extends TeaModel {
 
     public static class CreateRoleResponseBodyRole extends TeaModel {
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the role.</p>
+         * <p>The resource descriptor of the role.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::123456789012****:role/ECSAdmin</p>
@@ -51,7 +51,7 @@ public class CreateRoleResponseBody extends TeaModel {
         public String arn;
 
         /**
-         * <p>The document of the policy in which the entity that can assume the role is specified.</p>
+         * <p>The content of the access policy for assuming the role.</p>
          * 
          * <strong>example:</strong>
          * <p>{ \&quot;Statement\&quot;: [ { \&quot;Action\&quot;: \&quot;sts:AssumeRole\&quot;, \&quot;Effect\&quot;: \&quot;Allow\&quot;, \&quot;Principal\&quot;: { \&quot;RAM\&quot;: \&quot;acs:ram::12345678901234****:root\&quot; } } ], \&quot;Version\&quot;: \&quot;1\&quot; }</p>
@@ -60,7 +60,7 @@ public class CreateRoleResponseBody extends TeaModel {
         public String assumeRolePolicyDocument;
 
         /**
-         * <p>The time when the role was created.</p>
+         * <p>The time when the role was created. The time is in RFC 3339 UTC format, indicated by Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2015-01-23T12:33:18Z</p>
@@ -72,7 +72,7 @@ public class CreateRoleResponseBody extends TeaModel {
          * <p>The description of the role.</p>
          * 
          * <strong>example:</strong>
-         * <p>ECS administrator</p>
+         * <p>ECS management role</p>
          */
         @NameInMap("Description")
         public String description;
@@ -105,7 +105,7 @@ public class CreateRoleResponseBody extends TeaModel {
         public String roleName;
 
         /**
-         * <p>The name of the role after authorization.</p>
+         * <p>The name of the authorized role.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:ECSAdmin@role.123456.onaliyunservice.com">ECSAdmin@role.123456.onaliyunservice.com</a></p>

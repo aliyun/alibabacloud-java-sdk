@@ -14,7 +14,7 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the role.</p>
+     * <p>The role information.</p>
      */
     @NameInMap("Role")
     public CreateServiceLinkedRoleResponseBodyRole role;
@@ -42,7 +42,7 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
 
     public static class CreateServiceLinkedRoleResponseBodyRole extends TeaModel {
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the role.</p>
+         * <p>The resource descriptor of the role.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::177242285274****:role/aliyunserviceroleforpolardb</p>
@@ -51,7 +51,7 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
         public String arn;
 
         /**
-         * <p>The document of the trust policy for the role.</p>
+         * <p>The trust policy of the role.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;Statement\&quot;:[{\&quot;Action\&quot;:\&quot;sts:AssumeRole\&quot;,\&quot;Effect\&quot;:\&quot;Allow\&quot;,\&quot;Principal\&quot;:{\&quot;Service\&quot;:[\&quot;polardb.aliyuncs.com\&quot;]}}],\&quot;Version\&quot;:\&quot;1\&quot;}</p>
@@ -60,7 +60,7 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
         public String assumeRolePolicyDocument;
 
         /**
-         * <p>The time when the role was created. The time is displayed in UTC.</p>
+         * <p>The time when the role was created (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-06-30T08:14:16Z</p>
@@ -80,8 +80,8 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the role is a service-linked role. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The role is a service-linked role.</li>
+         * <li>false: The role is not a service-linked role.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -91,7 +91,7 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
         public Boolean isServiceLinkedRole;
 
         /**
-         * <p>The ID of the role.</p>
+         * <p>The role ID.</p>
          * 
          * <strong>example:</strong>
          * <p>32833240981067****</p>
@@ -100,7 +100,7 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
         public String roleId;
 
         /**
-         * <p>The name of the role.</p>
+         * <p>The role name.</p>
          * 
          * <strong>example:</strong>
          * <p>AliyunServiceRoleForPolarDB</p>
@@ -109,7 +109,7 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
         public String roleName;
 
         /**
-         * <p>The role name that uses a domain name as the suffix.</p>
+         * <p>The role name with the domain name suffix.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:AliyunServiceRoleForPolarDB@role.test.onaliyunservice.com">AliyunServiceRoleForPolarDB@role.test.onaliyunservice.com</a></p>

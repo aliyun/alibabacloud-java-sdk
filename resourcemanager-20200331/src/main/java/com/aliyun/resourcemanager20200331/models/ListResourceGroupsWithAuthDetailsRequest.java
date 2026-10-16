@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListResourceGroupsWithAuthDetailsRequest extends TeaModel {
     /**
-     * <p>The display name of the resource group. This parameter specifies a filter condition for the query. Fuzzy search is supported.</p>
-     * <p>The display name can be a maximum of 50 characters in length.</p>
+     * <p>The display name of the resource group. This parameter is used as a filter condition. Fuzzy match is supported.</p>
+     * <p>The name can be up to 50 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>TestRG-BVT1</p>
@@ -15,14 +15,16 @@ public class ListResourceGroupsWithAuthDetailsRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>Specifies whether to return the information of tags. Valid values:</p>
+     * <p>Specifies whether to return tag information. Valid values:</p>
      * <ul>
-     * <li>false (default)</li>
-     * <li>true</li>
-     * </ul>
+     * <li><p>false (default): Does not return tag information.</p>
+     * </li>
+     * <li><p>true: Returns tag information.</p>
      * <blockquote>
-     * <p> If you set a tag filter condition, the tag information is returned regardless of the <code>IncludeTags</code> value.</p>
+     * <p>If you specify tag-based filter conditions, tag information is always returned regardless of the value of <code>IncludeTags</code>.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -31,8 +33,8 @@ public class ListResourceGroupsWithAuthDetailsRequest extends TeaModel {
     public Boolean includeTags;
 
     /**
-     * <p>The identifier of the resource group. This parameter specifies a filter condition for the query. Fuzzy search is supported.</p>
-     * <p>The identifier can be a maximum of 50 characters in length and can contain letters, digits, and hyphens (-).</p>
+     * <p>The unique identifier of the resource group. This parameter is used as a filter condition. Fuzzy match is supported.</p>
+     * <p>The identifier can be up to 50 characters in length and can contain letters, digits, and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>prod-rg</p>
@@ -41,7 +43,7 @@ public class ListResourceGroupsWithAuthDetailsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,7 +52,7 @@ public class ListResourceGroupsWithAuthDetailsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -59,13 +61,13 @@ public class ListResourceGroupsWithAuthDetailsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The IDs of the resource groups that you want to query.</p>
+     * <p>The list of resource group IDs.</p>
      */
     @NameInMap("ResourceGroupIds")
     public java.util.List<String> resourceGroupIds;
 
     /**
-     * <p>The ID of the region where the resource resides.</p>
+     * <p>The region ID of the resource.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shenzhen</p>
@@ -74,17 +76,17 @@ public class ListResourceGroupsWithAuthDetailsRequest extends TeaModel {
     public String resourceRegionId;
 
     /**
-     * <p>The resource types.</p>
+     * <p>The list of resource types.</p>
      */
     @NameInMap("ResourceTypes")
     public java.util.List<ListResourceGroupsWithAuthDetailsRequestResourceTypes> resourceTypes;
 
     /**
-     * <p>The status of the resource group. This parameter specifies a filter condition for the query. Valid values:</p>
+     * <p>The status of the resource group. This parameter is used as a filter condition. Valid values:</p>
      * <ul>
-     * <li>Creating: The resource group is being created.</li>
-     * <li>OK: The resource group is created.</li>
-     * <li>PendingDelete: The resource group is waiting to be deleted.</li>
+     * <li>Creating: Being created.</li>
+     * <li>OK: Created.</li>
+     * <li>PendingDelete: Pending deletion.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -187,7 +189,7 @@ public class ListResourceGroupsWithAuthDetailsRequest extends TeaModel {
     public static class ListResourceGroupsWithAuthDetailsRequestResourceTypes extends TeaModel {
         /**
          * <p>The resource type.</p>
-         * <p>You can obtain the resource type from the <strong>Resource type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+         * <p>You can obtain the resource type from the <strong>Resource Type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>instance</p>
@@ -196,8 +198,8 @@ public class ListResourceGroupsWithAuthDetailsRequest extends TeaModel {
         public String resourceTypeCode;
 
         /**
-         * <p>The service code.</p>
-         * <p>You can obtain the code from the <strong>Service code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+         * <p>The cloud service code.</p>
+         * <p>You can obtain the cloud service code from the <strong>Cloud Service Code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>

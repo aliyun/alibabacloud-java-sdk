@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetRoleRequest extends TeaModel {
     /**
-     * <p>The language in which you want to return the description of the role. Valid values:</p>
+     * <p>The language type. The role description is returned in the specified language. Valid values:</p>
      * <ul>
-     * <li>en: English</li>
-     * <li>zh-CN: Chinese</li>
-     * <li>ja: Japanese</li>
+     * <li>en: English.</li>
+     * <li>zh-CN: Chinese.</li>
+     * <li>ja: Japanese.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,8 +19,8 @@ public class GetRoleRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The name of the role.</p>
-     * <p>The name must be 1 to 64 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</p>
+     * <p>The role name.</p>
+     * <p>The name must be 1 to 64 characters in length and can contain letters, digits, periods (.), and hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

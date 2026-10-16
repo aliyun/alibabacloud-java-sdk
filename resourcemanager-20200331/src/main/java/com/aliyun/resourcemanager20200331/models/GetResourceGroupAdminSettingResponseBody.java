@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetResourceGroupAdminSettingResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether enable the Use Creator as Administrator feature.</p>
+     * <p>Indicates whether the resource group creator is set as the resource group administrator.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

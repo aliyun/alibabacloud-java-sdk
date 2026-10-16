@@ -9,7 +9,7 @@ public class CancelPromoteResourceAccountRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>06950264-3f0d-4ca9-82dd-6ee7a3d33d6b</p>
+     * <p>06950264-3f0d-4ca9-82dd-6ee7a3d3****</p>
      */
     @NameInMap("RecordId")
     public String recordId;

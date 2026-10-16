@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPolicyResponseBody extends TeaModel {
     /**
-     * <p>The information about the permission policy.</p>
+     * <p>The access policy information.</p>
      */
     @NameInMap("Policy")
     public GetPolicyResponseBodyPolicy policy;
@@ -42,7 +42,7 @@ public class GetPolicyResponseBody extends TeaModel {
 
     public static class GetPolicyResponseBodyPolicy extends TeaModel {
         /**
-         * <p>The number of references to the permission policy.</p>
+         * <p>The number of references.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -51,7 +51,7 @@ public class GetPolicyResponseBody extends TeaModel {
         public Integer attachmentCount;
 
         /**
-         * <p>The time when the permission policy was created.</p>
+         * <p>The time when the access policy was created. The time is in RFC 3339 UTC format, indicated by Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2015-01-23T12:33:18Z</p>
@@ -60,7 +60,7 @@ public class GetPolicyResponseBody extends TeaModel {
         public String createDate;
 
         /**
-         * <p>The default version of the permission policy.</p>
+         * <p>The default version of the access policy.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -69,16 +69,16 @@ public class GetPolicyResponseBody extends TeaModel {
         public String defaultVersion;
 
         /**
-         * <p>The description of the permission policy.</p>
+         * <p>The description of the access policy.</p>
          * 
          * <strong>example:</strong>
-         * <p>OSS administrator</p>
+         * <p>OSS administrator permissions</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The document of the permission policy.</p>
+         * <p>The content of the access policy.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;Statement&quot;: [{ &quot;Action&quot;: [&quot;oss:<em>&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: [&quot;acs:oss:</em>:<em>:</em>&quot;]}], &quot;Version&quot;: &quot;1&quot;}</p>
@@ -87,7 +87,7 @@ public class GetPolicyResponseBody extends TeaModel {
         public String policyDocument;
 
         /**
-         * <p>The name of the permission policy.</p>
+         * <p>The Policy Name of the access policy.</p>
          * 
          * <strong>example:</strong>
          * <p>OSS-Administrator</p>
@@ -96,10 +96,10 @@ public class GetPolicyResponseBody extends TeaModel {
         public String policyName;
 
         /**
-         * <p>The type of the permission policy. Valid values:</p>
+         * <p>The type of the access policy. Valid values:</p>
          * <ul>
-         * <li>Custom</li>
-         * <li>System</li>
+         * <li>Custom: custom policy.</li>
+         * <li>System: system policy.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -109,7 +109,7 @@ public class GetPolicyResponseBody extends TeaModel {
         public String policyType;
 
         /**
-         * <p>The time when the permission policy was updated.</p>
+         * <p>The time when the access policy was last updated. The time is in RFC 3339 UTC format, indicated by Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2016-01-23T12:33:18Z</p>

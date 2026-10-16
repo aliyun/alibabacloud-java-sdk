@@ -14,10 +14,10 @@ public class SetMemberDeletionPermissionResponseBody extends TeaModel {
     public String managementAccountId;
 
     /**
-     * <p>The status of the member deletion feature. Valid values:</p>
+     * <p>The status of the member deletion permission. Valid values:</p>
      * <ul>
-     * <li>Enabled: The feature is enabled.</li>
-     * <li>Disabled: The feature is disabled.</li>
+     * <li>Enabled: The member deletion permission is enabled.</li>
+     * <li>Disabled: The member deletion permission is disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class SetMemberDeletionPermissionResponseBody extends TeaModel {
     public String memberDeletionStatus;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C55A4CAA-9039-1DDF-91CE-FCC134513D29</p>
@@ -36,7 +36,7 @@ public class SetMemberDeletionPermissionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the resource directory.</p>
+     * <p>The resource directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rd-3G****</p>

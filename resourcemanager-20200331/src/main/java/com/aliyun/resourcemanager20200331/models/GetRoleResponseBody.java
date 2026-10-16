@@ -14,7 +14,7 @@ public class GetRoleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the role.</p>
+     * <p>The role information.</p>
      */
     @NameInMap("Role")
     public GetRoleResponseBodyRole role;
@@ -42,7 +42,7 @@ public class GetRoleResponseBody extends TeaModel {
 
     public static class GetRoleResponseBodyRoleLatestDeletionTask extends TeaModel {
         /**
-         * <p>The time when the deletion task was created.</p>
+         * <p>The time when the deletion task was created. The time is in RFC 3339 UTC format, indicated by Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-10-23T12:33:18Z</p>
@@ -84,7 +84,7 @@ public class GetRoleResponseBody extends TeaModel {
 
     public static class GetRoleResponseBodyRole extends TeaModel {
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the role.</p>
+         * <p>The resource descriptor of the role.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::123456789012****:role/ECSAdmin</p>
@@ -93,7 +93,7 @@ public class GetRoleResponseBody extends TeaModel {
         public String arn;
 
         /**
-         * <p>The document of the policy in which the identity that can assume the role is specified.</p>
+         * <p>The content of the access policy that specifies one or more entities entrusted to assume the role.</p>
          * 
          * <strong>example:</strong>
          * <p>{ \&quot;Statement\&quot;: [ { \&quot;Action\&quot;: \&quot;sts:AssumeRole\&quot;, \&quot;Effect\&quot;: \&quot;Allow\&quot;, \&quot;Principal\&quot;: { \&quot;RAM\&quot;: \&quot;acs:ram::12345678901234****:root\&quot; } } ], \&quot;Version\&quot;: \&quot;1\&quot; }</p>
@@ -102,7 +102,7 @@ public class GetRoleResponseBody extends TeaModel {
         public String assumeRolePolicyDocument;
 
         /**
-         * <p>The time when the role was created.</p>
+         * <p>The time when the role was created. The time is in RFC 3339 UTC format, indicated by Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2015-01-23T12:33:18Z</p>
@@ -114,7 +114,7 @@ public class GetRoleResponseBody extends TeaModel {
          * <p>The description of the role.</p>
          * 
          * <strong>example:</strong>
-         * <p>ECS administrator</p>
+         * <p>ECS management role</p>
          */
         @NameInMap("Description")
         public String description;
@@ -129,7 +129,7 @@ public class GetRoleResponseBody extends TeaModel {
         public Boolean isServiceLinkedRole;
 
         /**
-         * <p>The information of the most recent deletion task.</p>
+         * <p>The information about the most recent deletion task.</p>
          */
         @NameInMap("LatestDeletionTask")
         public GetRoleResponseBodyRoleLatestDeletionTask latestDeletionTask;
@@ -162,7 +162,7 @@ public class GetRoleResponseBody extends TeaModel {
         public String roleName;
 
         /**
-         * <p>The name of the role after authorization.</p>
+         * <p>The name of the authorized role.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:ECSAdmin@role.123456.onaliyunservice.com">ECSAdmin@role.123456.onaliyunservice.com</a></p>
@@ -171,7 +171,7 @@ public class GetRoleResponseBody extends TeaModel {
         public String rolePrincipalName;
 
         /**
-         * <p>The time when the role was updated.</p>
+         * <p>The time when the role was last updated. The time is in RFC 3339 UTC format, indicated by Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2016-01-23T12:33:18Z</p>

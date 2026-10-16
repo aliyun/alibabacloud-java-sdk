@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
     /**
-     * <p>The result of the deletion check for the member.</p>
+     * <p>The result of the member deletion check.</p>
      */
     @NameInMap("AccountDeletionCheckResultInfo")
     public GetAccountDeletionCheckResultResponseBodyAccountDeletionCheckResultInfo accountDeletionCheckResultInfo;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>54AC391D-4F7F-5F08-B8D3-0AECDE6EC5BD</p>
@@ -51,10 +51,10 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
         public String checkId;
 
         /**
-         * <p>The name of the cloud service to which the check item belongs.</p>
+         * <p>The service name of the cloud service to which the check item belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>Container Service for Kubernetes</p>
+         * <p>Container Service</p>
          */
         @NameInMap("CheckName")
         public String checkName;
@@ -63,7 +63,7 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
          * <p>The description of the check item.</p>
          * 
          * <strong>example:</strong>
-         * <p>An instance of a cloud service is running within the member. Submit a ticket to contact Alibaba Cloud technical support.</p>
+         * <p>Cloud service instances are running. Submit a ticket to contact customer service for assistance</p>
          */
         @NameInMap("Description")
         public String description;
@@ -110,7 +110,7 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
         public String checkId;
 
         /**
-         * <p>The name of the cloud service to which the check item belongs.</p>
+         * <p>The service name of the cloud service to which the check item belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>Enterprise finance</p>
@@ -160,19 +160,19 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
 
     public static class GetAccountDeletionCheckResultResponseBodyAccountDeletionCheckResultInfo extends TeaModel {
         /**
-         * <p>The check items that you can choose to ignore for the member deletion.</p>
+         * <p>The check items that you can choose to abandon and proceed with the member deletion.</p>
          * <blockquote>
-         * <p> This parameter may be returned if the value of AllowDelete is true.</p>
+         * <p>This parameter may be returned when AllowDelete is set to true.</p>
          * </blockquote>
          */
         @NameInMap("AbandonableChecks")
         public java.util.List<GetAccountDeletionCheckResultResponseBodyAccountDeletionCheckResultInfoAbandonableChecks> abandonableChecks;
 
         /**
-         * <p>Indicates whether the member can be deleted. Valid values:</p>
+         * <p>Indicates whether the member account can be deleted. Valid values:</p>
          * <ul>
-         * <li>true: The member can be deleted.</li>
-         * <li>false: The member cannot be deleted.</li>
+         * <li>true: The member account can be deleted.</li>
+         * <li>false: The member account cannot be deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -182,16 +182,16 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
         public String allowDelete;
 
         /**
-         * <p>The reasons why the member cannot be deleted.</p>
+         * <p>The reasons why the member account cannot be deleted.</p>
          * <blockquote>
-         * <p> This parameter is returned only if the value of AllowDelete is false.</p>
+         * <p>This parameter is returned only when AllowDelete is set to false.</p>
          * </blockquote>
          */
         @NameInMap("NotAllowReason")
         public java.util.List<GetAccountDeletionCheckResultResponseBodyAccountDeletionCheckResultInfoNotAllowReason> notAllowReason;
 
         /**
-         * <p>The status of the check. Valid values:</p>
+         * <p>The check status. Valid values:</p>
          * <ul>
          * <li>PreCheckComplete: The check is complete.</li>
          * <li>PreChecking: The check is in progress.</li>

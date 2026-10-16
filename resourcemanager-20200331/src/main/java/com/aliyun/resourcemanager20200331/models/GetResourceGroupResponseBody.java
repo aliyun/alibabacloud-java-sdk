@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetResourceGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2D69A58F-345C-4FDE-88E4-BF5189484043</p>
@@ -14,7 +14,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information of the resource group.</p>
+     * <p>The resource group information.</p>
      */
     @NameInMap("ResourceGroup")
     public GetResourceGroupResponseBodyResourceGroup resourceGroup;
@@ -140,7 +140,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
 
     public static class GetResourceGroupResponseBodyResourceGroup extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account to which the resource group belongs.</p>
+         * <p>The Alibaba Cloud account ID to which the resource group belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789****</p>
@@ -149,7 +149,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The time when the resource group was created. The time is displayed in UTC.</p>
+         * <p>The time when the resource group was created (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2015-01-23T12:33:18Z</p>
@@ -167,7 +167,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-9gLOoK****</p>
@@ -176,7 +176,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The identifier of the resource group.</p>
+         * <p>The unique identifier of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>my-project</p>

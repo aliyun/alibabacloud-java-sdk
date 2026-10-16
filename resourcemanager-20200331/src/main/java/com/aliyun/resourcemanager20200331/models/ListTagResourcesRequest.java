@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <p>Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -24,16 +24,19 @@ public class ListTagResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The resource ID.</p>
+     * <p>The resource group ID or resource directory member ID. This parameter is used as a filter condition.</p>
+     * <blockquote>
+     * <p>To query the tags that are attached to a resource directory member, you must specify both <code>ResourceId</code> and <code>ResourceType</code>, and set <code>ResourceType</code> to <code>Account</code>.</p>
+     * </blockquote>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the objects whose tags you want to query. This parameter specifies a filter condition for the query. Valid values:</p>
+     * <p>The resource type. This parameter is used as a filter condition. Valid values:</p>
      * <ul>
-     * <li>ResourceGroup: resource group. This is the default value.</li>
-     * <li>Account: member.</li>
+     * <li>ResourceGroup (default): queries the tags of a resource group.</li>
+     * <li>Account: queries the tags of a resource directory member.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +46,8 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag key and value.</p>
+     * <p>The tags. This parameter is used as a filter condition.</p>
+     * <p>You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -95,7 +99,7 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>A tag key.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>k1</p>
@@ -104,7 +108,7 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>A tag value.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>

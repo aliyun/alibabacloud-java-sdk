@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateRoleRequest extends TeaModel {
     /**
-     * <p>The document of the policy that specifies</p>
-     * <p>one or more trusted entities to assume the role. The trusted entities can be Alibaba Cloud accounts, Alibaba Cloud services, or identity providers (IdPs).</p>
+     * <p>The content of the access policy for assuming the role.</p>
+     * <p>Specifies one or more entities that are allowed to assume the role. The trusted entity can be an Alibaba Cloud account, an Alibaba Cloud service, or an identity provider.</p>
      * <blockquote>
-     * <p> RAM users cannot assume the RAM roles of trusted Alibaba Cloud services.</p>
+     * <p>A Resource Access Management (RAM) user cannot assume a RAM role whose trusted entity is an Alibaba Cloud service.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -23,7 +23,7 @@ public class CreateRoleRequest extends TeaModel {
      * <p>The description must be 1 to 1,024 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>ECS administrator</p>
+     * <p>ECS management role</p>
      */
     @NameInMap("Description")
     public String description;
@@ -31,7 +31,7 @@ public class CreateRoleRequest extends TeaModel {
     /**
      * <p>The maximum session duration of the role.</p>
      * <p>Valid values: 3600 to 43200. Unit: seconds. Default value: 3600.</p>
-     * <p>If you do not specify this parameter, the default value is used.</p>
+     * <p>If this parameter is left empty, the default value is used.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -41,7 +41,7 @@ public class CreateRoleRequest extends TeaModel {
 
     /**
      * <p>The name of the role.</p>
-     * <p>The name must be 1 to 64 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</p>
+     * <p>The name must be 1 to 64 characters in length and can contain letters, digits, periods (.), and hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the next query is required.</p>
+     * <p>Indicates whether the <code>NextToken</code> parameter is returned for the next query. Valid values:</p>
      * <ul>
-     * <li>If the value of this parameter is empty (<code>&quot;NextToken&quot;: &quot;&quot;</code>), all results are returned, and the next query is not required.</li>
-     * <li>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</li>
+     * <li>If <code>NextToken</code> is empty, which is displayed as <code>&quot;NextToken&quot;: &quot;&quot;</code>, no next query exists.</li>
+     * <li>If <code>NextToken</code> is returned with a value, the value is the token that is used to start the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8054B059-6B36-53BF-AA45-B8C9A0ED05AB</p>
@@ -63,7 +63,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
         /**
-         * <p>The ID of the resource group or member.</p>
+         * <p>The resource group ID or resource directory member ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekz6bre2uq****</p>
@@ -72,10 +72,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The type of the object whose tags are queried. Valid values:</p>
+         * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li>resourcegroup: resource group</li>
-         * <li>Account: member</li>
+         * <li>resourcegroup: resource group.</li>
+         * <li>Account: resource directory member.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class EnableResourceDirectoryRequest extends TeaModel {
     /**
-     * <p>The mode in which you enable a resource directory. Valid values:</p>
+     * <p>The method used to enable the resource directory. Valid values:</p>
      * <ul>
-     * <li>CurrentAccount: indicates that the current account is used to enable a resource directory.</li>
-     * <li>NewManagementAccount: indicates that a newly created account is used to enable a resource directory. If you select this mode, you must configure the <code>MAName</code>, <code>MASecureMobilePhone</code>, and <code>VerificationCode</code> parameters.</li>
+     * <li>CurrentAccount: enables the resource directory by using the current logon account.</li>
+     * <li>NewManagementAccount: enables the resource directory by creating a new management account. If you select this method, you must configure <code>MAName</code>, <code>MASecureMobilePhone</code>, and <code>VerificationCode</code>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,8 +19,8 @@ public class EnableResourceDirectoryRequest extends TeaModel {
     public String enableMode;
 
     /**
-     * <p>The name of the newly created account.</p>
-     * <p>Specify the name in the <code>&lt;Prefix&gt;@rdadmin.aliyunid.com</code> format. The prefix can contain letters, digits, and special characters but cannot contain consecutive special characters. The prefix must start with a letter or digit and end with a letter or digit. Valid special characters include underscores (_), periods (.), and hyphens (-). The prefix must be 2 to 50 characters in length.</p>
+     * <p>The name of the new management account.</p>
+     * <p>Format: <code>&lt;Prefix&gt;@rdadmin.aliyunid.com</code>. The prefix can contain letters, digits, and the special characters <code>_.-</code>. The prefix must start and end with a letter or digit, and cannot contain consecutive special characters. The prefix must be 2 to 50 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:user01@rdadmin.aliyunid.com">user01@rdadmin.aliyunid.com</a></p>
@@ -29,11 +29,16 @@ public class EnableResourceDirectoryRequest extends TeaModel {
     public String MAName;
 
     /**
-     * <p>The mobile phone number that is bound to the newly created account.</p>
-     * <p>If you leave this parameter empty, the mobile phone number that is bound to the current account is used. The mobile phone number you specify must be the same as the mobile phone number that you specify when you call the <a href="https://help.aliyun.com/document_detail/364248.html">SendVerificationCodeForEnableRD</a> operation to obtain a verification code.</p>
-     * <p>Specify the mobile phone number in the <code>&lt;Country code&gt;-&lt;Mobile phone number&gt;</code> format.</p>
+     * <p>The secure phone number of the new management account.</p>
+     * <p>If you leave this parameter empty, the secure phone number of the current logon account is used. The phone number must be the same as the one used to authenticate and obtain the verification code in <a href="https://help.aliyun.com/document_detail/364248.html">SendVerificationCodeForEnableRD</a>.</p>
+     * <p>Format: <code>&lt;Country code&gt;-&lt;Phone number&gt;</code>.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
      * <blockquote>
-     * <p> Mobile phone numbers in the <code>86-&lt;Mobile phone number&gt;</code> format in the Chinese mainland are not supported.</p>
+     * <p>Phone numbers from the Chinese mainland in the format <code>86-&lt;Phone number&gt;</code> are not supported.</p>
+     * </blockquote>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <blockquote>
+     * <p>Only phone numbers from the Chinese mainland in the format <code>86-&lt;Phone number&gt;</code> are supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,7 +49,7 @@ public class EnableResourceDirectoryRequest extends TeaModel {
 
     /**
      * <p>The verification code.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/364248.html">SendVerificationCodeForEnableRD</a> operation to obtain the verification code.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/364248.html">SendVerificationCodeForEnableRD</a> to obtain the verification code.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>

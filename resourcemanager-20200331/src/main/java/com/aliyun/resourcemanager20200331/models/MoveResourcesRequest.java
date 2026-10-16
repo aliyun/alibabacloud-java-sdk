@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MoveResourcesRequest extends TeaModel {
     /**
-     * <p>The ID of the resource group to which you want to move the resources.</p>
+     * <p>The ID of the destination resource group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class MoveResourcesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The resources that you want to move.</p>
+     * <p>The list of resources to move.</p>
      * <blockquote>
-     * <p> You can move a maximum of 10 resources at a time. If you want to move more than 10 resources, move them in batches.</p>
+     * <p>A maximum of 10 resources can be moved at a time. Move resources in batches if you have more than 10.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -56,28 +56,30 @@ public class MoveResourcesRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>vpc-bp1sig0mjktx5ewx1****</p>
+         * <p>i-23v38****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The type of the resource.</p>
+         * <p>The resource type.</p>
+         * <p>You can obtain the value from the <strong>Resource Type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>vpc</p>
+         * <p>instance</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
-         * <p>The ID of the Alibaba Cloud service to which the resource belongs.</p>
+         * <p>The cloud service code.</p>
+         * <p>You can obtain the value from the <strong>Cloud Service Code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>vpc</p>
+         * <p>ecs</p>
          */
         @NameInMap("Service")
         public String service;

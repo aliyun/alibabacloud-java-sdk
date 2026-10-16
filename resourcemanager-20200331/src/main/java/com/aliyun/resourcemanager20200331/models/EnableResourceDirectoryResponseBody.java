@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableResourceDirectoryResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EC2FE94D-A4A2-51A1-A493-5C273A36C46A</p>
@@ -14,7 +14,7 @@ public class EnableResourceDirectoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information of the resource directory.</p>
+     * <p>The resource directory information.</p>
      */
     @NameInMap("ResourceDirectory")
     public EnableResourceDirectoryResponseBodyResourceDirectory resourceDirectory;
@@ -42,7 +42,7 @@ public class EnableResourceDirectoryResponseBody extends TeaModel {
 
     public static class EnableResourceDirectoryResponseBodyResourceDirectory extends TeaModel {
         /**
-         * <p>The time when the resource directory was enabled.</p>
+         * <p>The time when the resource directory was enabled. The time is displayed in UTC in RFC 3339 format, indicated by Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-08T02:15:31.744Z</p>
@@ -78,7 +78,7 @@ public class EnableResourceDirectoryResponseBody extends TeaModel {
         public String resourceDirectoryId;
 
         /**
-         * <p>The ID of the Root folder.</p>
+         * <p>The ID of the root folder.</p>
          * 
          * <strong>example:</strong>
          * <p>r-G9****</p>

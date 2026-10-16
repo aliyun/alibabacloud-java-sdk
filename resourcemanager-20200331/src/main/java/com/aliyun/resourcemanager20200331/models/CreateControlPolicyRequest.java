@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateControlPolicyRequest extends TeaModel {
     /**
-     * <p>The description of the access control policy.</p>
-     * <p>The description must be 1 to 1,024 characters in length. The description can contain letters, digits, underscores (_), and hyphens (-) and must start with a letter.</p>
+     * <p>The description of the control policy.</p>
+     * <p>The description must be 1 to 1024 characters in length, must start with a letter, and can contain letters, digits, underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>ExampleControlPolicy</p>
@@ -15,8 +15,8 @@ public class CreateControlPolicyRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The effective scope of the access control policy.</p>
-     * <p>The value RAM indicates that the access control policy takes effect only for RAM users and RAM roles.</p>
+     * <p>The effective scope of the control policy.</p>
+     * <p>Valid values: RAM, which indicates that the control policy takes effect only for Resource Access Management (RAM) users or RAM roles.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,10 +26,10 @@ public class CreateControlPolicyRequest extends TeaModel {
     public String effectScope;
 
     /**
-     * <p>The document of the access control policy.</p>
-     * <p>The document can be a maximum of 4,096 characters in length.</p>
-     * <p>For more information about the languages of access control policies, see <a href="https://help.aliyun.com/document_detail/179096.html">Languages of access control policies</a>.</p>
-     * <p>For more information about the examples of access control policies, see <a href="https://help.aliyun.com/document_detail/181474.html">Examples of custom access control policies</a>.</p>
+     * <p>The content of the control policy.</p>
+     * <p>The maximum length is 4096 characters.</p>
+     * <p>For information about the control policy language, see <a href="https://help.aliyun.com/document_detail/179096.html">Control policy language</a>.</p>
+     * <p>For examples of control policies, see <a href="https://help.aliyun.com/document_detail/181474.html">Examples of custom control policies</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,8 +39,8 @@ public class CreateControlPolicyRequest extends TeaModel {
     public String policyDocument;
 
     /**
-     * <p>The name of the access control policy.</p>
-     * <p>The name must be 1 to 128 characters in length. The name can contain letters, digits, and hyphens (-) and must start with a letter.</p>
+     * <p>Policy Name of the control policy.</p>
+     * <p>Policy Name must be 1 to 128 characters in length, must start with a letter, and can contain letters, digits, and hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

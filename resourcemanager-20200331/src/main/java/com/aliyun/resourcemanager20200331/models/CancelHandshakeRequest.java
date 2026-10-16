@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelHandshakeRequest extends TeaModel {
     /**
-     * <p>The ID of the invitation.</p>
+     * <p>The handshake ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

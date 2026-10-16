@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteServiceLinkedRoleResponseBody extends TeaModel {
     /**
-     * <p>The ID of the deletion task.</p>
+     * <p>The deletion task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>task/acs-service-role/polardb.aliyuncs.com/AliyunServiceRoleForPolarDB/64c4f9cc-fac2-4692-ae1b-804ae4b9****</p>

@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListControlPolicyAttachmentsForTargetRequest extends TeaModel {
     /**
-     * <p>The language in which you want to return the descriptions of the access control policies. Valid values:</p>
+     * <p>The language in which the control policy descriptions are returned. Valid values:</p>
      * <ul>
-     * <li>zh-CN (default value): Chinese</li>
-     * <li>en: English</li>
-     * <li>ja: Japanese</li>
+     * <li>zh-CN (default): Chinese.</li>
+     * <li>en: English.</li>
+     * <li>ja: Japanese.</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is valid only for system access control policies.</p>
+     * <p>This parameter is valid only for system control policies.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -22,11 +22,11 @@ public class ListControlPolicyAttachmentsForTargetRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The ID of the object whose access control policies you want to query. Access control policies can be attached to the following objects:</p>
+     * <p>The target node. Valid values:</p>
      * <ul>
-     * <li>Root folder</li>
-     * <li>Subfolders of the Root folder</li>
-     * <li>Members</li>
+     * <li>Root ID: queries the control policies attached to the Root node.</li>
+     * <li>Resource folder ID: queries the control policies attached to a resource folder.</li>
+     * <li>Member ID: queries the control policies attached to a member.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

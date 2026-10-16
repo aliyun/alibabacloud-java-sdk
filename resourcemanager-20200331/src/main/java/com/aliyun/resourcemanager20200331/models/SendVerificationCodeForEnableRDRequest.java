@@ -5,10 +5,15 @@ import com.aliyun.tea.*;
 
 public class SendVerificationCodeForEnableRDRequest extends TeaModel {
     /**
-     * <p>The mobile phone number that is bound to the newly created account. If you leave this parameter empty, the mobile phone number that is bound to the current account is used.</p>
-     * <p>Specify the mobile phone number in the <code>&lt;Country code&gt;-&lt;Mobile phone number&gt;</code> format.</p>
+     * <p>The secure phone number of the new management account. If you leave this parameter empty, the secure phone number of the current logon account is used.</p>
+     * <p>Format: <code>&lt;Country code&gt;-&lt;Phone number&gt;</code>.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
      * <blockquote>
-     * <p> Mobile phone numbers in the <code>86-&lt;Mobile phone number&gt;</code> format in the Chinese mainland are not supported.</p>
+     * <p>Phone numbers in the <code>86-&lt;Phone number&gt;</code> format from the Chinese mainland are not supported.</p>
+     * </blockquote>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <blockquote>
+     * <p>Only phone numbers in the <code>86-&lt;Phone number&gt;</code> format from the Chinese mainland are supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

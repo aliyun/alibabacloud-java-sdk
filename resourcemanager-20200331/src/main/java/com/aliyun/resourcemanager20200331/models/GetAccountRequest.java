@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAccountRequest extends TeaModel {
     /**
-     * <p>The Alibaba Cloud account ID of the member.</p>
+     * <p>The member account ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class GetAccountRequest extends TeaModel {
     public String accountId;
 
     /**
-     * <p>Specifies whether to return the information of tags. Valid values:</p>
+     * <p>Specifies whether to return tag information. Valid values:</p>
      * <ul>
-     * <li>false (default value)</li>
-     * <li>true</li>
+     * <li>false (default): Does not return tag information.</li>
+     * <li>true: Returns tag information.</li>
      * </ul>
      * 
      * <strong>example:</strong>

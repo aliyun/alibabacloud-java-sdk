@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B32BD3D6-1089-41F3-8E70-E0079BC7D760</p>
@@ -35,7 +35,7 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
     public ListTargetAttachmentsForControlPolicyResponseBodyTargetAttachments targetAttachments;
 
     /**
-     * <p>The total number of objects to which the control policy is attached.</p>
+     * <p>The number of target nodes to which the control policy is attached.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

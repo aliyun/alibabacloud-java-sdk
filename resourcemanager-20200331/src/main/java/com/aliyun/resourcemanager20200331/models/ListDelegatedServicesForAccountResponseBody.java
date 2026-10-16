@@ -8,7 +8,7 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
     public ListDelegatedServicesForAccountResponseBodyDelegatedServices delegatedServices;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D9C03B94-9396-4794-A74B-13DC437556A6</p>

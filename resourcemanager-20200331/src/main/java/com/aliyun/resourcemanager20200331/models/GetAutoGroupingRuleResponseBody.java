@@ -14,7 +14,7 @@ public class GetAutoGroupingRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the rule.</p>
+     * <p>The rule information.</p>
      */
     @NameInMap("Rule")
     public GetAutoGroupingRuleResponseBodyRule rule;
@@ -42,7 +42,7 @@ public class GetAutoGroupingRuleResponseBody extends TeaModel {
 
     public static class GetAutoGroupingRuleResponseBodyRuleRuleContents extends TeaModel {
         /**
-         * <p>The condition for the range of resources that are automatically transferred.</p>
+         * <p>The scope condition for automatic group transfer, which specifies the range of resources to be automatically transferred to a resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;children&quot;:[{&quot;desired&quot;:&quot;{\&quot;env\&quot;:\&quot;online\&quot;, \&quot;project\&quot;:\&quot;A\&quot;}&quot;,&quot;featurePath&quot;:&quot;$.tags&quot;,&quot;featureSource&quot;:&quot;RESOURCE&quot;,&quot;operator&quot;:&quot;TagMatchAll&quot;}],&quot;operator&quot;:&quot;and&quot;}</p>
@@ -51,7 +51,7 @@ public class GetAutoGroupingRuleResponseBody extends TeaModel {
         public String autoGroupingScopeCondition;
 
         /**
-         * <p>The ID of the content record.</p>
+         * <p>The rule content ID.</p>
          * 
          * <strong>example:</strong>
          * <p>grc-acfo******fwybpq</p>
@@ -60,7 +60,7 @@ public class GetAutoGroupingRuleResponseBody extends TeaModel {
         public String ruleContentId;
 
         /**
-         * <p>The condition for the destination resource group.</p>
+         * <p>The target resource group condition, which specifies the destination resource group for automatic grouping.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;children&quot;:[{&quot;desired&quot;:&quot;rg-aek2********qcy&quot;,&quot;featurePath&quot;:&quot;$.resourceGroupId&quot;,&quot;featureSource&quot;:&quot;RESOURCE&quot;,&quot;operator&quot;:&quot;StringEquals&quot;}],&quot;operator&quot;:&quot;and&quot;}</p>
@@ -101,7 +101,7 @@ public class GetAutoGroupingRuleResponseBody extends TeaModel {
 
     public static class GetAutoGroupingRuleResponseBodyRule extends TeaModel {
         /**
-         * <p>The time when the rule was created.</p>
+         * <p>The time when the rule was created, in RFC 3339 format with a UTC offset of +08:00.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-01T10:00:00+08:00</p>
@@ -110,7 +110,7 @@ public class GetAutoGroupingRuleResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The IDs of excluded regions. Multiple IDs are separated by commas (,).</p>
+         * <p>The excluded region IDs. Multiple region IDs are separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou,cn-shanghai</p>
@@ -119,7 +119,7 @@ public class GetAutoGroupingRuleResponseBody extends TeaModel {
         public String excludeRegionIdsScope;
 
         /**
-         * <p>The IDs of excluded resource groups. Multiple IDs are separated by commas (,).</p>
+         * <p>The excluded resource group IDs. Multiple resource group IDs are separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekz<strong><strong><strong>4b5ea,rg-aek2</strong></strong></strong>fxykq</p>
@@ -128,7 +128,7 @@ public class GetAutoGroupingRuleResponseBody extends TeaModel {
         public String excludeResourceGroupIdsScope;
 
         /**
-         * <p>The IDs of excluded resources. Multiple IDs are separated by commas (,).</p>
+         * <p>The excluded resource IDs. Multiple resource IDs are separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>i-2zee<strong><strong><strong>ym49kfmwis,vpc-5ts6</strong></strong></strong>fnw493g849a</p>
@@ -146,7 +146,7 @@ public class GetAutoGroupingRuleResponseBody extends TeaModel {
         public String excludeResourceTypesScope;
 
         /**
-         * <p>The time when the rule was modified.</p>
+         * <p>The time when the rule was last modified, in RFC 3339 format with a UTC offset of +08:00.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-01T10:00:00+08:00</p>
@@ -155,7 +155,7 @@ public class GetAutoGroupingRuleResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>The IDs of regions. Multiple IDs are separated by commas (,).</p>
+         * <p>The region IDs in scope. Multiple region IDs are separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou,cn-shanghai</p>
@@ -164,7 +164,7 @@ public class GetAutoGroupingRuleResponseBody extends TeaModel {
         public String regionIdsScope;
 
         /**
-         * <p>The IDs of resource groups. Multiple IDs are separated by commas (,).</p>
+         * <p>The resource group IDs in scope. Multiple resource group IDs are separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekz<strong><strong><strong>4b5ea,rg-aek2</strong></strong></strong>fxykq</p>
@@ -173,7 +173,7 @@ public class GetAutoGroupingRuleResponseBody extends TeaModel {
         public String resourceGroupIdsScope;
 
         /**
-         * <p>The IDs of resources. Multiple IDs are separated by commas (,).</p>
+         * <p>The resource IDs in scope. Multiple resource IDs are separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>i-2zee<strong><strong><strong>ym49kfmwis,vpc-5ts6</strong></strong></strong>fnw493g849a</p>
@@ -182,7 +182,7 @@ public class GetAutoGroupingRuleResponseBody extends TeaModel {
         public String resourceIdsScope;
 
         /**
-         * <p>The resource types. Multiple resource types are separated by commas (,).</p>
+         * <p>The resource types in scope. Multiple resource types are separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.instance,vpc.vpc</p>
@@ -191,22 +191,22 @@ public class GetAutoGroupingRuleResponseBody extends TeaModel {
         public String resourceTypesScope;
 
         /**
-         * <p>The content records of the rule.</p>
+         * <p>The list of rule contents.</p>
          */
         @NameInMap("RuleContents")
         public java.util.List<GetAutoGroupingRuleResponseBodyRuleRuleContents> ruleContents;
 
         /**
-         * <p>The description of the rule.</p>
+         * <p>The rule description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Transfer resources to which the {&quot;env&quot;: &quot;online&quot;} and {&quot;project&quot;: &quot;A&quot;} tags are added to the resource group rg-aek2********qcy.</p>
+         * <p>Transfer resources with tags {&quot;env&quot;: &quot;online&quot;} and {&quot;project&quot;: &quot;A&quot;} to resource group rg-aek2********qcy</p>
          */
         @NameInMap("RuleDesc")
         public String ruleDesc;
 
         /**
-         * <p>The ID of the rule.</p>
+         * <p>The rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gr-acfo******hy6a</p>
@@ -215,19 +215,19 @@ public class GetAutoGroupingRuleResponseBody extends TeaModel {
         public String ruleId;
 
         /**
-         * <p>The name of the rule.</p>
+         * <p>The rule name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Custom Transfer Rule for Online Resources of Project A</p>
+         * <p>Automatic group transfer rule for Project A online resources</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
-         * <p>The type of the rule. Valid values:</p>
+         * <p>The rule type. Valid values:</p>
          * <ul>
-         * <li>custom_condition: custom transfer rule</li>
-         * <li>associated_transfer: transfer rule for associated resources</li>
+         * <li>custom_condition: Transfer based on custom rules.</li>
+         * <li>associated_transfer: Transfer associated resources together.</li>
          * </ul>
          * 
          * <strong>example:</strong>

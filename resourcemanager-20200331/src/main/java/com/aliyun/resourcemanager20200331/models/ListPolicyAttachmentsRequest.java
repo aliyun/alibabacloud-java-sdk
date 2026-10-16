@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListPolicyAttachmentsRequest extends TeaModel {
     /**
-     * <p>The language in which you want to return the description of the system policy. Valid values:</p>
+     * <p>The language type. The description of the system access policy is returned in the specified language.</p>
      * <ul>
-     * <li>en: English</li>
-     * <li>zh-CN: Chinese</li>
-     * <li>ja: Japanese</li>
+     * <li>en: English.</li>
+     * <li>zh-CN: Chinese.</li>
+     * <li>ja: Japanese.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +20,7 @@ public class ListPolicyAttachmentsRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
-     * <p>Pages start from page 1. Default value: 1.</p>
+     * <p>Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -39,8 +39,8 @@ public class ListPolicyAttachmentsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the permission policy.</p>
-     * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphen (-).</p>
+     * <p>Policy Name of the access policy.</p>
+     * <p>Policy Name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>AdministratorAccess</p>
@@ -49,10 +49,10 @@ public class ListPolicyAttachmentsRequest extends TeaModel {
     public String policyName;
 
     /**
-     * <p>The type of the permission policy. If you do not configure this parameter, all types of policies are returned. Valid values:</p>
+     * <p>The type of the access policy. If this parameter is left empty, all types of access policies are listed.</p>
      * <ul>
-     * <li>Custom</li>
-     * <li>System</li>
+     * <li>Custom: custom policy.</li>
+     * <li>System: system policy.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class ListPolicyAttachmentsRequest extends TeaModel {
     public String policyType;
 
     /**
-     * <p>The name of the object to which you want to attach the permission policy.</p>
+     * <p>The name of the principal.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:alice@demo.onaliyun.com">alice@demo.onaliyun.com</a></p>
@@ -71,11 +71,11 @@ public class ListPolicyAttachmentsRequest extends TeaModel {
     public String principalName;
 
     /**
-     * <p>The type of the object to which you want to attach the permission policy. If you do not configure this parameter, the system lists all types of objects. Valid values:</p>
+     * <p>The authorization object type. If this parameter is left empty, all types of authorization objects are listed.</p>
      * <ul>
-     * <li>IMSUser: RAM user</li>
-     * <li>IMSGroup: RAM user group</li>
-     * <li>ServiceRole: RAM role</li>
+     * <li>IMSUser: Resource Access Management (RAM) user.</li>
+     * <li>IMSGroup: RAM user group.</li>
+     * <li>ServiceRole: RAM role.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,7 +85,7 @@ public class ListPolicyAttachmentsRequest extends TeaModel {
     public String principalType;
 
     /**
-     * <p>The ID of the resource group or the ID of the Alibaba Cloud account to which the resource group belongs. If you do not configure this parameter, the system lists all policy attachment records within the current account.</p>
+     * <p>The ID of the resource group or the Alibaba Cloud account ID to which the resource group belongs. If this parameter is left empty, all authorization records under the current account are listed.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-001</p>

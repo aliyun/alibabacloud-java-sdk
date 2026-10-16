@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetResourceDirectoryResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CD76D376-2517-4924-92C5-DBC52262F93A</p>
@@ -14,7 +14,7 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information of the resource directory.</p>
+     * <p>The resource directory information.</p>
      */
     @NameInMap("ResourceDirectory")
     public GetResourceDirectoryResponseBodyResourceDirectory resourceDirectory;
@@ -42,12 +42,12 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
 
     public static class GetResourceDirectoryResponseBodyResourceDirectory extends TeaModel {
         /**
-         * <p>The status of the Control Policy feature. Valid values:</p>
+         * <p>The status of the control policy. Valid values:</p>
          * <ul>
-         * <li>Enabled: The feature is enabled.</li>
-         * <li>PendingEnable: The feature is being enabled.</li>
-         * <li>Disabled: The feature is disabled.</li>
-         * <li>PendingDisable: The feature is being disabled.</li>
+         * <li>Enabled: Enabled.</li>
+         * <li>PendingEnable: Being enabled.</li>
+         * <li>Disabled: Disabled.</li>
+         * <li>PendingDisable: Being disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
         public String controlPolicyStatus;
 
         /**
-         * <p>The time when the resource directory was enabled.</p>
+         * <p>The time when the resource directory was created. The time is displayed in UTC in RFC 3339 format, indicated by Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-02-18T15:32:10.473Z</p>
@@ -66,10 +66,10 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The real-name verification information.</p>
+         * <p>The real-name verification information of the member.</p>
          * 
          * <strong>example:</strong>
-         * <p>\<em>\</em>\* Co., Ltd.</p>
+         * <p>***有限公司</p>
          */
         @NameInMap("IdentityInformation")
         public String identityInformation;
@@ -93,10 +93,10 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
         public String masterAccountName;
 
         /**
-         * <p>The status of the member deletion feature. Valid values:</p>
+         * <p>Indicates whether member deletion is enabled. Valid values:</p>
          * <ul>
-         * <li>Enabled: The feature is enabled. You can call the <a href="https://help.aliyun.com/document_detail/311546.html">DeleteAccount</a> operation to delete members of the resource account type.</li>
-         * <li>Disabled: The feature is disabled. You cannot delete members of the resource account type.</li>
+         * <li>Enabled: Enabled. You can call <a href="https://help.aliyun.com/document_detail/311546.html">DeleteAccount</a> to delete members of the resource account type.</li>
+         * <li>Disabled: Disabled. You cannot delete members of the resource account type.</li>
          * </ul>
          * 
          * <strong>example:</strong>

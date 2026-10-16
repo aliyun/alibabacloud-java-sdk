@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAutoGroupingRuleRequest extends TeaModel {
     /**
-     * <p>The ID of the rule.</p>
+     * <p>The rule ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

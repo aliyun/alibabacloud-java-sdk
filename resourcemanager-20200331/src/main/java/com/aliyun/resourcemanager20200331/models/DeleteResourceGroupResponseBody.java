@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteResourceGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1C488B66-B819-4D14-8711-C4EAAA13AC01</p>
@@ -14,7 +14,7 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information of the resource group.</p>
+     * <p>The resource group information.</p>
      */
     @NameInMap("ResourceGroup")
     public DeleteResourceGroupResponseBodyResourceGroup resourceGroup;
@@ -91,7 +91,7 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
 
     public static class DeleteResourceGroupResponseBodyResourceGroup extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account to which the resource group belongs.</p>
+         * <p>The Alibaba Cloud account ID to which the resource group belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789****</p>
@@ -100,7 +100,7 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The time when the resource group was created. The time is displayed in UTC.</p>
+         * <p>The time when the resource group was created (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2015-01-23T12:33:18Z</p>
@@ -118,7 +118,7 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-9gLOoK****</p>
@@ -141,9 +141,9 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
         /**
          * <p>The status of the resource group. Valid values:</p>
          * <ul>
-         * <li>Creating: The resource group is being created.</li>
-         * <li>OK: The resource group is created.</li>
-         * <li>PendingDelete: The resource group is waiting to be deleted.</li>
+         * <li>Creating: Being created.</li>
+         * <li>OK: Created.</li>
+         * <li>PendingDelete: Pending deletion.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -15,7 +15,7 @@ public class UpdateRoleRequest extends TeaModel {
 
     /**
      * <p>The description of the RAM role.</p>
-     * <p>The description must be 1 to 1,024 characters in length.</p>
+     * <p>The description must be 1 to 1024 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>ECS administrator</p>
@@ -24,9 +24,9 @@ public class UpdateRoleRequest extends TeaModel {
     public String newDescription;
 
     /**
-     * <p>The maximum session time of the RAM role.</p>
+     * <p>The maximum session duration of the RAM role.</p>
      * <p>Valid values: 3600 to 43200. Unit: seconds. Default value: 3600.</p>
-     * <p>If you do not specify this parameter, the default value is used.</p>
+     * <p>If this parameter is left empty, the default value is used.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -36,7 +36,7 @@ public class UpdateRoleRequest extends TeaModel {
 
     /**
      * <p>The name of the RAM role.</p>
-     * <p>The name must be 1 to 64 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</p>
+     * <p>The name must be 1 to 64 characters in length and can contain letters, digits, periods (.), and hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

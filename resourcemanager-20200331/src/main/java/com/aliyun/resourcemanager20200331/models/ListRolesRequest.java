@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListRolesRequest extends TeaModel {
     /**
-     * <p>The language in which you want to return the descriptions of the RAM roles. Valid values:</p>
+     * <p>The language type. The role description is returned in the specified language. Valid values:</p>
      * <ul>
-     * <li>en: English</li>
-     * <li>zh-CN: Chinese</li>
-     * <li>ja: Japanese</li>
+     * <li>en: English.</li>
+     * <li>zh-CN: Chinese.</li>
+     * <li>ja: Japanese.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +20,7 @@ public class ListRolesRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
-     * <p>Pages start from page 1. Default value: 1.</p>
+     * <p>Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

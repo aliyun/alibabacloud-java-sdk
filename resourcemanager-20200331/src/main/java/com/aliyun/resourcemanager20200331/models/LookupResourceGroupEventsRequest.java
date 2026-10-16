@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class LookupResourceGroupEventsRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. The time is displayed in UTC.</p>
+     * <p>The end time of the event. The format is YYYY-MM-DD HH:mm:ss and does not include a time zone identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-11-30 23:43:16</p>
@@ -24,7 +24,7 @@ public class LookupResourceGroupEventsRequest extends TeaModel {
     public String eventCategory;
 
     /**
-     * <p>The attributes used for advanced search.</p>
+     * <p>The lookup attributes.</p>
      */
     @NameInMap("LookupAttributes")
     public java.util.List<LookupResourceGroupEventsRequestLookupAttributes> lookupAttributes;
@@ -40,7 +40,7 @@ public class LookupResourceGroupEventsRequest extends TeaModel {
     public String maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>The pagination token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>TGlzdFJlc291cm****</p>
@@ -67,7 +67,7 @@ public class LookupResourceGroupEventsRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The beginning of the time range to query. The time is displayed in UTC.</p>
+     * <p>The start time of the event. The format is YYYY-MM-DD HH:mm:ss and does not include a time zone identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-11-30 23:43:16</p>
@@ -146,7 +146,7 @@ public class LookupResourceGroupEventsRequest extends TeaModel {
 
     public static class LookupResourceGroupEventsRequestLookupAttributes extends TeaModel {
         /**
-         * <p>The key of the attribute.</p>
+         * <p>The key of the lookup attribute.</p>
          * 
          * <strong>example:</strong>
          * <p>key</p>
@@ -155,7 +155,7 @@ public class LookupResourceGroupEventsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the attribute.</p>
+         * <p>The value of the lookup attribute.</p>
          * 
          * <strong>example:</strong>
          * <p>value</p>

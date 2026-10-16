@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPayerForAccountResponseBody extends TeaModel {
     /**
-     * <p>The ID of the settlement account.</p>
+     * <p>The ID of the billing account.</p>
      * 
      * <strong>example:</strong>
      * <p>172841235500****</p>
@@ -14,7 +14,7 @@ public class GetPayerForAccountResponseBody extends TeaModel {
     public String payerAccountId;
 
     /**
-     * <p>The name of the settlement account.</p>
+     * <p>The name of the billing account.</p>
      * 
      * <strong>example:</strong>
      * <p>Alice</p>
@@ -23,7 +23,7 @@ public class GetPayerForAccountResponseBody extends TeaModel {
     public String payerAccountName;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>

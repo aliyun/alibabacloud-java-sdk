@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckAccountDeleteRequest extends TeaModel {
     /**
-     * <p>The ID of the member that you want to delete.</p>
+     * <p>The ID of the member account to be deleted.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

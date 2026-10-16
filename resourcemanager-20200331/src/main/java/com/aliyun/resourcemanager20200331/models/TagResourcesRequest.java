@@ -5,20 +5,21 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>The ID of a resource group or member.</p>
+     * <p>The ID of the resource group or the ID of the resource directory member account.</p>
+     * <p>You can specify up to 50 IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the objects to which you want to add tags. Valid values:</p>
+     * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li>ResourceGroup : resource group. This is the default value.</li>
-     * <li>Account: member.</li>
+     * <li>ResourceGroup (default): attaches labels to resource groups.</li>
+     * <li>Account: attaches labels to member accounts of a resource directory.</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is required if you add tags to members in a resource directory.</p>
+     * <p>This parameter is required when you attach labels to member accounts of a resource directory.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,7 +29,8 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags.</p>
+     * <p>The labels.</p>
+     * <p>You can attach up to 20 labels.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -65,8 +67,8 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>A tag key.</p>
-         * <p>A tag key can be a maximum of 128 characters in length. It cannot contain <code>http://</code> or <code>https://</code> and cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * <p>The label key.</p>
+         * <p>The key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>k1</p>
@@ -75,8 +77,8 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>A tag value.</p>
-         * <p>A tag value can be a maximum of 128 characters in length. It cannot contain <code>http://</code> or <code>https://</code> and cannot start with <code>acs:</code>.</p>
+         * <p>The label value.</p>
+         * <p>The value can be up to 128 characters in length and cannot start with <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>

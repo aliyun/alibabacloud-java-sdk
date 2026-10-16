@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SendVerificationCodeForBindSecureMobilePhoneResponseBody extends TeaModel {
     /**
-     * <p>The time when the verification code expires.</p>
+     * <p>The expiration time of the verification code. The time is in RFC 3339 UTC format, indicated by Z for UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-17T07:38:41.747Z</p>
@@ -14,7 +14,7 @@ public class SendVerificationCodeForBindSecureMobilePhoneResponseBody extends Te
     public String expirationDate;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DCD43660-75DD-5D15-B342-1B83FCA5B913</p>

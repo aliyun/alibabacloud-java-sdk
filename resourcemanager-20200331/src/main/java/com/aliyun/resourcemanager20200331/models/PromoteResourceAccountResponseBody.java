@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class PromoteResourceAccountResponseBody extends TeaModel {
     /**
-     * <p>The information of the member account.</p>
+     * <p>The member account information.</p>
      */
     @NameInMap("Account")
     public PromoteResourceAccountResponseBodyAccount account;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>
@@ -42,7 +42,7 @@ public class PromoteResourceAccountResponseBody extends TeaModel {
 
     public static class PromoteResourceAccountResponseBodyAccount extends TeaModel {
         /**
-         * <p>The ID of the member account.</p>
+         * <p>The account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>12323344****</p>
@@ -51,7 +51,7 @@ public class PromoteResourceAccountResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The name of the member account.</p>
+         * <p>The account name.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
@@ -60,7 +60,7 @@ public class PromoteResourceAccountResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>The display name of the member account.</p>
+         * <p>The member name.</p>
          * 
          * <strong>example:</strong>
          * <p>admin</p>
@@ -69,7 +69,7 @@ public class PromoteResourceAccountResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The ID of the folder.</p>
+         * <p>The folder ID.</p>
          * 
          * <strong>example:</strong>
          * <p>fd-bVaRIG****</p>
@@ -78,10 +78,10 @@ public class PromoteResourceAccountResponseBody extends TeaModel {
         public String folderId;
 
         /**
-         * <p>The way in which the member account joined the resource directory. Valid values:</p>
+         * <p>The method used by the member to join the resource directory. Valid values:</p>
          * <ul>
-         * <li>invited: The member account is invited to join the resource directory.</li>
-         * <li>created: The member account is directly created in the resource directory.</li>
+         * <li>invited: Invited.</li>
+         * <li>created: Created.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -91,7 +91,7 @@ public class PromoteResourceAccountResponseBody extends TeaModel {
         public String joinMethod;
 
         /**
-         * <p>The time when the member account joined the resource directory.</p>
+         * <p>The time when the member joined the resource directory. The time is displayed in UTC in RFC 3339 format, indicated by Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2015-01-23T12:33:18Z</p>
@@ -100,7 +100,7 @@ public class PromoteResourceAccountResponseBody extends TeaModel {
         public String joinTime;
 
         /**
-         * <p>The time when the member account was modified.</p>
+         * <p>The time when the member was last modified. The time is displayed in UTC in RFC 3339 format, indicated by Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2015-01-23T12:33:18Z</p>
@@ -118,7 +118,7 @@ public class PromoteResourceAccountResponseBody extends TeaModel {
         public String recordId;
 
         /**
-         * <p>The ID of the resource directory.</p>
+         * <p>The resource directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rd-k3****</p>
@@ -127,20 +127,20 @@ public class PromoteResourceAccountResponseBody extends TeaModel {
         public String resourceDirectoryId;
 
         /**
-         * <p>The status of the member account. Valid values:</p>
+         * <p>The status of the member. Valid values:</p>
          * <ul>
-         * <li>CreateSuccess: The member account is created.</li>
-         * <li>CreateVerifying: The creation of the member account is under confirmation.</li>
-         * <li>CreateFailed: The member account failed to be created.</li>
-         * <li>CreateExpired: The creation of the member account expired.</li>
-         * <li>CreateCancelled: The creation of the member account is canceled.</li>
-         * <li>PromoteVerifying: The upgrade of the member account is under confirmation.</li>
-         * <li>PromoteFailed: The member account failed to be upgraded.</li>
-         * <li>PromoteExpired: The upgrade of the member account expired.</li>
-         * <li>PromoteCancelled: The upgrade of the member account is canceled.</li>
-         * <li>PromoteSuccess: The member account is upgraded.</li>
-         * <li>InviteSuccess: The owner of the member account accepted the invitation.</li>
-         * <li>Removed: The member account is removed from the resource directory.</li>
+         * <li>CreateSuccess: Created.</li>
+         * <li>CreateVerifying: Pending creation confirmation.</li>
+         * <li>CreateFailed: Creation failed.</li>
+         * <li>CreateExpired: Creation expired.</li>
+         * <li>CreateCancelled: Creation canceled.</li>
+         * <li>PromoteVerifying: Pending upgrade confirmation.</li>
+         * <li>PromoteFailed: Upgrade failed.</li>
+         * <li>PromoteExpired: Upgrade expired.</li>
+         * <li>PromoteCancelled: Upgrade canceled.</li>
+         * <li>PromoteSuccess: Upgraded.</li>
+         * <li>InviteSuccess: Invited.</li>
+         * <li>Removed: Removed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -150,10 +150,10 @@ public class PromoteResourceAccountResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The type of the member account. Valid values:</p>
+         * <p>The type of the member. Valid values:</p>
          * <ul>
-         * <li>CloudAccount</li>
-         * <li>ResourceAccount</li>
+         * <li>CloudAccount: Alibaba Cloud account.</li>
+         * <li>ResourceAccount: Resource account.</li>
          * </ul>
          * 
          * <strong>example:</strong>

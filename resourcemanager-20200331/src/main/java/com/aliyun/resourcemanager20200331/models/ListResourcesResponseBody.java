@@ -23,7 +23,7 @@ public class ListResourcesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -35,7 +35,7 @@ public class ListResourcesResponseBody extends TeaModel {
     public ListResourcesResponseBodyResources resources;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

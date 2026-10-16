@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetachControlPolicyRequest extends TeaModel {
     /**
-     * <p>The ID of the access control policy.</p>
+     * <p>The ID of the control policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,11 +15,11 @@ public class DetachControlPolicyRequest extends TeaModel {
     public String policyId;
 
     /**
-     * <p>The ID of the object from which you want to detach the access control policy. Access control policies can be attached to the following objects:</p>
+     * <p>The ID of the target node. Valid values:</p>
      * <ul>
-     * <li>Root folder</li>
-     * <li>Subfolders of the Root folder</li>
-     * <li>Members</li>
+     * <li>Root ID: detaches the control policy from the Root resource folder.</li>
+     * <li>Resource folder ID: detaches the control policy from a resource folder.</li>
+     * <li>Member ID: detaches the control policy from a member.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

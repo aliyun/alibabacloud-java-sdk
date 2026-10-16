@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetachControlPolicyResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9EA4F962-1A2E-4AFE-BE0C-B14736FC46CC</p>

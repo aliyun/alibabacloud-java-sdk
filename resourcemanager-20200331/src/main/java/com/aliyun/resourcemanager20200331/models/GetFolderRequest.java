@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFolderRequest extends TeaModel {
     /**
-     * <p>The ID of the folder.</p>
+     * <p>The folder ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

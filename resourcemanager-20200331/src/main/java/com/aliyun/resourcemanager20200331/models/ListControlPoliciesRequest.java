@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListControlPoliciesRequest extends TeaModel {
     /**
-     * <p>The language in which you want to return the descriptions of the access control policies. Valid values:</p>
+     * <p>The language in which you want the description of the control policy to be returned. Valid values:</p>
      * <ul>
-     * <li>zh-CN (default value): Chinese</li>
-     * <li>en: English</li>
-     * <li>ja: Japanese</li>
+     * <li>zh-CN (default): Chinese.</li>
+     * <li>en: English.</li>
+     * <li>ja: Japanese.</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is valid only for system access control policies.</p>
+     * <p>This parameter is valid only for system control policies.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -22,8 +22,8 @@ public class ListControlPoliciesRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The number of the page to return. </p>
-     * <p>Page start from page 1. Default value: 1.</p>
+     * <p>The page number.</p>
+     * <p>Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class ListControlPoliciesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. </p>
+     * <p>The number of entries per page.</p>
      * <p>Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -42,10 +42,10 @@ public class ListControlPoliciesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The type of the access control policy. Valid values:</p>
+     * <p>The type of the control policy. Valid values:</p>
      * <ul>
-     * <li>System: system access control policy</li>
-     * <li>Custom: custom access control policy</li>
+     * <li>System: system control policy.</li>
+     * <li>Custom: custom control policy.</li>
      * </ul>
      * 
      * <strong>example:</strong>

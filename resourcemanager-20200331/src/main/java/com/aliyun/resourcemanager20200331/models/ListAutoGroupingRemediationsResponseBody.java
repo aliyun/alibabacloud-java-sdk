@@ -15,7 +15,7 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>TGlzdFJlc291cm****</p>
@@ -137,7 +137,7 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
         public String remediationId;
 
         /**
-         * <p>The remediation time.</p>
+         * <p>The remediation time. The format is YYYY-MM-DD HH:mm:ss without a time zone identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-01 00:00:00</p>
@@ -156,7 +156,7 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
 
         /**
          * <p>The resource type.</p>
-         * <p>You can obtain the resource type from the <strong>Resource type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+         * <p>You can obtain the resource type from the <strong>Resource Type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>instance</p>
@@ -165,8 +165,8 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The ID of the Alibaba Cloud service.</p>
-         * <p>You can obtain the ID from the <strong>Service code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+         * <p>The cloud service ID.</p>
+         * <p>You can obtain the cloud service ID from the <strong>Cloud Service Code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>
@@ -175,7 +175,7 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
         public String service;
 
         /**
-         * <p>The information about the new resource group.</p>
+         * <p>The information about the target resource group for remediation.</p>
          */
         @NameInMap("TargetResourceGroupInfo")
         public ListAutoGroupingRemediationsResponseBodyRemediationsTargetResourceGroupInfo targetResourceGroupInfo;

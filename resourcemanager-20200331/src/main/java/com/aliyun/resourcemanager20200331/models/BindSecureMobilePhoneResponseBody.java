@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindSecureMobilePhoneResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0217AFEB-5318-56D4-B167-1933D83EDF3F</p>

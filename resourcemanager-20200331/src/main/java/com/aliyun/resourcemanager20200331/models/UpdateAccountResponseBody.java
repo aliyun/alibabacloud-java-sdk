@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateAccountResponseBody extends TeaModel {
     /**
-     * <p>The information of the member.</p>
+     * <p>The member information.</p>
      */
     @NameInMap("Account")
     public UpdateAccountResponseBodyAccount account;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>
@@ -42,7 +42,7 @@ public class UpdateAccountResponseBody extends TeaModel {
 
     public static class UpdateAccountResponseBodyAccount extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account that corresponds to the member.</p>
+         * <p>The ID of the member.</p>
          * 
          * <strong>example:</strong>
          * <p>12323344****</p>
@@ -51,7 +51,7 @@ public class UpdateAccountResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The name of the Alibaba Cloud account that corresponds to the member.</p>
+         * <p>The name of the Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:ecs-manager@aliyun.com">ecs-manager@aliyun.com</a></p>
@@ -60,7 +60,7 @@ public class UpdateAccountResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>The display name of the member.</p>
+         * <p>The name of the member.</p>
          * 
          * <strong>example:</strong>
          * <p>admin</p>
@@ -78,10 +78,10 @@ public class UpdateAccountResponseBody extends TeaModel {
         public String folderId;
 
         /**
-         * <p>The way in which the member joins the resource directory. Valid values:</p>
+         * <p>The method used by the member to join the resource directory. Valid values:</p>
          * <ul>
-         * <li>invited: The member is invited to join the resource directory.</li>
-         * <li>created: The member is directly created in the resource directory.</li>
+         * <li>invited: invited.</li>
+         * <li>created: created.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -91,7 +91,7 @@ public class UpdateAccountResponseBody extends TeaModel {
         public String joinMethod;
 
         /**
-         * <p>The time when the member joined the resource directory. The time is displayed in UTC.</p>
+         * <p>The time when the member joined the resource directory (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2015-01-23T12:33:18Z</p>
@@ -100,7 +100,7 @@ public class UpdateAccountResponseBody extends TeaModel {
         public String joinTime;
 
         /**
-         * <p>The time when the member was modified. The time is displayed in UTC.</p>
+         * <p>The time when the member was last modified (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2015-01-23T12:33:18Z</p>
@@ -118,12 +118,12 @@ public class UpdateAccountResponseBody extends TeaModel {
         public String resourceDirectoryId;
 
         /**
-         * <p>The status of the member. Valid values:</p>
+         * <p>The join status of the member. Valid values:</p>
          * <ul>
-         * <li>CreateSuccess: The member is created.</li>
-         * <li>InviteSuccess: The member accepts the invitation.</li>
-         * <li>Removed: The member is removed.</li>
-         * <li>SwitchSuccess: The type of the member is switched.</li>
+         * <li>CreateSuccess: Created.</li>
+         * <li>InviteSuccess: Invited.</li>
+         * <li>Removed: Removed.</li>
+         * <li>SwitchSuccess: Switched.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -135,8 +135,8 @@ public class UpdateAccountResponseBody extends TeaModel {
         /**
          * <p>The type of the member. Valid values:</p>
          * <ul>
-         * <li>CloudAccount: cloud account</li>
-         * <li>ResourceAccount: resource account</li>
+         * <li>CloudAccount: cloud account.</li>
+         * <li>ResourceAccount: resource account.</li>
          * </ul>
          * 
          * <strong>example:</strong>

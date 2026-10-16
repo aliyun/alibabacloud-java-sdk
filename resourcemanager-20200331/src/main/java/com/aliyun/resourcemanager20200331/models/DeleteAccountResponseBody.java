@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteAccountResponseBody extends TeaModel {
     /**
-     * <p>The type of the deletion. Valid values:</p>
+     * <p>The deletion type. Valid values:</p>
      * <ul>
-     * <li>0: Direct deletion. If the member does not have pay-as-you-go resources that are purchased within the previous 30 days, the system directly deletes the member.</li>
-     * <li>1: Deletion with a silence period. If the member has pay-as-you-go resources that are purchased within the previous 30 days, the member enters a silence period. The system starts to delete the member until the silence period ends. For more information about the silence period, see <a href="https://help.aliyun.com/document_detail/446079.html">What is the silence period for member deletion?</a></li>
+     * <li>0: Direct deletion. If the member has no pay-as-you-go resources in the last 30 days, the system directly deletes the member.</li>
+     * <li>1: Cool-down period deletion. If the member has pay-as-you-go resources in the last 30 days, the member enters a cool-down period. The system starts to delete the member after the cool-down period ends. For more information about the cool-down period, see <a href="https://help.aliyun.com/document_detail/446079.html">What is the cool-down period for member deletion</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>

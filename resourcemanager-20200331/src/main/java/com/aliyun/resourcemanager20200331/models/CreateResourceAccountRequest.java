@@ -5,11 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateResourceAccountRequest extends TeaModel {
     /**
-     * <p>The prefix for the Alibaba Cloud account name of the member. If you leave this parameter empty, the system randomly generates a prefix.</p>
-     * <p>The prefix must be 2 to 37 characters in length.</p>
-     * <p>The prefix can contain letters, digits, and special characters but cannot contain consecutive special characters. The prefix must start with a letter or digit and end with a letter or digit. Valid special characters include underscores (<code>_</code>), periods (<code>.</code>), and hyphens (-).</p>
-     * <p>The complete Alibaba Cloud account name of a member is in the @.aliyunid.com format, such as <code>alice@rd-3G****.aliyunid.com</code>.</p>
-     * <p>Each name must be unique in the resource directory.</p>
+     * <p>The prefix of the account name. If you leave this parameter empty, the system randomly generates a prefix.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;Length: 2 to 50 characters.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;Length: 2 to 37 characters.</p>
+     * <p>Format: Can contain letters, digits, and special characters <code>_.-</code>. Must start and end with a letter or digit. Consecutive special characters <code>_.-</code> are not allowed.</p>
+     * <p>The full account name is in the format of <AccountNamePrefix>@<ResourceDirectoryId>.aliyunid.com. Example: <code>alice@rd-3G****.aliyunid.com</code>.</p>
+     * <p>The account name must be unique within the resource directory.</p>
      * 
      * <strong>example:</strong>
      * <p>alice</p>
@@ -19,9 +20,9 @@ public class CreateResourceAccountRequest extends TeaModel {
 
     /**
      * <p>The display name of the member.</p>
-     * <p>The name must be 2 to 50 characters in length.</p>
-     * <p>The name can contain letters, digits, underscores (_), periods (.), hyphens (-), and spaces.</p>
-     * <p>The name must be unique in the resource directory.</p>
+     * <p>Length: 2 to 50 characters.</p>
+     * <p>Format: Can contain letters, digits, underscores (_), periods (.), hyphens (-), and spaces.</p>
+     * <p>The display name must be unique within the resource directory.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +41,7 @@ public class CreateResourceAccountRequest extends TeaModel {
     public String parentFolderId;
 
     /**
-     * <p>The ID of the billing account. If you leave this parameter empty, the newly created member is used as its billing account.</p>
+     * <p>The ID of the billing account. If you leave this parameter empty, the newly created member pays for its own resource consumption.</p>
      * 
      * <strong>example:</strong>
      * <p>12323344****</p>
@@ -51,11 +52,11 @@ public class CreateResourceAccountRequest extends TeaModel {
     /**
      * <p>The identity type of the member. Valid values:</p>
      * <ul>
-     * <li>resell (default): The member is an account for a reseller. A relationship is automatically established between the member and the reseller. The management account of the resource directory must be used as the billing account of the member.</li>
-     * <li>non_resell: The member is not an account for a reseller. The member is an account that is not associated with a reseller. You can directly use the account to purchase Alibaba Cloud resources. The member is used as its own billing account.</li>
+     * <li>resell (default): reseller account. The created member automatically establishes a reseller relationship with your distributor. You must use the management account to pay for the new member.</li>
+     * <li>non_resell: non-reseller account. The created member is a regular Alibaba Cloud account that has no relationship with your current distributor. This account purchases resources directly from Alibaba Cloud and pays for its own resource consumption.</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is available only for resellers at the international site (alibabacloud.com).</p>
+     * <p>This parameter is supported only for China site (Chinese mainland) distributor customers.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -65,7 +66,7 @@ public class CreateResourceAccountRequest extends TeaModel {
     public String resellAccountType;
 
     /**
-     * <p>The tag of the member.</p>
+     * <p>The tags of the member.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateResourceAccountRequestTag> tag;

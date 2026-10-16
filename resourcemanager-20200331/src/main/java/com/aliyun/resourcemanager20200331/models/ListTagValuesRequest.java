@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagValuesRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries to return for a single request.</p>
+     * <p>The maximum number of entries to return in a single request.</p>
      * <p>Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ListTagValuesRequest extends TeaModel {
 
     /**
      * <p>The resource type.</p>
-     * <p>The value Account indicates the members of the resource directory.</p>
+     * <p>Set the value to Account, which indicates a member of a resource directory.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class ListTagValuesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag key. This parameter specifies a filter condition for the query.</p>
+     * <p>The tag key that is used as a filter condition for the query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class ListTagValuesRequest extends TeaModel {
     public String tagKey;
 
     /**
-     * <p>The tag value for a fuzzy query.</p>
+     * <p>The tag value for fuzzy match.</p>
      * 
      * <strong>example:</strong>
      * <p>v1</p>

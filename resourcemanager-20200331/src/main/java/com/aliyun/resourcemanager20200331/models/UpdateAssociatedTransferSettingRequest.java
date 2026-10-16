@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateAssociatedTransferSettingRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the Transfer Existing Associated Resources feature. Valid values:</p>
+     * <p>Specifies whether to start the task for transferring existing associated resources to the resource group. Valid values:</p>
      * <ul>
-     * <li>false</li>
-     * <li>true</li>
+     * <li>false: Does not start the task for transferring existing associated resources to the resource group.</li>
+     * <li>true: Starts the task for transferring existing associated resources to the resource group.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class UpdateAssociatedTransferSettingRequest extends TeaModel {
     public String enableExistingResourcesTransfer;
 
     /**
-     * <p>The settings of transfer rules.</p>
+     * <p>The rule settings of the associated resource group transfer feature.</p>
      */
     @NameInMap("RuleSettings")
     public java.util.List<UpdateAssociatedTransferSettingRequestRuleSettings> ruleSettings;
@@ -46,8 +46,8 @@ public class UpdateAssociatedTransferSettingRequest extends TeaModel {
 
     public static class UpdateAssociatedTransferSettingRequestRuleSettings extends TeaModel {
         /**
-         * <p>The type of the associated resource.</p>
-         * <p>You can obtain the resource type from the <strong>Resource type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+         * <p>The resource type of the associated resource.</p>
+         * <p>You can obtain the resource type from the <strong>Resource Type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>disk</p>
@@ -56,8 +56,8 @@ public class UpdateAssociatedTransferSettingRequest extends TeaModel {
         public String associatedResourceType;
 
         /**
-         * <p>The service code of the associated resource.</p>
-         * <p>You can obtain the service code from the <strong>Service code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+         * <p>The cloud service code of the associated resource.</p>
+         * <p>You can obtain the cloud service code from the <strong>Cloud Service Code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>
@@ -66,8 +66,8 @@ public class UpdateAssociatedTransferSettingRequest extends TeaModel {
         public String associatedService;
 
         /**
-         * <p>The type of the primary resource.</p>
-         * <p>You can obtain the resource type from the <strong>Resource type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+         * <p>The resource type of the master resource.</p>
+         * <p>You can obtain the resource type from the <strong>Resource Type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>instance</p>
@@ -76,8 +76,8 @@ public class UpdateAssociatedTransferSettingRequest extends TeaModel {
         public String masterResourceType;
 
         /**
-         * <p>The service code of the primary resource.</p>
-         * <p>You can obtain the service code from the <strong>Service code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+         * <p>The cloud service code of the master resource.</p>
+         * <p>You can obtain the cloud service code from the <strong>Cloud Service Code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>
@@ -86,10 +86,10 @@ public class UpdateAssociatedTransferSettingRequest extends TeaModel {
         public String masterService;
 
         /**
-         * <p>The status of the Transfer Associated Resources feature. Valid values:</p>
+         * <p>The enabling status of the associated resource group transfer feature. Valid values:</p>
          * <ul>
-         * <li>Enable: enabled</li>
-         * <li>Disable: disabled</li>
+         * <li>Enable: Enabled.</li>
+         * <li>Disable: Disabled.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

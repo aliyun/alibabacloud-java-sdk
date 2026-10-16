@@ -8,7 +8,7 @@ public class ListAncestorsResponseBody extends TeaModel {
     public ListAncestorsResponseBodyFolders folders;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>83AFBEB6-DC03-406E-9686-867461FF6698</p>

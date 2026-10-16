@@ -5,8 +5,18 @@ import com.aliyun.tea.*;
 
 public class ListResourcesRequest extends TeaModel {
     /**
+     * <p>Specifies whether to query the total number of resources. Default value: true. Valid values:</p>
+     * <ul>
+     * <li>true: Queries the total number of resources and returns the result in the TotalCount parameter.</li>
+     * <li>false: Does not query the total number of resources. The TotalCount parameter returns -1, and the resources are still paginated based on the PageNumber and PageSize parameters.</li>
+     * </ul>
+     */
+    @NameInMap("Count")
+    public Boolean count;
+
+    /**
      * <p>The page number.</p>
-     * <p>Pages start from page 1. Default value: 1.</p>
+     * <p>Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -53,7 +63,7 @@ public class ListResourcesRequest extends TeaModel {
 
     /**
      * <p>The resource type.</p>
-     * <p>For more information about the supported resource types, see the <strong>Resource type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+     * <p>You can obtain the resource type from the <strong>Resource Type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>instance</p>
@@ -62,17 +72,17 @@ public class ListResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The resource types. A maximum of 50 resource types are supported.</p>
+     * <p>The list of resource types. A maximum of 50 resource types are supported.</p>
      * <blockquote>
-     * <p> If you configure <code>ResourceTypes</code>, you must configure both <code>Service</code> and <code>ResourceType</code>. Otherwise, the configured Service or ResourceType does not take effect.</p>
+     * <p>If you configure the Settings for ResourceTypes, the Service and ResourceType request parameter specified separately do not take effect.</p>
      * </blockquote>
      */
     @NameInMap("ResourceTypes")
     public java.util.List<ListResourcesRequestResourceTypes> resourceTypes;
 
     /**
-     * <p>The ID of the Alibaba Cloud service.</p>
-     * <p>You can obtain the ID from the <strong>Service code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+     * <p>The code of the cloud service.</p>
+     * <p>You can obtain the code from the <strong>Cloud Service Code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs</p>
@@ -83,6 +93,14 @@ public class ListResourcesRequest extends TeaModel {
     public static ListResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListResourcesRequest self = new ListResourcesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListResourcesRequest setCount(Boolean count) {
+        this.count = count;
+        return this;
+    }
+    public Boolean getCount() {
+        return this.count;
     }
 
     public ListResourcesRequest setPageNumber(Integer pageNumber) {
@@ -153,9 +171,9 @@ public class ListResourcesRequest extends TeaModel {
         /**
          * <p>The resource type.</p>
          * <p>Valid values of N: 1 to 50.</p>
-         * <p>For more information about the supported resource types, see the <strong>Resource type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+         * <p>You can obtain the resource type from the <strong>Resource Type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
          * <blockquote>
-         * <p> You must configure both <code>Service</code> and <code>ResourceType</code> in <code>ResourceTypes</code>. Otherwise, the two parameters do not take effect.</p>
+         * <p>The Service and ResourceType parameters in ResourceTypes must be specified at the same time. Otherwise, they do not take effect.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -165,11 +183,11 @@ public class ListResourcesRequest extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The ID of the Alibaba Cloud service.</p>
+         * <p>The code of the cloud service.</p>
          * <p>Valid values of N: 1 to 50.</p>
-         * <p>You can obtain the ID from the <strong>Service code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+         * <p>You can obtain the code from the <strong>Cloud Service Code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</p>
          * <blockquote>
-         * <p> You must configure both <code>Service</code> and <code>ResourceType</code> in <code>ResourceTypes</code>. Otherwise, the two parameters do not take effect.</p>
+         * <p>The Service and ResourceType parameters in ResourceTypes must be specified at the same time. Otherwise, they do not take effect.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

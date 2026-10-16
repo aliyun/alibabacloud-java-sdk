@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateControlPolicyResponseBody extends TeaModel {
     /**
-     * <p>The details of the access control policy.</p>
+     * <p>The details of the control policy.</p>
      */
     @NameInMap("ControlPolicy")
     public UpdateControlPolicyResponseBodyControlPolicy controlPolicy;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2DFCE4C9-04A9-4C83-BB14-FE791275EC53</p>
@@ -42,7 +42,7 @@ public class UpdateControlPolicyResponseBody extends TeaModel {
 
     public static class UpdateControlPolicyResponseBodyControlPolicy extends TeaModel {
         /**
-         * <p>The number of times that the access control policy is referenced.</p>
+         * <p>The number of times the control policy is referenced.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -51,7 +51,7 @@ public class UpdateControlPolicyResponseBody extends TeaModel {
         public String attachmentCount;
 
         /**
-         * <p>The time when the access control policy was created.</p>
+         * <p>The time when the control policy was created. The time is displayed in UTC in RFC 3339 format, indicated by Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-03-18T09:24:19Z</p>
@@ -60,7 +60,7 @@ public class UpdateControlPolicyResponseBody extends TeaModel {
         public String createDate;
 
         /**
-         * <p>The description of the access control policy.</p>
+         * <p>The description of the control policy.</p>
          * 
          * <strong>example:</strong>
          * <p>ExampleControlPolicy</p>
@@ -69,10 +69,10 @@ public class UpdateControlPolicyResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The effective scope of the access control policy. Valid values:</p>
+         * <p>The effective scope of the control policy. Valid values:</p>
          * <ul>
-         * <li>All: The access control policy is in effect for Alibaba Cloud accounts, RAM users, and RAM roles.</li>
-         * <li>RAM: The access control policy is in effect only for RAM users and RAM roles.</li>
+         * <li>All: The control policy takes effect for Alibaba Cloud accounts, Resource Access Management (RAM) users, and RAM roles.</li>
+         * <li>RAM: The control policy takes effect only for RAM users and RAM roles.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -82,7 +82,7 @@ public class UpdateControlPolicyResponseBody extends TeaModel {
         public String effectScope;
 
         /**
-         * <p>The ID of the access control policy.</p>
+         * <p>The ID of the control policy.</p>
          * 
          * <strong>example:</strong>
          * <p>cp-jExXAqIYkwHN****</p>
@@ -91,7 +91,7 @@ public class UpdateControlPolicyResponseBody extends TeaModel {
         public String policyId;
 
         /**
-         * <p>The name of the access control policy.</p>
+         * <p>The Policy Name of the control policy.</p>
          * 
          * <strong>example:</strong>
          * <p>NewControlPolicy</p>
@@ -100,10 +100,10 @@ public class UpdateControlPolicyResponseBody extends TeaModel {
         public String policyName;
 
         /**
-         * <p>The type of the access control policy. Valid values:</p>
+         * <p>The type of the control policy. Valid values:</p>
          * <ul>
-         * <li>System: system access control policy</li>
-         * <li>Custom: custom access control policy</li>
+         * <li>System: system control policy.</li>
+         * <li>Custom: custom control policy.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -113,7 +113,7 @@ public class UpdateControlPolicyResponseBody extends TeaModel {
         public String policyType;
 
         /**
-         * <p>The time when the access control policy was updated.</p>
+         * <p>The time when the control policy was updated. The time is displayed in UTC in RFC 3339 format, indicated by Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-03-18T10:04:55Z</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetAutoGroupingStatusResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the Transfer Existing Associated Resources feature is enabled. Valid values:</p>
+     * <p>Indicates whether the attached-resource allocation for existing resources is enabled. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>true: Enabled.</li>
+     * <li>false: Not enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,12 +18,12 @@ public class GetAutoGroupingStatusResponseBody extends TeaModel {
     public Boolean enableExistedResourcesTransfer;
 
     /**
-     * <p>The status of the Automatic Resource Transfer feature. Valid values:</p>
+     * <p>The status of automatic resource group transfer. Valid values:</p>
      * <ul>
-     * <li>Enabling: The feature is being enabled.</li>
-     * <li>Enable: The feature is enabled.</li>
-     * <li>Partial_Enable: The transfer of associated resources is enabled, but custom transfer rule-based resource transfer is disabled. You can call the <a href="https://help.aliyun.com/document_detail/2870380.html">EnableAutoGrouping</a> operation to enable custom transfer rule-based resource transfer.</li>
-     * <li>Disable: The feature is disabled.</li>
+     * <li>Enabling: Being enabled.</li>
+     * <li>Enable: Enabled.</li>
+     * <li>Partial_Enable: Attached-resource allocation is enabled, but custom condition-based resource group transfer is not enabled. To enable custom condition-based resource group transfer, call <a href="~~EnableAutoGrouping~~">EnableAutoGrouping</a>.</li>
+     * <li>Disable: Not enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

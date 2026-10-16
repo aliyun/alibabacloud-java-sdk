@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InitResourceDirectoryResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CD76D376-2517-4924-92C5-DBC52262F93A</p>
@@ -14,7 +14,7 @@ public class InitResourceDirectoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information of the resource directory.</p>
+     * <p>The resource directory information.</p>
      */
     @NameInMap("ResourceDirectory")
     public InitResourceDirectoryResponseBodyResourceDirectory resourceDirectory;
@@ -42,7 +42,7 @@ public class InitResourceDirectoryResponseBody extends TeaModel {
 
     public static class InitResourceDirectoryResponseBodyResourceDirectory extends TeaModel {
         /**
-         * <p>The time when the resource directory was enabled.</p>
+         * <p>The time when the resource directory was enabled. The time is displayed in UTC in RFC 3339 format, indicated by Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-02-18T15:32:10.473Z</p>
@@ -51,7 +51,7 @@ public class InitResourceDirectoryResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The ID of the enterprise management account.</p>
+         * <p>The ID of the management account.</p>
          * 
          * <strong>example:</strong>
          * <p>172841235500****</p>
@@ -60,7 +60,7 @@ public class InitResourceDirectoryResponseBody extends TeaModel {
         public String masterAccountId;
 
         /**
-         * <p>The name of the enterprise management account.</p>
+         * <p>The name of the management account.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun-****</p>
@@ -78,7 +78,7 @@ public class InitResourceDirectoryResponseBody extends TeaModel {
         public String resourceDirectoryId;
 
         /**
-         * <p>The ID of the root folder.</p>
+         * <p>The ID of the Root folder.</p>
          * 
          * <strong>example:</strong>
          * <p>r-Zo****</p>
