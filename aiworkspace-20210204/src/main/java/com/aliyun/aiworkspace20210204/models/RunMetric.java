@@ -7,18 +7,21 @@ public class RunMetric extends TeaModel {
     /**
      * <p>The metric name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>loss</p>
      */
     @NameInMap("Key")
     public String key;
 
     /**
-     * <p>The step when the metric was recorded.</p>
+     * <p>The step count at which the metric is generated.</p>
      */
     @NameInMap("Step")
     public Long step;
 
     /**
-     * <p>The timestamp when the metric was recorded.</p>
+     * <p>The timestamp at which the metric is generated.</p>
      */
     @NameInMap("Timestamp")
     public Long timestamp;

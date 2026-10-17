@@ -20,7 +20,7 @@ public class ListConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of returned items.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -110,13 +110,13 @@ public class ListConfigsResponseBody extends TeaModel {
         public String configId;
 
         /**
-         * <p>The key of the configuration item. The following keys are supported:</p>
+         * <p>The key of the configuration item. Valid values:</p>
          * <ul>
-         * <li>tempStoragePath: the temporary storage path. This ConfigKey can be used only when CategoryName is set to CommonResourceConfig.</li>
-         * <li>isAutoRecycle: the automatic recycling configuration. This ConfigKey can be used only when CategoryName is set to DLCAutoRecycle.</li>
-         * <li>priorityConfig: the priority configuration. This ConfigKey can be used only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</li>
-         * <li>quotaMaximumDuration: the maximum runtime duration configuration for DLC jobs in a quota. This ConfigKey can be used only when CategoryName is set to QuotaMaximumDuration.</li>
-         * <li>predefinedTags: the preset tags for the workspace. Resources that are created must include these tags.</li>
+         * <li>tempStoragePath: Temporary storage path. This key is allowed only when CategoryName is set to CommonResourceConfig.</li>
+         * <li>isAutoRecycle: Automatic revoke configuration. This key is allowed only when CategoryName is set to DLCAutoRecycle.</li>
+         * <li>priorityConfig: Priority configuration. This key is allowed only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</li>
+         * <li>quotaMaximumDuration: Maximum runtime configuration of DLC nodes for a quota. This key is allowed only when CategoryName is set to QuotaMaximumDuration.</li>
+         * <li>predefinedTags: Preset labels for the workspace. Resources created must have these labels.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class ListConfigsResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>The UTC time when the configuration item was last modified.</p>
+         * <p>The UTC time when the configuration item was modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-07-28T03:44:10.000Z</p>

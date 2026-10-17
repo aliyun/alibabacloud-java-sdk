@@ -4166,6 +4166,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Labels", request.labels);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.options)) {
+            query.put("Options", request.options);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.verbose)) {
             query.put("Verbose", request.verbose);
         }

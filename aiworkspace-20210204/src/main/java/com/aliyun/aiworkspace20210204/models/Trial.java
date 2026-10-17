@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class Trial extends TeaModel {
     /**
      * <p>Accessibility</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PRIVATE</p>
      */
     @NameInMap("Accessibility")
     public String accessibility;
@@ -21,12 +24,18 @@ public class Trial extends TeaModel {
 
     /**
      * <p>GmtCreateTime</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-01-30T12:51:33.028Z</p>
      */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
     /**
      * <p>GmtModifiedTime</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-01-30T12:51:33.028Z</p>
      */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
@@ -39,24 +48,36 @@ public class Trial extends TeaModel {
 
     /**
      * <p>Name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testrun</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>OwnerId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1631044****3440</p>
      */
     @NameInMap("OwnerId")
     public String ownerId;
 
     /**
      * <p>SourceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>train9s0afvjkf</p>
      */
     @NameInMap("SourceId")
     public String sourceId;
 
     /**
      * <p>SourceType</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TrainingService</p>
      */
     @NameInMap("SourceType")
     public String sourceType;
@@ -78,6 +99,9 @@ public class Trial extends TeaModel {
 
     /**
      * <p>WorkspaceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>145883</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

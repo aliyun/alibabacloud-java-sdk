@@ -7,7 +7,7 @@ public class GetPermissionShrinkRequest extends TeaModel {
     /**
      * <p>The access type. Valid values:</p>
      * <ul>
-     * <li>PUBLIC: All members in the current workspace can access the instance.</li>
+     * <li>PUBLIC: All members of the current workspace can access the instance.</li>
      * <li>PRIVATE: Only the creator can access the instance.</li>
      * </ul>
      * 
@@ -30,7 +30,7 @@ public class GetPermissionShrinkRequest extends TeaModel {
     public String callerUid;
 
     /**
-     * <p>The Alibaba Cloud account UID of the workspace permission creator.</p>
+     * <p>The Alibaba Cloud account UID of the creator of the workspace permission.</p>
      * 
      * <strong>example:</strong>
      * <p>17915******4216</p>
@@ -38,14 +38,17 @@ public class GetPermissionShrinkRequest extends TeaModel {
     @NameInMap("Creator")
     public String creator;
 
+    /**
+     * <p>The labels.</p>
+     */
     @NameInMap("Labels")
     public String labelsShrink;
 
     /**
      * <p>The optional configurations. Separate multiple configurations with commas (,). Valid values:</p>
      * <ul>
-     * <li>ResourceEmpty: The resource is empty. The resource is empty if Resource is not specified.</li>
-     * <li>DisableRam: RAM authentication is not performed.</li>
+     * <li>ResourceEmpty: The resource is empty. If Resource is not specified, this value is empty.</li>
+     * <li>DisableRam: Disables RAM checks.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -7,8 +7,8 @@ public class AddImageRequest extends TeaModel {
     /**
      * <p>The visibility of the image. Valid values:</p>
      * <ul>
-     * <li>PUBLIC: All members in the current workspace can access the image.</li>
-     * <li>PRIVATE: Only the creator can access the image.</li>
+     * <li>PUBLIC: All members in the current workspace can manage the image.</li>
+     * <li>PRIVATE: Only the creator can manage the image.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,8 @@ public class AddImageRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The image ID. If you do not specify this parameter, the system automatically generates one. The format is image- followed by 18 uppercase or lowercase letters or digits.</p>
+     * <p>The ID of the image. If you do not specify this parameter, the system automatically generates an image ID.
+     * The format is image- followed by 18 uppercase or lowercase letters or digits.</p>
      * 
      * <strong>example:</strong>
      * <p>image-k83*****cv</p>
@@ -36,7 +37,7 @@ public class AddImageRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The image URI, which can be duplicated. For information about how to view the image URI, see <a href="https://help.aliyun.com/document_detail/449118.html">ListImage</a>.</p>
+     * <p>The URI of the image. The URI can be duplicated. For more information about how to view the image URI, see <a href="https://help.aliyun.com/document_detail/449118.html">ListImage</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,8 +47,8 @@ public class AddImageRequest extends TeaModel {
     public String imageUri;
 
     /**
-     * <p>The image labels. This is an array in which each item contains a key field and a value field.
-     * Official images have the following label: system.official=true
+     * <p>The labels of the image. This parameter is an array, and each item in the array contains the key and value fields.
+     * Official images have the following label: system.official=true.
      * The following keys are supported:</p>
      * <ul>
      * <li>system.chipType</li>
@@ -74,7 +75,7 @@ public class AddImageRequest extends TeaModel {
     public java.util.List<AddImageRequestLabels> labels;
 
     /**
-     * <p>The image name. Naming rules:</p>
+     * <p>The name of the image. The naming rules are as follows:</p>
      * <ul>
      * <li>The name must be 1 to 50 characters in length.</li>
      * <li>The name can contain lowercase letters, digits, and hyphens (-), and must start with a letter.</li>
@@ -89,7 +90,7 @@ public class AddImageRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The image size, in GB.</p>
+     * <p>The size of the image. Unit: GB.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -98,7 +99,7 @@ public class AddImageRequest extends TeaModel {
     public Long size;
 
     /**
-     * <p>The image source ID. If the image source type is Build, the source ID corresponds to the image build ID.</p>
+     * <p>The source ID of the image. If the source type of the image is Build, the source ID is the image build ID.</p>
      * 
      * <strong>example:</strong>
      * <p>build-****ks92</p>
@@ -107,10 +108,10 @@ public class AddImageRequest extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>The image source type. Valid values:</p>
+     * <p>The source type of the image. Valid values:</p>
      * <ul>
-     * <li>Import: import.</li>
-     * <li>Build: generate.</li>
+     * <li>Import: The image is imported.</li>
+     * <li>Build: The image is built.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -121,12 +122,15 @@ public class AddImageRequest extends TeaModel {
 
     /**
      * <p>The user ID (UID) of the image creator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1611******3000</p>
      */
     @NameInMap("UserId")
     public String userId;
 
     /**
-     * <p>The ID of the workspace to which the image belongs. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+     * <p>The ID of the workspace to which the image belongs. For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>15******45</p>

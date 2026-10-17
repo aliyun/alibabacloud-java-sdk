@@ -4,9 +4,15 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class UserMetricsEndpoint extends TeaModel {
+    /**
+     * <p>The HTTP path of the metric collection API.</p>
+     */
     @NameInMap("Path")
     public String path;
 
+    /**
+     * <p>The port number on which the metric collection service listens.</p>
+     */
     @NameInMap("Port")
     public Integer port;
 
