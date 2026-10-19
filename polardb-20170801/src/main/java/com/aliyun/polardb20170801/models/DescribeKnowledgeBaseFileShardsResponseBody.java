@@ -250,6 +250,15 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
         @NameInMap("ShardIndex")
         public Integer shardIndex;
 
+        /**
+         * <p>The URI of the source document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/source.pdf">https://example.com/source.pdf</a></p>
+         */
+        @NameInMap("SourceUri")
+        public String sourceUri;
+
         public static DescribeKnowledgeBaseFileShardsResponseBodyShards build(java.util.Map<String, ?> map) throws Exception {
             DescribeKnowledgeBaseFileShardsResponseBodyShards self = new DescribeKnowledgeBaseFileShardsResponseBodyShards();
             return TeaModel.build(map, self);
@@ -309,6 +318,14 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
         }
         public Integer getShardIndex() {
             return this.shardIndex;
+        }
+
+        public DescribeKnowledgeBaseFileShardsResponseBodyShards setSourceUri(String sourceUri) {
+            this.sourceUri = sourceUri;
+            return this;
+        }
+        public String getSourceUri() {
+            return this.sourceUri;
         }
 
     }

@@ -252,6 +252,15 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
         @NameInMap("SimilarityScore")
         public Double similarityScore;
 
+        /**
+         * <p>The URI of the source document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/source.pdf">https://example.com/source.pdf</a></p>
+         */
+        @NameInMap("SourceUri")
+        public String sourceUri;
+
         public static RetrievalKnowledgeBaseResponseBodyResults build(java.util.Map<String, ?> map) throws Exception {
             RetrievalKnowledgeBaseResponseBodyResults self = new RetrievalKnowledgeBaseResponseBodyResults();
             return TeaModel.build(map, self);
@@ -343,6 +352,14 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
         }
         public Double getSimilarityScore() {
             return this.similarityScore;
+        }
+
+        public RetrievalKnowledgeBaseResponseBodyResults setSourceUri(String sourceUri) {
+            this.sourceUri = sourceUri;
+            return this;
+        }
+        public String getSourceUri() {
+            return this.sourceUri;
         }
 
     }

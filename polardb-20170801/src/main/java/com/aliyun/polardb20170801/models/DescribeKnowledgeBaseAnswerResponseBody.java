@@ -384,6 +384,15 @@ public class DescribeKnowledgeBaseAnswerResponseBody extends TeaModel {
         @NameInMap("SourceId")
         public Integer sourceId;
 
+        /**
+         * <p>The URI of the original document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/source.pdf">https://example.com/source.pdf</a></p>
+         */
+        @NameInMap("SourceUri")
+        public String sourceUri;
+
         public static DescribeKnowledgeBaseAnswerResponseBodySources build(java.util.Map<String, ?> map) throws Exception {
             DescribeKnowledgeBaseAnswerResponseBodySources self = new DescribeKnowledgeBaseAnswerResponseBodySources();
             return TeaModel.build(map, self);
@@ -475,6 +484,14 @@ public class DescribeKnowledgeBaseAnswerResponseBody extends TeaModel {
         }
         public Integer getSourceId() {
             return this.sourceId;
+        }
+
+        public DescribeKnowledgeBaseAnswerResponseBodySources setSourceUri(String sourceUri) {
+            this.sourceUri = sourceUri;
+            return this;
+        }
+        public String getSourceUri() {
+            return this.sourceUri;
         }
 
     }
