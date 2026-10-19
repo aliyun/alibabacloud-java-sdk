@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeKnowledgeBaseAnswerRequest extends TeaModel {
     /**
-     * <p>The unique ID of the knowledge base.</p>
+     * <p>The unique identifier of the knowledge base.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeKnowledgeBaseAnswerRequest extends TeaModel {
     public String knowledgeBaseId;
 
     /**
-     * <p>The unique ID of the Q&amp;A task.</p>
+     * <p>The unique identifier of the Q&amp;A task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -94,7 +94,7 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The element reference of the image in the Docling source document structure.</p>
+         * <p>The reference to the image element in the structure of the Docling source document.</p>
          * 
          * <strong>example:</strong>
          * <p>#/pictures/1</p>
@@ -103,7 +103,7 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
         public String itemRef;
 
         /**
-         * <p>The media type of the image resource.</p>
+         * <p>The MIME type of the image resource.</p>
          * 
          * <strong>example:</strong>
          * <p>image/png</p>
@@ -169,13 +169,13 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
 
     public static class RetrievalKnowledgeBaseResponseBodyResults extends TeaModel {
         /**
-         * <p>The list of figure or table captions associated with the chunk.</p>
+         * <p>The list of captions for figures or tables associated with the chunk.</p>
          */
         @NameInMap("Captions")
         public java.util.List<String> captions;
 
         /**
-         * <p>The list of Docling source document structured element references associated with the chunk. You can use these references to precisely locate elements in the original document.</p>
+         * <p>The list of references to structured elements in the Docling source document associated with the chunk. You can use these references to precisely locate the original elements.</p>
          */
         @NameInMap("DocItems")
         public java.util.List<String> docItems;
@@ -193,13 +193,13 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
          * <p>The name of the file.</p>
          * 
          * <strong>example:</strong>
-         * <p>2024FinancialReport.pdf</p>
+         * <p>2024 Financial Report.pdf</p>
          */
         @NameInMap("FileName")
         public String fileName;
 
         /**
-         * <p>The chain of section headings to which the chunk belongs.</p>
+         * <p>The heading hierarchy of the section to which the chunk belongs.</p>
          */
         @NameInMap("Headings")
         public java.util.List<String> headings;

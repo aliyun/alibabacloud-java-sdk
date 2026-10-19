@@ -2134,6 +2134,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AutoUseCoupon", request.autoUseCoupon);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.capacity)) {
+            query.put("Capacity", request.capacity);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
         }
@@ -7395,7 +7399,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a custom model registration from an AI cluster.</p>
+     * <p>Deletes a custom model registration for an AI cluster.</p>
      * 
      * @param request DeleteAIDBClusterCustomModelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7404,10 +7408,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteAIDBClusterCustomModelResponse deleteAIDBClusterCustomModelWithOptions(DeleteAIDBClusterCustomModelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
-            query.put("DBClusterId", request.DBClusterId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.modelName)) {
             query.put("ModelName", request.modelName);
         }
@@ -7435,7 +7435,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a custom model registration from an AI cluster.</p>
+     * <p>Deletes a custom model registration for an AI cluster.</p>
      * 
      * @param request DeleteAIDBClusterCustomModelRequest
      * @return DeleteAIDBClusterCustomModelResponse
@@ -13307,7 +13307,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of models in an AI cluster.</p>
+     * <p>Retrieves a list of models in an AI cluster.</p>
      * 
      * @param request DescribeAvailableModelsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13347,7 +13347,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of models in an AI cluster.</p>
+     * <p>Retrieves a list of models in an AI cluster.</p>
      * 
      * @param request DescribeAvailableModelsRequest
      * @return DescribeAvailableModelsResponse
@@ -18643,7 +18643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the result of a single-round knowledge base question answering task.</p>
+     * <p>Queries the single-turn Q&amp;A results of a knowledge base.</p>
      * 
      * @param request DescribeKnowledgeBaseAnswerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18683,7 +18683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the result of a single-round knowledge base question answering task.</p>
+     * <p>Queries the single-turn Q&amp;A results of a knowledge base.</p>
      * 
      * @param request DescribeKnowledgeBaseAnswerRequest
      * @return DescribeKnowledgeBaseAnswerResponse
@@ -30798,13 +30798,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Registers a custom model for an AI cluster.</p>
      * 
-     * @param request RegisterAIDBClusterCustomModelRequest
+     * @param tmpReq RegisterAIDBClusterCustomModelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RegisterAIDBClusterCustomModelResponse
      */
-    public RegisterAIDBClusterCustomModelResponse registerAIDBClusterCustomModelWithOptions(RegisterAIDBClusterCustomModelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public RegisterAIDBClusterCustomModelResponse registerAIDBClusterCustomModelWithOptions(RegisterAIDBClusterCustomModelRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RegisterAIDBClusterCustomModelShrinkRequest request = new RegisterAIDBClusterCustomModelShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.containerEnv)) {
+            request.containerEnvShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.containerEnv, "ContainerEnv", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.modelParams)) {
+            request.modelParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.modelParams, "ModelParams", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.containerEnvShrink)) {
+            query.put("ContainerEnv", request.containerEnvShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.customOssBucketName)) {
             query.put("CustomOssBucketName", request.customOssBucketName);
         }
@@ -30813,20 +30827,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CustomOssBucketPath", request.customOssBucketPath);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
-            query.put("DBClusterId", request.DBClusterId);
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceClass)) {
+            query.put("DBInstanceClass", request.DBInstanceClass);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.directCommand)) {
+            query.put("DirectCommand", request.directCommand);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.displayModelName)) {
             query.put("DisplayModelName", request.displayModelName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.imageName)) {
+            query.put("ImageName", request.imageName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inferenceEngine)) {
+            query.put("InferenceEngine", request.inferenceEngine);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.modelName)) {
             query.put("ModelName", request.modelName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.modelParamsShrink)) {
+            query.put("ModelParams", request.modelParamsShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.registryPassword)) {
+            query.put("RegistryPassword", request.registryPassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.registryUsername)) {
+            query.put("RegistryUsername", request.registryUsername);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -31608,6 +31646,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Adjusts the model capacity of an AI cluster.</p>
+     * 
+     * @param request ResizeAIDBClusterModelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ResizeAIDBClusterModelResponse
+     */
+    public ResizeAIDBClusterModelResponse resizeAIDBClusterModelWithOptions(ResizeAIDBClusterModelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetCapacity)) {
+            query.put("TargetCapacity", request.targetCapacity);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ResizeAIDBClusterModel"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ResizeAIDBClusterModelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Adjusts the model capacity of an AI cluster.</p>
+     * 
+     * @param request ResizeAIDBClusterModelRequest
+     * @return ResizeAIDBClusterModelResponse
+     */
+    public ResizeAIDBClusterModelResponse resizeAIDBClusterModel(ResizeAIDBClusterModelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.resizeAIDBClusterModelWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Restarts an AI cluster.</p>
      * 
      * @param request RestartAIDBClusterRequest
@@ -31984,7 +32078,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information from a knowledge base.</p>
+     * <p>Searches a knowledge base.</p>
      * 
      * @param request RetrievalKnowledgeBaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32036,7 +32130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information from a knowledge base.</p>
+     * <p>Searches a knowledge base.</p>
      * 
      * @param request RetrievalKnowledgeBaseRequest
      * @return RetrievalKnowledgeBaseResponse

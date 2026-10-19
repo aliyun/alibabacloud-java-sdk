@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAIDBClusterResponseBody extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-******************</p>
@@ -14,7 +14,7 @@ public class CreateAIDBClusterResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The order ID.</p>
+     * <p>The ID of the order.</p>
      * 
      * <strong>example:</strong>
      * <p>2035638*******</p>
@@ -32,7 +32,7 @@ public class CreateAIDBClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-************</p>

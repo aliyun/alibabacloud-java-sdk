@@ -20,7 +20,7 @@ public class CreateApplicationResponseBody extends TeaModel {
     public java.util.List<CreateApplicationResponseBodyComponents> components;
 
     /**
-     * <p>The application description.</p>
+     * <p>The application remarks.</p>
      * 
      * <strong>example:</strong>
      * <p>myapp</p>
@@ -29,7 +29,7 @@ public class CreateApplicationResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The generated order ID.</p>
+     * <p>The ID of the generated order.</p>
      * 
      * <strong>example:</strong>
      * <p>2148126708*****</p>
@@ -47,7 +47,7 @@ public class CreateApplicationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the resources are sufficient. This parameter is returned only when DryRun is set to true.</p>
+     * <p>Indicates whether the required resources are available. This parameter is returned only when DryRun is set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

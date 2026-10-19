@@ -60,7 +60,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String architecture;
 
     /**
-     * <p>The authentication provider.</p>
+     * <p>The authentication service provider.</p>
      * 
      * <strong>example:</strong>
      * <p>feishu</p>
@@ -78,16 +78,16 @@ public class CreateApplicationRequest extends TeaModel {
     public String authProviderConfig;
 
     /**
-     * <p>Specifies if automatic creation is enabled and the instance will attach and associate with an EIP.</p>
+     * <p>Specifies whether automatic creation is enabled and the instance will attach and associate with an EIP.</p>
      */
     @NameInMap("AutoAllocatePublicEip")
     public Boolean autoAllocatePublicEip;
 
     /**
-     * <p>Specifies whether to automatically create a Polarlakebase cold storage instance. Valid values:</p>
+     * <p>Specifies whether to automatically create a Polarlakebase cold storage edition instance. Valid values:</p>
      * <ul>
-     * <li>false: Does not automatically create the instance. This is the default value.</li>
-     * <li>true: Automatically creates the instance.</li>
+     * <li>false (default): Do not automatically create the instance.</li>
+     * <li>true: Automatically create the instance.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -108,8 +108,8 @@ public class CreateApplicationRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically use coupons. Valid values:</p>
      * <ul>
-     * <li>true: Uses coupons. This is the default value.</li>
-     * <li>false: Does not use coupons.</li>
+     * <li>true (default): Use coupons.</li>
+     * <li>false: Do not use coupons.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -143,13 +143,13 @@ public class CreateApplicationRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The expected list of DNAT entries for NAT mapping. This parameter must be specified together with VpcNatGatewayId. It can be left empty, which indicates that no DNAT entries are created.</p>
+     * <p>The expected list of DNAT entries for NAT mapping. Specify this parameter together with VpcNatGatewayId. Leave this parameter empty if you do not want to create DNAT entries.</p>
      */
     @NameInMap("DnatEntries")
     public java.util.List<CreateApplicationRequestDnatEntries> dnatEntries;
 
     /**
-     * <p>The dedicated NAT IP address allocated for DNAT, which is separate from the SNAT IP address. The IP address must belong to the NAT gateway, be in the available state, and the vSwitch where the gateway resides must belong to the primary CIDR block reachable from the office network. This parameter must be specified together with VpcNatGatewayId. Prerequisite: An SNAT entry is associated with the vSwitch where the application resides.</p>
+     * <p>The dedicated NAT IP address allocated for DNAT mapping, which is separate from the SNAT IP address. The IP address must belong to the gateway, be in the available state, and the vSwitch where the gateway resides must belong to the primary CIDR block reachable from the office network. This parameter must be specified together with VpcNatGatewayId. Prerequisite: An SNAT entry is bound to the vSwitch where the application resides.</p>
      * 
      * <strong>example:</strong>
      * <p>10.64.0.10</p>
@@ -158,7 +158,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String dnatIpAddress;
 
     /**
-     * <p>Specifies whether to perform a dry run. Default value: <code>false</code>. If you set this parameter to <code>true</code>, the system only checks the parameters and resources without actually creating the resources.</p>
+     * <p>Specifies whether to perform a dry run. Default value: false. If you set this parameter to true, only parameter and resource validations are performed, and no resources are actually created.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -185,7 +185,7 @@ public class CreateApplicationRequest extends TeaModel {
     public CreateApplicationRequestMemApplicationSpec memApplicationSpec;
 
     /**
-     * <p>The model API. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
+     * <p>The API of the model. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
      * 
      * <strong>example:</strong>
      * <p>openai-completions</p>
@@ -203,7 +203,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String modelApiKey;
 
     /**
-     * <p>The base URL of the model. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
+     * <p>The endpoint of the model. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></p>
@@ -226,7 +226,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String modelFrom;
 
     /**
-     * <p>The model name. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
+     * <p>The name of the model. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
      * 
      * <strong>example:</strong>
      * <p>qwen3-max</p>
@@ -259,7 +259,8 @@ public class CreateApplicationRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The ID of the Polarlakebase cold storage or high-performance instance. Default value: empty. If you specify this parameter, the corresponding storage is mounted to the application. This parameter is supported only for the following applications:</p>
+     * <p>The instance ID of the Polarlakebase cold storage or high-performance edition. Default value: empty. If you specify this parameter, the corresponding storage is mounted to the application.</p>
+     * <p>Currently, only the following applications are supported:</p>
      * <ul>
      * <li>supabase</li>
      * <li>raycluster</li>
@@ -308,7 +309,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The name of the IP address whitelist group. Default value: <code>default</code>.</p>
+     * <p>The name of the IP address whitelist group. Default value: default.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -317,7 +318,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String securityIPArrayName;
 
     /**
-     * <p>The IP address whitelist. If you do not specify this parameter, the default value <code>127.0.0.1</code> is used.</p>
+     * <p>The IP address whitelist. If you do not specify this parameter, the default value 127.0.0.1 is used.</p>
      * 
      * <strong>example:</strong>
      * <p>127.0.0.1,172.17.0.0/24</p>
@@ -335,7 +336,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String securityIPType;
 
     /**
-     * <p>The skill template ID.</p>
+     * <p>The ID of the skill template.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -344,7 +345,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String skillTemplateId;
 
     /**
-     * <p>The list of storage resources for the application.</p>
+     * <p>The list of application storages.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;StorageType&quot;:&quot;oss&quot;,&quot;StorageInstanceId&quot;:&quot;pfs-xxxx&quot;,&quot;EndpointId&quot;:&quot;pe-xxxx&quot;}]</p>
@@ -395,7 +396,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>NAT mapping: the user-created VPC NAT gateway ID. If you specify this parameter, NAT mapping is enabled when the instance is created. The NAT gateway must reside in the same VPC as the application, be of the private network (intranet) type, and be in the active state.</p>
+     * <p>The NAT gateway ID of the self-managed VPC NAT gateway for NAT mapping. If you specify this parameter, NAT mapping is enabled when the instance is created. The gateway must be in the same VPC as the application, use the private network (intranet) type, and be active.</p>
      * 
      * <strong>example:</strong>
      * <p>ngw-xxx</p>
@@ -919,11 +920,12 @@ public class CreateApplicationRequest extends TeaModel {
         public Long componentReplica;
 
         /**
-         * <p>The type of the application subcomponent. Valid values for supabase:</p>
+         * <p>The type of the application subcomponent.
+         * For supabase, valid values:</p>
          * <ul>
          * <li>gateway</li>
          * <li>backend
-         * Valid values for raycluster:</li>
+         * For raycluster, valid values:</li>
          * <li>head</li>
          * <li>worker</li>
          * <li>gpuworker</li>
@@ -1078,7 +1080,7 @@ public class CreateApplicationRequest extends TeaModel {
 
     public static class CreateApplicationRequestDnatEntries extends TeaModel {
         /**
-         * <p>The frontend port. This parameter is optional. By default, the control system automatically allocates a port, avoiding ports already occupied by the gateway. You can query the allocation result by calling the DescribeApplicationAttribute operation.</p>
+         * <p>The frontend port. This parameter is optional. By default, the system automatically assigns a port that is not occupied by the gateway. You can call the DescribeApplicationAttribute operation to query the assigned port.</p>
          * 
          * <strong>example:</strong>
          * <p>10001</p>
@@ -1120,7 +1122,7 @@ public class CreateApplicationRequest extends TeaModel {
 
     public static class CreateApplicationRequestEndpoints extends TeaModel {
         /**
-         * <p>The description of the service endpoint.</p>
+         * <p>The remark of the service endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>my_endpoint</p>
@@ -1278,7 +1280,16 @@ public class CreateApplicationRequest extends TeaModel {
         public String llmModel;
 
         /**
-         * <p>The project name, which corresponds to the database schema that stores project data.</p>
+         * <p>The memory type, such as multimodal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MULTIMODAL_TEXT</p>
+         */
+        @NameInMap("MemoryType")
+        public String memoryType;
+
+        /**
+         * <p>The project name, which corresponds to the schema in the database where project data is stored.</p>
          * 
          * <strong>example:</strong>
          * <p>test-project-name</p>
@@ -1303,6 +1314,39 @@ public class CreateApplicationRequest extends TeaModel {
          */
         @NameInMap("Shard")
         public Integer shard;
+
+        /**
+         * <p>The name of the visual embedder model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen3.7-text-embedding</p>
+         */
+        @NameInMap("VisualEmbedderModel")
+        public String visualEmbedderModel;
+
+        /**
+         * <p>The vector dimensions of the visual embedder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2560</p>
+         */
+        @NameInMap("VisualEmbedderModelDimension")
+        public Integer visualEmbedderModelDimension;
+
+        /**
+         * <p>The list of modalities for the visual LLM, such as image.</p>
+         */
+        @NameInMap("VisualLlmModalities")
+        public java.util.List<String> visualLlmModalities;
+
+        /**
+         * <p>The name of the visual LLM model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen3.6-flash</p>
+         */
+        @NameInMap("VisualLlmModel")
+        public String visualLlmModel;
 
         public static CreateApplicationRequestMemApplicationSpec build(java.util.Map<String, ?> map) throws Exception {
             CreateApplicationRequestMemApplicationSpec self = new CreateApplicationRequestMemApplicationSpec();
@@ -1365,6 +1409,14 @@ public class CreateApplicationRequest extends TeaModel {
             return this.llmModel;
         }
 
+        public CreateApplicationRequestMemApplicationSpec setMemoryType(String memoryType) {
+            this.memoryType = memoryType;
+            return this;
+        }
+        public String getMemoryType() {
+            return this.memoryType;
+        }
+
         public CreateApplicationRequestMemApplicationSpec setProjectName(String projectName) {
             this.projectName = projectName;
             return this;
@@ -1387,6 +1439,38 @@ public class CreateApplicationRequest extends TeaModel {
         }
         public Integer getShard() {
             return this.shard;
+        }
+
+        public CreateApplicationRequestMemApplicationSpec setVisualEmbedderModel(String visualEmbedderModel) {
+            this.visualEmbedderModel = visualEmbedderModel;
+            return this;
+        }
+        public String getVisualEmbedderModel() {
+            return this.visualEmbedderModel;
+        }
+
+        public CreateApplicationRequestMemApplicationSpec setVisualEmbedderModelDimension(Integer visualEmbedderModelDimension) {
+            this.visualEmbedderModelDimension = visualEmbedderModelDimension;
+            return this;
+        }
+        public Integer getVisualEmbedderModelDimension() {
+            return this.visualEmbedderModelDimension;
+        }
+
+        public CreateApplicationRequestMemApplicationSpec setVisualLlmModalities(java.util.List<String> visualLlmModalities) {
+            this.visualLlmModalities = visualLlmModalities;
+            return this;
+        }
+        public java.util.List<String> getVisualLlmModalities() {
+            return this.visualLlmModalities;
+        }
+
+        public CreateApplicationRequestMemApplicationSpec setVisualLlmModel(String visualLlmModel) {
+            this.visualLlmModel = visualLlmModel;
+            return this;
+        }
+        public String getVisualLlmModel() {
+            return this.visualLlmModel;
         }
 
     }

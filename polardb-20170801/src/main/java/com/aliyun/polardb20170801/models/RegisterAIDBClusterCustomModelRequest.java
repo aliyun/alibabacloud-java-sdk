@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class RegisterAIDBClusterCustomModelRequest extends TeaModel {
     /**
+     * <p>The container startup environment variables. Variable names cannot be empty or contain whitespace. Variable values can be empty strings.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;HF_HOME&quot;:&quot;/cache/hf&quot;,&quot;EMPTY_VALUE&quot;:&quot;&quot;}</p>
+     */
+    @NameInMap("ContainerEnv")
+    public java.util.Map<String, String> containerEnv;
+
+    /**
      * <p>The name of the OSS bucket.</p>
      * <p>This parameter is required.</p>
      * 
@@ -15,7 +24,7 @@ public class RegisterAIDBClusterCustomModelRequest extends TeaModel {
     public String customOssBucketName;
 
     /**
-     * <p>The model path within the OSS bucket.</p>
+     * <p>The model path in the OSS bucket.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,23 +34,49 @@ public class RegisterAIDBClusterCustomModelRequest extends TeaModel {
     public String customOssBucketPath;
 
     /**
-     * <p>The ID of the PolarDB AI 3.0 logical instance.</p>
-     * <p>This parameter is required.</p>
+     * <p>The GPU instance type used for model deployment. Required when configuring deployment parameters.</p>
      * 
      * <strong>example:</strong>
-     * <p>pm-2ze4x2mwo81knj08a</p>
+     * <p>polardb.gpu.gn8is.4xlarge</p>
      */
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
+    @NameInMap("DBInstanceClass")
+    public String DBInstanceClass;
 
     /**
-     * <p>The display name shown in the candidate list and the initial client-facing invocation name.</p>
+     * <p>The direct startup command for the model container.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>python -m vllm.entrypoints.openai.api_server</p>
+     */
+    @NameInMap("DirectCommand")
+    public String directCommand;
+
+    /**
+     * <p>The display name in the candidate list and the initial invocation name for clients.</p>
      * 
      * <strong>example:</strong>
      * <p>my-qwen3</p>
      */
     @NameInMap("DisplayModelName")
     public String displayModelName;
+
+    /**
+     * <p>The full reference of the customer-owned inference image, in the format of registry/repository:tag.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>registry.example.com/customer/model:v1</p>
+     */
+    @NameInMap("ImageName")
+    public String imageName;
+
+    /**
+     * <p>The inference engine. Required when configuring deployment parameters. Valid values: vllm and sglang.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vllm</p>
+     */
+    @NameInMap("InferenceEngine")
+    public String inferenceEngine;
 
     /**
      * <p>The custom model registration key and model directory name.</p>
@@ -54,6 +89,15 @@ public class RegisterAIDBClusterCustomModelRequest extends TeaModel {
     public String modelName;
 
     /**
+     * <p>The model startup parameters. Parameter keys must start with --.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;--max-model-len&quot;:&quot;32768&quot;}</p>
+     */
+    @NameInMap("ModelParams")
+    public java.util.Map<String, String> modelParams;
+
+    /**
      * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -63,9 +107,35 @@ public class RegisterAIDBClusterCustomModelRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The password or temporary token for the customer image repository. Required when ImageName is specified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>temporary-token</p>
+     */
+    @NameInMap("RegistryPassword")
+    public String registryPassword;
+
+    /**
+     * <p>The username for the customer image repository. Required when ImageName is specified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>temporary-user</p>
+     */
+    @NameInMap("RegistryUsername")
+    public String registryUsername;
+
     public static RegisterAIDBClusterCustomModelRequest build(java.util.Map<String, ?> map) throws Exception {
         RegisterAIDBClusterCustomModelRequest self = new RegisterAIDBClusterCustomModelRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RegisterAIDBClusterCustomModelRequest setContainerEnv(java.util.Map<String, String> containerEnv) {
+        this.containerEnv = containerEnv;
+        return this;
+    }
+    public java.util.Map<String, String> getContainerEnv() {
+        return this.containerEnv;
     }
 
     public RegisterAIDBClusterCustomModelRequest setCustomOssBucketName(String customOssBucketName) {
@@ -84,12 +154,20 @@ public class RegisterAIDBClusterCustomModelRequest extends TeaModel {
         return this.customOssBucketPath;
     }
 
-    public RegisterAIDBClusterCustomModelRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
+    public RegisterAIDBClusterCustomModelRequest setDBInstanceClass(String DBInstanceClass) {
+        this.DBInstanceClass = DBInstanceClass;
         return this;
     }
-    public String getDBClusterId() {
-        return this.DBClusterId;
+    public String getDBInstanceClass() {
+        return this.DBInstanceClass;
+    }
+
+    public RegisterAIDBClusterCustomModelRequest setDirectCommand(String directCommand) {
+        this.directCommand = directCommand;
+        return this;
+    }
+    public String getDirectCommand() {
+        return this.directCommand;
     }
 
     public RegisterAIDBClusterCustomModelRequest setDisplayModelName(String displayModelName) {
@@ -100,6 +178,22 @@ public class RegisterAIDBClusterCustomModelRequest extends TeaModel {
         return this.displayModelName;
     }
 
+    public RegisterAIDBClusterCustomModelRequest setImageName(String imageName) {
+        this.imageName = imageName;
+        return this;
+    }
+    public String getImageName() {
+        return this.imageName;
+    }
+
+    public RegisterAIDBClusterCustomModelRequest setInferenceEngine(String inferenceEngine) {
+        this.inferenceEngine = inferenceEngine;
+        return this;
+    }
+    public String getInferenceEngine() {
+        return this.inferenceEngine;
+    }
+
     public RegisterAIDBClusterCustomModelRequest setModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -108,12 +202,36 @@ public class RegisterAIDBClusterCustomModelRequest extends TeaModel {
         return this.modelName;
     }
 
+    public RegisterAIDBClusterCustomModelRequest setModelParams(java.util.Map<String, String> modelParams) {
+        this.modelParams = modelParams;
+        return this;
+    }
+    public java.util.Map<String, String> getModelParams() {
+        return this.modelParams;
+    }
+
     public RegisterAIDBClusterCustomModelRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public RegisterAIDBClusterCustomModelRequest setRegistryPassword(String registryPassword) {
+        this.registryPassword = registryPassword;
+        return this;
+    }
+    public String getRegistryPassword() {
+        return this.registryPassword;
+    }
+
+    public RegisterAIDBClusterCustomModelRequest setRegistryUsername(String registryUsername) {
+        this.registryUsername = registryUsername;
+        return this;
+    }
+    public String getRegistryUsername() {
+        return this.registryUsername;
     }
 
 }

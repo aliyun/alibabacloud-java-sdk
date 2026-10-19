@@ -14,7 +14,7 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of records on the current page.</p>
+     * <p>The number of entries on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The number of entries per page in a paged query.</p>
+     * <p>The number of entries per page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -47,7 +47,7 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
     public java.util.List<DescribeKnowledgeBaseFileShardsResponseBodyShards> shards;
 
     /**
-     * <p>The total number of records.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -119,7 +119,7 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
         public Integer documentIndex;
 
         /**
-         * <p>The unique ID of the image resource.</p>
+         * <p>The unique identifier of the image resource.</p>
          * 
          * <strong>example:</strong>
          * <p>document-0/pictures/1</p>
@@ -137,7 +137,7 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
         public String itemRef;
 
         /**
-         * <p>The media type of the image resource.</p>
+         * <p>The MIME type of the image resource.</p>
          * 
          * <strong>example:</strong>
          * <p>image/png</p>
@@ -209,13 +209,13 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
         public java.util.List<String> captions;
 
         /**
-         * <p>The list of Docling source document structured element references associated with the shard. You can use these references to precisely locate original document elements.</p>
+         * <p>The list of structured element references in the Docling source document associated with the shard, which can be used to precisely locate the original elements.</p>
          */
         @NameInMap("DocItems")
         public java.util.List<String> docItems;
 
         /**
-         * <p>The chain of section headings to which the shard belongs.</p>
+         * <p>The section heading chain to which the shard belongs.</p>
          */
         @NameInMap("Headings")
         public java.util.List<String> headings;

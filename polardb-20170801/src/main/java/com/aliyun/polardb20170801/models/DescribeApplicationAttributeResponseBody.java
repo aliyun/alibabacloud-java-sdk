@@ -66,7 +66,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The application description.</p>
+     * <p>The description of the application.</p>
      * 
      * <strong>example:</strong>
      * <p>myapp</p>
@@ -75,7 +75,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The NAT mapping: the list of DNAT mapping entries.</p>
+     * <p>The list of DNAT mapping entries for NAT mapping.</p>
      */
     @NameInMap("DnatMappings")
     public java.util.List<DescribeApplicationAttributeResponseBodyDnatMappings> dnatMappings;
@@ -127,8 +127,8 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     /**
      * <p>The lock mode. Valid values:</p>
      * <ul>
-     * <li>Unlock: Unlocked.</li>
-     * <li>Lock: Locked.</li>
+     * <li>Unlock: The application is not locked.</li>
+     * <li>Lock: The application is locked.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -182,7 +182,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public String natGatewayId;
 
     /**
-     * <p>The SNAT IP address bound to the vSwitch where the application resides for NAT mapping. This parameter refers to customer-managed SNAT entries that are discovered and returned in real time by the control plane, and is independent of the Internet NAT gateway SNAT.</p>
+     * <p>The SNAT IP address bound to the vSwitch where the application resides for NAT mapping. This refers to customer-managed SNAT entries that are discovered and returned in real time by the control plane, and is independent of the Internet NAT gateway SNAT.</p>
      * 
      * <strong>example:</strong>
      * <p>10.64.0.20</p>
@@ -200,13 +200,13 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public String payType;
 
     /**
-     * <p>The attributes of the PolarClaw application.</p>
+     * <p>The PolarClaw application attributes.</p>
      */
     @NameInMap("PolarClawApplicationAttribute")
     public DescribeApplicationAttributeResponseBodyPolarClawApplicationAttribute polarClawApplicationAttribute;
 
     /**
-     * <p>The attributes of the PolarClaw SaaS application.</p>
+     * <p>The PolarClaw SaaS application attributes.</p>
      */
     @NameInMap("PolarClawSaaSApplicationAttribute")
     public DescribeApplicationAttributeResponseBodyPolarClawSaaSApplicationAttribute polarClawSaaSApplicationAttribute;
@@ -281,9 +281,9 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
      * <li>ClassChanging: The application specifications are being changed.</li>
      * <li>Transing: The application is being migrated.</li>
      * <li>MinorVersionUpgrading: The minor version of the application is being upgraded.</li>
-     * <li>NetCreating: The endpoint is being created.</li>
-     * <li>NetDeleting: The endpoint is being deleted.</li>
-     * <li>NetModifying: The endpoint is being modified.</li>
+     * <li>NetCreating: The endpoint of the application is being created.</li>
+     * <li>NetDeleting: The endpoint of the application is being deleted.</li>
+     * <li>NetModifying: The endpoint of the application is being modified.</li>
      * <li>Restarting: The application is being restarted.</li>
      * <li>Locking: The application is being locked.</li>
      * <li>Locked: The application is locked.</li>
@@ -304,7 +304,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public java.util.List<DescribeApplicationAttributeResponseBodyStorages> storages;
 
     /**
-     * <p>Indicates whether an upgrade is available.</p>
+     * <p>Specifies whether an upgrade is available.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -697,7 +697,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The security group ID.</p>
+         * <p>The ID of the security group.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-*******************</p>
@@ -706,7 +706,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The security group name.</p>
+         * <p>The name of the security group.</p>
          * 
          * <strong>example:</strong>
          * <p>MyGroupName</p>
@@ -848,7 +848,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
 
     public static class DescribeApplicationAttributeResponseBodyComponentsTopology extends TeaModel {
         /**
-         * <p>The list of topology child node IDs or child node subcomponent types for the current application subcomponent.</p>
+         * <p>The list of topology child node IDs for the current application subcomponent, or the list of subcomponent types of the child nodes.</p>
          */
         @NameInMap("Children")
         public java.util.List<String> children;
@@ -863,7 +863,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String layer;
 
         /**
-         * <p>The list of topology parent node IDs or parent node subcomponent types for the current application subcomponent.</p>
+         * <p>The list of topology parent node IDs for the current application subcomponent, or the list of subcomponent types of the parent nodes.</p>
          */
         @NameInMap("Parents")
         public java.util.List<String> parents;
@@ -910,7 +910,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String componentClass;
 
         /**
-         * <p>The description of the application subcomponent specifications.</p>
+         * <p>The description of the specifications for the application subcomponent.</p>
          * 
          * <strong>example:</strong>
          * <p>2C4GB</p>
@@ -919,7 +919,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String componentClassDescription;
 
         /**
-         * <p>The subcomponent ID.</p>
+         * <p>The ID of the subcomponent.</p>
          * 
          * <strong>example:</strong>
          * <p>pac-*******************</p>
@@ -946,7 +946,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public Long componentReplica;
 
         /**
-         * <p>The replica group name of the application subcomponent.</p>
+         * <p>The name of the replica group for the application subcomponent.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -978,7 +978,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public java.util.List<DescribeApplicationAttributeResponseBodyComponentsSecurityIPArrays> securityIPArrays;
 
         /**
-         * <p>The component status. The valid values are the same as the application status.</p>
+         * <p>The status of the component. The valid values are the same as those of the application status.</p>
          * 
          * <strong>example:</strong>
          * <p>Activated</p>
@@ -1089,7 +1089,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
 
     public static class DescribeApplicationAttributeResponseBodyDnatMappings extends TeaModel {
         /**
-         * <p>The access address in the NatIp:FrontPort format. It can be directly used on the office network.</p>
+         * <p>The access address in the NatIp:FrontPort format, which can be directly used on the office network.</p>
          * 
          * <strong>example:</strong>
          * <p>10.64.0.10:10001</p>
@@ -1107,7 +1107,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public Integer backendPort;
 
         /**
-         * <p>The DNAT entry ID.</p>
+         * <p>The ID of the DNAT entry.</p>
          * 
          * <strong>example:</strong>
          * <p>fwd-xxx</p>
@@ -1125,7 +1125,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public Integer frontPort;
 
         /**
-         * <p>The port name. Valid values: webui, hermesagent, dashboard, and ssh.</p>
+         * <p>The name of the port. Valid values: webui, hermesagent, dashboard, and ssh.</p>
          * 
          * <strong>example:</strong>
          * <p>webui</p>
@@ -1134,7 +1134,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String portName;
 
         /**
-         * <p>The entry status.</p>
+         * <p>The status of the entry.</p>
          * 
          * <strong>example:</strong>
          * <p>Available</p>
@@ -1211,7 +1211,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>The endpoint ID.</p>
+         * <p>The ID of the endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>pa-**************</p>
@@ -1229,10 +1229,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String IP;
 
         /**
-         * <p>The endpoint type. Valid values:</p>
+         * <p>The type of the endpoint. Valid values:</p>
          * <ul>
          * <li>Private: VPC address.</li>
-         * <li>Public: Internet address.</li>
+         * <li>Public: public network address.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1251,7 +1251,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String port;
 
         /**
-         * <p>The port description.</p>
+         * <p>The description of the port.</p>
          * 
          * <strong>example:</strong>
          * <p>kong_http</p>
@@ -1400,7 +1400,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
 
     public static class DescribeApplicationAttributeResponseBodyMemApplicationAttribute extends TeaModel {
         /**
-         * <p>The database name.</p>
+         * <p>The name of the database.</p>
          * 
          * <strong>example:</strong>
          * <p>test-database-name</p>
@@ -1409,7 +1409,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String dbName;
 
         /**
-         * <p>The embedder model name.</p>
+         * <p>The name of the embedder model.</p>
          * 
          * <strong>example:</strong>
          * <p>text-embedding-v4</p>
@@ -1427,7 +1427,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String graphLlmModelName;
 
         /**
-         * <p>The LLM model name.</p>
+         * <p>The name of the LLM model.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen3-max</p>
@@ -1436,7 +1436,25 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String llmModelName;
 
         /**
-         * <p>The project name, which corresponds to the schema where project data is stored in the database.</p>
+         * <p>The active memory type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MULTIMODAL_TEXT</p>
+         */
+        @NameInMap("MemoryType")
+        public String memoryType;
+
+        /**
+         * <p>Indicates whether the multimodal feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("MultimodalEnabled")
+        public Boolean multimodalEnabled;
+
+        /**
+         * <p>The name of the project, which corresponds to the schema in the database where project data is stored.</p>
          * 
          * <strong>example:</strong>
          * <p>test-project-name</p>
@@ -1445,7 +1463,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String projectName;
 
         /**
-         * <p>The reranker model name.</p>
+         * <p>The name of the reranker model.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen3-rerank</p>
@@ -1467,6 +1485,39 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
          */
         @NameInMap("UserName")
         public String userName;
+
+        /**
+         * <p>The current dimensions of the VisualEmbedder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2560</p>
+         */
+        @NameInMap("VisualEmbedderDimensions")
+        public Integer visualEmbedderDimensions;
+
+        /**
+         * <p>The current VisualEmbedder model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen3.7-text-embedding</p>
+         */
+        @NameInMap("VisualEmbedderModelName")
+        public String visualEmbedderModelName;
+
+        /**
+         * <p>The currently enabled understanding modalities.</p>
+         */
+        @NameInMap("VisualLlmModalities")
+        public java.util.List<String> visualLlmModalities;
+
+        /**
+         * <p>The current VisualLLM model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen3.6-flash</p>
+         */
+        @NameInMap("VisualLlmModelName")
+        public String visualLlmModelName;
 
         public static DescribeApplicationAttributeResponseBodyMemApplicationAttribute build(java.util.Map<String, ?> map) throws Exception {
             DescribeApplicationAttributeResponseBodyMemApplicationAttribute self = new DescribeApplicationAttributeResponseBodyMemApplicationAttribute();
@@ -1505,6 +1556,22 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             return this.llmModelName;
         }
 
+        public DescribeApplicationAttributeResponseBodyMemApplicationAttribute setMemoryType(String memoryType) {
+            this.memoryType = memoryType;
+            return this;
+        }
+        public String getMemoryType() {
+            return this.memoryType;
+        }
+
+        public DescribeApplicationAttributeResponseBodyMemApplicationAttribute setMultimodalEnabled(Boolean multimodalEnabled) {
+            this.multimodalEnabled = multimodalEnabled;
+            return this;
+        }
+        public Boolean getMultimodalEnabled() {
+            return this.multimodalEnabled;
+        }
+
         public DescribeApplicationAttributeResponseBodyMemApplicationAttribute setProjectName(String projectName) {
             this.projectName = projectName;
             return this;
@@ -1535,6 +1602,38 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
         public String getUserName() {
             return this.userName;
+        }
+
+        public DescribeApplicationAttributeResponseBodyMemApplicationAttribute setVisualEmbedderDimensions(Integer visualEmbedderDimensions) {
+            this.visualEmbedderDimensions = visualEmbedderDimensions;
+            return this;
+        }
+        public Integer getVisualEmbedderDimensions() {
+            return this.visualEmbedderDimensions;
+        }
+
+        public DescribeApplicationAttributeResponseBodyMemApplicationAttribute setVisualEmbedderModelName(String visualEmbedderModelName) {
+            this.visualEmbedderModelName = visualEmbedderModelName;
+            return this;
+        }
+        public String getVisualEmbedderModelName() {
+            return this.visualEmbedderModelName;
+        }
+
+        public DescribeApplicationAttributeResponseBodyMemApplicationAttribute setVisualLlmModalities(java.util.List<String> visualLlmModalities) {
+            this.visualLlmModalities = visualLlmModalities;
+            return this;
+        }
+        public java.util.List<String> getVisualLlmModalities() {
+            return this.visualLlmModalities;
+        }
+
+        public DescribeApplicationAttributeResponseBodyMemApplicationAttribute setVisualLlmModelName(String visualLlmModelName) {
+            this.visualLlmModelName = visualLlmModelName;
+            return this;
+        }
+        public String getVisualLlmModelName() {
+            return this.visualLlmModelName;
         }
 
     }
@@ -1747,7 +1846,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The security group ID.</p>
+         * <p>The ID of the security group.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-**************</p>
@@ -1756,7 +1855,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The security group name.</p>
+         * <p>The name of the security group.</p>
          * 
          * <strong>example:</strong>
          * <p>MyGroupName</p>

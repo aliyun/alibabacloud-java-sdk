@@ -14,7 +14,7 @@ public class DescribeAvailableModelsRequest extends TeaModel {
     public String kubeType;
 
     /**
-     * <p>The model type. Valid values: custom or public. If this parameter is not specified, all models are returned.</p>
+     * <p>The model type. Valid values: custom and public. If you do not specify this parameter, all models are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>custom</p>
