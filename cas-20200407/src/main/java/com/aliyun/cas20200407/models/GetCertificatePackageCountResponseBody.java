@@ -14,7 +14,7 @@ public class GetCertificatePackageCountResponseBody extends TeaModel {
     public String noticeCountDetail;
 
     /**
-     * <p>The details of certificate brand products.</p>
+     * <p>The product details of certificate brands.</p>
      * 
      * <strong>example:</strong>
      * <p>[
@@ -34,7 +34,7 @@ public class GetCertificatePackageCountResponseBody extends TeaModel {
     public String productCountList;
 
     /**
-     * <p>The acceleration gateway forwarding quota.</p>
+     * <p>The forwarding quota of the acceleration gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>{TotalCount=116900, RemainCount=90448, AutoPay=0, AutoPayCount=5000, UsedCount=26452}</p>
@@ -43,7 +43,7 @@ public class GetCertificatePackageCountResponseBody extends TeaModel {
     public String proxyCountDetail;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>08F45EA0-66A7-4504-9B31-3589F5CE308D</p>
@@ -52,7 +52,7 @@ public class GetCertificatePackageCountResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of domain names bound to certificates.</p>
+     * <p>The total number of domain names bound to the certificates.</p>
      * 
      * <strong>example:</strong>
      * <p>{TotalCount=573, RemainCount=243, FreeQuota=10, UsedCount=330}</p>

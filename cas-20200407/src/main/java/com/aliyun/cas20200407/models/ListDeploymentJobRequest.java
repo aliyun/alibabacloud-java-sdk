@@ -5,13 +5,34 @@ import com.aliyun.tea.*;
 
 public class ListDeploymentJobRequest extends TeaModel {
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The certificate ID.</p>
+     * <blockquote>
+     * <p>You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> operation.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>23982365</p>
+     */
+    @NameInMap("CertId")
+    public Long certId;
+
+    /**
+     * <p>The current page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
+
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cas-ivauto-hqito6</p>
+     */
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     /**
      * <p>The task type.</p>
@@ -23,7 +44,7 @@ public class ListDeploymentJobRequest extends TeaModel {
     public String jobType;
 
     /**
-     * <p>The number of certificates to display per page in a paged query. Default value: <strong>50</strong>.</p>
+     * <p>The paging Settings for the number of certificates to return on each page during a paged query. Default value: <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -45,12 +66,28 @@ public class ListDeploymentJobRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListDeploymentJobRequest setCertId(Long certId) {
+        this.certId = certId;
+        return this;
+    }
+    public Long getCertId() {
+        return this.certId;
+    }
+
     public ListDeploymentJobRequest setCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;
         return this;
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public ListDeploymentJobRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public ListDeploymentJobRequest setJobType(String jobType) {
