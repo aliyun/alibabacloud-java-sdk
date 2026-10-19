@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateQueueShrinkRequest extends TeaModel {
     /**
-     * <p>The delay period for all messages sent to the queue. A message sent to the queue can be consumed only after the delay period specified by this parameter elapses. Unit: seconds.</p>
-     * <p>Valid values: 0 to 604800.</p>
-     * <p>Default value: 0.</p>
+     * <p>The delay period for all messages sent to the queue. A message sent to the queue can be consumed only after the delay period specified by this parameter elapses.
+     * Valid values: 0 to 604800. Unit: seconds.
+     * Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -22,7 +22,7 @@ public class CreateQueueShrinkRequest extends TeaModel {
     public String dlqPolicyShrink;
 
     /**
-     * <p>Specifies whether to enable the log management feature. Valid values:</p>
+     * <p>Specifies whether to enable the Log Management feature. Valid values:</p>
      * <ul>
      * <li><p>true: Enabled.</p>
      * </li>
@@ -44,9 +44,9 @@ public class CreateQueueShrinkRequest extends TeaModel {
     public String kmsKeyId;
 
     /**
-     * <p>The maximum size of a message body that can be sent to the queue. Unit: bytes.</p>
-     * <p>Valid values: 1024 to 65536.</p>
-     * <p>Default value: 65536.</p>
+     * <p>The maximum size of a message body that can be sent to the queue.
+     * Valid values: 1024 to 65536. Unit: bytes.
+     * Default value: 65536.</p>
      * 
      * <strong>example:</strong>
      * <p>65536</p>
@@ -55,9 +55,9 @@ public class CreateQueueShrinkRequest extends TeaModel {
     public Long maximumMessageSize;
 
     /**
-     * <p>The maximum duration for which a message is retained in the queue. After the specified duration elapses from the time the message is sent to the queue, the message is deleted regardless of whether it has been consumed. Unit: seconds.</p>
-     * <p>Valid values: 60 to 604800.</p>
-     * <p>Default value: 345600.</p>
+     * <p>The maximum duration for which a message is retained in the queue. After the specified duration elapses since a message is sent to the queue, the message is deleted regardless of whether it has been consumed.
+     * Valid values: 60 to 604800. Unit: seconds.
+     * Default value: 345600.</p>
      * 
      * <strong>example:</strong>
      * <p>345600</p>
@@ -66,9 +66,9 @@ public class CreateQueueShrinkRequest extends TeaModel {
     public Long messageRetentionPeriod;
 
     /**
-     * <p>The maximum wait time for a ReceiveMessage request when the queue is empty. Unit: seconds.</p>
-     * <p>Valid values: 0 to 30.</p>
-     * <p>Default value: 0.</p>
+     * <p>The maximum duration for which a ReceiveMessage request waits when the queue has no messages.
+     * Valid values: 0 to 30. Unit: seconds.
+     * Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -112,15 +112,15 @@ public class CreateQueueShrinkRequest extends TeaModel {
     public java.util.List<CreateQueueShrinkRequestTag> tag;
 
     /**
-     * <p>The rate limiting policy.</p>
+     * <p>The throttling policy.</p>
      */
     @NameInMap("TenantRateLimitPolicy")
     public String tenantRateLimitPolicyShrink;
 
     /**
-     * <p>The duration for which a consumed message stays in the Inactive state after it is changed from the Active state. Unit: seconds.</p>
-     * <p>Valid values: 1 to 43200.</p>
-     * <p>Default value: 30.</p>
+     * <p>The duration for which a message stays in the Inactive state after it is consumed from the queue and changes from the Active state to the Inactive state.
+     * Valid values: 1 to 43200. Unit: seconds.
+     * Default value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>

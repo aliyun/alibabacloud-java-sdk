@@ -5,9 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListQueueRequest extends TeaModel {
     /**
-     * <p>The page number of the results to return.</p>
-     * <p>Valid values: 1 to 100000000.</p>
-     * <p>If you set this parameter to a value less than 1, the system uses 1 by default. If you set this parameter to a value greater than 100000000, the system uses 100000000 by default.</p>
+     * <p>The page number of the returned results. Valid values: 1 to 100000000. If the specified value is less than 1, the system defaults to 1. If the specified value is greater than 100000000, the system defaults to 100000000.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -16,9 +14,7 @@ public class ListQueueRequest extends TeaModel {
     public Long pageNum;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <p>Valid values: 10 to 50.</p>
-     * <p>If you set this parameter to a value less than 10, the system uses 10 by default. If you set this parameter to a value greater than 50, the system uses 50 by default.</p>
+     * <p>The number of entries to return on each page. Valid values: 10 to 50. If the specified value is less than 10, the system defaults to 10. If the specified value is greater than 50, the system defaults to 50.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -101,7 +97,7 @@ public class ListQueueRequest extends TeaModel {
 
     public static class ListQueueRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>tag1</p>
@@ -110,7 +106,7 @@ public class ListQueueRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

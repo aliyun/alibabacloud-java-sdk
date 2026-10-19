@@ -38,7 +38,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the response.</p>
+     * <p>The response status.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -47,7 +47,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
 
     public static class GetQueueAttributesResponseBodyDataDlqPolicy extends TeaModel {
         /**
-         * <p>The target queue for dead-letter message delivery.</p>
+         * <p>The destination queue for dead-letter message delivery.</p>
          * 
          * <strong>example:</strong>
          * <p>deadLetterTargetQueue</p>
@@ -119,7 +119,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         public String deadLetterTargetQueue;
 
         /**
-         * <p>Indicates whether dead-letter message delivery is enabled.</p>
+         * <p>Specifies whether dead-letter message delivery is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -128,7 +128,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The maximum number of times a message can be delivered.</p>
+         * <p>The maximum number of delivery attempts for a message.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -169,7 +169,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
 
     public static class GetQueueAttributesResponseBodyDataTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>tag1</p>
@@ -178,7 +178,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -211,7 +211,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
 
     public static class GetQueueAttributesResponseBodyDataTenantRateLimitPolicy extends TeaModel {
         /**
-         * <p>Specifies whether rate limiting is enabled. Valid values:</p>
+         * <p>Specifies whether throttling is enabled. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -258,7 +258,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
     public static class GetQueueAttributesResponseBodyData extends TeaModel {
         /**
          * <p>The approximate total number of messages in the Active state in the queue.</p>
-         * <p><warning>This field will be deprecated and defaults to 0. Use the CloudMonitor API to retrieve this metric instead.</warning></p>
+         * <p><warning>This field will be deprecated and default to 0. We recommend that you use the CloudMonitor API to obtain metrics.</warning></p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -267,7 +267,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         public Long activeMessages;
 
         /**
-         * <p>The time when the queue was created.</p>
+         * <p>The time when the queue was created. The value is a UNIX timestamp in seconds in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>1250700999</p>
@@ -277,7 +277,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
 
         /**
          * <p>The approximate total number of messages in the Delayed state in the queue.</p>
-         * <p><warning>This field will be deprecated and defaults to 0. Use the CloudMonitor API to retrieve this metric instead.</warning></p>
+         * <p><warning>This field will be deprecated and default to 0. We recommend that you use the CloudMonitor API to obtain metrics.</warning></p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -286,7 +286,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         public Long delayMessages;
 
         /**
-         * <p>The delay period for all messages sent to the queue. Messages sent to the queue can be consumed only after the delay period specified by this parameter elapses. Unit: seconds.</p>
+         * <p>The delay time for all messages sent to the queue. Messages sent to the queue can be consumed only after the delay time specified by this parameter elapses. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -300,15 +300,27 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         @NameInMap("DlqPolicy")
         public GetQueueAttributesResponseBodyDataDlqPolicy dlqPolicy;
 
+        /**
+         * <p>Specifies whether server-side encryption is enabled. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableSSE")
         public Boolean enableSSE;
 
+        /**
+         * <p>Specifies whether server-side encryption is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EncryptionEnabled")
         public Boolean encryptionEnabled;
 
         /**
          * <p>The approximate total number of messages in the Inactive state in the queue.</p>
-         * <p><warning>This field will be deprecated and defaults to 0. Use the CloudMonitor API to retrieve this metric instead.</warning></p>
+         * <p><warning>This field will be deprecated and default to 0. We recommend that you use the CloudMonitor API to obtain metrics.</warning></p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -316,11 +328,17 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         @NameInMap("InactiveMessages")
         public Long inactiveMessages;
 
+        /**
+         * <p>The KMS key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-xxx</p>
+         */
         @NameInMap("KmsKeyId")
         public String kmsKeyId;
 
         /**
-         * <p>The most recent time when the queue attributes were modified. The value is a UNIX timestamp representing the number of seconds elapsed since 1970-01-01 00:00:00.</p>
+         * <p>The time when the queue attributes were last modified. The value is a UNIX timestamp in seconds in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>1250700999</p>
@@ -329,7 +347,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         public Long lastModifyTime;
 
         /**
-         * <p>Indicates whether the log management feature is enabled.</p>
+         * <p>Specifies whether the log management feature is enabled.</p>
          * <ul>
          * <li><p>True: Enabled.</p>
          * </li>
@@ -344,7 +362,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         public Boolean loggingEnabled;
 
         /**
-         * <p>The maximum length of the message body sent to the queue. Unit: bytes.</p>
+         * <p>The maximum length of the message body that can be sent to the queue. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>65536</p>
@@ -353,7 +371,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         public Long maximumMessageSize;
 
         /**
-         * <p>The maximum duration for which a message is retained in the queue. After the period specified by this parameter elapses since the message is sent to the queue, the message is deleted regardless of whether it has been consumed. Unit: seconds.</p>
+         * <p>The maximum retention period of messages in the queue. After the time specified by this parameter elapses from the time when a message is sent to the queue, the message is deleted regardless of whether it has been consumed. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>65536</p>
@@ -362,7 +380,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         public Long messageRetentionPeriod;
 
         /**
-         * <p>The maximum wait time for a ReceiveMessage request on the queue when the queue has no messages. Unit: seconds.</p>
+         * <p>The maximum waiting time for a ReceiveMessage request when the queue is empty. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -380,10 +398,10 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         public String queueName;
 
         /**
-         * <p>The type of the queue. Valid values:</p>
+         * <p>The queue type. Valid values:</p>
          * <ul>
-         * <li>normal: standard queue</li>
-         * <li>fifo: FIFO queue</li>
+         * <li>normal: Standard queue.</li>
+         * <li>fifo: FIFO queue.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -392,9 +410,21 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         @NameInMap("QueueType")
         public String queueType;
 
+        /**
+         * <p>The server-side encryption algorithm. Currently, only AES-256-GCM is supported. If this parameter is not specified, the default algorithm is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AES-256-GCM</p>
+         */
         @NameInMap("SseAlgorithm")
         public String sseAlgorithm;
 
+        /**
+         * <p>The server-side encryption method. Valid values: SMQ and KMS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KMS</p>
+         */
         @NameInMap("SseType")
         public String sseType;
 
@@ -405,13 +435,13 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         public java.util.List<GetQueueAttributesResponseBodyDataTags> tags;
 
         /**
-         * <p>The rate limiting policy.</p>
+         * <p>The throttling policy.</p>
          */
         @NameInMap("TenantRateLimitPolicy")
         public GetQueueAttributesResponseBodyDataTenantRateLimitPolicy tenantRateLimitPolicy;
 
         /**
-         * <p>The duration for which a message stays in the Inactive state after it is consumed from the queue and changes from the Active state to the Inactive state.
+         * <p>The duration for which a message remains in the Inactive state after it is consumed from the queue.
          * Valid values: 1 to 43200. Unit: seconds.
          * Default value: 30.</p>
          * 

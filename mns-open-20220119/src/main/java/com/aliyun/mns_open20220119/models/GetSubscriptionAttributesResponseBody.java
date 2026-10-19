@@ -47,7 +47,7 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
 
     public static class GetSubscriptionAttributesResponseBodyDataDlqPolicy extends TeaModel {
         /**
-         * <p>The target queue to which dead-letter messages are delivered.</p>
+         * <p>The destination queue for dead-letter message delivery.</p>
          * 
          * <strong>example:</strong>
          * <p>deadLetterTargetQueue</p>
@@ -151,9 +151,21 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
     }
 
     public static class GetSubscriptionAttributesResponseBodyDataTenantRateLimitPolicy extends TeaModel {
+        /**
+         * <p>Indicates whether throttling is enabled. Valid values: true or false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>The maximum number of messages received per second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MaxReceivesPerSecond")
         public Integer maxReceivesPerSecond;
 
@@ -182,7 +194,7 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
 
     public static class GetSubscriptionAttributesResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the subscription was created. The value is a UNIX timestamp that represents the number of seconds that have elapsed since 00:00:00 on January 1, 1970.</p>
+         * <p>The time when the subscription was created. The value is a UNIX timestamp in seconds in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>1449554806</p>
@@ -197,7 +209,7 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
         public GetSubscriptionAttributesResponseBodyDataDlqPolicy dlqPolicy;
 
         /**
-         * <p>The endpoint of the subscription.</p>
+         * <p>The endpoint address of the subscription.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://example.com">http://example.com</a></p>
@@ -206,7 +218,7 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The tag used for message filtering. Only messages that have a matching tag are pushed.</p>
+         * <p>The tag used for message filtering in the subscription. Only messages with matching tags are pushed.</p>
          * 
          * <strong>example:</strong>
          * <p>important</p>
@@ -215,7 +227,7 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
         public String filterTag;
 
         /**
-         * <p>The time when the subscription properties were last modified. The value is a UNIX timestamp that represents the number of seconds that have elapsed since 00:00:00 on January 1, 1970.</p>
+         * <p>The time when the subscription attributes were last modified. The value is a UNIX timestamp in seconds in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>1449554962</p>
@@ -224,8 +236,7 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
         public Long lastModifyTime;
 
         /**
-         * <p>The format of the message content that is pushed to an endpoint.
-         * Valid values:</p>
+         * <p>The format of the message content pushed to the endpoint. Valid values:</p>
          * <ul>
          * <li><p>XML</p>
          * </li>
@@ -242,7 +253,7 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
         public String notifyContentFormat;
 
         /**
-         * <p>The retry policy that is used when a message fails to be pushed to an endpoint. Valid values:</p>
+         * <p>The retry strategy used when an error occurs while pushing messages to the endpoint. Valid values:</p>
          * <ul>
          * <li><p>BACKOFF_RETRY: backoff retry.</p>
          * </li>
@@ -265,11 +276,14 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
         @NameInMap("SubscriptionName")
         public String subscriptionName;
 
+        /**
+         * <p>The throttling policy.</p>
+         */
         @NameInMap("TenantRateLimitPolicy")
         public GetSubscriptionAttributesResponseBodyDataTenantRateLimitPolicy tenantRateLimitPolicy;
 
         /**
-         * <p>The name of the topic to which the subscription belongs.</p>
+         * <p>The name of the subscribed topic.</p>
          * 
          * <strong>example:</strong>
          * <p>MyTopic</p>
@@ -278,7 +292,7 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
         public String topicName;
 
         /**
-         * <p>The AccountId of the owner of the topic to which the subscription belongs.</p>
+         * <p>The account ID of the owner of the subscribed topic.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789098****</p>

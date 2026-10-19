@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EventMatchRule extends TeaModel {
     /**
-     * <p>Specifies whether to match.</p>
+     * <p>Indicates whether the rule is matched.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class EventMatchRule extends TeaModel {
     public Boolean matchState;
 
     /**
-     * <p>The full name to match.</p>
+     * <p>The full name matching rule.</p>
      * 
      * <strong>example:</strong>
      * <p>testBucket/folder1/file1</p>
@@ -23,7 +23,7 @@ public class EventMatchRule extends TeaModel {
     public String name;
 
     /**
-     * <p>The prefix to match.</p>
+     * <p>The prefix matching rule.</p>
      * 
      * <strong>example:</strong>
      * <p>testBucket/prefix1xxx</p>
@@ -32,7 +32,7 @@ public class EventMatchRule extends TeaModel {
     public String prefix;
 
     /**
-     * <p>The suffix to match.</p>
+     * <p>The suffix matching rule.</p>
      * 
      * <strong>example:</strong>
      * <p>suffix/xxxx.test</p>

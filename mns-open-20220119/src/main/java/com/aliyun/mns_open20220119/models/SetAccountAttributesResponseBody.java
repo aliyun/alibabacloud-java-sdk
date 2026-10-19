@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SetAccountAttributesResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class SetAccountAttributesResponseBody extends TeaModel {
     public Long code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>operation success</p>
      */
@@ -19,6 +23,8 @@ public class SetAccountAttributesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>06273500-249F-5863-121D-74D51123E62C</p>
      */
@@ -26,6 +32,8 @@ public class SetAccountAttributesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The response status.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -33,6 +41,8 @@ public class SetAccountAttributesResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -47,7 +47,7 @@ public class ListTopicResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -152,7 +152,7 @@ public class ListTopicResponseBody extends TeaModel {
 
     public static class ListTopicResponseBodyDataPageData extends TeaModel {
         /**
-         * <p>The time when the subscription was created. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time when the topic was created. The value is a UTC UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1449554962</p>
@@ -160,17 +160,35 @@ public class ListTopicResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>Specifies whether server-side encryption is enabled. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableSSE")
         public Boolean enableSSE;
 
+        /**
+         * <p>Indicates whether server-side encryption is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EncryptionEnabled")
         public Boolean encryptionEnabled;
 
+        /**
+         * <p>The KMS key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-xxx</p>
+         */
         @NameInMap("KmsKeyId")
         public String kmsKeyId;
 
         /**
-         * <p>The time when the subscription attributes were last modified. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time when the topic attributes were last modified. The value is a UTC UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1449554962</p>
@@ -179,12 +197,10 @@ public class ListTopicResponseBody extends TeaModel {
         public Long lastModifyTime;
 
         /**
-         * <p>Indicates whether the Log Management feature is enabled. Valid values:</p>
+         * <p>Indicates whether the log management feature is enabled. Valid values:</p>
          * <ul>
-         * <li><p>True: Enabled.</p>
-         * </li>
-         * <li><p>False: Disabled.</p>
-         * </li>
+         * <li>True: enabled</li>
+         * <li>False: disabled</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -194,7 +210,7 @@ public class ListTopicResponseBody extends TeaModel {
         public Boolean loggingEnabled;
 
         /**
-         * <p>The maximum length of the message body sent to the topic. Unit: bytes.</p>
+         * <p>The maximum length of the message body that can be sent to the topic. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>65536</p>
@@ -212,7 +228,7 @@ public class ListTopicResponseBody extends TeaModel {
         public Long messageCount;
 
         /**
-         * <p>The maximum duration for which a message is retained in the topic. After the time specified by this parameter elapses since the message is sent to the topic, the message is deleted regardless of whether it has been successfully pushed to the user. Unit: seconds.</p>
+         * <p>The maximum retention period of messages in the topic. After the specified period elapses from the time a message is sent to the topic, the message is deleted regardless of whether it is successfully pushed to users. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>86400</p>
@@ -220,9 +236,21 @@ public class ListTopicResponseBody extends TeaModel {
         @NameInMap("MessageRetentionPeriod")
         public Long messageRetentionPeriod;
 
+        /**
+         * <p>The server-side encryption algorithm. Currently, AES-256-GCM is supported. If this parameter is not specified, the default algorithm is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AES-256-GCM</p>
+         */
         @NameInMap("SseAlgorithm")
         public String sseAlgorithm;
 
+        /**
+         * <p>The server-side encryption method. Valid values: SMQ and KMS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KMS</p>
+         */
         @NameInMap("SseType")
         public String sseType;
 
@@ -424,7 +452,7 @@ public class ListTopicResponseBody extends TeaModel {
         public Long pageNum;
 
         /**
-         * <p>The number of results returned per page.</p>
+         * <p>The number of entries returned on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SetAccountAttributesRequest extends TeaModel {
     /**
+     * <p>Ensures the idempotence of the request. Generate a parameter value from your client to ensure that the value is unique across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see How to ensure idempotence.</p>
+     * 
      * <strong>example:</strong>
      * <p>06273500-249</p>
      */
@@ -12,6 +14,8 @@ public class SetAccountAttributesRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Specifies whether to enable the log management feature.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class SetAccountAttributesRequest extends TeaModel {
     public Boolean logEnabled;
 
     /**
+     * <p>The name of the Simple Log Service Logstore.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-logstore</p>
      */
@@ -26,6 +32,8 @@ public class SetAccountAttributesRequest extends TeaModel {
     public String logStoreName;
 
     /**
+     * <p>Specifies whether to enable the message trace feature.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,6 +41,8 @@ public class SetAccountAttributesRequest extends TeaModel {
     public Boolean messageTraceEnabled;
 
     /**
+     * <p>The name of the Simple Log Service project.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-project</p>
      */

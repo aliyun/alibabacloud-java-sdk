@@ -43,7 +43,7 @@ public class GetTopicAttributesRequest extends TeaModel {
 
     public static class GetTopicAttributesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>tag1</p>
@@ -52,7 +52,7 @@ public class GetTopicAttributesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

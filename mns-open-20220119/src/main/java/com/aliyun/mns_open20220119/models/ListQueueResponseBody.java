@@ -38,7 +38,7 @@ public class ListQueueResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the response.</p>
+     * <p>The response status.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -47,7 +47,7 @@ public class ListQueueResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class ListQueueResponseBody extends TeaModel {
 
     public static class ListQueueResponseBodyDataPageDataDlqPolicy extends TeaModel {
         /**
-         * <p>The target queue for dead-letter message delivery.</p>
+         * <p>The destination queue for dead-letter message delivery.</p>
          * 
          * <strong>example:</strong>
          * <p>deadLetterTargetQueue</p>
@@ -128,7 +128,7 @@ public class ListQueueResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The maximum number of times a message can be delivered.</p>
+         * <p>The maximum number of delivery attempts for a message.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -169,7 +169,7 @@ public class ListQueueResponseBody extends TeaModel {
 
     public static class ListQueueResponseBodyDataPageDataTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>tag1</p>
@@ -178,7 +178,7 @@ public class ListQueueResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -211,8 +211,7 @@ public class ListQueueResponseBody extends TeaModel {
 
     public static class ListQueueResponseBodyDataPageData extends TeaModel {
         /**
-         * <p>The approximate total number of messages in the Active state in this queue.</p>
-         * <p>This field will default to 0 in the future and is not recommended. Use CloudMonitor API to retrieve this metric instead.</p>
+         * <p>The approximate total number of messages in the Active state in the queue. This parameter is deprecated and will default to 0 in the future. Use CloudMonitor API operations to obtain this metric.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -221,7 +220,7 @@ public class ListQueueResponseBody extends TeaModel {
         public Long activeMessages;
 
         /**
-         * <p>The time when the queue was created. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time when the queue was created. The value is a UNIX timestamp in seconds in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>1250700999</p>
@@ -230,8 +229,7 @@ public class ListQueueResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The approximate total number of messages in the Delayed state in this queue.</p>
-         * <p>This field will default to 0 in the future and is not recommended. Use CloudMonitor API to retrieve this metric instead.</p>
+         * <p>The approximate total number of messages in the Delayed state in the queue. This parameter is deprecated and will default to 0 in the future. Use CloudMonitor API operations to obtain this metric.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -240,7 +238,7 @@ public class ListQueueResponseBody extends TeaModel {
         public Long delayMessages;
 
         /**
-         * <p>The delay period after which all messages sent to this queue become consumable. Unit: seconds.</p>
+         * <p>The delay time for all messages sent to the queue. Messages sent to the queue can be consumed only after the delay time specified by this parameter elapses. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -254,15 +252,26 @@ public class ListQueueResponseBody extends TeaModel {
         @NameInMap("DlqPolicy")
         public ListQueueResponseBodyDataPageDataDlqPolicy dlqPolicy;
 
+        /**
+         * <p>Indicates whether server-side encryption is enabled. Valid values: true or false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableSSE")
         public Boolean enableSSE;
 
+        /**
+         * <p>Indicates whether server-side encryption is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EncryptionEnabled")
         public Boolean encryptionEnabled;
 
         /**
-         * <p>The approximate total number of messages in the Inactive state in this queue.</p>
-         * <p>This field will default to 0 in the future and is not recommended. Use CloudMonitor API to retrieve this metric instead.</p>
+         * <p>The approximate total number of messages in the Inactive state in the queue. This parameter is deprecated and will default to 0 in the future. Use CloudMonitor API operations to obtain this metric.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -270,11 +279,17 @@ public class ListQueueResponseBody extends TeaModel {
         @NameInMap("InactiveMessages")
         public Long inactiveMessages;
 
+        /**
+         * <p>The KMS key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-xxx</p>
+         */
         @NameInMap("KmsKeyId")
         public String kmsKeyId;
 
         /**
-         * <p>The most recent time when the queue attributes were modified. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time when the queue attributes were last modified. The value is a UNIX timestamp in seconds in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>1250700999</p>
@@ -283,11 +298,11 @@ public class ListQueueResponseBody extends TeaModel {
         public Long lastModifyTime;
 
         /**
-         * <p>Indicates whether the log management feature is enabled.</p>
+         * <p>Indicates whether the log management feature is enabled. Valid values:</p>
          * <ul>
-         * <li><p>True: Enabled.</p>
+         * <li><p>True: enabled</p>
          * </li>
-         * <li><p>False: Disabled.</p>
+         * <li><p>False: disabled</p>
          * </li>
          * </ul>
          * 
@@ -298,7 +313,7 @@ public class ListQueueResponseBody extends TeaModel {
         public Boolean loggingEnabled;
 
         /**
-         * <p>The maximum size of a message body that can be sent to this queue. Unit: bytes.</p>
+         * <p>The maximum size of the message body sent to the queue. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>65536</p>
@@ -307,7 +322,7 @@ public class ListQueueResponseBody extends TeaModel {
         public Long maximumMessageSize;
 
         /**
-         * <p>The maximum period for which a message can be retained in this queue. After the specified period elapses since a message is sent to the queue, the message is deleted regardless of whether it has been consumed. Unit: seconds.</p>
+         * <p>The maximum retention period of messages in the queue. Messages are deleted after the specified retention period elapses, regardless of whether they have been consumed. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>65536</p>
@@ -316,7 +331,7 @@ public class ListQueueResponseBody extends TeaModel {
         public Long messageRetentionPeriod;
 
         /**
-         * <p>The maximum wait time for a ReceiveMessage request when the queue is empty. Unit: seconds.</p>
+         * <p>The maximum waiting time for a ReceiveMessage request when the queue is empty. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -346,9 +361,21 @@ public class ListQueueResponseBody extends TeaModel {
         @NameInMap("QueueType")
         public String queueType;
 
+        /**
+         * <p>The server-side encryption algorithm. Currently, only AES-256-GCM is supported. If this parameter is not specified, the default algorithm is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AES-256-GCM</p>
+         */
         @NameInMap("SseAlgorithm")
         public String sseAlgorithm;
 
+        /**
+         * <p>The server-side encryption method. Valid values: SMQ or KMS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KMS</p>
+         */
         @NameInMap("SseType")
         public String sseType;
 
@@ -359,9 +386,7 @@ public class ListQueueResponseBody extends TeaModel {
         public java.util.List<ListQueueResponseBodyDataPageDataTags> tags;
 
         /**
-         * <p>The duration for which a message stays in the Inactive state after it is consumed from the queue.</p>
-         * <p>Valid values: 1 to 43200. Unit: seconds.</p>
-         * <p>Default value: 30.</p>
+         * <p>The duration during which a message remains in the Inactive state after it is consumed from the queue. Valid values: 1 to 43200. Unit: seconds. Default value: 30.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -553,7 +578,7 @@ public class ListQueueResponseBody extends TeaModel {
         public Long pageNum;
 
         /**
-         * <p>The maximum number of entries returned per page.</p>
+         * <p>The number of entries returned on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>

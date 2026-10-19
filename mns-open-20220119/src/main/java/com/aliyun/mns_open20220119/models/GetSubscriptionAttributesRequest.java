@@ -15,7 +15,7 @@ public class GetSubscriptionAttributesRequest extends TeaModel {
     public String subscriptionName;
 
     /**
-     * <p>The name of the topic to which the subscription belongs.</p>
+     * <p>The name of the subscribed topic.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
