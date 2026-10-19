@@ -4,17 +4,20 @@ package com.aliyun.adbai20250812.models;
 import com.aliyun.tea.*;
 
 public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel {
+    /**
+     * <p>The number of ACUs for each component of the Embodied platform.</p>
+     */
     @NameInMap("AcuDetails")
     public GetEmbodiedAIPlatformResourceUsageInfoResponseBodyAcuDetails acuDetails;
 
     /**
-     * <p>The GPU usage details.</p>
+     * <p>The GPU usage.</p>
      */
     @NameInMap("GpuDetails")
     public java.util.List<GetEmbodiedAIPlatformResourceUsageInfoResponseBodyGpuDetails> gpuDetails;
 
     /**
-     * <p>The maximum number of embodiments that can be registered.</p>
+     * <p>The maximum number of registered devices.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -23,7 +26,7 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
     public Long maxRegisteredDevices;
 
     /**
-     * <p>The number of registered embodiments.</p>
+     * <p>The number of registered devices.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -114,15 +117,39 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
     }
 
     public static class GetEmbodiedAIPlatformResourceUsageInfoResponseBodyAcuDetails extends TeaModel {
+        /**
+         * <p>The number of ACUs for the EAP web server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("EapWebserverACUCount")
         public Double eapWebserverACUCount;
 
+        /**
+         * <p>The number of ACUs for the Ray head node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RayHeadACUCount")
         public Double rayHeadACUCount;
 
+        /**
+         * <p>The number of ACUs for the Ray worker node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RayWorkerACUCount")
         public Double rayWorkerACUCount;
 
+        /**
+         * <p>The total number of ACUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalACUCount")
         public Double totalACUCount;
 
@@ -185,7 +212,7 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
         public String gpuModel;
 
         /**
-         * <p>The number of GPUs of this model currently in use.</p>
+         * <p>The current number of GPUs in use for this model.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -226,7 +253,7 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
 
     public static class GetEmbodiedAIPlatformResourceUsageInfoResponseBodySlbTraffic extends TeaModel {
         /**
-         * <p>The upstream bandwidth traffic over the public network. Unit: bytes.</p>
+         * <p>The inbound Internet traffic, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -235,7 +262,7 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
         public Long totalBytesIn;
 
         /**
-         * <p>The downstream bandwidth traffic over the public network. Unit: bytes.</p>
+         * <p>The outbound Internet traffic, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -268,7 +295,7 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
 
     public static class GetEmbodiedAIPlatformResourceUsageInfoResponseBodyStorageUsageNas extends TeaModel {
         /**
-         * <p>The NAS standard storage usage. Unit: bytes.</p>
+         * <p>The NAS standard storage usage, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -293,7 +320,7 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
 
     public static class GetEmbodiedAIPlatformResourceUsageInfoResponseBodyStorageUsageOss extends TeaModel {
         /**
-         * <p>The OSS standard storage usage. Unit: bytes.</p>
+         * <p>The OSS standard storage usage, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

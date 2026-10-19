@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyEmbodiedAIPlatformRequest extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,13 +14,19 @@ public class ModifyEmbodiedAIPlatformRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The total number of devices.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("DeviceCount")
     public String deviceCount;
 
     /**
-     * <p>The name of the embodied intelligence multimodal data platform.</p>
+     * <p>The name of the embodied AI multimodal data platform.</p>
      * <blockquote>
-     * <p>The name can contain lowercase letters, digits, and underscores (_). It must start with a letter and end with a letter or digit. The name can be up to 16 characters in length.</p>
+     * <p>The name must be 1 to 16 characters in length and can contain lowercase letters, digits, and underscores (_). It must start with a letter and end with a letter or digit.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -31,11 +37,14 @@ public class ModifyEmbodiedAIPlatformRequest extends TeaModel {
     public String platformName;
 
     /**
-     * <p>The Ray specification information of the platform.</p>
+     * <p>The Ray specifications of the platform.</p>
      */
     @NameInMap("RayConfig")
     public ModifyEmbodiedAIPlatformRequestRayConfig rayConfig;
 
+    /**
+     * <p>The configuration of development and training resources.</p>
+     */
     @NameInMap("RayTrainConfig")
     public ModifyEmbodiedAIPlatformRequestRayTrainConfig rayTrainConfig;
 
@@ -160,7 +169,7 @@ public class ModifyEmbodiedAIPlatformRequest extends TeaModel {
         public Integer minWorkerQuantity;
 
         /**
-         * <p>The disk size of the worker node.</p>
+         * <p>The disk capacity of the worker node.</p>
          * 
          * <strong>example:</strong>
          * <p>100G</p>
@@ -253,7 +262,7 @@ public class ModifyEmbodiedAIPlatformRequest extends TeaModel {
         /**
          * <p>The type of the Ray cluster. Valid values:</p>
          * <ul>
-         * <li><p>BASIC: basic type, which does not support high availability.</p>
+         * <li><p>BASIC: basic type, non-high-availability.</p>
          * </li>
          * <li><p>HIGH_AVAILABILITY: high-availability type.</p>
          * </li>
@@ -275,7 +284,7 @@ public class ModifyEmbodiedAIPlatformRequest extends TeaModel {
         public String headSpec;
 
         /**
-         * <p>The configuration information of Ray worker groups.</p>
+         * <p>The configuration of the Ray worker groups.</p>
          */
         @NameInMap("WorkerGroups")
         public java.util.List<ModifyEmbodiedAIPlatformRequestRayConfigWorkerGroups> workerGroups;
@@ -313,6 +322,8 @@ public class ModifyEmbodiedAIPlatformRequest extends TeaModel {
 
     public static class ModifyEmbodiedAIPlatformRequestRayTrainConfigGpuSpecs extends TeaModel {
         /**
+         * <p>The allocation unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;1&quot;</p>
          */
@@ -320,6 +331,8 @@ public class ModifyEmbodiedAIPlatformRequest extends TeaModel {
         public String allocateUnit;
 
         /**
+         * <p>The number of GPUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -327,6 +340,8 @@ public class ModifyEmbodiedAIPlatformRequest extends TeaModel {
         public Long count;
 
         /**
+         * <p>The GPU model.</p>
+         * 
          * <strong>example:</strong>
          * <p>ADB.MLTensor.2</p>
          */
@@ -366,16 +381,23 @@ public class ModifyEmbodiedAIPlatformRequest extends TeaModel {
 
     public static class ModifyEmbodiedAIPlatformRequestRayTrainConfigTerminalConfigAcrConfig extends TeaModel {
         /**
+         * <p>The instance ID of the image repository.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-8vb32jdd306b50rodza7</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The list of namespaces.</p>
+         */
         @NameInMap("Namespaces")
         public java.util.List<String> namespaces;
 
         /**
+         * <p>The address of the image repository instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>example-vpc.example-region.cr.aliyuncs.com</p>
          */
@@ -414,6 +436,9 @@ public class ModifyEmbodiedAIPlatformRequest extends TeaModel {
     }
 
     public static class ModifyEmbodiedAIPlatformRequestRayTrainConfigTerminalConfig extends TeaModel {
+        /**
+         * <p>The configuration of the image repository.</p>
+         */
         @NameInMap("AcrConfig")
         public ModifyEmbodiedAIPlatformRequestRayTrainConfigTerminalConfigAcrConfig acrConfig;
 
@@ -434,15 +459,23 @@ public class ModifyEmbodiedAIPlatformRequest extends TeaModel {
 
     public static class ModifyEmbodiedAIPlatformRequestRayTrainConfig extends TeaModel {
         /**
+         * <p>The number of CPU ACUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("CpuAcu")
         public Long cpuAcu;
 
+        /**
+         * <p>The list of GPU types to purchase.</p>
+         */
         @NameInMap("GpuSpecs")
         public java.util.List<ModifyEmbodiedAIPlatformRequestRayTrainConfigGpuSpecs> gpuSpecs;
 
+        /**
+         * <p>The configuration of the development machine.</p>
+         */
         @NameInMap("TerminalConfig")
         public ModifyEmbodiedAIPlatformRequestRayTrainConfigTerminalConfig terminalConfig;
 

@@ -1,3 +1,7 @@
+2026-10-19 Version: 1.9.3
+- Update API CreateMultiModelKnowledgeBase: add request parameters Description.
+
+
 2026-09-03 Version: 1.9.2
 - Update API CreateMultiModelKnowledgeBase: add request parameters AdbInstanceName.
 - Update API CreateMultiModelKnowledgeBase: add request parameters DbClusterAcu.

@@ -4,9 +4,21 @@ package com.aliyun.adbai20250812.models;
 import com.aliyun.tea.*;
 
 public class CreateMultiModelKnowledgeBaseResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the created AnalyticDB for MySQL cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>amv-***</p>
+     */
     @NameInMap("DbClusterId")
     public String dbClusterId;
 
+    /**
+     * <p>The name of the created multimodal knowledge engine service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mmkb-***</p>
+     */
     @NameInMap("MmkbName")
     public String mmkbName;
 

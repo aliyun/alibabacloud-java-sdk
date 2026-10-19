@@ -174,10 +174,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates an AnalyticDB multimodal knowledge base.</p>
+     * <p>Creates an AnalyticDB for MySQL multimodal knowledge base.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an AnalyticDB multimodal knowledge base.</p>
+     * <p>Creates an AnalyticDB for MySQL multimodal knowledge base.</p>
      * 
      * @param request CreateMultiModelKnowledgeBaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -196,6 +196,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dbClusterAcu)) {
             query.put("DbClusterAcu", request.dbClusterAcu);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.lakeStorageBucketName)) {
@@ -245,10 +249,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates an AnalyticDB multimodal knowledge base.</p>
+     * <p>Creates an AnalyticDB for MySQL multimodal knowledge base.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an AnalyticDB multimodal knowledge base.</p>
+     * <p>Creates an AnalyticDB for MySQL multimodal knowledge base.</p>
      * 
      * @param request CreateMultiModelKnowledgeBaseRequest
      * @return CreateMultiModelKnowledgeBaseResponse
@@ -422,10 +426,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries multi-turn conversations for instance kernel diagnostics.</p>
+     * <p>Retrieves multi-turn conversations for instance kernel diagnostics.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries multi-turn conversations for instance kernel diagnostics.</p>
+     * <p>Retrieves multi-turn conversations for instance kernel diagnostics.</p>
      * 
      * @param request DescribeChatMessageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -473,10 +477,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries multi-turn conversations for instance kernel diagnostics.</p>
+     * <p>Retrieves multi-turn conversations for instance kernel diagnostics.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries multi-turn conversations for instance kernel diagnostics.</p>
+     * <p>Retrieves multi-turn conversations for instance kernel diagnostics.</p>
      * 
      * @param request DescribeChatMessageRequest
      * @return DescribeChatMessageResponse
@@ -626,7 +630,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the resource usage information of an embodied intelligence platform.</p>
+     * <p>Queries the resource usage information of the Embodied platform.</p>
      * 
      * @param request GetEmbodiedAIPlatformResourceUsageInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -674,7 +678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the resource usage information of an embodied intelligence platform.</p>
+     * <p>Queries the resource usage information of the Embodied platform.</p>
      * 
      * @param request GetEmbodiedAIPlatformResourceUsageInfoRequest
      * @return GetEmbodiedAIPlatformResourceUsageInfoResponse
@@ -800,7 +804,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the specifications of an embodied intelligence platform.</p>
+     * <p>Modifies the specifications of the embodied AI platform.</p>
      * 
      * @param tmpReq ModifyEmbodiedAIPlatformRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -866,7 +870,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the specifications of an embodied intelligence platform.</p>
+     * <p>Modifies the specifications of the embodied AI platform.</p>
      * 
      * @param request ModifyEmbodiedAIPlatformRequest
      * @return ModifyEmbodiedAIPlatformResponse

@@ -15,7 +15,7 @@ public class CreateEmbodiedAIPlatformShrinkRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The ontology count.</p>
+     * <p>The device count.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -62,7 +62,7 @@ public class CreateEmbodiedAIPlatformShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The webserver specification of the platform.</p>
+     * <p>The Webserver specification of the platform.</p>
      * 
      * <strong>example:</strong>
      * <p>large</p>

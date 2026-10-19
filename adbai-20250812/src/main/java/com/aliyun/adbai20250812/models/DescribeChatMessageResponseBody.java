@@ -29,7 +29,7 @@ public class DescribeChatMessageResponseBody extends TeaModel {
     public java.util.List<DescribeChatMessageResponseBodyContent> content;
 
     /**
-     * <p>The creation time.</p>
+     * <p>The creation time, in ISO 8601 format and UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-03-18T02:01:56Z</p>
@@ -345,7 +345,7 @@ public class DescribeChatMessageResponseBody extends TeaModel {
 
     public static class DescribeChatMessageResponseBodyContentData extends TeaModel {
         /**
-         * <p>The ID of the data API operation that is called.</p>
+         * <p>The ID of the invoked data API.</p>
          * 
          * <strong>example:</strong>
          * <p>call_e0e9ee423c7e4ba88d058fd6</p>
@@ -354,7 +354,7 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         public String callId;
 
         /**
-         * <p>The name of the data API operation that is called.</p>
+         * <p>The name of the invoked data API.</p>
          * 
          * <strong>example:</strong>
          * <p>describeScalingRecommendation</p>
@@ -363,7 +363,7 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The output of the data API operation that is called.</p>
+         * <p>The output of the invoked data API.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;type&quot;: &quot;text&quot;, &quot;text&quot;: &quot;Skill not found: instance_health_inspection&quot;}]</p>
@@ -579,7 +579,7 @@ public class DescribeChatMessageResponseBody extends TeaModel {
 
     public static class DescribeChatMessageResponseBodyData extends TeaModel {
         /**
-         * <p>The parameters of the data API operation that is called.</p>
+         * <p>The parameters of the invoked data API.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;instanceName&quot;: &quot;amv-bp1b9y9xhvpzm9p0&quot;, &quot;pageNumber&quot;: 1, &quot;pageSize&quot;: 10}</p>
@@ -588,7 +588,7 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         public String arguments;
 
         /**
-         * <p>The ID of the data API operation that is called.</p>
+         * <p>The ID of the invoked data API.</p>
          * 
          * <strong>example:</strong>
          * <p>call_1891f1689bc44ab292aadff3</p>
@@ -597,7 +597,7 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         public String callId;
 
         /**
-         * <p>The name of the data API operation that is called.</p>
+         * <p>The name of the invoked data API.</p>
          * 
          * <strong>example:</strong>
          * <p>describeScalingRecommendation</p>
@@ -606,7 +606,7 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The output of the data API operation that is called.</p>
+         * <p>The output of the invoked data API.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;type&quot;: &quot;text&quot;, &quot;text&quot;: &quot;Skill not found: instance_health_inspection&quot;}]</p>

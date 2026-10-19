@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyEmbodiedAIPlatformShrinkRequest extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,13 +14,19 @@ public class ModifyEmbodiedAIPlatformShrinkRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The total number of devices.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("DeviceCount")
     public String deviceCount;
 
     /**
-     * <p>The name of the embodied intelligence multimodal data platform.</p>
+     * <p>The name of the embodied AI multimodal data platform.</p>
      * <blockquote>
-     * <p>The name can contain lowercase letters, digits, and underscores (_). It must start with a letter and end with a letter or digit. The name can be up to 16 characters in length.</p>
+     * <p>The name must be 1 to 16 characters in length and can contain lowercase letters, digits, and underscores (_). It must start with a letter and end with a letter or digit.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -31,11 +37,14 @@ public class ModifyEmbodiedAIPlatformShrinkRequest extends TeaModel {
     public String platformName;
 
     /**
-     * <p>The Ray specification information of the platform.</p>
+     * <p>The Ray specifications of the platform.</p>
      */
     @NameInMap("RayConfig")
     public String rayConfigShrink;
 
+    /**
+     * <p>The configuration of development and training resources.</p>
+     */
     @NameInMap("RayTrainConfig")
     public String rayTrainConfigShrink;
 

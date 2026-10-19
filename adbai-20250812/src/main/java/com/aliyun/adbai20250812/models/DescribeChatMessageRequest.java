@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeChatMessageRequest extends TeaModel {
     /**
-     * <p>The question statement submitted by the user.</p>
+     * <p>The question asked by the user.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>How to set reasonable annual plan goals?</p>
+     * <p>How to set reasonable annual planning goals?</p>
      */
     @NameInMap("Query")
     public String query;

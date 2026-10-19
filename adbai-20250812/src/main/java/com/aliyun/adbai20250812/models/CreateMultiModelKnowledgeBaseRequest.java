@@ -4,11 +4,17 @@ package com.aliyun.adbai20250812.models;
 import com.aliyun.tea.*;
 
 public class CreateMultiModelKnowledgeBaseRequest extends TeaModel {
+    /**
+     * <p><strong>[Deprecated]</strong></p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AdbInstanceName")
     public String adbInstanceName;
 
     /**
-     * <p>The instance cluster ID.</p>
+     * <p>The ID of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>amv-bp11q28kvl688****</p>
@@ -16,9 +22,30 @@ public class CreateMultiModelKnowledgeBaseRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The number of ACUs for the AnalyticDB for MySQL instance resources.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24</p>
+     */
     @NameInMap("DbClusterAcu")
     public Integer dbClusterAcu;
 
+    /**
+     * <p>The description of the multimodal knowledge base instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
+    @NameInMap("Description")
+    public String description;
+
+    /**
+     * <p><strong>[Deprecated]</strong></p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("LakeStorageBucketName")
     public String lakeStorageBucketName;
 
@@ -34,18 +61,48 @@ public class CreateMultiModelKnowledgeBaseRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The maximum number of ACUs for the multimodal knowledge base resources.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>128</p>
+     */
     @NameInMap("ResourceAcuMax")
     public Integer resourceAcuMax;
 
+    /**
+     * <p>The minimum number of ACUs for the multimodal knowledge base resources.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>32</p>
+     */
     @NameInMap("ResourceAcuMin")
     public Integer resourceAcuMin;
 
+    /**
+     * <p>The ID of the vSwitch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1ak7shaq72ywiah****</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <p>The ID of the VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-uf66oesmrqge1t2gs****</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>The ID of the zone to which the instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai-b</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -76,6 +133,14 @@ public class CreateMultiModelKnowledgeBaseRequest extends TeaModel {
     }
     public Integer getDbClusterAcu() {
         return this.dbClusterAcu;
+    }
+
+    public CreateMultiModelKnowledgeBaseRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateMultiModelKnowledgeBaseRequest setLakeStorageBucketName(String lakeStorageBucketName) {
