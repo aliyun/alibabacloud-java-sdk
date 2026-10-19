@@ -1285,11 +1285,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of regions where the current account has assets. You can use the returned region IDs as the RegionId parameter for subsequent region-specific API operations. You can filter regions by whether audit or detection is enabled. The returned region list is not equivalent to the full list of regions supported by all Alibaba Cloud services.
-     * The parameter examples are provided only to illustrate the format. Replace them with the actual region IDs, resource identifiers, and configuration values obtained from your account.</p>
+     * <p>Queries the list of regions where the assets owned by the current account are located. You can use this list to select the RegionId for subsequent region-specific API operations. You can filter the regions based on whether auditing or detection is enabled. The returned region list is not the same as the list of all regions supported by Alibaba Cloud services.
+     * The parameter examples are for format illustration only. When you call this operation, replace them with the regions, resource identifiers, and configuration values queried from the current account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the regions where assets reside.</p>
+     * <p>Queries the regions where assets are located.</p>
      * 
      * @param request ListRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1308,6 +1308,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.loadAll)) {
+            query.put("LoadAll", request.loadAll);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1329,11 +1333,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of regions where the current account has assets. You can use the returned region IDs as the RegionId parameter for subsequent region-specific API operations. You can filter regions by whether audit or detection is enabled. The returned region list is not equivalent to the full list of regions supported by all Alibaba Cloud services.
-     * The parameter examples are provided only to illustrate the format. Replace them with the actual region IDs, resource identifiers, and configuration values obtained from your account.</p>
+     * <p>Queries the list of regions where the assets owned by the current account are located. You can use this list to select the RegionId for subsequent region-specific API operations. You can filter the regions based on whether auditing or detection is enabled. The returned region list is not the same as the list of all regions supported by Alibaba Cloud services.
+     * The parameter examples are for format illustration only. When you call this operation, replace them with the regions, resource identifiers, and configuration values queried from the current account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the regions where assets reside.</p>
+     * <p>Queries the regions where assets are located.</p>
      * 
      * @param request ListRegionsRequest
      * @return ListRegionsResponse

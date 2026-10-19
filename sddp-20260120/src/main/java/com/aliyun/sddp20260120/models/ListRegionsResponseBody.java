@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListRegionsResponseBody extends TeaModel {
     /**
-     * <p>The list of regions where assets reside.</p>
+     * <p>The list of regions where the assets are located.</p>
      */
     @NameInMap("RegionList")
     public java.util.List<ListRegionsResponseBodyRegionList> regionList;
 
     /**
-     * <p>The request ID, which can be used to locate this API call.</p>
+     * <p>The request ID. You can use this ID to locate the API call.</p>
      * 
      * <strong>example:</strong>
      * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
@@ -42,7 +42,7 @@ public class ListRegionsResponseBody extends TeaModel {
 
     public static class ListRegionsResponseBodyRegionList extends TeaModel {
         /**
-         * <p>The region ID where the assets reside.</p>
+         * <p>The ID of the region where the assets are located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-zhangjiakou</p>
@@ -51,10 +51,10 @@ public class ListRegionsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The name of the region where the assets reside.</p>
+         * <p>The name of the region where the assets are located.</p>
          * 
          * <strong>example:</strong>
-         * <p>China North 3 (Zhangjiakou)</p>
+         * <p>China (Zhangjiakou)</p>
          */
         @NameInMap("RegionName")
         public String regionName;
