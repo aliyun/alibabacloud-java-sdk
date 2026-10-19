@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClustersV1Request extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>eck-xxxxxxxx</p>
@@ -13,11 +13,17 @@ public class DescribeClustersV1Request extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The cluster type. Valid values: Kubernetes and ManagedKubernetes. A value of Kubernetes indicates an ECK cluster. A value of ManagedKubernetes indicates a serverless virtual cluster. This parameter must be used together with the profile parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Kubernetes</p>
+     */
     @NameInMap("ClusterType")
     public String clusterType;
 
     /**
-     * <p>The ENS region ID where the cluster resides.</p>
+     * <p>The ENS region ID of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-58</p>
@@ -26,7 +32,7 @@ public class DescribeClustersV1Request extends TeaModel {
     public String ensRegionId;
 
     /**
-     * <p>The cluster name.</p>
+     * <p>The name of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>test-eck-name</p>
@@ -34,6 +40,12 @@ public class DescribeClustersV1Request extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The cluster profile. Valid values: Default and Serverless. A value of Default indicates an ECK cluster. A value of Serverless indicates a serverless virtual cluster. This parameter must be used together with the cluster_type parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Default</p>
+     */
     @NameInMap("Profile")
     public String profile;
 

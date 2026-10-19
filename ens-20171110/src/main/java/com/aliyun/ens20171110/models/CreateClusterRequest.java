@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateClusterRequest extends TeaModel {
     /**
-     * <p>Kubernetes or ManagedKubernetes. The former indicates an ECK cluster, and the latter indicates a serverless VC.
-     * Must be used together with the profile parameter.</p>
+     * <p>Kubernetes or ManagedKubernetes. The former indicates an ECK cluster, and the latter indicates a serverless VC. This parameter must be used together with the Profile parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,7 +15,7 @@ public class CreateClusterRequest extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>The pod network CIDR block. The CIDR block must be a valid private CIDR block, which includes the following CIDR blocks and their subnets: 10.0.0.0/8, 172.16-31.0.0/12-16, and 192.168.0.0/16. The CIDR block cannot overlap with the CIDR blocks used by the VPC or existing Kubernetes clusters in the VPC. You cannot modify the CIDR block after the cluster is created.</p>
+     * <p>The CIDR block for pods. It must be a valid private CIDR block, such as 10.0.0.0/8, 172.16.0.0/12 to 172.31.0.0/16, or 192.168.0.0/16, and their subnets. The CIDR block cannot overlap with the CIDR block of the VPC or the CIDR blocks used by existing Kubernetes clusters in the VPC. The CIDR block cannot be modified after the cluster is created.</p>
      * 
      * <strong>example:</strong>
      * <p>172.20.0.0/16</p>
@@ -31,7 +30,7 @@ public class CreateClusterRequest extends TeaModel {
     public CreateClusterRequestControlPlaneConfig controlPlaneConfig;
 
     /**
-     * <p>The ENS Region ID of the cluster.</p>
+     * <p>The ID of the Edge Node Service (ENS) region where the cluster is deployed.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -39,11 +38,22 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    /**
+     * <p>The Internet service provider (ISP) information. Valid values:</p>
+     * <ul>
+     * <li><strong>cmcc</strong>: China Mobile.</li>
+     * <li><strong>unicom</strong>: China Unicom.</li>
+     * <li><strong>telecom</strong>: China Telecom.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>telecom</p>
+     */
     @NameInMap("Isp")
     public String isp;
 
     /**
-     * <p>The cluster version, which is consistent with the Kubernetes community baseline version. Select the latest version. If you do not specify this parameter, the latest version is used by default.</p>
+     * <p>The Kubernetes version of the cluster. The version aligns with the Kubernetes community baseline version. We recommend that you select the latest version. If you do not specify this parameter, the latest version is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>1.32.1</p>
@@ -52,7 +62,7 @@ public class CreateClusterRequest extends TeaModel {
     public String kubernetesVersion;
 
     /**
-     * <p>The ID of the CLB instance used for API Server access. If you specify this parameter, automatic creation of a CLB instance for the API Server is skipped.</p>
+     * <p>The ID of the Classic Load Balancer (CLB) instance used for API server access. If you specify this parameter, automatic creation of a CLB instance for the API server is skipped.</p>
      * 
      * <strong>example:</strong>
      * <p>lb-wz9t256gqa3vbouk****</p>
@@ -61,7 +71,7 @@ public class CreateClusterRequest extends TeaModel {
     public String loadBalancerId;
 
     /**
-     * <p>The cluster name.</p>
+     * <p>The name of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>mycluster-1</p>
@@ -69,18 +79,23 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the NAT gateway used by the cluster. If you specify this parameter, automatic creation of a NAT gateway is skipped.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nat-5t7nh1cfm6kxiszlttr38****</p>
+     */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
     /**
-     * <p>Each pod vSwitch corresponds to a worker node vSwitch. The zone of the pod vSwitch must be the same as that of the worker node vSwitch. If you do not specify this parameter, vswitch_ids is used by default.</p>
+     * <p>The IDs of the pod vSwitches. Each pod vSwitch corresponds to a worker node vSwitch. The pod vSwitch and the worker node vSwitch must be in the same zone. If you do not specify this parameter, the vSwitches specified by the VswitchIds parameter are used by default.</p>
      */
     @NameInMap("PodVswitchIds")
     public java.util.List<String> podVswitchIds;
 
     /**
-     * <p>Default or Serverless. The former indicates an ECK cluster, and the latter indicates a serverless VC.
-     * Must be used together with the cluster_type parameter.</p>
+     * <p>Default or Serverless. The former indicates an ECK cluster, and the latter indicates a serverless VC. This parameter must be used together with the ClusterType parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -90,10 +105,12 @@ public class CreateClusterRequest extends TeaModel {
     public String profile;
 
     /**
-     * <p>Specifies whether to enable public network access. The API Server is exposed through an EIP to enable public access to the cluster.
-     * ● true: Enable public network access.
-     * ● false: Disable public network access. If you select this option, you cannot access the cluster API Server from the Internet.
-     * Default value: false.</p>
+     * <p>Specifies whether to enable public network access. You can expose the API server by using an elastic IP address (EIP) to enable public network access to the cluster. Valid values:</p>
+     * <ul>
+     * <li>true: enables public network access.</li>
+     * <li>false: disables public network access. If you select false, you cannot access the API server of the cluster over the Internet.
+     * Default value: false.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -102,7 +119,7 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean publicAccess;
 
     /**
-     * <p>The service network CIDR block. Valid ranges: 10.0.0.0/16-24, 172.16-31.0.0/16-24, and 192.168.0.0/16-24. The CIDR block cannot overlap with the VPC CIDR block 10.1.0.0/21 or the CIDR blocks used by existing Kubernetes clusters in the VPC. You cannot modify the CIDR block after the cluster is created.</p>
+     * <p>The CIDR block for Services. Valid ranges include 10.0.0.0/16 to 10.0.0.0/24, 172.16.0.0/16 to 172.31.0.0/24, and 192.168.0.0/16 to 192.168.0.0/24. The CIDR block cannot overlap with the VPC CIDR block 10.1.0.0/21 or the CIDR blocks used by existing Kubernetes clusters in the VPC. The CIDR block cannot be modified after the cluster is created.</p>
      * 
      * <strong>example:</strong>
      * <p>172.19.0.0/20</p>
@@ -111,7 +128,7 @@ public class CreateClusterRequest extends TeaModel {
     public String serviceCidr;
 
     /**
-     * <p>The VPC used by the cluster.</p>
+     * <p>The ID of the virtual private cloud (VPC) used by the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-xxxx</p>
@@ -120,7 +137,7 @@ public class CreateClusterRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The IDs of the vSwitches for cluster nodes. The ENS Region of the vswitch_ids must be the same as the ens_region_id value.</p>
+     * <p>The IDs of the vSwitches where the cluster nodes are deployed. The ENS region of the vSwitches must be the same as the ENS region specified by the EnsRegionId parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;vsw-xxx&quot;, &quot;vsw-yyy&quot;]</p>
@@ -255,7 +272,7 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestControlPlaneConfig extends TeaModel {
         /**
-         * <p>The control plane virtual machine image ID.</p>
+         * <p>The ID of the virtual machine image for the control plane.</p>
          * 
          * <strong>example:</strong>
          * <p>m-5ul335umat4e2y9ynwi84p3f9</p>
@@ -264,7 +281,7 @@ public class CreateClusterRequest extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The node instance type.</p>
+         * <p>The instance type of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>ens.esk.sn1.medium</p>
@@ -273,7 +290,7 @@ public class CreateClusterRequest extends TeaModel {
         public String instanceSpec;
 
         /**
-         * <p>The logon password for the cluster control plane machines.</p>
+         * <p>The logon password for the control plane machines of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>ThisIsAPassword</p>
@@ -282,7 +299,7 @@ public class CreateClusterRequest extends TeaModel {
         public String loginPassword;
 
         /**
-         * <p>The node service port range.</p>
+         * <p>The edge zone service port range.</p>
          * 
          * <strong>example:</strong>
          * <p>30000-32767</p>
@@ -291,7 +308,7 @@ public class CreateClusterRequest extends TeaModel {
         public String nodePortRange;
 
         /**
-         * <p>The control plane node runtime name.</p>
+         * <p>The name of the runtime for the control plane nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>containerd</p>
@@ -309,7 +326,7 @@ public class CreateClusterRequest extends TeaModel {
         public Integer size;
 
         /**
-         * <p>The node system cloud disk type. Valid values: &quot;local_ssd&quot;, &quot;cloud_ssd&quot;, &quot;cloud_efficiency&quot;, &quot;local_hdd&quot;.</p>
+         * <p>The category of the system cloud disk for the node. Valid values: local_ssd, cloud_ssd, cloud_efficiency, and local_hdd.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_efficiency</p>
@@ -318,7 +335,7 @@ public class CreateClusterRequest extends TeaModel {
         public String systemDiskCategory;
 
         /**
-         * <p>The node system cloud disk size.</p>
+         * <p>The size of the system cloud disk for the node.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>

@@ -52,7 +52,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public Object config;
 
     /**
-     * <p>The CIDR block for pods.</p>
+     * <p>The pod CIDR block.</p>
      * 
      * <strong>example:</strong>
      * <p>172.20.0.0/16</p>
@@ -66,10 +66,15 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     @NameInMap("ControlPlaneConfig")
     public DescribeClusterDetailResponseBodyControlPlaneConfig controlPlaneConfig;
 
+    /**
+     * <p>The control plane metadata.</p>
+     */
     @NameInMap("ControlPlaneMeta")
     public DescribeClusterDetailResponseBodyControlPlaneMeta controlPlaneMeta;
 
     /**
+     * <p>The time when the cluster was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-04-07T09:57:26+08:00</p>
      */
@@ -86,6 +91,8 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String ensRegionId;
 
     /**
+     * <p>The ISP information.</p>
+     * 
      * <strong>example:</strong>
      * <p>unicom</p>
      */
@@ -93,7 +100,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String isp;
 
     /**
-     * <p>The authentication token for cluster access.</p>
+     * <p>The authentication token for joining the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx.yyy</p>
@@ -102,7 +109,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String joinToken;
 
     /**
-     * <p>The cluster version, which is consistent with the Kubernetes community baseline version. We recommend that you select the latest version. If you do not specify this parameter, the latest version is used by default.</p>
+     * <p>The cluster version, which aligns with the Kubernetes community baseline version. Select the latest version. If not specified, the latest version is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>1.32.1.aliyunedge.1</p>
@@ -111,7 +118,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String kubernetesVersion;
 
     /**
-     * <p>The CLB instance ID of the API server.</p>
+     * <p>The ID of the Classic Load Balancer (CLB) instance for the API server.</p>
      * 
      * <strong>example:</strong>
      * <p>lb-5snthcyu1x10g7tywj7iu****</p>
@@ -129,20 +136,28 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>The ID of the NAT gateway.</p>
+     * 
      * <strong>example:</strong>
      * <p>nat-5tawjw5j7sgd2deujxuk0****</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
+    /**
+     * <p>The number of nodes in the cluster.</p>
+     */
     @NameInMap("NodeCount")
     public DescribeClusterDetailResponseBodyNodeCount nodeCount;
 
+    /**
+     * <p>The pod status information of the cluster.</p>
+     */
     @NameInMap("PodStatus")
     public DescribeClusterDetailResponseBodyPodStatus podStatus;
 
     /**
-     * <p>The vSwitch IDs for pods.</p>
+     * <p>The pod vSwitch IDs.</p>
      */
     @NameInMap("PodVswitchIds")
     public java.util.List<String> podVswitchIds;
@@ -157,7 +172,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public Boolean publicAccess;
 
     /**
-     * <p>Id of the request。</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
@@ -166,7 +181,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The CIDR block for services.</p>
+     * <p>The service CIDR block.</p>
      * 
      * <strong>example:</strong>
      * <p>172.19.0.0/20</p>
@@ -175,12 +190,12 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String serviceCidr;
 
     /**
-     * <p>The cluster status. Valid values:</p>
+     * <p>The cluster state. Valid values:</p>
      * <ul>
-     * <li><strong>initial</strong>: Being created.</li>
+     * <li><strong>initial</strong>: Creating.</li>
      * <li><strong>failed</strong>: Creation failed.</li>
      * <li><strong>running</strong>: Running.</li>
-     * <li><strong>deleting</strong>: Being released.</li>
+     * <li><strong>deleting</strong>: Releasing.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -199,7 +214,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The vSwitch IDs of the cluster nodes.</p>
+     * <p>The vSwitch IDs where the cluster nodes reside.</p>
      */
     @NameInMap("VswitchIds")
     public java.util.List<String> vswitchIds;
@@ -395,7 +410,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
 
     public static class DescribeClusterDetailResponseBodyControlPlaneConfig extends TeaModel {
         /**
-         * <p>The container runtime type.</p>
+         * <p>The runtime type.</p>
          * 
          * <strong>example:</strong>
          * <p>containerd</p>
@@ -404,7 +419,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public String containerRuntime;
 
         /**
-         * <p>The image ID of the control plane virtual machine.</p>
+         * <p>The ID of the control plane virtual machine image.</p>
          * 
          * <strong>example:</strong>
          * <p>m-5ul335umat4e2y9ynwi84p3f9</p>
@@ -413,7 +428,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The node instance type.</p>
+         * <p>The instance type of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>ens.esk.sn1.medium</p>
@@ -440,7 +455,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public Long size;
 
         /**
-         * <p>The system cloud disk type of the node.</p>
+         * <p>The system cloud disk category of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_efficiency</p>
@@ -522,6 +537,8 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
 
     public static class DescribeClusterDetailResponseBodyControlPlaneMetaMasterInstances extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-573utia8wbecrbgsm6o8fx132</p>
          */
@@ -529,6 +546,8 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The instance IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.10.0.2</p>
          */
@@ -536,6 +555,8 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public String ip;
 
         /**
+         * <p>The node name.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-573utia8wbecrbgsm6o8fx132</p>
          */
@@ -575,6 +596,8 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
 
     public static class DescribeClusterDetailResponseBodyControlPlaneMetaMasterUrl extends TeaModel {
         /**
+         * <p>The private endpoint of the API server.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://10.0.0.1:6443">https://10.0.0.1:6443</a></p>
          */
@@ -582,6 +605,8 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public String privateUrl;
 
         /**
+         * <p>The public address of the API server.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://0.0.0.0:6443">https://0.0.0.0:6443</a></p>
          */
@@ -612,9 +637,15 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterDetailResponseBodyControlPlaneMeta extends TeaModel {
+        /**
+         * <p>The master node information.</p>
+         */
         @NameInMap("MasterInstances")
         public java.util.List<DescribeClusterDetailResponseBodyControlPlaneMetaMasterInstances> masterInstances;
 
+        /**
+         * <p>The API server address.</p>
+         */
         @NameInMap("MasterUrl")
         public DescribeClusterDetailResponseBodyControlPlaneMetaMasterUrl masterUrl;
 
@@ -643,6 +674,8 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
 
     public static class DescribeClusterDetailResponseBodyNodeCount extends TeaModel {
         /**
+         * <p>The number of ready nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -650,6 +683,8 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public Integer ready;
 
         /**
+         * <p>The total number of nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -681,6 +716,8 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
 
     public static class DescribeClusterDetailResponseBodyPodStatus extends TeaModel {
         /**
+         * <p>The number of pods in the Running state.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -688,6 +725,8 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public Integer running;
 
         /**
+         * <p>The total number of pods.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

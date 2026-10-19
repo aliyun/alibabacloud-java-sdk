@@ -42,7 +42,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
 
     public static class DescribeClustersV1ResponseBodyClustersControlPlaneConfig extends TeaModel {
         /**
-         * <p>The container runtime type.</p>
+         * <p>The type of the container runtime.</p>
          * 
          * <strong>example:</strong>
          * <p>containerd</p>
@@ -51,7 +51,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String containerRuntime;
 
         /**
-         * <p>The image ID.</p>
+         * <p>The ID of the image.</p>
          * 
          * <strong>example:</strong>
          * <p>m-68be8cb9f71fhyvjekxa23qsf</p>
@@ -69,7 +69,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String instanceSpec;
 
         /**
-         * <p>The node service port range.</p>
+         * <p>The edge zone service port range.</p>
          * 
          * <strong>example:</strong>
          * <p>30000-32767</p>
@@ -87,7 +87,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public Long size;
 
         /**
-         * <p>The system cloud disk type of the node. Valid values: local_ssd, cloud_ssd, cloud_efficiency, and local_hdd.</p>
+         * <p>The category of the system cloud disk for nodes. Valid values: local_ssd, cloud_ssd, cloud_efficiency, and local_hdd.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
@@ -96,7 +96,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String systemDiskCategory;
 
         /**
-         * <p>The system cloud disk size. Unit: GB.</p>
+         * <p>The size of the system cloud disk. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -178,7 +178,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String aliUid;
 
         /**
-         * <p>The cluster instance ID.</p>
+         * <p>The instance ID of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>eck-xxxxxxx</p>
@@ -187,7 +187,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The cluster kubeconfig.</p>
+         * <p>The kubeconfig of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -228,7 +228,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public Object config;
 
         /**
-         * <p>The pod network CIDR block. The value must be a valid private CIDR block, which includes the following CIDR blocks and their subnets: 10.0.0.0/8, 172.16-31.0.0/12-16, and 192.168.0.0/16. The CIDR block cannot overlap with the VPC CIDR block or the CIDR blocks used by existing Kubernetes clusters in the VPC. You cannot modify this value after the cluster is created.</p>
+         * <p>The CIDR block for pods. It must be a valid private CIDR block, specifically one of the following CIDR blocks or their subnets: 10.0.0.0/8, 172.16.0.0/12 to 172.31.0.0/16, and 192.168.0.0/16. The CIDR block cannot overlap with the CIDR block of the VPC or the CIDR blocks used by existing Kubernetes clusters in the VPC. The CIDR block cannot be modified after the cluster is created.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.0/8</p>
@@ -237,12 +237,14 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String containerCidr;
 
         /**
-         * <p>The control plane configuration.</p>
+         * <p>The configuration of the control plane.</p>
          */
         @NameInMap("ControlPlaneConfig")
         public DescribeClustersV1ResponseBodyClustersControlPlaneConfig controlPlaneConfig;
 
         /**
+         * <p>The time when the cluster was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-04-07T09:57:26+08:00</p>
          */
@@ -250,7 +252,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String created;
 
         /**
-         * <p>The ENS node ID.</p>
+         * <p>The ENS edge zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-55</p>
@@ -259,6 +261,8 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String ensRegionId;
 
         /**
+         * <p>The ISP information.</p>
+         * 
          * <strong>example:</strong>
          * <p>unicom</p>
          */
@@ -266,7 +270,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String isp;
 
         /**
-         * <p>The authentication token for cluster access.</p>
+         * <p>The authentication token for joining the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxxxxxx.yyyyyyy</p>
@@ -275,7 +279,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String joinToken;
 
         /**
-         * <p>The cluster version, which is consistent with the Kubernetes community baseline version. Use the latest version. If you do not specify this parameter, the latest version is used by default.</p>
+         * <p>The Kubernetes version of the cluster, which aligns with the Kubernetes community baseline version. Select the latest version. If this parameter is not specified, the latest version is used by default.</p>
          * 
          * <strong>example:</strong>
          * <p>1.31.9-aliyunedge.1</p>
@@ -293,7 +297,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String loadBalancerId;
 
         /**
-         * <p>The cluster name.</p>
+         * <p>The name of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>test-eck-name</p>
@@ -302,16 +306,16 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The vSwitch IDs for pods. Each pod vSwitch corresponds to a worker node vSwitch, and the zones of the pod vSwitch and the worker node vSwitch must be the same. If you leave this parameter empty, the value of vswitch_ids is used by default.</p>
+         * <p>The IDs of the vSwitches for pods. Each pod vSwitch corresponds to a worker node vSwitch. The pod vSwitch and the worker node vSwitch must be in the same zone. If this parameter is not specified, the value of vswitch_ids is used by default.</p>
          */
         @NameInMap("PodVswitchIds")
         public java.util.List<String> podVswitchIds;
 
         /**
-         * <p>Indicates whether public network access is enabled. The API Server is exposed through an EIP to enable public access to the cluster. Valid values:</p>
+         * <p>Specifies whether to enable public network access. An elastic IP address (EIP) is used to expose the API server to enable public access to the cluster. Valid values:</p>
          * <ul>
-         * <li>true: Public network access is enabled.</li>
-         * <li>false: Public network access is disabled. If you select this option, the cluster API Server cannot be accessed from the Internet.</li>
+         * <li>true: enables public network access.</li>
+         * <li>false: disables public network access. If you set this parameter to false, you cannot access the API server of the cluster over the Internet.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -321,7 +325,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public Boolean publicAccess;
 
         /**
-         * <p>The service network CIDR block. Valid ranges: 10.0.0.0/16-24, 172.16-31.0.0/16-24, and 192.168.0.0/16-24. The CIDR block cannot overlap with the VPC CIDR block 10.1.0.0/21 or the CIDR blocks used by existing Kubernetes clusters in the VPC. You cannot modify this value after the cluster is created.</p>
+         * <p>The CIDR block for services. Valid CIDR blocks: 10.0.0.0/16 to 10.0.0.0/24, 172.16.0.0/16 to 172.31.0.0/24, and 192.168.0.0/16 to 192.168.0.0/24. The CIDR block cannot overlap with the VPC CIDR block 10.1.0.0/21 or the CIDR blocks used by existing Kubernetes clusters in the VPC. The CIDR block cannot be modified after the cluster is created.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.0/16</p>
@@ -330,7 +334,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String serviceCidr;
 
         /**
-         * <p>The cluster status.</p>
+         * <p>The status of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>running</p>
@@ -348,7 +352,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The vSwitch IDs of the cluster nodes. The ENS region of the vSwitch IDs must be the same as the value of ens_region_id.</p>
+         * <p>The IDs of the vSwitches where the cluster nodes reside. The ENS region of the vSwitches must be the same as the value of ens_region_id.</p>
          */
         @NameInMap("VswitchIds")
         public java.util.List<String> vswitchIds;

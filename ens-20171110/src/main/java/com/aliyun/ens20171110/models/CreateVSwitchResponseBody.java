@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateVSwitchResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
@@ -14,7 +14,7 @@ public class CreateVSwitchResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the VSwitch.</p>
+     * <p>The ID of the vSwitch.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-5****</p>

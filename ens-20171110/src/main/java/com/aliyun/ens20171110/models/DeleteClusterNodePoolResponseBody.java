@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteClusterNodePoolResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F3B261DD-3858-4D3C-877D-303ADF374600</p>

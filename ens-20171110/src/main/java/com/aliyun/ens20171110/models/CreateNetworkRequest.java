@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateNetworkRequest extends TeaModel {
     /**
-     * <p>The CIDR block of the network. You can use one of the following CIDR blocks or their subsets:</p>
+     * <p>The CIDR block of the network. You can use one of the following CIDR blocks or their subsets as the CIDR block of the network:</p>
      * <ul>
-     * <li><p>10.0.0.0/8 (default).</p>
-     * </li>
-     * <li><p>172.16.0.0/12.</p>
-     * </li>
-     * <li><p>192.168.0.0/16.</p>
-     * </li>
+     * <li>10.0.0.0/8 (default).</li>
+     * <li>172.16.0.0/12.</li>
+     * <li>192.168.0.0/16.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -23,8 +20,8 @@ public class CreateNetworkRequest extends TeaModel {
     public String cidrBlock;
 
     /**
-     * <p>A description of the network.</p>
-     * <p>Must be 2 to 256 characters long, start with a letter or a Chinese character, and cannot start with http\:// or https\://.</p>
+     * <p>The description of the network.</p>
+     * <p>The description must be 2 to 256 characters in length, and must start with a letter or a Chinese character. It cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>this is my first network</p>
@@ -32,11 +29,21 @@ public class CreateNetworkRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Specifies whether to enable IPv6. Valid values:</p>
+     * <ul>
+     * <li>false (default): disables IPv6.</li>
+     * <li>true: enables IPv6.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnableIpv6")
     public Boolean enableIpv6;
 
     /**
-     * <p>The node ID of ENS.</p>
+     * <p>The ID of the ENS edge zone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +53,13 @@ public class CreateNetworkRequest extends TeaModel {
     public String ensRegionId;
 
     /**
+     * <p>The ISP of the IPv6 address. Valid values:</p>
+     * <ul>
+     * <li>cmcc</li>
+     * <li>telecom</li>
+     * <li>unicom</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>telecom</p>
      */
@@ -53,14 +67,11 @@ public class CreateNetworkRequest extends TeaModel {
     public String ipv6Isp;
 
     /**
-     * <p>The network name. Follow these naming rules:</p>
+     * <p>The name of the network. The name must meet the following requirements:</p>
      * <ul>
-     * <li><p>Must be 2 to 128 characters long, using English or Chinese characters.</p>
-     * </li>
-     * <li><p>Must start with a letter or a Chinese character. Cannot start with http\:// or https\://.</p>
-     * </li>
-     * <li><p>Can contain digits, colons (:), underscores (_), or hyphens (-).</p>
-     * </li>
+     * <li>The name must be 2 to 128 characters in length.</li>
+     * <li>The name must start with a letter or a Chinese character, and cannot start with http:// or https://.</li>
+     * <li>The name can contain digits, colons (:), underscores (_), and hyphens (-).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,7 +81,7 @@ public class CreateNetworkRequest extends TeaModel {
     public String networkName;
 
     /**
-     * <p>Resource tags.</p>
+     * <p>The resource tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateNetworkRequestTag> tag;
@@ -138,14 +149,11 @@ public class CreateNetworkRequest extends TeaModel {
 
     public static class CreateNetworkRequestTag extends TeaModel {
         /**
-         * <p>The tag key for the instance. N ranges from <strong>1</strong> to <strong>20</strong>.</p>
+         * <p>The key of tag N of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
          * <ul>
-         * <li><p>Cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</p>
-         * </li>
-         * <li><p>Supports up to 64 characters.</p>
-         * </li>
-         * <li><p>Cannot be an empty string.</p>
-         * </li>
+         * <li>The key cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
+         * <li>The key can be up to 64 characters in length.</li>
+         * <li>The key cannot be an empty string.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -155,7 +163,7 @@ public class CreateNetworkRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value for the resource. N ranges from 1 to 20. This value can be an empty string once provided. It supports up to 128 characters, cannot start with acs:, and cannot contain http\:// or https\://.</p>
+         * <p>The value of tag N of the resource. Valid values of N: 1 to 20. The value can be an empty string. The value can be up to 128 characters in length, and cannot start with acs: or contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>tagValue</p>

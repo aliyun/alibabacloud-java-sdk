@@ -15,7 +15,7 @@ public class DescribeClusterUserKubeconfigRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Specifies whether to use the internal access address. The default value is false.</p>
+     * <p>Specifies whether the internal-facing access address of the private network is used. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

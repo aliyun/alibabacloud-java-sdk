@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVSwitchesResponseBody extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the current query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page in the current query.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -32,7 +32,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries in the list.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -40,9 +40,6 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    /**
-     * <p>A collection of VSwitches.</p>
-     */
     @NameInMap("VSwitches")
     public DescribeVSwitchesResponseBodyVSwitches vSwitches;
 

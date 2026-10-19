@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InstallClusterAddonsRequest extends TeaModel {
     /**
-     * <p>The component information.</p>
+     * <p>The add-on information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Addons")
@@ -126,7 +126,7 @@ public class InstallClusterAddonsRequest extends TeaModel {
         public java.util.List<InstallClusterAddonsRequestAddonsConfigSchema> configSchema;
 
         /**
-         * <p>The plug-in name.</p>
+         * <p>The add-on name.</p>
          * 
          * <strong>example:</strong>
          * <p>edge-csi-lite</p>

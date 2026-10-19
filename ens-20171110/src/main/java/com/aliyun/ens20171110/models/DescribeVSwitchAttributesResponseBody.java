@@ -23,7 +23,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     public String cidrBlock;
 
     /**
-     * <p>The time when the vSwitch was created. This value uses UTC and follows the yyyy-MM-ddTHH:mm:ssZ format.</p>
+     * <p>The creation time. The time is displayed in UTC in the yyyy-MM-ddTHH:mm:ssZ format.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-06-01T00:00:00Z</p>
@@ -41,7 +41,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the ENS edge zone.</p>
+     * <p>The ENS edge zone ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-xian-unicom</p>
@@ -56,6 +56,8 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     public DescribeVSwitchAttributesResponseBodyInstanceIds instanceIds;
 
     /**
+     * <p>The IPv6 CIDR block of the vSwitch.</p>
+     * 
      * <strong>example:</strong>
      * <p>2408:XXXX:0:a600::/110</p>
      */
@@ -69,7 +71,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     public DescribeVSwitchAttributesResponseBodyNatGatewayIds natGatewayIds;
 
     /**
-     * <p>The ID of the network.</p>
+     * <p>The network ID.</p>
      * 
      * <strong>example:</strong>
      * <p>n-257gqcdfvx6n****</p>
@@ -81,7 +83,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     public DescribeVSwitchAttributesResponseBodyNetworkInterfaceIds networkInterfaceIds;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C0003****2A8</p>
@@ -92,12 +94,9 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     /**
      * <p>The status of the vSwitch. Valid values:</p>
      * <ul>
-     * <li><p>Pending: The vSwitch is being configured.</p>
-     * </li>
-     * <li><p>Available: The vSwitch is active.</p>
-     * </li>
-     * <li><p>Releasing: The vSwitch is being released.</p>
-     * </li>
+     * <li>Pending: The vSwitch is being configured.</li>
+     * <li>Available: The vSwitch is available.</li>
+     * <li>Releasing: The vSwitch is being released.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -107,7 +106,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <p>The vSwitch ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-5****</p>
@@ -116,7 +115,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The name of the vSwitch.</p>
+     * <p>The vSwitch name.</p>
      * 
      * <strong>example:</strong>
      * <p>Test-switch</p>

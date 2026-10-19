@@ -17,7 +17,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     public DescribeNetworkAttributeResponseBodyCloudResources cloudResources;
 
     /**
-     * <p>The time at which the network was created. The time is in UTC and is formatted as yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <p>The creation time. The time is displayed in UTC in the yyyy-MM-ddTHH:mm:ssZ format.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-06-01T00:00:00Z</p>
@@ -35,7 +35,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the ENS node.</p>
+     * <p>The ENS edge zone ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -133,10 +133,8 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     /**
      * <p>The status of the network. Valid values:</p>
      * <ul>
-     * <li><p>Pending: The network is being configured.</p>
-     * </li>
-     * <li><p>Available: The network is ready for use.</p>
-     * </li>
+     * <li>Pending: Configuring.</li>
+     * <li>Available: Available.</li>
      * </ul>
      * 
      * <strong>example:</strong>

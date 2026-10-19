@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DescribeClusterDetailRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <p>Only ECK cluster IDs with the eck- prefix are accepted. Legacy short hexadecimal cluster IDs are not supported. Call DescribeClustersV1 to obtain the ID. When listing clusters, pass in the Name parameter.</p>
+     * <p>Only ECK cluster IDs with the eck- prefix are accepted. Legacy short hexadecimal cluster IDs are not supported. You can call DescribeClustersV1 to obtain the ID. The Name parameter must be specified when listing clusters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ModifyClusterNodePoolShrinkRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <p>Only ECK cluster IDs with the eck- prefix are supported. You can obtain the ID by calling the DescribeClustersV1 operation. Serverless cluster IDs returned by the DescribeCluster operation are not supported. The cluster must be in the running state. After creation, it typically takes 10 to 20 minutes to complete initialization.</p>
+     * <p>Only ECK cluster IDs with the eck- prefix are supported. You can obtain the ID by calling the DescribeClustersV1 operation. Serverless cluster IDs returned by the DescribeCluster operation are not supported. The cluster must be in the running state. After creation, it usually takes 10 to 20 minutes to complete initialization.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

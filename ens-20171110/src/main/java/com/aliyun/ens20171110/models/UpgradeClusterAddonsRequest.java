@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeClusterAddonsRequest extends TeaModel {
     /**
-     * <p>The component information.</p>
+     * <p>The add-on information.</p>
      */
     @NameInMap("Addons")
     public java.util.List<UpgradeClusterAddonsRequestAddons> addons;
@@ -61,7 +61,7 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
         public String configVersion;
 
         /**
-         * <p>The component name.</p>
+         * <p>The add-on name.</p>
          * 
          * <strong>example:</strong>
          * <p>edge-csi-lite</p>
@@ -70,7 +70,7 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The custom parameters for the component.</p>
+         * <p>The custom parameters of the add-on.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;k1&quot;:&quot;v1&quot;}</p>
@@ -119,13 +119,13 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
 
     public static class UpgradeClusterAddonsRequestAddons extends TeaModel {
         /**
-         * <p>The schema of the custom parameters for the component.</p>
+         * <p>The schema of the custom parameters for the add-on.</p>
          */
         @NameInMap("ConfigSchema")
         public java.util.List<UpgradeClusterAddonsRequestAddonsConfigSchema> configSchema;
 
         /**
-         * <p>The component name.</p>
+         * <p>The add-on name.</p>
          * 
          * <strong>example:</strong>
          * <p>edge-csi-lite</p>

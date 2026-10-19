@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ModifyClusterNodePoolRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <p>Only ECK cluster IDs with the eck- prefix are supported. You can obtain the ID by calling the DescribeClustersV1 operation. Serverless cluster IDs returned by the DescribeCluster operation are not supported. The cluster must be in the running state. After creation, it typically takes 10 to 20 minutes to complete initialization.</p>
+     * <p>Only ECK cluster IDs with the eck- prefix are supported. You can obtain the ID by calling the DescribeClustersV1 operation. Serverless cluster IDs returned by the DescribeCluster operation are not supported. The cluster must be in the running state. After creation, it usually takes 10 to 20 minutes to complete initialization.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +73,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
 
     public static class ModifyClusterNodePoolRequestKubernetesConfig extends TeaModel {
         /**
-         * <p>The script to run after instance creation but before joining the cluster. The content must be Base64-encoded.</p>
+         * <p>The script to be executed after the instance is created and before it joins the cluster. The content must be Base64-encoded.</p>
          * 
          * <strong>example:</strong>
          * <p>ZWNobyBvawo=</p>
@@ -82,7 +82,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public String preUserData;
 
         /**
-         * <p>The script to run after instance creation and after joining the cluster. The content must be Base64-encoded.</p>
+         * <p>The script to be executed after the instance is created and after it joins the cluster. The content must be Base64-encoded.</p>
          * 
          * <strong>example:</strong>
          * <p>ZWNobyBvawo=</p>
@@ -115,6 +115,8 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
 
     public static class ModifyClusterNodePoolRequestNodepoolInfo extends TeaModel {
         /**
+         * <p>The name of the node pool.</p>
+         * 
          * <strong>example:</strong>
          * <p>test1</p>
          */
@@ -122,7 +124,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The node pool ID.</p>
+         * <p>The ID of the node pool.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +158,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
 
     public static class ModifyClusterNodePoolRequestScalingGroupDataDisks extends TeaModel {
         /**
-         * <p>The data cloud disk type.</p>
+         * <p>The category of the data cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_efficiency</p>
@@ -165,7 +167,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public String category;
 
         /**
-         * <p>The data cloud disk size.</p>
+         * <p>The size of the data cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -204,7 +206,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public java.util.List<ModifyClusterNodePoolRequestScalingGroupDataDisks> dataDisks;
 
         /**
-         * <p>The instance image ID.</p>
+         * <p>The ID of the instance image.</p>
          * 
          * <strong>example:</strong>
          * <p>m-68bysm5a8gkm7oik7ngacf0in</p>
@@ -213,7 +215,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The instance billing type.</p>
+         * <p>The billing method of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
@@ -228,7 +230,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public java.util.List<String> instanceTypes;
 
         /**
-         * <p>The instance key pair. This parameter is mutually exclusive with password.</p>
+         * <p>The name of the instance key pair. This parameter and Password are mutually exclusive.</p>
          * 
          * <strong>example:</strong>
          * <p>tf-testAcc</p>
@@ -237,7 +239,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public String keyPairName;
 
         /**
-         * <p>The instance password. This parameter is mutually exclusive with key_pair_name.</p>
+         * <p>The instance password. This parameter and key_pair_name are mutually exclusive.</p>
          * 
          * <strong>example:</strong>
          * <p>@AN5Ejx1YyzzK</p>
@@ -246,7 +248,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public String password;
 
         /**
-         * <p>The system cloud disk type.</p>
+         * <p>The category of the system cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_efficiency</p>
@@ -255,7 +257,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public String systemDiskCategory;
 
         /**
-         * <p>The system cloud disk size.</p>
+         * <p>The size of the system cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -264,7 +266,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public Integer systemDiskSize;
 
         /**
-         * <p>The vSwitches used by instances.</p>
+         * <p>The vSwitches used by the instances.</p>
          */
         @NameInMap("VswitchIds")
         public java.util.List<String> vswitchIds;

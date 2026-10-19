@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeClusterAddonsShrinkRequest extends TeaModel {
     /**
-     * <p>The component information.</p>
+     * <p>The add-on information.</p>
      */
     @NameInMap("Addons")
     public String addonsShrink;

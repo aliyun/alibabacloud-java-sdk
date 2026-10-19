@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ShareAICImageRequest extends TeaModel {
     /**
-     * <p>The image name.</p>
+     * <p>The ID of the AIC image. You can call DescribeAICImages to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ShareAICImageRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The user group.</p>
+     * <p>The user groups.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Users")
