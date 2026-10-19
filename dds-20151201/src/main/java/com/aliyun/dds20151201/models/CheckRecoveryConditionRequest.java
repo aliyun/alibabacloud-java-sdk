@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class CheckRecoveryConditionRequest extends TeaModel {
     /**
-     * <p>The backup ID.</p>
+     * <p>The ID of the backup set.</p>
      * <blockquote>
      * <ul>
      * <li>You can call the <a href="https://help.aliyun.com/document_detail/62172.html">DescribeBackups</a> operation to query the backup ID.</li>
-     * <li>You must specify one of the <strong>RestoreTime</strong> and BackupId parameters.</li>
-     * <li>This parameter is not applicable to sharded cluster instances.</li>
+     * <li>You must specify either this parameter or the <strong>RestoreTime</strong> parameter.</li>
+     * <li>This parameter is not supported for sharded cluster instances.</li>
      * </ul>
      * </blockquote>
      * 
@@ -21,9 +21,9 @@ public class CheckRecoveryConditionRequest extends TeaModel {
     public String backupId;
 
     /**
-     * <p>The name of the source database. The value is a JSON array.</p>
+     * <p>The names of the databases to be restored. The value is a JSON array.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, all databases are restored by default.</p>
+     * <p>If you do not specify this parameter, all databases are restored by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -33,9 +33,9 @@ public class CheckRecoveryConditionRequest extends TeaModel {
     public String databaseNames;
 
     /**
-     * <p>The region of the backup set used for the cross-region backup and restoration.</p>
+     * <p>The area where the backup set resides during geo-redundancy recover.</p>
      * <blockquote>
-     * <p> This parameter is required when you set the RestoreType parameter to 3.</p>
+     * <p>This parameter is required when the backup recover type is geo-redundancy cloning.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -45,14 +45,15 @@ public class CheckRecoveryConditionRequest extends TeaModel {
     public String destRegion;
 
     /**
-     * <p>The database engine version of the instance.</p>
+     * <p>The database version. Valid values:</p>
      * <ul>
+     * <li><strong>8.0</strong></li>
+     * <li><strong>7.0</strong></li>
      * <li><strong>6.0</strong></li>
      * <li><strong>5.0</strong></li>
      * <li><strong>4.4</strong></li>
      * <li><strong>4.2</strong></li>
      * <li><strong>4.0</strong></li>
-     * <li><strong>3.4</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,15 +63,15 @@ public class CheckRecoveryConditionRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The instance architecture. Valid values:</p>
+     * <p>The instance type. Valid values:</p>
      * <ul>
-     * <li>replicate</li>
+     * <li>replicate </li>
      * <li>sharding</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>This parameter is required when you set the RestoreType parameter to 2.</li>
-     * <li>This parameter is required when you set the RestoreType parameter to 3.</li>
+     * <li>This parameter is required when the backup recover type is rebuilding a deleted instance.</li>
+     * <li>This parameter is required when the backup recover type is geo-redundancy cloning.</li>
      * </ul>
      * </blockquote>
      * 
@@ -87,7 +88,7 @@ public class CheckRecoveryConditionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-bp179****</p>
@@ -102,11 +103,11 @@ public class CheckRecoveryConditionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The point in time to which the instance is restored. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The point in time to which you want to restore the instance. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <blockquote>
      * <ul>
-     * <li>The time can be a point in time within the past seven days. The time must be earlier than the current time, but later than the time when the instance was created.</li>
-     * <li>You must specify one of the RestoreTime and <strong>BackupId</strong> parameters.</li>
+     * <li>The value can be any point in time within the last seven days. The value must be earlier than the current time and later than the creation time of the instance.</li>
+     * <li>You must specify either this parameter or the <strong>BackupId</strong> parameter.</li>
      * </ul>
      * </blockquote>
      * 
@@ -117,13 +118,13 @@ public class CheckRecoveryConditionRequest extends TeaModel {
     public String restoreTime;
 
     /**
-     * <p>The restoration type.</p>
+     * <p>The backup recover type. Valid values:</p>
      * <blockquote>
      * <ul>
-     * <li>0: The data of the source instance is restored to a new instance in the same region.</li>
-     * <li>1: The data of the source instance is restored to an earlier point in time.</li>
-     * <li>2: The data of a deleted instance is restored to a new instance from the backup set.</li>
-     * <li>3: The data of a deleted instance is restored to a new instance in another region from the backup set.</li>
+     * <li>0: local backup recover</li>
+     * <li>1: local point-in-time recover</li>
+     * <li>2: backup recover of a deleted instance using a backup set</li>
+     * <li>3: geo-redundancy backup recover using a backup set</li>
      * </ul>
      * </blockquote>
      * 
@@ -134,7 +135,7 @@ public class CheckRecoveryConditionRequest extends TeaModel {
     public String restoreType;
 
     /**
-     * <p>The ID of the source instance.</p>
+     * <p>The instance ID of the source instance to recover.</p>
      * 
      * <strong>example:</strong>
      * <p>dds-bp1378****</p>
@@ -143,11 +144,11 @@ public class CheckRecoveryConditionRequest extends TeaModel {
     public String sourceDBInstance;
 
     /**
-     * <p>The region where the source instance resides.</p>
+     * <p>The area where the source instance resides.</p>
      * <blockquote>
      * <ul>
-     * <li>This parameter is required when you set the RestoreType parameter to 2.</li>
-     * <li>This parameter is required when you set the RestoreType parameter to 3.</li>
+     * <li>This parameter is required when the backup recover type is rebuilding a deleted instance.</li>
+     * <li>This parameter is required when the backup recover type is geo-redundancy cloning.</li>
      * </ul>
      * </blockquote>
      * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
     /**
-     * <p>The IP whitelist templates.</p>
+     * <p>The list of IP whitelist templates.</p>
      */
     @NameInMap("GlobalSecurityIPGroup")
     public java.util.List<CreateGlobalSecurityIPGroupResponseBodyGlobalSecurityIPGroup> globalSecurityIPGroup;
@@ -44,7 +44,7 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
         /**
          * <p>The IP addresses in the whitelist template.</p>
          * <blockquote>
-         * <p>Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP address whitelists.</p>
+         * <p>Separate multiple IP addresses with commas (,). A maximum of 1,000 IP addresses or CIDR blocks can be added to all IP whitelists in total.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -56,9 +56,9 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
         /**
          * <p>The name of the IP whitelist template. The name must meet the following requirements:</p>
          * <ul>
-         * <li><p>It can contain lowercase letters, digits, and underscores (_).</p>
+         * <li><p>It can contain only lowercase letters, digits, and underscores (_).</p>
          * </li>
-         * <li><p>It must start with a letter and end with a letter or digit.</p>
+         * <li><p>It must start with a letter and end with a letter or a digit.</p>
          * </li>
          * <li><p>It must be 2 to 120 characters in length.</p>
          * </li>
@@ -80,7 +80,7 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
         public String globalSecurityGroupId;
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

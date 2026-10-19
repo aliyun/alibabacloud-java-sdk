@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class ModifyNodeSpecRequest extends TeaModel {
     /**
+     * <p>Specifies whether to automatically align the primary node to the primary zone after operations such as specification changes for multi-zone instances. If you choose not to align the node, one primary/secondary switchover (transient disconnection) is avoided. Default value: true.</p>
+     */
+    @NameInMap("AlignPrimaryZone")
+    public Boolean alignPrimaryZone;
+
+    /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong> (default): Enables automatic payment. Make sure that your account has a sufficient balance.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Disables automatic payment. You must manually pay for the order.</p>
-     * </li>
+     * <li><strong>true</strong> (default): Automatic payment is enabled. Make sure that your account has sufficient balance.</li>
+     * <li><strong>false</strong>: Manual payment is enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +24,7 @@ public class ModifyNodeSpecRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The business information. This is an additional parameter.</p>
+     * <p>The additional parameter that contains business information.</p>
      * 
      * <strong>example:</strong>
      * <p>{“ActivityId&quot;:&quot;000000000&quot;}</p>
@@ -29,7 +33,7 @@ public class ModifyNodeSpecRequest extends TeaModel {
     public String businessInfo;
 
     /**
-     * <p>A client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. Make sure that the value is unique across different requests and contains a maximum of 64 ASCII characters. The value cannot contain non-ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -40,10 +44,8 @@ public class ModifyNodeSpecRequest extends TeaModel {
     /**
      * <p>Specifies whether to use a coupon. Valid values:</p>
      * <ul>
-     * <li><p><strong>default</strong> or <strong>null</strong> (default): A coupon is used.</p>
-     * </li>
-     * <li><p><strong>youhuiquan_promotion_option_id_for_blank</strong>: A coupon is not used.</p>
-     * </li>
+     * <li><strong>default</strong> or <strong>null</strong> (default): Use a coupon.</li>
+     * <li><strong>youhuiquan_promotion_option_id_for_blank</strong>: Do not use a coupon.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,12 +65,10 @@ public class ModifyNodeSpecRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The effective time of the configuration change. Valid values:</p>
+     * <p>The effective period of the configuration change. Valid values: </p>
      * <ul>
-     * <li><p><strong>Immediately</strong> (default): The change takes effect immediately.</p>
-     * </li>
-     * <li><p><strong>MaintainTime</strong>: The change takes effect during the O\&amp;M window of the instance.</p>
-     * </li>
+     * <li><strong>Immediately</strong> (default): The configuration change takes effect immediately.</li>
+     * <li><strong>MaintainTime</strong>: The configuration change takes effect within the maintenance window of the instance.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,10 +80,8 @@ public class ModifyNodeSpecRequest extends TeaModel {
     /**
      * <p>The source of the request. Valid values:</p>
      * <ul>
-     * <li><p><strong>OpenApi</strong>: The request is from OpenAPI.</p>
-     * </li>
-     * <li><p><strong>mongo_buy</strong>: The request is from the console.</p>
-     * </li>
+     * <li><strong>OpenApi</strong>: The request is sent from OpenAPI.</li>
+     * <li><strong>mongo_buy</strong>: The request is sent from the console.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -93,7 +91,7 @@ public class ModifyNodeSpecRequest extends TeaModel {
     public String fromApp;
 
     /**
-     * <p>The instance type of the shard or Mongos node. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</p>
+     * <p>The specifications of the shard or mongos node. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance specifications</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>dds.mongos.standard</p>
@@ -102,9 +100,9 @@ public class ModifyNodeSpecRequest extends TeaModel {
     public String nodeClass;
 
     /**
-     * <p>The ID of the shard or Mongos node in the sharded cluster instance. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the node ID.</p>
+     * <p>The ID of the shard or mongos node in the sharded cluster instance. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the node ID.</p>
      * <blockquote>
-     * <p>If you set this parameter to the ID of a shard node, you must also specify the <strong>NodeStorage</strong> parameter.</p>
+     * <p>If the value is a shard node ID, you must also specify the <strong>NodeStorage</strong> parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -115,12 +113,10 @@ public class ModifyNodeSpecRequest extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>The storage space of the shard node. The step size is 10. Unit: GB.</p>
+     * <p>The storage space of the shard node. The step size is 10 GB.</p>
      * <ul>
-     * <li><p>SSD local disk: <strong>10</strong> to <strong>2000</strong>.</p>
-     * </li>
-     * <li><p>ESSD PL1 disk: <strong>20</strong> to <strong>16000</strong>.</p>
-     * </li>
+     * <li>For local SSDs, valid values: <strong>10</strong> to <strong>2000</strong>.</li>
+     * <li>For PL1 ESSDs, valid values: <strong>20</strong> to <strong>16000</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -132,10 +128,8 @@ public class ModifyNodeSpecRequest extends TeaModel {
     /**
      * <p>The order type. Valid values:</p>
      * <ul>
-     * <li><p><strong>UPGRADE</strong>: upgrades the instance configuration.</p>
-     * </li>
-     * <li><p><strong>DOWNGRADE</strong>: downgrades the instance configuration.</p>
-     * </li>
+     * <li><strong>UPGRADE</strong>: Upgrade.</li>
+     * <li><strong>DOWNGRADE</strong>: Downgrade.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -167,9 +161,9 @@ public class ModifyNodeSpecRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The time when the configuration change takes effect. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The time when the configuration change is executed. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
      * <blockquote>
-     * <p>This parameter is deprecated. Use the EffectiveTime parameter instead.</p>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated. Use the EffectiveTime parameter instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -179,11 +173,10 @@ public class ModifyNodeSpecRequest extends TeaModel {
     public String switchTime;
 
     /**
-     * <p>The hidden zone to which you want to migrate the instance.</p>
+     * <p>The destination hidden zone for zone migration.</p>
      * <blockquote>
-     * <p>Notice: </p>
+     * <p>Notice: This parameter is supported only for cloud disk instances.</notice></p>
      * </blockquote>
-     * <p>This parameter is applicable only to instances that use disks.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-j</p>
@@ -192,11 +185,10 @@ public class ModifyNodeSpecRequest extends TeaModel {
     public String targetHiddenZoneId;
 
     /**
-     * <p>The secondary zone to which you want to migrate the instance.</p>
+     * <p>The destination secondary zone for zone migration.</p>
      * <blockquote>
-     * <p>Notice: </p>
+     * <p>Notice: This parameter is supported only for cloud disk instances.</notice></p>
      * </blockquote>
-     * <p>This parameter is applicable only to instances that use disks.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-e</p>
@@ -205,11 +197,10 @@ public class ModifyNodeSpecRequest extends TeaModel {
     public String targetSecondaryZoneId;
 
     /**
-     * <p>The ID of the vSwitch in the destination zone.</p>
+     * <p>The ID of the destination vSwitch for zone migration.</p>
      * <blockquote>
-     * <p>Notice: </p>
+     * <p>Notice: This parameter is supported only for cloud disk instances.</notice></p>
      * </blockquote>
-     * <p>This parameter is applicable only to instances that use disks.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-xxxxxxxx</p>
@@ -218,11 +209,10 @@ public class ModifyNodeSpecRequest extends TeaModel {
     public String targetVswitchId;
 
     /**
-     * <p>The primary zone to which you want to migrate the instance.</p>
+     * <p>The destination primary zone for zone migration.</p>
      * <blockquote>
-     * <p>Notice: </p>
+     * <p>Notice: This parameter is supported only for cloud disk instances.</notice></p>
      * </blockquote>
-     * <p>This parameter is applicable only to instances that use disks.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-h</p>
@@ -233,6 +223,14 @@ public class ModifyNodeSpecRequest extends TeaModel {
     public static ModifyNodeSpecRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyNodeSpecRequest self = new ModifyNodeSpecRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyNodeSpecRequest setAlignPrimaryZone(Boolean alignPrimaryZone) {
+        this.alignPrimaryZone = alignPrimaryZone;
+        return this;
+    }
+    public Boolean getAlignPrimaryZone() {
+        return this.alignPrimaryZone;
     }
 
     public ModifyNodeSpecRequest setAutoPay(Boolean autoPay) {

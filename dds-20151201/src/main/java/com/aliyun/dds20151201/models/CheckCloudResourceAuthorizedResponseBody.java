@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class CheckCloudResourceAuthorizedResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether KMS keys are authorized to ApsaraDB for MongoDB instances. Valid values:</p>
+     * <p>The authorization status. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: KMS keys are not authorized.</p>
-     * </li>
-     * <li><p><strong>1</strong>: KMS keys are authorized.</p>
-     * </li>
-     * <li><p><strong>2</strong>: KMS is not enabled.</p>
-     * </li>
+     * <li><strong>0</strong>: Not authorized.</li>
+     * <li><strong>1</strong>: Authorized.</li>
+     * <li><strong>2</strong>: The user has not enabled KMS.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,7 +19,7 @@ public class CheckCloudResourceAuthorizedResponseBody extends TeaModel {
     public Integer authorizationState;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A0181AC4-F186-46ED-87CA-100C70B86729</p>
@@ -31,9 +28,9 @@ public class CheckCloudResourceAuthorizedResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The role information of the authorized Alibaba Resource Name (ARN).</p>
+     * <p>The information about the role that is authorized to access Alibaba Cloud resources.</p>
      * <blockquote>
-     * <p>This parameter is returned only when the value of the <strong>AuthorizationState</strong> parameter is <strong>1</strong>.</p>
+     * <p>The response includes this parameter only when the return value of <strong>AuthorizationState</strong> is <strong>1</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

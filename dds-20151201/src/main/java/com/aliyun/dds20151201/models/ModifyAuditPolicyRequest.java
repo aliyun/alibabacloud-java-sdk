@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAuditPolicyRequest extends TeaModel {
     /**
-     * <p>The source of the request. Set this parameter to <strong>Console</strong>.</p>
+     * <p>The source of the audit log request. Valid value: <strong>Console</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>Console</p>
@@ -14,12 +14,10 @@ public class ModifyAuditPolicyRequest extends TeaModel {
     public String auditLogSwitchSource;
 
     /**
-     * <p>The status of the audit log. Valid values:</p>
+     * <p>The status of audit logging. Valid values:</p>
      * <ul>
-     * <li><p><strong>enable</strong>: Enables the audit log feature.</p>
-     * </li>
-     * <li><p><strong>disabled</strong>: Disables the audit log feature.</p>
-     * </li>
+     * <li><strong>enable</strong>: Enables audit logging.</li>
+     * <li><strong>disabled</strong>: Disables audit logging.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -40,7 +38,7 @@ public class ModifyAuditPolicyRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>This parameter is effective only for the <strong>V2_Standard</strong> (DAS Enterprise Edition (NoSQL Compatible) audit log) edition. It specifies the hot storage duration for the audit log. Valid values: 0 to 7. Unit: days.</p>
+     * <p>This parameter takes effect only in the V2_Standard edition (DAS Enterprise Edition NoSQL-compatible audit logs) and specifies the hot storage duration of audit logs. Valid values: 0 to 7. Unit: days.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -61,23 +59,18 @@ public class ModifyAuditPolicyRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The edition of the audit log. Valid values:</p>
+     * <p>The edition of audit logging. Valid values:</p>
      * <ul>
-     * <li><p><strong>Trial</strong>: Trial Edition.</p>
-     * </li>
-     * <li><p><strong>Standard</strong>: Standard Edition.</p>
-     * </li>
-     * <li><p><strong>V2_Standard</strong>: DAS Enterprise Edition (NoSQL Compatible) audit log.</p>
-     * </li>
-     * </ul>
-     * <blockquote>
+     * <li><strong>Trial</strong>: Free Trial edition.</li>
+     * <li><strong>Standard</strong>: Standard edition.</li>
+     * <li><strong>V2_Standard</strong>: DAS Enterprise Edition (NoSQL-compatible) audit logs.<blockquote>
      * <ul>
-     * <li><p>The default value of this parameter is <strong>Trial</strong>. Starting from January 6, 2022, the Standard edition is being rolled out across regions, and new applications for the Trial edition are no longer accepted.</p>
-     * </li>
-     * <li><p>Starting from February 2026, the DAS Enterprise Edition (NoSQL Compatible) audit log will be rolled out across regions, and new applications for the Standard edition will no longer be accepted.</p>
-     * </li>
+     * <li>The default value is <strong>Trial</strong>. Starting from January 6, 2022, the Standard edition of audit logs is gradually rolled out across regions, and applications for the Free Trial edition are no longer accepted.</li>
+     * <li>Starting from February 2026, DAS Enterprise Edition (NoSQL-compatible) audit logs are gradually rolled out across regions, and applications for the Standard edition are no longer accepted.</li>
      * </ul>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Standard</p>
@@ -87,9 +80,9 @@ public class ModifyAuditPolicyRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li><p>For the <strong>Standard</strong> edition, this parameter specifies the retention period for the audit log. Valid values: 1 to 365. The default value is 30. Unit: days.</p>
+     * <li><p>In the Standard edition, this parameter specifies the retention period of audit logs. Valid values: 1 to 365. Default value: 30. Unit: days.</p>
      * </li>
-     * <li><p>For the <strong>V2_Standard</strong> (DAS Enterprise Edition (NoSQL Compatible) audit log) edition, this parameter specifies the cold storage duration for the audit log. Valid values: 30, 180, 365, 1095, and 1825. Unit: days.</p>
+     * <li><p>In the V2_Standard edition (DAS Enterprise Edition NoSQL-compatible audit logs), this parameter specifies the cold storage duration of audit logs. Valid values: 30, 180, 365, 1095, and 1825. Unit: days.</p>
      * </li>
      * </ul>
      * 

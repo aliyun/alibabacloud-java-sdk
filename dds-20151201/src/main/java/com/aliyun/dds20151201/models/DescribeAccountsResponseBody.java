@@ -37,6 +37,63 @@ public class DescribeAccountsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeAccountsResponseBodyAccountsAccountRolesRole extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>admin</p>
+         */
+        @NameInMap("DBName")
+        public String DBName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>read</p>
+         */
+        @NameInMap("Role")
+        public String role;
+
+        public static DescribeAccountsResponseBodyAccountsAccountRolesRole build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAccountsResponseBodyAccountsAccountRolesRole self = new DescribeAccountsResponseBodyAccountsAccountRolesRole();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAccountsResponseBodyAccountsAccountRolesRole setDBName(String DBName) {
+            this.DBName = DBName;
+            return this;
+        }
+        public String getDBName() {
+            return this.DBName;
+        }
+
+        public DescribeAccountsResponseBodyAccountsAccountRolesRole setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
+        }
+
+    }
+
+    public static class DescribeAccountsResponseBodyAccountsAccountRoles extends TeaModel {
+        @NameInMap("Role")
+        public java.util.List<DescribeAccountsResponseBodyAccountsAccountRolesRole> role;
+
+        public static DescribeAccountsResponseBodyAccountsAccountRoles build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAccountsResponseBodyAccountsAccountRoles self = new DescribeAccountsResponseBodyAccountsAccountRoles();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAccountsResponseBodyAccountsAccountRoles setRole(java.util.List<DescribeAccountsResponseBodyAccountsAccountRolesRole> role) {
+            this.role = role;
+            return this;
+        }
+        public java.util.List<DescribeAccountsResponseBodyAccountsAccountRolesRole> getRole() {
+            return this.role;
+        }
+
+    }
+
     public static class DescribeAccountsResponseBodyAccountsAccount extends TeaModel {
         @NameInMap("AccountDescription")
         public String accountDescription;
@@ -52,6 +109,16 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>admin</p>
+         */
+        @NameInMap("DBName")
+        public String DBName;
+
+        @NameInMap("Roles")
+        public DescribeAccountsResponseBodyAccountsAccountRoles roles;
 
         public static DescribeAccountsResponseBodyAccountsAccount build(java.util.Map<String, ?> map) throws Exception {
             DescribeAccountsResponseBodyAccountsAccount self = new DescribeAccountsResponseBodyAccountsAccount();
@@ -96,6 +163,22 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
         public String getDBInstanceId() {
             return this.DBInstanceId;
+        }
+
+        public DescribeAccountsResponseBodyAccountsAccount setDBName(String DBName) {
+            this.DBName = DBName;
+            return this;
+        }
+        public String getDBName() {
+            return this.DBName;
+        }
+
+        public DescribeAccountsResponseBodyAccountsAccount setRoles(DescribeAccountsResponseBodyAccountsAccountRoles roles) {
+            this.roles = roles;
+            return this;
+        }
+        public DescribeAccountsResponseBodyAccountsAccountRoles getRoles() {
+            return this.roles;
         }
 
     }

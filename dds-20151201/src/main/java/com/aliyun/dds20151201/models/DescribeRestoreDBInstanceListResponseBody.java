@@ -17,7 +17,7 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -35,7 +35,7 @@ public class DescribeRestoreDBInstanceListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of instances in the query results.</p>
+     * <p>The total number of instances returned in the query result.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>

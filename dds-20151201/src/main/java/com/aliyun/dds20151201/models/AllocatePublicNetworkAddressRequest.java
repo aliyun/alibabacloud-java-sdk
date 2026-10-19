@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AllocatePublicNetworkAddressRequest extends TeaModel {
     /**
-     * <p>The ID of the instance</p>
+     * <p>The instance ID.</p>
      * <blockquote>
      * <p>If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
      * </blockquote>
@@ -18,9 +18,9 @@ public class AllocatePublicNetworkAddressRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The ID of the mongos, shard, or Configserver node in the sharded cluster instance. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the ID of the mongos, shard, or Configserver node.</p>
+     * <p>Instance ID of the Mongos, shard, or ConfigServer node in the sharded cluster instance. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query instance ID of the Mongos, shard, or ConfigServer node.</p>
      * <blockquote>
-     * <p>This parameter is required only when you specify the <strong>DBInstanceId</strong> parameter to the ID of a sharded cluster instance.</p>
+     * <p>This parameter is required if <strong>DBInstanceId</strong> is set to instance ID of a sharded cluster instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

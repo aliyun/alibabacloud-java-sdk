@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupsRequest extends TeaModel {
     /**
-     * <p>The backup ID.</p>
-     * <p>If you specify the ID of a sharded cluster instance for the <strong>DBInstanceId</strong> parameter, the number of backup IDs must be the same as the number of shard nodes. Separate the backup IDs with commas (,).</p>
+     * <p>The instance ID.</p>
+     * <p>If you set the <strong>DBInstanceId</strong> parameter to the ID of a sharded cluster instance, the number of instance IDs is the same as the number of shard nodes. Separate multiple instance IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>2072****,2072****,2072****</p>
@@ -15,7 +15,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public String backupId;
 
     /**
-     * <p>The backup job ID.</p>
+     * <p>The backup task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>775051</p>
@@ -24,9 +24,9 @@ public class DescribeBackupsRequest extends TeaModel {
     public String backupJobId;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <blockquote>
-     * <p>If the instance is a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
+     * <p>If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -39,7 +39,7 @@ public class DescribeBackupsRequest extends TeaModel {
     /**
      * <p>The region where the backup resides.</p>
      * <blockquote>
-     * <p>This parameter is required for geo-redundancy.</p>
+     * <p>This parameter is required for geo-redundancy backups.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -49,9 +49,9 @@ public class DescribeBackupsRequest extends TeaModel {
     public String destRegion;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format (UTC).</p>
      * <blockquote>
-     * <p>This parameter is invalid if you specify the BackupId parameter.</p>
+     * <p>This parameter is invalid if BackupId is specified.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -61,9 +61,9 @@ public class DescribeBackupsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the shard node in the sharded cluster instance.</p>
+     * <p>Instance ID of the shard node in the sharded cluster instance.</p>
      * <blockquote>
-     * <p>This parameter is required if you specify the ID of a sharded cluster instance for the <strong>DBInstanceId</strong> parameter.</p>
+     * <p>This parameter is required if you set the <strong>DBInstanceId</strong> parameter to instance ID of a sharded cluster instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. The value must be greater than 0 and not greater than the maximum value of the integer data type. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -88,14 +88,11 @@ public class DescribeBackupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p><strong>30</strong> (Default)</p>
-     * </li>
-     * <li><p><strong>50</strong></p>
-     * </li>
-     * <li><p><strong>100</strong></p>
-     * </li>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -123,10 +120,8 @@ public class DescribeBackupsRequest extends TeaModel {
      * <p>The region where the instance resides.</p>
      * <blockquote>
      * <ul>
-     * <li><p>This parameter is required to restore a deleted instance.</p>
-     * </li>
-     * <li><p>This parameter is required for geo-redundancy.</p>
-     * </li>
+     * <li>This parameter is required to restore a deleted instance.</li>
+     * <li>This parameter is required for geo-redundancy backups.</li>
      * </ul>
      * </blockquote>
      * 
@@ -137,9 +132,9 @@ public class DescribeBackupsRequest extends TeaModel {
     public String srcRegion;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in Coordinated Universal Time (UTC).</p>
+     * <p>The beginning of the time range to query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format (UTC).</p>
      * <blockquote>
-     * <p>This parameter is invalid if you specify the BackupId parameter.</p>
+     * <p>This parameter is invalid if BackupId is specified.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

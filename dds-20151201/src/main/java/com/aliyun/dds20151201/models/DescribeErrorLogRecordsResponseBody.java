@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeErrorLogRecordsResponseBody extends TeaModel {
     /**
-     * <p>The database engine.</p>
+     * <p>The engine type of the current database.</p>
      * 
      * <strong>example:</strong>
      * <p>MongoDB</p>
@@ -17,7 +17,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
     public DescribeErrorLogRecordsResponseBodyItems items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +26,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of records per page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +35,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>68BCBEC2-1E66-471F-A1A8-E3C60C0A80B0</p>
@@ -44,7 +44,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

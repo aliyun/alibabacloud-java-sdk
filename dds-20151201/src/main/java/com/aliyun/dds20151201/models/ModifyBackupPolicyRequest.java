@@ -5,33 +5,22 @@ import com.aliyun.tea.*;
 
 public class ModifyBackupPolicyRequest extends TeaModel {
     /**
-     * <p>The frequency of high-frequency backups. Valid values:</p>
+     * <p>The high-frequency backup frequency. Valid values:</p>
      * <ul>
-     * <li><p><strong>-1</strong>: High-frequency backup is disabled.</p>
-     * </li>
-     * <li><p><strong>30</strong>: every 30 minutes.</p>
-     * </li>
-     * <li><p><strong>60</strong>: every 1 hour.</p>
-     * </li>
-     * <li><p><strong>120</strong>: every 2 hours.</p>
-     * </li>
-     * <li><p><strong>180</strong>: every 3 hours.</p>
-     * </li>
-     * <li><p><strong>240</strong>: every 4 hours.</p>
-     * </li>
-     * <li><p><strong>360</strong>: every 6 hours.</p>
-     * </li>
-     * <li><p><strong>480</strong>: every 8 hours.</p>
-     * </li>
-     * <li><p><strong>720</strong>: every 12 hours.</p>
-     * </li>
+     * <li><strong>-1</strong>: Disables high-frequency backups.</li>
+     * <li><strong>30</strong>: Every 30 minutes.</li>
+     * <li><strong>60</strong>: Every 1 hour.</li>
+     * <li><strong>120</strong>: Every 2 hours.</li>
+     * <li><strong>180</strong>: Every 3 hours.</li>
+     * <li><strong>240</strong>: Every 4 hours.</li>
+     * <li><strong>360</strong>: Every 6 hours.</li>
+     * <li><strong>480</strong>: Every 8 hours.</li>
+     * <li><strong>720</strong>: Every 12 hours.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li><p>If you set <strong>SnapshotBackupType</strong> to <strong>Standard</strong>, the value of this parameter is -1.</p>
-     * </li>
-     * <li><p>High-frequency backup takes effect only if you set <strong>SnapshotBackupType</strong> to <strong>Flash</strong> and set this parameter to a value greater than 0.</p>
-     * </li>
+     * <li>If <strong>SnapshotBackupType</strong> is set to <strong>Standard</strong>, this parameter must be set to <strong>-1</strong>.</li>
+     * <li>If <strong>SnapshotBackupType</strong> is set to <strong>Flash</strong> and this parameter is set to a value greater than 0, high-frequency backups take effect.</li>
      * </ul>
      * </blockquote>
      * 
@@ -42,13 +31,11 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String backupInterval;
 
     /**
-     * <p>The number of days to retain full backups.</p>
+     * <p>The number of days for which full backups are retained.</p>
      * <blockquote>
      * <ul>
-     * <li><p>For instances that were created before September 10, 2021, the default retention period is 7 days.</p>
-     * </li>
-     * <li><p>For instances that are created after September 10, 2021, the default retention period is 30 days.</p>
-     * </li>
+     * <li>For users who created instances before September 10, 2021, the default retention period is 7 days.</li>
+     * <li>For new users who created instances on or after September 10, 2021, the default retention period is 30 days.</li>
      * </ul>
      * </blockquote>
      * 
@@ -59,16 +46,16 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public Long backupRetentionPeriod;
 
     /**
-     * <p>The policy to retain backups when you release the instance.</p>
+     * <p>The backup data retention policy. Valid values:</p>
      * <ul>
-     * <li><p>0: All backup sets of the instance are deleted when the instance is released.</p>
+     * <li><p>0: Deletes all backup sets of the instance immediately when the instance is released.</p>
      * </li>
-     * <li><p>1: An automatic backup is performed when the instance is released, and this backup is retained for a long time.</p>
+     * <li><p>1: An automatic backup is performed when the instance is released, and the backup set is retained for long-term retention (LTR).</p>
      * </li>
-     * <li><p>2: An automatic backup is performed when the instance is released, and all backup sets of the instance are retained for a long time.</p>
+     * <li><p>2: An automatic backup is performed when the instance is released, and all backup sets of the cluster are retained for long-term retention (LTR).</p>
      * </li>
      * </ul>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/2779111.html">Long-term backup retention</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/2779111.html">Long-term retention backups</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -77,30 +64,21 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public Integer backupRetentionPolicyOnClusterDeletion;
 
     /**
-     * <p>The days of the week to perform geo-redundant backups. Valid values:</p>
+     * <p>The days of the week when cross-region backup is performed. Valid values:</p>
      * <ol>
-     * <li><p>Monday</p>
-     * </li>
-     * <li><p>Tuesday</p>
-     * </li>
-     * <li><p>Wednesday</p>
-     * </li>
-     * <li><p>Thursday</p>
-     * </li>
-     * <li><p>Friday</p>
-     * </li>
-     * <li><p>Saturday</p>
-     * </li>
-     * <li><p>Sunday</p>
-     * </li>
+     * <li>Monday: Monday.</li>
+     * <li>Tuesday: Tuesday.</li>
+     * <li>Wednesday: Wednesday.</li>
+     * <li>Thursday: Thursday.</li>
+     * <li>Friday: Friday.</li>
+     * <li>Saturday: Saturday.</li>
+     * <li>Sunday: Sunday.</li>
      * </ol>
      * <blockquote>
-     * <p>This parameter is required if you enable geo-redundancy.</p>
+     * <p>This parameter is required for cross-region backup.</p>
      * <ul>
-     * <li><p>To specify multiple days, separate them with commas (,).</p>
-     * </li>
-     * <li><p>If you set the backup method to conventional backup, the days of the week specified by this parameter must be a subset of the days of the week specified by PreferredBackupPeriod.</p>
-     * </li>
+     * <li>If you specify multiple values, separate them with commas (,).</li>
+     * <li>When the backup settings are set to standard backup, the value must be a subset of the PreferredBackupPeriod backup epoch.</li>
      * </ul>
      * </blockquote>
      * 
@@ -111,15 +89,13 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String crossBackupPeriod;
 
     /**
-     * <p>The policy for geo-redundant backups. Valid values:</p>
+     * <p>The operation policy for cross-region backup. Valid values:</p>
      * <ul>
-     * <li><p>update: Modify the geo-redundancy policy.</p>
-     * </li>
-     * <li><p>delete: Delete the geo-redundancy policy.</p>
-     * </li>
+     * <li>update: Modifies the cross-region backup policy.</li>
+     * <li>delete: Deletes the cross-region backup policy.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required if you enable geo-redundancy.</p>
+     * <p>This parameter is required for cross-region backup.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -129,15 +105,13 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String crossBackupType;
 
     /**
-     * <p>The retention policy for cross-region log backups. Valid values:</p>
+     * <p>The retention type for cross-region log backup. Valid values:</p>
      * <ul>
-     * <li><p>delay: Retain the backup for a specified period.</p>
-     * </li>
-     * <li><p>never: Retain the backup permanently.</p>
-     * </li>
+     * <li>delay: Retains backups for a specified period.</li>
+     * <li>never: Never expires.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required if you enable geo-redundancy.</p>
+     * <p>This parameter is required for cross-region backup.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -147,9 +121,9 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String crossLogRetentionType;
 
     /**
-     * <p>The number of days to retain cross-region log backups. Valid values: 3 to 1825. The value must be less than or equal to the value of CrossRetentionValue.</p>
+     * <p>The retention period for cross-region log backup. Valid values: 3 to 1825 days. The value must be less than or equal to the value of CrossRetentionValue.</p>
      * <blockquote>
-     * <p>This parameter is required if you enable geo-redundancy.</p>
+     * <p>This parameter is required for cross-region backup.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -159,15 +133,15 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public Integer crossLogRetentionValue;
 
     /**
-     * <p>The retention policy for geo-redundant backups. Valid values:</p>
+     * <p>The retention type for cross-region backup. Valid values:</p>
      * <ul>
-     * <li><p>delay: Retain the backup for a specified period.</p>
+     * <li><p>delay: Retains backups for a specified period.</p>
      * </li>
-     * <li><p>never: Retain the backup permanently.</p>
+     * <li><p>never: Never expires.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required if you enable geo-redundancy.</p>
+     * <p>This parameter is required for cross-region backup.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -177,13 +151,11 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String crossRetentionType;
 
     /**
-     * <p>The number of days to retain geo-redundant backups. Valid values: 3 to 1825.</p>
+     * <p>The retention period for cross-region backup. Valid values: 3 to 1825 days.</p>
      * <blockquote>
      * <ul>
-     * <li><p>This parameter is required if you enable geo-redundancy.</p>
-     * </li>
-     * <li><p>This parameter is required if you set CrossRetentionType to delay.</p>
-     * </li>
+     * <li>This parameter is required for cross-region backup.</li>
+     * <li>This parameter is required and must be specified when CrossRetentionType is set to delay.</li>
      * </ul>
      * </blockquote>
      * 
@@ -204,9 +176,9 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The region ID of the geo-redundant backup.</p>
+     * <p>The region where backups are stored.</p>
      * <blockquote>
-     * <p>This parameter is required if you enable geo-redundancy.</p>
+     * <p>This parameter is required for cross-region backup.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -218,15 +190,14 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable log backup. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: Disable log backup. This is the default value.</p>
+     * <li><p><strong>0</strong>: Disables log backup. This is the default value.</p>
      * </li>
-     * <li><p><strong>1</strong>: Enable log backup.</p>
+     * <li><p><strong>1</strong>: Enables log backup.</p>
+     * <blockquote>
+     * <p>Notice: Sharded cluster instances do not support disabling log backup.</notice></p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>Notice: </p>
-     * </blockquote>
-     * <p>You cannot disable log backup for sharded cluster instances.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -235,14 +206,12 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public Long enableBackupLog;
 
     /**
-     * <p>Specifies whether to enable cross-region log backup. Valid values:</p>
+     * <p>Specifies whether to enable cross-region log backup.</p>
      * <blockquote>
-     * <p>This parameter is required if you enable geo-redundancy.</p>
+     * <p>This parameter is required for cross-region backup.</p>
      * <ul>
-     * <li><p>1: Enable cross-region log backup. This value is required for sharded cluster instances. This value is also required for replica set instances if you want to enable geo-redundant point-in-time recovery.</p>
-     * </li>
-     * <li><p>0: Disable cross-region log backup.</p>
-     * </li>
+     * <li>1: Enables cross-region log backup. This value is required for sharded cluster instances. For replica set instances, this value is required if you want to support cross-region point-in-time recovery.</li>
+     * <li>0: Disables cross-region log backup.</li>
      * </ul>
      * </blockquote>
      * 
@@ -253,7 +222,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public Integer enableCrossLogBackup;
 
     /**
-     * <p>The number of days to retain high-frequency backups. Before you specify this parameter, you must set the BackupInterval parameter. The default retention period is 1 day.</p>
+     * <p>The number of days for which high-frequency backups are retained. Before you use this parameter, make sure that the BackupInterval parameter is specified. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -264,17 +233,13 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     /**
      * <p>The instance type. Valid values:</p>
      * <ul>
-     * <li><p>replicate</p>
-     * </li>
-     * <li><p>sharding</p>
-     * </li>
+     * <li>replicate </li>
+     * <li>sharding</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li><p>This parameter is required when you restore a deleted instance.</p>
-     * </li>
-     * <li><p>This parameter is required when you clone an instance from a geo-redundant backup.</p>
-     * </li>
+     * <li>This parameter is required when the backup recovery type is set to rebuilding a deleted instance.</li>
+     * <li>This parameter is required when the backup recovery type is set to cloning an instance from cross-region backup.</li>
      * </ul>
      * </blockquote>
      * 
@@ -285,7 +250,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The number of days to retain log backups. Default value: 7.</p>
+     * <p>The number of days for which log backups are retained. Default value: 7.</p>
      * <p>Valid values: 7 to 730.</p>
      * 
      * <strong>example:</strong>
@@ -303,27 +268,19 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     /**
      * <p>The backup cycle. Valid values:</p>
      * <ul>
-     * <li><p><strong>Monday</strong></p>
-     * </li>
-     * <li><p><strong>Tuesday</strong></p>
-     * </li>
-     * <li><p><strong>Wednesday</strong></p>
-     * </li>
-     * <li><p><strong>Thursday</strong></p>
-     * </li>
-     * <li><p><strong>Friday</strong></p>
-     * </li>
-     * <li><p><strong>Saturday</strong></p>
-     * </li>
-     * <li><p><strong>Sunday</strong></p>
-     * </li>
+     * <li><strong>Monday</strong>: Monday.</li>
+     * <li><strong>Tuesday</strong>: Tuesday.</li>
+     * <li><strong>Wednesday</strong>: Wednesday.</li>
+     * <li><strong>Thursday</strong>: Thursday.</li>
+     * <li><strong>Friday</strong>: Friday.</li>
+     * <li><strong>Saturday</strong>: Saturday.</li>
+     * <li><strong>Sunday</strong>: Sunday.</li>
      * </ul>
      * <blockquote>
-     * <p>Notice: </p>
+     * <p>Notice: To ensure data security, back up your MongoDB data at least twice a week.</notice></p>
      * </blockquote>
-     * <p>To ensure data security, back up the MongoDB instance at least twice a week.</p>
      * <blockquote>
-     * <p>To specify multiple backup cycles, separate them with commas (,).</p>
+     * <p>If you specify multiple values, separate them with commas (,).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -333,9 +290,9 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String preferredBackupPeriod;
 
     /**
-     * <p>The time range to perform a backup. Specify the time in the <em>HH:mm</em>Z-<em>HH:mm</em>Z format. The time is displayed in Coordinated Universal Time (UTC).</p>
+     * <p>The time period during which backups are performed. The format is <i>HH:mm</i>Z-<i>HH:mm</i>Z (UTC).</p>
      * <blockquote>
-     * <p>The time range must be 1 hour.</p>
+     * <p>The time period is limited to 1 hour.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -347,9 +304,9 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable hourly sparse backup. Valid values:</p>
      * <ul>
-     * <li><p>true: If the backup frequency is in minutes, all snapshots that are generated within the last hour are retained. For snapshots that were generated more than 1 hour ago but less than 24 hours ago, only the first snapshot that is generated after each full hour is retained.</p>
+     * <li><p>true: If the backup frequency is set to minutes, all snapshots taken within 1 hour from the current time are retained. For snapshots taken more than 1 hour but within 24 hours from the current time, only the first snapshot taken after the hour is retained.</p>
      * </li>
-     * <li><p>false: All snapshots are retained within the high-frequency backup retention period.</p>
+     * <li><p>false: All snapshots taken within the high-frequency backup retention period are retained.</p>
      * </li>
      * </ul>
      * 
@@ -368,10 +325,8 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     /**
      * <p>The snapshot backup type. Valid values:</p>
      * <ul>
-     * <li><p><strong>Flash</strong>: second-level backup.</p>
-     * </li>
-     * <li><p><strong>Standard</strong>: conventional backup. This is the default value.</p>
-     * </li>
+     * <li><strong>Flash</strong>: Backup within seconds.</li>
+     * <li><strong>Standard</strong>: Standard backup. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -381,13 +336,11 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String snapshotBackupType;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The region where the instance is deployed.</p>
      * <blockquote>
      * <ul>
-     * <li><p>This parameter is required if you restore a deleted instance.</p>
-     * </li>
-     * <li><p>This parameter is required if you enable geo-redundancy.</p>
-     * </li>
+     * <li>This parameter is required to recover deleted instances.</li>
+     * <li>This parameter is required for cross-region backup.</li>
      * </ul>
      * </blockquote>
      * 

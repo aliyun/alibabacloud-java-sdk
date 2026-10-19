@@ -8,7 +8,7 @@ public class DescribeParametersResponseBody extends TeaModel {
     public DescribeParametersResponseBodyConfigParameters configParameters;
 
     /**
-     * <p>The database engine of the instance. Default value: <strong>mongodb</strong>.</p>
+     * <p>The database engine. Default value: <strong>mongodb</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>mongodb</p>
@@ -17,7 +17,7 @@ public class DescribeParametersResponseBody extends TeaModel {
     public String engine;
 
     /**
-     * <p>The database engine version of the instance.</p>
+     * <p>The database engine version.</p>
      * 
      * <strong>example:</strong>
      * <p>4.0</p>

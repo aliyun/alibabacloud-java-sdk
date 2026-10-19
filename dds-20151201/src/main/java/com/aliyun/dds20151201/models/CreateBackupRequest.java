@@ -5,21 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateBackupRequest extends TeaModel {
     /**
-     * <p>The backup method. Valid values:</p>
+     * <p>The backup method of the instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>Snapshot</strong>: A snapshot backup.</p>
-     * </li>
-     * <li><p><strong>Logical</strong>: A logical backup.</p>
-     * </li>
-     * <li><p><strong>Physical</strong> (default): A physical backup.</p>
-     * </li>
+     * <li><strong>Snapshot</strong>: snapshot backup</li>
+     * <li><strong>Logical</strong>: logical backup</li>
+     * <li><strong>Physical</strong>: physical backup (default)</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li><p>Instances with cloud disks support only snapshot backups.</p>
-     * </li>
-     * <li><p>This parameter applies only to replica set and sharded cluster instances. This parameter is not required for standalone instances, which use snapshot backups.</p>
-     * </li>
+     * <li>Cloud disk instances support only snapshot backup.</li>
+     * <li>Only replica set and sharded cluster instances support selecting the backup method. You do not need to specify this parameter for standalone instances. The backup method is fixed to snapshot backup.</li>
      * </ul>
      * </blockquote>
      * 
@@ -30,14 +25,12 @@ public class CreateBackupRequest extends TeaModel {
     public String backupMethod;
 
     /**
-     * <p>The backup retention period in days. This parameter applies only to replica set and sharded cluster instances that use cloud disks.</p>
+     * <p>The retention period of the backup. This parameter is applicable only to replica set and sharded cluster instances with cloud disks.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the retention period from the default backup policy is used. You can set this parameter to one of the following values:</p>
+     * <p>If you do not specify this parameter, the default backup policy applies. Valid values: </p>
      * <ul>
-     * <li><p>A value from 7 to 730</p>
-     * </li>
-     * <li><p>-1 (permanent retention)</p>
-     * </li>
+     * <li>7 to 730: 7 to 730 days</li>
+     * <li>-1: long-term retention</li>
      * </ul>
      * </blockquote>
      * 

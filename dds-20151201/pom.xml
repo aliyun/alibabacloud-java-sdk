@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>dds20151201</artifactId>
-  <version>9.4.2</version>
+  <version>9.5.0</version>
   <packaging>jar</packaging>
   <name>dds20151201</name>
   <description>Alibaba Cloud Dds (20151201) SDK for Java
@@ -41,12 +41,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.26</version>
+      <version>0.2.28</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.3.12</version>
+      <version>0.3.18</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

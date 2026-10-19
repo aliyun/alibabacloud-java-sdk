@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePriceRequest extends TeaModel {
     /**
-     * <p>The business information. This is an additional parameter.</p>
+     * <p>The additional parameter for business information.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;AccountPassword&quot;:&quot;Pw123456&quot;,&quot;DBInstanceDescription&quot;:&quot;test&quot;}</p>
@@ -14,26 +14,17 @@ public class DescribePriceRequest extends TeaModel {
     public String businessInfo;
 
     /**
-     * <p>The commodity code of the instance. Valid values:</p>
+     * <p>The commodity code. Valid values:</p>
      * <ul>
-     * <li><p><strong>dds</strong>: pay-as-you-go ReplicaSet instance.</p>
-     * </li>
-     * <li><p><strong>badds</strong>: subscription ReplicaSet instance.</p>
-     * </li>
-     * <li><p><strong>dds_sharding</strong>: pay-as-you-go sharded cluster instance.</p>
-     * </li>
-     * <li><p><strong>badds_sharding</strong>: subscription sharded cluster instance.</p>
-     * </li>
-     * <li><p><strong>badds_sharding_intl</strong>: subscription sharded cluster instance on the Alibaba Cloud International Website (www\.alibabacloud.com).</p>
-     * </li>
-     * <li><p><strong>dds_sharding_intl</strong>: pay-as-you-go sharded cluster instance on the Alibaba Cloud International Website (www\.alibabacloud.com).</p>
-     * </li>
-     * <li><p><strong>badds_sharding_jp</strong>: subscription sharded cluster instance on the Alibaba Cloud Japan Website.</p>
-     * </li>
-     * <li><p><strong>badds_intl</strong>: subscription ReplicaSet instance on the Alibaba Cloud International Website (www\.alibabacloud.com).</p>
-     * </li>
-     * <li><p><strong>dds_intl</strong>: pay-as-you-go ReplicaSet instance on the Alibaba Cloud International Website (www\.alibabacloud.com).</p>
-     * </li>
+     * <li><strong>dds</strong>: pay-as-you-go replica set instance</li>
+     * <li><strong>badds</strong>: subscription replica set instance</li>
+     * <li><strong>dds_sharding</strong>: pay-as-you-go sharded cluster instance</li>
+     * <li><strong>badds_sharding</strong>: subscription sharded cluster instance</li>
+     * <li><strong>badds_sharding_intl</strong>: subscription sharded cluster instance on the international site</li>
+     * <li><strong>dds_sharding_intl</strong>: pay-as-you-go sharded cluster instance on the international site</li>
+     * <li><strong>badds_sharding_jp</strong>: subscription sharded cluster instance on the Japan site</li>
+     * <li><strong>badds_intl</strong>: subscription replica set instance on the international site</li>
+     * <li><strong>dds_intl</strong>: pay-as-you-go replica set instance on the international site</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,10 +36,8 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>Specifies whether to use a coupon. Valid values:</p>
      * <ul>
-     * <li><p><strong>default</strong> or <strong>null</strong> (default): A coupon is used.</p>
-     * </li>
-     * <li><p><strong>youhuiquan_promotion_option_id_for_blank</strong>: A coupon is not used.</p>
-     * </li>
+     * <li><strong>default</strong> or <strong>null</strong> (default): Use a coupon.</li>
+     * <li><strong>youhuiquan_promotion_option_id_for_blank</strong>: Do not use a coupon.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,7 +47,7 @@ public class DescribePriceRequest extends TeaModel {
     public String couponNo;
 
     /**
-     * <p>A JSON string that contains information about the instance. For more information about the parameters and JSON examples, see <a href="https://help.aliyun.com/document_detail/197291.html">DBInstances parameter of the DescribePrice operation</a>.</p>
+     * <p>The JSON-formatted string that contains multiple pieces of information about instances. For metric descriptions and more JSON format examples, see <a href="https://help.aliyun.com/document_detail/197291.html">DBInstances metric description for the DescribePrice operation</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,12 +57,10 @@ public class DescribePriceRequest extends TeaModel {
     public String DBInstances;
 
     /**
-     * <p>Specifies whether to return the order parameters. Valid values:</p>
+     * <p>Specifies whether to return order parameters. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong> (default): The order parameters are not returned.</p>
-     * </li>
-     * <li><p><strong>true</strong>: The order parameters are returned.</p>
-     * </li>
+     * <li><strong>false</strong> (default): Do not return order parameters.</li>
+     * <li><strong>true</strong>: Return order parameters.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,12 +72,9 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The order type. Valid values:</p>
      * <ul>
-     * <li><p><strong>BUY</strong>: Creates an instance.</p>
-     * </li>
-     * <li><p><strong>UPGRADE</strong>: Changes the configuration of an instance.</p>
-     * </li>
-     * <li><p><strong>RENEW</strong>: Renews an instance.</p>
-     * </li>
+     * <li><strong>BUY</strong>: Create an instance.</li>
+     * <li><strong>UPGRADE</strong>: Upgrade instance configurations.</li>
+     * <li><strong>RENEW</strong>: Renew an instance.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -107,7 +91,7 @@ public class DescribePriceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The product code. The default value is <strong>dds</strong>.</p>
+     * <p>The product code. Default value: <strong>dds</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>dds</p>
@@ -116,7 +100,7 @@ public class DescribePriceRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The region ID. Call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -125,7 +109,7 @@ public class DescribePriceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+     * <p>The resource group ID. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmyiu4ekp****</p>

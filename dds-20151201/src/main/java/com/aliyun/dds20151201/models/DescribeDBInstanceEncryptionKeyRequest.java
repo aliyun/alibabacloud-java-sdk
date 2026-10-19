@@ -15,13 +15,26 @@ public class DescribeDBInstanceEncryptionKeyRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The custom key for the instance. You can call the <a href="https://help.aliyun.com/document_detail/151729.html">DescribeUserEncryptionKeyList</a> operation to query the list of custom keys for an ApsaraDB for MongoDB instance.</p>
+     * <p>The custom encryption key of the instance. You can call <a href="https://help.aliyun.com/document_detail/151729.html">DescribeUserEncryptionKeyList</a> to query the custom keys of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>2axxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
      */
     @NameInMap("EncryptionKey")
     public String encryptionKey;
+
+    /**
+     * <p>The key scenario to query. Valid values:</p>
+     * <ul>
+     * <li>TDE: Queries transparent data encryption key information.</li>
+     * <li>CloudDisk: Queries cloud disk encryption key information.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>TDE</p>
+     */
+    @NameInMap("EncryptionType")
+    public String encryptionType;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -54,6 +67,14 @@ public class DescribeDBInstanceEncryptionKeyRequest extends TeaModel {
     }
     public String getEncryptionKey() {
         return this.encryptionKey;
+    }
+
+    public DescribeDBInstanceEncryptionKeyRequest setEncryptionType(String encryptionType) {
+        this.encryptionType = encryptionType;
+        return this;
+    }
+    public String getEncryptionType() {
+        return this.encryptionType;
     }
 
     public DescribeDBInstanceEncryptionKeyRequest setOwnerAccount(String ownerAccount) {

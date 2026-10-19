@@ -27,13 +27,11 @@ public class DescribeUserEncryptionKeyListRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role. Format: <code>acs:ram::$accountID:role/$roleName</code>. The default value is <code>acs:ram::$accountID:role/aliyunrdsinstanceencryptiondefaultrole</code>.</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the specified role. Format: <code>acs:ram::$accountID:role/$roleName </code>. Default value: <code>acs:ram::$accountID:role/aliyunrdsinstanceencryptiondefaultrole</code>.</p>
      * <blockquote>
      * <ul>
-     * <li><p><code>$accountID</code>: The ID of your Alibaba Cloud account. To view the ID, log on to the Alibaba Cloud Management Console, move the pointer over your profile picture in the upper-right corner, and then click Security Settings.</p>
-     * </li>
-     * <li><p><code>$roleName</code>: The name of the RAM role. To view the role name, log on to the RAM console. In the navigation pane on the left, click RAM Role Management. Find the role name in the RAM Role Name list.</p>
-     * </li>
+     * <li><code>$accountID</code>: the Alibaba Cloud account ID. You can log on to the Alibaba Cloud Management Console, move the mouse over the profile picture in the upper-right corner, and click Security Settings to view it.</li>
+     * <li><code>$roleName</code>: the name of the RAM role. You can log on to the Resource Access Management (RAM) console, click RAM Roles in the left-side navigation pane, and view the name in the RAM role name list.</li>
      * </ul>
      * </blockquote>
      * 
@@ -44,7 +42,7 @@ public class DescribeUserEncryptionKeyListRequest extends TeaModel {
     public String roleARN;
 
     /**
-     * <p>The ID of the destination region. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query available regions.</p>
+     * <p>The target zone ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query available zones.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>

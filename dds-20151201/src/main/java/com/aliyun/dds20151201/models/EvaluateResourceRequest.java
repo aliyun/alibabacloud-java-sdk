@@ -7,7 +7,7 @@ public class EvaluateResourceRequest extends TeaModel {
     /**
      * <p>The instance type.</p>
      * <blockquote>
-     * <p>This parameter is required when you evaluate resources for a replica set instance. For details about instance types, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</p>
+     * <p>This parameter is required when you evaluate resources for a replica set instance. For more information about instance types, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class EvaluateResourceRequest extends TeaModel {
     public String DBInstanceClass;
 
     /**
-     * <p>The instance ID. This parameter is required when you evaluate resources for an instance upgrade or downgrade.</p>
+     * <p>The instance ID. This parameter is required when you evaluate resources for changing instance specifications.</p>
      * 
      * <strong>example:</strong>
      * <p>dds-bp14bf67a76d****</p>
@@ -53,7 +53,7 @@ public class EvaluateResourceRequest extends TeaModel {
     /**
      * <p>The number of read-only nodes in the instance. Valid values: <strong>1</strong> to <strong>5</strong>.</p>
      * <blockquote>
-     * <p>This parameter is not required for standalone instances&lt;props=&quot;china&quot;&gt; and Serverless instances.</p>
+     * <p>This parameter is not required for standalone instances<ph props ="china"> or serverless instances</ph>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class EvaluateResourceRequest extends TeaModel {
     public String readonlyReplicas;
 
     /**
-     * <p>The ID of the region. For more information, see <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a>.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> to query available regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,16 +75,16 @@ public class EvaluateResourceRequest extends TeaModel {
     /**
      * <p>The number of nodes in the instance.</p>
      * <ul>
-     * <li><p>Set the value to <strong>1</strong> for a standalone instance.</p>
+     * <li><p>For a standalone instance, set the value to <strong>1</strong>.</p>
      * </li>
-     * <li><p>Set the value to <strong>2</strong> for an instance that uses shared storage.</p>
+     * <li><p>For an instance with shared storage, set the value to <strong>2</strong>.</p>
      * </li>
      * <li><p>For a replica set instance, valid values are <strong>3</strong>, <strong>5</strong>, and <strong>7</strong>.</p>
      * </li>
      * </ul>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <blockquote>
-     * <p>This parameter is not required for Serverless instances.</p>
+     * <p>This parameter is not required for serverless instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -100,8 +100,8 @@ public class EvaluateResourceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The shard information of the sharded cluster. This parameter is required when you evaluate resources for a sharded cluster instance.</p>
-     * <p>To evaluate resources for a new sharded cluster instance, specify the instance type for each shard in a JSON string. Example:</p>
+     * <p>The shard information of the sharded cluster instance. This parameter is required when you evaluate resources for a sharded cluster instance.</p>
+     * <p>When you evaluate resources for a new sharded cluster instance, you must specify the specifications of each shard in a JSON-formatted character string. Example:</p>
      * <pre><code>{
      *      &quot;ConfigSvrs&quot;:
      *          [{&quot;Storage&quot;:20,&quot;DBInstanceClass&quot;:&quot;dds.cs.mid&quot;}],
@@ -111,30 +111,23 @@ public class EvaluateResourceRequest extends TeaModel {
      *          [{&quot;Storage&quot;:50,&quot;DBInstanceClass&quot;:&quot;dds.shard.standard&quot;},{&quot;Storage&quot;:50,&quot;DBInstanceClass&quot;:&quot;dds.shard.standard&quot;},   {&quot;Storage&quot;:50,&quot;DBInstanceClass&quot;:&quot;dds.shard.standard&quot;}]
      *  }
      * </code></pre>
-     * <p>The parameters in the example are described as follows:</p>
+     * <p>The parameter descriptions in the example are as follows:</p>
      * <ul>
-     * <li><p>ConfigSvrs: The ConfigServer nodes.</p>
-     * </li>
-     * <li><p>Mongos: The Mongos nodes.</p>
-     * </li>
-     * <li><p>Shards: The shard nodes.</p>
-     * </li>
-     * <li><p>Storage: The storage space of the target shard.</p>
-     * </li>
-     * <li><p>DBInstanceClass: The instance type of the target shard. For details about instance types, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</p>
-     * </li>
+     * <li>ConfigSvrs: the Configserver nodes.</li>
+     * <li>Mongos: the mongos nodes.</li>
+     * <li>Shards: the shard nodes.</li>
+     * <li>Storage: the storage capacity of the target shard.</li>
+     * <li>DBInstanceClass: the instance type of the target shard. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</li>
      * </ul>
-     * <p>To evaluate resources for upgrading or downgrading a sharded cluster instance, specify only the node information in a JSON string. Example:</p>
+     * <p>When you evaluate resources for upgrading or downgrading a sharded cluster instance, you only need to specify the node information in a JSON-formatted character string. Example:</p>
      * <pre><code>{
      *      &quot;NodeId&quot;: &quot;d-bp147c4d9ca7****&quot;, &quot;NodeClass&quot;: &quot;dds.shard.standard&quot;
      * } 
      * </code></pre>
-     * <p>The parameters in the example are described as follows:</p>
+     * <p>The parameter descriptions in the example are as follows:</p>
      * <ul>
-     * <li><p>NodeId: The ID of the target node.</p>
-     * </li>
-     * <li><p>NodeClass: The instance type of the target node. For details about instance types, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</p>
-     * </li>
+     * <li>NodeId: the ID of the target node.</li>
+     * <li>NodeClass: the instance type of the target node. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -144,9 +137,9 @@ public class EvaluateResourceRequest extends TeaModel {
     public String shardsInfo;
 
     /**
-     * <p>The storage space of the replica set. Unit: GB.</p>
+     * <p>The storage capacity of the replica set instance. Unit: GB.</p>
      * <blockquote>
-     * <p>This parameter is required if the instance uses cloud disks.</p>
+     * <p>This parameter is required when the instance uses cloud disks.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -156,7 +149,7 @@ public class EvaluateResourceRequest extends TeaModel {
     public String storage;
 
     /**
-     * <p>The ID of the zone. For more information, see <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a>.</p>
+     * <p>The zone ID. You can call <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> to query available zones.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

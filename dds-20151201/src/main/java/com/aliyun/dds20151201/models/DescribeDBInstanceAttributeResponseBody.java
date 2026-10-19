@@ -8,7 +8,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     public DescribeDBInstanceAttributeResponseBodyDBInstances DBInstances;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A935A8EE-A6CC-53DE-98BA-20ABAA7E632B</p>
@@ -477,6 +477,18 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("CurrentKernelVersion")
         public String currentKernelVersion;
 
+        @NameInMap("EbsBandwidth")
+        public Integer ebsBandwidth;
+
+        @NameInMap("EbsIOPS")
+        public Integer ebsIOPS;
+
+        @NameInMap("EcsBandwidth")
+        public Integer ecsBandwidth;
+
+        @NameInMap("EcsIOPS")
+        public Integer ecsIOPS;
+
         @NameInMap("LockMode")
         public String lockMode;
 
@@ -532,6 +544,38 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getCurrentKernelVersion() {
             return this.currentKernelVersion;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardListShardAttribute setEbsBandwidth(Integer ebsBandwidth) {
+            this.ebsBandwidth = ebsBandwidth;
+            return this;
+        }
+        public Integer getEbsBandwidth() {
+            return this.ebsBandwidth;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardListShardAttribute setEbsIOPS(Integer ebsIOPS) {
+            this.ebsIOPS = ebsIOPS;
+            return this;
+        }
+        public Integer getEbsIOPS() {
+            return this.ebsIOPS;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardListShardAttribute setEcsBandwidth(Integer ecsBandwidth) {
+            this.ecsBandwidth = ecsBandwidth;
+            return this;
+        }
+        public Integer getEcsBandwidth() {
+            return this.ecsBandwidth;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardListShardAttribute setEcsIOPS(Integer ecsIOPS) {
+            this.ecsIOPS = ecsIOPS;
+            return this;
+        }
+        public Integer getEcsIOPS() {
+            return this.ecsIOPS;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardListShardAttribute setLockMode(String lockMode) {
@@ -837,6 +881,18 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("DisasterRecoveryInfo")
         public String disasterRecoveryInfo;
 
+        @NameInMap("EbsBandwidth")
+        public Integer ebsBandwidth;
+
+        @NameInMap("EbsIOPS")
+        public Integer ebsIOPS;
+
+        @NameInMap("EcsBandwidth")
+        public Integer ecsBandwidth;
+
+        @NameInMap("EcsIOPS")
+        public Integer ecsIOPS;
+
         @NameInMap("Encrypted")
         public Boolean encrypted;
 
@@ -1119,6 +1175,38 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getDisasterRecoveryInfo() {
             return this.disasterRecoveryInfo;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance setEbsBandwidth(Integer ebsBandwidth) {
+            this.ebsBandwidth = ebsBandwidth;
+            return this;
+        }
+        public Integer getEbsBandwidth() {
+            return this.ebsBandwidth;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance setEbsIOPS(Integer ebsIOPS) {
+            this.ebsIOPS = ebsIOPS;
+            return this;
+        }
+        public Integer getEbsIOPS() {
+            return this.ebsIOPS;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance setEcsBandwidth(Integer ecsBandwidth) {
+            this.ecsBandwidth = ecsBandwidth;
+            return this;
+        }
+        public Integer getEcsBandwidth() {
+            return this.ecsBandwidth;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance setEcsIOPS(Integer ecsIOPS) {
+            this.ecsIOPS = ecsIOPS;
+            return this;
+        }
+        public Integer getEcsIOPS() {
+            return this.ecsIOPS;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance setEncrypted(Boolean encrypted) {

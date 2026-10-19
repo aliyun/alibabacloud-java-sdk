@@ -11,7 +11,7 @@ public class DescribeVpcsForMongoDBRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. The value must be an integer greater than 0. The default value is <strong>1</strong>.</p>
+     * <p>The page number. Valid values: an integer greater than 0 and up to the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeVpcsForMongoDBRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. The value must be an integer greater than 0. The default value is <strong>50</strong>.</p>
+     * <p>The number of entries per page. Valid values: an integer greater than 0 and up to the maximum value of the Integer data type. Default value: <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

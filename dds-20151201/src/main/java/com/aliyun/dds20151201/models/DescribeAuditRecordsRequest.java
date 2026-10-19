@@ -7,7 +7,7 @@ public class DescribeAuditRecordsRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p>If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
+     * <p>If you specify a sharded cluster instance ID for this parameter, you must also specify the <strong>NodeId</strong> parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class DescribeAuditRecordsRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The name of the database. By default, all databases are queried.</p>
+     * <p>The name of the database. The default value is all databases.</p>
      * 
      * <strong>example:</strong>
      * <p>database****</p>
@@ -27,9 +27,9 @@ public class DescribeAuditRecordsRequest extends TeaModel {
     public String database;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
      * <blockquote>
-     * <p>The time range between the start time and the end time cannot exceed 24 hours. Otherwise, the operation fails.</p>
+     * <p>The time range between the end time and the start time cannot exceed 24 hours. If the time range exceeds 24 hours, the call fails.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -40,15 +40,13 @@ public class DescribeAuditRecordsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The format of the returned audit records. Valid values:</p>
+     * <p>The display format of the returned audit records. Valid values:</p>
      * <ul>
-     * <li><p><strong>File</strong>: Triggers the generation of an audit log file. If you set this parameter to File, only common parameters are returned.</p>
-     * </li>
-     * <li><p><strong>Stream</strong> (default): Returns a data stream.</p>
-     * </li>
+     * <li><strong>File</strong>: Triggers the generation of an audit log file. If you set this parameter to this value, only common parameters are returned.</li>
+     * <li><strong>Stream</strong> (default): Returns a data stream.</li>
      * </ul>
      * <blockquote>
-     * <p>The <strong>File</strong> parameter is deprecated.</p>
+     * <p>The <strong>File</strong> value is deprecated.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -58,7 +56,7 @@ public class DescribeAuditRecordsRequest extends TeaModel {
     public String form;
 
     /**
-     * <p>The logical operator for the keyword search. The default value is and.</p>
+     * <p>The logical operator for keyword search. The default value is and.</p>
      * 
      * <strong>example:</strong>
      * <p>and</p>
@@ -67,9 +65,9 @@ public class DescribeAuditRecordsRequest extends TeaModel {
     public String logicalOperator;
 
     /**
-     * <p>The ID of a Mongos node or a shard node in the sharded cluster instance.</p>
+     * <p>Instance ID of a mongos node or shard node in the sharded cluster instance.</p>
      * <blockquote>
-     * <p>This parameter is available only when <strong>DBInstanceId</strong> is set to the ID of a sharded cluster instance.</p>
+     * <p>This parameter is available only when <strong>DBInstanceId</strong> is set to instance ID of a sharded cluster instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -79,12 +77,10 @@ public class DescribeAuditRecordsRequest extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>The order in which to sort the returned audit log entries by time. Valid values:</p>
+     * <p>The order in which the queried slow logs are sorted by time. Valid values:</p>
      * <ul>
-     * <li><p><strong>asc</strong>: Sorts the entries in ascending order.</p>
-     * </li>
-     * <li><p><strong>desc</strong>: Sorts the entries in descending order.</p>
-     * </li>
+     * <li><strong>asc</strong>: sorts results in ascending order by time.</li>
+     * <li><strong>desc</strong>: sorts results in descending order by time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +96,7 @@ public class DescribeAuditRecordsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number to return. The value must be greater than 0 and must not exceed the maximum value of the integer data type. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be greater than 0 and cannot exceed the maximum value of the Integer type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -109,7 +105,7 @@ public class DescribeAuditRecordsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>30</strong> (default), <strong>50</strong>, and <strong>100</strong>.</p>
+     * <p>The number of records per page. Valid values: <strong>30</strong> (default), <strong>50</strong>, and <strong>100</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -118,7 +114,7 @@ public class DescribeAuditRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The keywords for the query. You can specify up to 10 keywords. Separate multiple keywords with spaces.</p>
+     * <p>The keywords to query. Separate multiple keywords with spaces. You can specify a maximum of 10 keywords.</p>
      * 
      * <strong>example:</strong>
      * <p>slow</p>
@@ -133,7 +129,7 @@ public class DescribeAuditRecordsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -143,7 +139,7 @@ public class DescribeAuditRecordsRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The database account. By default, all accounts are queried.</p>
+     * <p>The database account. The default value is all accounts.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

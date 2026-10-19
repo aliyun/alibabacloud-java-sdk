@@ -14,7 +14,7 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -99,7 +99,7 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
         public String cidrBlock;
 
         /**
-         * <p>This parameter is deprecated. No value is returned.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and no value is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -108,7 +108,7 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>This parameter is deprecated. No value is returned.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and no value is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -119,10 +119,8 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The vSwitch is the default vSwitch.</p>
-         * </li>
-         * <li><p><strong>false</strong>: The vSwitch is not the default vSwitch.</p>
-         * </li>
+         * <li><strong>true</strong>: The vSwitch is the default vSwitch.</li>
+         * <li><strong>false</strong>: The vSwitch is not the default vSwitch.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,7 +130,7 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>The zone to which the vSwitch belongs.</p>
+         * <p>The active zone to which the vSwitch belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>
@@ -141,7 +139,7 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
         public String izNo;
 
         /**
-         * <p>The status of the vSwitch. A value of <strong>Available</strong> indicates that the vSwitch is active.</p>
+         * <p>The status of the vSwitch. <strong>Available</strong> indicates that the vSwitch is active.</p>
          * 
          * <strong>example:</strong>
          * <p>Available</p>
@@ -240,7 +238,7 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
 
     public static class DescribeVpcsForMongoDBResponseBodyVpcs extends TeaModel {
         /**
-         * <p>This parameter is deprecated. No value is returned.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and no value is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -249,7 +247,7 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
         public String aliUid;
 
         /**
-         * <p>This parameter is deprecated. No value is returned.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and no value is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -264,7 +262,7 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
         public String cidrBlock;
 
         /**
-         * <p>This parameter is deprecated. No value is returned.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and no value is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -273,7 +271,7 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>This parameter is deprecated. No value is returned.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and no value is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -282,11 +280,11 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>Indicates whether the VPC is the default one. Valid values:</p>
+         * <p>Indicates whether the VPC is the default VPC. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The VPC is the default one.</p>
+         * <li><p><strong>true</strong>: Yes.</p>
          * </li>
-         * <li><p><strong>false</strong>: The VPC is not the default one.</p>
+         * <li><p><strong>false</strong>: No.</p>
          * </li>
          * </ul>
          * 
@@ -306,7 +304,7 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
         public String regionNo;
 
         /**
-         * <p>The status of the VPC. A value of <strong>Available</strong> indicates that the VPC is active.</p>
+         * <p>The status of the VPC. <strong>Available</strong> indicates that the VPC is available.</p>
          * 
          * <strong>example:</strong>
          * <p>Available</p>

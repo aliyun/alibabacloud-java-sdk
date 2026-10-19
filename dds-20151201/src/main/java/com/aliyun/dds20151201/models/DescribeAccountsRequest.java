@@ -5,13 +5,22 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountsRequest extends TeaModel {
     /**
-     * <p>The name of the account. Set the value to <strong>root</strong>.</p>
+     * <p>The account name.</p>
      * 
      * <strong>example:</strong>
      * <p>root</p>
      */
     @NameInMap("AccountName")
     public String accountName;
+
+    /**
+     * <p>The account type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
+     */
+    @NameInMap("CharacterType")
+    public String characterType;
 
     /**
      * <p>The instance ID.</p>
@@ -22,6 +31,15 @@ public class DescribeAccountsRequest extends TeaModel {
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
+
+    /**
+     * <p>The database to which the account belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>admin</p>
+     */
+    @NameInMap("DBName")
+    public String DBName;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -48,12 +66,28 @@ public class DescribeAccountsRequest extends TeaModel {
         return this.accountName;
     }
 
+    public DescribeAccountsRequest setCharacterType(String characterType) {
+        this.characterType = characterType;
+        return this;
+    }
+    public String getCharacterType() {
+        return this.characterType;
+    }
+
     public DescribeAccountsRequest setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
         return this;
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public DescribeAccountsRequest setDBName(String DBName) {
+        this.DBName = DBName;
+        return this;
+    }
+    public String getDBName() {
+        return this.DBName;
     }
 
     public DescribeAccountsRequest setOwnerAccount(String ownerAccount) {

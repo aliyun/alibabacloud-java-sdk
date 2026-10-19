@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AllocateNodePrivateNetworkAddressResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>60EEBD77-227C-5B39-86EA-D89163C5****</p>

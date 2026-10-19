@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class ModifyNodeSpecBatchRequest extends TeaModel {
     /**
+     * <p>Specifies whether to automatically align the primary node to the primary zone after operations such as configuration changes for a multi-zone instance. If you choose not to align the node, one primary/secondary switchover (transient connection) is prevented. Default value: true.</p>
+     */
+    @NameInMap("AlignPrimaryZone")
+    public Boolean alignPrimaryZone;
+
+    /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Automatic payment is enabled. Make sure that your account has a sufficient balance.</li>
-     * </ul>
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <ul>
-     * <li><strong>false</strong>: Manual payment is enabled. Log on to the ApsaraDB for MongoDB console. In the upper-right corner, choose <strong>Expenses</strong> &gt; <strong>Expenses and Costs</strong>. In the navigation pane on the left, choose <strong>Subscription Orders</strong> &gt; <strong>My Orders</strong>. On the <strong>Product Orders</strong> tab, find the target order and pay for it.</li>
-     * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <ul>
-     * <li><strong>false</strong>: Manual payment is enabled. Log on to the ApsaraDB for MongoDB console. In the upper-right corner, choose <strong>Expenses</strong> &gt; <strong>Expenses and Costs</strong>. In the navigation pane on the left, click <strong>Order Management</strong>. On the <strong>Product Orders</strong> page, find the target order and pay for it.</li>
+     * <li><strong>true</strong>: enables automatic payment. Make sure that your account has sufficient balance.
+     * &lt;props=&quot;china&quot;&gt;- <strong>false</strong>: disables automatic payment. You can log on to the ApsaraDB for MongoDB console, choose <strong>Expenses</strong> &gt; <strong>Expenses and Costs</strong> in the upper-right corner, choose <strong>Orders</strong> &gt; <strong>My Orders</strong> in the left-side navigation pane, and then find the target order on the <strong>Orders</strong> tab to complete the payment.
+     * &lt;props=&quot;intl&quot;&gt;- <strong>false</strong>: disables automatic payment. You can log on to the ApsaraDB for MongoDB console, choose <strong>Expenses</strong> &gt; <strong>Expenses and Costs</strong> in the upper-right corner, click <strong>Order Management</strong> in the left-side navigation pane, and then find the target order on the <strong>Orders</strong> page to complete the payment.</li>
      * </ul>
      * <p>Default value: <strong>true</strong>.</p>
      * 
@@ -35,7 +35,7 @@ public class ModifyNodeSpecBatchRequest extends TeaModel {
     public String businessInfo;
 
     /**
-     * <p>A client token. It is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the token, but you must ensure that it is unique among different requests. The token can contain a maximum of 64 ASCII characters and cannot contain non-ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -46,10 +46,8 @@ public class ModifyNodeSpecBatchRequest extends TeaModel {
     /**
      * <p>Specifies whether to use a coupon. Valid values:</p>
      * <ul>
-     * <li><p><strong>default</strong> or <strong>null</strong> (default): A coupon is used.</p>
-     * </li>
-     * <li><p><strong>youhuiquan_promotion_option_id_for_blank</strong>: A coupon is not used.</p>
-     * </li>
+     * <li><strong>default</strong> or <strong>null</strong>: uses a coupon. This is the default value.</li>
+     * <li><strong>youhuiquan_promotion_option_id_for_blank</strong>: does not use a coupon.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,7 +57,7 @@ public class ModifyNodeSpecBatchRequest extends TeaModel {
     public String couponNo;
 
     /**
-     * <p>The ID of the instance for which you want to change configurations.</p>
+     * <p>The instance ID of the instance whose configurations you want to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,17 +69,13 @@ public class ModifyNodeSpecBatchRequest extends TeaModel {
     /**
      * <p>The effective period of the configuration change. Valid values:</p>
      * <ul>
-     * <li><p><strong>Immediately</strong>: The change takes effect immediately.</p>
-     * </li>
-     * <li><p><strong>MaintainTime</strong>: The change takes effect during the maintenance window of the instance.</p>
-     * </li>
+     * <li><strong>Immediately</strong>: The configuration change takes effect immediately.</li>
+     * <li><strong>MaintainTime</strong>: The configuration change takes effect during the maintenance window of the instance.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/62008.html">ModifyDBInstanceMaintainTime</a> operation to change the maintenance window of an instance.</p>
-     * </li>
-     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the maintenance window of an instance.</p>
-     * </li>
+     * <li>You can invoke the <a href="https://help.aliyun.com/document_detail/62008.html">ModifyDBInstanceMaintainTime</a> operation to modify the maintenance window of the instance.</li>
+     * <li>You can invoke the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the maintenance window of the instance.</li>
      * </ul>
      * </blockquote>
      * <p>Default value: <strong>Immediately</strong>.</p>
@@ -93,7 +87,7 @@ public class ModifyNodeSpecBatchRequest extends TeaModel {
     public String effectiveTime;
 
     /**
-     * <p>The instance types of the Mongos and shard nodes that you want to change. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</p>
+     * <p>The specifications of the Mongos or shard nodes to be modified. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -103,12 +97,10 @@ public class ModifyNodeSpecBatchRequest extends TeaModel {
     public String nodesInfo;
 
     /**
-     * <p>The type of configuration change. Valid values:</p>
+     * <p>The type of the configuration change. Valid values:</p>
      * <ul>
-     * <li><p><strong>UPGRADE</strong>: Upgrades the instance configuration.</p>
-     * </li>
-     * <li><p><strong>DOWNGRADE</strong>: Downgrades the instance configuration.</p>
-     * </li>
+     * <li><strong>UPGRADE</strong>: upgrades the configurations.</li>
+     * <li><strong>DOWNGRADE</strong>: downgrades the configurations.</li>
      * </ul>
      * <blockquote>
      * <p>This parameter is available only when the billing method of the instance is subscription.</p>
@@ -127,7 +119,7 @@ public class ModifyNodeSpecBatchRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query available regions.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -142,18 +134,14 @@ public class ModifyNodeSpecBatchRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The destination zone of the hidden node for a configuration change that involves a zone migration.</p>
+     * <p>The destination zone of the hidden node when you migrate the instance across zones and change its configurations at the same time.</p>
      * <blockquote>
-     * <p>Notice: </p>
+     * <p>Notice: This parameter is supported only for cloud disk instances.</notice>
+     * Notice: The value of this parameter cannot be the same as the value of the TargetZoneId or TargetSecondaryZoneId parameter.</notice></p>
      * </blockquote>
-     * <p>This parameter applies only to instances that use disks.</p>
-     * <blockquote>
-     * <p>Notice: </p>
-     * </blockquote>
-     * <p>The value of this parameter cannot be the same as the value of the TargetZoneId or TargetSecondaryZoneId parameter.</p>
      * <blockquote>
      * <ul>
-     * <li>This parameter is required only for a configuration change that involves a zone migration.</li>
+     * <li>You must specify this parameter only when you migrate the instance across zones and change its configurations at the same time.</li>
      * </ul>
      * </blockquote>
      * 
@@ -164,18 +152,12 @@ public class ModifyNodeSpecBatchRequest extends TeaModel {
     public String targetHiddenZoneId;
 
     /**
-     * <p>The destination zone of the secondary node for a configuration change that involves a zone migration.</p>
+     * <p>The destination zone of the secondary node when you migrate the instance across zones and change its configurations at the same time.</p>
      * <blockquote>
-     * <p>Notice: </p>
-     * </blockquote>
-     * <p>This parameter applies only to instances that use disks.</p>
-     * <blockquote>
-     * <p>Notice: </p>
-     * </blockquote>
-     * <p>The value of this parameter cannot be the same as the value of the TargetZoneId or TargetHiddenZoneId parameter.</p>
-     * <blockquote>
+     * <p>Notice: This parameter is supported only for cloud disk instances.</notice>
+     * Notice: The value of this parameter cannot be the same as the value of the TargetZoneId or TargetHiddenZoneId parameter.</notice></p>
      * <ul>
-     * <li>This parameter is required only for a configuration change that involves a zone migration.</li>
+     * <li>You must specify this parameter only when you migrate the instance across zones and change its configurations at the same time.</li>
      * </ul>
      * </blockquote>
      * 
@@ -186,14 +168,11 @@ public class ModifyNodeSpecBatchRequest extends TeaModel {
     public String targetSecondaryZoneId;
 
     /**
-     * <p>The ID of the destination virtual switch for a configuration change that involves a zone migration.</p>
+     * <p>The ID of the destination vSwitch when you migrate the instance across zones and change its configurations at the same time.</p>
      * <blockquote>
-     * <p>Notice: </p>
-     * </blockquote>
-     * <p>This parameter applies only to instances that use disks.</p>
-     * <blockquote>
+     * <p>Notice: This parameter is supported only for cloud disk instances.</notice></p>
      * <ul>
-     * <li>This parameter is required only for a configuration change that involves a zone migration.</li>
+     * <li>You must specify this parameter only when you migrate the instance across zones and change its configurations at the same time.</li>
      * </ul>
      * </blockquote>
      * 
@@ -204,18 +183,12 @@ public class ModifyNodeSpecBatchRequest extends TeaModel {
     public String targetVswitchId;
 
     /**
-     * <p>The destination zone of the primary node for a configuration change that involves a zone migration.</p>
+     * <p>The destination zone of the primary node when you migrate the instance across zones and change its configurations at the same time.</p>
      * <blockquote>
-     * <p>Notice: </p>
-     * </blockquote>
-     * <p>This parameter applies only to instances that use disks.</p>
-     * <blockquote>
-     * <p>Notice: </p>
-     * </blockquote>
-     * <p>The value of this parameter cannot be the same as the value of the TargetSecondaryZoneId or TargetHiddenZoneId parameter.</p>
-     * <blockquote>
+     * <p>Notice: This parameter is supported only for cloud disk instances.</notice>
+     * Notice: The value of this parameter cannot be the same as the value of the TargetSecondaryZoneId or TargetHiddenZoneId parameter.</notice></p>
      * <ul>
-     * <li>This parameter is required only for a configuration change that involves a zone migration.</li>
+     * <li>You must specify this parameter only when you migrate the instance across zones and change its configurations at the same time.</li>
      * </ul>
      * </blockquote>
      * 
@@ -228,6 +201,14 @@ public class ModifyNodeSpecBatchRequest extends TeaModel {
     public static ModifyNodeSpecBatchRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyNodeSpecBatchRequest self = new ModifyNodeSpecBatchRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyNodeSpecBatchRequest setAlignPrimaryZone(Boolean alignPrimaryZone) {
+        this.alignPrimaryZone = alignPrimaryZone;
+        return this;
+    }
+    public Boolean getAlignPrimaryZone() {
+        return this.alignPrimaryZone;
     }
 
     public ModifyNodeSpecBatchRequest setAutoPay(Boolean autoPay) {

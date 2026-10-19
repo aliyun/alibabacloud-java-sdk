@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeDBInstanceAttributeRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The database engine. Valid value: <strong>MongoDB</strong>.</p>
+     * <p>The database engine. Set the value to <strong>MongoDB</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>MongoDB</p>
@@ -24,12 +24,10 @@ public class DescribeDBInstanceAttributeRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>Indicates whether the instance has been deleted. Valid values:</p>
+     * <p>Specifies whether the instance is deleted. Valid values: </p>
      * <ul>
-     * <li><p><strong>false</strong>: The instance is running normally. Query information about a running instance.</p>
-     * </li>
-     * <li><p><strong>true</strong>: The instance has been deleted. Query information about a deleted instance.</p>
-     * </li>
+     * <li><strong>false</strong>: The instance is running. Queries the information of a running instance.</li>
+     * <li><strong>true</strong>: The instance is deleted. Queries the information of a deleted instance.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,9 +43,9 @@ public class DescribeDBInstanceAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the resource group. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information about a resource group</a>.</p>
+     * <p>The resource group ID. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
      * <blockquote>
-     * <p>This parameter is supported only on Alibaba Cloud China Website (www\.aliyun.com).</p>
+     * <p>This parameter is supported only on the China site.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

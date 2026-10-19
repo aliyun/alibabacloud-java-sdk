@@ -15,12 +15,10 @@ public class DescribeBackupPolicyRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The instance type.</p>
+     * <p>The instance type. Valid values:</p>
      * <ul>
-     * <li><p>replicate: replica set instance</p>
-     * </li>
-     * <li><p>sharding: sharded cluster instance</p>
-     * </li>
+     * <li>replicate: replica set instance</li>
+     * <li>sharding: sharded cluster instance</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +43,7 @@ public class DescribeBackupPolicyRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The region where the instance is located.</p>
+     * <p>The region where the instance is deployed.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>

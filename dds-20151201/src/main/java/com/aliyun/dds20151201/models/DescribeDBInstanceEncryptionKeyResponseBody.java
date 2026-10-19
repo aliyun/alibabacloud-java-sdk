@@ -14,7 +14,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
     public String creator;
 
     /**
-     * <p>The scheduled time when the key for the instance will be deleted. If the parameter is left empty, the key will not be deleted.</p>
+     * <p>The scheduled deletion time of the instance key. If this value is empty, the key is not automatically deleted.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-07-06T18:22:03Z</p>
@@ -23,7 +23,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
     public String deleteDate;
 
     /**
-     * <p>The description of the key for the instance.</p>
+     * <p>The description of the instance key.</p>
      * 
      * <strong>example:</strong>
      * <p>key description example</p>
@@ -32,7 +32,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The key for the instance.</p>
+     * <p>The instance key.</p>
      * 
      * <strong>example:</strong>
      * <p>2axxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
@@ -41,12 +41,10 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
     public String encryptionKey;
 
     /**
-     * <p>Indicates whether the key for the instance is enabled. Valid values:</p>
+     * <p>The status of the instance key. Valid values:</p>
      * <ul>
-     * <li><p><strong>Enabled</strong></p>
-     * </li>
-     * <li><p><strong>Disabled</strong></p>
-     * </li>
+     * <li><strong>Enabled</strong>: The instance key is available.</li>
+     * <li><strong>Disabled</strong>: The instance key is unavailable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,7 +54,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
     public String encryptionKeyStatus;
 
     /**
-     * <p>The purpose of the key for the instance.</p>
+     * <p>The purpose of the instance key.</p>
      * 
      * <strong>example:</strong>
      * <p>ENCRYPT/DECRYPT</p>
@@ -65,7 +63,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
     public String keyUsage;
 
     /**
-     * <p>The expiration time of the key for the instance. The time is displayed in UTC. If the parameter is left empty, the key for the instance will not expire.</p>
+     * <p>The expiration time of the key (UTC). If this value is empty, the key does not expire.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-07-06T18:22:03Z</p>
@@ -74,7 +72,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
     public String materialExpireTime;
 
     /**
-     * <p>The source of the key for the instance.</p>
+     * <p>The source of the instance key.</p>
      * 
      * <strong>example:</strong>
      * <p>Aliyun_KMS</p>
@@ -83,7 +81,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
     public String origin;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>783C2062-A2D3-4EA8-88AD-E43F990C23BB</p>

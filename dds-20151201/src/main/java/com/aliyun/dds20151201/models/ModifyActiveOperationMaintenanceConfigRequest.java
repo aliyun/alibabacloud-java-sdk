@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyActiveOperationMaintenanceConfigRequest extends TeaModel {
     /**
-     * <p>The day of the cycle.</p>
+     * <p>The list of days in the O&amp;M cycle, separated by commas (,).</p>
      * <ul>
-     * <li><p>If CycleType is set to Month, enter a number from 1 to 28 to specify the day of the month. Use a comma (,) to separate multiple days.</p>
-     * </li>
-     * <li><p>If CycleType is set to Week, enter a number from 1 to 7 to specify the day of the week. Use a comma (,) to separate multiple days.</p>
-     * </li>
+     * <li>If CycleType is set to Month, each item is an integer from 1 to 28, which represents a day of the month.</li>
+     * <li>If CycleType is set to Week, each item is an integer from 1 to 7, which represents a day of the week.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,12 +18,10 @@ public class ModifyActiveOperationMaintenanceConfigRequest extends TeaModel {
     public String cycleTime;
 
     /**
-     * <p>The cycle type.</p>
+     * <p>The cycle type. Valid values:</p>
      * <ul>
-     * <li><p>Month: monthly</p>
-     * </li>
-     * <li><p>Week: weekly</p>
-     * </li>
+     * <li>Month: Monthly.</li>
+     * <li>Week: Weekly.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,7 +31,7 @@ public class ModifyActiveOperationMaintenanceConfigRequest extends TeaModel {
     public String cycleType;
 
     /**
-     * <p>The end time of the O\&amp;M window for the instance. The time is in the HH:mmZ format and is in UTC.</p>
+     * <p>The end time of the instance O&amp;M window. The time is in the HH:mmZ format and in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>22:00Z</p>
@@ -44,7 +40,7 @@ public class ModifyActiveOperationMaintenanceConfigRequest extends TeaModel {
     public String maintainEndTime;
 
     /**
-     * <p>The start time of the O\&amp;M window for the instance. The time is in the HH:mmZ format and is in UTC.</p>
+     * <p>The start time of the instance O&amp;M window. The time is in the HH:mmZ format and in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>21:00Z</p>
@@ -65,12 +61,10 @@ public class ModifyActiveOperationMaintenanceConfigRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether the configuration is enabled.</p>
+     * <p>Specifies whether the configuration takes effect. Valid values: </p>
      * <ul>
-     * <li><p>1: enabled</p>
-     * </li>
-     * <li><p>2: disabled</p>
-     * </li>
+     * <li>1: Effective. </li>
+     * <li>2: Invalid.</li>
      * </ul>
      * 
      * <strong>example:</strong>

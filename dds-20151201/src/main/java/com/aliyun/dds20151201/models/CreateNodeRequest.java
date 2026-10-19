@@ -5,23 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateNodeRequest extends TeaModel {
     /**
-     * <p>The account name. The name must meet the following requirements:</p>
+     * <p>The username. Valid values:</p>
      * <ul>
-     * <li><p>Starts with a lowercase letter.</p>
-     * </li>
-     * <li><p>Consists of lowercase letters, digits, and underscores (_).</p>
-     * </li>
-     * <li><p>Is 4 to 16 characters in length.</p>
-     * </li>
+     * <li>The username must start with a lowercase letter.</li>
+     * <li>The username can contain lowercase letters, digits, and underscores (_).</li>
+     * <li>The username must be 4 to 16 characters in length.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li><p>Keywords of ApsaraDB for MongoDB cannot be used as the account name.</p>
-     * </li>
-     * <li><p>The account has read-only permissions.</p>
-     * </li>
-     * <li><p>You must set the account name and password only when you enable a public endpoint for a shard node for the first time. These parameters are not required on subsequent requests.</p>
-     * </li>
+     * <li>ApsaraDB for MongoDB does not support using keywords as usernames.</li>
+     * <li>The permissions of the account are fixed to read-only.</li>
+     * <li>When you apply for a direct connection endpoint for the shard node for the first time, you must set the username and password. You do not need to set them again for subsequent applications.</li>
      * </ul>
      * </blockquote>
      * 
@@ -32,17 +26,14 @@ public class CreateNodeRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The password for the account. The password must meet the following requirements:</p>
+     * <p>The password of the account. Valid values:</p>
      * <ul>
-     * <li><p>Must contain characters from at least three of the following categories: uppercase letters, lowercase letters, digits, and special characters.</p>
-     * </li>
-     * <li><p>Special characters include <code>!@#$%^&amp;*()_+-=</code>.</p>
-     * </li>
-     * <li><p>Is 8 to 32 characters in length.</p>
-     * </li>
+     * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+     * <li>Special characters include !@#$%^&amp;*()_+-=.</li>
+     * <li>The password must be 8 to 32 characters in length.</li>
      * </ul>
      * <blockquote>
-     * <p>ApsaraDB for MongoDB does not support resetting the account password for shard nodes.</p>
+     * <p>ApsaraDB for MongoDB does not support resetting the password of the account for the shard node.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -54,18 +45,12 @@ public class CreateNodeRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: (Default) Enables automatic payment. Ensure that your account has a sufficient balance.</li>
-     * </ul>
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <ul>
-     * <li><strong>false</strong>: Disables automatic payment. In this case, you must manually pay for the node. To do so, log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose <strong>Billing</strong> &gt; <strong>Billing Management</strong>. In the left-side navigation pane, choose <strong>Subscription Orders</strong> &gt; <strong>My Orders</strong>. On the <strong>Product Orders</strong> tab, find the order and complete the payment.</li>
-     * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <ul>
-     * <li><strong>false</strong>: Disables automatic payment. In this case, you must manually pay for the node. To do so, log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose <strong>Billing</strong> &gt; <strong>Billing Management</strong>. In the left-side navigation pane, click <strong>Order Management</strong>. On the <strong>Product Orders</strong> page, find the order and complete the payment.</li>
+     * <li><strong>true</strong>: enables automatic payment. This is the default value. Make sure that your account has sufficient balance.
+     * &lt;props=&quot;china&quot;&gt;- <strong>false</strong>: disables automatic payment. You can log on to the ApsaraDB for MongoDB console, choose <strong>Expenses</strong> &gt; <strong>Expenses and Costs</strong> in the upper-right corner, choose <strong>Subscription Orders</strong> &gt; <strong>My Orders</strong> in the left-side navigation pane, and then pay for the order on the <strong>Orders</strong> tab.
+     * &lt;props=&quot;intl&quot;&gt;- <strong>false</strong>: disables automatic payment. You can log on to the ApsaraDB for MongoDB console, choose <strong>Expenses</strong> &gt; <strong>Expenses and Costs</strong> in the upper-right corner, click <strong>Order Management</strong> in the left-side navigation pane, and then pay for the order on the <strong>Orders</strong> page.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required for subscription instances.</p>
+     * <p>This parameter is required when the billing method is subscription.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -75,7 +60,7 @@ public class CreateNodeRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Additional business information.</p>
+     * <p>The additional parameter that contains business information.</p>
      * 
      * <strong>example:</strong>
      * <p>{“ActivityId&quot;:&quot;000000000&quot;}</p>
@@ -84,7 +69,7 @@ public class CreateNodeRequest extends TeaModel {
     public String businessInfo;
 
     /**
-     * <p>A client-generated token to ensure request idempotence. The token must be unique across requests, contain only ASCII characters, and not exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -95,10 +80,8 @@ public class CreateNodeRequest extends TeaModel {
     /**
      * <p>Specifies whether to use a coupon. Valid values:</p>
      * <ul>
-     * <li><p><strong>default</strong> or <strong>null</strong>: (Default) An available coupon is automatically applied.</p>
-     * </li>
-     * <li><p><strong>youhuiquan_promotion_option_id_for_blank</strong>: No coupon is used.</p>
-     * </li>
+     * <li><strong>default</strong> or <strong>null</strong>: uses a coupon. This is the default value.</li>
+     * <li><strong>youhuiquan_promotion_option_id_for_blank</strong>: does not use a coupon.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -108,7 +91,7 @@ public class CreateNodeRequest extends TeaModel {
     public String couponNo;
 
     /**
-     * <p>The ID of the sharded cluster instance.</p>
+     * <p>The instance ID of the sharded cluster instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -118,7 +101,7 @@ public class CreateNodeRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The instance type of the shard or mongos node. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</p>
+     * <p>The instance type of the shard node or mongos node. For more information about instance types, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -128,10 +111,10 @@ public class CreateNodeRequest extends TeaModel {
     public String nodeClass;
 
     /**
-     * <p>The storage space of the node. Unit: GB.</p>
-     * <p>The valid values of this parameter vary based on the storage type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</p>
+     * <p>The disk space of the node. Unit: GB.</p>
+     * <p>The valid values vary based on the storage type. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</p>
      * <blockquote>
-     * <p>This parameter is required when the node type is <strong>shard</strong>.</p>
+     * <p>This parameter is required when the node type is <strong>Shard</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -143,10 +126,8 @@ public class CreateNodeRequest extends TeaModel {
     /**
      * <p>The node type. Valid values:</p>
      * <ul>
-     * <li><p><strong>shard</strong>: A shard node.</p>
-     * </li>
-     * <li><p><strong>mongos</strong>: A mongos node.</p>
-     * </li>
+     * <li><strong>shard</strong>: shard node.</li>
+     * <li><strong>mongos</strong>: mongos node.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -163,10 +144,10 @@ public class CreateNodeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of read-only nodes in a shard node.</p>
-     * <p>Valid values: <strong>0</strong> to <strong>5</strong>. The default value is <strong>0</strong>.</p>
+     * <p>The number of read-only nodes in the shard node.</p>
+     * <p>Valid values: <strong>0</strong> to <strong>5</strong>. Default value: <strong>0</strong>.</p>
      * <blockquote>
-     * <p>This parameter is available only on the China site (aliyun.com).</p>
+     * <p>This parameter is supported only on the Alibaba Cloud China site.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -191,12 +172,10 @@ public class CreateNodeRequest extends TeaModel {
     public Integer searchStorage;
 
     /**
-     * <p>Specifies whether to enable a public endpoint for the shard node. Valid values:</p>
+     * <p>Specifies whether to apply for a direct connection endpoint for the shard node. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enables a public endpoint for the shard node.</p>
-     * </li>
-     * <li><p><strong>false</strong>: (Default) Does not enable a public endpoint for the shard node.</p>
-     * </li>
+     * <li><strong>true</strong>: applies for a direct connection endpoint for the shard node.</li>
+     * <li><strong>false</strong>: does not apply for a direct connection endpoint for the shard node. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>

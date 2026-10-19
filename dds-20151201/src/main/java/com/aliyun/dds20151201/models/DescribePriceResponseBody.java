@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePriceResponseBody extends TeaModel {
     /**
-     * <p>The list of order information.</p>
+     * <p>The order information list.</p>
      */
     @NameInMap("Order")
     public DescribePriceResponseBodyOrder order;
@@ -13,7 +13,7 @@ public class DescribePriceResponseBody extends TeaModel {
     /**
      * <p>The order parameters.</p>
      * <blockquote>
-     * <p>This parameter is returned only when <strong>OrderParamOut</strong> is set to <strong>true</strong>.</p>
+     * <p>This parameter is returned only when the <strong>OrderParamOut</strong> parameter is set to <strong>true</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -276,7 +276,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     public static class DescribePriceResponseBodyOrderDepreciateInfoContractActivity extends TeaModel {
         /**
-         * <p>The promotion ID.</p>
+         * <p>The activity ID.</p>
          * 
          * <strong>example:</strong>
          * <p>41120065996xxxxx</p>
@@ -285,16 +285,16 @@ public class DescribePriceResponseBody extends TeaModel {
         public Long activityId;
 
         /**
-         * <p>The promotion name.</p>
+         * <p>The activity name.</p>
          * 
          * <strong>example:</strong>
-         * <p>合同优惠_整单_xxx折</p>
+         * <p>Contract discount_entire order_xxx% off</p>
          */
         @NameInMap("ActivityName")
         public String activityName;
 
         /**
-         * <p>The price after the discount.</p>
+         * <p>The price after discount.</p>
          * 
          * <strong>example:</strong>
          * <p>20522.4</p>
@@ -397,7 +397,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     public static class DescribePriceResponseBodyOrderDepreciateInfo extends TeaModel {
         /**
-         * <p>The price reduction percentage.</p>
+         * <p>The price reduction ratio.</p>
          * 
          * <strong>example:</strong>
          * <p>30%</p>
@@ -406,7 +406,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Double cheapRate;
 
         /**
-         * <p>The total price after the price reduction.</p>
+         * <p>The total price on the official website after the price reduction.</p>
          * 
          * <strong>example:</strong>
          * <p>9*</p>
@@ -415,13 +415,13 @@ public class DescribePriceResponseBody extends TeaModel {
         public Double cheapStandAmount;
 
         /**
-         * <p>The contract promotion.</p>
+         * <p>The contract discount.</p>
          */
         @NameInMap("ContractActivity")
         public DescribePriceResponseBodyOrderDepreciateInfoContractActivity contractActivity;
 
         /**
-         * <p>The price difference discount. This is displayed in the total price of the order.</p>
+         * <p>The price difference discount (displayed in the total order price).</p>
          * 
          * <strong>example:</strong>
          * <p>**</p>
@@ -439,7 +439,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public String differentialName;
 
         /**
-         * <p>Indicates whether a contract promotion is matched.</p>
+         * <p>Indicates whether a contract discount is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -448,7 +448,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Boolean isContractActivity;
 
         /**
-         * <p>Indicates whether to show the price reduction.</p>
+         * <p>Indicates whether the price reduction margin is displayed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -466,7 +466,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Double listPrice;
 
         /**
-         * <p>The monthly price.</p>
+         * <p>The equivalent monthly price.</p>
          * 
          * <strong>example:</strong>
          * <p>**</p>
@@ -475,7 +475,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Double monthPrice;
 
         /**
-         * <p>The original total price.</p>
+         * <p>The original total price on the official website.</p>
          * 
          * <strong>example:</strong>
          * <p>12*</p>
@@ -600,7 +600,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>Indicates whether a contract promotion is matched.</p>
+         * <p>Indicates whether a contract discount is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -621,7 +621,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>Information about the price reduction.</p>
+         * <p>The price reduction information.</p>
          */
         @NameInMap("DepreciateInfo")
         public DescribePriceResponseBodyOrderDepreciateInfo depreciateInfo;
@@ -636,7 +636,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public String discountAmount;
 
         /**
-         * <p>Indicates whether a contract promotion is matched.</p>
+         * <p>Indicates whether a contract discount is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -645,7 +645,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Boolean isContractActivity;
 
         /**
-         * <p>The order information.</p>
+         * <p>The order message.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -657,7 +657,7 @@ public class DescribePriceResponseBody extends TeaModel {
          * <p>The list of promotion information.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;[{\&quot;activityCategory\&quot;:\&quot;discount\&quot;,\&quot;activityExtInfo\&quot;:{\&quot;noUseYouhuiquan\&quot;:\&quot;true\&quot;,\&quot;activityId\&quot;:\&quot;191156098xxxx\&quot;,\&quot;activityExtraAttr\&quot;:\&quot;{\\\&quot;forbiddenCpsProfit\\\&quot;:\\\&quot;true\\\&quot;,\\\&quot;forbiddenCouponsRestricted\\\&quot;:\\\&quot;true\\\&quot;,\\\&quot;forbiddenAmbassadorProfit\\\&quot;:\\\&quot;true\\\&quot;}\&quot;,\&quot;isActivityIdFromWanHuaTong\&quot;:\&quot;true\&quot;,\&quot;isContractActivity\&quot;:\&quot;false\&quot;},\&quot;canPromFee\&quot;:906130,\&quot;optionCode\&quot;:\&quot;wanhua_activity\&quot;,\&quot;promotionName\&quot;:\&quot;FY24--MongoDB 副本集--首购--1年*折--ft首购权益\&quot;,\&quot;promotionOptionNo\&quot;:\&quot;19115609882xxxx\&quot;,\&quot;promotionRuleIdList\&quot;:[2091xxxx],\&quot;selected\&quot;:true,\&quot;targetArticleItemCodes\&quot;:[]},{\&quot;activityCategory\&quot;:\&quot;discount\&quot;,\&quot;activityExtInfo\&quot;:{\&quot;activityId\&quot;:\&quot;1018040010xxxxx\&quot;,\&quot;wanHuaOrderExpireSec\&quot;:\&quot;604800\&quot;,\&quot;isActivityIdFromWanHuaTong\&quot;:\&quot;true\&quot;,\&quot;isContractActivity\&quot;:\&quot;false\&quot;},\&quot;canPromFee\&quot;:339799,\&quot;optionCode\&quot;:\&quot;wanhua_activity\&quot;,\&quot;promotionName\&quot;:\&quot;FY24--MongoDB年付折扣\&quot;,\&quot;promotionOptionNo\&quot;:\&quot;10180400107xxxxx\&quot;,\&quot;promotionRuleIdList\&quot;:[xxxxx],\&quot;selected\&quot;:false,\&quot;targetArticleItemCodes\&quot;:[]}]&quot;</p>
+         * <p>&quot;[{\&quot;activityCategory\&quot;:\&quot;discount\&quot;,\&quot;activityExtInfo\&quot;:{\&quot;noUseYouhuiquan\&quot;:\&quot;true\&quot;,\&quot;activityId\&quot;:\&quot;191156098xxxx\&quot;,\&quot;activityExtraAttr\&quot;:\&quot;{\\\&quot;forbiddenCpsProfit\\\&quot;:\\\&quot;true\\\&quot;,\\\&quot;forbiddenCouponsRestricted\\\&quot;:\\\&quot;true\\\&quot;,\\\&quot;forbiddenAmbassadorProfit\\\&quot;:\\\&quot;true\\\&quot;}\&quot;,\&quot;isActivityIdFromWanHuaTong\&quot;:\&quot;true\&quot;,\&quot;isContractActivity\&quot;:\&quot;false\&quot;},\&quot;canPromFee\&quot;:906130,\&quot;optionCode\&quot;:\&quot;wanhua_activity\&quot;,\&quot;promotionName\&quot;:\&quot;FY24--MongoDB replica set--first purchase--1-year * discount--ft first purchase benefit\&quot;,\&quot;promotionOptionNo\&quot;:\&quot;19115609882xxxx\&quot;,\&quot;promotionRuleIdList\&quot;:[2091xxxx],\&quot;selected\&quot;:true,\&quot;targetArticleItemCodes\&quot;:[]},{\&quot;activityCategory\&quot;:\&quot;discount\&quot;,\&quot;activityExtInfo\&quot;:{\&quot;activityId\&quot;:\&quot;1018040010xxxxx\&quot;,\&quot;wanHuaOrderExpireSec\&quot;:\&quot;604800\&quot;,\&quot;isActivityIdFromWanHuaTong\&quot;:\&quot;true\&quot;,\&quot;isContractActivity\&quot;:\&quot;false\&quot;},\&quot;canPromFee\&quot;:339799,\&quot;optionCode\&quot;:\&quot;wanhua_activity\&quot;,\&quot;promotionName\&quot;:\&quot;FY24--MongoDB annual discount\&quot;,\&quot;promotionOptionNo\&quot;:\&quot;10180400107xxxxx\&quot;,\&quot;promotionRuleIdList\&quot;:[xxxxx],\&quot;selected\&quot;:false,\&quot;targetArticleItemCodes\&quot;:[]}]&quot;</p>
          */
         @NameInMap("OptionalPromotions")
         public String optionalPromotions;
@@ -675,7 +675,7 @@ public class DescribePriceResponseBody extends TeaModel {
          * <p>The matched promotions.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;finalPromFee\&quot;:90xxx,\&quot;optionCode\&quot;:\&quot;wanhua_activity\&quot;,\&quot;promType\&quot;:\&quot;discount\&quot;,\&quot;promotionId\&quot;:2091xxxx,\&quot;promotionName\&quot;:\&quot;新用户购买云数据库 MongoDB 副本集1年享*折优惠，限1台\&quot;}]&quot;</p>
+         * <p>[{\&quot;finalPromFee\&quot;:90xxx,\&quot;optionCode\&quot;:\&quot;wanhua_activity\&quot;,\&quot;promType\&quot;:\&quot;discount\&quot;,\&quot;promotionId\&quot;:2091xxxx,\&quot;promotionName\&quot;:\&quot;New users purchasing ApsaraDB for MongoDB replica set for 1 year enjoy * discount, limited to 1 instance\&quot;}]&quot;</p>
          */
         @NameInMap("PromDetailList")
         public String promDetailList;
@@ -684,7 +684,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public DescribePriceResponseBodyOrderRuleIds ruleIds;
 
         /**
-         * <p>Indicates whether to show the discount information.</p>
+         * <p>Indicates whether the discount information is displayed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -693,7 +693,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Boolean showDiscountInfo;
 
         /**
-         * <p>The discount price.</p>
+         * <p>The discounted price.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -702,7 +702,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Double standDiscountPrice;
 
         /**
-         * <p>The discount price.</p>
+         * <p>The standard discounted price.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -711,7 +711,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Double standPrice;
 
         /**
-         * <p>The aggregate price of the order.</p>
+         * <p>The aggregated price of the order.</p>
          * 
          * <strong>example:</strong>
          * <p>483.14</p>

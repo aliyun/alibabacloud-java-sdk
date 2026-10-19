@@ -55,6 +55,15 @@ public class ResetAccountPasswordRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>账号所在库（账号建在/操作于哪个库），缺省 admin；规则：长度1~63，禁 /、\、.、空格、&quot;、$，禁 local</p>
+     * 
+     * <strong>example:</strong>
+     * <p>admin</p>
+     */
+    @NameInMap("DBName")
+    public String DBName;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -102,6 +111,14 @@ public class ResetAccountPasswordRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public ResetAccountPasswordRequest setDBName(String DBName) {
+        this.DBName = DBName;
+        return this;
+    }
+    public String getDBName() {
+        return this.DBName;
     }
 
     public ResetAccountPasswordRequest setOwnerAccount(String ownerAccount) {

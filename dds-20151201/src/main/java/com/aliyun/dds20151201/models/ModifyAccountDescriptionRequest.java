@@ -60,6 +60,13 @@ public class ModifyAccountDescriptionRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>admin</p>
+     */
+    @NameInMap("DBName")
+    public String DBName;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -107,6 +114,14 @@ public class ModifyAccountDescriptionRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public ModifyAccountDescriptionRequest setDBName(String DBName) {
+        this.DBName = DBName;
+        return this;
+    }
+    public String getDBName() {
+        return this.DBName;
     }
 
     public ModifyAccountDescriptionRequest setOwnerAccount(String ownerAccount) {

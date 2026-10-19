@@ -11,7 +11,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
     public java.util.List<DescribeActiveOperationTaskResponseBodyItems> items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries returned per page. Default value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -38,7 +38,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -93,7 +93,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
 
     public static class DescribeActiveOperationTaskResponseBodyItems extends TeaModel {
         /**
-         * <p>The time when the task was created. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the O&amp;M task was created. The format is <code>yyyy-MM-ddTHH:mm:ssZ</code> (UTC time).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-06T13:11:08Z</p>
@@ -102,7 +102,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         public String createdTime;
 
         /**
-         * <p>The database type of the instance.</p>
+         * <p>The database type.</p>
          * 
          * <strong>example:</strong>
          * <p>mongodb</p>
@@ -111,7 +111,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         public String dbType;
 
         /**
-         * <p>The deadline before which the time to preform the task can be modified. The time in UTC is displayed in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * <p>The latest time within the adjustable range for the execution time of the O&amp;M task. The format is <code>yyyy-MM-ddTHH:mm:ssZ</code> (UTC time).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-29T13:59:59Z</p>
@@ -138,7 +138,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         public String insName;
 
         /**
-         * <p>The time when the task was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the O&amp;M task was modified. The format is <code>yyyy-MM-ddTHH:mm:ssZ</code> (UTC time).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-02-24T08:18:53Z</p>
@@ -147,7 +147,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The required preparation period between the task start time and the switchover time. The time is displayed in the HH:mm:ss format.</p>
+         * <p>The preparation time required between the start time and the switchover time of the O&amp;M task. The format is HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>14:00:00</p>
@@ -156,7 +156,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         public String prepareInterval;
 
         /**
-         * <p>The region of the instance.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -165,7 +165,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The result information.</p>
+         * <p>The execution result information.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -174,7 +174,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         public String resultInfo;
 
         /**
-         * <p>The time when the task was preformed. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The execution time of the O&amp;M task. The format is <code>yyyy-MM-ddTHH:mm:ssZ</code> (UTC time).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-20T02:40:00Z</p>
@@ -183,20 +183,14 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The state of the task. Valid values:</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><p>2: The task is waiting for users to specify a switchover time.</p>
-         * </li>
-         * <li><p>3: The task is waiting to be performed.</p>
-         * </li>
-         * <li><p>4: The task is being performed. If the task is in this state, the ModifyActiveOperationTask operation cannot be called to modify the scheduled switchover time.</p>
-         * </li>
-         * <li><p>5: The task is performed.</p>
-         * </li>
-         * <li><p>6: The task fails.</p>
-         * </li>
-         * <li><p>7: The task is canceled.</p>
-         * </li>
+         * <li>2: Waiting for the user to specify a time.</li>
+         * <li>3: Waiting to be processed.</li>
+         * <li>4: Processing. After the task enters this state, the scheduled switchover time cannot be modified.</li>
+         * <li>5: Succeeded.</li>
+         * <li>6: Failed.</li>
+         * <li>7: Canceled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -206,7 +200,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The time when the system performs the switchover operation. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The switchover time of the O&amp;M task. The format is <code>yyyy-MM-ddTHH:mm:ssZ</code> (UTC time).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-06T14:11:08Z</p>
@@ -224,16 +218,11 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         public String taskParams;
 
         /**
-         * <p>The type of the task. Valid values:</p>
+         * <p>The task type. Valid values:</p>
          * <ul>
-         * <li><p>rds_apsaradb_ha: master-replica switchover</p>
-         * </li>
-         * <li><p>rds_apsaradb_transfer: instance migration</p>
-         * </li>
-         * <li><p>rds_apsaradb_upgrade: minor version update</p>
-         * </li>
-         * <li><p>all: all types</p>
-         * </li>
+         * <li>rds_apsaradb_ha: primary/secondary node switch.</li>
+         * <li>rds_apsaradb_transfer: instance migration.</li>
+         * <li>rds_apsaradb_upgrade: minor version update.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MigrateAvailableZoneResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0FDDC511-7252-4A4A-ADDA-5CB1BF63****</p>

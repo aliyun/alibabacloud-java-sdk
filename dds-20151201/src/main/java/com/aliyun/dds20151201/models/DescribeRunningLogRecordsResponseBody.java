@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRunningLogRecordsResponseBody extends TeaModel {
     /**
-     * <p>The database engine.</p>
+     * <p>The engine type of the current database.</p>
      * 
      * <strong>example:</strong>
      * <p>MongoDB</p>

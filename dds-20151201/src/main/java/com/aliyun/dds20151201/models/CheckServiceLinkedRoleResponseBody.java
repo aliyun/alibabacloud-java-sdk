@@ -14,7 +14,7 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether an SLR is created.</p>
+     * <p>Indicates whether the service-linked role <a href="https://help.aliyun.com/document_detail/384051.html">AliyunServiceRoleForMongoDB</a> has been created.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

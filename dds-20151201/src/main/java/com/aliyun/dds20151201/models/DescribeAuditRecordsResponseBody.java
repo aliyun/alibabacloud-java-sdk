@@ -17,7 +17,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries on the current page.</p>
+     * <p>The maximum number of records on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -35,7 +35,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>40</p>

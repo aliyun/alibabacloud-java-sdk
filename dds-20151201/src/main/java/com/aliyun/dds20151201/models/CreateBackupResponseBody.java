@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateBackupResponseBody extends TeaModel {
     /**
-     * <p>The backup ID.</p>
+     * <p>The ID of the backup.</p>
      * <blockquote>
-     * <p>This parameter is deprecated. To obtain the backup ID, call the <a href="https://help.aliyun.com/document_detail/468441.html">DescribeBackups</a> operation.</p>
+     * <p><strong>[Deprecated]</strong> This parameter will be deprecated soon. To obtain the backup ID, call the <a href="https://help.aliyun.com/document_detail/468441.html">DescribeBackups</a> operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class CreateBackupResponseBody extends TeaModel {
     public String backupId;
 
     /**
-     * <p>The backup job ID.</p>
+     * <p>The ID of the backup job.</p>
      * 
      * <strong>example:</strong>
      * <p>775051</p>
@@ -26,7 +26,7 @@ public class CreateBackupResponseBody extends TeaModel {
     public String backupJobId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>7016B12F-7F64-40A4-BAFF-013F02AC82FC</p>

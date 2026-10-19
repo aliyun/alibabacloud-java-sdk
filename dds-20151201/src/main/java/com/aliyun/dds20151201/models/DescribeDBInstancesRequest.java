@@ -7,10 +7,8 @@ public class DescribeDBInstancesRequest extends TeaModel {
     /**
      * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>PrePaid</strong>: subscription.</p>
-     * </li>
-     * <li><p><strong>PostPaid</strong>: pay-as-you-go.</p>
-     * </li>
+     * <li><strong>PrePaid</strong>: subscription.</li>
+     * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +27,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String connectionDomain;
 
     /**
-     * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</p>
+     * <p>The instance specification. For more information about valid values, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance specifications</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>dds.mongo.mid</p>
@@ -40,16 +38,13 @@ public class DescribeDBInstancesRequest extends TeaModel {
     /**
      * <p>The instance name. The name must meet the following requirements:</p>
      * <ul>
-     * <li><p>It must start with a Chinese character or a letter.</p>
-     * </li>
-     * <li><p>It can contain digits, Chinese characters, letters, underscores (_), and hyphens (-).</p>
-     * </li>
-     * <li><p>It must be 2 to 256 characters in length.</p>
-     * </li>
+     * <li>It must start with a Chinese character or a letter.</li>
+     * <li>It can contain digits, Chinese characters, letters, underscores (_), and hyphens (-).</li>
+     * <li>It must be 2 to 256 characters in length.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Test database</p>
+     * <p>TestDatabase</p>
      */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
@@ -64,7 +59,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/63870.html">Instance states</a>.</p>
+     * <p>The instance status. For more details about valid values, see <a href="https://help.aliyun.com/document_detail/63870.html">Instance status table</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -73,16 +68,12 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String DBInstanceStatus;
 
     /**
-     * <p>The instance architecture. Valid values:</p>
+     * <p>The instance type. Valid values: </p>
      * <ul>
-     * <li><p><strong>sharding</strong>: sharded cluster instance.</p>
-     * </li>
-     * <li><p><strong>replicate</strong>: replica set or standalone instance. This is the default value.</p>
-     * </li>
-     * </ul>
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <ul>
-     * <li><strong>serverless</strong>: serverless instance.</li>
+     * <li><strong>sharding</strong>: sharded cluster instance.</li>
+     * <li><strong>replicate</strong>: default value. Replica set instance or single-node instance.
+     *  &lt;props=&quot;china&quot;&gt;</li>
+     * <li><strong>serverless</strong>: Serverless instance.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -92,14 +83,11 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String DBInstanceType;
 
     /**
-     * <p>Filters instances by type. Valid values:</p>
+     * <p>Specifies whether to filter standard or test instances.</p>
      * <ol>
-     * <li><p>customized: standalone instances and DBFS instances.</p>
-     * </li>
-     * <li><p>standard: standard instances, which include replica set and sharded cluster instances.</p>
-     * </li>
-     * <li><p>default: all instances.</p>
-     * </li>
+     * <li>Single-node instances and DBFS instances: customized</li>
+     * <li>Standard instances (replica set and sharded cluster): standard</li>
+     * <li>Default (displays all instances): default</li>
      * </ol>
      * 
      * <strong>example:</strong>
@@ -120,20 +108,13 @@ public class DescribeDBInstancesRequest extends TeaModel {
     /**
      * <p>The database engine version. Valid values:</p>
      * <ul>
-     * <li><p><strong>7.0</strong></p>
-     * </li>
-     * <li><p><strong>6.0</strong></p>
-     * </li>
-     * <li><p><strong>5.0</strong></p>
-     * </li>
-     * <li><p><strong>4.4</strong></p>
-     * </li>
-     * <li><p><strong>4.2</strong></p>
-     * </li>
-     * <li><p><strong>4.0</strong></p>
-     * </li>
-     * <li><p><strong>3.4</strong></p>
-     * </li>
+     * <li><strong>7.0</strong></li>
+     * <li><strong>6.0</strong></li>
+     * <li><strong>5.0</strong></li>
+     * <li><strong>4.4</strong></li>
+     * <li><strong>4.2</strong></li>
+     * <li><strong>4.0</strong></li>
+     * <li><strong>3.4</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -143,7 +124,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The expiration time of the instance. The time is in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. This parameter is used to filter instances that expire on or before the specified time.</p>
+     * <p>The expiration time of the instance in the yyyy-MM-ddTHH:mm:ssZ format (UTC). This parameter is used to filter instances whose expiration time is earlier than or equal to the specified time.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-12-26T16:00:00Z</p>
@@ -154,10 +135,8 @@ public class DescribeDBInstancesRequest extends TeaModel {
     /**
      * <p>The expiration status of the instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The instance is expired.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The instance is not expired.</p>
-     * </li>
+     * <li><strong>true</strong>: expired.</li>
+     * <li><strong>false</strong>: not expired.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -169,10 +148,8 @@ public class DescribeDBInstancesRequest extends TeaModel {
     /**
      * <p>The network type of the instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>Classic</strong>: classic network.</p>
-     * </li>
-     * <li><p><strong>VPC</strong>: virtual private cloud (VPC).</p>
-     * </li>
+     * <li><strong>Classic</strong>: classic network.</li>
+     * <li><strong>VPC</strong>: VPC.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -188,7 +165,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. The value must be greater than 0 and no greater than the maximum value of the integer data type. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -197,14 +174,11 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p><strong>30</strong> (default)</p>
-     * </li>
-     * <li><p><strong>50</strong></p>
-     * </li>
-     * <li><p><strong>100</strong></p>
-     * </li>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -225,12 +199,9 @@ public class DescribeDBInstancesRequest extends TeaModel {
     /**
      * <p>The number of nodes in the replica set instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>3</strong></p>
-     * </li>
-     * <li><p><strong>5</strong></p>
-     * </li>
-     * <li><p><strong>7</strong></p>
-     * </li>
+     * <li><strong>3</strong></li>
+     * <li><strong>5</strong></li>
+     * <li><strong>7</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -255,7 +226,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags of the instance.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeDBInstancesRequestTag> tag;
@@ -502,14 +473,11 @@ public class DescribeDBInstancesRequest extends TeaModel {
 
     public static class DescribeDBInstancesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N. The value of N must be in the range of <strong>1</strong> to <strong>20</strong>.</p>
+         * <p>The tag key of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
          * <ul>
-         * <li><p>The tag key cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</p>
-         * </li>
-         * <li><p>The tag key can be up to 64 characters in length.</p>
-         * </li>
-         * <li><p>The tag key cannot be an empty string.</p>
-         * </li>
+         * <li>The tag key cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
+         * <li>The tag key can be up to 64 characters in length.</li>
+         * <li>The tag key cannot be an empty string.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -519,14 +487,11 @@ public class DescribeDBInstancesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N. The value of N must be in the range of <strong>1</strong> to <strong>20</strong>.</p>
+         * <p>The tag value of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
          * <ul>
-         * <li><p>The tag value cannot start with <code>aliyun</code>, <code>acs</code>:, <code>http://</code>, or <code>https://</code>.</p>
-         * </li>
-         * <li><p>The tag value can be up to 128 characters in length.</p>
-         * </li>
-         * <li><p>The tag value can be an empty string.</p>
-         * </li>
+         * <li>The tag value cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
+         * <li>The tag value can be up to 128 characters in length.</li>
+         * <li>The tag value can be an empty string.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -15,9 +15,9 @@ public class RestartDBInstanceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The ID of a shard or Mongos node in a sharded cluster instance.</p>
+     * <p>The ID of the shard or mongos node in the sharded cluster instance.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter for a sharded cluster instance, the entire instance is restarted.</p>
+     * <p>If you do not specify this parameter for a sharded cluster instance, the entire sharded cluster instance is restarted.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,6 +35,12 @@ public class RestartDBInstanceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>Specifies whether to restart mongos nodes in parallel. This parameter takes effect only when you restart multiple mongos nodes at a time.</p>
+     */
+    @NameInMap("ParallelRestartMongos")
+    public Boolean parallelRestartMongos;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -42,12 +48,10 @@ public class RestartDBInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The time to restart the instance. Valid values:</p>
+     * <p>The time when the instance is restarted. Valid values:</p>
      * <ul>
-     * <li><p>0: The instance is restarted immediately.</p>
-     * </li>
-     * <li><p>1: The instance is restarted within the maintenance window.</p>
-     * </li>
+     * <li>0: Immediately.</li>
+     * <li>1: Within the O&amp;M window.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,6 +103,14 @@ public class RestartDBInstanceRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public RestartDBInstanceRequest setParallelRestartMongos(Boolean parallelRestartMongos) {
+        this.parallelRestartMongos = parallelRestartMongos;
+        return this;
+    }
+    public Boolean getParallelRestartMongos() {
+        return this.parallelRestartMongos;
     }
 
     public RestartDBInstanceRequest setResourceOwnerAccount(String resourceOwnerAccount) {

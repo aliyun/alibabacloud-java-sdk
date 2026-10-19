@@ -5,17 +5,14 @@ import com.aliyun.tea.*;
 
 public class AllocateNodePrivateNetworkAddressRequest extends TeaModel {
     /**
-     * <p>The username of the account.</p>
+     * <p>The username.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>The username must be 4 to 16 characters in length and can contain lowercase letters, digits, and underscores (_). The username must start with a lowercase letter.</p>
-     * </li>
-     * <li><p>You must configure the account and password only when you apply for the endpoint of a shard or Configserver node for the first time. The account and password are required for all shard and Configserver nodes.</p>
-     * </li>
-     * <li><p>The permissions of this account are fixed to read-only.</p>
-     * </li>
+     * <li>The username must start with a lowercase letter and be 4 to 16 characters in length. It can contain lowercase letters, digits, and underscores (_).</li>
+     * <li>You need to set the username and password only when you apply for an endpoint for a shard or Configserver node for the first time. All shard and Configserver nodes use the username and password set during the first application.</li>
+     * <li>The account has fixed read-only permissions.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>shardcsaccount</p>
@@ -24,12 +21,10 @@ public class AllocateNodePrivateNetworkAddressRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The password for the account.</p>
+     * <p>The password.</p>
      * <ul>
-     * <li><p>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include <code>! # $ % ^ &amp; * ( ) _ + - =</code></p>
-     * </li>
-     * <li><p>The password must be 8 to 32 characters in length.</p>
-     * </li>
+     * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include <code>!#$%^&amp;*()_+-=</code>.</li>
+     * <li>The password must be 8 to 32 characters in length.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +34,7 @@ public class AllocateNodePrivateNetworkAddressRequest extends TeaModel {
     public String accountPassword;
 
     /**
-     * <p>The ID of the sharded cluster instance.</p>
+     * <p>The instance ID of the sharded cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,7 +69,7 @@ public class AllocateNodePrivateNetworkAddressRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the zone to which the instance belongs.</p>
+     * <p>The zone ID of the instance.</p>
      * <blockquote>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the zone ID of the instance.</p>
      * </blockquote>

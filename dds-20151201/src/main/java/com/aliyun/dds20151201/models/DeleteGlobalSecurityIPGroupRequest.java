@@ -7,7 +7,7 @@ public class DeleteGlobalSecurityIPGroupRequest extends TeaModel {
     /**
      * <p>The name of the IP address whitelist template. The name must meet the following requirements:</p>
      * <ul>
-     * <li><p>It must consist of lowercase letters, digits, and underscores (_).</p>
+     * <li><p>It can contain only lowercase letters, digits, and underscores (_).</p>
      * </li>
      * <li><p>It must start with a letter and end with a letter or a digit.</p>
      * </li>
@@ -38,7 +38,7 @@ public class DeleteGlobalSecurityIPGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the latest list of regions.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

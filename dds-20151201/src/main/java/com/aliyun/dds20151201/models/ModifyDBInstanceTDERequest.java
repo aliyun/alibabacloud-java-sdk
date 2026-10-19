@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceTDERequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,22 +16,15 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
 
     /**
      * <p>The ID of the custom key.
-     * Custom keys are supported only in the following regions. In other regions, the default key is used.</p>
+     * Custom keys are supported only in the following regions. In other regions, the default key is used for encryption.</p>
      * <ul>
-     * <li><p>Singapore (ap-southeast-1)</p>
-     * </li>
-     * <li><p>Hangzhou (cn-hangzhou)</p>
-     * </li>
-     * <li><p>Shanghai (cn-shanghai)</p>
-     * </li>
-     * <li><p>Beijing (cn-beijing)</p>
-     * </li>
-     * <li><p>Shenzhen (cn-shenzhen)</p>
-     * </li>
-     * <li><p>Hong Kong (cn-hongkong)</p>
-     * </li>
-     * <li><p>Malaysia (ap-southeast-3)</p>
-     * </li>
+     * <li>Singapore (ap-southeast-1)</li>
+     * <li>Hangzhou (cn-hangzhou)</li>
+     * <li>Shanghai (cn-shanghai)</li>
+     * <li>Beijing (cn-beijing)</li>
+     * <li>Shenzhen (cn-shenzhen)</li>
+     * <li>Hong Kong (China) (cn-hongkong)</li>
+     * <li>Malaysia (ap-southeast-3)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,9 +34,9 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     public String encryptionKey;
 
     /**
-     * <p>The encryption method. Set the value to <strong>aes-256-cbc</strong>.</p>
+     * <p>The encryption method. Valid values: <strong>aes-256-cbc</strong>.</p>
      * <blockquote>
-     * <p>This parameter is available only when <strong>TDEStatus</strong> is set to <strong>enabled</strong>.</p>
+     * <p>This parameter is available only when the <strong>TDEStatus</strong> parameter is set to <strong>enabled</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -65,13 +58,11 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role. The format is <code>acs:ram::$accountID:role/$roleName </code>.</p>
+     * <p>The ARN of the specified role. Format: <code>acs:ram::$accountID:role/$roleName</code>.</p>
      * <blockquote>
      * <ul>
-     * <li><p><code>$accountID</code>: The ID of your Alibaba Cloud account. To view the ID, log on to the Alibaba Cloud Management Console, move the pointer over your profile picture in the upper-right corner, and then click Security Settings.</p>
-     * </li>
-     * <li><p><code>$roleName</code>: The name of the RAM role. To view the name, log on to the RAM console, click RAM Role Management in the navigation pane on the left, and then view the role name in the RAM Role Name list.</p>
-     * </li>
+     * <li><code>$accountID</code>: the ID of the Alibaba Cloud account. You can view the ID by logging on to the Alibaba Cloud Management Console, moving the pointer over the profile picture in the upper-right corner, and clicking Security Settings.</li>
+     * <li><code>$roleName</code>: the name of the RAM role. You can view the name by logging on to the Resource Access Management (RAM) console, clicking RAM Roles in the left-side navigation pane, and viewing the RAM role name list.</li>
      * </ul>
      * </blockquote>
      * 
@@ -82,11 +73,11 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     public String roleARN;
 
     /**
-     * <p>Specifies when to enable TDE. Valid values:</p>
+     * <p>The time to modify the Transparent Data Encryption (TDE) status of the MongoDB instance. Valid values:</p>
      * <ul>
-     * <li><p>0: Enables TDE immediately.</p>
+     * <li><p>0: immediately.</p>
      * </li>
-     * <li><p>1: Enables TDE during the maintenance window.</p>
+     * <li><p>1: within the O&amp;M window.</p>
      * </li>
      * </ul>
      * 
@@ -97,9 +88,9 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     public String switchMode;
 
     /**
-     * <p>The TDE status. Set the value to <strong>enabled</strong> to enable TDE.</p>
+     * <p>The TDE status. Valid values: <strong>enabled</strong>, which indicates that TDE is enabled.</p>
      * <blockquote>
-     * <p>You cannot disable TDE after you enable it. Enable this feature with caution.</p>
+     * <p>You cannot disable TDE after it is enabled. Proceed with caution.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

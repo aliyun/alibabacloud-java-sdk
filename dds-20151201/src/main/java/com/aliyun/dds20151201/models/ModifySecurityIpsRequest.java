@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class ModifySecurityIpsRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. Example: qwertyui1234567</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qwertyui1234567</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
      * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -15,14 +24,20 @@ public class ModifySecurityIpsRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The method that is used to modify the IP address whitelist. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:
+     * true: performs a dry run without calling the operation. The system checks the request parameters, request format, service limits, and available resources. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.
+     * false (default): sends the request. If the check succeeds, the operation is performed.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
+     * <p>The modification method. Valid values:</p>
      * <ul>
-     * <li><p><strong>Cover</strong>: overwrites the original IP address whitelist.</p>
-     * </li>
-     * <li><p><strong>Append</strong>: appends data to the IP address whitelist.</p>
-     * </li>
-     * <li><p><strong>Delete</strong>: deletes the IP address whitelist.</p>
-     * </li>
+     * <li><strong>Cover</strong>: Overwrites the original whitelist.</li>
+     * <li><strong>Append</strong>: Appends to the whitelist. An error is returned if duplicate IP addresses exist.</li>
+     * <li><strong>Extend</strong>: Appends to the whitelist. Duplicate IP addresses are merged.</li>
+     * <li><strong>Delete</strong>: Deletes the whitelist.</li>
      * </ul>
      * <p>Default value: <strong>Cover</strong>.</p>
      * 
@@ -45,8 +60,8 @@ public class ModifySecurityIpsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The attribute of the IP address whitelist. It can contain a maximum of 120 characters in length and can contain uppercase letters, lowercase letters, and digits.</p>
-     * <p>This parameter is empty by default.</p>
+     * <p>The attribute of the whitelist group. The value can contain uppercase letters, lowercase letters, and digits. The maximum length is 120 characters.</p>
+     * <p>Default value: empty string.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -55,7 +70,7 @@ public class ModifySecurityIpsRequest extends TeaModel {
     public String securityIpGroupAttribute;
 
     /**
-     * <p>The name of the IP address whitelist that you want to modify. Default value: <strong>default</strong>.</p>
+     * <p>The name of the IP whitelist group to modify. Default value: <strong>default</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>allowserver</p>
@@ -64,12 +79,10 @@ public class ModifySecurityIpsRequest extends TeaModel {
     public String securityIpGroupName;
 
     /**
-     * <p>The IP addresses in the IP address whitelist. Separate multiple IP addresses with commas (,). You can add a maximum of 1,000 different IP addresses to the IP address whitelist. The entries in the IP address whitelist must be in one of the following formats:</p>
+     * <p>The list of IP addresses in the IP whitelist group. Separate multiple IP addresses with commas (,). IP addresses cannot be duplicated. A maximum of 1000 IP addresses are supported. The following two formats are supported:</p>
      * <ul>
-     * <li><p>IP addresses, such as 127.0.0.1.</p>
-     * </li>
-     * <li><p>CIDR blocks, such as 127.0.0.1/24. In this example, 24 indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.</p>
-     * </li>
+     * <li>IP address format, such as 127.0.0.1.</li>
+     * <li>CIDR format, such as 127.0.0.1/24 (Classless Inter-Domain Routing, where 24 indicates the length of the prefix in the address. The value ranges from 1 to 32).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -84,12 +97,28 @@ public class ModifySecurityIpsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifySecurityIpsRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
     public ModifySecurityIpsRequest setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
         return this;
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public ModifySecurityIpsRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public ModifySecurityIpsRequest setModifyMode(String modifyMode) {

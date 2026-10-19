@@ -7,7 +7,7 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p>If this parameter is set to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
+     * <p>If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,9 +27,9 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
     public String DBName;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is in UTC.</p>
+     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format (UTC).</p>
      * <blockquote>
-     * <p>The end time can be up to 24 hours later than the start time. Otherwise, the call fails.</p>
+     * <p>The end time must be within 24 hours from the start time. Otherwise, the call fails.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -40,7 +40,8 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The logical operator for the keyword-based query. Default value: <code>and</code>.</p>
+     * <p>The logical operator for keyword-based search.
+     * Default value: and.</p>
      * 
      * <strong>example:</strong>
      * <p>and</p>
@@ -49,9 +50,9 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
     public String logicalOperator;
 
     /**
-     * <p>The ID of a mongos node or shard node in a sharded cluster instance.</p>
+     * <p>Instance ID of the mongos or shard node in the sharded cluster instance.</p>
      * <blockquote>
-     * <p>This parameter is available only when the <strong>DBInstanceId</strong> parameter is set to the ID of a sharded cluster instance.</p>
+     * <p>This parameter is available only if you set the <strong>DBInstanceId</strong> parameter to instance ID of a sharded cluster instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -61,12 +62,10 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>The sort order of the running logs to return. Valid values:</p>
+     * <p>The order in which the returned running logs are sorted by time. Valid values:</p>
      * <ul>
-     * <li><p>asc: ascending order</p>
-     * </li>
-     * <li><p>desc: descending order</p>
-     * </li>
+     * <li>asc: ascending order.</li>
+     * <li>desc: descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,7 +81,7 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the page to return. The value must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -91,7 +90,7 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>30</strong> to <strong>100</strong>.</p>
+     * <p>The number of entries per page. Valid values: <strong>30</strong> to <strong>100</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -100,7 +99,7 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The keywords for the query. You can specify up to 10 keywords. Separate multiple keywords with spaces.</p>
+     * <p>The keywords for the query. Separate multiple keywords with spaces. You can specify up to 10 keywords.</p>
      * 
      * <strong>example:</strong>
      * <p>test test2</p>
@@ -109,7 +108,7 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
     public String queryKeywords;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-bpxxxxxxxxxxxxxxxxxx</p>
@@ -124,7 +123,7 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The role ID of the node. You can call the <a href="https://help.aliyun.com/document_detail/62134.html">DescribeReplicaSetRole</a> operation to query the role ID.</p>
+     * <p>The role ID of the node. You can call <a href="https://help.aliyun.com/document_detail/62134.html">DescribeReplicaSetRole</a> to query the role ID.</p>
      * 
      * <strong>example:</strong>
      * <p>651xxxxx</p>
@@ -133,15 +132,14 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
     public String roleId;
 
     /**
-     * <p>The role of the node. Valid values:</p>
+     * <p>The role of the node in the instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>primary</strong>: The primary node.</p>
-     * </li>
-     * <li><p><strong>secondary</strong>: A secondary node.</p>
-     * </li>
+     * <li><strong>primary</strong>: primary node.</li>
+     * <li><strong>secondary</strong>: secondary node.</li>
+     * <li><strong>search</strong>: search node.</li>
      * </ul>
      * <blockquote>
-     * <p>If the <strong>NodeId</strong> parameter is set to the ID of a mongos node, the <strong>RoleType</strong> parameter can only be set to <strong>primary</strong>.</p>
+     * <p>If you set the <strong>NodeId</strong> parameter to the ID of a mongos node, the value of <strong>RoleType</strong> can only be <strong>primary</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -151,7 +149,7 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
     public String roleType;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

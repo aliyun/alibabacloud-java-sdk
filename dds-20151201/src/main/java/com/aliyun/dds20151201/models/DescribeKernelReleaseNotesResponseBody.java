@@ -8,7 +8,7 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
     public DescribeKernelReleaseNotesResponseBodyReleaseNotes releaseNotes;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>F01D4DDA-CB72-4083-B399-AF4642294FE6</p>

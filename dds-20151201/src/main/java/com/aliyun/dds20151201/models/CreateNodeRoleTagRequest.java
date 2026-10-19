@@ -27,10 +27,10 @@ public class CreateNodeRoleTagRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the shard node.</p>
+     * <p>The shard node ID.</p>
      * <blockquote>
      * <ul>
-     * <li>This parameter applies only to sharded cluster instances.</li>
+     * <li>This parameter is available only when you create a role tag for a shard node of a sharded cluster instance.</li>
      * </ul>
      * </blockquote>
      * 
