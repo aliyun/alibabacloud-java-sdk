@@ -16,8 +16,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>Use this operation together with BatchReceiveMessage.</li>
+     * <li>The result of a batch operation may contain both successful and failed sub-requests. The HTTP status code is 204 only when all sub-requests succeed.</li>
+     * <li>A maximum of 16 messages can be deleted per request.</li>
+     * <li>Provide the list of <code>ReceiptHandle</code> values returned from the previous consumption to identify the messages to delete.</li>
+     * <li>This operation succeeds only when executed before <code>NextVisibleTime</code>. After the timeout, the message becomes Active again, the ReceiptHandle becomes invalid, and you must consume the message again to obtain a new handle.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>批量删除消息</p>
+     * <p>Deletes messages from a queue in a batch. A maximum of 16 messages can be deleted at a time.</p>
      * 
      * @param request BatchDeleteMessageRequest
      * @param headers map
@@ -50,8 +60,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>Use this operation together with BatchReceiveMessage.</li>
+     * <li>The result of a batch operation may contain both successful and failed sub-requests. The HTTP status code is 204 only when all sub-requests succeed.</li>
+     * <li>A maximum of 16 messages can be deleted per request.</li>
+     * <li>Provide the list of <code>ReceiptHandle</code> values returned from the previous consumption to identify the messages to delete.</li>
+     * <li>This operation succeeds only when executed before <code>NextVisibleTime</code>. After the timeout, the message becomes Active again, the ReceiptHandle becomes invalid, and you must consume the message again to obtain a new handle.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>批量删除消息</p>
+     * <p>Deletes messages from a queue in a batch. A maximum of 16 messages can be deleted at a time.</p>
      * 
      * @param request BatchDeleteMessageRequest
      * @return BatchDeleteMessageResponse
@@ -64,18 +84,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>该接口用于批量查看指定队列中的消息，一次最多可以查看16条消息。</li>
-     * <li>使用此接口不会改变消息的状态，消息仍保持为Active状态。</li>
-     * <li>不支持长轮询功能。</li>
-     * <li>需要提供<code>queueName</code>作为路径参数，并通过查询参数设置<code>peekonly=true</code>及指定要查看的消息数量<code>numOfMessages</code>（范围在1到16之间）。</li>
-     * <li>成功响应将返回一个包含所请求消息详细信息的数组，包括但不限于消息ID、正文、入队时间等。</li>
-     * <li>如果指定的队列不存在或队列中没有可见消息，则会返回相应的错误码。</li>
+     * <li>This operation batch peeks at messages in a specified queue. You can peek at up to 16 messages at a time.</li>
+     * <li>This operation does not change the message status. Messages remain in the Active state.</li>
+     * <li>Long polling is not supported.</li>
+     * <li>Provide <code>queueName</code> as a path parameter, and set the query parameter <code>peekonly=true</code> along with <code>numOfMessages</code> (range: 1 to 16) to specify the number of messages to peek at.</li>
+     * <li>A successful response returns an array containing the details of the requested messages, including but not limited to the message ID, body, and enqueue time.</li>
+     * <li>If the specified queue does not exist or no visible messages are in the queue, the corresponding error code is returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>批量查看消息</p>
+     * <p>Batch peeks at messages in a queue without changing the message status.</p>
      * 
      * @param request BatchPeekMessageRequest
      * @param headers map
@@ -113,18 +133,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>该接口用于批量查看指定队列中的消息，一次最多可以查看16条消息。</li>
-     * <li>使用此接口不会改变消息的状态，消息仍保持为Active状态。</li>
-     * <li>不支持长轮询功能。</li>
-     * <li>需要提供<code>queueName</code>作为路径参数，并通过查询参数设置<code>peekonly=true</code>及指定要查看的消息数量<code>numOfMessages</code>（范围在1到16之间）。</li>
-     * <li>成功响应将返回一个包含所请求消息详细信息的数组，包括但不限于消息ID、正文、入队时间等。</li>
-     * <li>如果指定的队列不存在或队列中没有可见消息，则会返回相应的错误码。</li>
+     * <li>This operation batch peeks at messages in a specified queue. You can peek at up to 16 messages at a time.</li>
+     * <li>This operation does not change the message status. Messages remain in the Active state.</li>
+     * <li>Long polling is not supported.</li>
+     * <li>Provide <code>queueName</code> as a path parameter, and set the query parameter <code>peekonly=true</code> along with <code>numOfMessages</code> (range: 1 to 16) to specify the number of messages to peek at.</li>
+     * <li>A successful response returns an array containing the details of the requested messages, including but not limited to the message ID, body, and enqueue time.</li>
+     * <li>If the specified queue does not exist or no visible messages are in the queue, the corresponding error code is returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>批量查看消息</p>
+     * <p>Batch peeks at messages in a queue without changing the message status.</p>
      * 
      * @param request BatchPeekMessageRequest
      * @return BatchPeekMessageResponse
@@ -137,18 +157,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>该操作会将取得的消息状态变为 Inactive，Inactive 持续时间由队列属性 <code>VisibilityTimeout</code> 决定。</li>
-     * <li>消费者需在 VisibilityTimeout 时间内调用 DeleteMessage 删除消息，否则消息会重新变为 Active。</li>
-     * <li>支持长轮询（Long Polling）：设置 <code>waitseconds &gt; 0</code> 后，若队列为空则等待至有消息到达或超时返回。<blockquote>
-     * <p>Notice: 进入长轮询后，建议您降低外部调用长轮询的并发数，选择合适的长轮询时间。目前服务端会根据长轮询数量、长轮询等待时间、访问 IP 数量等因素动态调整长轮询防攻击的并发上限值。当队列无消息时，超过长轮询上限值的请求将无法被监听到，并直接返回 404 MessageNotExist（按请求量正常计费）。如果您有临时提升长轮询上限值的需求，请及时提交工单。</p>
+     * <li>This operation changes the status of received messages to Inactive. The Inactive duration is determined by the <code>VisibilityTimeout</code> attribute of the queue.</li>
+     * <li>Consumers must call DeleteMessage to delete messages within the VisibilityTimeout period. Otherwise, messages become Active again.</li>
+     * <li>Long polling is supported: if you set <code>waitseconds &gt; 0</code> and the queue is empty, the request waits until a message arrives or the timeout expires.<blockquote>
+     * <p>Notice: After long polling is enabled, reduce the concurrency of external long polling calls and select an appropriate long polling duration. The server dynamically adjusts the concurrency limit for long polling based on factors such as the number of long polling requests, long polling wait time, and number of access IP addresses. When the queue has no messages, requests that exceed the long polling limit cannot be listened to and directly return 404 MessageNotExist (billed normally by request count). If you need to temporarily increase the long polling limit, submit a ticket promptly.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>批量消费消息</p>
+     * <p>Batch receives up to 16 messages from a specified queue for consumption.</p>
      * 
      * @param request BatchReceiveMessageRequest
      * @param headers map
@@ -186,18 +206,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>该操作会将取得的消息状态变为 Inactive，Inactive 持续时间由队列属性 <code>VisibilityTimeout</code> 决定。</li>
-     * <li>消费者需在 VisibilityTimeout 时间内调用 DeleteMessage 删除消息，否则消息会重新变为 Active。</li>
-     * <li>支持长轮询（Long Polling）：设置 <code>waitseconds &gt; 0</code> 后，若队列为空则等待至有消息到达或超时返回。<blockquote>
-     * <p>Notice: 进入长轮询后，建议您降低外部调用长轮询的并发数，选择合适的长轮询时间。目前服务端会根据长轮询数量、长轮询等待时间、访问 IP 数量等因素动态调整长轮询防攻击的并发上限值。当队列无消息时，超过长轮询上限值的请求将无法被监听到，并直接返回 404 MessageNotExist（按请求量正常计费）。如果您有临时提升长轮询上限值的需求，请及时提交工单。</p>
+     * <li>This operation changes the status of received messages to Inactive. The Inactive duration is determined by the <code>VisibilityTimeout</code> attribute of the queue.</li>
+     * <li>Consumers must call DeleteMessage to delete messages within the VisibilityTimeout period. Otherwise, messages become Active again.</li>
+     * <li>Long polling is supported: if you set <code>waitseconds &gt; 0</code> and the queue is empty, the request waits until a message arrives or the timeout expires.<blockquote>
+     * <p>Notice: After long polling is enabled, reduce the concurrency of external long polling calls and select an appropriate long polling duration. The server dynamically adjusts the concurrency limit for long polling based on factors such as the number of long polling requests, long polling wait time, and number of access IP addresses. When the queue has no messages, requests that exceed the long polling limit cannot be listened to and directly return 404 MessageNotExist (billed normally by request count). If you need to temporarily increase the long polling limit, submit a ticket promptly.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>批量消费消息</p>
+     * <p>Batch receives up to 16 messages from a specified queue for consumption.</p>
      * 
      * @param request BatchReceiveMessageRequest
      * @return BatchReceiveMessageResponse
@@ -210,17 +230,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>一次 Batch 请求的消息总大小不得超过 64 KB。</li>
-     * <li><code>BatchSendMessage</code> 与 <code>SendMessage</code> 使用相同的 URL 路径，通过 Body 结构区分：包含 <code>Messages</code> 数组即为批量发送，否则为单条发送。</li>
-     * <li>批量操作的返回结果可能同时包含成功和失败的子消息。</li>
-     * <li>每次请求中可以包含多个消息对象，每个消息对象可以设置不同的延迟时间和优先级。</li>
-     * <li>对于 FIFO 队列，可以通过 <code>MessageGroupId</code> 参数来指定消息分组 ID。</li>
+     * <li>The total size of messages in a single batch request must not exceed 64 KB.</li>
+     * <li><code>BatchSendMessage</code> and <code>SendMessage</code> use the same URL path. They are distinguished by the body structure: if the body contains a <code>Messages</code> array, it is a batch send operation. Otherwise, it is a single message send operation.</li>
+     * <li>The response of a batch operation may contain both successful and failed sub-messages.</li>
+     * <li>Each request can contain multiple message objects. Each message object can have a different delay time and priority.</li>
+     * <li>For FIFO queues, you can use the <code>MessageGroupId</code> parameter to specify a message group ID.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>批量发送消息</p>
+     * <p>Sends a batch of up to 16 messages to a specified queue, with a total size not exceeding 64 KB.</p>
      * 
      * @param request BatchSendMessageRequest
      * @param headers map
@@ -254,17 +274,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>一次 Batch 请求的消息总大小不得超过 64 KB。</li>
-     * <li><code>BatchSendMessage</code> 与 <code>SendMessage</code> 使用相同的 URL 路径，通过 Body 结构区分：包含 <code>Messages</code> 数组即为批量发送，否则为单条发送。</li>
-     * <li>批量操作的返回结果可能同时包含成功和失败的子消息。</li>
-     * <li>每次请求中可以包含多个消息对象，每个消息对象可以设置不同的延迟时间和优先级。</li>
-     * <li>对于 FIFO 队列，可以通过 <code>MessageGroupId</code> 参数来指定消息分组 ID。</li>
+     * <li>The total size of messages in a single batch request must not exceed 64 KB.</li>
+     * <li><code>BatchSendMessage</code> and <code>SendMessage</code> use the same URL path. They are distinguished by the body structure: if the body contains a <code>Messages</code> array, it is a batch send operation. Otherwise, it is a single message send operation.</li>
+     * <li>The response of a batch operation may contain both successful and failed sub-messages.</li>
+     * <li>Each request can contain multiple message objects. Each message object can have a different delay time and priority.</li>
+     * <li>For FIFO queues, you can use the <code>MessageGroupId</code> parameter to specify a message group ID.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>批量发送消息</p>
+     * <p>Sends a batch of up to 16 messages to a specified queue, with a total size not exceeding 64 KB.</p>
      * 
      * @param request BatchSendMessageRequest
      * @return BatchSendMessageResponse
@@ -276,8 +296,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation allows you to modify the VisibilityTimeout of a message that has been consumed and is currently in the Inactive state. The VisibilityTimeout is the countdown from the current moment until the message becomes Active again.</li>
+     * <li>A successful invocation returns a new <code>ReceiptHandle</code>. Use this new handle for subsequent delete or visibility timeout modification operations on this message.</li>
+     * <li>This operation can only be invoked successfully before <code>NextVisibleTime</code>. Otherwise, a fault is returned.</li>
+     * <li>Common scenarios include when a consumer requires a longer processing time and needs to extend the VisibilityTimeout to prevent the message from being consumed again.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改消息下次可消费时间</p>
+     * <p>Extends or shortens the invisibility period of a message that is in the Inactive state.</p>
      * 
      * @param request ChangeMessageVisibilityRequest
      * @param headers map
@@ -314,8 +343,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation allows you to modify the VisibilityTimeout of a message that has been consumed and is currently in the Inactive state. The VisibilityTimeout is the countdown from the current moment until the message becomes Active again.</li>
+     * <li>A successful invocation returns a new <code>ReceiptHandle</code>. Use this new handle for subsequent delete or visibility timeout modification operations on this message.</li>
+     * <li>This operation can only be invoked successfully before <code>NextVisibleTime</code>. Otherwise, a fault is returned.</li>
+     * <li>Common scenarios include when a consumer requires a longer processing time and needs to extend the VisibilityTimeout to prevent the message from being consumed again.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改消息下次可消费时间</p>
+     * <p>Extends or shortens the invisibility period of a message that is in the Inactive state.</p>
      * 
      * @param request ChangeMessageVisibilityRequest
      * @return ChangeMessageVisibilityResponse
@@ -328,16 +366,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>消息发布后会被推送到该 Topic 下所有 Subscription 的 Endpoint。</li>
-     * <li>推送到 Queue 和 HTTP Endpoint 时不需要设置 <code>MessageAttributes</code>。</li>
-     * <li>推送到邮件、短信或移动推送时需要设置对应的 <code>MessageAttributes</code> 子属性。</li>
-     * <li>消息内容建议事先进行 Base64 编码以避免特殊字符问题。</li>
+     * <li>After a message is published, it is pushed to the endpoints of all subscriptions under the topic.</li>
+     * <li>You do not need to set <code>MessageAttributes</code> when pushing messages to queues or HTTP endpoints.</li>
+     * <li>You must set the corresponding <code>MessageAttributes</code> sub-properties when pushing messages to email, SMS, or mobile push endpoints.</li>
+     * <li>Base64-encode the message content beforehand to avoid special character issues.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>发布消息</p>
+     * <p>Publishes a message to a specified topic. The message is pushed to all subscribed endpoints.</p>
      * 
      * @param request PublishMessageRequest
      * @param headers map
@@ -383,16 +421,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>消息发布后会被推送到该 Topic 下所有 Subscription 的 Endpoint。</li>
-     * <li>推送到 Queue 和 HTTP Endpoint 时不需要设置 <code>MessageAttributes</code>。</li>
-     * <li>推送到邮件、短信或移动推送时需要设置对应的 <code>MessageAttributes</code> 子属性。</li>
-     * <li>消息内容建议事先进行 Base64 编码以避免特殊字符问题。</li>
+     * <li>After a message is published, it is pushed to the endpoints of all subscriptions under the topic.</li>
+     * <li>You do not need to set <code>MessageAttributes</code> when pushing messages to queues or HTTP endpoints.</li>
+     * <li>You must set the corresponding <code>MessageAttributes</code> sub-properties when pushing messages to email, SMS, or mobile push endpoints.</li>
+     * <li>Base64-encode the message content beforehand to avoid special character issues.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>发布消息</p>
+     * <p>Publishes a message to a specified topic. The message is pushed to all subscribed endpoints.</p>
      * 
      * @param request PublishMessageRequest
      * @return PublishMessageResponse
@@ -405,18 +443,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li><strong>SendMessage</strong> 接口用于将消息发送至指定队列。</li>
-     * <li>消息可以立即被消费或通过设置 <code>DelaySeconds</code> 参数来延迟消费。</li>
-     * <li>发送的消息可以指定优先级，数值越小表示优先级越高。</li>
-     * <li>对于 FIFO 队列，可以通过 <code>MessageGroupId</code> 来保证同一分组内消息的顺序投递。</li>
-     * <li>用户还可以自定义属性 <code>UserProperties</code>，以 JSON 格式字符串形式提供额外信息。</li>
-     * <li>当 <code>DelaySeconds</code> 大于 0 时，API 返回的 <code>ReceiptHandle</code> 可用来在消息变为 Active 状态前删除该延迟消息。</li>
+     * <li>The <strong>SendMessage</strong> operation sends a message to a specified queue.</li>
+     * <li>Messages can be consumed immediately or delayed by setting the <code>DelaySeconds</code> parameter.</li>
+     * <li>You can specify a priority for the message. A smaller value indicates a higher priority.</li>
+     * <li>For FIFO queues, use <code>MessageGroupId</code> to ensure ordered delivery of messages within the same group.</li>
+     * <li>You can also set custom attributes in <code>UserProperties</code> as a JSON-formatted string to provide additional information.</li>
+     * <li>When <code>DelaySeconds</code> is greater than 0, the <code>ReceiptHandle</code> returned by the API can be used to delete the delayed message before it becomes Active.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>发送消息</p>
+     * <p>Sends a message to a specified queue with support for delay and priority settings.</p>
      * 
      * @param request SendMessageRequest
      * @param headers map
@@ -466,18 +504,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li><strong>SendMessage</strong> 接口用于将消息发送至指定队列。</li>
-     * <li>消息可以立即被消费或通过设置 <code>DelaySeconds</code> 参数来延迟消费。</li>
-     * <li>发送的消息可以指定优先级，数值越小表示优先级越高。</li>
-     * <li>对于 FIFO 队列，可以通过 <code>MessageGroupId</code> 来保证同一分组内消息的顺序投递。</li>
-     * <li>用户还可以自定义属性 <code>UserProperties</code>，以 JSON 格式字符串形式提供额外信息。</li>
-     * <li>当 <code>DelaySeconds</code> 大于 0 时，API 返回的 <code>ReceiptHandle</code> 可用来在消息变为 Active 状态前删除该延迟消息。</li>
+     * <li>The <strong>SendMessage</strong> operation sends a message to a specified queue.</li>
+     * <li>Messages can be consumed immediately or delayed by setting the <code>DelaySeconds</code> parameter.</li>
+     * <li>You can specify a priority for the message. A smaller value indicates a higher priority.</li>
+     * <li>For FIFO queues, use <code>MessageGroupId</code> to ensure ordered delivery of messages within the same group.</li>
+     * <li>You can also set custom attributes in <code>UserProperties</code> as a JSON-formatted string to provide additional information.</li>
+     * <li>When <code>DelaySeconds</code> is greater than 0, the <code>ReceiptHandle</code> returned by the API can be used to delete the delayed message before it becomes Active.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>发送消息</p>
+     * <p>Sends a message to a specified queue with support for delay and priority settings.</p>
      * 
      * @param request SendMessageRequest
      * @return SendMessageResponse

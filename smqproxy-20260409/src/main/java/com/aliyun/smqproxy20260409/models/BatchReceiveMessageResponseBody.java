@@ -4,6 +4,9 @@ package com.aliyun.smqproxy20260409.models;
 import com.aliyun.tea.*;
 
 public class BatchReceiveMessageResponseBody extends TeaModel {
+    /**
+     * <p>The array of messages.</p>
+     */
     @NameInMap("Messages")
     public java.util.List<BatchReceiveMessageResponseBodyMessages> messages;
 
@@ -22,6 +25,8 @@ public class BatchReceiveMessageResponseBody extends TeaModel {
 
     public static class BatchReceiveMessageResponseBodyMessages extends TeaModel {
         /**
+         * <p>The total number of times the message has been consumed.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -29,6 +34,8 @@ public class BatchReceiveMessageResponseBody extends TeaModel {
         public Long dequeueCount;
 
         /**
+         * <p>The time when the message was sent to the queue, in milliseconds since 1970-01-01 00:00:00 000.</p>
+         * 
          * <strong>example:</strong>
          * <p>1250700979348</p>
          */
@@ -36,6 +43,8 @@ public class BatchReceiveMessageResponseBody extends TeaModel {
         public Long enqueueTime;
 
         /**
+         * <p>The time when the message was first consumed, in milliseconds (timestamp). If <code>DequeueCount=0</code>, this value is the same as <code>EnqueueTime</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>1250700979348</p>
          */
@@ -43,6 +52,8 @@ public class BatchReceiveMessageResponseBody extends TeaModel {
         public Long firstDequeueTime;
 
         /**
+         * <p>The message body.</p>
+         * 
          * <strong>example:</strong>
          * <p>This is test message 1.</p>
          */
@@ -50,6 +61,8 @@ public class BatchReceiveMessageResponseBody extends TeaModel {
         public String messageBody;
 
         /**
+         * <p>The MD5 hash of the message body.</p>
+         * 
          * <strong>example:</strong>
          * <p>C5DD56A39F5F7BB8B3337C6D11B6D8BE</p>
          */
@@ -57,6 +70,8 @@ public class BatchReceiveMessageResponseBody extends TeaModel {
         public String messageBodyMD5;
 
         /**
+         * <p>The message group ID. This parameter applies only to FIFO queues.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-group</p>
          */
@@ -64,6 +79,8 @@ public class BatchReceiveMessageResponseBody extends TeaModel {
         public String messageGroupId;
 
         /**
+         * <p>The message ID, which is unique within a queue.</p>
+         * 
          * <strong>example:</strong>
          * <p>5F290C926D472878214D9529A8FA200000001</p>
          */
@@ -71,6 +88,8 @@ public class BatchReceiveMessageResponseBody extends TeaModel {
         public String messageId;
 
         /**
+         * <p>The time when the message becomes available for consumption again, in milliseconds (timestamp).</p>
+         * 
          * <strong>example:</strong>
          * <p>1250700979348</p>
          */
@@ -78,6 +97,8 @@ public class BatchReceiveMessageResponseBody extends TeaModel {
         public Long nextVisibleTime;
 
         /**
+         * <p>The priority of the message. 1 indicates the highest priority.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -85,6 +106,8 @@ public class BatchReceiveMessageResponseBody extends TeaModel {
         public Long priority;
 
         /**
+         * <p>The temporary handle generated for this message retrieval. This handle is used to delete or modify Inactive messages and is valid until NextVisibleTime.</p>
+         * 
          * <strong>example:</strong>
          * <p>1-ODU4OTkzNDU5My0xNDMyNzI3ODI3LTItOA==</p>
          */
@@ -92,6 +115,8 @@ public class BatchReceiveMessageResponseBody extends TeaModel {
         public String receiptHandle;
 
         /**
+         * <p>The user-defined properties in JSON format.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;properties1&quot;:&quot;value&quot;}</p>
          */

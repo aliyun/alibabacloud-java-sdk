@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BatchReceiveMessageRequest extends TeaModel {
     /**
+     * <p>The maximum number of messages to receive in this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class BatchReceiveMessageRequest extends TeaModel {
     public Integer numOfMessages;
 
     /**
+     * <p>The maximum polling wait time for this request, in seconds. Set to 0 for an immediate return.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

@@ -4,10 +4,16 @@ package com.aliyun.smqproxy20260409.models;
 import com.aliyun.tea.*;
 
 public class PublishMessageRequest extends TeaModel {
+    /**
+     * <p><strong>Message attributes</strong>. You do not need to set this parameter when pushing messages to queues or HTTP endpoints.</p>
+     */
     @NameInMap("MessageAttributes")
     public PublishMessageRequestMessageAttributes messageAttributes;
 
     /**
+     * <p><strong>Message content</strong>. Base64-encode the content beforehand.
+     * Maximum size: 64 KB.</p>
+     * 
      * <strong>example:</strong>
      * <p>hello topic</p>
      */
@@ -18,6 +24,9 @@ public class PublishMessageRequest extends TeaModel {
     public String messageGroupId;
 
     /**
+     * <p><strong>Message tag</strong>, used for message filtering on subscriptions.
+     * Maximum length: 64 characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>order-event</p>
      */
@@ -63,22 +72,28 @@ public class PublishMessageRequest extends TeaModel {
 
     public static class PublishMessageRequestMessageAttributes extends TeaModel {
         /**
+         * <p><strong>Email push attributes</strong> (JSON-formatted string).</p>
+         * 
          * <strong>example:</strong>
-         * <p>详见 <a href="https://help.aliyun.com/zh/direct-mail/singlesendmail">https://help.aliyun.com/zh/direct-mail/singlesendmail</a></p>
+         * <p>For more information, see <a href="https://www.alibabacloud.com/help/en/direct-mail/singlesendmail">https://www.alibabacloud.com/help/en/direct-mail/singlesendmail</a>.</p>
          */
         @NameInMap("DirectMail")
         public String directMail;
 
         /**
+         * <p>SMS push attributes (JSON-formatted string), including <code>FreeSignName</code>, <code>TemplateCode</code>, <code>Type</code>, <code>Receiver</code>, and <code>SmsParams</code>.</p>
+         * 
          * <strong>example:</strong>
-         * <p>{&quot;FreeSignName&quot;:&quot;阿里云&quot;,&quot;TemplateCode&quot;:&quot;SMS_123456&quot;,&quot;Type&quot;:&quot;singleContent&quot;,&quot;Receiver&quot;:&quot;13800000000&quot;,&quot;SmsParams&quot;:&quot;{\&quot;code\&quot;:\&quot;1234\&quot;}&quot;}</p>
+         * <p>{&quot;FreeSignName&quot;:&quot;Alibaba Cloud&quot;,&quot;TemplateCode&quot;:&quot;SMS_123456&quot;,&quot;Type&quot;:&quot;singleContent&quot;,&quot;Receiver&quot;:&quot;13800000000&quot;,&quot;SmsParams&quot;:&quot;{\&quot;code\&quot;:\&quot;1234\&quot;}&quot;}</p>
          */
         @NameInMap("DirectSMS")
         public String directSMS;
 
         /**
+         * <p>Mobile push attributes (JSON-formatted string).</p>
+         * 
          * <strong>example:</strong>
-         * <p>移动推送属性示例值</p>
+         * <p>Sample mobile push attributes value.</p>
          */
         @NameInMap("Push")
         public String push;

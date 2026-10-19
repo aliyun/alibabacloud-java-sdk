@@ -4,6 +4,9 @@ package com.aliyun.smqproxy20260409.models;
 import com.aliyun.tea.*;
 
 public class BatchDeleteMessageRequest extends TeaModel {
+    /**
+     * <p>The ReceiptHandle values of multiple messages.</p>
+     */
     @NameInMap("ReceiptHandles")
     public java.util.List<String> receiptHandles;
 

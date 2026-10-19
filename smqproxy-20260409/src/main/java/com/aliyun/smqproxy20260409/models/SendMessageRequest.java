@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SendMessageRequest extends TeaModel {
     /**
+     * <p>The delay period after which the message can be consumed. Unit: seconds. Maximum value: 7 days.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,6 +14,8 @@ public class SendMessageRequest extends TeaModel {
     public Integer delaySeconds;
 
     /**
+     * <p>The message body. We recommend that you Base64-encode the message body in advance to avoid issues with special characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;Hello MNS&quot;</p>
      */
@@ -19,6 +23,8 @@ public class SendMessageRequest extends TeaModel {
     public String messageBody;
 
     /**
+     * <p>The message group ID. Messages within the same group are delivered in order. This parameter is valid only for FIFO queues.</p>
+     * 
      * <strong>example:</strong>
      * <p>group-123</p>
      */
@@ -26,6 +32,8 @@ public class SendMessageRequest extends TeaModel {
     public String messageGroupId;
 
     /**
+     * <p>The message priority. A smaller value indicates a higher priority. The value 1 indicates the highest priority.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -33,6 +41,8 @@ public class SendMessageRequest extends TeaModel {
     public Integer priority;
 
     /**
+     * <p>The user-defined properties.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;key1&quot;:&quot;value1&quot;, &quot;key2&quot;:&quot;value2&quot;}</p>
      */

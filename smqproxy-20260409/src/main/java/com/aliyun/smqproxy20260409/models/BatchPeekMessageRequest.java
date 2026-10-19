@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class BatchPeekMessageRequest extends TeaModel {
     /**
+     * <p>The maximum number of messages to peek at in this BatchPeekMessage request.</p>
+     * 
      * <strong>example:</strong>
      * <p>16</p>
      */
     @NameInMap("numOfMessages")
     public Integer numOfMessages;
 
+    /**
+     * <p>Indicates that this request only peeks at messages at the top of the queue without changing the message status. Fixed value: true.</p>
+     */
     @NameInMap("peekonly")
     public Boolean peekonly;
 

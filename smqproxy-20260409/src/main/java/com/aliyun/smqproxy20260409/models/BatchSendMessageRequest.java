@@ -4,6 +4,9 @@ package com.aliyun.smqproxy20260409.models;
 import com.aliyun.tea.*;
 
 public class BatchSendMessageRequest extends TeaModel {
+    /**
+     * <p>The message list.</p>
+     */
     @NameInMap("Messages")
     public java.util.List<BatchSendMessageRequestMessages> messages;
 
@@ -22,6 +25,8 @@ public class BatchSendMessageRequest extends TeaModel {
 
     public static class BatchSendMessageRequestMessages extends TeaModel {
         /**
+         * <p>The delay in seconds before the message becomes consumable.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -29,6 +34,8 @@ public class BatchSendMessageRequest extends TeaModel {
         public Integer delaySeconds;
 
         /**
+         * <p>The message body.</p>
+         * 
          * <strong>example:</strong>
          * <p>This is test message 1.</p>
          */
@@ -36,6 +43,8 @@ public class BatchSendMessageRequest extends TeaModel {
         public String messageBody;
 
         /**
+         * <p>The message group ID. Messages within the same group are delivered in order. This parameter is valid only for FIFO queues.</p>
+         * 
          * <strong>example:</strong>
          * <p>group1</p>
          */
@@ -43,6 +52,8 @@ public class BatchSendMessageRequest extends TeaModel {
         public String messageGroupId;
 
         /**
+         * <p>The priority. A smaller value indicates a higher priority. The value 1 represents the highest priority.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
