@@ -290,6 +290,13 @@ public class ListModelsResponseBody extends TeaModel {
         @NameInMap("priceUnit")
         public String priceUnit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>standard</p>
+         */
+        @NameInMap("timeBand")
+        public String timeBand;
+
         public static ListModelsResponseBodyModelsPricesPrices build(java.util.Map<String, ?> map) throws Exception {
             ListModelsResponseBodyModelsPricesPrices self = new ListModelsResponseBodyModelsPricesPrices();
             return TeaModel.build(map, self);
@@ -317,6 +324,14 @@ public class ListModelsResponseBody extends TeaModel {
         }
         public String getPriceUnit() {
             return this.priceUnit;
+        }
+
+        public ListModelsResponseBodyModelsPricesPrices setTimeBand(String timeBand) {
+            this.timeBand = timeBand;
+            return this;
+        }
+        public String getTimeBand() {
+            return this.timeBand;
         }
 
     }

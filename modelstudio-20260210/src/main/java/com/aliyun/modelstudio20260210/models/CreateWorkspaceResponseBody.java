@@ -43,8 +43,8 @@ public class CreateWorkspaceResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true: Successful.</li>
-     * <li>false: Failed.</li>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The business workspace information.</p>
+     * <p>The workspace information.</p>
      */
     @NameInMap("workspace")
     public CreateWorkspaceResponseBodyWorkspace workspace;
@@ -150,7 +150,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public String serviceSite;
 
         /**
-         * <p>The business workspace ID.</p>
+         * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ws-ac3ef438bec22dc5</p>
@@ -159,7 +159,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public String workspaceId;
 
         /**
-         * <p>The name of the business workspace.</p>
+         * <p>The workspace name.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

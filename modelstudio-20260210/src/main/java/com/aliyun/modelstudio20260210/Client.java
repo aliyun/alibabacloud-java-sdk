@@ -8,7 +8,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("modelstudio", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -374,7 +374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a business workspace.</p>
+     * <p>Creates a workspace.</p>
      * 
      * @param request CreateWorkspaceRequest
      * @param headers map
@@ -412,7 +412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a business workspace.</p>
+     * <p>Creates a workspace.</p>
      * 
      * @param request CreateWorkspaceRequest
      * @return CreateWorkspaceResponse
@@ -1161,7 +1161,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of API key information for authentication credentials.</p>
+     * <p>Retrieves a list of API Key authentication credentials.</p>
      * 
      * @param request ListApiKeysRequest
      * @param headers map
@@ -1219,7 +1219,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of API key information for authentication credentials.</p>
+     * <p>Retrieves a list of API Key authentication credentials.</p>
      * 
      * @param request ListApiKeysRequest
      * @return ListApiKeysResponse
@@ -1232,7 +1232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries model throttling configurations for a workspace.</p>
+     * <p>Queries model throttling for a workspace.</p>
      * 
      * @param request ListModelLimitsRequest
      * @param headers map
@@ -1282,7 +1282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries model throttling configurations for a workspace.</p>
+     * <p>Queries model throttling for a workspace.</p>
      * 
      * @param request ListModelLimitsRequest
      * @return ListModelLimitsResponse
@@ -1595,7 +1595,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of business workspaces.</p>
+     * <p>Retrieves the list of workspaces.</p>
      * 
      * @param request ListWorkspacesRequest
      * @param headers map
@@ -1641,7 +1641,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of business workspaces.</p>
+     * <p>Retrieves the list of workspaces.</p>
      * 
      * @param request ListWorkspacesRequest
      * @return ListWorkspacesResponse
@@ -1897,7 +1897,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edits the information of an authentication credential API key.</p>
+     * <p>Edits the information of an API Key authentication credential.</p>
      * 
      * @param request UpdateApiKeyRequest
      * @param headers map
@@ -1937,7 +1937,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edits the information of an authentication credential API key.</p>
+     * <p>Edits the information of an API Key authentication credential.</p>
      * 
      * @param request UpdateApiKeyRequest
      * @return UpdateApiKeyResponse

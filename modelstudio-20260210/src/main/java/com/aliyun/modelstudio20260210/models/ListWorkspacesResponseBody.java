@@ -23,7 +23,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -41,7 +41,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The pagination token used to retrieve more results. You do not need to specify this parameter for the first request. For subsequent requests, use the token returned in the previous response.</p>
+     * <p>The token used to retrieve additional results. You do not need to provide this parameter for the first request. Obtain the token for subsequent requests from the response of the previous request.</p>
      * 
      * <strong>example:</strong>
      * <p>TbB1IsZUSR4iE</p>
@@ -81,7 +81,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The list of business workspaces.</p>
+     * <p>The list of workspaces.</p>
      */
     @NameInMap("workspaces")
     public java.util.List<ListWorkspacesResponseBodyWorkspaces> workspaces;
@@ -192,7 +192,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The service deployment scope. For more information, see <a href="https://www.alibabacloud.com/help/zh/model-studio/regions/">documentation</a>.</p>
+         * <p>The service deployment scope. For details, <a href="https://www.alibabacloud.com/help/zh/model-studio/regions/">view the documentation</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>global</p>
@@ -201,7 +201,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String serviceSite;
 
         /**
-         * <p>The business workspace ID.</p>
+         * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ws-0759e7b7ea7f585b</p>
@@ -210,7 +210,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String workspaceId;
 
         /**
-         * <p>The business workspace name.</p>
+         * <p>The workspace name.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

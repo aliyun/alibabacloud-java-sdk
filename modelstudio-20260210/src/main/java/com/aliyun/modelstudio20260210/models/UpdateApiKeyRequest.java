@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdateApiKeyRequest extends TeaModel {
     /**
-     * <p>The API key permission settings.</p>
+     * <p>The API Key permission settings.</p>
      * <blockquote>
-     * <p>Do not fill in this section or fill it in completely for each UpdateApiKey operation. Otherwise, the configuration may not match your expectations.</p>
+     * <p>Do not specify this parameter or specify it completely for each UpdateApiKey operation. Otherwise, the configuration may not match your expectations.</p>
      * </blockquote>
      */
     @NameInMap("auth")
@@ -47,14 +47,14 @@ public class UpdateApiKeyRequest extends TeaModel {
         /**
          * <p>The list of accessible models.</p>
          * <blockquote>
-         * <p>Notice: The content takes effect only when allowAllModels is set to false.</p>
+         * <p>Notice: The specified content takes effect only when allowAllModels is set to false.</p>
          * </blockquote>
          */
         @NameInMap("accessibleModels")
         public java.util.List<String> accessibleModels;
 
         /**
-         * <p>Specifies whether to allow access to all models with granted inference permissions in the workspace. Valid values:</p>
+         * <p>Specifies whether all models with inference permissions in the workspace are accessible. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -105,9 +105,9 @@ public class UpdateApiKeyRequest extends TeaModel {
         public UpdateApiKeyRequestAuthModelAccessScope modelAccessScope;
 
         /**
-         * <p>Valid values:</p>
+         * <p>The permission type. Valid values:</p>
          * <ul>
-         * <li>All: all permissions.</li>
+         * <li>All: full permissions.</li>
          * <li>Custom: custom permissions.</li>
          * </ul>
          * 

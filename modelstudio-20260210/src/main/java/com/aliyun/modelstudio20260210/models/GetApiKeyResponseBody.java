@@ -47,10 +47,10 @@ public class GetApiKeyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
+     * <li>true: Succeeded.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class GetApiKeyResponseBody extends TeaModel {
         public java.util.List<String> accessibleModels;
 
         /**
-         * <p>Indicates whether all models with granted inference permissions in the workspace can be accessed. Valid values:</p>
+         * <p>Indicates whether all models with inference permissions granted in the specified workspace are accessible. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -163,13 +163,17 @@ public class GetApiKeyResponseBody extends TeaModel {
         public java.util.List<String> accessIps;
 
         /**
-         * <p>The model access scope.</p>
+         * <p>The model access scope. If configured, only the selected models can be called.</p>
          */
         @NameInMap("modelAccessScope")
         public GetApiKeyResponseBodyApiKeyAuthModelAccessScope modelAccessScope;
 
         /**
-         * <p>All: all permissions. Custom: custom permissions.</p>
+         * <p>The permission type. Valid values:</p>
+         * <ul>
+         * <li>All: all permissions.</li>
+         * <li>Custom: custom permissions.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Custom</p>
@@ -265,7 +269,7 @@ public class GetApiKeyResponseBody extends TeaModel {
         public Integer disabled;
 
         /**
-         * <p>The time when the API key was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1774338222000</p>
@@ -283,6 +287,8 @@ public class GetApiKeyResponseBody extends TeaModel {
         public String workspaceId;
 
         /**
+         * <p>The workspace name.</p>
+         * 
          * <strong>example:</strong>
          * <p>workspace_test</p>
          */

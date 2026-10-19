@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateWorkspaceRequest extends TeaModel {
     /**
+     * <p>The service deployment scope (the deployment scope for services that depend on GPU resources, such as inference, training, and deployment). The Beijing and Singapore regions are not supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>global</p>
      */
@@ -12,7 +14,7 @@ public class CreateWorkspaceRequest extends TeaModel {
     public String serviceSite;
 
     /**
-     * <p>The name of the business workspace.</p>
+     * <p>The workspace name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApiKeysResponseBody extends TeaModel {
     /**
-     * <p>The list of API keys.</p>
+     * <p>The list of API Keys.</p>
      */
     @NameInMap("apiKeys")
     public java.util.List<ListApiKeysResponseBodyApiKeys> apiKeys;
@@ -65,7 +65,7 @@ public class ListApiKeysResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API call was successful. Valid values:</p>
+     * <p>Indicates whether the API call was successful.</p>
      * <ul>
      * <li>true: Successful.</li>
      * <li>false: Failed.</li>
@@ -171,7 +171,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public java.util.List<String> accessibleModels;
 
         /**
-         * <p>Indicates whether access to all models with inference permissions in the workspace is allowed.</p>
+         * <p>Indicates whether all models with inference permissions granted in the workspace are accessible.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -216,7 +216,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public ListApiKeysResponseBodyApiKeysAuthModelAccessScope modelAccessScope;
 
         /**
-         * <p>All: all permissions. Custom: custom permissions.</p>
+         * <p>All: full permissions. Custom: custom permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>Custom</p>
@@ -266,7 +266,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public Long apiKeyId;
 
         /**
-         * <p>The value of the API key.</p>
+         * <p>The value of the API Key.</p>
          * 
          * <strong>example:</strong>
          * <p>sk-ws-djI.8O7d*****2aICctnid4u4</p>
@@ -299,7 +299,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether the API key is disabled. Valid values:</p>
+         * <p>Indicates whether the API Key is disabled.</p>
          * <ul>
          * <li><strong>0</strong>: Active.</li>
          * <li><strong>1</strong>: Disabled.</li>
@@ -330,6 +330,8 @@ public class ListApiKeysResponseBody extends TeaModel {
         public String workspaceId;
 
         /**
+         * <p>The workspace name.</p>
+         * 
          * <strong>example:</strong>
          * <p>workspace_test</p>
          */

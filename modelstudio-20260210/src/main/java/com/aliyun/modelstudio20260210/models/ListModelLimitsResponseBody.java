@@ -38,7 +38,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
     public java.util.List<ListModelLimitsResponseBodyLimits> limits;
 
     /**
-     * <p>The maximum number of records returned in a single request.</p>
+     * <p>The maximum number of records to return in a single call.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -65,7 +65,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API call was successful.</p>
+     * <p>Indicates whether the API call succeeded.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -161,7 +161,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
 
     public static class ListModelLimitsResponseBodyLimitsModelLimit extends TeaModel {
         /**
-         * <p>The maximum concurrency.</p>
+         * <p>The maximum number of concurrent requests.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -170,7 +170,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
         public Long asyncUserConcurrencyLimit;
 
         /**
-         * <p>The queue size.</p>
+         * <p>The number of queued requests.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -188,7 +188,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
         public Long requestLimit;
 
         /**
-         * <p>The time period for request throttling, in seconds.</p>
+         * <p>The time period for request throttling. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -215,7 +215,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
         public String usageLimitField;
 
         /**
-         * <p>The time period for usage throttling, in seconds.</p>
+         * <p>The time period for usage throttling. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -288,7 +288,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
 
     public static class ListModelLimitsResponseBodyLimitsWorkspaceLimit extends TeaModel {
         /**
-         * <p>The maximum concurrency.</p>
+         * <p>The maximum number of concurrent requests.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -297,7 +297,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
         public Long asyncUserConcurrencyLimit;
 
         /**
-         * <p>The queue size.</p>
+         * <p>The number of queued requests.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -315,7 +315,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
         public Long requestLimit;
 
         /**
-         * <p>The time period for request throttling, in seconds.</p>
+         * <p>The time period for request throttling. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -342,7 +342,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
         public String usageLimitField;
 
         /**
-         * <p>The time period for usage throttling, in seconds.</p>
+         * <p>The time period for usage throttling. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -424,7 +424,7 @@ public class ListModelLimitsResponseBody extends TeaModel {
         public String model;
 
         /**
-         * <p>The model throttling configuration for the current user account.</p>
+         * <p>The model throttling for the current user account.</p>
          */
         @NameInMap("modelLimit")
         public ListModelLimitsResponseBodyLimitsModelLimit modelLimit;
@@ -439,7 +439,16 @@ public class ListModelLimitsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The custom model throttling configuration for the current workspace.</p>
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws_123xxx</p>
+         */
+        @NameInMap("workspaceId")
+        public String workspaceId;
+
+        /**
+         * <p>The custom model throttling for the current workspace.</p>
          */
         @NameInMap("workspaceLimit")
         public ListModelLimitsResponseBodyLimitsWorkspaceLimit workspaceLimit;
@@ -471,6 +480,14 @@ public class ListModelLimitsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListModelLimitsResponseBodyLimits setWorkspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
+            return this;
+        }
+        public String getWorkspaceId() {
+            return this.workspaceId;
         }
 
         public ListModelLimitsResponseBodyLimits setWorkspaceLimit(ListModelLimitsResponseBodyLimitsWorkspaceLimit workspaceLimit) {

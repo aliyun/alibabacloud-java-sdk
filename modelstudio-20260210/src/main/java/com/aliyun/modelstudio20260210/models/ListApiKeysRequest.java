@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApiKeysRequest extends TeaModel {
     /**
-     * <p>The API key ID for exact match.</p>
+     * <p>The API Key ID for exact match.</p>
      * 
      * <strong>example:</strong>
      * <p>3076140</p>
@@ -56,7 +56,7 @@ public class ListApiKeysRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The field by which to sort results. Valid values:</p>
+     * <p>The field by which to sort the results. Valid values:</p>
      * <ul>
      * <li><p>apiKeyId (default)</p>
      * </li>
