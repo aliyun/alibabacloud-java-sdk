@@ -1,0 +1,136 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.winnexo20260512.models;
+
+import com.aliyun.tea.*;
+
+public class TransferTodoResponseBody extends TeaModel {
+    /**
+     * <p>业务状态码；成功为200</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
+    @NameInMap("code")
+    public String code;
+
+    /**
+     * <p>错误描述</p>
+     * 
+     * <strong>example:</strong>
+     * <p>请求的资源不存在</p>
+     */
+    @NameInMap("message")
+    public String message;
+
+    /**
+     * <p>请求追踪ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
+     */
+    @NameInMap("requestId")
+    public String requestId;
+
+    /**
+     * <p>逐目标处理结果</p>
+     */
+    @NameInMap("targets")
+    public java.util.List<TransferTodoResponseBodyTargets> targets;
+
+    /**
+     * <p>待办ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>todo_abc123</p>
+     */
+    @NameInMap("todoId")
+    public String todoId;
+
+    public static TransferTodoResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        TransferTodoResponseBody self = new TransferTodoResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public TransferTodoResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public TransferTodoResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public TransferTodoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public TransferTodoResponseBody setTargets(java.util.List<TransferTodoResponseBodyTargets> targets) {
+        this.targets = targets;
+        return this;
+    }
+    public java.util.List<TransferTodoResponseBodyTargets> getTargets() {
+        return this.targets;
+    }
+
+    public TransferTodoResponseBody setTodoId(String todoId) {
+        this.todoId = todoId;
+        return this;
+    }
+    public String getTodoId() {
+        return this.todoId;
+    }
+
+    public static class TransferTodoResponseBodyTargets extends TeaModel {
+        /**
+         * <p>处理结果：CREATED/REVIVED/ALREADY_PENDING</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATED</p>
+         */
+        @NameInMap("result")
+        public String result;
+
+        /**
+         * <p>目标用户ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43</p>
+         */
+        @NameInMap("userId")
+        public String userId;
+
+        public static TransferTodoResponseBodyTargets build(java.util.Map<String, ?> map) throws Exception {
+            TransferTodoResponseBodyTargets self = new TransferTodoResponseBodyTargets();
+            return TeaModel.build(map, self);
+        }
+
+        public TransferTodoResponseBodyTargets setResult(String result) {
+            this.result = result;
+            return this;
+        }
+        public String getResult() {
+            return this.result;
+        }
+
+        public TransferTodoResponseBodyTargets setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+    }
+
+}

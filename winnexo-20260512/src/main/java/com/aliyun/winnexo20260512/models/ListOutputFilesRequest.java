@@ -5,6 +5,24 @@ import com.aliyun.tea.*;
 
 public class ListOutputFilesRequest extends TeaModel {
     /**
+     * <p>精确业务编号，来自文件登记或工作流实例关联</p>
+     * 
+     * <strong>example:</strong>
+     * <p>REQ-20261012-001</p>
+     */
+    @NameInMap("bizId")
+    public String bizId;
+
+    /**
+     * <p>可选协作空间 ID；未传保持当前用户个人产出范围</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cg_123e4567-e89b-42d3-a456-426614174001</p>
+     */
+    @NameInMap("collaborationGroupId")
+    public String collaborationGroupId;
+
+    /**
      * <p>The type of the output item. Valid values: ppt, html, document, picture, slides, video, audio, email, and others.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +68,15 @@ public class ListOutputFilesRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>精确会话 ID，覆盖普通会话、技能会话与任务 executionId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>session_123e4567-e89b-42d3-a456-426614174008</p>
+     */
+    @NameInMap("sessionId")
+    public String sessionId;
+
+    /**
      * <p>Specifies whether to display only outputs and output items with sharing enabled.</p>
      * 
      * <strong>example:</strong>
@@ -57,6 +84,12 @@ public class ListOutputFilesRequest extends TeaModel {
      */
     @NameInMap("sharedOnly")
     public Boolean sharedOnly;
+
+    /**
+     * <p>全部匹配的标签列表，来自文件登记或实例 variables.tags</p>
+     */
+    @NameInMap("tags")
+    public java.util.List<String> tags;
 
     /**
      * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass it explicitly by using --tenant-id.</p>
@@ -70,6 +103,22 @@ public class ListOutputFilesRequest extends TeaModel {
     public static ListOutputFilesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListOutputFilesRequest self = new ListOutputFilesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListOutputFilesRequest setBizId(String bizId) {
+        this.bizId = bizId;
+        return this;
+    }
+    public String getBizId() {
+        return this.bizId;
+    }
+
+    public ListOutputFilesRequest setCollaborationGroupId(String collaborationGroupId) {
+        this.collaborationGroupId = collaborationGroupId;
+        return this;
+    }
+    public String getCollaborationGroupId() {
+        return this.collaborationGroupId;
     }
 
     public ListOutputFilesRequest setItemType(String itemType) {
@@ -112,12 +161,28 @@ public class ListOutputFilesRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public ListOutputFilesRequest setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+    }
+    public String getSessionId() {
+        return this.sessionId;
+    }
+
     public ListOutputFilesRequest setSharedOnly(Boolean sharedOnly) {
         this.sharedOnly = sharedOnly;
         return this;
     }
     public Boolean getSharedOnly() {
         return this.sharedOnly;
+    }
+
+    public ListOutputFilesRequest setTags(java.util.List<String> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<String> getTags() {
+        return this.tags;
     }
 
     public ListOutputFilesRequest setTenantId(String tenantId) {
