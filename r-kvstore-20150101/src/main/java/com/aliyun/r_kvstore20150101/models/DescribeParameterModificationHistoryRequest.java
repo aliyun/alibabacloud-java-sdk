@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeParameterModificationHistoryRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeParameterModificationHistoryRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,9 +25,9 @@ public class DescribeParameterModificationHistoryRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the node.</p>
+     * <p>The node ID.</p>
      * <blockquote>
-     * <p>You can set this parameter to query the parameter settings of the specified node in a cluster instance.</p>
+     * <p>Specify this parameter to query the parameter settings of a specific node in a cluster instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class DescribeParameterModificationHistoryRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The name of the parameter.</p>
+     * <p>The parameter name.</p>
      * 
      * <strong>example:</strong>
      * <p>script_check_enable</p>
@@ -61,7 +61,7 @@ public class DescribeParameterModificationHistoryRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

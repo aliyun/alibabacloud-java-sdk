@@ -12,7 +12,7 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
      * <li><strong>cs</strong>: config server node</li>
      * </ul>
      * <blockquote>
-     * <p> If you set this parameter, you must also set the <strong>NodeId</strong> parameter.</p>
+     * <p>If you specify this parameter, you must also specify the <strong>NodeId</strong> parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
     public String DBName;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. The time range cannot exceed one day. We recommend that you specify 1 hour. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+     * <p>The end time of the query. The end time must be later than the start time, and the time span between the start time and end time cannot exceed one day. We recommend that you set the time span to one hour. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,15 +51,13 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the node in the instance. You can set this parameter to query the operational logs of a specified node.</p>
+     * <p>The ID of the node in the instance. Specify this parameter to query the running logs of a specific node.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>This parameter is available only for read/write splitting and cluster instances.</p>
-     * </li>
-     * <li><p>If you set this parameter, you must also set the <strong>CharacterType</strong> parameter.</p>
-     * </li>
+     * <li>This parameter is available only when the instance uses the read/write splitting or cluster architecture.</li>
+     * <li>If you specify this parameter, you must also specify the <strong>CharacterType</strong> parameter.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>r-bp1zxszhcgatnx****-db-0</p>
@@ -68,7 +66,7 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>The method that is used to sort the returned log entries. Valid values:</p>
+     * <p>The sort order of the query results. Valid values:</p>
      * <ul>
      * <li><strong>asc</strong>: ascending order</li>
      * <li><strong>desc</strong>: descending order</li>
@@ -87,7 +85,7 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong> and less than or equal to the maximum value supported by the integer data type. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be greater than <strong>0</strong> and cannot exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -96,7 +94,7 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>30</strong>.</p>
+     * <p>The maximum number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -105,7 +103,7 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The keyword that is used to query operational logs.</p>
+     * <p>The keyword used to query the running logs.</p>
      * 
      * <strong>example:</strong>
      * <p>aof</p>
@@ -129,10 +127,10 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The role of the data shard. Default value: master. Valid values:</p>
+     * <p>The role type of the data shard. Valid values:</p>
      * <ul>
-     * <li><strong>master</strong>: master node</li>
-     * <li><strong>slave</strong>: replica node</li>
+     * <li><strong>master</strong> (default): primary node</li>
+     * <li><strong>slave</strong>: secondary node</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -145,7 +143,7 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+     * <p>The start time of the query. You can view the running logs generated within the last 72 hours. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

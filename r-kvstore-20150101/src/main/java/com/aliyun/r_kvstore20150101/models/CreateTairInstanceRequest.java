@@ -14,12 +14,10 @@ public class CreateTairInstanceRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enable auto-renewal.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): Disable auto-renewal.</p>
-     * </li>
+     * <li><strong>true</strong>: enables auto-renewal.</li>
+     * <li><strong>false</strong>: disables auto-renewal. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,9 +27,9 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String autoRenew;
 
     /**
-     * <p>The auto-renewal duration. Unit: month. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>6</strong>, and <strong>12</strong>.</p>
+     * <p>The auto-renewal epoch. Unit: months. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>6</strong>, and <strong>12</strong>.</p>
      * <blockquote>
-     * <p>This parameter is required only when the <strong>AutoRenew</strong> parameter is set to <strong>true</strong>.</p>
+     * <p>This parameter is required when the <strong>AutoRenew</strong> parameter is set to <strong>true</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,12 +39,10 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String autoRenewPeriod;
 
     /**
-     * <p>Specifies whether to use a coupon. Valid values:</p>
+     * <p>Specifies whether to use a voucher. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Use a coupon.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): Do not use a coupon.</p>
-     * </li>
+     * <li><strong>true</strong>: uses a voucher.</li>
+     * <li><strong>false</strong>: does not use a voucher. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,9 +52,9 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String autoUseCoupon;
 
     /**
-     * <p>The ID of the backup set from the source instance. The system creates a new instance based on the data in this backup set. You can call the <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a> operation to query the backup set ID. If the source instance is a cluster instance, you must specify the backup ID for each shard, separated by commas, for example, &quot;10\<em>\</em>,11\<em>\</em>,15\<em>\</em>&quot;.</p>
+     * <p>The ID of the backup set of the source instance. The system uses the data in the specified backup set to create the instance. You can invoke the <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a> operation to query the backup set ID. If the source instance is a cluster instance, you must enter the backup set IDs of all shards in the source instance and separate them with commas, such as &quot;10**,11**,15**&quot;.</p>
      * <blockquote>
-     * <p>If your instance is a cloud-native cluster instance, we recommend that you call the <a href="https://help.aliyun.com/document_detail/2679168.html">DescribeClusterBackupList</a> operation to query the cluster backup ID, such as <code>cb-xx</code>. Then, specify the cluster backup ID for the <code>ClusterBackupId</code> parameter to clone the cluster instance. This avoids the need to specify the backup ID of each shard.</p>
+     * <p>If your instance is a cloud-native architecture instance, we recommend that you invoke the <a href="https://help.aliyun.com/document_detail/2679168.html">DescribeClusterBackupList</a> operation to query the cluster backup set ID, such as &quot;cb-xx&quot;, and then specify the ClusterBackupId request parameter to clone the cluster instance. This saves you the trouble of entering the backup set ID of each shard.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -68,7 +64,7 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String backupId;
 
     /**
-     * <p>The business information. This can be the ID of a promotion or a business context.</p>
+     * <p>The activity ID and business information.</p>
      * 
      * <strong>example:</strong>
      * <p>000000000</p>
@@ -77,12 +73,10 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String businessInfo;
 
     /**
-     * <p>The billing method of the instance. Valid values:</p>
+     * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li><p><strong>PrePaid</strong> (default): The subscription billing method.</p>
-     * </li>
-     * <li><p><strong>PostPaid</strong>: The pay-as-you-go billing method.</p>
-     * </li>
+     * <li><strong>PrePaid</strong>: subscription. This is the default value.</li>
+     * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -92,7 +86,7 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>A client-generated token that ensures the idempotence of the request. The token must be unique among different requests. It is case-sensitive and cannot exceed 64 ASCII characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token is case-sensitive and can be up to 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -101,12 +95,10 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the cluster backup set. Some instances that use the cluster architecture support cluster backup sets. You can call the <a href="https://help.aliyun.com/document_detail/2679168.html">DescribeClusterBackupList</a> operation to query for cluster backup set IDs.</p>
+     * <p>The ID of the cluster backup set. Some new cluster architectures support cluster backup set IDs. You can call the <a href="https://help.aliyun.com/document_detail/2679168.html">DescribeClusterBackupList</a> operation to obtain the ID.</p>
      * <ul>
-     * <li><p>If this feature is supported, you can specify this parameter and leave the <strong>BackupId</strong> parameter empty.</p>
-     * </li>
-     * <li><p>If this feature is not supported, you must specify the backup ID of each shard of the source instance for the <code>BackupId</code> parameter. Separate the backup IDs with commas, for example, &quot;2158\<em>\</em>\<em>\<em>20,2158\</em>\</em>\*\*22&quot;.</p>
-     * </li>
+     * <li>If the cluster architecture supports cluster backup sets, you can enter the specified cluster backup set ID. You do not need to specify the <strong>BackupId</strong> parameter.</li>
+     * <li>If the cluster architecture does not support cluster backup sets, enter the backup set IDs of all shards in the source instance in the BackupId parameter and separate them with commas, such as &quot;2158\<em>\</em>\<em>\<em>20,2158\</em>\</em>\*\*22&quot;.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,9 +108,9 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String clusterBackupId;
 
     /**
-     * <p>The prefix of the connection string. It must start with a lowercase letter, consist of lowercase letters and digits, and be 8 to 40 characters in length.</p>
+     * <p>The prefix of the endpoint. The prefix must be 8 to 40 characters in length and can contain lowercase letters and digits. It must start with a lowercase letter.</p>
      * <blockquote>
-     * <p>The full connection string is in the format of <code>&lt;prefix&gt;-&lt;instance ID&gt;.redis.rds.aliyuncs.com</code>.</p>
+     * <p>The endpoint is in the following format: <Prefix-Instance ID>.redis.rds.aliyuncs.com.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -137,12 +129,10 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String couponNo;
 
     /**
-     * <p>Specifies whether to perform a precheck for this request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run before you create the instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Performs a precheck and does not create the instance. The system checks the request parameters, request format, service limits, and available inventory. If the request fails the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): Sends a normal request and creates the instance after the request passes the precheck.</p>
-     * </li>
+     * <li><strong>true</strong>: performs a dry run without creating the instance. The system checks the request parameters, request format, service limits, and available resources. If the request fails the dry run, the system returns an error. If the request passes the dry run, the system returns the <code>DryRunOperation</code> error code.</li>
+     * <li><strong>false</strong>: sends the request. If the request passes the check, the instance is created. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -152,14 +142,11 @@ public class CreateTairInstanceRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The database version. Default value: <strong>1.0</strong>. The valid values depend on the Tair instance series:</p>
+     * <p>The database engine version. Default value: <strong>1.0</strong>. The value varies based on the Tair instance type:</p>
      * <ul>
-     * <li><p><strong>tair_rdb</strong>: Tair memory-enhanced instances are compatible with Redis 5.0, Redis 6.0, and Redis 7.0. Set the value to <strong>5.0</strong>, <strong>6.0</strong>, or <strong>7.0</strong>.</p>
-     * </li>
-     * <li><p><strong>tair_scm</strong>: Tair persistent memory-optimized instances are compatible with Redis 6.0. Set the value to <strong>1.0</strong>.</p>
-     * </li>
-     * <li><p><strong>tair_essd</strong>: Tair disk-based instances (ESSD/SSD) are compatible with Redis 6.0. Set the value to <strong>1.0</strong> to create an ESSD-based instance or <strong>2.0</strong> to create an SSD-based instance.</p>
-     * </li>
+     * <li>Tair_rdb: Tair memory-enhanced instances are compatible with Redis 5.0, Redis 6.0, and Redis 7.0 protocols. Set the value to <strong>5.0</strong>, <strong>6.0</strong>, or <strong>7.0</strong>.</li>
+     * <li>Tair_scm: Tair persistent memory-optimized instances are compatible with the Redis 6.0 protocol. Set the value to <strong>1.0</strong>.</li>
+     * <li>Tair_essd: Tair disk-based (ESSD/SSD) instances are compatible with the Redis 6.0 protocol. Set the value to <strong>1.0</strong> for ESSD-based instances and <strong>2.0</strong> for SSD-based instances.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -169,18 +156,15 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>Specifies whether to create the instance as a child instance in a distributed instance. By using this parameter, you can create a distributed instance.</p>
+     * <p>Specifies whether to use the new instance as a child instance in a distributed instance. You can use this parameter to create a distributed instance.</p>
      * <ul>
-     * <li><p>To create the first child instance, set this parameter to <strong>true</strong>.</p>
-     * </li>
-     * <li><p>To create the second or third child instance, specify the ID of the distributed instance, such as <code>gr-bp14rkqrhac****</code>.</p>
-     * </li>
-     * <li><p>If you do not want to create a distributed instance, do not specify this parameter.</p>
+     * <li>To use the new instance as the first child instance, set the value to <strong>true</strong>.</li>
+     * <li>To use the new instance as the second or third child instance, set the value to the ID of the distributed instance, such as gr-bp14rkqrhac****.</li>
+     * <li>If you do not want to use the new instance as a child instance in a distributed instance, leave this parameter empty.<blockquote>
+     * <p>The new instance must be a Tair memory-enhanced instance if you want to use it as a child instance in a distributed instance.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>To be created as a child instance of a distributed instance, the new instance must be a Tair memory-enhanced instance.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>gr-bp14rkqrhac****</p>
@@ -189,7 +173,7 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String globalInstanceId;
 
     /**
-     * <p>The IDs of the global IP whitelist templates for the instance. To specify multiple template IDs, separate them with commas. The IDs cannot be repeated.</p>
+     * <p>The global IP address whitelist templates of the instance. Separate multiple whitelist templates with commas (,). Each template must be unique.</p>
      * 
      * <strong>example:</strong>
      * <p>g-zsldxfiwjmti0kcm****</p>
@@ -198,14 +182,11 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String globalSecurityGroupIds;
 
     /**
-     * <p>The instance type. For more information, see the following topics:</p>
+     * <p>The instance type. For more information, see:</p>
      * <ul>
-     * <li><p><a href="https://help.aliyun.com/document_detail/2527112.html">Memory-enhanced instance types</a></p>
-     * </li>
-     * <li><p><a href="https://help.aliyun.com/document_detail/2527110.html">Persistent memory-optimized instance types</a></p>
-     * </li>
-     * <li><p><a href="https://help.aliyun.com/document_detail/2527111.html">Disk-based instance types</a></p>
-     * </li>
+     * <li><a href="https://help.aliyun.com/document_detail/2527112.html">Memory-enhanced instance types</a>.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/2527110.html">Persistent memory-optimized instance types</a>.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/2527111.html">Disk-based instance types</a>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -216,21 +197,17 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String instanceClass;
 
     /**
-     * <p>The type of connection string to use when creating a cloud-native, dual-zone instance with the read/write splitting architecture. If you do not specify this parameter, the default value <code>AzIndependentEndpoint</code> is used.</p>
+     * <p>The endpoint type used when you create a cloud-native Dual-active-zone deployment read/write splitting instance. If you do not specify this parameter, the default value is AzIndependentEndpoint.</p>
      * <ul>
-     * <li><p><strong>AzIndependentEndpoint</strong> (<strong>default</strong>): Zone-specific connection string. The primary and secondary zones each provide an independent connection string, allowing clients to connect to the nearest zone.</p>
-     * </li>
-     * <li><p><strong>UnifiedEndpoint</strong>: Unified connection string. A single connection string is provided to access nodes in both the primary and secondary zones, but this may cause cross-zone access.</p>
-     * </li>
+     * <li><strong>AzIndependentEndpoint</strong>: active zone-independent endpoint. This is the <strong>default value</strong>. Independent endpoints are provided for the primary and secondary active zones. You can use different endpoints to achieve nearest access.</li>
+     * <li><strong>UnifiedEndpoint</strong>: unified endpoint. A unified endpoint is provided to access nodes in both the primary and secondary active zones. However, cross-active-zone access may occur.</li>
      * </ul>
      * <blockquote>
-     * <p>Notice: </p>
+     * <p>Notice: This parameter applies only to cloud-native Dual-active-zone deployment read/write splitting instances. For other types of instances, only active zone-independent endpoints are supported. Even if you specify UnifiedEndpoint, it does not take effect.</p>
      * </blockquote>
-     * <p>This parameter applies only to cloud-native, dual-zone instances with the read/write splitting architecture. Other instance types support only zone-specific connection strings.</p>
      * <blockquote>
-     * <p>Notice: </p>
+     * <p>Notice: The UnifiedEndpoint parameter is currently available only to whitelisted users. If you are not a whitelisted user and specify this parameter, an invoke error is returned. To request access, commit a ticket.</p>
      * </blockquote>
-     * <p>The <code>UnifiedEndpoint</code> option is available only to users on a whitelist. If a non-whitelisted user specifies this value, the request fails. To request access, submit a ticket.</p>
      * 
      * <strong>example:</strong>
      * <p>AzIndependentEndpoint</p>
@@ -239,12 +216,10 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String instanceEndpointType;
 
     /**
-     * <p>The name of the instance. The name must meet the following requirements:</p>
+     * <p>The instance name. The name must meet the following requirements:</p>
      * <ul>
-     * <li><p>It must be 2 to 80 characters in length.</p>
-     * </li>
-     * <li><p>It must start with an uppercase or lowercase letter or a Chinese character. It cannot contain spaces or the following special characters: <code>@/:=”&lt;&gt;{[]}</code>.</p>
-     * </li>
+     * <li>The name must be 2 to 80 characters in length.</li>
+     * <li>The name must start with a letter or a Chinese character. It cannot contain spaces or the following special characters: <code>@/:=”&lt;&gt;{[]}</code>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -254,14 +229,11 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The Tair instance series, which determines the storage medium. Valid values:</p>
+     * <p>The storage medium. Valid values:</p>
      * <ul>
-     * <li><p><strong>tair_rdb</strong>: memory-enhanced</p>
-     * </li>
-     * <li><p><strong>tair_scm</strong>: persistent memory-optimized</p>
-     * </li>
-     * <li><p><strong>tair_essd</strong>: disk-based</p>
-     * </li>
+     * <li><strong>tair_rdb</strong>: memory-enhanced.</li>
+     * <li><strong>tair_scm</strong>: persistent memory-optimized.</li>
+     * <li><strong>tair_essd</strong>: disk-based.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -272,22 +244,28 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The end time of the maintenance window. Specify the time in the <em>HH:mm</em>Z format (UTC). For example, to end the maintenance at 02:00 (UTC+8), set this parameter to <code>18:00Z</code>.</p>
+     * <p>The end time of the maintenance window. Specify the time in the <i>HH:mm</i>Z format. The time must be in UTC. For example, if you want the maintenance window to end at 02:00 (UTC+8), set the value to <code>18:00Z</code>.</p>
      * <blockquote>
-     * <p>The maintenance window must be at least one hour long.</p>
+     * <p>The interval between the start time and the end time must be at least 1 hour.</p>
      * </blockquote>
      * <blockquote>
-     * <p>If this parameter is not specified, the maintenance window ends at 22:00 UTC (06:00 UTC+8) by default.</p>
+     * <p>If you do not specify this parameter, the default value is 22:00 (UTC), which is 06:00 (UTC+8).</p>
      * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>18:00Z</p>
      */
     @NameInMap("MaintainEndTime")
     public String maintainEndTime;
 
     /**
-     * <p>The start time of the maintenance window. Specify the time in the <em>HH:mm</em>Z format (UTC). For example, to start the maintenance at 01:00 (UTC+8), set this parameter to <code>17:00Z</code>.</p>
+     * <p>The start time of the maintenance window. Specify the time in the <i>HH:mm</i>Z format. The time must be in UTC. For example, if you want the maintenance window to start at 01:00 (UTC+8), set the value to <code>17:00Z</code>.</p>
      * <blockquote>
-     * <p>If this parameter is not specified, the maintenance window starts at 18:00 UTC (02:00 UTC+8) by default.</p>
+     * <p>If you do not specify this parameter, the default value is 18:00 (UTC), which is 02:00 (UTC+8).</p>
      * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>17:00Z</p>
      */
     @NameInMap("MaintainStartTime")
     public String maintainStartTime;
@@ -299,7 +277,7 @@ public class CreateTairInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the parameter template. The instance is created by using the parameters defined in this template.</p>
+     * <p>The ID of the parameter template. The instance is created based on the parameters in the specified template. Each template ID must be unique.</p>
      * 
      * <strong>example:</strong>
      * <p>g-50npzjcqb1ua6q6j****</p>
@@ -308,12 +286,10 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String paramGroupId;
 
     /**
-     * <p>The password of the instance. The password must meet the following requirements:</p>
+     * <p>The instance password. The password must meet the following requirements:</p>
      * <ul>
-     * <li><p>It must be 8 to 32 characters in length.</p>
-     * </li>
-     * <li><p>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The supported special characters are <code>!@#$%^&amp;*()_+-=</code>.</p>
-     * </li>
+     * <li>The password must be 8 to 32 characters in length.</li>
+     * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, special characters, and digits. Supported special characters are <code>!@#$%^&amp;*()_+-=</code>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -323,9 +299,9 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>The subscription duration, in months. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>6</strong>, 7, 8, 9, 12, 24, 36, and 60.</p>
+     * <p>The subscription duration. Unit: months. Valid values: <strong>1</strong> to <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, <strong>36</strong>, and <strong>60</strong>.</p>
      * <blockquote>
-     * <p>This parameter is required only when you set the <code>ChargeType</code> parameter to <code>PrePaid</code>.</p>
+     * <p>This parameter is required when the <strong>ChargeType</strong> parameter is set to <strong>PrePaid</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -344,9 +320,9 @@ public class CreateTairInstanceRequest extends TeaModel {
     public Integer port;
 
     /**
-     * <p>The private IP address of the instance.</p>
+     * <p>The internal IP address of the instance.</p>
      * <blockquote>
-     * <p>The IP address must be within the CIDR block of the vSwitch to which the instance belongs. You can call the <a href="https://help.aliyun.com/document_detail/35748.html">DescribeVSwitches</a> operation to query the CIDR block information.</p>
+     * <p>The IP address must fall within the CIDR block of the vSwitch to which the instance belongs. You can call the <a href="https://help.aliyun.com/document_detail/35748.html">DescribeVSwitches</a> operation of the VPC API to query the CIDR block information.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -356,22 +332,18 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String privateIpAddress;
 
     /**
-     * <p>The number of read-only nodes in the primary zone. This parameter is applicable only to cloud-native instances that use the read/write splitting architecture.</p>
+     * <p>The number of read-only nodes in the primary zone. This parameter applies only when you create a cloud-native read/write splitting instance.</p>
      * <ul>
-     * <li><p>If the instance uses the standard architecture, the valid values are 1 to 9.</p>
-     * </li>
-     * <li><p>If the instance uses the cluster architecture, specify the number of read-only nodes per shard. The valid values are 1 to 4.</p>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p>If you create a multi-zone instance, you can use this parameter and the <code>SlaveReadOnlyCount</code> parameter to customize the number of read-only nodes in the primary and secondary zones.</p>
+     * <li>If the instance uses the standard architecture, valid values are 1 to 9.</li>
+     * <li>If the instance uses the cluster architecture, valid values are 1 to 4, which indicate the number of read-only nodes per data shard.<blockquote>
+     * <p>If you create a multi-zone instance, you can use this parameter and the SlaveReadOnlyCount parameter to specify the number of read-only nodes in the primary and secondary zones.</p>
      * <ul>
-     * <li><p>If the instance uses the standard architecture, the sum of <code>ReadOnlyCount</code> and <code>SlaveReadOnlyCount</code> cannot exceed 9.</p>
-     * </li>
-     * <li><p>If the instance uses the cluster architecture, the sum of <code>ReadOnlyCount</code> and <code>SlaveReadOnlyCount</code> cannot exceed 4.</p>
-     * </li>
+     * <li>If the instance uses the standard architecture, the sum of the values of this parameter and the SlaveReadOnlyCount parameter cannot exceed 9.</li>
+     * <li>If the instance uses the cluster architecture, the sum of the values of this parameter and the SlaveReadOnlyCount parameter cannot exceed 4.</li>
      * </ul>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -380,10 +352,10 @@ public class CreateTairInstanceRequest extends TeaModel {
     public Integer readOnlyCount;
 
     /**
-     * <p>When creating an instance from a backup set, specifies whether to restore configurations such as account information (<code>account</code>), kernel parameters (<code>config</code>), and whitelists (<code>whitelist</code>) from the source backup set. To restore a specific configuration, specify its keyword. To restore multiple configurations, separate the keywords with commas.</p>
-     * <p>If this parameter is not specified, no configurations are restored from the source backup set.</p>
+     * <p>Specifies whether to restore the account, kernel parameters, and whitelist from the original backup set when you create an instance by using a specified backup set. For example, to restore the account information, set the value to account.</p>
+     * <p>Default value: empty. An empty value indicates that the account, kernel parameters, and whitelist are not restored from the original backup set.</p>
      * <blockquote>
-     * <p>This parameter applies only to cloud-native instances, and the source backup set must contain the specified configuration information. You can call the <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a> operation and check the <code>RecoverConfigMode</code> parameter in the response to check if the backup set contains the information.</p>
+     * <p>This parameter applies only to cloud-native instances and requires that the original backup set contains the account, kernel parameters, and whitelist information. You can call the <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a> operation to query whether the RecoverConfigMode parameter of a specified backup set contains the preceding information.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -393,7 +365,7 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String recoverConfigMode;
 
     /**
-     * <p>The ID of the region where you want to create the instance. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query available regions.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent region list. Use this parameter to specify the region where you want to create the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -403,9 +375,9 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The number of replica nodes in the primary zone. This parameter is applicable only to cloud-native, multi-replica cluster instances. You can use this parameter to customize the number of replica nodes. Valid values: 1 to 4.</p>
+     * <p>The number of secondary nodes in the primary zone. This parameter applies only when you create a cloud-native cluster instance with multiple replicas. You can use this parameter to specify the number of secondary nodes. Valid values: 1 to 4.</p>
      * <blockquote>
-     * <p>If you create a multi-zone instance, you can use this parameter and the <code>SlaveReplicaCount</code> parameter to customize the number of replica nodes in the primary and secondary zones. The sum of <code>ReplicaCount</code> and <code>SlaveReplicaCount</code> cannot exceed 4.</p>
+     * <p>If you create a multi-zone instance, you can use this parameter and the SlaveReplicaCount parameter to specify the number of secondary nodes in the primary and secondary zones. The sum of the values of this parameter and the SlaveReplicaCount parameter cannot exceed 4.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -415,13 +387,11 @@ public class CreateTairInstanceRequest extends TeaModel {
     public Integer replicaCount;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs.</p>
+     * <p>The ID of the destination resource group.</p>
      * <blockquote>
      * <ul>
-     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation or use the Resource Management console to query the IDs of resource groups. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
-     * </li>
-     * <li><p>Before you change the resource group of an instance, you can call the <a href="https://help.aliyun.com/document_detail/158866.html">ListResources</a> operation to view the current resource group of the instance.</p>
-     * </li>
+     * <li>You can invoke the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation or use the console to obtain the resource group ID list. For related operations, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</li>
+     * <li>Before you change the resource group to which the instance belongs, you can invoke the <a href="https://help.aliyun.com/document_detail/158866.html">ListResources</a> operation to view the current resource group of the instance.</li>
      * </ul>
      * </blockquote>
      * 
@@ -438,7 +408,7 @@ public class CreateTairInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>If point-in-time recovery (PITR) is enabled for the source instance, you can specify a point in time within the backup retention period. The system creates a new instance by using the backup data of the source instance at that point in time. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format (UTC).</p>
+     * <p>The point in time to which you want to restore the source instance. If the data flashback feature is enabled for the source instance, you can specify a point in time within the backup retention period of the source instance. The system uses the backup data of the source instance at the specified point in time to create the instance. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-07-06T07:25:57Z</p>
@@ -447,9 +417,9 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String restoreTime;
 
     /**
-     * <p>The ID of the secondary zone. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query available zones.</p>
+     * <p>The secondary zone ID. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent zone list.</p>
      * <blockquote>
-     * <p>The value of this parameter cannot be the same as the value of the <code>ZoneId</code> parameter. You cannot specify a multi-zone ID.</p>
+     * <p>The value of this parameter cannot be the same as the value of the ZoneId parameter, and you cannot specify the ID of a multi-zone deployment.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -462,15 +432,13 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The number of shards in the instance. Valid values:</p>
+     * <p>The number of data nodes in the instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong> (default): Creates a standard architecture instance with a single shard.</p>
-     * </li>
-     * <li><p>From <strong>2</strong> to <strong>32</strong>: Creates a cluster architecture instance with the specified number of shards.</p>
-     * </li>
+     * <li><strong>1</strong>: creates a <a href="https://help.aliyun.com/document_detail/52228.html">standard instance</a> that has only one data node. This is the default value.</li>
+     * <li><strong>2</strong> to <strong>32</strong>: creates a <a href="https://help.aliyun.com/document_detail/52228.html">cluster instance</a> that has the specified number of data nodes.</li>
      * </ul>
      * <blockquote>
-     * <p>You can specify a value from <strong>2</strong> to <strong>32</strong> for this parameter only when you set the <strong>InstanceType</strong> parameter to <code>tair_rdb</code> or <code>tair_scm</code>. Only memory-enhanced and persistent memory-optimized instances support the cluster architecture.</p>
+     * <p>You can set this parameter to a value from <strong>2</strong> to <strong>32</strong> only when the <strong>InstanceType</strong> parameter is set to <strong>tair_rdb</strong> or <strong>tair_scm</strong>. This means that only memory-enhanced and persistent memory-optimized instances support the cluster architecture.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -480,12 +448,10 @@ public class CreateTairInstanceRequest extends TeaModel {
     public Integer shardCount;
 
     /**
-     * <p>The architecture type of the instance. Valid values:</p>
+     * <p>The instance edition. Valid values:</p>
      * <ul>
-     * <li><p><strong>MASTER_SLAVE</strong> (default): The primary/replica architecture, which provides high availability.</p>
-     * </li>
-     * <li><p><strong>STAND_ALONE</strong>: single-replica. This architecture uses a single node. If the node fails, data is lost, and the system automatically creates a new, empty instance. This architecture is supported only for <strong>single-zone</strong> deployments and does not support cluster or read/write splitting architectures.</p>
-     * </li>
+     * <li><strong>MASTER_SLAVE</strong>: High-availability Edition. This edition uses a primary/secondary architecture to ensure high availability. This is the default value.</li>
+     * <li><strong>STAND_ALONE</strong>: Standalone Edition. This edition uses a single-node architecture. If a node fails, data is lost and the system automatically creates a new empty instance. This edition is supported only in <strong>single-zone</strong> deployments and does not support cluster or read/write splitting architectures.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -504,7 +470,7 @@ public class CreateTairInstanceRequest extends TeaModel {
     public Integer slaveReadOnlyCount;
 
     /**
-     * <p>The number of replica nodes in the secondary zone.</p>
+     * <p>The number of secondary nodes in the secondary zone.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -513,9 +479,9 @@ public class CreateTairInstanceRequest extends TeaModel {
     public Integer slaveReplicaCount;
 
     /**
-     * <p>To create an instance from a backup set of an existing instance, specify the ID of the source instance.</p>
+     * <p>Instance ID of the source instance. If you want to create an instance based on the backup set of an existing instance, specify instance ID of the source instance in this parameter.</p>
      * <blockquote>
-     * <p>You must also specify the backup data by using one of the following parameters: <strong>BackupId</strong>, <strong>ClusterBackupId</strong>, or <strong>RestoreTime</strong>. We recommend that you use <code>ClusterBackupId</code> for cloud-native instances that use a cluster architecture.</p>
+     * <p>Then, specify the backup set or point in time by using the <strong>BackupId</strong>, <strong>ClusterBackupId</strong> (recommended for cloud-native cluster architectures), or <strong>RestoreTime</strong> parameter. This parameter must be used in combination with one of the preceding three parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -525,9 +491,9 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String srcDBInstanceId;
 
     /**
-     * <p>The storage space of the disk-based instance. The valid values of this parameter vary based on the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/2527111.html">Disk-based instance types</a>.</p>
+     * <p>The storage capacity of the disk-based instance. The valid values vary based on the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/2527111.html">Disk-based instance types</a>.</p>
      * <blockquote>
-     * <p>This parameter is required only when you set the <strong>InstanceType</strong> parameter to <code>tair_essd</code> to create a Tair instance that uses an ESSD. For Tair instances that use standard <code>SSD</code>s, the storage capacity is determined by the instance type and you do not need to specify this parameter.</p>
+     * <p>This parameter is required only when the <strong>InstanceType</strong> parameter is set to <strong>tair_essd</strong> and you create an ESSD-based instance. If you create a Tair disk-based <strong>SSD</strong> instance, the capacity field is defined as a fixed value based on the instance type, and you do not need to specify this field.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -539,7 +505,7 @@ public class CreateTairInstanceRequest extends TeaModel {
     /**
      * <p>The storage type. Valid values: <strong>essd_pl1</strong>, <strong>essd_pl2</strong>, and <strong>essd_pl3</strong>.</p>
      * <blockquote>
-     * <p>This parameter is required only when you set the <strong>InstanceType</strong> parameter to <code>tair_essd</code> to create a Tair instance that uses an Enhanced SSD (ESSD).</p>
+     * <p>This parameter is required only when the <strong>InstanceType</strong> parameter is set to <strong>tair_essd</strong> and you create an ESSD-based instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -549,13 +515,13 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String storageType;
 
     /**
-     * <p>The tags of the instance.</p>
+     * <p>The tag information of the instance.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateTairInstanceRequestTag> tag;
 
     /**
-     * <p>The ID of the vSwitch in the specified VPC. You can call the VPC API operation <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVSwitches</a> to obtain the vSwitch ID.</p>
+     * <p>The ID of the vSwitch in the VPC. You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation of the VPC API to obtain the vSwitch ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -565,7 +531,7 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the Virtual Private Cloud (VPC) where you want to create the instance. You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation to query available VPCs.</p>
+     * <p>The ID of the virtual private cloud (VPC). You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation of the VPC API to query the VPC ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -575,9 +541,9 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The ID of the primary zone where you want to create the instance. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query available zones.</p>
+     * <p>The primary active zone ID. You can invoke the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent active zone list. Use this parameter to specify the active zone where you want to create the instance.</p>
      * <blockquote>
-     * <p>You can also specify a secondary zone by using the <code>SecondaryZoneId</code> parameter. This deploys the primary and replica nodes in different zones within the same region for a high-availability primary/replica architecture. For example, you can set <code>ZoneId</code> to <code>cn-hangzhou-h</code> and <code>SecondaryZoneId</code> to <code>cn-hangzhou-g</code>.</p>
+     * <p>You can also specify the SecondaryZoneId parameter to set the secondary active zone. The primary and secondary nodes will be placed in the specified primary and secondary active zones to implement a dual-active-zone primary/secondary architecture deployment. For example, set the ZoneId parameter to &quot;cn-hangzhou-h&quot; and the SecondaryZoneId parameter to &quot;cn-hangzhou-g&quot;.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -985,9 +951,9 @@ public class CreateTairInstanceRequest extends TeaModel {
 
     public static class CreateTairInstanceRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key. A tag key and a tag value form a key-value pair.</p>
          * <blockquote>
-         * <p>A single request can contain up to five key-value pairs.</p>
+         * <p>You can specify up to 5 tag key-value pairs at a time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -997,9 +963,9 @@ public class CreateTairInstanceRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * <blockquote>
-         * <p><strong>N</strong> specifies the Nth tag in the request. For example, <strong>Tag.1.Value</strong> specifies the value of the first tag, and <strong>Tag.2.Value</strong> specifies the value of the second tag.</p>
+         * <p><strong>N</strong> indicates the sequence number of the tag. For example, <strong>Tag.1.Value</strong> indicates the value of the first tag, and <strong>Tag.2.Value</strong> indicates the value of the second tag.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

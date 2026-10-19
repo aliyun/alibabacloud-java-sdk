@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
     /**
-     * <p>Details about the instances.</p>
+     * <p>The list of instance information.</p>
      */
     @NameInMap("Instances")
     public java.util.List<DescribeDedicatedClusterInstanceListResponseBodyInstances> instances;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>25</p>
@@ -29,7 +29,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>712CCF2A-16BD-411B-93F7-E978BEF2****</p>
@@ -38,7 +38,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -93,7 +93,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
 
     public static class DescribeDedicatedClusterInstanceListResponseBodyInstancesInstanceNodeList extends TeaModel {
         /**
-         * <p>The ID of the host in the dedicated cluster.</p>
+         * <p>The host ID in the dedicated cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>ch-bp13vf0y9gx3c****</p>
@@ -102,7 +102,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         public String dedicatedHostName;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>r-bp1e7vl6ygf1yq****</p>
@@ -131,9 +131,9 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         /**
          * <p>The node type. Valid values:</p>
          * <ul>
-         * <li><strong>db</strong>: data node.</li>
-         * <li><strong>proxy</strong>: proxy node.</li>
-         * <li><strong>normal</strong>: regular node. This value is returned when the instance runs in the standard architecture.</li>
+         * <li><strong>db</strong>: Data node.</li>
+         * <li><strong>proxy</strong>: Proxy node.</li>
+         * <li><strong>normal</strong>: Regular node. This value is returned for instances that use the standard architecture.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         public String nodeType;
 
         /**
-         * <p>The port number that is used to connect to the node.</p>
+         * <p>The port of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>3001</p>
@@ -152,10 +152,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The role of the node. Valid values:</p>
+         * <p>The node role. Valid values:</p>
          * <ul>
-         * <li><strong>master</strong>: master node</li>
-         * <li><strong>slave</strong>: replica node</li>
+         * <li><strong>master</strong>: Primary node.</li>
+         * <li><strong>slave</strong>: Secondary node.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -165,7 +165,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         public String role;
 
         /**
-         * <p>The zone ID of the node.</p>
+         * <p>The zone to which the node belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
@@ -246,7 +246,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
 
     public static class DescribeDedicatedClusterInstanceListResponseBodyInstances extends TeaModel {
         /**
-         * <p>The default bandwidth of the instance. Unit: Mbit/s.</p>
+         * <p>The default bandwidth of the instance. Unit: MB/s.</p>
          * 
          * <strong>example:</strong>
          * <p>24</p>
@@ -255,10 +255,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         public Long bandWidth;
 
         /**
-         * <p>The architecture of the instance. Valid values:</p>
+         * <p>The architecture type. Valid values:</p>
          * <ul>
-         * <li><strong>logic</strong>: cluster</li>
-         * <li><strong>normal</strong>: standard</li>
+         * <li><strong>logic</strong>: Cluster architecture.</li>
+         * <li><strong>normal</strong>: Standard architecture.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -268,7 +268,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         public String characterType;
 
         /**
-         * <p>The ID of the dedicated cluster to which the instance belongs.</p>
+         * <p>The dedicated cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dhg-rx71fc5ndh9o****</p>
@@ -277,7 +277,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The name of the dedicated cluster to which the instance belongs.</p>
+         * <p>The dedicated cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>testname</p>
@@ -286,7 +286,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         public String clusterName;
 
         /**
-         * <p>The private endpoint of the instance.</p>
+         * <p>The direct connection endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>r-t4ncdi1dgi0ja8****.redis.hangzhou.rds.aliyuncs.com</p>
@@ -295,7 +295,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         public String connectionDomain;
 
         /**
-         * <p>The time when the instance was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the instance was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-05-06T07:09:40Z</p>
@@ -304,7 +304,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The current bandwidth of the instance, which is the sum of the default bandwidth and any extra bandwidth that is purchased. Unit: Mbit/s.</p>
+         * <p>The current bandwidth of the instance. Unit: MB/s. The value is the sum of the default bandwidth and the increased bandwidth.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -313,7 +313,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         public Long currentBandWidth;
 
         /**
-         * <p>An internal parameter used for the maintenance and management of instances.</p>
+         * <p>An internal parameter used for instance maintenance.</p>
          * 
          * <strong>example:</strong>
          * <p>4652****</p>
@@ -322,7 +322,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         public String customId;
 
         /**
-         * <p>The database engine. The return value is <strong>redis</strong>.</p>
+         * <p>The database engine. The value is fixed as <strong>redis</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>redis</p>
@@ -331,7 +331,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>The database engine version of the instance. The return value is <strong>5.0</strong>.</p>
+         * <p>The database engine version. The value is fixed as <strong>5.0</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>5.0</p>
@@ -349,7 +349,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         public String instanceClass;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>r-bp1e7vl6ygf1yq****</p>
@@ -367,29 +367,29 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>Details about the nodes.</p>
+         * <p>The list of node information.</p>
          */
         @NameInMap("InstanceNodeList")
         public java.util.List<DescribeDedicatedClusterInstanceListResponseBodyInstancesInstanceNodeList> instanceNodeList;
 
         /**
-         * <p>The state of the instance. Valid values:</p>
+         * <p>The instance status. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong>: The instance is normal.</li>
-         * <li><strong>Creating</strong>: The instance is being created.</li>
-         * <li><strong>Changing</strong>: The configurations of the instance are being changed.</li>
-         * <li><strong>Inactive</strong>: The instance is disabled.</li>
-         * <li><strong>Flushing</strong>: The instance is being released.</li>
-         * <li><strong>Released</strong>: The instance is released.</li>
-         * <li><strong>Transforming</strong>: The billing method of the instance is being changed.</li>
-         * <li><strong>Unavailable</strong>: The instance is unavailable.</li>
-         * <li><strong>Error</strong>: The instance failed to be created.</li>
-         * <li><strong>Migrating</strong>: The instance is being migrated.</li>
-         * <li><strong>BackupRecovering</strong>: The instance is being restored from a backup.</li>
-         * <li><strong>MinorVersionUpgrading</strong>: The minor version of the instance is being updated.</li>
-         * <li><strong>NetworkModifying</strong>: The network type of the instance is being changed.</li>
-         * <li><strong>SSLModifying</strong>: The SSL configurations of the instance are being changed.</li>
-         * <li><strong>MajorVersionUpgrading</strong>: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.</li>
+         * <li><strong>Normal</strong>: Normal.</li>
+         * <li><strong>Creating</strong>: Creating.</li>
+         * <li><strong>Changing</strong>: Changing.</li>
+         * <li><strong>Inactive</strong>: Disabled.</li>
+         * <li><strong>Flushing</strong>: Purge in progress.</li>
+         * <li><strong>Released</strong>: Released.</li>
+         * <li><strong>Transforming</strong>: Transforming.</li>
+         * <li><strong>Unavailable</strong>: Unavailable.</li>
+         * <li><strong>Error</strong>: Creation failed.</li>
+         * <li><strong>Migrating</strong>: Migrating.</li>
+         * <li><strong>BackupRecovering</strong>: Restoring from backup.</li>
+         * <li><strong>MinorVersionUpgrading</strong>: Minor version upgrade in progress.</li>
+         * <li><strong>NetworkModifying</strong>: Changing the network.</li>
+         * <li><strong>SSLModifying</strong>: Changing SSL configurations.</li>
+         * <li><strong>MajorVersionUpgrading</strong>: Major engine version upgrade in progress. The instance remains accessible.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -399,7 +399,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         public String instanceStatus;
 
         /**
-         * <p>The end time of the maintenance window. The time is in the <em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+         * <p>The end time of the maintenance window. The time is in the <i>HH:mm</i>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>17:00Z</p>
@@ -408,7 +408,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         public String maintainEndTime;
 
         /**
-         * <p>The start time of the maintenance window. The time is in the <em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+         * <p>The start time of the maintenance window. The time is in the <i>HH:mm</i>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>16:00Z</p>
@@ -419,13 +419,11 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         /**
          * <p>The number of proxy nodes.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>If the return value is <strong>0</strong>, the proxy mode is disabled for the instance. If the return value is an integer greater than <strong>0</strong>, such as <strong>1</strong>, the proxy mode is enabled for the instance.</p>
-         * </li>
-         * <li><p>This parameter is returned only when the instance is a <a href="https://help.aliyun.com/document_detail/52228.html">cluster</a> instance.</p>
-         * </li>
+         * <li>A value of <strong>0</strong> indicates that the proxy mode is disabled for the instance. A value greater than <strong>0</strong> (such as <strong>1</strong>) indicates that the proxy mode is enabled for the instance.</li>
+         * <li>This parameter is returned only when the instance uses the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a>.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -434,7 +432,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         public Integer proxyCount;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -443,9 +441,9 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The number of shards.</p>
+         * <p>The number of data shards.</p>
          * <blockquote>
-         * <p> This parameter is returned only when the instance is a <a href="https://help.aliyun.com/document_detail/52228.html">cluster</a> instance.</p>
+         * <p>This parameter is returned only when the instance uses the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -455,7 +453,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         public Integer shardCount;
 
         /**
-         * <p>The storage type of the instance. The return value is LOCAL_SSD, which indicates <a href="https://help.aliyun.com/document_detail/122389.html">enhanced SSDs (ESSDs)</a>.</p>
+         * <p>The storage type. The value is fixed as LOCAL_SSD (<a href="https://help.aliyun.com/document_detail/122389.html">ESSD cloud disk (standard SSD)</a>).</p>
          * 
          * <strong>example:</strong>
          * <p>LOCAL_SSD</p>

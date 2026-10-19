@@ -4,10 +4,15 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class CreateInspectionTaskResponseBody extends TeaModel {
+    /**
+     * <p>The task data.</p>
+     */
     @NameInMap("Data")
     public CreateInspectionTaskResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9A931CE5-C926-5E09-B0EC-6299C4A6****</p>
      */
@@ -15,6 +20,12 @@ public class CreateInspectionTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +63,8 @@ public class CreateInspectionTaskResponseBody extends TeaModel {
 
     public static class CreateInspectionTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The task status.</p>
+         * 
          * <strong>example:</strong>
          * <p>PENDING</p>
          */
@@ -59,6 +72,8 @@ public class CreateInspectionTaskResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>tit-dca42f85c73644e0ab5c80ef641xxxx</p>
          */

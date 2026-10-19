@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
     /**
-     * <p>An array of global IP whitelist templates.</p>
+     * <p>The IP whitelist template information.</p>
      */
     @NameInMap("GlobalSecurityIPGroup")
     public java.util.List<DescribeGlobalSecurityIPGroupResponseBodyGlobalSecurityIPGroup> globalSecurityIPGroup;
@@ -42,15 +42,15 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
 
     public static class DescribeGlobalSecurityIPGroupResponseBodyGlobalSecurityIPGroup extends TeaModel {
         /**
-         * <p>An array of instance IDs that are associated with the global IP whitelist template.</p>
+         * <p>The instance IDs associated with the IP whitelist template.</p>
          */
         @NameInMap("DBInstances")
         public java.util.List<String> DBInstances;
 
         /**
-         * <p>The IP addresses in the global IP whitelist template.</p>
+         * <p>The IP addresses in the whitelist template.</p>
          * <blockquote>
-         * <p>Separate multiple IP addresses with a comma.</p>
+         * <p>Separate multiple IP addresses with commas (,).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
         public String GIpList;
 
         /**
-         * <p>The name of the global IP whitelist template.</p>
+         * <p>The name of the IP whitelist template.</p>
          * 
          * <strong>example:</strong>
          * <p>test_123</p>
@@ -69,7 +69,7 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
         public String globalIgName;
 
         /**
-         * <p>The ID of the global IP whitelist template.</p>
+         * <p>The ID of the IP whitelist template.</p>
          * 
          * <strong>example:</strong>
          * <p>g-zsldxfiwjmti0kcm****</p>
@@ -78,7 +78,7 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
         public String globalSecurityGroupId;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

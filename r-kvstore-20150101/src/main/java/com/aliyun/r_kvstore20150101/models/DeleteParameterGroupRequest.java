@@ -11,7 +11,7 @@ public class DeleteParameterGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the parameter template.</p>
+     * <p>The parameter template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySecurityGroupConfigurationRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,10 @@ public class ModifySecurityGroupConfigurationRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the security group that you want to manage. You can specify up to 10 security groups. Separate multiple security group IDs with commas (,).</p>
+     * <p>The IDs of the security groups that you want to set. You can specify up to 10 security group IDs, separated by commas (,).</p>
+     * <blockquote>
+     * <p>This operation overwrites the existing settings. For valid values, query the basic information about the security groups that you created by calling <a href="https://next.api.aliyun.com/api/Ecs/2014-05-26/DescribeSecurityGroups">DescribeSecurityGroups</a>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

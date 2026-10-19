@@ -8,10 +8,10 @@ public class UntagResourcesRequest extends TeaModel {
      * <p>Specifies whether to remove all tags from the instance. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: removes all tags from the instance.</li>
-     * <li><strong>false</strong> (default): does not remove all tags from the instance.</li>
+     * <li><strong>false</strong>: does not remove all tags from the instance. This is the default value.</li>
      * </ul>
      * <blockquote>
-     * <p>If you specify both this parameter and the <strong>TagKey.N</strong> parameter, this parameter does not take effect.</p>
+     * <p>If both <strong>TagKey.N</strong> and this parameter are specified, this parameter does not take effect.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class UntagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of the instances.</p>
+     * <p>The list of instance IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class UntagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The resource type. Set the value to <strong>INSTANCE</strong>.</p>
+     * <p>The resource type. Valid value: <strong>INSTANCE</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

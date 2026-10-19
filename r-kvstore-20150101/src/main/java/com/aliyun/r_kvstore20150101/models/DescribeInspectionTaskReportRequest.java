@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeInspectionTaskReportRequest extends TeaModel {
     /**
+     * <p>The ID of the inspection instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>r-bp19f4f6994813xxx</p>
      */
@@ -12,6 +14,7 @@ public class DescribeInspectionTaskReportRequest extends TeaModel {
     public String inspectionInsId;
 
     /**
+     * <p>The assistant instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +27,7 @@ public class DescribeInspectionTaskReportRequest extends TeaModel {
     public String securityToken;
 
     /**
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

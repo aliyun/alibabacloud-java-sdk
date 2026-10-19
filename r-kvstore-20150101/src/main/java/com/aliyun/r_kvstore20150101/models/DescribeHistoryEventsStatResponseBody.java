@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHistoryEventsStatResponseBody extends TeaModel {
     /**
-     * <p>The queried events.</p>
+     * <p>The event list.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeHistoryEventsStatResponseBodyItems> items;
@@ -42,12 +42,12 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
 
     public static class DescribeHistoryEventsStatResponseBodyItems extends TeaModel {
         /**
-         * <p>The system event category. Valid values:</p>
+         * <p>The system event categorization. Valid values:</p>
          * <ul>
-         * <li><strong>Exception</strong>: abnormal events</li>
-         * <li><strong>Optimize</strong>: optimization events.</li>
-         * <li><strong>Notification</strong>: notification events.</li>
-         * <li><strong>Maintenance</strong>: scheduled maintenance events.</li>
+         * <li><strong>Exception</strong>: Exception event.</li>
+         * <li><strong>Optimize</strong>: Optimization events.</li>
+         * <li><strong>Notification</strong>: Notification event.</li>
+         * <li><strong>Maintenance</strong>: Scheduled maintenance event.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
         public String eventCategory;
 
         /**
-         * <p>The total number of returned events.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>21</p>

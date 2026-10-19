@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceParameterRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,7 +23,7 @@ public class ModifyInstanceParameterRequest extends TeaModel {
     /**
      * <p>The parameter template ID.</p>
      * <blockquote>
-     * <p>You can view the list of parameter templates in the target region, including the parameter template ID, through the DescribeParameterGroups interface.</p>
+     * <p>You can call the DescribeParameterGroups operation to query the list of parameter templates in the target region, including parameter template IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class ModifyInstanceParameterRequest extends TeaModel {
     public String parameterGroupId;
 
     /**
-     * <p>The information about parameters.</p>
+     * <p>The parameter information.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;hz&quot;: &quot;50&quot;}</p>

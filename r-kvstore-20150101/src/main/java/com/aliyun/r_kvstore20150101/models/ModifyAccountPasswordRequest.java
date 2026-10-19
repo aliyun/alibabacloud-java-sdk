@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAccountPasswordRequest extends TeaModel {
     /**
-     * <p>The username of the account for which you want to change the password. You can call the <a href="https://help.aliyun.com/document_detail/473816.html">DescribeAccounts</a> operation to query the username of the account.</p>
+     * <p>The name of the account whose password you want to modify. You can call <a href="https://help.aliyun.com/document_detail/473816.html">DescribeAccounts</a> to query the account name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifyAccountPasswordRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ModifyAccountPasswordRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The new password to be set for the account. The password must be 8 to 32 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and specific special characters. These special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></p>
+     * <p>The new password to set for the account. The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include <code>!@#$%^&amp;*()_+-=</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,9 +35,9 @@ public class ModifyAccountPasswordRequest extends TeaModel {
     public String newAccountPassword;
 
     /**
-     * <p>The current password of the account.</p>
+     * <p>The original password of the account.</p>
      * <blockquote>
-     * <p>If you forget your password, you can call the <a href="https://help.aliyun.com/document_detail/473815.html">ResetAccountPassword</a> operation to reset your password.</p>
+     * <p>If you forget the password of the account, you can call <a href="https://help.aliyun.com/document_detail/473815.html">ResetAccountPassword</a> to reset the password.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -63,7 +63,7 @@ public class ModifyAccountPasswordRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>This parameter is used only for internal maintenance. You do not need to specify this parameter.</p>
+     * <p>This parameter is used only for internal maintenance purposes. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>SDK</p>

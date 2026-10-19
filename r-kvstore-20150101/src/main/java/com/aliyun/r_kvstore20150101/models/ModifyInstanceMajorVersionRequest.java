@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceMajorVersionRequest extends TeaModel {
     /**
-     * <p>The time when you want to upgrade the major version. Valid values:</p>
+     * <p>The time when the upgrade is performed. Valid values:</p>
      * <ul>
-     * <li><strong>Immediately</strong> (default): immediately upgrades the major version.</li>
-     * <li><strong>MaintainTime</strong>: upgrades the major version within the maintenance window.</li>
+     * <li><strong>Immediately</strong>: The upgrade is performed immediately. This is the default value.</li>
+     * <li><strong>MaintainTime</strong>: The upgrade is performed during the maintenance window.</li>
      * </ul>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of an instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of the instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class ModifyInstanceMajorVersionRequest extends TeaModel {
     public String effectiveTime;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,14 @@ public class ModifyInstanceMajorVersionRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The major version to which you want to upgrade the instance. Valid values: <strong>4.0</strong> and <strong>5.0</strong>.</p>
+     * <p>The major version to which the instance is upgraded.</p>
+     * <ul>
+     * <li>Valid values for cloud-native instances: 6.0 or 7.0.</li>
+     * <li>Valid values for classic instances: 4.0 (not recommended) or 5.0.<blockquote>
+     * <p>Only upgrades to the same deployment mode are supported.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

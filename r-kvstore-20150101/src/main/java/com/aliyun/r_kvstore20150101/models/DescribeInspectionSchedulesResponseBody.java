@@ -4,10 +4,15 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInspectionSchedulesResponseBody extends TeaModel {
+    /**
+     * <p>The data.</p>
+     */
     @NameInMap("Data")
     public DescribeInspectionSchedulesResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A501A191-BD70-5E50-98A9-C2A486A82****</p>
      */
@@ -15,6 +20,8 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +59,9 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
 
     public static class DescribeInspectionSchedulesResponseBodyDataItems extends TeaModel {
         /**
+         * <p>The time when the scheduled task configuration was created.</p>
+         * <p>The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-04-21T02:26:18Z</p>
          */
@@ -59,6 +69,8 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The cron expression.</p>
+         * 
          * <strong>example:</strong>
          * <p>0 0 3 * * ?</p>
          */
@@ -66,6 +78,8 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
         public String cronExpression;
 
         /**
+         * <p>Indicates whether the task is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -73,6 +87,13 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
         public Long enabled;
 
         /**
+         * <p>The inspection items.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Supported inspection items include RESOURCE_USAGE, BIGKEY, HOTKEY, PERFORMANCE_METRICS, and SLOWLOG.</li>
+         * </ul>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>HOTKEY</p>
          */
@@ -80,6 +101,8 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
         public String inspectionItems;
 
         /**
+         * <p>The time window.</p>
+         * 
          * <strong>example:</strong>
          * <p>1h</p>
          */
@@ -87,6 +110,8 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
         public String inspectionWindow;
 
         /**
+         * <p>The list of associated instance IDs.</p>
+         * 
          * <strong>example:</strong>
          * <p>r-2zed6typz5j6djmb2x</p>
          */
@@ -94,6 +119,9 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
         public String instanceIds;
 
         /**
+         * <p>The next time the task is scheduled to run.</p>
+         * <p>The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-07-29T10:00:00Z</p>
          */
@@ -101,6 +129,8 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
         public String nextFireTime;
 
         /**
+         * <p>The notification configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -108,6 +138,8 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
         public String notifyConfig;
 
         /**
+         * <p>The language of the report.</p>
+         * 
          * <strong>example:</strong>
          * <p>zh-CN</p>
          */
@@ -115,6 +147,8 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
         public String reportLanguage;
 
         /**
+         * <p>The ID of the timed scheduling.</p>
+         * 
          * <strong>example:</strong>
          * <p>sch-b45811bf4bba46c8b6d233551da9xxxx</p>
          */
@@ -122,6 +156,8 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
         public String scheduleId;
 
         /**
+         * <p>The name of the timed scheduling.</p>
+         * 
          * <strong>example:</strong>
          * <p>sch-test</p>
          */
@@ -129,6 +165,8 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
         public String scheduleName;
 
         /**
+         * <p>The time zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>Asia/Shanghai</p>
          */
@@ -136,6 +174,9 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
         public String timezone;
 
         /**
+         * <p>The update time.</p>
+         * <p>The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-07-29T06:50:04Z</p>
          */
@@ -254,10 +295,15 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
     }
 
     public static class DescribeInspectionSchedulesResponseBodyData extends TeaModel {
+        /**
+         * <p>The array of scheduled task configurations.</p>
+         */
         @NameInMap("Items")
         public java.util.List<DescribeInspectionSchedulesResponseBodyDataItems> items;
 
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -265,6 +311,8 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
         public Long pageNum;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -272,6 +320,8 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */

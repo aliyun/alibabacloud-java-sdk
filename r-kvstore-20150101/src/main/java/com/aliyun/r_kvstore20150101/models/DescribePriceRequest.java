@@ -14,9 +14,9 @@ public class DescribePriceRequest extends TeaModel {
     public String businessInfo;
 
     /**
-     * <p>The storage capacity of the instance. Unit: MB. This parameter is used only to query Redis Open-Source Edition instances that are deployed in classic mode. We recommend that you use the <strong>InstanceClass</strong> parameter to specify an exact instance type.</p>
+     * <p>The storage capacity used to specify the instance type, in MB. This parameter is used only to query Redis Community Edition instances in classic deployment mode. We recommend that you use the <strong>InstanceClass</strong> parameter to specify an exact instance type.</p>
      * <blockquote>
-     * <p> If you specify the <strong>InstanceClass</strong> parameter, you do not need to specify the Capacity parameter.</p>
+     * <p>After you specify the <strong>InstanceClass</strong> parameter, you do not need to specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,8 +28,8 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li><strong>PostPaid</strong> (default): pay-as-you-go</li>
-     * <li><strong>PrePaid</strong>: subscription</li>
+     * <li><strong>PostPaid</strong> (default): pay-as-you-go.</li>
+     * <li><strong>PrePaid</strong>: subscription.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class DescribePriceRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The coupon code. Default value: youhuiquan_promotion_option_id_for_blank. This value indicates that no coupon code is available.</p>
+     * <p>The coupon code. Default value: youhuiquan_promotion_option_id_for_blank, which indicates that no coupon code is used.</p>
      * 
      * <strong>example:</strong>
      * <p>youhuiquan_promotion_option_id_for_blank</p>
@@ -48,7 +48,9 @@ public class DescribePriceRequest extends TeaModel {
     public String couponNo;
 
     /**
-     * <p>The engine version of the instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, and <strong>5.0</strong>.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;Database engine version of the Redis instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, <strong>5.0</strong>, and <strong>6.0</strong>.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;Database engine version of the Redis instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, and <strong>5.0</strong>.</p>
+     * <p>&lt;props=&quot;partner&quot;&gt;Database engine version of the Redis instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, and <strong>5.0</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>5.0</p>
@@ -57,10 +59,10 @@ public class DescribePriceRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>Specifies whether to forcefully change the configurations of the instance. Valid values:</p>
+     * <p>Specifies whether to forcibly change the configuration. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong>: forcefully changes the configurations.</li>
-     * <li><strong>true</strong> (default): does not forcefully change the configurations.</li>
+     * <li><strong>false</strong>: yes.</li>
+     * <li><strong>true</strong> (default): no.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,26 +72,21 @@ public class DescribePriceRequest extends TeaModel {
     public Boolean forceUpgrade;
 
     /**
-     * <p>The instance type.**** <strong>To view the instance type, perform the following steps:</strong></p>
+     * <p>The instance type specified by using the <strong>InstanceClass</strong> code. To find the <strong>InstanceClass</strong> code:</p>
      * <ol>
-     * <li>In the <a href="https://help.aliyun.com/document_detail/26350.html">Instance specifications</a> topic, click the link in the <strong>References for instance specifications</strong> column corresponding to the instance type that you want to view.</li>
-     * <li>In the instance type table of the specification documentation, find the instance type in the <strong>InstanceClass</strong> column.</li>
+     * <li>In the <a href="https://help.aliyun.com/document_detail/26350.html">instance type navigation</a>, select the desired instance type and click the value in the <strong>Architecture</strong> column to open the specification document.</li>
+     * <li>In the instance type table of the specification document, find the desired instance type and locate the code in the <strong>InstanceClass</strong> column.</li>
      * </ol>
      * <blockquote>
-     * <p> If you want to query new instances, in addition to key parameters, you must also specify at least the following parameters:</p>
-     * </blockquote>
+     * <p>The following example describes the parameters required for querying the price of a new instance. In addition to other key parameters, specify at least the following parameters:</p>
      * <ul>
-     * <li><p>To query a classic instance, specify this parameter.</p>
-     * </li>
-     * <li><p>To query a cloud-native standard instance, specify this parameter.</p>
-     * </li>
-     * <li><p>To query a cloud-native cluster instance, specify this parameter and the <strong>ShardCount</strong> parameter.</p>
-     * </li>
-     * <li><p>To query a cloud-native read/write splitting instance, specify this parameter and the <strong>Instances</strong> parameter.</p>
-     * </li>
-     * <li><p>To query multiple instances of different specifications or to query a Tair ESSD-based instance that has a custom storage type and storage capacity, specify the Instances parameter. In this case, you do not need to specify the InstanceClass parameter.</p>
-     * </li>
+     * <li>Classic Edition instance: specify this parameter.</li>
+     * <li>Cloud-native Edition standard architecture instance: specify this parameter.</li>
+     * <li>Cloud-native Edition cluster architecture instance: specify this parameter and the <strong>ShardCount</strong> parameter.</li>
+     * <li>Cloud-native Edition read/write splitting architecture instance: specify this parameter and the <strong>Instances</strong> parameter.</li>
+     * <li>Multiple instances of different types, or Tair ESSD-based instances (custom storage type and storage capacity): specify the Instances parameter (this parameter is not required).</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>redis.master.small.default</p>
@@ -100,7 +97,7 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p> This parameter is required when the <strong>OrderType</strong> parameter is set to <strong>UPGRADE</strong> or <strong>RENEW</strong>.</p>
+     * <p>This parameter is required when <strong>OrderType</strong> is set to <strong>UPGRADE</strong> or <strong>RENEW</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -110,7 +107,7 @@ public class DescribePriceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>If you want to query cloud-native read/write splitting instances, Tair ESSD-based instances, or instances of different specifications, you must specify this parameter as a JSON string. For more information, see the <strong>Additional description of the Instances parameter</strong> section.</p>
+     * <p>If you want to query the price of cloud-native read/write splitting architecture instances, Tair ESSD-based instances, or multiple instances of different types, specify this parameter. The value is a JSON-formatted string. For more information, see <strong>Additional description of the Instances parameter</strong> below.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;RegionId&quot;: &quot;cn-hangzhou&quot;,&quot;ZoneId&quot;: &quot;cn-hangzhou-b&quot;,&quot;ShardClass&quot;: &quot;tair.scm.with.proxy.standard.2m.8d&quot;,&quot;ShardCount&quot;: &quot;3&quot;,&quot;Period&quot;: &quot;1&quot;,&quot;Quantity&quot;: &quot;1&quot;}]</p>
@@ -121,8 +118,8 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The node type. Valid values:</p>
      * <ul>
-     * <li><strong>STAND_ALONE</strong>: standalone</li>
-     * <li><strong>MASTER_SLAVE</strong> (default): high availability (master-replica)</li>
+     * <li><strong>STAND_ALONE</strong>: standalone (single replica).</li>
+     * <li><strong>MASTER_SLAVE</strong> (default): high availability (dual replicas).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -132,10 +129,10 @@ public class DescribePriceRequest extends TeaModel {
     public String nodeType;
 
     /**
-     * <p>Specifies whether to return parameters related to the order. Valid values:</p>
+     * <p>Specifies whether to return order parameters. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default)</li>
-     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default): does not return order parameters.</li>
+     * <li><strong>true</strong>: returns order parameters.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -147,10 +144,10 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The order type. Valid values:</p>
      * <ul>
-     * <li><strong>BUY</strong>: specifies the orders that are used to purchase instances.</li>
-     * <li><strong>UPGRADE</strong>: specifies the orders that are used to change the configurations of instances.</li>
-     * <li><strong>RENEW</strong>: specifies the orders that are used to renew instances.</li>
-     * <li><strong>CONVERT</strong>: specifies the orders that are used to change the billing methods of instances.</li>
+     * <li><strong>BUY</strong>: new purchase.</li>
+     * <li><strong>UPGRADE</strong>: configuration change.</li>
+     * <li><strong>RENEW</strong>: renewal.</li>
+     * <li><strong>CONVERT</strong>: billing method conversion.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -167,7 +164,7 @@ public class DescribePriceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The subscription duration. Unit: month. Valid values: <strong>1</strong>, 2, 3, 4, 5, 6, 7, 8, <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, and <strong>36</strong>.</p>
+     * <p>The subscription duration, in months. Valid values: <strong>1</strong> to <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, and <strong>36</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -176,7 +173,7 @@ public class DescribePriceRequest extends TeaModel {
     public Long period;
 
     /**
-     * <p>The number of instances that you want to purchase. Valid values: <strong>1</strong> to <strong>30</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The number of instances to purchase. Valid values: <strong>1</strong> to <strong>30</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -185,7 +182,7 @@ public class DescribePriceRequest extends TeaModel {
     public Long quantity;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> to query available regions.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -200,9 +197,9 @@ public class DescribePriceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the secondary zone. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> API to query it.</p>
+     * <p>The secondary zone ID. You can call <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> to query available zones.</p>
      * <blockquote>
-     * <p>The values passed for this parameter and the ZoneId parameter must be different.</p>
+     * <p>The value of this parameter must be different from the value of the ZoneId parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -215,7 +212,7 @@ public class DescribePriceRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The number of data shards in the cloud-native cluster instance.</p>
+     * <p>The number of data shard nodes in a cloud-native cluster instance.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -224,7 +221,7 @@ public class DescribePriceRequest extends TeaModel {
     public Integer shardCount;
 
     /**
-     * <p>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> operation to query the zone ID.</p>
+     * <p>The zone ID. You can call <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> to query available zones.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-e</p>

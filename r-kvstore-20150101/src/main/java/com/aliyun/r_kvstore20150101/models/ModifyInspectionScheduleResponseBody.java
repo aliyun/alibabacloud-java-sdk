@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyInspectionScheduleResponseBody extends TeaModel {
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>AD7E16AA-6B23-43BF-979C-07D957FB****</p>
      */

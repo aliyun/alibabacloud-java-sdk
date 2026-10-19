@@ -7,10 +7,8 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     /**
      * <p>The network type. Valid values:</p>
      * <ul>
-     * <li><p><strong>CLASSIC</strong>: Classic Network.</p>
-     * </li>
-     * <li><p><strong>VPC</strong>: VPC.</p>
-     * </li>
+     * <li><strong>CLASSIC</strong>: classic network.</li>
+     * <li><strong>VPC</strong>: virtual private cloud (VPC).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,9 +17,6 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
 
-    /**
-     * <p>Details about the instance\&quot;s network connections.</p>
-     */
     @NameInMap("NetInfoItems")
     public DescribeDBInstanceNetInfoResponseBodyNetInfoItems netInfoItems;
 

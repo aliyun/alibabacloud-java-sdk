@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateParameterGroupRequest extends TeaModel {
     /**
-     * <p>The service category. Valid values:</p>
+     * <p>The product category. Valid values:</p>
      * <ul>
-     * <li><strong>standard</strong>: Community Edition</li>
-     * <li><strong>enterprise</strong>: Enhanced Edition (Tair)</li>
+     * <li><strong>standard</strong>: Redis Community Edition.</li>
+     * <li><strong>enterprise</strong>: Tair (Enterprise Edition).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -21,9 +21,9 @@ public class CreateParameterGroupRequest extends TeaModel {
     /**
      * <p>The engine type. Valid values:</p>
      * <ul>
-     * <li><strong>redis</strong>: ApsaraDB for Redis Community Edition instance or Tair DRAM-based instance</li>
-     * <li><strong>tair_pena</strong>: Tair persistent memory-optimized instance</li>
-     * <li><strong>tair_pdb</strong>: Tair ESSD/SSD-based instance</li>
+     * <li><strong>redis</strong>: Redis Community Edition or Tair memory-optimized.</li>
+     * <li><strong>tair_pena</strong>: Tair persistent memory-optimized.</li>
+     * <li><strong>tair_pdb</strong>: Tair disk-optimized (ESSD/SSD).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -34,12 +34,12 @@ public class CreateParameterGroupRequest extends TeaModel {
     public String engineType;
 
     /**
-     * <p>The compatible engine version. Valid values:</p>
+     * <p>The compatible version. Valid values:</p>
      * <ul>
-     * <li>For ApsaraDB for Redis Community Edition instances, set the parameter to <strong>5.0</strong>, <strong>6.0</strong>, or <strong>7.0</strong>.</li>
-     * <li>For Tair DRAM-based instances that are compatible with Redis 5.0, 6.0, or 7.0, set the parameter to <strong>5.0</strong>, <strong>6.0</strong>, or <strong>7.0</strong>.</li>
-     * <li>For Tair persistent memory-optimized instances that are compatible with Redis 6.0, set the parameter to <strong>1.0</strong>.</li>
-     * <li>For Tair ESSD-based instances that are compatible with Redis 6.0, set the parameter to <strong>1.0</strong>. For Tair SSD-based instances that are compatible with Redis 6.0, set the parameter to <strong>2.0</strong>.</li>
+     * <li>Redis Community Edition supports <strong>5.0</strong>, <strong>6.0</strong>, and <strong>7.0</strong>.</li>
+     * <li>Tair memory-optimized is compatible with Redis 5.0, 6.0, and 7.0 protocols. Set this parameter to <strong>5.0</strong>, <strong>6.0</strong>, or <strong>7.0</strong>.</li>
+     * <li>Tair persistent memory-optimized is compatible with the Redis 6.0 protocol. Set this parameter to <strong>1.0</strong>.</li>
+     * <li>Tair disk-optimized (ESSD/SSD) is compatible with the Redis 6.0 protocol. To create a parameter template for the ESSD type, set this parameter to <strong>1.0</strong>. To create a parameter template for the SSD type, set this parameter to <strong>2.0</strong>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -56,7 +56,7 @@ public class CreateParameterGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The description of the parameter template. The description must be 0 to 200 characters in length.</p>
+     * <p>The description of the parameter template. The description can be 0 to 200 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -65,10 +65,10 @@ public class CreateParameterGroupRequest extends TeaModel {
     public String parameterGroupDesc;
 
     /**
-     * <p>The new name of the parameter template. The name must meet the following requirements:</p>
+     * <p>The name of the parameter template. The name must meet the following requirements:</p>
      * <ul>
      * <li>The name can contain letters, digits, and underscores (_). It must start with a letter and cannot contain Chinese characters.</li>
-     * <li>The name can be 8 to 64 characters in length.</li>
+     * <li>The name must be 8 to 64 characters in length.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -79,9 +79,9 @@ public class CreateParameterGroupRequest extends TeaModel {
     public String parameterGroupName;
 
     /**
-     * <p>A JSON-formatted object that specifies the parameter-value pairs. Format: {&quot;Parameter 1&quot;:&quot;Value 1&quot;,&quot;Parameter 2&quot;:&quot;Value 2&quot;...}. The specified value overwrites the original content.</p>
+     * <p>A JSON string that consists of parameters and their values, in the following format: {&quot;Parameter 1&quot;:&quot;Value of Parameter 1&quot;,&quot;Parameter 2&quot;:&quot;Value of Parameter 2&quot;...}.</p>
      * <blockquote>
-     * <p> The parameters that can be added for different editions are displayed in the console.</p>
+     * <p>The parameters that can be added vary by version. Refer to the console for details.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

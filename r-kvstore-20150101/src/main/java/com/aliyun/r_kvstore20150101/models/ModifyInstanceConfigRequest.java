@@ -33,7 +33,7 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The Sentinel compatibility mode. This parameter applies to non-cluster instances. Valid values:</p>
+     * <p>The Sentinel compatibility mode, which applies to non-cluster instances. Valid values:</p>
      * <ul>
      * <li><strong>no</strong> (default): disabled.</li>
      * <li><strong>yes</strong>: enabled.<blockquote>
@@ -62,7 +62,7 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public String paramNoLooseSentinelPasswordFreeAccess;
 
     /**
-     * <p>After Sentinel mode and the ParamNoLooseSentinelPasswordFreeAccess parameter are enabled, use this parameter to add additional password-free commands (empty by default).</p>
+     * <p>After Sentinel mode and the ParamNoLooseSentinelPasswordFreeAccess parameter are enabled, you can use this parameter to add additional password-free commands (empty by default).</p>
      * <blockquote>
      * <ul>
      * <li>After this parameter is set, the specified commands can be run without a password on any connection. Proceed with caution.</li>
@@ -77,10 +77,10 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public String paramNoLooseSentinelPasswordFreeCommands;
 
     /**
-     * <p>The synchronization pattern. Valid values:</p>
+     * <p>The synchronization mode. Valid values:</p>
      * <ul>
      * <li><strong>async</strong> (default): asynchronous</li>
-     * <li><strong>semisync</strong>: semi-synchronous.</li>
+     * <li><strong>semisync</strong>: semi-synchronous</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -90,11 +90,11 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public String paramReplMode;
 
     /**
-     * <p>The degradation threshold for semi-synchronous mode. This parameter is supported only in semi-synchronous mode. Unit: ms. Valid values: 10 to 60000. Default value: 500.</p>
+     * <p>The degradation threshold for semi-synchronous mode. This parameter can be configured only for semi-synchronous mode. Unit: ms. Valid values: 10 to 60000. Default value: 500.</p>
      * <blockquote>
      * <ul>
-     * <li>When the synchronization latency exceeds this threshold, the synchronous mode automatically transforms to asynchronous. When the latency is eliminated, the synchronous mode automatically transforms back to semi-synchronous.</li>
-     * <li>This parameter is supported only by Tair Enterprise instances. This feature is in public preview.</li>
+     * <li>When the synchronization latency exceeds this threshold, the synchronization mode automatically switches to asynchronous. When the synchronization latency is eliminated, the synchronization mode automatically switches back to semi-synchronous.</li>
+     * <li>Only Tair Enterprise instances are supported. This feature is in public preview.</li>
      * </ul>
      * </blockquote>
      * 
@@ -105,7 +105,7 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public String paramSemisyncReplTimeout;
 
     /**
-     * <p>The Sentinel compatibility mode. This parameter applies to instances that use the proxy connection mode in cluster architecture or instances that use the read/write splitting architecture. Valid values:</p>
+     * <p>The Sentinel compatibility mode, which applies to instances in cluster architecture with proxy connection mode or read/write splitting architecture. Valid values:</p>
      * <ul>
      * <li><strong>0</strong> (default): disabled.</li>
      * <li><strong>1</strong>: enabled.<blockquote>

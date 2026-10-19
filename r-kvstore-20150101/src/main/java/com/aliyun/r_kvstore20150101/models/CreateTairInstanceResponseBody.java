@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTairInstanceResponseBody extends TeaModel {
     /**
-     * <p>The maximum bandwidth in MB/s.</p>
+     * <p>The maximum bandwidth of the instance. Unit: MB/s.</p>
      * 
      * <strong>example:</strong>
      * <p>96</p>
@@ -14,12 +14,10 @@ public class CreateTairInstanceResponseBody extends TeaModel {
     public Long bandwidth;
 
     /**
-     * <p>The charge type. Valid values:</p>
+     * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>PrePaid</strong>: prepaid.</p>
-     * </li>
-     * <li><p><strong>PostPaid</strong>: pay-as-you-go.</p>
-     * </li>
+     * <li><strong>PrePaid</strong>: subscription.</li>
+     * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +27,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The detailed configuration of the instance, returned as a JSON string. For parameter details, see <a href="https://help.aliyun.com/document_detail/43885.html">Configuration parameters</a>.</p>
+     * <p>The detailed configurations of the instance, in the format of a JSON character string. For more information about the parameters, see Parameter settings description.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;EvictionPolicy\&quot;:\&quot;volatile-lru\&quot;,\&quot;hash-max-ziplist-entries\&quot;:512,\&quot;zset-max-ziplist-entries\&quot;:128,\&quot;list-max-ziplist-entries\&quot;:512,\&quot;list-max-ziplist-value\&quot;:64,\&quot;zset-max-ziplist-value\&quot;:64,\&quot;set-max-intset-entries\&quot;:512,\&quot;hash-max-ziplist-value\&quot;:64}</p>
@@ -38,7 +36,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
     public String config;
 
     /**
-     * <p>The internal connection address.</p>
+     * <p>The internal network connection endpoint of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>r-bp13ac3d047b****.tairpena.rds.aliyuncs.com</p>
@@ -47,7 +45,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
     public String connectionDomain;
 
     /**
-     * <p>The maximum number of connections.</p>
+     * <p>The maximum number of connections supported by the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -67,7 +65,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
     /**
      * <p>The instance name.</p>
      * <blockquote>
-     * <p>This parameter is returned only when the <strong>InstanceName</strong> parameter is specified in the request.</p>
+     * <p>This parameter is returned only when the <strong>InstanceName</strong> request parameter is specified.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -77,7 +75,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The instance status. The value is always <strong>Creating</strong>.</p>
+     * <p>The current status of the instance. The value is fixed as <strong>Creating</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>Creating</p>
@@ -95,7 +93,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
     public Long orderId;
 
     /**
-     * <p>The instance port.</p>
+     * <p>The port number of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>6379</p>
@@ -104,7 +102,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
     public Integer port;
 
     /**
-     * <p>The theoretical maximum number of read and write operations per second (QPS) for the instance.</p>
+     * <p>The maximum number of read and write operations processed per second. Unit: operations per second. This value is the theoretical maximum for the current instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>100000</p>
@@ -140,7 +138,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The availability zone ID.</p>
+     * <p>The zone ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-h</p>

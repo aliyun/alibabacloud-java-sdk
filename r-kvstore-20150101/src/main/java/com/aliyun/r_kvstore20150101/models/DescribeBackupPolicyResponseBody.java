@@ -25,8 +25,8 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the backup service is enabled for the instance. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: enabled.</li>
-     * <li><strong>0</strong>: disabled.</li>
+     * <li><strong>1</strong>: Enabled.</li>
+     * <li><strong>0</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,8 +38,8 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     /**
      * <p>Indicates whether incremental backup is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: enabled.</li>
-     * <li><strong>0</strong>: disabled.</li>
+     * <li><strong>1</strong>: Enabled.</li>
+     * <li><strong>0</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

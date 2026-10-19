@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceMonitorRequest extends TeaModel {
     /**
-     * <p>The instance ID.</p>
+     * <p>The ID of the Tair instance. This operation is used only to modify the monitoring collection granularity of a Tair instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,8 @@ public class ModifyDBInstanceMonitorRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>This parameter is deprecated. The monitoring granularity is fixed at 60 seconds.</p>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated and uses a fixed value of 60.</p>
+     * <p>The collection granularity of monitoring data. Unit: seconds. Default value: 60.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

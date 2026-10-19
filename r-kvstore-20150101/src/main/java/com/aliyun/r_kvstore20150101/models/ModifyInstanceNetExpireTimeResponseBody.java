@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>r-bp1zxszhcgatnx****</p>
@@ -17,7 +17,7 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
     public ModifyInstanceNetExpireTimeResponseBodyNetInfoItems netInfoItems;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9C4AF387-1EA3-4C84-8013-3F6B973EDDF5</p>

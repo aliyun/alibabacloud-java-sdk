@@ -7,9 +7,9 @@ public class DescribeInstancesRequest extends TeaModel {
     /**
      * <p>The architecture type. Valid values:</p>
      * <ul>
-     * <li><strong>cluster</strong>: cluster.</li>
-     * <li><strong>standard</strong>: standard.</li>
-     * <li><strong>rwsplit</strong>: read/write splitting.</li>
+     * <li><strong>cluster</strong>: cluster edition</li>
+     * <li><strong>standard</strong>: standard edition</li>
+     * <li><strong>rwsplit</strong>: read/write splitting edition</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,8 +21,8 @@ public class DescribeInstancesRequest extends TeaModel {
     /**
      * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li><strong>PrePaid</strong>: subscription.</li>
-     * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
+     * <li><strong>PrePaid</strong>: subscription</li>
+     * <li><strong>PostPaid</strong>: pay-as-you-go</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,10 +32,10 @@ public class DescribeInstancesRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The edition of the instance. Valid values:</p>
+     * <p>The edition type of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>Community</strong>: ApsaraDB for Redis Community Edition.</li>
-     * <li><strong>Enterprise</strong>: Tair Enhanced Edition.</li>
+     * <li><strong>Community</strong>: open-source Redis</li>
+     * <li><strong>Enterprise</strong>: Tair Enterprise Edition</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,8 +56,8 @@ public class DescribeInstancesRequest extends TeaModel {
     /**
      * <p>The expiration status of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: expired.</li>
-     * <li><strong>false</strong>: not expired.</li>
+     * <li><strong>true</strong>: The instance has expired.</li>
+     * <li><strong>false</strong>: The instance has not expired.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,10 +67,10 @@ public class DescribeInstancesRequest extends TeaModel {
     public String expired;
 
     /**
-     * <p>Specifies whether to filter child instances of distributed instances from the returned instance list. Valid values:</p>
+     * <p>Specifies whether to filter child instances of distributed instances in the returned instance list. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: returns only child instance information.</li>
-     * <li><strong>false</strong>: does not return child instance information.</li>
+     * <li><strong>true</strong>: Only child instance information is returned.</li>
+     * <li><strong>false</strong>: Child instance information is not returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,7 +80,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public Boolean globalInstance;
 
     /**
-     * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/107984.html">Instance types</a>.</p>
+     * <p>The instance specifications. For more information, see <a href="https://help.aliyun.com/document_detail/107984.html">Instance specifications</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>redis.master.small.default</p>
@@ -89,9 +89,9 @@ public class DescribeInstancesRequest extends TeaModel {
     public String instanceClass;
 
     /**
-     * <p>The IDs of the instances to query.</p>
+     * <p>The IDs of the instances to be queried.</p>
      * <blockquote>
-     * <p>To specify multiple instance IDs, separate them with commas (,). A maximum of 30 instance IDs can be specified in a single request.</p>
+     * <p>To specify multiple instance IDs, separate the IDs with commas (,). You can specify up to 30 instance IDs in a single request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -103,19 +103,19 @@ public class DescribeInstancesRequest extends TeaModel {
     /**
      * <p>The status of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>Normal</strong>: normal.</li>
-     * <li><strong>Creating</strong>: being created.</li>
-     * <li><strong>Changing</strong>: being changed.</li>
-     * <li><strong>Inactive</strong>: disabled.</li>
-     * <li><strong>Flushing</strong>: being flushed.</li>
-     * <li><strong>Released</strong>: released.</li>
-     * <li><strong>Transforming</strong>: being transformed.</li>
-     * <li><strong>Migrating</strong>: being migrated.</li>
-     * <li><strong>BackupRecovering</strong>: being restored from a backup.</li>
-     * <li><strong>MinorVersionUpgrading</strong>: minor version being upgraded.</li>
-     * <li><strong>NetworkModifying</strong>: network type being changed.</li>
-     * <li><strong>SSLModifying</strong>: SSL being changed.</li>
-     * <li><strong>MajorVersionUpgrading</strong>: major version being upgraded. The instance can be accessed normally.</li>
+     * <li><strong>Normal</strong>: normal</li>
+     * <li><strong>Creating</strong>: creating</li>
+     * <li><strong>Changing</strong>: changing</li>
+     * <li><strong>Inactive</strong>: disabled</li>
+     * <li><strong>Flushing</strong>: purge in progress</li>
+     * <li><strong>Released</strong>: released</li>
+     * <li><strong>Transforming</strong>: transforming</li>
+     * <li><strong>Migrating</strong>: migrating</li>
+     * <li><strong>BackupRecovering</strong>: recovering from backup</li>
+     * <li><strong>MinorVersionUpgrading</strong>: minor version upgrade in progress</li>
+     * <li><strong>NetworkModifying</strong>: changing the network type</li>
+     * <li><strong>SSLModifying</strong>: changing SSL configurations</li>
+     * <li><strong>MajorVersionUpgrading</strong>: major engine version upgrade in progress, during which the instance remains accessible</li>
      * </ul>
      * <blockquote>
      * <p>For more information about instance statuses, see <a href="https://help.aliyun.com/document_detail/200740.html">Instance statuses and impacts</a>.</p>
@@ -128,11 +128,11 @@ public class DescribeInstancesRequest extends TeaModel {
     public String instanceStatus;
 
     /**
-     * <p>The category of the instance. Valid values:</p>
+     * <p>The instance type. Valid values:</p>
      * <ul>
-     * <li><strong>Tair</strong>: Tair (Enhanced Edition)</li>
-     * <li><strong>Redis</strong>: ApsaraDB for Redis Community Edition</li>
-     * <li><strong>Memcache</strong></li>
+     * <li><strong>Tair</strong>: Tair (Enterprise Edition)</li>
+     * <li><strong>Redis</strong>: open-source Redis</li>
+     * <li><strong>Memcache</strong>: Memcache</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -142,10 +142,10 @@ public class DescribeInstancesRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The network type of the instance. Valid values:</p>
+     * <p>The network type. Valid values:</p>
      * <ul>
-     * <li><strong>CLASSIC</strong>: classic network.</li>
-     * <li><strong>VPC</strong>: virtual private cloud (VPC).</li>
+     * <li><strong>CLASSIC</strong>: classic network</li>
+     * <li><strong>VPC</strong>: VPC</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -157,10 +157,10 @@ public class DescribeInstancesRequest extends TeaModel {
     /**
      * <p>The node type. Valid values:</p>
      * <ul>
-     * <li><strong>MASTER_SLAVE</strong>: high availability (dual-replica)</li>
-     * <li><strong>STAND_ALONE</strong>: single replica</li>
+     * <li><strong>MASTER_SLAVE</strong>: high-availability (dual-replica)</li>
+     * <li><strong>STAND_ALONE</strong>: single-replica</li>
      * <li><strong>double</strong>: dual-replica</li>
-     * <li><strong>single</strong>: single replica<blockquote>
+     * <li><strong>single</strong>: single-replica<blockquote>
      * <p>For cloud-native instances, select <strong>MASTER_SLAVE</strong> or <strong>STAND_ALONE</strong>. For classic instances, select <strong>double</strong> or <strong>single</strong>.</p>
      * </blockquote>
      * </li>
@@ -188,7 +188,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The maximum number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>30</strong>.</p>
+     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -197,7 +197,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The private IP address of the VPC.</p>
+     * <p>The private IP address in the VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>172.16.49.***</p>
@@ -208,7 +208,7 @@ public class DescribeInstancesRequest extends TeaModel {
     /**
      * <p>The region ID of the instance.</p>
      * <blockquote>
-     * <p>When calling this API, if the <strong>Tag</strong> parameter is specified, this parameter is required.</p>
+     * <p>When you call this operation, if the <strong>Tag</strong> parameter is specified, this parameter is required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -218,9 +218,9 @@ public class DescribeInstancesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> API or use the console to obtain the list of resource group IDs. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation or use the console to obtain the list of resource group IDs. For related operations, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -236,7 +236,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The keyword used for fuzzy search by instance name or instance ID.</p>
+     * <p>The search keyword. Fuzzy match is supported for instance names and instance IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>apitest</p>
@@ -248,13 +248,13 @@ public class DescribeInstancesRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The tags of the instance.</p>
+     * <p>The tag information of the instance.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeInstancesRequestTag> tag;
 
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <p>The vSwitch ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-bp1e7clcw529l773d****</p>
@@ -263,7 +263,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the VPC.</p>
+     * <p>The VPC ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1nme44gek34slfc****</p>
@@ -503,22 +503,22 @@ public class DescribeInstancesRequest extends TeaModel {
 
     public static class DescribeInstancesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. The tag key and value together form a key-value pair.</p>
+         * <p>The tag key. It forms a key-value pair with the tag value.</p>
          * <blockquote>
-         * <p>A maximum of 5 tag key-value pairs can be specified at a time.</p>
+         * <p>You can specify up to 5 tag key-value pairs in a single request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>存储类型</p>
+         * <p>Storage type</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag. The tag value and key together form a key-value pair.</p>
+         * <p>The tag value. It forms a key-value pair with the tag key.</p>
          * 
          * <strong>example:</strong>
-         * <p>开发</p>
+         * <p>Development</p>
          */
         @NameInMap("Value")
         public String value;

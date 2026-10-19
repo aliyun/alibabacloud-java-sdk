@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceAutoRenewalAttributeRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -16,7 +16,7 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
      * <blockquote>
-     * <p>By default, the system checks whether auto-renewal is enabled for all instances.</p>
+     * <p>By default, the system queries whether enable auto-renewal is configured for all instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. The value must be an integer greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be greater than <strong>0</strong> and cannot exceed the maximum value of Integer. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,9 +41,9 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
+     * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
      * <blockquote>
-     * <p>The default value is <strong>30</strong>.</p>
+     * <p>Default value: <strong>30</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AddShardingNodeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables auto-renewal. Make sure that your account has sufficient balance.</li>
-     * <li><strong>false</strong>: disables auto-renewal. You must manually renew the instance in the console before the instance expires. For more information, see <a href="https://help.aliyun.com/document_detail/26352.html">Instance renewal</a>.</li>
+     * <li><strong>true</strong>: Automatic payment is enabled. Make sure that your account has sufficient balance.</li>
+     * <li><strong>false</strong>: Automatic payment is disabled. You must manually complete the payment in the console. For more information, see <a href="https://help.aliyun.com/document_detail/26352.html">Manual renewal</a>.</li>
      * </ul>
      * <blockquote>
-     * <p> Default value: <strong>true</strong>.</p>
+     * <p>Default value: <strong>true</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class AddShardingNodeRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The business information. This is an additional parameter.</p>
+     * <p>The additional parameter for business information.</p>
      * 
      * <strong>example:</strong>
      * <p>000000000</p>
@@ -30,7 +30,7 @@ public class AddShardingNodeRequest extends TeaModel {
     public String businessInfo;
 
     /**
-     * <p>The ID of the coupon.</p>
+     * <p>The coupon code.</p>
      * 
      * <strong>example:</strong>
      * <p>youhuiquan_promotion_option_id_for_blank</p>
@@ -39,10 +39,10 @@ public class AddShardingNodeRequest extends TeaModel {
     public String couponNo;
 
     /**
-     * <p>Specifies whether to enable forced transmission during a configuration change. Valid values:</p>
+     * <p>Specifies whether to enable forced transmission. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): Before the configuration change, the system checks the minor version of the instance. If the minor version of the instance is outdated, an error is reported. You must update the minor version of the instance and try again.</li>
-     * <li><strong>true</strong>: The system skips the version check and directly performs the configuration change.</li>
+     * <li><strong>false</strong> (default): Before the Upgrade/Downgrade, the system checks the current minor engine version of the instance. If the minor engine version is outdated, an error is returned. You must upgrade the minor engine version and retry.</li>
+     * <li><strong>true</strong>: Skips the check and directly executes the Upgrade/Downgrade operation.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class AddShardingNodeRequest extends TeaModel {
     public Boolean forceTrans;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,9 +77,9 @@ public class AddShardingNodeRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The number of data shards that you want to add. Default value: <strong>1</strong>.</p>
+     * <p>The number of shards to add. Default value: <strong>1</strong>.</p>
      * <blockquote>
-     * <p> The instance can contain 2 to 256 data shards. You can add up to 64 data shards at a time. Make sure that the number of shards does not exceed this limit.</p>
+     * <p>The minimum total number of shards for an instance is 2. You can add up to 64 shards in a single operation, and the total number of shards for an instance cannot exceed 256. Make sure that the number of shards does not exceed this limit.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -89,7 +89,7 @@ public class AddShardingNodeRequest extends TeaModel {
     public Integer shardCount;
 
     /**
-     * <p>The source of the operation. This parameter is used only for internal maintenance. You do not need to specify this parameter.</p>
+     * <p>The request source. This parameter is used only for internal maintenance and does not need to be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>SDK</p>
@@ -98,7 +98,8 @@ public class AddShardingNodeRequest extends TeaModel {
     public String sourceBiz;
 
     /**
-     * <p>The vSwitch ID. You can specify a different vSwitch within the same virtual private cloud (VPC). In this case, the new data shards are created in the specified vSwitch. If you do not specify this parameter, the new data shards are created in the original vSwitch.</p>
+     * <p>The ID of a different vSwitch within the same VPC. The new data shards are created under the specified vSwitch.
+     * If you leave this parameter empty, the new data shards are created under the original vSwitch.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-bp1e7clcw529l773d****</p>

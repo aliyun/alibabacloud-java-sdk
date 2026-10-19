@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceVpcAuthModeRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,13 +30,13 @@ public class ModifyInstanceVpcAuthModeRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>Specifies whether to disable password-free access. Valid values:</p>
+     * <p>The authentication mode in a VPC. Valid values:</p>
      * <ul>
-     * <li><strong>Open</strong>: disables password-free access.</li>
-     * <li><strong>Close</strong>: enables password-free access.</li>
+     * <li><strong>Open</strong>: Uses password authentication.</li>
+     * <li><strong>Close</strong>: Disables password authentication and enables password-free access.</li>
      * </ul>
      * <blockquote>
-     * <p> Default value: <strong>Open</strong>.</p>
+     * <p>Default value: <strong>Open</strong>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

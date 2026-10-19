@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyBackupPolicyRequest extends TeaModel {
     /**
-     * <p>The number of days for which you want to retain data backup files. Valid values: 7 to 730. Default value: 7.</p>
+     * <p>The number of days for which data backups are retained. Default value: 7. Valid values: 7 to 730.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -14,14 +14,14 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public Integer backupRetentionPeriod;
 
     /**
-     * <p>Specifies whether to enable the data flashback feature for the instance. Valid values:</p>
+     * <p>Specifies whether to enable the data flashback feature. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: enables the data flashback feature. You must also enable append-only file (AOF) persistence by setting <code>appendonly</code> to <code>yes</code> in the parameter settings of the instance. Then, you can use the data flashback feature.</li>
-     * <li><strong>0</strong> (default): disables the data flashback feature.</li>
-     * </ul>
-     * <blockquote>
-     * <p> This parameter is available only for Tair (Enterprise Edition) DRAM-based and persistent memory-optimized instances. For more information, see <a href="https://help.aliyun.com/document_detail/148479.html">Data flashback</a>.</p>
+     * <li><strong>1</strong>: Enabled. Make sure that append-only file (AOF) persistence is enabled in the parameter settings of the instance (<code>appendonly</code> is set to <code>yes</code>). The data flashback feature is available only after AOF persistence is enabled.</li>
+     * <li><strong>0</strong>: Disabled. This is the default value.<blockquote>
+     * <p>This parameter is supported only by Tair (Enterprise Edition) memory-optimized and persistent memory-optimized instances. For more information, see <a href="https://help.aliyun.com/document_detail/148479.html">Data flashback</a>.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -30,7 +30,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public Integer enableBackupLog;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The days of the week to back up data. Valid values:</p>
+     * <p>The backup cycle. Valid values:</p>
      * <ul>
      * <li><strong>Monday</strong></li>
      * <li><strong>Tuesday</strong></li>
@@ -57,7 +57,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
      * <li><strong>Sunday</strong></li>
      * </ul>
      * <blockquote>
-     * <p>Separate multiple options with commas (,).</p>
+     * <p>You can specify multiple values. Separate them with commas (,).</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -68,9 +68,9 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String preferredBackupPeriod;
 
     /**
-     * <p>The time range to back up data. Specify the time in the <em>HH:mm</em>Z-<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+     * <p>The backup time. Specify the time in the <i>HH:mm</i>Z-<i>HH:mm</i>Z format (UTC).</p>
      * <blockquote>
-     * <p>The beginning and end of the time range must be on the hour. The duration must be an hour.</p>
+     * <p>The time must be on the hour, and the interval must be 1 hour.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

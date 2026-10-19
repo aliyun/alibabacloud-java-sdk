@@ -5,10 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateInstancesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic payment. Valid values:
-     * \* <strong>true</strong>: Enables automatic payment. This is the default value.
-     * \* <strong>false</strong>: Disables automatic payment. You must go to the console to complete the payment. In the top navigation bar, choose <strong>Expenses</strong> &gt; <strong>Renewal Management</strong>. In the navigation pane on the left, click <strong>Or*er Management</strong> &gt; <strong>My Or*ers</strong>, find the or*er, and then complete the payment.
-     * \&gt; This parameter is valid only when <strong>ChargeType</strong> is set to <strong>PrePaid</strong> in <strong>Instances</strong>.</p>
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: enables automatic payment. This is the default value.</li>
+     * <li><strong>false</strong>: disables automatic payment. You must manually pay for the order. In the top navigation bar of the console, choose <strong>Billing</strong> &gt; <strong>Renewal Management</strong>. In the left-side navigation pane, choose <strong>Order Management</strong> &gt; <strong>My Orders</strong>, find the order, and then complete the payment.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is available only when the <strong>ChargeType</strong> parameter in the <strong>Instances</strong> array is set to <strong>PrePaid</strong>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -17,10 +21,14 @@ public class CreateInstancesRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for the instance. Valid values:
-     * \* <strong>true</strong>: Enables auto-renewal.
-     * \* <strong>false</strong>: Disables auto-renewal. This is the default value.
-     * \&gt; This parameter is valid only when <strong>ChargeType</strong> is set to <strong>PrePaid</strong> in <strong>Instances</strong>.</p>
+     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: enables auto-renewal.</li>
+     * <li><strong>false</strong>: disables auto-renewal. This is the default value.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is available only when the <strong>ChargeType</strong> parameter in the <strong>Instances</strong> array is set to <strong>PrePaid</strong>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -29,7 +37,7 @@ public class CreateInstancesRequest extends TeaModel {
     public String autoRenew;
 
     /**
-     * <p>Additional business information.</p>
+     * <p>The extended business information.</p>
      * 
      * <strong>example:</strong>
      * <p>000000000</p>
@@ -38,7 +46,7 @@ public class CreateInstancesRequest extends TeaModel {
     public String businessInfo;
 
     /**
-     * <p>The coupon code. The default value is <code>youhuiquan_promotion_option_id_for_blank</code>.</p>
+     * <p>The coupon code. Default value: <code>youhuiquan_promotion_option_id_for_blank</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>youhuiquan_promotion_option_id_for_blank</p>
@@ -47,7 +55,10 @@ public class CreateInstancesRequest extends TeaModel {
     public String couponNo;
 
     /**
-     * <p>The Redis-compatible engine version for the instance. Valid values: <strong>4.0</strong> and <strong>5.0</strong>. The default value is <strong>5.0</strong>.</p>
+     * <p>The Redis-compatible engine version of the instance. Valid values: <strong>4.0</strong> and <strong>5.0</strong>.</p>
+     * <blockquote>
+     * <p>Default value: <strong>5.0</strong>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>5.0</p>
@@ -56,7 +67,7 @@ public class CreateInstancesRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The configurations of the new instances, specified in JSON format. For more information, see the details of the Instances parameter.</p>
+     * <p>The configuration information of the new instances. The value must be in JSON format. For more information, see the supplementary description of the Instances parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,10 +95,14 @@ public class CreateInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Specifies whether to rebuild an instance from the recycle bin. Valid values:
-     * \* <strong>true</strong>: Rebuilds the instance.
-     * \* <strong>false</strong>: Does not rebuild the instance. This is the default value.
-     * \&gt; This parameter is valid only when <strong>SrcDBInstanceId</strong> is specified in <strong>Instances</strong>.</p>
+     * <p>Specifies whether to rebuild and restore the source instance from the recycle bin. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: yes.</li>
+     * <li><strong>false</strong>: no. This is the default value.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is available only when the <strong>SrcDBInstanceId</strong> parameter is specified in the <strong>Instances</strong> array.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -96,7 +111,7 @@ public class CreateInstancesRequest extends TeaModel {
     public Boolean rebuildInstance;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-resourcegroupid1</p>
@@ -114,7 +129,7 @@ public class CreateInstancesRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>A client-generated token to ensure request idempotence. The value must be unique across requests, case-sensitive, and up to 64 ASCII characters long.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token is case-sensitive and can be up to 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>

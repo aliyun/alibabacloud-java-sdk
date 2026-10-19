@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstancesOverviewResponseBody extends TeaModel {
     /**
-     * <p>The list of instances.</p>
+     * <p>The array of instances.</p>
      */
     @NameInMap("Instances")
     public java.util.List<DescribeInstancesOverviewResponseBodyInstances> instances;
@@ -63,7 +63,7 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
          * <ul>
          * <li><strong>cluster</strong>: Cluster Edition.</li>
          * <li><strong>standard</strong>: Standard Edition.</li>
-         * <li><strong>rwsplit</strong>: read/write splitting edition.</li>
+         * <li><strong>rwsplit</strong>: read/write splitting Edition.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -226,7 +226,7 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
         public String nodeType;
 
         /**
-         * <p>The private IP address of the instance in a VPC. The IP address may change. Use ConnectionDomain (internal endpoint) to connect to the instance.</p>
+         * <p>The private IP address of the instance in a VPC. The IP address may change. Use ConnectionDomain (the internal endpoint) to connect to the instance.</p>
          * <blockquote>
          * <ul>
          * <li>This parameter is not returned if the network type of the instance is classic network.</li>

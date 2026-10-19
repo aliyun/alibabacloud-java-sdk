@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateGlobalSecurityIPGroupRequest extends TeaModel {
     /**
-     * <p>The IP addresses in the IP whitelist template.</p>
+     * <p>The IP addresses in the whitelist template.</p>
      * <blockquote>
-     * <p> Separate multiple IP addresses with commas (,). The maximum number of IP addresses is 1,000.</p>
+     * <p>Separate multiple IP addresses with commas (,). IP addresses cannot be duplicated. You can add up to 1,000 IP addresses.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class CreateGlobalSecurityIPGroupRequest extends TeaModel {
     public String GIpList;
 
     /**
-     * <p>The name of the IP whitelist template. The name must meet the following requirements:</p>
+     * <p>The name of the IP address whitelist template. The name must meet the following requirements:</p>
      * <ul>
      * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
      * <li>The name must start with a letter and end with a letter or digit.</li>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeParameterGroupsResponseBody extends TeaModel {
     /**
-     * <p>The list of parameter templates.</p>
+     * <p>The parameter templates.</p>
      */
     @NameInMap("ParameterGroups")
     public java.util.List<DescribeParameterGroupsResponseBodyParameterGroups> parameterGroups;
@@ -44,8 +44,8 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         /**
          * <p>The product category. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Redis Community Edition</li>
-         * <li><strong>1</strong>: Tair (Enhanced Edition)</li>
+         * <li><strong>0</strong>: open-source Redis.</li>
+         * <li><strong>1</strong>: Tair (Enterprise Edition).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         public Long category;
 
         /**
-         * <p>The creation time of the parameter template.</p>
+         * <p>The time when the parameter template was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-18 16:32:45</p>
@@ -66,9 +66,9 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         /**
          * <p>The engine type. Valid values:</p>
          * <ul>
-         * <li><strong>redis</strong>: Redis Community Edition or Tair (Enhanced Edition) in-memory type.</li>
-         * <li><strong>tair_pena</strong>: Tair (Enhanced Edition) persistent memory type.</li>
-         * <li><strong>tair_pdb</strong>: Tair (Enhanced Edition) cloud disk type.</li>
+         * <li><strong>redis</strong>: open-source Redis or Tair (Memory-optimized).</li>
+         * <li><strong>tair_pena</strong>: Tair (Persistent Memory-optimized).</li>
+         * <li><strong>tair_pdb</strong>: Tair (Disk-optimized).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>The engine-compatible version.</p>
+         * <p>The compatible engine version.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -87,7 +87,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         public String engineVersion;
 
         /**
-         * <p>The most recent modification time of the parameter template.</p>
+         * <p>The time when the parameter template was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-18 16:32:45</p>
@@ -96,7 +96,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         public String modified;
 
         /**
-         * <p>The parameter template ID.</p>
+         * <p>The ID of the parameter template.</p>
          * 
          * <strong>example:</strong>
          * <p>test01</p>

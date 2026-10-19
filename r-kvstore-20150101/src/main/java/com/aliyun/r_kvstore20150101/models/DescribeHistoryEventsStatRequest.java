@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeHistoryEventsStatRequest extends TeaModel {
     /**
-     * <p>The status of the events that you want to query. Valid values:</p>
+     * <p>The event status. Valid values:</p>
      * <ul>
-     * <li><strong>Archived</strong></li>
-     * <li><strong>UnArchived</strong></li>
-     * <li><strong>All</strong></li>
+     * <li><strong>Archived</strong>: Archived.</li>
+     * <li><strong>UnArchived</strong>: Not archived.</li>
+     * <li><strong>All</strong>: All events.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class DescribeHistoryEventsStatRequest extends TeaModel {
     public String archiveStatus;
 
     /**
-     * <p>The beginning of the time range to query. Only tasks that have a start time later than or equal to the time specified by this parameter are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The start time can be up to 30 days earlier than the current time. If you set this parameter to a time more than 30 days earlier than the current time, this time is automatically converted to a time that is exactly 30 days earlier than the current time.</p>
+     * <p>The beginning of the time range for the task start time. Only tasks whose start time is later than this time are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0. The earliest supported time is 30 days before the current time. If the specified time is more than 30 days before the current time, it is automatically converted to 30 days before the current time.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-01-02T11:31:03Z</p>
@@ -53,7 +53,7 @@ public class DescribeHistoryEventsStatRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The end of the time range to query. Only tasks that have a start time earlier than or equal to the time specified by this parameter are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end of the time range for the task start time. Only tasks whose start time is earlier than this time are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-02-02T11:31:03Z</p>

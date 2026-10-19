@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEncryptionKeyResponseBody extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud account that is used to create the custom key.</p>
+     * <p>The Alibaba Cloud account ID of the key creator.</p>
      * 
      * <strong>example:</strong>
      * <p>17649847********</p>
@@ -14,9 +14,9 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
     public String creator;
 
     /**
-     * <p>The time when the custom key is expected to be deleted. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * <p>The estimated time when the key is to be deleted. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * <blockquote>
-     * <p>If the return value is an empty string, the custom key cannot be automatically deleted.</p>
+     * <p>If this parameter is empty, the key will not be automatically deleted.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
     public String deleteDate;
 
     /**
-     * <p>The description of the custom key. By default, an empty string is returned.</p>
+     * <p>The description of the key. By default, this parameter is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>testkey</p>
@@ -35,7 +35,7 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the custom key.</p>
+     * <p>The key ID of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ad463061-992d-4195-8a94-ed63********</p>
@@ -44,10 +44,10 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
     public String encryptionKey;
 
     /**
-     * <p>The state of the custom key. Valid values:</p>
+     * <p>The status of the key. Valid values:</p>
      * <ul>
-     * <li><strong>Enabled</strong>: The custom key is available.</li>
-     * <li><strong>Disabled</strong>: The custom key is unavailable.</li>
+     * <li><strong>Enabled</strong>: The key is available.</li>
+     * <li><strong>Disabled</strong>: The key is unavailable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
     public String encryptionName;
 
     /**
-     * <p>The purpose of the custom key. A value of <code>ENCRYPT/DECRYPT</code> indicates encryption and decryption.</p>
+     * <p>The purpose of the key. The return value <code>ENCRYPT/DECRYPT</code> indicates that the key is used for encryption and decryption.</p>
      * 
      * <strong>example:</strong>
      * <p>ENCRYPT/DECRYPT</p>
@@ -75,9 +75,9 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
     public String keyUsage;
 
     /**
-     * <p>The time when the custom key expires. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * <p>The expiration time of the key. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * <blockquote>
-     * <p>If the return value is an empty string, the custom key does not expire.</p>
+     * <p>If this parameter is empty, the key does not expire.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
     public String materialExpireTime;
 
     /**
-     * <p>The source of the custom key. A value of <strong>Aliyun_KMS</strong> indicates <a href="https://help.aliyun.com/document_detail/28935.html">Key Management Service (KMS)</a> of Alibaba Cloud.</p>
+     * <p>The source of the key material. The return value is <strong>Aliyun_KMS</strong>, which indicates Alibaba Cloud <a href="https://help.aliyun.com/document_detail/28935.html">Key Management Service (KMS)</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>Aliyun_KMS</p>
@@ -96,7 +96,7 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
     public String origin;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9A931CE5-C926-5E09-B0EC-6299C4A6****</p>
@@ -105,7 +105,7 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role to which you want to grant permissions.</p>
+     * <p>The global resource descriptor ARN (Alibaba Cloud Resource Name) of the role to be granted authorization.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::123456789012****:role/AliyunRdsInstanceEncryptionDefaultRole</p>

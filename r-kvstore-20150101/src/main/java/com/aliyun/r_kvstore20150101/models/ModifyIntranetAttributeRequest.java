@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyIntranetAttributeRequest extends TeaModel {
     /**
-     * <p>The amount of bandwidth that you want to add. Unit: Mbit/s. The value must be an integer greater than or equal to 0. In most cases, the maximum bandwidth that can be added can be two times the default maximum bandwidth of the current instance type. For more information about the bandwidth specifications supported by different instance types, see <a href="https://help.aliyun.com/document_detail/26350.html">Overview</a>. The bandwidth is also subject to the following limits:</p>
+     * <p>The bandwidth to add, in MB/s. The value must be an integer greater than or equal to 0. Typically, the maximum value is twice the default maximum bandwidth of the current instance type. For bandwidth information about each instance type, see <a href="https://help.aliyun.com/document_detail/26350.html">Instance type navigation</a>. However, the following limits also apply:</p>
      * <ul>
-     * <li>The bandwidth of an individual instance cannot exceed 75% of the bandwidth of the host. For more information about the host specifications and bandwidth, see <a href="https://help.aliyun.com/document_detail/206343.html">Instance types of hosts</a>.</li>
-     * <li>The total bandwidth of all of the instances on the host cannot exceed 150% of the bandwidth of the host. You can configure resource overcommitment to handle traffic spikes. For more information, see <a href="https://help.aliyun.com/document_detail/183798.html">Configure resource overcommitment to reduce costs</a>.</li>
+     * <li>The bandwidth of a single instance cannot exceed 75% of the bandwidth of the host on which the instance resides. For information about host specifications and bandwidth, see <a href="https://help.aliyun.com/document_detail/206343.html">Host specification details</a>.</li>
+     * <li>The total bandwidth of all instances on a host cannot exceed 150% of the bandwidth of the host. You can configure overcommitment to meet bandwidth requirements for staggered-peak deployment. For more information, see <a href="https://help.aliyun.com/document_detail/183798.html">Configure cluster overcommitment to reduce costs</a>.</li>
      * </ul>
      * <blockquote>
-     * <p>If you do not specify this parameter for a standard instance, the bandwidth of the instance is set to two times that of the current bandwidth.</p>
+     * <p>For instances that use the standard architecture, if you do not specify this parameter, the bandwidth of the instance is doubled based on the current bandwidth.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class ModifyIntranetAttributeRequest extends TeaModel {
     public Long bandWidth;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,9 +31,9 @@ public class ModifyIntranetAttributeRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the data node. You can call the <a href="https://help.aliyun.com/document_detail/473783.html">DescribeClusterMemberInfo</a> operation to query the node ID. Separate multiple IDs with commas (,).</p>
+     * <p>The ID of the data node. You can call <a href="https://help.aliyun.com/document_detail/473783.html">DescribeClusterMemberInfo</a> to query the ID. Separate multiple IDs with commas (,).</p>
      * <blockquote>
-     * <p> This parameter is required if the instance is a <a href="https://help.aliyun.com/document_detail/52228.html">cluster</a> instance.</p>
+     * <p>This parameter is available and required only when the instance uses the <a href="https://help.aliyun.com/document_detail/52228.html">Cluster Edition</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

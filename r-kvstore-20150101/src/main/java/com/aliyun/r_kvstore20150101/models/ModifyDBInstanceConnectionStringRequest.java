@@ -15,7 +15,7 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     public String currentConnectionString;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,8 +27,8 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     /**
      * <p>The network type of the endpoint. Valid values:</p>
      * <ul>
-     * <li><strong>Private</strong>: internal network</li>
-     * <li><strong>Public</strong>: Internet</li>
+     * <li><strong>Private</strong>: virtual private cloud (VPC).</li>
+     * <li><strong>Public</strong>: Internet.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,9 +38,9 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     public String IPType;
 
     /**
-     * <p>The prefix of the new endpoint. Specify the endpoint in the <code>&lt;prefix&gt;.redis.rds.aliyuncs.com</code> format. The prefix must be 8 to 40 characters in length and can contain lowercase letters and digits. It must start with a lowercase letter.</p>
+     * <p>The prefix of the new endpoint. The endpoint of the instance is in the format of <code>&lt;prefix&gt;.redis.rds.aliyuncs.com</code>. The prefix must start with a lowercase letter and can contain lowercase letters and digits. The prefix must be 8 to 40 characters in length.</p>
      * <blockquote>
-     * <p> You must specify one of the <strong>NewConnectionString</strong> and <strong>Port</strong> parameters.</p>
+     * <p>You must specify at least one of the request parameters <strong>NewConnectionString</strong> and <strong>Port</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -56,9 +56,9 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The port number of the instance. Valid values: <strong>1024</strong> to <strong>65535</strong>.</p>
+     * <p>The service port number of the instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * <blockquote>
-     * <p> You must specify one of the <strong>NewConnectionString</strong> and <strong>Port</strong> parameters.</p>
+     * <p>You must specify at least one of the request parameters <strong>NewConnectionString</strong> and <strong>Port</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

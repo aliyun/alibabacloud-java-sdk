@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteGlobalSecurityIPGroupRequest extends TeaModel {
     /**
-     * <p>The name of the global IP whitelist template. The name must meet the following requirements:</p>
+     * <p>The name of the IP whitelist template. The name must meet the following requirements:</p>
      * <ul>
-     * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
-     * <li>The name must start with a letter and end with a letter or a digit.</li>
-     * <li>The name must be 2 to 120 characters in length.</li>
+     * <li><p>The name can contain lowercase letters, digits, and underscores (_).</p>
+     * </li>
+     * <li><p>The name must start with a letter and end with a letter or digit.</p>
+     * </li>
+     * <li><p>The name must be 2 to 120 characters in length.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +48,7 @@ public class DeleteGlobalSecurityIPGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmyiu4e******</p>

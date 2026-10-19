@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceMultiVIPResponseBody extends TeaModel {
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>52D901ED-E0A5-42FB-B9DB-39C295C3****</p>
      */

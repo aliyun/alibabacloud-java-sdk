@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenewInstanceResponseBody extends TeaModel {
     /**
-     * <p>The end time of the order.</p>
+     * <p>The end time of the order. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-02-19T00:00:00Z</p>
@@ -14,7 +14,7 @@ public class RenewInstanceResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>111111111111111</p>
@@ -23,7 +23,7 @@ public class RenewInstanceResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2222245-222A-4155-9349-E22222****</p>

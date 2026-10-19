@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTairKVCacheVNodeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically complete the payment. The value must be <strong>true</strong>.</p>
+     * <p>Specifies whether to enable automatic payment. Set the value to <strong>true</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -16,10 +16,8 @@ public class CreateTairKVCacheVNodeRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enables auto-renewal.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): Disables auto-renewal.</p>
-     * </li>
+     * <li><strong>true</strong>: enables auto-renewal.</li>
+     * <li><strong>false</strong> (default): disables auto-renewal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +27,7 @@ public class CreateTairKVCacheVNodeRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The auto-renewal period, in months. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>6</strong>, and <strong>12</strong>.</p>
+     * <p>The auto-renewal epoch. Unit: months. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>6</strong>, and <strong>12</strong>.</p>
      * <blockquote>
      * <p>This parameter is required when the <strong>AutoRenew</strong> parameter is set to <strong>true</strong>.</p>
      * </blockquote>
@@ -41,12 +39,10 @@ public class CreateTairKVCacheVNodeRequest extends TeaModel {
     public String autoRenewPeriod;
 
     /**
-     * <p>Specifies whether to use a coupon. Valid values:</p>
+     * <p>Specifies whether to use a voucher. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Use a coupon.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): Do not use a coupon.</p>
-     * </li>
+     * <li><strong>true</strong>: uses a voucher.</li>
+     * <li><strong>false</strong> (default): does not use a voucher.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,7 +52,7 @@ public class CreateTairKVCacheVNodeRequest extends TeaModel {
     public Boolean autoUseCoupon;
 
     /**
-     * <p>Additional business information, such as a promotion ID.</p>
+     * <p>The extended information, such as the campaign ID and business information.</p>
      * 
      * <strong>example:</strong>
      * <p>000000000</p>
@@ -65,9 +61,9 @@ public class CreateTairKVCacheVNodeRequest extends TeaModel {
     public String businessInfo;
 
     /**
-     * <p>The billing method for the instance. Valid value:</p>
+     * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li><strong>PrePaid</strong>: Subscription. If you specify this value, you must also specify the <strong>Period</strong> parameter.</li>
+     * <li><strong>PrePaid</strong>: subscription. If you set this parameter to PrePaid, you must also specify the <strong>Period</strong> parameter.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -77,7 +73,7 @@ public class CreateTairKVCacheVNodeRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>A client-generated token that ensures request idempotence. This token must be unique across requests, is case-sensitive, and cannot exceed 64 ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must ensure that the token is unique among different requests. The token is case-sensitive and can be up to 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -105,12 +101,10 @@ public class CreateTairKVCacheVNodeRequest extends TeaModel {
     public String couponNo;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform a dry run on the instance creation request. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Performs a dry run and does not create the instance. The system checks the request parameters, request format, business limits, and available inventory. If the check fails, the system returns the corresponding error. If the check passes, the system returns the <code>DryRunOperation</code> error code.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): Sends a normal request. If the check passes, the system creates the instance.</p>
-     * </li>
+     * <li><strong>true</strong>: performs a dry run without creating the instance. The system checks the request parameters, request format, service limits, and available resources. If the request fails the dry run, the system returns an error. If the request passes the dry run, the system returns the <code>DryRunOperation</code> error code.</li>
+     * <li><strong>false</strong> (default): sends the request. If the request passes the dry run, the instance is created.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -119,14 +113,11 @@ public class CreateTairKVCacheVNodeRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    /**
-     * <p>This parameter is no longer used.</p>
-     */
     @NameInMap("ElasticTimeRange")
     public String elasticTimeRange;
 
     /**
-     * <p>The instance specification.</p>
+     * <p>The instance type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -136,7 +127,7 @@ public class CreateTairKVCacheVNodeRequest extends TeaModel {
     public String instanceClass;
 
     /**
-     * <p>The name of the new instance. The name must be 2 to 80 characters long and must start with a letter (case-insensitive) or a Chinese character. Spaces and the following special characters are not supported: <code>@/:=”&lt;&gt;{[]}</code>.</p>
+     * <p>The name of the new instance. The name must be 2 to 80 characters in length and start with a letter or a Chinese character. It cannot contain spaces or the following special characters: <code>@/:=”&lt;&gt;{[]}</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>vnodetest</p>
@@ -151,7 +142,7 @@ public class CreateTairKVCacheVNodeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The subscription period in months. Valid values: <strong>1</strong> to <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, and <strong>36</strong>.</p>
+     * <p>The subscription duration. Unit: months. Valid values: <strong>1</strong> to <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, and <strong>36</strong>.</p>
      * <blockquote>
      * <p>This parameter is required when the <strong>ChargeType</strong> parameter is set to <strong>PrePaid</strong>.</p>
      * </blockquote>
@@ -163,7 +154,7 @@ public class CreateTairKVCacheVNodeRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The ID of the region where you want to create the instance.</p>
+     * <p>The region ID. Specifies the region where you want to create the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -173,13 +164,11 @@ public class CreateTairKVCacheVNodeRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the instance will belong.</p>
+     * <p>The ID of the destination resource group.</p>
      * <blockquote>
      * <ul>
-     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation or view resource group IDs in the console. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information about a resource group</a>.</p>
-     * </li>
-     * <li><p>Before changing the resource group of an instance, call the <a href="158866">ListResources</a> API to view the current resource group of the instance.</p>
-     * </li>
+     * <li>You can invoke the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation or go to the console to obtain the resource group ID list. For related operations, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</li>
+     * <li>Before you change the resource group to which the instance belongs, you can invoke the <a href="https://help.aliyun.com/document_detail/158866.html">ListResources</a> operation to view the current resource group of the instance.</li>
      * </ul>
      * </blockquote>
      * 
@@ -199,21 +188,22 @@ public class CreateTairKVCacheVNodeRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The tags to add to the instance. You can specify a maximum of five tags.</p>
+     * <p>The tag information of the instance.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateTairKVCacheVNodeRequestTag> tag;
 
     /**
-     * <p>This parameter is no longer used.</p>
+     * <strong>example:</strong>
+     * <p>fixed</p>
      */
     @NameInMap("VNodeType")
     public String VNodeType;
 
     /**
-     * <p>The ID of the vSwitch for the instance. The vSwitch must belong to the VPC that is associated with the specified virtual cluster. You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation to obtain the vSwitch ID.</p>
+     * <p>The vSwitch ID of the instance. The vSwitch must belong to the VPC associated with the specified VCluster virtual cluster. You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation of the VPC API to query the vSwitch ID.</p>
      * <blockquote>
-     * <p>The vSwitch must be in the same zone as the instance.</p>
+     * <p>The zone of the vSwitch must be the same as the zone of the instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -224,7 +214,7 @@ public class CreateTairKVCacheVNodeRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the virtual cluster that hosts the VNode.</p>
+     * <p>The instance ID of the VCluster virtual cluster where the VNode resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -234,7 +224,7 @@ public class CreateTairKVCacheVNodeRequest extends TeaModel {
     public String vkName;
 
     /**
-     * <p>The ID of the zone where you want to create the instance.</p>
+     * <p>The zone ID. Specifies the zone where you want to create the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -458,7 +448,7 @@ public class CreateTairKVCacheVNodeRequest extends TeaModel {
 
     public static class CreateTairKVCacheVNodeRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The tag key. A tag key and a tag value form a tag key-value pair.</p>
          * <blockquote>
          * <p>You can specify up to 5 tag key-value pairs at a time.</p>
          * </blockquote>
@@ -472,7 +462,7 @@ public class CreateTairKVCacheVNodeRequest extends TeaModel {
         /**
          * <p>The tag value.</p>
          * <blockquote>
-         * <p><strong>N</strong> represents the index of a tag, starting from 1. For example, <strong>Tag.1.Value</strong> is the value of the first tag.</p>
+         * <p><strong>N</strong> specifies the sequence number of the tag. For example, <strong>Tag.1.Value</strong> specifies the value of the first tag, and <strong>Tag.2.Value</strong> specifies the value of the second tag.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

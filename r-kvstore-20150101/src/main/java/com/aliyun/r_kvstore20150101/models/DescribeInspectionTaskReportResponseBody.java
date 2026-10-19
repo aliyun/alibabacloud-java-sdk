@@ -4,10 +4,15 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInspectionTaskReportResponseBody extends TeaModel {
+    /**
+     * <p>The task report.</p>
+     */
     @NameInMap("Data")
     public DescribeInspectionTaskReportResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>561AFBF1-BE20-44DB-9BD1-6988B53E****</p>
      */
@@ -15,6 +20,8 @@ public class DescribeInspectionTaskReportResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +59,8 @@ public class DescribeInspectionTaskReportResponseBody extends TeaModel {
 
     public static class DescribeInspectionTaskReportResponseBodyDataSummary extends TeaModel {
         /**
+         * <p>The number of high-risk items.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -59,6 +68,8 @@ public class DescribeInspectionTaskReportResponseBody extends TeaModel {
         public Long error;
 
         /**
+         * <p>The number of failed items.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -66,6 +77,8 @@ public class DescribeInspectionTaskReportResponseBody extends TeaModel {
         public Long failed;
 
         /**
+         * <p>The number of normal items.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -73,6 +86,8 @@ public class DescribeInspectionTaskReportResponseBody extends TeaModel {
         public Long normal;
 
         /**
+         * <p>The number of warning items.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -119,17 +134,24 @@ public class DescribeInspectionTaskReportResponseBody extends TeaModel {
     }
 
     public static class DescribeInspectionTaskReportResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of associated instance IDs.</p>
+         */
         @NameInMap("InstanceIds")
         public java.util.List<String> instanceIds;
 
         /**
+         * <p>The Markdown text of the report details.</p>
+         * 
          * <strong>example:</strong>
-         * <h1>Tair 智能巡检报告\n\n## 总览...</h1>
+         * <h1>Tair Intelligent Inspection Report\n\n## Overview..</h1>
          */
         @NameInMap("MarkdownText")
         public String markdownText;
 
         /**
+         * <p>The report language.</p>
+         * 
          * <strong>example:</strong>
          * <p>zh-CN</p>
          */
@@ -137,16 +159,23 @@ public class DescribeInspectionTaskReportResponseBody extends TeaModel {
         public String reportLanguage;
 
         /**
+         * <p>The task status.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCEEDED</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The summary.</p>
+         */
         @NameInMap("Summary")
         public DescribeInspectionTaskReportResponseBodyDataSummary summary;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>tit-dca42f85c73644e0ab5c80ef6412xxx</p>
          */

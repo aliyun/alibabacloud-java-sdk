@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAccountParameterRequest extends TeaModel {
     /**
+     * <p>The account name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyAccountParameterRequest extends TeaModel {
     public String accountName;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,11 @@ public class ModifyAccountParameterRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The account parameters to modify, in JSON format. The modified values overwrite the original values. For example, if you want to modify only the access-db-id parameter to 1, pass in {&quot;access-db-id&quot;:&quot;1&quot;}.
+     * Only two parameters are supported: access-db-id (accessible DB ID) and cu-limit (CU Limit).</p>
+     * <blockquote>
+     * <p>Notice: Currently, only Tair Serverless KV instances are supported.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

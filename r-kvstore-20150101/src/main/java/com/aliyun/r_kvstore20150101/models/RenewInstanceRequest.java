@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class RenewInstanceRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables automatic payment.</li>
+     * <li><strong>true</strong>: enables automatic payment. This is the default value.</li>
      * <li><strong>false</strong>: disables automatic payment.</li>
      * </ul>
-     * <p>If you select false, you must choose <strong>Expenses</strong> &gt; <strong>Renewal Management</strong> in the top navigation bar. In the left-side navigation pane, click <strong>Orders</strong>. Find the specified order and pay for it.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;If you set this parameter to false, you must log on to the console, choose <strong>Billing</strong> &gt; <strong>Renewal Management</strong> in the top navigation bar, and then choose <strong>Order Management</strong> &gt; <strong>My Orders</strong> in the left-side navigation pane to find and pay for the order.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;If you set this parameter to false, you must log on to the console, choose <strong>Billing</strong> &gt; <strong>Renewal Management</strong> in the top navigation bar, and then click <strong>Order Management</strong> in the left-side navigation pane to find and pay for the order.</p>
+     * <p>&lt;props=&quot;partner&quot;&gt;If you set this parameter to false, you must log on to the console, choose <strong>Billing</strong> &gt; <strong>Renewal Management</strong> in the top navigation bar, and then click <strong>Order Management</strong> in the left-side navigation pane to find and pay for the order.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -19,10 +21,10 @@ public class RenewInstanceRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables auto-renewal. The instance is renewed based on the specified renewal duration. For example, if you set the renewal duration to three months, you are charged for three months of service each time the instance is automatically renewed.</li>
-     * <li><strong>false</strong> (default): disables auto-renewal.</li>
+     * <li><strong>true</strong>: enables auto-renewal. The instance is renewed for the specified period. For example, if you set the renewal period to 3 months, the instance is automatically renewed for 3 months each time.</li>
+     * <li><strong>false</strong>: disables auto-renewal. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,7 +34,7 @@ public class RenewInstanceRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The ID of the promotional event or business information.</p>
+     * <p>The activity ID and business information.</p>
      * 
      * <strong>example:</strong>
      * <p>000000000</p>
@@ -41,10 +43,7 @@ public class RenewInstanceRequest extends TeaModel {
     public String businessInfo;
 
     /**
-     * <p>The storage capacity of the instance. Unit: MB. When you renew the instance, you can specify this parameter to change specifications of the instance.</p>
-     * <blockquote>
-     * <p>To change the specifications when you renew the instance, you must specify at least one of the <code>Capacity</code> and <code>InstanceClass</code> parameters.</p>
-     * </blockquote>
+     * <p><strong>[Deprecated]</strong> You cannot change the storage capacity when you renew an instance. By default, the renewal order is placed based on the current specifications.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -55,7 +54,7 @@ public class RenewInstanceRequest extends TeaModel {
     public String capacity;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token is case-sensitive. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token is case-sensitive and can be up to 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>0.6823317918435086</p>
@@ -73,7 +72,7 @@ public class RenewInstanceRequest extends TeaModel {
     public String couponNo;
 
     /**
-     * <p>The source of the request. The default value is <strong>OpenAPI</strong> and cannot be changed.</p>
+     * <p>The source of the request. Default value: <strong>OpenAPI</strong>. You do not need to manually specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>OpenAPI</p>
@@ -82,10 +81,7 @@ public class RenewInstanceRequest extends TeaModel {
     public String fromApp;
 
     /**
-     * <p>The instance type code. For more information, see <a href="https://help.aliyun.com/document_detail/26350.html">Instance specifications overview</a>. When you renew the instance, you can specify this parameter to change specifications of the instance.</p>
-     * <blockquote>
-     * <p>To change the specifications when you renew the instance, you must specify at least one of the <code>Capacity</code> and <code>InstanceClass</code> parameters.</p>
-     * </blockquote>
+     * <p><strong>[Deprecated]</strong> You cannot change the instance type when you renew an instance. By default, the renewal order is placed based on the current specifications.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -96,7 +92,7 @@ public class RenewInstanceRequest extends TeaModel {
     public String instanceClass;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -112,7 +108,10 @@ public class RenewInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The renewal period. Valid values: <strong>1</strong>, 2, 3, 4, 5, 6, 7, 8, <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, and <strong>36</strong>. Unit: months.</p>
+     * <p>The renewal period. Unit: months. Valid values: <strong>1</strong> to <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, and <strong>36</strong>.</p>
+     * <blockquote>
+     * <p>For example, if an instance expires in 3 months and you renew it for 3 months, the instance will expire in 6 months after the renewal.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

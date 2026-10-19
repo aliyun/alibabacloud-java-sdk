@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceAutoUpgradeResponseBody extends TeaModel {
     /**
-     * <p>ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2FF6158E-3394-4A90-B634-79C49184****</p>

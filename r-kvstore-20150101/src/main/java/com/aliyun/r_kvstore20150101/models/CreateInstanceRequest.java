@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
     /**
-     * <p>The Append Only File (AOF) persistence parameter settings for the new instance. Valid values:</p>
+     * <p>The AOF parameter settings of the new instance. Valid values:</p>
      * <ul>
      * <li><strong>yes</strong> (default): enables AOF persistence.</li>
-     * <li><strong>no</strong>: disables AOF persistence.<blockquote>
-     * <p>This parameter is applicable to classic instances. Cloud-native instances do not support specifying the AOF parameter.</p>
+     * <li><strong>no</strong>: shutdown AOF persistence.<blockquote>
+     * <p>This parameter applies to classic instances. Cloud-native instances do not support specifying the AOF parameter.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -24,7 +24,7 @@ public class CreateInstanceRequest extends TeaModel {
      * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: enables auto-renewal.</li>
-     * <li><strong>false</strong> (default): does not enable auto-renewal.</li>
+     * <li><strong>false</strong> (default): disables auto-renewal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>The auto-renewal epoch. Unit: months. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>6</strong>, and <strong>12</strong>.</p>
      * <blockquote>
-     * <p>This parameter is required when <strong>AutoRenew</strong> is set to <strong>true</strong>.</p>
+     * <p>This parameter is required when the AutoRenew parameter is set to <strong>true</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -46,10 +46,10 @@ public class CreateInstanceRequest extends TeaModel {
     public String autoRenewPeriod;
 
     /**
-     * <p>Specifies whether to use a coupon. Valid values:</p>
+     * <p>Specifies whether to use a voucher. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: uses a coupon.</li>
-     * <li><strong>false</strong> (default): does not use a coupon.</li>
+     * <li><strong>true</strong>: uses a voucher.</li>
+     * <li><strong>false</strong> (default): does not use a voucher.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,9 +59,9 @@ public class CreateInstanceRequest extends TeaModel {
     public String autoUseCoupon;
 
     /**
-     * <p>The ID of the backup set of the source instance. The system uses the data stored in the backup set to create the instance. You can invoke <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a> to query the BackupId. If the source instance is a cluster instance, specify the backup set IDs of all shards of the source instance, separated by commas (,). Example: &quot;10\<em>\</em>,11\<em>\</em>,15\<em>\</em>&quot;.</p>
+     * <p>You can specify the backup set ID of the source instance in this parameter. The system uses the data saved in the backup set to create the new instance. You can call the <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a> operation to query the BackupId. If the source instance is a cluster instance, you must enter the backup set IDs of all shards in the source instance and separate them with commas, such as &quot;10**,11**,15**&quot;.</p>
      * <blockquote>
-     * <p>If your instance is a cloud-native architecture cluster instance, use <a href="https://help.aliyun.com/document_detail/2679168.html">DescribeClusterBackupList</a> to query the cluster backup set ID, such as &quot;cb-xx&quot;, and specify it in the ClusterBackupId request parameter to clone the cluster instance. This eliminates the need to specify individual shard backup set IDs.</p>
+     * <p>If your instance is a cloud-native architecture instance and a cluster instance, we recommend that you call the <a href="https://help.aliyun.com/document_detail/2679168.html">DescribeClusterBackupList</a> operation to query the cluster backup set ID, such as &quot;cb-xx&quot;, and then enter it in the ClusterBackupId request parameter to clone the cluster instance. This saves you the trouble of entering the backup set ID of each shard.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -71,7 +71,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String backupId;
 
     /**
-     * <p>The activity ID and business information.</p>
+     * <p>The ID of the promotional event or business information.</p>
      * 
      * <strong>example:</strong>
      * <p>000000000</p>
@@ -82,7 +82,7 @@ public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>The storage capacity of the instance. Unit: MB.</p>
      * <blockquote>
-     * <p>You must specify at least one of the <strong>Capacity</strong> and <strong>InstanceClass</strong> parameters when you call this operation.</p>
+     * <p>When you call this operation, you must specify at least one of the Capacity and InstanceClass parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -105,10 +105,10 @@ public class CreateInstanceRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The cluster backup set ID, which is supported by some new cluster architecture instances. You can call <a href="https://help.aliyun.com/document_detail/2679168.html">DescribeClusterBackupList</a> to obtain the ID.</p>
+     * <p>The ID of the cluster backup set. Some new cluster architectures support cluster backup set IDs. You can call the <a href="https://help.aliyun.com/document_detail/2679168.html">DescribeClusterBackupList</a> operation to obtain the ID.</p>
      * <ul>
-     * <li>If supported, specify the cluster backup set ID. You do not need to specify the <strong>BackupId</strong> parameter.</li>
-     * <li>If not supported, specify the backup set IDs of all shards of the source instance in the BackupId parameter, separated by commas (,). Example: &quot;2158\<em>\</em>\<em>\<em>20,2158\</em>\</em>\*\*22&quot;.</li>
+     * <li>If the architecture supports cluster backup sets, you can enter the specified cluster backup set ID without specifying the BackupId parameter.</li>
+     * <li>If the architecture does not support cluster backup sets, specify the backup set IDs of all shards in the source instance in the BackupId parameter and separate them with commas, such as &quot;2158\<em>\</em>\<em>\<em>20,2158\</em>\</em>\*\*22&quot;.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -118,9 +118,9 @@ public class CreateInstanceRequest extends TeaModel {
     public String clusterBackupId;
 
     /**
-     * <p>The prefix of the endpoint. The prefix must consist of lowercase letters and digits, start with a lowercase letter, and be 8 to 40 characters in length.</p>
+     * <p>The prefix of the endpoint. The prefix must be 8 to 40 characters in length and can contain lowercase letters and digits. It must start with a lowercase letter.</p>
      * <blockquote>
-     * <p>The endpoint is in the format of: <prefix>.redis.rds.aliyuncs.com.</p>
+     * <p>The endpoint format is: <Prefix>.redis.rds.aliyuncs.com.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String couponNo;
 
     /**
-     * <p>The ID of the dedicated cluster. This parameter is required when you create an instance in a dedicated cluster.</p>
+     * <p>The ID of the dedicated cluster. This parameter is required when you create an ApsaraDB for Redis instance in a dedicated cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>dhg-uv4fnk6r7zff****</p>
@@ -148,10 +148,10 @@ public class CreateInstanceRequest extends TeaModel {
     public String dedicatedHostGroupId;
 
     /**
-     * <p>Specifies whether to perform a dry run for this instance creation request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run on the instance creation request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run without creating the instance. The system checks items such as the request parameters, request format, service limits, and available resources. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
-     * <li><strong>false</strong> (default): sends the request. After the request passes the check, the instance is created.</li>
+     * <li><strong>true</strong>: performs a dry run without creating the instance. The system checks the request parameters, request format, service limits, and available resources. If the request fails the dry run, the system returns an error. If the request passes the dry run, the system returns the DryRunOperation error code.</li>
+     * <li><strong>false</strong> (default): sends the normal request and creates the instance after the request passes the check.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -161,16 +161,16 @@ public class CreateInstanceRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Redis <strong>classic</strong> engine version. Valid values:</p>
+     * <p>The engine version of the Redis <strong>classic instance</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>2.8</strong> (not recommended, <a href="https://help.aliyun.com/document_detail/2674657.html">planned for end of support</a>)</li>
-     * <li><strong>4.0</strong> (not recommended)</li>
+     * <li><strong>2.8</strong> (Not recommended. <a href="https://help.aliyun.com/document_detail/2674657.html">End-of-life is planned</a>.)</li>
+     * <li><strong>4.0</strong> (Not recommended)</li>
      * <li><strong>5.0</strong></li>
      * </ul>
-     * <p>Redis <strong>cloud-native</strong> engine version. Valid values:</p>
+     * <p>The engine version of the Redis <strong>cloud-native instance</strong>. Valid values:</p>
      * <ul>
      * <li><strong>5.0</strong></li>
-     * <li><strong>6.0</strong> (recommended)</li>
+     * <li><strong>6.0</strong> (Recommended)</li>
      * <li><strong>7.0</strong></li>
      * </ul>
      * <blockquote>
@@ -184,15 +184,15 @@ public class CreateInstanceRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>Specifies whether to use the new instance as the first child instance of a distributed instance. This allows you to create a distributed instance. Valid values:</p>
+     * <p>Specifies whether to use the new instance as the first child instance of a distributed instance. You can create a distributed instance in this way. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: uses the instance as the first child instance.</li>
-     * <li><strong>false</strong> (default): does not use the instance as the first child instance.</li>
+     * <li><strong>true</strong>: uses the new instance as the first child instance.</li>
+     * <li><strong>false</strong> (default): does not use the new instance as the first child instance.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>To set this parameter to <strong>true</strong>, the new instance must be a Tair memory-optimized instance with a database DPI engine version of 5.0.</li>
-     * <li>This parameter is applicable only to Chinese site (aliyun.com).</li>
+     * <li>If you set this parameter to <strong>true</strong>, the new instance must be a Tair memory-optimized instance and the DPI engine version must be 5.0.</li>
+     * <li>This parameter applies only to the China site.</li>
      * </ul>
      * </blockquote>
      * 
@@ -203,8 +203,8 @@ public class CreateInstanceRequest extends TeaModel {
     public Boolean globalInstance;
 
     /**
-     * <p>The instance ID of the distributed instance. This parameter is applicable only to Chinese site (aliyun.com).</p>
-     * <p>&lt;props=&quot;china&quot;&gt; To append the new Redis instance as a child instance of a distributed instance, this parameter is active and required. For more information and console operations, see <a href="https://help.aliyun.com/document_detail/106885.html">Add a child instance to a distributed instance</a>.</p>
+     * <p>The distributed instance ID. This parameter applies only to the China site.</p>
+     * <p>&lt;props=&quot;china&quot;&gt; If you want to append the new ApsaraDB for Redis instance as a new child instance to a distributed instance, this parameter is active and required. For more information and console operations, see <a href="https://help.aliyun.com/document_detail/106885.html">Add a child instance to a distributed instance</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>gr-bp14rkqrhac****</p>
@@ -213,9 +213,9 @@ public class CreateInstanceRequest extends TeaModel {
     public String globalInstanceId;
 
     /**
-     * <p>The global IP whitelist templates for the instance. Separate multiple templates with commas (,). Duplicates are not allowed.</p>
+     * <p>The global IP address whitelist templates of the instance. Separate multiple templates with commas (,). Duplicate templates are not allowed.</p>
      * <blockquote>
-     * <p>Notice: This parameter is applicable only to cloud-native instances. Classic instances do not support the whitelist template feature.</notice></p>
+     * <p>Notice: This parameter applies only to cloud-native instances. Classic instances do not support the whitelist template feature.</notice></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -225,9 +225,9 @@ public class CreateInstanceRequest extends TeaModel {
     public String globalSecurityGroupIds;
 
     /**
-     * <p>The instance type. For example, redis.master.small.default specifies a Community Edition (classic) standard architecture dual-replica 1 GB instance. For more information, see <a href="https://help.aliyun.com/document_detail/26350.html">Instance type overview</a>. </p>
+     * <p>The instance type. For example, redis.master.small.default indicates a 1 GB Community Edition (classic architecture) instance with the standard architecture and two replicas. For more information, see <a href="https://help.aliyun.com/document_detail/26350.html">Overview of instance types</a>. </p>
      * <blockquote>
-     * <p>You must specify at least one of the <strong>Capacity</strong> and <strong>InstanceClass</strong> parameters when you call this operation.</p>
+     * <p>When you call this operation, you must specify at least one of the Capacity and InstanceClass parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -237,16 +237,16 @@ public class CreateInstanceRequest extends TeaModel {
     public String instanceClass;
 
     /**
-     * <p>The endpoint type used when you create a cloud-native dual-zone deployment read/write splitting instance. If this parameter is not explicitly committed, the default value is AzIndependentEndpoint.</p>
+     * <p>The type of the endpoint used when you create a cloud-native dual-zone deployment read/write splitting instance. If you do not explicitly specify this parameter, the default value is AzIndependentEndpoint.</p>
      * <ul>
-     * <li><strong>AzIndependentEndpoint</strong>: <strong>default value</strong>. Zone-independent endpoints. The primary and secondary zones provide independent endpoints, which allow nearest access through different endpoints.</li>
-     * <li><strong>UnifiedEndpoint</strong>: unified endpoint. A unified endpoint is provided to access nodes in both the primary and secondary zones, but cross-zone access may occur.</li>
+     * <li><strong>AzIndependentEndpoint</strong>: <strong>Default value</strong>. Active zone-independent endpoints. The primary and secondary active zones provide independent endpoints. You can use different endpoints to implement nearest access for active zones.</li>
+     * <li><strong>UnifiedEndpoint</strong>: Unified endpoint. A unified endpoint is provided to access nodes in both the primary and secondary active zones, but cross-zone access may occur.</li>
      * </ul>
      * <blockquote>
-     * <p>Notice: This parameter is applicable only to cloud-native dual-zone deployment read/write splitting instances. For other instance types, only zone-independent endpoints are supported. Even if UnifiedEndpoint is specified, it does not take effect.</notice></p>
+     * <p>Notice: This parameter applies only to cloud-native dual-zone deployment read/write splitting instances. For other types of instances, only active zone-independent endpoints are supported. Even if you specify UnifiedEndpoint, it does not take effect.</notice></p>
      * </blockquote>
      * <blockquote>
-     * <p>Notice: The UnifiedEndpoint option is available only to users on the whitelist. If you are not on the whitelist and specify this parameter, the invocation returns an error. To request access, submit a ticket.</notice></p>
+     * <p>Notice: The UnifiedEndpoint parameter is currently available only to whitelisted users. If a non-whitelisted user specifies this parameter, an invocation error is returned. To apply for the permissions, submit a ticket.</notice></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -256,7 +256,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String instanceEndpointType;
 
     /**
-     * <p>The name of the instance. The name must be 2 to 80 characters in length and must start with a letter or a Chinese character. The name cannot contain <code>@/:=&quot;&lt;&gt;{[]}</code> or spaces.</p>
+     * <p>The name of the instance. The name must be 2 to 80 characters in length, and must start with a letter or a Chinese character. It cannot contain the following special characters: <code>@/:=”&lt;&gt;{[]}</code> and spaces.</p>
      * 
      * <strong>example:</strong>
      * <p>apitest</p>
@@ -278,12 +278,12 @@ public class CreateInstanceRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The end time of the maintenance window. Specify the time in the <i>HH:mm</i>Z format in UTC. For example, to set the end time to 02:00 (UTC+8), specify <code>18:00Z</code>.</p>
+     * <p>The end time of the maintenance window for the instance. Specify the time in the <i>HH:mm</i>Z format. The time must be in UTC. For example, if you want the maintenance window to end at 02:00 (UTC+8), set the value to <code>18:00Z</code>.</p>
      * <blockquote>
-     * <p>The interval between the start time and end time must be at least 1 hour.</p>
+     * <p>The interval between the start time and the end time must be at least 1 hour.</p>
      * </blockquote>
      * <blockquote>
-     * <p>If this parameter is not specified, the default value is 06:00 (UTC+8), which is 22:00Z in UTC.</p>
+     * <p>If you do not specify this parameter, the default value is 22:00 (UTC), which is 06:00 (UTC+8).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -293,9 +293,9 @@ public class CreateInstanceRequest extends TeaModel {
     public String maintainEndTime;
 
     /**
-     * <p>The start time of the maintenance window. Specify the time in the <i>HH:mm</i>Z format in UTC. For example, to set the start time to 01:00 (UTC+8), specify <code>17:00Z</code>.</p>
+     * <p>The start time of the maintenance window for the instance. Specify the time in the <i>HH:mm</i>Z format. The time must be in UTC. For example, if you want the maintenance window to start at 01:00 (UTC+8), set the value to <code>17:00Z</code>.</p>
      * <blockquote>
-     * <p>If this parameter is not specified, the default value is 02:00 (UTC+8), which is 18:00Z in UTC.</p>
+     * <p>If you do not specify this parameter, the default value is 18:00 (UTC), which is 02:00 (UTC+8).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -319,11 +319,11 @@ public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>The node type. Valid values:</p>
      * <ul>
-     * <li><strong>MASTER_SLAVE</strong>: high availability (dual-replica)</li>
+     * <li><strong>MASTER_SLAVE</strong>: high-availability (two replicas)</li>
      * <li><strong>STAND_ALONE</strong>: single replica</li>
-     * <li><strong>double</strong>: dual-replica</li>
+     * <li><strong>double</strong>: two replicas</li>
      * <li><strong>single</strong>: single replica<blockquote>
-     * <p>For cloud-native instances, set this parameter to <strong>MASTER_SLAVE</strong> or <strong>STAND_ALONE</strong>. For classic instances, set this parameter to <strong>double</strong> or <strong>single</strong>.</p>
+     * <p>For cloud-native instances, select <strong>MASTER_SLAVE</strong> or <strong>STAND_ALONE</strong>. For classic instances, select <strong>double</strong> or <strong>single</strong>.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -341,7 +341,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the parameter template. The ID is globally unique.&gt;Notice: This parameter is applicable only to cloud-native instances.</notice></p>
+     * <p>The globally unique ID of the parameter template.&gt;Notice: This parameter applies only to cloud-native instances.</notice></p>
      * 
      * <strong>example:</strong>
      * <p>rpg-test**</p>
@@ -350,7 +350,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String paramGroupId;
 
     /**
-     * <p>The password of the instance. The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, special characters, and digits. The following special characters are supported: <code>!@#$%^&amp;*()_+-=</code>.</p>
+     * <p>The password of the instance. The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, special characters, and digits. The allowed special characters include <code>!@#$%^&amp;*()_+-=</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Pass!123456</p>
@@ -359,9 +359,9 @@ public class CreateInstanceRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>The subscription period. Unit: months. Valid values: <strong>1</strong> to <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, <strong>36</strong>, and <strong>60</strong>.</p>
+     * <p>The subscription duration. Unit: months. Valid values: <strong>1</strong> to <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, <strong>36</strong>, and <strong>60</strong>.</p>
      * <blockquote>
-     * <p>This parameter is available and required only when <strong>ChargeType</strong> is set to <strong>PrePaid</strong>.</p>
+     * <p>This parameter is required and takes effect only when the ChargeType parameter is set to <strong>PrePaid</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -392,14 +392,14 @@ public class CreateInstanceRequest extends TeaModel {
     public String privateIpAddress;
 
     /**
-     * <p>The number of read-only nodes in the primary zone. This parameter is applicable only to cloud-native read/write splitting instances.</p>
+     * <p>The number of read-only nodes in the primary zone. This parameter applies only to cloud-native read/write splitting instances.</p>
      * <ul>
-     * <li>For standard architecture instances, valid values are 1 to 9.</li>
-     * <li>For cluster architecture instances, valid values are 1 to 4, which specifies the number of read-only nodes per data shard.<blockquote>
-     * <p>If you create a multi-zone instance, you can use this parameter together with the SlaveReadOnlyCount parameter to customize the number of read-only nodes in the primary and secondary zones.</p>
+     * <li>If the instance uses the standard architecture, valid values are 1 to 9.</li>
+     * <li>If the instance uses the cluster architecture, valid values are 1 to 4, which indicates the number of read-only nodes per shard.<blockquote>
+     * <p>If you create a multi-zone instance, you can use this parameter and the SlaveReadOnlyCount parameter to specify the number of read-only nodes in the primary and secondary zones.</p>
      * <ul>
-     * <li>For standard architecture instances, the sum of this parameter and SlaveReadOnlyCount cannot exceed 9.</li>
-     * <li>For cluster architecture instances, the sum of this parameter and SlaveReadOnlyCount cannot exceed 4.</li>
+     * <li>If the instance uses the standard architecture, the sum of this parameter and the SlaveReadOnlyCount parameter cannot exceed 9.</li>
+     * <li>If the instance uses the cluster architecture, the sum of this parameter and the SlaveReadOnlyCount parameter cannot exceed 4.</li>
      * </ul>
      * </blockquote>
      * </li>
@@ -412,10 +412,10 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer readOnlyCount;
 
     /**
-     * <p>Specifies whether to restore the account, kernel parameter (config), or whitelist information from the original backup set when you create an instance from a specified backup set. For example, to restore account information, set this parameter to <code>account</code>.</p>
-     * <p>The default value is empty, which indicates that the account, kernel parameter, and whitelist information is not restored from the original backup set.</p>
+     * <p>Specifies whether to restore the account, kernel parameters, and whitelist information from the original backup set when you create an instance by using a specified backup set. For example, to restore the account information, set the value to <code>account</code>.</p>
+     * <p>Default value: empty, which indicates that the account, kernel parameters, and whitelist information are not restored from the original backup set.</p>
      * <blockquote>
-     * <p>This parameter is applicable only to cloud-native instances, and the original backup set must contain the account, kernel parameter, or whitelist information. You can call <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a> to check whether the RecoverConfigMode parameter of the specified backup set contains the preceding information.</p>
+     * <p>This parameter applies only to cloud-native instances, and the original backup set must contain the account, kernel parameters, and whitelist information. You can call the <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a> operation to query whether the RecoverConfigMode parameter of the specified backup set contains the preceding information.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -425,7 +425,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String recoverConfigMode;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> to query available regions. Use this parameter to specify the region in which to create the instance.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -435,9 +435,9 @@ public class CreateInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The number of replica nodes in the primary zone. This parameter is applicable only to cloud-native cluster multi-replica instances. You can use this parameter to customize the number of replica nodes. Valid values: 1 to 4.</p>
+     * <p>The number of secondary nodes in the primary zone. This parameter applies only to cloud-native cluster instances with multiple replicas. You can use this parameter to specify a custom number of secondary nodes. Valid values: 1 to 4.</p>
      * <blockquote>
-     * <p>If you create a multi-zone instance, you can use this parameter together with the SlaveReplicaCount parameter to customize the number of replica nodes in the primary and secondary zones. The sum of this parameter and the SlaveReplicaCount parameter cannot exceed 4.</p>
+     * <p>If you create a multi-zone instance, you can use this parameter and the SlaveReplicaCount parameter to specify the number of secondary nodes in the primary and secondary zones. The sum of this parameter and the SlaveReplicaCount parameter cannot exceed 4.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -447,7 +447,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer replicaCount;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-resourcegroupid1</p>
@@ -462,7 +462,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>If flashback is enabled for the source instance, you can specify a point in time within the backup retention period. The system uses the backup data of the source instance at the specified point in time to create the instance. Specify the time in the ISO 8601 standard in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
+     * <p>The point in time to which you want to restore the source instance. If the data flashback feature is enabled for the source instance, you can specify any point in time within the backup retention period of the source instance. The system uses the backup data of the source instance at the specified point in time to create the new instance. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-06-19T16:00:00Z</p>
@@ -471,9 +471,9 @@ public class CreateInstanceRequest extends TeaModel {
     public String restoreTime;
 
     /**
-     * <p>The secondary zone ID. You can call <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> to query available zones.</p>
+     * <p>The secondary zone ID. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> operation to query the most recent zone list.</p>
      * <blockquote>
-     * <p>The value of this parameter must be different from the value of ZoneId. You cannot set this parameter to the ID of a multi-zone.</p>
+     * <p>The value of this parameter cannot be the same as the value of the ZoneId parameter, and cannot be the ID of a multi-zone deployment.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -486,10 +486,10 @@ public class CreateInstanceRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The number of shards. This parameter is applicable only to cloud-native instances. You can use this parameter to customize the number of shards.</p>
+     * <p>The number of shards. This parameter applies only to cloud-native instances. You can use this parameter to specify a custom number of shards.</p>
      * <ul>
-     * <li>1: creates a non-cluster instance.</li>
-     * <li>A value greater than 1: creates a cluster instance.</li>
+     * <li>1: creates a non-cluster architecture.</li>
+     * <li>A value greater than 1: creates a cluster architecture.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -508,7 +508,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer slaveReadOnlyCount;
 
     /**
-     * <p>The number of replica nodes in the secondary zone.</p>
+     * <p>The number of secondary nodes in the secondary zone.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -517,9 +517,9 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer slaveReplicaCount;
 
     /**
-     * <p>To create an instance from a backup set of an existing instance, specify the instance ID of the source instance in this parameter.</p>
+     * <p>If you want to create a new instance based on the backup set of an instance, specify the source instance ID in this parameter first.</p>
      * <blockquote>
-     * <p>Then use the <strong>BackupId</strong>, <strong>ClusterBackupId</strong> (recommended for cloud-native cluster instances), or <strong>RestoreTime</strong> parameter to specify the backup set or point in time. This parameter must be used together with one of the preceding three parameters. The value is a string, not an array.</p>
+     * <p>Then, specify the backup set or point in time by using the BackupId, ClusterBackupId (recommended for cloud-native cluster architecture), or RestoreTime parameter. This parameter must be used in combination with one of the preceding three parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -529,13 +529,13 @@ public class CreateInstanceRequest extends TeaModel {
     public String srcDBInstanceId;
 
     /**
-     * <p>The tags of the instance.</p>
+     * <p>The tag information of the instance.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateInstanceRequestTag> tag;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. The token value is generated by the client and must be unique among different requests. The token is case-sensitive and cannot exceed 64 ASCII characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token is case-sensitive and can be up to 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -562,9 +562,9 @@ public class CreateInstanceRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The primary zone ID. You can invoke <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> to query active zones. Use this parameter to specify the zone in which to create the instance.</p>
+     * <p>The primary active zone ID. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent active zone list, and use this parameter to specify the active zone where you want to create the instance.</p>
      * <blockquote>
-     * <p>You can also specify the SecondaryZoneId parameter to set the secondary zone. The primary and secondary nodes are deployed in the specified primary and secondary zones respectively, which implements a dual-center primary/secondary architecture in the same city. For example, set ZoneId to &quot;cn-hangzhou-h&quot; and SecondaryZoneId to &quot;cn-hangzhou-g&quot;.</p>
+     * <p>You can also specify the SecondaryZoneId parameter to set the secondary active zone. The deployment of the primary and secondary nodes is in the specified primary and secondary active zones to implement a primary/secondary architecture. For example, you can set the ZoneId parameter to &quot;cn-hangzhou-h&quot; and the SecondaryZoneId parameter to &quot;cn-hangzhou-g&quot;.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -991,8 +991,8 @@ public class CreateInstanceRequest extends TeaModel {
          * <p>The key of the tag.</p>
          * <blockquote>
          * <ul>
-         * <li><strong>N</strong> specifies the sequence number of the tag. A maximum of 20 tags can be attached to a single instance. For example, Tag.1.Key specifies the key of the first tag, and Tag.2.Key specifies the key of the second tag.</li>
-         * <li>If the tag key does not exist, the tag is automatically created.</li>
+         * <li><strong>N</strong> indicates the sequence number of the tag key. You can attach up to 20 tags to a single instance. For example, Tag.1.Key indicates the key of the first tag, and Tag.2.Key indicates the key of the second tag.</li>
+         * <li>If the key of the tag does not exist, the system performs automatic creation.</li>
          * </ul>
          * </blockquote>
          * 
@@ -1005,7 +1005,7 @@ public class CreateInstanceRequest extends TeaModel {
         /**
          * <p>The value of the tag.</p>
          * <blockquote>
-         * <p><strong>N</strong> specifies the sequence number of the tag. For example, <strong>Tag.1.Value</strong> specifies the value of the first tag, and <strong>Tag.2.Value</strong> specifies the value of the second tag.</p>
+         * <p><strong>N</strong> indicates the sequence number of the tag value. For example, <strong>Tag.1.Value</strong> indicates the value of the first tag, and <strong>Tag.2.Value</strong> indicates the value of the second tag.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -8,7 +8,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public DescribeAvailableResourceResponseBodyAvailableZones availableZones;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>493B7308-D9C2-55F6-B042-0313BD63****</p>

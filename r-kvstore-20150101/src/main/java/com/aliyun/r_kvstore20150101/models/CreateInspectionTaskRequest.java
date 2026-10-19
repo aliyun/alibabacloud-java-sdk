@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateInspectionTaskRequest extends TeaModel {
     /**
+     * <p>The end time of the inspection time range.</p>
+     * <p>The time is in the YYYY-MM-DDTHH:mm:ssZ format and in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-07-29T06:59:26Z</p>
      */
@@ -12,6 +15,14 @@ public class CreateInspectionTaskRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The specified inspection items. Valid values:</p>
+     * <ul>
+     * <li>RESOURCE_USAGE</li>
+     * <li>BIGKEY</li>
+     * <li>HOTKEY</li>
+     * <li>PERFORMANCE_METRICS</li>
+     * <li>SLOWLOG</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +32,7 @@ public class CreateInspectionTaskRequest extends TeaModel {
     public String inspectionItems;
 
     /**
+     * <p>The ID of the assistant instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +42,7 @@ public class CreateInspectionTaskRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The list of associated instance IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +52,8 @@ public class CreateInspectionTaskRequest extends TeaModel {
     public String instanceIds;
 
     /**
+     * <p>The language of the report.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
      */
@@ -46,6 +61,9 @@ public class CreateInspectionTaskRequest extends TeaModel {
     public String reportLanguage;
 
     /**
+     * <p>The start time of the inspection time range.</p>
+     * <p>The time is in the YYYY-MM-DDTHH:mm:ssZ format and in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-07-29T05:59:26Z</p>
      */

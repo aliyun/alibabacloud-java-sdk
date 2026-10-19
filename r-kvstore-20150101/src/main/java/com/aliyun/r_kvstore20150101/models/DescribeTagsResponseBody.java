@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeTagsResponseBody extends TeaModel {
     /**
-     * <p>The pagination token to use in the next request to get the next page. If this field is empty, there are no more results.</p>
+     * <p>The token used to start the next query.</p>
      * <blockquote>
-     * <p>If not all results are returned in one query, this parameter is returned. You can pass in the returned value of this parameter for the next query.</p>
+     * <p>This parameter is returned if a single query does not return all results. You can pass the value of this parameter in a subsequent query to continue the query.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class DescribeTagsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details of the tags.</p>
+     * <p>The tag information.</p>
      */
     @NameInMap("Tags")
     public java.util.List<DescribeTagsResponseBodyTags> tags;
@@ -62,7 +62,7 @@ public class DescribeTagsResponseBody extends TeaModel {
 
     public static class DescribeTagsResponseBodyTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>size</p>

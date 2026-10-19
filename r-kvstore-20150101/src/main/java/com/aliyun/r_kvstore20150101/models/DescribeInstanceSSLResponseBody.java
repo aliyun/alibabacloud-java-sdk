@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceSSLResponseBody extends TeaModel {
     /**
-     * <p>The common name of the CA certificate. The default value is the internal endpoint of the instance.</p>
+     * <p>The common name of the CA certificate. The default value is the internal network endpoint of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>r-bp1zxszhcgatnx****.redis.rds.aliyuncs.com</p>
@@ -23,7 +23,7 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
     public String certDownloadURL;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>r-bp1zxszhcgatnx****</p>
@@ -32,7 +32,7 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>02260F96-913E-4655-9BA5-A3651CAF****</p>
@@ -43,8 +43,8 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
     /**
      * <p>The status of the TLS (SSL) encryption feature. Valid values:</p>
      * <ul>
-     * <li><strong>Enable</strong>: SSL encryption is enabled.</li>
-     * <li><strong>Disable</strong>: SSL encryption is disabled.</li>
+     * <li><strong>Enable</strong>: Enabled.</li>
+     * <li><strong>Disable</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,8 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
     public String SSLEnabled;
 
     /**
-     * <p>The time when the CA certificate expires.</p>
+     * <p>The expiration time of the CA certificate.</p>
+     * <p>The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-08-05T09:05:53Z</p>

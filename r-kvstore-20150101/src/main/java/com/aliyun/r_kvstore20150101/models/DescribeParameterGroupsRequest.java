@@ -7,9 +7,9 @@ public class DescribeParameterGroupsRequest extends TeaModel {
     /**
      * <p>The engine type. Valid values:</p>
      * <ul>
-     * <li><strong>redis</strong>: Redis Community Edition or Tair (Enhanced Edition) in-memory type.</li>
-     * <li><strong>tair_pena</strong>: Tair (Enhanced Edition) persistent memory type.</li>
-     * <li><strong>tair_pdb</strong>: Tair (Enhanced Edition) cloud disk type (ESSD/SSD).</li>
+     * <li><strong>redis</strong>: open-source Redis or Tair (Memory-optimized).</li>
+     * <li><strong>tair_pena</strong>: Tair (Persistent Memory-optimized).</li>
+     * <li><strong>tair_pdb</strong>: Tair (Disk-optimized, ESSD/SSD).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,6 +18,9 @@ public class DescribeParameterGroupsRequest extends TeaModel {
     @NameInMap("DbType")
     public String dbType;
 
+    /**
+     * <p>The compatible engine version.</p>
+     */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
@@ -28,7 +31,7 @@ public class DescribeParameterGroupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> to query the region ID.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

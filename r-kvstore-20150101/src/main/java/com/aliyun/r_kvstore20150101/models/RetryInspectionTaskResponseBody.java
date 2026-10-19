@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RetryInspectionTaskResponseBody extends TeaModel {
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>794120D1-E0CF-4713-BAE4-EBAEA04506AF</p>
      */

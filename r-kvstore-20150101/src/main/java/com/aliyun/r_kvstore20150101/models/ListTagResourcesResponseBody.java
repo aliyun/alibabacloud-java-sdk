@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The token required to obtain more results. If a query does not return all results, in the next query, you can provide the token returned by the previous query to obtain more results.</p>
+     * <p>The token used to start the next query. If a query does not return all results, you can pass the token returned from the previous query in subsequent queries to continue the query.</p>
      * 
      * <strong>example:</strong>
      * <p>212db86sca4384811e0b5e8707ec2****</p>
@@ -14,7 +14,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>47A514A1-4B77-4E30-B4C5-2A880650****</p>

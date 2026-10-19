@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CancelInspectionTaskResponseBody extends TeaModel {
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>2BE6E619-A657-42E3-AD2D-18F8428A****</p>
      */

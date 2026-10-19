@@ -8,7 +8,7 @@ public class DescribeEncryptionKeyListResponseBody extends TeaModel {
     public DescribeEncryptionKeyListResponseBodyKeyIds keyIds;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10E2160B-959C-5C3E-BFE6-86EC5925****</p>

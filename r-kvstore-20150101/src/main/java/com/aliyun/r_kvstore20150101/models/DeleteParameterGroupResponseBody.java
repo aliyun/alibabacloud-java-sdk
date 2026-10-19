@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteParameterGroupResponseBody extends TeaModel {
     /**
-     * <p>The parameter template ID, which is globally unique.</p>
+     * <p>The parameter template ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rpg-sys-00*****</p>
@@ -14,7 +14,7 @@ public class DeleteParameterGroupResponseBody extends TeaModel {
     public String paramGroupId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2BE6E619-A657-42E3-AD2D-18F8428A****</p>

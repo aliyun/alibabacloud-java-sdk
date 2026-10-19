@@ -14,9 +14,6 @@ public class DescribeDBInstanceNetInfoRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <p>The network type.</p>
-     */
     @NameInMap("NetType")
     public String netType;
 

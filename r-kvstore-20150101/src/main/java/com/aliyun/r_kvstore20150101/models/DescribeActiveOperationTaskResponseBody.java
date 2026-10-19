@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTaskResponseBody extends TeaModel {
     /**
-     * <p>The list of O\&amp;M tasks.</p>
+     * <p>The list of O&amp;M tasks.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeActiveOperationTaskResponseBodyItems> items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The maximum number of entries returned per page.</p>
+     * <p>The maximum number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -29,7 +29,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2E1FF0CC-F42A-4B6F-A1F4-A17B1451****</p>
@@ -38,7 +38,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,7 +93,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
 
     public static class DescribeActiveOperationTaskResponseBodyItems extends TeaModel {
         /**
-         * <p>The time when the O\&amp;M task was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the O&amp;M task was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-02-24T06:00:11Z</p>
@@ -102,7 +102,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         public String createdTime;
 
         /**
-         * <p>The database type of the instance. The return value is <strong>Redis</strong>.</p>
+         * <p>The database type. Return value: <strong>redis</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>redis</p>
@@ -111,7 +111,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         public String dbType;
 
         /**
-         * <p>The deadline before which the time to preform the O&amp;M task can be modified. The time in UTC is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format.</p>
+         * <p>The latest time within the adjustable range for the O&amp;M task execution time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-29T13:59:59Z</p>
@@ -120,7 +120,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         public String deadline;
 
         /**
-         * <p>The ID of the O&amp;M task.</p>
+         * <p>The O&amp;M task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1****1</p>
@@ -129,7 +129,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         public Integer id;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>r-bp1lgal1sdvxrz****</p>
@@ -138,7 +138,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         public String insName;
 
         /**
-         * <p>The time when the O\&amp;M task was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the O&amp;M task was modified. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-02-24T08:18:53Z</p>
@@ -147,7 +147,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The required preparation period between the task start time and the switchover time. The time is displayed in the <em>HH:mm:ss</em> format.</p>
+         * <p>The preparation time required between the O&amp;M task start time and the switchover time. The time is in the <i>HH:mm:ss</i> format.</p>
          * 
          * <strong>example:</strong>
          * <p>14:00:00</p>
@@ -156,7 +156,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         public String prepareInterval;
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hanghzou</p>
@@ -165,7 +165,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The time when the O\&amp;M task was preformed. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The execution time of the O&amp;M task. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-20T02:40:00Z</p>
@@ -174,14 +174,14 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The state of the O&amp;M task. Valid values:</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><strong>2</strong>: The task is waiting for users to specify a switchover time.</li>
-         * <li><strong>3</strong>: The task is waiting to be performed.</li>
-         * <li><strong>4</strong>: The task is being performed. If the task is in this state, the <strong>ModifyActiveOperationTask</strong> operation cannot be called to modify the scheduled switchover time.</li>
-         * <li><strong>5</strong>: The task is performed.</li>
-         * <li><strong>6</strong>: The task fails.</li>
-         * <li><strong>7</strong>: The task is canceled.</li>
+         * <li><strong>2</strong>: Waiting for the user to specify a time.</li>
+         * <li><strong>3</strong>: Waiting to be processed.</li>
+         * <li><strong>4</strong>: Being processed. After the task enters this state, you cannot call <strong>ModifyActiveOperationTask</strong> to modify the scheduled switchover time.</li>
+         * <li><strong>5</strong>: Succeeded.</li>
+         * <li><strong>6</strong>: Failed.</li>
+         * <li><strong>7</strong>: Canceled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -191,7 +191,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The time when the system performs the switchover operation. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the system-initiated switchover operation is performed. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-20T03:10:00Z</p>
@@ -200,12 +200,12 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         public String switchTime;
 
         /**
-         * <p>The type of the task. Valid values:</p>
+         * <p>The task type. Valid values:</p>
          * <ul>
-         * <li><strong>rds_apsaradb_ha</strong>: master-replica switchover</li>
-         * <li><strong>rds_apsaradb_transfer</strong>: instance migration</li>
-         * <li><strong>rds_apsaradb_upgrade</strong>: minor version update</li>
-         * <li><strong>all</strong>: all types</li>
+         * <li><strong>rds_apsaradb_ha</strong>: node failover.</li>
+         * <li><strong>rds_apsaradb_transfer</strong>: instance migration.</li>
+         * <li><strong>rds_apsaradb_upgrade</strong>: minor engine version update.</li>
+         * <li><strong>all</strong>: all task types.</li>
          * </ul>
          * 
          * <strong>example:</strong>

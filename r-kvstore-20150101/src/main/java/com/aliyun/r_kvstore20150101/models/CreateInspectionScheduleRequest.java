@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateInspectionScheduleRequest extends TeaModel {
     /**
+     * <p>The cron expression for the periodic scheduling.</p>
+     * 
      * <strong>example:</strong>
      * <p>0 0 2 * * ?</p>
      */
@@ -12,6 +14,15 @@ public class CreateInspectionScheduleRequest extends TeaModel {
     public String cronExpression;
 
     /**
+     * <p>The specified inspection items. The following inspection items are supported:</p>
+     * <ul>
+     * <li>RESOURCE_USAGE</li>
+     * <li>BIGKEY</li>
+     * <li>HOTKEY</li>
+     * <li>PERFORMANCE_METRICS</li>
+     * <li>SLOWLOG</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>RESOURCE_USAGE</p>
      */
@@ -19,6 +30,8 @@ public class CreateInspectionScheduleRequest extends TeaModel {
     public String inspectionItems;
 
     /**
+     * <p>The time window.</p>
+     * 
      * <strong>example:</strong>
      * <p>1h</p>
      */
@@ -26,6 +39,7 @@ public class CreateInspectionScheduleRequest extends TeaModel {
     public String inspectionWindow;
 
     /**
+     * <p>The O&amp;M Assistant instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +49,13 @@ public class CreateInspectionScheduleRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The list of associated instance IDs.</p>
+     * <blockquote>
+     * <ul>
+     * <li>Separate multiple instances with commas (,).</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>r-bp1zxszhcgatnx****</p>
      */
@@ -42,6 +63,8 @@ public class CreateInspectionScheduleRequest extends TeaModel {
     public String instanceIds;
 
     /**
+     * <p>The report language.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
      */
@@ -49,6 +72,8 @@ public class CreateInspectionScheduleRequest extends TeaModel {
     public String reportLanguage;
 
     /**
+     * <p>The name of the timed scheduling.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-sche</p>
      */
@@ -59,6 +84,8 @@ public class CreateInspectionScheduleRequest extends TeaModel {
     public String securityToken;
 
     /**
+     * <p>The time zone.</p>
+     * 
      * <strong>example:</strong>
      * <p>Asia/Shanghai</p>
      */

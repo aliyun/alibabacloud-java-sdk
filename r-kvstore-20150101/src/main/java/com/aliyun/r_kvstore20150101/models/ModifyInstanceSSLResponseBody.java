@@ -23,7 +23,7 @@ public class ModifyInstanceSSLResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>32184****</p>

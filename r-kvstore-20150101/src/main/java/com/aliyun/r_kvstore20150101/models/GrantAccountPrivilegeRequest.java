@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GrantAccountPrivilegeRequest extends TeaModel {
     /**
-     * <p>The name of the account. You can call the <a href="~~DescribeAccounts~~">DescribeAccounts</a> operation to obtain the name of the account.</p>
+     * <p>The account name. You can call <a href="https://help.aliyun.com/document_detail/473816.html">DescribeAccounts</a> to obtain the account name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class GrantAccountPrivilegeRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The permissions of the account. Default value: RoleReadWrite. Valid values:</p>
+     * <p>The permissions of the account. Valid values:</p>
      * <ul>
-     * <li>RoleReadOnly: The account has the read-only permissions.</li>
-     * <li>RoleReadWrite: The account has the read and write permissions.</li>
+     * <li>RoleReadOnly: read-only permissions.</li>
+     * <li>RoleReadWrite: read and write permissions. This is the default value.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

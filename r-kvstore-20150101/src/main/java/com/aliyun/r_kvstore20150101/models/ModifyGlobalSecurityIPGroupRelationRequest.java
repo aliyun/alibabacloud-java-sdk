@@ -15,7 +15,10 @@ public class ModifyGlobalSecurityIPGroupRelationRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The ID of the IP whitelist template.</p>
+     * <p>The IP whitelist template ID.</p>
+     * <blockquote>
+     * <p>To dissociate a template, delete the corresponding IP whitelist template ID. This parameter overwrites the original value. To dissociate all templates, pass in an empty string.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +44,7 @@ public class ModifyGlobalSecurityIPGroupRelationRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmyiu4ekp****</p>

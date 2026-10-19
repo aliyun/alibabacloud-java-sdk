@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyActiveOperationMaintainConfigRequest extends TeaModel {
     /**
-     * <p>The days of the cycle.</p>
+     * <p>The cycle time.</p>
      * <ul>
-     * <li><p>If <code>CycleType</code> is <code>Month</code>, specify the days of the month (1 to 28). Separate multiple days with a comma (,).</p>
-     * </li>
-     * <li><p>If <code>CycleType</code> is <code>Week</code>, specify the days of the week (1 to 7). Separate multiple days with a comma (,).</p>
-     * </li>
+     * <li>If CycleType is set to Month, the value is a number from 1 to 28, which indicates the day of the month. Multiple values are separated by commas (,). If the configuration does not take effect, the value is 0.</li>
+     * <li>If CycleType is set to Week, the value is a number from 1 to 7, which indicates the day of the week. Multiple values are separated by commas (,). If the configuration does not take effect, the value is 0.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,12 +18,10 @@ public class ModifyActiveOperationMaintainConfigRequest extends TeaModel {
     public String cycleTime;
 
     /**
-     * <p>The cycle type of the maintenance window. Valid values:</p>
+     * <p>The cycle type. Valid values:</p>
      * <ul>
-     * <li><p><code>Month</code></p>
-     * </li>
-     * <li><p><code>Week</code></p>
-     * </li>
+     * <li>Month: Monthly.</li>
+     * <li>Week: Weekly.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,7 +31,7 @@ public class ModifyActiveOperationMaintainConfigRequest extends TeaModel {
     public String cycleType;
 
     /**
-     * <p>The end time of the maintenance window, specified in <em>HH:mm:ss</em>Z format (UTC time).</p>
+     * <p>The end time of the O&amp;M time window. The time is in the HH:mm:ssZ format (UTC time).</p>
      * 
      * <strong>example:</strong>
      * <p>20:00:00Z</p>
@@ -44,7 +40,7 @@ public class ModifyActiveOperationMaintainConfigRequest extends TeaModel {
     public String maintainEndTime;
 
     /**
-     * <p>The start time of the maintenance window, specified in <em>HH:mm:ss</em>Z format (UTC time).</p>
+     * <p>The start time of the O&amp;M time window. The time is in the <i>HH:mm:ss</i>Z format (UTC time).</p>
      * 
      * <strong>example:</strong>
      * <p>16:00:00Z</p>
@@ -68,12 +64,10 @@ public class ModifyActiveOperationMaintainConfigRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>Specifies whether the configuration is enabled. Valid values:</p>
+     * <p>Specifies whether the configuration takes effect. Valid values:</p>
      * <ul>
-     * <li><p>1: enabled</p>
-     * </li>
-     * <li><p>2: disabled</p>
-     * </li>
+     * <li>1: Effective.</li>
+     * <li>2: Ineffective.</li>
      * </ul>
      * 
      * <strong>example:</strong>

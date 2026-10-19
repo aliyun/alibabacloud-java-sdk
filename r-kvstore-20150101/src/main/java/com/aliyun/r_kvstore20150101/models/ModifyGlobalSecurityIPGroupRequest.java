@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyGlobalSecurityIPGroupRequest extends TeaModel {
     /**
      * <p>The IP addresses in the IP whitelist template.</p>
+     * <blockquote>
+     * <p>This parameter overwrites the original value.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,8 +21,11 @@ public class ModifyGlobalSecurityIPGroupRequest extends TeaModel {
      * <p>The name of the IP whitelist template. The name must meet the following requirements:</p>
      * <ul>
      * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
-     * <li>The name must start with a letter and end with a letter or a digit.</li>
-     * <li>The name must be 2 to 120 characters in length.</li>
+     * <li>The name must start with a letter and end with a letter or digit.</li>
+     * <li>The name must be 2 to 120 characters in length.<blockquote>
+     * <p>This parameter overwrites the original value.</p>
+     * </blockquote>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -56,7 +62,7 @@ public class ModifyGlobalSecurityIPGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmyiu4ekp****</p>

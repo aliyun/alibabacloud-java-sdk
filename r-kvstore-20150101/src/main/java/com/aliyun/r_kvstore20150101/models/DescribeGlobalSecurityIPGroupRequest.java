@@ -4,11 +4,17 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeGlobalSecurityIPGroupRequest extends TeaModel {
+    /**
+     * <p>The database engine type. Valid values: redis (Redis engine) and memcache (Memcache engine).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>redis</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
     /**
-     * <p>The ID of the global IP whitelist template.</p>
+     * <p>The ID of the IP whitelist template.</p>
      * 
      * <strong>example:</strong>
      * <p>g-zsldxfiwjmti0kcm****</p>
@@ -23,7 +29,7 @@ public class DescribeGlobalSecurityIPGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

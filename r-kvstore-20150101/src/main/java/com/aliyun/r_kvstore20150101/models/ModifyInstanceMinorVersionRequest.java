@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceMinorVersionRequest extends TeaModel {
     /**
-     * <p>The time when you want to update the minor version. Valid values:</p>
+     * <p>The time when the upgrade is performed. Valid values:</p>
      * <ul>
-     * <li><strong>Immediately</strong> (default): immediately updates the minor version.</li>
-     * <li><strong>MaintainTime</strong>: updates the minor version during the maintenance window.</li>
+     * <li><strong>Immediately</strong>: Performs the upgrade immediately. This is the default value.</li>
+     * <li><strong>MaintainTime</strong>: Performs the upgrade during the maintenance window.</li>
      * </ul>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of an instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> to change the maintenance window of the instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class ModifyInstanceMinorVersionRequest extends TeaModel {
     public String effectiveTime;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class ModifyInstanceMinorVersionRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The minor version to which you want to update. Default value: <strong>latest_version</strong>.</p>
+     * <p>The minor version to which you want to upgrade. Default value: <strong>latest_version</strong>, which indicates the latest version.</p>
      * 
      * <strong>example:</strong>
      * <p>latest_version</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeServiceLinkedRoleExistsRequest extends TeaModel {
     /**
-     * <p>The database engine of the instance. Only Redis is supported.</p>
+     * <p>The database type. You can only set this parameter to &quot;Redis&quot; or leave it empty.</p>
      * 
      * <strong>example:</strong>
      * <p>Redis</p>
@@ -20,9 +20,9 @@ public class DescribeServiceLinkedRoleExistsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the instance resides.</p>
+     * <p>The region ID of the instance.</p>
      * <blockquote>
-     * <p>This parameter does not affect the query results. You can specify any region ID.</p>
+     * <p>This parameter does not affect the query result. You can specify any region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

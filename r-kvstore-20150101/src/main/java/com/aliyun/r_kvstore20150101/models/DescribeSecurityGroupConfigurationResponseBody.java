@@ -8,7 +8,7 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
     public DescribeSecurityGroupConfigurationResponseBodyItems items;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>981C0D6A-D9DD-466C-92DA-F29DF755****</p>

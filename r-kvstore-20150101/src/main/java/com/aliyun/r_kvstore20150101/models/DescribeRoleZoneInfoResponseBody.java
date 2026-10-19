@@ -8,7 +8,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
     public DescribeRoleZoneInfoResponseBodyNode node;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +35,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

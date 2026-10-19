@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyAuditLogConfigRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the audit log feature. Default value: true. Valid values:</p>
+     * <p>Specifies whether to enable audit logging. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables the audit log feature.</li>
-     * <li><strong>false</strong>: disables the audit log feature.</li>
+     * <li><strong>true</strong> (default): Enabled.</li>
+     * <li><strong>false</strong>: Disabled.</li>
      * </ul>
      * <blockquote>
-     * <p>If the instance uses the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a> or <a href="https://help.aliyun.com/document_detail/62870.html">read/write splitting architecture</a>, the audit log feature is enabled or disabled for both the data nodes and proxy nodes. You cannot separately enable the audit log feature for the data nodes or proxy nodes.</p>
+     * <p>If the instance uses the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a> or <a href="https://help.aliyun.com/document_detail/62870.html">read/write splitting architecture</a>, audit logs for data nodes and proxy nodes are enabled or disabled at the same time. You cannot enable them separately.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class ModifyAuditLogConfigRequest extends TeaModel {
     public Boolean dbAudit;
 
     /**
-     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,15 +43,13 @@ public class ModifyAuditLogConfigRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The retention period of audit logs. Valid values: <strong>1</strong> to <strong>365</strong>. Unit: days.</p>
+     * <p>The number of days for which audit logs are retained. Valid values: <strong>1</strong> to <strong>365</strong>.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>This parameter is required only when the <strong>DbAudit</strong> parameter is set to <strong>true</strong>.</p>
-     * </li>
-     * <li><p>The value of this parameter takes effect for all instances in the current region.</p>
-     * </li>
+     * <li>This parameter is required when <strong>DbAudit</strong> is set to <strong>true</strong>.</li>
+     * <li>This parameter takes effect on all instances in the current region.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>10</p>

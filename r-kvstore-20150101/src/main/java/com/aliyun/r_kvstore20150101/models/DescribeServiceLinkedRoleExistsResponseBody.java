@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeServiceLinkedRoleExistsResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the service-linked role is created for Tair (Redis OSS-compatible) in the current account. Valid values:</p>
+     * <p>Indicates whether the service-linked role has been authorized for the current account. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: Authorized.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Not authorized.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class DescribeServiceLinkedRoleExistsResponseBody extends TeaModel {
     public Boolean existsServiceLinkedRole;
 
     /**
-     * <p>The unique ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>90B82DB7-FB28-4CC2-ADBF-1F8659F3****</p>

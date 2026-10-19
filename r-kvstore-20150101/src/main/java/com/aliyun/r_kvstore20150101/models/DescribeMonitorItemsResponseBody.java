@@ -8,7 +8,7 @@ public class DescribeMonitorItemsResponseBody extends TeaModel {
     public DescribeMonitorItemsResponseBodyMonitorItems monitorItems;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8BEB2618-9517-43F3-A233-E0B34512****</p>

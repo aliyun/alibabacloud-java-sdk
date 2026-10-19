@@ -8,7 +8,7 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
     public DescribeInstanceAutoRenewalAttributeResponseBodyItems items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number of the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on the current page.</p>
+     * <p>The number of entries on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -26,7 +26,7 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2B17D708-1D6D-49F3-B6D7-478371DD****</p>
@@ -35,7 +35,7 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

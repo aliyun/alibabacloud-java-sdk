@@ -7,11 +7,11 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: Enabled.</li>
+     * <li><strong>false</strong>: Disabled.</li>
      * </ul>
      * <blockquote>
-     * <p> The default value is <strong>false</strong>.</p>
+     * <p>Default value: <strong>false</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends TeaModel {
     public String autoRenew;
 
     /**
-     * <p>The ID of the instance. Separate multiple instance IDs with commas (,).</p>
+     * <p>The instance ID. Separate multiple instance IDs with commas (,).</p>
      * <blockquote>
      * <p>You can specify up to 30 instance IDs.</p>
      * </blockquote>
@@ -34,9 +34,9 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The auto-renewal period. Valid values: <strong>1</strong> to <strong>12</strong>. Unit: months. When the instance is about to expire, the instance is automatically renewed based on the number of months specified by this parameter.</p>
+     * <p>The auto-renewal cycle. Valid values: <strong>1</strong> to <strong>12</strong>. Unit: months. When the instance is about to expire, the system automatically renews the instance for the specified duration.</p>
      * <blockquote>
-     * <p>This parameter is available and required only if the <strong>AutoRenew</strong> parameter is set to <strong>true</strong>.</p>
+     * <p>This parameter is available and required only when <strong>AutoRenew</strong> is set to <strong>true</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The service. Set the value to kvstore.</p>
+     * <p>The product. Set the value to kvstore.</p>
      * 
      * <strong>example:</strong>
      * <p>kvstore</p>

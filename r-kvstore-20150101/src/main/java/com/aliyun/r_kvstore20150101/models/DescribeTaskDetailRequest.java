@@ -15,7 +15,7 @@ public class DescribeTaskDetailRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The task ID.</p>
+     * <p>The node ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeHistoryTasksResponseBody extends TeaModel {
     /**
-     * <p>The queried task objects.</p>
+     * <p>The list of task objects.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeHistoryTasksResponseBodyItems> items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The maximum number of entries returned per page.</p>
+     * <p>The maximum number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of tasks that meet these constraints without taking pagination into account.</p>
+     * <p>The total number of tasks that meet the query conditions, regardless of pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -93,21 +93,21 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
 
     public static class DescribeHistoryTasksResponseBodyItems extends TeaModel {
         /**
-         * <p>A set of allowed actions that can be taken on the task. The system matches the current step name and status of the task to the available actions specified by ActionInfo. If no matching action is found, the current status of the task does not support any action. Example:</p>
+         * <p>The allowed operation information. When used, the operation Action is matched based on currentStepName and status in this information. If no Action is matched, the task does not support operations in its current state. Example:</p>
          * <pre><code>{&quot;steps&quot;: [
          *     {
-         *       &quot;step_name&quot;: &quot;exec_task&quot;, // The name of the step, which matches CurrentStepName.
-         *       &quot;action_info&quot;: {    // The actions supported for this step.
-         *         &quot;Waiting&quot;: [      // The status, which matches Status.
-         *           &quot;modifySwitchTime&quot; // The action. Multiple actions are supported.
+         *       &quot;step_name&quot;: &quot;exec_task&quot;, // Step name, matched with currentStepName
+         *       &quot;action_info&quot;: {    // Operations supported by the step
+         *         &quot;Waiting&quot;: [      // Status, matched with status
+         *           &quot;modifySwitchTime&quot; // Operation Action, may have multiple values, indicating multiple supported operations
          *         ]
          *       }
          *     },
          *     {
-         *       &quot;step_name&quot;: &quot;init_task&quot;, // The name of the step.
-         *       &quot;action_info&quot;: {    // The actions supported for this step.
-         *         &quot;Running&quot;: [      // The status.
-         *           &quot;cancel&quot;,       // The action.
+         *       &quot;step_name&quot;: &quot;init_task&quot;, // Step name
+         *       &quot;action_info&quot;: {    // Operations supported by the step
+         *         &quot;Running&quot;: [      // Status
+         *           &quot;cancel&quot;,       // Operation
          *           &quot;pause&quot;
          *         ]
          *       }
@@ -115,11 +115,11 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
          *   ]
          * }
          * </code></pre>
-         * <p>The system may support the following actions:</p>
+         * <p>Operations that the system may support: </p>
          * <ul>
-         * <li><strong>retry</strong></li>
-         * <li><strong>cancel</strong></li>
-         * <li><strong>modifySwitchTime</strong>: changes the switching or restoration time.</li>
+         * <li><strong>retry</strong>: Retry.</li>
+         * <li><strong>cancel</strong>: Cancel.</li>
+         * <li><strong>modifySwitchTime</strong>: Modify the switchover time or recovery time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String actionInfo;
 
         /**
-         * <p>The ID of the user who made the request. If CallerSource is set to User, CallerUid indicates the unique ID (UID) of the user.</p>
+         * <p>The request user ID. When callerSource is User, this value represents the user UID.</p>
          * 
          * <strong>example:</strong>
          * <p>141345906006****</p>
@@ -138,10 +138,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String callerSource;
 
         /**
-         * <p>The request source. Valid values:</p>
+         * <p>The request source. Valid values: </p>
          * <ul>
-         * <li><strong>System</strong></li>
-         * <li><strong>User</strong></li>
+         * <li><strong>System</strong>: Automatically initiated by the system.</li>
+         * <li><strong>User</strong>: Initiated by a user.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -151,7 +151,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String callerUid;
 
         /**
-         * <p>The name of the current step. If this parameter is left empty, the task is not started.</p>
+         * <p>The name of the current step being executed. An empty value indicates that the task has not started.</p>
          * 
          * <strong>example:</strong>
          * <p>exec_task</p>
@@ -160,7 +160,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String currentStepName;
 
         /**
-         * <p>The database type. The return value is redis.</p>
+         * <p>The database type. The value is fixed as redis.</p>
          * 
          * <strong>example:</strong>
          * <p>redis</p>
@@ -169,7 +169,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String dbType;
 
         /**
-         * <p>The end time of the task. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The end time of the task in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-02-03T12:06:17Z</p>
@@ -196,7 +196,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The instance type. The return value is Instance.</p>
+         * <p>The instance type. The value is fixed as Instance.</p>
          * 
          * <strong>example:</strong>
          * <p>Instance</p>
@@ -205,7 +205,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The product. The return value is kvstore.</p>
+         * <p>The product. The value is fixed as kvstore.</p>
          * 
          * <strong>example:</strong>
          * <p>kvstore</p>
@@ -214,7 +214,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String product;
 
         /**
-         * <p>The task progress. Valid values: 0 to 100.</p>
+         * <p>The current progress. Valid values: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>79.0</p>
@@ -241,7 +241,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The estimated amount of time remaining to complete the task. Unit: seconds. A value of 0 indicates that the task is completed.</p>
+         * <p>The estimated remaining execution time. Unit: seconds. A value of 0 indicates that the execution is complete.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -250,7 +250,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public Integer remainTime;
 
         /**
-         * <p>The start time of the task. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The start time of the task in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-02-03T11:31:03Z</p>
@@ -259,15 +259,15 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The task status.</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><strong>Scheduled</strong></li>
-         * <li><strong>Running</strong></li>
-         * <li><strong>Succeed</strong></li>
-         * <li><strong>Failed</strong></li>
-         * <li><strong>Cancelling</strong></li>
-         * <li><strong>Canceled</strong></li>
-         * <li><strong>Waiting</strong></li>
+         * <li><strong>Scheduled</strong>: Waiting for execution.</li>
+         * <li><strong>Running</strong>: Running.</li>
+         * <li><strong>Succeed</strong>: Succeeded.</li>
+         * <li><strong>Failed</strong>: Failed.</li>
+         * <li><strong>Cancelling</strong>: Being stopped.</li>
+         * <li><strong>Canceled</strong>: Stopped.</li>
+         * <li><strong>Waiting</strong>: Waiting for the scheduled time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -277,7 +277,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The task details. The details vary based on the task type.</p>
+         * <p>The task details. Different task types correspond to different outputs.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;callerUid\&quot;:\&quot;test\&quot;}</p>
@@ -295,15 +295,15 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The task type.</p>
+         * <p>The task type. Valid values:</p>
          * <ul>
-         * <li><strong>ModifyInsSpec</strong></li>
-         * <li><strong>DeleteInsNode</strong></li>
-         * <li><strong>AddInsNode</strong></li>
-         * <li><strong>HaSwitch</strong></li>
-         * <li><strong>RestartIns</strong></li>
-         * <li><strong>CreateIns</strong></li>
-         * <li><strong>ModifyInsConfig</strong></li>
+         * <li><strong>ModifyInsSpec</strong>: Specification change or migration.</li>
+         * <li><strong>DeleteInsNode</strong>: Shard deletion.</li>
+         * <li><strong>AddInsNode</strong>: Shard addition.</li>
+         * <li><strong>HaSwitch</strong>: Primary/secondary switchover.</li>
+         * <li><strong>RestartIns</strong>: Instance restart.</li>
+         * <li><strong>CreateIns</strong>: Instance creation.</li>
+         * <li><strong>ModifyInsConfig</strong>: Configuration change.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -313,7 +313,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String taskType;
 
         /**
-         * <p>The ID of the user to which the resources belong.</p>
+         * <p>The user ID of the resource owner.</p>
          * 
          * <strong>example:</strong>
          * <p>141345906006****</p>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceMultiVIPRequest extends TeaModel {
     /**
+     * <p>The number of LBs to add.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateInstanceMultiVIPRequest extends TeaModel {
     public String addCount;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

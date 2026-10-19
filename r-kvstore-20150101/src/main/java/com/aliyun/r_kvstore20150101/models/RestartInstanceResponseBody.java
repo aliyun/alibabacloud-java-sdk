@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RestartInstanceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>r-bp1zxszhcgatnx****</p>
@@ -14,7 +14,7 @@ public class RestartInstanceResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EFC9161F-15E3-4A6E-8A99-C33331****</p>
@@ -23,7 +23,7 @@ public class RestartInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>11111****</p>

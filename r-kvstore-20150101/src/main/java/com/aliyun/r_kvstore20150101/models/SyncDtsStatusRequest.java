@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SyncDtsStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,10 +39,10 @@ public class SyncDtsStatusRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>Disables configuration changes for the instance. Valid values:</p>
+     * <p>Specifies whether to restrict specification changes on the instance. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: does not disable configuration changes.</li>
-     * <li><strong>1</strong>: disables configuration changes. In this case, if you attempt to modify the configurations of the instance, the system informs you that the operation cannot be performed.</li>
+     * <li><strong>0</strong>: Unrestricted.</li>
+     * <li><strong>1</strong>: Restricted. Users are prompted when they perform a specification change.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,9 +52,9 @@ public class SyncDtsStatusRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The ID of the DTS instance. You can view the ID in the <a href="https://dts.console.aliyun.com/">DTS console</a>.</p>
+     * <p>Instance ID of the DTS instance. You can log on to the <a href="https://dts.console.aliyun.com/">DTS console</a> to view instance ID.</p>
      * <blockquote>
-     * <p> A Tair (Redis OSS-compatible) instance may be involved in multiple data migration or synchronization tasks. If you want to cancel the restriction on the instance, you can specify this parameter to prevent repeated operation calls.</p>
+     * <p>An instance may be involved in multiple DTS migration or synchronization tasks simultaneously. To remove the specification change restrictions on the instance, pass this parameter to avoid calling this operation multiple times.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

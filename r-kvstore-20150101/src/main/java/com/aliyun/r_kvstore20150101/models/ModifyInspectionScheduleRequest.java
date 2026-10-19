@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyInspectionScheduleRequest extends TeaModel {
     /**
+     * <p>The cron expression.</p>
+     * 
      * <strong>example:</strong>
      * <p>0 0 2 * * ?</p>
      */
@@ -12,6 +14,8 @@ public class ModifyInspectionScheduleRequest extends TeaModel {
     public String cronExpression;
 
     /**
+     * <p>Specifies whether to start the scheduled task. Default value: true.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -19,6 +23,15 @@ public class ModifyInspectionScheduleRequest extends TeaModel {
     public Long enabled;
 
     /**
+     * <p>The specified inspection items. The following inspection items are supported:</p>
+     * <ul>
+     * <li>RESOURCE_USAGE</li>
+     * <li>BIGKEY</li>
+     * <li>HOTKEY</li>
+     * <li>PERFORMANCE_METRICS</li>
+     * <li>SLOWLOG</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>HOTKEY</p>
      */
@@ -26,6 +39,8 @@ public class ModifyInspectionScheduleRequest extends TeaModel {
     public String inspectionItems;
 
     /**
+     * <p>1h</p>
+     * 
      * <strong>example:</strong>
      * <p>1h</p>
      */
@@ -33,6 +48,7 @@ public class ModifyInspectionScheduleRequest extends TeaModel {
     public String inspectionWindow;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +58,8 @@ public class ModifyInspectionScheduleRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The list of associated instance IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>r-bp1zxszhcgatnx****</p>
      */
@@ -49,6 +67,8 @@ public class ModifyInspectionScheduleRequest extends TeaModel {
     public String instanceIds;
 
     /**
+     * <p>The report language.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
      */
@@ -56,6 +76,8 @@ public class ModifyInspectionScheduleRequest extends TeaModel {
     public String reportLanguage;
 
     /**
+     * <p>The ID of the timed scheduling.</p>
+     * 
      * <strong>example:</strong>
      * <p>sch-4dfb08ddf9f84855bacca35axxx</p>
      */
@@ -63,6 +85,8 @@ public class ModifyInspectionScheduleRequest extends TeaModel {
     public String scheduleId;
 
     /**
+     * <p>The name of the timed scheduling.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-sche</p>
      */
@@ -70,6 +94,8 @@ public class ModifyInspectionScheduleRequest extends TeaModel {
     public String scheduleName;
 
     /**
+     * <p>The time zone.</p>
+     * 
      * <strong>example:</strong>
      * <p>Asia/Shanghai</p>
      */

@@ -11,7 +11,7 @@ public class DescribeParameterGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the parameter template.</p>
+     * <p>The parameter template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class DescribeParameterGroupRequest extends TeaModel {
     public String parameterGroupId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>

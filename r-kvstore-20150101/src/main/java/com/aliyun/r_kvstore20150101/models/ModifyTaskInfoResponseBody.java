@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyTaskInfoResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if a task fails.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>mst.errorcode.success.errormessage</p>
@@ -14,7 +14,7 @@ public class ModifyTaskInfoResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The ID of the failed task. This parameter is returned if a task fails.</p>
+     * <p>The ID of the failed node. The first failed node ID is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>t-0mqaj5hnyofczv****</p>
@@ -32,7 +32,7 @@ public class ModifyTaskInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of completed tasks.</p>
+     * <p>The number of successful nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

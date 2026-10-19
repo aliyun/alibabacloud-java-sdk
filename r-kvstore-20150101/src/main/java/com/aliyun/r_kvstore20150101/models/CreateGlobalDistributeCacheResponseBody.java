@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateGlobalDistributeCacheResponseBody extends TeaModel {
     /**
-     * <p>The ID of the distributed instance.</p>
+     * <p>The distributed instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>gr-8vbzg1y6m****t38p</p>
@@ -14,7 +14,7 @@ public class CreateGlobalDistributeCacheResponseBody extends TeaModel {
     public String globalInstanceId;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>r-8vb6ffc5****4ec4</p>

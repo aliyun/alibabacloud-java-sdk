@@ -8,7 +8,7 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
     public DescribeCacheAnalysisReportListResponseBodyDailyTasks dailyTasks;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1041xxxx</p>
@@ -17,7 +17,7 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>743D0A03-52DE-4E6F-8D09-EC1414CF****</p>

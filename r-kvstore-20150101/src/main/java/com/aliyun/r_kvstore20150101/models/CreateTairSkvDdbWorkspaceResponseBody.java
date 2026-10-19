@@ -27,7 +27,7 @@ public class CreateTairSkvDdbWorkspaceResponseBody extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The detailed configuration of the instance.</p>
+     * <p>The detailed configurations of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;EvictionPolicy\&quot;:\&quot;volatile-lru\&quot;,\&quot;hash-max-ziplist-entries\&quot;:512,\&quot;zset-max-ziplist-entries\&quot;:128,\&quot;zset-max-ziplist-value\&quot;:64,\&quot;set-max-intset-entries\&quot;:512,\&quot;hash-max-ziplist-value\&quot;:64}</p>
@@ -36,7 +36,7 @@ public class CreateTairSkvDdbWorkspaceResponseBody extends TeaModel {
     public String config;
 
     /**
-     * <p>The internal endpoint of the Redis instance.</p>
+     * <p>The internal network connection endpoint of the Redis instance.</p>
      * 
      * <strong>example:</strong>
      * <p>r-bp1zxszhcgatnx**.redis.rds.aliyuncs.com</p>
@@ -45,7 +45,7 @@ public class CreateTairSkvDdbWorkspaceResponseBody extends TeaModel {
     public String connectionDomain;
 
     /**
-     * <p>The maximum number of connections supported by the instance.</p>
+     * <p>The maximum number of connections to the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -72,7 +72,7 @@ public class CreateTairSkvDdbWorkspaceResponseBody extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The current status of the instance. The return value is fixed as Creating.</p>
+     * <p>The current status of the instance. The value is fixed as Creating.</p>
      * 
      * <strong>example:</strong>
      * <p>Creating</p>
@@ -99,7 +99,7 @@ public class CreateTairSkvDdbWorkspaceResponseBody extends TeaModel {
     public Integer port;
 
     /**
-     * <p>The queries per second (QPS). This value is the theoretical value for the current instance specifications.</p>
+     * <p>The queries per second (QPS). This is the theoretical value for the current instance specifications.</p>
      * 
      * <strong>example:</strong>
      * <p>100000</p>
@@ -108,7 +108,7 @@ public class CreateTairSkvDdbWorkspaceResponseBody extends TeaModel {
     public Long QPS;
 
     /**
-     * <p>The region in which the instance resides.</p>
+     * <p>The region where the instance is deployed.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hongkong</p>
@@ -126,7 +126,7 @@ public class CreateTairSkvDdbWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the task flow that is executed for the creation.</p>
+     * <p>The ID of the task flow executed for creation.</p>
      * 
      * <strong>example:</strong>
      * <p>1111</p>
@@ -135,7 +135,7 @@ public class CreateTairSkvDdbWorkspaceResponseBody extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The zone ID of the instance.</p>
+     * <p>The ID of the zone where the instance is deployed.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-b</p>

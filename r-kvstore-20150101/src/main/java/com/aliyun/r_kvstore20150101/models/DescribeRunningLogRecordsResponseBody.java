@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRunningLogRecordsResponseBody extends TeaModel {
     /**
-     * <p>The type of the database engine.</p>
+     * <p>The database engine.</p>
      * 
      * <strong>example:</strong>
      * <p>Redis</p>
@@ -14,7 +14,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
     public String engine;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>r-bp1zxszhcgatnx****</p>
@@ -26,7 +26,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
     public DescribeRunningLogRecordsResponseBodyItems items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +35,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of log entries returned on the current page.</p>
+     * <p>The number of entries returned on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -44,7 +44,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The maximum number of entries returned on each page.</p>
+     * <p>The maximum number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -62,7 +62,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range to query.</p>
+     * <p>The start time of the query. The time is in the YYYY-MM-DDTHH:mmZ format and is in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2018-12-03T07:01Z</p>
@@ -71,7 +71,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>

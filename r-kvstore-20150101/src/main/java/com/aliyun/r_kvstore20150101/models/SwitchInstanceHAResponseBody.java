@@ -14,6 +14,8 @@ public class SwitchInstanceHAResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>674546459</p>
      */

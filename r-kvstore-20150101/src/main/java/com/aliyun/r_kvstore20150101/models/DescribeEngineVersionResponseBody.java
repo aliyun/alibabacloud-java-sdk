@@ -5,28 +5,28 @@ import com.aliyun.tea.*;
 
 public class DescribeEngineVersionResponseBody extends TeaModel {
     /**
-     * <p>The latest minor version to which the instance can be updated.</p>
+     * <p>The information about the latest minor version to which the instance can be upgraded.</p>
      */
     @NameInMap("DBLatestMinorVersion")
     public DescribeEngineVersionResponseBodyDBLatestMinorVersion DBLatestMinorVersion;
 
     /**
-     * <p>The release notes for the minor version of the instance, including the release date, minor version number, release type such as new feature, and description.</p>
+     * <p>The update notes for the minor version of the instance, including the release time, minor version number, type (such as new feature), and detailed description.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;releaseInfo\&quot;:{\&quot;createTime\&quot;:\&quot;2021-07-27\&quot;,\&quot;level\&quot;:1,\&quot;releaseVersion\&quot;:\&quot;0.5.4\&quot;,\&quot;releaseNote\&quot;:\&quot;功能更新：增强稳定性。\&quot;}],\&quot;versionChangesLevel\&quot;:2}</p>
+     * <p>{\&quot;releaseInfo\&quot;:{\&quot;createTime\&quot;:\&quot;2021-07-27\&quot;,\&quot;level\&quot;:1,\&quot;releaseVersion\&quot;:\&quot;0.5.4\&quot;,\&quot;releaseNote\&quot;:\&quot;Feature update: Enhanced stability.\&quot;}],\&quot;versionChangesLevel\&quot;:2}</p>
      */
     @NameInMap("DBVersionRelease")
     public String DBVersionRelease;
 
     /**
-     * <p>Indicates whether the instance major version can be upgraded. Valid values:</p>
+     * <p>Indicates whether the major version of the instance can be upgraded. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: The major version can be upgraded.</li>
-     * <li><strong>false</strong>: The major version is the latest version and cannot be upgraded.</li>
+     * <li><strong>false</strong>: The major version cannot be upgraded, usually because it is already the latest version.</li>
      * </ul>
      * <blockquote>
-     * <p> To upgrade the major version, call the <a href="https://help.aliyun.com/document_detail/473776.html">ModifyInstanceMajorVersion</a> operation.</p>
+     * <p>To upgrade the major version, call the <a href="https://help.aliyun.com/document_detail/473776.html">ModifyInstanceMajorVersion</a> operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -36,13 +36,13 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     public Boolean enableUpgradeMajorVersion;
 
     /**
-     * <p>Indicates whether the instance minor version can be updated. Valid values:</p>
+     * <p>Indicates whether the minor version of the instance can be upgraded. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The minor version can be updated.</li>
-     * <li><strong>false</strong>: The minor version is the latest version and cannot be updated.</li>
+     * <li><strong>true</strong>: The minor version can be upgraded.</li>
+     * <li><strong>false</strong>: The minor version is already the latest and cannot be upgraded.</li>
      * </ul>
      * <blockquote>
-     * <p> To update the minor version, call the <a href="https://help.aliyun.com/document_detail/473777.html">ModifyInstanceMinorVersion</a> operation.</p>
+     * <p>To upgrade the minor version, call the <a href="https://help.aliyun.com/document_detail/473777.html">ModifyInstanceMinorVersion</a> operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     public Boolean enableUpgradeMinorVersion;
 
     /**
-     * <p>The database engine. Valid values: <strong>redis</strong> and <strong>memcache</strong>.</p>
+     * <p>The database engine type. Valid values: <strong>redis</strong> and <strong>memcache</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>redis</p>
@@ -61,10 +61,10 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     public String engine;
 
     /**
-     * <p>Indicates whether automatic minor version update is enabled. Valid values:</p>
+     * <p>Indicates whether automatic minor version upgrade is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Automatic minor version update is disabled.</li>
-     * <li><strong>1</strong>: Automatic minor version update is enabled.</li>
+     * <li><strong>0</strong>: Disabled.</li>
+     * <li><strong>1</strong>: Enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,10 +74,10 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     public String isAutoUpgradeOpen;
 
     /**
-     * <p>Indicates whether the instance uses the latest minor version. Valid values:</p>
+     * <p>Indicates whether the minor version of the instance is the latest. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -87,10 +87,10 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     public Boolean isLatestVersion;
 
     /**
-     * <p>Indicates whether Transport Layer Security (TLS) is enabled. Valid values:</p>
+     * <p>Indicates whether the new TLS version is supported. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: TLS is enabled.</li>
-     * <li><strong>0</strong>: TLS is disabled.</li>
+     * <li><strong>1</strong>: Enabled.</li>
+     * <li><strong>0</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,10 +100,10 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     public String isNewSSLMode;
 
     /**
-     * <p>Indicates whether the NGLB mode is enabled. Valid values:</p>
+     * <p>Indicates whether NGLB mode is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: The NGLB mode is disabled.</li>
-     * <li><strong>1</strong>: The NGLB mode is enabled.</li>
+     * <li><strong>0</strong>: Disabled.</li>
+     * <li><strong>1</strong>: Enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -113,7 +113,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     public String isOpenNGLB;
 
     /**
-     * <p>Indicates whether the instance runs a Redis version.</p>
+     * <p>Indicates whether the instance is a Redis-compatible version.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -124,8 +124,8 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     /**
      * <p>Indicates whether SSL is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: SSL is enabled.</li>
-     * <li><strong>0</strong>: TLS is disabled.</li>
+     * <li><strong>1</strong>: Enabled.</li>
+     * <li><strong>0</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -153,7 +153,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     public String minorVersion;
 
     /**
-     * <p>The latest minor version to which the proxy node can be updated.</p>
+     * <p>The information about the latest minor version to which the proxy node can be upgraded.</p>
      */
     @NameInMap("ProxyLatestMinorVersion")
     public DescribeEngineVersionResponseBodyProxyLatestMinorVersion proxyLatestMinorVersion;
@@ -161,7 +161,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     /**
      * <p>The current minor version of the proxy node.</p>
      * <blockquote>
-     * <p> This parameter is returned only for cluster and read/write splitting instances.</p>
+     * <p>This parameter is returned only for instances of the cluster or read/write splitting architecture.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -171,19 +171,19 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     public String proxyMinorVersion;
 
     /**
-     * <p>The release notes for the minor version of proxy nodes. The release notes include the release date, minor version number, release type such as new feature, and description.</p>
+     * <p>The update notes for the minor version of the proxy node, including the release time, minor version number, type (such as new feature), and detailed description.</p>
      * <blockquote>
-     * <p> This parameter is returned only for cluster and read/write splitting instances.</p>
+     * <p>This parameter is returned only for instances of the cluster or read/write splitting architecture.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;releaseInfo\&quot;:[{\&quot;createTime\&quot;:\&quot;2021-06-08\&quot;,\&quot;level\&quot;:0,\&quot;releaseVersion\&quot;:\&quot;6.6.2\&quot;,\&quot;releaseNote\&quot;:\&quot;新特性：增加对部分内部命令的支持。\&quot;}],\&quot;versionChangesLevel\&quot;:2}</p>
+     * <p>{\&quot;releaseInfo\&quot;:[{\&quot;createTime\&quot;:\&quot;2021-06-08\&quot;,\&quot;level\&quot;:0,\&quot;releaseVersion\&quot;:\&quot;6.6.2\&quot;,\&quot;releaseNote\&quot;:\&quot;New feature: Added support for some internal commands.\&quot;}],\&quot;versionChangesLevel\&quot;:2}</p>
      */
     @NameInMap("ProxyVersionRelease")
     public String proxyVersionRelease;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>A52974D1-9D57-4805-86CC-92E6EDE8****</p>
@@ -419,11 +419,11 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         public DescribeEngineVersionResponseBodyDBLatestMinorVersionVersionReleaseReleaseInfo releaseInfo;
 
         /**
-         * <p>The version update level, which indicates how strongly the update is recommended. Valid values:</p>
+         * <p>The importance level of the version upgrade (recommended upgrade level). Valid values:</p>
          * <ul>
-         * <li>0: regular</li>
-         * <li>1: recommended</li>
-         * <li>2: critical</li>
+         * <li>0: Normal.</li>
+         * <li>1: Important.</li>
+         * <li>2: Critical.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -457,11 +457,11 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
 
     public static class DescribeEngineVersionResponseBodyDBLatestMinorVersion extends TeaModel {
         /**
-         * <p>The version update level. Valid values:</p>
+         * <p>The importance level of the version change. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: regular</li>
-         * <li><strong>1</strong>: recommended</li>
-         * <li><strong>2</strong>: critical</li>
+         * <li><strong>0</strong>: Normal.</li>
+         * <li><strong>1</strong>: Important.</li>
+         * <li><strong>2</strong>: Critical.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -480,7 +480,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         public String minorVersion;
 
         /**
-         * <p>The version update path from the current minor version to the latest minor version of the instance, which is consistent with the version documentation. For more detailed information, you can directly refer to the release notes.</p>
+         * <p>The version evolution path from the current minor version of the instance to the latest minor version. This is consistent with the version documentation. You can refer to the version release notes for more detailed information.</p>
          */
         @NameInMap("VersionRelease")
         public DescribeEngineVersionResponseBodyDBLatestMinorVersionVersionRelease versionRelease;
@@ -603,11 +603,11 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         public DescribeEngineVersionResponseBodyProxyLatestMinorVersionVersionReleaseReleaseInfo releaseInfo;
 
         /**
-         * <p>The version update level, which indicates how strongly the update is recommended. Valid values:</p>
+         * <p>The importance level of the version upgrade (recommended upgrade level). Valid values:</p>
          * <ul>
-         * <li>0: regular</li>
-         * <li>1: recommended</li>
-         * <li>2: critical</li>
+         * <li>0: Normal.</li>
+         * <li>1: Important.</li>
+         * <li>2: Critical.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -641,11 +641,11 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
 
     public static class DescribeEngineVersionResponseBodyProxyLatestMinorVersion extends TeaModel {
         /**
-         * <p>The version update level. Valid values:</p>
+         * <p>The importance level of the version change. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: regular</li>
-         * <li><strong>1</strong>: recommended</li>
-         * <li><strong>2</strong>: critical</li>
+         * <li><strong>0</strong>: Normal.</li>
+         * <li><strong>1</strong>: Important.</li>
+         * <li><strong>2</strong>: Critical.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -664,7 +664,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         public String minorVersion;
 
         /**
-         * <p>The version update path from the current minor version to the latest minor version of the instance, which is consistent with the version documentation. For more detailed information, you can directly refer to the release notes.</p>
+         * <p>The version evolution path from the current minor version of the instance to the latest minor version. This is consistent with the version documentation. You can refer to the version release notes for more detailed information.</p>
          */
         @NameInMap("VersionRelease")
         public DescribeEngineVersionResponseBodyProxyLatestMinorVersionVersionRelease versionRelease;

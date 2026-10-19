@@ -7,8 +7,9 @@ public class TransformInstanceChargeTypeResponseBody extends TeaModel {
     /**
      * <p>The expiration time of the instance.</p>
      * <blockquote>
-     * <p>This parameter is returned only when you change the billing method of an instance from pay-as-you-go to subscription.</p>
+     * <p>This parameter is returned only when the billing method of the instance is changed from pay-as-you-go to subscription.</p>
      * </blockquote>
+     * <p>The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-05-13T00:00:00Z</p>
@@ -17,7 +18,7 @@ public class TransformInstanceChargeTypeResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The order ID.</p>
+     * <p>The ID of the order.</p>
      * 
      * <strong>example:</strong>
      * <p>20881824000****</p>
@@ -26,7 +27,7 @@ public class TransformInstanceChargeTypeResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>82C791FB-8979-489E-853D-706D7743****</p>

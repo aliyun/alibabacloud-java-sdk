@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class DescribeAuditRecordsResponseBody extends TeaModel {
     /**
      * <p>The end time of the query.</p>
+     * <p>The time is in the YYYY-MM-DDTHH:mm:ssZ format and displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-03-25T12:10:00Z</p>
@@ -26,7 +27,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
     public DescribeAuditRecordsResponseBodyItems items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number of the page to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +36,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The maximum number of entries returned per page.</p>
+     * <p>The maximum number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -54,6 +55,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
 
     /**
      * <p>The start time of the query.</p>
+     * <p>The time is in the YYYY-MM-DDTHH:mm:ssZ format and displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-03-24T12:10:00Z</p>
@@ -62,7 +64,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>22222</p>

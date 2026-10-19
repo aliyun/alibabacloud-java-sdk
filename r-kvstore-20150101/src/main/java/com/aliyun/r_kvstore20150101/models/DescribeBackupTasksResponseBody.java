@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupTasksResponseBody extends TeaModel {
     /**
-     * <p>The following parameters are no longer used. Ignore the parameters.</p>
+     * <p><strong>[Deprecated]</strong> This group of parameters is deprecated. Ignore these parameters.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public DescribeBackupTasksResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -26,7 +26,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>BB73740C-23E2-4392-9DA4-2660C74C****</p>
@@ -73,7 +73,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
 
     public static class DescribeBackupTasksResponseBodyAccessDeniedDetail extends TeaModel {
         /**
-         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * <p>Same as above.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -84,7 +84,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         public String authAction;
 
         /**
-         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * <p>Same as above.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -95,7 +95,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         public String authPrincipalDisplayName;
 
         /**
-         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * <p>Same as above.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -106,7 +106,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * <p>Same as above.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -117,7 +117,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * <p>Same as above.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -128,7 +128,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * <p>Same as above.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -139,7 +139,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         public String noPermissionType;
 
         /**
-         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * <p>Same as above.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -223,14 +223,14 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         public Long backupJobID;
 
         /**
-         * <p>The state of the backup task. Valid values:</p>
+         * <p>The status of the backup task. Valid values:</p>
          * <ul>
-         * <li><strong>NoStart</strong>: The backup task is not started.</li>
-         * <li><strong>Preparing</strong>: The backup task is being prepared.</li>
-         * <li><strong>Waiting</strong>: The backup task is pending.</li>
-         * <li><strong>Uploading</strong>: The system is uploading the backup file.</li>
-         * <li><strong>Checking</strong>: The system is checking the uploaded backup file.</li>
-         * <li><strong>Finished</strong>: The backup task is completed.</li>
+         * <li><strong>NoStart</strong>: not started</li>
+         * <li><strong>Preparing</strong>: preparing</li>
+         * <li><strong>Waiting</strong>: waiting</li>
+         * <li><strong>Uploading</strong>: uploading</li>
+         * <li><strong>Checking</strong>: checking</li>
+         * <li><strong>Finished</strong>: completed</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -242,8 +242,8 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         /**
          * <p>The backup mode. Valid values:</p>
          * <ul>
-         * <li><strong>Automated</strong>: automatic backup</li>
-         * <li><strong>Manual</strong>: manual backup</li>
+         * <li><strong>Automated</strong>: automatic backup.</li>
+         * <li><strong>Manual</strong>: manual backup.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -262,7 +262,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The progress of the backup task in percentage.</p>
+         * <p>The progress percentage of the backup task. This parameter is not recommended. Refer to the <strong>Progress</strong> parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -271,7 +271,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         public String process;
 
         /**
-         * <p>The backup progress.</p>
+         * <p>The progress percentage of the backup. Valid values: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>27</p>
@@ -280,7 +280,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         public String progress;
 
         /**
-         * <p>The start time of the backup task. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The start time of the backup task. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-05T19:24:00Z</p>
@@ -291,8 +291,8 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         /**
          * <p>The type of the backup task. Valid values:</p>
          * <ul>
-         * <li><strong>TempBackupTask</strong>: The backup task was manually performed.</li>
-         * <li><strong>NormalBackupTask</strong>: The backup task was automatically performed.</li>
+         * <li><strong>TempBackupTask</strong>: temporary backup task, which indicates a manual backup.</li>
+         * <li><strong>NormalBackupTask</strong>: normal backup task, which indicates an automatic backup.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTasksResponseBody extends TeaModel {
     /**
-     * <p>The list of O\&amp;M events.</p>
+     * <p>The list of O&amp;M events.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeActiveOperationTasksResponseBodyItems> items;
@@ -20,7 +20,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page. Default 25.</p>
+     * <p>The number of entries per page. Default value: 25.</p>
      * 
      * <strong>example:</strong>
      * <p>25</p>
@@ -38,7 +38,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of O\&amp;M events returned.</p>
+     * <p>The total number of O&amp;M event records returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,7 +93,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
 
     public static class DescribeActiveOperationTasksResponseBodyItems extends TeaModel {
         /**
-         * <p>Indicates whether the event can be canceled. The value 1 indicates that the event can be canceled. The value 0 indicates that the event cannot be canceled.</p>
+         * <p>Indicates whether the event can be canceled. A value of 1 indicates that the event can be canceled. A value of 0 indicates that the event cannot be canceled.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -102,7 +102,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String allowCancel;
 
         /**
-         * <p>Indicates whether the switching time can be changed. The value 1 indicates that the switching time can be changed. The value 0 indicates that the switching time cannot be changed.</p>
+         * <p>Indicates whether the event time can be modified. A value of 1 indicates that the time can be modified. A value of 0 indicates that the time cannot be modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -111,7 +111,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String allowChange;
 
         /**
-         * <p>The code of the task level. The value S1 indicates the system O\&amp;M level. The value S0 indicates the exception fixing level.</p>
+         * <p>The event level code. S1 indicates system O&amp;M. S0 indicates risk recovery.</p>
          * 
          * <strong>example:</strong>
          * <p>S1</p>
@@ -120,7 +120,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String changeLevel;
 
         /**
-         * <p>The level of the task in English.</p>
+         * <p>The event level in English.</p>
          * 
          * <strong>example:</strong>
          * <p>System maintenance</p>
@@ -129,7 +129,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String changeLevelEn;
 
         /**
-         * <p>The level of the task in Chinese.</p>
+         * <p>The event level in Chinese.</p>
          * 
          * <strong>example:</strong>
          * <p>系统运维</p>
@@ -138,7 +138,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String changeLevelZh;
 
         /**
-         * <p>The time when the O\&amp;M task was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The creation time in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-05-30T14:30:00Z</p>
@@ -156,7 +156,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String currentAVZ;
 
         /**
-         * <p>The database type of the instance. The return value is <strong>Redis</strong>.</p>
+         * <p>The database type. Return value: <strong>redis</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>redis</p>
@@ -165,7 +165,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String dbType;
 
         /**
-         * <p>The version of the database engine.</p>
+         * <p>The Milvus version number of the kernel.</p>
          * 
          * <strong>example:</strong>
          * <p>5.0</p>
@@ -174,7 +174,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String dbVersion;
 
         /**
-         * <p>The deadline before which the time to preform the O&amp;M task can be modified. The time in UTC is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format.</p>
+         * <p>The latest deadline by which the task execution time can be adjusted, in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-05-30T23:59:59Z</p>
@@ -183,7 +183,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String deadline;
 
         /**
-         * <p>The ID of the O\&amp;M event.</p>
+         * <p>The O&amp;M event ID.</p>
          * 
          * <strong>example:</strong>
          * <p>11111</p>
@@ -192,7 +192,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public Integer id;
 
         /**
-         * <p>The impact of the task.</p>
+         * <p>The event impact.</p>
          * 
          * <strong>example:</strong>
          * <p>TransientDisconnection</p>
@@ -201,7 +201,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String impact;
 
         /**
-         * <p>The impact of the task in English.</p>
+         * <p>The event impact in English.</p>
          * 
          * <strong>example:</strong>
          * <p>Transient instance disconnection</p>
@@ -210,7 +210,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String impactEn;
 
         /**
-         * <p>The impact of the task in Chinese.</p>
+         * <p>The event impact in Chinese.</p>
          * 
          * <strong>example:</strong>
          * <p>实例闪断</p>
@@ -219,7 +219,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String impactZh;
 
         /**
-         * <p>The alias and description of the instance.</p>
+         * <p>The instance alias or description.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -237,7 +237,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String insName;
 
         /**
-         * <p>The time when the O\&amp;M task was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The modification time in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-05-30T14:30:00Z</p>
@@ -246,7 +246,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The required preparation period between the task start time and the switchover time. The time is displayed in the <em>HH:mm:ss</em> format.</p>
+         * <p>The preparation time required between the start time and the switchover time. Format: HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>04:00:00</p>
@@ -255,7 +255,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String prepareInterval;
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hanghzou</p>
@@ -264,7 +264,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The information about the execution result.</p>
+         * <p>The execution result information.</p>
          * 
          * <strong>example:</strong>
          * <p>userCancel</p>
@@ -273,7 +273,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String resultInfo;
 
         /**
-         * <p>The time when the event is executed in the backend. The time must be in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</p>
+         * <p>The time when the backend starts executing the event, in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-05-30T00:00:00Z</p>
@@ -282,13 +282,13 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The status of the O\&amp;M event. Valid values:</p>
+         * <p>The status of the O&amp;M event. Valid values:</p>
          * <ul>
-         * <li><strong>3</strong>: filters pending events.</li>
-         * <li><strong>4</strong>: filters in-progress events.</li>
-         * <li><strong>5</strong>: filters successful events.</li>
-         * <li><strong>6</strong>: filters failed events.</li>
-         * <li><strong>7</strong>: filters canceled events.</li>
+         * <li><strong>3</strong>: pending.</li>
+         * <li><strong>4</strong>: being processed.</li>
+         * <li><strong>5</strong>: ended successfully.</li>
+         * <li><strong>6</strong>: ended with failure.</li>
+         * <li><strong>7</strong>: canceled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -304,7 +304,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public java.util.List<String> subInsNames;
 
         /**
-         * <p>The time when the system performs the switchover operation. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the backend initiates the switchover operation, in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-05-30T14:30:00Z</p>
@@ -313,7 +313,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String switchTime;
 
         /**
-         * <p>The O\&amp;M event parameters.</p>
+         * <p>The O&amp;M event parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -324,7 +324,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String taskParams;
 
         /**
-         * <p>The type of the O\&amp;M event.</p>
+         * <p>The type of the O&amp;M event.</p>
          * 
          * <strong>example:</strong>
          * <p>rds_apsaradb_transfer</p>
@@ -333,7 +333,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String taskType;
 
         /**
-         * <p>The cause of the O\&amp;M event.</p>
+         * <p>The reason for the O&amp;M event in English.</p>
          * 
          * <strong>example:</strong>
          * <p>Minor version update</p>
@@ -342,7 +342,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String taskTypeEn;
 
         /**
-         * <p>The reason for the task in Chinese.</p>
+         * <p>The task reason in Chinese.</p>
          * 
          * <strong>example:</strong>
          * <p>小版本升级</p>

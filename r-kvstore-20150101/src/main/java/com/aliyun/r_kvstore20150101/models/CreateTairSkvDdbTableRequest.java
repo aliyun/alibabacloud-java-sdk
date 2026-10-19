@@ -14,7 +14,7 @@ public class CreateTairSkvDdbTableRequest extends TeaModel {
     public String backupId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token is case-sensitive and cannot exceed 64 ASCII characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token is case-sensitive and can contain up to 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz**</p>
@@ -70,7 +70,7 @@ public class CreateTairSkvDdbTableRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>To create an instance from a backup set of an existing instance, specify the source instance ID in this parameter.</p>
+     * <p>To create an instance from a backup set of an existing instance, specify the ID of the source instance in this parameter.</p>
      * <blockquote>
      * <p>This parameter must be used together with BackupId.</p>
      * </blockquote>

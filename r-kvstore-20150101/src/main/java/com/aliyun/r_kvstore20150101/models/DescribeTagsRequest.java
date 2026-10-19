@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeTagsRequest extends TeaModel {
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The token used to start the next query to return more results.</p>
      * <blockquote>
-     * <p>This parameter is not required for the first request. If not all results are returned in one query, you can specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</p>
+     * <p>You do not need to provide this parameter for the first query. If a single query does not return all results, you can pass the <strong>NextToken</strong> value returned in the previous response to continue the query.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class DescribeTagsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The resource type. Valid values: <strong>INSTANCE</strong> or <strong>instance</strong>.</p>
+     * <p>The resource type. Valid values: <strong>INSTANCE</strong> and <strong>instance</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>INSTANCE</p>

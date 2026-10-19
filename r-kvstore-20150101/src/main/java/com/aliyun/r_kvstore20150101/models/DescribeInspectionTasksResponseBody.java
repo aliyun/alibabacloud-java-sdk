@@ -4,10 +4,15 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInspectionTasksResponseBody extends TeaModel {
+    /**
+     * <p>The task data.</p>
+     */
     @NameInMap("Data")
     public DescribeInspectionTasksResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2D9F3768-EDA9-4811-943E-42C8006E****</p>
      */
@@ -15,6 +20,8 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +59,9 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
 
     public static class DescribeInspectionTasksResponseBodyDataItems extends TeaModel {
         /**
+         * <p>The time when the task was created.</p>
+         * <p>The time is displayed in UTC time in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-07-01T02:06:34Z</p>
          */
@@ -59,6 +69,9 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The end time of the task.</p>
+         * <p>The time is displayed in UTC time in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-09-23T00:00:00Z</p>
          */
@@ -66,6 +79,9 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The completion time of the task.</p>
+         * <p>The time is displayed in UTC time in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-09T02:13:01Z</p>
          */
@@ -73,6 +89,15 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
         public String finishTime;
 
         /**
+         * <p>The specified inspection items. The following inspection items are supported:</p>
+         * <ul>
+         * <li>RESOURCE_USAGE</li>
+         * <li>BIGKEY</li>
+         * <li>HOTKEY</li>
+         * <li>PERFORMANCE_METRICS</li>
+         * <li>SLOWLOG</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PERFORMANCE_METRICS</p>
          */
@@ -80,6 +105,8 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
         public String inspectionItems;
 
         /**
+         * <p>The list of associated instance IDs.</p>
+         * 
          * <strong>example:</strong>
          * <p>r-uf6ns8txov3mp9jxxx</p>
          */
@@ -87,6 +114,8 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
         public String instanceIds;
 
         /**
+         * <p>The language of the report.</p>
+         * 
          * <strong>example:</strong>
          * <p>zh-CN</p>
          */
@@ -94,6 +123,8 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
         public String reportLanguage;
 
         /**
+         * <p>The ID of the scheduled task.</p>
+         * 
          * <strong>example:</strong>
          * <p>sch-4dfb08ddf9f84855bacca35axxx</p>
          */
@@ -101,6 +132,8 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
         public String scheduleId;
 
         /**
+         * <p>The source of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>scheduler|</p>
          */
@@ -108,6 +141,9 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>The start time of the task.</p>
+         * <p>The time is displayed in UTC time in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-05-30T02:11:01Z</p>
          */
@@ -115,6 +151,8 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The status of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCEEDED</p>
          */
@@ -122,6 +160,8 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>tit-dca42f85c73644e0ab5c80ef641xxx</p>
          */
@@ -224,10 +264,15 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeInspectionTasksResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of tasks.</p>
+         */
         @NameInMap("Items")
         public java.util.List<DescribeInspectionTasksResponseBodyDataItems> items;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -235,6 +280,8 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
         public Long pageNum;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -242,6 +289,8 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>6</p>
          */

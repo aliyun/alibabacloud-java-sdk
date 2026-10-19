@@ -37,12 +37,72 @@ public class DescribeTairSkvDdbTableResponseBody extends TeaModel {
         return this.tables;
     }
 
+    public static class DescribeTairSkvDdbTableResponseBodyTablesTableGlobalSecondaryIndexListGlobalSecondaryIndex extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>tt-gsi-xxxxxxxxx</p>
+         */
+        @NameInMap("GsiId")
+        public String gsiId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>indexKey1</p>
+         */
+        @NameInMap("IndexName")
+        public String indexName;
+
+        public static DescribeTairSkvDdbTableResponseBodyTablesTableGlobalSecondaryIndexListGlobalSecondaryIndex build(java.util.Map<String, ?> map) throws Exception {
+            DescribeTairSkvDdbTableResponseBodyTablesTableGlobalSecondaryIndexListGlobalSecondaryIndex self = new DescribeTairSkvDdbTableResponseBodyTablesTableGlobalSecondaryIndexListGlobalSecondaryIndex();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeTairSkvDdbTableResponseBodyTablesTableGlobalSecondaryIndexListGlobalSecondaryIndex setGsiId(String gsiId) {
+            this.gsiId = gsiId;
+            return this;
+        }
+        public String getGsiId() {
+            return this.gsiId;
+        }
+
+        public DescribeTairSkvDdbTableResponseBodyTablesTableGlobalSecondaryIndexListGlobalSecondaryIndex setIndexName(String indexName) {
+            this.indexName = indexName;
+            return this;
+        }
+        public String getIndexName() {
+            return this.indexName;
+        }
+
+    }
+
+    public static class DescribeTairSkvDdbTableResponseBodyTablesTableGlobalSecondaryIndexList extends TeaModel {
+        @NameInMap("GlobalSecondaryIndex")
+        public java.util.List<DescribeTairSkvDdbTableResponseBodyTablesTableGlobalSecondaryIndexListGlobalSecondaryIndex> globalSecondaryIndex;
+
+        public static DescribeTairSkvDdbTableResponseBodyTablesTableGlobalSecondaryIndexList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeTairSkvDdbTableResponseBodyTablesTableGlobalSecondaryIndexList self = new DescribeTairSkvDdbTableResponseBodyTablesTableGlobalSecondaryIndexList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeTairSkvDdbTableResponseBodyTablesTableGlobalSecondaryIndexList setGlobalSecondaryIndex(java.util.List<DescribeTairSkvDdbTableResponseBodyTablesTableGlobalSecondaryIndexListGlobalSecondaryIndex> globalSecondaryIndex) {
+            this.globalSecondaryIndex = globalSecondaryIndex;
+            return this;
+        }
+        public java.util.List<DescribeTairSkvDdbTableResponseBodyTablesTableGlobalSecondaryIndexListGlobalSecondaryIndex> getGlobalSecondaryIndex() {
+            return this.globalSecondaryIndex;
+        }
+
+    }
+
     public static class DescribeTairSkvDdbTableResponseBodyTablesTable extends TeaModel {
         @NameInMap("Bandwidth")
         public Long bandwidth;
 
         @NameInMap("Connections")
         public Long connections;
+
+        @NameInMap("GlobalSecondaryIndexList")
+        public DescribeTairSkvDdbTableResponseBodyTablesTableGlobalSecondaryIndexList globalSecondaryIndexList;
 
         @NameInMap("TableId")
         public String tableId;
@@ -69,6 +129,14 @@ public class DescribeTairSkvDdbTableResponseBody extends TeaModel {
         }
         public Long getConnections() {
             return this.connections;
+        }
+
+        public DescribeTairSkvDdbTableResponseBodyTablesTable setGlobalSecondaryIndexList(DescribeTairSkvDdbTableResponseBodyTablesTableGlobalSecondaryIndexList globalSecondaryIndexList) {
+            this.globalSecondaryIndexList = globalSecondaryIndexList;
+            return this;
+        }
+        public DescribeTairSkvDdbTableResponseBodyTablesTableGlobalSecondaryIndexList getGlobalSecondaryIndexList() {
+            return this.globalSecondaryIndexList;
         }
 
         public DescribeTairSkvDdbTableResponseBodyTablesTable setTableId(String tableId) {

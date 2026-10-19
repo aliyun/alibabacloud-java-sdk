@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     /**
-     * <p>The database engine that the instance runs.</p>
+     * <p>The database engine.</p>
      * 
      * <strong>example:</strong>
      * <p>Redis</p>
@@ -14,7 +14,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public String engine;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>r-bp10n********</p>
@@ -26,7 +26,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public DescribeSlowLogRecordsResponseBodyItems items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -53,7 +53,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>686BB8A6-BBA5-47E5-8A75-D2ADE433****</p>
@@ -63,6 +63,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
 
     /**
      * <p>The start time of the query.</p>
+     * <p>The time is in the YYYY-MM-DDTHH:mmZ format and displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-03-10T14:00Z</p>
@@ -71,7 +72,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The total number of returned log entries.</p>
+     * <p>The total number of log entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

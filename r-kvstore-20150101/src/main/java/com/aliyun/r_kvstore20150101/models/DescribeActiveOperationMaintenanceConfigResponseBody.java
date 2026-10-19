@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaModel {
     /**
-     * <p>The configuration details of the O\&amp;M task.</p>
+     * <p>The configuration details of the O&amp;M task.</p>
      */
     @NameInMap("Config")
     public DescribeActiveOperationMaintenanceConfigResponseBodyConfig config;
 
     /**
-     * <p>Indicates whether the O\&amp;M task is configured. Valid values:</p>
+     * <p>Indicates whether the configuration exists. Valid values:</p>
      * <ul>
-     * <li>1: The O\&amp;M task is configured.</li>
-     * <li>0: The O\&amp;M task is not configured.</li>
+     * <li>1: Configured.</li>
+     * <li>0: Not configured.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaMod
 
     public static class DescribeActiveOperationMaintenanceConfigResponseBodyConfig extends TeaModel {
         /**
-         * <p>The time when the O\&amp;M task was created. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the O&amp;M task configuration was created. The time is in the <i>yyyy-mm-dd</i>T<i>hh:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2018-05-30T14:30:00Z</p>
@@ -72,10 +72,10 @@ public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaMod
         public String createdTime;
 
         /**
-         * <p>The interval between two O\&amp;M tasks.</p>
+         * <p>The cycle time.</p>
          * <ul>
-         * <li>If the CycleType parameter is set to Month, the CycleTime parameter returns a string of numbers ranging from 1 to 28, which indicates the specific days of the month. The numbers are separated with commas (,). The CycleTime parameter returns 0 when the configurations do not take effect.</li>
-         * <li>If the CycleType parameter is set to Week, the CycleTime parameter returns a string of numbers ranging from 1 to 7, which indicates the specific days of the week. The numbers are separated with commas (,). The CycleTime parameter returns 0 when the configurations do not take effect.</li>
+         * <li>If CycleType is set to Month, a number from 1 to 28 is returned, indicating the day of the month. Multiple values are separated by commas (,). The value is 0 if the configuration is inactive.</li>
+         * <li>If CycleType is set to Week, a number from 1 to 7 is returned, indicating the day of the week. Multiple values are separated by commas (,). The value is 0 if the configuration is inactive.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -85,10 +85,10 @@ public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaMod
         public String cycleTime;
 
         /**
-         * <p>The unit of the O\&amp;M task cycle. Valid values:</p>
+         * <p>The cycle type. Valid values:</p>
          * <ul>
-         * <li>Month</li>
-         * <li>Week</li>
+         * <li>Month: monthly</li>
+         * <li>Week: weekly</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -98,7 +98,7 @@ public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaMod
         public String cycleType;
 
         /**
-         * <p>The end time of the O\&amp;M window. The time follows the ISO 8601 standard in the <em>hh:mm:ss</em> Z format. The time is displayed in UTC.</p>
+         * <p>The end time of the O&amp;M time window. The time is in the <i>hh:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>20:00:00Z</p>
@@ -107,7 +107,7 @@ public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaMod
         public String maintainEndTime;
 
         /**
-         * <p>The start time of the O\&amp;M window. The time follows the ISO 8601 standard in the <em>hh:mm:ss</em> Z format. The time is displayed in UTC.</p>
+         * <p>The start time of the O&amp;M time window. The time is in the <i>hh:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>18:00:00Z</p>
@@ -116,7 +116,7 @@ public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaMod
         public String maintainStartTime;
 
         /**
-         * <p>The time when the last O\&amp;M task configurations are modified. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in Coordinated Universal Time (UTC).</p>
+         * <p>The time when the O&amp;M task configuration was last modified. The time is in the <i>yyyy-mm-dd</i>T<i>hh:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-05-30T14:30:00Z</p>
@@ -125,10 +125,10 @@ public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaMod
         public String modifiedTime;
 
         /**
-         * <p>Indicates whether the configurations take effect. Valid values:</p>
+         * <p>Indicates whether the configuration is active. Valid values:</p>
          * <ul>
-         * <li>1: The configurations are in effect.</li>
-         * <li>2: The configurations are invalid.</li>
+         * <li>1: Active.</li>
+         * <li>2: Inactive.</li>
          * </ul>
          * 
          * <strong>example:</strong>

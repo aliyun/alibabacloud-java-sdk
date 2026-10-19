@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceRequest extends TeaModel {
     /**
-     * <p>The display language of the response. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
      * <li><strong>zh-CN</strong>: Chinese. This is the default value.</li>
      * <li><strong>en-US</strong>: English.</li>
@@ -18,10 +18,10 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The database engine of the instance. Valid values:</p>
+     * <p>The engine type. Valid values:</p>
      * <ul>
-     * <li><strong>Redis</strong></li>
-     * <li><strong>Memcache</strong></li>
+     * <li><strong>Redis</strong>: Redis engine</li>
+     * <li><strong>Memcache</strong>: Memcache engine</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,9 +44,9 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <blockquote>
-     * <p>This parameter is available and required only if the <strong>OrderType</strong> parameter is set to <strong>UPGRADE</strong> or <strong>DOWNGRADE</strong>.</p>
+     * <p>This parameter is available and required only when <strong>OrderType</strong> is set to <strong>UPGRADE</strong> or <strong>DOWNGRADE</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -56,9 +56,11 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The edition of the instance. Valid values:</p>
+     * <p>The product series. Valid values:</p>
      * <ul>
-     * <li><strong>professional</strong>: Standard Edition. This edition supports the standalone, master-replica, read /write splitting, and cluster architectures and provides high scalability.</li>
+     * <li><strong>professional</strong>: Professional Edition. This edition supports the standalone, primary/secondary, read/write splitting, and cluster architectures, and provides high scalability.
+     *  &lt;props=&quot;china&quot;&gt;</li>
+     * <li><strong>economical</strong>: Economical Edition. This edition supports only the primary/secondary architecture and is cost-effective. For more information, see <a href="https://help.aliyun.com/document_detail/2489678.html">YiTian RDS instances</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,9 +70,9 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String instanceScene;
 
     /**
-     * <p>The ID of the data node for which you want to query available resources that can be created. You can call the <a href="https://help.aliyun.com/document_detail/473786.html">DescribeLogicInstanceTopology</a> operation to query the ID of the data node. Remove the number sign (<code>#</code>) and the content that follows the number sign. For example, retain only r-bp10noxlhcoim2\<em>\</em>\<em>\</em>-db-0.</p>
+     * <p>The data node ID. You can call the <a href="https://help.aliyun.com/document_detail/473786.html">DescribeLogicInstanceTopology</a> operation to obtain the data node ID. For the obtained data node ID, you must remove the number sign (<code>#</code>) and the content that follows it. For example, retain only r-bp10noxlhcoim2****-db-0.</p>
      * <blockquote>
-     * <p>Before you specify this parameter, you must set the <strong>InstanceId</strong> parameter to the ID of an instance that uses the cluster or read/write splitting architecture.</p>
+     * <p>Before you specify this parameter, you must also specify the <strong>InstanceId</strong> parameter, and the instance must use the cluster or read/write splitting architecture.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -82,9 +84,9 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     /**
      * <p>The order type. Valid values:</p>
      * <ul>
-     * <li><strong>BUY</strong> (default): orders that are used to create instances</li>
-     * <li><strong>UPGRADE</strong>: orders that are used to upgrade instances</li>
-     * <li><strong>DOWNGRADE</strong>: orders that are used to downgrade instances</li>
+     * <li><strong>BUY</strong> (default): new purchase</li>
+     * <li><strong>UPGRADE</strong>: upgrade instance type</li>
+     * <li><strong>DOWNGRADE</strong>: downgrade instance type</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,17 +102,17 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The instance type. Default value: Local. Valid values:</p>
+     * <p>The product type. Valid values:</p>
      * <ul>
-     * <li><strong>Local</strong>: classic Redis Open-Source Edition instance or classic DRAM-based instance</li>
-     * <li><strong>Tair_rdb</strong>: cloud-native DRAM-based instance</li>
-     * <li><strong>Tair_scm</strong>: persistent memory-optimized instance</li>
-     * <li><strong>Tair_essd</strong>: ESSD/SSD-based instance</li>
-     * <li><strong>OnECS</strong>: cloud-native Redis Open-Source Edition instance</li>
-     * </ul>
-     * <blockquote>
-     * <p> The default value of this parameter is Local. To query disk resources, you must specify the instance type that provides the required disk resources.</p>
+     * <li><strong>Local</strong> (default): Redis Community Edition instance (classic architecture) or memory-optimized instance (classic architecture).</li>
+     * <li><strong>Tair_rdb</strong>: memory-optimized instance (cloud-native architecture).</li>
+     * <li><strong>Tair_scm</strong>: persistent memory-optimized instance.</li>
+     * <li><strong>Tair_essd</strong>: disk-optimized instance.</li>
+     * <li><strong>OnECS</strong>: Redis Community Edition instance (cloud-native architecture).<blockquote>
+     * <p>The default value is Local. If you want to query cloud disk resources, you must specify the product type that corresponds to the required cloud disk resources.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Local</p>
@@ -119,7 +121,7 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -129,9 +131,9 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the IDs of resource groups.</p>
+     * <p>The resource group ID. You can invoke the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to obtain the resource group ID.</p>
      * <blockquote>
-     * <p> You can also query the IDs of resource groups in the Resource Management console. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information about a resource group</a>.</p>
+     * <p>You can also obtain the resource group ID in the console. For related operations, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -150,7 +152,7 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> operation to query the most recent zone list.</p>
+     * <p>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> operation to query the zone ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-h</p>

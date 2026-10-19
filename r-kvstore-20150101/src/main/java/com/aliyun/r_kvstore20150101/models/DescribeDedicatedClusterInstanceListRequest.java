@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDedicatedClusterInstanceListRequest extends TeaModel {
     /**
-     * <p>The ID of the dedicated cluster. You can view the dedicated cluster ID on the Dedicated Clusters page in the ApsaraDB for MyBase console.</p>
+     * <p>The dedicated cluster ID. You can obtain the ID on the dedicated cluster information page in the ApsaraDB for MyBase console.</p>
      * <blockquote>
-     * <p>Separate multiple IDs with commas (,).</p>
+     * <p>To specify multiple IDs, separate them with commas (,).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class DescribeDedicatedClusterInstanceListRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The ID of the host in the dedicated cluster. You can call the <a href="https://help.aliyun.com/document_detail/200944.html">DescribeDedicatedHosts</a> operation to query the host ID.</p>
+     * <p>The host ID in the dedicated cluster. You can call <a href="https://help.aliyun.com/document_detail/200944.html">DescribeDedicatedHosts</a> to query the host ID.</p>
      * <blockquote>
-     * <p>Separate multiple IDs with commas (,).</p>
+     * <p>To specify multiple IDs, separate them with commas (,).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class DescribeDedicatedClusterInstanceListRequest extends TeaModel {
     public String dedicatedHostName;
 
     /**
-     * <p>The database engine of the instance. Set the value to <strong>Redis</strong>.</p>
+     * <p>The database engine. Set the value to <strong>Redis</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>Redis</p>
@@ -38,7 +38,7 @@ public class DescribeDedicatedClusterInstanceListRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>The database engine version of the instance. Set the value to <strong>5.0</strong>.</p>
+     * <p>The database engine version. Set the value to <strong>5.0</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>5.0</p>
@@ -47,9 +47,9 @@ public class DescribeDedicatedClusterInstanceListRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <blockquote>
-     * <p>The instance must be created by using a dedicated cluster. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">What is ApsaraDB for MyBase?</a></p>
+     * <p>The instance must be created in a dedicated cluster. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">ApsaraDB for MyBase</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,11 +59,11 @@ public class DescribeDedicatedClusterInstanceListRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The network type of the instance. Valid values:</p>
+     * <p>The network type of the instance endpoint. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Internet</li>
-     * <li><strong>1</strong>: classic network</li>
-     * <li><strong>2</strong>: Virtual Private Cloud (VPC)</li>
+     * <li><strong>0</strong>: Internet.</li>
+     * <li><strong>1</strong>: Classic network.</li>
+     * <li><strong>2</strong>: Virtual Private Cloud (VPC).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,16 +73,16 @@ public class DescribeDedicatedClusterInstanceListRequest extends TeaModel {
     public String instanceNetType;
 
     /**
-     * <p>The state of the instance. Valid values:</p>
+     * <p>The instance status. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: The instance is being created.</li>
-     * <li><strong>1</strong>: The instance is running.</li>
-     * <li><strong>3</strong>: The instance is being deleted.</li>
-     * <li><strong>5</strong>: The configurations of the instance are being changed.</li>
-     * <li><strong>6</strong>: The instance is being migrated.</li>
-     * <li><strong>7</strong>: The instance is being restored from a backup.</li>
-     * <li><strong>8</strong>: A master-replica switchover is in progress.</li>
-     * <li><strong>9</strong>: Expired data of the instance is being deleted.</li>
+     * <li><strong>0</strong>: Creating.</li>
+     * <li><strong>1</strong>: Running.</li>
+     * <li><strong>3</strong>: Deleting.</li>
+     * <li><strong>5</strong>: Changing specifications.</li>
+     * <li><strong>6</strong>: Migrating.</li>
+     * <li><strong>7</strong>: Restoring from backup.</li>
+     * <li><strong>8</strong>: Switching.</li>
+     * <li><strong>9</strong>: Deleting expired data.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -98,7 +98,7 @@ public class DescribeDedicatedClusterInstanceListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be greater than <strong>0</strong> and less than or equal to the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -107,7 +107,7 @@ public class DescribeDedicatedClusterInstanceListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>30</strong>.</p>
+     * <p>The maximum number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -116,7 +116,7 @@ public class DescribeDedicatedClusterInstanceListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -135,7 +135,7 @@ public class DescribeDedicatedClusterInstanceListRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> operation to query the most recent zone list.</p>
+     * <p>The zone ID. You can call <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> to query zone IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-e</p>

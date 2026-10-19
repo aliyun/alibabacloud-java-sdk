@@ -5,15 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceTDERequest extends TeaModel {
     /**
-     * <p>The ID of the custom key. You can call the <a href="https://help.aliyun.com/document_detail/473860.html">DescribeEncryptionKeyList</a> operation to query the key ID.</p>
+     * <p>The ID of the custom key. You can call <a href="https://help.aliyun.com/document_detail/473860.html">DescribeEncryptionKeyList</a> to query the key ID.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>If you do not specify this parameter, <a href="https://help.aliyun.com/document_detail/28935.html">Key Management Service (KMS)</a> automatically generates a key.</p>
-     * </li>
-     * <li><p>To create a custom key, you can call the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation of the KMS API.</p>
-     * </li>
+     * <li>If you do not specify this parameter, <a href="https://help.aliyun.com/document_detail/28935.html">Key Management Service</a> automatically generates a key.</li>
+     * <li>To create a custom key, call the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation of Key Management Service.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>ad463061-992d-4195-8a94-ed63********</p>
@@ -24,7 +22,7 @@ public class ModifyInstanceTDERequest extends TeaModel {
     /**
      * <p>The encryption algorithm. Default value: AES-CTR-256.</p>
      * <blockquote>
-     * <p>This parameter is available only if the <strong>TDEStatus</strong> parameter is set to <strong>Enabled</strong>.</p>
+     * <p>This parameter is available only when <strong>TDEStatus</strong> is set to <strong>Enabled</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -34,7 +32,7 @@ public class ModifyInstanceTDERequest extends TeaModel {
     public String encryptionName;
 
     /**
-     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,15 +54,13 @@ public class ModifyInstanceTDERequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role that you want to attach to your Tair (Redis OSS-compatible) instance. The ARN must be in the format of <code>acs:ram::$accountID:role/$roleName</code>. After the role is attached, your Tair (Redis OSS-compatible) instance can use KMS.</p>
+     * <p>The global resource descriptor Alibaba Cloud Resource Name (ARN) of the role to be authorized. After the authorization is complete, the related Key Management Service can be used. Format: <code>acs:ram::$accountID:role/$roleName</code>.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p><code>$accountID</code>: the ID of the Alibaba Cloud account. To view the account ID, log on to the Alibaba Cloud console, move the pointer over your profile picture in the upper-right corner of the page, and then click <strong>Security Settings</strong>.</p>
-     * </li>
-     * <li><p><code>$roleName</code>: the name of the RAM role. Replace $roleName with <strong>AliyunRdsInstanceEncryptionDefaultRole</strong>.</p>
-     * </li>
+     * <li><code>$accountID</code>: the Alibaba Cloud account ID. Log on to the Alibaba Cloud Management Console, move the mouse over the profile picture in the upper-right corner, and then click <strong>Security Settings</strong> to view the account ID.</li>
+     * <li><code>$roleName</code>: the RAM role name. Set this value to <strong>AliyunRdsInstanceEncryptionDefaultRole</strong>.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::123456789012****:role/AliyunRdsInstanceEncryptionDefaultRole</p>
@@ -76,9 +72,9 @@ public class ModifyInstanceTDERequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>Specifies whether to enable TDE. Set the value to <strong>Enabled</strong>.</p>
+     * <p>Enables the transparent data encryption feature. Set the value to <strong>Enabled</strong>.</p>
      * <blockquote>
-     * <p>TDE cannot be disabled after it is enabled. Before you enable it, evaluate whether this feature affects your business. For more information, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</p>
+     * <p>The TDE feature cannot be disabled after it is enabled. Before enabling TDE, evaluate whether it affects your business. For more information, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable transparent data encryption TDE</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

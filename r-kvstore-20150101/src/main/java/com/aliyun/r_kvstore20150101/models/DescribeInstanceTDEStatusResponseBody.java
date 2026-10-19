@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceTDEStatusResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5D622714-AEDD-4609-9167-F5DDD3D1****</p>
@@ -17,7 +17,7 @@ public class DescribeInstanceTDEStatusResponseBody extends TeaModel {
      * <p>Indicates whether TDE is enabled. Valid values:</p>
      * <ul>
      * <li><strong>Enabled</strong>: TDE is enabled.</li>
-     * <li><strong>Disable</strong>: TDE is disabled.</li>
+     * <li><strong>Disabled</strong>: TDE is disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

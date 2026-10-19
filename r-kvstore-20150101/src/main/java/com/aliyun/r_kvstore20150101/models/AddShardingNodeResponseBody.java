@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AddShardingNodeResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the data shards.</p>
+     * <p>The list of data shard node IDs.</p>
      */
     @NameInMap("NodeIds")
     public java.util.List<String> nodeIds;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>20741011111111</p>
@@ -20,7 +20,7 @@ public class AddShardingNodeResponseBody extends TeaModel {
     public Long orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B79C1A90-495B-4E99-A2AA-A4DB13B8****</p>

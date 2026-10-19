@@ -15,11 +15,11 @@ public class LockDBInstanceWriteRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The reason why write operations on the instance are locked.</p>
+     * <p>The reason for locking the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>锁写操作验证。</p>
+     * <p>Lock write operation verification</p>
      */
     @NameInMap("LockReason")
     public String lockReason;

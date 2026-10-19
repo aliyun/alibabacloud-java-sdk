@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class RenewAdditionalBandwidthRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables automatic payment.</li>
-     * <li><strong>false</strong>: disables automatic payment. If automatic payment is disabled, you must perform the following steps to complete the payment in the Tair (Redis OSS-compatible) console: In the top navigation bar, choose <strong>Expenses</strong> &gt; <strong>Renewal Management</strong>. In the left-side navigation pane, click <strong>Orders</strong>. On the <strong>Orders</strong> page, find the order and complete the payment.</li>
+     * <li><strong>true</strong>: Automatic payment is enabled. This is the default value.</li>
+     * <li><strong>false</strong>: Automatic payment is disabled. You must manually pay for the order. On the top menu bar of the console, choose <strong>Expenses</strong> &gt; <strong>Renewal Management</strong>. In the left-side navigation pane, choose <strong>Order Management</strong> &gt; <strong>My Orders</strong>. Find the order and complete the payment.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class RenewAdditionalBandwidthRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The ID of the coupon.</p>
+     * <p>The coupon code.</p>
      * 
      * <strong>example:</strong>
      * <p>youhuiquan_promotion_option_id_for_blank</p>
@@ -27,7 +27,7 @@ public class RenewAdditionalBandwidthRequest extends TeaModel {
     public String couponNo;
 
     /**
-     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class RenewAdditionalBandwidthRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The validity period of the bandwidth that you purchase. Unit: days. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>7</strong>, <strong>14</strong>, <strong>30</strong>, <strong>60</strong>, <strong>90</strong>, <strong>180</strong>, <strong>365</strong>, <strong>730</strong>, <strong>1095</strong>, and <strong>1825</strong>.</p>
+     * <p>The purchase duration. Unit: days. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>7</strong>, <strong>14</strong>, <strong>30</strong>, <strong>60</strong>, <strong>90</strong>, <strong>180</strong>, <strong>365</strong>, <strong>730</strong>, <strong>1095</strong>, and <strong>1825</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class RenewAdditionalBandwidthRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The source of the operation. This parameter is used only for internal maintenance. You do not need to specify this parameter.</p>
+     * <p>The request source. This parameter is used only for internal maintenance and does not need to be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>SDK</p>

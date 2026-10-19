@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceMaintainTimeRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class ModifyInstanceMaintainTimeRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The end time of the maintenance window. The time is in the <em>HH:mm</em>Z format. The time is displayed in UTC. For example, if you want the maintenance window to end at 2:00 (UTC+8), set this parameter to <code>18:00Z</code>.</p>
+     * <p>The end time of the maintenance window. Specify the time in the <i>HH:mm</i>Z format in UTC. For example, to set the end time to 02:00 (UTC+8), specify <code>18:00Z</code>.</p>
      * <blockquote>
-     * <p> The interval between the start time and the end time cannot be less than 1 hour.</p>
+     * <p>The interval between the start time and end time must be at least 1 hour.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -28,7 +28,7 @@ public class ModifyInstanceMaintainTimeRequest extends TeaModel {
     public String maintainEndTime;
 
     /**
-     * <p>The start time of the maintenance window. The time is in the <em>HH:mm</em>Z format. The time is displayed in UTC. For example, if you want the maintenance to start at 1:00 (UTC+8), set this parameter to <code>17:00Z</code>. After you call the API operation, you can view the actual time in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/55252.html">Set a maintenance window</a>.</p>
+     * <p>The start time of the maintenance window. Specify the time in the <i>HH:mm</i>Z format in UTC. For example, to set the start time to 01:00 (UTC+8), specify <code>17:00Z</code>. After you call this operation, you can view the actual time in the console. For more information, see <a href="https://help.aliyun.com/document_detail/55252.html">Set a maintenance window</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

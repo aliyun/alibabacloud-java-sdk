@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class TransformToPrePaidRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable auto-payment. Valid values:</p>
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Automatically completes the payment.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): An order is generated, but is not automatically paid. You must then log on to the console to pay for the <em>order</em>. For more information, see <a href="https://help.aliyun.com/document_detail/26352.html">Manually renew an instance</a>.</p>
-     * </li>
+     * <li><strong>true</strong>: enables automatic payment.</li>
+     * <li><strong>false</strong>: disables automatic payment (default). You must manually renew the instance in the console. For more information, see <a href="https://help.aliyun.com/document_detail/26352.html">Manual renewal</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,12 +18,10 @@ public class TransformToPrePaidRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Auto-renewal is enabled.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Auto-renewal is disabled.</p>
-     * </li>
+     * <li><strong>true</strong>: enables auto-renewal.</li>
+     * <li><strong>false</strong>: disables auto-renewal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,9 +31,9 @@ public class TransformToPrePaidRequest extends TeaModel {
     public String autoRenew;
 
     /**
-     * <p>The auto-renewal period. Unit: months. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>6</strong>, and <strong>12</strong>.</p>
+     * <p>The auto-renewal epoch. Unit: months. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>6</strong>, and <strong>12</strong>.</p>
      * <blockquote>
-     * <p>This parameter is required if <strong>AutoRenew</strong> is set to <strong>true</strong>.</p>
+     * <p>This parameter is required when <strong>AutoRenew</strong> is set to <strong>true</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -46,14 +42,11 @@ public class TransformToPrePaidRequest extends TeaModel {
     @NameInMap("AutoRenewPeriod")
     public Long autoRenewPeriod;
 
-    /**
-     * <p>The coupon code.</p>
-     */
     @NameInMap("CouponNo")
     public String couponNo;
 
     /**
-     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to obtain the instance ID.</p>
+     * <p>Instance ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,7 +62,7 @@ public class TransformToPrePaidRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The subscription duration. Unit: months. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>6</strong>, <strong>7</strong>, <strong>8</strong>, <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, and <strong>36</strong>.</p>
+     * <p>The subscription duration. Unit: months. Valid values: <strong>1</strong> to <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, and <strong>36</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

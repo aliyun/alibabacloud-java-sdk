@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceConfigResponseBody extends TeaModel {
     /**
-     * <p>The default configuration parameters of the instance. To view the full list of parameters, call the <a href="https://help.aliyun.com/document_detail/473847.html">DescribeParameters</a> operation.</p>
+     * <p>The default configuration parameters of the instance. For more comprehensive parameter settings, call the <a href="https://help.aliyun.com/document_detail/473847.html">DescribeParameters</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;EvictionPolicy\&quot;:\&quot;volatile-lru\&quot;,\&quot;hash-max-ziplist-entries\&quot;:512,\&quot;zset-max-ziplist-entries\&quot;:128,\&quot;list-max-ziplist-entries\&quot;:512,\&quot;list-max-ziplist-value\&quot;:64,\&quot;zset-max-ziplist-value\&quot;:64,\&quot;set-max-intset-entries\&quot;:512,\&quot;hash-max-ziplist-value\&quot;:64}</p>
@@ -14,16 +14,14 @@ public class DescribeInstanceConfigResponseBody extends TeaModel {
     public String config;
 
     /**
-     * <p>Specifies whether to enable Sentinel compatibility mode. This parameter applies only to non-cluster instances. Valid values:</p>
+     * <p>The Sentinel compatibility mode. This parameter applies to non-cluster instances. Valid values:</p>
      * <ul>
-     * <li><p><strong>no</strong> (default): Disabled</p>
-     * </li>
-     * <li><p><strong>yes</strong>: Enabled</p>
-     * </li>
-     * </ul>
-     * <blockquote>
+     * <li><strong>no</strong> (default): disabled.</li>
+     * <li><strong>yes</strong>: enabled.<blockquote>
      * <p>For more information, see <a href="https://help.aliyun.com/document_detail/178911.html">Sentinel compatibility mode</a>.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>no</p>
@@ -32,12 +30,10 @@ public class DescribeInstanceConfigResponseBody extends TeaModel {
     public String paramNoLooseSentinelEnabled;
 
     /**
-     * <p>Specifies whether to allow password-free execution of Sentinel commands when Sentinel compatibility mode is enabled. Valid values:</p>
+     * <p>Specifies whether to allow password-free execution of Sentinel-related commands when Sentinel mode is enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>no</strong> (default): Disabled.</p>
-     * </li>
-     * <li><p><strong>yes</strong>: Enabled. Allows you to run Sentinel commands on any connection without a password and use the <code>SENTINEL</code> command to subscribe to the <code>+switch-master</code> channel.</p>
-     * </li>
+     * <li><strong>no</strong> (default): disabled.</li>
+     * <li><strong>yes</strong>: enabled. After this parameter is enabled, you can run Sentinel commands without a password on any connection and use the SENTINEL command to listen on the +switch-master channel.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +43,7 @@ public class DescribeInstanceConfigResponseBody extends TeaModel {
     public String paramNoLooseSentinelPasswordFreeAccess;
 
     /**
-     * <p>Additional commands that can be run without a password. This parameter is valid only when Sentinel compatibility mode is enabled and <code>ParamNoLooseSentinelPasswordFreeAccess</code> is set to <code>yes</code>. By default, this parameter is empty.</p>
+     * <p>After Sentinel mode and the ParamNoLooseSentinelPasswordFreeAccess parameter are enabled, you can use this parameter to add additional password-free commands to the list. The default value is empty.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -56,12 +52,10 @@ public class DescribeInstanceConfigResponseBody extends TeaModel {
     public String paramNoLooseSentinelPasswordFreeCommands;
 
     /**
-     * <p>The replication mode. Valid values:</p>
+     * <p>The synchronization mode. Valid values:</p>
      * <ul>
-     * <li><p><strong>async</strong> (default): asynchronous mode</p>
-     * </li>
-     * <li><p><strong>semisync</strong>: semi-synchronous mode</p>
-     * </li>
+     * <li><strong>async</strong> (default): asynchronous mode.</li>
+     * <li><strong>semisync</strong>: semi-synchronous mode.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,9 +65,9 @@ public class DescribeInstanceConfigResponseBody extends TeaModel {
     public String paramReplMode;
 
     /**
-     * <p>The degradation threshold for the semi-synchronous mode. This parameter is valid only in semi-synchronous mode. Unit: milliseconds. Valid values: 10 to 60000. Default value: 500.</p>
+     * <p>The degradation threshold for semi-synchronous mode. This parameter can be configured only in semi-synchronous mode. Unit: ms. Valid values: 10 to 60000. Default value: 500.</p>
      * <blockquote>
-     * <p>If replication latency exceeds this threshold, the replication mode degrades to asynchronous mode. When the replication latency returns to normal, the mode reverts to semi-synchronous mode.</p>
+     * <p>When the synchronization latency exceeds this threshold, the synchronization mode automatically switches to asynchronous mode. When the synchronization latency is eliminated, the synchronization mode automatically switches back to semi-synchronous mode.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -83,16 +77,14 @@ public class DescribeInstanceConfigResponseBody extends TeaModel {
     public String paramReplTimeout;
 
     /**
-     * <p>Specifies whether to enable Sentinel compatibility mode. This parameter applies to instances that use the cluster architecture with proxy connection mode or the read/write splitting architecture. Valid values:</p>
+     * <p>The Sentinel compatibility mode. This parameter applies to instances that use the proxy connection mode in cluster architecture or the read/write splitting architecture. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong> (default): Disabled</p>
-     * </li>
-     * <li><p><strong>1</strong>: Enabled</p>
-     * </li>
-     * </ul>
-     * <blockquote>
+     * <li><strong>0</strong> (default): disabled.</li>
+     * <li><strong>1</strong>: enabled.<blockquote>
      * <p>For more information, see <a href="https://help.aliyun.com/document_detail/178911.html">Sentinel compatibility mode</a>.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>0</p>

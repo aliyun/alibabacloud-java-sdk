@@ -9,7 +9,7 @@ public class DescribeInstancesOverviewRequest extends TeaModel {
      * <ul>
      * <li><strong>cluster</strong>: Cluster Edition.</li>
      * <li><strong>standard</strong>: Standard Edition.</li>
-     * <li><strong>rwsplit</strong>: read/write splitting edition.</li>
+     * <li><strong>rwsplit</strong>: read/write splitting Edition.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class DescribeInstancesOverviewRequest extends TeaModel {
     /**
      * <p>The resource group ID.</p>
      * <blockquote>
-     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation or use the console to obtain the resource group ID. Related operations, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation or use the console to obtain the resource group ID. Related operations: see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

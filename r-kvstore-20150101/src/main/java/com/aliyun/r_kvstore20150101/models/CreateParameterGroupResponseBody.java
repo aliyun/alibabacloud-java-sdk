@@ -14,7 +14,7 @@ public class CreateParameterGroupResponseBody extends TeaModel {
     public String paramGroupId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>62DA5BE5-F9C9-527C-ACCB-4D783C297A3A</p>

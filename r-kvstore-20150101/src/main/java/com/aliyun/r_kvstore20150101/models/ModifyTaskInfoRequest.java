@@ -5,16 +5,17 @@ import com.aliyun.tea.*;
 
 public class ModifyTaskInfoRequest extends TeaModel {
     /**
-     * <p>The JSON-formatted parameters related to the action. Set this parameter to <code>{&quot;recoverMode&quot;: &quot;xxx&quot;, &quot;recoverTime&quot;: &quot;xxx&quot;}</code> if the <strong>TaskAction</strong> parameter is set to <strong>modifySwitchTime</strong>.</p>
+     * <p>The parameters related to the action, in JSON format.
+     * If <strong>TaskAction</strong> is set to <strong>modifySwitchTime</strong>, the ActionParams value is <code>{&quot;recoverMode&quot;: &quot;xxx&quot;, &quot;recoverTime&quot;: &quot;xxx&quot;}</code>.</p>
      * <ul>
-     * <li><p><strong>recoverMode</strong>: specifies the restoration mode for the task. Valid values:</p>
+     * <li><p><strong>recoverMode</strong> specifies the task recovery mode. Valid values:</p>
      * <ul>
-     * <li><strong>timePoint</strong>: performs the task at the specified point in time.</li>
-     * <li><strong>immediate</strong>: performs the task immediately.</li>
-     * <li><strong>maintainTime</strong>: performs the task within the maintenance window.</li>
+     * <li><strong>imePoint</strong>: Execute at a specified point in time.</li>
+     * <li><strong>immediate</strong>: Execute immediately.</li>
+     * <li><strong>maintainTime</strong>: Execute during the O&amp;M window.</li>
      * </ul>
      * </li>
-     * <li><p><strong>recoverTime</strong>: specifies the point in time for restoration. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. This parameter is required if the <strong>recoverMode</strong> parameter is set to <strong>timePoint</strong>.</p>
+     * <li><p><strong>recoverTime</strong> specifies the point in time, in UTC+0, in the yyyy-MM-ddTHH:mm:ssZ format. This parameter is required when <strong>recoverMode</strong> is set to <strong>timePoint</strong>.</p>
      * </li>
      * </ul>
      * 
@@ -25,7 +26,7 @@ public class ModifyTaskInfoRequest extends TeaModel {
     public String actionParams;
 
     /**
-     * <p>The ID of the region where the instance is deployed.</p>
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +45,7 @@ public class ModifyTaskInfoRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The name of the current step.</p>
+     * <p>The name of the current execution step. You can call <a href="https://help.aliyun.com/document_detail/2400077.html">DescribeHistoryTasks</a> to query the current execution step of a specified node ID. A common value is <strong>do_pause</strong>, which indicates waiting for the preset time to execute.</p>
      * 
      * <strong>example:</strong>
      * <p>do_pause</p>
@@ -53,7 +54,7 @@ public class ModifyTaskInfoRequest extends TeaModel {
     public String stepName;
 
     /**
-     * <p>The action name. Set the value to <strong>modifySwitchTime</strong>. The value specifies that you want to change the switching time or restoration time.</p>
+     * <p>The operation name. Currently, the valid value is <strong>modifySwitchTime</strong>, which indicates modifying the switchover time or recovery time.</p>
      * 
      * <strong>example:</strong>
      * <p>modifySwitchTime</p>
@@ -62,7 +63,7 @@ public class ModifyTaskInfoRequest extends TeaModel {
     public String taskAction;
 
     /**
-     * <p>The task ID. Separate multiple task IDs with commas (,). You can specify up to 30 task IDs.</p>
+     * <p>The node ID. To specify multiple IDs, separate them with commas (,). You can specify up to 30 IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

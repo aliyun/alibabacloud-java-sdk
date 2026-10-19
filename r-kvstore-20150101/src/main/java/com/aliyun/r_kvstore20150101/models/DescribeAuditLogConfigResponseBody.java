@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAuditLogConfigResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the audit log feature is enabled. Valid values:</p>
+     * <p>Indicates whether audit logging is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enabled</li>
-     * <li><strong>false</strong>: disabled</li>
+     * <li><strong>true</strong>: Enabled.</li>
+     * <li><strong>false</strong>: Disabled.</li>
      * </ul>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/473829.html">ModifyAuditLogConfig</a> operation to enable or disable the audit log feature for a Tair (Redis OSS-compatible) instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/473829.html">ModifyAuditLogConfig</a> operation to enable or disable audit logging for the instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class DescribeAuditLogConfigResponseBody extends TeaModel {
     public String dbAudit;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2BE6E619-A657-42E3-AD2D-18F8428A****</p>

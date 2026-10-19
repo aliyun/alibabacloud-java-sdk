@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class FlushInstanceForDBRequest extends TeaModel {
     /**
-     * <p>The index number of the database. Valid values: 0 to 255.</p>
+     * <p>The index number of the specified DB. Valid values: 0 to 255.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class FlushInstanceForDBRequest extends TeaModel {
     public Integer dbIndex;
 
     /**
-     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

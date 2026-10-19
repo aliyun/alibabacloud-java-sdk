@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTaskRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return the historical tasks. Default value: 0. Valid values:</p>
+     * <p>Specifies whether to return historical tasks. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: returns the current task.</li>
-     * <li><strong>1</strong>: returns the historical tasks.</li>
+     * <li><strong>0</strong> (default): Returns current tasks.</li>
+     * <li><strong>1</strong>: Returns historical tasks.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DescribeActiveOperationTaskRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be greater than <strong>0</strong> and cannot exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,7 +33,7 @@ public class DescribeActiveOperationTaskRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Specify a value greater than <strong>10</strong>. Default value: <strong>30</strong>.</p>
+     * <p>The maximum number of entries per page. The value must be greater than <strong>10</strong>. Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -42,9 +42,9 @@ public class DescribeActiveOperationTaskRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the O&amp;M task. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the pending event. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the region ID.</p>
      * <blockquote>
-     * <p>A value of <strong>all</strong> indicates all region IDs.</p>
+     * <p>Set this parameter to <strong>all</strong> to specify all region IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -64,11 +64,11 @@ public class DescribeActiveOperationTaskRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The type of the O\&amp;M task. Valid values:</p>
+     * <p>The task type. Valid values:</p>
      * <ul>
-     * <li><strong>rds_apsaradb_ha</strong>: master-replica switchover</li>
-     * <li><strong>rds_apsaradb_transfer</strong>: instance migration</li>
-     * <li><strong>rds_apsaradb_upgrade</strong>: minor version update</li>
+     * <li><strong>rds_apsaradb_ha</strong>: node failover.</li>
+     * <li><strong>rds_apsaradb_transfer</strong>: instance migration.</li>
+     * <li><strong>rds_apsaradb_upgrade</strong>: minor engine version update.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

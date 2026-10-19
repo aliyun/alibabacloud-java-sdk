@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInspectionTasksRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeInspectionTasksRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,8 @@ public class DescribeInspectionTasksRequest extends TeaModel {
     public String pageNum;
 
     /**
+     * <p>The number of entries per page. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -31,6 +36,12 @@ public class DescribeInspectionTasksRequest extends TeaModel {
     public String securityToken;
 
     /**
+     * <p>The task type.</p>
+     * <ul>
+     * <li>1: manual task</li>
+     * <li>2: scheduled task</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

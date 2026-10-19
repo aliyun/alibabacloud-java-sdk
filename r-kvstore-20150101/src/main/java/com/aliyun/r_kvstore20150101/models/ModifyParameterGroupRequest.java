@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyParameterGroupRequest extends TeaModel {
     /**
-     * <p>The service category. Valid values:</p>
+     * <p>The product category. Valid values:</p>
      * <ul>
-     * <li><strong>standard</strong>: Redis Open-Source Edition</li>
-     * <li><strong>enterprise</strong>: Tair (Enterprise Edition)</li>
+     * <li><strong>standard</strong>: Redis Community Edition.</li>
+     * <li><strong>enterprise</strong>: Tair (Enhanced Edition).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -25,7 +25,7 @@ public class ModifyParameterGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The description of the parameter template. The description must be 0 to 200 characters in length.</p>
+     * <p>The description of the parameter template. The description can be up to 200 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -34,7 +34,7 @@ public class ModifyParameterGroupRequest extends TeaModel {
     public String parameterGroupDesc;
 
     /**
-     * <p>The parameter template ID.</p>
+     * <p>The ID of the parameter template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,10 +44,13 @@ public class ModifyParameterGroupRequest extends TeaModel {
     public String parameterGroupId;
 
     /**
-     * <p>The new name of the parameter template. The name must meet the following requirements:</p>
+     * <p>The name of the parameter template. The name must meet the following requirements:</p>
      * <ul>
      * <li>The name can contain letters, digits, and underscores (_). It must start with a letter and cannot contain Chinese characters.</li>
-     * <li>The name can be 8 to 64 characters in length.</li>
+     * <li>The name must be 8 to 64 characters in length.<blockquote>
+     * <p>This parameter is required. If you do not want to change the name of the parameter template, specify the original name.</p>
+     * </blockquote>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -58,9 +61,9 @@ public class ModifyParameterGroupRequest extends TeaModel {
     public String parameterGroupName;
 
     /**
-     * <p>A JSON-formatted object that specifies the parameter-value pairs. Format: {&quot;Parameter 1&quot;:&quot;Value 1&quot;,&quot;Parameter 2&quot;:&quot;Value 2&quot;...}. The specified value overwrites the original content.</p>
+     * <p>The parameters and their values in JSON format: {&quot;Parameter1&quot;:&quot;Value1&quot;,&quot;Parameter2&quot;:&quot;Value2&quot;,...}. The specified values overwrite the existing values.</p>
      * <blockquote>
-     * <p> The parameters that can be added for different editions are displayed in the console.</p>
+     * <p>The parameters that can be added vary by version. Refer to the console for details.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -71,7 +74,7 @@ public class ModifyParameterGroupRequest extends TeaModel {
     public String parameters;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The ID of the region where the instance resides. You can call the <a href="https://help.aliyun.com/document_detail/473779.html">DescribeInstanceAttribute</a> operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-zhangjiakou</p>

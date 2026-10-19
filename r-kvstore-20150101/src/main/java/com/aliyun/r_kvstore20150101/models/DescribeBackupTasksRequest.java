@@ -7,7 +7,7 @@ public class DescribeBackupTasksRequest extends TeaModel {
     /**
      * <p>The ID of the backup task.</p>
      * <blockquote>
-     * <p> If you call the <a href="https://help.aliyun.com/document_detail/473819.html">CreateBackup</a> operation to perform a manual backup task, you can set this parameter to the returned backup ID to query the backup progress of the task.</p>
+     * <p>If you called the <a href="https://help.aliyun.com/document_detail/473819.html">CreateBackup</a> operation to perform a manual backup, you can pass the returned backup ID to query the backup progress.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeBackupTasksRequest extends TeaModel {
     public String backupJobId;
 
     /**
-     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query instance IDs.</p>
+     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,12 +29,12 @@ public class DescribeBackupTasksRequest extends TeaModel {
     /**
      * <p>The backup mode. Valid values:</p>
      * <ul>
-     * <li><strong>Automated</strong>: automatic backup. You can call the <a href="https://help.aliyun.com/document_detail/473822.html">DescribeBackupPolicy</a> operation to query the automatic backup policy.</li>
-     * <li><strong>Manual</strong>: manual backup.</li>
-     * </ul>
-     * <blockquote>
-     * <p> By default, the information about backup tasks in both modes is returned.</p>
+     * <li><strong>Automated</strong>: automated backup. You can call the <a href="https://help.aliyun.com/document_detail/473822.html">DescribeBackupPolicy</a> operation to query the automatic backup policy.</li>
+     * <li><strong>Manual</strong>: manual backup.<blockquote>
+     * <p>By default, task information for all backup modes is returned.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Manual</p>

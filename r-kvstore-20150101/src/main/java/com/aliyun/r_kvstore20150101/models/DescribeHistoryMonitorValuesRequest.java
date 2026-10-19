@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeHistoryMonitorValuesRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The end time of the query for historical monitoring data. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * <blockquote>
-     * <p>You can query monitoring data within the past month. The maximum time range to query is 7 days.</p>
+     * <p>You can query monitoring data of the last month. The maximum query range cannot exceed 7 days.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class DescribeHistoryMonitorValuesRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,14 +28,12 @@ public class DescribeHistoryMonitorValuesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>This parameter is deprecated and its value is fixed at <code>01m</code>.</p>
-     * <p>The system automatically determines the <strong>query interval</strong> based on the specified start and end times. For example, if the specified time range is 10 minutes or less, data is aggregated every 5 seconds, and the query results are returned at 5-second intervals.</p>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated. The value is fixed to <code>01m</code>.</p>
+     * <p>The system automatically determines the <strong>query interval</strong> based on the start time and end time. For example, if the query time range is less than or equal to 10 minutes, the data aggregation frequency is 5s, and the query results are returned at a frequency of 5s.</p>
      * <blockquote>
      * <ul>
-     * <li><p>If the specified <code>StartTime</code> is not at a data aggregation point, the first time point returned by the system is the nearest preceding data aggregation point. For example, if you set StartTime to <code>2022-01-20T12:01:48Z</code>, the first time point returned is <code>2022-01-20T12:01:45Z</code>.</p>
-     * </li>
-     * <li><p>If the instance has 32 or more data shards, the minimum data aggregation frequency is 1 minute.</p>
-     * </li>
+     * <li>The query results are aligned with the data aggregation frequency of the instance. If the StartTime you specify does not fall on a data aggregation point, the first time point returned by the system is the nearest data aggregation point. For example, if the StartTime you specify is 2022-01-20T12:01:48Z, the first time point returned by the system is 2022-01-20T12:01:45Z.</li>
+     * <li>If the number of data shards of the instance is greater than or equal to 32, the minimum data aggregation frequency is 1 minute.</li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
@@ -47,26 +45,22 @@ public class DescribeHistoryMonitorValuesRequest extends TeaModel {
     public String intervalForHistory;
 
     /**
-     * <p>The monitoring metric to query, such as <code>CpuUsage</code>. To specify multiple metrics, separate them with a comma (,).</p>
+     * <p>The monitoring metrics. To specify multiple monitoring metrics, separate them with commas (,). Take CpuUsage as an example:</p>
      * <ul>
-     * <li><p>For instances that use the cluster or read/write splitting architecture:</p>
+     * <li><p>Cluster or read/write splitting architecture:</p>
      * <ul>
-     * <li><p>To query the overall CPU utilization of all data nodes, set this parameter to <strong>CpuUsage$db</strong>.</p>
-     * </li>
-     * <li><p>To query the CPU utilization of a single data node, set this parameter to <strong>CpuUsage</strong> and specify the node in the <code>NodeId</code> parameter.</p>
-     * </li>
+     * <li>To query the overall CPU usage of all data nodes (DB), specify <strong>CpuUsage$db</strong>.</li>
+     * <li>To query the CPU usage of a single data node, specify <strong>CpuUsage</strong> and set the NodeId parameter to the DB node.</li>
      * </ul>
      * </li>
-     * <li><p>For instances that use the standard architecture (primary/standby), set this parameter to <strong>CpuUsage</strong>.</p>
+     * <li><p>Standard architecture (primary/secondary): Specify <strong>CpuUsage</strong>.</p>
      * </li>
      * </ul>
-     * <p>For more information about monitoring metrics, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/redis/developer-reference/api-r-kvstore-2015-01-01-describehistorymonitorvalues-redis#monitorKeys-note">Additional information about the MonitorKeys parameter</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/redis/developer-reference/api-r-kvstore-2015-01-01-describehistorymonitorvalues-redis#monitorKeys-note">Additional information about the MonitorKeys parameter</a> below.</p>
+     * <p>For more information about monitoring metrics and their descriptions, see &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/redis/developer-reference/api-r-kvstore-2015-01-01-describehistorymonitorvalues-redis#monitorKeys-note">MonitorKeys parameter description</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/redis/developer-reference/api-r-kvstore-2015-01-01-describehistorymonitorvalues-redis#monitorKeys-note">MonitorKeys parameter description</a>.</p>
      * <blockquote>
      * <ul>
-     * <li><p>If you do not specify this parameter, the <code>UsedMemory</code> and <code>quotaMemory</code> metrics are returned by default.</p>
-     * </li>
-     * <li><p>To ensure query efficiency, we recommend that you specify a maximum of 5 monitoring metrics for a single node and a maximum of 1 aggregate monitoring metric per query.</p>
-     * </li>
+     * <li>This parameter is empty by default. If this parameter is not specified, the UsedMemory and quotaMemory metrics are returned.</li>
+     * <li>To ensure query efficiency, specify no more than 5 monitoring metrics in a single request when querying metrics for a single node. Specify no more than 1 monitoring metric in a single request when querying aggregated monitoring metrics.</li>
      * </ul>
      * </blockquote>
      * 
@@ -77,13 +71,11 @@ public class DescribeHistoryMonitorValuesRequest extends TeaModel {
     public String monitorKeys;
 
     /**
-     * <p>The ID of a node in the instance. You can use this parameter to query the monitoring data of a specific node.</p>
+     * <p>The node ID of the instance. Specify this parameter to query the monitoring information of a specific node.</p>
      * <blockquote>
      * <ul>
-     * <li><p>This parameter is available only for instances that use the read/write splitting or cluster architecture.</p>
-     * </li>
-     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/473786.html">DescribeLogicInstanceTopology</a> operation to query node IDs.</p>
-     * </li>
+     * <li>This parameter is available only when the instance uses a read/write splitting or cluster architecture.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/473786.html">DescribeLogicInstanceTopology</a> operation to query node IDs.</li>
      * </ul>
      * </blockquote>
      * 
@@ -94,9 +86,9 @@ public class DescribeHistoryMonitorValuesRequest extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>If you want to query the metrics of a read-only node in a cloud-native instance that uses a read/write splitting architecture, you must specify the <strong>NodeId</strong> and set this parameter to <strong>READONLY</strong>.</p>
+     * <p>To query the metrics of a read-only node in a cloud-native read/write splitting instance, specify the <strong>NodeId</strong> parameter and set this parameter to <strong>READONLY</strong>.</p>
      * <blockquote>
-     * <p>In all other cases, you do not need to specify this parameter. You can also set it to <strong>MASTER</strong>.</p>
+     * <p> In other cases, you do not need to specify this parameter (or set it to <strong>MASTER</strong>).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -121,7 +113,7 @@ public class DescribeHistoryMonitorValuesRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The start time of the query for historical monitoring data. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

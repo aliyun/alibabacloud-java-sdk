@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyActiveOperationTasksRequest extends TeaModel {
     /**
-     * <p>The IDs of the O\&amp;M events. Separate multiple event IDs with commas (,).</p>
+     * <p>The O&amp;M event IDs. Separate multiple IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,13 +15,14 @@ public class ModifyActiveOperationTasksRequest extends TeaModel {
     public String ids;
 
     /**
-     * <p>Specifies whether to immediately start scheduling. Valid values:</p>
+     * <p>Specifies whether to immediately start execution scheduling.</p>
      * <ul>
-     * <li>0 (default): Scheduling is not started immediately.</li>
-     * <li>1: Scheduling is started immediately.</li>
+     * <li>0: No. (Default)</li>
+     * <li>1: Yes.</li>
      * </ul>
      * <blockquote>
-     * <p> If you set this parameter to 0, the SwitchTime parameter takes effect. If you set this parameter to 1, the SwitchTime parameter does not take effect. In this case, the start time of the event is set to the current time, and the system determines the switching time based on the start time. Scheduling is started immediately, which is a prerequisite for the switchover. Then, the switchover is performed. You can call the DescribeActiveOperationTasks operation to query the preparation time that is returned for the PrepareInterval parameter.</p>
+     * <p>If the value is 0, SwitchTime takes effect. If the value is 1, SwitchTime does not take effect. The event start time is set to the current time, and the switchover time is automatically calculated based on the new start time.
+     * The event immediately enters execution scheduling (not an immediate switchover). Pre-switchover preparations begin, and the switchover is performed after the preparations are complete. Call DescribeActiveOperationTasks and check the value of the PrepareInterval response parameter to obtain the preparation time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -46,9 +47,9 @@ public class ModifyActiveOperationTasksRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The scheduled switching time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The planned switchover time to set. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
      * <blockquote>
-     * <p> The time that is specified by the SwitchTime parameter cannot be later than the time that is specified by the Deadline parameter. You can call the DescribeActiveOperationTasks operation to query the latest switching time that is returned for the Deadline parameter.</p>
+     * <p> The time cannot be later than the deadline. Call DescribeActiveOperationTasks and check the value of the Deadline response parameter to obtain the deadline.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

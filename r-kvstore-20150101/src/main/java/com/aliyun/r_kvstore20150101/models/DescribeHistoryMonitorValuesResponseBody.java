@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeHistoryMonitorValuesResponseBody extends TeaModel {
     /**
-     * <p>The monitoring data returned as a JSON-formatted string. For more information, see <a href="https://help.aliyun.com/document_detail/122091.html">Monitoring parameters</a>.</p>
+     * <p>The monitoring information returned in JSON format. For more information, see <a href="https://help.aliyun.com/document_detail/122091.html">Monitoring parameter description</a>.</p>
      * <blockquote>
-     * <p>To improve data transfer efficiency, the system returns only monitoring data for metrics with non-zero values. If a metric is not returned, its value is <strong>0</strong>.</p>
+     * <p>To improve data transmission efficiency, only non-zero monitoring data is returned. All other monitoring data that is not displayed has a default value of <strong>0</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -16,8 +16,11 @@ public class DescribeHistoryMonitorValuesResponseBody extends TeaModel {
     @NameInMap("MonitorHistory")
     public String monitorHistory;
 
+    @NameInMap("MonitorLegend")
+    public String monitorLegend;
+
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F0997EE8-F4C2-4503-9168-85177ED7****</p>
@@ -36,6 +39,14 @@ public class DescribeHistoryMonitorValuesResponseBody extends TeaModel {
     }
     public String getMonitorHistory() {
         return this.monitorHistory;
+    }
+
+    public DescribeHistoryMonitorValuesResponseBody setMonitorLegend(String monitorLegend) {
+        this.monitorLegend = monitorLegend;
+        return this;
+    }
+    public String getMonitorLegend() {
+        return this.monitorLegend;
     }
 
     public DescribeHistoryMonitorValuesResponseBody setRequestId(String requestId) {

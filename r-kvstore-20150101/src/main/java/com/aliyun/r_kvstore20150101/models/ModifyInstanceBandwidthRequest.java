@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceBandwidthRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,9 +30,9 @@ public class ModifyInstanceBandwidthRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The total expected bandwidth of the instance.</p>
+     * <p>The total target bandwidth value of the instance.</p>
      * <blockquote>
-     * <p>If the instance is a cluster instance, the TargetIntranetBandwidth must be divisible by the number of shards in the instance. This operation is not supported for read/write splitting instances.</p>
+     * <p>Notice:  If the instance is a Cluster Edition instance, the total target bandwidth value must be evenly divisible by the number of shards. This operation is not supported for new-architecture read/write splitting instances.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

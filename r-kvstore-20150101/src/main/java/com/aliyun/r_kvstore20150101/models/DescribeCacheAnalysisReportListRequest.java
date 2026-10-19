@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeCacheAnalysisReportListRequest extends TeaModel {
     /**
-     * <p>The time range to query. Default value: 7. Unit: days.</p>
+     * <p>The number of days within which analysis results are queried. By default, analysis results of the last 7 days are queried.</p>
      * <blockquote>
-     * <p>If daily automatic analysis has not started and manual analysis is not performed, no records are returned.</p>
+     * <p>If the automatic analysis for the current day has not started when you query and no manual analysis task has been initiated, no records exist for the current day.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeCacheAnalysisReportListRequest extends TeaModel {
     public Integer days;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,9 +27,9 @@ public class DescribeCacheAnalysisReportListRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the child node in the cluster instance.</p>
+     * <p>The child node ID of a cluster instance.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the analysis results of all child nodes in the instance are returned.</p>
+     * <p>If you do not specify this parameter, the analysis results of all child nodes are returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class DescribeCacheAnalysisReportListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -56,7 +56,7 @@ public class DescribeCacheAnalysisReportListRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
      * <blockquote>
-     * <p>The default value is <strong>30</strong>.</p>
+     * <p>Default value: <strong>30</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

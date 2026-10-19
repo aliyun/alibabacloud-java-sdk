@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class RestartInstanceRequest extends TeaModel {
     /**
-     * <p>The time when you want to restart the instance. Default value: Immediately. Valid values:</p>
+     * <p>The time when the instance is restarted. Valid values:</p>
      * <ul>
-     * <li><strong>Immediately</strong>: immediately restarts the instance.</li>
-     * <li><strong>MaintainTime</strong>: restarts the instance during the maintenance window.</li>
+     * <li><strong>Immediately</strong>: The instance is restarted immediately. This is the default value.</li>
+     * <li><strong>MaintainTime</strong>: The instance is restarted during the maintenance window.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class RestartInstanceRequest extends TeaModel {
     public String effectiveTime;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,13 +43,13 @@ public class RestartInstanceRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>Specifies whether to update to the latest minor version when the instance is restarted. Valid values:</p>
+     * <p>Specifies whether to upgrade the minor version to the latest version when the instance is restarted. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: updates the minor version.</li>
-     * <li><strong>false</strong>: does not update the minor version.</li>
+     * <li><strong>true</strong>: Upgrades the minor version.</li>
+     * <li><strong>false</strong>: Does not upgrade the minor version.</li>
      * </ul>
      * <blockquote>
-     * <p>The default value is <strong>true</strong>.</p>
+     * <p>Default value: <strong>true</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

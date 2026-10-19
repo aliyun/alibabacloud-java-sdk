@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribePriceResponseBody extends TeaModel {
     /**
-     * <p>The information about the order.</p>
+     * <p>The order information.</p>
      */
     @NameInMap("Order")
     public DescribePriceResponseBodyOrder order;
 
     /**
-     * <p>The parameters of the order. When OrderParamOut is set to <code>true</code>, this parameter is returned.</p>
+     * <p>The order parameters. This parameter is returned when OrderParamOut is set to <code>true</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>String</p>
@@ -171,7 +171,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     public static class DescribePriceResponseBodyOrderDepreciateInfoContractActivity extends TeaModel {
         /**
-         * <p>The activity ID.</p>
+         * <p>The promotion ID.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -180,16 +180,16 @@ public class DescribePriceResponseBody extends TeaModel {
         public Long activityId;
 
         /**
-         * <p>The activity name.</p>
+         * <p>The promotion name.</p>
          * 
          * <strong>example:</strong>
-         * <p>合同优惠_整单_xxx折</p>
+         * <p>Contract_Discount_Order_xxxOff</p>
          */
         @NameInMap("ActivityName")
         public String activityName;
 
         /**
-         * <p>The preferential price.</p>
+         * <p>The price after the discount.</p>
          */
         @NameInMap("FinalFee")
         public Double finalFee;
@@ -201,7 +201,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Double finalPromFee;
 
         /**
-         * <p>The promotion code.</p>
+         * <p>The discount ID.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -286,7 +286,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     public static class DescribePriceResponseBodyOrderDepreciateInfo extends TeaModel {
         /**
-         * <p>The price reduction rate.</p>
+         * <p>The price reduction ratio.</p>
          * 
          * <strong>example:</strong>
          * <p>30%</p>
@@ -295,7 +295,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Long cheapRate;
 
         /**
-         * <p>The new total price displayed on the official website.</p>
+         * <p>The total price on the official website after the price reduction.</p>
          * 
          * <strong>example:</strong>
          * <p>9*</p>
@@ -304,13 +304,13 @@ public class DescribePriceResponseBody extends TeaModel {
         public Long cheapStandAmount;
 
         /**
-         * <p>The activity information.</p>
+         * <p>The promotion information.</p>
          */
         @NameInMap("ContractActivity")
         public DescribePriceResponseBodyOrderDepreciateInfoContractActivity contractActivity;
 
         /**
-         * <p>The promotional offer (displayed in the total order amount).</p>
+         * <p>The price difference discount, displayed in the order total.</p>
          * 
          * <strong>example:</strong>
          * <p>**</p>
@@ -319,7 +319,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Long differential;
 
         /**
-         * <p>The name of the promotional offer.</p>
+         * <p>The name of the price difference discount.</p>
          * 
          * <strong>example:</strong>
          * <p>XXXXX</p>
@@ -328,7 +328,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public String differentialName;
 
         /**
-         * <p>Indicates whether eligibility for the contracted discount is met.</p>
+         * <p>Indicates whether a contract-based discount is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -337,7 +337,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Boolean isContractActivity;
 
         /**
-         * <p>Indicates whether the price reduction rate is displayed.</p>
+         * <p>Indicates whether the price reduction is displayed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -355,7 +355,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Long listPrice;
 
         /**
-         * <p>The monthly price.</p>
+         * <p>The equivalent monthly price.</p>
          * 
          * <strong>example:</strong>
          * <p>**</p>
@@ -364,7 +364,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Long monthPrice;
 
         /**
-         * <p>The original total price displayed on the official website.</p>
+         * <p>The original total price on the official website.</p>
          * 
          * <strong>example:</strong>
          * <p>12*</p>
@@ -492,7 +492,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public DescribePriceResponseBodyOrderCoupons coupons;
 
         /**
-         * <p>The currency used for payment. A value of CNY is used when the order was generated on the China site (aliyun.com), and a value of USD is used when the order was generated on the international site (alibabacloud.com).</p>
+         * <p>The currency. The value is CNY (Chinese Yuan) for the China site and USD (US Dollar) for the international site.</p>
          * 
          * <strong>example:</strong>
          * <p>CNY</p>
@@ -501,7 +501,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>The activity information.</p>
+         * <p>The promotion information.</p>
          */
         @NameInMap("DepreciateInfo")
         public DescribePriceResponseBodyOrderDepreciateInfo depreciateInfo;
@@ -516,7 +516,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public String discountAmount;
 
         /**
-         * <p>The service fees of the order.</p>
+         * <p>The service fee.</p>
          * 
          * <strong>example:</strong>
          * <p>0.1</p>
@@ -525,7 +525,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public String handlingFeeAmount;
 
         /**
-         * <p>Indicates whether eligibility for the contracted discount is met.</p>
+         * <p>Indicates whether a contract-based discount is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -534,7 +534,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Boolean isContractActivity;
 
         /**
-         * <p>The information about the order.</p>
+         * <p>The order information.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -555,13 +555,13 @@ public class DescribePriceResponseBody extends TeaModel {
         public DescribePriceResponseBodyOrderRuleIds ruleIds;
 
         /**
-         * <p>Indicates whether the discount information is displayed.</p>
+         * <p>Indicates whether discount information is displayed.</p>
          */
         @NameInMap("ShowDiscountInfo")
         public Boolean showDiscountInfo;
 
         /**
-         * <p>The discount.</p>
+         * <p>The discount price.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -579,7 +579,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Long standPrice;
 
         /**
-         * <p>The transaction price of the order.</p>
+         * <p>The actual transaction price of the order.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MigrateToOtherZoneRequest extends TeaModel {
     /**
-     * <p>The ID of the Tair (Redis OSS-compatible) instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,13 +15,13 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The time when the database is switched after the instance is migrated. Valid values:</p>
+     * <p>The time when the database switchover is performed after data migration. Valid values: </p>
      * <ul>
-     * <li><strong>Immediately</strong>: The database is immediately switched after the instance is migrated.</li>
-     * <li><strong>MaintainTime</strong>: The database is switched within the maintenance window.</li>
+     * <li><strong>Immediately</strong>: The switchover is performed immediately after the migration.</li>
+     * <li><strong>MaintainTime</strong>: The switchover is performed within the maintenance window.</li>
      * </ul>
      * <blockquote>
-     * <p> Default value: Immediately.</p>
+     * <p>Default value: <strong>Immediately</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -37,17 +37,14 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of read replicas in the primary zone.</p>
+     * <p>The number of read-only nodes in the primary zone.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>The <strong>ReadOnlyCount</strong> and <strong>SlaveReadOnlyCount</strong> parameters are applicable only to cloud-native instances for which read/write splitting is enabled. When you migrate an instance to multiple zones, you can use these parameters to adjust the distribution of read replicas in the primary and secondary zones of the instance. This operation does not allow you to increase or decrease the number of nodes. Therefore, the sum of the values of <code>ReadOnlyCount and SlaveReadOnlyCount</code> must be the same as that before the migration.</p>
-     * </li>
-     * <li><p>If you do not specify these parameters when you migrate an instance from a single zone to multiple zones, one read replica is migrated to the secondary zone, and all other read replicas remain in the primary zone.</p>
-     * </li>
-     * <li><p>If the instance is a cluster instance, the preceding parameters indicate the number of read replicas per shard in the primary and secondary zones of the instance.</p>
-     * </li>
+     * <li>The ReadOnlyCount and SlaveReadOnlyCount parameters apply only to cloud-native instances with read/write splitting enabled. When you migrate an instance to multiple zones, you can use these parameters to adjust the distribution of read-only nodes across the primary and secondary zones. This operation does not support adding or removing nodes. Therefore, the total number of read-only nodes calculated by ReadOnlyCount + SlaveReadOnlyCount must remain the same as that before the migration.</li>
+     * <li>When you migrate an instance from a single zone to multiple zones and do not specify these parameters, one read-only node is migrated to the secondary zone by default, and the remaining read-only nodes stay in the primary zone.</li>
+     * <li>If the instance uses the cluster architecture, these parameters specify the number of read-only nodes per shard in the primary and secondary zones.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -56,17 +53,14 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public Integer readOnlyCount;
 
     /**
-     * <p>The number of replica nodes in the primary zone.</p>
+     * <p>The number of secondary nodes in the primary zone.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>The <strong>ReplicaCount</strong> and <strong>SlaveReplicaCount</strong> parameters are applicable only to cloud-native instances. When you migrate an instance to multiple zones, you can use these parameters to adjust the distribution of replica nodes in the primary and secondary zones of the instance. This operation does not allow you to increase or decrease the number of nodes. Therefore, the sum of the values of <code>ReplicaCount and SlaveReplicaCount</code> must be the same as that before the migration.</p>
-     * </li>
-     * <li><p>If you do not specify these parameters when you migrate an instance from a single zone to multiple zones, one replica node is migrated to the secondary zone, and all other replica nodes remain in the primary zone.</p>
-     * </li>
-     * <li><p>If the instance is a cluster instance, the preceding parameters indicate the number of replica nodes per shard in the primary and secondary zones of the instance.</p>
-     * </li>
+     * <li>The ReplicaCount and SlaveReplicaCount parameters apply only to cloud-native instances. When you migrate an instance to multiple zones, you can use these parameters to adjust the distribution of secondary nodes across the primary and secondary zones. This operation does not support adding or removing nodes. Therefore, the total number of secondary nodes calculated by ReplicaCount + SlaveReplicaCount must remain the same as that before the migration.</li>
+     * <li>When you migrate an instance from a single zone to multiple zones and do not specify these parameters, one secondary node is migrated to the secondary zone by default, and the remaining secondary nodes stay in the primary zone.</li>
+     * <li>If the instance uses the cluster architecture, these parameters specify the number of secondary nodes per shard in the primary and secondary zones.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -81,9 +75,9 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the secondary zone to which you want to migrate the instance. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> operation to query zone IDs.</p>
+     * <p>The ID of the destination secondary zone. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> operation to query the zone ID.</p>
      * <blockquote>
-     * <p> If you specify this parameter, the master node and replica node of the instance can be deployed in different zones and disaster recovery is implemented across zones. The instance can withstand failures in data centers.</p>
+     * <p>If you specify this parameter, the primary and secondary data nodes are distributed across different zones. This implements cross-zone disaster recovery and tolerates data center-level failures.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -96,7 +90,7 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The number of read replicas in the secondary zone.</p>
+     * <p>The number of read-only nodes in the secondary zone.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -105,7 +99,7 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public Integer slaveReadOnlyCount;
 
     /**
-     * <p>The number of replica nodes in the secondary zone.</p>
+     * <p>The number of secondary nodes in the secondary zone.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -114,15 +108,13 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public Integer slaveReplicaCount;
 
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <p>The vSwitch ID.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>The zone where the vSwitch resides must be the same as the ID of the destination zone.</p>
-     * </li>
-     * <li><p>If the network type of the instance is VPC, this parameter is required.</p>
-     * </li>
+     * <li>The zone where the vSwitch resides must be the same as the destination zone specified by ZoneId. </li>
+     * <li>This parameter is required if the network type of the instance is VPC.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>vsw-bp1e7clcw529l773d****</p>
@@ -131,7 +123,7 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the destination primary zone. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> operation to query zone IDs.</p>
+     * <p>The ID of the destination primary zone. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> operation to query the zone ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

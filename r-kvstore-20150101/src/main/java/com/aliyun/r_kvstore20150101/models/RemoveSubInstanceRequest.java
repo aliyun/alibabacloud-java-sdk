@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveSubInstanceRequest extends TeaModel {
     /**
-     * <p>Instance ID.</p>
+     * <p>Instance ID of the child instance in the distributed instance. You can call the <a href="https://help.aliyun.com/document_detail/473780.html">DescribeGlobalDistributeCache</a> operation to query instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

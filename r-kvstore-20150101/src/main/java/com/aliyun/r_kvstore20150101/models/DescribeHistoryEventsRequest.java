@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeHistoryEventsRequest extends TeaModel {
     /**
-     * <p>The status of the event. Valid values:</p>
+     * <p>The archive status of the event. Valid values:</p>
      * <ul>
-     * <li><strong>Archived</strong></li>
-     * <li><strong>UnArchived</strong></li>
-     * <li><strong>All</strong></li>
+     * <li><strong>Archived</strong>: The event is archived.</li>
+     * <li><strong>UnArchived</strong>: The event is not archived.</li>
+     * <li><strong>All</strong>: All events.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,12 +19,12 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public String archiveStatus;
 
     /**
-     * <p>The system event category. Valid values:</p>
+     * <p>The category of the system event. Valid values:</p>
      * <ul>
-     * <li><strong>Exception</strong>: abnormal events.</li>
-     * <li><strong>Optimize</strong>: optimization events.</li>
+     * <li><strong>Exception</strong>: Exception events.</li>
+     * <li><strong>Optimize</strong>: Optimization events.</li>
      * <li><strong>Notification</strong>: Notification events.</li>
-     * <li><strong>Maintenance</strong>: scheduled maintenance events.</li>
+     * <li><strong>Maintenance</strong>: Scheduled O&amp;M events.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public String eventCategory;
 
     /**
-     * <p>The event ID.</p>
+     * <p>The ID of the event.</p>
      * 
      * <strong>example:</strong>
      * <p>5345398</p>
@@ -43,11 +43,11 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public String eventId;
 
     /**
-     * <p>The level of the event. Valid values:</p>
+     * <p>The event level. Valid values:</p>
      * <ul>
-     * <li><strong>INFO</strong></li>
-     * <li><strong>WARN</strong></li>
-     * <li><strong>CRITICAL</strong></li>
+     * <li><strong>INFO</strong>: Information.</li>
+     * <li><strong>WARN</strong>: Warning.</li>
+     * <li><strong>CRITICAL</strong>: Critical.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,16 +59,16 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     /**
      * <p>The status of the event. Valid values:</p>
      * <ul>
-     * <li><strong>Inquiring</strong></li>
-     * <li><strong>Scheduled</strong>: Planned</li>
-     * <li><strong>Running</strong></li>
-     * <li><strong>Succeed</strong></li>
-     * <li><strong>Failed</strong></li>
-     * <li><strong>Canceled</strong></li>
-     * </ul>
-     * <blockquote>
-     * <p>Separate multiple states with commas (,).</p>
+     * <li><strong>Inquiring</strong>: Inquiring.</li>
+     * <li><strong>Scheduled</strong>: Scheduled.</li>
+     * <li><strong>Running</strong>: Running.</li>
+     * <li><strong>Succeed</strong>: Succeeded.</li>
+     * <li><strong>Failed</strong>: Failed.</li>
+     * <li><strong>Canceled</strong>: Canceled.<blockquote>
+     * <p>To query events in multiple statuses, separate the statuses with commas (,).</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Scheduled</p>
@@ -77,21 +77,21 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public String eventStatus;
 
     /**
-     * <p>The system event type. This parameter takes effect only when InstanceEventType.N is not specified. Valid values:</p>
+     * <p>The type of the system event. The EventType parameter is valid only when the InstanceEventType.N parameter is not specified. Valid values: </p>
      * <ul>
      * <li>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</li>
      * <li>SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</li>
-     * <li>SystemFailure.Reboot: The instance is restarted due to a system error.</li>
-     * <li>SystemFailure.Redeploy: The instance is redeployed due to a system error.</li>
-     * <li>SystemFailure.Delete: The instance is released due to an instance creation failure.</li>
-     * <li>InstanceFailure.Reboot: The instance is restarted due to an instance error.</li>
+     * <li>SystemFailure.Reboot: The instance is restarted due to a system failure.</li>
+     * <li>SystemFailure.Redeploy: The instance is redeployed due to a system failure.</li>
+     * <li>SystemFailure.Delete: The instance is released due to a creation failure.</li>
+     * <li>InstanceFailure.Reboot: The instance is restarted due to an instance failure.</li>
      * <li>InstanceExpiration.Stop: The subscription instance is stopped due to expiration.</li>
      * <li>InstanceExpiration.Delete: The subscription instance is released due to expiration.</li>
      * <li>AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.</li>
      * <li>AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</li>
      * </ul>
      * <blockquote>
-     * <p>For more information about event types, see <a href="https://help.aliyun.com/document_detail/66574.html">Overview of system events</a>. The values of this parameter are applicable only to instance system events, but not to disk system events.</p>
+     * <p>For more information about event types, see <a href="https://help.aliyun.com/document_detail/66574.html">Overview of system events</a>. The value of this parameter can only be an instance system event, not a cloud disk system event.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public String eventType;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The earliest start time of the query task. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-01-02T11:31:03Z</p>
@@ -125,7 +125,7 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. The value must be greater than 0 and less than or equal to the maximum integer value. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -134,7 +134,7 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of records to return on each page. Default value: 10.</p>
+     * <p>The number of entries to return on each page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -143,7 +143,7 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -152,7 +152,7 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfnuslkubs****</p>
@@ -169,13 +169,13 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     /**
      * <p>The type of the resource. Valid values:</p>
      * <ul>
-     * <li><strong>Instance</strong>: instance resources.</li>
-     * <li><strong>Host</strong>: host resources.</li>
-     * <li><strong>User</strong>: user resources</li>
-     * </ul>
-     * <blockquote>
-     * <p>If you do not specify this parameter, events of all resource types are queried.</p>
+     * <li><strong>Instance</strong>: Instance resources.</li>
+     * <li><strong>Host</strong>: Host resources.</li>
+     * <li><strong>User</strong>: User resources.<blockquote>
+     * <p>If you do not specify this parameter, all resource types are queried.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Instance</p>
@@ -187,7 +187,7 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The task IDs.</p>
+     * <p>The ID of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>578678678</p>
@@ -196,7 +196,7 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Only events that have a start time earlier than or equal to the time specified by this parameter are queried.</p>
+     * <p>The latest start time of the query task. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC and later than the earliest start time of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-02-02T11:31:03Z</p>

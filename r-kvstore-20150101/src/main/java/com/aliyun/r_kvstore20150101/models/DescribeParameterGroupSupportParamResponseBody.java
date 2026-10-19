@@ -14,7 +14,7 @@ public class DescribeParameterGroupSupportParamResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The parameters.</p>
+     * <p>The list of parameters.</p>
      */
     @NameInMap("ResourceList")
     public java.util.List<DescribeParameterGroupSupportParamResponseBodyResourceList> resourceList;
@@ -42,7 +42,7 @@ public class DescribeParameterGroupSupportParamResponseBody extends TeaModel {
 
     public static class DescribeParameterGroupSupportParamResponseBodyResourceList extends TeaModel {
         /**
-         * <p>The service category.</p>
+         * <p>The product category.</p>
          * 
          * <strong>example:</strong>
          * <p>standard</p>
@@ -60,7 +60,7 @@ public class DescribeParameterGroupSupportParamResponseBody extends TeaModel {
         public String dbType;
 
         /**
-         * <p>The engine version.</p>
+         * <p>The compatible engine version.</p>
          * 
          * <strong>example:</strong>
          * <p>5.0</p>
@@ -69,7 +69,7 @@ public class DescribeParameterGroupSupportParamResponseBody extends TeaModel {
         public String dbVersion;
 
         /**
-         * <p>The name of the parameter.</p>
+         * <p>The configurable parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>rt_threshold_ms</p>

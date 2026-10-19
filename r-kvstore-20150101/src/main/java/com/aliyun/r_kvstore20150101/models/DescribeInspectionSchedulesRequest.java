@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeInspectionSchedulesRequest extends TeaModel {
     /**
+     * <p>Specifies whether the scheduled task is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,7 @@ public class DescribeInspectionSchedulesRequest extends TeaModel {
     public Long enabled;
 
     /**
+     * <p>The instance ID of the assistant.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class DescribeInspectionSchedulesRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +33,8 @@ public class DescribeInspectionSchedulesRequest extends TeaModel {
     public Long pageNum;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -35,6 +42,8 @@ public class DescribeInspectionSchedulesRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The ID of the timed scheduling.</p>
+     * 
      * <strong>example:</strong>
      * <p>scheduleId-202604141xxxx</p>
      */

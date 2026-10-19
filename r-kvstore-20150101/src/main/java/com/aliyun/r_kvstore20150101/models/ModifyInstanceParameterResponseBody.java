@@ -14,7 +14,7 @@ public class ModifyInstanceParameterResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>561AFBF1-BE20-44DB-9BD1-6988B53E****</p>
@@ -23,7 +23,7 @@ public class ModifyInstanceParameterResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>578678678</p>

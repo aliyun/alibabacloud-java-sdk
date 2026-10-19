@@ -5,15 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateGlobalDistributeCacheRequest extends TeaModel {
     /**
-     * <p>Specifies when to perform the operation. Valid values:</p>
+     * <p>The time when the operation is executed. Valid values:</p>
      * <ul>
-     * <li><p><strong>Immediately</strong>: Performs the operation immediately.</p>
-     * </li>
-     * <li><p><strong>MaintainTime</strong>: Performs the operation during the maintenance window. This is the default value.</p>
-     * </li>
+     * <li><strong>Immediately</strong>: Executes the operation immediately.</li>
+     * <li><strong>MaintainTime</strong>: Executes the operation during the maintenance window. This is the default value.</li>
      * </ul>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to change the maintenance window of the instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of the instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,7 +29,7 @@ public class CreateGlobalDistributeCacheRequest extends TeaModel {
     /**
      * <p>The ID of the resource group.</p>
      * <blockquote>
-     * <p>This is a system parameter. You do not need to specify it.</p>
+     * <p>You do not need to specify this system parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -52,7 +50,7 @@ public class CreateGlobalDistributeCacheRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The ID of the source instance.</p>
+     * <p>The instance ID to be transformed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
