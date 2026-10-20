@@ -7,9 +7,9 @@ public class DescribeTemplateAttributeRequest extends TeaModel {
     /**
      * <p>The templatetype.</p>
      * <ul>
-     * <li><p>If you set this parameter to <code>kubernetes</code>, the template is displayed on the Orchestration Templates page in the console.</p>
+     * <li><p>If the value is set to <code>kubernetes</code>, the template is displayed on the Orchestration Templates page in the console.</p>
      * </li>
-     * <li><p>If you leave this parameter empty or set it to other values, the template is not displayed on the Orchestration Templates page in the console.</p>
+     * <li><p>If this parameter is left empty or set to other values, the template is not displayed on the Orchestration Templates page in the console.</p>
      * </li>
      * </ul>
      * <p>Settings this parameter to <code>kubernetes</code> is recommended.</p>

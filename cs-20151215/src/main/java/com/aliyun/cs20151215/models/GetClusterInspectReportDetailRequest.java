@@ -11,7 +11,7 @@ public class GetClusterInspectReportDetailRequest extends TeaModel {
      * <li>performance: performance and efficiency </li>
      * <li>stability: business stability</li>
      * <li>limitation: service limits </li>
-     * <li>cost: cost optimization.</li>
+     * <li>cost: cost optimization</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class GetClusterInspectReportDetailRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>Specifies whether to filter check items. If set to true, only abnormal check items with result=true are returned.</p>
+     * <p>Specifies whether to filter inspection items. If set to true, only abnormal inspection items with a result of true are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -33,7 +33,7 @@ public class GetClusterInspectReportDetailRequest extends TeaModel {
      * <p>The query language. Valid values:</p>
      * <ul>
      * <li>zh_CN</li>
-     * <li>en_US.</li>
+     * <li>en_US</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,10 +45,10 @@ public class GetClusterInspectReportDetailRequest extends TeaModel {
     /**
      * <p>The level of the inspection item. Valid values:</p>
      * <ul>
-     * <li>advice: suggestion</li>
-     * <li>warning: low-risk</li>
-     * <li>error: medium-risk</li>
-     * <li>critical: high-risk.</li>
+     * <li>advice: advice</li>
+     * <li>warning: low risk</li>
+     * <li>error: medium risk</li>
+     * <li>critical: high risk</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,7 +76,7 @@ public class GetClusterInspectReportDetailRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The object type of the inspection target. Only check items that match the specified targetType are returned.</p>
+     * <p>The object type. Only check items that match the object type are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>NodePool</p>

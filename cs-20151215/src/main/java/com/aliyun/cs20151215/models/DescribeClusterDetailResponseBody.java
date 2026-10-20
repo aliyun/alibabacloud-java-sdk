@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterDetailResponseBody extends TeaModel {
     /**
-     * <p>The intelligent managed mode configuration.</p>
+     * <p>The intelligent management mode configuration.</p>
      */
     @NameInMap("auto_mode")
     public DescribeClusterDetailResponseBodyAutoMode autoMode;
@@ -31,14 +31,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     /**
      * <p>The specification of the cluster when <code>cluster_type</code> is set to <code>ManagedKubernetes</code> and <code>profile</code> is configured. Valid values:</p>
      * <ul>
-     * <li><code>ack.standard</code>: Basic (selected by default if the value is empty)</li>
-     * <li><code>ack.pro.small</code>: Pro</li>
-     * <li><code>ack.pro.xlarge</code>: Pro XL</li>
-     * <li><code>ack.pro.2xlarge</code>: Pro 2XL</li>
-     * <li><code>ack.pro.4xlarge</code>: Pro 4XL (contact customer service to add your account to the whitelist)</li>
+     * <li><code>ack.standard</code>: Basic Edition (selected by default if the value is empty).</li>
+     * <li><code>ack.pro.small</code>: Pro Edition.</li>
+     * <li><code>ack.pro.xlarge</code>: Pro XL.</li>
+     * <li><code>ack.pro.2xlarge</code>: Pro 2XL.</li>
+     * <li><code>ack.pro.4xlarge</code>: Pro 4XL (requires contacting customer service to apply for whitelist access).</li>
      * </ul>
-     * <p>Pro XL, Pro 2XL, and Pro 4XL are three tiers provided by &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>. By pre-allocating and dedicating control plane resources, these tiers ensure that API concurrency and pod scheduling capabilities remain at a consistently high level. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</p>
-     * <p>For information about the cluster management fees for Pro and provisioned control plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</p>
+     * <p>Pro XL, Pro 2XL, and Pro 4XL are the three tiers provided by the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>. By pre-allocating and fixing control plane resources, these tiers ensure that API concurrency and pod scheduling capabilities are always maintained at a consistently high level. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</p>
+     * <p>For the cluster management fees of the Pro Edition and provisioned control plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>ack.pro.small</p>
@@ -47,13 +47,13 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String clusterSpec;
 
     /**
-     * <p>The cluster type.</p>
+     * <p>The cluster type. Valid values:</p>
      * <ul>
      * <li><p><code>Kubernetes</code>: ACK dedicated cluster.</p>
      * </li>
-     * <li><p><code>ManagedKubernetes</code>: ACK ACK cluster types, including ACK ACK clusters (ACK Pro and ACK Basic), ACK Serverless clusters (Pro and Basic), ACK Edge clusters (Pro and Basic), and ACK Lingjun clusters (Pro).</p>
+     * <li><p><code>ManagedKubernetes</code>: ACK ACK clusters, including ACK ACK clusters (ACK Pro Edition and ACK Basic Edition), ACK Serverless clusters (Pro Edition and Basic Edition), ACK Edge clusters (Pro Edition and Basic Edition), and ACK Lingjun clusters (Pro Edition).</p>
      * </li>
-     * <li><p><code>ExternalKubernetes</code>: registered cluster.</p>
+     * <li><p><code>ExternalKubernetes</code>: Registered cluster.</p>
      * </li>
      * </ul>
      * 
@@ -64,7 +64,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>The pod CIDR block, used for Flannel network configuration.</p>
+     * <p>The Pod CIDR block for the Flannel network configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>172.20.xx.xx/16</p>
@@ -73,13 +73,13 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String containerCidr;
 
     /**
-     * <p>The control plane configuration of the dedicated cluster.</p>
+     * <p>The control plane configuration for dedicated clusters.</p>
      */
     @NameInMap("control_plane_config")
     public DescribeClusterDetailResponseBodyControlPlaneConfig controlPlaneConfig;
 
     /**
-     * <p>The cluster connection configuration.</p>
+     * <p>The connection configuration of the cluster.</p>
      */
     @NameInMap("control_plane_endpoints_config")
     public DescribeClusterDetailResponseBodyControlPlaneEndpointsConfig controlPlaneEndpointsConfig;
@@ -94,7 +94,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String created;
 
     /**
-     * <p>The current Kubernetes version of the cluster. For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Kubernetes version overview</a>.</p>
+     * <p>The current version of the cluster. For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Overview of Kubernetes versions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>1.32.1-aliyun.1</p>
@@ -103,10 +103,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String currentVersion;
 
     /**
-     * <p>Indicates whether deletion protection is enabled for the cluster. Deletion protection prevents the cluster from being accidentally deleted through the console or API. Valid values:</p>
+     * <p>Specifies whether deletion protection is enabled for the cluster. This prevents the cluster from being accidentally deleted through the console or API calls. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: Deletion protection is enabled. The cluster cannot be deleted through the console or API.</li>
-     * <li><code>false</code>: Deletion protection is not enabled. The cluster can be deleted through the console or API.</li>
+     * <li><code>true</code>: Deletion protection is enabled. The cluster cannot be deleted through the console or API calls.</li>
+     * <li><code>false</code>: Deletion protection is disabled. The cluster can be deleted through the console or API calls.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public Boolean deletionProtection;
 
     /**
-     * <p>The Docker version used in the cluster.</p>
+     * <p>The Docker version in the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>19.03.5</p>
@@ -126,7 +126,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String dockerVersion;
 
     /**
-     * <p>The instance ID of the Server Load Balancer (SLB) associated with the Ingress of the cluster.</p>
+     * <p>The instance ID of the Ingress load balancer for the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>lb-2zehc05z3b8dwiifh****</p>
@@ -136,13 +136,13 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String externalLoadbalancerId;
 
     /**
-     * <p>The custom Subject Alternative Name (SAN) for the API Server certificate.</p>
+     * <p>The custom Subject Alternative Names (SANs) for the API server certificate.</p>
      */
     @NameInMap("extra_sans")
     public java.util.List<String> extraSans;
 
     /**
-     * <p>The initial Kubernetes version of the cluster.</p>
+     * <p>The initial version of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>1.32.1-aliyun.1</p>
@@ -151,10 +151,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String initVersion;
 
     /**
-     * <p>The IP protocol stack of the cluster. Valid values:</p>
+     * <p>The IP stack of the cluster. Valid values:</p>
      * <ul>
-     * <li>ipv4: creates a cluster that supports only the IPv4 protocol stack.</li>
-     * <li>dual: creates a cluster that supports the IPv4/IPv6 dual stack.</li>
+     * <li>ipv4: The cluster supports only the IPv4 stack.</li>
+     * <li>dual: The cluster supports both IPv4 and IPv6 stacks.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -164,13 +164,13 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String ipStack;
 
     /**
-     * <p>The maintenance window configuration of the cluster. This configuration takes effect only for managed clusters (ACK Pro clusters).</p>
+     * <p>The maintenance window configuration of the cluster. This configuration takes effect only for managed clusters, namely ACK Pro clusters.</p>
      */
     @NameInMap("maintenance_window")
     public MaintenanceWindow maintenanceWindow;
 
     /**
-     * <p>The access addresses of the cluster, including the internal network access address and the public network access address.</p>
+     * <p>The access endpoints of the cluster, including the internal network and public network access endpoints.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;intranet_api_server_endpoint\&quot;:\&quot;<a href="https://192.168.xx.xx:6443%5C%5C%22***%7D">https://192.168.xx.xx:6443\\&quot;***}</a></p>
@@ -179,7 +179,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String masterUrl;
 
     /**
-     * <p>The cluster metadata.</p>
+     * <p>The metadata of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>\&quot;Addons\&quot;:***</p>
@@ -188,7 +188,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String metaData;
 
     /**
-     * <p>The cluster name.</p>
+     * <p>The name of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>cluster-demo</p>
@@ -197,7 +197,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The network type used by the cluster, such as VPC.</p>
+     * <p>The network type of the cluster, such as VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc</p>
@@ -207,7 +207,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String networkMode;
 
     /**
-     * <p>The Kubernetes version to which the cluster can be upgraded.</p>
+     * <p>The version to which the cluster can be upgraded.</p>
      * 
      * <strong>example:</strong>
      * <p>1.xx.x-aliyun.1</p>
@@ -217,7 +217,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
 
     /**
      * <p>Applicable only to the Flannel network plugin. </p>
-     * <p>The subnet mask size assigned to each node, which controls the number of IP addresses that can be allocated to the node.</p>
+     * <p>The size of the subnet mask allocated to nodes, which controls the number of IP addresses that can be allocated to each node.</p>
      * 
      * <strong>example:</strong>
      * <p>26</p>
@@ -239,10 +239,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public java.util.Map<String, String> parameters;
 
     /**
-     * <p>Indicates whether PrivateZone is enabled for the cluster.  </p>
+     * <p>Specifies whether PrivateZone is enabled for the cluster. Valid values:  </p>
      * <ul>
      * <li><code>true</code>: Enabled.</li>
-     * <li><code>false</code>: Not enabled.</li>
+     * <li><code>false</code>: Disabled.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -254,15 +254,15 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public Boolean privateZone;
 
     /**
-     * <p>The cluster child class.</p>
+     * <p>The cluster subtype.</p>
      * <ul>
-     * <li><p><code>Default</code>: ACK managed cluster, including ACK cluster Pro and ACK cluster Basic.</p>
+     * <li><p><code>Default</code>: ACK managed clusters, including ACK Cluster Pro Edition and ACK Cluster Basic Edition.</p>
      * </li>
-     * <li><p><code>Edge</code>: ACK Edge cluster, including ACK Edge cluster Pro and ACK Edge cluster Basic.</p>
+     * <li><p><code>Edge</code>: ACK Edge clusters, including ACK Edge Cluster Pro Edition and ACK Edge Cluster Basic Edition.</p>
      * </li>
-     * <li><p><code>Serverless</code>: ACK Serverless cluster, including ACK Serverless cluster Pro and ACK Serverless cluster Basic.</p>
+     * <li><p><code>Serverless</code>: ACK Serverless clusters, including ACK Serverless Cluster Pro Edition and ACK Serverless Cluster Basic Edition.</p>
      * </li>
-     * <li><p><code>Lingjun</code>: ACK Lingjun cluster, available in Pro.</p>
+     * <li><p><code>Lingjun</code>: ACK Lingjun clusters, available only in the Pro Edition.</p>
      * </li>
      * </ul>
      * 
@@ -273,10 +273,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String profile;
 
     /**
-     * <p>The kube-proxy mode.</p>
+     * <p>The kube-proxy mode. Valid values:</p>
      * <ul>
-     * <li><code>iptables</code>: A mature and stable kube-proxy mode. Service discovery and load balancing for Kubernetes Services are configured by using iptables rules. Performance is moderate and affected by scale. This mode is suitable for clusters with a small number of Services.</li>
-     * <li><code>ipvs</code>: A high-performance kube-proxy mode. Service discovery and load balancing for Kubernetes Services are configured by using the Linux IPVS module. This mode is suitable for clusters with a large number of Services that require high load balancing performance.</li>
+     * <li><code>iptables</code>: The mature and stable kube-proxy mode. Service discovery and load balancing for Kubernetes Services are configured by using iptables rules. However, the performance is average and heavily affected by the scale. This mode is suitable for clusters with a small number of Services.</li>
+     * <li><code>ipvs</code>: The high-performance kube-proxy mode. Service discovery and load balancing for Kubernetes Services are configured by using the Linux IPVS module. This mode is suitable for clusters with a large number of Services and scenarios that require high-performance load balancing.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -304,13 +304,13 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The RRSA configuration.</p>
+     * <p>The RAM Roles for Service Accounts (RRSA) configuration.</p>
      */
     @NameInMap("rrsa_config")
     public DescribeClusterDetailResponseBodyRrsaConfig rrsaConfig;
 
     /**
-     * <p>The ID of the security group associated with the cluster.</p>
+     * <p>The ID of the security group to which the cluster belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-25yq****</p>
@@ -319,7 +319,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The service CIDR block.</p>
+     * <p>The CIDR block of the Service network.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -338,10 +338,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public Long size;
 
     /**
-     * <p>The status of the cluster. Valid values:</p>
+     * <p>The cluster status. Valid values:</p>
      * <ul>
      * <li><code>initial</code>: The cluster is being created.</li>
-     * <li><code>failed</code>: The cluster failed to be created.</li>
+     * <li><code>failed</code>: Cluster creation failed.</li>
      * <li><code>running</code>: The cluster is running.</li>
      * <li><code>updating</code>: The cluster is being updated.</li>
      * <li><code>upgrading</code>: The cluster is being upgraded.</li>
@@ -352,8 +352,8 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
      * <li><code>unavailable</code>: The cluster is unavailable.</li>
      * <li><code>deleting</code>: The cluster is being deleted.</li>
      * <li><code>deleted</code>: The cluster has been deleted.</li>
-     * <li><code>delete_failed</code>: The cluster failed to be deleted.</li>
-     * <li><code>waiting</code>: The cluster is in the accessed state, waiting to be connected.</li>
+     * <li><code>delete_failed</code>: Cluster deletion failed.</li>
+     * <li><code>waiting</code>: The cluster is waiting for access.</li>
      * <li><code>disconnected</code>: The cluster is disconnected.</li>
      * </ul>
      * 
@@ -364,7 +364,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String state;
 
     /**
-     * <p>The pod CIDR block.</p>
+     * <p>The Pod CIDR block.</p>
      * 
      * <strong>example:</strong>
      * <p>172.20.xx.xx/16</p>
@@ -374,7 +374,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String subnetCidr;
 
     /**
-     * <p>The resource tags of the cluster.</p>
+     * <p>The cluster resource tags.</p>
      */
     @NameInMap("tags")
     public java.util.List<Tag> tags;
@@ -389,7 +389,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String timezone;
 
     /**
-     * <p>The time when the cluster was last updated.</p>
+     * <p>The time when the cluster was updated.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-04-10T13:28:09+08:00</p>
@@ -398,7 +398,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String updated;
 
     /**
-     * <p>The ID of the VPC used by the cluster. This is a required parameter when you create a cluster.</p>
+     * <p>The ID of the virtual private cloud (VPC) where the cluster is deployed. This parameter is required when you create a cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-2zecuu62b9zw7a7qn****</p>
@@ -407,7 +407,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The vSwitch ID. This field is deprecated. To query control plane vSwitches, use vswitch_ids. To query data plane vSwitches, use vswitch_ids in the node pool configuration.</p>
+     * <p>The vSwitch ID. <strong>[Deprecated]</strong> To query the vSwitches for the control plane, use vswitch_ids. To query the vSwitches for the data plane, query the vswitch_ids of the node pool.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-2zete8s4qocqg0mf6****,vsw-2zete8s4qocqg0mf6****</p>
@@ -417,13 +417,13 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String vswitchId;
 
     /**
-     * <p>The vSwitches used by the cluster control plane.</p>
+     * <p>The vSwitches for the cluster control plane.</p>
      */
     @NameInMap("vswitch_ids")
     public java.util.List<String> vswitchIds;
 
     /**
-     * <p>The name of the Worker RAM role that authorizes ECS instances to serve as cluster worker nodes.</p>
+     * <p>The name of the RAM role for worker nodes. This role authorizes ECS instances to act as worker nodes in the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>KubernetesWorkerRole-ec87d15b-edca-4302-933f-c8a16bf0****</p>
@@ -808,7 +808,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
 
     public static class DescribeClusterDetailResponseBodyAutoMode extends TeaModel {
         /**
-         * <p>Indicates whether intelligent managed mode is enabled.</p>
+         * <p>Indicates whether the intelligent management mode is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -842,7 +842,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public Boolean autoRenew;
 
         /**
-         * <p>The auto-renewal period of the nodes.</p>
+         * <p>The auto-renewal period for the nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -851,7 +851,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public Long autoRenewPeriod;
 
         /**
-         * <p>The billing type of control plane nodes.</p>
+         * <p>The billing method for the control plane nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
@@ -869,7 +869,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public Boolean cloudMonitorFlags;
 
         /**
-         * <p>The CPU management policy of the nodes.</p>
+         * <p>The CPU management policy for the nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>none</p>
@@ -878,7 +878,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public String cpuPolicy;
 
         /**
-         * <p>The deployment set ID.</p>
+         * <p>The ID of the deployment set.</p>
          * 
          * <strong>example:</strong>
          * <p>ds-bp10b35imuam5amw****</p>
@@ -887,7 +887,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public String deploymentsetId;
 
         /**
-         * <p>The image ID.</p>
+         * <p>The ID of the image.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun_3_x64_20G_alibase_20240819</p>
@@ -896,7 +896,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The operating system image type.</p>
+         * <p>The type of the operating system image.</p>
          * 
          * <strong>example:</strong>
          * <p>AliyunLinux3</p>
@@ -905,19 +905,19 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public String imageType;
 
         /**
-         * <p>The metadata access configuration of the ECS instances.</p>
+         * <p>The metadata access configuration for the ECS instances.</p>
          */
         @NameInMap("instance_metadata_options")
         public InstanceMetadataOptions instanceMetadataOptions;
 
         /**
-         * <p>The instance types of the nodes.</p>
+         * <p>The instance type of the nodes.</p>
          */
         @NameInMap("instance_types")
         public java.util.List<String> instanceTypes;
 
         /**
-         * <p>The name of the key pair. Specify either this parameter or login_password.</p>
+         * <p>The name of the key pair. You must specify either this parameter or <code>login_password</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>ack</p>
@@ -926,7 +926,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public String keyPair;
 
         /**
-         * <p>The service port range of the nodes.</p>
+         * <p>The service port range for nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>30000-32767</p>
@@ -935,7 +935,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public String nodePortRange;
 
         /**
-         * <p>The subscription duration of the nodes.</p>
+         * <p>The subscription period for the nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -944,7 +944,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public Long period;
 
         /**
-         * <p>The unit of the subscription duration.</p>
+         * <p>The unit of the subscription period for the nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -953,7 +953,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public String periodUnit;
 
         /**
-         * <p>The runtime name.</p>
+         * <p>The name of the container runtime.</p>
          * 
          * <strong>example:</strong>
          * <p>containerd</p>
@@ -980,7 +980,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public Long size;
 
         /**
-         * <p>Indicates whether MLPS 2.0 security hardening is enabled.</p>
+         * <p>Indicates whether classified protection security hardening is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -989,7 +989,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public Boolean socEnabled;
 
         /**
-         * <p>Indicates whether burst (I/O performance burst) is enabled for the system cloud disk.</p>
+         * <p>Indicates whether bursting is enabled for the system cloud disks of the nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -998,7 +998,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public Boolean systemDiskBurstingEnabled;
 
         /**
-         * <p>The type of the system cloud disk for the nodes.</p>
+         * <p>The type of the system cloud disks for the nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_essd</p>
@@ -1007,7 +1007,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public String systemDiskCategory;
 
         /**
-         * <p>The performance level of the system cloud disk. This parameter takes effect only for ESSD cloud disks.</p>
+         * <p>The performance level of the system cloud disks for the nodes. This parameter takes effect only for ESSDs.</p>
          * 
          * <strong>example:</strong>
          * <p>PL1</p>
@@ -1016,7 +1016,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public String systemDiskPerformanceLevel;
 
         /**
-         * <p>The provisioned read/write IOPS of the system cloud disk.</p>
+         * <p>The provisioned read and write IOPS for the system cloud disks of the nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -1025,7 +1025,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public Long systemDiskProvisionedIops;
 
         /**
-         * <p>The size of the system cloud disk for the nodes. Minimum value: 40.</p>
+         * <p>The size of the system cloud disks for the nodes. The minimum value is 40.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -1034,7 +1034,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public Long systemDiskSize;
 
         /**
-         * <p>The automatic snapshot policy for the nodes.</p>
+         * <p>The ID of the automatic snapshot policy for the nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-2zej1nogjvovnz4z****</p>
@@ -1243,15 +1243,15 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
 
     public static class DescribeClusterDetailResponseBodyControlPlaneEndpointsConfigInternalDnsConfig extends TeaModel {
         /**
-         * <p>The VPCs in which the internal domain name records take effect. By default, this includes the VPC where the cluster is deployed.</p>
+         * <p>The VPC scope where the internal DNS records of the cluster take effect. By default, this includes the VPC where the cluster is deployed.</p>
          */
         @NameInMap("bind_vpcs")
         public java.util.List<String> bindVpcs;
 
         /**
-         * <p>Indicates whether internal domain name access is enabled for the cluster. </p>
+         * <p>Indicates whether internal DNS access is enabled for the cluster. Valid values: </p>
          * <ul>
-         * <li>true: Internal domain name access is enabled. Node-side components (kubelet, kube-proxy) access the API Server through the internal domain name.</li>
+         * <li>true: Internal DNS access is enabled. Node-side components such as kubelet and kube-proxy access the API server by using the internal domain name.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1285,7 +1285,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
 
     public static class DescribeClusterDetailResponseBodyControlPlaneEndpointsConfigLoadBalancersConfig extends TeaModel {
         /**
-         * <p>The access address.</p>
+         * <p>The endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>nlb-0ogk9aaxxxxxxx.cn-hangzhou.nlb.aliyuncsslb.com</p>
@@ -1344,7 +1344,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
 
     public static class DescribeClusterDetailResponseBodyControlPlaneEndpointsConfig extends TeaModel {
         /**
-         * <p>The internal DNS configuration of the cluster. This configuration applies to ACK managed clusters. The internal domain name is used by node-side system components such as kubelet and kube-proxy to access the API Server. If internal domain name access is not enabled, node-side system components access the API Server through the CLB IP address.</p>
+         * <p>The internal DNS configuration of the cluster, applicable to ACK managed clusters. The internal domain name is used by node-side system components such as kubelet and kube-proxy to access the API server. If internal domain name access is not enabled, node-side system components access the API server by using the IP address of the Classic Load Balancer (CLB) instance.</p>
          */
         @NameInMap("internal_dns_config")
         public DescribeClusterDetailResponseBodyControlPlaneEndpointsConfigInternalDnsConfig internalDnsConfig;
@@ -1380,12 +1380,11 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
 
     public static class DescribeClusterDetailResponseBodyOperationPolicyClusterAutoUpgrade extends TeaModel {
         /**
-         * <p>The auto upgrade frequency of the cluster. For more information, see <a href="https://help.aliyun.com/document_detail/2712866.html">Upgrade frequency</a>.</p>
-         * <p>Valid values:</p>
+         * <p>The automatic upgrade channel of the cluster. For more information, see <a href="https://help.aliyun.com/document_detail/2712866.html">Upgrade channels</a>. Valid values:</p>
          * <ul>
-         * <li>patch: the latest patch version.</li>
-         * <li>stable: the second latest minor version.</li>
-         * <li>rapid: the latest minor version.</li>
+         * <li>patch: The latest patch version.</li>
+         * <li>stable: The second latest minor version.</li>
+         * <li>rapid: The latest minor version.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1395,7 +1394,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public String channel;
 
         /**
-         * <p>Indicates whether cluster auto upgrade is enabled.</p>
+         * <p>Specifies whether automatic cluster upgrade is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1428,7 +1427,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
 
     public static class DescribeClusterDetailResponseBodyOperationPolicy extends TeaModel {
         /**
-         * <p>The cluster auto upgrade configuration.</p>
+         * <p>The automatic upgrade configuration of the cluster.</p>
          */
         @NameInMap("cluster_auto_upgrade")
         public DescribeClusterDetailResponseBodyOperationPolicyClusterAutoUpgrade clusterAutoUpgrade;
@@ -1450,7 +1449,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
 
     public static class DescribeClusterDetailResponseBodyRrsaConfig extends TeaModel {
         /**
-         * <p>The default audience of the OIDC token. Multiple values are separated by commas (,). The values are included as an array in the aud field of the OIDC token.</p>
+         * <p>The default audience of the OIDC token. If multiple values are included, they are separated by commas (,). These values form an array for the <code>aud</code> field in the OIDC token.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://kubernetes.default.svc,https://example.***.com">https://kubernetes.default.svc,https://example.***.com</a></p>
@@ -1459,7 +1458,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public String audience;
 
         /**
-         * <p>Indicates whether RRSA is enabled.</p>
+         * <p>Specifies whether RRSA is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1468,7 +1467,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The issuer information of the OIDC token. Multiple values are separated by commas (,). The first value becomes the value of the iss field in the OIDC token and the issuer URL of the OIDC IdP.</p>
+         * <p>The issuer of the OIDC token. If multiple values are included, they are separated by commas (,). The first value is used as the <code>iss</code> field in the OIDC token and the issuer URL of the OIDC identity provider (IdP).</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://oidc-ack-***,https://kubernetes.default.svc">https://oidc-ack-***,https://kubernetes.default.svc</a></p>
@@ -1477,7 +1476,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public String issuer;
 
         /**
-         * <p>The URL of the OIDC public key information.</p>
+         * <p>The URL of the OIDC public key.</p>
          */
         @NameInMap("jwks_url")
         public String jwksUrl;

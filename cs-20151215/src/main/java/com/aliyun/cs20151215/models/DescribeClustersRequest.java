@@ -14,7 +14,7 @@ public class DescribeClustersRequest extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>Perform a fuzzy match query based on the cluster name.</p>
+     * <p>Specifies the cluster name for fuzzy matching.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

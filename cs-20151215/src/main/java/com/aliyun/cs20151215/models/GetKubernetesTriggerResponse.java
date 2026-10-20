@@ -71,8 +71,7 @@ public class GetKubernetesTriggerResponse extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The trigger project name.</p>
-         * <p>The value consists of the namespace and application name in the format of <code>${namespace}/${name}</code>. Example: default/test-app.</p>
+         * <p>The trigger project name. It consists of the namespace and the name of the application, in the format of <code>${namespace}/${name}</code>. Example: default/test-app.</p>
          * 
          * <strong>example:</strong>
          * <p>default/test-app</p>
@@ -81,12 +80,11 @@ public class GetKubernetesTriggerResponse extends TeaModel {
         public String projectId;
 
         /**
-         * <p>The trigger type.</p>
-         * <p>Valid values:</p>
+         * <p>The trigger type. Valid values:</p>
          * <ul>
-         * <li><p><code>deployment</code>: a trigger for a stateless application. </p>
+         * <li><p><code>deployment</code>: the trigger for stateless applications. </p>
          * </li>
-         * <li><p><code>application</code>: a trigger for an application center application.</p>
+         * <li><p><code>application</code>: the trigger for applications in the Hybrid Cloud Application Center.</p>
          * </li>
          * </ul>
          * <p>Default value: <code>deployment</code>.</p>

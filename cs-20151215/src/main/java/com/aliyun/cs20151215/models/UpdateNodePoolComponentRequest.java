@@ -11,7 +11,7 @@ public class UpdateNodePoolComponentRequest extends TeaModel {
     public UpdateNodePoolComponentRequestConfig config;
 
     /**
-     * <p>Specifies whether to disable log rotation. Default value: false. Updating the baseline configuration triggers log rotation on nodes.</p>
+     * <p>Specifies whether to disable rolling updates. Default value: false. When set to false, updating the baseline configuration triggers a rolling update of nodes.</p>
      */
     @NameInMap("disableRolling")
     public Boolean disableRolling;
@@ -26,13 +26,13 @@ public class UpdateNodePoolComponentRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The list of nodes for log rotation. By default, all nodes are included.</p>
+     * <p>The list of nodes to include in the rolling update. By default, all nodes are included.</p>
      */
     @NameInMap("nodeNames")
     public java.util.List<String> nodeNames;
 
     /**
-     * <p>The log rotation configuration.</p>
+     * <p>The rolling update configuration.</p>
      */
     @NameInMap("rollingPolicy")
     public UpdateNodePoolComponentRequestRollingPolicy rollingPolicy;
@@ -182,7 +182,7 @@ public class UpdateNodePoolComponentRequest extends TeaModel {
 
     public static class UpdateNodePoolComponentRequestRollingPolicy extends TeaModel {
         /**
-         * <p>The upgrade interval between batches. Unit: seconds.</p>
+         * <p>The interval between batches during the upgrade, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -200,7 +200,7 @@ public class UpdateNodePoolComponentRequest extends TeaModel {
         public Long maxFailedNodes;
 
         /**
-         * <p>The maximum number of parallel operations per batch. Default value: 1.</p>
+         * <p>The maximum number of nodes that can be updated in parallel per batch. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -209,7 +209,7 @@ public class UpdateNodePoolComponentRequest extends TeaModel {
         public Long maxParallelism;
 
         /**
-         * <p>The automatic pause policy during node upgrade.</p>
+         * <p>The automatic pause policy during node upgrades.</p>
          * 
          * <strong>example:</strong>
          * <p>NotPause</p>

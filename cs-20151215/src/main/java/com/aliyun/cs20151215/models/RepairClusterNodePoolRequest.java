@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RepairClusterNodePoolRequest extends TeaModel {
     /**
-     * <p>[This field is deprecated] Specifies whether to allow instance restart.</p>
+     * <p><strong>[Deprecated]</strong> Specifies whether to allow instance restart.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -66,14 +66,14 @@ public class RepairClusterNodePoolRequest extends TeaModel {
         /**
          * <p>The repair operation ID. Valid values:</p>
          * <ul>
-         * <li>restart.kubelet: restart kubelet.</li>
-         * <li>restart.docker: restart Docker.</li>
-         * <li>restart.containerd: restart Containerd.</li>
-         * <li>restart.ntp: restart ntpd or chronyd.</li>
-         * <li>remove.containerdContainerInSandbox: delete a specified sandbox container under Containerd.</li>
-         * <li>remove.dockerContainerInSandbox: delete a specified sandbox container under Docker.</li>
-         * <li>remove.containerdContainer: delete a specified container under Containerd.</li>
-         * <li>remove.dockerContainer: delete a specified container under Docker.</li>
+         * <li>restart.kubelet: Restarts kubelet.</li>
+         * <li>restart.docker: Restarts Docker.</li>
+         * <li>restart.containerd: Restarts Containerd.</li>
+         * <li>restart.ntp: Restarts ntpd or chronyd.</li>
+         * <li>remove.containerdContainerInSandbox: Removes a specified sandbox container under Containerd.</li>
+         * <li>remove.dockerContainerInSandbox: Removes a specified sandbox container under Docker.</li>
+         * <li>remove.containerdContainer: Removes a specified container under Containerd.</li>
+         * <li>remove.dockerContainer: Removes a specified container under Docker.</li>
          * </ul>
          * 
          * <strong>example:</strong>

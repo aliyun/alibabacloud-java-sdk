@@ -27,13 +27,11 @@ public class GetKubernetesTriggerRequest extends TeaModel {
     /**
      * <p>The trigger type. Valid values:</p>
      * <ul>
-     * <li><p><code>deployment</code>: a trigger for a stateless application. </p>
-     * </li>
-     * <li><p><code>application</code>: a trigger for an application center application.</p>
-     * </li>
+     * <li><code>deployment</code>: the trigger for stateless applications.</li>
+     * <li><code>application</code>: the trigger for Application Center applications.
+     * Default value: <code>deployment</code>.
+     * If you do not specify the trigger type, the query results are not filtered by trigger type.</li>
      * </ul>
-     * <p>Default value: <code>deployment</code>.</p>
-     * <p>If you do not specify a trigger type, the query results are not filtered by trigger type.</p>
      * 
      * <strong>example:</strong>
      * <p>deployment</p>
@@ -43,8 +41,10 @@ public class GetKubernetesTriggerRequest extends TeaModel {
 
     /**
      * <p>The trigger action. Valid values:</p>
-     * <p><code>redeploy</code>: redeploys the resources defined in <code>project_id</code>.</p>
-     * <p>If you do not specify a trigger action, the query results are not filtered by trigger action.</p>
+     * <ul>
+     * <li><code>redeploy</code>: Redeploys the resources defined in <code>project_id</code>.
+     * If you do not specify the trigger action, the query results are not filtered by trigger action.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>redeploy</p>

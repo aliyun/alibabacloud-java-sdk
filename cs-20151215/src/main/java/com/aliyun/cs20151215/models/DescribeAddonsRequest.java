@@ -34,10 +34,11 @@ public class DescribeAddonsRequest extends TeaModel {
     public String clusterSpec;
 
     /**
+     * <p>Valid values:</p>
      * <ul>
      * <li><p><code>Kubernetes</code>: ACK dedicated cluster.</p>
      * </li>
-     * <li><p><code>ManagedKubernetes</code>: ACK managed cluster types, including ACK managed clusters (ACK Pro and ACK Basic), ACK Serverless clusters (Pro and Basic), ACK Edge clusters (Pro and Basic), and ACK Lingjun clusters (Pro).</p>
+     * <li><p><code>ManagedKubernetes</code>: ACK ACK cluster types, including ACK ACK clusters (ACK Pro and ACK Basic), ACK Serverless clusters (Pro and Basic), ACK Edge clusters (Pro and Basic), and ACK Lingjun clusters (Pro).</p>
      * </li>
      * <li><p><code>ExternalKubernetes</code>: registered cluster.</p>
      * </li>

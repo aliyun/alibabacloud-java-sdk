@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The token that determines the start point of the next query.</p>
+     * <p>The token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>c374bf4864448****</p>

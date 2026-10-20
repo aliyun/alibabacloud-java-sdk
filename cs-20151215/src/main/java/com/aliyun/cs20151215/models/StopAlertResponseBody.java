@@ -16,7 +16,7 @@ public class StopAlertResponseBody extends TeaModel {
     /**
      * <p>The execution result status. Valid values:</p>
      * <ul>
-     * <li>True: The execution is successful.</li>
+     * <li>True: The execution succeeded.</li>
      * <li>False: The execution failed.</li>
      * </ul>
      * 

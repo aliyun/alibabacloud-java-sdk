@@ -12,7 +12,7 @@ public class RunClusterCheckRequest extends TeaModel {
 
     /**
      * <p>The check target.</p>
-     * <p>If the type parameter is set to NodePoolUpgrade, this parameter must be set to the node pool ID.</p>
+     * <p>If the check type parameter <code>type</code> is set to <code>NodePoolUpgrade</code>, this parameter must be set to the node pool ID.</p>
      * <p>If other check types are selected, this parameter does not need to be set.</p>
      * 
      * <strong>example:</strong>

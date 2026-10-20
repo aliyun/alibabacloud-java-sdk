@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateKubernetesTriggerRequest extends TeaModel {
     /**
-     * <p>The trigger action. Valid values:</p>
-     * <p><code>redeploy</code>: redeploys the resources defined in project_id.</p>
+     * <p>The action of the trigger. Valid values:</p>
+     * <ul>
+     * <li><code>redeploy</code>: Redeploys the resources defined in <code>project_id</code>.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,8 +28,8 @@ public class CreateKubernetesTriggerRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The trigger project name.</p>
-     * <p>The value consists of the namespace and application name in the format of <code>${namespace}/${name}</code>.</p>
+     * <p>The project name of the trigger.</p>
+     * <p>It consists of the namespace and the name of the application, in the format of <code>${namespace}/${name}</code>.</p>
      * <p>Example: <code>default/test-app</code>.</p>
      * <p>This parameter is required.</p>
      * 
@@ -38,12 +40,10 @@ public class CreateKubernetesTriggerRequest extends TeaModel {
     public String projectId;
 
     /**
-     * <p>The trigger type. Valid values:</p>
+     * <p>The type of the trigger. Valid values:</p>
      * <ul>
-     * <li><p><code>deployment</code>: a trigger for stateless applications. </p>
-     * </li>
-     * <li><p><code>application</code>: a trigger for Application Center applications.</p>
-     * </li>
+     * <li><code>deployment</code>: The trigger for stateless applications. </li>
+     * <li><code>application</code>: The trigger for Hybrid Cloud Application Center applications.</li>
      * </ul>
      * <p>Default value: <code>deployment</code>.</p>
      * 

@@ -37,9 +37,9 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
          * <p>The component status. Valid values:</p>
          * <ul>
          * <li>active: installed</li>
-         * <li>updating: being modified</li>
+         * <li>updating: being updated</li>
          * <li>upgrading: being upgraded</li>
-         * <li>deleting: being uninstalled.</li>
+         * <li>deleting: being uninstalled</li>
          * </ul>
          * 
          * <strong>example:</strong>

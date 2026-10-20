@@ -25,7 +25,7 @@ public class CheckServiceRoleResponseBody extends TeaModel {
 
     public static class CheckServiceRoleResponseBodyRoles extends TeaModel {
         /**
-         * <p>Indicates whether the service role has been granted.</p>
+         * <p>Indicates whether the role has been authorized.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -34,7 +34,7 @@ public class CheckServiceRoleResponseBody extends TeaModel {
         public Boolean granted;
 
         /**
-         * <p>The prompt message returned when the service role is not granted.</p>
+         * <p>The message returned when the role is not authorized.</p>
          * 
          * <strong>example:</strong>
          * <p>The role does not exist: AliyunCSManagedAutoScalerRole</p>

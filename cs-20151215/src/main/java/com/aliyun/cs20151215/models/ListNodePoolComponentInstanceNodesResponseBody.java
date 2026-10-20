@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListNodePoolComponentInstanceNodesResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of records returned in a single response for pagination.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,16 +14,23 @@ public class ListNodePoolComponentInstanceNodesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination cursor. Do not specify this parameter for the first request. For subsequent requests, specify the token returned in the previous response.</p>
+     * 
      * <strong>example:</strong>
      * <p>5c0a1c0f91c14c6****</p>
      */
     @NameInMap("next_token")
     public String nextToken;
 
+    /**
+     * <p>The list of nodes.</p>
+     */
     @NameInMap("node_list")
     public java.util.List<ListNodePoolComponentInstanceNodesResponseBodyNodeList> nodeList;
 
     /**
+     * <p>The total number of nodes.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -66,6 +75,9 @@ public class ListNodePoolComponentInstanceNodesResponseBody extends TeaModel {
     }
 
     public static class ListNodePoolComponentInstanceNodesResponseBodyNodeListComponentConfig extends TeaModel {
+        /**
+         * <p>The custom configuration of the node component.</p>
+         */
         @NameInMap("custom_config")
         public java.util.Map<String, ?> customConfig;
 
@@ -85,10 +97,15 @@ public class ListNodePoolComponentInstanceNodesResponseBody extends TeaModel {
     }
 
     public static class ListNodePoolComponentInstanceNodesResponseBodyNodeListComponent extends TeaModel {
+        /**
+         * <p>The configuration of the node component.</p>
+         */
         @NameInMap("config")
         public ListNodePoolComponentInstanceNodesResponseBodyNodeListComponentConfig config;
 
         /**
+         * <p>The custom configuration version number of the component on the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -96,6 +113,8 @@ public class ListNodePoolComponentInstanceNodesResponseBody extends TeaModel {
         public String configRevision;
 
         /**
+         * <p>The name of the component on the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>kubelet</p>
          */
@@ -103,6 +122,8 @@ public class ListNodePoolComponentInstanceNodesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The version of the component on the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.28.9-aliyun.1</p>
          */
@@ -149,10 +170,15 @@ public class ListNodePoolComponentInstanceNodesResponseBody extends TeaModel {
     }
 
     public static class ListNodePoolComponentInstanceNodesResponseBodyNodeList extends TeaModel {
+        /**
+         * <p>The details of the component on the node.</p>
+         */
         @NameInMap("component")
         public ListNodePoolComponentInstanceNodesResponseBodyNodeListComponent component;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-bp1xxxxx</p>
          */
@@ -160,6 +186,8 @@ public class ListNodePoolComponentInstanceNodesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The node name.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou.10.91.xx.xx</p>
          */

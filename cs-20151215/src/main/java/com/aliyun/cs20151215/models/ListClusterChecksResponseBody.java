@@ -34,7 +34,7 @@ public class ListClusterChecksResponseBody extends TeaModel {
         public String checkId;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time in ISO 8601 format, including time zone information.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-11T02:56:02.565982623Z</p>

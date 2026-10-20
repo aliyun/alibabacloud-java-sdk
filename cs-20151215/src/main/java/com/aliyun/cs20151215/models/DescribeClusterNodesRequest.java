@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterNodesRequest extends TeaModel {
     /**
-     * <p>The instance IDs of nodes. Separate multiple IDs with commas (,).</p>
+     * <p>The list of node instance IDs. Separate multiple values with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;i-bp11xjhwkj8k966u****,i-bp1dmhc2bu5igkyq****&quot;</p>
@@ -14,6 +14,8 @@ public class DescribeClusterNodesRequest extends TeaModel {
     public String instanceIds;
 
     /**
+     * <p>The list of node IP addresses used for filtering. Separate multiple values with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>192.168.0.1</p>
      */
@@ -21,6 +23,8 @@ public class DescribeClusterNodesRequest extends TeaModel {
     public String nodeIps;
 
     /**
+     * <p>The node labels used for filtering. Specify the labels as key=value pairs separated by commas (,). Multiple labels are evaluated with the AND operator. Only nodes that match all specified labels are returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>nodeLabels=app=nginx,env=prod</p>
      */
@@ -28,6 +32,8 @@ public class DescribeClusterNodesRequest extends TeaModel {
     public String nodeLabels;
 
     /**
+     * <p>The list of node names used for filtering. Separate multiple values with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou.192.168.0.1</p>
      */
@@ -54,7 +60,7 @@ public class DescribeClusterNodesRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The maximum number of records that can be displayed on each page. Valid values: [1, 100].</p>
+     * <p>The maximum number of records to return per page. Valid values: 1 to 100.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -64,13 +70,13 @@ public class DescribeClusterNodesRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The status of cluster nodes. Used to filter by node running status. Valid values:</p>
+     * <p>The running states of the cluster nodes used for filtering. Valid values:</p>
      * <ul>
-     * <li><code>all</code>: does not filter by running status. All nodes are returned.</li>
-     * <li><code>running</code>: running nodes.</li>
-     * <li><code>removing</code>: nodes that are being removed.</li>
-     * <li><code>initial</code>: nodes that are being initialized.</li>
-     * <li><code>failed</code>: nodes that failed to be created.</li>
+     * <li><code>all</code>: does not filter nodes by running state and queries nodes in all states.</li>
+     * <li><code>running</code>: the cluster nodes that are running.</li>
+     * <li><code>removing</code>: the cluster nodes that are being removed.</li>
+     * <li><code>initial</code>: the cluster nodes that are being initialized.</li>
+     * <li><code>failed</code>: the cluster nodes that failed to be created.</li>
      * </ul>
      * <p>Default value: <code>all</code>.</p>
      * 

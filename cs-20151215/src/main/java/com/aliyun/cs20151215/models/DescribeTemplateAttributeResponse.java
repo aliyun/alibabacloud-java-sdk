@@ -44,7 +44,7 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
 
     public static class DescribeTemplateAttributeResponseBody extends TeaModel {
         /**
-         * <p>编排模板ID，每次变更都会有一个模板ID。</p>
+         * <p>The orchestration template ID. A new ID is generated each time the template is modified.</p>
          * 
          * <strong>example:</strong>
          * <p>72d20cf8-a533-4ea9-a10d-e7630d3d****</p>
@@ -53,11 +53,11 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
         public String id;
 
         /**
-         * <p>编排模板的访问权限，取值：</p>
+         * <p>The access permissions of the orchestration template. Valid values:</p>
          * <ul>
-         * <li><code>private</code>：私有。</li>
-         * <li><code>public</code>：公共。</li>
-         * <li><code>shared</code>：可共享。</li>
+         * <li><code>private</code>: private.</li>
+         * <li><code>public</code>: public.</li>
+         * <li><code>shared</code>: shared.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -67,7 +67,7 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
         public String acl;
 
         /**
-         * <p>编排模板名称。</p>
+         * <p>The name of the orchestration template.</p>
          * 
          * <strong>example:</strong>
          * <p>web</p>
@@ -76,7 +76,7 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
         public String name;
 
         /**
-         * <p>编排模板YAML内容。</p>
+         * <p>The YAML content of the orchestration template.</p>
          * 
          * <strong>example:</strong>
          * <p>apiVersion: V1\n***</p>
@@ -85,11 +85,11 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
         public String template;
 
         /**
-         * <p>模板类型。</p>
+         * <p>The templatetype.</p>
          * <ul>
-         * <li><p>当取值为kubernetes时将在控制台的编排模板页面展示该模板。</p>
+         * <li><p>If the value is kubernetes, the template is displayed on the Orchestration Templates page in the console.</p>
          * </li>
-         * <li><p>该参数不填写或者取值为其他值时，控制台的编排模板页面将不会展示该模板。</p>
+         * <li><p>If this parameter is not set or is set to other values, the template is not displayed on the Orchestration Templates page in the console.</p>
          * </li>
          * </ul>
          * 
@@ -100,7 +100,7 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
         public String templateType;
 
         /**
-         * <p>编排模板描述信息。</p>
+         * <p>The description of the orchestration template.</p>
          * 
          * <strong>example:</strong>
          * <p>test template</p>
@@ -109,7 +109,7 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
         public String description;
 
         /**
-         * <p>部署模板的标签。</p>
+         * <p>The tags of the deployment template.</p>
          * 
          * <strong>example:</strong>
          * <p>sa</p>
@@ -118,7 +118,7 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
         public String tags;
 
         /**
-         * <p>编排模板唯一ID，不随模板更新而改变。</p>
+         * <p>The unique ID of the orchestration template. This ID does not change when the template is updated.</p>
          * 
          * <strong>example:</strong>
          * <p>874ec485-e7e6-4373-8a3b-47bde8ae****</p>
@@ -127,7 +127,7 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
         public String templateWithHistId;
 
         /**
-         * <p>编排模板创建时间。</p>
+         * <p>The time when the orchestration template was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-25T16:56:33+08:00</p>
@@ -136,7 +136,7 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
         public String created;
 
         /**
-         * <p>编排模板更新时间。</p>
+         * <p>The time when the orchestration template was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-25T16:56:33+08:00</p>

@@ -31,12 +31,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
         public java.util.List<String> cveList;
 
         /**
-         * <p>The severity level of the vulnerability. Valid values:</p>
-         * <ul>
-         * <li>nntf: low</li>
-         * <li>later: medium</li>
-         * <li>asap: high.</li>
-         * </ul>
+         * <p>The vulnerability severity level.</p>
          * 
          * <strong>example:</strong>
          * <p>asap</p>
@@ -63,7 +58,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
         public String nodepoolId;
 
         /**
-         * <p>The name of the node pool.</p>
+         * <p>The node pool name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -72,16 +67,16 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
         public String nodepoolName;
 
         /**
-         * <p>The alias of the vulnerability.</p>
+         * <p>The vulnerability alias.</p>
          * 
          * <strong>example:</strong>
-         * <p>CVE-2022-xxxx:rsync 安全漏洞</p>
+         * <p>CVE-2022-xxxx:rsync security vulnerability</p>
          */
         @NameInMap("vul_alias_name")
         public String vulAliasName;
 
         /**
-         * <p>The name of the vulnerability.</p>
+         * <p>The vulnerability name.</p>
          * 
          * <strong>example:</strong>
          * <p>oval:com.redhat.rhsa:def:xxxxxxx</p>
@@ -90,15 +85,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
         public String vulName;
 
         /**
-         * <p>The type of the vulnerability. Valid values:</p>
-         * <ul>
-         * <li>app: application vulnerability</li>
-         * <li>sca: application vulnerability (Software Composition Analysis)</li>
-         * <li>cve: Linux vulnerability</li>
-         * <li>cms: WebCMS vulnerability</li>
-         * <li>sys: Windows vulnerability</li>
-         * <li>emg: emergency vulnerability.</li>
-         * </ul>
+         * <p>The vulnerability type.</p>
          * 
          * <strong>example:</strong>
          * <p>cve</p>

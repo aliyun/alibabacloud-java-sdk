@@ -44,7 +44,7 @@ public class DescribeClusterResourcesResponse extends TeaModel {
 
     public static class DescribeClusterResourcesResponseBodyDependencies extends TeaModel {
         /**
-         * <p>依赖资源的集群ID。</p>
+         * <p>The cluster ID of the dependent resource.</p>
          * 
          * <strong>example:</strong>
          * <p>cc5ee03f63e43425cb6f71f1a1756****</p>
@@ -53,7 +53,7 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>依赖资源类型。</p>
+         * <p>The type of the dependent resource.</p>
          * 
          * <strong>example:</strong>
          * <p>ALIYUN::VPC::NatGateway</p>
@@ -62,7 +62,7 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>依赖资源实例ID。</p>
+         * <p>The instance ID of the dependent resource.</p>
          * 
          * <strong>example:</strong>
          * <p>ngw-wz9sphwk42sdtjixo****</p>
@@ -103,7 +103,7 @@ public class DescribeClusterResourcesResponse extends TeaModel {
 
     public static class DescribeClusterResourcesResponseBodyAssociatedObject extends TeaModel {
         /**
-         * <p>k8s对象类型。</p>
+         * <p>The object type of the Kubernetes object.</p>
          * 
          * <strong>example:</strong>
          * <p>Service</p>
@@ -112,7 +112,7 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public String kind;
 
         /**
-         * <p>k8s对象命名空间。</p>
+         * <p>The namespace of the Kubernetes object.</p>
          * 
          * <strong>example:</strong>
          * <p>kube-system</p>
@@ -121,7 +121,7 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public String namespace;
 
         /**
-         * <p>k8s对象名称。</p>
+         * <p>The name of the Kubernetes object.</p>
          * 
          * <strong>example:</strong>
          * <p>nginx-ingress-lb</p>
@@ -162,11 +162,11 @@ public class DescribeClusterResourcesResponse extends TeaModel {
 
     public static class DescribeClusterResourcesResponseBodyDeleteBehavior extends TeaModel {
         /**
-         * <p>删除集群时是否默认删除该资源。</p>
+         * <p>Indicates whether the resource is deleted by default when the cluster is deleted.</p>
          * <ul>
-         * <li><p>true：默认删除该资源。</p>
+         * <li><p>true: The resource is deleted by default.</p>
          * </li>
-         * <li><p>fasle：不删除该资源。</p>
+         * <li><p>false: The resource is not deleted.</p>
          * </li>
          * </ul>
          * 
@@ -177,11 +177,11 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public Boolean deleteByDefault;
 
         /**
-         * <p><code>delete_by_default</code>的默认行为是否可以更改。</p>
+         * <p>Indicates whether the default behavior of <code>delete_by_default</code> can be changed.</p>
          * <ul>
-         * <li><p>true：可以更改。</p>
+         * <li><p>true: The behavior can be changed.</p>
          * </li>
-         * <li><p>false：不支持更改。</p>
+         * <li><p>false: The behavior cannot be changed.</p>
          * </li>
          * </ul>
          * 
@@ -216,7 +216,7 @@ public class DescribeClusterResourcesResponse extends TeaModel {
 
     public static class DescribeClusterResourcesResponseBody extends TeaModel {
         /**
-         * <p>集群ID。</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cb95aa626a47740afbf6aa099b65****</p>
@@ -225,7 +225,7 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>资源创建时间。</p>
+         * <p>The time when the resource was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-08-15T14:34:42+08:00</p>
@@ -234,7 +234,7 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public String created;
 
         /**
-         * <p>资源ID。</p>
+         * <p>The resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ngw-wz9sphwk42sdtjixo****</p>
@@ -243,7 +243,7 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>资源信息。关于资源的源信息，请参见<a href="https://help.aliyun.com/document_detail/133836.html">ListStackResources</a>。</p>
+         * <p>The resource information. For source information about the resource, see <a href="https://help.aliyun.com/document_detail/133836.html">ListStackResources</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;Id\&quot;:\&quot;KubernetesWorkerRole\&quot;,\&quot;Name\&quot;:\&quot;KubernetesWorkerRole\&quot;,\&quot;Type\&quot;:\&quot;ALIYUN::RAM::Role\&quot;,\&quot;Status\&quot;:\&quot;CREATE_COMPLETE\&quot;,\&quot;StatusReason\&quot;:\&quot;state changed\&quot;,\&quot;Updated\&quot;:\&quot;2025-04-10T06:21:17\&quot;,\&quot;PhysicalId\&quot;:\&quot;KubernetesWorkerRole-7e611193-225f-40f6-bc3c-ea8633******\&quot;}</p>
@@ -252,7 +252,7 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public String resourceInfo;
 
         /**
-         * <p>资源类型。</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>ALIYUN::VPC::NatGateway</p>
@@ -261,16 +261,16 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>资源状态。可选值：</p>
+         * <p>The resource status. Valid values:</p>
          * <ul>
-         * <li><code>CREATE_COMPLETE</code>：成功创建资源。</li>
-         * <li><code>CREATE_FAILED</code>：创建资源失败。</li>
-         * <li><code>CREATE_IN_PROGRESS</code>：创建资源中。</li>
-         * <li><code>DELETE_FAILED</code>：删除资源失败。</li>
-         * <li><code>DELETE_IN_PROGRESS</code>：删除资源中。</li>
-         * <li><code>ROLLBACK_COMPLETE</code>：成功回滚。</li>
-         * <li><code>ROLLBACK_FAILED</code>：回滚失败。</li>
-         * <li><code>ROLLBACK_IN_PROGRESS</code>：回滚中。</li>
+         * <li><code>CREATE_COMPLETE</code>: The resource was created.</li>
+         * <li><code>CREATE_FAILED</code>: The resource failed to be created.</li>
+         * <li><code>CREATE_IN_PROGRESS</code>: The resource is being created.</li>
+         * <li><code>DELETE_FAILED</code>: The resource failed to be deleted.</li>
+         * <li><code>DELETE_IN_PROGRESS</code>: The resource is being deleted.</li>
+         * <li><code>ROLLBACK_COMPLETE</code>: The rollback was successful.</li>
+         * <li><code>ROLLBACK_FAILED</code>: The rollback failed.</li>
+         * <li><code>ROLLBACK_IN_PROGRESS</code>: The rollback is in progress.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -280,10 +280,10 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public String state;
 
         /**
-         * <p>资源是否由ACK创建：</p>
+         * <p>Indicates whether the resource was created by ACK.</p>
          * <ul>
-         * <li>1：表示由ACK创建。</li>
-         * <li>0：表示该资源为已有资源。</li>
+         * <li>1: The resource was created by ACK.</li>
+         * <li>0: The resource is a pre-existing resource.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -293,29 +293,29 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public Long autoCreate;
 
         /**
-         * <p>依赖资源列表。</p>
+         * <p>The list of dependent resources.</p>
          */
         @NameInMap("dependencies")
         public java.util.List<DescribeClusterResourcesResponseBodyDependencies> dependencies;
 
         /**
-         * <p>资源关联的k8s对象。</p>
+         * <p>The Kubernetes object associated with the resource.</p>
          */
         @NameInMap("associated_object")
         public DescribeClusterResourcesResponseBodyAssociatedObject associatedObject;
 
         /**
-         * <p>删除集群时该资源的删除行为。</p>
+         * <p>The deletion behavior of the resource when the cluster is deleted.</p>
          */
         @NameInMap("delete_behavior")
         public DescribeClusterResourcesResponseBodyDeleteBehavior deleteBehavior;
 
         /**
-         * <p>该资源创建者的类型。可能的取值：</p>
+         * <p>The type of the resource creator. Valid values:</p>
          * <ul>
-         * <li>user：由用户自行创建；</li>
-         * <li>system：由ACK管控系统创建；</li>
-         * <li>addon：由集群组件创建。</li>
+         * <li>user: Created by the user.</li>
+         * <li>system: Created by the ACK control system.</li>
+         * <li>addon: Created by a cluster component.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -325,7 +325,7 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public String creatorType;
 
         /**
-         * <p>资源的其他信息。</p>
+         * <p>The additional information about the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;type&quot;: &quot;SLS_Data&quot; }</p>

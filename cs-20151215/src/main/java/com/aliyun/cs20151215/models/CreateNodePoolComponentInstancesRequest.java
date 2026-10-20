@@ -5,14 +5,21 @@ import com.aliyun.tea.*;
 
 public class CreateNodePoolComponentInstancesRequest extends TeaModel {
     /**
+     * <p>The list of node components.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("components")
     public java.util.List<CreateNodePoolComponentInstancesRequestComponents> components;
 
+    /**
+     * <p>The list of nodes for the rolling update. Default value: all nodes.</p>
+     */
     @NameInMap("node_names")
     public java.util.List<String> nodeNames;
 
+    /**
+     * <p>The rolling update configuration.</p>
+     */
     @NameInMap("rolling_policy")
     public CreateNodePoolComponentInstancesRequestRollingPolicy rollingPolicy;
 
@@ -47,6 +54,8 @@ public class CreateNodePoolComponentInstancesRequest extends TeaModel {
 
     public static class CreateNodePoolComponentInstancesRequestComponentsConfigEnvs extends TeaModel {
         /**
+         * <p>The name of the environment variable.</p>
+         * 
          * <strong>example:</strong>
          * <p>LOG_LEVEL</p>
          */
@@ -54,6 +63,8 @@ public class CreateNodePoolComponentInstancesRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The value of the environment variable.</p>
+         * 
          * <strong>example:</strong>
          * <p>info</p>
          */
@@ -85,12 +96,17 @@ public class CreateNodePoolComponentInstancesRequest extends TeaModel {
 
     public static class CreateNodePoolComponentInstancesRequestComponentsConfig extends TeaModel {
         /**
+         * <p>The custom configuration of the component.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;cpuManagerPolicy&quot;:&quot;static&quot;}</p>
          */
         @NameInMap("custom_config")
         public java.util.Map<String, ?> customConfig;
 
+        /**
+         * <p>The environment variables of the node component.</p>
+         */
         @NameInMap("envs")
         public java.util.List<CreateNodePoolComponentInstancesRequestComponentsConfigEnvs> envs;
 
@@ -118,10 +134,14 @@ public class CreateNodePoolComponentInstancesRequest extends TeaModel {
     }
 
     public static class CreateNodePoolComponentInstancesRequestComponents extends TeaModel {
+        /**
+         * <p>The configuration of the component.</p>
+         */
         @NameInMap("config")
         public CreateNodePoolComponentInstancesRequestComponentsConfig config;
 
         /**
+         * <p>The name of the component.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,6 +151,7 @@ public class CreateNodePoolComponentInstancesRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The version of the component.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,6 +193,8 @@ public class CreateNodePoolComponentInstancesRequest extends TeaModel {
 
     public static class CreateNodePoolComponentInstancesRequestRollingPolicy extends TeaModel {
         /**
+         * <p>The interval between batches in seconds. Default value: 0.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -179,6 +202,8 @@ public class CreateNodePoolComponentInstancesRequest extends TeaModel {
         public Long batchInterval;
 
         /**
+         * <p>The maximum number of nodes that can fail during the rolling update. Default value: 0. A value of 0 indicates that the task fails if any node fails. A value greater than 0 indicates that the task fails and stops if the cumulative number of failed nodes exceeds this value.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -186,6 +211,8 @@ public class CreateNodePoolComponentInstancesRequest extends TeaModel {
         public Long maxFailedNodes;
 
         /**
+         * <p>The maximum number of parallel updates per batch. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -193,6 +220,8 @@ public class CreateNodePoolComponentInstancesRequest extends TeaModel {
         public Long maxParallelism;
 
         /**
+         * <p>The auto-pause policy during the node upgrade. Valid values: NotPause, FirstBatch, and EveryBatch. Default value: NotPause.</p>
+         * 
          * <strong>example:</strong>
          * <p>NotPause</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RunNodeOperationResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c2230fxxxxx</p>
      */
@@ -12,6 +14,8 @@ public class RunNodeOperationResponseBody extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
@@ -19,6 +23,8 @@ public class RunNodeOperationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>T-xxxx</p>
      */

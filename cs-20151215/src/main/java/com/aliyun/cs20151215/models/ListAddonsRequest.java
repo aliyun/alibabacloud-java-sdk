@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ListAddonsRequest extends TeaModel {
     /**
      * <p>The cluster ID.
-     * If you specify a cluster ID, the system queries the list of available components for the specified cluster, and all other parameters are ignored.</p>
+     * If you specify a cluster ID, the available add-on components for the cluster are returned, and all other parameters are ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>c02b3e03be10643e8a644a843ffcb****</p>
@@ -59,7 +59,7 @@ public class ListAddonsRequest extends TeaModel {
     public String profile;
 
     /**
-     * <p>The region.
+     * <p>The region ID.
      * If cluster_id is specified, this parameter is ignored.
      * The region_id, cluster_type, profile, cluster_spec, and cluster_version parameters must be specified together.</p>
      * 

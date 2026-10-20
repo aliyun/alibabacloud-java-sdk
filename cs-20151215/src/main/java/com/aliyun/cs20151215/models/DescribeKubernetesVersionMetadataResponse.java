@@ -86,7 +86,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public String osVersion;
 
         /**
-         * <p>The type of the operating system distribution. We recommend that you use this field to specify the node operating system. Valid values:</p>
+         * <p>The operating system distribution type. Use this field to specify the operating system for nodes. Valid values:</p>
          * <ul>
          * <li><code>CentOS</code></li>
          * <li><code>AliyunLinux</code></li>
@@ -119,12 +119,12 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public String osType;
 
         /**
-         * <p>The image category. Partial valid values:</p>
+         * <p>The image category. Some valid values:</p>
          * <ul>
-         * <li><code>system</code>: public image.</li>
-         * <li><code>self</code>: custom image.</li>
-         * <li><code>others</code>: shared image from other users.</li>
-         * <li><code>marketplace</code>: Alibaba Cloud Marketplace image.</li>
+         * <li><code>system</code>: public images.</li>
+         * <li><code>self</code>: your custom images.</li>
+         * <li><code>others</code>: public images from other users.</li>
+         * <li><code>marketplace</code>: Alibaba Cloud Marketplace images.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -215,7 +215,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
 
     public static class DescribeKubernetesVersionMetadataResponseBody extends TeaModel {
         /**
-         * <p>The feature capabilities of the Kubernetes version.</p>
+         * <p>The features of the Kubernetes version.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -252,7 +252,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public java.util.List<Runtime> runtimes;
 
         /**
-         * <p>The Kubernetes version released by ACK. For more information about versions, see <a href="https://help.aliyun.com/document_detail/185269.html">Kubernetes version release overview</a>.</p>
+         * <p>The Kubernetes version released by ACK. For more information about versions, see <a href="https://help.aliyun.com/document_detail/185269.html">Overview of Kubernetes version releases</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>1.31.1-aliyun.1</p>
@@ -261,7 +261,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public String version;
 
         /**
-         * <p>The release date of the Kubernetes version.</p>
+         * <p>The release time of the Kubernetes version. The time is in ISO 8601 format and includes time zone information.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-30T00:00:00Z</p>
@@ -270,7 +270,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public String releaseDate;
 
         /**
-         * <p>The expiration date of the Kubernetes version.</p>
+         * <p>The expiration time of the Kubernetes version. The time is in ISO 8601 format and includes time zone information.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-30T00:00:00Z</p>
@@ -279,7 +279,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public String expirationDate;
 
         /**
-         * <p>Indicates whether the Kubernetes version can be used to create clusters.</p>
+         * <p>Indicates whether the Kubernetes version can be created.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

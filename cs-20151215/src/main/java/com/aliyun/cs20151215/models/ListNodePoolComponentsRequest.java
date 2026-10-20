@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListNodePoolComponentsRequest extends TeaModel {
     /**
+     * <p>The image ID of the node pool. Either this parameter or image_type is required if nodepool_id is not specified.</p>
+     * 
      * <strong>example:</strong>
      * <p>aliyun_3_x64_20G_container_optimized_alibase_20250629.vhd</p>
      */
@@ -12,6 +14,8 @@ public class ListNodePoolComponentsRequest extends TeaModel {
     public String imageId;
 
     /**
+     * <p>The image type of the node pool. Either this parameter or image_id is required if nodepool_id is not specified.</p>
+     * 
      * <strong>example:</strong>
      * <p>AliyunLinux3</p>
      */
@@ -19,6 +23,8 @@ public class ListNodePoolComponentsRequest extends TeaModel {
     public String imageType;
 
     /**
+     * <p>The instance types of the node pool. This parameter is required if nodepool_id is not specified.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;ecs.c6.xlarge&quot;]</p>
      */
@@ -26,6 +32,8 @@ public class ListNodePoolComponentsRequest extends TeaModel {
     public java.util.List<String> instanceTypes;
 
     /**
+     * <p>The maximum number of results to return. Default value: 200.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +41,8 @@ public class ListNodePoolComponentsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token.</p>
+     * 
      * <strong>example:</strong>
      * <p>5c0a1c0f91c14c6****</p>
      */
@@ -40,6 +50,8 @@ public class ListNodePoolComponentsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The node pool ID. If you specify a node pool ID, the system queries the list of components available for the node pool and ignores other parameters.</p>
+     * 
      * <strong>example:</strong>
      * <p>np1855b102ac434f5990d87b77a****</p>
      */
@@ -47,6 +59,8 @@ public class ListNodePoolComponentsRequest extends TeaModel {
     public String nodepoolId;
 
     /**
+     * <p>The node pool type. This parameter is required if nodepool_id is not specified.</p>
+     * 
      * <strong>example:</strong>
      * <p>ess</p>
      */

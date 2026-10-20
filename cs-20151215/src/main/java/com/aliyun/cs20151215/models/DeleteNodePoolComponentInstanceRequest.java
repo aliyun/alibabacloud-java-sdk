@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteNodePoolComponentInstanceRequest extends TeaModel {
     /**
+     * <p>The interval between batches, in seconds. Default value: 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class DeleteNodePoolComponentInstanceRequest extends TeaModel {
     public Long batchInterval;
 
     /**
+     * <p>The maximum number of nodes that can fail during the rolling process. Default value: 0. A value of 0 indicates that the task fails if any node fails. A value greater than 0 indicates that the task fails and stops if the cumulative number of failed nodes exceeds this value.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -19,6 +23,8 @@ public class DeleteNodePoolComponentInstanceRequest extends TeaModel {
     public Long maxFailedNodes;
 
     /**
+     * <p>The maximum number of parallel operations per batch. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class DeleteNodePoolComponentInstanceRequest extends TeaModel {
     public Long maxParallelism;
 
     /**
+     * <p>The list of nodes to rotate. Default value: all nodes.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;cn-hangzhou.10.91.xx.xx&quot;]</p>
      */
@@ -33,6 +41,14 @@ public class DeleteNodePoolComponentInstanceRequest extends TeaModel {
     public java.util.List<String> nodeNames;
 
     /**
+     * <p>The auto-pause policy during a node upgrade. Valid values:</p>
+     * <ul>
+     * <li>NotPause</li>
+     * <li>FirstBatch</li>
+     * <li>EveryBatch</li>
+     * </ul>
+     * <p>Default value: NotPause.</p>
+     * 
      * <strong>example:</strong>
      * <p>NotPause</p>
      */

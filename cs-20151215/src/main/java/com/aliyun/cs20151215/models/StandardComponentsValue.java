@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StandardComponentsValue extends TeaModel {
     /**
-     * <p>The component name.</p>
+     * <p>The name of the component.</p>
      * 
      * <strong>example:</strong>
      * <p>ack-arena</p>
@@ -14,7 +14,7 @@ public class StandardComponentsValue extends TeaModel {
     public String name;
 
     /**
-     * <p>The component version.</p>
+     * <p>The version of the component.</p>
      * 
      * <strong>example:</strong>
      * <p>0.5.0</p>
@@ -23,7 +23,7 @@ public class StandardComponentsValue extends TeaModel {
     public String version;
 
     /**
-     * <p>The description of the component features.</p>
+     * <p>The description of the component.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -32,11 +32,11 @@ public class StandardComponentsValue extends TeaModel {
     public String description;
 
     /**
-     * <p>Indicates whether the component is required by the cluster. Valid values:</p>
+     * <p>Indicates whether the component is required for the cluster. Valid values:</p>
      * <ul>
      * <li><p><code>true</code>: The component is required and must be installed when the cluster is created.</p>
      * </li>
-     * <li><p><code>false</code>: The component is optional and can be installed through Component Management after the cluster is created.</p>
+     * <li><p><code>false</code>: The component is not required. You can install it through component management after the cluster is created.</p>
      * </li>
      * </ul>
      * 
@@ -47,7 +47,7 @@ public class StandardComponentsValue extends TeaModel {
     public String required;
 
     /**
-     * <p>Indicates whether default installation is disabled. When a cluster is created, in addition to the components required by the cluster, some logging or routing-related components (such as Ingress) are also installed by default. If you do not want to install them by default, you can set this field to disable default installation. Valid values:</p>
+     * <p>Specifies whether to disable default installation. When a cluster is created, in addition to the required components, some log-related or routing-related components (such as Ingress) are installed by default. If you do not want these components to be installed by default, set this parameter to disable default installation. Valid values:</p>
      * <ul>
      * <li><code>true</code>: Default installation is disabled.</li>
      * <li><code>false</code>: Default installation is enabled.</li>

@@ -32,7 +32,7 @@ public class DescribeTemplatesRequest extends TeaModel {
      * <li><p>If this parameter is left empty or set to other values, the template is not displayed on the Orchestration Templates page in the console.</p>
      * </li>
      * </ul>
-     * <p>Set this parameter to <code>kubernetes</code>.</p>
+     * <p>Set this parameter to <code>kubernetes</code> in Settings.</p>
      * 
      * <strong>example:</strong>
      * <p>kubernetes</p>

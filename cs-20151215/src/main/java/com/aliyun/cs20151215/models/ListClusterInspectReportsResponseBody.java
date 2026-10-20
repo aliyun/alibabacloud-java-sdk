@@ -59,7 +59,7 @@ public class ListClusterInspectReportsResponseBody extends TeaModel {
 
     public static class ListClusterInspectReportsResponseBodyReportsSummary extends TeaModel {
         /**
-         * <p>The number of check items with a result of advice.</p>
+         * <p>The number of check items whose result is advice.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -77,7 +77,7 @@ public class ListClusterInspectReportsResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The number of check items with a result of error.</p>
+         * <p>The number of check items whose result is error.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -86,7 +86,7 @@ public class ListClusterInspectReportsResponseBody extends TeaModel {
         public Integer errorCount;
 
         /**
-         * <p>The number of check items with a result of normal.</p>
+         * <p>The number of check items whose result is normal.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -95,7 +95,7 @@ public class ListClusterInspectReportsResponseBody extends TeaModel {
         public Integer normalCount;
 
         /**
-         * <p>The number of check items with a result of warning.</p>
+         * <p>The number of check items whose result is warning.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -152,7 +152,7 @@ public class ListClusterInspectReportsResponseBody extends TeaModel {
 
     public static class ListClusterInspectReportsResponseBodyReports extends TeaModel {
         /**
-         * <p>The completion time of the inspection report.</p>
+         * <p>The completion time of the inspection report, in ISO 8601 format with time zone information.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-18T19:40:16.778333+08:00</p>
@@ -170,7 +170,7 @@ public class ListClusterInspectReportsResponseBody extends TeaModel {
         public String reportId;
 
         /**
-         * <p>The start time of the inspection report.</p>
+         * <p>The start time of the inspection report, in ISO 8601 format with time zone information.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-18T19:40:16.778333+08:00</p>

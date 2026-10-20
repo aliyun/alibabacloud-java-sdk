@@ -10,6 +10,9 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
     @NameInMap("events")
     public java.util.List<DescribeEventsForRegionResponseBodyEvents> events;
 
+    /**
+     * <p>The pagination token.</p>
+     */
     @NameInMap("next_token")
     public String nextToken;
 
@@ -151,7 +154,7 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
         public String subject;
 
         /**
-         * <p>The time when the event occurred.</p>
+         * <p>The time when the event was generated. The time follows the ISO 8601 standard and includes time zone information.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-14T10:00:56+08:00</p>
@@ -242,7 +245,7 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
-         * <p>The maximum number of results displayed on each page.</p>
+         * <p>The maximum number of results to return per page.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>

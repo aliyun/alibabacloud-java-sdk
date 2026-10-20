@@ -44,7 +44,7 @@ public class DescribeTriggerResponse extends TeaModel {
 
     public static class DescribeTriggerResponseBody extends TeaModel {
         /**
-         * <p>触发器ID。</p>
+         * <p>The trigger ID.</p>
          * 
          * <strong>example:</strong>
          * <p>75973497486******</p>
@@ -53,7 +53,7 @@ public class DescribeTriggerResponse extends TeaModel {
         public String id;
 
         /**
-         * <p>触发器名称。</p>
+         * <p>The trigger name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -62,7 +62,7 @@ public class DescribeTriggerResponse extends TeaModel {
         public String name;
 
         /**
-         * <p>集群ID。</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c259f563386444ebb8d7****</p>
@@ -71,8 +71,8 @@ public class DescribeTriggerResponse extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>触发器项目名称。</p>
-         * <p>由应用所在命名空间及应用名称组成，格式为<code>${namespace}/${name}</code>，取值示例：default/test-app。</p>
+         * <p>The trigger project name.</p>
+         * <p>The value consists of the namespace and application name in the format <code>${namespace}/${name}</code>. Example: default/test-app.</p>
          * 
          * <strong>example:</strong>
          * <p>default/test-app</p>
@@ -81,12 +81,12 @@ public class DescribeTriggerResponse extends TeaModel {
         public String projectId;
 
         /**
-         * <p>触发器类型。</p>
-         * <p>取值：</p>
+         * <p>The trigger type.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li><p><code>deployment</code>：针对无状态应用的触发器。 </p>
+         * <li><p><code>deployment</code>: a trigger for stateless applications. </p>
          * </li>
-         * <li><p><code>application</code>：针对应用中心应用的触发器。</p>
+         * <li><p><code>application</code>: a trigger for App Hub applications.</p>
          * </li>
          * </ul>
          * 
@@ -97,8 +97,8 @@ public class DescribeTriggerResponse extends TeaModel {
         public String type;
 
         /**
-         * <p>触发器行为，取值：</p>
-         * <p><code>redeploy</code>: 重新部署应用。</p>
+         * <p>The trigger action. Valid values:</p>
+         * <p><code>redeploy</code>: redeploys the application.</p>
          * 
          * <strong>example:</strong>
          * <p>redeploy</p>
@@ -107,7 +107,7 @@ public class DescribeTriggerResponse extends TeaModel {
         public String action;
 
         /**
-         * <p>Token信息。</p>
+         * <p>The token information.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJhbGci***</p>

@@ -14,16 +14,16 @@ public class DescribeClustersV1Request extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The cluster specification when <code>cluster_type</code> is set to <code>ManagedKubernetes</code> and <code>profile</code> is configured. Valid values:</p>
+     * <p>The cluster specification. This parameter is valid when cluster_type is set to ManagedKubernetes and profile is configured. Valid values:</p>
      * <ul>
-     * <li><code>ack.standard</code>: Basic</li>
-     * <li><code>ack.pro.small</code>: Pro</li>
-     * <li><code>ack.pro.xlarge</code>: Pro XL</li>
-     * <li><code>ack.pro.2xlarge</code>: Pro 2XL</li>
-     * <li><code>ack.pro.4xlarge</code>: Pro 4XL (contact customer service to add your account to the whitelist)</li>
+     * <li>ack.standard: Basic Edition.</li>
+     * <li>ack.pro.small: Pro Edition.</li>
+     * <li>ack.pro.xlarge: Pro XL.</li>
+     * <li>ack.pro.2xlarge: Pro 2XL.</li>
+     * <li>ack.pro.4xlarge: Pro 4XL. To use this specification, contact customer service to apply for whitelist access.</li>
      * </ul>
-     * <p>Pro XL, Pro 2XL, and Pro 4XL are three tiers provided by &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>. By pre-allocating and dedicating control plane resources, these tiers ensure that API concurrency and Pod scheduling capabilities remain at a deterministic high level, suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</p>
-     * <p>For information about cluster management fees for Pro and provisioned control plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</p>
+     * <p>Pro XL, Pro 2XL, and Pro 4XL are the three tiers provided by the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>. By pre-allocating and dedicating control plane resources, these tiers ensure consistently high levels of API concurrency and pod scheduling capabilities. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</p>
+     * <p>For information about the cluster management fees for the Pro Edition and provisioned control plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>ack.pro.small</p>
@@ -34,9 +34,9 @@ public class DescribeClustersV1Request extends TeaModel {
     /**
      * <p>The cluster type. Valid values:</p>
      * <ul>
-     * <li><code>Kubernetes</code>: ACK dedicated cluster.</li>
-     * <li><code>ManagedKubernetes</code>: ACK managed cluster types, including ACK managed clusters (Pro and Basic), ACK Serverless clusters (Pro and Basic), ACK Edge clusters (Pro and Basic), and ACK Lingjun clusters (Pro).</li>
-     * <li><code>ExternalKubernetes</code>: registered cluster.</li>
+     * <li>Kubernetes: ACK dedicated cluster.</li>
+     * <li>ManagedKubernetes: ACK managed clusters, including ACK managed clusters (Pro Edition and Basic Edition), ACK Serverless clusters (Pro Edition and Basic Edition), ACK Edge clusters (Pro Edition and Basic Edition), and ACK Lingjun clusters (Pro Edition).</li>
+     * <li>ExternalKubernetes: registered cluster.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class DescribeClustersV1Request extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>The cluster name.</p>
+     * <p>The cluster name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>cluster-demo</p>
@@ -55,7 +55,7 @@ public class DescribeClustersV1Request extends TeaModel {
     public String name;
 
     /**
-     * <p>The current page number.</p>
+     * <p>The page number of the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -64,7 +64,7 @@ public class DescribeClustersV1Request extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of records per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -73,16 +73,12 @@ public class DescribeClustersV1Request extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>When you set <code>cluster_type</code> to <code>ManagedKubernetes</code> (ACK managed cluster types), you can further specify the cluster subtype. Valid values:</p>
+     * <p>The cluster subtype. This parameter is valid only when cluster_type is set to ManagedKubernetes. Valid values:</p>
      * <ul>
-     * <li><p><code>Default</code>: ACK managed cluster, including ACK cluster Pro and ACK cluster Basic.</p>
-     * </li>
-     * <li><p><code>Edge</code>: ACK Edge cluster, including ACK Edge cluster Pro and ACK Edge cluster Basic.</p>
-     * </li>
-     * <li><p><code>Serverless</code>: ACK Serverless cluster, including ACK Serverless cluster Pro and ACK Serverless cluster Basic.</p>
-     * </li>
-     * <li><p><code>Lingjun</code>: ACK Lingjun cluster, available in Pro.</p>
-     * </li>
+     * <li>Default: ACK serverless clusters, including ACK serverless cluster Pro Edition and Basic Edition.</li>
+     * <li>Edge: ACK Edge clusters, including ACK Edge cluster Pro Edition and Basic Edition.</li>
+     * <li>Serverless: ACK ACK clusters, including ACK ACK cluster Pro Edition and Basic Edition.</li>
+     * <li>Lingjun: ACK Lingjun clusters, providing Pro Edition.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -92,7 +88,7 @@ public class DescribeClustersV1Request extends TeaModel {
     public String profile;
 
     /**
-     * <p>The region of the cluster. Specify this parameter to filter clusters in the specified region.</p>
+     * <p>The region of the cluster. Specify this parameter to filter clusters by region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

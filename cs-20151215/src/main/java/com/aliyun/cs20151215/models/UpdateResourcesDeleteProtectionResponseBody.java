@@ -41,7 +41,7 @@ public class UpdateResourcesDeleteProtectionResponseBody extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The list of resources for which the deletion protection status is updated.</p>
+     * <p>The list of resources whose deletion protection status is updated.</p>
      */
     @NameInMap("resources")
     public java.util.List<String> resources;

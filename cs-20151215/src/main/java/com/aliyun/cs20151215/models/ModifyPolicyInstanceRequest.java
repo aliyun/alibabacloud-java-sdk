@@ -7,8 +7,8 @@ public class ModifyPolicyInstanceRequest extends TeaModel {
     /**
      * <p>The governance action of the rule. Valid values:</p>
      * <ul>
-     * <li><code>deny</code>: Blocks non-compliant deployments.</li>
-     * <li><code>warn</code>: Generates an alert.</li>
+     * <li><code>deny</code>: blocks non-compliant deployments.</li>
+     * <li><code>warn</code>: generates alerts.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ModifyPolicyInstanceRequest extends TeaModel {
     public String action;
 
     /**
-     * <p>The instance ID of the policy rule.</p>
+     * <p>The instance ID of the policy rule instance.</p>
      * 
      * <strong>example:</strong>
      * <p>allowed-repos-cbhhb</p>
@@ -27,13 +27,13 @@ public class ModifyPolicyInstanceRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The namespaces to which the policy applies. If this parameter is empty, the policy applies to all namespaces.</p>
+     * <p>The namespaces to which the policy applies. An empty value indicates all namespaces.</p>
      */
     @NameInMap("namespaces")
     public java.util.List<String> namespaces;
 
     /**
-     * <p>The configuration parameters of the current rule instance. For more information about parameter settings rules, see <a href="https://help.aliyun.com/document_detail/359819.html">Container security policy rules</a>.</p>
+     * <p>The configuration parameters of the current rule instance. For more information about parameter settings rules, see <a href="https://help.aliyun.com/document_detail/359819.html">Container Security Policy Rule Library</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;restrictedNamespaces&quot;: [ &quot;test&quot; ]</p>

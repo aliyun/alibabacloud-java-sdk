@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListNodePoolComponentInstancesRequest extends TeaModel {
     /**
+     * <p>The maximum number of results to return. Default value: 200.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class ListNodePoolComponentInstancesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token.</p>
+     * 
      * <strong>example:</strong>
      * <p>5c0a1c0f91c14c6****</p>
      */

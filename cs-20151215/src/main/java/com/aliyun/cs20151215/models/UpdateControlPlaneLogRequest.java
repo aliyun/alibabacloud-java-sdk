@@ -36,7 +36,7 @@ public class UpdateControlPlaneLogRequest extends TeaModel {
     public String logProject;
 
     /**
-     * <p>The retention period of logs in the SLS Logstore. Valid values: 1 to 3000. Unit: days.</p>
+     * <p>The log retention period in the SLS Logstore. Valid values: 1 to 3000. Unit: days.</p>
      * <p>Default value: 30 days.</p>
      * 
      * <strong>example:</strong>

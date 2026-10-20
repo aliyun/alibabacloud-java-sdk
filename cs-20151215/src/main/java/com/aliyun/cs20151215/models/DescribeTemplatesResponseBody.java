@@ -57,7 +57,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of results.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -98,11 +98,11 @@ public class DescribeTemplatesResponseBody extends TeaModel {
 
     public static class DescribeTemplatesResponseBodyTemplates extends TeaModel {
         /**
-         * <p>The access permissions for the deployment template. Valid values:</p>
+         * <p>The access permissions of the deployment template. Valid values:</p>
          * <ul>
-         * <li><code>private</code>: private.</li>
-         * <li><code>public</code>: public.</li>
-         * <li><code>shared</code>: shared.</li>
+         * <li><code>private</code>: Private.</li>
+         * <li><code>public</code>: Public.</li>
+         * <li><code>shared</code>: Shared.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the orchestration template.</p>
+         * <p>The orchestration template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>874ec485-e7e6-4373-8a3b-47bde8******</p>
@@ -139,7 +139,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The name of the orchestration template.</p>
+         * <p>The orchestration template name.</p>
          * 
          * <strong>example:</strong>
          * <p>webserver</p>
@@ -168,7 +168,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         /**
          * <p>The templatetype.</p>
          * <ul>
-         * <li><p>If the value is set to kubernetes, the template is displayed on the Orchestration Templates page in the console.</p>
+         * <li><p>If the value is kubernetes, the template is displayed on the Orchestration Templates page in the console.</p>
          * </li>
          * <li><p>If this parameter is left empty or set to other values, the template is not displayed on the Orchestration Templates page in the console.</p>
          * </li>
@@ -181,7 +181,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String templateType;
 
         /**
-         * <p>The ID of the parent template associated with the template. This parameter is used to implement template versioning. Different versions of the same template share the same <code>template_with_hist_id</code> value.</p>
+         * <p>The ID of the parent template associated with the template. This parameter is used to implement the multi-version feature for templates. Different versions of the same template share the same <code>template_with_hist_id</code> value.</p>
          * 
          * <strong>example:</strong>
          * <p>ad81d115-7c8b-47e7-a222-9c28d7******</p>

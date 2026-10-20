@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class KubeletConfig extends TeaModel {
     /**
-     * <p>The whitelisted unsafe sysctls.</p>
+     * <p>The whitelist of allowed unsafe sysctl patterns.</p>
      */
     @NameInMap("allowedUnsafeSysctls")
     public java.util.List<String> allowedUnsafeSysctls;
 
     /**
-     * <p>The list of IP addresses of the DNS servers.</p>
+     * <p>The list of IP addresses for the cluster DNS servers.</p>
      */
     @NameInMap("clusterDNS")
     public java.util.List<String> clusterDNS;
 
     /**
-     * <p>The maximum number of log files that can be stored in each container.</p>
+     * <p>The maximum number of log files that can exist per container.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -26,7 +26,7 @@ public class KubeletConfig extends TeaModel {
     public Long containerLogMaxFiles;
 
     /**
-     * <p>The maximum size that a log file can reach before it is rotated.</p>
+     * <p>The maximum size a log file can reach before log rotation is performed.</p>
      * 
      * <strong>example:</strong>
      * <p>10Mi</p>
@@ -35,7 +35,7 @@ public class KubeletConfig extends TeaModel {
     public String containerLogMaxSize;
 
     /**
-     * <p>The maximum number of concurrent programs that rotate logs</p>
+     * <p>The maximum number of concurrent workers for log rotation operations.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,7 +44,7 @@ public class KubeletConfig extends TeaModel {
     public Integer containerLogMaxWorkers;
 
     /**
-     * <p>The duration at which the container logs are monitored for rotating logs.</p>
+     * <p>The interval for monitoring container logs to perform log rotation.</p>
      * 
      * <strong>example:</strong>
      * <p>10s</p>
@@ -53,7 +53,7 @@ public class KubeletConfig extends TeaModel {
     public String containerLogMonitorInterval;
 
     /**
-     * <p>Specifies whether to use Completely Fair Scheduler (CFS) quota to enforce pod CPU limits.</p>
+     * <p>Specifies whether to enable CPU CFS quota enforcement.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -62,7 +62,7 @@ public class KubeletConfig extends TeaModel {
     public Boolean cpuCFSQuota;
 
     /**
-     * <p>The duration for the CPU CFS quota.</p>
+     * <p>The CPU CFS quota period value.</p>
      * 
      * <strong>example:</strong>
      * <p>100ms</p>
@@ -71,7 +71,7 @@ public class KubeletConfig extends TeaModel {
     public String cpuCFSQuotaPeriod;
 
     /**
-     * <p>The CPU management policy used by kubelet.</p>
+     * <p>The CPU manager policy.</p>
      * 
      * <strong>example:</strong>
      * <p>none</p>
@@ -80,7 +80,7 @@ public class KubeletConfig extends TeaModel {
     public String cpuManagerPolicy;
 
     /**
-     * <p>The maximum number of burst peaks for the event records.</p>
+     * <p>The maximum burst size for event records.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -89,7 +89,7 @@ public class KubeletConfig extends TeaModel {
     public Long eventBurst;
 
     /**
-     * <p>Specifies the maximum number of events that can be generated per second.</p>
+     * <p>The maximum number of events that can be generated per second.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -98,31 +98,31 @@ public class KubeletConfig extends TeaModel {
     public Long eventRecordQPS;
 
     /**
-     * <p>A set of eviction thresholds that will trigger a pod eviction if met.</p>
+     * <p>The set of hard eviction thresholds that trigger pod eviction.</p>
      */
     @NameInMap("evictionHard")
     public java.util.Map<String, ?> evictionHard;
 
     /**
-     * <p>A set of eviction thresholds that will trigger a pod eviction if met over a corresponding grace period.</p>
+     * <p>The set of soft eviction thresholds.</p>
      */
     @NameInMap("evictionSoft")
     public java.util.Map<String, ?> evictionSoft;
 
     /**
-     * <p>A set of grace periods for eviction thresholds.</p>
+     * <p>The set of eviction grace periods.</p>
      */
     @NameInMap("evictionSoftGracePeriod")
     public java.util.Map<String, ?> evictionSoftGracePeriod;
 
     /**
-     * <p>A feature gate that is used to enable an experimental feature.</p>
+     * <p>The feature gates configuration used to enable experimental features.</p>
      */
     @NameInMap("featureGates")
     public java.util.Map<String, ?> featureGates;
 
     /**
-     * <p>The percentage of disk usage after which image garbage collection always runs.</p>
+     * <p>The threshold above which image garbage collection runs continuously.</p>
      * 
      * <strong>example:</strong>
      * <p>85</p>
@@ -131,7 +131,7 @@ public class KubeletConfig extends TeaModel {
     public Integer imageGCHighThresholdPercent;
 
     /**
-     * <p>The percentage of disk usage before which image garbage collection never runs.</p>
+     * <p>The threshold below which image garbage collection is not performed.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -149,7 +149,7 @@ public class KubeletConfig extends TeaModel {
     public Long kubeAPIBurst;
 
     /**
-     * <p>The QPS when kubelet communicates with the Kubernetes API server.</p>
+     * <p>The number of queries per second when communicating with the API server.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -158,13 +158,13 @@ public class KubeletConfig extends TeaModel {
     public Long kubeAPIQPS;
 
     /**
-     * <p>A set of configurations that specify resources reserved for the Kubernetes system.</p>
+     * <p>The resource configuration reserved for Kubernetes system components.</p>
      */
     @NameInMap("kubeReserved")
     public java.util.Map<String, ?> kubeReserved;
 
     /**
-     * <p>The maximum number of running pods.</p>
+     * <p>The maximum number of pods that can run on the node.</p>
      * 
      * <strong>example:</strong>
      * <p>110</p>
@@ -173,7 +173,7 @@ public class KubeletConfig extends TeaModel {
     public Long maxPods;
 
     /**
-     * <p>The name of the policy to be used by the memory manager.</p>
+     * <p>The policy used by the memory management manager.</p>
      * 
      * <strong>example:</strong>
      * <p>none</p>
@@ -182,7 +182,7 @@ public class KubeletConfig extends TeaModel {
     public String memoryManagerPolicy;
 
     /**
-     * <p>The maximum number of processes per pod.</p>
+     * <p>The maximum number of PIDs that can be used in a pod.</p>
      * 
      * <strong>example:</strong>
      * <p>-1</p>
@@ -191,7 +191,7 @@ public class KubeletConfig extends TeaModel {
     public Long podPidsLimit;
 
     /**
-     * <p>The read-only port.</p>
+     * <p>The read-only port number.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -200,7 +200,7 @@ public class KubeletConfig extends TeaModel {
     public Long readOnlyPort;
 
     /**
-     * <p>The maximum number of images that can be pulled from bursty image pulls.</p>
+     * <p>The maximum number of burst image pulls.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -209,7 +209,7 @@ public class KubeletConfig extends TeaModel {
     public Long registryBurst;
 
     /**
-     * <p>The maximum queries per second (QPS) of the image repository.</p>
+     * <p>The QPS limit for the image registry.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -218,13 +218,13 @@ public class KubeletConfig extends TeaModel {
     public Long registryPullQPS;
 
     /**
-     * <p>A list of configurations that specify memory reservations for non-uniform memory access (NUMA) nodes.</p>
+     * <p>The memory reserved for NUMA nodes.</p>
      */
     @NameInMap("reservedMemory")
     public java.util.List<KubeletConfigReservedMemory> reservedMemory;
 
     /**
-     * <p>Specifies whether to pull one image at a time.</p>
+     * <p>Specifies whether to pull images one at a time.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -233,6 +233,14 @@ public class KubeletConfig extends TeaModel {
     public Boolean serializeImagePulls;
 
     /**
+     * <p>Enables automatic issuance and rotation of kubelet server certificates. When enabled, you must also set &quot;RotateKubeletServerCertificate&quot;: true in the kubelet featureGates configuration.</p>
+     * <blockquote>
+     * <ul>
+     * <li>Available only for clusters running version 1.30 or later.</li>
+     * <li>For clusters running version 1.30 to v1.33, submit a ticket to apply for this feature.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -240,13 +248,13 @@ public class KubeletConfig extends TeaModel {
     public Boolean serverTLSBootstrap;
 
     /**
-     * <p>A set of configurations that specify reserved resources for the system.</p>
+     * <p>The resource configuration reserved for the system.</p>
      */
     @NameInMap("systemReserved")
     public java.util.Map<String, ?> systemReserved;
 
     /**
-     * <p>The name of the Topology Manager policy that you want to use.</p>
+     * <p>The Policy Name of the topology management manager to use.</p>
      * 
      * <strong>example:</strong>
      * <p>restricted</p>
@@ -255,7 +263,7 @@ public class KubeletConfig extends TeaModel {
     public String topologyManagerPolicy;
 
     /**
-     * <p>The versioned configuration information for the Managed Service for OpenTelemetry client.</p>
+     * <p>The versioned configuration for the OpenTelemetry tracing client.</p>
      */
     @NameInMap("tracing")
     public KubeletConfigTracing tracing;
@@ -523,7 +531,7 @@ public class KubeletConfig extends TeaModel {
 
     public static class KubeletConfigReservedMemory extends TeaModel {
         /**
-         * <p>The memory limit.</p>
+         * <p>The memory resources limit.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;memory&quot;: &quot;1Gi&quot;}</p>
@@ -532,7 +540,7 @@ public class KubeletConfig extends TeaModel {
         public java.util.Map<String, ?> limits;
 
         /**
-         * <p>The NUMA node identifier.</p>
+         * <p>The NUMA node.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -574,7 +582,7 @@ public class KubeletConfig extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The number of samples to be collected per million spans.</p>
+         * <p>The number of samples to collect per million spans.</p>
          * 
          * <strong>example:</strong>
          * <p>200000</p>

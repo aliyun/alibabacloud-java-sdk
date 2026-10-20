@@ -40,10 +40,10 @@ public class RemoveNodePoolNodesRequest extends TeaModel {
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>[This parameter is deprecated]</p>
+     * <p><strong>[Deprecated]</strong></p>
      * <p>The list of nodes to remove.</p>
      * <blockquote>
-     * <p>Danger: This parameter is deprecated. Use <code>instance_ids</code> instead.</danger>.</p>
+     * <p>Danger: This parameter is deprecated. Use <code>instance_ids</code> instead.</danger></p>
      * </blockquote>
      */
     @NameInMap("nodes")

@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateK8sClusterUserConfigExpireRequest extends TeaModel {
     /**
-     * <p>The custom expiration time. Unit: hours.</p>
-     * <p>Valid values: [1, 876000]. The maximum value is equivalent to 100 years.</p>
+     * <p>The custom expiration time specified by the user. Unit: hours.</p>
+     * <p>Valid values: [1, 876000], which indicates a maximum of 100 years.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

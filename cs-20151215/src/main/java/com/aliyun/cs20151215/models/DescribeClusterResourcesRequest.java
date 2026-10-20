@@ -7,9 +7,9 @@ public class DescribeClusterResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to also query resources created by cluster components.</p>
      * <ul>
-     * <li><p>true: queries the resources.</p>
+     * <li><p>true: Queries the resources.</p>
      * </li>
-     * <li><p>false: does not query the resources.</p>
+     * <li><p>false: Does not query the resources.</p>
      * </li>
      * </ul>
      * 

@@ -4,10 +4,15 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ListNodePoolComponentInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The list of node component instances.</p>
+     */
     @NameInMap("component_instances")
     public java.util.List<ListNodePoolComponentInstancesResponseBodyComponentInstances> componentInstances;
 
     /**
+     * <p>The maximum number of results to return. Default value: 200.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -15,6 +20,8 @@ public class ListNodePoolComponentInstancesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token.</p>
+     * 
      * <strong>example:</strong>
      * <p>5c0a1c0f91c14c6****</p>
      */
@@ -52,6 +59,8 @@ public class ListNodePoolComponentInstancesResponseBody extends TeaModel {
 
     public static class ListNodePoolComponentInstancesResponseBodyComponentInstancesConfigEnvs extends TeaModel {
         /**
+         * <p>The name of the environment variable.</p>
+         * 
          * <strong>example:</strong>
          * <p>LOG_LEVEL</p>
          */
@@ -59,6 +68,8 @@ public class ListNodePoolComponentInstancesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The value of the environment variable.</p>
+         * 
          * <strong>example:</strong>
          * <p>info</p>
          */
@@ -90,12 +101,17 @@ public class ListNodePoolComponentInstancesResponseBody extends TeaModel {
 
     public static class ListNodePoolComponentInstancesResponseBodyComponentInstancesConfig extends TeaModel {
         /**
+         * <p>The custom configuration of the component.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;cpuManagerPolicy&quot;:&quot;static&quot;}</p>
          */
         @NameInMap("custom_config")
         public java.util.Map<String, ?> customConfig;
 
+        /**
+         * <p>The environment variables of the node component.</p>
+         */
         @NameInMap("envs")
         public java.util.List<ListNodePoolComponentInstancesResponseBodyComponentInstancesConfigEnvs> envs;
 
@@ -123,10 +139,15 @@ public class ListNodePoolComponentInstancesResponseBody extends TeaModel {
     }
 
     public static class ListNodePoolComponentInstancesResponseBodyComponentInstances extends TeaModel {
+        /**
+         * <p>The configuration of the component.</p>
+         */
         @NameInMap("config")
         public ListNodePoolComponentInstancesResponseBodyComponentInstancesConfig config;
 
         /**
+         * <p>The version number of the component configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -134,6 +155,8 @@ public class ListNodePoolComponentInstancesResponseBody extends TeaModel {
         public String configRevision;
 
         /**
+         * <p>The name of the component.</p>
+         * 
          * <strong>example:</strong>
          * <p>kubelet</p>
          */
@@ -141,6 +164,8 @@ public class ListNodePoolComponentInstancesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The state of the component.</p>
+         * 
          * <strong>example:</strong>
          * <p>active</p>
          */
@@ -148,6 +173,8 @@ public class ListNodePoolComponentInstancesResponseBody extends TeaModel {
         public String state;
 
         /**
+         * <p>The version of the component.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.33.3-aliyun.1</p>
          */

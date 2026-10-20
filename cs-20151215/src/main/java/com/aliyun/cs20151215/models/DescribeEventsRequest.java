@@ -14,7 +14,7 @@ public class DescribeEventsRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The maximum number of results returned per request.</p>
+     * <p>The maximum number of results to return for a single request.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class DescribeEventsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The query token. Set this parameter to the NextToken value returned by the previous API call.</p>
+     * <p>The pagination token. Set this parameter to the NextToken value returned from the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>5c0a1c0f91c14c6****</p>
@@ -32,7 +32,7 @@ public class DescribeEventsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number for the paged query.</p>
+     * <p>The page number for paging in the paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -42,7 +42,7 @@ public class DescribeEventsRequest extends TeaModel {
 
     /**
      * <p>The maximum number of results to return per page.</p>
-     * <p>Valid values: [1,100].</p>
+     * <p>Valid values: 1 to 100.</p>
      * <p>Default value: 50.</p>
      * 
      * <strong>example:</strong>
@@ -52,24 +52,24 @@ public class DescribeEventsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The event type. If you do not set this parameter, all types of events are queried. Valid values:</p>
+     * <p>The event type. If you do not specify this parameter, events of all types are queried. Valid values:</p>
      * <ul>
-     * <li><code>cluster_create</code>: creates a cluster.</li>
-     * <li><code>cluster_scaleout</code>: scales out a cluster.</li>
-     * <li><code>cluster_attach</code>: adds existing nodes.</li>
-     * <li><code>cluster_delete</code>: deletes a cluster.</li>
-     * <li><code>cluster_upgrade</code>: upgrades a cluster.</li>
-     * <li><code>cluster_migrate</code>: migrates a cluster.</li>
-     * <li><code>cluster_node_delete</code>: removes nodes.</li>
-     * <li><code>cluster_node_drain</code>: drains nodes.</li>
-     * <li><code>cluster_modify</code>: modifies a cluster.</li>
-     * <li><code>cluster_configuration_modify</code>: modifies cluster management configurations.</li>
-     * <li><code>cluster_addon_install</code>: installs a component.</li>
-     * <li><code>cluster_addon_upgrade</code>: upgrades a component.</li>
-     * <li><code>cluster_addon_uninstall</code>: uninstalls a component.</li>
-     * <li><code>runtime_upgrade</code>: upgrades the runtime.</li>
-     * <li><code>nodepool_upgrade</code>: upgrades a node pool.</li>
-     * <li><code>nodepool_update</code>: updates a node pool.</li>
+     * <li><code>cluster_create</code>: Cluster creation.</li>
+     * <li><code>cluster_scaleout</code>: Cluster scale-out.</li>
+     * <li><code>cluster_attach</code>: Addition of existing nodes.</li>
+     * <li><code>cluster_delete</code>: Cluster deletion.</li>
+     * <li><code>cluster_upgrade</code>: Cluster upgrade.</li>
+     * <li><code>cluster_migrate</code>: Cluster migration.</li>
+     * <li><code>cluster_node_delete</code>: Node removal.</li>
+     * <li><code>cluster_node_drain</code>: Node draining.</li>
+     * <li><code>cluster_modify</code>: Cluster modification.</li>
+     * <li><code>cluster_configuration_modify</code>: Cluster control configuration modification.</li>
+     * <li><code>cluster_addon_install</code>: Add-on installation.</li>
+     * <li><code>cluster_addon_upgrade</code>: Add-on upgrade.</li>
+     * <li><code>cluster_addon_uninstall</code>: Add-on uninstallation.</li>
+     * <li><code>runtime_upgrade</code>: Runtime upgrade.</li>
+     * <li><code>nodepool_upgrade</code>: Node pool upgrade.</li>
+     * <li><code>nodepool_update</code>: Node pool update.</li>
      * </ul>
      * 
      * <strong>example:</strong>

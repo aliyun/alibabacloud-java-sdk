@@ -23,7 +23,7 @@ public class UpdateNodePoolComponentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The asynchronous task ID.</p>
+     * <p>The ID of the asynchronous task.</p>
      * 
      * <strong>example:</strong>
      * <p>T-67d7ec016ce37c0106000***</p>

@@ -126,7 +126,7 @@ public class ModifyNodePoolNodeConfigRequest extends TeaModel {
         public Long maxFailedNodes;
 
         /**
-         * <p>The node updates in the node pool are performed in batches. This parameter specifies the maximum number of nodes that can be updated in parallel per batch.</p>
+         * <p>Node updates in the node pool are performed in batches. This parameter specifies the maximum number of nodes that can be updated in parallel per batch.</p>
          * <p>Valid values: [1,10].</p>
          * <p>Default value: 10.</p>
          * 

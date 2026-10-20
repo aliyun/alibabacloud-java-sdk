@@ -25,9 +25,9 @@ public class GrantPermissionsRequest extends TeaModel {
 
     public static class GrantPermissionsRequestBody extends TeaModel {
         /**
-         * <p>The ID of the cluster to be authorized.</p>
+         * <p>The ID of the target cluster for authorization.</p>
          * <ul>
-         * <li>If the value of the <code>role_type</code> parameter is <code>all-clusters</code>, set this parameter to an empty string.</li>
+         * <li>If the <code>role_type</code> parameter is set to <code>all-clusters</code>, set this parameter to an empty string.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -38,7 +38,7 @@ public class GrantPermissionsRequest extends TeaModel {
         public String cluster;
 
         /**
-         * <p>Specifies whether the authorization is a custom authorization, which means <code>role_name</code> uses a custom ClusterRole name.</p>
+         * <p>Specifies whether the authorization is a custom authorization (the <code>role_name</code> parameter uses a custom ClusterRole name).</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -65,7 +65,7 @@ public class GrantPermissionsRequest extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The name of the preset role. Valid values:</p>
+         * <p>The preset role name. Valid values:</p>
          * <ul>
          * <li><code>admin</code>: administrator.</li>
          * <li><code>admin-view</code>: read-only administrator.</li>
@@ -79,8 +79,7 @@ public class GrantPermissionsRequest extends TeaModel {
          * </blockquote>
          * <ul>
          * <li><code>admin</code>, <code>admin-view</code>, <code>ops</code>: cannot be granted at the namespace level.</li>
-         * <li><code>admin-view</code>: cannot be granted at the all-clusters level.
-         * .</li>
+         * <li><code>admin-view</code>: cannot be granted at the all-clusters level.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

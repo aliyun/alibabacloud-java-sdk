@@ -4,9 +4,15 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterEventsRequest extends TeaModel {
+    /**
+     * <p>The maximum number of results to return for a single request.</p>
+     */
     @NameInMap("max_results")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token. The value is the next_token parameter returned by the previous API call.</p>
+     */
     @NameInMap("next_token")
     public String nextToken;
 
@@ -21,7 +27,7 @@ public class DescribeClusterEventsRequest extends TeaModel {
 
     /**
      * <p>The maximum number of results to return per page.</p>
-     * <p>Valid values: [1,100].</p>
+     * <p>Valid values: 1 to 100.</p>
      * <p>Default value: 50.</p>
      * 
      * <strong>example:</strong>

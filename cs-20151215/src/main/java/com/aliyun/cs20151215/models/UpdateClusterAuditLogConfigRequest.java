@@ -7,9 +7,9 @@ public class UpdateClusterAuditLogConfigRequest extends TeaModel {
     /**
      * <p>Specifies whether to disable the cluster audit log feature. Valid values:</p>
      * <ul>
-     * <li><p>false: enables the audit log feature or updates the audit log configuration.</p>
+     * <li><p>false: Enables the audit log feature or updates the audit log configuration.</p>
      * </li>
-     * <li><p>true: disables the audit log feature.</p>
+     * <li><p>true: Disables the audit log feature.</p>
      * </li>
      * </ul>
      * 

@@ -7,8 +7,8 @@ public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to delete all custom tags. This parameter takes effect only when <code>tag_keys</code> is empty. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: Delete all tags.</li>
-     * <li><code>false</code>: Do not delete all tags.</li>
+     * <li><code>true</code>: Deletes all tags.</li>
+     * <li><code>false</code>: Does not delete all tags.</li>
      * </ul>
      * 
      * <strong>example:</strong>

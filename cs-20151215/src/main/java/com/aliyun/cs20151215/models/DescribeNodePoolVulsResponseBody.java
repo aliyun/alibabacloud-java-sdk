@@ -11,7 +11,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
     public java.util.List<DescribeNodePoolVulsResponseBodyVulRecords> vulRecords;
 
     /**
-     * <p>Indicates whether the Security Center CVE fix service has been purchased.</p>
+     * <p>Indicates whether the China Cloud Security CVE fix service has been purchased.</p>
      * <ul>
      * <li><p>true: Purchased.</p>
      * </li>

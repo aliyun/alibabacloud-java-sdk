@@ -20,7 +20,7 @@ public class ListUserKubeConfigStatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of results returned per page.</p>
+     * <p>The number of results per page.</p>
      * <ul>
      * <li><p>Valid values: 1 to 100.</p>
      * </li>

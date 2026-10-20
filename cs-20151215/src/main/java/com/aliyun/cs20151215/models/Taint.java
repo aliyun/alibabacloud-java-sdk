@@ -7,9 +7,12 @@ public class Taint extends TeaModel {
     /**
      * <p>The scheduling policy. Valid values:</p>
      * <ul>
-     * <li><code>NoSchedule</code>: This taint is not tolerated. However, pods that are already scheduled to the node are not affected.</li>
-     * <li><code>NoExecute</code>: Pods that do not tolerate this taint are evicted after this taint is added to the node.</li>
-     * <li><code>PreferNoSchedule</code>: This value specifies a soft limit on pods. Existing pods on the node are not affected. The scheduler attempts to avoid scheduling pods that cannot tolerate the taint to the node.</li>
+     * <li><p><code>NoSchedule</code>: Not tolerated. This affects only the scheduling process. Already scheduled pods are not affected. This applies only to newly added pods.</p>
+     * </li>
+     * <li><p><code>NoExecute</code>: Not tolerated. When the taint changes, the pod is evicted.</p>
+     * </li>
+     * <li><p><code>PreferNoSchedule</code>: Soft constraint. Existing pods on the node are not affected. The scheduler tries to avoid scheduling pods that do not tolerate the taint to the node.</p>
+     * </li>
      * </ul>
      * <p>Default value: <code>NoSchedule</code>.</p>
      * 
@@ -20,7 +23,7 @@ public class Taint extends TeaModel {
     public String effect;
 
     /**
-     * <p>The <code>key</code> of the taint.</p>
+     * <p>The key of the taint.</p>
      * 
      * <strong>example:</strong>
      * <p>key</p>
@@ -29,7 +32,7 @@ public class Taint extends TeaModel {
     public String key;
 
     /**
-     * <p>The <code>value</code> of the taint.</p>
+     * <p>The value of the taint.</p>
      * 
      * <strong>example:</strong>
      * <p>value</p>

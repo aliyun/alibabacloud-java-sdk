@@ -14,10 +14,10 @@ public class Addon extends TeaModel {
     public String config;
 
     /**
-     * <p>Specifies whether to disable automatic installation. When you create a cluster, some additional log components are automatically installed in addition to the required components. You can disable the automatic installations of a component and install the component later by calling the component API or in the corresponding console. Valid values:</p>
+     * <p>Specifies whether to disable default installation. When a cluster is created, required components and additional components such as log components are installed by default. You can disable this default behavior and install these components later by calling the component installation API or by using the console. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: disables the automatic installation of a component.</li>
-     * <li><code>false</code>: allows the automatic installation of a component.</li>
+     * <li><code>true</code>: Disables default installation.</li>
+     * <li><code>false</code>: Allows default installation.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class Addon extends TeaModel {
     public Boolean disabled;
 
     /**
-     * <p>The component name.</p>
+     * <p>The name of the component.</p>
      * 
      * <strong>example:</strong>
      * <p>nginx-ingress-controller</p>

@@ -72,10 +72,10 @@ public class DescribeResourcesDeleteProtectionResponse extends TeaModel {
         public String resource;
 
         /**
-         * <p>Indicates whether deletion protection is enabled.</p>
+         * <p>Indicates whether deletion protection is enabled. Valid values:</p>
          * <ul>
-         * <li>true: enabled.</li>
-         * <li>false: disabled.</li>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

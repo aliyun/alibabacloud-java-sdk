@@ -14,7 +14,7 @@ public class DescribeClustersForRegionRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Queries clusters of a specified specification. Valid values:</p>
+     * <p>The specification of the cluster to query. Valid values:</p>
      * <ul>
      * <li><code>ack.standard</code>: Basic</li>
      * <li><code>ack.pro.small</code>: Pro</li>
@@ -22,8 +22,8 @@ public class DescribeClustersForRegionRequest extends TeaModel {
      * <li><code>ack.pro.2xlarge</code>: Pro 2XL</li>
      * <li><code>ack.pro.4xlarge</code>: Pro 4XL (contact customer service to add your account to the whitelist)</li>
      * </ul>
-     * <p>Pro XL, Pro 2XL, and Pro 4XL are three tiers provided by &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>. By pre-allocating and dedicating control plane resources, these tiers ensure that API concurrency and Pod scheduling capabilities remain at a consistently high level. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</p>
-     * <p>For information about cluster management fees for Pro and Provisioned Control Plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</p>
+     * <p>Pro XL, Pro 2XL, and Pro 4XL are three tiers provided by &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>. By pre-allocating and dedicating control plane resources, these tiers ensure that API concurrency and pod scheduling capabilities remain at a deterministic high level. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</p>
+     * <p>For information about cluster management fees for Pro and provisioned control plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>ack.standard</p>
@@ -32,7 +32,7 @@ public class DescribeClustersForRegionRequest extends TeaModel {
     public String clusterSpec;
 
     /**
-     * <p>Queries clusters of a specified type. Valid values:</p>
+     * <p>The type of cluster to query. Valid values:</p>
      * <ul>
      * <li>Kubernetes: ACK dedicated cluster.</li>
      * <li>ManagedKubernetes: ACK managed cluster types, including ACK managed clusters (ACK Pro and ACK Basic), ACK Serverless clusters (Pro and Basic), ACK Edge clusters (Pro and Basic), and ACK Lingjun clusters (Pro).</li>
@@ -46,7 +46,7 @@ public class DescribeClustersForRegionRequest extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>Fuzzy search by cluster name.</p>
+     * <p>Fuzzy matches clusters by cluster name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-cluster</p>
@@ -73,7 +73,7 @@ public class DescribeClustersForRegionRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Queries clusters of a specified subtype. Valid values:</p>
+     * <p>The subtype of cluster to query. Valid values:</p>
      * <ul>
      * <li>Default: ACK managed cluster, including ACK Pro and ACK Basic.</li>
      * <li>Edge: ACK Edge cluster, including ACK Edge Pro and ACK Edge Basic.</li>

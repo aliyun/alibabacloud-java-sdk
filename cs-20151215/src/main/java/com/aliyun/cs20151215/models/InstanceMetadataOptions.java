@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class InstanceMetadataOptions extends TeaModel {
     /**
-     * <p>Configuration of the ECS instance metadata access mode. Valid values:  </p>
+     * <p>The ECS instance metadata access mode configuration. Valid values:</p>
      * <ul>
-     * <li><code>optional</code>: Compatible with both NAT mode and hardened mode.  </li>
-     * <li><code>required</code>: Enables hardened mode only (IMDSv2). After this mode is enabled, applications within edge zones cannot access ECS instance metadata through NAT mode.</li>
+     * <li><code>optional</code>: Compatible with both normal mode and hardened mode.</li>
+     * <li><code>required</code>: Enables hardened mode only (IMDSv2). After this mode is enabled, applications in the node cannot access ECS instance metadata in normal mode.</li>
      * </ul>
-     * <p>Default Value: <code>optional</code>.  </p>
+     * <p>Default value: <code>optional</code>.</p>
      * <blockquote>
-     * <p>Notice:   </p>
+     * <p>Notice: </p>
      * </blockquote>
      * <ul>
-     * <li>This parameter is currently available only to users on the whitelist. To use it, submit a ticket to request access.  </li>
-     * <li>This parameter is supported only in ACK managed clusters of version 1.28 or later.</li>
+     * <li>This parameter is currently available only by whitelist. To use this parameter, submit a ticket.</li>
+     * <li>Only ACK managed clusters of version 1.28 and later support this parameter.</li>
      * </ul>
      * <blockquote>
-     * <p>For more information about instance metadata access modes, see <a href="https://help.aliyun.com/document_detail/108460.html">Instance Metadata Access Mode</a>.</p>
+     * <p>For more information about instance metadata access modes, see <a href="https://help.aliyun.com/document_detail/108460.html">Instance metadata access modes</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

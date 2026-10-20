@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeClusterRequest extends TeaModel {
     /**
-     * <p>[This parameter is deprecated] No value is required.</p>
+     * <p><strong>[Deprecated]</strong> You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -15,10 +15,10 @@ public class UpgradeClusterRequest extends TeaModel {
     public String componentName;
 
     /**
-     * <p>Specifies whether to upgrade only the control plane. Valid values:</p>
+     * <p>Specifies whether to upgrade only the control plane.</p>
      * <ul>
-     * <li>true: upgrades only the control plane.</li>
-     * <li>false: upgrades both the control plane and worker nodes.</li>
+     * <li>true: Upgrades only the control plane.</li>
+     * <li>false: Upgrades both the control plane and worker nodes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class UpgradeClusterRequest extends TeaModel {
     public Boolean masterOnly;
 
     /**
-     * <p>The target version to which the cluster is upgraded.</p>
+     * <p>The target version for the cluster upgrade.</p>
      * 
      * <strong>example:</strong>
      * <p>1.32.1-aliyun.1</p>
@@ -44,7 +44,7 @@ public class UpgradeClusterRequest extends TeaModel {
     public UpgradeClusterRequestRollingPolicy rollingPolicy;
 
     /**
-     * <p>[This parameter is deprecated] Use the <code>next_version</code> parameter instead.</p>
+     * <p><strong>[Deprecated]</strong> Use the <code>next_version</code> parameter instead.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>

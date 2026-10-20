@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
     /**
-     * <p>The number of policy instances deployed in the cluster at different governance levels.</p>
+     * <p>The number of policy instances deployed at different governance levels in the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>{ &quot;high&quot;: 11,     &quot;medium&quot;: 1  }</p>
@@ -14,7 +14,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
     public java.util.Map<String, ?> instancesSeverityCount;
 
     /**
-     * <p>The list of policy instance counts for different policy types.</p>
+     * <p>The list of policy instance counts by policy type.</p>
      */
     @NameInMap("policy_instances")
     public java.util.List<DescribePolicyInstancesStatusResponseBodyPolicyInstances> policyInstances;
@@ -42,7 +42,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
 
     public static class DescribePolicyInstancesStatusResponseBodyPolicyInstances extends TeaModel {
         /**
-         * <p>The policy type. For more information about supported policy types and their descriptions, see <a href="https://help.aliyun.com/document_detail/359819.html">Container security policy rule library</a>.</p>
+         * <p>The policy type. For more information about supported policy types and their descriptions, see <a href="https://help.aliyun.com/document_detail/359819.html">Container security policy rules</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>compliance</p>
@@ -78,7 +78,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
         public String policyName;
 
         /**
-         * <p>The governance level of the policy.</p>
+         * <p>The policy governance level.</p>
          * 
          * <strong>example:</strong>
          * <p>medium</p>

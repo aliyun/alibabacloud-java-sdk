@@ -73,7 +73,7 @@ public class UpdateUserPermissionsRequest extends TeaModel {
         public Boolean isCustom;
 
         /**
-         * <p>Specifies whether the authorization is for a RAM role.</p>
+         * <p>Indicates whether the authorization is for a RAM role.</p>
          * <ul>
          * <li><p>true: The authorization is for a RAM role.</p>
          * </li>
@@ -88,7 +88,7 @@ public class UpdateUserPermissionsRequest extends TeaModel {
         public Boolean isRamRole;
 
         /**
-         * <p>The namespace name. This parameter is empty by default for cluster-level authorization.</p>
+         * <p>The namespace name. This parameter is empty by default for cluster-scoped authorization.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -104,12 +104,12 @@ public class UpdateUserPermissionsRequest extends TeaModel {
          * <li><code>ops</code>: O&amp;M engineer.</li>
          * <li><code>dev</code>: developer.</li>
          * <li><code>restricted</code>: restricted user.</li>
-         * <li>A custom ClusterRole name.</li>
+         * <li>Custom ClusterRole name.</li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li><code>admin</code>, <code>admin-view</code>, <code>ops</code>: These roles cannot be granted at the <strong>namespace</strong> level.</li>
-         * <li><code>admin-view</code>: This role cannot be granted at the <strong>all-clusters</strong> level.</li>
+         * <li><code>admin</code>, <code>admin-view</code>, <code>ops</code>: These roles do not support authorization at the <strong>namespace</strong> scope.</li>
+         * <li><code>admin-view</code>: This role does not support authorization at the <strong>all-clusters</strong> scope.</li>
          * </ul>
          * </blockquote>
          * 
@@ -122,9 +122,9 @@ public class UpdateUserPermissionsRequest extends TeaModel {
         /**
          * <p>The authorization type. Valid values:</p>
          * <ul>
-         * <li><code>cluster</code>: cluster level.</li>
-         * <li><code>namespace</code>: namespace level.</li>
-         * <li><code>all-clusters</code>: all-clusters level.</li>
+         * <li><code>cluster</code>: cluster scope.</li>
+         * <li><code>namespace</code>: namespace scope.</li>
+         * <li><code>all-clusters</code>: all-clusters scope.</li>
          * </ul>
          * 
          * <strong>example:</strong>

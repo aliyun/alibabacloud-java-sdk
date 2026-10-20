@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
     /**
-     * <p>Filters the results by language (Chinese or English).</p>
+     * <p>Filters the returned results by language (Chinese or English).</p>
      * 
      * <strong>example:</strong>
      * <p>zh-CN</p>

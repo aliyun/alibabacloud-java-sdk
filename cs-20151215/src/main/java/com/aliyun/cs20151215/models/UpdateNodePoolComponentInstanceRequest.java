@@ -4,23 +4,36 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class UpdateNodePoolComponentInstanceRequest extends TeaModel {
+    /**
+     * <p>The node component configuration.</p>
+     */
     @NameInMap("config")
     public UpdateNodePoolComponentInstanceRequestConfig config;
 
     /**
+     * <p>Specifies whether to disable the rolling update. Default value: false. Updating the baseline configuration triggers a rolling update of the nodes.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("disable_rolling")
     public Boolean disableRolling;
 
+    /**
+     * <p>The list of nodes to be updated in a rolling manner. By default, all nodes are updated.</p>
+     */
     @NameInMap("node_names")
     public java.util.List<String> nodeNames;
 
+    /**
+     * <p>The rolling update configuration.</p>
+     */
     @NameInMap("rolling_policy")
     public UpdateNodePoolComponentInstanceRequestRollingPolicy rollingPolicy;
 
     /**
+     * <p>The node component version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.33.3-aliyun.1</p>
      */
@@ -74,6 +87,8 @@ public class UpdateNodePoolComponentInstanceRequest extends TeaModel {
 
     public static class UpdateNodePoolComponentInstanceRequestConfigEnvs extends TeaModel {
         /**
+         * <p>The name of the environment variable.</p>
+         * 
          * <strong>example:</strong>
          * <p>LOG_LEVEL</p>
          */
@@ -81,6 +96,8 @@ public class UpdateNodePoolComponentInstanceRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The value of the environment variable.</p>
+         * 
          * <strong>example:</strong>
          * <p>info</p>
          */
@@ -112,12 +129,17 @@ public class UpdateNodePoolComponentInstanceRequest extends TeaModel {
 
     public static class UpdateNodePoolComponentInstanceRequestConfig extends TeaModel {
         /**
+         * <p>The custom configuration of the node component.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;cpuManagerPolicy&quot;:&quot;static&quot;}</p>
          */
         @NameInMap("custom_config")
         public java.util.Map<String, ?> customConfig;
 
+        /**
+         * <p>The environment variables of the node component.</p>
+         */
         @NameInMap("envs")
         public java.util.List<UpdateNodePoolComponentInstanceRequestConfigEnvs> envs;
 
@@ -146,6 +168,8 @@ public class UpdateNodePoolComponentInstanceRequest extends TeaModel {
 
     public static class UpdateNodePoolComponentInstanceRequestRollingPolicy extends TeaModel {
         /**
+         * <p>The upgrade interval between batches, in seconds. Default value: 0.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -153,6 +177,8 @@ public class UpdateNodePoolComponentInstanceRequest extends TeaModel {
         public Long batchInterval;
 
         /**
+         * <p>The maximum number of nodes that are allowed to fail during the rolling update. Default value: 0. A value of 0 indicates that the task fails if any node fails. A value greater than 0 indicates that the task fails and stops if the cumulative number of failed nodes exceeds this value.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -160,6 +186,8 @@ public class UpdateNodePoolComponentInstanceRequest extends TeaModel {
         public Long maxFailedNodes;
 
         /**
+         * <p>The maximum number of parallel updates per batch. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -167,6 +195,8 @@ public class UpdateNodePoolComponentInstanceRequest extends TeaModel {
         public Long maxParallelism;
 
         /**
+         * <p>The auto-pause policy during the node upgrade process. Valid values: NotPause, FirstBatch, and EveryBatch. Default value: NotPause.</p>
+         * 
          * <strong>example:</strong>
          * <p>NotPause</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateClusterDiagnosisRequest extends TeaModel {
     /**
-     * <p>The parameters that specify the diagnosis target. The following examples show the parameters for different diagnosis types:</p>
+     * <p>The parameters used to specify the diagnosis target. The following examples show the parameters for different diagnosis types:</p>
      * <p>node:</p>
      * <pre><code>{&quot;name&quot;: &quot;cn-shanghai.10.10.10.107&quot;}
      * </code></pre>
@@ -19,11 +19,10 @@ public class CreateClusterDiagnosisRequest extends TeaModel {
      * <pre><code>{&quot;url&quot;: &quot;https://example.com&quot;}
      * </code></pre>
      * <p>memory</p>
-     * <pre><code>{&quot;node&quot;:&quot;ap-southeast-1.172.16.9.240&quot;}
+     * <pre><code>{&quot;node&quot;:&quot;cn-hangzhou.172.16.9.240&quot;}
      * </code></pre>
      * <p>service</p>
      * <pre><code>{&quot;namespace&quot;: &quot;kube-system&quot;, &quot;name&quot;: &quot;nginx-ingress-lb&quot;}
-     * ```.
      * </code></pre>
      * 
      * <strong>example:</strong>

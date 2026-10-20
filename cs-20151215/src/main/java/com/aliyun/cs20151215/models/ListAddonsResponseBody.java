@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAddonsResponseBody extends TeaModel {
     /**
-     * <p>The list of available components.</p>
+     * <p>The list of available add-on components.</p>
      */
     @NameInMap("addons")
     public java.util.List<ListAddonsResponseBodyAddons> addons;
@@ -40,7 +40,7 @@ public class ListAddonsResponseBody extends TeaModel {
          * <li>monitor: logging and monitoring component.</li>
          * <li>application: application component.</li>
          * </ul>
-         * <p>An empty value indicates that the component belongs to another category.</p>
+         * <p>An empty value indicates that the component belongs to another categorization.</p>
          * 
          * <strong>example:</strong>
          * <p>monitor</p>

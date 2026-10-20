@@ -7,8 +7,10 @@ public class FixNodePoolVulsRequest extends TeaModel {
     /**
      * <p>Specifies whether to allow node restarts.</p>
      * <ul>
-     * <li>true: Node restarts are allowed.</li>
-     * <li>false: Node restarts are not allowed.</li>
+     * <li><p>true: Node restarts are allowed.</p>
+     * </li>
+     * <li><p>false: Node restarts are not allowed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,7 +77,7 @@ public class FixNodePoolVulsRequest extends TeaModel {
     public static class FixNodePoolVulsRequestRolloutPolicy extends TeaModel {
         /**
          * <p>CVE fixes for nodes in the node pool are performed in batches. This parameter specifies the maximum number of nodes that can be fixed in parallel per batch.</p>
-         * <p>Valid values: minimum value is 1 and maximum value is the total number of nodes in the node pool.</p>
+         * <p>Valid values: The minimum value is 1 and the maximum value is the number of nodes in the node pool.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

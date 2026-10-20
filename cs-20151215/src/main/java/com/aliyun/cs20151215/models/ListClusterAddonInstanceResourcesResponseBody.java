@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
     /**
-     * <p>The Helm release instance information of the component.</p>
+     * <p>The Helm release instance information corresponding to the component.</p>
      */
     @NameInMap("helm_release")
     public ListClusterAddonInstanceResourcesResponseBodyHelmRelease helmRelease;
@@ -39,7 +39,7 @@ public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
 
     public static class ListClusterAddonInstanceResourcesResponseBodyHelmRelease extends TeaModel {
         /**
-         * <p>The Helm chart name of the component.</p>
+         * <p>The name of the Helm chart corresponding to the component.</p>
          * 
          * <strong>example:</strong>
          * <p>ack-node-problem-detector</p>
@@ -48,7 +48,7 @@ public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
         public String chartName;
 
         /**
-         * <p>The Helm chart version of the component.</p>
+         * <p>The version of the Helm chart corresponding to the component.</p>
          * 
          * <strong>example:</strong>
          * <p>1.2.28</p>

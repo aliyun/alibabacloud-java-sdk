@@ -63,10 +63,10 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
          * <li><code>ack.pro.small</code>: Pro</li>
          * <li><code>ack.pro.xlarge</code>: Pro XL</li>
          * <li><code>ack.pro.2xlarge</code>: Pro 2XL</li>
-         * <li><code>ack.pro.4xlarge</code>: Pro 4XL (contact customer service to add your account to the whitelist)</li>
+         * <li><code>ack.pro.4xlarge</code>: Pro 4XL (Contact customer service to add your account to the whitelist.)</li>
          * </ul>
-         * <p>Pro XL, Pro 2XL, and Pro 4XL are three tiers provided by &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>. By pre-allocating and dedicating control plane resources, these tiers ensure that API concurrency and Pod scheduling capabilities remain at a consistently high level. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</p>
-         * <p>For information about cluster management fees for Pro and Provisioned Control Plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</p>
+         * <p>Pro XL, Pro 2XL, and Pro 4XL are three tiers provided by &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>. By pre-allocating and dedicating control plane resources, these tiers ensure that API concurrency and pod scheduling capabilities remain at a consistently high level. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</p>
+         * <p>For information about the cluster management fees for Pro and provisioned control plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>ack.standard</p>
@@ -89,7 +89,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String clusterType;
 
         /**
-         * <p>The pod CIDR block of the cluster.</p>
+         * <p>The CIDR block used by the cluster pods.</p>
          * 
          * <strong>example:</strong>
          * <p>172.20.0.0/16</p>
@@ -119,7 +119,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
          * <p>Indicates whether deletion protection is enabled for the cluster. Deletion protection prevents the cluster from being accidentally deleted in the console or by calling API operations. Valid values:</p>
          * <ul>
          * <li>true: Deletion protection is enabled. The cluster cannot be deleted in the console or by calling API operations.</li>
-         * <li>false: Deletion protection is not enabled. The cluster can be deleted in the console or by calling API operations.</li>
+         * <li>false: Deletion protection is disabled. The cluster can be deleted in the console or by calling API operations.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,7 +147,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String ipStack;
 
         /**
-         * <p>The cluster name.</p>
+         * <p>The name of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>test-cluster</p>
@@ -198,7 +198,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The resource group ID of the cluster.</p>
+         * <p>The ID of the resource group to which the cluster belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmyvw3wjm****</p>
@@ -207,7 +207,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The security group ID of the cluster.</p>
+         * <p>The ID of the security group associated with the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-2zeihch86ooz9io4****</p>
@@ -235,7 +235,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public Long size;
 
         /**
-         * <p>The running state of the cluster. Valid values:</p>
+         * <p>The running status of the cluster. Valid values:</p>
          * <ul>
          * <li><code>initial</code>: The cluster is being created.</li>
          * <li><code>failed</code>: The cluster failed to be created.</li>
@@ -285,7 +285,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String updated;
 
         /**
-         * <p>The VPC ID of the cluster.</p>
+         * <p>The ID of the VPC where the cluster is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2zeg8nf1ukc0fcmvq****</p>
@@ -294,7 +294,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The list of vSwitches for the cluster control plane.</p>
+         * <p>The list of vSwitches used by the cluster control plane.</p>
          */
         @NameInMap("vswitch_ids")
         public java.util.List<String> vswitchIds;

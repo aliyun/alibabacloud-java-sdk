@@ -35,7 +35,7 @@ public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The tag key-value pairs of the resource. You can specify up to 20 tag key-value pairs. Note:</p>
      * <ul>
-     * <li>If you specify this parameter, the value cannot be an empty string and can contain up to 128 characters.</li>
+     * <li>Once a value is specified, it cannot be an empty string. The value can be up to 128 characters in length.</li>
      * <li>The value cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
      * <li>The value cannot contain <code>http://</code> or <code>https://</code>.</li>
      * </ul>

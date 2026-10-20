@@ -5,26 +5,25 @@ import com.aliyun.tea.*;
 
 public class Runtime extends TeaModel {
     /**
-     * <p>The name of a container runtime. The following types of runtime are supported by Container Service for Kubernetes (ACK).</p>
+     * <p>Specifies the container runtime. Valid values:</p>
      * <ul>
-     * <li><code>containerd</code>: supports all Kubernetes versions. We recommend that you set the parameter to this value.</li>
-     * <li><code>Sandboxed-Container.runv</code>: Sandboxed container provides enhanced isolation and supports Kubernetes 1.24 and earlier.</li>
-     * <li><code>docker</code>: supports Kubernetes 1.22 and earlier.</li>
+     * <li><code>containerd</code>: Recommended. Supported in version 1.20 and later.</li>
+     * <li><code>Sandboxed-Container.runv</code>: Sandboxed container that provides higher isolation. Supported in version 1.16 and later.</li>
+     * <li><code>docker</code>: Supported in clusters of version 1.22 and earlier.</li>
      * </ul>
      * <p>Default value: <code>containerd</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>docker</p>
+     * <p>containerd</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>The version of the container runtime. By default, the latest version is used.</p>
-     * <p>For more information about the changes to Sandboxed-Container, see <a href="https://help.aliyun.com/document_detail/160312.html">Sandboxed-Container release notes</a>.</p>
+     * <p>The container runtime version. By default, the latest version is used. For more information about the release notes, see <a href="https://help.aliyun.com/document_detail/207829.html">Container runtime release notes</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>19.03.5</p>
+     * <p>1.6.20</p>
      */
     @NameInMap("version")
     public String version;

@@ -21,7 +21,7 @@ public class CheckControlPlaneLogEnableResponseBody extends TeaModel {
     public java.util.List<String> components;
 
     /**
-     * <p>The name of the Simple Log Service (SLS) project that stores the control plane component logs.</p>
+     * <p>The name of the SLS project that stores the control plane component logs.</p>
      * <p>Default value: k8s-log-$Cluster ID.</p>
      * 
      * <strong>example:</strong>

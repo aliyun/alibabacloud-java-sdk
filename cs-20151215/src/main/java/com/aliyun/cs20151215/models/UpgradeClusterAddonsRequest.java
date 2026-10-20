@@ -35,7 +35,7 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
         public String componentName;
 
         /**
-         * <p>The custom parameters of the component, encoded as a JSON string.</p>
+         * <p>The custom component parameters, encoded as a JSON string.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;CpuRequest&quot;:&quot;800m&quot;}</p>
@@ -44,7 +44,7 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
         public String config;
 
         /**
-         * <p>The target version to which you want to upgrade. You can call the <code>DescribeAddon</code> operation to query the versions to which the component can be upgraded.</p>
+         * <p>The target version to upgrade to. You can call the <code>DescribeAddon</code> operation to query the upgradable versions of a component.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -56,8 +56,8 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
         /**
          * <p>The component upgrade policy. Valid values:</p>
          * <ul>
-         * <li>overwrite: overwrites the existing version.</li>
-         * <li>canary: performs a canary upgrade.</li>
+         * <li>overwrite: overwrite upgrade.</li>
+         * <li>canary: canary upgrade.</li>
          * </ul>
          * 
          * <strong>example:</strong>

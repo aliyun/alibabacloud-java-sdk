@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateKubernetesTriggerResponseBody extends TeaModel {
     /**
-     * <p>The trigger action. For example, <code>redeploy</code>: redeploy.</p>
+     * <p>The action of the trigger. Example: <code>redeploy</code>: Redeployment.</p>
      * 
      * <strong>example:</strong>
      * <p>redeploy</p>
@@ -32,7 +32,7 @@ public class CreateKubernetesTriggerResponseBody extends TeaModel {
     public String id;
 
     /**
-     * <p>The trigger project name.</p>
+     * <p>The project name of the trigger.</p>
      * 
      * <strong>example:</strong>
      * <p>default/test-app</p>
@@ -41,13 +41,10 @@ public class CreateKubernetesTriggerResponseBody extends TeaModel {
     public String projectId;
 
     /**
-     * <p>The trigger type.</p>
-     * <p>Valid values:</p>
+     * <p>The type of the trigger. Valid values:</p>
      * <ul>
-     * <li><p><code>deployment</code>: a trigger for stateless applications. </p>
-     * </li>
-     * <li><p><code>application</code>: a trigger for Application Center applications.</p>
-     * </li>
+     * <li><code>deployment</code>: The trigger for stateless applications. </li>
+     * <li><code>application</code>: The trigger for Hybrid Cloud Application Center applications.</li>
      * </ul>
      * 
      * <strong>example:</strong>

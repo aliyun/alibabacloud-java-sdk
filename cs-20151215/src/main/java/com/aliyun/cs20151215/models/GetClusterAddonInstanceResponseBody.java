@@ -14,7 +14,7 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
     public String config;
 
     /**
-     * <p>The logging feature status of the component.</p>
+     * <p>The logging status of the component.</p>
      */
     @NameInMap("logging")
     public GetClusterAddonInstanceResponseBodyLogging logging;
@@ -31,10 +31,10 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
     /**
      * <p>The component status. Valid values:</p>
      * <ul>
-     * <li>active: installed.</li>
-     * <li>updating: being modified.</li>
-     * <li>upgrading: being upgraded.</li>
-     * <li>deleting: being uninstalled.</li>
+     * <li>active: The component is installed.</li>
+     * <li>updating: The component is being modified.</li>
+     * <li>upgrading: The component is being upgraded.</li>
+     * <li>deleting: The component is being uninstalled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The Log Service project used by the logging feature of the component.</p>
+         * <p>The log project used by the logging feature of the component.</p>
          * 
          * <strong>example:</strong>
          * <p>k8s-log-c02b3e03be10643e8a644a843ffcb****</p>
@@ -138,7 +138,7 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         public String logProject;
 
         /**
-         * <p>The Log Service Logstore used by the logging feature of the component.</p>
+         * <p>The Logstore used by the logging feature of the component.</p>
          * 
          * <strong>example:</strong>
          * <p>my-logstore</p>

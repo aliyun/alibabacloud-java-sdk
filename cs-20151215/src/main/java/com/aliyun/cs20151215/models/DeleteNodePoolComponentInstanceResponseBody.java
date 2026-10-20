@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteNodePoolComponentInstanceResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c846d7d529e34413c9ab1****</p>
      */
@@ -12,6 +14,8 @@ public class DeleteNodePoolComponentInstanceResponseBody extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EB022AB1-4CF7-5BB6-B44A-38****</p>
      */
@@ -19,6 +23,8 @@ public class DeleteNodePoolComponentInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>T-696de321273bb00****</p>
      */

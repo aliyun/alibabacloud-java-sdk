@@ -8,7 +8,7 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
      * <p>The cluster type. Valid values:</p>
      * <ul>
      * <li><code>Kubernetes</code>: ACK dedicated cluster.</li>
-     * <li><code>ManagedKubernetes</code>: ACK managed cluster, including ACK Pro cluster, ACK Basic cluster, ACK Serverless Pro cluster, ACK Serverless Basic cluster, ACK Edge Pro cluster, and ACK Edge Basic cluster.</li>
+     * <li><code>ManagedKubernetes</code>: ACK managed cluster, including ACK Pro clusters, ACK basic clusters, ACK Serverless Pro clusters, ACK Serverless basic clusters, ACK Edge Pro clusters, and ACK Edge basic clusters.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,8 +19,8 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>The cluster version, which is consistent with the Kubernetes community baseline version. We recommend that you select the latest version. If you do not specify this parameter, the latest version is used by default.</p>
-     * <p>For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Kubernetes version release overview</a>.</p>
+     * <p>The Kubernetes version of the cluster. This version is consistent with the Kubernetes community baseline version. We recommend that you select the latest version. If you do not specify this parameter, the latest version is used by default.</p>
+     * <p>For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Overview of Kubernetes versions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>1.32.1-aliyun.1</p>
@@ -31,11 +31,11 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
     /**
      * <p>The query mode. Valid values:</p>
      * <ul>
-     * <li><code>supported</code>: queries supported versions.</li>
-     * <li><code>creatable</code>: queries creatable versions.</li>
+     * <li><code>supported</code>: Supported versions.</li>
+     * <li><code>creatable</code>: Versions available for cluster creation.</li>
      * </ul>
-     * <p>If you specify <code>KubernetesVersion</code>, the query mode is ignored.</p>
-     * <p>If you do not specify the query mode, creatable versions are returned by default.</p>
+     * <p>If you specify KubernetesVersion, the system ignores the query mode.</p>
+     * <p>If you do not specify a query mode, the system returns versions available for cluster creation by default.</p>
      * 
      * <strong>example:</strong>
      * <p>supported</p>
@@ -44,11 +44,11 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
     public String mode;
 
     /**
-     * <p>The cluster type for specific scenarios. Valid values:</p>
+     * <p>The cluster profile. Valid values:</p>
      * <ul>
-     * <li><code>Default</code>: non-edge scenario cluster.</li>
-     * <li><code>Edge</code>: edge scenario cluster.</li>
-     * <li><code>Serverless</code>: ACK Serverless cluster.</li>
+     * <li><code>Default</code>: cluster for non-edge scenarios.</li>
+     * <li><code>Edge</code>: cluster for edge scenarios.</li>
+     * <li><code>Serverless</code>: ASK cluster.</li>
      * </ul>
      * <p>Default value: <code>Default</code>.</p>
      * 
@@ -59,12 +59,10 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
     public String profile;
 
     /**
-     * <p>Specifies whether to query upgradable versions for the specified cluster version. This parameter takes effect only when the KubernetesVersion parameter is specified.</p>
+     * <p>Specifies whether to query the upgradable versions of the cluster version. This parameter takes effect only when the KubernetesVersion parameter is specified. Valid values:</p>
      * <ul>
-     * <li><p>true: queries upgradable versions.</p>
-     * </li>
-     * <li><p>false: does not query upgradable versions.</p>
-     * </li>
+     * <li>true: Queries upgradable versions.</li>
+     * <li>false: Does not query upgradable versions.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,14 +82,14 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The runtime type. You can specify the runtime type to filter the system images that are supported by the runtime. Valid values:</p>
+     * <p>The runtime type. You can specify a runtime type to filter system images supported by the runtime. Valid values:</p>
      * <ul>
      * <li><code>docker</code>: Docker runtime.</li>
      * <li><code>containerd</code>: containerd runtime.</li>
      * <li><code>Sandboxed-Container.runv</code>: sandboxed container.</li>
      * </ul>
-     * <p>If you specify the runtime type, the image versions supported by the specified runtime are returned.</p>
-     * <p>If you do not specify the runtime type, all images are returned by default.</p>
+     * <p>If you specify a runtime type, the system returns the image versions supported by the specified runtime.</p>
+     * <p>If you do not specify a runtime type, the system returns all images by default.</p>
      * 
      * <strong>example:</strong>
      * <p>containerd</p>

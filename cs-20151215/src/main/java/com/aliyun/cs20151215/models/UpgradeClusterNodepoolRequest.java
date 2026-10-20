@@ -59,10 +59,10 @@ public class UpgradeClusterNodepoolRequest extends TeaModel {
     public String runtimeVersion;
 
     /**
-     * <p>Specifies whether to use disk replacement for the upgrade. Valid values:</p>
+     * <p>Specifies whether to use system cloud disk replacement for the upgrade. Valid values:</p>
      * <ul>
-     * <li>true: Uses disk replacement to upgrade the node pool. ACK reinitializes the nodes based on the current node pool configurations, such as logon method, labels, taints, operating system image, and runtime version.</li>
-     * <li>false: Does not use disk replacement.</li>
+     * <li>true: Uses system cloud disk replacement to upgrade the node pool. ACK reinitializes the nodes based on the current node pool configurations, such as the logon method, labels, taints, operating system image, and runtime version.</li>
+     * <li>false: Does not use system cloud disk replacement.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -163,7 +163,7 @@ public class UpgradeClusterNodepoolRequest extends TeaModel {
         public Integer maxFailedNodes;
 
         /**
-         * <p>The maximum number of nodes that can be updated in parallel per batch. Node pool updates are performed in batches.</p>
+         * <p>Nodes in the node pool are updated in batches. This parameter specifies the maximum number of nodes that can be updated in parallel per batch.</p>
          * <p>Valid values: [1,10].</p>
          * <p>Default value: 10.</p>
          * 
@@ -174,7 +174,7 @@ public class UpgradeClusterNodepoolRequest extends TeaModel {
         public Integer maxParallelism;
 
         /**
-         * <p>The automatic pause policy during node upgrades. Valid values:</p>
+         * <p>The automatic pause policy during the node upgrade. Valid values:</p>
          * <ul>
          * <li>FirstBatch: Pauses after the first batch is complete.</li>
          * <li>EveryBatch: Pauses after each batch is complete.</li>

@@ -14,7 +14,7 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The ID of the precheck report.</p>
+     * <p>The precheck report ID.</p>
      * 
      * <strong>example:</strong>
      * <p>be4c8eb72de94d459ea7ace7c811d119</p>
@@ -26,7 +26,7 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
      * <p>The current upgrade status of the cluster. Valid values:</p>
      * <ul>
      * <li><code>success</code>: The upgrade is successful.</li>
-     * <li><code>fail</code>: The upgrade has failed.</li>
+     * <li><code>fail</code>: The upgrade failed.</li>
      * <li><code>pause</code>: The upgrade is paused.</li>
      * <li><code>running</code>: The upgrade is in progress.</li>
      * </ul>
@@ -41,9 +41,9 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
      * <p>The current upgrade phase of the cluster. Valid values:</p>
      * <ul>
      * <li><code>not_start</code>: Not started.</li>
-     * <li><code>prechecking</code>: Prechecking is in progress.</li>
-     * <li><code>upgrading</code>: The upgrade is in progress.</li>
-     * <li><code>pause</code>: The upgrade is paused.</li>
+     * <li><code>prechecking</code>: Prechecking.</li>
+     * <li><code>upgrading</code>: Upgrading.</li>
+     * <li><code>pause</code>: Paused.</li>
      * <li><code>success</code>: The upgrade is successful.</li>
      * </ul>
      * 
@@ -117,9 +117,9 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
         /**
          * <p>The upgrade task status. Valid values:</p>
          * <ul>
-         * <li><code>running</code>: The task is running.</li>
-         * <li><code>Success</code>: The task is successful.</li>
-         * <li><code>Failed</code>: The task has failed.</li>
+         * <li><code>running</code>: Running.</li>
+         * <li><code>Success</code>: Successful.</li>
+         * <li><code>Failed</code>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -44,11 +44,11 @@ public class DescribeUserPermissionResponse extends TeaModel {
 
     public static class DescribeUserPermissionResponseBody extends TeaModel {
         /**
-         * <p>集群访问配置，格式为：</p>
+         * <p>The cluster access configuration. The format varies based on the authorization scope:</p>
          * <ul>
-         * <li>当是集群维度授权时，格式为：<code>{cluster_id}</code>。</li>
-         * <li>当是命名空间维度授权时，格式为：<code>{cluster_id}/{namespace}</code>。</li>
-         * <li>当是所有集群授权时，值固定为：<code>all-clusters</code>。</li>
+         * <li>Cluster-level authorization: <code>{cluster_id}</code>.</li>
+         * <li>Namespace-level authorization: <code>{cluster_id}/{namespace}</code>.</li>
+         * <li>All-cluster authorization: <code>all-clusters</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -58,11 +58,11 @@ public class DescribeUserPermissionResponse extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>授权类型，取值：</p>
+         * <p>The authorization type. Valid values:</p>
          * <ul>
-         * <li><code>cluster</code>：集群维度。</li>
-         * <li><code>namespace</code>：命名空间维度。</li>
-         * <li><code>console</code>：所有集群维度的授权。</li>
+         * <li><code>cluster</code>: cluster-level.</li>
+         * <li><code>namespace</code>: namespace-level.</li>
+         * <li><code>console</code>: all-cluster-level authorization.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class DescribeUserPermissionResponse extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>自定义角色名称，当授权自定义角色时，该字段为指定的自定义集群管理角色名称。</p>
+         * <p>The custom role name. When a custom role is authorized, this field specifies the name of the custom cluster management role.</p>
          * 
          * <strong>example:</strong>
          * <p>terway-pod-reader</p>
@@ -81,13 +81,13 @@ public class DescribeUserPermissionResponse extends TeaModel {
         public String roleName;
 
         /**
-         * <p>预置的角色类型，取值：</p>
+         * <p>The preset role type. Valid values:</p>
          * <ul>
-         * <li><code>admin</code>：管理员。</li>
-         * <li><code>ops</code>：运维人员。</li>
-         * <li><code>dev</code>：开发人员。</li>
-         * <li><code>restricted</code>：受限用户。</li>
-         * <li><code>custom</code>：使用自定义的集群管理角色。</li>
+         * <li><code>admin</code>: Administrator.</li>
+         * <li><code>ops</code>: O&amp;M engineer.</li>
+         * <li><code>dev</code>: Developer.</li>
+         * <li><code>restricted</code>: Restricted user.</li>
+         * <li><code>custom</code>: Custom cluster management role.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -97,10 +97,10 @@ public class DescribeUserPermissionResponse extends TeaModel {
         public String roleType;
 
         /**
-         * <p>是否为集群创建者的授权，取值：</p>
+         * <p>Indicates whether the authorization belongs to the cluster creator. Valid values:</p>
          * <ul>
-         * <li><code>0</code>：代表不是集群创建者的授权记录。</li>
-         * <li><code>1</code>：代表该授权记录为集群创建者的管理员权限。</li>
+         * <li><code>0</code>: The authorization record does not belong to the cluster creator.</li>
+         * <li><code>1</code>: The authorization record represents the administrator permissions of the cluster creator.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -110,10 +110,10 @@ public class DescribeUserPermissionResponse extends TeaModel {
         public Long isOwner;
 
         /**
-         * <p>是否为RAM角色授权，取值：</p>
+         * <p>Indicates whether the authorization is for a RAM role. Valid values:</p>
          * <ul>
-         * <li><code>0</code>：代表当前记录不是RAM角色授权。</li>
-         * <li><code>1</code>：代表当前记录是RAM角色授权。</li>
+         * <li><code>0</code>: The record is not a RAM role authorization.</li>
+         * <li><code>1</code>: The record is a RAM role authorization.</li>
          * </ul>
          * 
          * <strong>example:</strong>

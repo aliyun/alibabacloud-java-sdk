@@ -11,13 +11,13 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     public DescribePolicyGovernanceInClusterResponseBodyViolation violation;
 
     /**
-     * <p>The policy governance audit logs of the current cluster.</p>
+     * <p>The policy governance audit logs of the cluster.</p>
      */
     @NameInMap("admit_log")
     public DescribePolicyGovernanceInClusterResponseBodyAdmitLog admitLog;
 
     /**
-     * <p>The count of enabled policies at different severity levels in the current cluster.</p>
+     * <p>The counts of enabled policies at different severity levels in the current cluster.</p>
      */
     @NameInMap("on_state")
     public java.util.List<DescribePolicyGovernanceInClusterResponseBodyOnState> onState;
@@ -95,7 +95,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     public static class DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolationsWarn extends TeaModel {
         /**
-         * <p>The summary of severity levels.</p>
+         * <p>The severity level.</p>
          * 
          * <strong>example:</strong>
          * <p>high</p>
@@ -104,7 +104,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String severity;
 
         /**
-         * <p>The total number of violations.</p>
+         * <p>The number of violations.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -137,13 +137,13 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     public static class DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolations extends TeaModel {
         /**
-         * <p>The summary of block records.</p>
+         * <p>The aggregated interception records.</p>
          */
         @NameInMap("deny")
         public java.util.List<DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolationsDeny> deny;
 
         /**
-         * <p>The summary of alert records.</p>
+         * <p>The aggregated alert records.</p>
          */
         @NameInMap("warn")
         public java.util.List<DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolationsWarn> warn;
@@ -173,7 +173,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     public static class DescribePolicyGovernanceInClusterResponseBodyViolationViolationsDeny extends TeaModel {
         /**
-         * <p>The policy description.</p>
+         * <p>The description of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>Prevent specific namespaces from being deleted.</p>
@@ -249,7 +249,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     public static class DescribePolicyGovernanceInClusterResponseBodyViolationViolationsWarn extends TeaModel {
         /**
-         * <p>The policy description.</p>
+         * <p>The description of the policy.</p>
          */
         @NameInMap("policyDescription")
         public String policyDescription;
@@ -268,6 +268,9 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
         /**
          * <p>The number of violations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("violations")
         public Long violations;
@@ -313,13 +316,13 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     public static class DescribePolicyGovernanceInClusterResponseBodyViolationViolations extends TeaModel {
         /**
-         * <p>The summary of block records.</p>
+         * <p>The aggregated interception records.</p>
          */
         @NameInMap("deny")
         public java.util.List<DescribePolicyGovernanceInClusterResponseBodyViolationViolationsDeny> deny;
 
         /**
-         * <p>The summary of alert information.</p>
+         * <p>The aggregated alert information.</p>
          */
         @NameInMap("warn")
         public java.util.List<DescribePolicyGovernanceInClusterResponseBodyViolationViolationsWarn> warn;
@@ -349,7 +352,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     public static class DescribePolicyGovernanceInClusterResponseBodyViolation extends TeaModel {
         /**
-         * <p>The summary information.</p>
+         * <p>The aggregated information.</p>
          */
         @NameInMap("totalViolations")
         public DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolations totalViolations;
@@ -385,7 +388,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     public static class DescribePolicyGovernanceInClusterResponseBodyAdmitLogLogs extends TeaModel {
         /**
-         * <p>The cluster ID.</p>
+         * <p>The ID of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>hash code</p>
@@ -394,10 +397,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The action taken by the policy, including alert (warn) and block (deny). Valid values:</p>
+         * <p>The action taken by the policy. Valid values:</p>
          * <ul>
-         * <li>warn: Only alerts on behaviors that violate the policy without actually blocking the request.</li>
-         * <li>deny: Blocks requests that violate the policy.</li>
+         * <li>warn: Alerts on policy violations but does not intercept the requests.</li>
+         * <li>deny: Intercepts requests that violate the policy.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -416,7 +419,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String constraintApiVersion;
 
         /**
-         * <p>The policy type.</p>
+         * <p>The type of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>cis-k8s</p>
@@ -434,7 +437,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String constraintGroup;
 
         /**
-         * <p>The policy name in policy management.</p>
+         * <p>The policy kind that corresponds to the policy name in policy management.</p>
          * 
          * <strong>example:</strong>
          * <p>ACKNamespacesDeleteProtection</p>
@@ -443,7 +446,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String constraintKind;
 
         /**
-         * <p>The policy instance name.</p>
+         * <p>The name of the policy instance.</p>
          * 
          * <strong>example:</strong>
          * <p>namespace-delete-protection-jpjwv</p>
@@ -461,7 +464,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String eventMsg;
 
         /**
-         * <p>The type of event triggered by the policy, such as violation.</p>
+         * <p>The type of the event triggered by the policy, such as violation.</p>
          * 
          * <strong>example:</strong>
          * <p>violation</p>
@@ -470,7 +473,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String eventType;
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>hash code</p>
@@ -479,7 +482,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String requestUid;
 
         /**
-         * <p>The information about the user whose request violated the policy.</p>
+         * <p>The user information of the request that violated the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>account id</p>
@@ -488,7 +491,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String requestUserinfo;
 
         /**
-         * <p>The name of the user whose request violated the policy.</p>
+         * <p>The username of the request that violated the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>account user name</p>
@@ -497,7 +500,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String requestUsername;
 
         /**
-         * <p>The type of resource that violated the policy. For example, if a request to operate on a Namespace is rejected, this field is set to Namespace.</p>
+         * <p>The type of the resource that violated the policy. For example, if a request to operate on a namespace is rejected, the value is Namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>Namespace</p>
@@ -515,7 +518,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String resourceName;
 
         /**
-         * <p>The time when the policy violation occurred.</p>
+         * <p>The time when the policy violation occurred. The time is in ISO 8601 format and includes time zone information.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-27T11:31:40Z</p>
@@ -652,7 +655,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     public static class DescribePolicyGovernanceInClusterResponseBodyAdmitLog extends TeaModel {
         /**
-         * <p>The total number of logs returned by the current query.</p>
+         * <p>The total number of logs queried.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -661,7 +664,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The log project that stores policy action information.</p>
+         * <p>The Log Service project that stores the policy action information.</p>
          * 
          * <strong>example:</strong>
          * <p>k8s-log-clusterid</p>
@@ -670,7 +673,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String logProject;
 
         /**
-         * <p>The Logstore that stores policy action information.</p>
+         * <p>The Log Service Logstore that stores the policy action information.</p>
          * 
          * <strong>example:</strong>
          * <p>policyadmit-clusterid</p>
@@ -687,8 +690,8 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         /**
          * <p>The status of the query result. Valid values:</p>
          * <ul>
-         * <li><code>Complete</code>: The query is complete and the returned result is the complete result.</li>
-         * <li><code>Incomplete</code>: The query is complete but the returned result is incomplete. Repeat the request to obtain the complete result.</li>
+         * <li><code>Complete</code>: The query is complete and the returned result is complete.</li>
+         * <li><code>Incomplete</code>: The query is complete but the returned result is incomplete. You must repeat the request to obtain the complete result.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -755,7 +758,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public Integer enabledCount;
 
         /**
-         * <p>The policy governance severity level.</p>
+         * <p>The severity level of the policy governance.</p>
          * 
          * <strong>example:</strong>
          * <p>high</p>
@@ -764,7 +767,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String severity;
 
         /**
-         * <p>The total number of policy types at this severity level.</p>
+         * <p>The total number of policy types at the severity level.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>

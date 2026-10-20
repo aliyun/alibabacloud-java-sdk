@@ -48,7 +48,7 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of records returned per page.</p>
+         * <p>The number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -117,7 +117,7 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
          * </li>
          * <li><p>Unknown: The status is unknown.</p>
          * </li>
-         * <li><p>Removed: The certificate has been revoked. An issuance record exists for the certificate.</p>
+         * <li><p>Removed: The certificate has been removed (an issuance record exists for the certificate).</p>
          * </li>
          * </ul>
          * 
@@ -146,7 +146,7 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
         public String clusterName;
 
         /**
-         * <p>The cluster status. Valid values:</p>
+         * <p>The running status of the cluster. Valid values:</p>
          * <ul>
          * <li><code>initial</code>: The cluster is being created.</li>
          * <li><code>failed</code>: The cluster failed to be created.</li>

@@ -18,7 +18,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
     public String action;
 
     /**
-     * <p>The rule templatetype.</p>
+     * <p>The templatetype of the rule.</p>
      * 
      * <strong>example:</strong>
      * <p>k8s-general</p>
@@ -38,8 +38,8 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the rule is deleted. Valid values:</p>
      * <ul>
-     * <li>0: The rule is not deleted.</li>
-     * <li>1: The rule is deleted.</li>
+     * <li>0: not deleted.</li>
+     * <li>1: deleted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,10 +58,10 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>Indicates whether policy configuration is required. Valid values: </p>
+     * <p>Indicates whether the policy requires configuration. Valid values: </p>
      * <ul>
-     * <li>0: Parameter settings are required.</li>
-     * <li>1: No parameter settings are required.</li>
+     * <li>0: parameter settings required.</li>
+     * <li>1: no parameter settings required.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +71,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
     public Integer noConfig;
 
     /**
-     * <p>The governance severity level of the rule. Valid values:</p>
+     * <p>The governance severity of the rule. Valid values:</p>
      * <ul>
      * <li><code>high</code>: high risk.</li>
      * <li><code>medium</code>: medium risk.</li>
@@ -88,7 +88,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
      * <p>The details of the rule template.</p>
      * 
      * <strong>example:</strong>
-     * <p>详情请参见请求示例</p>
+     * <p>For more information, see the request example</p>
      */
     @NameInMap("template")
     public String template;

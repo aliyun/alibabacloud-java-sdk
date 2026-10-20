@@ -32,7 +32,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
     public String currentStage;
 
     /**
-     * <p>The node fault error message.</p>
+     * <p>The task fault information.</p>
      */
     @NameInMap("error")
     public DescribeTaskInfoResponseBodyError error;
@@ -43,6 +43,9 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
     @NameInMap("events")
     public java.util.List<DescribeTaskInfoResponseBodyEvents> events;
 
+    /**
+     * <p>The output of the task.</p>
+     */
     @NameInMap("outputs")
     public java.util.Map<String, ?> outputs;
 
@@ -63,7 +66,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
      * <ul>
      * <li><code>running</code>: The task is running.</li>
      * <li><code>fail</code>: The task failed.</li>
-     * <li><code>success</code>: The task succeeded.</li>
+     * <li><code>success</code>: The task is completed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,7 +76,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
     public String state;
 
     /**
-     * <p>The target object of the task.</p>
+     * <p>The task execution target.</p>
      */
     @NameInMap("target")
     public DescribeTaskInfoResponseBodyTarget target;
@@ -88,7 +91,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The task execution details.</p>
+     * <p>The execution details of the task.</p>
      */
     @NameInMap("task_result")
     public java.util.List<DescribeTaskInfoResponseBodyTaskResult> taskResult;
@@ -272,7 +275,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
 
     public static class DescribeTaskInfoResponseBodyEvents extends TeaModel {
         /**
-         * <p>The event action.</p>
+         * <p>The action of the event.</p>
          * 
          * <strong>example:</strong>
          * <p>start</p>
@@ -281,7 +284,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>The event level.</p>
+         * <p>The level of the event.</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -290,7 +293,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         public String level;
 
         /**
-         * <p>The event message.</p>
+         * <p>The message of the event.</p>
          * 
          * <strong>example:</strong>
          * <p>start to xxx</p>
@@ -299,7 +302,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The event reason.</p>
+         * <p>The reason for the event.</p>
          * 
          * <strong>example:</strong>
          * <p>NodePoolUpgradeStart</p>
@@ -308,7 +311,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         public String reason;
 
         /**
-         * <p>The event source.</p>
+         * <p>The source of the event.</p>
          * 
          * <strong>example:</strong>
          * <p>ACK</p>
@@ -317,7 +320,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The time when the event was generated.</p>
+         * <p>The time when the event was generated. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1669706229286</p>
@@ -382,7 +385,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
 
     public static class DescribeTaskInfoResponseBodyStages extends TeaModel {
         /**
-         * <p>The end time of the task stage.</p>
+         * <p>The end time of the task stage. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-12-15 23:00:00</p>
@@ -391,7 +394,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The message of the task stage.</p>
+         * <p>The information about the task stage.</p>
          * 
          * <strong>example:</strong>
          * <p>success to xxxxx</p>
@@ -406,7 +409,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         public java.util.Map<String, ?> outputs;
 
         /**
-         * <p>The start time of the task stage.</p>
+         * <p>The start time of the task stage. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-12-15 23:00:00</p>
@@ -472,7 +475,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
 
     public static class DescribeTaskInfoResponseBodyTarget extends TeaModel {
         /**
-         * <p>The ID of the target object.</p>
+         * <p>The ID of the task execution target.</p>
          * 
          * <strong>example:</strong>
          * <p>c78592bfe92244365b3c3ad47f1de****</p>
@@ -481,7 +484,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The object type of the node on which the task is executed.</p>
+         * <p>The type of the task execution target.</p>
          * 
          * <strong>example:</strong>
          * <p>cluster</p>
@@ -514,7 +517,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
 
     public static class DescribeTaskInfoResponseBodyTaskResult extends TeaModel {
         /**
-         * <p>The resource on which the task operates. For example, if the resource involved in a scale-out task is an instance, this parameter returns the instance ID.</p>
+         * <p>The resource operated by the task. For example, if the operated resource during a scale-out is an instance, this value is the instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i-xxx</p>
@@ -523,7 +526,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         public String data;
 
         /**
-         * <p>The status of the resource scale-out. Valid values:</p>
+         * <p>The scale-out status of the resource. Valid values:</p>
          * <ul>
          * <li><code>success</code>: The scale-out succeeded.</li>
          * <li><code>failed</code>: The scale-out failed.</li>
