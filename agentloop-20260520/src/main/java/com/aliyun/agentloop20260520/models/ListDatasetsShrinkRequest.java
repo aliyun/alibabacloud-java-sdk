@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDatasetsShrinkRequest extends TeaModel {
     /**
-     * <p>The dataset name.</p>
+     * <p>The name of the dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>product_faq_dataset</p>
@@ -13,6 +13,9 @@ public class ListDatasetsShrinkRequest extends TeaModel {
     @NameInMap("datasetName")
     public String datasetName;
 
+    /**
+     * <p>Filters datasets by labels.</p>
+     */
     @NameInMap("labels")
     public String labelsShrink;
 
@@ -26,7 +29,7 @@ public class ListDatasetsShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. You do not need to set this parameter for the first request. For subsequent requests, set this parameter to the nextToken value returned in the previous response.</p>
+     * <p>The next token. You do not need to set this parameter for the first request. For subsequent requests, pass the nextToken value returned in the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>RsfoUqpOJd5nd0F1e4OquY/7dKNGp1JMgsKtvCagmtY=</p>

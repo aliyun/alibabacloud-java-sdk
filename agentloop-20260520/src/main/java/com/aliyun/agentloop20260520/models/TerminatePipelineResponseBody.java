@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TerminatePipelineResponseBody extends TeaModel {
     /**
+     * <p>The name of the AgentSpace where the pipeline is located.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-agent-space</p>
      */
@@ -12,6 +14,8 @@ public class TerminatePipelineResponseBody extends TeaModel {
     public String agentSpaceName;
 
     /**
+     * <p>The name of the pipeline.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-pipeline</p>
      */
@@ -19,6 +23,8 @@ public class TerminatePipelineResponseBody extends TeaModel {
     public String pipelineName;
 
     /**
+     * <p>The request ID, which is used to locate the request during troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
      */
@@ -26,6 +32,8 @@ public class TerminatePipelineResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The scheduling status. The value is fixed to Terminated, which is an irreversible desired state.</p>
+     * 
      * <strong>example:</strong>
      * <p>Terminated</p>
      */
@@ -33,6 +41,7 @@ public class TerminatePipelineResponseBody extends TeaModel {
     public String scheduleStatus;
 
     /**
+     * <p>The termination time in ISO 8601 UTC format.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +51,8 @@ public class TerminatePipelineResponseBody extends TeaModel {
     public String terminateTime;
 
     /**
+     * <p>The reason for termination.</p>
+     * 
      * <strong>example:</strong>
      * <p>project deprecated</p>
      */

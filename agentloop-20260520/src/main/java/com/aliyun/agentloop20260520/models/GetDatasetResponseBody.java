@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDatasetResponseBody extends TeaModel {
     /**
-     * <p>The agent space name.</p>
+     * <p>The name of the agent space.</p>
      * 
      * <strong>example:</strong>
      * <p>sop-agent</p>
@@ -24,7 +24,7 @@ public class GetDatasetResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The dataset name.</p>
+     * <p>The name of the dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>product_faq_dataset</p>
@@ -33,7 +33,7 @@ public class GetDatasetResponseBody extends TeaModel {
     public String datasetName;
 
     /**
-     * <p>The dataset description.</p>
+     * <p>The description of the dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>Product FAQ dataset for semantic search</p>
@@ -41,9 +41,15 @@ public class GetDatasetResponseBody extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>Indicates whether the dataset is added to favorites.</p>
+     */
     @NameInMap("isFavorite")
     public Boolean isFavorite;
 
+    /**
+     * <p>The labels of the dataset.</p>
+     */
     @NameInMap("labels")
     public java.util.Map<String, java.util.List<String>> labels;
 

@@ -11,7 +11,7 @@ public class ListDatasetsResponseBody extends TeaModel {
     public java.util.List<ListDatasetsResponseBodyDatasets> datasets;
 
     /**
-     * <p>The maximum number of results specified in this request.</p>
+     * <p>The maximum number of entries returned for this request.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -20,8 +20,8 @@ public class ListDatasetsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next page of results.</p>
-     * <p>If the total number of results exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page of data.</p>
+     * <p>The token for the next page of query results.</p>
+     * <p>If the total number of returned results exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page of data.</p>
      * 
      * <strong>example:</strong>
      * <p>umaQfI7x758Ns4TgWrj8yA3fYlnk7dJgsfhMrSViRY8=</p>
@@ -94,7 +94,7 @@ public class ListDatasetsResponseBody extends TeaModel {
 
     public static class ListDatasetsResponseBodyDatasets extends TeaModel {
         /**
-         * <p>The agent space name.</p>
+         * <p>The name of the agent workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>sop-agent</p>
@@ -113,7 +113,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The dataset name.</p>
+         * <p>The name of the dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>product_faq_dataset</p>
@@ -122,7 +122,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String datasetName;
 
         /**
-         * <p>The dataset description.</p>
+         * <p>The description of the dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>Product FAQ dataset for semantic search</p>
@@ -130,9 +130,15 @@ public class ListDatasetsResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Indicates whether the dataset is added to favorites.</p>
+         */
         @NameInMap("isFavorite")
         public Boolean isFavorite;
 
+        /**
+         * <p>The labels of the dataset.</p>
+         */
         @NameInMap("labels")
         public java.util.Map<String, java.util.List<String>> labels;
 

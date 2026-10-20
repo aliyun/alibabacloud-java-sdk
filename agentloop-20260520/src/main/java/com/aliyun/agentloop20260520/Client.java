@@ -2126,7 +2126,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询优化任务执行详情</p>
+     * <p>Queries the status, errors, execution progress, type-related results, and artifact references of a specified run.</p>
      * 
      * @param request GetOptimizeRunRequest
      * @param headers map
@@ -2154,7 +2154,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询优化任务执行详情</p>
+     * <p>Queries the status, errors, execution progress, type-related results, and artifact references of a specified run.</p>
      * 
      * @param request GetOptimizeRunRequest
      * @return GetOptimizeRunResponse
@@ -2167,7 +2167,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询优化任务</p>
+     * <p>Queries the type, status, configuration, and scheduling checkpoint of a specified optimization task.</p>
      * 
      * @param request GetOptimizeTaskRequest
      * @param headers map
@@ -2195,7 +2195,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询优化任务</p>
+     * <p>Queries the type, status, configuration, and scheduling checkpoint of a specified optimization task.</p>
      * 
      * @param request GetOptimizeTaskRequest
      * @return GetOptimizeTaskResponse
@@ -2290,7 +2290,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries pipeline run statistics.</p>
+     * <p>Queries the pipeline run statistics.</p>
      * 
      * @param request GetPipelineStatsRequest
      * @param headers map
@@ -2332,7 +2332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries pipeline run statistics.</p>
+     * <p>Queries the pipeline run statistics.</p>
      * 
      * @param request GetPipelineStatsRequest
      * @return GetPipelineStatsResponse
@@ -3552,7 +3552,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops a pipeline.</p>
+     * <p>Terminates a pipeline.</p>
      * 
      * @param request TerminatePipelineRequest
      * @param headers map
@@ -3586,7 +3586,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops a pipeline.</p>
+     * <p>Terminates a pipeline.</p>
      * 
      * @param request TerminatePipelineRequest
      * @return TerminatePipelineResponse
@@ -4289,7 +4289,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新优化任务</p>
+     * <p>Updates the status and type-related configurations of a specified optimization task.</p>
      * 
      * @param request UpdateOptimizeTaskRequest
      * @param headers map
@@ -4333,7 +4333,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新优化任务</p>
+     * <p>Updates the status and type-related configurations of a specified optimization task.</p>
      * 
      * @param request UpdateOptimizeTaskRequest
      * @return UpdateOptimizeTaskResponse

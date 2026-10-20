@@ -4,10 +4,15 @@ package com.aliyun.agentloop20260520.models;
 import com.aliyun.tea.*;
 
 public class GetOptimizeTaskResponseBody extends TeaModel {
+    /**
+     * <p>The scheduling checkpoint, which stores states such as the general scheduling watermark.</p>
+     */
     @NameInMap("checkpoint")
     public java.util.Map<String, ?> checkpoint;
 
     /**
+     * <p>The type-specific configuration. Optional prompts for ExperienceMining or SkillOptimize support only inline Markdown. The body is saved to inputs.prompt.content, which must be a non-empty UTF-8 string of up to 16 KiB.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;ioVersion&quot;:2,&quot;inputs&quot;:{&quot;experienceLibrary&quot;:{&quot;type&quot;:&quot;dataset&quot;,&quot;dataset&quot;:&quot;experiences&quot;},&quot;trajectory&quot;:{&quot;type&quot;:&quot;sls&quot;,&quot;project&quot;:&quot;my-project&quot;,&quot;logstore&quot;:&quot;agent-trajectory&quot;,&quot;format&quot;:&quot;atif&quot;},&quot;prompt&quot;:{&quot;type&quot;:&quot;inline&quot;,&quot;format&quot;:&quot;markdown&quot;,&quot;content&quot;:&quot;# Guidance\\nExtract evidence-backed tool contracts.&quot;}},&quot;outputs&quot;:{&quot;changePlan&quot;:{&quot;type&quot;:&quot;dataset&quot;,&quot;dataset&quot;:&quot;experience-plans&quot;}},&quot;operators&quot;:[&quot;tool_contract&quot;],&quot;application&quot;:{&quot;mode&quot;:&quot;manual&quot;}}</p>
      */
@@ -15,6 +20,8 @@ public class GetOptimizeTaskResponseBody extends TeaModel {
     public java.util.Map<String, ?> config;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-08-12T10:00:00Z</p>
      */
@@ -22,6 +29,8 @@ public class GetOptimizeTaskResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The next scheduling trigger time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-08-13T16:00:00Z</p>
      */
@@ -29,6 +38,8 @@ public class GetOptimizeTaskResponseBody extends TeaModel {
     public String nextTriggerTime;
 
     /**
+     * <p>The optimization task name.</p>
+     * 
      * <strong>example:</strong>
      * <p>efficiency-analysis</p>
      */
@@ -36,6 +47,8 @@ public class GetOptimizeTaskResponseBody extends TeaModel {
     public String optimizeTaskName;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -43,6 +56,8 @@ public class GetOptimizeTaskResponseBody extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
      */
@@ -50,6 +65,8 @@ public class GetOptimizeTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task status. Valid values: Enabled, Disabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>Enabled</p>
      */
@@ -57,6 +74,8 @@ public class GetOptimizeTaskResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The optimization task type.</p>
+     * 
      * <strong>example:</strong>
      * <p>EfficiencyAnalysis</p>
      */
@@ -64,6 +83,8 @@ public class GetOptimizeTaskResponseBody extends TeaModel {
     public String type;
 
     /**
+     * <p>The update time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-08-12T10:00:00Z</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateOptimizeTaskResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
      */

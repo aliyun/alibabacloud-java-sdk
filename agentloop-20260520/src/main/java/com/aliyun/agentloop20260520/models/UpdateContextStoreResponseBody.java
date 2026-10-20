@@ -14,7 +14,7 @@ public class UpdateContextStoreResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The effective strategy version number after the update for the memory type. If the strategy remains unchanged, the version number is the same as before the update.</p>
+     * <p>The strategy version number that takes effect after the update for the memory type. If the strategy remains unchanged, the version number is the same as that before the update.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetPipelineStatsRequest extends TeaModel {
     /**
+     * <p>The end time of the statistical window in UNIX seconds. Default value: now.</p>
+     * 
      * <strong>example:</strong>
      * <p>1735660800</p>
      */
@@ -12,6 +14,8 @@ public class GetPipelineStatsRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The statistical granularity. Valid values: Hour, Day, Week, and Month. Default value: automatically inferred.</p>
+     * 
      * <strong>example:</strong>
      * <p>Hour</p>
      */
@@ -19,6 +23,8 @@ public class GetPipelineStatsRequest extends TeaModel {
     public String granularity;
 
     /**
+     * <p>The start time of the statistical window in UNIX seconds. Default value: now - 86400.</p>
+     * 
      * <strong>example:</strong>
      * <p>1735574400</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetOptimizeRunResponseBody extends TeaModel {
     /**
+     * <p>The number of executed attempts.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class GetOptimizeRunResponseBody extends TeaModel {
     public Integer attemptCount;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-08-12T10:00:00Z</p>
      */
@@ -19,6 +23,8 @@ public class GetOptimizeRunResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The current execution stage.</p>
+     * 
      * <strong>example:</strong>
      * <p>attribution</p>
      */
@@ -26,6 +32,8 @@ public class GetOptimizeRunResponseBody extends TeaModel {
     public String currentStage;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InternalError</p>
      */
@@ -33,16 +41,23 @@ public class GetOptimizeRunResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>The optimize run failed.</p>
      */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The type-related information and immutable result references. For efficiency analysis, frozen outputBindings and tokenPublication release receipts are returned.</p>
+     */
     @NameInMap("extra")
     public java.util.Map<String, ?> extra;
 
     /**
+     * <p>The completion time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-08-12T10:01:00Z</p>
      */
@@ -50,6 +65,8 @@ public class GetOptimizeRunResponseBody extends TeaModel {
     public String finishTime;
 
     /**
+     * <p>The maximum number of attempts.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -57,6 +74,8 @@ public class GetOptimizeRunResponseBody extends TeaModel {
     public Integer maxAttempts;
 
     /**
+     * <p>The ID of the execution instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>or-20260812-0001</p>
      */
@@ -64,16 +83,23 @@ public class GetOptimizeRunResponseBody extends TeaModel {
     public String optimizeRunId;
 
     /**
+     * <p>The name of the optimization task.</p>
+     * 
      * <strong>example:</strong>
      * <p>efficiency-analysis</p>
      */
     @NameInMap("optimizeTaskName")
     public String optimizeTaskName;
 
+    /**
+     * <p>The current execution progress. The fields are defined by the task type.</p>
+     */
     @NameInMap("progress")
     public java.util.Map<String, ?> progress;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
      */
@@ -81,6 +107,8 @@ public class GetOptimizeRunResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The initial start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-08-12T10:00:01Z</p>
      */
@@ -88,6 +116,8 @@ public class GetOptimizeRunResponseBody extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The execution status.</p>
+     * 
      * <strong>example:</strong>
      * <p>Succeeded</p>
      */
@@ -95,6 +125,8 @@ public class GetOptimizeRunResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The number of analysis trajectories.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -102,6 +134,8 @@ public class GetOptimizeRunResponseBody extends TeaModel {
     public Long trajectoryCount;
 
     /**
+     * <p>The trigger type.</p>
+     * 
      * <strong>example:</strong>
      * <p>Scheduled</p>
      */
@@ -109,6 +143,8 @@ public class GetOptimizeRunResponseBody extends TeaModel {
     public String triggerType;
 
     /**
+     * <p>The task type snapshot.</p>
+     * 
      * <strong>example:</strong>
      * <p>EfficiencyAnalysis</p>
      */
@@ -116,6 +152,8 @@ public class GetOptimizeRunResponseBody extends TeaModel {
     public String type;
 
     /**
+     * <p>The end time of the analysis window, in UNIX seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1786432690000</p>
      */
@@ -123,6 +161,8 @@ public class GetOptimizeRunResponseBody extends TeaModel {
     public Long windowEndTime;
 
     /**
+     * <p>The start time of the analysis window, in UNIX seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1786432688000</p>
      */

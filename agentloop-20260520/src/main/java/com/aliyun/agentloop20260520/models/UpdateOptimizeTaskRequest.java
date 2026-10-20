@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateOptimizeTaskRequest extends TeaModel {
     /**
+     * <p>The type-related configurations. Optional prompts for ExperienceMining or SkillOptimize support only inline Markdown, and the body is saved to inputs.prompt.content (non-empty UTF-8, up to 16 KiB).</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;ioVersion&quot;:2,&quot;inputs&quot;:{&quot;experienceLibrary&quot;:{&quot;type&quot;:&quot;dataset&quot;,&quot;dataset&quot;:&quot;experiences&quot;},&quot;trajectory&quot;:{&quot;type&quot;:&quot;sls&quot;,&quot;project&quot;:&quot;my-project&quot;,&quot;logstore&quot;:&quot;agent-trajectory&quot;,&quot;format&quot;:&quot;atif&quot;},&quot;prompt&quot;:{&quot;type&quot;:&quot;inline&quot;,&quot;format&quot;:&quot;markdown&quot;,&quot;content&quot;:&quot;# Guidance\\nExtract evidence-backed tool contracts.&quot;}},&quot;outputs&quot;:{&quot;changePlan&quot;:{&quot;type&quot;:&quot;dataset&quot;,&quot;dataset&quot;:&quot;experience-plans&quot;}},&quot;operators&quot;:[&quot;tool_contract&quot;],&quot;application&quot;:{&quot;mode&quot;:&quot;manual&quot;}}</p>
      */
@@ -12,6 +14,8 @@ public class UpdateOptimizeTaskRequest extends TeaModel {
     public java.util.Map<String, ?> config;
 
     /**
+     * <p>The status of the task. Valid values: Enabled and Disabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>Disabled</p>
      */
@@ -19,6 +23,8 @@ public class UpdateOptimizeTaskRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The idempotency token.</p>
+     * 
      * <strong>example:</strong>
      * <p>a1b2c3d4-1234-5678-90ab-cdef12345678</p>
      */

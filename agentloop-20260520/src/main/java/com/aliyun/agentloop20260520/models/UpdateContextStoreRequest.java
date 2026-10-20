@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateContextStoreRequest extends TeaModel {
     /**
-     * <p>The description of the policy change. A new policy version is created when policy fields in the configuration are modified.</p>
+     * <p>The description of the policy change. A new policy version is written when policy fields in the configuration change.</p>
      * 
      * <strong>example:</strong>
      * <p>Relax similarity threshold</p>
@@ -14,7 +14,7 @@ public class UpdateContextStoreRequest extends TeaModel {
     public String changeNote;
 
     /**
-     * <p>The context library configuration. If provided, it fully overwrites the existing configuration. If omitted, the original configuration is retained.</p>
+     * <p>The context library configuration. If specified, the entire configuration is overwritten. If not specified, the original configuration is retained.</p>
      */
     @NameInMap("config")
     public UpdateContextStoreRequestConfig config;
@@ -38,7 +38,7 @@ public class UpdateContextStoreRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The running status. For the memory type, valid values are Active (running) and Paused (data source consumption and extraction paused). For the experience type, it indicates the mining status of the experience library. The specific valid values and combination constraints are defined by the server.</p>
+     * <p>The running status. Valid values: Active and Paused. For the memory type, pausing stops data source reading and extraction. For the experience Dataset follow type, pausing retains submitted and in-flight checkpoints, and resuming continues processing new records without skipping history from the current time. If you update only the status, you do not need to pass back the source.</p>
      * 
      * <strong>example:</strong>
      * <p>Active</p>
@@ -110,7 +110,7 @@ public class UpdateContextStoreRequest extends TeaModel {
 
     public static class UpdateContextStoreRequestConfigAudit extends TeaModel {
         /**
-         * <p>Specifies whether to write item events for dropped recall candidates. Default value: false.</p>
+         * <p>Specifies whether to write item events for dropped candidates during retrieval. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -119,7 +119,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public Boolean droppedCandidates;
 
         /**
-         * <p>The recording mode for recall queries. Valid values: raw (plaintext) and hash (HMAC only). Default value: raw.</p>
+         * <p>The recording mode for retrieval queries. Valid values: raw (plaintext) and hash (HMAC only). Default value: raw.</p>
          * 
          * <strong>example:</strong>
          * <p>raw</p>
@@ -215,7 +215,7 @@ public class UpdateContextStoreRequest extends TeaModel {
          * <p>The list of exclusion rules. Content that matches these rules is not extracted.</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;Password&quot;,&quot;ID number&quot;]</p>
+         * <p>[&quot;Password&quot;, &quot;ID number&quot;]</p>
          */
         @NameInMap("excludeRules")
         public java.util.List<String> excludeRules;
@@ -284,7 +284,7 @@ public class UpdateContextStoreRequest extends TeaModel {
 
     public static class UpdateContextStoreRequestConfigScopePolicy extends TeaModel {
         /**
-         * <p>The list of scope fields where at least one must be non-empty. Valid element values: userId, agentId, appId, and runId.</p>
+         * <p>The list of scope fields where at least one must be non-empty. Valid values for elements: userId, agentId, appId, and runId.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;userId&quot;]</p>
@@ -318,7 +318,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>Specifies whether the field is a sensitive field.</p>
+         * <p>Specifies whether the field is sensitive.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -336,7 +336,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public String sourceField;
 
         /**
-         * <p>The target write path, such as metadata.customerTier.</p>
+         * <p>The target path for writing, such as metadata.customerTier.</p>
          * 
          * <strong>example:</strong>
          * <p>metadata.customerTier</p>
@@ -427,7 +427,7 @@ public class UpdateContextStoreRequest extends TeaModel {
 
     public static class UpdateContextStoreRequestConfigSourceDataset extends TeaModel {
         /**
-         * <p>The list of custom field declarations. If provided, it fully overwrites the existing declarations.</p>
+         * <p>The list of custom field declarations. If specified, the entire list is overwritten.</p>
          */
         @NameInMap("customFields")
         public java.util.List<UpdateContextStoreRequestConfigSourceDatasetCustomFields> customFields;
@@ -498,7 +498,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public Boolean excludeDegraded;
 
         /**
-         * <p>The minimum number of steps, which must be greater than or equal to 0.</p>
+         * <p>The minimum number of steps. The value must be greater than or equal to 0.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -507,7 +507,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public Integer minStepCount;
 
         /**
-         * <p>The native SLS query statement. This statement is combined with the preceding conditions by using the AND operator.</p>
+         * <p>The native Simple Log Service (SLS) query statement, which is ANDed with the preceding conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>tool_names:&quot;search_order&quot;</p>
@@ -516,7 +516,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public String query;
 
         /**
-         * <p>The list of service names. A single trailing asterisk (*) is supported. Specifying an explicitly empty list returns a 400 error.</p>
+         * <p>The list of service names. A single trailing asterisk (*) is supported. An explicitly empty list returns a 400 error.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;crm-service&quot;,&quot;app-*&quot;]</p>
@@ -573,7 +573,7 @@ public class UpdateContextStoreRequest extends TeaModel {
 
     public static class UpdateContextStoreRequestConfigSourceTrajectoryScopeMapping extends TeaModel {
         /**
-         * <p>The JSONPath expression for the agentId field. Default value: $.agent_name.</p>
+         * <p>The JSONPath expression for agentId. Default value: $.agent_name.</p>
          * 
          * <strong>example:</strong>
          * <p>$.agent_name</p>
@@ -582,7 +582,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public String agentId;
 
         /**
-         * <p>The JSONPath expression for the appId field. Default value: $.service_names[0].</p>
+         * <p>The JSONPath expression for appId. Default value: $.service_names[0].</p>
          * 
          * <strong>example:</strong>
          * <p>$.service_names[0]</p>
@@ -591,7 +591,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public String appId;
 
         /**
-         * <p>The JSONPath expression for the runId field. Default value: $.trajectory_id.</p>
+         * <p>The JSONPath expression for runId. Default value: $.trajectory_id.</p>
          * 
          * <strong>example:</strong>
          * <p>$.trajectory_id</p>
@@ -600,7 +600,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public String runId;
 
         /**
-         * <p>The JSONPath expression for the userId field. By default, this field is not mapped.</p>
+         * <p>The JSONPath expression for userId. By default, this field is not mapped.</p>
          * 
          * <strong>example:</strong>
          * <p>$.trajectory_extensions.user_id</p>
@@ -649,7 +649,7 @@ public class UpdateContextStoreRequest extends TeaModel {
 
     public static class UpdateContextStoreRequestConfigSourceTrajectory extends TeaModel {
         /**
-         * <p>The trajectory filter conditions. Conditions are combined with AND, while items within a list are combined with OR.</p>
+         * <p>The trajectory filter conditions. Conditions are combined with AND, and elements within a list are combined with OR.</p>
          */
         @NameInMap("filter")
         public UpdateContextStoreRequestConfigSourceTrajectoryFilter filter;
@@ -673,7 +673,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public Integer pollIntervalSeconds;
 
         /**
-         * <p>The scope field mapping. The value must be a JSONPath expression. Only the $.a.b and $.a[0] formats are supported.</p>
+         * <p>The scope field mapping. The value is a JSONPath expression. Only the $.a.b and $.a[0] formats are supported.</p>
          */
         @NameInMap("scopeMapping")
         public UpdateContextStoreRequestConfigSourceTrajectoryScopeMapping scopeMapping;
@@ -719,7 +719,7 @@ public class UpdateContextStoreRequest extends TeaModel {
 
     public static class UpdateContextStoreRequestConfigSource extends TeaModel {
         /**
-         * <p>The AgentSpace where the trace data source is located. Cross-AgentSpace is not supported in the current phase. If provided, it must be equal to the path AgentSpace. Otherwise, a 400 parameter error is returned. The AgentSpace cannot be changed after creation.</p>
+         * <p>The AgentSpace where the trace data source is located. Cross-AgentSpace is not supported in the current phase. If specified, it must be equal to the path AgentSpace; otherwise, a 400 parameter error is returned. The AgentSpace cannot be changed after creation.</p>
          * 
          * <strong>example:</strong>
          * <p>my-agent-space</p>
@@ -734,7 +734,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public UpdateContextStoreRequestConfigSourceDataset dataset;
 
         /**
-         * <p>The start time for data backfill, in ISO 8601 UTC format.</p>
+         * <p>The start time for data backfill in ISO 8601 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-01T00:00:00Z</p>
@@ -789,7 +789,7 @@ public class UpdateContextStoreRequest extends TeaModel {
 
     public static class UpdateContextStoreRequestConfigStoragePolicy extends TeaModel {
         /**
-         * <p>The allowed storage actions. By default, all actions are allowed: ADD, UPDATE, MERGE, and DELETE.</p>
+         * <p>The allowed storage actions. Default value: all actions, including ADD, UPDATE, MERGE, and DELETE.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;ADD&quot;,&quot;UPDATE&quot;,&quot;MERGE&quot;,&quot;DELETE&quot;]</p>
@@ -798,7 +798,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public java.util.List<String> allowedActions;
 
         /**
-         * <p>Specifies whether to deduplicate events in event mode. Default value: true.</p>
+         * <p>Specifies whether to enable deduplication in event mode. Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -807,7 +807,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public Boolean dedupe;
 
         /**
-         * <p>Specifies whether to enable human edit protection. Default value: true. When this feature is enabled, automatic extraction does not overwrite manually modified memories.</p>
+         * <p>Specifies whether to enable manual edit protection. Default value: true. When enabled, automatic extraction does not overwrite manually modified memories.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -825,7 +825,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public String mergeKey;
 
         /**
-         * <p>The storage mode. Valid values: event (append events) and upsert (merge and update). Default value: upsert.</p>
+         * <p>The storage mode. Valid values: event (event append) and upsert (merge update). Default value: upsert.</p>
          * 
          * <strong>example:</strong>
          * <p>upsert</p>
@@ -843,7 +843,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public Double similarityThreshold;
 
         /**
-         * <p>The number of days before the memory expires. A value of 0 indicates that the memory never expires.</p>
+         * <p>The number of days before a memory expires. A value of 0 indicates that the memory never expires.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -928,7 +928,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public UpdateContextStoreRequestConfigExtractionPolicy extractionPolicy;
 
         /**
-         * <p>The metadata field mapping. The key is the business field, and the value is the storage field.</p>
+         * <p>The metadata field mapping. The key is the business field and the value is the storage field.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;userId&quot;:&quot;user_id&quot;,&quot;sessionId&quot;:&quot;session_id&quot;}</p>

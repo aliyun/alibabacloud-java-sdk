@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelPipelineRunResponseBody extends TeaModel {
     /**
-     * <p>The time when the cancellation was completed, in ISO 8601 UTC format.</p>
+     * <p>The time when the cancellation is completed, in the ISO 8601 UTC format.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CancelPipelineRunResponseBody extends TeaModel {
     public String finishTime;
 
     /**
-     * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID, which is used to locate the request during troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>

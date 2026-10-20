@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetPipelineStatsResponseBody extends TeaModel {
     /**
+     * <p>The end time of the statistical window in UNIX seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1735660800</p>
      */
@@ -12,6 +14,8 @@ public class GetPipelineStatsResponseBody extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The statistical granularity.</p>
+     * 
      * <strong>example:</strong>
      * <p>Hour</p>
      */
@@ -28,7 +32,7 @@ public class GetPipelineStatsResponseBody extends TeaModel {
     public String pipelineName;
 
     /**
-     * <p>The request ID, which is used to locate the request during troubleshooting.</p>
+     * <p>The request ID used to locate the request during troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
@@ -37,15 +41,23 @@ public class GetPipelineStatsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The start time of the statistical window in UNIX seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1735574400</p>
      */
     @NameInMap("startTime")
     public Long startTime;
 
+    /**
+     * <p>The aggregation summary.</p>
+     */
     @NameInMap("summary")
     public GetPipelineStatsResponseBodySummary summary;
 
+    /**
+     * <p>The time series data.</p>
+     */
     @NameInMap("timeSeries")
     public java.util.List<GetPipelineStatsResponseBodyTimeSeries> timeSeries;
 
@@ -112,6 +124,8 @@ public class GetPipelineStatsResponseBody extends TeaModel {
 
     public static class GetPipelineStatsResponseBodySummary extends TeaModel {
         /**
+         * <p>The average execution duration in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>2500</p>
          */
@@ -119,6 +133,8 @@ public class GetPipelineStatsResponseBody extends TeaModel {
         public Long avgElapsedMs;
 
         /**
+         * <p>The number of cancelled runs.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -126,6 +142,8 @@ public class GetPipelineStatsResponseBody extends TeaModel {
         public Long cancelledRuns;
 
         /**
+         * <p>The committed watermark in UNIX seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1735660800</p>
          */
@@ -133,6 +151,8 @@ public class GetPipelineStatsResponseBody extends TeaModel {
         public Long committedWatermark;
 
         /**
+         * <p>The number of failed runs.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -140,6 +160,8 @@ public class GetPipelineStatsResponseBody extends TeaModel {
         public Long failedRuns;
 
         /**
+         * <p>The schedule lag in seconds, calculated as the current time minus the watermark.</p>
+         * 
          * <strong>example:</strong>
          * <p>120</p>
          */
@@ -147,6 +169,8 @@ public class GetPipelineStatsResponseBody extends TeaModel {
         public Long scheduleLagSeconds;
 
         /**
+         * <p>The number of succeeded runs.</p>
+         * 
          * <strong>example:</strong>
          * <p>44</p>
          */
@@ -154,6 +178,8 @@ public class GetPipelineStatsResponseBody extends TeaModel {
         public Long succeededRuns;
 
         /**
+         * <p>The success rate, ranging from 0 to 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0</p>
          */
@@ -161,6 +187,8 @@ public class GetPipelineStatsResponseBody extends TeaModel {
         public Double successRate;
 
         /**
+         * <p>The total number of output bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>3221225472</p>
          */
@@ -168,6 +196,8 @@ public class GetPipelineStatsResponseBody extends TeaModel {
         public Long totalOutputBytes;
 
         /**
+         * <p>The total number of output rows.</p>
+         * 
          * <strong>example:</strong>
          * <p>1200000</p>
          */
@@ -175,6 +205,8 @@ public class GetPipelineStatsResponseBody extends TeaModel {
         public Long totalOutputRows;
 
         /**
+         * <p>The total number of processed bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>5368709120</p>
          */
@@ -182,6 +214,8 @@ public class GetPipelineStatsResponseBody extends TeaModel {
         public Long totalProcessedBytes;
 
         /**
+         * <p>The total number of processed rows.</p>
+         * 
          * <strong>example:</strong>
          * <p>1500000</p>
          */
@@ -189,6 +223,8 @@ public class GetPipelineStatsResponseBody extends TeaModel {
         public Long totalProcessedRows;
 
         /**
+         * <p>The total number of runs in the window.</p>
+         * 
          * <strong>example:</strong>
          * <p>44</p>
          */
@@ -300,6 +336,8 @@ public class GetPipelineStatsResponseBody extends TeaModel {
 
     public static class GetPipelineStatsResponseBodyTimeSeries extends TeaModel {
         /**
+         * <p>The average execution duration in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>2500</p>
          */
@@ -307,6 +345,8 @@ public class GetPipelineStatsResponseBody extends TeaModel {
         public Long avgElapsedMs;
 
         /**
+         * <p>The number of output bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>322122547</p>
          */
@@ -314,6 +354,8 @@ public class GetPipelineStatsResponseBody extends TeaModel {
         public Long outputBytes;
 
         /**
+         * <p>The number of output rows.</p>
+         * 
          * <strong>example:</strong>
          * <p>80000</p>
          */
@@ -321,6 +363,8 @@ public class GetPipelineStatsResponseBody extends TeaModel {
         public Long outputRows;
 
         /**
+         * <p>The number of processed bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>536870912</p>
          */
@@ -328,6 +372,8 @@ public class GetPipelineStatsResponseBody extends TeaModel {
         public Long processedBytes;
 
         /**
+         * <p>The number of processed rows.</p>
+         * 
          * <strong>example:</strong>
          * <p>100000</p>
          */
@@ -335,6 +381,8 @@ public class GetPipelineStatsResponseBody extends TeaModel {
         public Long processedRows;
 
         /**
+         * <p>The number of runs.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -342,6 +390,8 @@ public class GetPipelineStatsResponseBody extends TeaModel {
         public Long runs;
 
         /**
+         * <p>The number of succeeded runs.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -349,6 +399,8 @@ public class GetPipelineStatsResponseBody extends TeaModel {
         public Long succeededRuns;
 
         /**
+         * <p>The start timestamp of the time bucket in UNIX seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1735574400</p>
          */

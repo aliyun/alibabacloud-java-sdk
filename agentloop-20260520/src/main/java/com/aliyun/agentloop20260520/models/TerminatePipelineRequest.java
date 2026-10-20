@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TerminatePipelineRequest extends TeaModel {
     /**
+     * <p>The reason for termination.</p>
+     * 
      * <strong>example:</strong>
      * <p>project deprecated</p>
      */

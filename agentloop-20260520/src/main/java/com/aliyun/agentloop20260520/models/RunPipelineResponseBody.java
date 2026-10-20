@@ -14,7 +14,7 @@ public class RunPipelineResponseBody extends TeaModel {
     public String agentSpaceName;
 
     /**
-     * <p>The pipeline name.</p>
+     * <p>The name of the pipeline.</p>
      * 
      * <strong>example:</strong>
      * <p>my-pipeline</p>
@@ -23,7 +23,7 @@ public class RunPipelineResponseBody extends TeaModel {
     public String pipelineName;
 
     /**
-     * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID, which is used to locate the request during troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
@@ -32,7 +32,7 @@ public class RunPipelineResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The run ID created by this trigger.</p>
+     * <p>The ID of the run created by this trigger.</p>
      * 
      * <strong>example:</strong>
      * <p>run-20260101-0001</p>
@@ -41,7 +41,7 @@ public class RunPipelineResponseBody extends TeaModel {
     public String runId;
 
     /**
-     * <p>The current status of the run. The status is typically Pending after the run is queued.</p>
+     * <p>The current status of the run. The status is typically Pending after the run is enqueued.</p>
      * 
      * <strong>example:</strong>
      * <p>Pending</p>
