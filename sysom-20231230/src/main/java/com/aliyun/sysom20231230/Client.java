@@ -1589,6 +1589,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Queries published hotfixes in batches by CVE ID. You can filter the results by full kernel version.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the hotfixes and compatible packages for a CVE.</p>
+     * 
+     * @param request GetCveHotfixRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCveHotfixResponse
+     */
+    public GetCveHotfixResponse getCveHotfixWithOptions(GetCveHotfixRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cveIds)) {
+            body.put("cveIds", request.cveIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kernelVersions)) {
+            body.put("kernelVersions", request.kernelVersions);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCveHotfix"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/hotfixManager/hotfixes/cve"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCveHotfixResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries published hotfixes in batches by CVE ID. You can filter the results by full kernel version.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the hotfixes and compatible packages for a CVE.</p>
+     * 
+     * @param request GetCveHotfixRequest
+     * @return GetCveHotfixResponse
+     */
+    public GetCveHotfixResponse getCveHotfix(GetCveHotfixRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getCveHotfixWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be running. You can check the <code>data.status</code> field in the response to determine the status. When <code>data.status == Success</code>, the diagnosis is complete and you can read the diagnostic results from <code>data.result</code>.</p>
      * 
      * <b>summary</b> : 
@@ -3881,7 +3938,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of managed and unmanaged instances along with their instance information.</p>
+     * <p>Queries a list of managed and unmanaged instances along with their details.</p>
      * 
      * @param request ListAllInstancesRequest
      * @param headers map
@@ -3947,7 +4004,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of managed and unmanaged instances along with their instance information.</p>
+     * <p>Queries a list of managed and unmanaged instances along with their details.</p>
      * 
      * @param request ListAllInstancesRequest
      * @return ListAllInstancesResponse

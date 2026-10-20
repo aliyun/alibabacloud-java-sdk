@@ -14,7 +14,7 @@ public class ListAllInstancesRequest extends TeaModel {
     public String current;
 
     /**
-     * <p>The list of filter conditions.</p>
+     * <p>The list of filters.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -41,7 +41,7 @@ public class ListAllInstancesRequest extends TeaModel {
     public String managedType;
 
     /**
-     * <p>The maximum number of entries to return in a single request.</p>
+     * <p>The maximum number of records to return in a single request.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -50,9 +50,9 @@ public class ListAllInstancesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token.</p>
+     * <p>The pagination cursor.</p>
      * <blockquote>
-     * <p>If this parameter is not empty, more data is available.</p>
+     * <p>If this parameter is not empty, it indicates that more data is available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class ListAllInstancesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The number of entries per page. Default value: 10.</p>
+     * <p>The number of entries to return on each page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
