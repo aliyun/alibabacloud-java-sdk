@@ -4,10 +4,6 @@ package com.aliyun.agentidentitydata20251127.models;
 import com.aliyun.tea.*;
 
 public class GetWorkloadAccessTokenRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>test-workload-identity</p>
-     */
     @NameInMap("WorkloadIdentityName")
     public String workloadIdentityName;
 

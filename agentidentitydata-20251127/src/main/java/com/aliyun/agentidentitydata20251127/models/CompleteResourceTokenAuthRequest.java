@@ -4,10 +4,6 @@ package com.aliyun.agentidentitydata20251127.models;
 import com.aliyun.tea.*;
 
 public class CompleteResourceTokenAuthRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>urn:ietf:params:oauth:request_uri:3030cabc-<strong><strong>-</strong></strong>-****-d0054944102a</p>
-     */
     @NameInMap("SessionURI")
     public String sessionURI;
 
@@ -36,17 +32,9 @@ public class CompleteResourceTokenAuthRequest extends TeaModel {
     }
 
     public static class CompleteResourceTokenAuthRequestUserIdentifier extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>externalUser</p>
-         */
         @NameInMap("UserId")
         public String userId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>eyAgImFsZyI6ICJSU****</p>
-         */
         @NameInMap("UserJWT")
         public String userJWT;
 

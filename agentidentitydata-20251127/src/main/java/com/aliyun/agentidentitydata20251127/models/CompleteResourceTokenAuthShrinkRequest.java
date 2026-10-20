@@ -4,10 +4,6 @@ package com.aliyun.agentidentitydata20251127.models;
 import com.aliyun.tea.*;
 
 public class CompleteResourceTokenAuthShrinkRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>urn:ietf:params:oauth:request_uri:3030cabc-<strong><strong>-</strong></strong>-****-d0054944102a</p>
-     */
     @NameInMap("SessionURI")
     public String sessionURI;
 

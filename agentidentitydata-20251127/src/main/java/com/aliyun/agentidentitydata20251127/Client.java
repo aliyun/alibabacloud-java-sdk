@@ -151,6 +151,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ResourceCredentialProviderName", request.resourceCredentialProviderName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tokenVaultName)) {
+            body.put("TokenVaultName", request.tokenVaultName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workloadAccessToken)) {
             body.put("WorkloadAccessToken", request.workloadAccessToken);
         }
@@ -205,6 +209,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.audience)) {
+            body.put("Audience", request.audience);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.customParametersShrink)) {
             body.put("CustomParameters", request.customParametersShrink);
         }
@@ -235,6 +243,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sessionURI)) {
             body.put("SessionURI", request.sessionURI);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tokenVaultName)) {
+            body.put("TokenVaultName", request.tokenVaultName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workloadAccessToken)) {

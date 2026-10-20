@@ -4,17 +4,12 @@ package com.aliyun.agentidentitydata20251127.models;
 import com.aliyun.tea.*;
 
 public class GetResourceAPIKeyRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>test-api-key-provider</p>
-     */
     @NameInMap("ResourceCredentialProviderName")
     public String resourceCredentialProviderName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>eyAgImFsZyI6ICJSUzI1N****</p>
-     */
+    @NameInMap("TokenVaultName")
+    public String tokenVaultName;
+
     @NameInMap("WorkloadAccessToken")
     public String workloadAccessToken;
 
@@ -29,6 +24,14 @@ public class GetResourceAPIKeyRequest extends TeaModel {
     }
     public String getResourceCredentialProviderName() {
         return this.resourceCredentialProviderName;
+    }
+
+    public GetResourceAPIKeyRequest setTokenVaultName(String tokenVaultName) {
+        this.tokenVaultName = tokenVaultName;
+        return this;
+    }
+    public String getTokenVaultName() {
+        return this.tokenVaultName;
     }
 
     public GetResourceAPIKeyRequest setWorkloadAccessToken(String workloadAccessToken) {

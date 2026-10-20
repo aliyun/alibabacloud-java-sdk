@@ -4,17 +4,9 @@ package com.aliyun.agentidentitydata20251127.models;
 import com.aliyun.tea.*;
 
 public class GetResourceAPIKeyResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>sk-ds*****</p>
-     */
     @NameInMap("APIKey")
     public String APIKey;
 
-    /**
-     * <strong>example:</strong>
-     * <p>6E444C1B-1106-56A8-81E0-E3B049BF44AD</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

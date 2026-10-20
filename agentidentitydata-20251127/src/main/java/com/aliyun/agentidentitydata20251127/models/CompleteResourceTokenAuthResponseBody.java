@@ -4,10 +4,6 @@ package com.aliyun.agentidentitydata20251127.models;
 import com.aliyun.tea.*;
 
 public class CompleteResourceTokenAuthResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>6A3344F3-BFA1-5BCB-B5F5-17572C0D5586</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

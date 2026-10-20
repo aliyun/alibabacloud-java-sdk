@@ -6,66 +6,52 @@ import com.aliyun.tea.*;
 public class GetResourceOAuth2TokenShrinkRequest extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>{&quot;param1&quot;: &quot;test-param&quot;, &quot;param2&quot;: &quot;test-param2&quot;}</p>
+     * <p>app</p>
      */
+    @NameInMap("Audience")
+    public String audience;
+
     @NameInMap("CustomParameters")
     public String customParametersShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>user-defined-value</p>
-     */
     @NameInMap("CustomState")
     public String customState;
 
-    /**
-     * <strong>example:</strong>
-     * <p>False</p>
-     */
     @NameInMap("ForceAuthentication")
     public Boolean forceAuthentication;
 
-    /**
-     * <strong>example:</strong>
-     * <p>USER_FEDERATION</p>
-     */
     @NameInMap("OAuth2Flow")
     public String OAuth2Flow;
 
-    /**
-     * <strong>example:</strong>
-     * <p>oauth_credential_provider</p>
-     */
     @NameInMap("ResourceCredentialProviderName")
     public String resourceCredentialProviderName;
 
-    /**
-     * <strong>example:</strong>
-     * <p><a href="https://example.com">https://example.com</a></p>
-     */
     @NameInMap("ResourceOAuth2ReturnURL")
     public String resourceOAuth2ReturnURL;
 
     @NameInMap("Scopes")
     public String scopesShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>urn:ietf:params:oauth:request_uri:43b7df1a-<strong><strong>-</strong></strong>-****-709375a44d8a</p>
-     */
     @NameInMap("SessionURI")
     public String sessionURI;
 
-    /**
-     * <strong>example:</strong>
-     * <p>eyAgImFsZyI6ICJSUzI1N****</p>
-     */
+    @NameInMap("TokenVaultName")
+    public String tokenVaultName;
+
     @NameInMap("WorkloadAccessToken")
     public String workloadAccessToken;
 
     public static GetResourceOAuth2TokenShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         GetResourceOAuth2TokenShrinkRequest self = new GetResourceOAuth2TokenShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetResourceOAuth2TokenShrinkRequest setAudience(String audience) {
+        this.audience = audience;
+        return this;
+    }
+    public String getAudience() {
+        return this.audience;
     }
 
     public GetResourceOAuth2TokenShrinkRequest setCustomParametersShrink(String customParametersShrink) {
@@ -130,6 +116,14 @@ public class GetResourceOAuth2TokenShrinkRequest extends TeaModel {
     }
     public String getSessionURI() {
         return this.sessionURI;
+    }
+
+    public GetResourceOAuth2TokenShrinkRequest setTokenVaultName(String tokenVaultName) {
+        this.tokenVaultName = tokenVaultName;
+        return this;
+    }
+    public String getTokenVaultName() {
+        return this.tokenVaultName;
     }
 
     public GetResourceOAuth2TokenShrinkRequest setWorkloadAccessToken(String workloadAccessToken) {

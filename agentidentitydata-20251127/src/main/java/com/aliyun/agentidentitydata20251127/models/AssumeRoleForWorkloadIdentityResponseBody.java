@@ -10,10 +10,6 @@ public class AssumeRoleForWorkloadIdentityResponseBody extends TeaModel {
     @NameInMap("Credentials")
     public AssumeRoleForWorkloadIdentityResponseBodyCredentials credentials;
 
-    /**
-     * <strong>example:</strong>
-     * <p>B7F68680-F3FE-5BF1-A824-4DE0B1AC9B23</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -58,17 +54,9 @@ public class AssumeRoleForWorkloadIdentityResponseBody extends TeaModel {
     }
 
     public static class AssumeRoleForWorkloadIdentityResponseBodyAssumedRoleUser extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>acs:ram::113511544585****:role/testoidc/TestOidcAssumedRoleSession</p>
-         */
         @NameInMap("Arn")
         public String arn;
 
-        /**
-         * <strong>example:</strong>
-         * <p>33157794895460****</p>
-         */
         @NameInMap("AssumedRoleId")
         public String assumedRoleId;
 
@@ -96,31 +84,15 @@ public class AssumeRoleForWorkloadIdentityResponseBody extends TeaModel {
     }
 
     public static class AssumeRoleForWorkloadIdentityResponseBodyCredentials extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>STS.NTTcrF2UNgeshFRTj9i7hpkah</p>
-         */
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>3fNFJk4UA6KLEG2GXiBe9ZE43ejFRJsea1yT1rguTVY6</p>
-         */
         @NameInMap("AccessKeySecret")
         public String accessKeySecret;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-04-28T03:06:19Z</p>
-         */
         @NameInMap("Expiration")
         public String expiration;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CAIShwJ1q6Ft5B2yfSjIr5bSEsj4g7BihPWGWHz****</p>
-         */
         @NameInMap("SecurityToken")
         public String securityToken;
 
@@ -164,24 +136,15 @@ public class AssumeRoleForWorkloadIdentityResponseBody extends TeaModel {
     }
 
     public static class AssumeRoleForWorkloadIdentityResponseBodyWorkloadContextInfoUserContextJwtClaims extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>[&quot;test-aud&quot;,&quot;test-aud-2&quot;]</p>
-         */
         @NameInMap("Audiences")
         public String audiences;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://oauth.aliyun.com">https://oauth.aliyun.com</a></p>
-         */
         @NameInMap("Issuer")
         public String issuer;
 
-        /**
-         * <strong>example:</strong>
-         * <p>externalUser</p>
-         */
+        @NameInMap("JTI")
+        public String JTI;
+
         @NameInMap("Subject")
         public String subject;
 
@@ -206,6 +169,14 @@ public class AssumeRoleForWorkloadIdentityResponseBody extends TeaModel {
             return this.issuer;
         }
 
+        public AssumeRoleForWorkloadIdentityResponseBodyWorkloadContextInfoUserContextJwtClaims setJTI(String JTI) {
+            this.JTI = JTI;
+            return this;
+        }
+        public String getJTI() {
+            return this.JTI;
+        }
+
         public AssumeRoleForWorkloadIdentityResponseBodyWorkloadContextInfoUserContextJwtClaims setSubject(String subject) {
             this.subject = subject;
             return this;
@@ -220,10 +191,6 @@ public class AssumeRoleForWorkloadIdentityResponseBody extends TeaModel {
         @NameInMap("JwtClaims")
         public AssumeRoleForWorkloadIdentityResponseBodyWorkloadContextInfoUserContextJwtClaims jwtClaims;
 
-        /**
-         * <strong>example:</strong>
-         * <p>externalUser</p>
-         */
         @NameInMap("UserId")
         public String userId;
 
@@ -254,10 +221,6 @@ public class AssumeRoleForWorkloadIdentityResponseBody extends TeaModel {
         @NameInMap("UserContext")
         public AssumeRoleForWorkloadIdentityResponseBodyWorkloadContextInfoUserContext userContext;
 
-        /**
-         * <strong>example:</strong>
-         * <p>acs:agentidentity:cn-beijing:1778**<em><strong>8462:workloadidentitydirectory/default/workloadidentity/workload-bc7</strong></em></p>
-         */
         @NameInMap("WorkloadIdentityArn")
         public String workloadIdentityArn;
 

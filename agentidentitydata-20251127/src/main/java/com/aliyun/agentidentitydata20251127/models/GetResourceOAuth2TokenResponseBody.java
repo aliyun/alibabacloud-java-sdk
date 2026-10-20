@@ -4,38 +4,21 @@ package com.aliyun.agentidentitydata20251127.models;
 import com.aliyun.tea.*;
 
 public class GetResourceOAuth2TokenResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>66a1a2****0b93v3</p>
-     */
     @NameInMap("AccessToken")
     public String accessToken;
 
-    /**
-     * <strong>example:</strong>
-     * <p><a href="https://agentidentity.cn-beijing.aliyuncs.com/">https://agentidentity.cn-beijing.aliyuncs.com/</a>*****</p>
-     */
     @NameInMap("AuthorizationURL")
     public String authorizationURL;
 
-    /**
-     * <strong>example:</strong>
-     * <p>173C69C9-9C07-5B25-9477-603A33E5DA32</p>
-     */
+    @NameInMap("ExpiresIn")
+    public Long expiresIn;
+
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>IN_PROGRESS</p>
-     */
     @NameInMap("SessionStatus")
     public String sessionStatus;
 
-    /**
-     * <strong>example:</strong>
-     * <p>urn:ietf:params:oauth:request_uri:43b7df1a-<strong><strong>-</strong></strong>-****-709375a44d8a</p>
-     */
     @NameInMap("SessionURI")
     public String sessionURI;
 
@@ -58,6 +41,14 @@ public class GetResourceOAuth2TokenResponseBody extends TeaModel {
     }
     public String getAuthorizationURL() {
         return this.authorizationURL;
+    }
+
+    public GetResourceOAuth2TokenResponseBody setExpiresIn(Long expiresIn) {
+        this.expiresIn = expiresIn;
+        return this;
+    }
+    public Long getExpiresIn() {
+        return this.expiresIn;
     }
 
     public GetResourceOAuth2TokenResponseBody setRequestId(String requestId) {
