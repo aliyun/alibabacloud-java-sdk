@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateWorkflowDefinitionRequest extends TeaModel {
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace settings page to obtain the workspace ID.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Configuration page to obtain the workspace ID. You can also call the ListProjects operation to query the workspace ID of the current tenant.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,15 +15,15 @@ public class CreateWorkflowDefinitionRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The FlowSpec information that describes the workflow. For more information about the specification, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow">FlowSpec</a>.</p>
+     * <p>The FlowSpec information that describes the workflow. For more information about the specifications, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow">FlowSpec</a>.</p>
      * <blockquote>
-     * <p>How to quickly obtain a FlowSpec template?</p>
+     * <p>How do I quickly obtain a FlowSpec template?</p>
      * <ul>
-     * <li>Open a workflow in Data Studio, and then click &quot;Show Spec&quot; in the upper-right corner to obtain the FlowSpec description of the current workflow. You can use this FlowSpec description to quickly build a template that meets your requirements.</li>
+     * <li>Open a workflow in DataStudio and click Show Spec in the upper-right corner to obtain the FlowSpec description for the current workflow. You can quickly build a compliant template based on this FlowSpec description.</li>
      * </ul>
      * </blockquote>
      * <blockquote>
-     * <p>&lt;notice&gt;This operation only supports creating a workflow. Internal nodes described in FlowSpec are not created.&gt;&lt;/notice&gt;</p>
+     * <p>Notice: This operation only supports creating workflows. Internal nodes described in the FlowSpec are not created.</notice></p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

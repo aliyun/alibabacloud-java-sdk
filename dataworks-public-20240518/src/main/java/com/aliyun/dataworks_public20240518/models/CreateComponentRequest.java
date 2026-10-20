@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateComponentRequest extends TeaModel {
     /**
-     * <p>A reserved field.</p>
+     * <p>The reserved field.</p>
      * 
      * <strong>example:</strong>
      * <p>1AFAE64E-D1BE-432B-A9****</p>
@@ -24,7 +24,7 @@ public class CreateComponentRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The FlowSpec information that describes the workflow. For more information about the specification, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow/">FlowSpec</a>.</p>
+     * <p>The FlowSpec information that describes the workflow. For more information about the specifications, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow/">FlowSpec</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteComponentRequest extends TeaModel {
     /**
-     * <p>The component ID. This parameter can be used as a request parameter for querying the list of production studio components or modifying a production studio component.</p>
+     * <p>The ID of the component. You can use this ID as a request parameter to query the component list or modify a component.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class DeleteComponentRequest extends TeaModel {
 
     /**
      * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace management page to obtain the ID.</p>
-     * <p>This parameter specifies the DataWorks workspace for this API call operation.</p>
+     * <p>This parameter specifies the DataWorks workspace used to invoke this API operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
