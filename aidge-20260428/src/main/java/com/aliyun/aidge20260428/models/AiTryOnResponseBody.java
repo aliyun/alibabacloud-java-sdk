@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AiTryOnResponseBody extends TeaModel {
     /**
-     * <p>The error code. This parameter is not returned if the call is successful.</p>
+     * <p>The error code. This parameter is not returned when the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class AiTryOnResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The result struct.</p>
+     * <p>The returned result struct.</p>
      */
     @NameInMap("Data")
     public AiTryOnResponseBodyData data;
 
     /**
-     * <p>The error message. This parameter is not returned if the call is successful.</p>
+     * <p>The error message. This parameter is not returned when the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -29,7 +29,7 @@ public class AiTryOnResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID. Used to uniquely identify a request.</p>
+     * <p>The request ID, which is used to identify a unique request.</p>
      * 
      * <strong>example:</strong>
      * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>
@@ -38,7 +38,11 @@ public class AiTryOnResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values: true and false.</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call fails.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -102,7 +106,7 @@ public class AiTryOnResponseBody extends TeaModel {
         public Long processedImageCount;
 
         /**
-         * <p>The resolution of the processed image.</p>
+         * <p>The resolution of the processed images.</p>
          * 
          * <strong>example:</strong>
          * <p>1K</p>
@@ -135,7 +139,7 @@ public class AiTryOnResponseBody extends TeaModel {
 
     public static class AiTryOnResponseBodyData extends TeaModel {
         /**
-         * <p>The height of the result image, in pixels.</p>
+         * <p>The height of the result image in pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>1360</p>
@@ -153,7 +157,7 @@ public class AiTryOnResponseBody extends TeaModel {
         public String imageUrl;
 
         /**
-         * <p>The width of the result image, in pixels.</p>
+         * <p>The width of the result image in pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>768</p>

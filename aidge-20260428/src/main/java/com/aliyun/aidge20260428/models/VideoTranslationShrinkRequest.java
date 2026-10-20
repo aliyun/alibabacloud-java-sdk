@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class VideoTranslationShrinkRequest extends TeaModel {
     /**
-     * <p>The list of translation features. Valid values: speech and visual. You can select both. At least one feature is required. Duplicate values are not accepted.</p>
+     * <p>The list of translation features. Valid values: <code>speech</code> and <code>visual</code>. You can select both. At least one feature must be specified. Duplicate values are not allowed.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Capabilities")
     public String capabilitiesShrink;
 
     /**
-     * <p>Specifies whether to enable the quality check for on-screen text processing. Default value: false. The quality check is enabled when visual is included and this parameter is explicitly set to true. If only speech is selected, this parameter is ignored, no quality check is performed, no quality check fields are returned, and no errors are reported due to this parameter. Enabling the quality check may increase the waiting time. Do not enable it unless necessary.</p>
+     * <p>Specifies whether to enable the quality check for on-screen text processing. Default value: <code>false</code>. The quality check is enabled only when <code>visual</code> is included and this parameter is explicitly set to <code>true</code>. If only <code>speech</code> is selected, this parameter is ignored. No quality check is performed, no quality check fields are returned, and no errors are reported due to this parameter. Enabling the quality check may increase the waiting time. Do not enable it unless necessary.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -21,7 +21,7 @@ public class VideoTranslationShrinkRequest extends TeaModel {
     public Boolean enableQualityCheck;
 
     /**
-     * <p>Specifies whether to only erase the source language text in the video frames without translating it. This parameter is valid only when visual is included. Valid values: true (erases only) and false (translates the on-screen text). Default value: false.</p>
+     * <p>Specifies whether to only erase the source language text on the screen without translating it. This parameter is valid only when <code>visual</code> is included. Valid values: <code>true</code> (only erases the text) and <code>false</code> (translates the on-screen text). Default value: <code>false</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -30,7 +30,7 @@ public class VideoTranslationShrinkRequest extends TeaModel {
     public Boolean eraseOnly;
 
     /**
-     * <p>Specifies whether to erase brand logos. This parameter is valid only when visual is included. Valid values: true (erases brand logos) and false (retains logos). Default value: false. This parameter is independent of eraseOnly.</p>
+     * <p>Specifies whether to remove the brand logo. This parameter is valid only when <code>visual</code> is included. Valid values: <code>true</code> (removes the brand logo) and <code>false</code> (retains the logo). Default value: <code>false</code>. This parameter is independent of <code>EraseOnly</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -48,7 +48,7 @@ public class VideoTranslationShrinkRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
-     * <p>The subtitle processing mode. This parameter is valid only when speech is included. Valid values: erase (erases only the original subtitles) and replace (erases the original subtitles and adds new subtitles). If this parameter is omitted, the original subtitles are not processed and no new subtitles are added.</p>
+     * <p>The subtitle processing mode. This parameter is valid only when <code>speech</code> is included. Valid values: <code>erase</code> (removes only the original subtitles) and <code>replace</code> (removes the original subtitles and adds new subtitles). If this parameter is omitted, the original subtitles are not processed and no new subtitles are added.</p>
      * 
      * <strong>example:</strong>
      * <p>erase</p>
@@ -66,7 +66,7 @@ public class VideoTranslationShrinkRequest extends TeaModel {
     public String targetLanguage;
 
     /**
-     * <p>The URL of the video. Supported formats: MP4 and MOV. Maximum size: 200 MB.</p>
+     * <p>The video URL. Supported formats: MP4 and MOV. Maximum size: 200 MB.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
