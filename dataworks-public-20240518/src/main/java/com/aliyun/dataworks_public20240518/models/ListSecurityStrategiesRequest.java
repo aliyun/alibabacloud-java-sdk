@@ -23,7 +23,7 @@ public class ListSecurityStrategiesRequest extends TeaModel {
     public String controlSubModule;
 
     /**
-     * <p>The page number. Starts from 1. Default: 1.</p>
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class ListSecurityStrategiesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default: 20.</p>
+     * <p>The number of entries per page. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

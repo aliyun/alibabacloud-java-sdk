@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class FindBestMatchSecurityStrategyRequest extends TeaModel {
     /**
-     * <p>Control module, used to match the security policy type.</p>
+     * <p>The control module used to match the security policy type.</p>
      * 
      * <strong>example:</strong>
      * <p>DataQuery</p>
@@ -14,7 +14,7 @@ public class FindBestMatchSecurityStrategyRequest extends TeaModel {
     public String controlModule;
 
     /**
-     * <p>Control sub-module, used to match the security policy type.</p>
+     * <p>The control submodule used to match the security policy type.</p>
      * 
      * <strong>example:</strong>
      * <p>MyCatalog</p>
@@ -23,7 +23,7 @@ public class FindBestMatchSecurityStrategyRequest extends TeaModel {
     public String controlSubModule;
 
     /**
-     * <p><strong>Workspace ID</strong>, used to precisely match workspace-level policies.</p>
+     * <p>The <strong>workspace ID</strong> used for exact match of the workspace-level policy.</p>
      * 
      * <strong>example:</strong>
      * <p>12345</p>

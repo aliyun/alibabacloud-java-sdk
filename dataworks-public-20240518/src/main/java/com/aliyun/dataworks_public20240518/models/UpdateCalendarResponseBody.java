@@ -1,0 +1,46 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.dataworks_public20240518.models;
+
+import com.aliyun.tea.*;
+
+public class UpdateCalendarResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <p>The updated version number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
+    @NameInMap("Version")
+    public Integer version;
+
+    public static UpdateCalendarResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateCalendarResponseBody self = new UpdateCalendarResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public UpdateCalendarResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public UpdateCalendarResponseBody setVersion(Integer version) {
+        this.version = version;
+        return this;
+    }
+    public Integer getVersion() {
+        return this.version;
+    }
+
+}

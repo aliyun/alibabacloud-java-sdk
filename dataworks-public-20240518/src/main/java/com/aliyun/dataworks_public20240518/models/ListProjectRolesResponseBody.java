@@ -11,7 +11,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
     public ListProjectRolesResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>The request ID. Used to locate logs and troubleshoot issues.</p>
+     * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>61649187-0BCF-5E75-8D4B-64FDBEBBB447</p>
@@ -42,6 +42,8 @@ public class ListProjectRolesResponseBody extends TeaModel {
 
     public static class ListProjectRolesResponseBodyPagingInfoProjectRolesModulePermissions extends TeaModel {
         /**
+         * <p>The ID of the DataWorks module.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -49,6 +51,8 @@ public class ListProjectRolesResponseBody extends TeaModel {
         public Long moduleId;
 
         /**
+         * <p>The name of the DataWorks module.</p>
+         * 
          * <strong>example:</strong>
          * <p>HoloStudio</p>
          */
@@ -56,6 +60,8 @@ public class ListProjectRolesResponseBody extends TeaModel {
         public String moduleName;
 
         /**
+         * <p>The type of the permission.</p>
+         * 
          * <strong>example:</strong>
          * <p>Read</p>
          */
@@ -95,7 +101,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
 
     public static class ListProjectRolesResponseBodyPagingInfoProjectRoles extends TeaModel {
         /**
-         * <p>The role code of the workspace.</p>
+         * <p>The code of the workspace role.</p>
          * 
          * <strong>example:</strong>
          * <p>role_project_guest</p>
@@ -103,11 +109,14 @@ public class ListProjectRolesResponseBody extends TeaModel {
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The list of DataWorks product module permissions granted to the role.</p>
+         */
         @NameInMap("ModulePermissions")
         public java.util.List<ListProjectRolesResponseBodyPagingInfoProjectRolesModulePermissions> modulePermissions;
 
         /**
-         * <p>The role name of the workspace.</p>
+         * <p>The name of the workspace role.</p>
          * 
          * <strong>example:</strong>
          * <p>Visitors</p>
@@ -117,7 +126,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the DataWorks workspace.</p>
-         * <p>Note: For system default workspace roles, ProjectId returns a fixed value of -1.</p>
+         * <p>Note: For default system workspace roles, the value of ProjectId is fixed to -1.</p>
          * 
          * <strong>example:</strong>
          * <p>21229</p>
@@ -126,7 +135,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The role type of the workspace.</p>
+         * <p>The type of the workspace role.</p>
          * 
          * <strong>example:</strong>
          * <p>System</p>
@@ -183,7 +192,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
 
     public static class ListProjectRolesResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>The requested page number. Used for pagination.</p>
+         * <p>The page number of the requested data.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -207,7 +216,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
         public java.util.List<ListProjectRolesResponseBodyPagingInfoProjectRoles> projectRoles;
 
         /**
-         * <p>The total number of entries that meet the filter conditions.</p>
+         * <p>The total number of entries that meet the specified conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>42</p>

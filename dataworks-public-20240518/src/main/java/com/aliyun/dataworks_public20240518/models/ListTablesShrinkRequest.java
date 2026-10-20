@@ -14,7 +14,7 @@ public class ListTablesShrinkRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>Specifies whether to return extended properties. Set this parameter to <code>true</code> to return extended properties or <code>false</code> to not return them.</p>
+     * <p>Specifies whether to return extended properties. If this parameter is set to <code>true</code>, extended properties are returned. If this parameter is set to <code>false</code>, extended properties are not returned.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -54,7 +54,7 @@ public class ListTablesShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page size. Default value: 10. Maximum value: 100.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -63,25 +63,25 @@ public class ListTablesShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the parent-level metadata entity. You can obtain this value from the response of the ListDatabases or ListSchemas operation. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</p>
+     * <p>The ID of the parent metadata entity. You can refer to the response of the ListDatabases or ListSchemas operation, or see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</p>
      * <ul>
-     * <li><p>The value can be the database to which the table belongs. The format of <code>ParentMetaEntityId</code> is <code>${EntityType}:${InstanceID or encoded URL}:${DataCatalogIdentifier}:${DatabaseName}</code>. Use an empty string as a placeholder for levels that do not exist.</p>
+     * <li><p>The parent entity can be the database to which the table belongs. The <code>ParentMetaEntityId</code> format is <code>${EntityType}:${Instance ID or URL-encoded JDBC URL}:${Data catalog identifier}:${Database name}</code>. Use an empty string as a placeholder for non-existent levels.</p>
      * </li>
-     * <li><p>The value can also be the database schema to which the table belongs. The format of <code>ParentMetaEntityId</code> is <code>${EntityType}:${InstanceID or encoded URL}:${DataCatalogIdentifier}:${DatabaseName}:${SchemaName}</code>. Use an empty string as a placeholder for levels that do not exist.</p>
+     * <li><p>The parent entity can also be the database schema to which the table belongs. The <code>ParentMetaEntityId</code> format is <code>${EntityType}:${Instance ID or URL-encoded JDBC URL}:${Data catalog identifier}:${Database name}:${Schema name}</code>. Use an empty string as a placeholder for non-existent levels.</p>
      * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>You can set <code>ParentMetaEntityId</code> to a database schema only when the database type supports schemas (<code>maxcompute/holo/postgresql/sqlserver/hybriddb_for_postgresql/oracle</code>, where the three-layer model must be enabled for the maxcompute type). Otherwise, you can set it only to a database.</li>
-     * <li>For the maxcompute and dlf types, use an empty string as a placeholder for the instance ID. For the maxcompute type, the database name is the MaxCompute project name.</li>
-     * <li>For the starrocks type, the data catalog identifier is the catalog name. For the dlf type, the data catalog identifier is the catalog ID. Other types do not support the catalog level, and you can use an empty string as a placeholder.</li>
+     * <li>The database schema can be used for <code>ParentMetaEntityId</code> only when the database type supports schemas (<code>maxcompute</code>, <code>holo</code>, <code>postgresql</code>, <code>sqlserver</code>, <code>hybriddb_for_postgresql</code>, or <code>oracle</code>). For MaxCompute, the three-level model must be enabled. Otherwise, only the database can be used.</li>
+     * <li>For MaxCompute and DLF types, use an empty string as a placeholder for the instance ID. For MaxCompute, the database name is the MaxCompute project name.</li>
+     * <li>For StarRocks, the data catalog identifier is the catalog name. For DLF, the data catalog identifier is the catalog ID. Other types do not support the catalog level, so use an empty string as a placeholder.</li>
      * </ul>
      * </blockquote>
-     * <p>The following examples show the format of ParentMetaEntityId for common types:</p>
+     * <p>Examples of <code>ParentMetaEntityId</code> formats for common types:</p>
      * <ul>
      * <li><p><code>maxcompute-project:::project_name</code></p>
      * </li>
-     * <li><p><code>maxcompute-schema:::project_name:schema_name</code> (only when the three-layer model is enabled for the project)</p>
+     * <li><p><code>maxcompute-schema:::project_name:schema_name</code> (only when the three-level model is enabled for the project)</p>
      * </li>
      * <li><p><code>dlf-database::catalog_id:database_name</code></p>
      * </li>
@@ -95,12 +95,12 @@ public class ListTablesShrinkRequest extends TeaModel {
      * <blockquote>
      * <p>Where:  </p>
      * <ul>
-     * <li><code>instance_id</code>: The instance ID. This value is required when the data source is registered in instance mode.</li>
-     * <li><code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string. This value is required when the data source is registered by using a connection string.</li>
-     * <li><code>catalog_id</code>: The DLF catalog ID.</li>
-     * <li><code>project_name</code>: The MaxCompute project name.</li>
-     * <li><code>database_name</code>: The database name.</li>
-     * <li><code>schema_name</code>: The schema name.</li>
+     * <li><code>instance_id</code>: the instance ID, which is required when the data source is registered in instance mode.</li>
+     * <li><code>encoded_jdbc_url</code>: the URL-encoded JDBC connection string, which is required when the data source is registered by using a connection string.</li>
+     * <li><code>catalog_id</code>: the DLF catalog ID.</li>
+     * <li><code>project_name</code>: the MaxCompute project name.</li>
+     * <li><code>database_name</code>: the database name.</li>
+     * <li><code>schema_name</code>: the schema name.</li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
@@ -112,7 +112,7 @@ public class ListTablesShrinkRequest extends TeaModel {
     public String parentMetaEntityId;
 
     /**
-     * <p>The field by which to sort the results. Default value: CreateTime. Valid values:</p>
+     * <p>The field used for sorting. Default value: CreateTime. Valid values:</p>
      * <ul>
      * <li>CreateTime: creation time</li>
      * <li>ModifyTime: modification time</li>
@@ -127,7 +127,7 @@ public class ListTablesShrinkRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The list of table types to query. If this parameter is left empty, all types are queried.</p>
+     * <p>The list of table types to query. If this parameter is left empty, all table types are queried.</p>
      */
     @NameInMap("TableTypes")
     public String tableTypesShrink;

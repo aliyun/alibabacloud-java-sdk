@@ -1514,6 +1514,110 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>You must purchase DataWorks Enterprise Edition to use this feature.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a scheduling calendar.</p>
+     * 
+     * @param tmpReq CreateCalendarRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCalendarResponse
+     */
+    public CreateCalendarResponse createCalendarWithOptions(CreateCalendarRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateCalendarShrinkRequest request = new CreateCalendarShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.projectIds)) {
+            request.projectIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.projectIds, "ProjectIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.schedulePolicy)) {
+            request.schedulePolicyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.schedulePolicy, "SchedulePolicy", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allProjects)) {
+            body.put("AllProjects", request.allProjects);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            body.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expirationReminder)) {
+            body.put("ExpirationReminder", request.expirationReminder);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fallbackPolicy)) {
+            body.put("FallbackPolicy", request.fallbackPolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.overduePolicy)) {
+            body.put("OverduePolicy", request.overduePolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.owner)) {
+            body.put("Owner", request.owner);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectIdsShrink)) {
+            body.put("ProjectIds", request.projectIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schedulePolicyShrink)) {
+            body.put("SchedulePolicy", request.schedulePolicyShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("StartDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCalendar"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCalendarResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Enterprise Edition to use this feature.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a scheduling calendar.</p>
+     * 
+     * @param request CreateCalendarRequest
+     * @return CreateCalendarResponse
+     */
+    public CreateCalendarResponse createCalendar(CreateCalendarRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCalendarWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <blockquote>
      * <p>Notice: This operation does not support batch operations. If you specify multiple publish entities in the parameters, all entities except the first one are ignored.</p>
      * </blockquote>
@@ -5632,10 +5736,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Basic Edition or later is required.</p>
+     * <p>You must purchase DataWorks Basic Edition or a later edition to use this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a workflow instance based on the specified configurations, such as a data backfill workflow instance.</p>
+     * <p>Creates a workflow instance based on configurations, such as a data backfill workflow instance.</p>
      * 
      * @param tmpReq CreateWorkflowInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5729,10 +5833,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Basic Edition or later is required.</p>
+     * <p>You must purchase DataWorks Basic Edition or a later edition to use this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a workflow instance based on the specified configurations, such as a data backfill workflow instance.</p>
+     * <p>Creates a workflow instance based on configurations, such as a data backfill workflow instance.</p>
      * 
      * @param request CreateWorkflowInstancesRequest
      * @return CreateWorkflowInstancesResponse
@@ -5888,6 +5992,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteBusinessResponse deleteBusiness(DeleteBusinessRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteBusinessWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>DataWorks Enterprise Edition is required.
+     * You cannot delete a scheduling calendar that is referenced by nodes. Remove the node references first.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a scheduling calendar.</p>
+     * 
+     * @param request DeleteCalendarRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCalendarResponse
+     */
+    public DeleteCalendarResponse deleteCalendarWithOptions(DeleteCalendarRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCalendar"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCalendarResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>DataWorks Enterprise Edition is required.
+     * You cannot delete a scheduling calendar that is referenced by nodes. Remove the node references first.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a scheduling calendar.</p>
+     * 
+     * @param request DeleteCalendarRequest
+     * @return DeleteCalendarResponse
+     */
+    public DeleteCalendarResponse deleteCalendar(DeleteCalendarRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCalendarWithOptions(request, runtime);
     }
 
     /**
@@ -9102,11 +9258,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request Description</h2>
-     * <p>This API is used to find the most suitable security policy based on the provided control module, sub-module, and workspace ID. If a workspace ID is provided, the policy at the specified workspace level is matched first; otherwise, the tenant-level policy is returned. Note that system policies cannot be deleted or modified.</p>
+     * <h2>Operation description</h2>
+     * <p>This API operation queries the most suitable security policy based on the provided control module, submodule, and workspace ID. If a workspace ID is provided, the system preferentially matches policies at the specified workspace level. Otherwise, tenant-level policies are returned. Note that system policies cannot be deleted or modified.</p>
      * 
      * <b>summary</b> : 
-     * <p>Find the security policy that best matches the given conditions.</p>
+     * <p>Queries the best-matching security policy based on specified conditions.</p>
      * 
      * @param request FindBestMatchSecurityStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9146,11 +9302,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request Description</h2>
-     * <p>This API is used to find the most suitable security policy based on the provided control module, sub-module, and workspace ID. If a workspace ID is provided, the policy at the specified workspace level is matched first; otherwise, the tenant-level policy is returned. Note that system policies cannot be deleted or modified.</p>
+     * <h2>Operation description</h2>
+     * <p>This API operation queries the most suitable security policy based on the provided control module, submodule, and workspace ID. If a workspace ID is provided, the system preferentially matches policies at the specified workspace level. Otherwise, tenant-level policies are returned. Note that system policies cannot be deleted or modified.</p>
      * 
      * <b>summary</b> : 
-     * <p>Find the security policy that best matches the given conditions.</p>
+     * <p>Queries the best-matching security policy based on specified conditions.</p>
      * 
      * @param request FindBestMatchSecurityStrategyRequest
      * @return FindBestMatchSecurityStrategyResponse
@@ -9550,6 +9706,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetBusinessResponse getBusiness(GetBusinessRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getBusinessWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>DataWorks Enterprise Edition is required to use this API.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the current configuration of a specified scheduling calendar.</p>
+     * 
+     * @param request GetCalendarRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCalendarResponse
+     */
+    public GetCalendarResponse getCalendarWithOptions(GetCalendarRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCalendar"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCalendarResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>DataWorks Enterprise Edition is required to use this API.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the current configuration of a specified scheduling calendar.</p>
+     * 
+     * @param request GetCalendarRequest
+     * @return GetCalendarResponse
+     */
+    public GetCalendarResponse getCalendar(GetCalendarRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCalendarWithOptions(request, runtime);
     }
 
     /**
@@ -12379,16 +12585,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API retrieves the complete configuration information for a security policy by its ID.</li>
-     * <li>The API returns an error message if the provided <code>Id</code> is invalid or does not exist.</li>
-     * <li>The response includes basic policy information, such as its name and description, and policy details, such as control items and their settings.</li>
-     * <li>Note: Some fields in a system default policy cannot be modified or deleted.</li>
+     * <li>This API retrieves all configuration information of a specific security policy by using the specified security policy ID.</li>
+     * <li>Ensure that the provided <code>Id</code> parameter value is valid and exists. Otherwise, an error message is returned.</li>
+     * <li>The returned data structure includes the basic information of the policy, such as the name and description, and the detailed policy content, such as control items and their settings.</li>
+     * <li>Note: Some fields of system default policies may be protected from modification or deletion.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a security policy by its ID. This operation requires both DataWorks tenant administrator and security administrator permissions.</p>
+     * <p>Retrieves the details of a security policy based on the provided security policy ID.</p>
      * 
      * @param request GetSecurityStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12420,16 +12626,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API retrieves the complete configuration information for a security policy by its ID.</li>
-     * <li>The API returns an error message if the provided <code>Id</code> is invalid or does not exist.</li>
-     * <li>The response includes basic policy information, such as its name and description, and policy details, such as control items and their settings.</li>
-     * <li>Note: Some fields in a system default policy cannot be modified or deleted.</li>
+     * <li>This API retrieves all configuration information of a specific security policy by using the specified security policy ID.</li>
+     * <li>Ensure that the provided <code>Id</code> parameter value is valid and exists. Otherwise, an error message is returned.</li>
+     * <li>The returned data structure includes the basic information of the policy, such as the name and description, and the detailed policy content, such as control items and their settings.</li>
+     * <li>Note: Some fields of system default policies may be protected from modification or deletion.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a security policy by its ID. This operation requires both DataWorks tenant administrator and security administrator permissions.</p>
+     * <p>Retrieves the details of a security policy based on the provided security policy ID.</p>
      * 
      * @param request GetSecurityStrategyRequest
      * @return GetSecurityStrategyResponse
@@ -13833,6 +14039,134 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListBusinessResponse listBusiness(ListBusinessRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listBusinessWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>DataWorks Enterprise Edition is required.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the versions of a specified scheduling calendar.</p>
+     * 
+     * @param request ListCalendarVersionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCalendarVersionsResponse
+     */
+    public ListCalendarVersionsResponse listCalendarVersionsWithOptions(ListCalendarVersionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCalendarVersions"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCalendarVersionsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>DataWorks Enterprise Edition is required.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the versions of a specified scheduling calendar.</p>
+     * 
+     * @param request ListCalendarVersionsRequest
+     * @return ListCalendarVersionsResponse
+     */
+    public ListCalendarVersionsResponse listCalendarVersions(ListCalendarVersionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCalendarVersionsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>DataWorks Enterprise Edition is required.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of scheduling calendars.</p>
+     * 
+     * @param request ListCalendarsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCalendarsResponse
+     */
+    public ListCalendarsResponse listCalendarsWithOptions(ListCalendarsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.owner)) {
+            body.put("Owner", request.owner);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            body.put("SortBy", request.sortBy);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCalendars"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCalendarsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>DataWorks Enterprise Edition is required.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of scheduling calendars.</p>
+     * 
+     * @param request ListCalendarsRequest
+     * @return ListCalendarsResponse
+     */
+    public ListCalendarsResponse listCalendars(ListCalendarsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCalendarsWithOptions(request, runtime);
     }
 
     /**
@@ -18258,10 +18592,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <p>You must purchase DataWorks Basic Edition or later to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of workspace roles with pagination.</p>
+     * <p>Queries the details of workspace roles by paging.</p>
      * 
      * @param tmpReq ListProjectRolesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18323,10 +18657,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <p>You must purchase DataWorks Basic Edition or later to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of workspace roles with pagination.</p>
+     * <p>Queries the details of workspace roles by paging.</p>
      * 
      * @param request ListProjectRolesRequest
      * @return ListProjectRolesResponse
@@ -18786,16 +19120,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API retrieves a paginated list of configured security policies.</li>
-     * <li>The <code>ControlModule</code> and <code>ControlSubModule</code> parameters filter policies by a specific module or submodule.</li>
-     * <li>The <code>PageNum</code> and <code>PageSize</code> parameters control pagination. <code>PageNum</code> specifies the page number to retrieve (default: 1), and <code>PageSize</code> specifies the number of policies to return per page (default: 20).</li>
-     * <li>Use the <code>MaxResults</code> and <code>NextToken</code> private parameters for advanced pagination.</li>
+     * <li>This operation retrieves the configured security policies in the system in pages.</li>
+     * <li>You can use the <code>ControlModule</code> and <code>ControlSubModule</code> parameters to filter policies under specific modules or submodules.</li>
+     * <li>The pagination parameters include <code>PageNum</code> and <code>PageSize</code>, which indicate the page number and the number of entries per page. The default values are 1 and 20.</li>
+     * <li>If you need further pagination control, you can use the <code>MaxResults</code> and <code>NextToken</code> parameters (private parameters).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a paginated list of security policies based on specified conditions. This operation requires DataWorks tenant administrator or security administrator permissions.</p>
+     * <p>Retrieves a paginated list of security policies in the system based on specified conditions. This operation requires DataWorks tenant administrator and security administrator permissions.</p>
      * 
      * @param request ListSecurityStrategiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18839,16 +19173,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API retrieves a paginated list of configured security policies.</li>
-     * <li>The <code>ControlModule</code> and <code>ControlSubModule</code> parameters filter policies by a specific module or submodule.</li>
-     * <li>The <code>PageNum</code> and <code>PageSize</code> parameters control pagination. <code>PageNum</code> specifies the page number to retrieve (default: 1), and <code>PageSize</code> specifies the number of policies to return per page (default: 20).</li>
-     * <li>Use the <code>MaxResults</code> and <code>NextToken</code> private parameters for advanced pagination.</li>
+     * <li>This operation retrieves the configured security policies in the system in pages.</li>
+     * <li>You can use the <code>ControlModule</code> and <code>ControlSubModule</code> parameters to filter policies under specific modules or submodules.</li>
+     * <li>The pagination parameters include <code>PageNum</code> and <code>PageSize</code>, which indicate the page number and the number of entries per page. The default values are 1 and 20.</li>
+     * <li>If you need further pagination control, you can use the <code>MaxResults</code> and <code>NextToken</code> parameters (private parameters).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a paginated list of security policies based on specified conditions. This operation requires DataWorks tenant administrator or security administrator permissions.</p>
+     * <p>Retrieves a paginated list of security policies in the system based on specified conditions. This operation requires DataWorks tenant administrator and security administrator permissions.</p>
      * 
      * @param request ListSecurityStrategiesRequest
      * @return ListSecurityStrategiesResponse
@@ -19367,11 +19701,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li>You must purchase DataWorks Basic Edition or later to use this API.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of data tables in DataWorks Data Map. For types that do not support the schema level, you can query data tables under a specified database. For types that support the schema level, you can query data tables under a specified database, MaxCompute project, or schema. The response contains only basic table information and does not include technical metadata or business metadata.</p>
+     * <p>Queries the tables in Data Map. For types that do not support the schema level, this operation queries the tables in a specified database. For types that support the schema level, this operation queries the tables in a specified database, MaxCompute project, or schema. The response contains only basic table information and does not include technical or business metadata. For non-MaxCompute types, the response is not real-time and may be delayed by up to 1 hour compared to the metadata collection results.</p>
      * 
      * @param tmpReq ListTablesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19406,11 +19740,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li>You must purchase DataWorks Basic Edition or later to use this API.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of data tables in DataWorks Data Map. For types that do not support the schema level, you can query data tables under a specified database. For types that support the schema level, you can query data tables under a specified database, MaxCompute project, or schema. The response contains only basic table information and does not include technical metadata or business metadata.</p>
+     * <p>Queries the tables in Data Map. For types that do not support the schema level, this operation queries the tables in a specified database. For types that support the schema level, this operation queries the tables in a specified database, MaxCompute project, or schema. The response contains only basic table information and does not include technical or business metadata. For non-MaxCompute types, the response is not real-time and may be delayed by up to 1 hour compared to the metadata collection results.</p>
      * 
      * @param request ListTablesRequest
      * @return ListTablesResponse
@@ -22764,6 +23098,112 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateBusinessResponse updateBusiness(UpdateBusinessRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateBusinessWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Enterprise Edition to use this feature.
+     * The calendar name cannot be modified. Unsubmitted dates are not retained.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a scheduling calendar. This is a full update that requires you to submit the complete editable configuration.</p>
+     * 
+     * @param tmpReq UpdateCalendarRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCalendarResponse
+     */
+    public UpdateCalendarResponse updateCalendarWithOptions(UpdateCalendarRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateCalendarShrinkRequest request = new UpdateCalendarShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.projectIds)) {
+            request.projectIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.projectIds, "ProjectIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.schedulePolicy)) {
+            request.schedulePolicyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.schedulePolicy, "SchedulePolicy", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allProjects)) {
+            body.put("AllProjects", request.allProjects);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            body.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expirationReminder)) {
+            body.put("ExpirationReminder", request.expirationReminder);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fallbackPolicy)) {
+            body.put("FallbackPolicy", request.fallbackPolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.overduePolicy)) {
+            body.put("OverduePolicy", request.overduePolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.owner)) {
+            body.put("Owner", request.owner);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectIdsShrink)) {
+            body.put("ProjectIds", request.projectIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schedulePolicyShrink)) {
+            body.put("SchedulePolicy", request.schedulePolicyShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("StartDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCalendar"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCalendarResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Enterprise Edition to use this feature.
+     * The calendar name cannot be modified. Unsubmitted dates are not retained.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a scheduling calendar. This is a full update that requires you to submit the complete editable configuration.</p>
+     * 
+     * @param request UpdateCalendarRequest
+     * @return UpdateCalendarResponse
+     */
+    public UpdateCalendarResponse updateCalendar(UpdateCalendarRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCalendarWithOptions(request, runtime);
     }
 
     /**

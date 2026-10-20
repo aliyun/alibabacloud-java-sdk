@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListSecurityStrategiesResponseBody extends TeaModel {
     /**
-     * <p>The pagination result.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("PagingInfo")
     public ListSecurityStrategiesResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0bc5df3a17****903790e8e8a</p>
@@ -42,7 +42,7 @@ public class ListSecurityStrategiesResponseBody extends TeaModel {
 
     public static class ListSecurityStrategiesResponseBodyPagingInfoSecurityStrategiesContentControllers extends TeaModel {
         /**
-         * <p>The default value for Basic Edition.</p>
+         * <p><strong>The default value for Basic Edition.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -51,13 +51,13 @@ public class ListSecurityStrategiesResponseBody extends TeaModel {
         public Object basicEditionDefaultValue;
 
         /**
-         * <p>The valid value range for Basic Edition, specified as [min, max].</p>
+         * <p>The valid value range for Basic Edition [min, max].</p>
          */
         @NameInMap("BasicEditionIntervalValue")
         public java.util.List<Integer> basicEditionIntervalValue;
 
         /**
-         * <p>The identifier of the control item. For valid values, see the list of control items for each schema.</p>
+         * <p>The identifier of the control item. For valid values, see the control item list for each schema.</p>
          * 
          * <strong>example:</strong>
          * <p>viewCount</p>
@@ -66,7 +66,7 @@ public class ListSecurityStrategiesResponseBody extends TeaModel {
         public String controller;
 
         /**
-         * <p>The data type of the value. Valid values: <code>Boolean</code>, <code>Integer</code>, <code>Long</code>, and <code>String</code>.</p>
+         * <p><strong>The value type (Boolean/Integer/Long/String).</strong></p>
          * 
          * <strong>example:</strong>
          * <p>Integer</p>
@@ -78,13 +78,13 @@ public class ListSecurityStrategiesResponseBody extends TeaModel {
          * <p>The display name.</p>
          * 
          * <strong>example:</strong>
-         * <p>查询结果-单次展示记录值上限</p>
+         * <p>Query results - Maximum number of records displayed at a time</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
-         * <p>The display name in English.</p>
+         * <p><strong>The English display name.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>Query Results - Single Display Record Limit</p>
@@ -93,7 +93,7 @@ public class ListSecurityStrategiesResponseBody extends TeaModel {
         public String displayNameEn;
 
         /**
-         * <p>Whether the control item is enabled.</p>
+         * <p><strong>Indicates whether the control item is enabled.</strong></p>
          */
         @NameInMap("Enable")
         public Boolean enable;
@@ -108,7 +108,7 @@ public class ListSecurityStrategiesResponseBody extends TeaModel {
         public Object enterpriseEditionDefaultValue;
 
         /**
-         * <p>The valid value range for Enterprise Edition, specified as [min, max].</p>
+         * <p>The valid value range for Enterprise Edition [min, max].</p>
          */
         @NameInMap("EnterpriseEditionIntervalValue")
         public java.util.List<Integer> enterpriseEditionIntervalValue;
@@ -123,13 +123,13 @@ public class ListSecurityStrategiesResponseBody extends TeaModel {
         public Object professionalEditionDefaultValue;
 
         /**
-         * <p>The valid value range for Professional Edition, specified as [min, max].</p>
+         * <p>The valid value range for Professional Edition [min, max].</p>
          */
         @NameInMap("ProfessionalEditionIntervalValue")
         public java.util.List<Integer> professionalEditionIntervalValue;
 
         /**
-         * <p>The default value for Standard Edition.</p>
+         * <p><strong>The default value for Standard Edition.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -138,13 +138,13 @@ public class ListSecurityStrategiesResponseBody extends TeaModel {
         public Object standardEditionDefaultValue;
 
         /**
-         * <p>The valid value range for Standard Edition, specified as [min, max].</p>
+         * <p>The valid value range for Standard Edition [min, max].</p>
          */
         @NameInMap("StandardEditionIntervalValue")
         public java.util.List<Integer> standardEditionIntervalValue;
 
         /**
-         * <p>The value set for the control item. The data type of this value is specified by <code>ControllerValueType</code>.</p>
+         * <p><strong>The user-configured value. The type depends on ControllerValueType.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -273,7 +273,7 @@ public class ListSecurityStrategiesResponseBody extends TeaModel {
 
     public static class ListSecurityStrategiesResponseBodyPagingInfoSecurityStrategiesContent extends TeaModel {
         /**
-         * <p>The control scope.</p>
+         * <p><strong>The control scope.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>Tenant</p>
@@ -282,7 +282,7 @@ public class ListSecurityStrategiesResponseBody extends TeaModel {
         public String controlDwScope;
 
         /**
-         * <p>The control module. This value is from the <code>controlModule</code> property of the associated <code>SecurityStrategySchema</code>.</p>
+         * <p>The control module. The SecurityStrategySchema.controlModule associated with the current policy.</p>
          * 
          * <strong>example:</strong>
          * <p>DataQuery</p>
@@ -291,7 +291,7 @@ public class ListSecurityStrategiesResponseBody extends TeaModel {
         public String controlModule;
 
         /**
-         * <p>The control submodule. This value is from the <code>controlSubModule</code> property of the associated <code>SecurityStrategySchema</code>.</p>
+         * <p>The control submodule. The SecurityStrategySchema.controlSubModule associated with the current policy.</p>
          * 
          * <strong>example:</strong>
          * <p>MyCatalog</p>
@@ -300,22 +300,22 @@ public class ListSecurityStrategiesResponseBody extends TeaModel {
         public String controlSubModule;
 
         /**
-         * <p>A list of control items. The available items depend on the schema. For details, see the <code>Controller</code> definition and the list of control items for each schema.</p>
+         * <p>The list of control items. Valid control items depend on the selected schema. Refer to the controller definition and the control item list for each schema.</p>
          */
         @NameInMap("Controllers")
         public java.util.List<ListSecurityStrategiesResponseBodyPagingInfoSecurityStrategiesContentControllers> controllers;
 
         /**
-         * <p>The <code>displayName</code> of the associated <code>SecurityStrategySchema</code>.</p>
+         * <p>The SecurityStrategySchema.displayName associated with the current policy.</p>
          * 
          * <strong>example:</strong>
-         * <p>数据分析</p>
+         * <p>Data Analysis</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
-         * <p>The <code>displayNameEn</code> of the associated <code>SecurityStrategySchema</code>.</p>
+         * <p>The SecurityStrategySchema.displayNameEn associated with the current policy.</p>
          * 
          * <strong>example:</strong>
          * <p>Data Query</p>
@@ -324,7 +324,7 @@ public class ListSecurityStrategiesResponseBody extends TeaModel {
         public String displayNameEn;
 
         /**
-         * <p>The <code>name</code> of the associated <code>SecurityStrategySchema</code>.</p>
+         * <p>The SecurityStrategySchema.name associated with the current policy.</p>
          * 
          * <strong>example:</strong>
          * <p>DataQuerySecurityStrategySchema</p>
@@ -342,7 +342,7 @@ public class ListSecurityStrategiesResponseBody extends TeaModel {
         public String systemPolicyDisplayName;
 
         /**
-         * <p>The name of the system policy. If this property is not empty, the system automatically creates a default policy.</p>
+         * <p>The system policy name. If this parameter is not empty, the system performs automatic creation of a default policy.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM_GENERATE_DEFAULT_DATA_QUERY</p>
@@ -431,13 +431,13 @@ public class ListSecurityStrategiesResponseBody extends TeaModel {
 
     public static class ListSecurityStrategiesResponseBodyPagingInfoSecurityStrategies extends TeaModel {
         /**
-         * <p>The policy content. The content is constrained by <code>SecurityStrategySchema</code>.</p>
+         * <p>The policy content. The content is constrained by SecurityStrategySchema.</p>
          */
         @NameInMap("Content")
         public ListSecurityStrategiesResponseBodyPagingInfoSecurityStrategiesContent content;
 
         /**
-         * <p>The control scope. Valid values: <code>Workspace</code> and <code>Tenant</code>.</p>
+         * <p><strong>The control scope</strong> (Workspace/Tenant).</p>
          * 
          * <strong>example:</strong>
          * <p>Tenant</p>
@@ -446,7 +446,7 @@ public class ListSecurityStrategiesResponseBody extends TeaModel {
         public String controlDwScope;
 
         /**
-         * <p>The control module.</p>
+         * <p><strong>The control module.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>DataQuery</p>
@@ -455,7 +455,7 @@ public class ListSecurityStrategiesResponseBody extends TeaModel {
         public String controlModule;
 
         /**
-         * <p>The control submodule.</p>
+         * <p><strong>The control submodule.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>MyCatalog</p>
@@ -464,7 +464,7 @@ public class ListSecurityStrategiesResponseBody extends TeaModel {
         public String controlSubModule;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The format is YYYY-MM-DDTHH:mm:ss. The time zone is not specified in the current document.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-05-25T20:46:19</p>
@@ -473,7 +473,7 @@ public class ListSecurityStrategiesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The user ID of the creator.</p>
+         * <p><strong>The ID of the creator.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>203322746501002787</p>
@@ -482,16 +482,16 @@ public class ListSecurityStrategiesResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>The policy description.</p>
+         * <p>The description of the policy.</p>
          * 
          * <strong>example:</strong>
-         * <p>控制数据分析模块的查询结果安全行为</p>
+         * <p>Controls the security behavior of query results in the Data Analysis module</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Whether the policy is enabled.</p>
+         * <p><strong>Indicates whether the policy is enabled.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -500,7 +500,7 @@ public class ListSecurityStrategiesResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The policy ID.</p>
+         * <p>The ID of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -512,13 +512,13 @@ public class ListSecurityStrategiesResponseBody extends TeaModel {
          * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
-         * <p>默认数据分析策略</p>
+         * <p>Default Data Analysis policy</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The source ID of the system default policy.</p>
+         * <p><strong>The source ID of the system default policy.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -536,7 +536,7 @@ public class ListSecurityStrategiesResponseBody extends TeaModel {
         public String schemaName;
 
         /**
-         * <p>The time of the last update.</p>
+         * <p>The update time. The format is YYYY-MM-DDTHH:mm:ss. The time zone is not specified in the current document.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-05-25T20:46:19</p>
@@ -545,7 +545,7 @@ public class ListSecurityStrategiesResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>The ID of the user who last updated the policy.</p>
+         * <p><strong>The ID of the last updater.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>203322746501002787</p>
@@ -554,7 +554,7 @@ public class ListSecurityStrategiesResponseBody extends TeaModel {
         public String updater;
 
         /**
-         * <p>The associated workspace IDs.</p>
+         * <p><strong>The list of associated workspace IDs.</strong></p>
          */
         @NameInMap("Workspaces")
         public java.util.List<Long> workspaces;
@@ -697,7 +697,7 @@ public class ListSecurityStrategiesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The page size. Default value: 20.</p>
+         * <p>The number of entries per page. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -712,7 +712,7 @@ public class ListSecurityStrategiesResponseBody extends TeaModel {
         public java.util.List<ListSecurityStrategiesResponseBodyPagingInfoSecurityStrategies> securityStrategies;
 
         /**
-         * <p>The total count.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>

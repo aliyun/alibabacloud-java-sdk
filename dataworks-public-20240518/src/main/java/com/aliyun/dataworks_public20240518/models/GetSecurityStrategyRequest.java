@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSecurityStrategyRequest extends TeaModel {
     /**
-     * <p><strong>The ID of the security strategy.</strong></p>
+     * <p><strong>The security policy ID.</strong></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
