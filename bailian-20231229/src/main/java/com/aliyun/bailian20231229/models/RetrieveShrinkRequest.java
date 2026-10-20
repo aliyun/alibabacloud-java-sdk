@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class RetrieveShrinkRequest extends TeaModel {
     /**
-     * <p>The number of top-K similar text chunks to retrieve using vector retrieval. This is achieved by generating a vector representation of the query and searching the knowledge base for the K text chunks with the most similar vectors. The value must be an integer from 0 to 100. The sum of <code>DenseSimilarityTopK</code> and <code>SparseSimilarityTopK</code> must not exceed 200.</p>
+     * <p>The top K value for AISearch. The system generates a vector for the input text and retrieves the top K text chunks in the knowledge base that are most similar to the vector representation. Valid values: 0 to 100.
+     * The sum of DenseSimilarityTopK and SparseSimilarityTopK must be less than or equal to 200.</p>
      * <p>Default value: 100.</p>
      * 
      * <strong>example:</strong>
@@ -17,12 +18,10 @@ public class RetrieveShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable reranking. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: Enables reranking.</p>
-     * </li>
-     * <li><p><code>false</code>: Disables reranking.</p>
-     * </li>
+     * <li>true: Enabled.</li>
+     * <li>false: Disabled.</li>
      * </ul>
-     * <p>Default value: <code>true</code>.</p>
+     * <p>Default value: true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -31,15 +30,13 @@ public class RetrieveShrinkRequest extends TeaModel {
     public Boolean enableReranking;
 
     /**
-     * <p>Specifies whether to enable &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/model-studio/use-cases/rag-optimization#b7031e2ad6cji">conversational query rewriting</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/model-studio/use-cases/rag-optimization#b7031e2ad6cji">conversational query rewriting</a>.
+     * <p>Specifies whether to enable &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/model-studio/use-cases/rag-optimization#b7031e2ad6cji">multi-turn conversation rewriting</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/model-studio/use-cases/rag-optimization#b7031e2ad6cji">multi-turn conversation rewriting</a>.
      * Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: Enables conversational query rewriting.</p>
-     * </li>
-     * <li><p><code>false</code>: Disables conversational query rewriting.</p>
-     * </li>
+     * <li>true: Enabled.</li>
+     * <li>false: Disabled.</li>
      * </ul>
-     * <p>Default value: <code>false</code>.</p>
+     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -51,16 +48,16 @@ public class RetrieveShrinkRequest extends TeaModel {
     public String extraShrink;
 
     /**
-     * <p>The URLs of images to include in the query.</p>
+     * <p>The URLs of the images passed in the query.</p>
      */
     @NameInMap("Images")
     public String imagesShrink;
 
     /**
-     * <p>The ID of the knowledge base. This is the <code>Data.Id</code> value returned by the <code>CreateIndex</code> operation.</p>
+     * <p>The ID of the knowledge base, which is the Data.Id returned by the CreateIndex operation.</p>
      * <blockquote>
      * <ul>
-     * <li>Ensure the specified knowledge base exists and has not been deleted.</li>
+     * <li>Make sure that the corresponding knowledge base is created and not deleted.</li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
@@ -72,29 +69,29 @@ public class RetrieveShrinkRequest extends TeaModel {
     public String indexId;
 
     /**
-     * <p>The query, which is the original user prompt. There are no limits on the length of the query.</p>
+     * <p>The input text, which is the original input prompt. The length and characters of Query are not limited.</p>
      * 
      * <strong>example:</strong>
-     * <p>阿里云百炼平台介绍</p>
+     * <p>Introduction to Alibaba Cloud Model Studio</p>
      */
     @NameInMap("Query")
     public String query;
 
     /**
-     * <p>The conversation history, used for &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/model-studio/use-cases/rag-optimization#b7031e2ad6cji">conversational query rewriting</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/model-studio/use-cases/rag-optimization#b7031e2ad6cji">conversational query rewriting</a>. This parameter is effective only when <code>EnableRewrite</code> is set to <code>true</code>.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/model-studio/use-cases/rag-optimization#b7031e2ad6cji">Multi-turn conversation rewriting</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/model-studio/use-cases/rag-optimization#b7031e2ad6cji">Multi-turn conversation rewriting</a> allows you to pass in your own managed conversation history. This parameter takes effect only when EnableRewrite is set to <strong>true</strong>. Otherwise, it does not take effect even if you specify it.</p>
      */
     @NameInMap("QueryHistory")
     public String queryHistoryShrink;
 
     /**
-     * <p>The reranking configurations.</p>
+     * <p>The reranking configuration.</p>
      */
     @NameInMap("Rerank")
     public String rerankShrink;
 
     /**
-     * <p>The similarity threshold for reranking. Only text chunks with a similarity score greater than this value are returned. The value must be between 0.01 and 1.00, inclusive. This parameter overrides the similarity threshold setting of the knowledge base.</p>
-     * <p>If not specified, the threshold configured for the knowledge base is used.</p>
+     * <p>The similarity threshold. This threshold specifies the minimum similarity score allowed for recalled text chunks and is used to filter the text chunks returned by the ranking model. Only text chunks with a score greater than this value are recalled. Valid values: 0.01 to 1.00. This parameter has a higher priority than the similarity threshold configured for the knowledge base.</p>
+     * <p>If no specific value is specified, the similarity threshold configured for the knowledge base is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>0.20</p>
@@ -103,7 +100,7 @@ public class RetrieveShrinkRequest extends TeaModel {
     public Float rerankMinScore;
 
     /**
-     * <p>The number of top-ranked text chunks to return after reranking. The value must be an integer from 1 to 20. Default value: 5.</p>
+     * <p>The top N text chunks to return after reranking. Valid values: 1 to 20. Default value: 5.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -112,20 +109,18 @@ public class RetrieveShrinkRequest extends TeaModel {
     public Integer rerankTopN;
 
     /**
-     * <p>Configuration for conversational query rewriting.</p>
+     * <p>The multi-turn conversation rewriting configuration.</p>
      */
     @NameInMap("Rewrite")
     public String rewriteShrink;
 
     /**
-     * <p>Specifies whether to save the retrieval history for testing purposes. Valid values:</p>
+     * <p>Specifies whether to save the historical text chunk recall test data. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: Saves the retrieval history.</p>
-     * </li>
-     * <li><p><code>false</code>: Does not save the retrieval history.</p>
-     * </li>
+     * <li>true: Save.</li>
+     * <li>false: Do not save.</li>
      * </ul>
-     * <p>Default value: <code>false</code>.</p>
+     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -134,16 +129,16 @@ public class RetrieveShrinkRequest extends TeaModel {
     public Boolean saveRetrieverHistory;
 
     /**
-     * <p>Specifies custom retrieval conditions, such as tags, to filter semantic retrieval results and exclude irrelevant information.
-     * The filtering logic is applied only when the <code>is_displayed_chunk_content</code> parameter is set to <code>true</code>. For more information, see <a href="https://help.aliyun.com/document_detail/2869641.html">SearchFilters for a knowledge base</a>.</p>
+     * <p>The personalized retrieval conditions, such as tags, configured by using SearchFilter to filter semantic retrieval results and exclude information irrelevant to the query.
+     * The filtering logic takes effect when the is_displayed_chunk_content parameter is set to true. For more information, see <a href="https://help.aliyun.com/document_detail/2869641.html">Knowledge base SearchFilters</a>.</p>
      */
     @NameInMap("SearchFilters")
     public String searchFiltersShrink;
 
     /**
-     * <p>The number of top-K text chunks to retrieve using keyword retrieval. This feature finds text chunks in the knowledge base that exactly match the keywords in the query. It helps filter out irrelevant text chunks and provide more accurate results.
-     * The value must be an integer from 0 to 100.
-     * The sum of <code>DenseSimilarityTopK</code> and <code>SparseSimilarityTopK</code> must not exceed 200.</p>
+     * <p>The top K value for keyword retrieval. The system retrieves chunks from the knowledge base that are an exact match for the keywords in the input text. This helps you filter out irrelevant text chunks and provides more accurate results.
+     * Valid values: 0 to 100.
+     * The sum of DenseSimilarityTopK and SparseSimilarityTopK must be less than or equal to 200.</p>
      * <p>Default value: 100.</p>
      * 
      * <strong>example:</strong>

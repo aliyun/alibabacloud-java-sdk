@@ -38,7 +38,7 @@ public class DeleteFilesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status code returned by the API.</p>
+     * <p>The status code returned by the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,10 +47,10 @@ public class DeleteFilesResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the API call is successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li>true: The call is successful.</li>
-     * <li>false: The call fails.</li>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -125,9 +125,9 @@ public class DeleteFilesResponseBody extends TeaModel {
         /**
          * <p>The file deletion status. Valid values:</p>
          * <ul>
-         * <li>DELETED: The file is deleted.</li>
-         * <li>FAILED: The file fails to be deleted.</li>
-         * <li>NOT_FOUND: The file is not found.</li>
+         * <li>DELETED: The file was deleted.</li>
+         * <li>FAILED: The file failed to be deleted.</li>
+         * <li>NOT_FOUND: The file was not found.</li>
          * </ul>
          * 
          * <strong>example:</strong>

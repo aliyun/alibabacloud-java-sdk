@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTableFromAuthorizedOssResponseBody extends TeaModel {
     /**
-     * <p>Error status code.</p>
+     * <p>The error status code.</p>
      * 
      * <strong>example:</strong>
      * <p>DataCenter.FileTooLarge</p>
@@ -14,13 +14,13 @@ public class UpdateTableFromAuthorizedOssResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Data field of the response.</p>
+     * <p>The data field returned by the operation.</p>
      */
     @NameInMap("Data")
     public UpdateTableFromAuthorizedOssResponseBodyData data;
 
     /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Required parameter(%s) missing or invalid, please check the request parameters.</p>
@@ -29,7 +29,7 @@ public class UpdateTableFromAuthorizedOssResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>7BA8ADD9-53D6-53F0-918F-A1E776AD230E</p>
@@ -38,7 +38,7 @@ public class UpdateTableFromAuthorizedOssResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Status code returned by the operation.</p>
+     * <p>The status code returned by the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,7 +47,7 @@ public class UpdateTableFromAuthorizedOssResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the operation succeeded.</p>
+     * <p>Indicates whether the operation was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class UpdateTableFromAuthorizedOssResponseBody extends TeaModel {
 
     public static class UpdateTableFromAuthorizedOssResponseBodyData extends TeaModel {
         /**
-         * <p>Current table status. After upload, the status usually changes to TO_IMPORT. This means the system has accepted the uploaded file and is waiting to schedule it into the data table.</p>
+         * <p>The current table status. After upload, the status typically changes to TO_IMPORT, indicating the system has received the uploaded file and is waiting to schedule the write to the data table.</p>
          * 
          * <strong>example:</strong>
          * <p>TO_IMPORT</p>
@@ -119,7 +119,7 @@ public class UpdateTableFromAuthorizedOssResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Same as the input TableId parameter.</p>
+         * <p>The table ID, which is the same as the input parameter TableId.</p>
          * 
          * <strong>example:</strong>
          * <p>table_df96ebd5da8640e5a0991b3d15f39d4d_12792097</p>

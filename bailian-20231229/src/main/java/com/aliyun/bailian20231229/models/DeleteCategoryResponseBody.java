@@ -14,7 +14,7 @@ public class DeleteCategoryResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data field returned by the operation.</p>
+     * <p>The business data field of the operation.</p>
      */
     @NameInMap("Data")
     public DeleteCategoryResponseBodyData data;

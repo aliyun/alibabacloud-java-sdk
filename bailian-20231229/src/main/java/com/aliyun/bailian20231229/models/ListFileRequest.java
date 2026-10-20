@@ -6,10 +6,9 @@ import com.aliyun.tea.*;
 public class ListFileRequest extends TeaModel {
     /**
      * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <p>The category ID, which is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> operation. You can also obtain it on the <a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a> - Files tab by clicking the ID icon next to the category name.</p>
+     * <p>The category ID, which is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> operation. You can also obtain it on the <a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a> page by clicking the Files tab and then clicking the ID icon next to the category name.</p>
      * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <p>The category ID, which is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> operation. You can also obtain it on the <a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> - Files tab by clicking the ID icon next to the category name.</p>
-     * <p>.</p>
+     * <p>The category ID, which is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> operation. You can also obtain it on the <a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> page by clicking the Files tab and then clicking the ID icon next to the category name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,13 +18,13 @@ public class ListFileRequest extends TeaModel {
     public String categoryId;
 
     /**
-     * <p>The list of file IDs to query. A maximum of 20 files can be queried at a time.</p>
+     * <p>The list of file IDs to query. A maximum of 20 files can be queried in a single request.</p>
      */
     @NameInMap("FileIds")
     public java.util.List<String> fileIds;
 
     /**
-     * <p>The file name (without extension). Only exact match is supported. Fuzzy search is not supported.</p>
+     * <p>The file name (without the extension). Only exact match is supported. Fuzzy search is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>product-overview</p>
@@ -34,9 +33,9 @@ public class ListFileRequest extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The number of entries per page for paging. Valid values: 1 to 200.</p>
+     * <p>The number of entries per page for a paged query. Valid values: 1 to 200.</p>
      * <p>Default value:
-     * If no value is set or the value is less than 1, the default value is 20. If the value is set to greater than 200, the default value is 200.</p>
+     * If the value is not set or is less than 1, the default value is 20. If the value is greater than 200, the default value is 200.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -45,7 +44,7 @@ public class ListFileRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Set this to the NextToken value returned by the previous API call.</p>
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdH70eOCSCKtacdomNzak4U=</p>

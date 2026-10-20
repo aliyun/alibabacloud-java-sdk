@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteChunkShrinkRequest extends TeaModel {
     /**
-     * <p>The list of text chunks to delete. A maximum of 10 text chunk IDs can be specified in a single request.</p>
+     * <p>The list of text chunk IDs to delete. A maximum of 10 text chunk IDs can be passed in a single request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ChunkIds")

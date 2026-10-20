@@ -44,11 +44,11 @@ public class ChangeParseSettingShrinkRequest extends TeaModel {
     /**
      * <p>The parser identifier code. Different parsers are applicable to different scenarios. For more information, see &quot;Knowledge Base&quot;. Valid values:</p>
      * <ul>
-     * <li>DOCMIND (Intelligent Document Parsing)</li>
-     * <li>DOCMIND_DIGITAL (Electronic Document Parsing)</li>
-     * <li>DOCMIND_LLM_VERSION (Large Model Document Parsing)</li>
-     * <li>DASH_QWEN_VL_PARSER (Qwen VL Parsing)</li>
-     * <li>DOCMIND_LLM_VERSION_MEDIA (Audio/Video Parsing)</li>
+     * <li>DOCMIND (intelligent document parsing)</li>
+     * <li>DOCMIND_DIGITAL (electronic document parsing)</li>
+     * <li>DOCMIND_LLM_VERSION (large model document parsing)</li>
+     * <li>DASH_QWEN_VL_PARSER (Qwen VL parsing)</li>
+     * <li>DOCMIND_LLM_VERSION_MEDIA (audio and video parsing)</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -59,7 +59,7 @@ public class ChangeParseSettingShrinkRequest extends TeaModel {
     public String parser;
 
     /**
-     * <p>The parser configuration. This parameter is required only when the parser is set to Qwen VL Parsing.</p>
+     * <p>The parser configuration. This parameter is required only when the parser is set to Qwen VL parsing.</p>
      */
     @NameInMap("ParserConfig")
     public String parserConfigShrink;

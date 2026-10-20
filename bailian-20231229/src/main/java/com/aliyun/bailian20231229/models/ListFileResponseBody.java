@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFileResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The error status code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -159,7 +159,7 @@ public class ListFileResponseBody extends TeaModel {
         public String fileType;
 
         /**
-         * <p>The reason for parsing failure.</p>
+         * <p>The reason for the parsing failure.</p>
          * 
          * <strong>example:</strong>
          * <p>Error Message</p>
@@ -180,7 +180,7 @@ public class ListFileResponseBody extends TeaModel {
         public String parser;
 
         /**
-         * <p>The file size in bytes.</p>
+         * <p>The file size, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>512</p>
@@ -191,9 +191,9 @@ public class ListFileResponseBody extends TeaModel {
         /**
          * <p>The file parsing status. Valid values:</p>
          * <ul>
-         * <li>INIT: Initialization state. Waiting to be scheduled.</li>
+         * <li>INIT: Initialization. The file is waiting to be scheduled.</li>
          * <li>PARSING: Parsing in progress.</li>
-         * <li>PARSE_SUCCESS: Parsing completed.</li>
+         * <li>PARSE_SUCCESS: Parsing succeeded.</li>
          * <li>PARSE_FAILED: Parsing failed.</li>
          * </ul>
          * 
@@ -304,10 +304,10 @@ public class ListFileResponseBody extends TeaModel {
         public java.util.List<ListFileResponseBodyDataFileList> fileList;
 
         /**
-         * <p>Indicates whether there is a next page of category data that matches the query conditions. Valid values:</p>
+         * <p>Indicates whether a next page exists for the category data that matches the query conditions. Valid values:</p>
          * <ul>
-         * <li>true: Yes.</li>
-         * <li>false: No.</li>
+         * <li>true: A next page exists.</li>
+         * <li>false: No next page exists.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -317,7 +317,7 @@ public class ListFileResponseBody extends TeaModel {
         public Boolean hasNext;
 
         /**
-         * <p>The number of entries per page for paging.</p>
+         * <p>The number of entries per page for a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -335,7 +335,7 @@ public class ListFileResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>The total number of entries in the returned results.</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>48</p>

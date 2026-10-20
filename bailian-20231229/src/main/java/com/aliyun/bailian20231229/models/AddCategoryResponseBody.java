@@ -14,7 +14,7 @@ public class AddCategoryResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The data field returned by the operation.</p>
      */
     @NameInMap("Data")
     public AddCategoryResponseBodyData data;
@@ -29,7 +29,7 @@ public class AddCategoryResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>778C0B3B-xxxx-5FC1-A947-36EDD13606AB</p>
@@ -38,7 +38,7 @@ public class AddCategoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The status code returned by the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,12 +47,10 @@ public class AddCategoryResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The request was successful.</p>
-     * </li>
-     * <li><p>false: The request failed.</p>
-     * </li>
+     * <li>true: The call was successful. </li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,7 +114,7 @@ public class AddCategoryResponseBody extends TeaModel {
 
     public static class AddCategoryResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the category. Save this ID for future API calls that use this category.</p>
+         * <p>The category ID. Store this value properly because it is required for all subsequent API operations related to this category.</p>
          * 
          * <strong>example:</strong>
          * <p>cate_cdd11b1b79a74e8bbd675c356a91ee3xxxxxxxx</p>
@@ -125,10 +123,10 @@ public class AddCategoryResponseBody extends TeaModel {
         public String categoryId;
 
         /**
-         * <p>The name of the category.</p>
+         * <p>The category name.</p>
          * 
          * <strong>example:</strong>
-         * <p>类目名称</p>
+         * <p>CategoryName</p>
          */
         @NameInMap("CategoryName")
         public String categoryName;

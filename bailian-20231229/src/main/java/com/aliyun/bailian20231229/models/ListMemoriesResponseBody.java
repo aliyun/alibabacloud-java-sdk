@@ -14,7 +14,7 @@ public class ListMemoriesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The long-term memory entity list.</p>
+     * <p>The list of long-term memory entities.</p>
      */
     @NameInMap("memories")
     public java.util.List<ListMemoriesResponseBodyMemories> memories;
@@ -47,7 +47,7 @@ public class ListMemoriesResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The ID of the workspace to which the long-term memory entity list belongs.</p>
+     * <p>The workspace ID to which the long-term memory list belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>llm-3z7uw7fwz0vexxxx</p>
@@ -113,7 +113,7 @@ public class ListMemoriesResponseBody extends TeaModel {
          * <p>The description of the long-term memory.</p>
          * 
          * <strong>example:</strong>
-         * <p>我的大模型应用$APP_ID关于A用户的长期记忆体</p>
+         * <p>Long-term memory of user A for my large model application $APP_ID</p>
          */
         @NameInMap("description")
         public String description;

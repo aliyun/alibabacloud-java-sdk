@@ -47,7 +47,7 @@ public class ListIndicesResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
      * <li>true: Successful.</li>
      * <li>false: Failed.</li>
@@ -114,7 +114,7 @@ public class ListIndicesResponseBody extends TeaModel {
 
     public static class ListIndicesResponseBodyDataIndicesStructuredIndexConfig extends TeaModel {
         /**
-         * <p>Indicates whether this field is used for model responses. A value of <strong>true</strong> indicates that the retrieval results of this column are used as input for the large language model to generate answers.</p>
+         * <p>Specifies whether this field participates in model responses. A value of <strong>true</strong> indicates that the retrieval results of this column are used as input for the large language model to generate answers.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -123,7 +123,7 @@ public class ListIndicesResponseBody extends TeaModel {
         public Boolean isRecall;
 
         /**
-         * <p>Indicates whether this field is used for knowledge base retrieval. A value of <strong>true</strong> indicates that the knowledge base can search data in this column.</p>
+         * <p>Specifies whether this field participates in knowledge base retrieval. A value of <strong>true</strong> indicates that the knowledge base can search within the data of this column.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -201,8 +201,8 @@ public class ListIndicesResponseBody extends TeaModel {
         /**
          * <p>The configuration mode used by this knowledge base. Valid values:</p>
          * <ul>
-         * <li>recommend: Recommended configuration.</li>
-         * <li>user-defined: Custom configuration.</li>
+         * <li>recommend: recommended configuration.</li>
+         * <li>user-defined: custom configuration.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -215,13 +215,13 @@ public class ListIndicesResponseBody extends TeaModel {
          * <p>The description of the knowledge base.</p>
          * 
          * <strong>example:</strong>
-         * <p>The products in this list are mainly targeted at overseas customers</p>
+         * <p>Products in this catalog are mainly for overseas customers</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The list of document IDs.</p>
+         * <p>The list of file IDs.</p>
          */
         @NameInMap("DocumentIds")
         public java.util.List<String> documentIds;
@@ -230,13 +230,13 @@ public class ListIndicesResponseBody extends TeaModel {
          * <p>The name of the embedding model. Valid values:</p>
          * <p>&lt;props=&quot;china&quot;&gt;</p>
          * <ul>
-         * <li>text-embedding-v4: The text-embedding-v4 model.</li>
-         * <li>text-embedding-v3: The text-embedding-v3 model.</li>
-         * <li>text-embedding-v2: The text-embedding-v2 model.</li>
+         * <li>text-embedding-v4: text-embedding-v4 model.</li>
+         * <li>text-embedding-v3: text-embedding-v3 model.</li>
+         * <li>text-embedding-v2: text-embedding-v2 model.</li>
          * </ul>
          * <p>&lt;props=&quot;intl&quot;&gt;</p>
          * <ul>
-         * <li>text-embedding-v2: The text-embedding-v2 model.</li>
+         * <li>text-embedding-v2: text-embedding-v2 model.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -271,7 +271,7 @@ public class ListIndicesResponseBody extends TeaModel {
          * <p>The name of the knowledge base.</p>
          * 
          * <strong>example:</strong>
-         * <p>XXXX Product List</p>
+         * <p>Product Catalog</p>
          */
         @NameInMap("Name")
         public String name;
@@ -286,7 +286,7 @@ public class ListIndicesResponseBody extends TeaModel {
         public Integer overlapSize;
 
         /**
-         * <p>The commercial knowledge base CU specification. This parameter is valid only for Enterprise Edition.</p>
+         * <p>The compute unit (CU) specification of the commercial knowledge base. This parameter is valid only for Enterprise Edition.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -295,7 +295,7 @@ public class ListIndicesResponseBody extends TeaModel {
         public Integer pipelineCommercialCu;
 
         /**
-         * <p>The commercial knowledge base type specification.</p>
+         * <p>The commercial knowledge base edition.</p>
          * 
          * <strong>example:</strong>
          * <p>standard</p>
@@ -304,7 +304,7 @@ public class ListIndicesResponseBody extends TeaModel {
         public String pipelineCommercialType;
 
         /**
-         * <p>The knowledge base storage usage, in GB.</p>
+         * <p>The storage usage of the knowledge base. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>0.03</p>
@@ -332,7 +332,7 @@ public class ListIndicesResponseBody extends TeaModel {
          * </ul>
          * <p>&lt;props=&quot;intl&quot;&gt;</p>
          * <ul>
-         * <li>gte-rerank-hybrid: Official reranking.</li>
+         * <li>gte-rerank-hybrid: official reranking.</li>
          * <li>gte-rerank: gte-rerank reranking.</li>
          * </ul>
          * 
@@ -343,7 +343,7 @@ public class ListIndicesResponseBody extends TeaModel {
         public String rerankModelName;
 
         /**
-         * <p>The sentence separator. If multiple separators are used, they are separated by ｜. Valid values:</p>
+         * <p>The sentence separator. If multiple separators are used, they are separated by |. Valid values:</p>
          * <ul>
          * <li>\
          * : line break</li>
@@ -386,8 +386,8 @@ public class ListIndicesResponseBody extends TeaModel {
         /**
          * <p>The vector storage type of the knowledge base. Valid values:</p>
          * <ul>
-         * <li>ES: Built-in vector database.</li>
-         * <li>BUILT_IN: Built-in vector database.</li>
+         * <li>ES: built-in vector database.</li>
+         * <li>BUILT_IN: built-in vector database.</li>
          * <li>ADB: AnalyticDB for PostgreSQL database.</li>
          * </ul>
          * 
@@ -401,12 +401,12 @@ public class ListIndicesResponseBody extends TeaModel {
          * <p>The data type in Alibaba Cloud Model Studio &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>.</p>
          * <p>For document search&lt;props=&quot;china&quot;&gt;/audio and video search knowledge bases, valid values:</p>
          * <ul>
-         * <li>DATA_CENTER_CATEGORY: Category type.</li>
-         * <li>DATA_CENTER_FILE: File type.</li>
+         * <li>DATA_CENTER_CATEGORY: category type.</li>
+         * <li>DATA_CENTER_FILE: file type.</li>
          * </ul>
          * <p>For data query/image Q&amp;A knowledge bases, valid values:</p>
          * <ul>
-         * <li>DATA_CENTER_STRUCTURED_TABLE: Data table type.</li>
+         * <li>DATA_CENTER_STRUCTURED_TABLE: data table type.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -418,7 +418,7 @@ public class ListIndicesResponseBody extends TeaModel {
         /**
          * <p>The type of the knowledge base. Valid values:</p>
          * <ul>
-         * <li>UNSTRUCTURED: Document search.</li>
+         * <li>UNSTRUCTURED: document search.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -616,7 +616,7 @@ public class ListIndicesResponseBody extends TeaModel {
         public java.util.List<ListIndicesResponseBodyDataIndices> indices;
 
         /**
-         * <p>The returned page number.</p>
+         * <p>The page number returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -625,7 +625,7 @@ public class ListIndicesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The returned number of entries per page.</p>
+         * <p>The number of entries per page returned.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

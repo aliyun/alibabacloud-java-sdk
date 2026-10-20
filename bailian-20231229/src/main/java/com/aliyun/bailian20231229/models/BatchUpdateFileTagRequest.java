@@ -12,11 +12,7 @@ public class BatchUpdateFileTagRequest extends TeaModel {
     public java.util.List<BatchUpdateFileTagRequestFileInfos> fileInfos;
 
     /**
-     * <p>The update mode. Valid values:</p>
-     * <ul>
-     * <li>APPEND: appends tags to existing tags.</li>
-     * <li>OVERWRITE: overwrites existing tags.</li>
-     * </ul>
+     * <p>The update mode. Valid values: APPEND (append) and OVERWRITE (overwrite).</p>
      * 
      * <strong>example:</strong>
      * <p>OVERWRITE</p>
@@ -58,7 +54,7 @@ public class BatchUpdateFileTagRequest extends TeaModel {
 
         /**
          * <ul>
-         * <li>The list of tags associated with the file. You can specify up to 100 tags, and the total character length of all tags cannot exceed 700.</li>
+         * <li>The list of tags associated with the file. You can specify up to 100 tags. The total character length of all tags cannot exceed 700.</li>
          * </ul>
          * <p>This parameter is required.</p>
          */

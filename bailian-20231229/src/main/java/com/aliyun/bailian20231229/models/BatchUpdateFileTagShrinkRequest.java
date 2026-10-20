@@ -12,11 +12,7 @@ public class BatchUpdateFileTagShrinkRequest extends TeaModel {
     public String fileInfosShrink;
 
     /**
-     * <p>The update mode. Valid values:</p>
-     * <ul>
-     * <li>APPEND: appends tags to existing tags.</li>
-     * <li>OVERWRITE: overwrites existing tags.</li>
-     * </ul>
+     * <p>The update mode. Valid values: APPEND (append) and OVERWRITE (overwrite).</p>
      * 
      * <strong>example:</strong>
      * <p>OVERWRITE</p>

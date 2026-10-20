@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeParseSettingResponseBody extends TeaModel {
     /**
-     * <p>The error status code.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>InvalidParameter</p>
@@ -114,7 +114,7 @@ public class ChangeParseSettingResponseBody extends TeaModel {
 
     public static class ChangeParseSettingResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the configuration was changed. Valid values:</p>
+         * <p>Indicates whether the configuration was changed.</p>
          * <ul>
          * <li>true: The configuration was updated.</li>
          * <li>false: The configuration was not changed. The modification failed.</li>

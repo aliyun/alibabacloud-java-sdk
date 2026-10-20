@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class AddCategoryRequest extends TeaModel {
     /**
-     * <p>The name of the category. The name must be 1 to 20 characters long. It can contain Unicode letters, such as English letters and Chinese characters, along with digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The category name. The name must be 1 to 20 characters in length and can contain characters in the Unicode letter category, including letters, Chinese characters, and digits. The name can also contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>产品清单</p>
+     * <p>ProductList</p>
      */
     @NameInMap("CategoryName")
     public String categoryName;
 
     /**
-     * <p>The type of the category. Valid value:</p>
+     * <p>The category type. Valid values:</p>
      * <ul>
-     * <li>UNSTRUCTURED: A category.</li>
+     * <li>UNSTRUCTURED: category.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -28,7 +28,7 @@ public class AddCategoryRequest extends TeaModel {
     public String categoryType;
 
     /**
-     * <p>The ID of the connector instance. You can obtain the ID from the Alibaba Cloud Model Studio console.</p>
+     * <p>The instance ID of the data connector (Connector). Obtain this value from the Model Studio console.</p>
      * 
      * <strong>example:</strong>
      * <p>conn_xxxx</p>
@@ -37,7 +37,7 @@ public class AddCategoryRequest extends TeaModel {
     public String connectorId;
 
     /**
-     * <p>The ID of the parent category under which the new category is created. If you leave this parameter empty, a top-level category is created.</p>
+     * <p>The ID of the parent category. The new category is created under this parent category. If this parameter is left empty, a first-level category is created.</p>
      * 
      * <strong>example:</strong>
      * <p>cate_cdd11b1b79a74e8bbd675c356a91ee3xxxxxxxx</p>

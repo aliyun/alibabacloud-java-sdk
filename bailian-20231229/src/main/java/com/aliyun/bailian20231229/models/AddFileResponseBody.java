@@ -123,7 +123,7 @@ public class AddFileResponseBody extends TeaModel {
         public String fileId;
 
         /**
-         * <p>The parser type used to parse the file. Valid values:</p>
+         * <p>The parser type used to parse this file. Valid values:</p>
          * <ul>
          * <li>DASHSCOPE_DOCMIND: Alibaba Cloud intelligent document parsing.</li>
          * </ul>

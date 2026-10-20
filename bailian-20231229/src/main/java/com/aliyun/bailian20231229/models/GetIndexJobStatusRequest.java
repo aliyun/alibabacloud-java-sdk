@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetIndexJobStatusRequest extends TeaModel {
     /**
-     * <p>The knowledge base ID, which is the <code>Data.Id</code> returned by the <strong>CreateIndex</strong> operation.</p>
+     * <p>The knowledge base ID, which is the Data.Id returned by the CreateIndex operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetIndexJobStatusRequest extends TeaModel {
     public String indexId;
 
     /**
-     * <p>The knowledge base job ID, which is the <code>Data.Id</code> returned by the <strong>SubmitIndexJob</strong> or <strong>SubmitIndexAddDocumentsJob</strong> operation.</p>
+     * <p>The knowledge base job task ID, which is the Data.Id returned by the SubmitIndexJob or SubmitIndexAddDocumentsJob operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class GetIndexJobStatusRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>Both the <strong>SubmitIndexJob</strong> and <strong>SubmitIndexAddDocumentsJob</strong> operations support batch file import. This operation returns the overall status of the knowledge base job (<code>Status</code>) and the import status of each file (<code>Document.Status</code>). If there are many files, use the <code>PageNumber</code> parameter for paged query. Minimum value: 1. Default value: 1.</p>
+     * <p>Both the <strong>SubmitIndexJob</strong> and <strong>SubmitIndexAddDocumentsJob</strong> operations support batch file import. The fields returned by this operation include the overall status of the knowledge base job task (<code>Status</code>) and the import status of each file (<code>Document.Status</code>). If a large number of files are imported, you can use the <code>PageNumber</code> parameter for paging. The starting value is 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -34,7 +34,7 @@ public class GetIndexJobStatusRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of file import tasks to display per page in a paged query. No maximum limit. Default value: 10.</p>
+     * <p>The number of file import tasks to return on each page during paging. Maximum value: unlimited. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

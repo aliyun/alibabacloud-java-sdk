@@ -14,13 +14,13 @@ public class GetAvailableParserTypesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The business data returned upon a successful request.</p>
      */
     @NameInMap("Data")
     public GetAvailableParserTypesResponseBodyData data;
 
     /**
-     * <p>The error message that is returned if the request failed.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>User not authorized to operate on the specified resource</p>
@@ -38,7 +38,7 @@ public class GetAvailableParserTypesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The status code returned by the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,10 +47,10 @@ public class GetAvailableParserTypesResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class GetAvailableParserTypesResponseBody extends TeaModel {
          * <p>The display name of the parsing method.</p>
          * 
          * <strong>example:</strong>
-         * <p>智能文档解析</p>
+         * <p>Intelligent Document Parsing</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
@@ -125,10 +125,10 @@ public class GetAvailableParserTypesResponseBody extends TeaModel {
         /**
          * <p>The parser code. Valid values:</p>
          * <ul>
-         * <li>DOCMIND (Intelligent parsing)</li>
-         * <li>DOCMIND_DIGITAL (Digital parsing)</li>
-         * <li>DOCMIND_LLM_VERSION (LLM parsing)</li>
-         * <li>DASH_QWEN_VL_PARSER (Qwen VL parsing)</li>
+         * <li>DOCMIND: Intelligent Document Parsing.</li>
+         * <li>DOCMIND_DIGITAL: Electronic Document Parsing.</li>
+         * <li>DOCMIND_LLM_VERSION: LLM-based Document Parsing.</li>
+         * <li>DASH_QWEN_VL_PARSER: Qwen-VL Parsing.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -162,7 +162,7 @@ public class GetAvailableParserTypesResponseBody extends TeaModel {
 
     public static class GetAvailableParserTypesResponseBodyData extends TeaModel {
         /**
-         * <p>The file type, which is the same as the FileType in the input parameter.</p>
+         * <p>The file type, which is the same as the FileType input parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>pdf</p>
@@ -171,7 +171,7 @@ public class GetAvailableParserTypesResponseBody extends TeaModel {
         public String fileType;
 
         /**
-         * <p>The list of supported parsers</p>
+         * <p>The list of parsers supported for the specified file type.</p>
          */
         @NameInMap("ParserList")
         public java.util.List<GetAvailableParserTypesResponseBodyDataParserList> parserList;

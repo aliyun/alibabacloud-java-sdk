@@ -14,7 +14,7 @@ public class UpdateIndexResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The data field returned by the operation.</p>
      */
     @NameInMap("Data")
     public UpdateIndexResponseBodyData data;
@@ -38,7 +38,7 @@ public class UpdateIndexResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status code returned by the API.</p>
+     * <p>The status code returned by the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,9 +47,9 @@ public class UpdateIndexResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <p>true: The request was successful.</p>
-     * <p>false: The request failed.</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>true: The call was successful.</p>
+     * <p>false: The call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -14,7 +14,7 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data field returned by the operation.</p>
+     * <p>The business data field of the operation.</p>
      */
     @NameInMap("Data")
     public ListIndexDocumentsResponseBodyData data;
@@ -123,7 +123,7 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The file format type. Valid values: pdf, docx, doc, txt, md, pptx, ppt, png, jpg, jpeg, bmp, gif, and EXCEL.</p>
+         * <p>The file format type. Valid values: pdf, docx, doc, txt, md, pptx, ppt, png, jpg, jpeg, bmp, gif, EXCEL.</p>
          * 
          * <strong>example:</strong>
          * <p>pdf</p>

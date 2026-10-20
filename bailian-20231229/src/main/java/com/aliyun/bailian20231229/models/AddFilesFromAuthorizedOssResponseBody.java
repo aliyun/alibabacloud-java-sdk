@@ -14,7 +14,7 @@ public class AddFilesFromAuthorizedOssResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data field returned by the operation.</p>
+     * <p>The business data field of the operation.</p>
      */
     @NameInMap("Data")
     public AddFilesFromAuthorizedOssResponseBodyData data;
@@ -47,10 +47,10 @@ public class AddFilesFromAuthorizedOssResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
-     * <li>true: Successful.</li>
-     * <li>false: Failed.</li>
+     * <li>true: The operation is successful.</li>
+     * <li>false: The operation fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class AddFilesFromAuthorizedOssResponseBody extends TeaModel {
 
     public static class AddFilesFromAuthorizedOssResponseBodyDataAddFileResultList extends TeaModel {
         /**
-         * <p>The file ID. Keep this value safe because it is required for all subsequent API operations related to this file.</p>
+         * <p>The file ID. Keep this value secure because it is used for all subsequent API operations related to this file.</p>
          * 
          * <strong>example:</strong>
          * <p>file_809f469a59ac449586ec692576xxxxx_102248XXX</p>
@@ -123,7 +123,7 @@ public class AddFilesFromAuthorizedOssResponseBody extends TeaModel {
         public String fileId;
 
         /**
-         * <p>The error message returned when the file import fails.</p>
+         * <p>The error message returned when the file fails to be imported.</p>
          * 
          * <strong>example:</strong>
          * <p>size too large</p>
@@ -143,11 +143,11 @@ public class AddFilesFromAuthorizedOssResponseBody extends TeaModel {
         /**
          * <p>The file import status. Valid values:</p>
          * <ul>
-         * <li>SUCCESS: The import to application data is complete.</li>
-         * <li>FAILED: The import to application data failed.</li>
+         * <li>SUCCESS: The application data is imported.</li>
+         * <li>FAILED: The application data fails to be imported.</li>
          * </ul>
          * <blockquote>
-         * <p>Only files with a SUCCESS status can be used to create or update a knowledge base.</p>
+         * <p>Only files whose status is SUCCESS can be used to create or update knowledge bases.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

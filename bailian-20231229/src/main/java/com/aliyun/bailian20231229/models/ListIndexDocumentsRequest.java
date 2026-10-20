@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIndexDocumentsRequest extends TeaModel {
     /**
-     * <p>Filters the returned file list by file name (without the file extension). Default value: empty, which means no filtering by file name.</p>
+     * <p>Filters the returned file list by file name (excluding the file extension). Default value: empty, which means no filtering by file name.</p>
      * 
      * <strong>example:</strong>
      * <p>product-overview</p>
@@ -16,12 +16,12 @@ public class ListIndexDocumentsRequest extends TeaModel {
     /**
      * <p>Filters the returned file list by file import status. Valid values:</p>
      * <ul>
-     * <li>INSERT_ERROR: failed to import to the index.</li>
-     * <li>RUNNING: index building in progress.</li>
-     * <li>DELETED: deleted.</li>
-     * <li>FINISH: index building succeeded.</li>
-     * <li>PARSE_FAILED: parsing failed.</li>
-     * <li>DOC_PARSING: parsing in progress.</li>
+     * <li>INSERT_ERROR: Failed to import to the index.</li>
+     * <li>RUNNING: Index building in progress.</li>
+     * <li>DELETED: Deleted.</li>
+     * <li>FINISH: Index building succeeded.</li>
+     * <li>PARSE_FAILED: Parsing failed.</li>
+     * <li>DOC_PARSING: Parsing in progress.</li>
      * </ul>
      * <p>Default value: empty, which means no filtering by file import status.</p>
      * 
@@ -35,7 +35,7 @@ public class ListIndexDocumentsRequest extends TeaModel {
      * <p>Specifies whether to enable fuzzy matching for file names. This parameter is used together with the <code>DocumentName</code> parameter. Valid values:</p>
      * <ul>
      * <li>true: Performs fuzzy matching on the returned file list based on the file name.</li>
-     * <li>false: Performs exact matching on the returned file list based on the file name.</li>
+     * <li>false: Performs exact matching based on the file name.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -56,7 +56,7 @@ public class ListIndexDocumentsRequest extends TeaModel {
     public String indexId;
 
     /**
-     * <p>The page number. Minimum value: 1. Default value: 1.</p>
+     * <p>The page number to query. Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

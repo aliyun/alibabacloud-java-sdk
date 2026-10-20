@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetParseSettingsResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,7 +14,7 @@ public class GetParseSettingsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data fields.</p>
+     * <p>The business data returned when the request is successful.</p>
      */
     @NameInMap("Data")
     public java.util.List<GetParseSettingsResponseBodyData> data;
@@ -38,7 +38,7 @@ public class GetParseSettingsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The status code returned by the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,10 +47,10 @@ public class GetParseSettingsResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -123,13 +123,13 @@ public class GetParseSettingsResponseBody extends TeaModel {
         public String modelName;
 
         /**
-         * <p>The prompt used for parsing.</p>
+         * <p>The prompt used when calling Qwen VL parsing.</p>
          * 
          * <strong>example:</strong>
-         * <p>#角色
-         * 你是一个专业的图片内容标注人员，擅长识别并描述出图片中的内容。</p>
-         * <h1>任务目标</h1>
-         * <p>请结合输入图片，详细描述图片中的内容。</p>
+         * <h1>Role</h1>
+         * <p>You are a professional image content annotator who excels at identifying and describing the content in images.</p>
+         * <h1>Task Objective</h1>
+         * <p>Based on the input image, describe the content in the image in detail</p>
          */
         @NameInMap("ModelPrompt")
         public String modelPrompt;
@@ -159,7 +159,7 @@ public class GetParseSettingsResponseBody extends TeaModel {
 
     public static class GetParseSettingsResponseBodyData extends TeaModel {
         /**
-         * <p>The file type. Valid values are: pdf, docx, doc, etc. All supported file types in the category are listed here.</p>
+         * <p>The file type, specified as a file extension. Valid values include pdf, docx, and doc. All file types supported in the current category are listed.</p>
          * 
          * <strong>example:</strong>
          * <p>pdf</p>
@@ -168,12 +168,12 @@ public class GetParseSettingsResponseBody extends TeaModel {
         public String fileType;
 
         /**
-         * <p>The parser used for files of the current type. Valid values:</p>
+         * <p>The parser used to parse files of the current type under this category. Valid values:</p>
          * <ul>
-         * <li>DOCMIND (Intelligent parsing)</li>
-         * <li>DOCMIND_DIGITAL (Digital parsing)</li>
-         * <li>DOCMIND_LLM_VERSION (LLM parsing)</li>
-         * <li>DASH_QWEN_VL_PARSER (Qwen VL parsing)</li>
+         * <li>DOCMIND: Intelligent Document Parsing.</li>
+         * <li>DOCMIND_DIGITAL: Electronic Document Parsing.</li>
+         * <li>DOCMIND_LLM_VERSION: LLM-based Document Parsing.</li>
+         * <li>DASH_QWEN_VL_PARSER: Qwen VL Parsing.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -183,7 +183,7 @@ public class GetParseSettingsResponseBody extends TeaModel {
         public String parser;
 
         /**
-         * <p>The parser configuration. Currently, this is available only for Qwen VL parsing.</p>
+         * <p>The parser configuration. This parameter is returned only when the type is set to Qwen VL parsing.</p>
          */
         @NameInMap("ParserConfig")
         public GetParseSettingsResponseBodyDataParserConfig parserConfig;
@@ -192,7 +192,7 @@ public class GetParseSettingsResponseBody extends TeaModel {
          * <p>The display name of the parsing method.</p>
          * 
          * <strong>example:</strong>
-         * <p>电子文档解析</p>
+         * <p>Electronic Document Parsing</p>
          */
         @NameInMap("ParserDisplayName")
         public String parserDisplayName;

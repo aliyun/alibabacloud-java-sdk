@@ -14,7 +14,7 @@ public class DeleteFileResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The business data field of the API response.</p>
+     * <p>The business data field of the operation.</p>
      */
     @NameInMap("Data")
     public DeleteFileResponseBodyData data;
@@ -29,7 +29,7 @@ public class DeleteFileResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>17204B98-xxxx-4F9A-8464-2446A84821CA</p>
@@ -38,7 +38,7 @@ public class DeleteFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status code returned by the API.</p>
+     * <p>The status code returned by the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,12 +47,10 @@ public class DeleteFileResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the API call succeeded. Valid values:</p>
+     * <p>Indicates whether the API call is successful. Valid values:</p>
      * <ul>
-     * <li><p>true: Succeeded.</p>
-     * </li>
-     * <li><p>false: Failed.</p>
-     * </li>
+     * <li>true: The call succeeded.</li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

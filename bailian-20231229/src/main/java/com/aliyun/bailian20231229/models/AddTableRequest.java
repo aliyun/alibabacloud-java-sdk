@@ -98,7 +98,14 @@ public class AddTableRequest extends TeaModel {
         public String columnName;
 
         /**
-         * <p>The data type.</p>
+         * <p>The data type. Valid values:</p>
+         * <ul>
+         * <li>datetime: datetime</li>
+         * <li>string: string</li>
+         * <li>double: double-precision floating point</li>
+         * <li>image_url: image URL</li>
+         * <li>long: long integer</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

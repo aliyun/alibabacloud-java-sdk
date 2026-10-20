@@ -25,17 +25,17 @@ public class AddConnectorRequest extends TeaModel {
     public String connectorType;
 
     /**
-     * <p>The description for the connector.</p>
+     * <p>The description of the connector.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>文件连接器</p>
+     * <p>File connector</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The parameters for the file connector.</p>
+     * <p>The configuration parameters for the file connector.</p>
      */
     @NameInMap("FileConnectorConfig")
     public AddConnectorRequestFileConnectorConfig fileConnectorConfig;
@@ -79,7 +79,7 @@ public class AddConnectorRequest extends TeaModel {
 
     public static class AddConnectorRequestFileConnectorConfig extends TeaModel {
         /**
-         * <p>The name of the bucket.</p>
+         * <p>The name of the storage bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>zyb-docker-registry-jn</p>
@@ -88,7 +88,7 @@ public class AddConnectorRequest extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The region of the bucket.</p>
+         * <p>The region of the storage bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -97,7 +97,11 @@ public class AddConnectorRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The file storage location. Valid values:<br><code>OSS_CUSTOM</code>: Use your own Object Storage Service (OSS) bucket.<br><code>OSS_PLATFORM</code>: Use the platform-provided OSS bucket.<br><br></p>
+         * <p>The file storage location. Valid values:</p>
+         * <ul>
+         * <li>OSS_CUSTOM: Use your own OSS storage. </li>
+         * <li>OSS_PLATFORM: Use platform OSS storage.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>OSS_CUSTOM</p>

@@ -47,7 +47,7 @@ public class BatchUpdateFileTagResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
      * <li>true: Successful.</li>
      * <li>false: Failed.</li>
@@ -141,7 +141,7 @@ public class BatchUpdateFileTagResponseBody extends TeaModel {
         public String fileId;
 
         /**
-         * <p>Indicates whether the operation was successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
          * <li>true: Successful.</li>
          * <li>false: Failed.</li>

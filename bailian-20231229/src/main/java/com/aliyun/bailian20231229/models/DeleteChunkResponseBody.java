@@ -6,12 +6,15 @@ import com.aliyun.tea.*;
 public class DeleteChunkResponseBody extends TeaModel {
     /**
      * <p>The error status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidParameter</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The business data returned upon a successful request.</p>
+     * <p>The business data returned when the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -21,6 +24,9 @@ public class DeleteChunkResponseBody extends TeaModel {
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Required parameter(%s) missing or invalid, please check the request parameters.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -44,10 +50,10 @@ public class DeleteChunkResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li>true: The call was successful.</li>
-     * <li>false: The call failed.</li>
+     * <li>true: The operation was successful.</li>
+     * <li>false: The operation failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

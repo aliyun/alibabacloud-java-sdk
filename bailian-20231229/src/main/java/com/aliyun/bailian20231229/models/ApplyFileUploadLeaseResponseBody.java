@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ApplyFileUploadLeaseResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The error status code.</p>
      * 
      * <strong>example:</strong>
      * <p>DataCenter.FileTooLarge</p>
@@ -14,7 +14,7 @@ public class ApplyFileUploadLeaseResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The business data field of the operation.</p>
      */
     @NameInMap("Data")
     public ApplyFileUploadLeaseResponseBodyData data;
@@ -38,7 +38,7 @@ public class ApplyFileUploadLeaseResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status code returned.</p>
+     * <p>The status code returned by the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,10 +47,10 @@ public class ApplyFileUploadLeaseResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the API call is successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li>true: The call is successful.</li>
-     * <li>false: The call failed.</li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,9 +114,9 @@ public class ApplyFileUploadLeaseResponseBody extends TeaModel {
 
     public static class ApplyFileUploadLeaseResponseBodyDataParam extends TeaModel {
         /**
-         * <p>Key-value pairs that need to be included in the header. Both keys and values are strings.</p>
+         * <p>The key-value pairs to include in the request header. Both keys and values are strings.</p>
          * <blockquote>
-         * <p>The returned Content-Type may be empty. You can upload the file with the empty value.</p>
+         * <p>The returned Content-Type may be empty. Use the empty value as-is when uploading.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -140,9 +140,9 @@ public class ApplyFileUploadLeaseResponseBody extends TeaModel {
         public String method;
 
         /**
-         * <p>The upload URL of the file.</p>
+         * <p>The upload URL for the file.</p>
          * <blockquote>
-         * <p>This URL is a pre-signed URL. FormData upload is not supported. You must upload the file in binary mode.</p>
+         * <p>This URL is a pre-signed URL. It does not support FormData uploads. Use binary upload instead.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -184,7 +184,7 @@ public class ApplyFileUploadLeaseResponseBody extends TeaModel {
 
     public static class ApplyFileUploadLeaseResponseBodyData extends TeaModel {
         /**
-         * <p>The unique ID of the lease. You need to use this parameter when you call the <strong>AddFile</strong> API.</p>
+         * <p>The unique ID of the lease. This parameter is required when calling the <strong>AddFile</strong> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>1e6a159107384782be5e45ac4759b247.1719325231035</p>
@@ -199,7 +199,7 @@ public class ApplyFileUploadLeaseResponseBody extends TeaModel {
         public ApplyFileUploadLeaseResponseBodyDataParam param;
 
         /**
-         * <p>The upload method of the file. Valid values:</p>
+         * <p>The upload method for the file. Valid values:</p>
          * <ul>
          * <li>OSS.PreSignedURL</li>
          * <li>HTTP</li>

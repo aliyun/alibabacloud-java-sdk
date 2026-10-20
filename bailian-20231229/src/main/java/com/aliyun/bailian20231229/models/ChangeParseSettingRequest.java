@@ -44,11 +44,11 @@ public class ChangeParseSettingRequest extends TeaModel {
     /**
      * <p>The parser identifier code. Different parsers are applicable to different scenarios. For more information, see &quot;Knowledge Base&quot;. Valid values:</p>
      * <ul>
-     * <li>DOCMIND (Intelligent Document Parsing)</li>
-     * <li>DOCMIND_DIGITAL (Electronic Document Parsing)</li>
-     * <li>DOCMIND_LLM_VERSION (Large Model Document Parsing)</li>
-     * <li>DASH_QWEN_VL_PARSER (Qwen VL Parsing)</li>
-     * <li>DOCMIND_LLM_VERSION_MEDIA (Audio/Video Parsing)</li>
+     * <li>DOCMIND (intelligent document parsing)</li>
+     * <li>DOCMIND_DIGITAL (electronic document parsing)</li>
+     * <li>DOCMIND_LLM_VERSION (large model document parsing)</li>
+     * <li>DASH_QWEN_VL_PARSER (Qwen VL parsing)</li>
+     * <li>DOCMIND_LLM_VERSION_MEDIA (audio and video parsing)</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -59,7 +59,7 @@ public class ChangeParseSettingRequest extends TeaModel {
     public String parser;
 
     /**
-     * <p>The parser configuration. This parameter is required only when the parser is set to Qwen VL Parsing.</p>
+     * <p>The parser configuration. This parameter is required only when the parser is set to Qwen VL parsing.</p>
      */
     @NameInMap("ParserConfig")
     public ChangeParseSettingRequestParserConfig parserConfig;
@@ -112,13 +112,13 @@ public class ChangeParseSettingRequest extends TeaModel {
         public String modelName;
 
         /**
-         * <p>The prompt used when calling Qwen VL Parsing.</p>
+         * <p>The prompt used when calling Qwen VL parsing.</p>
          * 
          * <strong>example:</strong>
-         * <p>#角色
-         * 你是一个专业的图片内容标注人员，擅长识别并描述出图片中的内容。</p>
-         * <h1>任务目标</h1>
-         * <p>请结合输入图片，详细描述图片中的内容。</p>
+         * <h1>Role</h1>
+         * <p>You are a professional image content annotator who excels at identifying and describing the content in images.</p>
+         * <h1>Task Objective</h1>
+         * <p>Based on the input image, describe the content in the image in detail</p>
          */
         @NameInMap("modelPrompt")
         public String modelPrompt;

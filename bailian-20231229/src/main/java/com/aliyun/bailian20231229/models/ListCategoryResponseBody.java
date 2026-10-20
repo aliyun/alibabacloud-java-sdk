@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCategoryResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The error status code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,7 +14,7 @@ public class ListCategoryResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response payload.</p>
+     * <p>The business data field of the operation.</p>
      */
     @NameInMap("Data")
     public ListCategoryResponseBodyData data;
@@ -38,7 +38,7 @@ public class ListCategoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status code for the request.</p>
+     * <p>The status code returned by the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,12 +47,10 @@ public class ListCategoryResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the request succeeded. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: The request succeeded.</p>
-     * </li>
-     * <li><p><code>false</code>: The request failed.</p>
-     * </li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -128,15 +126,15 @@ public class ListCategoryResponseBody extends TeaModel {
          * <p>The category name.</p>
          * 
          * <strong>example:</strong>
-         * <p>类目1</p>
+         * <p>Category1</p>
          */
         @NameInMap("CategoryName")
         public String categoryName;
 
         /**
-         * <p>The category type. The only valid value is:</p>
+         * <p>The category type. Valid values:</p>
          * <ul>
-         * <li><code>UNSTRUCTURED</code>: A standard category.</li>
+         * <li>UNSTRUCTURED: category.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -146,14 +144,12 @@ public class ListCategoryResponseBody extends TeaModel {
         public String categoryType;
 
         /**
-         * <p>Indicates whether the category is the default. Valid values:</p>
+         * <p>Indicates whether the category is a default category. Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: The category is the default.</p>
-         * </li>
-         * <li><p><code>false</code>: The category is not the default.</p>
-         * </li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
-         * <p>You cannot delete the default category.</p>
+         * <p>Default categories cannot be deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -162,7 +158,7 @@ public class ListCategoryResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>The parent category ID.</p>
+         * <p>The category ID of the parent category.</p>
          * 
          * <strong>example:</strong>
          * <p>cate_addd11b1b79a74e8bbd675c356a91ee3xxxxxxxx</p>
@@ -219,18 +215,16 @@ public class ListCategoryResponseBody extends TeaModel {
 
     public static class ListCategoryResponseBodyData extends TeaModel {
         /**
-         * <p>The list of categories.</p>
+         * <p>The category list.</p>
          */
         @NameInMap("CategoryList")
         public java.util.List<ListCategoryResponseBodyDataCategoryList> categoryList;
 
         /**
-         * <p>Indicates whether more results are available for retrieval. Valid values:</p>
+         * <p>Indicates whether a next page of category data that matches the query conditions exists. Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: More results are available.</p>
-         * </li>
-         * <li><p><code>false</code>: This is the last page of results.</p>
-         * </li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -240,7 +234,7 @@ public class ListCategoryResponseBody extends TeaModel {
         public Boolean hasNext;
 
         /**
-         * <p>The maximum number of results to return per page.</p>
+         * <p>The number of categories per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -249,7 +243,7 @@ public class ListCategoryResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The token used to retrieve the next page of results. This parameter is omitted when no more results are available.</p>
+         * <p>The pagination token returned in this call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAALHWGpGoYCcYMxiFfmlhvh7Z4G8jiXR6IjHYd+M9WQVJ</p>
@@ -258,7 +252,7 @@ public class ListCategoryResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>The total number of matching categories.</p>
+         * <p>The total number of categories in the returned results.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

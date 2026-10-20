@@ -15,7 +15,7 @@ public class UpdateChunkRequest extends TeaModel {
     public String chunkId;
 
     /**
-     * <p>The file ID. This is the <code>FileId</code> returned by the <strong>AddFile</strong> operation. You can also obtain it from the &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a> - Files&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> - Files tab in the Model Studio console by clicking the ID icon next to the corresponding file.</p>
+     * <p>The file ID, which is the <code>FileId</code> returned by the <strong>AddFile</strong> operation. You can also obtain it from the &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">application data</a>-Files&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">application data</a>-Files tab in the Alibaba Cloud Model Studio console by clicking the ID icon next to the corresponding file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpdateChunkRequest extends TeaModel {
     public String dataId;
 
     /**
-     * <p>Specifies whether this text chunk participates in knowledge base retrieval. Valid values:</p>
+     * <p>Specifies whether the text chunk participates in knowledge base retrieval. Valid values:</p>
      * <ul>
      * <li>true: Participates.</li>
      * <li>false: Does not participate.</li>
@@ -40,7 +40,7 @@ public class UpdateChunkRequest extends TeaModel {
     public Boolean isDisplayedChunkContent;
 
     /**
-     * <p>The knowledge base ID. This is the <code>Data.Id</code> returned by the <strong>CreateIndex</strong> operation, or you can obtain it from the &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/knowledge-base">Knowledge Base</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/knowledge-base">Knowledge Base</a> page.</p>
+     * <p>The knowledge base ID, which is the <code>Data.Id</code> returned when you call the <strong>CreateIndex</strong> operation, or retrieved from the &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/knowledge-base">knowledge base</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/knowledge-base">knowledge base</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,20 +50,20 @@ public class UpdateChunkRequest extends TeaModel {
     public String pipelineId;
 
     /**
-     * <p>The new content of the text chunk. The content length must be between 10 and 6000 characters and cannot exceed the maximum segment length specified when the knowledge base was created.</p>
+     * <p>The new content of the text chunk. The content length must be between 10 and 6,000 characters, and must not exceed the maximum segment length set when the knowledge base was created.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>在哲学中所获得的确定性类型不是科学的确定性(即对每个人的理智来说都一样的确定性)，而是一种要在人类的整体本质中才能获得的亲证。哲学的每一形态都不同于科学，因为所有的哲学都没有得到一致的认可...</p>
+     * <p>The type of certainty obtained in philosophy is not scientific certainty (that is, certainty that is the same for every rational mind), but a kind of personal conviction that can only be obtained in the overall nature of humanity. Every form of philosophy differs from science in that no philosophy has received universal acceptance..</p>
      */
     @NameInMap("content")
     public String content;
 
     /**
-     * <p>The new title of the text chunk. The length is limited to 0 to 50 characters. An empty string is allowed. If you pass an empty string, the existing title is cleared. If you do not pass this parameter, the original title is retained.</p>
+     * <p>The new title of the text chunk. The length limit is 0–50 characters. An empty string is allowed. If you pass an empty string, the existing title is cleared. If you do not pass this parameter, the original title is retained.</p>
      * 
      * <strong>example:</strong>
-     * <p>什么是哲学</p>
+     * <p>What is philosophy</p>
      */
     @NameInMap("title")
     public String title;

@@ -7,8 +7,7 @@ public class CreateMemoryResponseBody extends TeaModel {
     /**
      * <p>The long-term memory ID.</p>
      * <blockquote>
-     * <p>Store this value properly. It is required for all subsequent API operations related to this long-term memory.
-     * .</p>
+     * <p>Store this value properly. It is required for all subsequent API operations related to this long-term memory.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
