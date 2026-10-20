@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TagResource extends TeaModel {
     /**
-     * <p>The resource ID, which is the data catalog ID.</p>
+     * <p>The resource ID, which is the catalog ID.</p>
      * 
      * <strong>example:</strong>
      * <p>clg-paimon-0424965be0c240acb4159688c9e2c4b6</p>

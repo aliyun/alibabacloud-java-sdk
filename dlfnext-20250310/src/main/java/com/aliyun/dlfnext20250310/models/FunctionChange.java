@@ -4,11 +4,20 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class FunctionChange extends TeaModel {
+    /**
+     * <p>The change type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>setOption</p>
+     */
     @NameInMap("action")
     public String action;
 
     /**
      * <p>required in UpdateFunctionComment</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Function configuration update</p>
      */
     @NameInMap("comment")
     public String comment;
@@ -21,18 +30,27 @@ public class FunctionChange extends TeaModel {
 
     /**
      * <p>required in SetFunctionOption/RemoveFunctionOption</p>
+     * 
+     * <strong>example:</strong>
+     * <p>namespaceSchema</p>
      */
     @NameInMap("key")
     public String key;
 
     /**
      * <p>required in AddDefinition/UpdateDefinition/DropDefinition</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my_function</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
      * <p>required in SetFunctionOption</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IDC_MOVE</p>
      */
     @NameInMap("value")
     public String value;

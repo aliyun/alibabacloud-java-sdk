@@ -5,67 +5,100 @@ import com.aliyun.tea.*;
 
 public class TableCompactionHistory extends TeaModel {
     /**
-     * <p>The number of files after compaction.</p>
+     * <p>The total number of files after the merge.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("afterFilesCount")
     public Long afterFilesCount;
 
     /**
-     * <p>The total size of files after compaction.</p>
+     * <p>The total size of the files after the merge.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>512</p>
      */
     @NameInMap("afterFilesSize")
     public Long afterFilesSize;
 
     /**
-     * <p>The number of files before compaction.</p>
+     * <p>The total number of files before the merge.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>150</p>
      */
     @NameInMap("beforeFilesCount")
     public Long beforeFilesCount;
 
     /**
-     * <p>The creation time of the last file before compaction.</p>
+     * <p>The latest creation time of the files before the merge.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1744969200000</p>
      */
     @NameInMap("beforeFilesLastCreationTime")
     public Long beforeFilesLastCreationTime;
 
     /**
-     * <p>The total size of files before compaction.</p>
+     * <p>The total size of the files before the merge.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1024</p>
      */
     @NameInMap("beforeFilesSize")
     public Long beforeFilesSize;
 
     /**
-     * <p>The catalog ID.</p>
+     * <p>The ID of the data catalog.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>clg-paimon-d13*****</p>
      */
     @NameInMap("catalogId")
     public String catalogId;
 
     /**
-     * <p>The compaction commit time.</p>
+     * <p>The commit time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1765890111419</p>
      */
     @NameInMap("commitTime")
     public Long commitTime;
 
     /**
-     * <p>The snapshot ID.</p>
+     * <p>The ID of the snapshot.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("snapshotId")
     public Long snapshotId;
 
     /**
-     * <p>The table ID.</p>
+     * <p>The ID of the table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tbl-*****</p>
      */
     @NameInMap("tableId")
     public String tableId;
 
     /**
-     * <p>The time when the record was last updated.</p>
+     * <p>The time when the record was updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1744970111419</p>
      */
     @NameInMap("updatedAt")
     public Long updatedAt;
 
     /**
      * <p>The user who updated the record.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
      */
     @NameInMap("updatedBy")
     public String updatedBy;

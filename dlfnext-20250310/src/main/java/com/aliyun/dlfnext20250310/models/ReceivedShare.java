@@ -14,7 +14,7 @@ public class ReceivedShare extends TeaModel {
     public String catalogName;
 
     /**
-     * <p>The comment of the share.</p>
+     * <p>The comment on the share.</p>
      * 
      * <strong>example:</strong>
      * <p>demo</p>
@@ -32,7 +32,7 @@ public class ReceivedShare extends TeaModel {
     public Long createdAt;
 
     /**
-     * <p>The creator of the share.</p>
+     * <p>The creator.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
@@ -40,6 +40,12 @@ public class ReceivedShare extends TeaModel {
     @NameInMap("createdBy")
     public String createdBy;
 
+    /**
+     * <p>Specifies whether write operations are allowed on the shared resources.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("enableWrite")
     public Boolean enableWrite;
 
@@ -53,7 +59,7 @@ public class ReceivedShare extends TeaModel {
     public String owner;
 
     /**
-     * <p>The provider\&quot;s account ID.</p>
+     * <p>The account ID of the provider.</p>
      * 
      * <strong>example:</strong>
      * <p>1111</p>
@@ -89,7 +95,7 @@ public class ReceivedShare extends TeaModel {
     public Long updatedAt;
 
     /**
-     * <p>The user who last updated the share.</p>
+     * <p>The updater.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>

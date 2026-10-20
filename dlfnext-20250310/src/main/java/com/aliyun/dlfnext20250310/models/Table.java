@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Table extends TeaModel {
     /**
-     * <p>The time when the table was created.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>1741266704867</p>
@@ -14,7 +14,7 @@ public class Table extends TeaModel {
     public Long createdAt;
 
     /**
-     * <p>The creator of the table.</p>
+     * <p>The creator.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
@@ -22,11 +22,14 @@ public class Table extends TeaModel {
     @NameInMap("createdBy")
     public String createdBy;
 
+    /**
+     * <p>The Iceberg table metadata.</p>
+     */
     @NameInMap("icebergTableMetadata")
     public IcebergTableMetadata icebergTableMetadata;
 
     /**
-     * <p>The UUID of the table.</p>
+     * <p>The table UUID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +38,7 @@ public class Table extends TeaModel {
     public String id;
 
     /**
-     * <p>Indicates whether the table is an external table.</p>
+     * <p>Specifies whether the table is an external table.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -44,7 +47,7 @@ public class Table extends TeaModel {
     public Boolean isExternal;
 
     /**
-     * <p>The name of the table.</p>
+     * <p>The table name.</p>
      * 
      * <strong>example:</strong>
      * <p>table_test</p>
@@ -53,7 +56,7 @@ public class Table extends TeaModel {
     public String name;
 
     /**
-     * <p>The owner of the table.</p>
+     * <p>The table owner.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
@@ -62,7 +65,7 @@ public class Table extends TeaModel {
     public String owner;
 
     /**
-     * <p>The path of the table.</p>
+     * <p>The table path.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://clg-paimon-xxx/db-xxx/tbl-xxxx</p>
@@ -77,7 +80,7 @@ public class Table extends TeaModel {
     public Schema schema;
 
     /**
-     * <p>The ID of the table schema.</p>
+     * <p>The table schema ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -85,23 +88,53 @@ public class Table extends TeaModel {
     @NameInMap("schemaId")
     public Long schemaId;
 
+    /**
+     * <p>The table status. A value of active indicates that the table is normal. A value of retained indicates that the table is soft-deleted but still retained in the recycle bin. A value of releasing indicates that the table is about to be permanently purged.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>active</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The storage class transition status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("storageAction")
     public String storageAction;
 
+    /**
+     * <p>The storage class transition time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1764556155852</p>
+     */
     @NameInMap("storageActionTimestamp")
     public Long storageActionTimestamp;
 
+    /**
+     * <p>The storage class.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>STANDARD</p>
+     */
     @NameInMap("storageClass")
     public String storageClass;
 
+    /**
+     * <p>The type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PAIMON</p>
+     */
     @NameInMap("type")
     public String type;
 
     /**
-     * <p>The time when the table was last updated.</p>
+     * <p>The update time.</p>
      * 
      * <strong>example:</strong>
      * <p>1741266704867</p>
@@ -110,7 +143,7 @@ public class Table extends TeaModel {
     public Long updatedAt;
 
     /**
-     * <p>The user who last updated the table.</p>
+     * <p>The updater.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>

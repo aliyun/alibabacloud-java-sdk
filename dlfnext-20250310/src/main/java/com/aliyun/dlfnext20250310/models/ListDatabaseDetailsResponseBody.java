@@ -11,7 +11,7 @@ public class ListDatabaseDetailsResponseBody extends TeaModel {
     public java.util.List<Database> databaseDetails;
 
     /**
-     * <p>The pagination token used to retrieve the next page of results. A value of null indicates that the current page is the last page.</p>
+     * <p>The pagination token used to retrieve the next page of results. A null value indicates that the current query returns the last page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>E8ABEB1C3DB893D16576269017992F57</p>

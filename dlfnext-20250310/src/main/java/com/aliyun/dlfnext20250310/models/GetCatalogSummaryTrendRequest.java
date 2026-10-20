@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCatalogSummaryTrendRequest extends TeaModel {
     /**
-     * <p>The end date, in yyyy-MM-dd format.</p>
+     * <p>The end date in the yyyy-MM-dd format. The result includes the end date.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetCatalogSummaryTrendRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>The start date, in yyyy-MM-dd format.</p>
+     * <p>The start date in the yyyy-MM-dd format. The result includes the start date.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

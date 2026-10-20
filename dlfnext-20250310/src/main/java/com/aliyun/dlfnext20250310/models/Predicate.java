@@ -4,18 +4,39 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class Predicate extends TeaModel {
+    /**
+     * <p>The list of child nodes.</p>
+     */
     @NameInMap("children")
     public java.util.List<Predicate> children;
 
+    /**
+     * <p>The assertion function.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("function")
     public String function;
 
+    /**
+     * <p>The assertion type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EXPRESSION</p>
+     */
     @NameInMap("kind")
     public String kind;
 
+    /**
+     * <p>The list of literal values.</p>
+     */
     @NameInMap("literals")
     public java.util.List<?> literals;
 
+    /**
+     * <p>The transform rule.</p>
+     */
     @NameInMap("transform")
     public Transform transform;
 

@@ -5,22 +5,25 @@ import com.aliyun.tea.*;
 
 public class IcebergTableMetadata extends TeaModel {
     /**
-     * <p>The latest snapshot of the Iceberg table.</p>
+     * <p>The latest Iceberg snapshot.</p>
      */
     @NameInMap("currentSnapshot")
     public IcebergSnapshot currentSnapshot;
 
     /**
-     * <p>The fields.</p>
+     * <p>The column fields.</p>
      */
     @NameInMap("fields")
     public java.util.List<IcebergNestedField> fields;
 
+    /**
+     * <p>The list of field IDs for the Iceberg identifier fields. The array elements are the integer IDs of the identifier fields in the Iceberg schema.</p>
+     */
     @NameInMap("identifierFieldIds")
     public java.util.List<Integer> identifierFieldIds;
 
     /**
-     * <p>The partition fields.</p>
+     * <p>The list of partition fields.</p>
      */
     @NameInMap("partitionFields")
     public java.util.List<IcebergPartitionField> partitionFields;

@@ -4,30 +4,81 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class Namespace extends TeaModel {
+    /**
+     * <p>The creation time, represented as a UNIX timestamp in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1741266704867</p>
+     */
     @NameInMap("createdAt")
     public Long createdAt;
 
+    /**
+     * <p>The user who created the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram:1234567:root</p>
+     */
     @NameInMap("createdBy")
     public String createdBy;
 
+    /**
+     * <p>The namespace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>namespace_id</p>
+     */
     @NameInMap("id")
     public String id;
 
+    /**
+     * <p>The storage path of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://example-bucket/example-namespace/</p>
+     */
     @NameInMap("location")
     public String location;
 
+    /**
+     * <p>The name of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The extension options for the namespace.</p>
+     */
     @NameInMap("options")
     public java.util.Map<String, String> options;
 
+    /**
+     * <p>The namespace owner.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram:1234567:root</p>
+     */
     @NameInMap("owner")
     public String owner;
 
+    /**
+     * <p>The update time, represented as a UNIX timestamp in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1741266704867</p>
+     */
     @NameInMap("updatedAt")
     public Long updatedAt;
 
+    /**
+     * <p>The user who updated the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram:1045689747920334:root</p>
+     */
     @NameInMap("updatedBy")
     public String updatedBy;
 

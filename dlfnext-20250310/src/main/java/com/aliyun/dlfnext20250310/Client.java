@@ -940,7 +940,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a data lake data catalog. The deletion fails unless the following conditions are met: all tables and self-managed databases under the catalog have been deleted, and the databases and tables have been deleted for at least 24 hours.</p>
+     * <p>Deletes a DLF catalog. The deletion fails unless the following conditions are met: all tables and databases under the catalog have been deleted, and the databases and tables have been deleted for at least 24 hours.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -966,7 +966,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a data lake data catalog. The deletion fails unless the following conditions are met: all tables and self-managed databases under the catalog have been deleted, and the databases and tables have been deleted for at least 24 hours.</p>
+     * <p>Deletes a DLF catalog. The deletion fails unless the following conditions are met: all tables and databases under the catalog have been deleted, and the databases and tables have been deleted for at least 24 hours.</p>
      * @return DropCatalogResponse
      */
     public DropCatalogResponse dropCatalog(String catalog) throws Exception {
@@ -1125,7 +1125,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a data catalog.</p>
+     * <p>Retrieves the details of a catalog.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1151,7 +1151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a data catalog.</p>
+     * <p>Retrieves the details of a catalog.</p>
      * @return GetCatalogResponse
      */
     public GetCatalogResponse getCatalog(String catalog) throws Exception {
@@ -1162,7 +1162,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a data catalog.</p>
+     * <p>Retrieves the details of a catalog.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1188,7 +1188,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a data catalog.</p>
+     * <p>Retrieves the details of a catalog.</p>
      * @return GetCatalogByIdResponse
      */
     public GetCatalogByIdResponse getCatalogById(String id) throws Exception {
@@ -1293,7 +1293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the storage overview trend for a catalog.</p>
+     * <p>Retrieves the storage overview trends of the data catalog.</p>
      * 
      * @param request GetCatalogSummaryTrendRequest
      * @param headers map
@@ -1331,7 +1331,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the storage overview trend for a catalog.</p>
+     * <p>Retrieves the storage overview trends of the data catalog.</p>
      * 
      * @param request GetCatalogSummaryTrendRequest
      * @return GetCatalogSummaryTrendResponse
@@ -1418,7 +1418,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can view an inventory overview.</p>
+     * <p>Retrieves the database storage overview.</p>
      * 
      * @param request GetDatabaseSummaryRequest
      * @param headers map
@@ -1452,7 +1452,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can view an inventory overview.</p>
+     * <p>Retrieves the database storage overview.</p>
      * 
      * @param request GetDatabaseSummaryRequest
      * @return GetDatabaseSummaryResponse
@@ -1849,7 +1849,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the storage summary for a table.</p>
+     * <p>Retrieves the table storage overview.</p>
      * 
      * @param request GetTableSummaryRequest
      * @param headers map
@@ -1883,7 +1883,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the storage summary for a table.</p>
+     * <p>Retrieves the table storage overview.</p>
      * 
      * @param request GetTableSummaryRequest
      * @return GetTableSummaryResponse
@@ -2078,7 +2078,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of data catalogs.</p>
+     * <p>Queries the list of catalogs.</p>
      * 
      * @param request ListCatalogsRequest
      * @param headers map
@@ -2120,7 +2120,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of data catalogs.</p>
+     * <p>Queries the list of catalogs.</p>
      * 
      * @param request ListCatalogsRequest
      * @return ListCatalogsResponse
@@ -2132,8 +2132,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation returns the DLF data access role and KMS key policy authorization statements required to configure BYOK SSE KMS. The customer master key is configured at the catalog level by using oss.sse.kms.key-id. When you create a table, you can enable SSE KMS for the table by setting the table property oss.sse.kms.enabled to true. Tables with KMS encryption enabled and tables without encryption can coexist in the same catalog.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Lists databases in a data lake with paged query support.</p>
+     * <p>Queries the list of databases in the data lake by using a paged query with paging.</p>
      * 
      * @param request ListDatabaseDetailsRequest
      * @param headers map
@@ -2178,8 +2181,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation returns the DLF data access role and KMS key policy authorization statements required to configure BYOK SSE KMS. The customer master key is configured at the catalog level by using oss.sse.kms.key-id. When you create a table, you can enable SSE KMS for the table by setting the table property oss.sse.kms.enabled to true. Tables with KMS encryption enabled and tables without encryption can coexist in the same catalog.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Lists databases in a data lake with paged query support.</p>
+     * <p>Queries the list of databases in the data lake by using a paged query with paging.</p>
      * 
      * @param request ListDatabaseDetailsRequest
      * @return ListDatabaseDetailsResponse
@@ -2463,7 +2469,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves storage overview for partitions.</p>
+     * <p>Retrieves the partition storage overview list.</p>
      * 
      * @param request ListPartitionSummariesRequest
      * @param headers map
@@ -2505,7 +2511,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves storage overview for partitions.</p>
+     * <p>Retrieves the partition storage overview list.</p>
      * 
      * @param request ListPartitionSummariesRequest
      * @return ListPartitionSummariesResponse

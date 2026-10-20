@@ -4,15 +4,30 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class Transform extends TeaModel {
+    /**
+     * <p>The target data type.</p>
+     */
     @NameInMap("castType")
     public FullDataType castType;
 
+    /**
+     * <p>The field reference object.</p>
+     */
     @NameInMap("fieldRef")
     public FieldRef fieldRef;
 
+    /**
+     * <p>The input parameters.</p>
+     */
     @NameInMap("inputs")
     public java.util.List<TransformInput> inputs;
 
+    /**
+     * <p>The name of the transformation function.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>transform_name</p>
+     */
     @NameInMap("name")
     public String name;
 

@@ -4,9 +4,21 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class TransformInput extends TeaModel {
+    /**
+     * <p>The input content.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INPUT</p>
+     */
     @NameInMap("input")
     public Object input;
 
+    /**
+     * <p>The input type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LITERAL</p>
+     */
     @NameInMap("type")
     public String type;
 

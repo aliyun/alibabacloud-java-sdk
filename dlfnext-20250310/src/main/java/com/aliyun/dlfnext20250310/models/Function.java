@@ -4,42 +4,108 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class Function extends TeaModel {
+    /**
+     * <p>The comment information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>comment</p>
+     */
     @NameInMap("comment")
     public String comment;
 
+    /**
+     * <p>The creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1741266704867</p>
+     */
     @NameInMap("createdAt")
     public Long createdAt;
 
+    /**
+     * <p>The creator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
+     */
     @NameInMap("createdBy")
     public String createdBy;
 
+    /**
+     * <p>The function metadata definitions.</p>
+     */
     @NameInMap("definitions")
     public java.util.Map<String, FunctionDefinition> definitions;
 
+    /**
+     * <p>Specifies whether the same input always returns the same output.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("deterministic")
     public Boolean deterministic;
 
+    /**
+     * <p>ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>db-xxxx</p>
+     */
     @NameInMap("id")
     public String id;
 
+    /**
+     * <p>The field input parameters.</p>
+     */
     @NameInMap("inputParams")
     public java.util.List<DataField> inputParams;
 
+    /**
+     * <p>The function name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The extension options.</p>
+     */
     @NameInMap("options")
     public java.util.Map<String, String> options;
 
+    /**
+     * <p>The owner.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
+     */
     @NameInMap("owner")
     public String owner;
 
+    /**
+     * <p>The return fields of the function.</p>
+     */
     @NameInMap("returnParams")
     public java.util.List<DataField> returnParams;
 
+    /**
+     * <p>The update time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1764556033696</p>
+     */
     @NameInMap("updatedAt")
     public Long updatedAt;
 
+    /**
+     * <p>The updater.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
+     */
     @NameInMap("updatedBy")
     public String updatedBy;
 

@@ -4,12 +4,30 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class FullInstant extends TeaModel {
+    /**
+     * <p>The snapshot ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("snapshotId")
     public Long snapshotId;
 
+    /**
+     * <p>The tag name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_tag</p>
+     */
     @NameInMap("tagName")
     public String tagName;
 
+    /**
+     * <p>The location method type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>snapshot</p>
+     */
     @NameInMap("type")
     public String type;
 

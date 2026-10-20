@@ -13,9 +13,15 @@ public class Permission extends TeaModel {
     @NameInMap("access")
     public String access;
 
+    /**
+     * <p>The column masking transformation rules mapped by column name. The key is the column name, and the value is the corresponding masking transformation configuration.</p>
+     */
     @NameInMap("columnMasking")
     public java.util.Map<String, ColumnMask> columnMasking;
 
+    /**
+     * <p>The custom columns.</p>
+     */
     @NameInMap("columns")
     public PermissionColumns columns;
 
@@ -28,9 +34,21 @@ public class Permission extends TeaModel {
     @NameInMap("database")
     public String database;
 
+    /**
+     * <p>The expiration time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1762398431157</p>
+     */
     @NameInMap("expireTime")
     public String expireTime;
 
+    /**
+     * <p>The function name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>function_name</p>
+     */
     @NameInMap("function")
     public String function;
 
@@ -52,6 +70,9 @@ public class Permission extends TeaModel {
     @NameInMap("resourceType")
     public String resourceType;
 
+    /**
+     * <p>The row filter.</p>
+     */
     @NameInMap("rowFilter")
     public RowFilter rowFilter;
 
@@ -64,6 +85,12 @@ public class Permission extends TeaModel {
     @NameInMap("table")
     public String table;
 
+    /**
+     * <p>The view name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>view_name</p>
+     */
     @NameInMap("view")
     public String view;
 
@@ -161,9 +188,15 @@ public class Permission extends TeaModel {
     }
 
     public static class PermissionColumns extends TeaModel {
+        /**
+         * <p>The list of included column names.</p>
+         */
         @NameInMap("columnNames")
         public java.util.List<String> columnNames;
 
+        /**
+         * <p>The list of excluded column names.</p>
+         */
         @NameInMap("excludedColumnNames")
         public java.util.List<String> excludedColumnNames;
 

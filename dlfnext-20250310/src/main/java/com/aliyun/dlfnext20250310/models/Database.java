@@ -64,9 +64,21 @@ public class Database extends TeaModel {
     @NameInMap("owner")
     public String owner;
 
+    /**
+     * <p>The status of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>active</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The number of tables in the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("tableCount")
     public Long tableCount;
 

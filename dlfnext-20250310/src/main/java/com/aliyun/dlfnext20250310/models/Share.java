@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Share extends TeaModel {
     /**
-     * <p>The comment for the share.</p>
+     * <p>The comment information of the share.</p>
      * 
      * <strong>example:</strong>
      * <p>demo</p>
@@ -14,7 +14,7 @@ public class Share extends TeaModel {
     public String comment;
 
     /**
-     * <p>The time when the share was created.</p>
+     * <p>The creation time of the share.</p>
      * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
@@ -23,7 +23,7 @@ public class Share extends TeaModel {
     public Long createdAt;
 
     /**
-     * <p>The user who created the share.</p>
+     * <p>The creator.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
@@ -31,11 +31,17 @@ public class Share extends TeaModel {
     @NameInMap("createdBy")
     public String createdBy;
 
+    /**
+     * <p>Specifies whether write operations are allowed on shared resources.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("enableWrite")
     public Boolean enableWrite;
 
     /**
-     * <p>The resource descriptor of the share owner.</p>
+     * <p>The owner of the share.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
@@ -44,7 +50,7 @@ public class Share extends TeaModel {
     public String owner;
 
     /**
-     * <p>The provider\&quot;s account ID.</p>
+     * <p>The account ID of the provider.</p>
      * 
      * <strong>example:</strong>
      * <p>1111</p>
@@ -71,7 +77,7 @@ public class Share extends TeaModel {
     public String shareName;
 
     /**
-     * <p>The time when the share was last updated.</p>
+     * <p>The update time.</p>
      * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
@@ -80,7 +86,7 @@ public class Share extends TeaModel {
     public Long updatedAt;
 
     /**
-     * <p>The user who last updated the share.</p>
+     * <p>The updater.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class FieldRef extends TeaModel {
     /**
-     * <p>Text sequence</p>
+     * <p>The data sequence of the field.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class FieldRef extends TeaModel {
     public Integer index;
 
     /**
-     * <p>Table name</p>
+     * <p>The field name.</p>
      * 
      * <strong>example:</strong>
      * <p>name</p>
@@ -23,7 +23,7 @@ public class FieldRef extends TeaModel {
     public String name;
 
     /**
-     * <p>File type</p>
+     * <p>The data type of the field.</p>
      */
     @NameInMap("type")
     public FullDataType type;

@@ -5,35 +5,53 @@ import com.aliyun.tea.*;
 
 public class FunctionDefinition extends TeaModel {
     /**
-     * <p>Required in FileFunctionDefinition.</p>
+     * <p>required in FileFunctionDefinition</p>
+     * 
+     * <strong>example:</strong>
+     * <p>com.aliyun.pai.flinkjob.udf.CtrKV</p>
      */
     @NameInMap("className")
     public String className;
 
     /**
-     * <p>Required in SQLFunctionDefinition and LambdaFunctionDefinition.</p>
+     * <p>required in SQLFunctionDefinition/LambdaFunctionDefinition</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("definition")
     public String definition;
 
     /**
-     * <p>Required in FileFunctionDefinition.</p>
+     * <p>required in FileFunctionDefinition</p>
      */
     @NameInMap("fileResources")
     public java.util.List<FunctionFileResource> fileResources;
 
     /**
-     * <p>Required in FileFunctionDefinition.</p>
+     * <p>required in FileFunctionDefinition</p>
+     * 
+     * <strong>example:</strong>
+     * <p>function_name</p>
      */
     @NameInMap("functionName")
     public String functionName;
 
     /**
-     * <p>Required in LambdaFunctionDefinition and FileFunctionDefinition.</p>
+     * <p>required in LambdaFunctionDefinition/FileFunctionDefinition</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
      */
     @NameInMap("language")
     public String language;
 
+    /**
+     * <p>The type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PAIMON</p>
+     */
     @NameInMap("type")
     public String type;
 

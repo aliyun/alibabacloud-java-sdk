@@ -5,43 +5,61 @@ import com.aliyun.tea.*;
 
 public class TableSnapshot extends TeaModel {
     /**
-     * <p>The total number of files in the snapshot.</p>
+     * <p>The number of files.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>63</p>
      */
     @NameInMap("fileCount")
     public Long fileCount;
 
     /**
-     * <p>The total size of all files in the snapshot, in bytes.</p>
+     * <p>The file size.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>645631581</p>
      */
     @NameInMap("fileSizeInBytes")
     public Long fileSizeInBytes;
 
     /**
-     * <p>The creation time of the most recent file in the snapshot, as a Unix timestamp in milliseconds.</p>
+     * <p>The creation time of the latest file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1761704112024</p>
      */
     @NameInMap("lastFileCreationTime")
     public Long lastFileCreationTime;
 
     /**
-     * <p>The total number of partitions in the table.</p>
+     * <p>The number of partitions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("partitionCount")
     public Long partitionCount;
 
     /**
-     * <p>The total number of records in the snapshot.</p>
+     * <p>The number of records.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16627</p>
      */
     @NameInMap("recordCount")
     public Long recordCount;
 
     /**
-     * <p>Contains detailed information about the snapshot.</p>
+     * <p>The name of the snapshot.</p>
      */
     @NameInMap("snapshot")
     public Snapshot snapshot;
 
     /**
-     * <p>The total number of buckets in the table.</p>
+     * <p>The total number of buckets.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>64</p>
      */
     @NameInMap("totalBuckets")
     public Integer totalBuckets;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TableSummary extends TeaModel {
     /**
-     * <p>The timestamp, in milliseconds, indicating when the table was created.</p>
+     * <p>The table creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
@@ -14,7 +14,7 @@ public class TableSummary extends TeaModel {
     public Long createdAt;
 
     /**
-     * <p>The name of the database.</p>
+     * <p>The database name.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -23,7 +23,7 @@ public class TableSummary extends TeaModel {
     public String databaseName;
 
     /**
-     * <p>The generation date of the storage summary.</p>
+     * <p>The update date of the storage overview data.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-06-01</p>
@@ -32,7 +32,7 @@ public class TableSummary extends TeaModel {
     public String generatedDate;
 
     /**
-     * <p>The timestamp, in milliseconds, indicating when the table data was last accessed.</p>
+     * <p>The last data access time of the table.</p>
      * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
@@ -40,11 +40,26 @@ public class TableSummary extends TeaModel {
     @NameInMap("lastAccessTime")
     public Long lastAccessTime;
 
+    /**
+     * <p>The last requester.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
+     */
     @NameInMap("lastRequester")
     public String lastRequester;
 
     /**
-     * <p>The total size of data files in the Archive storage class, in bytes.</p>
+     * <p>The storage size of the latest snapshot, in bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1024</p>
+     */
+    @NameInMap("latestSnapshotDataSizeInBytes")
+    public Long latestSnapshotDataSizeInBytes;
+
+    /**
+     * <p>The storage size of archive data files.</p>
      * 
      * <strong>example:</strong>
      * <p>10240</p>
@@ -53,7 +68,7 @@ public class TableSummary extends TeaModel {
     public Long objTypeArchiveSize;
 
     /**
-     * <p>The total size of data files in the Cold Archive storage class, in bytes.</p>
+     * <p>The storage size of cold archive data files.</p>
      * 
      * <strong>example:</strong>
      * <p>10240</p>
@@ -62,7 +77,7 @@ public class TableSummary extends TeaModel {
     public Long objTypeColdArchiveSize;
 
     /**
-     * <p>The total size of data files in the Infrequent Access storage class, in bytes.</p>
+     * <p>The storage size of infrequent access data files.</p>
      * 
      * <strong>example:</strong>
      * <p>10240</p>
@@ -71,7 +86,7 @@ public class TableSummary extends TeaModel {
     public Long objTypeIaSize;
 
     /**
-     * <p>The total size of data files in the Standard storage class, in bytes.</p>
+     * <p>The storage size of standard data files.</p>
      * 
      * <strong>example:</strong>
      * <p>10240</p>
@@ -80,7 +95,7 @@ public class TableSummary extends TeaModel {
     public Long objTypeStandardSize;
 
     /**
-     * <p>The total number of partitions in the table.</p>
+     * <p>The total number of partitions.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -89,7 +104,7 @@ public class TableSummary extends TeaModel {
     public Long partitionCount;
 
     /**
-     * <p>The storage location of the table.</p>
+     * <p>The storage location.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://clg-xxxx/db-xxxx/tbl-xxxx</p>
@@ -103,17 +118,26 @@ public class TableSummary extends TeaModel {
     @NameInMap("storageActionParams")
     public java.util.Map<String, String> storageActionParams;
 
+    /**
+     * <p>The storage class transition time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1767491579459</p>
+     */
     @NameInMap("storageActionTimestamp")
     public Long storageActionTimestamp;
 
     /**
      * <p>The storage class.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>STANDARD</p>
      */
     @NameInMap("storageClass")
     public String storageClass;
 
     /**
-     * <p>The name of the table.</p>
+     * <p>The table name.</p>
      * 
      * <strong>example:</strong>
      * <p>table1</p>
@@ -121,29 +145,44 @@ public class TableSummary extends TeaModel {
     @NameInMap("tableName")
     public String tableName;
 
+    /**
+     * <p>The top requester of the day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
+     */
     @NameInMap("topRequester")
     public String topRequester;
 
     /**
-     * <p>Total file access count.</p>
+     * <p>The total number of file accesses.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("totalFileAccessNum")
     public Long totalFileAccessNum;
 
     /**
-     * <p>Total file access count over the last 30 days.</p>
+     * <p>The total number of file accesses in the last 7 days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("totalFileAccessNum30d")
     public Long totalFileAccessNum30d;
 
     /**
-     * <p>Total file access count over the last 7 days.</p>
+     * <p>The total number of file accesses in the last 30 days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("totalFileAccessNum7d")
     public Long totalFileAccessNum7d;
 
     /**
-     * <p>The total number of files in the table.</p>
+     * <p>The total number of table files.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -152,7 +191,7 @@ public class TableSummary extends TeaModel {
     public Long totalFileCount;
 
     /**
-     * <p>The total storage capacity of the table, in bytes.</p>
+     * <p>The table storage capacity, in bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>1024</p>
@@ -161,7 +200,7 @@ public class TableSummary extends TeaModel {
     public Long totalFileSizeInBytes;
 
     /**
-     * <p>The total number of metadata files.</p>
+     * <p>The number of metadata files.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -170,7 +209,7 @@ public class TableSummary extends TeaModel {
     public Long totalMetaFileCount;
 
     /**
-     * <p>The total size of metadata files, in bytes.</p>
+     * <p>The storage size of metadata files.</p>
      * 
      * <strong>example:</strong>
      * <p>10240</p>
@@ -179,7 +218,7 @@ public class TableSummary extends TeaModel {
     public Long totalMetaSizeInBytes;
 
     /**
-     * <p>The number of Standard or Infrequent Access partitions unaccessed in the last 180 days.</p>
+     * <p>The number of standard or infrequent access partitions that have not been accessed in the last 180 days.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -188,7 +227,7 @@ public class TableSummary extends TeaModel {
     public Long unaccessedStdIaPartitionCount180d;
 
     /**
-     * <p>The number of Standard partitions unaccessed in the last 30 days.</p>
+     * <p>The number of standard storage partitions that have not been accessed in the last 30 days.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -198,6 +237,9 @@ public class TableSummary extends TeaModel {
 
     /**
      * <p>The update time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1764555981383</p>
      */
     @NameInMap("updatedAt")
     public Long updatedAt;
@@ -245,6 +287,14 @@ public class TableSummary extends TeaModel {
     }
     public String getLastRequester() {
         return this.lastRequester;
+    }
+
+    public TableSummary setLatestSnapshotDataSizeInBytes(Long latestSnapshotDataSizeInBytes) {
+        this.latestSnapshotDataSizeInBytes = latestSnapshotDataSizeInBytes;
+        return this;
+    }
+    public Long getLatestSnapshotDataSizeInBytes() {
+        return this.latestSnapshotDataSizeInBytes;
     }
 
     public TableSummary setObjTypeArchiveSize(Long objTypeArchiveSize) {

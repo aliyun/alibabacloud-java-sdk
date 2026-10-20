@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PartitionSummary extends TeaModel {
     /**
-     * <p>The creation timestamp for the partition.</p>
+     * <p>The partition creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
@@ -14,7 +14,7 @@ public class PartitionSummary extends TeaModel {
     public Long createdAt;
 
     /**
-     * <p>The name of the database.</p>
+     * <p>The database name.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -23,7 +23,7 @@ public class PartitionSummary extends TeaModel {
     public String databaseName;
 
     /**
-     * <p>The last access timestamp for the partition\&quot;s data.</p>
+     * <p>The last data access time.</p>
      * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
@@ -33,12 +33,15 @@ public class PartitionSummary extends TeaModel {
 
     /**
      * <p>The last requester.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
      */
     @NameInMap("lastRequester")
     public String lastRequester;
 
     /**
-     * <p>The name of the partition.</p>
+     * <p>The partition name.</p>
      * 
      * <strong>example:</strong>
      * <p>hh=18</p>
@@ -53,52 +56,70 @@ public class PartitionSummary extends TeaModel {
     public java.util.Map<String, String> storageActionParams;
 
     /**
-     * <p>The storage action timestamp.</p>
+     * <p>The storage class transition time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1764556155852</p>
      */
     @NameInMap("storageActionTimestamp")
     public Long storageActionTimestamp;
 
     /**
      * <p>The storage class.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>STANDARD</p>
      */
     @NameInMap("storageClass")
     public String storageClass;
 
     /**
-     * <p>The name of the table.</p>
+     * <p>The table name.</p>
      * 
      * <strong>example:</strong>
-     * <p>table1</p>
+     * <p>table_name</p>
      */
     @NameInMap("tableName")
     public String tableName;
 
     /**
-     * <p>The top requester.</p>
+     * <p>The top requester of the day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::[accountId]:root</p>
      */
     @NameInMap("topRequester")
     public String topRequester;
 
     /**
-     * <p>Total file access count.</p>
+     * <p>The total number of file accesses.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("totalFileAccessNum")
     public Long totalFileAccessNum;
 
     /**
-     * <p>Total file access count over the last 30 days.</p>
+     * <p>The total number of file accesses in the last 30 days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("totalFileAccessNum30d")
     public Long totalFileAccessNum30d;
 
     /**
-     * <p>Total file access count over the last 7 days.</p>
+     * <p>The total number of file accesses in the last 7 days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>70</p>
      */
     @NameInMap("totalFileAccessNum7d")
     public Long totalFileAccessNum7d;
 
     /**
-     * <p>The total number of files in the partition.</p>
+     * <p>The total number of files.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -107,7 +128,7 @@ public class PartitionSummary extends TeaModel {
     public Long totalFileCount;
 
     /**
-     * <p>The total size, in bytes, of all files in the partition.</p>
+     * <p>The storage capacity in bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>2048</p>
@@ -116,7 +137,7 @@ public class PartitionSummary extends TeaModel {
     public Long totalFileSizeInBytes;
 
     /**
-     * <p>The last update timestamp for the partition.</p>
+     * <p>The last update time.</p>
      * 
      * <strong>example:</strong>
      * <p>1744970111419</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDatabaseDetailsRequest extends TeaModel {
     /**
-     * <p>The SQL-style right fuzzy match pattern for database names. The percent sign (%) wildcard is supported.</p>
+     * <p>The SQL-style right fuzzy match pattern for database names. The percent sign (%) is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>database%</p>
@@ -14,9 +14,11 @@ public class ListDatabaseDetailsRequest extends TeaModel {
     public String databaseNamePattern;
 
     /**
-     * <p>The page size.</p>
-     * <p>Default value: 1000.</p>
-     * <p>Maximum value: 1000.</p>
+     * <p>The page size.
+     * Default value:
+     *     1000
+     * Maximum value:
+     *     1000</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -25,7 +27,7 @@ public class ListDatabaseDetailsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token used to retrieve the next page of results. If the response does not include this token, pass an empty string (&quot;&quot;) or an empty character (\&quot;\&quot;).</p>
+     * <p>The pagination token used to retrieve the next page of results. If no token is provided in the response, pass an empty string (&quot;&quot;) or an empty character (\&quot;\&quot;).</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -33,6 +35,12 @@ public class ListDatabaseDetailsRequest extends TeaModel {
     @NameInMap("pageToken")
     public String pageToken;
 
+    /**
+     * <p>The filter for the database deletion status. active indicates a normal database, and retained indicates a soft-deleted database that is still retained in the recycle bin.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>active</p>
+     */
     @NameInMap("status")
     public String status;
 

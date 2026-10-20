@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCatalogSummaryRequest extends TeaModel {
     /**
-     * <p>The date of the storage overview.</p>
+     * <p>The date of the storage overview, in the YYYY-MM-DD format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-09-18</p>

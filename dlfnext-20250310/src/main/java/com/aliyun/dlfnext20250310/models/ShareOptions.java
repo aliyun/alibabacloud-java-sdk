@@ -4,15 +4,39 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class ShareOptions extends TeaModel {
+    /**
+     * <p>The maximum number of catalogs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("catalogSizeLimit")
     public Integer catalogSizeLimit;
 
+    /**
+     * <p>The maximum number of recipients.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("receiverSizeLimit")
     public Integer receiverSizeLimit;
 
+    /**
+     * <p>The maximum shared resource count.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("shareResourceSizeLimit")
     public Integer shareResourceSizeLimit;
 
+    /**
+     * <p>The maximum number of shares.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("shareSizeLimit")
     public Integer shareSizeLimit;
 

@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to remove all tags from the resources. This parameter and TagKey are mutually exclusive.</p>
+     * <p>Specifies whether to delete all tags from the resources. This parameter and the TagKey parameter are mutually exclusive.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("all")
     public Boolean all;
 
     /**
-     * <p>The list of data catalog IDs from which to remove tags. The value is a JSON array. Maximum: 50.</p>
+     * <p>The list of resource IDs. You can specify up to 50 resource IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,17 +24,17 @@ public class UntagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. Valid value: CATALOGRESOURCE.</p>
+     * <p>The resource type. Valid value: catalog.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>CATALOGRESOURCE</p>
+     * <p>catalog</p>
      */
     @NameInMap("resourceType")
     public String resourceType;
 
     /**
-     * <p>The list of tag keys to remove. The value is a JSON array. This parameter and All are mutually exclusive.</p>
+     * <p>The list of tag keys. This parameter and the All parameter are mutually exclusive.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;team&quot;]</p>
