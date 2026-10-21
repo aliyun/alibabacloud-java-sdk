@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateProductRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the response messages. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English. This parameter is required. If not provided, the service returns a 400 error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class UpdateProductRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The product ID.</p>
+     * <p>The product ID. Only products with ProductType set to custom support updates. System preset products (ProductType set to preset) cannot be modified. Calling this operation on a preset product returns a 403 error. To create a custom product, use the CreateProduct API first. This parameter is the resource identifier for the Update operation and is required. Only custom products can be updated. System preset products cannot be updated.</p>
      * 
      * <strong>example:</strong>
      * <p>alibaba_cloud_sas</p>
@@ -38,12 +36,10 @@ public class UpdateProductRequest extends TeaModel {
     public String productName;
 
     /**
-     * <p>The region of the Data Management center for threat analysis. Select the region for the Data Management center based on the region of your assets. Valid values:</p>
+     * <p>The region where the data management center of Cloud Threat Detection and Response (CTDR) is located. Select the management center region based on the region where your assets reside. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: The Chinese mainland.</p>
-     * </li>
-     * <li><p>ap-southeast-1: Regions outside the Chinese mainland.</p>
-     * </li>
+     * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Assets are located outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,7 +49,7 @@ public class UpdateProductRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID of a member. An administrator can specify this parameter to switch to the perspective of the member.</p>
+     * <p>The user ID that the administrator uses to switch to another member\&quot;s view.</p>
      * 
      * <strong>example:</strong>
      * <p>1733269771123</p>

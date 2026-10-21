@@ -11,7 +11,7 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
     public GetNormalizationRuleResponseBodyNormalizationRule normalizationRule;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
@@ -42,7 +42,7 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
 
     public static class GetNormalizationRuleResponseBodyNormalizationRule extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>
@@ -51,7 +51,7 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>Specifies whether to pack non-standard fields into the extend_content field. Valid values:</p>
+         * <p>Specifies whether to pack non-standard fields into the extended field extend_content. Valid values:</p>
          * <ul>
          * <li>enabled: Enabled.</li>
          * <li>disabled: Disabled.</li>
@@ -64,12 +64,7 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
         public String extendContentPacked;
 
         /**
-         * <p>The storage mode for extended fields. Valid values:</p>
-         * <ul>
-         * <li>flat: ingested as-is.</li>
-         * <li>reject: not ingested.</li>
-         * <li>pack: packed into the extend_content field.</li>
-         * </ul>
+         * <p>The storage mode for extended fields. Valid values: flat (ingest as-is), reject (do not ingest), and pack (pack into the extend_content field).</p>
          * 
          * <strong>example:</strong>
          * <p>flat</p>
@@ -87,6 +82,12 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
         public String normalizationCategoryId;
 
         /**
+         * <p>The field source:</p>
+         * <ul>
+         * <li>&quot;native&quot;: raw logs</li>
+         * <li>&quot;normalized&quot;: normalized logs</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>normalized</p>
          */
@@ -123,7 +124,7 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
         public String normalizationRuleFormat;
 
         /**
-         * <p>The normalization rule ID.</p>
+         * <p>The ID of the normalization rule.</p>
          * 
          * <strong>example:</strong>
          * <p>nr-z0b2ssjteut85uoh9nzp</p>
@@ -132,7 +133,7 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
         public String normalizationRuleId;
 
         /**
-         * <p>The list of normalization rule IDs.</p>
+         * <p>The IDs of the normalization rules.</p>
          */
         @NameInMap("NormalizationRuleIds")
         public java.util.List<String> normalizationRuleIds;
@@ -142,7 +143,7 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
          * <ul>
          * <li>both</li>
          * <li>scan</li>
-         * <li>realtime.</li>
+         * <li>realtime</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -172,8 +173,8 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
         /**
          * <p>The type of the normalization rule. Valid values:</p>
          * <ul>
-         * <li>predefined: predefined normalization rule.</li>
-         * <li>custom: custom normalization rule.</li>
+         * <li>predefined: predefined normalization rule</li>
+         * <li>custom: custom normalization rule</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -192,7 +193,7 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
         public Integer normalizationRuleVersion;
 
         /**
-         * <p>The normalization schema ID.</p>
+         * <p>The ID of the normalization schema.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP_ACTIVITY</p>
@@ -201,6 +202,8 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
         public String normalizationSchemaId;
 
         /**
+         * <p>The ID of the normalization security domain.</p>
+         * 
          * <strong>example:</strong>
          * <p>NETWORK_AND_WEB_SECURITY</p>
          */
@@ -210,8 +213,8 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
         /**
          * <p>The field used to sort the rule list. Valid values:</p>
          * <ul>
-         * <li>GmtModified: sorted by modification time.</li>
-         * <li>Id: sorted by rule ID (default).</li>
+         * <li>GmtModified: sort by modification time</li>
+         * <li>Id: sort by rule ID (default)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -230,7 +233,7 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
         public String productId;
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>
@@ -239,7 +242,7 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
-         * <p>The vendor ID associated with the normalization rule.</p>
+         * <p>The ID of the vendor corresponding to the normalization rule.</p>
          * 
          * <strong>example:</strong>
          * <p>alibaba_cloud</p>

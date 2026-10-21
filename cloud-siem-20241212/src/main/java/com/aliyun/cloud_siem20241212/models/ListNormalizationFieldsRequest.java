@@ -8,7 +8,8 @@ public class ListNormalizationFieldsRequest extends TeaModel {
      * <p>The language of the response. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese.</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English.
+     * This parameter is required and cannot be omitted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +19,7 @@ public class ListNormalizationFieldsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of entries to return in this request.</p>
+     * <p>The maximum number of entries to return.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -39,7 +40,7 @@ public class ListNormalizationFieldsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Specifies whether a next query token exists. You do not need to specify this parameter for the first query or if no next query exists. If a next query exists, set this parameter to the NextToken value returned by the previous API call.</p>
+     * <p>Specifies whether a next query token exists. Leave this parameter empty for the first query or when no more results are available. If a next page exists, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -48,6 +49,8 @@ public class ListNormalizationFieldsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The field source.</p>
+     * 
      * <strong>example:</strong>
      * <p>native</p>
      */
@@ -55,6 +58,8 @@ public class ListNormalizationFieldsRequest extends TeaModel {
     public String normalizationFieldSource;
 
     /**
+     * <p>The schema type.</p>
+     * 
      * <strong>example:</strong>
      * <p>log</p>
      */
@@ -62,10 +67,10 @@ public class ListNormalizationFieldsRequest extends TeaModel {
     public String normalizationSchemaType;
 
     /**
-     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the region where your assets reside. Valid values:</p>
+     * <p>The region where the threat analysis data management center resides. Specify the management center region based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
-     * <li>ap-southeast-1: Your assets reside outside China.</li>
+     * <li>cn-hangzhou: The assets reside in the Chinese mainland.</li>
+     * <li>ap-southeast-1: The assets reside outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,7 +80,7 @@ public class ListNormalizationFieldsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the member to which the administrator switches the view.</p>
+     * <p>The user ID that the administrator switches to when viewing as another member.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>

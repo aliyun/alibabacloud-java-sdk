@@ -5,11 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetDataStorageRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the returned message. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese.</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
+     * <p>Note: This parameter is required for actual API calls. If you do not specify this parameter, the service returns a 400 error with the message &quot;The specified Lang can not be empty.&quot;. Explicitly specify the language code.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -18,10 +19,10 @@ public class GetDataStorageRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The region where the threat analysis data management center is located. Specify the management center region based on the region of your assets. Valid values:</p>
+     * <p>The region where the data management center of Threat Analysis is located. Select the region of the management center based on the region where your assets reside. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets are located in the Chinese mainland.</li>
-     * <li>ap-southeast-1: Your assets are located outside China.</li>
+     * <li>cn-hangzhou: The assets reside in the Chinese mainland.</li>
+     * <li>ap-southeast-1: The assets reside outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +32,7 @@ public class GetDataStorageRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID that the administrator uses to switch to another member\&quot;s perspective.</p>
+     * <p>The ID of the user whose perspective the administrator switches to.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>

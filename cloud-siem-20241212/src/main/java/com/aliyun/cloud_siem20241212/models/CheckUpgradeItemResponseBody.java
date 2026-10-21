@@ -42,7 +42,7 @@ public class CheckUpgradeItemResponseBody extends TeaModel {
 
     public static class CheckUpgradeItemResponseBodyUpgradeItem extends TeaModel {
         /**
-         * <p>The name of the module.</p>
+         * <p>The check result of the check item. Example values: OK and FAIL.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -51,7 +51,7 @@ public class CheckUpgradeItemResponseBody extends TeaModel {
         public String checkResult;
 
         /**
-         * <p>The check status.</p>
+         * <p>The checkpoint status.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -60,7 +60,7 @@ public class CheckUpgradeItemResponseBody extends TeaModel {
         public String checkStatus;
 
         /**
-         * <p>The ID of the upgrade item.</p>
+         * <p>The upgrade item ID.</p>
          * 
          * <strong>example:</strong>
          * <p>incident_upgrade</p>

@@ -15,7 +15,8 @@ public class ListDataSetRecordsRequest extends TeaModel {
     public String dataSetId;
 
     /**
-     * <p>The filter conditions, specified as a JSON string. For example: {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;}</p>
+     * <p>The JSON string for field fuzzy match. Example:
+     * {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;}</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;}</p>
@@ -24,12 +25,10 @@ public class ListDataSetRecordsRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +38,7 @@ public class ListDataSetRecordsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of results to return for each request when <code>NextToken</code> is used for pagination. Valid values: 1 to 100. Default value: 50.</p>
+     * <p>The maximum number of results to return per query when you use the NextToken parameter. Valid values: 1 to 100. Default value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -48,7 +47,7 @@ public class ListDataSetRecordsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The token used to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -57,12 +56,10 @@ public class ListDataSetRecordsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The sort order. Valid values:</p>
+     * <p>The sort direction. Valid values:</p>
      * <ul>
-     * <li><p>&quot;desc&quot; (default)</p>
-     * </li>
-     * <li><p>&quot;asc&quot;</p>
-     * </li>
+     * <li>&quot;desc&quot; (default): Descending order.</li>
+     * <li>&quot;asc&quot;: Ascending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,12 +69,10 @@ public class ListDataSetRecordsRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The sort field. Valid values:</p>
+     * <p>The field by which to sort. Valid values:</p>
      * <ul>
-     * <li><p>&quot;updatetime&quot; (default)</p>
-     * </li>
-     * <li><p>&quot;createtime&quot;</p>
-     * </li>
+     * <li>&quot;updatetime&quot; (default): Update time.</li>
+     * <li>&quot;createtime&quot;: Creation time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -87,7 +82,7 @@ public class ListDataSetRecordsRequest extends TeaModel {
     public String orderField;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -97,7 +92,7 @@ public class ListDataSetRecordsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -107,12 +102,10 @@ public class ListDataSetRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region of the data management center for Threat Analysis. Select the region where your assets are located. Valid values:</p>
+     * <p>The region where the data management center for threat analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li><p><code>cn-hangzhou</code>: For assets in the Chinese mainland.</p>
-     * </li>
-     * <li><p><code>ap-southeast-1</code>: For assets in regions outside mainland China.</p>
-     * </li>
+     * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Assets are located outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -122,7 +115,7 @@ public class ListDataSetRecordsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID that an administrator can use to view data as another member.</p>
+     * <p>The ID of the user whose perspective the administrator switches to.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>

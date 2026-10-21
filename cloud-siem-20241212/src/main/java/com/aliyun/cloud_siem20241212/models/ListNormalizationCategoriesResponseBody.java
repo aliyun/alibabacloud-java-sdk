@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNormalizationCategoriesResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries returned on the current page.</p>
+     * <p>The maximum number of entries to return in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -14,7 +14,7 @@ public class ListNormalizationCategoriesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to retrieve the next page of results. If the response does not contain this parameter, no more results are available.</p>
+     * <p>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -23,7 +23,7 @@ public class ListNormalizationCategoriesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>A list of normalization categories.</p>
+     * <p>The list of standardized categories.</p>
      */
     @NameInMap("NormalizationCategories")
     public java.util.List<ListNormalizationCategoriesResponseBodyNormalizationCategories> normalizationCategories;
@@ -38,7 +38,7 @@ public class ListNormalizationCategoriesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>57</p>
@@ -93,7 +93,7 @@ public class ListNormalizationCategoriesResponseBody extends TeaModel {
 
     public static class ListNormalizationCategoriesResponseBodyNormalizationCategories extends TeaModel {
         /**
-         * <p>The ID of the normalization category.</p>
+         * <p>The ID of the standardized category.</p>
          * 
          * <strong>example:</strong>
          * <p>COMMON_CATEGORY</p>
@@ -102,7 +102,7 @@ public class ListNormalizationCategoriesResponseBody extends TeaModel {
         public String normalizationCategoryId;
 
         /**
-         * <p>The name of the normalization category.</p>
+         * <p>The name of the standardized category.</p>
          * 
          * <strong>example:</strong>
          * <p>COMMON_CATEGORY</p>

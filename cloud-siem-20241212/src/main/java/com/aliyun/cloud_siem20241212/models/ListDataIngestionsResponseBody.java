@@ -42,7 +42,7 @@ public class ListDataIngestionsResponseBody extends TeaModel {
 
     public static class ListDataIngestionsResponseBodyDataIngestions extends TeaModel {
         /**
-         * <p>The time when the data ingestion was enabled.</p>
+         * <p>The activation time. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>
@@ -60,7 +60,7 @@ public class ListDataIngestionsResponseBody extends TeaModel {
         public Integer capacityCount;
 
         /**
-         * <p>The time when the data ingestion was created.</p>
+         * <p>The creation time. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>
@@ -69,7 +69,7 @@ public class ListDataIngestionsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The ID of the data ingestion.</p>
+         * <p>The data ingestion ID.</p>
          * 
          * <strong>example:</strong>
          * <p>alibaba_cloud_sas_netstat_ingestion_173326*******</p>
@@ -78,12 +78,10 @@ public class ListDataIngestionsResponseBody extends TeaModel {
         public String dataIngestionId;
 
         /**
-         * <p>The mode of the data ingestion. Valid values:</p>
+         * <p>The data ingestion mode. Valid values:</p>
          * <ul>
-         * <li><p>realtime</p>
-         * </li>
-         * <li><p>scan</p>
-         * </li>
+         * <li>realtime</li>
+         * <li>scan</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -102,14 +100,11 @@ public class ListDataIngestionsResponseBody extends TeaModel {
         public Boolean dataIngestionModeEditable;
 
         /**
-         * <p>The state of the data ingestion. Valid values:</p>
+         * <p>The data ingestion state. Valid values:</p>
          * <ul>
-         * <li><p>ingested</p>
-         * </li>
-         * <li><p>uningested</p>
-         * </li>
-         * <li><p>abnormal</p>
-         * </li>
+         * <li>ingested</li>
+         * <li>uningested</li>
+         * <li>abnormal</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,7 +114,7 @@ public class ListDataIngestionsResponseBody extends TeaModel {
         public String dataIngestionState;
 
         /**
-         * <p>The error code for the data ingestion anomaly.</p>
+         * <p>The error code for the data ingestion exception state.</p>
          * 
          * <strong>example:</strong>
          * <p>UserUnauthorized</p>
@@ -128,12 +123,10 @@ public class ListDataIngestionsResponseBody extends TeaModel {
         public String dataIngestionStateCode;
 
         /**
-         * <p>The status of the data ingestion. Valid values:</p>
+         * <p>The accessed state of data ingestion. Valid values:</p>
          * <ul>
-         * <li><p>enabled: The data ingestion is enabled.</p>
-         * </li>
-         * <li><p>disabled: The data ingestion is disabled.</p>
-         * </li>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,7 +136,7 @@ public class ListDataIngestionsResponseBody extends TeaModel {
         public String dataIngestionStatus;
 
         /**
-         * <p>The ID of the data ingestion template.</p>
+         * <p>The data ingestion template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>alibaba_cloud_sas_netstat_ingestion</p>
@@ -152,12 +145,10 @@ public class ListDataIngestionsResponseBody extends TeaModel {
         public String dataIngestionTemplateId;
 
         /**
-         * <p>The type of the data ingestion. Valid values:</p>
+         * <p>The data ingestion type. Valid values:</p>
          * <ul>
-         * <li><p>preset</p>
-         * </li>
-         * <li><p>custom</p>
-         * </li>
+         * <li>preset</li>
+         * <li>custom</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -176,7 +167,7 @@ public class ListDataIngestionsResponseBody extends TeaModel {
         public Boolean dataSourceEditable;
 
         /**
-         * <p>The ID of the data source.</p>
+         * <p>The data source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ds-scpfegri73oyoknbc90c</p>
@@ -194,7 +185,7 @@ public class ListDataIngestionsResponseBody extends TeaModel {
         public Boolean normalizationRuleEditable;
 
         /**
-         * <p>The ID of the normalization rule.</p>
+         * <p>The normalization rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>nr-0aywiqdtaqdvwac7xkbjsf3a</p>
@@ -203,7 +194,7 @@ public class ListDataIngestionsResponseBody extends TeaModel {
         public String normalizationRuleId;
 
         /**
-         * <p>The ID of the data source for real-time ingestion.</p>
+         * <p>The data source ID in real-time mode.</p>
          * 
          * <strong>example:</strong>
          * <p>ds-scpfegri73oyoknbc90c</p>
@@ -212,7 +203,7 @@ public class ListDataIngestionsResponseBody extends TeaModel {
         public String realtimeDataSourceId;
 
         /**
-         * <p>The ID of the data source for scan-based ingestion.</p>
+         * <p>The data source ID in scan mode.</p>
          * 
          * <strong>example:</strong>
          * <p>ds-scpfegri73oyoknbc90c</p>
@@ -221,7 +212,7 @@ public class ListDataIngestionsResponseBody extends TeaModel {
         public String scanDataSourceId;
 
         /**
-         * <p>The job ID of the stream processing task.</p>
+         * <p>The stream job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>73a78aa245e3b1299d6ceed093de7bd8</p>
@@ -230,7 +221,7 @@ public class ListDataIngestionsResponseBody extends TeaModel {
         public String streamJobId;
 
         /**
-         * <p>The time when the data ingestion was last updated.</p>
+         * <p>The update time. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>

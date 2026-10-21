@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListDataSourcesShrinkRequest extends TeaModel {
     /**
-     * <p>The source of the data. Valid values:</p>
+     * <p>The data source origin. Valid values:</p>
      * <ul>
-     * <li><p>center</p>
-     * </li>
-     * <li><p>custom</p>
-     * </li>
+     * <li>center</li>
+     * <li>custom</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,13 +18,13 @@ public class ListDataSourcesShrinkRequest extends TeaModel {
     public String dataSourceFrom;
 
     /**
-     * <p>The IDs of the data sources.</p>
+     * <p>The list of data source IDs.</p>
      */
     @NameInMap("DataSourceIds")
     public String dataSourceIdsShrink;
 
     /**
-     * <p>The name of the data source.</p>
+     * <p>The data source name.</p>
      * 
      * <strong>example:</strong>
      * <p>alibaba_cloud_waf_alert_log</p>
@@ -35,14 +33,11 @@ public class ListDataSourcesShrinkRequest extends TeaModel {
     public String dataSourceName;
 
     /**
-     * <p>The status of the data source. Valid values:</p>
+     * <p>The data source status. Valid values:</p>
      * <ul>
-     * <li><p>unconfigured</p>
-     * </li>
-     * <li><p>normal</p>
-     * </li>
-     * <li><p>abnormal</p>
-     * </li>
+     * <li>unconfigured</li>
+     * <li>normal</li>
+     * <li>abnormal</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,12 +47,10 @@ public class ListDataSourcesShrinkRequest extends TeaModel {
     public String dataSourceStatus;
 
     /**
-     * <p>The status of the Logstore. Valid values:</p>
+     * <p>The Logstore status. Valid values:</p>
      * <ul>
-     * <li><p>normal</p>
-     * </li>
-     * <li><p>abnormal</p>
-     * </li>
+     * <li>normal</li>
+     * <li>abnormal</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,18 +60,16 @@ public class ListDataSourcesShrinkRequest extends TeaModel {
     public String dataSourceStoreStatus;
 
     /**
-     * <p>The IDs of the data source templates.</p>
+     * <p>The list of data source template IDs.</p>
      */
     @NameInMap("DataSourceTemplateIds")
     public String dataSourceTemplateIdsShrink;
 
     /**
-     * <p>The type of the data source. Valid values:</p>
+     * <p>The data source type. Valid values:</p>
      * <ul>
-     * <li><p>preset</p>
-     * </li>
-     * <li><p>custom</p>
-     * </li>
+     * <li>preset</li>
+     * <li>custom</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -90,11 +81,10 @@ public class ListDataSourcesShrinkRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
+     * <p>Note: This parameter is required. If you do not specify this parameter, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot; Explicitly pass a language code.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -103,7 +93,7 @@ public class ListDataSourcesShrinkRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The name of the Simple Log Service project.</p>
+     * <p>The Simple Log Service project name.</p>
      * 
      * <strong>example:</strong>
      * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou</p>
@@ -112,7 +102,7 @@ public class ListDataSourcesShrinkRequest extends TeaModel {
     public String logProjectName;
 
     /**
-     * <p>The ID of the log storage region.</p>
+     * <p>The log storage region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -121,7 +111,7 @@ public class ListDataSourcesShrinkRequest extends TeaModel {
     public String logRegionId;
 
     /**
-     * <p>The name of the Simple Log Service Logstore.</p>
+     * <p>The Simple Log Service Logstore name.</p>
      * 
      * <strong>example:</strong>
      * <p>audit-activity</p>
@@ -130,13 +120,13 @@ public class ListDataSourcesShrinkRequest extends TeaModel {
     public String logStoreName;
 
     /**
-     * <p>The IDs of the users who can access the data.</p>
+     * <p>The list of data ingestion user IDs.</p>
      */
     @NameInMap("LogUserIds")
     public String logUserIdsShrink;
 
     /**
-     * <p>The maximum number of entries to return for a single request.</p>
+     * <p>The maximum number of entries to return in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -148,7 +138,7 @@ public class ListDataSourcesShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to retrieve the next page of results. Set this parameter to the value of NextToken that is returned in the response to the previous query. Leave this parameter empty for the first query.</p>
+     * <p>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -157,12 +147,10 @@ public class ListDataSourcesShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The sorting order. Valid values:</p>
+     * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li><p>desc</p>
-     * </li>
-     * <li><p>asc</p>
-     * </li>
+     * <li>desc</li>
+     * <li>asc</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -172,7 +160,7 @@ public class ListDataSourcesShrinkRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The sorting field.</p>
+     * <p>The field used for sorting.</p>
      * 
      * <strong>example:</strong>
      * <p>UpdateTime</p>
@@ -199,12 +187,10 @@ public class ListDataSourcesShrinkRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The region where the Data Management Center of your threat analysis feature is located. Select a region based on the location of your assets. Valid values:</p>
+     * <p>The region where the threat analysis data management center is located. Specify the management center based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland.</p>
-     * </li>
-     * <li><p>ap-southeast-1: Your assets are in a region outside China.</p>
-     * </li>
+     * <li>cn-hangzhou: The assets are located in the Chinese mainland.</li>
+     * <li>ap-southeast-1: The assets are located outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -214,7 +200,7 @@ public class ListDataSourcesShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID of the member. You can use this parameter to switch the perspective to a member.</p>
+     * <p>The user ID of the member to which the administrator switches the view.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>

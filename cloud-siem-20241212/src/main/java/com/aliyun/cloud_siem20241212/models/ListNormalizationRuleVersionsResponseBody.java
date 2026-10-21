@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNormalizationRuleVersionsResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries returned on each page.</p>
+     * <p>The maximum number of entries to return.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -14,7 +14,7 @@ public class ListNormalizationRuleVersionsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no more results are available.</p>
+     * <p>The pagination token. You do not need to specify this parameter for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -29,7 +29,7 @@ public class ListNormalizationRuleVersionsResponseBody extends TeaModel {
     public java.util.List<ListNormalizationRuleVersionsResponseBodyNormalizationRuleVersions> normalizationRuleVersions;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
@@ -93,7 +93,7 @@ public class ListNormalizationRuleVersionsResponseBody extends TeaModel {
 
     public static class ListNormalizationRuleVersionsResponseBodyNormalizationRuleVersions extends TeaModel {
         /**
-         * <p>The time when the version was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>
@@ -102,7 +102,7 @@ public class ListNormalizationRuleVersionsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The expression of the normalization rule.</p>
+         * <p>The normalization rule expression.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -113,7 +113,7 @@ public class ListNormalizationRuleVersionsResponseBody extends TeaModel {
         public String normalizationRuleExpression;
 
         /**
-         * <p>The ID of the normalization rule.</p>
+         * <p>The normalization rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>nr-z0b2ssjteut85uoh9nzp</p>
@@ -122,7 +122,7 @@ public class ListNormalizationRuleVersionsResponseBody extends TeaModel {
         public String normalizationRuleId;
 
         /**
-         * <p>The version of the normalization rule.</p>
+         * <p>The normalization rule version.</p>
          * 
          * <strong>example:</strong>
          * <p>V1</p>
@@ -131,7 +131,7 @@ public class ListNormalizationRuleVersionsResponseBody extends TeaModel {
         public Integer normalizationRuleVersion;
 
         /**
-         * <p>The time when the version was updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAutoDisposeEntitiesResponseBody extends TeaModel {
     /**
-     * <p>A list of AI-powered automated analysis entities.</p>
+     * <p>The list of AI automatic decision-making entity information.</p>
      */
     @NameInMap("AutoDecisionEntities")
     public java.util.List<ListAutoDisposeEntitiesResponseBodyAutoDecisionEntities> autoDecisionEntities;
@@ -20,7 +20,7 @@ public class ListAutoDisposeEntitiesResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The maximum number of entries returned in this request.</p>
+     * <p>The maximum number of entries returned in this call.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -29,7 +29,7 @@ public class ListAutoDisposeEntitiesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to retrieve the next page of results. An empty value indicates that all results have been returned.</p>
+     * <p>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If a next query exists, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -47,7 +47,7 @@ public class ListAutoDisposeEntitiesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
@@ -56,7 +56,7 @@ public class ListAutoDisposeEntitiesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total count of entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>57</p>
@@ -138,10 +138,8 @@ public class ListAutoDisposeEntitiesResponseBody extends TeaModel {
         /**
          * <p>The disposal method. Valid values:</p>
          * <ul>
-         * <li><p><code>ignore</code>: Ignore.</p>
-         * </li>
-         * <li><p><code>dispose</code>: Playbook-based disposal.</p>
-         * </li>
+         * <li>ignore: Ignored.</li>
+         * <li>dispose: Playbook-based disposal.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,16 +169,11 @@ public class ListAutoDisposeEntitiesResponseBody extends TeaModel {
         /**
          * <p>The entity type. Valid values:</p>
          * <ul>
-         * <li><p><code>ip</code>: An IP address.</p>
-         * </li>
-         * <li><p><code>domain</code>: A domain.</p>
-         * </li>
-         * <li><p><code>process</code>: A process.</p>
-         * </li>
-         * <li><p><code>file</code>: A file.</p>
-         * </li>
-         * <li><p><code>host</code>: A host.</p>
-         * </li>
+         * <li>ip: IP address.</li>
+         * <li>domain: domain name.</li>
+         * <li>process: process.</li>
+         * <li>file: file.</li>
+         * <li>host: host.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -208,7 +201,7 @@ public class ListAutoDisposeEntitiesResponseBody extends TeaModel {
         public String playbookUuid;
 
         /**
-         * <p>The unique identifier (UUID) of the entry.</p>
+         * <p>The UUID of the playbook. This is the unique identifier of the playbook.</p>
          * 
          * <strong>example:</strong>
          * <p>0d23f133-22d7-4388-b738-ab******</p>

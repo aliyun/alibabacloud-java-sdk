@@ -4,10 +4,15 @@ package com.aliyun.cloud_siem20241212.models;
 import com.aliyun.tea.*;
 
 public class ListAlertAggregationsResponseBody extends TeaModel {
+    /**
+     * <p>The list of alert groups returned based on the specified aggregation method, sorted by alert count in descending order.</p>
+     */
     @NameInMap("AlertAggregations")
     public java.util.List<ListAlertAggregationsResponseBodyAlertAggregations> alertAggregations;
 
     /**
+     * <p>The maximum number of entries returned in this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -15,6 +20,8 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token for the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
      */
@@ -22,6 +29,8 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +38,8 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -36,6 +47,8 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
      */
@@ -43,6 +56,8 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>57</p>
      */
@@ -112,6 +127,8 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
 
     public static class ListAlertAggregationsResponseBodyAlertAggregationsDefenseActionCounts extends TeaModel {
         /**
+         * <p>The display name of the entity attribute field that can be added to the whitelist.</p>
+         * 
          * <strong>example:</strong>
          * <p>accesstoken</p>
          */
@@ -119,8 +136,10 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The default right-hand value displayed for the whitelist rule.</p>
+         * 
          * <strong>example:</strong>
-         * <p>测试-前途系统AI</p>
+         * <p>Test-FutureSystemAI</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -150,6 +169,8 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
 
     public static class ListAlertAggregationsResponseBodyAlertAggregationsStatusCounts extends TeaModel {
         /**
+         * <p>The display name of the entity attribute field that can be added to the whitelist.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://domain.com/">http://domain.com/</a></p>
          */
@@ -157,6 +178,8 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The right-hand value.</p>
+         * 
          * <strong>example:</strong>
          * <p>123.123.123.123</p>
          */
@@ -187,13 +210,21 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
     }
 
     public static class ListAlertAggregationsResponseBodyAlertAggregations extends TeaModel {
+        /**
+         * <p>The list of account display values associated with the aggregation group, in one-to-one correspondence with AccountIds. When the username is valid and differs from the account ID, the format is &quot;username/account ID&quot;. Otherwise, only the account ID is returned.</p>
+         */
         @NameInMap("AccountDisplayValues")
         public java.util.List<String> accountDisplayValues;
 
+        /**
+         * <p>The list of member accounts IDs for which the report is generated. You need to specify this parameter only when you generate a multi-account report and want to limit the report to specific member accounts.</p>
+         */
         @NameInMap("AccountIds")
         public java.util.List<String> accountIds;
 
         /**
+         * <p>The unique identifier of the aggregation group, which is a concatenation of AggregationType, PrimaryValue, and SecondaryValue joined by colons (:). The last segment is empty if no secondary aggregation value exists.</p>
+         * 
          * <strong>example:</strong>
          * <p>vendor_product:alibaba_cloud:sas</p>
          */
@@ -201,6 +232,8 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
         public String aggregationKey;
 
         /**
+         * <p>The aggregation method.</p>
+         * 
          * <strong>example:</strong>
          * <p>5m-avg</p>
          */
@@ -208,19 +241,29 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
         public String aggregationType;
 
         /**
+         * <p>The number of consecutive failures. This parameter is optional.</p>
+         * 
          * <strong>example:</strong>
          * <p>25</p>
          */
         @NameInMap("AlertCount")
         public Long alertCount;
 
+        /**
+         * <p>The collection of MITRE ATT&amp;CK attack techniques associated with alerts in the aggregation group. Each element is a JSON array string.</p>
+         */
         @NameInMap("AttackStages")
         public java.util.List<String> attackStages;
 
+        /**
+         * <p>The quantity distribution by defense action within the aggregation group. Name is the action field value, and Value is the corresponding alert count.</p>
+         */
         @NameInMap("DefenseActionCounts")
         public java.util.List<ListAlertAggregationsResponseBodyAlertAggregationsDefenseActionCounts> defenseActionCounts;
 
         /**
+         * <p>The time of the first access, represented as a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1785290308</p>
          */
@@ -228,6 +271,8 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
         public Long firstTime;
 
         /**
+         * <p>The most recent time when the attack event occurred.</p>
+         * 
          * <strong>example:</strong>
          * <p>1785293908000</p>
          */
@@ -235,6 +280,8 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
         public Long latestTime;
 
         /**
+         * <p>The display text of the primary aggregation value. For account aggregation, the format is &quot;username/account ID&quot;. If no valid username exists, only the account ID is returned. For event summaries, the event name is returned based on the Lang parameter. If the name is missing, the event UUID is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>Test incident</p>
          */
@@ -242,6 +289,8 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
         public String primaryDisplayValue;
 
         /**
+         * <p>The value corresponding to the primary query condition.</p>
+         * 
          * <strong>example:</strong>
          * <p>alibaba_cloud</p>
          */
@@ -249,15 +298,26 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
         public String primaryValue;
 
         /**
+         * <p>The value corresponding to the secondary query condition.</p>
+         * 
          * <strong>example:</strong>
          * <p>sas</p>
          */
         @NameInMap("SecondaryValue")
         public String secondaryValue;
 
+        /**
+         * <p>The collection of event source codes.</p>
+         * <blockquote>
+         * <p>Example: [\\\&quot;MRM\\\&quot;]</p>
+         * </blockquote>
+         */
         @NameInMap("SourceCodes")
         public java.util.List<String> sourceCodes;
 
+        /**
+         * <p>The quantity distribution by alert status within the aggregation group. Name is the alert status value, and Value is the corresponding alert count.</p>
+         */
         @NameInMap("StatusCounts")
         public java.util.List<ListAlertAggregationsResponseBodyAlertAggregationsStatusCounts> statusCounts;
 

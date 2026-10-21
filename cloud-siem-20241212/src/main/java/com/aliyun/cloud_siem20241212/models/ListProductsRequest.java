@@ -7,11 +7,10 @@ public class ListProductsRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
+     * <p>Note: This parameter is required in actual calls. If this parameter is not specified, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot; Explicitly pass a language code.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -20,7 +19,7 @@ public class ListProductsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of entries to return.</p>
+     * <p>The maximum number of entries to return in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -32,7 +31,7 @@ public class ListProductsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to start the next query. You do not need to specify this parameter for the first query. For subsequent queries, set this parameter to the \<code>NextToken\\</code> value that is returned from the previous API call.</p>
+     * <p>The pagination token. You do not need to specify this parameter for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -58,10 +57,8 @@ public class ListProductsRequest extends TeaModel {
     /**
      * <p>The product type. Valid values:</p>
      * <ul>
-     * <li><p>preset</p>
-     * </li>
-     * <li><p>custom</p>
-     * </li>
+     * <li>preset</li>
+     * <li>custom</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,12 +68,10 @@ public class ListProductsRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The region of the Data Management center for threat analysis. Select the region for the Management Hub based on the region where your assets are located. Valid values:</p>
+     * <p>The region where the threat analysis data management center is located. Specify the management center based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland or China (Hong Kong).</p>
-     * </li>
-     * <li><p>ap-southeast-1: Your assets are in regions outside China.</p>
-     * </li>
+     * <li>cn-hangzhou: The assets are located in the Chinese mainland or Hong Kong (China).</li>
+     * <li>ap-southeast-1: The assets are located outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -86,7 +81,7 @@ public class ListProductsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID of the member. An administrator can specify this parameter to switch to the perspective of this member.</p>
+     * <p>The user ID of the member to which the administrator switches the view.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>

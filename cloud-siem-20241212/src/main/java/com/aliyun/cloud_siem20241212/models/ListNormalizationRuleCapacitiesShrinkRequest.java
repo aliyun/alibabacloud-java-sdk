@@ -7,10 +7,9 @@ public class ListNormalizationRuleCapacitiesShrinkRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.
+     * This parameter is required in practice. If you do not specify this parameter or pass an empty string, the API returns a 400 error (The specified Lang can not be empty.).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +19,7 @@ public class ListNormalizationRuleCapacitiesShrinkRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of entries to return on each page.</p>
+     * <p>The maximum number of entries to return in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -32,7 +31,7 @@ public class ListNormalizationRuleCapacitiesShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to start the next query. Leave this parameter empty for the first query. If the response is truncated, use the \<code>NextToken\\</code> value from the previous response.</p>
+     * <p>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -41,7 +40,7 @@ public class ListNormalizationRuleCapacitiesShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the normalization rule.</p>
+     * <p>The normalization rule ID.</p>
      * 
      * <strong>example:</strong>
      * <p>nr-z0b2ssjteut85uoh9nzp</p>
@@ -50,18 +49,16 @@ public class ListNormalizationRuleCapacitiesShrinkRequest extends TeaModel {
     public String normalizationRuleId;
 
     /**
-     * <p>A list of normalization rule IDs.</p>
+     * <p>The list of normalization rule IDs.</p>
      */
     @NameInMap("NormalizationRuleIds")
     public String normalizationRuleIdsShrink;
 
     /**
-     * <p>The region of the threat analysis Data Management Center. Select the region where your assets are located. Valid values:</p>
+     * <p>The region where the threat analysis data management center resides. Specify the management center based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland.</p>
-     * </li>
-     * <li><p>ap-southeast-1: Your assets are outside the Chinese mainland.</p>
-     * </li>
+     * <li>cn-hangzhou: The assets reside in the Chinese mainland.</li>
+     * <li>ap-southeast-1: The assets reside outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +68,7 @@ public class ListNormalizationRuleCapacitiesShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID that an administrator uses to switch to a member\&quot;s perspective.</p>
+     * <p>The user ID that the administrator uses to switch to the view of another member.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>

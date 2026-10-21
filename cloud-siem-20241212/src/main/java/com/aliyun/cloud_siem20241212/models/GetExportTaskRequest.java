@@ -16,11 +16,10 @@ public class GetExportTaskRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
+     * <p>Note: This parameter is required. If you do not specify this parameter, the API returns a 400 error.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -29,12 +28,10 @@ public class GetExportTaskRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The region where the threat analysis data management center is deployed. Select a region based on your asset location. Valid values:</p>
+     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the region where your assets reside. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland.</p>
-     * </li>
-     * <li><p>ap-southeast-1: Your assets are outside the Chinese mainland.</p>
-     * </li>
+     * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Your assets reside outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +41,7 @@ public class GetExportTaskRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID of a member account. An administrator can use this parameter to operate as the specified member account.</p>
+     * <p>The ID of the user to which the administrator switches the view.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>

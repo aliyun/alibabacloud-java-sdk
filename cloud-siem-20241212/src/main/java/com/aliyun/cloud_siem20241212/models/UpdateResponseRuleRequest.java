@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateResponseRuleRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the response messages. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese.</li>
      * <li><strong>en</strong>: English.</li>
@@ -27,7 +27,7 @@ public class UpdateResponseRuleRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that marks the position from which to start reading. If this parameter is left empty, data is read from the beginning.</p>
+     * <p>The token that marks the start position of the current read. Leave this parameter empty to start from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -36,10 +36,10 @@ public class UpdateResponseRuleRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region where the data management center of the threat analysis feature is located. Specify the management center based on the region of your assets. Valid values:</p>
+     * <p>The region where the data management center of Cloud Threat Detection and Response (CTDR) is located. Select the management center region based on the region where your assets reside. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: the Chinese mainland.</li>
-     * <li>ap-southeast-1: outside China.</li>
+     * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Your assets reside outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,12 +60,12 @@ public class UpdateResponseRuleRequest extends TeaModel {
     /**
      * <p>The action type of the automated response rule. Valid values:</p>
      * <ul>
-     * <li>doPlaybook: execute a playbook.</li>
-     * <li>changeEventStatus: update the event status.</li>
-     * <li>changeThreatLevel: update the event threat level.</li>
-     * <li>addEventTag: add an event label.</li>
-     * <li>deleteEventTag: delete an event label.</li>
-     * <li>alertWhitelist: add the alert to the whitelist.</li>
+     * <li>doPlaybook: runs a playbook.</li>
+     * <li>changeEventStatus: updates the event status.</li>
+     * <li>changeThreatLevel: updates the threat level of an event.</li>
+     * <li>addEventTag: adds a label to an event.</li>
+     * <li>deleteEventTag: deletes a label from an event.</li>
+     * <li>alertWhitelist: adds an alert to the whitelist.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -110,6 +110,9 @@ public class UpdateResponseRuleRequest extends TeaModel {
     @NameInMap("ResponseRulePriority")
     public Integer responseRulePriority;
 
+    /**
+     * <p>The remarks for the response rule.</p>
+     */
     @NameInMap("ResponseRuleRemark")
     public String responseRuleRemark;
 
@@ -129,9 +132,9 @@ public class UpdateResponseRuleRequest extends TeaModel {
     /**
      * <p>The trigger type of the automated response rule. Valid values:</p>
      * <ul>
-     * <li>event: event occurred.</li>
-     * <li>event_update: event updated.</li>
-     * <li>alert: alert occurred.</li>
+     * <li>event: an event occurs.</li>
+     * <li>event_update: an event is updated.</li>
+     * <li>alert: an alert occurs.</li>
      * </ul>
      * 
      * <strong>example:</strong>

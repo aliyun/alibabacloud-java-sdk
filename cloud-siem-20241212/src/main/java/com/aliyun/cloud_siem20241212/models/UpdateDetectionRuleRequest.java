@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDetectionRuleRequest extends TeaModel {
     /**
-     * <p>The ATT\&amp;CK tactic of the alert.</p>
+     * <p>The ATT&amp;CK technique of the alert.</p>
      * 
      * <strong>example:</strong>
      * <p>Discovery</p>
@@ -13,11 +13,14 @@ public class UpdateDetectionRuleRequest extends TeaModel {
     @NameInMap("AlertAttCk")
     public String alertAttCk;
 
+    /**
+     * <p>The MITRE ATT&amp;CK technique mapping.</p>
+     */
     @NameInMap("AlertAttCkMapping")
     public String alertAttCkMapping;
 
     /**
-     * <p>The description of the alert. You can use $$ to reference fields from the query output.</p>
+     * <p>The alert description. You can use $$ to reference query output fields.</p>
      * 
      * <strong>example:</strong>
      * <p>Alert from: $product_code$, detected network attack from $src_ip$, affected assets include: $dst_ip$</p>
@@ -28,16 +31,11 @@ public class UpdateDetectionRuleRequest extends TeaModel {
     /**
      * <p>The threat level of the alert. Valid values:</p>
      * <ul>
-     * <li><p>5: Critical.</p>
-     * </li>
-     * <li><p>4: Important.</p>
-     * </li>
-     * <li><p>3: Medium.</p>
-     * </li>
-     * <li><p>2: Low.</p>
-     * </li>
-     * <li><p>1: Informational.</p>
-     * </li>
+     * <li>5: critical.</li>
+     * <li>4: high.</li>
+     * <li>3: medium.</li>
+     * <li>2: low.</li>
+     * <li>1: informational.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,11 +44,14 @@ public class UpdateDetectionRuleRequest extends TeaModel {
     @NameInMap("AlertLevel")
     public String alertLevel;
 
+    /**
+     * <p>The alert level mapping.</p>
+     */
     @NameInMap("AlertLevelMapping")
     public String alertLevelMapping;
 
     /**
-     * <p>The name of the alert. You can use $$ to reference fields from the query output.</p>
+     * <p>The alert name. You can use $$ to reference query output fields.</p>
      * 
      * <strong>example:</strong>
      * <p>Detected high-frequency multi-type network attacks from $src_ip$</p>
@@ -68,7 +69,7 @@ public class UpdateDetectionRuleRequest extends TeaModel {
     public String alertSchemaId;
 
     /**
-     * <p>The ATT\&amp;CK tactic ID of the alert.</p>
+     * <p>The ATT&amp;CK tactic phase of the alert.</p>
      * 
      * <strong>example:</strong>
      * <p>TA0042</p>
@@ -77,7 +78,7 @@ public class UpdateDetectionRuleRequest extends TeaModel {
     public String alertTacticId;
 
     /**
-     * <p>The number of alerts for the alert threshold.</p>
+     * <p>The alert threshold count.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -86,7 +87,7 @@ public class UpdateDetectionRuleRequest extends TeaModel {
     public Integer alertThresholdCount;
 
     /**
-     * <p>The fields for the alert threshold. Separate multiple fields with commas.</p>
+     * <p>The list of alert threshold fields, separated by commas.</p>
      * 
      * <strong>example:</strong>
      * <p>alert_type,ip</p>
@@ -95,7 +96,7 @@ public class UpdateDetectionRuleRequest extends TeaModel {
     public String alertThresholdGroup;
 
     /**
-     * <p>The period for the alert threshold.</p>
+     * <p>The length of the alert threshold period.</p>
      * 
      * <strong>example:</strong>
      * <p>5m</p>
@@ -104,7 +105,7 @@ public class UpdateDetectionRuleRequest extends TeaModel {
     public String alertThresholdPeriod;
 
     /**
-     * <p>The type of the alert.</p>
+     * <p>The Alarm Metric for alerting.</p>
      * 
      * <strong>example:</strong>
      * <p>siem_rule_type_alert_storm</p>
@@ -112,11 +113,14 @@ public class UpdateDetectionRuleRequest extends TeaModel {
     @NameInMap("AlertType")
     public String alertType;
 
+    /**
+     * <p>The Alarm Metric mapping for alerting.</p>
+     */
     @NameInMap("AlertTypeMapping")
     public String alertTypeMapping;
 
     /**
-     * <p>The content of the detection expression.</p>
+     * <p>The expression content of the detection rule.</p>
      * 
      * <strong>example:</strong>
      * <p>*|set session mode=scan;SELECT * FROM log
@@ -138,7 +142,7 @@ public class UpdateDetectionRuleRequest extends TeaModel {
     public String detectionExpressionContent;
 
     /**
-     * <p>The type of the detection expression.</p>
+     * <p>The expression content of the detection rule.</p>
      * 
      * <strong>example:</strong>
      * <p>sql</p>
@@ -186,12 +190,9 @@ public class UpdateDetectionRuleRequest extends TeaModel {
     /**
      * <p>The type of the detection rule. Valid values:</p>
      * <ul>
-     * <li><p>preset: a preset detection rule.</p>
-     * </li>
-     * <li><p>custom: a custom detection rule.</p>
-     * </li>
-     * <li><p>custom_template: a rule template.</p>
-     * </li>
+     * <li>preset: preset detection rule.</li>
+     * <li>custom: custom detection rule.</li>
+     * <li>custom_template: rule template.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -211,7 +212,7 @@ public class UpdateDetectionRuleRequest extends TeaModel {
     public String entityMappings;
 
     /**
-     * <p>The configuration of the event aggregation period.</p>
+     * <p>The event aggregation period configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>60m</p>
@@ -220,18 +221,13 @@ public class UpdateDetectionRuleRequest extends TeaModel {
     public String incidentAggregationExpression;
 
     /**
-     * <p>The type of event aggregation. Valid values:</p>
+     * <p>The event aggregation type. Valid values:</p>
      * <ul>
-     * <li><p>none: Events are not generated.</p>
-     * </li>
-     * <li><p>graph_compute: graph computing (supported by predefined rules).</p>
-     * </li>
-     * <li><p>expert: expert rule.</p>
-     * </li>
-     * <li><p>passthrough: pass-through (one-to-one mapping with alerts).</p>
-     * </li>
-     * <li><p>window: window-based aggregation of similar events.</p>
-     * </li>
+     * <li>none: no event is generated.</li>
+     * <li>graph_compute: graph computing (supported by predefined rules).</li>
+     * <li>expert: expert rule.</li>
+     * <li>passthrough: alert pass-through (one-to-one).</li>
+     * <li>window: same-type aggregation (window).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -241,12 +237,10 @@ public class UpdateDetectionRuleRequest extends TeaModel {
     public String incidentAggregationType;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the response messages. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -274,7 +268,7 @@ public class UpdateDetectionRuleRequest extends TeaModel {
     public String logSchemaId;
 
     /**
-     * <p>The custom parameters for the playbook.</p>
+     * <p>The user-defined parameters of the playbook.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -287,7 +281,7 @@ public class UpdateDetectionRuleRequest extends TeaModel {
     public String playbookParameters;
 
     /**
-     * <p>The unique ID of the playbook.</p>
+     * <p>The unique identifier of the playbook.</p>
      * 
      * <strong>example:</strong>
      * <p>31568394-7a86-487c-b8ec-b3f42b59****</p>
@@ -296,12 +290,10 @@ public class UpdateDetectionRuleRequest extends TeaModel {
     public String playbookUuid;
 
     /**
-     * <p>The region of the Data Management center for Threat Analysis. Select the region where your assets are located. Valid values:</p>
+     * <p>The region where the data management center of Cloud Threat Detection and Response is located. Select the management center region based on the region where your assets reside. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: The Chinese mainland.</p>
-     * </li>
-     * <li><p>ap-southeast-1: Regions outside the Chinese mainland.</p>
-     * </li>
+     * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Your assets reside outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -311,7 +303,7 @@ public class UpdateDetectionRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The start time for scheduling. This is a 13-digit UNIX timestamp.</p>
+     * <p>The scheduling start time, expressed as a 13-digit timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1733269771123</p>
@@ -320,7 +312,7 @@ public class UpdateDetectionRuleRequest extends TeaModel {
     public Long scheduleBeginTime;
 
     /**
-     * <p>The cron expression for scheduling. This parameter is required when you set ScheduleType to cron.</p>
+     * <p>The cron expression for scheduling. Required when ScheduleType is set to cron.</p>
      * 
      * <strong>example:</strong>
      * <p>1h</p>
@@ -329,7 +321,7 @@ public class UpdateDetectionRuleRequest extends TeaModel {
     public String scheduleExpression;
 
     /**
-     * <p>The maximum number of retries after a timeout. The value must be between 1 and 100.</p>
+     * <p>The maximum number of retries on timeout. Valid values: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -338,7 +330,7 @@ public class UpdateDetectionRuleRequest extends TeaModel {
     public Integer scheduleMaxRetries;
 
     /**
-     * <p>The maximum timeout period. Unit: seconds. The value must be between 60 and 1800.</p>
+     * <p>The maximum timeout duration, in seconds. Valid values: 60 to 1800.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -349,10 +341,8 @@ public class UpdateDetectionRuleRequest extends TeaModel {
     /**
      * <p>The scheduling type. Valid values:</p>
      * <ul>
-     * <li><p>fixed_rate: fixed interval.</p>
-     * </li>
-     * <li><p>cron: cron expression.</p>
-     * </li>
+     * <li>fixed_rate: fixed interval.</li>
+     * <li>cron: cron expression.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -42,7 +42,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
 
     public static class GetNormalizationSchemaResponseBodyNormalizationSchemaNormalizationFieldsNormalizationFieldJsonKeys extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1736386610000</p>
@@ -51,7 +51,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The key description of the JSON-type standard field.</p>
+         * <p>The description of the key for a JSON normalization field.</p>
          * 
          * <strong>example:</strong>
          * <p>Cloud Provider Code</p>
@@ -60,7 +60,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public String normalizationFieldDescription;
 
         /**
-         * <p>The key example of the JSON-type standard field.</p>
+         * <p>The example of the key for a JSON normalization field.</p>
          * 
          * <strong>example:</strong>
          * <p>alibaba_cloud</p>
@@ -69,7 +69,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public String normalizationFieldExample;
 
         /**
-         * <p>The key source of the JSON-type standard field.</p>
+         * <p>The source of the key for a JSON normalization field.</p>
          * 
          * <strong>example:</strong>
          * <p>preset</p>
@@ -78,7 +78,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public String normalizationFieldFrom;
 
         /**
-         * <p>The key name of the JSON-type standard field.</p>
+         * <p>The name of the key for a JSON normalization field.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_code</p>
@@ -87,25 +87,25 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public String normalizationFieldName;
 
         /**
-         * <p>Indicates whether the key of the JSON-type standard field is required.</p>
+         * <p>Specifies whether the key of a JSON normalization field is required.</p>
          */
         @NameInMap("NormalizationFieldRequired")
         public Boolean normalizationFieldRequired;
 
         /**
-         * <p>Indicates whether the field is a system built-in standard field name.</p>
+         * <p>Specifies whether the normalization field name is a system built-in name.</p>
          */
         @NameInMap("NormalizationFieldReserved")
         public Boolean normalizationFieldReserved;
 
         /**
-         * <p>Indicates whether the key of the JSON-type standard field is tokenized.</p>
+         * <p>Specifies whether the key of a JSON normalization field is tokenized.</p>
          */
         @NameInMap("NormalizationFieldTokenize")
         public Boolean normalizationFieldTokenize;
 
         /**
-         * <p>The key type of the JSON-type standard field.</p>
+         * <p>The type of the key for a JSON normalization field.</p>
          * 
          * <strong>example:</strong>
          * <p>varchar</p>
@@ -114,7 +114,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public String normalizationFieldType;
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1736386610000</p>
@@ -211,7 +211,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
 
     public static class GetNormalizationSchemaResponseBodyNormalizationSchemaNormalizationFields extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1736386610000</p>
@@ -220,7 +220,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The normalization field description.</p>
+         * <p>The description of the normalization field.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_user</p>
@@ -229,7 +229,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public String normalizationFieldDescription;
 
         /**
-         * <p>The normalization field example.</p>
+         * <p>The example of the normalization field.</p>
          * 
          * <strong>example:</strong>
          * <p>173326*******</p>
@@ -238,7 +238,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public String normalizationFieldExample;
 
         /**
-         * <p>The source of the standard field. Valid values:</p>
+         * <p>The source of the normalization field. Valid values:</p>
          * <ul>
          * <li>preset: built-in.</li>
          * <li>custom: custom.</li>
@@ -251,19 +251,19 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public String normalizationFieldFrom;
 
         /**
-         * <p>Indicates whether indexes are created for all keys of the JSON-type standard field.</p>
+         * <p>Specifies whether indexes are created for all keys of a JSON normalization field.</p>
          */
         @NameInMap("NormalizationFieldJsonIndexAll")
         public Boolean normalizationFieldJsonIndexAll;
 
         /**
-         * <p>The key list of the JSON-type standard field.</p>
+         * <p>The list of keys for a JSON normalization field.</p>
          */
         @NameInMap("NormalizationFieldJsonKeys")
         public java.util.List<GetNormalizationSchemaResponseBodyNormalizationSchemaNormalizationFieldsNormalizationFieldJsonKeys> normalizationFieldJsonKeys;
 
         /**
-         * <p>The normalization field name.</p>
+         * <p>The name of the normalization field.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_user</p>
@@ -272,13 +272,13 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public String normalizationFieldName;
 
         /**
-         * <p>Indicates whether the field is required.</p>
+         * <p>Specifies whether the field is required.</p>
          */
         @NameInMap("NormalizationFieldRequired")
         public Boolean normalizationFieldRequired;
 
         /**
-         * <p>Indicates whether the normalization field is required.</p>
+         * <p>Specifies whether the normalization field is required.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -287,7 +287,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public Boolean normalizationFieldRequirement;
 
         /**
-         * <p>Indicates whether the normalization field is reserved.</p>
+         * <p>Specifies whether the normalization field is reserved.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -296,13 +296,13 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public Boolean normalizationFieldReserved;
 
         /**
-         * <p>Indicates whether the standard field is tokenized.</p>
+         * <p>Specifies whether the normalization field is tokenized.</p>
          */
         @NameInMap("NormalizationFieldTokenize")
         public Boolean normalizationFieldTokenize;
 
         /**
-         * <p>The normalization field type. Valid values:</p>
+         * <p>The type of the normalization field. Valid values:</p>
          * <ul>
          * <li>varchar</li>
          * <li>bigint</li>
@@ -316,7 +316,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public String normalizationFieldType;
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1736386610000</p>
@@ -437,7 +437,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
 
     public static class GetNormalizationSchemaResponseBodyNormalizationSchemaNormalizationSchemaReferences extends TeaModel {
         /**
-         * <p>The normalization rule ID.</p>
+         * <p>The ID of the normalization rule.</p>
          * 
          * <strong>example:</strong>
          * <p>alibaba_cloud_cfw_flow_rule</p>
@@ -462,7 +462,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
 
     public static class GetNormalizationSchemaResponseBodyNormalizationSchema extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>
@@ -471,7 +471,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The ID of the normalization rule category.</p>
+         * <p>The ID of the normalized rule category.</p>
          * 
          * <strong>example:</strong>
          * <p>NETWORK_CATEGORY</p>
@@ -480,6 +480,8 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public String normalizationCategoryId;
 
         /**
+         * <p>The source of the field. Valid values: normalized: normalized field, native: native field.</p>
+         * 
          * <strong>example:</strong>
          * <p>native</p>
          */
@@ -493,7 +495,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public java.util.List<GetNormalizationSchemaResponseBodyNormalizationSchemaNormalizationFields> normalizationFields;
 
         /**
-         * <p>The normalization schema description.</p>
+         * <p>The description of the normalization schema.</p>
          * 
          * <strong>example:</strong>
          * <p>Network 5-Tuple Logs</p>
@@ -515,7 +517,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public String normalizationSchemaFrom;
 
         /**
-         * <p>The normalization schema ID.</p>
+         * <p>The ID of the normalization schema.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP_ACTIVITY</p>
@@ -524,7 +526,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public String normalizationSchemaId;
 
         /**
-         * <p>The normalization schema name.</p>
+         * <p>The name of the normalization schema.</p>
          * 
          * <strong>example:</strong>
          * <p>normalization_rule_Z57np</p>
@@ -539,7 +541,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public java.util.List<GetNormalizationSchemaResponseBodyNormalizationSchemaNormalizationSchemaReferences> normalizationSchemaReferences;
 
         /**
-         * <p>The normalization schema type. Valid values:</p>
+         * <p>The type of the normalization schema. Valid values:</p>
          * <ul>
          * <li>log</li>
          * <li>entity</li>
@@ -553,6 +555,8 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public String normalizationSchemaType;
 
         /**
+         * <p>The security domain ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>DATA_SECURITY</p>
          */
@@ -560,17 +564,22 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public String normalizationSecurityDomainId;
 
         /**
+         * <p>The product ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>alibaba_cloud_bastionhost</p>
          */
         @NameInMap("ProductId")
         public String productId;
 
+        /**
+         * <p>The list of recommended entities.</p>
+         */
         @NameInMap("RecommendEntities")
         public java.util.List<String> recommendEntities;
 
         /**
-         * <p>The Simple Log Service LogStore.</p>
+         * <p>The Simple Log Service Logstore.</p>
          * 
          * <strong>example:</strong>
          * <p>network-activity</p>
@@ -588,7 +597,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public String targetStoreView;
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>
@@ -597,6 +606,8 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
+         * <p>The vendor ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>alibaba_cloud</p>
          */

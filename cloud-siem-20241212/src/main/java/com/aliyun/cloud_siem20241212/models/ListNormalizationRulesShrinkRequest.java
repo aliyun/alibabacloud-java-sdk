@@ -8,7 +8,8 @@ public class ListNormalizationRulesShrinkRequest extends TeaModel {
      * <p>The language of the response. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese.</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English.
+     * This parameter is required in practice. If you do not specify this parameter, the API returns a 400 error (The specified Lang can not be empty.).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,7 +31,7 @@ public class ListNormalizationRulesShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
+     * <p>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If a next query is required, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -39,7 +40,7 @@ public class ListNormalizationRulesShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The category ID of the normalization rule.</p>
+     * <p>The normalization rule category ID.</p>
      * 
      * <strong>example:</strong>
      * <p>NETWORK_CATEGORY</p>
@@ -54,7 +55,7 @@ public class ListNormalizationRulesShrinkRequest extends TeaModel {
     public String normalizationRuleIdsShrink;
 
     /**
-     * <p>The name of the normalization rule.</p>
+     * <p>The normalization rule name.</p>
      * 
      * <strong>example:</strong>
      * <p>normalization_rule_Z57np</p>
@@ -63,7 +64,7 @@ public class ListNormalizationRulesShrinkRequest extends TeaModel {
     public String normalizationRuleName;
 
     /**
-     * <p>The type of the normalization rule. Valid values:</p>
+     * <p>The normalization rule type. Valid values:</p>
      * <ul>
      * <li>predefined: predefined normalization rule.</li>
      * <li>custom: custom normalization rule.</li>
@@ -85,6 +86,8 @@ public class ListNormalizationRulesShrinkRequest extends TeaModel {
     public String normalizationSchemaId;
 
     /**
+     * <p>The security domain ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>NETWORK_AND_WEB_SECURITY</p>
      */
@@ -104,7 +107,7 @@ public class ListNormalizationRulesShrinkRequest extends TeaModel {
      * <p>The sort order. Valid values:</p>
      * <ul>
      * <li>desc</li>
-     * <li>asc.</li>
+     * <li>asc</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -141,10 +144,10 @@ public class ListNormalizationRulesShrinkRequest extends TeaModel {
     public String productId;
 
     /**
-     * <p>The region where the data management center of the threat analysis feature resides. Specify this parameter based on the region where your assets reside. Valid values:</p>
+     * <p>The data management center of threat analysis. Specify the management center based on the region where your assets reside. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: the Chinese mainland.</li>
-     * <li>ap-southeast-1: outside China.</li>
+     * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Your assets reside outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -154,7 +157,7 @@ public class ListNormalizationRulesShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID of the member to which the administrator switches the view.</p>
+     * <p>The ID of the member to which the administrator switches the view.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>

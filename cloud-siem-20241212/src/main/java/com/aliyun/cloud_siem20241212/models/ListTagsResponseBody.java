@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagsResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of results to return when using NextToken-based pagination. Valid values: 1 to 100. Default value: 50.</p>
+     * <p>The maximum number of entries to return when you use NextToken for pagination. Valid values: 1 to 100. Default value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -14,7 +14,7 @@ public class ListTagsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If a next query is available, set this parameter to the NextToken value returned by the previous API call.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. If not all results are returned in a query, a value is returned for NextToken. In the next query, set NextToken to this value.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -77,7 +77,7 @@ public class ListTagsResponseBody extends TeaModel {
 
     public static class ListTagsResponseBodyTags extends TeaModel {
         /**
-         * <p>The number of quick queries returned on the current page.</p>
+         * <p>The number of custom queries returned on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>

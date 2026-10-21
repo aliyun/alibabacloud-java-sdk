@@ -7,18 +7,18 @@ public class ListAlertsRequest extends TeaModel {
     /**
      * <p>The threat level of the alert. Valid values:</p>
      * <ul>
-     * <li>5: critical.</li>
-     * <li>4: high-risk.</li>
-     * <li>3: medium-risk.</li>
-     * <li>2: low-risk.</li>
-     * <li>1: informational.</li>
+     * <li>5: Critical.</li>
+     * <li>4: High.</li>
+     * <li>3: Medium.</li>
+     * <li>2: Low.</li>
+     * <li>1: Informational.</li>
      * </ul>
      */
     @NameInMap("AlertLevel")
     public java.util.List<String> alertLevel;
 
     /**
-     * <p>The alert ID associated with the event.</p>
+     * <p>The ID of the alert that is associated with the event.</p>
      * 
      * <strong>example:</strong>
      * <p>sas_71e24437d2797ce8fc59692905a4****</p>
@@ -27,7 +27,7 @@ public class ListAlertsRequest extends TeaModel {
     public String alertUuid;
 
     /**
-     * <p>The end time of the alert.</p>
+     * <p>The end time of the alert. This value is a UNIX timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1766801904000</p>
@@ -41,6 +41,7 @@ public class ListAlertsRequest extends TeaModel {
      * <li><strong>zh</strong> (default): Chinese.</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
+     * <p>Note: This parameter is required in practice. If you do not specify this parameter, the API returns a 400 error: &quot;The specified Lang can not be empty.&quot;</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -49,7 +50,7 @@ public class ListAlertsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of entries to return in this request.</p>
+     * <p>The maximum number of entries to return.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -83,7 +84,7 @@ public class ListAlertsRequest extends TeaModel {
      * <p>The field used for sorting. Valid values:</p>
      * <ul>
      * <li>GmtCreate: creation time.</li>
-     * <li>GmtModified: update time.</li>
+     * <li>GmtModified: last modified time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -115,10 +116,10 @@ public class ListAlertsRequest extends TeaModel {
     /**
      * <p>The query filter condition in JSON format. Valid values:</p>
      * <ul>
-     * <li><code>{&quot;Type&quot;:&quot;maxCost&quot;, &quot;Value&quot;:&quot;100&quot;}</code>: the top 100 queries with the longest execution duration.</li>
-     * <li><code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;finished&quot;}</code>: completed queries.</li>
-     * <li><code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;running&quot;}</code>: running queries.</li>
-     * <li><code>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;30&quot;,&quot;Max&quot;:&quot;50&quot;}</code>: queries with a custom execution duration range. You can specify the minimum and maximum execution duration. <strong>Min</strong> specifies the minimum execution duration. <strong>Max</strong> specifies the maximum execution duration. Unit: milliseconds (ms).<ul>
+     * <li><code>{&quot;Type&quot;:&quot;maxCost&quot;, &quot;Value&quot;:&quot;100&quot;}</code>: The 100 queries with the longest execution duration.</li>
+     * <li><code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;finished&quot;}</code>: Completed queries.</li>
+     * <li><code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;running&quot;}</code>: Running queries.</li>
+     * <li><code>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;30&quot;,&quot;Max&quot;:&quot;50&quot;}</code>: Custom execution duration queries. You can specify the minimum and maximum execution duration. <strong>Min</strong> specifies the minimum execution duration. <strong>Max</strong> specifies the maximum execution duration. Unit: milliseconds (ms).<ul>
      * <li>If only <strong>Min</strong> is specified, queries with an execution duration greater than this value are returned.</li>
      * <li>If only <strong>Max</strong> is specified, queries with an execution duration less than this value are returned.</li>
      * <li>If both <strong>Min</strong> and <strong>Max</strong> are specified, queries with an execution duration greater than or equal to <strong>Min</strong> and less than or equal to <strong>Max</strong> are returned.</li>
@@ -142,10 +143,10 @@ public class ListAlertsRequest extends TeaModel {
     public String queryViewId;
 
     /**
-     * <p>The region where the threat analysis data management center is located. Specify the management center based on the region of your assets. Valid values:</p>
+     * <p>The region where the threat detection and response data management center resides. Specify the management center based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets are located in the Chinese mainland or Hong Kong (China).</li>
-     * <li>ap-southeast-1: Your assets are located outside China.</li>
+     * <li>cn-hangzhou: Your assets reside in the Chinese mainland or Hong Kong (China).</li>
+     * <li>ap-southeast-1: Your assets reside in regions outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -155,7 +156,7 @@ public class ListAlertsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the member accounts in the resource folder.</p>
+     * <p>The ID of the member accounts in the resource directory.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -177,10 +178,10 @@ public class ListAlertsRequest extends TeaModel {
     public Integer roleType;
 
     /**
-     * <p>The time when the alert first occurred.</p>
+     * <p>The time when the alert first occurred. This value is a UNIX timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
-     * <p>2025-09-30T02:23:00Z</p>
+     * <p>1759198980000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

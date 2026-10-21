@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNormalizationRuleRequest extends TeaModel {
     /**
-     * <p>Specifies whether to pack non-standard fields into the extension field extend_content. Valid values:</p>
+     * <p>Specifies whether to pack non-standard fields into the extended field extend_content. Valid values:</p>
      * <ul>
      * <li>enabled: Enabled.</li>
      * <li>disabled: Disabled.</li>
@@ -18,7 +18,7 @@ public class CreateNormalizationRuleRequest extends TeaModel {
     public String extendContentPacked;
 
     /**
-     * <p>The storage mode for extension fields. Valid values: flat, pack, and reject.</p>
+     * <p>The storage mode for extended fields. Valid values: flat, pack, reject.</p>
      * 
      * <strong>example:</strong>
      * <p>flat</p>
@@ -27,7 +27,7 @@ public class CreateNormalizationRuleRequest extends TeaModel {
     public String extendFieldStoreMode;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the response messages. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese.</li>
      * <li><strong>en</strong>: English.</li>
@@ -88,7 +88,7 @@ public class CreateNormalizationRuleRequest extends TeaModel {
      * <ul>
      * <li>both</li>
      * <li>scan</li>
-     * <li>realtime.</li>
+     * <li>realtime</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class CreateNormalizationRuleRequest extends TeaModel {
     public Integer normalizationRuleVersion;
 
     /**
-     * <p>The normalization schema ID.</p>
+     * <p>The ID of the normalization schema.</p>
      * 
      * <strong>example:</strong>
      * <p>HTTP_ACTIVITY</p>
@@ -138,6 +138,8 @@ public class CreateNormalizationRuleRequest extends TeaModel {
     public String normalizationSchemaId;
 
     /**
+     * <p>The ID of the normalization security domain.</p>
+     * 
      * <strong>example:</strong>
      * <p>NETWORK_AND_WEB_SECURITY</p>
      */
@@ -147,8 +149,8 @@ public class CreateNormalizationRuleRequest extends TeaModel {
     /**
      * <p>The field used to sort the rule list. Valid values:</p>
      * <ul>
-     * <li>GmtModified: sorted by modification time.</li>
-     * <li>Id: sorted by rule ID (default).</li>
+     * <li>GmtModified: sorts by modification time.</li>
+     * <li>Id: sorts by rule ID (default).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -167,10 +169,10 @@ public class CreateNormalizationRuleRequest extends TeaModel {
     public String productId;
 
     /**
-     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the region where your assets reside. Valid values:</p>
+     * <p>The region where the data management center of Cloud Threat Detection and Response (CTDR) is located. Select the management center region based on the region where your assets reside. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
-     * <li>ap-southeast-1: Your assets reside outside China.</li>
+     * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Assets are located outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -180,7 +182,7 @@ public class CreateNormalizationRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the member accounts in the resource directory.</p>
+     * <p>The ID of the member accounts in the resource folder.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>

@@ -5,12 +5,11 @@ import com.aliyun.tea.*;
 
 public class ValidateLogStoreRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.
+     * This parameter is actually required. If it is not provided, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot; This parameter is actually required. If it is not provided, the service returns a 400 error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +19,7 @@ public class ValidateLogStoreRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The name of the Simple Log Service project.</p>
+     * <p>The name of the Simple Log Service project. You can call GetDataStorage to obtain a valid project name.</p>
      * 
      * <strong>example:</strong>
      * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou</p>
@@ -38,7 +37,7 @@ public class ValidateLogStoreRequest extends TeaModel {
     public String logRegionId;
 
     /**
-     * <p>The name of the Simple Log Service Logstore.</p>
+     * <p>The name of the Simple Log Service Logstore. This parameter is actually required. You can call GetDataStorage to obtain a valid Logstore name.</p>
      * 
      * <strong>example:</strong>
      * <p>ssglauncher-log</p>
@@ -47,7 +46,7 @@ public class ValidateLogStoreRequest extends TeaModel {
     public String logStoreName;
 
     /**
-     * <p>The user ID for data access.</p>
+     * <p>The ID of the data ingestion user.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>
@@ -56,12 +55,10 @@ public class ValidateLogStoreRequest extends TeaModel {
     public Long logUserId;
 
     /**
-     * <p>The region of the Data Management Center for threat analysis. Select a region based on the location of your assets. Valid values:</p>
+     * <p>The region where the data management center for threat analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: The Chinese mainland.</p>
-     * </li>
-     * <li><p>ap-southeast-1: Regions outside China.</p>
-     * </li>
+     * <li>cn-hangzhou: The assets are located in the Chinese mainland.</li>
+     * <li>ap-southeast-1: The assets are located outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +68,7 @@ public class ValidateLogStoreRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID of a member. This lets an administrator switch to the member\&quot;s perspective.</p>
+     * <p>The ID of the user whose perspective the administrator switches to.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>

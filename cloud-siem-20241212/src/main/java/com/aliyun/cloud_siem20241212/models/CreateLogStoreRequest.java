@@ -5,12 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateLogStoreRequest extends TeaModel {
     /**
-     * <p>The language of the response messages. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.
+     * Note: This parameter is required. If this parameter is not specified, the API returns a 400 error. Valid values: zh (Chinese) or en (English).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +19,7 @@ public class CreateLogStoreRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The name of the Simple Log Service project.</p>
+     * <p>The Simple Log Service project name.</p>
      * 
      * <strong>example:</strong>
      * <p>aliyun-cloudsiem-channel-173326*******-cn-hangzhou</p>
@@ -29,7 +28,7 @@ public class CreateLogStoreRequest extends TeaModel {
     public String logProjectName;
 
     /**
-     * <p>The ID of the log storage region.</p>
+     * <p>The log storage region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -38,7 +37,7 @@ public class CreateLogStoreRequest extends TeaModel {
     public String logRegionId;
 
     /**
-     * <p>The name of the Simple Log Service Logstore.</p>
+     * <p>The Simple Log Service LogStore name.</p>
      * 
      * <strong>example:</strong>
      * <p>logstoreqykug</p>
@@ -56,12 +55,10 @@ public class CreateLogStoreRequest extends TeaModel {
     public Long logUserId;
 
     /**
-     * <p>The region of the Data Management Center for threat analysis. Select a region for the Management Center based on the region of your assets. Valid values:</p>
+     * <p>The region where the data management center of Cloud Threat Detection and Response (CTDR) is located. Specify the management center based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland.</p>
-     * </li>
-     * <li><p>ap-southeast-1: Your assets are in a region outside China.</p>
-     * </li>
+     * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Your assets reside outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +68,7 @@ public class CreateLogStoreRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID of a member. An administrator can specify this parameter to switch to the perspective of the member.</p>
+     * <p>The user ID that the administrator switches to when viewing as another member.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>

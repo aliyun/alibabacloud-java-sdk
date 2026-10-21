@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLogTicketResponseBody extends TeaModel {
     /**
-     * <p>The ticket for Simple Log Service.</p>
+     * <p>The Simple Log Service ticket.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -14,7 +14,7 @@ public class GetLogTicketResponseBody extends TeaModel {
     public String logTicket;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>

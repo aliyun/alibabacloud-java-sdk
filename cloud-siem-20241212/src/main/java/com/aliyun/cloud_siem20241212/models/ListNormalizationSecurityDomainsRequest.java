@@ -10,6 +10,7 @@ public class ListNormalizationSecurityDomainsRequest extends TeaModel {
      * <li><strong>zh</strong> (default): Chinese.</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
+     * <p>Note: This parameter is required. If you do not specify this parameter, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot; Explicitly pass a language code.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -27,7 +28,7 @@ public class ListNormalizationSecurityDomainsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
+     * <p>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -38,8 +39,8 @@ public class ListNormalizationSecurityDomainsRequest extends TeaModel {
     /**
      * <p>The region where the threat detection and response data management center is located. Specify the management center based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: the asset is in the Chinese mainland.</li>
-     * <li>ap-southeast-1: the asset is outside China.</li>
+     * <li>cn-hangzhou: The assets are located in the Chinese mainland.</li>
+     * <li>ap-southeast-1: The assets are located outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +50,7 @@ public class ListNormalizationSecurityDomainsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID of the member to which the administrator switches the view.</p>
+     * <p>The user ID that the administrator uses to switch to the view of another member.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>

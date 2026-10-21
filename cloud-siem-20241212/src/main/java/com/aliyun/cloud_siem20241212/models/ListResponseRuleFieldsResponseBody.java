@@ -20,7 +20,7 @@ public class ListResponseRuleFieldsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next query. Valid values: leave this parameter empty for the first query or if no more results exist. If a next query exists, set this parameter to the NextToken value returned by the previous API call.</p>
+     * <p>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If a next query exists, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -142,12 +142,12 @@ public class ListResponseRuleFieldsResponseBody extends TeaModel {
         /**
          * <p>The aggregation method for the dispatch rule condition. Valid values:</p>
          * <ul>
-         * <li><code>=</code>: equal to</li>
-         * <li><code>&lt;&gt;</code>: not equal to</li>
-         * <li><code>in</code>: contains</li>
-         * <li><code>not in</code>: does not contain</li>
-         * <li><code>REGEXP</code>: matches the regular expression</li>
-         * <li><code>NOT REGEXP</code>: does not match the regular expression</li>
+         * <li><code>=</code>: Equal to.</li>
+         * <li><code>&lt;&gt;</code>: Not equal to.</li>
+         * <li><code>in</code>: Contains.</li>
+         * <li><code>not in</code>: Does not contain.</li>
+         * <li><code>REGEXP</code>: Matches the regular expression.</li>
+         * <li><code>NOT REGEXP</code>: Does not match the regular expression.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -250,7 +250,7 @@ public class ListResponseRuleFieldsResponseBody extends TeaModel {
         public String fieldName;
 
         /**
-         * <p>The normalization object type to which the field belongs.</p>
+         * <p>The normalized object type to which the field belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>alert</p>
@@ -259,7 +259,7 @@ public class ListResponseRuleFieldsResponseBody extends TeaModel {
         public String fieldNormalization;
 
         /**
-         * <p>The list of optional enumeration values for the field. This parameter is not returned if no enumeration values are available.</p>
+         * <p>The list of optional enumeration values for the field. This parameter is not returned if no enumeration values exist.</p>
          */
         @NameInMap("RightValue")
         public java.util.List<ListResponseRuleFieldsResponseBodyListResponseRuleFieldsRightValue> rightValue;

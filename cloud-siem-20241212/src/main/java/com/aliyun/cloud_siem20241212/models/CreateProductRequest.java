@@ -7,10 +7,9 @@ public class CreateProductRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.
+     * Note: This parameter is required in practice. If you do not specify this parameter, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot;</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +19,7 @@ public class CreateProductRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The name of the product.</p>
+     * <p>The product name.</p>
      * 
      * <strong>example:</strong>
      * <p>alibaba_cloud_sas</p>
@@ -29,12 +28,10 @@ public class CreateProductRequest extends TeaModel {
     public String productName;
 
     /**
-     * <p>The region of the Data Management center. Select a region based on the location of your assets. Valid values:</p>
+     * <p>The region where the threat analysis data management center resides. Specify the management center based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: Assets are in the Chinese mainland.</p>
-     * </li>
-     * <li><p>ap-southeast-1: Assets are outside China.</p>
-     * </li>
+     * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Your assets reside outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +41,7 @@ public class CreateProductRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID of a member. This parameter is used when an administrator operates as another member.</p>
+     * <p>The user ID that the administrator uses to switch to the view of another member.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>
@@ -53,7 +50,7 @@ public class CreateProductRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The name of the vendor.</p>
+     * <p>The vendor name.</p>
      * 
      * <strong>example:</strong>
      * <p>111</p>

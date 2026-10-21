@@ -7,9 +7,10 @@ public class DeleteLogStoreRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.<blockquote>
+     * <p>Note: This parameter is required in practice. If this parameter is not specified, the API returns a 400 error: &quot;The specified Lang can not be empty.&quot;</p>
+     * </blockquote>
      * </li>
      * </ul>
      * 
@@ -20,7 +21,10 @@ public class DeleteLogStoreRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The name of the Simple Log Service project.</p>
+     * <p>The Simple Log Service project name.</p>
+     * <blockquote>
+     * <p>Note: This parameter is required in practice. If this parameter is not specified, the API returns a 400 error: &quot;SLS log project name is empty.&quot;</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou</p>
@@ -29,7 +33,7 @@ public class DeleteLogStoreRequest extends TeaModel {
     public String logProjectName;
 
     /**
-     * <p>The ID of the log storage region.</p>
+     * <p>The log storage region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -38,7 +42,7 @@ public class DeleteLogStoreRequest extends TeaModel {
     public String logRegionId;
 
     /**
-     * <p>The name of the Simple Log Service Logstore.</p>
+     * <p>The Simple Log Service LogStore name.</p>
      * 
      * <strong>example:</strong>
      * <p>rds-logstore</p>
@@ -47,7 +51,7 @@ public class DeleteLogStoreRequest extends TeaModel {
     public String logStoreName;
 
     /**
-     * <p>The user ID for data ingestion.</p>
+     * <p>The user ID for data access.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>
@@ -56,12 +60,10 @@ public class DeleteLogStoreRequest extends TeaModel {
     public Long logUserId;
 
     /**
-     * <p>The region of the Management Hub. Select a region based on the location of your assets. Valid values:</p>
+     * <p>The region where the Cloud Threat Detection and Response (CTDR) data management center is located. Specify the management center based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: if your assets are in the Chinese mainland.</p>
-     * </li>
-     * <li><p>ap-southeast-1: if your assets are outside China.</p>
-     * </li>
+     * <li>cn-hangzhou: Your assets belong to the Chinese mainland.</li>
+     * <li>ap-southeast-1: Your assets belong to regions outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +73,7 @@ public class DeleteLogStoreRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID of the member whose perspective the administrator wants to switch to.</p>
+     * <p>The user ID that the administrator switches to when viewing from the perspective of another member.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>

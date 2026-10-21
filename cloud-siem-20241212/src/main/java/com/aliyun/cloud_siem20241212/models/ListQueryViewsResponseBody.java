@@ -4,12 +4,30 @@ package com.aliyun.cloud_siem20241212.models;
 import com.aliyun.tea.*;
 
 public class ListQueryViewsResponseBody extends TeaModel {
+    /**
+     * <p>The Simple Log Service project name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou</p>
+     */
     @NameInMap("LogProjectName")
     public String logProjectName;
 
+    /**
+     * <p>The log storage region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("LogRegionId")
     public String logRegionId;
 
+    /**
+     * <p>The Simple Log Service Logstore name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>audit-activity</p>
+     */
     @NameInMap("LogStoreName")
     public String logStoreName;
 
@@ -23,7 +41,7 @@ public class ListQueryViewsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned in the previous API call.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request or if no more results exist. Set this parameter to the NextToken value returned in the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAASLVeIxed4466E0LVmGkzwS6hJKd9DGVGMDRM6Lu****</p>

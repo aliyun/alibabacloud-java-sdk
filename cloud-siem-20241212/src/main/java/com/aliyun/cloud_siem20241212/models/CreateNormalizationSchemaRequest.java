@@ -5,13 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateNormalizationSchemaRequest extends TeaModel {
     /**
-     * <p>The language of the response message. Valid values:</p>
+     * <p>The language of the response messages. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
+     * <p>Note: This parameter is required in actual API calls. If it is not provided, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot; Pass the language code explicitly.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -20,7 +19,7 @@ public class CreateNormalizationSchemaRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the normalization classification.</p>
+     * <p>The normalization category ID.</p>
      * 
      * <strong>example:</strong>
      * <p>NETWORK_CATEGORY</p>
@@ -29,6 +28,8 @@ public class CreateNormalizationSchemaRequest extends TeaModel {
     public String normalizationCategoryId;
 
     /**
+     * <p>The field source.</p>
+     * 
      * <strong>example:</strong>
      * <p>native</p>
      */
@@ -42,7 +43,7 @@ public class CreateNormalizationSchemaRequest extends TeaModel {
     public java.util.List<CreateNormalizationSchemaRequestNormalizationFields> normalizationFields;
 
     /**
-     * <p>The description of the normalization structure.</p>
+     * <p>The normalization schema description.</p>
      * 
      * <strong>example:</strong>
      * <p>ProcessQuery</p>
@@ -51,7 +52,7 @@ public class CreateNormalizationSchemaRequest extends TeaModel {
     public String normalizationSchemaDescription;
 
     /**
-     * <p>The ID of the normalization structure.</p>
+     * <p>The normalization schema ID. When creating a custom schema, the ID must start with custom- and can contain only lowercase letters, digits, and hyphens. Example: custom-my-log-schema.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +62,7 @@ public class CreateNormalizationSchemaRequest extends TeaModel {
     public String normalizationSchemaId;
 
     /**
-     * <p>The name of the normalization structure.</p>
+     * <p>The normalization schema name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,12 +72,10 @@ public class CreateNormalizationSchemaRequest extends TeaModel {
     public String normalizationSchemaName;
 
     /**
-     * <p>The type of the normalization structure. Valid values:</p>
+     * <p>The normalization schema type. Valid values:</p>
      * <ul>
-     * <li><p>log: a log</p>
-     * </li>
-     * <li><p>entity: an entity</p>
-     * </li>
+     * <li>log: log.</li>
+     * <li>entity: entity.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -87,6 +86,8 @@ public class CreateNormalizationSchemaRequest extends TeaModel {
     public String normalizationSchemaType;
 
     /**
+     * <p>The security domain ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>NETWORK_AND_WEB_SECURITY</p>
      */
@@ -94,6 +95,8 @@ public class CreateNormalizationSchemaRequest extends TeaModel {
     public String normalizationSecurityDomainId;
 
     /**
+     * <p>The product ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>sas</p>
      */
@@ -101,12 +104,10 @@ public class CreateNormalizationSchemaRequest extends TeaModel {
     public String productId;
 
     /**
-     * <p>The region where the Data Management center for threat analysis is located. Select a region based on the location of your assets. Valid values:</p>
+     * <p>The region where the data management center of Cloud Threat Detection and Response (CTDR) is located. Select the management center region based on the region where your assets reside. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: for assets in the Chinese mainland and China (Hong Kong)</p>
-     * </li>
-     * <li><p>ap-southeast-1: for assets in regions outside China</p>
-     * </li>
+     * <li>cn-hangzhou: assets in the Chinese mainland or Hong Kong (China).</li>
+     * <li>ap-southeast-1: assets in regions outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,7 +117,7 @@ public class CreateNormalizationSchemaRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID of a member. An administrator can use this ID to switch to the member\&quot;s perspective.</p>
+     * <p>The user ID that the administrator uses to switch to the view of another member account.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -125,7 +126,7 @@ public class CreateNormalizationSchemaRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The Simple Log Service Logstore.</p>
+     * <p>The Simple Log Service LogStore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -135,6 +136,8 @@ public class CreateNormalizationSchemaRequest extends TeaModel {
     public String targetLogStore;
 
     /**
+     * <p>The vendor ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>alibaba</p>
      */
@@ -260,7 +263,7 @@ public class CreateNormalizationSchemaRequest extends TeaModel {
 
     public static class CreateNormalizationSchemaRequestNormalizationFieldsNormalizationFieldJsonKeys extends TeaModel {
         /**
-         * <p>The description of the key for a normalization field of the json type.</p>
+         * <p>The key description for a standard field of the JSON type.</p>
          * 
          * <strong>example:</strong>
          * <p>The alert severity levels are represented by the values 1, 2, 3, and 4.</p>
@@ -269,7 +272,7 @@ public class CreateNormalizationSchemaRequest extends TeaModel {
         public String normalizationFieldDescription;
 
         /**
-         * <p>An example of the key for a normalization field of the json type.</p>
+         * <p>The key example for a standard field of the JSON type.</p>
          * 
          * <strong>example:</strong>
          * <p>1, 2, 3, 4</p>
@@ -278,7 +281,7 @@ public class CreateNormalizationSchemaRequest extends TeaModel {
         public String normalizationFieldExample;
 
         /**
-         * <p>The source of the key for a normalization field of the json type.</p>
+         * <p>The key source for a standard field of the JSON type.</p>
          * 
          * <strong>example:</strong>
          * <p>preset</p>
@@ -287,7 +290,7 @@ public class CreateNormalizationSchemaRequest extends TeaModel {
         public String normalizationFieldFrom;
 
         /**
-         * <p>The name of the key for a normalization field of the json type.</p>
+         * <p>The key name for a standard field of the JSON type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -297,7 +300,7 @@ public class CreateNormalizationSchemaRequest extends TeaModel {
         public String normalizationFieldName;
 
         /**
-         * <p>Indicates whether the key for a normalization field of the json type is required.</p>
+         * <p>Specifies whether the key for a standard field of the JSON type is required.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -306,7 +309,7 @@ public class CreateNormalizationSchemaRequest extends TeaModel {
         public Boolean normalizationFieldRequired;
 
         /**
-         * <p>Indicates whether to tokenize the key for a normalization field of the json type.</p>
+         * <p>Specifies whether the key for a standard field of the JSON type is tokenized.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -315,7 +318,7 @@ public class CreateNormalizationSchemaRequest extends TeaModel {
         public Boolean normalizationFieldTokenize;
 
         /**
-         * <p>The type of the key for a normalization field of the json type. Supported types: text, long, double, and json.</p>
+         * <p>The key type for a standard field of the JSON type. Valid values: text, long, double, and json.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -389,7 +392,7 @@ public class CreateNormalizationSchemaRequest extends TeaModel {
 
     public static class CreateNormalizationSchemaRequestNormalizationFields extends TeaModel {
         /**
-         * <p>The description of the normalization field.</p>
+         * <p>The standard field description.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_user</p>
@@ -398,7 +401,7 @@ public class CreateNormalizationSchemaRequest extends TeaModel {
         public String normalizationFieldDescription;
 
         /**
-         * <p>An example of the normalization field.</p>
+         * <p>The standard field example.</p>
          * 
          * <strong>example:</strong>
          * <p>173326*******</p>
@@ -407,7 +410,7 @@ public class CreateNormalizationSchemaRequest extends TeaModel {
         public String normalizationFieldExample;
 
         /**
-         * <p>The source of the key for a normalization field of the json type.</p>
+         * <p>The key source for a standard field of the JSON type.</p>
          * 
          * <strong>example:</strong>
          * <p>preset</p>
@@ -416,7 +419,7 @@ public class CreateNormalizationSchemaRequest extends TeaModel {
         public String normalizationFieldFrom;
 
         /**
-         * <p>Indicates whether to create an index for all keys of a json type normalization field.</p>
+         * <p>Specifies whether to create indexes for all keys in a standard field of the JSON type.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -425,13 +428,13 @@ public class CreateNormalizationSchemaRequest extends TeaModel {
         public Boolean normalizationFieldJsonIndexAll;
 
         /**
-         * <p>The list of keys for a normalization field of the json type.</p>
+         * <p>The key list for a standard field of the JSON type.</p>
          */
         @NameInMap("NormalizationFieldJsonKeys")
         public java.util.List<CreateNormalizationSchemaRequestNormalizationFieldsNormalizationFieldJsonKeys> normalizationFieldJsonKeys;
 
         /**
-         * <p>The name of the normalization field.</p>
+         * <p>The normalization field name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -441,7 +444,7 @@ public class CreateNormalizationSchemaRequest extends TeaModel {
         public String normalizationFieldName;
 
         /**
-         * <p>Indicates whether the normalization field is required.</p>
+         * <p>Specifies whether the standard field is required.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -450,7 +453,7 @@ public class CreateNormalizationSchemaRequest extends TeaModel {
         public Boolean normalizationFieldRequired;
 
         /**
-         * <p>Indicates whether the normalization field is required.</p>
+         * <p>Specifies whether the normalization field is required.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -459,7 +462,7 @@ public class CreateNormalizationSchemaRequest extends TeaModel {
         public Boolean normalizationFieldRequirement;
 
         /**
-         * <p>Indicates whether the normalization field is reserved.</p>
+         * <p>Specifies whether the normalization field is reserved.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -468,7 +471,7 @@ public class CreateNormalizationSchemaRequest extends TeaModel {
         public Boolean normalizationFieldReserved;
 
         /**
-         * <p>Indicates whether to tokenize the normalization field.</p>
+         * <p>Specifies whether the standard field is tokenized.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -477,11 +480,11 @@ public class CreateNormalizationSchemaRequest extends TeaModel {
         public Boolean normalizationFieldTokenize;
 
         /**
-         * <p>The type of the normalization field. Supported types: text, long, double, and json.</p>
+         * <p>The standard field type. Valid values: text, long, double, and json.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>varchar</p>
+         * <p>text</p>
          */
         @NameInMap("NormalizationFieldType")
         public String normalizationFieldType;

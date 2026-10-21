@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDataSetRecordsResponseBody extends TeaModel {
     /**
-     * <p>A list of dataset records.</p>
+     * <p>The list of dataset records.</p>
      */
     @NameInMap("DataSetRecords")
     public java.util.List<ListDataSetRecordsResponseBodyDataSetRecords> dataSetRecords;
 
     /**
-     * <p>The maximum number of results to return per page for token-based pagination. Valid values: 1 to 100. Default: 50.</p>
+     * <p>The maximum number of results to return per query when you use the NextToken parameter. Valid values: 1 to 100. Default value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -20,7 +20,7 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results.</p>
+     * <p>The token used to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -29,7 +29,7 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -47,7 +47,7 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
@@ -56,7 +56,7 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries that match the query.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>57</p>
@@ -127,7 +127,7 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
 
     public static class ListDataSetRecordsResponseBodyDataSetRecords extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1658974643000</p>
@@ -136,7 +136,7 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The dataset ID.</p>
+         * <p>The ID of the dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>dataset-t8ha6p7k61rmniqw****</p>
@@ -145,7 +145,7 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
         public String dataSetId;
 
         /**
-         * <p>The dataset name.</p>
+         * <p>The name of the dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>lmftest</p>
@@ -154,7 +154,7 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
         public String dataSetName;
 
         /**
-         * <p>The dataset record ID.</p>
+         * <p>The ID of the dataset record.</p>
          * 
          * <strong>example:</strong>
          * <p>124566</p>
@@ -163,13 +163,13 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
         public String dataSetRecordId;
 
         /**
-         * <p>The dataset record value.</p>
+         * <p>The values of the dataset record.</p>
          */
         @NameInMap("DataSetRecordValues")
         public String dataSetRecordValues;
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1658974643000</p>

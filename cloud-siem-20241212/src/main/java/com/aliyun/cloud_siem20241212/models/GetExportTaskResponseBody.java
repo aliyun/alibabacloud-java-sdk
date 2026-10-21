@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetExportTaskResponseBody extends TeaModel {
     /**
-     * <p>The status of the task. Valid values:</p>
+     * <p>The task status. Valid values:</p>
      * <ul>
-     * <li><p>success: The task is successful.</p>
-     * </li>
-     * <li><p>exporting: The task is in progress.</p>
-     * </li>
+     * <li>success: The export is successful.</li>
+     * <li>exporting: The export is in progress.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,9 +18,9 @@ public class GetExportTaskResponseBody extends TeaModel {
     public String exportStatus;
 
     /**
-     * <p>The type of the export task. Valid value:</p>
+     * <p>The export type. Valid values:</p>
      * <ul>
-     * <li>incident_list: event list.</li>
+     * <li>incident_list: incident list.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,7 +30,7 @@ public class GetExportTaskResponseBody extends TeaModel {
     public String exportType;
 
     /**
-     * <p>The name of the file.</p>
+     * <p>The file name.</p>
      * 
      * <strong>example:</strong>
      * <p>event_1193842352994186_17344888****.xlsx</p>
@@ -41,7 +39,7 @@ public class GetExportTaskResponseBody extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The time when the task was created.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>1605076118000</p>
@@ -50,7 +48,7 @@ public class GetExportTaskResponseBody extends TeaModel {
     public String gmtCreate;
 
     /**
-     * <p>The ID of the export task.</p>
+     * <p>The export task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>400185</p>
@@ -59,7 +57,7 @@ public class GetExportTaskResponseBody extends TeaModel {
     public Long id;
 
     /**
-     * <p>The download link for the exported Excel file.</p>
+     * <p>The download URL of the exported Excel file.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://cloud-siem-user-dataset.oss-cn-shanghai.aliyuncs.com/export_file/17661858******5/event_17661858******5_175748****.xlsx">https://cloud-siem-user-dataset.oss-cn-shanghai.aliyuncs.com/export_file/17661858******5/event_17661858******5_175748****.xlsx</a></p>
@@ -68,7 +66,7 @@ public class GetExportTaskResponseBody extends TeaModel {
     public String link;
 
     /**
-     * <p>The progress of the export task.</p>
+     * <p>The export progress.</p>
      * 
      * <strong>example:</strong>
      * <p>66</p>

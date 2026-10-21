@@ -5,12 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListTrafficStatisticsRequest extends TeaModel {
     /**
-     * <p>The language of the response messages. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.
+     * Note: This parameter is required in practice. If this parameter is not specified, the API returns a 400 error: &quot;The specified Lang can not be empty.&quot;</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +19,7 @@ public class ListTrafficStatisticsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>A list of user IDs for batch data ingestion.</p>
+     * <p>The list of user IDs for batch data ingestion.</p>
      */
     @NameInMap("LogUserIds")
     public java.util.List<Long> logUserIds;
@@ -35,12 +34,10 @@ public class ListTrafficStatisticsRequest extends TeaModel {
     public String productId;
 
     /**
-     * <p>The region of the Data Management center for threat analysis. Select a region based on the location of your asset. Valid values:</p>
+     * <p>The region where the threat detection and response data management center resides. Specify the management center based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: Your asset is in the Chinese mainland.</p>
-     * </li>
-     * <li><p>ap-southeast-1: Your asset is outside China.</p>
-     * </li>
+     * <li>cn-hangzhou: The assets reside in the Chinese mainland.</li>
+     * <li>ap-southeast-1: The assets reside outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,7 +56,7 @@ public class ListTrafficStatisticsRequest extends TeaModel {
     public Integer regionTag;
 
     /**
-     * <p>The user ID of a member. This parameter is used by an administrator to switch to the perspective of the member.</p>
+     * <p>The user ID that the administrator switches to when viewing from another member\&quot;s perspective.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>
@@ -77,12 +74,10 @@ public class ListTrafficStatisticsRequest extends TeaModel {
     public String trafficStatisticPeriod;
 
     /**
-     * <p>The statistic granularity. Valid values:</p>
+     * <p>The statistical granularity. Valid values:</p>
      * <ul>
-     * <li><p>day: day. This is the default value.</p>
-     * </li>
-     * <li><p>hour: hour.</p>
-     * </li>
+     * <li>day: day. This is the default value.</li>
+     * <li>hour: hour.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -92,16 +87,12 @@ public class ListTrafficStatisticsRequest extends TeaModel {
     public String trafficStatisticPeriodType;
 
     /**
-     * <p>The statistic dimension. Valid values:</p>
+     * <p>The statistical dimension. Valid values:</p>
      * <ul>
-     * <li><p>Region</p>
-     * </li>
-     * <li><p>Product</p>
-     * </li>
-     * <li><p>DataIngetion</p>
-     * </li>
-     * <li><p>logUserId</p>
-     * </li>
+     * <li>Region</li>
+     * <li>Product</li>
+     * <li>DataIngetion</li>
+     * <li>logUserId</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -111,7 +102,7 @@ public class ListTrafficStatisticsRequest extends TeaModel {
     public String trafficStatisticType;
 
     /**
-     * <p>The type of the log traffic.</p>
+     * <p>The log traffic type.</p>
      * 
      * <strong>example:</strong>
      * <p>agentAnalysisLogTraffic</p>

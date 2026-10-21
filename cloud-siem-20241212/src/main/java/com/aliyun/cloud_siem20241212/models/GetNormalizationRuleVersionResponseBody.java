@@ -42,7 +42,7 @@ public class GetNormalizationRuleVersionResponseBody extends TeaModel {
 
     public static class GetNormalizationRuleVersionResponseBodyNormalizationRuleVersion extends TeaModel {
         /**
-         * <p>The time when the rule version was created.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>
@@ -51,7 +51,7 @@ public class GetNormalizationRuleVersionResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The ID of the normalization rule category.</p>
+         * <p>The category ID of the normalization rule.</p>
          * 
          * <strong>example:</strong>
          * <p>NETWORK_CATEGORY</p>
@@ -69,7 +69,7 @@ public class GetNormalizationRuleVersionResponseBody extends TeaModel {
         public String normalizationRuleDescription;
 
         /**
-         * <p>The expression for the normalization rule.</p>
+         * <p>The expression of the normalization rule.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -118,10 +118,8 @@ public class GetNormalizationRuleVersionResponseBody extends TeaModel {
         /**
          * <p>The type of the normalization rule. Valid values:</p>
          * <ul>
-         * <li><p>predefined: a predefined rule.</p>
-         * </li>
-         * <li><p>custom: a custom rule.</p>
-         * </li>
+         * <li>predefined: predefined normalization rule.</li>
+         * <li>custom: custom normalization rule.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -140,7 +138,7 @@ public class GetNormalizationRuleVersionResponseBody extends TeaModel {
         public Integer normalizationRuleVersion;
 
         /**
-         * <p>The name of the normalization rule version.</p>
+         * <p>The version name of the normalization rule.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -158,7 +156,7 @@ public class GetNormalizationRuleVersionResponseBody extends TeaModel {
         public String normalizationSchemaId;
 
         /**
-         * <p>The product ID.</p>
+         * <p>The ID of the product.</p>
          * 
          * <strong>example:</strong>
          * <p>alibaba_cloud_sas</p>
@@ -167,12 +165,10 @@ public class GetNormalizationRuleVersionResponseBody extends TeaModel {
         public String productId;
 
         /**
-         * <p>The region where the Data Management center for Threat Analysis is located. Select a region for the management center based on the region where your assets are located. Valid values:</p>
+         * <p>The region where the data management center of Threat Analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</p>
          * <ul>
-         * <li><p>cn-hangzhou: Your assets are in the Chinese mainland.</p>
-         * </li>
-         * <li><p>ap-southeast-1: Your assets are in a region outside China.</p>
-         * </li>
+         * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Assets are located outside the Chinese mainland.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -182,7 +178,7 @@ public class GetNormalizationRuleVersionResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The time when the rule version was last updated.</p>
+         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>
@@ -191,7 +187,7 @@ public class GetNormalizationRuleVersionResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
-         * <p>The ID of the vendor for the normalization rule.</p>
+         * <p>The ID of the vendor that corresponds to the normalization rule.</p>
          * 
          * <strong>example:</strong>
          * <p>alibaba_cloud</p>

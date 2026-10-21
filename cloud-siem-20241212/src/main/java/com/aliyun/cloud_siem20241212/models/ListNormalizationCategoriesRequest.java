@@ -7,10 +7,9 @@ public class ListNormalizationCategoriesRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.
+     * This parameter is effectively required. If you do not specify this parameter, the server returns a 400 error (The specified Lang can not be empty.) instead of using the default value zh.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +19,7 @@ public class ListNormalizationCategoriesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of entries to return on each page.</p>
+     * <p>The maximum number of entries to return in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -32,7 +31,7 @@ public class ListNormalizationCategoriesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to retrieve the next page of results. Set this parameter to the NextToken value returned in the previous API call to retrieve the next page of results. You do not need to specify this parameter for the first query.</p>
+     * <p>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -43,10 +42,8 @@ public class ListNormalizationCategoriesRequest extends TeaModel {
     /**
      * <p>The type of the normalization rule category. Valid values:</p>
      * <ul>
-     * <li><p>log</p>
-     * </li>
-     * <li><p>entity</p>
-     * </li>
+     * <li>log</li>
+     * <li>entity</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,12 +53,10 @@ public class ListNormalizationCategoriesRequest extends TeaModel {
     public String normalizationCategoryType;
 
     /**
-     * <p>The region of the Data Management center for threat analysis. Select the region for the Data Management center based on the region where your assets are located. Valid values:</p>
+     * <p>The region where the threat analysis data management center resides. Specify this parameter based on the region where your assets reside. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: Assets are in the Chinese mainland.</p>
-     * </li>
-     * <li><p>ap-southeast-1: Assets are in a region outside China.</p>
-     * </li>
+     * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Your assets reside outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +66,7 @@ public class ListNormalizationCategoriesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID of the member. An administrator can use this parameter to switch to the perspective of this member.</p>
+     * <p>The user ID of the member to which the administrator switches the view.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>

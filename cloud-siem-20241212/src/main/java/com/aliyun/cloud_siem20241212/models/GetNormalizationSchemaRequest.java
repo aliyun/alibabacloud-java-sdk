@@ -5,11 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetNormalizationSchemaRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese.</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
+     * <p>Note: This parameter is required in actual API calls. If you do not specify this parameter, the service returns a 400 error with the message &quot;The specified Lang can not be empty.&quot; Explicitly specify the language code.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -18,7 +19,7 @@ public class GetNormalizationSchemaRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the normalization rule category.</p>
+     * <p>The ID of the normalized rule category.</p>
      * 
      * <strong>example:</strong>
      * <p>HTTP_ACTIVITY</p>
@@ -27,10 +28,10 @@ public class GetNormalizationSchemaRequest extends TeaModel {
     public String normalizationSchemaId;
 
     /**
-     * <p>The normalization schema type. Valid values:</p>
+     * <p>The type of the normalized schema. Valid values:</p>
      * <ul>
-     * <li>log: log.</li>
-     * <li>entity: entity.</li>
+     * <li>log: Log.</li>
+     * <li>entity: Entity. This parameter is required in actual API calls. If you do not specify this parameter, the service returns a 400 error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,10 +41,10 @@ public class GetNormalizationSchemaRequest extends TeaModel {
     public String normalizationSchemaType;
 
     /**
-     * <p>The region where the threat analysis data management center resides. Specify the management center based on the region of your assets. Valid values:</p>
+     * <p>The region of the data management center for Threat Analysis. Select the region of the management center based on the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
-     * <li>ap-southeast-1: Your assets reside outside the Chinese mainland.</li>
+     * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Assets are located outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,7 +54,7 @@ public class GetNormalizationSchemaRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID that the administrator switches to when viewing as another member.</p>
+     * <p>The ID of the user whose perspective the administrator switches to.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>

@@ -42,7 +42,7 @@ public class GetUserConfigResponseBody extends TeaModel {
 
     public static class GetUserConfigResponseBodyUser extends TeaModel {
         /**
-         * <p>The current CTDR version.</p>
+         * <p>The current Cloud Threat Detection and Response (CTDR) version.</p>
          * 
          * <strong>example:</strong>
          * <p>v2</p>
@@ -53,14 +53,10 @@ public class GetUserConfigResponseBody extends TeaModel {
         /**
          * <p>The upgrade status. Valid values:</p>
          * <ul>
-         * <li><p>pending: The upgrade is pending.</p>
-         * </li>
-         * <li><p>upgrading: The upgrade is in progress.</p>
-         * </li>
-         * <li><p>success: The upgrade is successful.</p>
-         * </li>
-         * <li><p>failed: The upgrade failed.</p>
-         * </li>
+         * <li>pending: Pending upgrade.</li>
+         * <li>upgrading: Upgrading.</li>
+         * <li>success: Upgrade succeeded.</li>
+         * <li>failed: Upgrade failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -70,7 +66,7 @@ public class GetUserConfigResponseBody extends TeaModel {
         public String dataStorageVersion;
 
         /**
-         * <p>The version of Log Management.</p>
+         * <p>The log management version.</p>
          * 
          * <strong>example:</strong>
          * <p>v2</p>
@@ -79,7 +75,7 @@ public class GetUserConfigResponseBody extends TeaModel {
         public String upgradeCtdrVersion;
 
         /**
-         * <p>The target CTDR version for the upgrade.</p>
+         * <p>The CTDR version to upgrade to.</p>
          * 
          * <strong>example:</strong>
          * <p>v2</p>

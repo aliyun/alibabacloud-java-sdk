@@ -14,7 +14,7 @@ public class CreateExportTaskResponseBody extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The ID of the export task.</p>
+     * <p>The export task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>400151</p>

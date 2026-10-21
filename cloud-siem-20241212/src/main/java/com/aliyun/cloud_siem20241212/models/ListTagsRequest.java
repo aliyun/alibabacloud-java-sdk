@@ -8,7 +8,10 @@ public class ListTagsRequest extends TeaModel {
      * <p>The language of the response. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese.</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English.<blockquote>
+     * <p>This parameter is required. If you do not specify this parameter, the service returns a 400 error.</p>
+     * </blockquote>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +21,7 @@ public class ListTagsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of results to return when using NextToken-based pagination. Valid values: 1 to 100. Default value: 50.</p>
+     * <p>The maximum number of entries to return when you use NextToken for pagination. Valid values: 1 to 100. Default value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -27,7 +30,7 @@ public class ListTagsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If a next query is available, set this parameter to the NextToken value returned by the previous API call.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. If not all results are returned in a query, a value is returned for NextToken. In the next query, set NextToken to this value.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAASLVeIxed4466E0LVmGkzwS6hJKd9DGVGMDRM6Lu****</p>
@@ -36,10 +39,10 @@ public class ListTagsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region where the threat analysis data management center is located. Specify the management center based on the region of your assets. Valid values:</p>
+     * <p>The region where the data management center of threat detection and response is located. Specify the management center region based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: the asset is in the Chinese mainland.</li>
-     * <li>ap-southeast-1: the asset is outside China.</li>
+     * <li>cn-hangzhou: The assets are located in the Chinese mainland.</li>
+     * <li>ap-southeast-1: The assets are located outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +52,7 @@ public class ListTagsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID that the administrator switches to when viewing as another member.</p>
+     * <p>The ID of the member to which the administrator switches the view.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -60,8 +63,8 @@ public class ListTagsRequest extends TeaModel {
     /**
      * <p>The view type. Valid values:</p>
      * <ul>
-     * <li>0: the view of the current Alibaba Cloud account.</li>
-     * <li>1: the view of all accounts in the enterprise.</li>
+     * <li>0: The view of the current Alibaba Cloud account.</li>
+     * <li>1: The view of all accounts in the enterprise.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,7 +83,7 @@ public class ListTagsRequest extends TeaModel {
     public String targetRelation;
 
     /**
-     * <p>The scan object type. Valid values:</p>
+     * <p>The object type of the scan target. Valid values:</p>
      * <ul>
      * <li><strong>1</strong>: snapshot </li>
      * <li><strong>2</strong>: image</li>

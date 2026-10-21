@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNormalizationFieldsResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries to return in this request.</p>
+     * <p>The maximum number of entries to return.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -14,7 +14,7 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Specifies whether a next query token exists. You do not need to specify this parameter for the first query or if no next query exists. If a next query exists, set this parameter to the NextToken value returned by the previous API call.</p>
+     * <p>Specifies whether a next query token exists. Leave this parameter empty for the first query or when no more results are available. If a next page exists, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -93,7 +93,7 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
 
     public static class ListNormalizationFieldsResponseBodyNormalizationFieldsNormalizationFieldJsonKeys extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1736386610000</p>
@@ -102,7 +102,7 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The description of the JSON-type normalization field key.</p>
+         * <p>The description of the JSON-type standard field key.</p>
          * 
          * <strong>example:</strong>
          * <p>alert_level</p>
@@ -111,7 +111,7 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         public String normalizationFieldDescription;
 
         /**
-         * <p>The example value of the JSON-type normalization field key.</p>
+         * <p>The example value of the JSON-type standard field key.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -120,7 +120,7 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         public String normalizationFieldExample;
 
         /**
-         * <p>The source of the normalization field key of the JSON type.</p>
+         * <p>The source of the JSON-type standard field key.</p>
          * 
          * <strong>example:</strong>
          * <p>preset</p>
@@ -129,7 +129,7 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         public String normalizationFieldFrom;
 
         /**
-         * <p>The name of the JSON-type normalization field key.</p>
+         * <p>The name of the JSON-type standard field key.</p>
          * 
          * <strong>example:</strong>
          * <p>alert_level</p>
@@ -138,25 +138,25 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         public String normalizationFieldName;
 
         /**
-         * <p>Indicates whether the JSON-type normalization field key is required.</p>
+         * <p>Indicates whether the JSON-type standard field key is required.</p>
          */
         @NameInMap("NormalizationFieldRequired")
         public Boolean normalizationFieldRequired;
 
         /**
-         * <p>Indicates whether the normalization field key is a built-in system field key.</p>
+         * <p>Indicates whether the standard field key is a system built-in key.</p>
          */
         @NameInMap("NormalizationFieldReserved")
         public Boolean normalizationFieldReserved;
 
         /**
-         * <p>Indicates whether the JSON-type normalization field key is tokenized.</p>
+         * <p>Indicates whether the JSON-type standard field key is tokenized.</p>
          */
         @NameInMap("NormalizationFieldTokenize")
         public Boolean normalizationFieldTokenize;
 
         /**
-         * <p>The type of the JSON-type normalization field key.</p>
+         * <p>The type of the JSON-type standard field key.</p>
          * 
          * <strong>example:</strong>
          * <p>text</p>
@@ -165,7 +165,7 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         public String normalizationFieldType;
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1736386610000</p>
@@ -262,7 +262,7 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
 
     public static class ListNormalizationFieldsResponseBodyNormalizationFields extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1736386610000</p>
@@ -271,7 +271,7 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The ID of the normalization category.</p>
+         * <p>The normalization category ID.</p>
          * 
          * <strong>example:</strong>
          * <p>NETWORK_CATEGORY</p>
@@ -298,7 +298,7 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         public String normalizationFieldExample;
 
         /**
-         * <p>The source of the normalization field key of the JSON type.</p>
+         * <p>The source of the JSON-type standard field key.</p>
          * 
          * <strong>example:</strong>
          * <p>preset</p>
@@ -307,13 +307,13 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         public String normalizationFieldFrom;
 
         /**
-         * <p>Indicates whether indexes are created for all keys of the JSON-type normalization field.</p>
+         * <p>Indicates whether indexes are created for all keys of the JSON-type standard field.</p>
          */
         @NameInMap("NormalizationFieldJsonIndexAll")
         public Boolean normalizationFieldJsonIndexAll;
 
         /**
-         * <p>The list of keys for the JSON-type normalization field.</p>
+         * <p>The list of keys for the JSON-type standard field.</p>
          */
         @NameInMap("NormalizationFieldJsonKeys")
         public java.util.List<ListNormalizationFieldsResponseBodyNormalizationFieldsNormalizationFieldJsonKeys> normalizationFieldJsonKeys;
@@ -328,7 +328,7 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         public String normalizationFieldName;
 
         /**
-         * <p>Indicates whether the normalization field key is required.</p>
+         * <p>Indicates whether the standard field key is required.</p>
          */
         @NameInMap("NormalizationFieldRequired")
         public Boolean normalizationFieldRequired;
@@ -352,7 +352,7 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         public Boolean normalizationFieldReserved;
 
         /**
-         * <p>Indicates whether the normalization field is tokenized.</p>
+         * <p>Indicates whether the standard field is tokenized.</p>
          */
         @NameInMap("NormalizationFieldTokenize")
         public Boolean normalizationFieldTokenize;
@@ -362,7 +362,7 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
          * <ul>
          * <li>varchar</li>
          * <li>bigint</li>
-         * <li>double.</li>
+         * <li>double</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -372,7 +372,7 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         public String normalizationFieldType;
 
         /**
-         * <p>The ID of the normalization schema.</p>
+         * <p>The normalization schema ID.</p>
          * 
          * <strong>example:</strong>
          * <p>NETWORK_SESSION_ACTIVITY</p>
@@ -381,6 +381,8 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         public String normalizationSchemaId;
 
         /**
+         * <p>The security domain ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>NETWORK_AND_WEB_SECURITY</p>
          */
@@ -388,7 +390,7 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         public String normalizationSecurityDomainId;
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1736386610000</p>

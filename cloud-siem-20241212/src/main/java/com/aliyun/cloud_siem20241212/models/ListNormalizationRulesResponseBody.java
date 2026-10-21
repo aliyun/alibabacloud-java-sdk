@@ -14,7 +14,7 @@ public class ListNormalizationRulesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
+     * <p>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If a next query is required, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -169,7 +169,7 @@ public class ListNormalizationRulesResponseBody extends TeaModel {
 
     public static class ListNormalizationRulesResponseBodyNormalizationRules extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>
@@ -191,7 +191,12 @@ public class ListNormalizationRulesResponseBody extends TeaModel {
         public String extendContentPacked;
 
         /**
-         * <p>The storage mode for extended fields. Valid values: flat (ingest as-is), reject (do not ingest), and pack (pack into the extend_content field).</p>
+         * <p>The extended field storage mode. Valid values:</p>
+         * <ul>
+         * <li>flat: ingested as-is.</li>
+         * <li>reject: not ingested.</li>
+         * <li>pack: packed into the extend_content field.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>flat</p>
@@ -200,7 +205,7 @@ public class ListNormalizationRulesResponseBody extends TeaModel {
         public String extendFieldStoreMode;
 
         /**
-         * <p>The category ID of the normalization rule.</p>
+         * <p>The normalization rule category ID.</p>
          * 
          * <strong>example:</strong>
          * <p>NETWORK_CATEGORY</p>
@@ -209,6 +214,8 @@ public class ListNormalizationRulesResponseBody extends TeaModel {
         public String normalizationCategoryId;
 
         /**
+         * <p>The field source.</p>
+         * 
          * <strong>example:</strong>
          * <p>normalized</p>
          */
@@ -216,7 +223,7 @@ public class ListNormalizationRulesResponseBody extends TeaModel {
         public String normalizationFieldSource;
 
         /**
-         * <p>The description of the normalization rule.</p>
+         * <p>The normalization rule description.</p>
          * 
          * <strong>example:</strong>
          * <p>normalization_rule_Z57np</p>
@@ -225,7 +232,7 @@ public class ListNormalizationRulesResponseBody extends TeaModel {
         public String normalizationRuleDescription;
 
         /**
-         * <p>The expression of the normalization rule.</p>
+         * <p>The normalization rule expression.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -236,7 +243,7 @@ public class ListNormalizationRulesResponseBody extends TeaModel {
         public String normalizationRuleExpression;
 
         /**
-         * <p>The format of the normalization rule.</p>
+         * <p>The normalization rule format.</p>
          * 
          * <strong>example:</strong>
          * <p>SPL</p>
@@ -254,11 +261,11 @@ public class ListNormalizationRulesResponseBody extends TeaModel {
         public String normalizationRuleId;
 
         /**
-         * <p>The mode of the normalization rule. Valid values:</p>
+         * <p>The normalization rule mode. Valid values:</p>
          * <ul>
          * <li>both</li>
          * <li>scan</li>
-         * <li>realtime.</li>
+         * <li>realtime</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -268,7 +275,7 @@ public class ListNormalizationRulesResponseBody extends TeaModel {
         public String normalizationRuleMode;
 
         /**
-         * <p>The name of the normalization rule.</p>
+         * <p>The normalization rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>normalization_rule_Z57np</p>
@@ -277,13 +284,13 @@ public class ListNormalizationRulesResponseBody extends TeaModel {
         public String normalizationRuleName;
 
         /**
-         * <p>The list of associated ingestion policies.</p>
+         * <p>The list of associated collection policies.</p>
          */
         @NameInMap("NormalizationRuleReferences")
         public java.util.List<ListNormalizationRulesResponseBodyNormalizationRulesNormalizationRuleReferences> normalizationRuleReferences;
 
         /**
-         * <p>The status of the normalization rule.</p>
+         * <p>The normalization rule status.</p>
          * 
          * <strong>example:</strong>
          * <p>started</p>
@@ -292,7 +299,7 @@ public class ListNormalizationRulesResponseBody extends TeaModel {
         public String normalizationRuleStatus;
 
         /**
-         * <p>The type of the normalization rule. Valid values:</p>
+         * <p>The normalization rule type. Valid values:</p>
          * <ul>
          * <li>predefined: predefined normalization rule.</li>
          * <li>custom: custom normalization rule.</li>
@@ -323,6 +330,8 @@ public class ListNormalizationRulesResponseBody extends TeaModel {
         public String normalizationSchemaId;
 
         /**
+         * <p>The security domain ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>NETWORK_AND_WEB_SECURITY</p>
          */
@@ -339,7 +348,7 @@ public class ListNormalizationRulesResponseBody extends TeaModel {
         public String productId;
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>

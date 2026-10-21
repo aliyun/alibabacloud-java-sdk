@@ -42,7 +42,7 @@ public class ListTrafficStatisticsResponseBody extends TeaModel {
 
     public static class ListTrafficStatisticsResponseBodyTrafficStatisticsTrafficStatisticData extends TeaModel {
         /**
-         * <p>The statistic time.</p>
+         * <p>The statistical time. The value is a date number in the YYYYMMDD format. For example, 20250815 indicates August 15, 2025.</p>
          * 
          * <strong>example:</strong>
          * <p>20250815</p>
@@ -51,7 +51,7 @@ public class ListTrafficStatisticsResponseBody extends TeaModel {
         public Long trafficStatisticTime;
 
         /**
-         * <p>The statistic value.</p>
+         * <p>The statistical value.</p>
          * 
          * <strong>example:</strong>
          * <p>1.699814</p>
@@ -90,7 +90,7 @@ public class ListTrafficStatisticsResponseBody extends TeaModel {
         public java.util.List<ListTrafficStatisticsResponseBodyTrafficStatisticsTrafficStatisticData> trafficStatisticData;
 
         /**
-         * <p>The statistic target.</p>
+         * <p>The statistical target.</p>
          * 
          * <strong>example:</strong>
          * <p>all</p>

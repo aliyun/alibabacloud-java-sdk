@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListLogProjectsResponseBody extends TeaModel {
     /**
-     * <p>The list of Simple Log Service projects.</p>
+     * <p>The list of log projects.</p>
      */
     @NameInMap("LogProjects")
     public java.util.List<String> logProjects;
 
     /**
-     * <p>The maximum number of entries returned on this call.</p>
+     * <p>The maximum number of entries to return in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -20,7 +20,7 @@ public class ListLogProjectsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to retrieve the next page of results. If this parameter is not returned, no more results are available.</p>
+     * <p>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>

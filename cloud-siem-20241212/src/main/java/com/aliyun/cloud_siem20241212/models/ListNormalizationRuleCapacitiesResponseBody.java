@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNormalizationRuleCapacitiesResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries returned.</p>
+     * <p>The maximum number of entries to return in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -14,7 +14,7 @@ public class ListNormalizationRuleCapacitiesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query. If the response is truncated, use this token in your next request to retrieve the next page of results. If this parameter is empty, all results have been returned.</p>
+     * <p>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -23,7 +23,7 @@ public class ListNormalizationRuleCapacitiesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The list of security capabilities that are associated with the normalization rules.</p>
+     * <p>The list of security capabilities associated with normalization rules.</p>
      */
     @NameInMap("NormalizationRuleCapacities")
     public java.util.List<ListNormalizationRuleCapacitiesResponseBodyNormalizationRuleCapacities> normalizationRuleCapacities;
@@ -47,7 +47,7 @@ public class ListNormalizationRuleCapacitiesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
@@ -56,7 +56,7 @@ public class ListNormalizationRuleCapacitiesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>57</p>
@@ -152,14 +152,10 @@ public class ListNormalizationRuleCapacitiesResponseBody extends TeaModel {
         /**
          * <p>The type of the security capability. Valid values:</p>
          * <ul>
-         * <li><p>detection_preset_rule: predefined analysis rule.</p>
-         * </li>
-         * <li><p>detection_custom_rule: custom analysis rule.</p>
-         * </li>
-         * <li><p>incident_investigation: security event handling.</p>
-         * </li>
-         * <li><p>soar_playbooks: predefined playbook.</p>
-         * </li>
+         * <li>detection_preset_rule: predefined analysis rule.</li>
+         * <li>detection_custom_rule: custom analysis rule.</li>
+         * <li>incident_investigation: security incident handling.</li>
+         * <li>soar_playbooks: predefined playbook.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -169,7 +165,7 @@ public class ListNormalizationRuleCapacitiesResponseBody extends TeaModel {
         public String capacityType;
 
         /**
-         * <p>The ID of the normalization rule.</p>
+         * <p>The normalization rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>nr-z0b2ssjteut85uoh9nzp</p>

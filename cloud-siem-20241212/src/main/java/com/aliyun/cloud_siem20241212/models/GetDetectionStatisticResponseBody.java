@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetDetectionStatisticResponseBody extends TeaModel {
     /**
-     * <p>The detection rule count result.</p>
+     * <p>The count results of detection rules.</p>
      */
     @NameInMap("DetectionStatistic")
     public GetDetectionStatisticResponseBodyDetectionStatistic detectionStatistic;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6FB890AC-90B2-5EEA-845B-F7C86FB2****</p>
@@ -41,6 +41,9 @@ public class GetDetectionStatisticResponseBody extends TeaModel {
     }
 
     public static class GetDetectionStatisticResponseBodyDetectionStatistic extends TeaModel {
+        /**
+         * <p>The number of AI-powered aggregation rules.</p>
+         */
         @NameInMap("AiPoweredAggregationRuleCount")
         public Integer aiPoweredAggregationRuleCount;
 
@@ -90,7 +93,7 @@ public class GetDetectionStatisticResponseBody extends TeaModel {
         public Integer passthroughRuleCount;
 
         /**
-         * <p>The number of similar aggregation rules.</p>
+         * <p>The number of same-type aggregation rules.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>

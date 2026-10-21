@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProductsResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries returned.</p>
+     * <p>The maximum number of entries to return in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -14,7 +14,7 @@ public class ListProductsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to retrieve the next page of results. If the value of this parameter is not empty, more results are available. You can use this token in the next request to retrieve the next page of results.</p>
+     * <p>The pagination token. You do not need to specify this parameter for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -38,7 +38,7 @@ public class ListProductsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>57</p>
@@ -93,7 +93,7 @@ public class ListProductsResponseBody extends TeaModel {
 
     public static class ListProductsResponseBodyProducts extends TeaModel {
         /**
-         * <p>The number of abnormal data ingestion configurations.</p>
+         * <p>The number of abnormal data ingestion entries.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -111,7 +111,7 @@ public class ListProductsResponseBody extends TeaModel {
         public Long activeTime;
 
         /**
-         * <p>Indicates whether data collection configurations can be added.</p>
+         * <p>Indicates whether data collection can be added.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -120,7 +120,7 @@ public class ListProductsResponseBody extends TeaModel {
         public Boolean allowAddDataIngestion;
 
         /**
-         * <p>The time when the product was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>
@@ -129,12 +129,10 @@ public class ListProductsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The data ingestion status. Valid values:</p>
+         * <p>The accessed state of data ingestion. Valid values:</p>
          * <ul>
-         * <li><p>true: enabled.</p>
-         * </li>
-         * <li><p>false: disabled.</p>
-         * </li>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -144,7 +142,7 @@ public class ListProductsResponseBody extends TeaModel {
         public Boolean dataIngestionStatus;
 
         /**
-         * <p>The number of enabled data ingestion configurations.</p>
+         * <p>The number of enabled data ingestion entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -171,7 +169,7 @@ public class ListProductsResponseBody extends TeaModel {
         public String productId;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and does not need to be specified.</p>
          * 
          * <strong>example:</strong>
          * <p>sas</p>
@@ -182,10 +180,8 @@ public class ListProductsResponseBody extends TeaModel {
         /**
          * <p>The product type. Valid values:</p>
          * <ul>
-         * <li><p>preset</p>
-         * </li>
-         * <li><p>custom</p>
-         * </li>
+         * <li>preset</li>
+         * <li>custom</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -195,7 +191,7 @@ public class ListProductsResponseBody extends TeaModel {
         public String productType;
 
         /**
-         * <p>The total number of data ingestion configurations.</p>
+         * <p>The total number of data ingestion entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -204,7 +200,7 @@ public class ListProductsResponseBody extends TeaModel {
         public Integer totalDataIngestionCount;
 
         /**
-         * <p>The time when the product was updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>

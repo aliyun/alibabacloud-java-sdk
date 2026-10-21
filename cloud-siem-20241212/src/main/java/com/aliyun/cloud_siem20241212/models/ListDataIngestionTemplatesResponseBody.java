@@ -85,7 +85,7 @@ public class ListDataIngestionTemplatesResponseBody extends TeaModel {
         public String capacityCount;
 
         /**
-         * <p>The time when the template was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>
@@ -96,10 +96,8 @@ public class ListDataIngestionTemplatesResponseBody extends TeaModel {
         /**
          * <p>The data ingestion mode. Valid values:</p>
          * <ul>
-         * <li><p>realtime</p>
-         * </li>
-         * <li><p>scan</p>
-         * </li>
+         * <li>realtime</li>
+         * <li>scan</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -109,12 +107,10 @@ public class ListDataIngestionTemplatesResponseBody extends TeaModel {
         public String dataIngestionMode;
 
         /**
-         * <p>The data ingestion status. Valid values:</p>
+         * <p>The accessed state of data ingestion. Valid values:</p>
          * <ul>
-         * <li><p>enabled: enabled.</p>
-         * </li>
-         * <li><p>disabled: disabled.</p>
-         * </li>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -124,7 +120,7 @@ public class ListDataIngestionTemplatesResponseBody extends TeaModel {
         public String dataIngestionStatus;
 
         /**
-         * <p>The ID of the data ingestion template.</p>
+         * <p>The data ingestion template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>alibaba_cloud_sas_account_snapshot_log</p>
@@ -133,7 +129,7 @@ public class ListDataIngestionTemplatesResponseBody extends TeaModel {
         public String dataIngestionTemplateId;
 
         /**
-         * <p>The name of the data ingestion template.</p>
+         * <p>The data source template name.</p>
          * 
          * <strong>example:</strong>
          * <p>alibaba_cloud_sas_account_snapshot_log</p>
@@ -144,14 +140,10 @@ public class ListDataIngestionTemplatesResponseBody extends TeaModel {
         /**
          * <p>The status of the data ingestion template. Valid values:</p>
          * <ul>
-         * <li><p>pending</p>
-         * </li>
-         * <li><p>running</p>
-         * </li>
-         * <li><p>success</p>
-         * </li>
-         * <li><p>failed</p>
-         * </li>
+         * <li>pending</li>
+         * <li>running</li>
+         * <li>success</li>
+         * <li>failed</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -161,7 +153,7 @@ public class ListDataIngestionTemplatesResponseBody extends TeaModel {
         public String dataIngestionTemplateStatus;
 
         /**
-         * <p>The ID of the data source template.</p>
+         * <p>The data source template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>alibaba_cloud_sas_account_snapshot_log_173326*******</p>
@@ -170,7 +162,7 @@ public class ListDataIngestionTemplatesResponseBody extends TeaModel {
         public String dataSourceTemplateId;
 
         /**
-         * <p>The ID of the normalization rule.</p>
+         * <p>The normalization rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>alibaba_cloud_actiontrail_event_rule</p>
@@ -179,7 +171,7 @@ public class ListDataIngestionTemplatesResponseBody extends TeaModel {
         public String normalizationRuleId;
 
         /**
-         * <p>The name of the normalization rule.</p>
+         * <p>The normalization rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>normalization_rule_ke1RN</p>
@@ -188,7 +180,7 @@ public class ListDataIngestionTemplatesResponseBody extends TeaModel {
         public String normalizationRuleName;
 
         /**
-         * <p>The time when the template was last updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>173326*******</p>

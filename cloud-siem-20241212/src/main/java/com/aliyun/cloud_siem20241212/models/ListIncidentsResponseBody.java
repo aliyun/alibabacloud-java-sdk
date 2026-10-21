@@ -11,7 +11,7 @@ public class ListIncidentsResponseBody extends TeaModel {
     public java.util.List<ListIncidentsResponseBodyIncidents> incidents;
 
     /**
-     * <p>The maximum number of entries to return in this request.</p>
+     * <p>The maximum number of entries to read in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -20,7 +20,7 @@ public class ListIncidentsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If a next page exists, set this parameter to the NextToken value returned by the previous API call.</p>
+     * <p>The pagination token used to retrieve the next page of results. Leave this parameter empty for the first request or when there are no more pages. If more pages exist, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -29,7 +29,7 @@ public class ListIncidentsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number for pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class ListIncidentsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to display per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -126,14 +126,26 @@ public class ListIncidentsResponseBody extends TeaModel {
     }
 
     public static class ListIncidentsResponseBodyIncidents extends TeaModel {
+        /**
+         * <p>The list of associated alert information.</p>
+         */
         @NameInMap("AlertInfos")
         public String alertInfos;
 
+        /**
+         * <p>The list of alert source codes or modules.</p>
+         */
+        @NameInMap("AlertSources")
+        public java.util.List<String> alertSources;
+
+        /**
+         * <p>The list of MITRE ATT&amp;CK tactics.</p>
+         */
         @NameInMap("AttckTactics")
         public String attckTactics;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1603248483000</p>
@@ -150,12 +162,21 @@ public class ListIncidentsResponseBody extends TeaModel {
         @NameInMap("DetectionRuleId")
         public String detectionRuleId;
 
+        /**
+         * <p>The name of the detection rule.</p>
+         */
         @NameInMap("DetectionRuleName")
         public String detectionRuleName;
 
+        /**
+         * <p>The list of associated entity information.</p>
+         */
         @NameInMap("EntityInfos")
         public String entityInfos;
 
+        /**
+         * <p>The description of the incident.</p>
+         */
         @NameInMap("IncidentDescription")
         public String incidentDescription;
 
@@ -169,7 +190,7 @@ public class ListIncidentsResponseBody extends TeaModel {
         public String incidentName;
 
         /**
-         * <p>The remark of the incident.</p>
+         * <p>The remark for the incident.</p>
          * 
          * <strong>example:</strong>
          * <p>remark</p>
@@ -179,6 +200,12 @@ public class ListIncidentsResponseBody extends TeaModel {
 
         /**
          * <p>The event status. Valid values:</p>
+         * <ul>
+         * <li>0: Unhandled.</li>
+         * <li>1: Handling.</li>
+         * <li>5: Handling failed.</li>
+         * <li>10: Handled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -214,6 +241,15 @@ public class ListIncidentsResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The display name of the incident owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        @NameInMap("OwnerName")
+        public String ownerName;
+
+        /**
          * <p>The number of alerts associated with the incident.</p>
          * 
          * <strong>example:</strong>
@@ -241,7 +277,20 @@ public class ListIncidentsResponseBody extends TeaModel {
         public Long responseTime;
 
         /**
+         * <p>The list of response types. Valid values: auto, manual, ai.</p>
+         */
+        @NameInMap("ResponseTypes")
+        public java.util.List<String> responseTypes;
+
+        /**
          * <p>The threat level. Valid values:</p>
+         * <ul>
+         * <li>5: Critical.</li>
+         * <li>4: High.</li>
+         * <li>3: Medium.</li>
+         * <li>2: Low.</li>
+         * <li>1: Informational.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -250,7 +299,7 @@ public class ListIncidentsResponseBody extends TeaModel {
         public String threatLevel;
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1603248483000</p>
@@ -269,6 +318,14 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
         public String getAlertInfos() {
             return this.alertInfos;
+        }
+
+        public ListIncidentsResponseBodyIncidents setAlertSources(java.util.List<String> alertSources) {
+            this.alertSources = alertSources;
+            return this;
+        }
+        public java.util.List<String> getAlertSources() {
+            return this.alertSources;
         }
 
         public ListIncidentsResponseBodyIncidents setAttckTactics(String attckTactics) {
@@ -367,6 +424,14 @@ public class ListIncidentsResponseBody extends TeaModel {
             return this.owner;
         }
 
+        public ListIncidentsResponseBodyIncidents setOwnerName(String ownerName) {
+            this.ownerName = ownerName;
+            return this;
+        }
+        public String getOwnerName() {
+            return this.ownerName;
+        }
+
         public ListIncidentsResponseBodyIncidents setRelateAlertCount(Integer relateAlertCount) {
             this.relateAlertCount = relateAlertCount;
             return this;
@@ -389,6 +454,14 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
         public Long getResponseTime() {
             return this.responseTime;
+        }
+
+        public ListIncidentsResponseBodyIncidents setResponseTypes(java.util.List<String> responseTypes) {
+            this.responseTypes = responseTypes;
+            return this;
+        }
+        public java.util.List<String> getResponseTypes() {
+            return this.responseTypes;
         }
 
         public ListIncidentsResponseBodyIncidents setThreatLevel(String threatLevel) {

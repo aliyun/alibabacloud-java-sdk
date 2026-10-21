@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVendorsResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries returned for this request.</p>
+     * <p>The maximum number of entries to return in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -17,7 +17,7 @@ public class ListVendorsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to retrieve the next page of results. If this is your first query or if no next page exists, you do not need to specify this parameter. If a next page exists, set the value to the NextToken value that is returned in the last response.</p>
+     * <p>The pagination token for the next query. You do not need to specify this parameter for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -26,7 +26,7 @@ public class ListVendorsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
@@ -96,7 +96,7 @@ public class ListVendorsResponseBody extends TeaModel {
 
     public static class ListVendorsResponseBodyVendors extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>
@@ -105,7 +105,7 @@ public class ListVendorsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>
@@ -134,10 +134,8 @@ public class ListVendorsResponseBody extends TeaModel {
         /**
          * <p>The vendor type. Valid values:</p>
          * <ul>
-         * <li><p>preset</p>
-         * </li>
-         * <li><p>custom</p>
-         * </li>
+         * <li>preset</li>
+         * <li>custom</li>
          * </ul>
          * 
          * <strong>example:</strong>

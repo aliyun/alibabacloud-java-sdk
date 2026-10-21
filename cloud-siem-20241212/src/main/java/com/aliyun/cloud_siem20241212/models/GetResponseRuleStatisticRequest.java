@@ -10,6 +10,7 @@ public class GetResponseRuleStatisticRequest extends TeaModel {
      * <li><strong>zh</strong> (default): Chinese.</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
+     * <p>Note: This parameter is required. If this parameter is not specified, the API returns a 400 error.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -20,8 +21,8 @@ public class GetResponseRuleStatisticRequest extends TeaModel {
     /**
      * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the region where your assets reside. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: the Chinese mainland and Hong Kong (China)</li>
-     * <li>ap-southeast-1: regions outside China</li>
+     * <li>cn-hangzhou: the Chinese mainland and Hong Kong (China).</li>
+     * <li>ap-southeast-1: regions outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +32,8 @@ public class GetResponseRuleStatisticRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The Alibaba Cloud account ID of the member to which the administrator switches the view.</p>
+     * <p>The Alibaba Cloud account ID that the administrator switches to for viewing as another member.</p>
+     * <p>Note: This parameter requires administrator permissions or multi-account settings. If you do not have sufficient permissions, the API returns a Forbidden.NoPermission error.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -42,7 +44,7 @@ public class GetResponseRuleStatisticRequest extends TeaModel {
     /**
      * <p>The view type. Valid values:</p>
      * <ul>
-     * <li>0: the current Alibaba Cloud account view.</li>
+     * <li>0: the view of the current Alibaba Cloud account.</li>
      * <li>1: the view of all accounts in the enterprise.</li>
      * </ul>
      * 

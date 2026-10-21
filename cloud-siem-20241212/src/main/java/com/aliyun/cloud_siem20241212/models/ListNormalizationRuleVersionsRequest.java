@@ -5,13 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListNormalizationRuleVersionsRequest extends TeaModel {
     /**
-     * <p>The language of the response messages. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
+     * <p>Note: This parameter is required in actual calls. If this parameter is not specified, the service returns a 400 error &quot;The specified Lang can not be empty.&quot; Explicitly pass in the language code.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -20,7 +19,7 @@ public class ListNormalizationRuleVersionsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of entries to return for the current request.</p>
+     * <p>The maximum number of entries to return.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -32,7 +31,7 @@ public class ListNormalizationRuleVersionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to retrieve the next page of results. You do not need to specify this parameter for the first request. If a next page exists, set this parameter to the value of NextToken that is returned from the last call.</p>
+     * <p>The pagination token. You do not need to specify this parameter for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -41,7 +40,7 @@ public class ListNormalizationRuleVersionsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the normalization rule.</p>
+     * <p>The normalization rule ID.</p>
      * 
      * <strong>example:</strong>
      * <p>nr-z0b2ssjteut85uoh9nzp</p>
@@ -50,12 +49,10 @@ public class ListNormalizationRuleVersionsRequest extends TeaModel {
     public String normalizationRuleId;
 
     /**
-     * <p>The region where the Data Management Center for threat analysis is located. Select the region for the Management Center based on the region of your assets. Valid values:</p>
+     * <p>The region where the threat detection and response data management center resides. Specify the management center based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland.</p>
-     * </li>
-     * <li><p>ap-southeast-1: Your assets are in a region outside Chinese mainland.</p>
-     * </li>
+     * <li>cn-hangzhou: The assets reside in the Chinese mainland.</li>
+     * <li>ap-southeast-1: The assets reside outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +62,7 @@ public class ListNormalizationRuleVersionsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID of the member. An administrator can use this parameter to switch to the perspective of this member.</p>
+     * <p>The user ID that the administrator uses to switch to the view of another member.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>

@@ -76,12 +76,10 @@ public class ListDataSourceTemplatesResponseBody extends TeaModel {
 
     public static class ListDataSourceTemplatesResponseBodyDataSourceTemplates extends TeaModel {
         /**
-         * <p>Indicates whether to automatically discover new users. Valid values:</p>
+         * <p>Indicates whether automatic discovery of new users is enabled. Valid values:</p>
          * <ul>
-         * <li><p>enabled: enabled.</p>
-         * </li>
-         * <li><p>disabled: disabled.</p>
-         * </li>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -91,7 +89,7 @@ public class ListDataSourceTemplatesResponseBody extends TeaModel {
         public String autoScanNew;
 
         /**
-         * <p>The time when the template was created.</p>
+         * <p>The creation time. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>
@@ -100,12 +98,10 @@ public class ListDataSourceTemplatesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The source of the data. Valid values:</p>
+         * <p>The data source origin. Valid values:</p>
          * <ul>
-         * <li><p>center</p>
-         * </li>
-         * <li><p>custom</p>
-         * </li>
+         * <li>center</li>
+         * <li>custom</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,7 +111,7 @@ public class ListDataSourceTemplatesResponseBody extends TeaModel {
         public String dataSourceFrom;
 
         /**
-         * <p>Indicates whether to automatically discover new data sources.</p>
+         * <p>Indicates whether automatic discovery of new data sources is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -133,7 +129,7 @@ public class ListDataSourceTemplatesResponseBody extends TeaModel {
         public String dataSourceRecognizer;
 
         /**
-         * <p>The ID of the data source template.</p>
+         * <p>The data source template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>alibaba_cloud_actiontrail_event_ingestion</p>
@@ -142,7 +138,7 @@ public class ListDataSourceTemplatesResponseBody extends TeaModel {
         public String dataSourceTemplateId;
 
         /**
-         * <p>The name of the data source template.</p>
+         * <p>The data source template name.</p>
          * 
          * <strong>example:</strong>
          * <p>alibaba_cloud_actiontrail_event_ingestion</p>
@@ -151,7 +147,7 @@ public class ListDataSourceTemplatesResponseBody extends TeaModel {
         public String dataSourceTemplateName;
 
         /**
-         * <p>The rule for matching the name of the Simple Log Service project.</p>
+         * <p>The matching rule for the Simple Log Service project name.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun-cloudsiem-data-173326*******</p>
@@ -166,7 +162,7 @@ public class ListDataSourceTemplatesResponseBody extends TeaModel {
         public java.util.List<String> logRegionIds;
 
         /**
-         * <p>The rule for matching the name of the Simple Log Service Logstore.</p>
+         * <p>The matching rule for the Simple Log Service Logstore name.</p>
          * 
          * <strong>example:</strong>
          * <p>audit-activity</p>
@@ -181,7 +177,7 @@ public class ListDataSourceTemplatesResponseBody extends TeaModel {
         public java.util.List<String> logUserIds;
 
         /**
-         * <p>The time when the template was updated.</p>
+         * <p>The update time. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>

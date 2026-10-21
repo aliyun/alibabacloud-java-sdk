@@ -5,12 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListLogStoresRequest extends TeaModel {
     /**
-     * <p>The language of the response message. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.
+     * Note: This parameter is required in practice. If you do not specify this parameter, the API returns a 400 error (The specified Lang can not be empty.).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +19,7 @@ public class ListLogStoresRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The name of the Simple Log Service project.</p>
+     * <p>The name of the Simple Log Service project. The project name follows the naming convention aliyun-cloudsiem-data-{userId}-{regionId}. You can call the GetDataStorage operation and obtain a valid project name from the Data.LogProject field in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou</p>
@@ -29,7 +28,7 @@ public class ListLogStoresRequest extends TeaModel {
     public String logProjectName;
 
     /**
-     * <p>The ID of the log storage region.</p>
+     * <p>The log storage region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -38,7 +37,7 @@ public class ListLogStoresRequest extends TeaModel {
     public String logRegionId;
 
     /**
-     * <p>The ID of the user who ingests the data.</p>
+     * <p>The user ID for data ingestion.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>
@@ -47,7 +46,7 @@ public class ListLogStoresRequest extends TeaModel {
     public Long logUserId;
 
     /**
-     * <p>The maximum number of entries to return on this call.</p>
+     * <p>The maximum number of entries to return in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -59,7 +58,7 @@ public class ListLogStoresRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to start the next query. You do not need to specify this parameter for the first query. If a subsequent query is required, set the value to the NextToken value that is returned from the previous API call.</p>
+     * <p>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -68,12 +67,10 @@ public class ListLogStoresRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region of the Data Management center. Select the region based on the location of your assets. Valid values:</p>
+     * <p>The region where the threat analysis data management center is located. Specify the management center based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland.</p>
-     * </li>
-     * <li><p>ap-southeast-1: Your assets are in a region outside China.</p>
-     * </li>
+     * <li>cn-hangzhou: Your assets are located in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Your assets are located outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,7 +80,7 @@ public class ListLogStoresRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID of the member whose permissions are assumed by the administrator.</p>
+     * <p>The user ID that the administrator wants to switch to for viewing from another member\&quot;s perspective.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>

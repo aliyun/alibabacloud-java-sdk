@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ValidateNormalizationRuleRequest extends TeaModel {
     /**
-     * <p>The rule ID.</p>
+     * <p>The ID of the rule.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -14,7 +14,7 @@ public class ValidateNormalizationRuleRequest extends TeaModel {
     public String data;
 
     /**
-     * <p>The storage mode for extended fields. Valid values: \<code>flat\\</code>, \<code>pack\\</code>, and \<code>reject\\</code>.</p>
+     * <p>The storage mode of extended fields. Valid values: flat, pack, and reject.</p>
      * 
      * <strong>example:</strong>
      * <p>flat</p>
@@ -23,13 +23,12 @@ public class ValidateNormalizationRuleRequest extends TeaModel {
     public String extendFieldStoreMode;
 
     /**
-     * <p>The language of the response messages. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
+     * <p>Note: This parameter is required in actual API calls. If this parameter is not provided, the service returns a 400 error with the message \&quot;The specified Lang can not be empty.\&quot; Explicitly specify the language code.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -38,7 +37,7 @@ public class ValidateNormalizationRuleRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The sample log. The value must be in the JSON format.</p>
+     * <p>The log sample in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;aaa&quot;:&quot;bbb&quot;,&quot;xxx&quot;:&quot;yyy&quot;}</p>
@@ -47,7 +46,7 @@ public class ValidateNormalizationRuleRequest extends TeaModel {
     public String logSample;
 
     /**
-     * <p>The normalization category of the rule.</p>
+     * <p>The normalization category to which the rule belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>NETWORK_CATEGORY</p>
@@ -56,7 +55,7 @@ public class ValidateNormalizationRuleRequest extends TeaModel {
     public String normalizationCategoryId;
 
     /**
-     * <p>The expression for the normalization rule.</p>
+     * <p>The expression of the normalization rule.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -67,7 +66,7 @@ public class ValidateNormalizationRuleRequest extends TeaModel {
     public String normalizationRuleExpression;
 
     /**
-     * <p>The mode of the normalization rule. Valid values: \<code>both\\</code> and \<code>realtime\\</code>.</p>
+     * <p>The mode of the normalization rule. Valid values: both and realtime.</p>
      * 
      * <strong>example:</strong>
      * <p>realtime</p>
@@ -76,7 +75,7 @@ public class ValidateNormalizationRuleRequest extends TeaModel {
     public String normalizationRuleMode;
 
     /**
-     * <p>The ID of the normalization pattern for the rule.</p>
+     * <p>The ID of the normalization schema to which the rule belongs. This parameter is required in actual API calls. If this parameter is not provided, the service returns a 400 error.</p>
      * 
      * <strong>example:</strong>
      * <p>HTTP_ACTIVITY</p>
@@ -85,7 +84,7 @@ public class ValidateNormalizationRuleRequest extends TeaModel {
     public String normalizationSchemaId;
 
     /**
-     * <p>The product ID.</p>
+     * <p>The ID of the product.</p>
      * 
      * <strong>example:</strong>
      * <p>alibaba_cloud_sas</p>
@@ -94,12 +93,10 @@ public class ValidateNormalizationRuleRequest extends TeaModel {
     public String productId;
 
     /**
-     * <p>The region where the Data Management center for threat analysis is deployed. Select the region based on the location of your assets. Valid values:</p>
+     * <p>The region where the data management center of Threat Analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland.</p>
-     * </li>
-     * <li><p>ap-southeast-1: Your assets are in regions outside the Chinese mainland.</p>
-     * </li>
+     * <li>cn-hangzhou: The assets are located in the Chinese mainland.</li>
+     * <li>ap-southeast-1: The assets are located outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,7 +106,7 @@ public class ValidateNormalizationRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID of the member. An administrator uses this parameter to switch to the perspective of the member.</p>
+     * <p>The ID of the user whose perspective the administrator switches to.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>
@@ -118,7 +115,7 @@ public class ValidateNormalizationRuleRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The vendor ID.</p>
+     * <p>The ID of the vendor.</p>
      * 
      * <strong>example:</strong>
      * <p>alibaba_cloud</p>

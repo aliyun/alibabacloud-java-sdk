@@ -8,7 +8,8 @@ public class ListQueryViewsRequest extends TeaModel {
      * <p>The language of the response. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese.</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English.
+     * Note: This parameter is required in practice. If you do not specify this parameter, the API returns a 400 error: &quot;The specified Lang can not be empty.&quot; You must explicitly pass zh or en.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +28,7 @@ public class ListQueryViewsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned in the previous API call.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request or if no more results exist. Set this parameter to the NextToken value returned in the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -54,7 +55,7 @@ public class ListQueryViewsRequest extends TeaModel {
     public String queryViewType;
 
     /**
-     * <p>The region where the threat analysis data management center is located. Specify the management center based on the region of your assets. Valid values:</p>
+     * <p>The region where the Cloud Threat Detection and Response (CTDR) data management center resides. Specify this parameter based on the region of your assets. Valid values:</p>
      * <ul>
      * <li>cn-hangzhou: Your assets belong to the Chinese mainland or Hong Kong (China).</li>
      * <li>ap-southeast-1: Your assets belong to regions outside China.</li>

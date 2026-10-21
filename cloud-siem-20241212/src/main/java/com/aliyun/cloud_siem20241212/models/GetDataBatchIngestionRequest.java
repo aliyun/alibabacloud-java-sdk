@@ -7,11 +7,10 @@ public class GetDataBatchIngestionRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
+     * <p>Note: Although this parameter is marked as optional, it is actually required. If this parameter is not specified, the API returns a 400 error.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -20,12 +19,10 @@ public class GetDataBatchIngestionRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The region where the Data Management Center for threat analysis is located. Select the region of the Management Center based on the region where your assets are located. Valid values:</p>
+     * <p>The region where the threat analysis data management center is located. Specify the management center based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland.</p>
-     * </li>
-     * <li><p>ap-southeast-1: Your assets are in a region outside China.</p>
-     * </li>
+     * <li>cn-hangzhou: The assets are located in the Chinese mainland.</li>
+     * <li>ap-southeast-1: The assets are located outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,7 +32,7 @@ public class GetDataBatchIngestionRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID of a member. An administrator can use this parameter to switch to the member\&quot;s perspective.</p>
+     * <p>The ID of the member to which the administrator switches the view.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>

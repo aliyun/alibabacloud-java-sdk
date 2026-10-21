@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataSetResponseBody extends TeaModel {
     /**
-     * <p>The result returned after the dataset is created.</p>
+     * <p>The result of the dataset creation.</p>
      */
     @NameInMap("DataSetRecordStatistic")
     public CreateDataSetResponseBodyDataSetRecordStatistic dataSetRecordStatistic;
@@ -51,7 +51,7 @@ public class CreateDataSetResponseBody extends TeaModel {
         public String dataSetId;
 
         /**
-         * <p>The number of new records in the dataset.</p>
+         * <p>The number of new dataset records.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>

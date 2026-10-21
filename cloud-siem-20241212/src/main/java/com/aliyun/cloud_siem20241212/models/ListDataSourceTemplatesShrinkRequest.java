@@ -13,10 +13,9 @@ public class ListDataSourceTemplatesShrinkRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.
+     * This parameter is required in practice. If you do not specify this parameter, the API returns a 400 error (The specified Lang can not be empty.). Valid values: zh and en.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,12 +43,10 @@ public class ListDataSourceTemplatesShrinkRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The region of the Data Management center for threat analysis. Select a region based on the location of your assets. Valid values:</p>
+     * <p>The region where the data management center of the threat analysis feature resides. Specify this parameter based on the region where your assets reside. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland.</p>
-     * </li>
-     * <li><p>ap-southeast-1: Your assets are in a region outside China.</p>
-     * </li>
+     * <li>cn-hangzhou: Chinese mainland. Your assets reside in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Outside China. Your assets reside outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,7 +56,7 @@ public class ListDataSourceTemplatesShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID of a member. An administrator can switch to the perspective of the member.</p>
+     * <p>The ID of the member to which the administrator switches the view.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNormalizationSecurityDomainsResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries returned in this query.</p>
+     * <p>The maximum number of entries returned for this request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -14,7 +14,7 @@ public class ListNormalizationSecurityDomainsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
+     * <p>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>

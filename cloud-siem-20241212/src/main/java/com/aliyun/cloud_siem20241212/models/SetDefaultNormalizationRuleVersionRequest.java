@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetDefaultNormalizationRuleVersionRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the response messages. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese.</li>
      * <li><strong>en</strong>: English.</li>
@@ -18,7 +18,7 @@ public class SetDefaultNormalizationRuleVersionRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The normalization rule ID.</p>
+     * <p>The normalization rule ID. Only custom-type normalization rules are supported. This operation does not support preset normalization rules.</p>
      * 
      * <strong>example:</strong>
      * <p>nr-z0b2ssjteut85uoh9nzp</p>
@@ -36,7 +36,7 @@ public class SetDefaultNormalizationRuleVersionRequest extends TeaModel {
     public Integer normalizationRuleVersion;
 
     /**
-     * <p>The data management center of the threat analysis feature. Specify this parameter based on the region where your assets reside. Valid values:</p>
+     * <p>The region where the data management center of the threat analysis feature is located. Select the region based on the region where your assets reside. Valid values:</p>
      * <ul>
      * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
      * <li>ap-southeast-1: Your assets reside outside China.</li>
@@ -49,7 +49,7 @@ public class SetDefaultNormalizationRuleVersionRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID of the member to which the administrator switches the view.</p>
+     * <p>The user ID that the administrator uses to switch to the view of another member account.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>

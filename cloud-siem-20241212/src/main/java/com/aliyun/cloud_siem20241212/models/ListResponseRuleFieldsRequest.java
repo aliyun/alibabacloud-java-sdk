@@ -8,7 +8,10 @@ public class ListResponseRuleFieldsRequest extends TeaModel {
      * <p>The language of the response. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese.</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English.<blockquote>
+     * <p>This parameter is required. If you do not specify this parameter, the API returns a 400 error.</p>
+     * </blockquote>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +30,7 @@ public class ListResponseRuleFieldsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that marks the position from which to start reading. Leave this parameter empty to read from the beginning.</p>
+     * <p>The pagination token that marks the current position for reading. Leave this parameter empty to read from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -38,8 +41,8 @@ public class ListResponseRuleFieldsRequest extends TeaModel {
     /**
      * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the region where your assets reside. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Chinese mainland.</li>
-     * <li>ap-southeast-1: outside the Chinese mainland.</li>
+     * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Your assets reside outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,8 +63,8 @@ public class ListResponseRuleFieldsRequest extends TeaModel {
     /**
      * <p>The view type. Valid values:</p>
      * <ul>
-     * <li>0: the view of the current Alibaba Cloud account.</li>
-     * <li>1: the view of all accounts in the enterprise.</li>
+     * <li>0: The view of the current Alibaba Cloud account.</li>
+     * <li>1: The view of all accounts in the enterprise.</li>
      * </ul>
      * 
      * <strong>example:</strong>

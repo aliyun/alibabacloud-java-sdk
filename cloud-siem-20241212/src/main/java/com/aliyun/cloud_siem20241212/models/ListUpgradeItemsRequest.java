@@ -5,12 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListUpgradeItemsRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the response messages. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.
+     * Note: This parameter is required. If it is not specified, the service returns a 400 error (The specified Lang can not be empty.).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +19,7 @@ public class ListUpgradeItemsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of entries to return.</p>
+     * <p>The maximum number of entries to return in a single call.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -29,7 +28,7 @@ public class ListUpgradeItemsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to retrieve the next page of results. Leave this parameter empty for the first request. To retrieve the next page, set this parameter to the NextToken value from the previous response.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request or if there are no more results to return. If a next page exists, set this parameter to the value of NextToken returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -38,12 +37,10 @@ public class ListUpgradeItemsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region where the Data Management center is located. Select a region based on where your assets are. Valid values:</p>
+     * <p>The region where the data management center of Cloud Threat Detection and Response (CTDR) resides. Select the region based on the region where your assets reside. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland.</p>
-     * </li>
-     * <li><p>ap-southeast-1: Your assets are outside China.</p>
-     * </li>
+     * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Your assets reside outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,7 +50,7 @@ public class ListUpgradeItemsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID of the member. An administrator can use this parameter to switch to the member\&quot;s view.</p>
+     * <p>The user ID of the member account that the administrator switches to.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>

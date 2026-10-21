@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetDataBatchIngestionResponseBody extends TeaModel {
     /**
-     * <p>The details of the batch data ingestion task.</p>
+     * <p>The data batch ingestion configuration.</p>
      */
     @NameInMap("DataBatchIngestion")
     public GetDataBatchIngestionResponseBodyDataBatchIngestion dataBatchIngestion;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
@@ -42,7 +42,7 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
 
     public static class GetDataBatchIngestionResponseBodyDataBatchIngestionDataIngestions extends TeaModel {
         /**
-         * <p>The ID of the data ingestion task.</p>
+         * <p>The data ingestion ID.</p>
          * 
          * <strong>example:</strong>
          * <p>alibaba_cloud_sas_process_ingestion_173326*******</p>
@@ -51,12 +51,10 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
         public String dataIngestionId;
 
         /**
-         * <p>The status of the data ingestion task. Valid values:</p>
+         * <p>The accessed state of the data ingestion. Valid values:</p>
          * <ul>
-         * <li><p>enabled: enabled</p>
-         * </li>
-         * <li><p>disabled: disabled</p>
-         * </li>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -66,7 +64,7 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
         public String dataIngestionStatus;
 
         /**
-         * <p>The ID of the data source.</p>
+         * <p>The data source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>alibaba_cloud_sas_process_log_173326*******</p>
@@ -75,7 +73,7 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
         public String dataSourceId;
 
         /**
-         * <p>The ID of the product.</p>
+         * <p>The product ID.</p>
          * 
          * <strong>example:</strong>
          * <p>alibaba_cloud_sas</p>
@@ -84,7 +82,7 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
         public String productId;
 
         /**
-         * <p>The ID of the vendor.</p>
+         * <p>The vendor ID.</p>
          * 
          * <strong>example:</strong>
          * <p>alibaba_cloud</p>
@@ -141,18 +139,16 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
 
     public static class GetDataBatchIngestionResponseBodyDataBatchIngestion extends TeaModel {
         /**
-         * <p>The list of data ingestion IDs for Alibaba Cloud services.</p>
+         * <p>The list of cloud native mode ingestion IDs.</p>
          */
         @NameInMap("ApsaraDataIngestionIds")
         public java.util.List<String> apsaraDataIngestionIds;
 
         /**
-         * <p>Specifies whether to automatically discover new users. Valid values:</p>
+         * <p>Indicates whether new users are automatically discovered. Valid values:</p>
          * <ul>
-         * <li><p>enabled: New users are automatically discovered.</p>
-         * </li>
-         * <li><p>disabled: New users are not automatically discovered.</p>
-         * </li>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -162,7 +158,7 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
         public String autoScanNew;
 
         /**
-         * <p>The time when the configuration of the batch data ingestion task took effect.</p>
+         * <p>The effective period of the data batch ingestion. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>
@@ -171,7 +167,7 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
         public String dataBatchIngestionEffectTime;
 
         /**
-         * <p>The mode of the batch data ingestion task.</p>
+         * <p>The batch data ingestion mode.</p>
          * 
          * <strong>example:</strong>
          * <p>full</p>
@@ -180,7 +176,7 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
         public String dataBatchIngestionMode;
 
         /**
-         * <p>The time when the batch data ingestion task was configured.</p>
+         * <p>The time when the data batch ingestion was configured. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>
@@ -189,16 +185,12 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
         public String dataBatchIngestionSetTime;
 
         /**
-         * <p>The status of the batch data ingestion task. Valid values:</p>
+         * <p>The accessed state of the data batch ingestion. Valid values:</p>
          * <ul>
-         * <li><p>pending: The configuration is pending to take effect.</p>
-         * </li>
-         * <li><p>running: The configuration is taking effect.</p>
-         * </li>
-         * <li><p>success: The configuration has taken effect.</p>
-         * </li>
-         * <li><p>failed: The configuration failed to take effect.</p>
-         * </li>
+         * <li>pending: Pending.</li>
+         * <li>running: In effect.</li>
+         * <li>success: Succeeded.</li>
+         * <li>failed: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -208,13 +200,13 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
         public String dataBatchIngestionStatus;
 
         /**
-         * <p>The list of data ingestion tasks.</p>
+         * <p>The list of data ingestions.</p>
          */
         @NameInMap("DataIngestions")
         public java.util.List<GetDataBatchIngestionResponseBodyDataBatchIngestionDataIngestions> dataIngestions;
 
         /**
-         * <p>Specifies whether to automatically discover new Logstores.</p>
+         * <p>Indicates whether automatic discovery of new Logstores is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -223,13 +215,13 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
         public Boolean dataSourceRecognizeEnabled;
 
         /**
-         * <p>The list of user IDs for batch data ingestion.</p>
+         * <p>The list of user IDs for data batch ingestion.</p>
          */
         @NameInMap("LogUserIds")
         public java.util.List<String> logUserIds;
 
         /**
-         * <p>The list of recommended data ingestion IDs.</p>
+         * <p>The list of recommended ingestion IDs.</p>
          */
         @NameInMap("RecommendDataIngestionIds")
         public java.util.List<String> recommendDataIngestionIds;

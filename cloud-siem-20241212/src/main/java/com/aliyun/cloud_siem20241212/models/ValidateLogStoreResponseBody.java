@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ValidateLogStoreResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6276D891-*****-55B2-87B9-74D413F7****</p>

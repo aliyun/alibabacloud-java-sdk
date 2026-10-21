@@ -11,7 +11,7 @@ public class ListLogStoresResponseBody extends TeaModel {
     public java.util.List<String> logStores;
 
     /**
-     * <p>The maximum number of entries returned on this call.</p>
+     * <p>The maximum number of entries to return in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -20,7 +20,7 @@ public class ListLogStoresResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to start the next query. If this parameter is empty, no subsequent query is required.</p>
+     * <p>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>

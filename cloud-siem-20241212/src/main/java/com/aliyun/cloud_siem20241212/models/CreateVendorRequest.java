@@ -5,13 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateVendorRequest extends TeaModel {
     /**
-     * <p>The language of the response messages. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
+     * <blockquote>
+     * <p>Note: This parameter is required in practice. If you omit it, the API returns a 400 error: &quot;The specified Lang can not be empty.&quot;</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -20,12 +21,10 @@ public class CreateVendorRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The region of the Data Management center. Select a region based on the location of your assets. Valid values:</p>
+     * <p>The region where the threat analysis data management center is located. Specify the management center based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: The assets are in the Chinese mainland.</p>
-     * </li>
-     * <li><p>ap-southeast-1: The assets are in a region outside China.</p>
-     * </li>
+     * <li>cn-hangzhou: Your assets belong to the Chinese mainland.</li>
+     * <li>ap-southeast-1: Your assets belong to regions outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,7 +34,7 @@ public class CreateVendorRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID of a member. An administrator can use this parameter to switch to the member\&quot;s view.</p>
+     * <p>The ID of the member account that the administrator switches to.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>
@@ -44,7 +43,7 @@ public class CreateVendorRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The name of the vendor.</p>
+     * <p>The vendor name.</p>
      * 
      * <strong>example:</strong>
      * <p>111</p>

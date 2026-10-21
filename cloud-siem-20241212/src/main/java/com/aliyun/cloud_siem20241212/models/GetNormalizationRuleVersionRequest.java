@@ -7,11 +7,10 @@ public class GetNormalizationRuleVersionRequest extends TeaModel {
     /**
      * <p>The language of the response message. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
+     * <p>Note: This parameter is required in actual API calls. If you do not specify this parameter, the service returns a 400 error with the message &quot;The specified Lang can not be empty.&quot; Explicitly specify the language code.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -38,12 +37,10 @@ public class GetNormalizationRuleVersionRequest extends TeaModel {
     public Integer normalizationRuleVersion;
 
     /**
-     * <p>The region where the Data Management center for Threat Analysis is located. Select a region for the management center based on the region where your assets are located. Valid values:</p>
+     * <p>The region where the data management center of Threat Analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland.</p>
-     * </li>
-     * <li><p>ap-southeast-1: Your assets are in a region outside China.</p>
-     * </li>
+     * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Assets are located outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,7 +50,7 @@ public class GetNormalizationRuleVersionRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID of the member. An administrator can use this parameter to switch to the perspective of a specific member.</p>
+     * <p>The ID of the user whose perspective the administrator switches to.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>

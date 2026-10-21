@@ -11,7 +11,7 @@ public class ListDataConnectorsResponseBody extends TeaModel {
     public java.util.List<ListDataConnectorsResponseBodyDataConnector> dataConnector;
 
     /**
-     * <p>The maximum number of records returned in this request.</p>
+     * <p>The maximum number of records returned in this query.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -136,7 +136,7 @@ public class ListDataConnectorsResponseBody extends TeaModel {
         public String authConfigId;
 
         /**
-         * <p>The cloud product of the authentication configuration.</p>
+         * <p>The cloud product to which the authentication configuration belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>salesForceRestAPI</p>
@@ -145,7 +145,7 @@ public class ListDataConnectorsResponseBody extends TeaModel {
         public String authConfigProduct;
 
         /**
-         * <p>The cloud vendor of the authentication configuration.</p>
+         * <p>The cloud vendor to which the authentication configuration belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>SALESFORCE</p>
@@ -244,7 +244,7 @@ public class ListDataConnectorsResponseBody extends TeaModel {
         public String logStoreName;
 
         /**
-         * <p>The name of the SLS data import job associated with the collector.</p>
+         * <p>The name of the SLS data import job for the collector.</p>
          * 
          * <strong>example:</strong>
          * <p>1a2b3c4d5e6f7a8b9c0d1e2f3a4b****</p>
@@ -253,7 +253,7 @@ public class ListDataConnectorsResponseBody extends TeaModel {
         public String slsIngestionJobName;
 
         /**
-         * <p>The status of the SLS data import job associated with the collector.</p>
+         * <p>The status of the SLS data import job for the collector.</p>
          * 
          * <strong>example:</strong>
          * <p>running</p>

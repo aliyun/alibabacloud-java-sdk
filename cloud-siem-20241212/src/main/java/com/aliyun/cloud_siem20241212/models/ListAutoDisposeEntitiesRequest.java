@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAutoDisposeEntitiesRequest extends TeaModel {
     /**
-     * <p>The IDs of automated disposal records.</p>
+     * <p>The list of decision-making disposal IDs.</p>
      */
     @NameInMap("AutoDisposeRecordIds")
     public java.util.List<String> autoDisposeRecordIds;
 
     /**
-     * <p>The page number. The value must be 1 or greater.</p>
+     * <p>The current page number. The value must be greater than or equal to 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class ListAutoDisposeEntitiesRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>The type of the data source.</p>
+     * <p>The data source type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,11 +33,10 @@ public class ListAutoDisposeEntitiesRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
+     * <p>Note: This parameter is required. If you do not specify this parameter, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot; Explicitly pass a language code.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -46,7 +45,7 @@ public class ListAutoDisposeEntitiesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of entries to return.</p>
+     * <p>The maximum number of entries to return in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -55,7 +54,7 @@ public class ListAutoDisposeEntitiesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to retrieve the next page of results. You can obtain this token from the response to a previous call.</p>
+     * <p>The pagination token that indicates the position from which the current call starts reading. An empty value indicates that all data has been read.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -64,7 +63,7 @@ public class ListAutoDisposeEntitiesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,7 +73,7 @@ public class ListAutoDisposeEntitiesRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The unique identifier of the playbook.</p>
+     * <p>The UUID of the playbook. This is the unique identifier of the playbook.</p>
      * 
      * <strong>example:</strong>
      * <p>b2491e39-ddf2-478a-8c07-*****</p>

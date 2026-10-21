@@ -7,9 +7,10 @@ public class ResetDataStorageRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.<blockquote>
+     * <p>Note: This parameter is required. If you do not specify this parameter, the API returns a 400 error: &quot;The specified Lang can not be empty.&quot;</p>
+     * </blockquote>
      * </li>
      * </ul>
      * 
@@ -20,12 +21,10 @@ public class ResetDataStorageRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The region of the Data Management center. Select a region for the Data Management center based on the region where your assets are located. Valid values:</p>
+     * <p>The region where the threat analysis data management center resides. Specify the management center region based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: The assets are in the Chinese mainland.</p>
-     * </li>
-     * <li><p>ap-southeast-1: The assets are in a region outside China.</p>
-     * </li>
+     * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Your assets reside outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,7 +34,7 @@ public class ResetDataStorageRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID of a member. An administrator uses this ID to switch to the member\&quot;s perspective.</p>
+     * <p>The ID of the China Threat Detection and Response (CTDR) member to which the administrator switches the view.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>

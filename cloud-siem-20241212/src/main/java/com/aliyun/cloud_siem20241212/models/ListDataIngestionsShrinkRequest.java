@@ -5,18 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListDataIngestionsShrinkRequest extends TeaModel {
     /**
-     * <p>An array of data ingestion policy IDs.</p>
+     * <p>The list of data ingestion policy IDs.</p>
      */
     @NameInMap("DataIngestionIds")
     public String dataIngestionIdsShrink;
 
     /**
-     * <p>The data ingestion status. Valid values:</p>
+     * <p>The accessed state of data ingestion. Valid values:</p>
      * <ul>
-     * <li><p><code>enabled</code>: Enabled.</p>
-     * </li>
-     * <li><p><code>disabled</code>: Disabled.</p>
-     * </li>
+     * <li>enabled: Enabled.</li>
+     * <li>disabled: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,7 +24,7 @@ public class ListDataIngestionsShrinkRequest extends TeaModel {
     public String dataIngestionStatus;
 
     /**
-     * <p>An array of data ingestion template IDs.</p>
+     * <p>The list of data ingestion template IDs.</p>
      */
     @NameInMap("DataIngestionTemplateIds")
     public String dataIngestionTemplateIdsShrink;
@@ -34,10 +32,8 @@ public class ListDataIngestionsShrinkRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +43,7 @@ public class ListDataIngestionsShrinkRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>An array of normalization schema IDs.</p>
+     * <p>The list of normalization schema IDs.</p>
      */
     @NameInMap("NormalizationSchemaIds")
     public String normalizationSchemaIdsShrink;
@@ -62,12 +58,10 @@ public class ListDataIngestionsShrinkRequest extends TeaModel {
     public String productId;
 
     /**
-     * <p>The region where the threat analysis feature is deployed. Select the region that corresponds to the location of your asset. Valid values:</p>
+     * <p>The data management center of the threat analysis feature. Specify this parameter based on the region where your assets reside. Valid values:</p>
      * <ul>
-     * <li><p><code>cn-hangzhou</code>: Your asset is in the Chinese mainland.</p>
-     * </li>
-     * <li><p><code>ap-southeast-1</code>: Your asset is in a region outside the Chinese mainland.</p>
-     * </li>
+     * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Your assets reside outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -77,7 +71,7 @@ public class ListDataIngestionsShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID of a member. An administrator can use this parameter to query data as the specified member.</p>
+     * <p>The user ID of the member to which the administrator switches the view.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>

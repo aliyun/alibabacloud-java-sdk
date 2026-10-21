@@ -42,7 +42,7 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
 
     public static class SetDefaultNormalizationRuleVersionResponseBodyNormalizationRuleVersion extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the normalization rule version was created. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>
@@ -147,6 +147,8 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
         public String normalizationSchemaId;
 
         /**
+         * <p>The normalization security domain ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>NETWORK_AND_WEB_SECURITY</p>
          */
@@ -163,7 +165,7 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
         public String productId;
 
         /**
-         * <p>The update time.</p>
+         * <p>The time when the normalization rule version was last updated. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>

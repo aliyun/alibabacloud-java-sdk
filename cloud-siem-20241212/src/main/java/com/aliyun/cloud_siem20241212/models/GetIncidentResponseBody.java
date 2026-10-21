@@ -11,7 +11,7 @@ public class GetIncidentResponseBody extends TeaModel {
     public GetIncidentResponseBodyIncident incident;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
@@ -42,7 +42,7 @@ public class GetIncidentResponseBody extends TeaModel {
 
     public static class GetIncidentResponseBodyIncident extends TeaModel {
         /**
-         * <p>The count of attack stages associated with the event alerts.</p>
+         * <p>The number of attack phases in the alerts associated with the event.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -59,7 +59,7 @@ public class GetIncidentResponseBody extends TeaModel {
         public Object attckTactics;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1757386075000</p>
@@ -77,13 +77,13 @@ public class GetIncidentResponseBody extends TeaModel {
         public String detectionRuleId;
 
         /**
-         * <p>The event summaries type. Valid values:</p>
+         * <p>The event aggregation type. Valid values:</p>
          * <ul>
-         * <li>none: no event is generated.</li>
-         * <li>graph_compute: graph computing (supported by predefined rules).</li>
-         * <li>expert: expert rule.</li>
-         * <li>passthrough: alerting pass-through (one-to-one).</li>
-         * <li>window: same-type aggregation (window).</li>
+         * <li>none: No event is generated.</li>
+         * <li>graph_compute: Graph computing (supported by predefined rules).</li>
+         * <li>expert: Expert rules.</li>
+         * <li>passthrough: Alert pass-through (one-to-one).</li>
+         * <li>window: Similar event aggregation (window).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class GetIncidentResponseBody extends TeaModel {
         public String incidentName;
 
         /**
-         * <p>The remarks of the event.</p>
+         * <p>The remarks on the event.</p>
          * 
          * <strong>example:</strong>
          * <p>Remark</p>
@@ -122,10 +122,10 @@ public class GetIncidentResponseBody extends TeaModel {
         /**
          * <p>The status of the event. Valid values:</p>
          * <ul>
-         * <li>0: unhandled.</li>
-         * <li>1: handling.</li>
-         * <li>5: handling failed.</li>
-         * <li>10: handled.</li>
+         * <li>0: Unhandled.</li>
+         * <li>1: Processing.</li>
+         * <li>5: Processing failed.</li>
+         * <li>10: Handled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -198,7 +198,7 @@ public class GetIncidentResponseBody extends TeaModel {
         public Object relateUserIds;
 
         /**
-         * <p>The response time. Unit: milliseconds (ms).</p>
+         * <p>The response time in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1757386075000</p>
@@ -209,11 +209,11 @@ public class GetIncidentResponseBody extends TeaModel {
         /**
          * <p>The threat level. Valid values:</p>
          * <ul>
-         * <li>5: critical.</li>
-         * <li>4: high.</li>
-         * <li>3: medium.</li>
-         * <li>2: low.</li>
-         * <li>1: informational.</li>
+         * <li>5: Critical.</li>
+         * <li>4: High.</li>
+         * <li>3: Medium.</li>
+         * <li>2: Low.</li>
+         * <li>1: Informational.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -232,7 +232,7 @@ public class GetIncidentResponseBody extends TeaModel {
         public String threatScore;
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1757386075000</p>

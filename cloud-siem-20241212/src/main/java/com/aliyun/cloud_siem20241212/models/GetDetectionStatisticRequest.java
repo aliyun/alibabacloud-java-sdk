@@ -5,11 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetDetectionStatisticRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese.</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
+     * <p>Note: This parameter is required in actual API calls. If it is not provided, the service returns a 400 error with the message &quot;The specified Lang can not be empty.&quot;. Explicitly specify the language code.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -18,10 +19,10 @@ public class GetDetectionStatisticRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the region where your assets reside. Valid values:</p>
+     * <p>The region of the data management center for threat analysis. Select the region of the management center based on the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: China (Hangzhou). Your assets reside in the Chinese mainland.</li>
-     * <li>ap-southeast-1: Singapore. Your assets reside outside China.</li>
+     * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Assets are located outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +32,7 @@ public class GetDetectionStatisticRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the member to which the administrator switches the view.</p>
+     * <p>The ID of the user whose view the administrator assumes.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>

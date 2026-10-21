@@ -14,7 +14,7 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
+     * <p>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -102,7 +102,7 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The ID of the normalization rule category.</p>
+         * <p>The normalization rule category ID.</p>
          * 
          * <strong>example:</strong>
          * <p>NETWORK_CATEGORY</p>
@@ -111,9 +111,11 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
         public String normalizationCategoryId;
 
         /**
-         * <p>The field source. Valid values:
-         * normalized: normalized field.
-         * native: native field.</p>
+         * <p>The field source. Valid values:</p>
+         * <ul>
+         * <li>normalized: normalized field.</li>
+         * <li>native: native field.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>normalized</p>
@@ -122,7 +124,7 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
         public String normalizationFieldSource;
 
         /**
-         * <p>The description of the normalization schema.</p>
+         * <p>The normalization schema description.</p>
          * 
          * <strong>example:</strong>
          * <p>Network flow log</p>
@@ -131,7 +133,11 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
         public String normalizationSchemaDescription;
 
         /**
-         * <p>The source of the normalization schema. Valid values: preset (predefined) and custom (user-defined).</p>
+         * <p>The normalization schema source. Valid values:</p>
+         * <ul>
+         * <li>preset: predefined.</li>
+         * <li>custom: custom.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>preset</p>
@@ -140,7 +146,7 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
         public String normalizationSchemaFrom;
 
         /**
-         * <p>The ID of the normalization schema.</p>
+         * <p>The normalization schema ID.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP_ACTIVITY</p>
@@ -149,7 +155,7 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
         public String normalizationSchemaId;
 
         /**
-         * <p>The name of the normalization schema.</p>
+         * <p>The normalization schema name.</p>
          * 
          * <strong>example:</strong>
          * <p>normalization_rule_Z57np</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDataSourcesResponseBody extends TeaModel {
     /**
-     * <p>The data sources.</p>
+     * <p>The alert source products associated with events.</p>
      */
     @NameInMap("DataSources")
     public java.util.List<ListDataSourcesResponseBodyDataSources> dataSources;
 
     /**
-     * <p>The maximum number of entries returned on each page.</p>
+     * <p>The maximum number of entries to return in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -20,7 +20,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to retrieve the next page of results. If a value is returned, it indicates that not all results have been returned. You can use this token in the next query to continue retrieving results.</p>
+     * <p>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -56,7 +56,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -169,7 +169,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
 
     public static class ListDataSourcesResponseBodyDataSourcesDataSourceStores extends TeaModel {
         /**
-         * <p>The time when the check was performed.</p>
+         * <p>The check time.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>
@@ -178,7 +178,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public Long checkTime;
 
         /**
-         * <p>The time when the log storage was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>
@@ -187,12 +187,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The source of the data. Valid values:</p>
+         * <p>The data source origin. Valid values:</p>
          * <ul>
-         * <li><p>center</p>
-         * </li>
-         * <li><p>custom</p>
-         * </li>
+         * <li>center</li>
+         * <li>custom</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -202,7 +200,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public String dataSourceStoreFrom;
 
         /**
-         * <p>The ID of the log storage.</p>
+         * <p>The log store ID.</p>
          * 
          * <strong>example:</strong>
          * <p>di_xxxx_source_1</p>
@@ -211,12 +209,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public String dataSourceStoreId;
 
         /**
-         * <p>The status of the log storage. Valid values:</p>
+         * <p>The log store status. Valid values:</p>
          * <ul>
-         * <li><p>normal</p>
-         * </li>
-         * <li><p>abnormal</p>
-         * </li>
+         * <li>normal</li>
+         * <li>abnormal</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -226,7 +222,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public String dataSourceStoreStatus;
 
         /**
-         * <p>The status code of the log storage.</p>
+         * <p>The log store status code.</p>
          * 
          * <strong>example:</strong>
          * <p>LogStoreNotExist</p>
@@ -235,7 +231,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public String dataSourceStoreStatusCode;
 
         /**
-         * <p>The name of the Simple Log Service project.</p>
+         * <p>The Simple Log Service project name.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou</p>
@@ -244,7 +240,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public String logProjectName;
 
         /**
-         * <p>The ID of the log storage region.</p>
+         * <p>The log storage region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -253,7 +249,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public String logRegionId;
 
         /**
-         * <p>The name of the Simple Log Service Logstore.</p>
+         * <p>The Simple Log Service Logstore name.</p>
          * 
          * <strong>example:</strong>
          * <p>audit-activity</p>
@@ -262,7 +258,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public String logStoreName;
 
         /**
-         * <p>The time when the log storage was last updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>
@@ -359,7 +355,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
 
     public static class ListDataSourcesResponseBodyDataSources extends TeaModel {
         /**
-         * <p>The time when the data source was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>
@@ -368,12 +364,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The source of the data. Valid values:</p>
+         * <p>The data source origin. Valid values:</p>
          * <ul>
-         * <li><p>center</p>
-         * </li>
-         * <li><p>custom</p>
-         * </li>
+         * <li>center</li>
+         * <li>custom</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -383,7 +377,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public String dataSourceFrom;
 
         /**
-         * <p>The ID of the data source.</p>
+         * <p>The data source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ds-scpfegri73oyoknbc90c</p>
@@ -392,7 +386,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public String dataSourceId;
 
         /**
-         * <p>The name of the data source.</p>
+         * <p>The data source name.</p>
          * 
          * <strong>example:</strong>
          * <p>AD_LOG</p>
@@ -401,7 +395,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public String dataSourceName;
 
         /**
-         * <p>Indicates whether new Logstores are automatically discovered.</p>
+         * <p>Indicates whether automatic discovery of new Logstores is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -419,20 +413,17 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public String dataSourceRecognizer;
 
         /**
-         * <p>The list of data ingestion IDs that are associated with the data source.</p>
+         * <p>The list of data ingestion IDs associated with the data source.</p>
          */
         @NameInMap("DataSourceReferences")
         public java.util.List<ListDataSourcesResponseBodyDataSourcesDataSourceReferences> dataSourceReferences;
 
         /**
-         * <p>The status of the data source. Valid values:</p>
+         * <p>The data source status. Valid values:</p>
          * <ul>
-         * <li><p>unconfigured</p>
-         * </li>
-         * <li><p>normal</p>
-         * </li>
-         * <li><p>abnormal</p>
-         * </li>
+         * <li>unconfigured</li>
+         * <li>normal</li>
+         * <li>abnormal</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -442,13 +433,13 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public String dataSourceStatus;
 
         /**
-         * <p>The list of Logstores.</p>
+         * <p>The list of log services.</p>
          */
         @NameInMap("DataSourceStores")
         public java.util.List<ListDataSourcesResponseBodyDataSourcesDataSourceStores> dataSourceStores;
 
         /**
-         * <p>The ID of the data source template.</p>
+         * <p>The data source template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>alibaba_cloud_sas_account_snapshot_log_173326*******</p>
@@ -457,12 +448,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public String dataSourceTemplateId;
 
         /**
-         * <p>The type of the data source. Valid values:</p>
+         * <p>The data source type. Valid values:</p>
          * <ul>
-         * <li><p>preset</p>
-         * </li>
-         * <li><p>custom</p>
-         * </li>
+         * <li>preset</li>
+         * <li>custom</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -472,7 +461,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public String dataSourceType;
 
         /**
-         * <p>The name of the Simple Log Service project.</p>
+         * <p>The Simple Log Service project name.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou</p>
@@ -481,7 +470,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public String logProjectName;
 
         /**
-         * <p>The ID of the log storage region.</p>
+         * <p>The log storage region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -490,7 +479,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public String logRegionId;
 
         /**
-         * <p>The name of the Simple Log Service Logstore.</p>
+         * <p>The Simple Log Service Logstore name.</p>
          * 
          * <strong>example:</strong>
          * <p>audit-activity</p>
@@ -499,7 +488,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public String logStoreName;
 
         /**
-         * <p>The ID of the user who can access the data.</p>
+         * <p>The data ingestion user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>173326*******</p>
@@ -508,7 +497,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public Long logUserId;
 
         /**
-         * <p>The time when the data source was last updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>

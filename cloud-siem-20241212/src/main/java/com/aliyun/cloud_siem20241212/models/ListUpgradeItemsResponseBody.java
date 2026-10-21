@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUpgradeItemsResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries returned on the current page.</p>
+     * <p>The maximum number of entries to return in a single call.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -14,7 +14,7 @@ public class ListUpgradeItemsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to retrieve the next page of results. If the value is not empty, more results are available.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request or if there are no more results to return. If a next page exists, set this parameter to the value of NextToken returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -32,7 +32,7 @@ public class ListUpgradeItemsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>57</p>
@@ -93,7 +93,7 @@ public class ListUpgradeItemsResponseBody extends TeaModel {
 
     public static class ListUpgradeItemsResponseBodyUpgradeItems extends TeaModel {
         /**
-         * <p>The ID of the upgrade item.</p>
+         * <p>The upgrade item ID.</p>
          * 
          * <strong>example:</strong>
          * <p>data_storage_2_upgrade</p>

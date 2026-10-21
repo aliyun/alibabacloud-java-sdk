@@ -5,12 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListLogProjectsRequest extends TeaModel {
     /**
-     * <p>The language of the response messages. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.
+     * Note: Although this parameter is marked as optional in the schema, the API returns a 400 error if it is not provided. Therefore, this parameter is required in practice. Set the value to zh (Chinese) or en (English).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +19,7 @@ public class ListLogProjectsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the log storage region.</p>
+     * <p>The log storage region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -29,7 +28,7 @@ public class ListLogProjectsRequest extends TeaModel {
     public String logRegionId;
 
     /**
-     * <p>The user ID for data access.</p>
+     * <p>The ID of the data access user.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>
@@ -38,7 +37,7 @@ public class ListLogProjectsRequest extends TeaModel {
     public Long logUserId;
 
     /**
-     * <p>The maximum number of entries to return on this call.</p>
+     * <p>The maximum number of entries to return in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -50,7 +49,7 @@ public class ListLogProjectsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to retrieve the next page of results. You do not need to specify this parameter for the first call. To retrieve the next page of results, set this parameter to the NextToken value that was returned from the previous call.</p>
+     * <p>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -59,12 +58,10 @@ public class ListLogProjectsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region where the Data Management hub for threat analysis is located. Select the region of the Data Management hub based on the region of your assets. Valid values:</p>
+     * <p>The region where the threat detection and response data management center resides. Specify the management center region based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland.</p>
-     * </li>
-     * <li><p>ap-southeast-1: Your assets are in a region outside China.</p>
-     * </li>
+     * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Your assets reside outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,7 +71,7 @@ public class ListLogProjectsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the member account in the resource directory.</p>
+     * <p>The ID of the member accounts in the resource folder.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>

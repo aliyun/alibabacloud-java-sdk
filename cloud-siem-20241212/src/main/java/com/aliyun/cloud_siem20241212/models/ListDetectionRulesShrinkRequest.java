@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDetectionRulesShrinkRequest extends TeaModel {
     /**
-     * <p>The ATT\&amp;CK technique of the alert.</p>
+     * <p>The alert ATT&amp;CK technique.</p>
      * 
      * <strong>example:</strong>
      * <p>Discovery</p>
@@ -16,16 +16,11 @@ public class ListDetectionRulesShrinkRequest extends TeaModel {
     /**
      * <p>The threat level of the alert. Valid values:</p>
      * <ul>
-     * <li><p>5: critical.</p>
-     * </li>
-     * <li><p>4: important.</p>
-     * </li>
-     * <li><p>3: medium.</p>
-     * </li>
-     * <li><p>2: low.</p>
-     * </li>
-     * <li><p>1: informational.</p>
-     * </li>
+     * <li>5: Critical.</li>
+     * <li>4: High.</li>
+     * <li>3: Medium.</li>
+     * <li>2: Low.</li>
+     * <li>1: Informational.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +39,7 @@ public class ListDetectionRulesShrinkRequest extends TeaModel {
     public String alertTacticId;
 
     /**
-     * <p>The alert type.</p>
+     * <p>The Alarm Metric of the alerting rule.</p>
      * 
      * <strong>example:</strong>
      * <p>siem_rule_type_alert_storm</p>
@@ -53,7 +48,7 @@ public class ListDetectionRulesShrinkRequest extends TeaModel {
     public String alertType;
 
     /**
-     * <p>The type of the detection rule expression.</p>
+     * <p>The expression content of the detection rule.</p>
      * 
      * <strong>example:</strong>
      * <p>playbook</p>
@@ -97,12 +92,9 @@ public class ListDetectionRulesShrinkRequest extends TeaModel {
     /**
      * <p>The type of the detection rule. Valid values:</p>
      * <ul>
-     * <li><p>preset: a built-in detection rule.</p>
-     * </li>
-     * <li><p>custom: a custom detection rule.</p>
-     * </li>
-     * <li><p>custom_template: a rule template.</p>
-     * </li>
+     * <li>preset: preset detection rule.</li>
+     * <li>custom: custom detection rule.</li>
+     * <li>custom_template: rule template.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -112,18 +104,13 @@ public class ListDetectionRulesShrinkRequest extends TeaModel {
     public String detectionRuleType;
 
     /**
-     * <p>The event aggregation type. Valid values:</p>
+     * <p>The event summaries type. Valid values:</p>
      * <ul>
-     * <li><p>none: No events are generated.</p>
-     * </li>
-     * <li><p>graph_compute: graph computing (supported by predefined rules).</p>
-     * </li>
-     * <li><p>expert: expert rule.</p>
-     * </li>
-     * <li><p>passthrough: alert passthrough (one-to-one).</p>
-     * </li>
-     * <li><p>window: aggregation of similar alerts (by window).</p>
-     * </li>
+     * <li>none: No event is generated.</li>
+     * <li>graph_compute: Graph computing (supported by predefined rules).</li>
+     * <li>expert: Expert rule.</li>
+     * <li>passthrough: Alerting pass-through (one-to-one).</li>
+     * <li>window: Same-type aggregation (window).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -135,11 +122,10 @@ public class ListDetectionRulesShrinkRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
+     * <p>Note: This parameter is required. If you do not specify this parameter, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot; Explicitly pass a language code.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -166,7 +152,7 @@ public class ListDetectionRulesShrinkRequest extends TeaModel {
     public String logSchemaId;
 
     /**
-     * <p>The maximum number of data entries to read.</p>
+     * <p>The maximum number of entries to return in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -175,7 +161,7 @@ public class ListDetectionRulesShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to start the next query.</p>
+     * <p>The token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -186,10 +172,8 @@ public class ListDetectionRulesShrinkRequest extends TeaModel {
     /**
      * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li><p><strong>asc</strong>: ascending order. This is the default value.</p>
-     * </li>
-     * <li><p><strong>desc</strong>: descending order.</p>
-     * </li>
+     * <li><strong>asc</strong>: Ascending order. This is the default value.</li>
+     * <li><strong>desc</strong>: Descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -199,12 +183,10 @@ public class ListDetectionRulesShrinkRequest extends TeaModel {
     public String orderDirection;
 
     /**
-     * <p>The field to sort by. Valid values:</p>
+     * <p>The field used for sorting. Valid values:</p>
      * <ul>
-     * <li><p>GmtCreate: the creation time.</p>
-     * </li>
-     * <li><p>GmtModified: the update time.</p>
-     * </li>
+     * <li>GmtCreate: creation time.</li>
+     * <li>GmtModified: update time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -214,7 +196,7 @@ public class ListDetectionRulesShrinkRequest extends TeaModel {
     public String orderFieldName;
 
     /**
-     * <p>The pagination parameter. This specifies the current page number.</p>
+     * <p>The page number of the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -223,7 +205,7 @@ public class ListDetectionRulesShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The pagination parameter. This specifies the number of entries per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -232,12 +214,10 @@ public class ListDetectionRulesShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region where the Data Management center of threat analysis is located. Select a region based on the region where your assets are located. Valid values:</p>
+     * <p>The region where the threat analysis data management center is located. Specify the management center based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland.</p>
-     * </li>
-     * <li><p>ap-southeast-1: Your assets are outside China.</p>
-     * </li>
+     * <li>cn-hangzhou: The assets are located in the Chinese mainland.</li>
+     * <li>ap-southeast-1: The assets are located outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -247,7 +227,7 @@ public class ListDetectionRulesShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID that the administrator uses to switch to the perspective of another member.</p>
+     * <p>The ID of the member to which the administrator switches the view.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>

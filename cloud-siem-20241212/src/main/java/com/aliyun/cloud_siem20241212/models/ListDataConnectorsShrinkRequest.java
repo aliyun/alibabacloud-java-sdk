@@ -22,8 +22,8 @@ public class ListDataConnectorsShrinkRequest extends TeaModel {
     /**
      * <p>The collector status. Valid values:</p>
      * <ul>
-     * <li>&quot;enabled&quot;: enabled.</li>
-     * <li>&quot;disabled&quot; (default): disabled.</li>
+     * <li>enabled: Enabled.</li>
+     * <li>disabled (default): Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,6 +61,7 @@ public class ListDataConnectorsShrinkRequest extends TeaModel {
      * <li><strong>zh</strong> (default): Chinese.</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
+     * <p>Note: This parameter is required. If you do not specify this parameter, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot; Explicitly pass a language code.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -78,7 +79,7 @@ public class ListDataConnectorsShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. You do not need to set this parameter for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
+     * <p>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If a next page exists, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -87,7 +88,7 @@ public class ListDataConnectorsShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The sort field. Currently, only sorting by updateTime is supported. If OrderField is left empty, the default order returned by the database is used.</p>
+     * <p>The sort field. Currently, only sorting by updateTime is supported. If OrderField is empty, the default order returned by the database is used.</p>
      * 
      * <strong>example:</strong>
      * <p>Id</p>
@@ -98,8 +99,8 @@ public class ListDataConnectorsShrinkRequest extends TeaModel {
     /**
      * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li>&quot;asc&quot;: ascending order.</li>
-     * <li>&quot;desc&quot; (default): descending order.</li>
+     * <li>asc: ascending order.</li>
+     * <li>desc (default): descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -140,7 +141,7 @@ public class ListDataConnectorsShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID that the administrator switches to when viewing as another member.</p>
+     * <p>The ID of the member to which the administrator switches the view.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>

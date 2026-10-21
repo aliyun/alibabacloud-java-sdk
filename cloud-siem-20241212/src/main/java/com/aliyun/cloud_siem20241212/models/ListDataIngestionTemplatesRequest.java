@@ -7,14 +7,10 @@ public class ListDataIngestionTemplatesRequest extends TeaModel {
     /**
      * <p>The status of the data ingestion template. Valid values:</p>
      * <ul>
-     * <li><p>pending</p>
-     * </li>
-     * <li><p>running</p>
-     * </li>
-     * <li><p>success</p>
-     * </li>
-     * <li><p>failed</p>
-     * </li>
+     * <li>pending</li>
+     * <li>running</li>
+     * <li>success</li>
+     * <li>failed</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,7 +20,7 @@ public class ListDataIngestionTemplatesRequest extends TeaModel {
     public String dataIngestionTemplateStatus;
 
     /**
-     * <p>A list of data source template IDs.</p>
+     * <p>The list of data source template IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>alibaba_cloud_sas_account_snapshot_log_173326*******</p>
@@ -35,11 +31,10 @@ public class ListDataIngestionTemplatesRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
+     * <p>Note: This parameter is required. If you do not specify this parameter, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot; Explicitly pass in a language code.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -75,12 +70,10 @@ public class ListDataIngestionTemplatesRequest extends TeaModel {
     public String productId;
 
     /**
-     * <p>The region where the Data Management center of threat analysis is located. You must select a region based on the region where your assets are located. Valid values:</p>
+     * <p>The region where the data management center of threat detection and response resides. Specify the management center based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland.</p>
-     * </li>
-     * <li><p>ap-southeast-1: Your assets are in a region outside China.</p>
-     * </li>
+     * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Your assets reside outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -90,7 +83,7 @@ public class ListDataIngestionTemplatesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID of the member whose perspective you want to use. This parameter is available only for administrators.</p>
+     * <p>The user ID used by an administrator to assume the view of another member.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>

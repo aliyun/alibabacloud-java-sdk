@@ -11,7 +11,7 @@ public class ListAlertsResponseBody extends TeaModel {
     public java.util.List<ListAlertsResponseBodyAlerts> alerts;
 
     /**
-     * <p>The maximum number of entries to return in this request.</p>
+     * <p>The maximum number of entries to return.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -127,7 +127,7 @@ public class ListAlertsResponseBody extends TeaModel {
 
     public static class ListAlertsResponseBodyAlerts extends TeaModel {
         /**
-         * <p>The alert details.</p>
+         * <p>The detailed content of the alert.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;alert_uuid&quot;:&quot;a3f8c2e1-9b7d-4f6a-8c2e-1d5b9a7f****&quot;}</p>
@@ -136,7 +136,7 @@ public class ListAlertsResponseBody extends TeaModel {
         public String alertRecord;
 
         /**
-         * <p>The alert UUID.</p>
+         * <p>The UUID of the alert.</p>
          * 
          * <strong>example:</strong>
          * <p>798341271677187</p>

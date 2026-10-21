@@ -5,13 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetLogTicketRequest extends TeaModel {
     /**
-     * <p>The language of the response messages. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
+     * <p>Note: This parameter is required in actual calls. If this parameter is not specified, the service returns a 400 error &quot;The specified Lang can not be empty.&quot; Explicitly pass in the language code.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -29,12 +28,10 @@ public class GetLogTicketRequest extends TeaModel {
     public Long logUserId;
 
     /**
-     * <p>The region of the Data Management hub for threat analysis. Select the region based on the location of your asset. Valid values:</p>
+     * <p>The region where the Cloud Threat Detection and Response (CTDR) data management center is located. Specify the management center based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: The asset is in the Chinese mainland.</p>
-     * </li>
-     * <li><p>ap-southeast-1: The asset is in a region outside China.</p>
-     * </li>
+     * <li>cn-hangzhou: The assets are located in the Chinese mainland.</li>
+     * <li>ap-southeast-1: The assets are located outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +41,7 @@ public class GetLogTicketRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID of a member. This parameter lets an administrator switch to the perspective of the member.</p>
+     * <p>The user ID that the administrator switches to when viewing as another member.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>

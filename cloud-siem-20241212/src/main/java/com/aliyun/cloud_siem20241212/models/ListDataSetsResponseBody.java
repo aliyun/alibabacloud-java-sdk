@@ -11,7 +11,7 @@ public class ListDataSetsResponseBody extends TeaModel {
     public java.util.List<ListDataSetsResponseBodyDataSets> dataSets;
 
     /**
-     * <p>The maximum number of results to return for the request. This parameter is used for queries that use NextToken. Valid values: 1 to 100. Default value: 50.</p>
+     * <p>The maximum number of results to return when you use the NextToken-based pagination method. Valid values: 1 to 100. Default value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -20,7 +20,7 @@ public class ListDataSetsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to start the next query.</p>
+     * <p>The pagination token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -56,7 +56,7 @@ public class ListDataSetsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>57</p>
@@ -127,7 +127,7 @@ public class ListDataSetsResponseBody extends TeaModel {
 
     public static class ListDataSetsResponseBodyDataSetsDataSetReferences extends TeaModel {
         /**
-         * <p>The ID of the dataset.</p>
+         * <p>The dataset ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dataset-nhcrmjpx1zsorlaq****</p>
@@ -136,7 +136,7 @@ public class ListDataSetsResponseBody extends TeaModel {
         public String dataSetId;
 
         /**
-         * <p>The ID of the rule or playbook that is associated with the dataset.</p>
+         * <p>The ID of the rule or playbook associated with the dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>456232</p>
@@ -145,7 +145,7 @@ public class ListDataSetsResponseBody extends TeaModel {
         public String dataSetReferenceId;
 
         /**
-         * <p>The name of the rule or playbook that is associated with the dataset.</p>
+         * <p>The name of the rule or playbook associated with the dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>playbook_name</p>
@@ -154,12 +154,10 @@ public class ListDataSetsResponseBody extends TeaModel {
         public String dataSetReferenceName;
 
         /**
-         * <p>The type of the service that is associated with the dataset. Valid values:</p>
+         * <p>The type of service associated with the dataset. Valid values:</p>
          * <ul>
-         * <li><p>custom_rule: custom rule.</p>
-         * </li>
-         * <li><p>playbook: playbook.</p>
-         * </li>
+         * <li>custom_rule: custom rule.</li>
+         * <li>playbook: playbook.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -209,12 +207,10 @@ public class ListDataSetsResponseBody extends TeaModel {
 
     public static class ListDataSetsResponseBodyDataSetsIpWhitelistRecognizers extends TeaModel {
         /**
-         * <p>The status of automatic detection. Valid values:</p>
+         * <p>The automatic recognition status. Valid values:</p>
          * <ul>
-         * <li><p>enabled: enabled.</p>
-         * </li>
-         * <li><p>disabled: disabled.</p>
-         * </li>
+         * <li>enabled: enabled.</li>
+         * <li>disabled: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -224,26 +220,17 @@ public class ListDataSetsResponseBody extends TeaModel {
         public String autoRecognizeStatus;
 
         /**
-         * <p>The type of IP address that the recognizer detects. Valid values:</p>
+         * <p>The IP type identified by the recognizer. Valid values:</p>
          * <ul>
-         * <li><p>sas_vulnerability_scanner_ip: Security Center web vulnerability scanner IP address.</p>
-         * </li>
-         * <li><p>waf_back_source_ip: Web Application Firewall back-to-origin IP address.</p>
-         * </li>
-         * <li><p>ddos_back_source_ip: Anti-DDoS back-to-origin IP address.</p>
-         * </li>
-         * <li><p>esa_back_source_ip: Edge Security Acceleration (ESA) back-to-origin node IP address.</p>
-         * </li>
-         * <li><p>ecs_public_ip: Elastic Compute Service (ECS) public IP address.</p>
-         * </li>
-         * <li><p>slb_public_ip: Server Load Balancer (SLB) public IP address.</p>
-         * </li>
-         * <li><p>vpc_eip: Elastic IP Address (EIP).</p>
-         * </li>
-         * <li><p>cdn_back_source_ip: Alibaba Cloud CDN back-to-origin IP address.</p>
-         * </li>
-         * <li><p>ga_back_source_ip: Global Accelerator (GA) back-to-origin IP address.</p>
-         * </li>
+         * <li>sas_vulnerability_scanner_ip: IP addresses of the Security Center vulnerability web scanner.</li>
+         * <li>waf_back_source_ip: back-to-origin IP addresses of Web Application Firewall (WAF).</li>
+         * <li>ddos_back_source_ip: back-to-origin IP addresses of Anti-DDoS.</li>
+         * <li>esa_back_source_ip: back-to-origin node IP addresses of Edge Security Acceleration (ESA).</li>
+         * <li>ecs_public_ip: public IP addresses of Elastic Compute Service (ECS) instances.</li>
+         * <li>slb_public_ip: public IP addresses of Server Load Balancer (SLB) instances.</li>
+         * <li>vpc_eip: elastic IP addresses (EIPs).</li>
+         * <li>cdn_back_source_ip: back-to-origin IP addresses of Content Delivery Network (CDN).</li>
+         * <li>ga_back_source_ip: back-to-origin IP addresses of Global Accelerator (GA).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -253,12 +240,10 @@ public class ListDataSetsResponseBody extends TeaModel {
         public String ipWhitelistRecognizerType;
 
         /**
-         * <p>The detection scope. Valid values:</p>
+         * <p>The recognition scope. Valid values:</p>
          * <ul>
-         * <li><p>current_account: current account only.</p>
-         * </li>
-         * <li><p>rd_accounts: multiple accounts.</p>
-         * </li>
+         * <li>current_account: current account only.</li>
+         * <li>rd_accounts: multi-account enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -268,7 +253,7 @@ public class ListDataSetsResponseBody extends TeaModel {
         public String recognizeScope;
 
         /**
-         * <p>The time when the dataset was updated.</p>
+         * <p>The update time. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1713787368000</p>
@@ -317,7 +302,7 @@ public class ListDataSetsResponseBody extends TeaModel {
 
     public static class ListDataSetsResponseBodyDataSets extends TeaModel {
         /**
-         * <p>The time when the dataset was created.</p>
+         * <p>The creation time. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1713787368000</p>
@@ -326,7 +311,7 @@ public class ListDataSetsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The description of the dataset.</p>
+         * <p>The dataset description.</p>
          * 
          * <strong>example:</strong>
          * <p>lmftest desc</p>
@@ -335,7 +320,7 @@ public class ListDataSetsResponseBody extends TeaModel {
         public String dataSetDescription;
 
         /**
-         * <p>The name of the unique key for the dataset.</p>
+         * <p>The unique key name of the dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>ip</p>
@@ -344,7 +329,7 @@ public class ListDataSetsResponseBody extends TeaModel {
         public String dataSetFieldKeyName;
 
         /**
-         * <p>The names of the fields in the dataset.</p>
+         * <p>The field names of the dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;ip&quot;,&quot;region&quot;]</p>
@@ -362,7 +347,7 @@ public class ListDataSetsResponseBody extends TeaModel {
         public String dataSetFileName;
 
         /**
-         * <p>The ID of the dataset.</p>
+         * <p>The dataset ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dataset-t8ha6p7k61rmniqw****</p>
@@ -371,7 +356,7 @@ public class ListDataSetsResponseBody extends TeaModel {
         public String dataSetId;
 
         /**
-         * <p>The name of the dataset.</p>
+         * <p>The dataset name.</p>
          * 
          * <strong>example:</strong>
          * <p>lmftest</p>
@@ -380,18 +365,16 @@ public class ListDataSetsResponseBody extends TeaModel {
         public String dataSetName;
 
         /**
-         * <p>The dataset references.</p>
+         * <p>The dataset reference data.</p>
          */
         @NameInMap("DataSetReferences")
         public java.util.List<ListDataSetsResponseBodyDataSetsDataSetReferences> dataSetReferences;
 
         /**
-         * <p>The status of the dataset. Valid values:</p>
+         * <p>The dataset status. Valid values:</p>
          * <ul>
-         * <li><p>0: deleted.</p>
-         * </li>
-         * <li><p>1: enabled.</p>
-         * </li>
+         * <li>0: deleted.</li>
+         * <li>1: enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -401,12 +384,10 @@ public class ListDataSetsResponseBody extends TeaModel {
         public Integer dataSetStatus;
 
         /**
-         * <p>The type of the dataset. Valid values:</p>
+         * <p>The dataset type. Valid values:</p>
          * <ul>
-         * <li><p>custom: custom.</p>
-         * </li>
-         * <li><p>preset: predefined.</p>
-         * </li>
+         * <li>custom: custom dataset.</li>
+         * <li>preset: predefined dataset.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -422,7 +403,7 @@ public class ListDataSetsResponseBody extends TeaModel {
         public java.util.List<ListDataSetsResponseBodyDataSetsIpWhitelistRecognizers> ipWhitelistRecognizers;
 
         /**
-         * <p>The time when the dataset was updated.</p>
+         * <p>The update time. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1713787368000</p>

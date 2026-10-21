@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetNormalizationRuleRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese.</li>
      * <li><strong>en</strong>: English.</li>
@@ -18,7 +18,7 @@ public class GetNormalizationRuleRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The normalization rule ID.</p>
+     * <p>The ID of the normalization rule.</p>
      * 
      * <strong>example:</strong>
      * <p>nr-z0b2ssjteut85uoh9nzp</p>
@@ -27,6 +27,8 @@ public class GetNormalizationRuleRequest extends TeaModel {
     public String normalizationRuleId;
 
     /**
+     * <p>The ID of the normalization security domain.</p>
+     * 
      * <strong>example:</strong>
      * <p>NETWORK_AND_WEB_SECURITY</p>
      */
@@ -34,10 +36,10 @@ public class GetNormalizationRuleRequest extends TeaModel {
     public String normalizationSecurityDomainId;
 
     /**
-     * <p>The region where the data management center of threat analysis is located. Specify the management center based on the region of your assets. Valid values:</p>
+     * <p>The region where the data management center of Threat Analysis is located. You must select the region of the management center based on the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: the asset is in the Chinese mainland.</li>
-     * <li>ap-southeast-1: the asset is outside the Chinese mainland.</li>
+     * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Assets are located outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +49,7 @@ public class GetNormalizationRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID that the administrator uses to switch to the view of another member.</p>
+     * <p>The ID of the user whose perspective the administrator switches to.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>

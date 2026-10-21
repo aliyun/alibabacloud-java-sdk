@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataSetsShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the dataset.</p>
+     * <p>The dataset ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dataset-qt0n8246gs9nackg****</p>
@@ -20,7 +20,7 @@ public class ListDataSetsShrinkRequest extends TeaModel {
     public String dataSetIdsShrink;
 
     /**
-     * <p>The name of the dataset.</p>
+     * <p>The dataset name.</p>
      * 
      * <strong>example:</strong>
      * <p>lmftest</p>
@@ -29,12 +29,10 @@ public class ListDataSetsShrinkRequest extends TeaModel {
     public String dataSetName;
 
     /**
-     * <p>The status of the dataset. Valid values:</p>
+     * <p>The dataset status. Valid values:</p>
      * <ul>
-     * <li><p>0: deleted.</p>
-     * </li>
-     * <li><p>1: enabled.</p>
-     * </li>
+     * <li>0: deleted.</li>
+     * <li>1: enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,12 +42,10 @@ public class ListDataSetsShrinkRequest extends TeaModel {
     public Integer dataSetStatus;
 
     /**
-     * <p>The type of the dataset. Valid values:</p>
+     * <p>The dataset type. Valid values:</p>
      * <ul>
-     * <li><p>custom: custom.</p>
-     * </li>
-     * <li><p>preset: predefined.</p>
-     * </li>
+     * <li>custom: custom dataset.</li>
+     * <li>preset: predefined dataset.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,10 +57,9 @@ public class ListDataSetsShrinkRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.
+     * This parameter is required in practice. If you do not specify this parameter, the API returns a 400 error (The specified Lang can not be empty.). Valid values: zh and en.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,7 +69,7 @@ public class ListDataSetsShrinkRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of results to return for the request. This parameter is used for queries that use NextToken. Valid values: 1 to 100. Default value: 50.</p>
+     * <p>The maximum number of results to return when you use the NextToken-based pagination method. Valid values: 1 to 100. Default value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -83,7 +78,7 @@ public class ListDataSetsShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to start the next query.</p>
+     * <p>The pagination token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -94,10 +89,8 @@ public class ListDataSetsShrinkRequest extends TeaModel {
     /**
      * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li><p><strong>asc</strong> (default): ascending.</p>
-     * </li>
-     * <li><p><strong>desc</strong>: descending.</p>
-     * </li>
+     * <li><strong>asc</strong> (default): ascending order.</li>
+     * <li><strong>desc</strong>: descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -107,12 +100,10 @@ public class ListDataSetsShrinkRequest extends TeaModel {
     public String orderDirection;
 
     /**
-     * <p>The field to use for sorting. Valid values:</p>
+     * <p>The field used for sorting. Valid values:</p>
      * <ul>
-     * <li><p>GmtCreate: creation time.</p>
-     * </li>
-     * <li><p>GmtModified: update time.</p>
-     * </li>
+     * <li>GmtCreate: creation time.</li>
+     * <li>GmtModified: update time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -140,12 +131,10 @@ public class ListDataSetsShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region where the Data Management Center for threat analysis is deployed. Select a region based on the location of your assets. Valid values:</p>
+     * <p>The region where the threat analysis data management center resides. Specify the management center based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland.</p>
-     * </li>
-     * <li><p>ap-southeast-1: Your assets are in a region outside China.</p>
-     * </li>
+     * <li>cn-hangzhou: The assets reside in the Chinese mainland.</li>
+     * <li>ap-southeast-1: The assets reside outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -155,7 +144,7 @@ public class ListDataSetsShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID that an administrator uses to switch to the perspective of a member.</p>
+     * <p>The ID of the member to which the administrator switches the view.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>

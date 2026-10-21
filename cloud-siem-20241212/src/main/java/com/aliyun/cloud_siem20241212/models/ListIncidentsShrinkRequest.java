@@ -13,11 +13,14 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     @NameInMap("AlertUuid")
     public String alertUuid;
 
+    /**
+     * <p>The list of detection rule IDs.</p>
+     */
     @NameInMap("DetectionRuleIds")
     public java.util.List<String> detectionRuleIds;
 
     /**
-     * <p>The timestamp of the end time, in milliseconds (ms).</p>
+     * <p>The end time timestamp, in milliseconds (ms).</p>
      * 
      * <strong>example:</strong>
      * <p>1749090526055</p>
@@ -36,6 +39,12 @@ public class ListIncidentsShrinkRequest extends TeaModel {
 
     /**
      * <p>The event status. Valid values:</p>
+     * <ul>
+     * <li>0: Unhandled.</li>
+     * <li>1: Handling.</li>
+     * <li>5: Handling failed.</li>
+     * <li>10: Handled.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -44,6 +53,8 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public Integer incidentStatus;
 
     /**
+     * <p>The list of event statuses.</p>
+     * 
      * <strong>example:</strong>
      * <p>[0,1,5]</p>
      */
@@ -60,13 +71,18 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public String incidentTags;
 
     /**
-     * <p>The list of event UUIDs, separated by commas (,).</p>
+     * <p>The list of event UUIDs, separated by commas (half-width).</p>
      */
     @NameInMap("IncidentUuids")
     public String incidentUuidsShrink;
 
     /**
-     * <p>The language type of the response message. Valid values:</p>
+     * <p>The language of the response messages. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * <p>Note: This parameter is required in actual API calls. If it is not provided, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot; Pass the language code explicitly.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -75,7 +91,7 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of entries to return in this request.</p>
+     * <p>The maximum number of entries to read in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -84,7 +100,7 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If a next page exists, set this parameter to the NextToken value returned by the previous API call.</p>
+     * <p>The pagination token used to retrieve the next page of results. Leave this parameter empty for the first request or when there are no more pages. If more pages exist, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAASLVeIxed4466E0LVmGkzwS6hJKd9DGVGMDRM6Lu****</p>
@@ -94,6 +110,10 @@ public class ListIncidentsShrinkRequest extends TeaModel {
 
     /**
      * <p>The sort direction. Valid values:</p>
+     * <ul>
+     * <li><strong>desc</strong> (default): Descending order.</li>
+     * <li><strong>asc</strong>: Ascending order.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>desc</p>
@@ -102,10 +122,10 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public String orderDirection;
 
     /**
-     * <p>The field by which the list is sorted.</p>
+     * <p>The field used to sort the list. Valid values:</p>
      * <ul>
-     * <li>GmtModified: event update time (default).</li>
-     * <li>ThreatScore: threat score.</li>
+     * <li>GmtModified: The event update time (default).</li>
+     * <li>ThreatScore: The threat score.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -121,7 +141,7 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public java.util.List<String> owners;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number for pagination.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -131,7 +151,7 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to display per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -141,7 +161,11 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region where the threat analysis data management center is located. Select the management center based on the region of your assets. Valid values:</p>
+     * <p>The location of the data management center for Cloud Threat Detection and Response (CTDR). Select the management center location based on the region where your assets reside. Valid values:</p>
+     * <ul>
+     * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Assets are located outside China.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -168,7 +192,7 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public String relateEntityId;
 
     /**
-     * <p>The user ID that the administrator switches to for viewing from another member\&quot;s perspective.</p>
+     * <p>The user ID that the administrator uses to switch to another member\&quot;s view.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -178,6 +202,10 @@ public class ListIncidentsShrinkRequest extends TeaModel {
 
     /**
      * <p>The view type. Valid values:</p>
+     * <ul>
+     * <li>0: The current Alibaba Cloud account view.</li>
+     * <li>1: The view of all accounts in the enterprise.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -186,7 +214,7 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public Integer roleType;
 
     /**
-     * <p>The timestamp of the start time, in milliseconds (ms).</p>
+     * <p>The start time timestamp, in milliseconds (ms).</p>
      * 
      * <strong>example:</strong>
      * <p>1690102943000</p>
@@ -196,6 +224,13 @@ public class ListIncidentsShrinkRequest extends TeaModel {
 
     /**
      * <p>The threat level. Valid values:</p>
+     * <ul>
+     * <li>5: Critical.</li>
+     * <li>4: High.</li>
+     * <li>3: Medium.</li>
+     * <li>2: Low.</li>
+     * <li>1: Informational.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>5</p>
