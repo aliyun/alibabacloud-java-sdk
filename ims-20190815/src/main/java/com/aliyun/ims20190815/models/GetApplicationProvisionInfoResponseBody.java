@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetApplicationProvisionInfoResponseBody extends TeaModel {
     /**
-     * <p>The installation information about the application.</p>
+     * <p>The application installation information.</p>
      */
     @NameInMap("ApplicationProvisionInfo")
     public GetApplicationProvisionInfoResponseBodyApplicationProvisionInfo applicationProvisionInfo;
@@ -110,7 +110,7 @@ public class GetApplicationProvisionInfoResponseBody extends TeaModel {
 
     public static class GetApplicationProvisionInfoResponseBodyApplicationProvisionInfo extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The Alibaba Cloud account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>177242285274****</p>
@@ -119,6 +119,12 @@ public class GetApplicationProvisionInfoResponseBody extends TeaModel {
         public String accountId;
 
         /**
+         * <p>The application category. Valid values:</p>
+         * <ul>
+         * <li>Official: official applications</li>
+         * <li>ThirdParty: regular third-party applications</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ThirdParty</p>
          */
@@ -144,6 +150,12 @@ public class GetApplicationProvisionInfoResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>The application assignment type. Valid values:</p>
+         * <ul>
+         * <li>AllowAll: No assignment is required. All RAM users and roles can access the application.</li>
+         * <li>OnDemand: Assignment is required on demand. RAM users and roles can access the application only after it is assigned to them.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>AllowAll</p>
          */
@@ -151,7 +163,7 @@ public class GetApplicationProvisionInfoResponseBody extends TeaModel {
         public String assignmentType;
 
         /**
-         * <p>The time when the application was installed. The value is a timestamp.</p>
+         * <p>The installation timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1603693518000</p>
@@ -160,7 +172,7 @@ public class GetApplicationProvisionInfoResponseBody extends TeaModel {
         public String createDate;
 
         /**
-         * <p>The information about the scopes of permissions that are granted to the application.</p>
+         * <p>The application permission scope information.</p>
          */
         @NameInMap("DelegatedScope")
         public GetApplicationProvisionInfoResponseBodyApplicationProvisionInfoDelegatedScope delegatedScope;
@@ -175,6 +187,8 @@ public class GetApplicationProvisionInfoResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <p>Indicates whether user authorization is required.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -182,7 +196,7 @@ public class GetApplicationProvisionInfoResponseBody extends TeaModel {
         public Boolean needPrincipalConsent;
 
         /**
-         * <p>The update time. The value is a timestamp.</p>
+         * <p>The update timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1603693518000</p>

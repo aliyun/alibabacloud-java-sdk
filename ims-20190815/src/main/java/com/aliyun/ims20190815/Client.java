@@ -1234,7 +1234,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a passkey of a RAM user.</p>
+     * <p>Deletes the passkey of a user.</p>
      * 
      * @param request DeletePasskeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1270,7 +1270,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a passkey of a RAM user.</p>
+     * <p>Deletes the passkey of a user.</p>
      * 
      * @param request DeletePasskeyRequest
      * @return DeletePasskeyResponse
@@ -1868,6 +1868,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the account-level AccessKey network access control policy.</p>
+     * 
+     * @param request GetAccessKeyPolicyForAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAccessKeyPolicyForAccountResponse
+     */
+    public GetAccessKeyPolicyForAccountResponse getAccessKeyPolicyForAccountWithOptions(GetAccessKeyPolicyForAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAccessKeyPolicyForAccount"),
+            new TeaPair("version", "2019-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAccessKeyPolicyForAccountResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the account-level AccessKey network access control policy.</p>
+     * 
+     * @param request GetAccessKeyPolicyForAccountRequest
+     * @return GetAccessKeyPolicyForAccountResponse
+     */
+    public GetAccessKeyPolicyForAccountResponse getAccessKeyPolicyForAccount(GetAccessKeyPolicyForAccountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAccessKeyPolicyForAccountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries information about the multi-factor authentication (MFA) devices of an Alibaba Cloud account.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
@@ -2065,10 +2102,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>调用本接口前，目标应用必须已经安装；可先调用 <code>ProvisionApplication</code> 安装应用，并使用已安装应用的 <code>AppId</code>。仅使用 <code>CreateApplication</code> 返回、但尚未安装的应用 ID 调用会失败。</p>
+     * <p>Before you call this operation, the target application must be installed. You can call ProvisionApplication to install the application and use the AppId of the installed application. Calling this operation with an application ID returned by CreateApplication for an application that has not been installed will fail.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries installation information about a specified installed application.</p>
+     * <p>Queries the installation information of a specified installed application.</p>
      * 
      * @param request GetApplicationProvisionInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2100,10 +2137,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>调用本接口前，目标应用必须已经安装；可先调用 <code>ProvisionApplication</code> 安装应用，并使用已安装应用的 <code>AppId</code>。仅使用 <code>CreateApplication</code> 返回、但尚未安装的应用 ID 调用会失败。</p>
+     * <p>Before you call this operation, the target application must be installed. You can call ProvisionApplication to install the application and use the AppId of the installed application. Calling this operation with an application ID returned by CreateApplication for an application that has not been installed will fail.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries installation information about a specified installed application.</p>
+     * <p>Queries the installation information of a specified installed application.</p>
      * 
      * @param request GetApplicationProvisionInfoRequest
      * @return GetApplicationProvisionInfoResponse
@@ -2510,7 +2547,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an identity provider (IdP) for role-based single sign-on (SSO).</p>
+     * <p>Queries the details of a specified role-based SSO identity provider.</p>
      * 
      * @param request GetSAMLProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2542,7 +2579,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an identity provider (IdP) for role-based single sign-on (SSO).</p>
+     * <p>Queries the details of a specified role-based SSO identity provider.</p>
      * 
      * @param request GetSAMLProviderRequest
      * @return GetSAMLProviderResponse
@@ -2812,7 +2849,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of the mobile phone or email that is bound to a Resource Access Management (RAM) user.</p>
+     * <p>Queries the status of the secure phone or security email address of a Resource Access Management (RAM) user.</p>
      * 
      * @param request GetVerificationInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2844,7 +2881,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of the mobile phone or email that is bound to a Resource Access Management (RAM) user.</p>
+     * <p>Queries the status of the secure phone or security email address of a Resource Access Management (RAM) user.</p>
      * 
      * @param request GetVerificationInfoRequest
      * @return GetVerificationInfoResponse
@@ -3954,7 +3991,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Usage notes</h3>
-     * <p>This topic provides an example on how to remove the client ID <code>498469743454717****</code> from the OIDC IdP named <code>TestOIDCProvider</code>.</p>
+     * <p>This topic provides an example on how to remove the client ID <code>498469743454717****</code> from an OIDC IdP named <code>TestOIDCProvider</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Invokes RemoveClientIdFromOIDCProvider to remove a specified client ID from an OIDC IdP.</p>
@@ -3994,7 +4031,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Usage notes</h3>
-     * <p>This topic provides an example on how to remove the client ID <code>498469743454717****</code> from the OIDC IdP named <code>TestOIDCProvider</code>.</p>
+     * <p>This topic provides an example on how to remove the client ID <code>498469743454717****</code> from an OIDC IdP named <code>TestOIDCProvider</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Invokes RemoveClientIdFromOIDCProvider to remove a specified client ID from an OIDC IdP.</p>
@@ -4253,6 +4290,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetAccessKeyPolicyResponse setAccessKeyPolicy(SetAccessKeyPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setAccessKeyPolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Sets the account-level AccessKey network access control policy.</p>
+     * 
+     * @param request SetAccessKeyPolicyForAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetAccessKeyPolicyForAccountResponse
+     */
+    public SetAccessKeyPolicyForAccountResponse setAccessKeyPolicyForAccountWithOptions(SetAccessKeyPolicyForAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessKeyPolicy)) {
+            query.put("AccessKeyPolicy", request.accessKeyPolicy);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetAccessKeyPolicyForAccount"),
+            new TeaPair("version", "2019-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetAccessKeyPolicyForAccountResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Sets the account-level AccessKey network access control policy.</p>
+     * 
+     * @param request SetAccessKeyPolicyForAccountRequest
+     * @return SetAccessKeyPolicyForAccountResponse
+     */
+    public SetAccessKeyPolicyForAccountResponse setAccessKeyPolicyForAccount(SetAccessKeyPolicyForAccountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setAccessKeyPolicyForAccountWithOptions(request, runtime);
     }
 
     /**

@@ -5,9 +5,10 @@ import com.aliyun.tea.*;
 
 public class RemoveClientIdFromOIDCProviderRequest extends TeaModel {
     /**
-     * <p>The client ID to remove.</p>
-     * <p>Format: letters, digits, and the special characters <code>.-_:/</code> are allowed. The value cannot start with the special characters <code>.-_:/</code>.</p>
-     * <p>Length: up to 128 characters.</p>
+     * <p>The specified client ID.</p>
+     * <p>Format: The client ID can contain letters, digits, and the following special characters: <code>.-_:/</code>. It cannot start with a special character.</p>
+     * <p>Length: The client ID can be up to 128 characters in length.</p>
+     * <p>The <code>ClientId</code> must be bound to the OIDC IdP specified by <code>OIDCProviderName</code>. If it is not bound, you can first call <code>CreateOIDCProvider</code> by setting <code>ClientIds</code> or call <code>AddClientIdToOIDCProvider</code> to bind it.</p>
      * 
      * <strong>example:</strong>
      * <p>498469743454717****</p>
@@ -16,7 +17,7 @@ public class RemoveClientIdFromOIDCProviderRequest extends TeaModel {
     public String clientId;
 
     /**
-     * <p>The name of an existing OIDC IdP that has the target <code>ClientId</code> attached. If you have not created or attached one, call <code>CreateOIDCProvider</code> (with <code>ClientIds</code> specified) or <code>AddClientIdToOIDCProvider</code> first.</p>
+     * <p>The name of the OIDC IdP that exists and is bound to the target <code>ClientId</code>. If the OIDC IdP has not been created or the client ID has not been bound, you can first call <code>CreateOIDCProvider</code> by setting <code>ClientIds</code> or call <code>AddClientIdToOIDCProvider</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>TestOIDCProvider</p>

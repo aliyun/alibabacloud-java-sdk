@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class DeletePasskeyRequest extends TeaModel {
     /**
      * <p>The ID of the passkey.</p>
+     * <p>This parameter is actually required. If you do not specify this parameter, the call fails and the error code <code>MissingPasskeyId</code> is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>PASSKEY-CuZjEHhWcr7GIQOMGvkS</p>

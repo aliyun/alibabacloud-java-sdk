@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetApplicationProvisionInfoRequest extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The ID of the application. You can call ListApplicationProvisionInfos to obtain the AppId of an installed application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

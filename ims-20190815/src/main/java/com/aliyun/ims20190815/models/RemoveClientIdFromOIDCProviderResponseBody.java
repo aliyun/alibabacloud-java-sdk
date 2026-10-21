@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
     /**
-     * <p>The information about the OIDC IdP.</p>
+     * <p>The OIDC IdP information.</p>
      */
     @NameInMap("OIDCProvider")
     public RemoveClientIdFromOIDCProviderResponseBodyOIDCProvider OIDCProvider;
@@ -42,7 +42,7 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
 
     public static class RemoveClientIdFromOIDCProviderResponseBodyOIDCProvider extends TeaModel {
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the OIDC IdP.</p>
+         * <p>The ARN of the OIDC IdP.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::177242285274****:oidc-provider/TestOIDCProvider</p>
@@ -60,7 +60,7 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
         public String clientIds;
 
         /**
-         * <p>The time when the OIDC IdP was created. The time is displayed in UTC.</p>
+         * <p>The creation time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-11T06:56:03Z</p>
@@ -78,7 +78,7 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The fingerprints of the HTTPS CA certificate. Multiple fingerprints are separated by commas (,).</p>
+         * <p>The verification fingerprints of the HTTPS CA certificate. Multiple fingerprints are separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>902ef2deeb3c5b13ea4c3d5193629309e231****</p>
@@ -87,7 +87,7 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
         public String fingerprints;
 
         /**
-         * <p>The time when the OIDC IdP was created. The value is a UNIX timestamp.</p>
+         * <p>The creation time as a UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1636613763000</p>
@@ -96,7 +96,7 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The time when the OIDC IdP was last modified. The value is a UNIX timestamp.</p>
+         * <p>The update time as a UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1636706309000</p>
@@ -105,7 +105,7 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The earliest time when an external IdP is allowed to issue an ID token. If the iat field in the ID token indicates a time earlier than the current time by more than this value, the request is rejected.
+         * <p>The earliest issuance time allowed for the external IdP to issue an ID token. If the time difference between the <code>iat</code> field in the ID token and the current time is greater than this value, the request is rejected.
          * Unit: hours. Valid values: 1 to 168.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +133,7 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
         public String OIDCProviderName;
 
         /**
-         * <p>The time when the OIDC IdP was last modified. The time is displayed in UTC.</p>
+         * <p>The update time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-12T08:38:29Z</p>
