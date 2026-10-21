@@ -16,7 +16,7 @@ public class DescribeFilesystemsVscAttachInfoResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The query token. Set this parameter to the NextToken value returned in the previous API call.</p>
+     * <p>The query token. The value is the NextToken parameter value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>
@@ -34,7 +34,7 @@ public class DescribeFilesystemsVscAttachInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of association entries.</p>
+     * <p>The total number of association records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

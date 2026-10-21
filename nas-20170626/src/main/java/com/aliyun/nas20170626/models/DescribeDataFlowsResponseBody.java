@@ -8,7 +8,7 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
     public DescribeDataFlowsResponseBodyDataFlowInfo dataFlowInfo;
 
     /**
-     * <p>The token that determines the start point of the next query. If the returned results are truncated, you can use NextToken to initiate another request to retrieve the results after the truncation point.</p>
+     * <p>When the returned results of a request are truncated, you can use NextToken to initiate another request and obtain the remaining results.</p>
      * 
      * <strong>example:</strong>
      * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>

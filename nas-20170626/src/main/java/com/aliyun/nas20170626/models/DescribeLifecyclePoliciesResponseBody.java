@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
     /**
-     * <p>The collection of lifecycle management policy information.</p>
+     * <p>The lifecycle management policies.</p>
      */
     @NameInMap("LifecyclePolicies")
     public java.util.List<DescribeLifecyclePoliciesResponseBodyLifecyclePolicies> lifecyclePolicies;
@@ -20,7 +20,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of lifecycle management policies on each page.</p>
+     * <p>The number of lifecycle management policies returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>BC7C825C-5F65-4B56-BEF6-98C56C7C****</p>
@@ -93,8 +93,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
 
     public static class DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesDeleteRules extends TeaModel {
         /**
-         * <p>The attribute of the rule.</p>
-         * <p>Valid values:</p>
+         * <p>The attribute of the rule. Valid values:</p>
          * <ul>
          * <li>Atime: The access time of the file.</li>
          * </ul>
@@ -106,10 +105,9 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         public String attribute;
 
         /**
-         * <p>The threshold of the rule.</p>
-         * <p>Valid values:</p>
+         * <p>The threshold of the rule. Valid values:</p>
          * <ul>
-         * <li>If Attribute is set to Atime, this value indicates the number of days since the file was last accessed. Valid values: 1 to 365.</li>
+         * <li>If Attribute is set to Atime, the value indicates the number of days that a file has not been accessed. Valid values: 1 to 365.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -185,7 +183,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
 
     public static class DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesTransitRules extends TeaModel {
         /**
-         * <p>The attribute of the transit rule.</p>
+         * <p>The attribute of the transition rule.</p>
          * 
          * <strong>example:</strong>
          * <p>Atime</p>
@@ -194,7 +192,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         public String attribute;
 
         /**
-         * <p>The threshold of the transit rule.</p>
+         * <p>The threshold of the transition rule.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -227,8 +225,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
 
     public static class DescribeLifecyclePoliciesResponseBodyLifecyclePolicies extends TeaModel {
         /**
-         * <p>The time when the lifecycle management policy was created.</p>
-         * <p>The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
+         * <p>The time when the lifecycle management policy was created. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-10-30T10:08:08Z</p>
@@ -237,13 +234,13 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The file data expiration and deletion rules. A maximum of one rule can be configured.</p>
+         * <p>The expiration and deletion rules for file data. You can configure up to one rule.</p>
          */
         @NameInMap("DeleteRules")
         public java.util.List<DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesDeleteRules> deleteRules;
 
         /**
-         * <p>The description of the policy.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>Description</p>
@@ -252,7 +249,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The file system ID.</p>
+         * <p>The ID of the file system.</p>
          * 
          * <strong>example:</strong>
          * <p>31a8e4****</p>
@@ -288,13 +285,12 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         public String lifecyclePolicyType;
 
         /**
-         * <p>The management rule associated with the lifecycle management policy.</p>
-         * <p>Valid values:</p>
+         * <p>The management rule associated with the lifecycle management policy. Valid values:</p>
          * <ul>
-         * <li>DEFAULT_ATIME_14: Files not accessed in the last 14 days.</li>
-         * <li>DEFAULT_ATIME_30: Files not accessed in the last 30 days.</li>
-         * <li>DEFAULT_ATIME_60: Files not accessed in the last 60 days.</li>
-         * <li>DEFAULT_ATIME_90: Files not accessed in the last 90 days.</li>
+         * <li>DEFAULT_ATIME_14: Files that have not been accessed for 14 days.</li>
+         * <li>DEFAULT_ATIME_30: Files that have not been accessed for 30 days.</li>
+         * <li>DEFAULT_ATIME_60: Files that have not been accessed for 60 days.</li>
+         * <li>DEFAULT_ATIME_90: Files that have not been accessed for 90 days.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -304,7 +300,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         public String lifecycleRuleName;
 
         /**
-         * <p>The absolute path of the single directory configured in the lifecycle management policy.</p>
+         * <p>The absolute path of the single directory configured for the lifecycle management policy.</p>
          * 
          * <strong>example:</strong>
          * <p>/pathway/to/folder</p>
@@ -313,7 +309,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>The list of absolute paths of multiple directories configured in the lifecycle management policy.</p>
+         * <p>The list of absolute paths of the multiple directories configured for the lifecycle management policy.</p>
          */
         @NameInMap("Paths")
         public java.util.List<String> paths;
@@ -325,7 +321,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         public java.util.List<DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesRetrieveRules> retrieveRules;
 
         /**
-         * <p>The storage tiering type. Valid values:</p>
+         * <p>The tiered storage type. Valid values:</p>
          * <ul>
          * <li>InfrequentAccess: IA storage class.</li>
          * <li>Archive: Archive storage class.</li>
@@ -338,7 +334,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         public String storageType;
 
         /**
-         * <p>The file data transit rules.</p>
+         * <p>The file data transition rules.</p>
          */
         @NameInMap("TransitRules")
         public java.util.List<DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesTransitRules> transitRules;

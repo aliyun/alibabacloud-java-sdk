@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataFlowRequest extends TeaModel {
     /**
-     * <p>The auto-refresh interval. General-purpose CPFS checks the directory for data updates at this interval. If data updates exist, an auto-refresh task is started. Unit: minutes.</p>
+     * <p>The auto-refresh interval. General-purpose CPFS checks whether data updates exist in the directory at this interval. If data updates exist, an auto-refresh task is started. Unit: minutes.</p>
      * <p>Valid values: 10 to 525600. Default value: 10.</p>
      * <blockquote>
      * <p>This parameter takes effect only when the file system type is General-purpose CPFS.</p>
@@ -18,10 +18,10 @@ public class CreateDataFlowRequest extends TeaModel {
     public Long autoRefreshInterval;
 
     /**
-     * <p>The auto-refresh policy. Specifies the policy for importing data updates from the source storage to General-purpose CPFS after the source data is updated.</p>
+     * <p>The auto-refresh policy. This policy determines how data updates from the source storage are imported to General-purpose CPFS.</p>
      * <ul>
-     * <li>None (default): Data updates from the source are not automatically imported to General-purpose CPFS. You can use data flow tasks to import data updates from the source.</li>
-     * <li>ImportChanged: Data updates from the source are automatically imported to General-purpose CPFS.<blockquote>
+     * <li>None: Data updates from the source storage are not automatically imported to General-purpose CPFS. You can use a data flow task to import the updates. This is the default value.</li>
+     * <li>ImportChanged: Data updates from the source storage are automatically imported to General-purpose CPFS.<blockquote>
      * <p>This parameter takes effect only when the file system type is General-purpose CPFS.</p>
      * </blockquote>
      * </li>
@@ -34,7 +34,7 @@ public class CreateDataFlowRequest extends TeaModel {
     public String autoRefreshPolicy;
 
     /**
-     * <p>The collection of auto-refresh configurations.</p>
+     * <p>The auto-refresh configurations.</p>
      * <blockquote>
      * <p>This parameter takes effect only when the file system type is General-purpose CPFS.</p>
      * </blockquote>
@@ -46,10 +46,10 @@ public class CreateDataFlowRequest extends TeaModel {
     public java.util.List<CreateDataFlowRequestAutoRefreshs> autoRefreshs;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</p>
-     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can generate the token on your client to ensure that the token is unique across different requests.</p>
+     * <p>The client token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">Ensure idempotence</a>.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the value of RequestId as the value of ClientToken. The value of RequestId may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -74,12 +74,12 @@ public class CreateDataFlowRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to perform a dry run for this request.</p>
-     * <p>A dry run checks parameter validity and resource availability without actually creating the instance or incurring fees.</p>
+     * <p>Specifies whether to perform a dry run on the creation request.</p>
+     * <p>A dry run helps you check parameter validity and resource availability without actually creating the instance or incurring fees.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true: performs a dry run without creating the instance. The system checks whether the required parameters are specified, whether the request format is valid, whether service limits are met, and whether the specified NAS resources are available. If the check fails, the corresponding error is returned. If the check succeeds, the HTTP status code 200 is returned, but the DataFlowId is empty.</li>
-     * <li>false (default): performs a dry run and sends the request. If the check succeeds, the instance is created.</li>
+     * <li>true: A dry run is performed and no instance is created. The system checks whether required parameters are specified, the request format, business limits, and NAS resource availability. If the request fails the dry run, an error is returned. If the request passes the dry run, the HTTP status code 200 is returned, but the FileSystemId parameter is empty.</li>
+     * <li>false: A regular request is sent. If the request passes the dry run, the instance is created. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -91,9 +91,9 @@ public class CreateDataFlowRequest extends TeaModel {
     /**
      * <p>The file system ID.</p>
      * <ul>
-     * <li><p>General-purpose CPFS: must start with <code>cpfs-</code>, such as cpfs-125487\<em>\</em>\<em>\</em>.</p>
+     * <li><p>General-purpose CPFS: The ID must start with <code>cpfs-</code>, such as cpfs-125487\<em>\</em>\<em>\</em>.</p>
      * </li>
-     * <li><p>CPFS for Lingjun: must start with <code>bmcpfs-</code>, such as bmcpfs-0015\<em>\</em>\<em>\</em>.</p>
+     * <li><p>CPFS for Lingjun: The ID must start with <code>bmcpfs-</code>, such as bmcpfs-0015\<em>\</em>\<em>\</em>.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -107,13 +107,13 @@ public class CreateDataFlowRequest extends TeaModel {
     /**
      * <p>The directory in the CPFS for Lingjun file system. Limits:</p>
      * <ul>
-     * <li><p>Must start and end with a forward slash (/).</p>
+     * <li><p>The directory must start and end with a forward slash (/).</p>
      * </li>
-     * <li><p>The directory must be an existing directory on the CPFS for Lingjun file system.</p>
+     * <li><p>The directory must already exist in the CPFS for Lingjun file system.</p>
      * </li>
-     * <li><p>The length must be 1 to 1023 characters.</p>
+     * <li><p>The directory must be 1 to 1,023 characters in length.</p>
      * </li>
-     * <li><p>UTF-8 encoding is used.</p>
+     * <li><p>The directory must be encoded in UTF-8.</p>
      * </li>
      * </ul>
      * <blockquote>
@@ -127,7 +127,7 @@ public class CreateDataFlowRequest extends TeaModel {
     public String fileSystemPath;
 
     /**
-     * <p>The Fileset ID.</p>
+     * <p>The fileset ID.</p>
      * <blockquote>
      * <p>This parameter is required when the file system type is General-purpose CPFS.</p>
      * </blockquote>
@@ -141,7 +141,7 @@ public class CreateDataFlowRequest extends TeaModel {
     /**
      * <p>The security protection type of the source storage. If the source storage must be accessed through security protection, specify the security protection type. Valid values:</p>
      * <ul>
-     * <li>None (default): The source storage does not require security protection for access.</li>
+     * <li>None: The source storage does not require security protection for access. This is the default value.</li>
      * <li>SSL: Access is protected by an SSL certificate.</li>
      * </ul>
      * 
@@ -160,23 +160,23 @@ public class CreateDataFlowRequest extends TeaModel {
      * <ul>
      * <li><p>storage type: Only oss is supported.</p>
      * </li>
-     * <li><p>account id: Optional. The UID of the account to which the source storage belongs. This parameter is required when you use cross-account OSS.</p>
+     * <li><p>account id: Optional. The UID of the account to which the source storage belongs. This parameter is required when you use a cross-account OSS bucket.</p>
      * </li>
      * <li><p>path: The name of the OSS bucket. Limits:</p>
      * <ul>
-     * <li><p>Only lowercase letters, digits, and hyphens (-) are supported. The name must start and end with a lowercase letter or digit.</p>
+     * <li><p>The name can contain only lowercase letters, digits, and hyphens (-), and must start and end with a lowercase letter or a digit.</p>
      * </li>
-     * <li><p>The maximum length is 128 characters.</p>
+     * <li><p>The name can be up to 128 characters in length.</p>
      * </li>
-     * <li><p>UTF-8 encoding is used.</p>
+     * <li><p>The name must be encoded in UTF-8.</p>
      * </li>
      * </ul>
      * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>The OSS bucket must be an existing bucket in the current region.</li>
-     * <li>The account id parameter is supported only by CPFS for Lingjun 2.6.0 or later.</li>
+     * <li>The OSS bucket must already exist in the region.</li>
+     * <li>The account id parameter is supported only in CPFS for Lingjun 2.6.0 and later.</li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
@@ -188,15 +188,15 @@ public class CreateDataFlowRequest extends TeaModel {
     public String sourceStorage;
 
     /**
-     * <p>The access path within the source storage bucket. Limits:</p>
+     * <p>The access path in the source storage bucket. Limits:</p>
      * <ul>
-     * <li><p>Must start and end with a forward slash (/).</p>
+     * <li><p>The path must start and end with a forward slash (/).</p>
      * </li>
-     * <li><p>Case-sensitive.</p>
+     * <li><p>The path is case-sensitive.</p>
      * </li>
-     * <li><p>The length must be 1 to 1023 characters.</p>
+     * <li><p>The path must be 1 to 1,023 characters in length.</p>
      * </li>
-     * <li><p>UTF-8 encoding is used.</p>
+     * <li><p>The path must be encoded in UTF-8.</p>
      * </li>
      * </ul>
      * <blockquote>
@@ -210,14 +210,14 @@ public class CreateDataFlowRequest extends TeaModel {
     public String sourceStoragePath;
 
     /**
-     * <p>The maximum transfer bandwidth of the data flow. Unit: MB/s. Valid values: </p>
+     * <p>The maximum transmission bandwidth of the data flow. Unit: MB/s. Valid values: </p>
      * <ul>
      * <li>600</li>
      * <li>1200</li>
      * <li>1500</li>
      * </ul>
      * <blockquote>
-     * <p>The transfer bandwidth of the data flow must be less than the I/O bandwidth of the file system.
+     * <p>The transmission bandwidth of the data flow must be less than the I/O bandwidth of the file system.
      * This parameter is required when the file system type is General-purpose CPFS.</p>
      * </blockquote>
      * 
@@ -338,14 +338,14 @@ public class CreateDataFlowRequest extends TeaModel {
 
     public static class CreateDataFlowRequestAutoRefreshs extends TeaModel {
         /**
-         * <p>The auto-refresh directory. General-purpose CPFS registers data modification events from the source storage, checks whether the source data in this directory has been updated, and automatically imports the updated data.</p>
-         * <p>The default value is empty, which means that data updates in the source storage are not automatically imported to General-purpose CPFS. You must manually create a task to import updates.</p>
+         * <p>The auto-refresh directory. General-purpose CPFS registers data modification events of the source storage, checks whether the source data in this directory is updated, and automatically imports the updated data.</p>
+         * <p>By default, this parameter is empty. Data updates in the source storage are not automatically imported to General-purpose CPFS. You must create a manual task to import the updates.</p>
          * <p>Limits:</p>
          * <ul>
-         * <li>The length must be 2 to 1024 characters.</li>
-         * <li>UTF-8 encoding is used.</li>
-         * <li>Must start and end with a forward slash (/).</li>
-         * <li>The directory must be an existing directory on the General-purpose CPFS file system and must be located within the Fileset directory of the data flow.</li>
+         * <li>The directory must be 2 to 1,024 characters in length.</li>
+         * <li>The directory must be encoded in UTF-8.</li>
+         * <li>The directory must start and end with a forward slash (/).</li>
+         * <li>The directory must already exist in General-purpose CPFS and must be located in the fileset directory of the data flow.</li>
          * </ul>
          * 
          * <strong>example:</strong>

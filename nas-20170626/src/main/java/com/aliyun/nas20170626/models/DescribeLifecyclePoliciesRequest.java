@@ -7,7 +7,7 @@ public class DescribeLifecyclePoliciesRequest extends TeaModel {
     /**
      * <p>The description of the policy.</p>
      * <blockquote>
-     * <p>Only CPFS for Lingjun supports this parameter.</p>
+     * <p>This parameter is supported only by CPFS for Lingjun.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeLifecyclePoliciesRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The file system ID.</p>
+     * <p>The ID of the file system.</p>
      * 
      * <strong>example:</strong>
      * <p>31a8e4****</p>
@@ -35,10 +35,10 @@ public class DescribeLifecyclePoliciesRequest extends TeaModel {
     public String lifecyclePolicyId;
 
     /**
-     * <p>The lifecycle policy name. The naming rules are as follows:</p>
-     * <p>The name must be 3 to 64 characters in length, start with a letter, and can contain letters, digits, underscores (_), or hyphens (-).</p>
+     * <p>Policy Name of the lifecycle policy. Policy Name must meet the following rules:</p>
+     * <p>Policy Name must be 3 to 64 characters in length. It must start with a letter and can contain letters, digits, underscores (_), and hyphens (-).</p>
      * <blockquote>
-     * <p>This parameter is optional for General-purpose NAS file systems. If specified, this parameter takes precedence. If not specified, LifecyclePolicyId is used instead.</p>
+     * <p>For General-purpose NAS file systems, this parameter is optional. If you specify this parameter, the specified value is used. If you do not specify this parameter, the value of LifecyclePolicyId is used.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -48,12 +48,11 @@ public class DescribeLifecyclePoliciesRequest extends TeaModel {
     public String lifecyclePolicyName;
 
     /**
-     * <p>The policy type.</p>
-     * <p>Valid values:</p>
+     * <p>The policy type. Valid values:</p>
      * <ul>
      * <li>Auto: Automatic execution.</li>
      * <li>OnDemand: On-demand execution.<blockquote>
-     * <p>Only CPFS for Lingjun supports this parameter.</p>
+     * <p>This parameter is supported only by CPFS for Lingjun.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -66,7 +65,7 @@ public class DescribeLifecyclePoliciesRequest extends TeaModel {
 
     /**
      * <p>The page number of the list.</p>
-     * <p>Start value (default value): 1.</p>
+     * <p>Starting value (default value): 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -75,7 +74,7 @@ public class DescribeLifecyclePoliciesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of lifecycle management policies on each page.</p>
+     * <p>The number of lifecycle management policies to return on each page.</p>
      * <p>Valid values: 1 to 100.</p>
      * <p>Default value: 10.</p>
      * 
@@ -86,9 +85,9 @@ public class DescribeLifecyclePoliciesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Filters results by path.</p>
+     * <p>Filters lifecycle policies by path.</p>
      * <blockquote>
-     * <p>Only CPFS for Lingjun supports this parameter.</p>
+     * <p>This parameter is supported only by CPFS for Lingjun.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -98,11 +97,11 @@ public class DescribeLifecyclePoliciesRequest extends TeaModel {
     public String path;
 
     /**
-     * <p>The storage tiering type. Valid values:</p>
+     * <p>The tiered storage type. Valid values:</p>
      * <ul>
      * <li>InfrequentAccess: IA storage class.</li>
      * <li>Archive: Archive storage class.<blockquote>
-     * <p>If StorageType is not specified, all lifecycle policies are returned.</p>
+     * <p>If you do not specify StorageType, all lifecycle policies are returned.</p>
      * </blockquote>
      * </li>
      * </ul>

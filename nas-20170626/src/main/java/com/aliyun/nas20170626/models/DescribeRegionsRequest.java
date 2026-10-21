@@ -8,10 +8,10 @@ public class DescribeRegionsRequest extends TeaModel {
      * <p>The file system type.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>all: all types.</li>
-     * <li>standard (default): General-purpose NAS.</li>
-     * <li>extreme: Extreme NAS.</li>
-     * <li>cpfs: Cloud Parallel File Storage (CPFS).</li>
+     * <li>all: all types</li>
+     * <li>standard: General-purpose NAS (default)</li>
+     * <li>extreme: Extreme NAS</li>
+     * <li>cpfs: Cloud Parallel File Storage</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,8 +21,8 @@ public class DescribeRegionsRequest extends TeaModel {
     public String fileSystemType;
 
     /**
-     * <p>The page number of the list.</p>
-     * <p>Start value (default value): 1.</p>
+     * <p>The page number.</p>
+     * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -31,7 +31,7 @@ public class DescribeRegionsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of regions on each page during a paged query.</p>
+     * <p>The number of regions per page in a paging query.</p>
      * <p>Valid values: 1 to 100.</p>
      * <p>Default value: 10.</p>
      * 

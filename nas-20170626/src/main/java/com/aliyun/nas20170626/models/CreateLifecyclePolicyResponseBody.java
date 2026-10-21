@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLifecyclePolicyResponseBody extends TeaModel {
     /**
-     * <p>The lifecycle policy ID.</p>
+     * <p>The ID of the lifecycle policy.</p>
      * 
      * <strong>example:</strong>
      * <p>lsp-bp1234567890ab****</p>
@@ -14,7 +14,7 @@ public class CreateLifecyclePolicyResponseBody extends TeaModel {
     public String lifecyclePolicyId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>BC7C825C-5F65-4B56-BEF6-98C56C7C****</p>
@@ -26,8 +26,8 @@ public class CreateLifecyclePolicyResponseBody extends TeaModel {
      * <p>The request status.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class AttachVscToFilesystemsRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</p>
-     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can generate the value from your client and ensure that the value is unique across different requests.</p>
+     * <p>The client token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class AttachVscToFilesystemsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID information of file systems and Virtual Storage Channels (VSCs). A maximum of 10 entries can be specified per batch.</p>
+     * <p>The IDs of the file systems and virtual storage channels (VSCs). You can specify up to 10 IDs per batch. This parameter must be passed in a flattened format, such as ResourceIds.1.FileSystemId=bmcpfs-xxx&amp;ResourceIds.1.VscId=vsc-xxx. JSON arrays are not supported.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceIds")
@@ -27,7 +27,7 @@ public class AttachVscToFilesystemsRequest extends TeaModel {
     /**
      * <p>The role chain.</p>
      * <blockquote>
-     * <p>This parameter is required only for cross-account scenarios.</p>
+     * <p>Required only for cross-account scenarios.</p>
      * </blockquote>
      */
     @NameInMap("RoleChain")
@@ -64,7 +64,7 @@ public class AttachVscToFilesystemsRequest extends TeaModel {
 
     public static class AttachVscToFilesystemsRequestResourceIds extends TeaModel {
         /**
-         * <p>The file system ID.</p>
+         * <p>The ID of the file system.</p>
          * 
          * <strong>example:</strong>
          * <p>bmcpfs-290t15yn4uo8lid****</p>
@@ -73,7 +73,7 @@ public class AttachVscToFilesystemsRequest extends TeaModel {
         public String fileSystemId;
 
         /**
-         * <p>The Virtual Storage Channel (VSC) ID. You can call the ListVscs operation of Lingjun eflo-controller/2022-12-15 to query VSC IDs. If no VSC has been created, call the CreateVsc operation to create one.</p>
+         * <p>The ID of the VSC. You can call the ListVscs operation of the Lingjun AI Computing Service eflo-controller/2022-12-15 API to query the ID. If no VSC is created, you can call the CreateVsc operation to create one.</p>
          * 
          * <strong>example:</strong>
          * <p>vsc-8vb864o3ppwfvh****</p>
@@ -106,7 +106,7 @@ public class AttachVscToFilesystemsRequest extends TeaModel {
 
     public static class AttachVscToFilesystemsRequestRoleChain extends TeaModel {
         /**
-         * <p>The UID of the Alibaba Cloud account on whose behalf the service assumes the role.</p>
+         * <p>The UID of the Alibaba Cloud account. This parameter specifies the Alibaba Cloud account for which the service assumes the role.</p>
          * 
          * <strong>example:</strong>
          * <p>176498472570****</p>
@@ -124,7 +124,7 @@ public class AttachVscToFilesystemsRequest extends TeaModel {
         public String roleArn;
 
         /**
-         * <p>The role type. Valid values: service and user.</p>
+         * <p>The type of the role. Valid values: service and user.</p>
          * 
          * <strong>example:</strong>
          * <p>service</p>

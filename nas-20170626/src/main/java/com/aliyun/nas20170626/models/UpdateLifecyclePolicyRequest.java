@@ -13,9 +13,9 @@ public class UpdateLifecyclePolicyRequest extends TeaModel {
     /**
      * <p>The description of the lifecycle policy.</p>
      * <p>Format:
-     * The description must be 3 to 64 characters in length, start with a letter, and can contain letters, digits, underscores (_), or hyphens (-).</p>
+     * The description must be 3 to 64 characters in length. It must start with a letter and can contain letters, digits, underscores (_), and hyphens (-).</p>
      * <blockquote>
-     * <p>Only CPFS for Lingjun is supported.</p>
+     * <p>Supported only for CPFS for Lingjun.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -25,9 +25,9 @@ public class UpdateLifecyclePolicyRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The file system ID. The ID starts with bmcpfs-, such as bmcpfs-290w65p03ok64ya****.</p>
+     * <p>The ID of the file system. The ID starts with bmcpfs-, such as bmcpfs-290w65p03ok64ya****. To use CPFS for Lingjun, you must first submit a ticket to apply for the service whitelist and then create the file system in the NAS console.</p>
      * <blockquote>
-     * <p>This parameter is supported only when LifecyclePolicyType is set to OnDemand in the lifecycle management policy of a CPFS for Lingjun file system.</p>
+     * <p>Supported only when LifecyclePolicyType is set to OnDemand in the lifecycle management policy of a CPFS for Lingjun file system.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -40,7 +40,7 @@ public class UpdateLifecyclePolicyRequest extends TeaModel {
     /**
      * <p>The ID of the lifecycle policy.</p>
      * <blockquote>
-     * <p>This parameter is required for CPFS for Lingjun file systems.</p>
+     * <p>Required for CPFS for Lingjun file systems.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -51,24 +51,24 @@ public class UpdateLifecyclePolicyRequest extends TeaModel {
     public String lifecyclePolicyId;
 
     /**
-     * <p>The absolute paths of the directories associated with the lifecycle management policy.</p>
+     * <p>The absolute path of the directory associated with the lifecycle management policy. This parameter is required when FileSystemId starts with bmcpfs-.</p>
      */
     @NameInMap("Paths")
     public java.util.List<String> paths;
 
     /**
-     * <p>The data retrieval rules. A maximum of one rule can be configured.</p>
+     * <p>The data retrieval rules for files. You can configure up to one rule.</p>
      * <blockquote>
-     * <p>Only CPFS for Lingjun file systems are supported.</p>
+     * <p>Supported only for CPFS for Lingjun file systems.</p>
      * </blockquote>
      */
     @NameInMap("RetrieveRules")
     public java.util.List<UpdateLifecyclePolicyRequestRetrieveRules> retrieveRules;
 
     /**
-     * <p>The tiered storage type.</p>
+     * <p>The tiered storage type. Valid values:</p>
      * <ul>
-     * <li>InfrequentAccess: IA storage class (default).</li>
+     * <li>InfrequentAccess: IA storage class. This is the default value.</li>
      * <li>Archive: Archive storage class.</li>
      * </ul>
      * 
@@ -79,9 +79,9 @@ public class UpdateLifecyclePolicyRequest extends TeaModel {
     public String storageType;
 
     /**
-     * <p>The data transit rules. A maximum of one rule can be configured.</p>
+     * <p>The data transition rules for files. You can configure up to one rule.</p>
      * <blockquote>
-     * <p>This parameter is supported only when LifecyclePolicyType is set to Auto for CPFS for Lingjun file systems.</p>
+     * <p>Supported only when LifecyclePolicyType is set to Auto for a CPFS for Lingjun file system.</p>
      * </blockquote>
      */
     @NameInMap("TransitRules")
@@ -161,7 +161,7 @@ public class UpdateLifecyclePolicyRequest extends TeaModel {
          * <p>The attribute of the rule.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Atime: the access time of the file.</li>
+         * <li>Atime: the last access time of the file.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -174,7 +174,7 @@ public class UpdateLifecyclePolicyRequest extends TeaModel {
          * <p>The threshold of the rule.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>If Attribute is set to Atime, the value specifies the number of days since the file was last accessed. Valid values: 1 to 365.</li>
+         * <li>If Attribute is set to Atime, the value indicates the number of days that a file has not been accessed. Valid values: 1 to 365.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -220,13 +220,10 @@ public class UpdateLifecyclePolicyRequest extends TeaModel {
         public String attribute;
 
         /**
-         * <p>The threshold of the rule. Valid values:</p>
+         * <p>The threshold of the rule. Valid values for RetrieveType:</p>
          * <ul>
-         * <li>RetrieveType<ul>
-         * <li>AfterVisit: supported when LifecyclePolicyType is set to Auto. Indicates best-effort recall on visit.</li>
-         * <li>All: supported when LifecyclePolicyType is set to OnDemand. Indicates retrieval of all data.</li>
-         * </ul>
-         * </li>
+         * <li>AfterVisit: supported when LifecyclePolicyType is set to Auto. This value indicates best-effort recall on visit.</li>
+         * <li>All: supported when LifecyclePolicyType is set to OnDemand. This value indicates that all data is retrieved.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -263,7 +260,7 @@ public class UpdateLifecyclePolicyRequest extends TeaModel {
          * <p>The attribute of the rule.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Atime: the access time of the file.</li>
+         * <li>Atime: the last access time of the file.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -276,7 +273,7 @@ public class UpdateLifecyclePolicyRequest extends TeaModel {
          * <p>The threshold of the rule.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>If Attribute is set to Atime, the value specifies the number of days since the file was last accessed. Valid values: 1 to 365.</li>
+         * <li>If Attribute is set to Atime, the value indicates the number of days that a file has not been accessed. Valid values: 1 to 365.</li>
          * </ul>
          * 
          * <strong>example:</strong>

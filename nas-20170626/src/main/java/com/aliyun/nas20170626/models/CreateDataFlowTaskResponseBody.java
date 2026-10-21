@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataFlowTaskResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>2D69A58F-345C-4FDE-88E4-BF518948****</p>
@@ -14,7 +14,7 @@ public class CreateDataFlowTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The data flow task ID.</p>
+     * <p>The ID of the data flow task.</p>
      * 
      * <strong>example:</strong>
      * <p>task-38aa8e890f45****</p>
