@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryAsyncTaskResultResponseBody extends TeaModel {
     /**
-     * <p>The error code. This parameter is not returned if the call is successful.</p>
+     * <p>The error code. This parameter is not returned when the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class QueryAsyncTaskResultResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The asynchronous task result.</p>
+     * <p>The result of the asynchronous task.</p>
      */
     @NameInMap("Data")
     public QueryAsyncTaskResultResponseBodyData data;
 
     /**
-     * <p>The error message. This parameter is not returned if the call is successful.</p>
+     * <p>The error message. This parameter is not returned when the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -38,11 +38,7 @@ public class QueryAsyncTaskResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
-     * <ul>
-     * <li>true: The call is successful.</li>
-     * <li>false: The call failed.</li>
-     * </ul>
+     * <p>Indicates whether the call is successful. Valid values: true: The call is successful. false: The call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -97,6 +93,15 @@ public class QueryAsyncTaskResultResponseBody extends TeaModel {
 
     public static class QueryAsyncTaskResultResponseBodyData extends TeaModel {
         /**
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order-20260928-001</p>
+         */
+        @NameInMap("BizId")
+        public String bizId;
+
+        /**
          * <p>The task result.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +120,7 @@ public class QueryAsyncTaskResultResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The downstream task ID.</p>
+         * <p>The ID of the downstream task.</p>
          * 
          * <strong>example:</strong>
          * <p>task-xxxxx</p>
@@ -132,6 +137,14 @@ public class QueryAsyncTaskResultResponseBody extends TeaModel {
         public static QueryAsyncTaskResultResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryAsyncTaskResultResponseBodyData self = new QueryAsyncTaskResultResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QueryAsyncTaskResultResponseBodyData setBizId(String bizId) {
+            this.bizId = bizId;
+            return this;
+        }
+        public String getBizId() {
+            return this.bizId;
         }
 
         public QueryAsyncTaskResultResponseBodyData setResult(String result) {

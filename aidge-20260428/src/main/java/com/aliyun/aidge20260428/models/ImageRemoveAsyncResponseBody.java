@@ -14,13 +14,13 @@ public class ImageRemoveAsyncResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned result struct.</p>
+     * <p>The returned result struct information.</p>
      */
     @NameInMap("Data")
     public ImageRemoveAsyncResponseBodyData data;
 
     /**
-     * <p>The error message, such as &quot;The parameters contain sensitive information. Please try another input.&quot;</p>
+     * <p>The error message, such as &quot;The parameters contain sensitive information. Try another input.&quot;</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -29,7 +29,7 @@ public class ImageRemoveAsyncResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request, which is used to identify a unique request.</p>
+     * <p>The request ID, which is used to identify a unique request.</p>
      * 
      * <strong>example:</strong>
      * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>
@@ -38,7 +38,11 @@ public class ImageRemoveAsyncResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values: true (success) and false (failure).</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call fails.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>True</p>

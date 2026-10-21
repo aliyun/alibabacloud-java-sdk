@@ -5,13 +5,22 @@ import com.aliyun.tea.*;
 
 public class SizeChartExtractAsyncRequest extends TeaModel {
     /**
+     * <p>The business order number of the caller. It is recorded when the request is accepted and returned as is when you query the asynchronous task result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>order-20260928-001</p>
+     */
+    @NameInMap("BizId")
+    public String bizId;
+
+    /**
      * <p>The list of column names to extract, such as Size, Bust, and Length.</p>
      */
     @NameInMap("ColumnNameList")
     public java.util.List<String> columnNameList;
 
     /**
-     * <p>The image URL. The image must be in the JPG, JPEG, PNG, BMP, or WEBP format. The resolution must be between 256 × 256 pixels and 3000 × 3000 pixels. The file size cannot exceed 10 MB.</p>
+     * <p>The image URL. The image must be in the JPG, JPEG, PNG, BMP, or WEBP format. The resolution must be between 256 × 256 pixels and 3000 × 3000 pixels, and the file size cannot exceed 10 MB.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +41,14 @@ public class SizeChartExtractAsyncRequest extends TeaModel {
     public static SizeChartExtractAsyncRequest build(java.util.Map<String, ?> map) throws Exception {
         SizeChartExtractAsyncRequest self = new SizeChartExtractAsyncRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SizeChartExtractAsyncRequest setBizId(String bizId) {
+        this.bizId = bizId;
+        return this;
+    }
+    public String getBizId() {
+        return this.bizId;
     }
 
     public SizeChartExtractAsyncRequest setColumnNameList(java.util.List<String> columnNameList) {

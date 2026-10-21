@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageRemovalProAsyncResponseBody extends TeaModel {
     /**
-     * <p>The error code. This parameter is not returned when the call is successful.</p>
+     * <p>The error code. This parameter is not returned for successful calls.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -20,7 +20,7 @@ public class ImageRemovalProAsyncResponseBody extends TeaModel {
     public ImageRemovalProAsyncResponseBodyData data;
 
     /**
-     * <p>The error message. This parameter is not returned when the call is successful. Example: &quot;The parameters contain sensitive information. Try other inputs.&quot;</p>
+     * <p>The error message. This parameter is not returned for successful calls. Example: &quot;The parameters contain sensitive information. Try other inputs.&quot;</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -29,7 +29,7 @@ public class ImageRemovalProAsyncResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request, which is used to identify a unique request.</p>
+     * <p>The ID of the request. This ID is used to uniquely identify the request.</p>
      * 
      * <strong>example:</strong>
      * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>
@@ -38,7 +38,11 @@ public class ImageRemovalProAsyncResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <ul>
+     * <li>true: successful.</li>
+     * <li>false: failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -93,7 +97,7 @@ public class ImageRemovalProAsyncResponseBody extends TeaModel {
 
     public static class ImageRemovalProAsyncResponseBodyData extends TeaModel {
         /**
-         * <p>The node ID used to query the asynchronous task result.</p>
+         * <p>The ID of the task. You can use this ID to query the asynchronous task result.</p>
          * 
          * <strong>example:</strong>
          * <p>TID_550e8400-e29b-41d4-a716-446655440000</p>

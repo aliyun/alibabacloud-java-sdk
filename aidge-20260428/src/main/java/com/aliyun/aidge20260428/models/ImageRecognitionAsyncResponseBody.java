@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageRecognitionAsyncResponseBody extends TeaModel {
     /**
-     * <p>The error code. This parameter is not returned when the call is successful.</p>
+     * <p>The error code. This parameter is not returned for normal calls.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ImageRecognitionAsyncResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned recognition result struct.</p>
+     * <p>The struct information of the returned recognition result.</p>
      */
     @NameInMap("Data")
     public ImageRecognitionAsyncResponseBodyData data;
@@ -29,7 +29,7 @@ public class ImageRecognitionAsyncResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request, which is used to identify a unique request.</p>
+     * <p>The request ID, which is used to identify a unique request.</p>
      * 
      * <strong>example:</strong>
      * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>
@@ -40,8 +40,8 @@ public class ImageRecognitionAsyncResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call is successful. Valid values:</p>
      * <ul>
-     * <li>true: The call is successful.</li>
-     * <li>false: The call fails.</li>
+     * <li>true: successful</li>
+     * <li>false: failed</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +97,7 @@ public class ImageRecognitionAsyncResponseBody extends TeaModel {
 
     public static class ImageRecognitionAsyncResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the task used to query the asynchronous task result.</p>
+         * <p>The task ID used to query the result of the asynchronous task.</p>
          * 
          * <strong>example:</strong>
          * <p>TID_550e8400-e29b-41d4-a716-446655440000</p>

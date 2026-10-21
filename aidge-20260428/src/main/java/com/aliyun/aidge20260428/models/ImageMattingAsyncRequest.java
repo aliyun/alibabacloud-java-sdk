@@ -28,7 +28,16 @@ public class ImageMattingAsyncRequest extends TeaModel {
     public String bgColor;
 
     /**
-     * <p>The URL of the original image. The image must be in JPG, JPEG, PNG, BMP, or WEBP format. The resolution must be between 100 × 100 and 3000 × 3000 pixels, and the file size cannot exceed 10 MB.</p>
+     * <p>The business order ID of the caller. It is recorded upon acceptance and returned as is when you query the result of the asynchronous task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>order-20260928-001</p>
+     */
+    @NameInMap("BizId")
+    public String bizId;
+
+    /**
+     * <p>The URL of the original image. The image must be in JPG, JPEG, PNG, BMP, or WEBP format. The resolution must be between 100 × 100 and 3000 × 3000 pixels, and the file size must not exceed 10 MB.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,6 +83,14 @@ public class ImageMattingAsyncRequest extends TeaModel {
     }
     public String getBgColor() {
         return this.bgColor;
+    }
+
+    public ImageMattingAsyncRequest setBizId(String bizId) {
+        this.bizId = bizId;
+        return this;
+    }
+    public String getBizId() {
+        return this.bizId;
     }
 
     public ImageMattingAsyncRequest setImageUrl(String imageUrl) {

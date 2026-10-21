@@ -2126,9 +2126,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h1>Scenarios</h1>
      * <ul>
-     * <li><p>Supports secondary editing of materials: After the image subject is separated from the background, you can further edit the image.</p>
+     * <li><p>Supports secondary editing of materials: After separating the image subject from the background, you can further edit the image.</p>
      * </li>
-     * <li><p>Improves material processing efficiency: Quickly extracts the subjects from various material images for background replacement, which improves the production efficiency of advertising images and marketing posters.</p>
+     * <li><p>Improves material processing efficiency: Quickly extracts the subjects from various material images for background replacement, thereby improving the production efficiency of advertising images and marketing posters.</p>
      * </li>
      * </ul>
      * <h1>Features.</h1>
@@ -2145,9 +2145,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h4>3. Multi-format output and background operations</h4>
      * <ul>
-     * <li><p><strong>Transparent background export</strong>: Directly generates PNG images with transparent or white backgrounds, which adapts to e-commerce and design scenarios.</p>
+     * <li><p><strong>Transparent background export</strong>: Directly generates PNG images with transparent backgrounds and white backgrounds, adapting to e-commerce and design scenarios.</p>
      * </li>
-     * <li><p><strong>Supports custom background colors</strong></p>
+     * <li><p><strong>Custom background color support</strong></p>
      * </li>
      * </ul>
      * <h1>Effect comparison</h1>
@@ -2173,7 +2173,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Extracts the salient subject from an image, separates it from the background, and returns the subject image without the background. It also provides multiple background options and custom size options to optimize product display.</p>
+     * <p>Extracts the salient subject from an image by separating it from the background and returns the subject image with the background removed. It also provides multiple background options and custom size options to optimize product display.</p>
      * 
      * @param request ImageMattingAsyncRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2188,6 +2188,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.bgColor)) {
             query.put("BgColor", request.bgColor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.imageUrl)) {
@@ -2223,9 +2227,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h1>Scenarios</h1>
      * <ul>
-     * <li><p>Supports secondary editing of materials: After the image subject is separated from the background, you can further edit the image.</p>
+     * <li><p>Supports secondary editing of materials: After separating the image subject from the background, you can further edit the image.</p>
      * </li>
-     * <li><p>Improves material processing efficiency: Quickly extracts the subjects from various material images for background replacement, which improves the production efficiency of advertising images and marketing posters.</p>
+     * <li><p>Improves material processing efficiency: Quickly extracts the subjects from various material images for background replacement, thereby improving the production efficiency of advertising images and marketing posters.</p>
      * </li>
      * </ul>
      * <h1>Features.</h1>
@@ -2242,9 +2246,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h4>3. Multi-format output and background operations</h4>
      * <ul>
-     * <li><p><strong>Transparent background export</strong>: Directly generates PNG images with transparent or white backgrounds, which adapts to e-commerce and design scenarios.</p>
+     * <li><p><strong>Transparent background export</strong>: Directly generates PNG images with transparent backgrounds and white backgrounds, adapting to e-commerce and design scenarios.</p>
      * </li>
-     * <li><p><strong>Supports custom background colors</strong></p>
+     * <li><p><strong>Custom background color support</strong></p>
      * </li>
      * </ul>
      * <h1>Effect comparison</h1>
@@ -2270,7 +2274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Extracts the salient subject from an image, separates it from the background, and returns the subject image without the background. It also provides multiple background options and custom size options to optimize product display.</p>
+     * <p>Extracts the salient subject from an image by separating it from the background and returns the subject image with the background removed. It also provides multiple background options and custom size options to optimize product display.</p>
      * 
      * @param request ImageMattingAsyncRequest
      * @return ImageMattingAsyncResponse
@@ -2553,7 +2557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h1>Scenarios</h1>
      * <ol>
      * <li>Intelligent image filtering and optimization:
-     * Merchants and platforms can use the intelligent element recognition API to filter images and automatically identify images containing specific elements such as watermarks and logos. After filtering, they can further call the intelligent elimination API to optimize these images, improve image quality, and shorten the product release cycle.</li>
+     * Merchants and platforms can use the intelligent element recognition API to filter images and automatically identify images containing specific elements such as watermarks and logos. After filtering, they can call the intelligent elimination API to optimize these images, improve image quality, and shorten the product release cycle.</li>
      * <li>Automated image processing and efficiency improvement:
      * Through the intelligent element recognition API, merchants and platforms can automate the image processing workflow and automatically identify and mark image elements that need to be optimized. This workflow reduces manual intervention and improves the efficiency of image processing.</li>
      * </ol>
@@ -2568,16 +2572,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </li>
      * <li><p>Logo: A logo or trademark.</p>
      * </li>
-     * <li><p>Watermark: Monochrome transparent text, logos, images, URLs, or store names.</p>
+     * <li><p>Watermark: Monochrome transparent text, logos, images, URLs, store names, etc.</p>
      * </li>
      * <li><p>Text-containing color block: A color block containing text outside the subject.</p>
      * </li>
      * </ul>
-     * <p><strong>2. The main features of the intelligent element recognition API include:</strong></p>
+     * <p><strong>2. The intelligent element recognition API provides the following features:</strong></p>
      * <ul>
      * <li><p>Element recognition: Identifies whether elements such as text, logos, watermarks, and text-containing color blocks exist in the image subject and background.</p>
      * </li>
-     * <li><p>Workflow collaboration: Used in combination with the intelligent elimination API. The intelligent element recognition API first identifies the elements to be removed, and then the intelligent elimination API effectively removes them to ensure the accuracy and efficiency of image processing.</p>
+     * <li><p>Workflow collaboration: Used in combination with the intelligent elimination API. First, the intelligent element recognition API identifies the elements to be removed, and then the intelligent elimination API effectively removes them to ensure the accuracy and efficiency of image processing.</p>
      * </li>
      * </ul>
      * <p><strong>3. Technical advantages:</strong></p>
@@ -2643,7 +2647,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Identifies specific elements in e-commerce images. It analyzes image details to help users quickly identify elements such as text, logos, watermarks, and text-containing color blocks in the main subject and background, significantly improving the efficiency and accuracy of image filtering.</p>
+     * <p>Identifies specific elements in e-commerce images. It extracts image details to help users quickly identify text, logos, watermarks, and text-containing color blocks in the main subject and background, significantly improving the efficiency and accuracy of image filtering.</p>
      * 
      * @param tmpReq ImageRecognitionAsyncRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2662,6 +2666,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.imageUrl)) {
             query.put("ImageUrl", request.imageUrl);
         }
@@ -2716,7 +2724,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h1>Scenarios</h1>
      * <ol>
      * <li>Intelligent image filtering and optimization:
-     * Merchants and platforms can use the intelligent element recognition API to filter images and automatically identify images containing specific elements such as watermarks and logos. After filtering, they can further call the intelligent elimination API to optimize these images, improve image quality, and shorten the product release cycle.</li>
+     * Merchants and platforms can use the intelligent element recognition API to filter images and automatically identify images containing specific elements such as watermarks and logos. After filtering, they can call the intelligent elimination API to optimize these images, improve image quality, and shorten the product release cycle.</li>
      * <li>Automated image processing and efficiency improvement:
      * Through the intelligent element recognition API, merchants and platforms can automate the image processing workflow and automatically identify and mark image elements that need to be optimized. This workflow reduces manual intervention and improves the efficiency of image processing.</li>
      * </ol>
@@ -2731,16 +2739,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </li>
      * <li><p>Logo: A logo or trademark.</p>
      * </li>
-     * <li><p>Watermark: Monochrome transparent text, logos, images, URLs, or store names.</p>
+     * <li><p>Watermark: Monochrome transparent text, logos, images, URLs, store names, etc.</p>
      * </li>
      * <li><p>Text-containing color block: A color block containing text outside the subject.</p>
      * </li>
      * </ul>
-     * <p><strong>2. The main features of the intelligent element recognition API include:</strong></p>
+     * <p><strong>2. The intelligent element recognition API provides the following features:</strong></p>
      * <ul>
      * <li><p>Element recognition: Identifies whether elements such as text, logos, watermarks, and text-containing color blocks exist in the image subject and background.</p>
      * </li>
-     * <li><p>Workflow collaboration: Used in combination with the intelligent elimination API. The intelligent element recognition API first identifies the elements to be removed, and then the intelligent elimination API effectively removes them to ensure the accuracy and efficiency of image processing.</p>
+     * <li><p>Workflow collaboration: Used in combination with the intelligent elimination API. First, the intelligent element recognition API identifies the elements to be removed, and then the intelligent elimination API effectively removes them to ensure the accuracy and efficiency of image processing.</p>
      * </li>
      * </ul>
      * <p><strong>3. Technical advantages:</strong></p>
@@ -2806,7 +2814,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Identifies specific elements in e-commerce images. It analyzes image details to help users quickly identify elements such as text, logos, watermarks, and text-containing color blocks in the main subject and background, significantly improving the efficiency and accuracy of image filtering.</p>
+     * <p>Identifies specific elements in e-commerce images. It extracts image details to help users quickly identify text, logos, watermarks, and text-containing color blocks in the main subject and background, significantly improving the efficiency and accuracy of image filtering.</p>
      * 
      * @param request ImageRecognitionAsyncRequest
      * @return ImageRecognitionAsyncResponse
@@ -2954,44 +2962,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Scenarios</h2>
      * <ul>
-     * <li><strong>Efficient e-commerce image processing:</strong>
+     * <li><strong>Efficient processing of e-commerce images:</strong>
      * Removes irrelevant visual elements to provide clearer and more focused product displays, enhancing the customer shopping experience.</li>
-     * <li><strong>Multi-platform product information synchronization:</strong>
-     * When merchants list products on different e-commerce platforms, they can quickly remove specific text and watermarks to comply with the image specifications of different platforms.</li>
+     * <li><strong>Product information synchronization across multiple platforms:</strong>
+     * Quickly removes specific text and watermarks when merchants list products on different e-commerce platforms to comply with the image specifications of each platform.</li>
      * </ul>
      * <h2>Features</h2>
      * <ol>
-     * <li><p>First, clarify the definitions of the image subject and the image background. In actual use, when specifying the objects to be removed, you can choose to remove them from the image subject or the image background. Both API and editor integration methods are supported to meet different types of requirements.</p>
+     * <li><p>First, understand the definitions of the image subject and the image background. In actual use, when specifying the objects to remove, you can choose to remove objects from the image subject or the image background. Both API and editor integration methods are supported to meet different requirements.</p>
      * <ol>
      * <li><p>Image subject: the core product area in the image.</p>
      * </li>
-     * <li><p>Image background: the rest of the image other than the product subject.</p>
+     * <li><p>Image background: the rest of the image except the product subject.</p>
      * </li>
      * </ol>
      * </li>
-     * <li><p>Second, the objects to be removed support the following four types: text, specific names, transparent text blocks, and watermarks. You can refer to the following examples to clarify your usage requirements and perform targeted operations:</p>
+     * <li><p>Second, the following four types of objects can be removed: text, specific names, transparent text blocks, and watermarks. You can refer to the following examples to clarify your requirements and perform targeted operations:</p>
      * </li>
      * </ol>
-     * <h2>Before and after</h2>
+     * <h2>Effect comparison</h2>
      * <table>
      * <thead>
      * <tr>
      * <th><strong>Original image</strong></th>
-     * <th><strong>Erased image</strong></th>
+     * <th><strong>Processed image</strong></th>
      * </tr>
      * </thead>
      * <tbody><tr>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/AJdl65AyryVZyOke/img/4bd2c812-ed3c-45da-8a86-ebd29102f4b1.jpeg" alt="Main image 1 - Leopard print large capacity crossbody canvas bag.jpeg"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/AJdl65AyryVZyOke/img/4bd2c812-ed3c-45da-8a86-ebd29102f4b1.jpeg" alt="Main image 1 - Leopard print large capacity millennium single shoulder crossbody canvas bag.jpeg"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/eff0eb1b-36df-431d-a010-3bb3b7348ff9.png" alt="image.png"></td>
      * </tr>
      * <tr>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/c44ac17b-3fa4-4a6f-b411-90f1062b183b.jpeg" alt="Main image 1 - Short half-cover round-tip French false nails with handle.jpeg"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/c44ac17b-3fa4-4a6f-b411-90f1062b183b.jpeg" alt="Main image 1 - Handled ultra-short half-cover round head French false nails.jpeg"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/af779684-4aa5-49b0-8668-34ab8bd4bcc1.png" alt="image.png"></td>
      * </tr>
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Erases text, specific names, transparent text blocks, and watermarks from e-commerce images. This feature automatically identifies these elements and allows you to specify objects to be removed, enabling efficient and accurate processing of large batches of images to simplify image editing.</p>
+     * <p>Removes objects from e-commerce images by automatically identifying and erasing text, specific names, transparent text blocks, and watermarks. Allows you to specify objects to remove as needed, enabling efficient and accurate processing of large batches of images and simplifying image editing.</p>
      * 
      * @param request ImageRemovalProAsyncRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3000,6 +3008,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ImageRemovalProAsyncResponse imageRemovalProAsyncWithOptions(ImageRemovalProAsyncRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.imageUrl)) {
             query.put("ImageUrl", request.imageUrl);
         }
@@ -3025,44 +3037,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Scenarios</h2>
      * <ul>
-     * <li><strong>Efficient e-commerce image processing:</strong>
+     * <li><strong>Efficient processing of e-commerce images:</strong>
      * Removes irrelevant visual elements to provide clearer and more focused product displays, enhancing the customer shopping experience.</li>
-     * <li><strong>Multi-platform product information synchronization:</strong>
-     * When merchants list products on different e-commerce platforms, they can quickly remove specific text and watermarks to comply with the image specifications of different platforms.</li>
+     * <li><strong>Product information synchronization across multiple platforms:</strong>
+     * Quickly removes specific text and watermarks when merchants list products on different e-commerce platforms to comply with the image specifications of each platform.</li>
      * </ul>
      * <h2>Features</h2>
      * <ol>
-     * <li><p>First, clarify the definitions of the image subject and the image background. In actual use, when specifying the objects to be removed, you can choose to remove them from the image subject or the image background. Both API and editor integration methods are supported to meet different types of requirements.</p>
+     * <li><p>First, understand the definitions of the image subject and the image background. In actual use, when specifying the objects to remove, you can choose to remove objects from the image subject or the image background. Both API and editor integration methods are supported to meet different requirements.</p>
      * <ol>
      * <li><p>Image subject: the core product area in the image.</p>
      * </li>
-     * <li><p>Image background: the rest of the image other than the product subject.</p>
+     * <li><p>Image background: the rest of the image except the product subject.</p>
      * </li>
      * </ol>
      * </li>
-     * <li><p>Second, the objects to be removed support the following four types: text, specific names, transparent text blocks, and watermarks. You can refer to the following examples to clarify your usage requirements and perform targeted operations:</p>
+     * <li><p>Second, the following four types of objects can be removed: text, specific names, transparent text blocks, and watermarks. You can refer to the following examples to clarify your requirements and perform targeted operations:</p>
      * </li>
      * </ol>
-     * <h2>Before and after</h2>
+     * <h2>Effect comparison</h2>
      * <table>
      * <thead>
      * <tr>
      * <th><strong>Original image</strong></th>
-     * <th><strong>Erased image</strong></th>
+     * <th><strong>Processed image</strong></th>
      * </tr>
      * </thead>
      * <tbody><tr>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/AJdl65AyryVZyOke/img/4bd2c812-ed3c-45da-8a86-ebd29102f4b1.jpeg" alt="Main image 1 - Leopard print large capacity crossbody canvas bag.jpeg"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/AJdl65AyryVZyOke/img/4bd2c812-ed3c-45da-8a86-ebd29102f4b1.jpeg" alt="Main image 1 - Leopard print large capacity millennium single shoulder crossbody canvas bag.jpeg"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/eff0eb1b-36df-431d-a010-3bb3b7348ff9.png" alt="image.png"></td>
      * </tr>
      * <tr>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/c44ac17b-3fa4-4a6f-b411-90f1062b183b.jpeg" alt="Main image 1 - Short half-cover round-tip French false nails with handle.jpeg"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/c44ac17b-3fa4-4a6f-b411-90f1062b183b.jpeg" alt="Main image 1 - Handled ultra-short half-cover round head French false nails.jpeg"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/af779684-4aa5-49b0-8668-34ab8bd4bcc1.png" alt="image.png"></td>
      * </tr>
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Erases text, specific names, transparent text blocks, and watermarks from e-commerce images. This feature automatically identifies these elements and allows you to specify objects to be removed, enabling efficient and accurate processing of large batches of images to simplify image editing.</p>
+     * <p>Removes objects from e-commerce images by automatically identifying and erasing text, specific names, transparent text blocks, and watermarks. Allows you to specify objects to remove as needed, enabling efficient and accurate processing of large batches of images and simplifying image editing.</p>
      * 
      * @param request ImageRemovalProAsyncRequest
      * @return ImageRemovalProAsyncResponse
@@ -3374,18 +3386,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Scenarios</h2>
      * <ul>
-     * <li><strong>Efficient processing of e-commerce images:</strong><br>Removes irrelevant visual elements to provide clearer and more focused product displays, enhancing the customer shopping experience.</li>
-     * <li><strong>Multi-platform product information synchronization:</strong>
-     * When merchants synchronize product listings across different e-commerce platforms, they can quickly remove specific text and watermarks to comply with the image specifications of different platforms.</li>
-     * <li><strong>Marketing material preparation:</strong>
-     * Merchants can easily remove original promotional information and quickly update it with the latest campaign information.<blockquote>
-     * <p>Note: Merchants or platforms can batch remove unwanted elements in images to optimize image quality. We recommend using this feature in combination with the &quot;Intelligent Recognition API&quot; (coming soon) to first filter out images containing text, specific names, transparent text blocks, and watermarks, and then use the &quot;Intelligent Erasure API&quot; for batch removal. The Intelligent Recognition API focuses on &quot;recognition&quot;, while the Intelligent Erasure API focuses on &quot;erasure&quot;. By calling them in sequence, you can maximize the erasure effect and reduce &quot;false removals&quot; and &quot;false recognitions&quot;.</p>
+     * <li><strong>Efficient e-commerce image processing:</strong><br>Removes irrelevant visual elements to provide clearer and more focused product displays, enhancing the customer shopping experience.</li>
+     * <li><strong>Multi-platform product information synchronization:</strong><br>When merchants list products on different e-commerce platforms simultaneously, they can quickly remove specific text and promotional stickers to comply with the image specifications of different platforms.</li>
+     * <li><strong>Marketing material preparation:</strong><br>Merchants can easily remove original promotional information and quickly update it with the latest campaign information.<blockquote>
+     * <p>Note: Merchants or platforms can batch remove impurities in images to optimize image quality. We recommend using this feature in combination with the &quot;Intelligent Recognition API&quot; (coming soon) to first filter images containing text, specific names, transparent text blocks, and promotional stickers, and then use the &quot;Intelligent Erasure API&quot; for batch removal. The Intelligent Recognition API focuses on &quot;recognition&quot;, while the Intelligent Erasure API focuses on &quot;erasure&quot;. By calling them in sequence, you can maximize the erasure effect and reduce &quot;false removals&quot; and &quot;false recognitions&quot;.</p>
      * </blockquote>
      * </li>
      * </ul>
      * <h2>Features</h2>
      * <ol>
-     * <li><p>First, clarify the definitions of the image subject and the image background. In actual use, when specifying the objects to remove, you can choose whether the removal scope is the image subject or the image background area. Both API and editor integration methods are supported to meet different types of needs.</p>
+     * <li><p>First, clarify the definitions of the image subject and the image background. In actual use, when specifying the objects to be removed, you can choose whether the removal scope is the image subject or the image background area. Both API and editor integration methods are supported to meet different types of requirements.</p>
      * <ol>
      * <li><p>Image subject: the core product area in the image.</p>
      * </li>
@@ -3393,18 +3403,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </li>
      * </ol>
      * </li>
-     * <li><p>Second, the objects to remove support the following three cases:</p>
+     * <li><p>Second, the objects to be removed support the following three cases:</p>
      * <ol>
-     * <li><p>The user selects only the type. You can select text, specific names, transparent text blocks, and watermarks. You can clarify your usage requirements through the following examples for targeted operations.</p>
+     * <li><p>The user only selects the type. Supported types include text, specific names, transparent text blocks, and promotional stickers. You can clarify the usage requirements through the following examples for targeted operations.</p>
      * </li>
      * <li><p>(Upgraded) Provides specified image erasure. Users can specify multiple images at a time.</p>
      * </li>
-     * <li><p>(Upgraded) Provides specified text erasure. Users can specify multiple texts at a time.</p>
+     * <li><p>(Upgraded) Provides specified text erasure. Users can specify multiple text strings at a time.</p>
      * </li>
      * </ol>
      * </li>
      * </ol>
-     * <p>Processing flow: The user provides the original image URL → OCR and VLM models detect the text or image position → The coordinates of the area to be repaired are determined → AI repairs and generates a clean image → The result image URL is returned.</p>
+     * <p>Processing flow: The user passes in the original image URL → OCR and VLM models detect the text or image position → Determine the coordinates of the area to be repaired → AI repairs and generates a clean image → Returns the result image URL.</p>
      * <h2>Effect comparison</h2>
      * <table>
      * <thead>
@@ -3455,7 +3465,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>Does not involve the image subject area</li>
      * </ul>
      * <p><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/05759aef-1720-41cd-8800-f7d0801e4d95.jpeg" alt="b05173e7-2ae5-494e-99d2-7111fc966fd5.jpeg"> |
-     * | Watermarks | *   Involves the image subject area</p>
+     * | Promotional stickers | *   Involves the image subject area</p>
      * <pre><code>![2.jpeg](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/bf1442f8-a9fa-40d3-bcb0-7a8a41b49b5d.jpeg)
      * </code></pre>
      * <ul>
@@ -3468,10 +3478,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <p><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/caa6994b-2f97-484d-a807-671a0dc75947.jpeg" alt="dee0c7cf-8b0d-4d6d-9677-d5f2e6099834.jpeg"> |
      * | Specified image element erasure (supports multiple image links) | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/9297951f-53c1-4476-8c69-5c31df3fce21.png" alt="image.png"> | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/ef3f35aa-609f-454c-bba0-dd1710c83945.png" alt="image.png"> |
-     * | Specified text erasure (supports multiple texts) | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/c784d8be-4b4d-4972-8b99-828c742b8f03.png" alt="image.png"> | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/805423ca-bd0d-4d44-a18e-a7d7bfe88587.png" alt="image.png"> |</p>
+     * | Specified text erasure (supports multiple text strings) | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/c784d8be-4b4d-4972-8b99-828c742b8f03.png" alt="image.png"> | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/805423ca-bd0d-4d44-a18e-a7d7bfe88587.png" alt="image.png"> |</p>
      * 
      * <b>summary</b> : 
-     * <p>Provides intelligent image erasure tailored for e-commerce images by automatically identifying and removing text, specific names, transparent text blocks, and unwanted overlays, and allows you to specify objects to remove for efficient and accurate batch processing to simplify image editing.</p>
+     * <p>Intelligently removes unwanted elements from e-commerce images by automatically identifying and erasing text, specific names, transparent text blocks, and promotional stickers. Supports specifying target objects for removal to enable efficient and accurate batch processing and simplify image editing.</p>
      * 
      * @param tmpReq ImageRemoveAsyncRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3498,6 +3508,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.imageUrl)) {
             query.put("ImageUrl", request.imageUrl);
         }
@@ -3547,18 +3561,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Scenarios</h2>
      * <ul>
-     * <li><strong>Efficient processing of e-commerce images:</strong><br>Removes irrelevant visual elements to provide clearer and more focused product displays, enhancing the customer shopping experience.</li>
-     * <li><strong>Multi-platform product information synchronization:</strong>
-     * When merchants synchronize product listings across different e-commerce platforms, they can quickly remove specific text and watermarks to comply with the image specifications of different platforms.</li>
-     * <li><strong>Marketing material preparation:</strong>
-     * Merchants can easily remove original promotional information and quickly update it with the latest campaign information.<blockquote>
-     * <p>Note: Merchants or platforms can batch remove unwanted elements in images to optimize image quality. We recommend using this feature in combination with the &quot;Intelligent Recognition API&quot; (coming soon) to first filter out images containing text, specific names, transparent text blocks, and watermarks, and then use the &quot;Intelligent Erasure API&quot; for batch removal. The Intelligent Recognition API focuses on &quot;recognition&quot;, while the Intelligent Erasure API focuses on &quot;erasure&quot;. By calling them in sequence, you can maximize the erasure effect and reduce &quot;false removals&quot; and &quot;false recognitions&quot;.</p>
+     * <li><strong>Efficient e-commerce image processing:</strong><br>Removes irrelevant visual elements to provide clearer and more focused product displays, enhancing the customer shopping experience.</li>
+     * <li><strong>Multi-platform product information synchronization:</strong><br>When merchants list products on different e-commerce platforms simultaneously, they can quickly remove specific text and promotional stickers to comply with the image specifications of different platforms.</li>
+     * <li><strong>Marketing material preparation:</strong><br>Merchants can easily remove original promotional information and quickly update it with the latest campaign information.<blockquote>
+     * <p>Note: Merchants or platforms can batch remove impurities in images to optimize image quality. We recommend using this feature in combination with the &quot;Intelligent Recognition API&quot; (coming soon) to first filter images containing text, specific names, transparent text blocks, and promotional stickers, and then use the &quot;Intelligent Erasure API&quot; for batch removal. The Intelligent Recognition API focuses on &quot;recognition&quot;, while the Intelligent Erasure API focuses on &quot;erasure&quot;. By calling them in sequence, you can maximize the erasure effect and reduce &quot;false removals&quot; and &quot;false recognitions&quot;.</p>
      * </blockquote>
      * </li>
      * </ul>
      * <h2>Features</h2>
      * <ol>
-     * <li><p>First, clarify the definitions of the image subject and the image background. In actual use, when specifying the objects to remove, you can choose whether the removal scope is the image subject or the image background area. Both API and editor integration methods are supported to meet different types of needs.</p>
+     * <li><p>First, clarify the definitions of the image subject and the image background. In actual use, when specifying the objects to be removed, you can choose whether the removal scope is the image subject or the image background area. Both API and editor integration methods are supported to meet different types of requirements.</p>
      * <ol>
      * <li><p>Image subject: the core product area in the image.</p>
      * </li>
@@ -3566,18 +3578,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </li>
      * </ol>
      * </li>
-     * <li><p>Second, the objects to remove support the following three cases:</p>
+     * <li><p>Second, the objects to be removed support the following three cases:</p>
      * <ol>
-     * <li><p>The user selects only the type. You can select text, specific names, transparent text blocks, and watermarks. You can clarify your usage requirements through the following examples for targeted operations.</p>
+     * <li><p>The user only selects the type. Supported types include text, specific names, transparent text blocks, and promotional stickers. You can clarify the usage requirements through the following examples for targeted operations.</p>
      * </li>
      * <li><p>(Upgraded) Provides specified image erasure. Users can specify multiple images at a time.</p>
      * </li>
-     * <li><p>(Upgraded) Provides specified text erasure. Users can specify multiple texts at a time.</p>
+     * <li><p>(Upgraded) Provides specified text erasure. Users can specify multiple text strings at a time.</p>
      * </li>
      * </ol>
      * </li>
      * </ol>
-     * <p>Processing flow: The user provides the original image URL → OCR and VLM models detect the text or image position → The coordinates of the area to be repaired are determined → AI repairs and generates a clean image → The result image URL is returned.</p>
+     * <p>Processing flow: The user passes in the original image URL → OCR and VLM models detect the text or image position → Determine the coordinates of the area to be repaired → AI repairs and generates a clean image → Returns the result image URL.</p>
      * <h2>Effect comparison</h2>
      * <table>
      * <thead>
@@ -3628,7 +3640,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>Does not involve the image subject area</li>
      * </ul>
      * <p><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/05759aef-1720-41cd-8800-f7d0801e4d95.jpeg" alt="b05173e7-2ae5-494e-99d2-7111fc966fd5.jpeg"> |
-     * | Watermarks | *   Involves the image subject area</p>
+     * | Promotional stickers | *   Involves the image subject area</p>
      * <pre><code>![2.jpeg](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/bf1442f8-a9fa-40d3-bcb0-7a8a41b49b5d.jpeg)
      * </code></pre>
      * <ul>
@@ -3641,10 +3653,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <p><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/caa6994b-2f97-484d-a807-671a0dc75947.jpeg" alt="dee0c7cf-8b0d-4d6d-9677-d5f2e6099834.jpeg"> |
      * | Specified image element erasure (supports multiple image links) | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/9297951f-53c1-4476-8c69-5c31df3fce21.png" alt="image.png"> | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/ef3f35aa-609f-454c-bba0-dd1710c83945.png" alt="image.png"> |
-     * | Specified text erasure (supports multiple texts) | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/c784d8be-4b4d-4972-8b99-828c742b8f03.png" alt="image.png"> | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/805423ca-bd0d-4d44-a18e-a7d7bfe88587.png" alt="image.png"> |</p>
+     * | Specified text erasure (supports multiple text strings) | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/c784d8be-4b4d-4972-8b99-828c742b8f03.png" alt="image.png"> | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/805423ca-bd0d-4d44-a18e-a7d7bfe88587.png" alt="image.png"> |</p>
      * 
      * <b>summary</b> : 
-     * <p>Provides intelligent image erasure tailored for e-commerce images by automatically identifying and removing text, specific names, transparent text blocks, and unwanted overlays, and allows you to specify objects to remove for efficient and accurate batch processing to simplify image editing.</p>
+     * <p>Intelligently removes unwanted elements from e-commerce images by automatically identifying and erasing text, specific names, transparent text blocks, and promotional stickers. Supports specifying target objects for removal to enable efficient and accurate batch processing and simplify image editing.</p>
      * 
      * @param request ImageRemoveAsyncRequest
      * @return ImageRemoveAsyncResponse
@@ -3964,11 +3976,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Main images and detail images for cross-border e-commerce.</p>
      * <h2>Features</h2>
      * <ul>
-     * <li><p><strong>Product subject information protection</strong>: Allows you to specify whether to translate the text on the product subject. This helps you protect subject information, such as embedded product names, from being translated.</p>
+     * <li><p><strong>Product subject information protection</strong>: Allows you to specify whether to translate the text on the product subject. This helps you protect the subject information, such as the embedded product name, from being translated.</p>
      * </li>
-     * <li><p><strong>Brand name protection</strong>: Allows you to specify whether to translate brand names in the image. This helps you protect brand name information from being translated.</p>
+     * <li><p><strong>Brand name protection</strong>: Allows you to specify whether to translate the brand name in the image. This helps you protect the brand name from being translated.</p>
      * </li>
-     * <li><p><strong>Translation intervention</strong>: Allows you to customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), or omitting the translation (ABC-null). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API, which meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention words. If you need more, contact the platform for processing.</p>
+     * <li><p><strong>Translation intervention</strong>: Allows you to customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), and skipping translation (ABC-null). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API operation to meet your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</p>
      * </li>
      * </ul>
      * <h2>Supported language pairs</h2>
@@ -4075,11 +4087,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </tbody></table>
      * <h2>Preparations and call process</h2>
-     * <p>The asynchronous API for Image Translation Plus and other capabilities share the same result retrieval process, RocketMQ subscription rules, message encryption protocol, dependency configurations, and Java consumption and decryption code.
-     * For the asynchronous call process, subscription rules, message format and encryption protocol, and detailed integration solutions, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API call instructions</a>.</p>
+     * <p>The asynchronous API operations for the Plus edition of image translation and other features share the same result retrieval process, RocketMQ subscription rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.
+     * For the integration process of asynchronous calls, subscription rules, message formats and encryption protocols, and detailed integration solutions, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API operation call instructions</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Translates e-commerce images by using the Mixture of Experts (MOE) architecture, delivering higher translation accuracy for multiple minor languages than the Lite and Pro editions.</p>
+     * <p>Translates e-commerce images by using the Mixture of Experts (MoE) architecture. Compared with the Lite and Pro editions, the Plus edition provides higher translation accuracy for multiple minor languages.</p>
      * 
      * @param request ImageTranslationPlusAsyncRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4088,6 +4100,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ImageTranslationPlusAsyncResponse imageTranslationPlusAsyncWithOptions(ImageTranslationPlusAsyncRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.glossary)) {
             query.put("Glossary", request.glossary);
         }
@@ -4139,11 +4155,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Main images and detail images for cross-border e-commerce.</p>
      * <h2>Features</h2>
      * <ul>
-     * <li><p><strong>Product subject information protection</strong>: Allows you to specify whether to translate the text on the product subject. This helps you protect subject information, such as embedded product names, from being translated.</p>
+     * <li><p><strong>Product subject information protection</strong>: Allows you to specify whether to translate the text on the product subject. This helps you protect the subject information, such as the embedded product name, from being translated.</p>
      * </li>
-     * <li><p><strong>Brand name protection</strong>: Allows you to specify whether to translate brand names in the image. This helps you protect brand name information from being translated.</p>
+     * <li><p><strong>Brand name protection</strong>: Allows you to specify whether to translate the brand name in the image. This helps you protect the brand name from being translated.</p>
      * </li>
-     * <li><p><strong>Translation intervention</strong>: Allows you to customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), or omitting the translation (ABC-null). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API, which meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention words. If you need more, contact the platform for processing.</p>
+     * <li><p><strong>Translation intervention</strong>: Allows you to customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), and skipping translation (ABC-null). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API operation to meet your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</p>
      * </li>
      * </ul>
      * <h2>Supported language pairs</h2>
@@ -4250,11 +4266,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </tbody></table>
      * <h2>Preparations and call process</h2>
-     * <p>The asynchronous API for Image Translation Plus and other capabilities share the same result retrieval process, RocketMQ subscription rules, message encryption protocol, dependency configurations, and Java consumption and decryption code.
-     * For the asynchronous call process, subscription rules, message format and encryption protocol, and detailed integration solutions, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API call instructions</a>.</p>
+     * <p>The asynchronous API operations for the Plus edition of image translation and other features share the same result retrieval process, RocketMQ subscription rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.
+     * For the integration process of asynchronous calls, subscription rules, message formats and encryption protocols, and detailed integration solutions, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API operation call instructions</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Translates e-commerce images by using the Mixture of Experts (MOE) architecture, delivering higher translation accuracy for multiple minor languages than the Lite and Pro editions.</p>
+     * <p>Translates e-commerce images by using the Mixture of Experts (MoE) architecture. Compared with the Lite and Pro editions, the Plus edition provides higher translation accuracy for multiple minor languages.</p>
      * 
      * @param request ImageTranslationPlusAsyncRequest
      * @return ImageTranslationPlusAsyncResponse
@@ -4370,22 +4386,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>E-commerce product images, marketing images, and images in various other scenarios.</p>
      * <h2>Features</h2>
      * <ul>
-     * <li><p>Product subject information protection: Allows you to specify whether to translate the text on the product subject. This helps protect the subject information, such as embedded product names, from being translated.</p>
+     * <li><p>Product subject information protection: You can specify whether to translate the text on the product subject. This helps you protect the subject information, such as the embedded product name, from being translated.</p>
      * </li>
-     * <li><p>Post-translation editing: Allows you to specify whether to return layout information such as the position, font, and color of the text. This information can be used for secondary editing when integrated with an image editor. The SDK package for the editor is not yet available. Follow platform notifications for updates.</p>
+     * <li><p>Secondary editing after translation: You can specify whether to return layout information such as the position, font, and color of the text. This information can be used for secondary editing when you integrate an image editor. The SDK package for the editor is not yet available. Follow platform notifications for updates.</p>
      * </li>
-     * <li><p>Brand name protection: Allows you to specify whether to translate brand names in the image. This helps protect brand name information from being translated.</p>
+     * <li><p>Brand name protection: You can specify whether to translate brand names in the image. This helps you protect brand name information from being translated.</p>
      * </li>
-     * <li><p>Translation intervention: Allows you to customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), or omitting the translation (ABC-null). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API, which meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</p>
+     * <li><p>Translation intervention: You can customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), or omitting the translation (ABC-null). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API, which meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention entries. If you need more, contact the platform for assistance.</p>
      * </li>
      * </ul>
      * <h2>Preparations and call process</h2>
-     * <p>Image Translation Pro supports both synchronous and asynchronous call methods. This topic describes the asynchronous call API. For synchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/image-translation-pro">Image Translation Pro</a>.
-     * The asynchronous APIs for text translation and other capabilities share the result retrieval process, ApsaraMQ for RocketMQ subscription rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.
-     * For the integration process, subscription rules, message formats and encryption protocols, and detailed integration solutions for asynchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API call instructions</a>.</p>
+     * <p>Image Translation Pro supports both synchronous and asynchronous calls. This topic describes the asynchronous call API. For synchronous calls, see <a href="https://www.alibabacloud.com/help/en/aidge/image-translation-pro">Image Translation Pro</a>.
+     * The asynchronous APIs for text translation and other capabilities share the same result retrieval process, RocketMQ subscription rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.
+     * For the integration process, subscription rules, message formats and encryption protocols, and detailed integration solutions for asynchronous calls, see <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API call instructions</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Translates images by using Image Translation Pro. This service is designed specifically for e-commerce images, integrates multimodal large language model technology for more accurate image understanding, significantly improves translation quality, and continuously expands and optimizes multilingual translation capabilities. It supports more than 400 language pairs, including pivot languages.</p>
+     * <p>Translates images asynchronously by using Image Translation Pro. Designed for e-commerce images, this service integrates multimodal large language models to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. It supports more than 400 language pairs, including bridged language pairs.</p>
      * 
      * @param request ImageTranslationProAsyncRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4394,6 +4410,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ImageTranslationProAsyncResponse imageTranslationProAsyncWithOptions(ImageTranslationProAsyncRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.glossary)) {
             query.put("Glossary", request.glossary);
         }
@@ -4445,22 +4465,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>E-commerce product images, marketing images, and images in various other scenarios.</p>
      * <h2>Features</h2>
      * <ul>
-     * <li><p>Product subject information protection: Allows you to specify whether to translate the text on the product subject. This helps protect the subject information, such as embedded product names, from being translated.</p>
+     * <li><p>Product subject information protection: You can specify whether to translate the text on the product subject. This helps you protect the subject information, such as the embedded product name, from being translated.</p>
      * </li>
-     * <li><p>Post-translation editing: Allows you to specify whether to return layout information such as the position, font, and color of the text. This information can be used for secondary editing when integrated with an image editor. The SDK package for the editor is not yet available. Follow platform notifications for updates.</p>
+     * <li><p>Secondary editing after translation: You can specify whether to return layout information such as the position, font, and color of the text. This information can be used for secondary editing when you integrate an image editor. The SDK package for the editor is not yet available. Follow platform notifications for updates.</p>
      * </li>
-     * <li><p>Brand name protection: Allows you to specify whether to translate brand names in the image. This helps protect brand name information from being translated.</p>
+     * <li><p>Brand name protection: You can specify whether to translate brand names in the image. This helps you protect brand name information from being translated.</p>
      * </li>
-     * <li><p>Translation intervention: Allows you to customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), or omitting the translation (ABC-null). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API, which meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</p>
+     * <li><p>Translation intervention: You can customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), or omitting the translation (ABC-null). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API, which meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention entries. If you need more, contact the platform for assistance.</p>
      * </li>
      * </ul>
      * <h2>Preparations and call process</h2>
-     * <p>Image Translation Pro supports both synchronous and asynchronous call methods. This topic describes the asynchronous call API. For synchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/image-translation-pro">Image Translation Pro</a>.
-     * The asynchronous APIs for text translation and other capabilities share the result retrieval process, ApsaraMQ for RocketMQ subscription rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.
-     * For the integration process, subscription rules, message formats and encryption protocols, and detailed integration solutions for asynchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API call instructions</a>.</p>
+     * <p>Image Translation Pro supports both synchronous and asynchronous calls. This topic describes the asynchronous call API. For synchronous calls, see <a href="https://www.alibabacloud.com/help/en/aidge/image-translation-pro">Image Translation Pro</a>.
+     * The asynchronous APIs for text translation and other capabilities share the same result retrieval process, RocketMQ subscription rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.
+     * For the integration process, subscription rules, message formats and encryption protocols, and detailed integration solutions for asynchronous calls, see <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API call instructions</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Translates images by using Image Translation Pro. This service is designed specifically for e-commerce images, integrates multimodal large language model technology for more accurate image understanding, significantly improves translation quality, and continuously expands and optimizes multilingual translation capabilities. It supports more than 400 language pairs, including pivot languages.</p>
+     * <p>Translates images asynchronously by using Image Translation Pro. Designed for e-commerce images, this service integrates multimodal large language models to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. It supports more than 400 language pairs, including bridged language pairs.</p>
      * 
      * @param request ImageTranslationProAsyncRequest
      * @return ImageTranslationProAsyncResponse
@@ -4578,24 +4598,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>E-commerce product images, marketing images, and images for various other scenarios.</p>
      * <h2>Features</h2>
      * <ul>
-     * <li><p><strong>Product subject information protection</strong>: Allows you to specify whether to translate text on the product subject, protecting the subject information and preventing the translation of embedded information such as product names.</p>
+     * <li><p><strong>Product subject information protection</strong>: Allows you to specify whether to translate the text on the product subject. This helps protect the subject information from being translated and prevents the translation of embedded information such as product names.</p>
      * </li>
-     * <li><p><strong>Brand name protection</strong>: Allows you to specify whether to translate brand names in the image, protecting brand name information from being translated.</p>
+     * <li><p><strong>Brand name protection</strong>: Allows you to specify whether to translate brand names in the image. This helps protect brand name information from being translated.</p>
      * </li>
-     * <li><p><strong>Secondary editing after translation (layer information)</strong>: Allows you to specify whether to return layer information such as text position, font, and color. This information can be used to integrate with image editors for secondary editing of translation results. Refer to platform notifications for updates on the availability of the editor SDK.</p>
+     * <li><p><strong>Secondary editing after translation (layer information)</strong>: Allows you to specify whether to return layer information such as the position, font, and color of the text. This information can be used to integrate with image editors for secondary editing of translation results. For the release progress of the editor SDK package, refer to platform notifications.</p>
      * </li>
-     * <li><p><strong>Translation intervention</strong>: Allows you to customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), and skipping translation (ABC-null value). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. Contact the platform if you need a higher limit.</p>
+     * <li><p><strong>Translation intervention</strong>: Allows you to customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), and skipping translation (ABC-null value). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API operation to meet your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention entries. If you need more, contact the platform for assistance.</p>
      * </li>
      * </ul>
      * <h2>Preparations and call process</h2>
      * <ul>
-     * <li>Image Translation Standard Edition supports both synchronous and asynchronous call methods. This topic describes the asynchronous call API. For synchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/image-translation">Image Translation Standard Edition</a>.   </li>
-     * <li>The asynchronous APIs for Image Translation Standard Edition and other features share the same result retrieval process, RocketMQ subscription rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.   </li>
-     * <li>For the integration process, subscription rules, message formats and encryption protocols, and detailed integration solutions for asynchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API call instructions</a>.</li>
+     * <li>The standard edition of Image Translation supports both synchronous and asynchronous call methods. This topic describes the asynchronous call API operation. To use synchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/image-translation">Image Translation Standard Edition</a>.   </li>
+     * <li>The asynchronous API operations for the standard edition of Image Translation and other features share the result retrieval process, ApsaraMQ for RocketMQ subscription rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.   </li>
+     * <li>For the integration process, subscription rules, message formats and encryption protocols, and detailed integration solutions for asynchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API operation call instructions</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Translates e-commerce images by supporting over 400 language pairs, including bridged pairs. Accurately processes complex text layouts within images and ensures that translated content matches the image context, helping e-commerce platforms and developers easily achieve multilingual conversion and presentation of image content. The service also returns layer information such as text position, font, and color, facilitating secondary editing of translation results in image editors.</p>
+     * <p>Translates images specifically designed for e-commerce, supporting over 400 language pairs, including bridged pairs. It accurately processes complex text layouts within images and ensures that the translated content matches the image context. This helps e-commerce platforms and developers easily achieve multilingual conversion and presentation of image content. Additionally, the service returns layer information such as the position, font, and color of text in the image, which facilitates secondary editing of translation results by using image editors.</p>
      * 
      * @param request ImageTranslationStandardAsyncRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4604,6 +4624,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ImageTranslationStandardAsyncResponse imageTranslationStandardAsyncWithOptions(ImageTranslationStandardAsyncRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.glossary)) {
             query.put("Glossary", request.glossary);
         }
@@ -4655,24 +4679,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>E-commerce product images, marketing images, and images for various other scenarios.</p>
      * <h2>Features</h2>
      * <ul>
-     * <li><p><strong>Product subject information protection</strong>: Allows you to specify whether to translate text on the product subject, protecting the subject information and preventing the translation of embedded information such as product names.</p>
+     * <li><p><strong>Product subject information protection</strong>: Allows you to specify whether to translate the text on the product subject. This helps protect the subject information from being translated and prevents the translation of embedded information such as product names.</p>
      * </li>
-     * <li><p><strong>Brand name protection</strong>: Allows you to specify whether to translate brand names in the image, protecting brand name information from being translated.</p>
+     * <li><p><strong>Brand name protection</strong>: Allows you to specify whether to translate brand names in the image. This helps protect brand name information from being translated.</p>
      * </li>
-     * <li><p><strong>Secondary editing after translation (layer information)</strong>: Allows you to specify whether to return layer information such as text position, font, and color. This information can be used to integrate with image editors for secondary editing of translation results. Refer to platform notifications for updates on the availability of the editor SDK.</p>
+     * <li><p><strong>Secondary editing after translation (layer information)</strong>: Allows you to specify whether to return layer information such as the position, font, and color of the text. This information can be used to integrate with image editors for secondary editing of translation results. For the release progress of the editor SDK package, refer to platform notifications.</p>
      * </li>
-     * <li><p><strong>Translation intervention</strong>: Allows you to customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), and skipping translation (ABC-null value). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. Contact the platform if you need a higher limit.</p>
+     * <li><p><strong>Translation intervention</strong>: Allows you to customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), and skipping translation (ABC-null value). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API operation to meet your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention entries. If you need more, contact the platform for assistance.</p>
      * </li>
      * </ul>
      * <h2>Preparations and call process</h2>
      * <ul>
-     * <li>Image Translation Standard Edition supports both synchronous and asynchronous call methods. This topic describes the asynchronous call API. For synchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/image-translation">Image Translation Standard Edition</a>.   </li>
-     * <li>The asynchronous APIs for Image Translation Standard Edition and other features share the same result retrieval process, RocketMQ subscription rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.   </li>
-     * <li>For the integration process, subscription rules, message formats and encryption protocols, and detailed integration solutions for asynchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API call instructions</a>.</li>
+     * <li>The standard edition of Image Translation supports both synchronous and asynchronous call methods. This topic describes the asynchronous call API operation. To use synchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/image-translation">Image Translation Standard Edition</a>.   </li>
+     * <li>The asynchronous API operations for the standard edition of Image Translation and other features share the result retrieval process, ApsaraMQ for RocketMQ subscription rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.   </li>
+     * <li>For the integration process, subscription rules, message formats and encryption protocols, and detailed integration solutions for asynchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API operation call instructions</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Translates e-commerce images by supporting over 400 language pairs, including bridged pairs. Accurately processes complex text layouts within images and ensures that translated content matches the image context, helping e-commerce platforms and developers easily achieve multilingual conversion and presentation of image content. The service also returns layer information such as text position, font, and color, facilitating secondary editing of translation results in image editors.</p>
+     * <p>Translates images specifically designed for e-commerce, supporting over 400 language pairs, including bridged pairs. It accurately processes complex text layouts within images and ensures that the translated content matches the image context. This helps e-commerce platforms and developers easily achieve multilingual conversion and presentation of image content. Additionally, the service returns layer information such as the position, font, and color of text in the image, which facilitates secondary editing of translation results by using image editors.</p>
      * 
      * @param request ImageTranslationStandardAsyncRequest
      * @return ImageTranslationStandardAsyncResponse
@@ -5828,10 +5852,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>API name on the POP gateway: QueryAsyncTaskResult.</p>
+     * <p>The API name in the POP gateway is QueryAsyncTaskResult.</p>
      * 
      * <b>summary</b> : 
-     * <p>API name on the POP gateway: QueryAsyncTaskResult.</p>
+     * <p>Queries the result of an asynchronous task. The API name in the POP gateway is QueryAsyncTaskResult.</p>
      * 
      * @param request QueryAsyncTaskResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5863,10 +5887,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>API name on the POP gateway: QueryAsyncTaskResult.</p>
+     * <p>The API name in the POP gateway is QueryAsyncTaskResult.</p>
      * 
      * <b>summary</b> : 
-     * <p>API name on the POP gateway: QueryAsyncTaskResult.</p>
+     * <p>Queries the result of an asynchronous task. The API name in the POP gateway is QueryAsyncTaskResult.</p>
      * 
      * @param request QueryAsyncTaskResultRequest
      * @return QueryAsyncTaskResultResponse
@@ -6379,12 +6403,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Scenarios</h2>
-     * <p>Size charts: Extracts size charts for apparel categories into text.
-     * Package weight and dimensions: Extracts package weight and dimension information from images.</p>
+     * <p>Size charts: extracts size charts of apparel categories into text.
+     * Package weight and dimensions: extracts package weight and dimension information from images.</p>
      * <h2>Feature description</h2>
-     * <p>The size chart extraction service is based on multimodal foundation models. It automatically recognizes size charts or package weight and dimension information in images and converts the information into structured text. Provide an image URL, and the system processes the request as an asynchronous task and returns the extracted structured data. You can specify the column names to be recognized, such as Size, Bust, and Length, by using ColumnNameList for precise targeted extraction. You can also control the output language by using the LanguageModel parameter. Valid values: cn for Chinese and en for English. If you do not specify this parameter, the original language is retained. This service is applicable to scenarios such as text conversion of size charts for apparel categories and batch structuring of package weight and dimension information for commodities.
-     * Core capabilities: Input an image URL and optional column name configurations to output the structured data of the size chart or package weight and dimensions in the image. The API operation uses the asynchronous task mode (background: true). After you submit the task, a task ID is returned. You must poll the task to obtain the final result. This mode is suitable for processing complex images or handling large-scale calls.</p>
-     * <h2>Example results</h2>
+     * <p>The size chart extraction service is based on multimodal large language models. It automatically recognizes size charts or package weight and dimension information in images and converts the information into structured text. You provide an image URL, and the system processes the request as an asynchronous task and returns the extracted structured data. You can specify the column names to be recognized, such as Size, Bust, and Length, by using ColumnNameList to achieve precise and targeted extraction. You can also control the output language by using the LanguageModel parameter. Valid values: cn for Chinese and en for English. If you do not specify this parameter, the original language is retained. This service is applicable to scenarios such as text conversion of size charts for apparel categories and batch structuring of package weight and dimension information for commodities.
+     * Core capabilities: You can input an image URL and optional column name configurations to output the structured data of the size chart or package weight and dimensions in the image. The API operation uses the asynchronous task mode (background: true). After you submit the task, a task ID is returned. You must poll the task to obtain the final result. This mode is suitable for processing complex images or handling a large number of calls.</p>
+     * <h2>Comparison</h2>
      * <table>
      * <thead>
      * <tr>
@@ -6399,90 +6423,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tbody></table>
      * <pre><code>      &quot;SizeChart&quot;: [
      *         {
-     *           &quot;尺码&quot;: {
+     *           &quot;Size&quot;: {
      *             &quot;value&quot;: &quot;S&quot;
      *           },
-     *           &quot;腰围&quot;: {
+     *           &quot;Waist&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 58
      *           },
-     *           &quot;裙长&quot;: {
+     *           &quot;Skirt length&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 81
      *           },
-     *           &quot;体重建议&quot;: {
+     *           &quot;Weight recommendation&quot;: {
      *             &quot;unit&quot;: &quot;kg&quot;,
      *             &quot;lower_value&quot;: 40,
      *             &quot;upper_value&quot;: 47.5
      *           }
      *         },
      *         {
-     *           &quot;尺码&quot;: {
+     *           &quot;Size&quot;: {
      *             &quot;value&quot;: &quot;M&quot;
      *           },
-     *           &quot;腰围&quot;: {
+     *           &quot;Waist&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 59
      *           },
-     *           &quot;裙长&quot;: {
+     *           &quot;Skirt length&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 82
      *           },
-     *           &quot;体重建议&quot;: {
+     *           &quot;Weight recommendation&quot;: {
      *             &quot;unit&quot;: &quot;kg&quot;,
      *             &quot;lower_value&quot;: 45,
      *             &quot;upper_value&quot;: 52.5
      *           }
      *         },
      *         {
-     *           &quot;尺码&quot;: {
+     *           &quot;Size&quot;: {
      *             &quot;value&quot;: &quot;L&quot;
      *           },
-     *           &quot;腰围&quot;: {
+     *           &quot;Waist&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 60
      *           },
-     *           &quot;裙长&quot;: {
+     *           &quot;Skirt length&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 83
      *           },
-     *           &quot;体重建议&quot;: {
+     *           &quot;Weight recommendation&quot;: {
      *             &quot;unit&quot;: &quot;kg&quot;,
      *             &quot;lower_value&quot;: 50,
      *             &quot;upper_value&quot;: 57.5
      *           }
      *         },
      *         {
-     *           &quot;尺码&quot;: {
+     *           &quot;Size&quot;: {
      *             &quot;value&quot;: &quot;XL&quot;
      *           },
-     *           &quot;腰围&quot;: {
+     *           &quot;Waist&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 61
      *           },
-     *           &quot;裙长&quot;: {
+     *           &quot;Skirt length&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 84
      *           },
-     *           &quot;体重建议&quot;: {
+     *           &quot;Weight recommendation&quot;: {
      *             &quot;unit&quot;: &quot;kg&quot;,
      *             &quot;lower_value&quot;: 55,
      *             &quot;upper_value&quot;: 62.5
      *           }
      *         },
      *         {
-     *           &quot;尺码&quot;: {
+     *           &quot;Size&quot;: {
      *             &quot;value&quot;: &quot;2XL&quot;
      *           },
-     *           &quot;腰围&quot;: {
+     *           &quot;Waist&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 62
      *           },
-     *           &quot;裙长&quot;: {
+     *           &quot;Skirt length&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 85
      *           },
-     *           &quot;体重建议&quot;: {
+     *           &quot;Weight recommendation&quot;: {
      *             &quot;unit&quot;: &quot;kg&quot;,
      *             &quot;lower_value&quot;: 60,
      *             &quot;upper_value&quot;: 67.5
@@ -6505,7 +6529,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>} |</p>
      * 
      * <b>summary</b> : 
-     * <p>Extracts structured information such as size charts and package weight and dimensions from images by using multimodal large models in asynchronous mode.</p>
+     * <p>Extracts structured information such as size charts and package weight and dimensions from images by using multimodal large language models in asynchronous mode.</p>
      * 
      * @param tmpReq SizeChartExtractAsyncRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6520,6 +6544,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.columnNameListShrink)) {
             query.put("ColumnNameList", request.columnNameListShrink);
         }
@@ -6552,12 +6580,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Scenarios</h2>
-     * <p>Size charts: Extracts size charts for apparel categories into text.
-     * Package weight and dimensions: Extracts package weight and dimension information from images.</p>
+     * <p>Size charts: extracts size charts of apparel categories into text.
+     * Package weight and dimensions: extracts package weight and dimension information from images.</p>
      * <h2>Feature description</h2>
-     * <p>The size chart extraction service is based on multimodal foundation models. It automatically recognizes size charts or package weight and dimension information in images and converts the information into structured text. Provide an image URL, and the system processes the request as an asynchronous task and returns the extracted structured data. You can specify the column names to be recognized, such as Size, Bust, and Length, by using ColumnNameList for precise targeted extraction. You can also control the output language by using the LanguageModel parameter. Valid values: cn for Chinese and en for English. If you do not specify this parameter, the original language is retained. This service is applicable to scenarios such as text conversion of size charts for apparel categories and batch structuring of package weight and dimension information for commodities.
-     * Core capabilities: Input an image URL and optional column name configurations to output the structured data of the size chart or package weight and dimensions in the image. The API operation uses the asynchronous task mode (background: true). After you submit the task, a task ID is returned. You must poll the task to obtain the final result. This mode is suitable for processing complex images or handling large-scale calls.</p>
-     * <h2>Example results</h2>
+     * <p>The size chart extraction service is based on multimodal large language models. It automatically recognizes size charts or package weight and dimension information in images and converts the information into structured text. You provide an image URL, and the system processes the request as an asynchronous task and returns the extracted structured data. You can specify the column names to be recognized, such as Size, Bust, and Length, by using ColumnNameList to achieve precise and targeted extraction. You can also control the output language by using the LanguageModel parameter. Valid values: cn for Chinese and en for English. If you do not specify this parameter, the original language is retained. This service is applicable to scenarios such as text conversion of size charts for apparel categories and batch structuring of package weight and dimension information for commodities.
+     * Core capabilities: You can input an image URL and optional column name configurations to output the structured data of the size chart or package weight and dimensions in the image. The API operation uses the asynchronous task mode (background: true). After you submit the task, a task ID is returned. You must poll the task to obtain the final result. This mode is suitable for processing complex images or handling a large number of calls.</p>
+     * <h2>Comparison</h2>
      * <table>
      * <thead>
      * <tr>
@@ -6572,90 +6600,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tbody></table>
      * <pre><code>      &quot;SizeChart&quot;: [
      *         {
-     *           &quot;尺码&quot;: {
+     *           &quot;Size&quot;: {
      *             &quot;value&quot;: &quot;S&quot;
      *           },
-     *           &quot;腰围&quot;: {
+     *           &quot;Waist&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 58
      *           },
-     *           &quot;裙长&quot;: {
+     *           &quot;Skirt length&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 81
      *           },
-     *           &quot;体重建议&quot;: {
+     *           &quot;Weight recommendation&quot;: {
      *             &quot;unit&quot;: &quot;kg&quot;,
      *             &quot;lower_value&quot;: 40,
      *             &quot;upper_value&quot;: 47.5
      *           }
      *         },
      *         {
-     *           &quot;尺码&quot;: {
+     *           &quot;Size&quot;: {
      *             &quot;value&quot;: &quot;M&quot;
      *           },
-     *           &quot;腰围&quot;: {
+     *           &quot;Waist&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 59
      *           },
-     *           &quot;裙长&quot;: {
+     *           &quot;Skirt length&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 82
      *           },
-     *           &quot;体重建议&quot;: {
+     *           &quot;Weight recommendation&quot;: {
      *             &quot;unit&quot;: &quot;kg&quot;,
      *             &quot;lower_value&quot;: 45,
      *             &quot;upper_value&quot;: 52.5
      *           }
      *         },
      *         {
-     *           &quot;尺码&quot;: {
+     *           &quot;Size&quot;: {
      *             &quot;value&quot;: &quot;L&quot;
      *           },
-     *           &quot;腰围&quot;: {
+     *           &quot;Waist&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 60
      *           },
-     *           &quot;裙长&quot;: {
+     *           &quot;Skirt length&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 83
      *           },
-     *           &quot;体重建议&quot;: {
+     *           &quot;Weight recommendation&quot;: {
      *             &quot;unit&quot;: &quot;kg&quot;,
      *             &quot;lower_value&quot;: 50,
      *             &quot;upper_value&quot;: 57.5
      *           }
      *         },
      *         {
-     *           &quot;尺码&quot;: {
+     *           &quot;Size&quot;: {
      *             &quot;value&quot;: &quot;XL&quot;
      *           },
-     *           &quot;腰围&quot;: {
+     *           &quot;Waist&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 61
      *           },
-     *           &quot;裙长&quot;: {
+     *           &quot;Skirt length&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 84
      *           },
-     *           &quot;体重建议&quot;: {
+     *           &quot;Weight recommendation&quot;: {
      *             &quot;unit&quot;: &quot;kg&quot;,
      *             &quot;lower_value&quot;: 55,
      *             &quot;upper_value&quot;: 62.5
      *           }
      *         },
      *         {
-     *           &quot;尺码&quot;: {
+     *           &quot;Size&quot;: {
      *             &quot;value&quot;: &quot;2XL&quot;
      *           },
-     *           &quot;腰围&quot;: {
+     *           &quot;Waist&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 62
      *           },
-     *           &quot;裙长&quot;: {
+     *           &quot;Skirt length&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 85
      *           },
-     *           &quot;体重建议&quot;: {
+     *           &quot;Weight recommendation&quot;: {
      *             &quot;unit&quot;: &quot;kg&quot;,
      *             &quot;lower_value&quot;: 60,
      *             &quot;upper_value&quot;: 67.5
@@ -6678,7 +6706,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>} |</p>
      * 
      * <b>summary</b> : 
-     * <p>Extracts structured information such as size charts and package weight and dimensions from images by using multimodal large models in asynchronous mode.</p>
+     * <p>Extracts structured information such as size charts and package weight and dimensions from images by using multimodal large language models in asynchronous mode.</p>
      * 
      * @param request SizeChartExtractAsyncRequest
      * @return SizeChartExtractAsyncResponse
@@ -7622,16 +7650,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Product introduction</h2>
      * <p>The video translation API translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising.
-     * The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the <code>TaskId</code> and poll the task status by calling the query API until the task is completed and the result is returned.</p>
+     * The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the TaskId and poll the task status by calling the query API until the task is completed and the result is returned.</p>
      * <h2>Scenarios</h2>
      * <ul>
-     * <li><p><strong>Cross-border e-commerce video localization</strong>: Translates the selling point text in product introduction videos into the language of the target market to facilitate promotion on overseas platforms.</p>
+     * <li><p><strong>Cross-border e-commerce video localization</strong>: Translates the speech subtitles and selling point text in product introduction videos into the language of the target market to promote products on overseas platforms.</p>
      * </li>
-     * <li><p><strong>International social media marketing</strong>: Localizes the on-screen text in videos for platforms such as TikTok, Instagram, and YouTube with one click to improve comprehension and conversion rates among overseas users.</p>
+     * <li><p><strong>International social media marketing</strong>: Localizes speech subtitles and on-screen text for platforms such as TikTok, Instagram, and YouTube with one click to improve comprehension and conversion rates among overseas users.</p>
      * </li>
-     * <li><p><strong>Global brand advertising</strong>: Automatically generates video versions in the languages of the target regions to reduce manual production costs.</p>
+     * <li><p><strong>Global brand advertising</strong>: Automatically generates video versions in the corresponding languages based on the delivery regions to reduce manual production costs.</p>
      * </li>
-     * <li><p><strong>Training and product instructions</strong>: Translates the on-screen text in training courses or product demo videos into multiple languages for global teams.</p>
+     * <li><p><strong>Training and product instructions</strong>: Translates the speech subtitles and on-screen text in training courses or product demo videos into multiple languages for global teams.</p>
      * </li>
      * </ul>
      * <h2>Features</h2>
@@ -7645,33 +7673,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </thead>
      * <tbody><tr>
      * <td>Speech subtitle translation</td>
-     * <td><code>speech</code></td>
-     * <td>Translates the video speech into target language dubbing. Original subtitles are not removed, and no new subtitles are added.</td>
+     * <td>speech</td>
+     * <td>Translates the video speech into target language dubbing. You can choose to erase the original subtitles only or replace them with translated subtitles. By default, the original subtitles are not processed and no new subtitles are added.</td>
      * </tr>
      * <tr>
      * <td>On-screen text translation</td>
-     * <td><code>visual</code></td>
-     * <td>Translates the embedded text (subtitles, selling point text, etc.) in the video frames and erases the original text. You can enable quality check for on-screen text processing by using the API.</td>
+     * <td>visual</td>
+     * <td>Translates the source language text in the video frames, or erases the on-screen text without translation. You can choose to erase brand logos.</td>
      * </tr>
      * <tr>
-     * <td>Speech subtitle translation (<code>speech</code>) generates target language dubbing based on the spoken content in the video and synthesizes it into the video. It does not remove original subtitles or add new subtitles. Original subtitles refer to the existing subtitles in the video frames that correspond to the spoken content.</td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * <tr>
-     * <td>On-screen text translation (<code>visual</code>) targets the recognizable original language text in the video frames, such as titles, product selling points, and descriptive text. It can be used independently without selecting speech subtitle translation first, and the text does not need to appear in the speech. Original subtitles within the processing scope may also be processed.</td>
+     * <td>Speech subtitle translation (speech) generates target language dubbing based on the spoken content in the video, processes the subtitles based on the original subtitle processing option, and synthesizes the final video. Original subtitles refer to the existing subtitles in the video frames that correspond to the spoken content. Replacing with translated subtitles erases the original subtitles first and then adds subtitles synchronized with the translated speech.</td>
      * <td></td>
      * <td></td>
      * </tr>
      * <tr>
-     * <td>When both <code>speech</code> and <code>visual</code> are selected, the speech subtitle translation is completed and the video is synthesized first. Then, on-screen text processing is performed on this video, retaining the translated dubbing and outputting a final video. The order of features in the array does not affect the execution order. Therefore, not processing original subtitles only means that no subtitles are removed or added during the speech subtitle phase. Subsequent on-screen text processing may still alter the original subtitles.</td>
+     * <td>On-screen text translation (visual) targets recognizable original video language text in the video frames, such as titles, product selling points, and descriptive text. It can be used independently without selecting speech subtitle translation first, and does not require the text to appear in the speech. Original subtitles within the processing scope may also be processed.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>When both speech and visual are selected, the speech subtitle translation is completed and the video is synthesized first, and then the on-screen text processing is performed on this video. The translated dubbing is retained, and a final video is output. The order of features in the array does not affect the execution order. Therefore, not processing original subtitles only means that no subtitles are erased or added during the speech subtitle phase, and subsequent on-screen text processing may still change the original subtitles. Subtitles that have been replaced with translated subtitles are retained during subsequent on-screen text processing.</td>
      * <td></td>
      * <td></td>
      * </tr>
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising. The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the task ID and poll the task status by calling the query API until the task is completed and the result is returned.</p>
+     * <p>Translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising. The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the TaskId and poll the task status by calling the query API until the task is completed and the result is returned.</p>
      * 
      * @param tmpReq VideoTranslationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7741,16 +7769,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Product introduction</h2>
      * <p>The video translation API translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising.
-     * The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the <code>TaskId</code> and poll the task status by calling the query API until the task is completed and the result is returned.</p>
+     * The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the TaskId and poll the task status by calling the query API until the task is completed and the result is returned.</p>
      * <h2>Scenarios</h2>
      * <ul>
-     * <li><p><strong>Cross-border e-commerce video localization</strong>: Translates the selling point text in product introduction videos into the language of the target market to facilitate promotion on overseas platforms.</p>
+     * <li><p><strong>Cross-border e-commerce video localization</strong>: Translates the speech subtitles and selling point text in product introduction videos into the language of the target market to promote products on overseas platforms.</p>
      * </li>
-     * <li><p><strong>International social media marketing</strong>: Localizes the on-screen text in videos for platforms such as TikTok, Instagram, and YouTube with one click to improve comprehension and conversion rates among overseas users.</p>
+     * <li><p><strong>International social media marketing</strong>: Localizes speech subtitles and on-screen text for platforms such as TikTok, Instagram, and YouTube with one click to improve comprehension and conversion rates among overseas users.</p>
      * </li>
-     * <li><p><strong>Global brand advertising</strong>: Automatically generates video versions in the languages of the target regions to reduce manual production costs.</p>
+     * <li><p><strong>Global brand advertising</strong>: Automatically generates video versions in the corresponding languages based on the delivery regions to reduce manual production costs.</p>
      * </li>
-     * <li><p><strong>Training and product instructions</strong>: Translates the on-screen text in training courses or product demo videos into multiple languages for global teams.</p>
+     * <li><p><strong>Training and product instructions</strong>: Translates the speech subtitles and on-screen text in training courses or product demo videos into multiple languages for global teams.</p>
      * </li>
      * </ul>
      * <h2>Features</h2>
@@ -7764,33 +7792,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </thead>
      * <tbody><tr>
      * <td>Speech subtitle translation</td>
-     * <td><code>speech</code></td>
-     * <td>Translates the video speech into target language dubbing. Original subtitles are not removed, and no new subtitles are added.</td>
+     * <td>speech</td>
+     * <td>Translates the video speech into target language dubbing. You can choose to erase the original subtitles only or replace them with translated subtitles. By default, the original subtitles are not processed and no new subtitles are added.</td>
      * </tr>
      * <tr>
      * <td>On-screen text translation</td>
-     * <td><code>visual</code></td>
-     * <td>Translates the embedded text (subtitles, selling point text, etc.) in the video frames and erases the original text. You can enable quality check for on-screen text processing by using the API.</td>
+     * <td>visual</td>
+     * <td>Translates the source language text in the video frames, or erases the on-screen text without translation. You can choose to erase brand logos.</td>
      * </tr>
      * <tr>
-     * <td>Speech subtitle translation (<code>speech</code>) generates target language dubbing based on the spoken content in the video and synthesizes it into the video. It does not remove original subtitles or add new subtitles. Original subtitles refer to the existing subtitles in the video frames that correspond to the spoken content.</td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * <tr>
-     * <td>On-screen text translation (<code>visual</code>) targets the recognizable original language text in the video frames, such as titles, product selling points, and descriptive text. It can be used independently without selecting speech subtitle translation first, and the text does not need to appear in the speech. Original subtitles within the processing scope may also be processed.</td>
+     * <td>Speech subtitle translation (speech) generates target language dubbing based on the spoken content in the video, processes the subtitles based on the original subtitle processing option, and synthesizes the final video. Original subtitles refer to the existing subtitles in the video frames that correspond to the spoken content. Replacing with translated subtitles erases the original subtitles first and then adds subtitles synchronized with the translated speech.</td>
      * <td></td>
      * <td></td>
      * </tr>
      * <tr>
-     * <td>When both <code>speech</code> and <code>visual</code> are selected, the speech subtitle translation is completed and the video is synthesized first. Then, on-screen text processing is performed on this video, retaining the translated dubbing and outputting a final video. The order of features in the array does not affect the execution order. Therefore, not processing original subtitles only means that no subtitles are removed or added during the speech subtitle phase. Subsequent on-screen text processing may still alter the original subtitles.</td>
+     * <td>On-screen text translation (visual) targets recognizable original video language text in the video frames, such as titles, product selling points, and descriptive text. It can be used independently without selecting speech subtitle translation first, and does not require the text to appear in the speech. Original subtitles within the processing scope may also be processed.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>When both speech and visual are selected, the speech subtitle translation is completed and the video is synthesized first, and then the on-screen text processing is performed on this video. The translated dubbing is retained, and a final video is output. The order of features in the array does not affect the execution order. Therefore, not processing original subtitles only means that no subtitles are erased or added during the speech subtitle phase, and subsequent on-screen text processing may still change the original subtitles. Subtitles that have been replaced with translated subtitles are retained during subsequent on-screen text processing.</td>
      * <td></td>
      * <td></td>
      * </tr>
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising. The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the task ID and poll the task status by calling the query API until the task is completed and the result is returned.</p>
+     * <p>Translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising. The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the TaskId and poll the task status by calling the query API until the task is completed and the result is returned.</p>
      * 
      * @param request VideoTranslationRequest
      * @return VideoTranslationResponse
