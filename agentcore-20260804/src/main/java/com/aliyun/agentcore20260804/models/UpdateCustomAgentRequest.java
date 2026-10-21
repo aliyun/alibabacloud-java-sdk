@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomAgentRequest extends TeaModel {
     /**
-     * <p>The update configuration for the custom agent. Provide at least one top-level field. Omitted top-level fields retain their original values. When providing a configuration object, you must specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole.</p>
+     * <p>The update configuration for the custom agent. Specify at least one top-level field. Omitted top-level fields retain their original values. When providing a configuration object, specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole.</p>
      */
     @NameInMap("body")
     public UpdateCustomAgentRequestBody body;
 
     /**
-     * <p>Idempotency is not currently guaranteed. Do not rely on this parameter to prevent duplicate requests.</p>
+     * <p>Idempotence is not currently guaranteed. Do not rely on this parameter to prevent duplicate requests.</p>
      * 
      * <strong>example:</strong>
      * <p>custom-agent-request-20261010-001</p>
@@ -42,7 +42,7 @@ public class UpdateCustomAgentRequest extends TeaModel {
 
     public static class UpdateCustomAgentRequestBodyAgenticFsMounts extends TeaModel {
         /**
-         * <p>The subdirectory under /mnt/agenticfs/ in the container. This field is required for each mount item and is validated by the backend. Mount targets cannot be duplicated or overlap in a parent-child relationship.</p>
+         * <p>The subdirectory under /mnt/agenticfs/ in the container. This field is required for each mount item. Mount targets must not be duplicated or form parent-child overrides.</p>
          * 
          * <strong>example:</strong>
          * <p>/mnt/agenticfs/data</p>
@@ -51,7 +51,7 @@ public class UpdateCustomAgentRequest extends TeaModel {
         public String mountPath;
 
         /**
-         * <p>The existing non-empty relative directory under the access point. This field is required for each mount item and is validated by the backend. Root directories, absolute paths, and parent directory traversals are not allowed.</p>
+         * <p>The existing non-empty relative directory under the access point. This field is required for each mount item. Root directories, absolute paths, and parent directory traversals are not allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>workspace/data</p>
@@ -60,7 +60,7 @@ public class UpdateCustomAgentRequest extends TeaModel {
         public String path;
 
         /**
-         * <p>Specifies whether the mount is read-only. A value of true indicates read-only, and false indicates read/write. If omitted, the default value is false.</p>
+         * <p>Specifies whether the mount is read-only. A value of true indicates read-only, and false indicates read and write. If omitted, the default value is false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -69,7 +69,7 @@ public class UpdateCustomAgentRequest extends TeaModel {
         public Boolean readOnly;
 
         /**
-         * <p>The domain name of the access point. This field is required for each mount item and is validated by the backend. Use the DomainName value from the response of the NAS ListAccessPoints operation. Do not include the protocol, port, or path.</p>
+         * <p>The domain name of the access point. This field is required for each mount item. Use the DomainName value from the response of the NAS ListAccessPoints operation. Do not include the protocol, port, or path.</p>
          * 
          * <strong>example:</strong>
          * <p>ap-0123456789abcdef0.0123456789-vlm36.cn-hangzhou.nas.aliyuncs.com</p>
@@ -180,7 +180,7 @@ public class UpdateCustomAgentRequest extends TeaModel {
 
     public static class UpdateCustomAgentRequestBodyArtifactContainer extends TeaModel {
         /**
-         * <p>The optional executable program and startup parameters. If specified, this must be a non-empty string. When updating the artifact, omitting this field uses the default startup method of the image. To retain the original custom startup command, provide this field together.</p>
+         * <p>The optional executable program and startup parameters. If specified, this must be a non-empty string. When updating the artifact, omitting this field uses the default startup method of the image. To retain the original custom startup command, provide this field as well.</p>
          * 
          * <strong>example:</strong>
          * <p>python app.py</p>
@@ -229,7 +229,7 @@ public class UpdateCustomAgentRequest extends TeaModel {
         public String tag;
 
         /**
-         * <p>The image source type. Currently, only acr is supported, which indicates Alibaba Cloud Container Registry (ACR).</p>
+         * <p>The source type of the image. Currently, only acr is supported, which indicates Alibaba Cloud Container Registry (ACR).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -307,7 +307,7 @@ public class UpdateCustomAgentRequest extends TeaModel {
         public UpdateCustomAgentRequestBodyArtifactContainer container;
 
         /**
-         * <p>The TCP port that the agent service listens on. Valid values: 1 to 65535.</p>
+         * <p>The TCP port listened by the agent service. Valid values: 1 to 65535.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -442,7 +442,7 @@ public class UpdateCustomAgentRequest extends TeaModel {
         public String path;
 
         /**
-         * <p>The port accessed by the health check. This field is required when configuring a health check. Valid values: 1 to 65535.</p>
+         * <p>The port accessed for health checks. This field is required when configuring a health check. Valid values: 1 to 65535.</p>
          * 
          * <strong>example:</strong>
          * <p>8080</p>
@@ -460,7 +460,7 @@ public class UpdateCustomAgentRequest extends TeaModel {
         public Integer timeoutSeconds;
 
         /**
-         * <p>The number of consecutive health check failures required to mark the agent as unhealthy. This must be a positive integer. If omitted, the default value is 3.</p>
+         * <p>The number of consecutive health check failures before the instance is considered unhealthy. This must be a positive integer. If omitted, the default value is 3.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -667,9 +667,31 @@ public class UpdateCustomAgentRequest extends TeaModel {
 
     }
 
+    public static class UpdateCustomAgentRequestBodyObservability extends TeaModel {
+        /**
+         * <p>Specifies whether to enable agent observability. Default value: true. If set to false, the platform Python probe is not loaded at runtime, and you must collect observability data yourself.</p>
+         */
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        public static UpdateCustomAgentRequestBodyObservability build(java.util.Map<String, ?> map) throws Exception {
+            UpdateCustomAgentRequestBodyObservability self = new UpdateCustomAgentRequestBodyObservability();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateCustomAgentRequestBodyObservability setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+    }
+
     public static class UpdateCustomAgentRequestBodyOssMounts extends TeaModel {
         /**
-         * <p>The name of the OSS bucket. This field is required for each mount item. The length is 3 to 63 characters. It can contain only lowercase letters, digits, and hyphens, and cannot start or end with a hyphen.</p>
+         * <p>The name of the OSS bucket. This parameter is required for each mount item. The name must be 3 to 63 characters in length and can contain only lowercase letters, digits, and hyphens. It cannot start or end with a hyphen.</p>
          * 
          * <strong>example:</strong>
          * <p>my-agent-data</p>
@@ -678,7 +700,7 @@ public class UpdateCustomAgentRequest extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The subdirectory under /mnt/oss/ in the container. This field is required for each mount item. Mount targets cannot be duplicated or overlap in a parent-child relationship.</p>
+         * <p>The subdirectory under /mnt/oss/ in the container. This parameter is required for each mount item. Mount targets must not be duplicated or form parent-child overlaps.</p>
          * 
          * <strong>example:</strong>
          * <p>/mnt/oss/train</p>
@@ -687,7 +709,7 @@ public class UpdateCustomAgentRequest extends TeaModel {
         public String mountPath;
 
         /**
-         * <p>The non-empty object directory prefix in the bucket, such as datasets/train. Leading and trailing forward slashes (/) are removed. Root directories are not supported. Do not use parent directory traversals.</p>
+         * <p>The non-empty object directory prefix in the bucket, such as datasets/train. Leading and trailing slashes are removed. The root directory is not supported. Do not use parent directory traversal.</p>
          * 
          * <strong>example:</strong>
          * <p>datasets/train</p>
@@ -696,7 +718,7 @@ public class UpdateCustomAgentRequest extends TeaModel {
         public String path;
 
         /**
-         * <p>Specifies whether the mount is read-only. A value of true indicates read-only, and false indicates read/write. If omitted, the default value is false.</p>
+         * <p>Specifies whether the mount is read-only. A value of true indicates read-only, and false indicates read and write. If omitted, the default value is false.</p>
          */
         @NameInMap("readOnly")
         public Boolean readOnly;
@@ -742,7 +764,7 @@ public class UpdateCustomAgentRequest extends TeaModel {
 
     public static class UpdateCustomAgentRequestBodyProtocolPaths extends TeaModel {
         /**
-         * <p>The description of the current API path.</p>
+         * <p>The usage description of the current API path.</p>
          * 
          * <strong>example:</strong>
          * <p>AG-UI conversation API</p>
@@ -751,7 +773,7 @@ public class UpdateCustomAgentRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The non-empty API path corresponding to the current protocol.</p>
+         * <p>The non-empty API path for the current protocol.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -791,7 +813,7 @@ public class UpdateCustomAgentRequest extends TeaModel {
         public java.util.Map<String, String> headers;
 
         /**
-         * <p>The list of API paths corresponding to the current protocol.</p>
+         * <p>The list of API paths for the current protocol.</p>
          */
         @NameInMap("paths")
         public java.util.List<UpdateCustomAgentRequestBodyProtocolPaths> paths;
@@ -875,14 +897,19 @@ public class UpdateCustomAgentRequest extends TeaModel {
 
     public static class UpdateCustomAgentRequestBodyRuntimeHpa extends TeaModel {
         /**
-         * <p>Specifies whether to enable elastic scaling. A value of true indicates that elastic scaling is enabled. A value of false indicates that elastic scaling is disabled. If this field is omitted when runtime is provided, the default value is false.</p>
+         * <p>Specifies whether to enable elastic scaling. Valid values:</p>
+         * <ul>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.
+         * When runtime is provided, if this field is omitted, the default value is false.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
 
         /**
-         * <p>The maximum number of concurrent sessions for a single runtime instance. Valid values: 1 to 100. If this field is omitted when runtime is provided, the default value 100 is used.</p>
+         * <p>The maximum number of concurrent sessions for a single runtime instance. Valid values: 1 to 100. When runtime is provided, if this field is omitted, the default value is 100.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -891,7 +918,7 @@ public class UpdateCustomAgentRequest extends TeaModel {
         public Integer maxConcurrentSessionsPerSandbox;
 
         /**
-         * <p>The maximum number of runtime instances. Valid values: 1 to 100. The value cannot be less than minSandboxCount. If this field is omitted when runtime is provided, the default value 10 is used.</p>
+         * <p>The maximum number of runtime instances. Valid values: 1 to 100. The value cannot be less than minSandboxCount. When runtime is provided, if this field is omitted, the default value is 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -900,7 +927,7 @@ public class UpdateCustomAgentRequest extends TeaModel {
         public Integer maxSandboxCount;
 
         /**
-         * <p>The minimum number of runtime instances. Valid values: 1 to 100. The value cannot be greater than maxSandboxCount. If this field is omitted when runtime is provided, the default value 1 is used.</p>
+         * <p>The minimum number of runtime instances. Valid values: 1 to 100. The value cannot be greater than maxSandboxCount. When runtime is provided, if this field is omitted, the default value is 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -909,7 +936,7 @@ public class UpdateCustomAgentRequest extends TeaModel {
         public Integer minSandboxCount;
 
         /**
-         * <p>The session idle timeout in seconds. Valid values: 60 to 86400. If this field is omitted when runtime is provided, the default value 600 is used.</p>
+         * <p>The session idle timeout in seconds. Valid values: 60 to 86400. When runtime is provided, if this field is omitted, the default value is 600.</p>
          * 
          * <strong>example:</strong>
          * <p>600</p>
@@ -966,7 +993,7 @@ public class UpdateCustomAgentRequest extends TeaModel {
 
     public static class UpdateCustomAgentRequestBodyRuntimeSessionPolicy extends TeaModel {
         /**
-         * <p>The name of the HTTP request header used by the session policy. This field is required when type is ISOLATED_HEADER_FIELD and must be a valid HTTP request header name. Omit this field for other policies.</p>
+         * <p>The name of the HTTP request header used by the session policy. This parameter is required when type is ISOLATED_HEADER_FIELD and must be a valid HTTP request header name. Omit this parameter for other policies.</p>
          * 
          * <strong>example:</strong>
          * <p>X-Session-Id</p>
@@ -978,8 +1005,8 @@ public class UpdateCustomAgentRequest extends TeaModel {
          * <p>The session policy type. Valid values:</p>
          * <ul>
          * <li>AFFINITY: Session affinity.</li>
-         * <li>ISOLATED_HEADER_FIELD: Associates sessions by using the request header specified by headerName.</li>
-         * <li>ISOLATED_COOKIE: Cookie-based session option. This value is not recommended.</li>
+         * <li>ISOLATED_HEADER_FIELD: Associates sessions by using the request header specified in headerName.</li>
+         * <li>ISOLATED_COOKIE: Cookie-based session option. Not recommended.</li>
          * <li>DISABLED: Compatibility option. The response returns AFFINITY.</li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -1022,13 +1049,13 @@ public class UpdateCustomAgentRequest extends TeaModel {
         public UpdateCustomAgentRequestBodyRuntimeCompute compute;
 
         /**
-         * <p>The optional elastic policy. When runtime is provided, if hpa or its fields are omitted, the default values are used: enabled is false, the minimum number of instances is 1, the maximum number of instances is 10, the maximum number of concurrent sessions per instance is 100, and the session idle timeout is 600 seconds. To retain the original policy during an update, you must provide the complete hpa configuration.</p>
+         * <p>The optional elastic policy. When runtime is provided, if hpa or its fields are omitted, default values are used: enabled is false, the minimum number of instances is 1, the maximum number of instances is 10, the maximum number of concurrent sessions per instance is 100, and the session idle timeout is 600 seconds. To retain the original policy during an update, provide the complete hpa configuration.</p>
          */
         @NameInMap("hpa")
         public UpdateCustomAgentRequestBodyRuntimeHpa hpa;
 
         /**
-         * <p>The session policy configuration, which is used to set the session association method for requests.</p>
+         * <p>The session policy configuration used to set the session association method for requests.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("sessionPolicy")
@@ -1067,13 +1094,13 @@ public class UpdateCustomAgentRequest extends TeaModel {
 
     public static class UpdateCustomAgentRequestBody extends TeaModel {
         /**
-         * <p>The list of additional AgenticFS mounts. The total number of AgenticFS and OSS mounts cannot exceed 10. If you omit this field or pass an empty array [] during creation, no additional mounts are configured. During an update, omitting this field retains the original value, and passing an empty array [] clears the list. You cannot pass null.</p>
+         * <p>The list of additional AgenticFS mounts. The total number of AgenticFS and OSS mounts cannot exceed 10. During creation, omitting this field or passing an empty array [] indicates no additional mounts. During an update, omitting this field retains the original value, and passing an empty array [] clears the list. You cannot pass null.</p>
          */
         @NameInMap("agenticFsMounts")
         public java.util.List<UpdateCustomAgentRequestBodyAgenticFsMounts> agenticFsMounts;
 
         /**
-         * <p>The deployment artifact configuration. Currently, only ACR container images are supported. Specify the container field and the service listening port field. Omit the code field. During an update, you must specify all required fields for port and container.</p>
+         * <p>The deployment artifact configuration. Currently, only ACR container images are supported. Specify the container field and the service listening port field. Omit the code field. During an update, you must specify the port field and all required fields of the container object.</p>
          */
         @NameInMap("artifact")
         public UpdateCustomAgentRequestBodyArtifact artifact;
@@ -1106,7 +1133,7 @@ public class UpdateCustomAgentRequest extends TeaModel {
         public UpdateCustomAgentRequestBodyLogging logging;
 
         /**
-         * <p>The name of the custom agent. The length is 1 to 128 characters after leading and trailing whitespaces are removed. The name must be unique within the same workspace. If omitted, the original value is retained. You cannot pass null or a blank name.</p>
+         * <p>The name of the custom agent. The length is 1 to 128 characters after leading and trailing whitespaces are removed. The name must be unique within the same workspace. If omitted, the original value is retained. You cannot pass null or an empty name.</p>
          * 
          * <strong>example:</strong>
          * <p>my-custom-agent</p>
@@ -1115,19 +1142,25 @@ public class UpdateCustomAgentRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The network access configuration for the agent. When providing this object, omitted access items are treated as allowed. The actual accessible scope is still restricted by the workspace network configuration. To retain the original restrictions during an update, specify both accessInternet and accessVpc.</p>
+         * <p>The network access configuration for the agent. When providing this object, omitted access items are treated as allowed. The actual accessible scope is still subject to the workspace network configuration. To retain the original restrictions during an update, specify both accessInternet and accessVpc.</p>
          */
         @NameInMap("network")
         public UpdateCustomAgentRequestBodyNetwork network;
 
         /**
-         * <p>The list of OSS mounts. The total number of OSS and AgenticFS mounts cannot exceed 10. For each item, you must specify bucketName, path, and mountPath. Mount targets cannot be duplicated or overlap with each other. This list is replaced as a whole during an update. Pass an empty array [] to clear the list.</p>
+         * <p>The observability configuration for high-code agents.</p>
+         */
+        @NameInMap("observability")
+        public UpdateCustomAgentRequestBodyObservability observability;
+
+        /**
+         * <p>The OSS mount list. A maximum of 10 items in total with agenticFsMounts. Each item must include bucketName, path, and mountPath. Mount targets must not be duplicated or overlap. During an update, this list is replaced entirely. Pass an empty array to clear all mounts.</p>
          */
         @NameInMap("ossMounts")
         public java.util.List<UpdateCustomAgentRequestBodyOssMounts> ossMounts;
 
         /**
-         * <p>The list of invocation protocols supported by the agent. Each item includes the protocol type, and optional paths and request headers. The entire list is replaced during an update.</p>
+         * <p>The list of invocation protocols supported by the agent. Each item includes the protocol type and optional paths and request headers. During an update, this list is replaced entirely.</p>
          */
         @NameInMap("protocol")
         public java.util.List<UpdateCustomAgentRequestBodyProtocol> protocol;
@@ -1142,10 +1175,19 @@ public class UpdateCustomAgentRequest extends TeaModel {
         public String roleArn;
 
         /**
-         * <p>The runtime configuration. When this object is provided, both compute and sessionPolicy must be present. To retain the original elastic policy, you must also provide the complete hpa configuration. Omitting the top-level runtime field retains the original configuration.</p>
+         * <p>The runtime configuration. When this object is provided, compute and sessionPolicy must be provided together. To retain the original elastic policy, provide the complete hpa configuration. Omitting the top-level runtime field retains the original configuration.</p>
          */
         @NameInMap("runtime")
         public UpdateCustomAgentRequestBodyRuntime runtime;
+
+        /**
+         * <p>If not specified during an update, the original value is retained. Explicitly set to true or false. The system does not automatically default to false. New API contracts reject null and invalid types. Existing compatibility endpoints are processed according to migration conventions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("useImageCache")
+        public Boolean useImageCache;
 
         public static UpdateCustomAgentRequestBody build(java.util.Map<String, ?> map) throws Exception {
             UpdateCustomAgentRequestBody self = new UpdateCustomAgentRequestBody();
@@ -1216,6 +1258,14 @@ public class UpdateCustomAgentRequest extends TeaModel {
             return this.network;
         }
 
+        public UpdateCustomAgentRequestBody setObservability(UpdateCustomAgentRequestBodyObservability observability) {
+            this.observability = observability;
+            return this;
+        }
+        public UpdateCustomAgentRequestBodyObservability getObservability() {
+            return this.observability;
+        }
+
         public UpdateCustomAgentRequestBody setOssMounts(java.util.List<UpdateCustomAgentRequestBodyOssMounts> ossMounts) {
             this.ossMounts = ossMounts;
             return this;
@@ -1246,6 +1296,14 @@ public class UpdateCustomAgentRequest extends TeaModel {
         }
         public UpdateCustomAgentRequestBodyRuntime getRuntime() {
             return this.runtime;
+        }
+
+        public UpdateCustomAgentRequestBody setUseImageCache(Boolean useImageCache) {
+            this.useImageCache = useImageCache;
+            return this;
+        }
+        public Boolean getUseImageCache() {
+            return this.useImageCache;
         }
 
     }

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomAgentShrinkRequest extends TeaModel {
     /**
-     * <p>The update configuration for the custom agent. Provide at least one top-level field. Omitted top-level fields retain their original values. When providing a configuration object, you must specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole.</p>
+     * <p>The update configuration for the custom agent. Specify at least one top-level field. Omitted top-level fields retain their original values. When providing a configuration object, specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole.</p>
      */
     @NameInMap("body")
     public String bodyShrink;
 
     /**
-     * <p>Idempotency is not currently guaranteed. Do not rely on this parameter to prevent duplicate requests.</p>
+     * <p>Idempotence is not currently guaranteed. Do not rely on this parameter to prevent duplicate requests.</p>
      * 
      * <strong>example:</strong>
      * <p>custom-agent-request-20261010-001</p>

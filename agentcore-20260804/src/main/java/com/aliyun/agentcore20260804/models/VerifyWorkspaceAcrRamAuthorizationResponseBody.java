@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class VerifyWorkspaceAcrRamAuthorizationResponseBody extends TeaModel {
     /**
      * <p>The business status code.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -15,12 +16,14 @@ public class VerifyWorkspaceAcrRamAuthorizationResponseBody extends TeaModel {
 
     /**
      * <p>The response data.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("data")
     public VerifyWorkspaceAcrRamAuthorizationResponseBodyData data;
 
     /**
      * <p>The HTTP status code.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -30,6 +33,7 @@ public class VerifyWorkspaceAcrRamAuthorizationResponseBody extends TeaModel {
 
     /**
      * <p>The response message.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -39,6 +43,7 @@ public class VerifyWorkspaceAcrRamAuthorizationResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>12345678-1234-1234-1234-123456789012</p>
@@ -48,6 +53,7 @@ public class VerifyWorkspaceAcrRamAuthorizationResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -111,6 +117,7 @@ public class VerifyWorkspaceAcrRamAuthorizationResponseBody extends TeaModel {
     public static class VerifyWorkspaceAcrRamAuthorizationResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the ACR Enterprise instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-1234567890abcdef</p>
@@ -120,6 +127,7 @@ public class VerifyWorkspaceAcrRamAuthorizationResponseBody extends TeaModel {
 
         /**
          * <p>The current attachment status of the policy for the target repository.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>UNAUTHORIZED</p>
@@ -128,7 +136,8 @@ public class VerifyWorkspaceAcrRamAuthorizationResponseBody extends TeaModel {
         public String authorizationStatus;
 
         /**
-         * <p>The access prerequisite status. This does not indicate that the secret is ready.</p>
+         * <p>The access prerequisite status, which does not indicate Secret Ready.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ELIGIBLE</p>
@@ -137,25 +146,32 @@ public class VerifyWorkspaceAcrRamAuthorizationResponseBody extends TeaModel {
         public String eligibilityStatus;
 
         /**
-         * <p>The stable reason code for unauthorized or unmet conditions. This field is omitted when no reason exists.</p>
+         * <p>The stable reason code for unauthorized or unmet conditions. This field is omitted if no reason exists.</p>
          * 
          * <strong>example:</strong>
          * <p>AcrRamUnauthorized</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
          */
         @NameInMap("reasonCode")
         public String reasonCode;
 
         /**
-         * <p>The user-readable reason message. This field is omitted when no reason exists.</p>
+         * <p>The user-readable reason. This field is omitted if no reason exists.</p>
          * 
          * <strong>example:</strong>
          * <p>Authorize the Workspace role for this ACR instance.</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
          */
         @NameInMap("reasonMessage")
         public String reasonMessage;
 
         /**
          * <p>The name of the shared role selected by the backend. This field is not editable on the frontend.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>AliyunAgentCoreWorkspace-ws-1234567890abcdef12345</p>
@@ -165,6 +181,7 @@ public class VerifyWorkspaceAcrRamAuthorizationResponseBody extends TeaModel {
 
         /**
          * <p>The source of the shared role. This does not indicate that authorization is complete.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>WORKSPACE_SHARED</p>
@@ -174,6 +191,7 @@ public class VerifyWorkspaceAcrRamAuthorizationResponseBody extends TeaModel {
 
         /**
          * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ws-1234567890abcdef12345</p>

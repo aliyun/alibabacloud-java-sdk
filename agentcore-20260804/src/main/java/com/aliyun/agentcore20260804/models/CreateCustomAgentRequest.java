@@ -11,7 +11,7 @@ public class CreateCustomAgentRequest extends TeaModel {
     public CreateCustomAgentRequestBody body;
 
     /**
-     * <p>Idempotency is not currently guaranteed. Do not rely on this parameter to prevent duplicate requests.</p>
+     * <p>Idempotence is not currently guaranteed. Do not rely on this parameter to prevent duplicate requests.</p>
      * 
      * <strong>example:</strong>
      * <p>custom-agent-request-20261010-001</p>
@@ -42,7 +42,7 @@ public class CreateCustomAgentRequest extends TeaModel {
 
     public static class CreateCustomAgentRequestBodyAgenticFsMounts extends TeaModel {
         /**
-         * <p>The subdirectory under /mnt/agenticfs/ in the container. This parameter is required for each mount item. Mount targets must not be duplicated or overlap in a parent-child relationship.</p>
+         * <p>The subdirectory under /mnt/agenticfs/ in the container. This parameter is required for each mount item. Mount targets must not be duplicated or overlap in parent-child relationships.</p>
          * 
          * <strong>example:</strong>
          * <p>/mnt/agenticfs/data</p>
@@ -60,7 +60,7 @@ public class CreateCustomAgentRequest extends TeaModel {
         public String path;
 
         /**
-         * <p>Specifies whether the mount is read-only. A value of true indicates read-only, and false indicates read and write. If omitted, the default value is false.</p>
+         * <p>Specifies whether the mount is read-only. A value of true indicates read-only, and a value of false indicates read and write. If this parameter is omitted, the default value is false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -69,7 +69,7 @@ public class CreateCustomAgentRequest extends TeaModel {
         public Boolean readOnly;
 
         /**
-         * <p>The access point domain name. This parameter is required for each mount item. Use the DomainName from the NAS ListAccessPoints response. Do not include the protocol, port, or path.</p>
+         * <p>The domain name of the access point. This parameter is required for each mount item. Use the DomainName from the NAS ListAccessPoints response. Do not include the protocol, port, or path.</p>
          * 
          * <strong>example:</strong>
          * <p>ap-0123456789abcdef0.0123456789-vlm36.cn-hangzhou.nas.aliyuncs.com</p>
@@ -118,7 +118,7 @@ public class CreateCustomAgentRequest extends TeaModel {
 
     public static class CreateCustomAgentRequestBodyArtifactCode extends TeaModel {
         /**
-         * <p>The startup entry point of the code package. Code package deployment is not currently supported. Omit this parameter.</p>
+         * <p>The startup entry point for the code package. Code package deployment is not currently supported. Omit this parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +128,7 @@ public class CreateCustomAgentRequest extends TeaModel {
         public String entrypoint;
 
         /**
-         * <p>The language runtime identifier of the code package. Code package deployment is not currently supported. Omit this parameter.</p>
+         * <p>The language runtime identifier for the code package. Code package deployment is not currently supported. Omit this parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -424,7 +424,7 @@ public class CreateCustomAgentRequest extends TeaModel {
         public Integer healthyThreshold;
 
         /**
-         * <p>The interval between two health checks, in seconds. It must be a positive integer. If omitted, the default value is 10.</p>
+         * <p>The interval between two health checks, in seconds. It must be a positive integer. If this parameter is omitted, the default value is 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -433,7 +433,7 @@ public class CreateCustomAgentRequest extends TeaModel {
         public Integer intervalSeconds;
 
         /**
-         * <p>The HTTP health check path. It must start with a forward slash (/). If omitted, the default value is /healthz.</p>
+         * <p>The HTTP health check path. It must start with a forward slash (/). If this parameter is omitted, the default value is /healthz.</p>
          * 
          * <strong>example:</strong>
          * <p>/healthz</p>
@@ -451,7 +451,7 @@ public class CreateCustomAgentRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The timeout period for a single health check, in seconds. It must be a positive integer and less than intervalSeconds. If omitted, the default value is 2.</p>
+         * <p>The timeout period for a single health check, in seconds. It must be a positive integer and less than intervalSeconds. If this parameter is omitted, the default value is 2.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -460,7 +460,7 @@ public class CreateCustomAgentRequest extends TeaModel {
         public Integer timeoutSeconds;
 
         /**
-         * <p>The number of consecutive health check failures required to mark the instance as unhealthy. It must be a positive integer. If omitted, the default value is 3.</p>
+         * <p>The number of consecutive health check failures required to mark the agent as unhealthy. It must be a positive integer. If this parameter is omitted, the default value is 3.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -525,7 +525,7 @@ public class CreateCustomAgentRequest extends TeaModel {
 
     public static class CreateCustomAgentRequestBodyLoggingSls extends TeaModel {
         /**
-         * <p>The name of the Simple Log Service Logstore that receives the agent logs.</p>
+         * <p>The name of the Simple Log Service Logstore that receives agent logs.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-runtime</p>
@@ -534,7 +534,7 @@ public class CreateCustomAgentRequest extends TeaModel {
         public String logstore;
 
         /**
-         * <p>The name of the Simple Log Service project that receives the agent logs.</p>
+         * <p>The name of the Simple Log Service project that receives agent logs.</p>
          * 
          * <strong>example:</strong>
          * <p>my-agent-logs</p>
@@ -589,7 +589,7 @@ public class CreateCustomAgentRequest extends TeaModel {
 
     public static class CreateCustomAgentRequestBodyNetworkAccessInternet extends TeaModel {
         /**
-         * <p>Specifies whether to allow the agent to access the Internet. A Boolean value is required when configuring accessInternet. For this to take effect, the workspace must also allow Internet access.</p>
+         * <p>Specifies whether to allow the agent to access the Internet. A Boolean value must be provided when configuring accessInternet. For this to take effect, the workspace must also allow Internet access.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
@@ -611,7 +611,7 @@ public class CreateCustomAgentRequest extends TeaModel {
 
     public static class CreateCustomAgentRequestBodyNetworkAccessVpc extends TeaModel {
         /**
-         * <p>Specifies whether to allow the agent to access the user VPC configured for the workspace. A Boolean value is required when configuring accessVpc. For this to take effect, the workspace must also allow VPC access.</p>
+         * <p>Specifies whether to allow the agent to access the user VPC configured for the workspace. A Boolean value must be provided when configuring accessVpc. For this to take effect, the workspace must also allow VPC access.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
@@ -667,6 +667,28 @@ public class CreateCustomAgentRequest extends TeaModel {
 
     }
 
+    public static class CreateCustomAgentRequestBodyObservability extends TeaModel {
+        /**
+         * <p>Default value: true. If set to false, the platform Python probe is not loaded at runtime, and you must collect observability data yourself.</p>
+         */
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        public static CreateCustomAgentRequestBodyObservability build(java.util.Map<String, ?> map) throws Exception {
+            CreateCustomAgentRequestBodyObservability self = new CreateCustomAgentRequestBodyObservability();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateCustomAgentRequestBodyObservability setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+    }
+
     public static class CreateCustomAgentRequestBodyOssMounts extends TeaModel {
         /**
          * <p>The name of the OSS bucket. This parameter is required for each mount item. The name must be 3 to 63 characters in length and can contain only lowercase letters, digits, and hyphens. It cannot start or end with a hyphen.</p>
@@ -678,7 +700,7 @@ public class CreateCustomAgentRequest extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The subdirectory under /mnt/oss/ in the container. This parameter is required for each mount item. Mount targets must not be duplicated or overlap in a parent-child relationship.</p>
+         * <p>The subdirectory under /mnt/oss/ in the container. This parameter is required for each mount item. Mount targets must not be duplicated or form parent-child overlaps.</p>
          * 
          * <strong>example:</strong>
          * <p>/mnt/oss/train</p>
@@ -687,7 +709,7 @@ public class CreateCustomAgentRequest extends TeaModel {
         public String mountPath;
 
         /**
-         * <p>The non-empty object directory prefix in the bucket, such as datasets/train. Leading and trailing forward slashes (/) are removed. Root directories are not supported. Do not use parent directory references.</p>
+         * <p>The non-empty object directory prefix in the bucket, such as datasets/train. Leading and trailing slashes (/) are removed. The root directory is not supported. Do not use parent directory traversal.</p>
          * 
          * <strong>example:</strong>
          * <p>datasets/train</p>
@@ -696,7 +718,7 @@ public class CreateCustomAgentRequest extends TeaModel {
         public String path;
 
         /**
-         * <p>Specifies whether the mount is read-only. A value of true indicates read-only, and false indicates read and write. If omitted, the default value is false.</p>
+         * <p>Specifies whether the mount is read-only. A value of true indicates read-only, and a value of false indicates read and write. If this parameter is omitted, the default value is false.</p>
          */
         @NameInMap("readOnly")
         public Boolean readOnly;
@@ -742,7 +764,7 @@ public class CreateCustomAgentRequest extends TeaModel {
 
     public static class CreateCustomAgentRequestBodyProtocolPaths extends TeaModel {
         /**
-         * <p>The usage description of the current API path.</p>
+         * <p>The purpose description of the current API path.</p>
          * 
          * <strong>example:</strong>
          * <p>AG-UI conversation API</p>
@@ -865,14 +887,14 @@ public class CreateCustomAgentRequest extends TeaModel {
 
     public static class CreateCustomAgentRequestBodyRuntimeHpa extends TeaModel {
         /**
-         * <p>Specifies whether to enable elastic scaling. A value of true indicates that elastic scaling is enabled. A value of false indicates that elastic scaling is disabled. When runtime is provided, if this field is omitted, the default value is false.</p>
+         * <p>Specifies whether to enable elastic scaling. A value of true indicates that elastic scaling is enabled. A value of false indicates that elastic scaling is disabled. When runtime is provided, if this field is omitted, the default value false is used.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
 
         /**
-         * <p>The maximum number of concurrent sessions for a single runtime instance. Valid values: 1 to 100. When runtime is provided, if this field is omitted, the default value is 100.</p>
+         * <p>The maximum number of concurrent sessions for a single runtime instance. Valid values: 1 to 100. When runtime is provided, if this field is omitted, the default value 100 is used.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -881,7 +903,7 @@ public class CreateCustomAgentRequest extends TeaModel {
         public Integer maxConcurrentSessionsPerSandbox;
 
         /**
-         * <p>The maximum number of runtime instances. Valid values: 1 to 100. The value cannot be less than minSandboxCount. When runtime is provided, if this field is omitted, the default value is 10.</p>
+         * <p>The maximum number of runtime instances. Valid values: 1 to 100. The value cannot be less than minSandboxCount. When runtime is provided, if this field is omitted, the default value 10 is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -890,7 +912,7 @@ public class CreateCustomAgentRequest extends TeaModel {
         public Integer maxSandboxCount;
 
         /**
-         * <p>The minimum number of runtime instances. Valid values: 1 to 100. The value cannot be greater than maxSandboxCount. When runtime is provided, if this field is omitted, the default value is 1.</p>
+         * <p>The minimum number of runtime instances. Valid values: 1 to 100. The value cannot be greater than maxSandboxCount. When runtime is provided, if this field is omitted, the default value 1 is used.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -899,7 +921,7 @@ public class CreateCustomAgentRequest extends TeaModel {
         public Integer minSandboxCount;
 
         /**
-         * <p>The session idle timeout in seconds. Valid values: 60 to 86400. When runtime is provided, if this field is omitted, the default value is 600.</p>
+         * <p>The session idle timeout in seconds. Valid values: 60 to 86400. When runtime is provided, if this field is omitted, the default value 600 is used.</p>
          * 
          * <strong>example:</strong>
          * <p>600</p>
@@ -965,7 +987,7 @@ public class CreateCustomAgentRequest extends TeaModel {
         public String headerName;
 
         /**
-         * <p>The session policy type. Valid values: AFFINITY: session affinity; ISOLATED_HEADER_FIELD: associates sessions by using the request header specified by headerName. ISOLATED_COOKIE is not recommended. DISABLED is a compatibility option, and the response returns AFFINITY.</p>
+         * <p>The session policy type. Valid values: AFFINITY: session affinity. ISOLATED_HEADER_FIELD: uses the request header specified by headerName to associate sessions. ISOLATED_COOKIE: not recommended for now. DISABLED: compatibility option, and the response returns AFFINITY.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1051,13 +1073,13 @@ public class CreateCustomAgentRequest extends TeaModel {
 
     public static class CreateCustomAgentRequestBody extends TeaModel {
         /**
-         * <p>The list of additional AgenticFS mounts. The total number of AgenticFS and OSS mounts cannot exceed 10. If you omit this parameter or pass an empty array [] during creation, no additional mounts are configured. If you omit this parameter during an update, the original value is retained. If you pass an empty array [], the mounts are cleared. You cannot pass null.</p>
+         * <p>The list of additional AgenticFS mounts. The total number of AgenticFS mounts and ossMounts cannot exceed 10. If you omit this parameter or pass an empty array [] during creation, no additional mounts are configured. If you omit this parameter during an update, the original value is retained. If you pass an empty array [], the mounts are cleared. You cannot pass null.</p>
          */
         @NameInMap("agenticFsMounts")
         public java.util.List<CreateCustomAgentRequestBodyAgenticFsMounts> agenticFsMounts;
 
         /**
-         * <p>The deployment artifact configuration. Currently, only ACR container images are supported. Specify container and the service listening port port. Omit code.</p>
+         * <p>The deployment artifact configuration. Currently, only ACR container images are supported. Specify container and the service listening port in port, and omit code.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("artifact")
@@ -1067,7 +1089,7 @@ public class CreateCustomAgentRequest extends TeaModel {
          * <p>The description of the agent\&quot;s purpose. The maximum length is 1,024 characters after leading and trailing whitespace is removed.</p>
          * 
          * <strong>example:</strong>
-         * <p>Custom agent that provides conversation services</p>
+         * <p>Custom agent that provides conversational services</p>
          */
         @NameInMap("description")
         public String description;
@@ -1079,13 +1101,13 @@ public class CreateCustomAgentRequest extends TeaModel {
         public CreateCustomAgentRequestBodyEnvironment environment;
 
         /**
-         * <p>The optional HTTP health check configuration. If this object is provided, port is required, and unspecified items use default values. If omitted during creation, no health check is configured. If this top-level field is omitted during an update, the original configuration is retained. If null is passed, the health check is removed.</p>
+         * <p>The optional HTTP health check configuration. If this object is provided, you must specify port. Unspecified items use default values. If omitted during creation, no health check is configured. If this top-level field is omitted during an update, the original configuration is retained. If null is passed, the health check is removed.</p>
          */
         @NameInMap("healthCheck")
         public CreateCustomAgentRequestBodyHealthCheck healthCheck;
 
         /**
-         * <p>The agent log delivery configuration. You can specify the Simple Log Service project and Logstore. After a successful creation or update, verify that logs are delivered properly.</p>
+         * <p>The agent log delivery configuration. You can specify the Simple Log Service project and Logstore. After a successful creation or update, verify whether logs are delivered properly.</p>
          */
         @NameInMap("logging")
         public CreateCustomAgentRequestBodyLogging logging;
@@ -1101,19 +1123,25 @@ public class CreateCustomAgentRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The network access configuration of the agent. If this object is provided, omitted access items are treated as allowed. The actual accessible range is still limited by the workspace network configuration. To retain the original restrictions during an update, specify both accessInternet and accessVpc.</p>
+         * <p>The network access configuration of the agent. If this object is provided, omitted access items are treated as allowed. The actual accessible scope is still limited by the workspace network configuration. To retain the original restrictions during an update, specify both accessInternet and accessVpc.</p>
          */
         @NameInMap("network")
         public CreateCustomAgentRequestBodyNetwork network;
 
         /**
-         * <p>The list of OSS mounts. The total number of OSS and AgenticFS mounts cannot exceed 10. For each item, you must specify bucketName, path, and mountPath. Mount targets must not be duplicated or overlap. The entire list is replaced during an update. Pass an empty array [] to clear the list.</p>
+         * <p>The high-code agent observability configuration.</p>
+         */
+        @NameInMap("observability")
+        public CreateCustomAgentRequestBodyObservability observability;
+
+        /**
+         * <p>The list of OSS mounts. A maximum of 10 items are allowed in total with agenticFsMounts. Each item must specify bucketName, path, and mountPath. Mount targets must not be duplicated or overlap with each other. When you update the agent, the entire list is replaced. Pass an empty array [] to clear the list.</p>
          */
         @NameInMap("ossMounts")
         public java.util.List<CreateCustomAgentRequestBodyOssMounts> ossMounts;
 
         /**
-         * <p>The list of invocation protocols supported by the agent. Each item includes the protocol type and optional paths and request headers. When updating, replace the entire list.</p>
+         * <p>The list of invocation protocols supported by the agent. Each item includes the protocol type and optional paths and request headers. When you update the agent, the entire list is replaced.</p>
          */
         @NameInMap("protocol")
         public java.util.List<CreateCustomAgentRequestBodyProtocol> protocol;
@@ -1129,11 +1157,20 @@ public class CreateCustomAgentRequest extends TeaModel {
         public String roleArn;
 
         /**
-         * <p>The runtime configuration, including compute specifications, session policies, and an optional elastic policy. compute and sessionPolicy must be specified together.</p>
+         * <p>The runtime configuration, including compute specifications, session policies, and optional elastic policy. Both compute and sessionPolicy must be specified at the same time.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("runtime")
         public CreateCustomAgentRequestBodyRuntime runtime;
+
+        /**
+         * <p>Specifies whether to use the image cache. If omitted during creation, the default value is false. You can explicitly set it to true or false. The new contract rejects null and invalid types. Existing compatibility endpoints are processed according to migration agreements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("useImageCache")
+        public Boolean useImageCache;
 
         public static CreateCustomAgentRequestBody build(java.util.Map<String, ?> map) throws Exception {
             CreateCustomAgentRequestBody self = new CreateCustomAgentRequestBody();
@@ -1204,6 +1241,14 @@ public class CreateCustomAgentRequest extends TeaModel {
             return this.network;
         }
 
+        public CreateCustomAgentRequestBody setObservability(CreateCustomAgentRequestBodyObservability observability) {
+            this.observability = observability;
+            return this;
+        }
+        public CreateCustomAgentRequestBodyObservability getObservability() {
+            return this.observability;
+        }
+
         public CreateCustomAgentRequestBody setOssMounts(java.util.List<CreateCustomAgentRequestBodyOssMounts> ossMounts) {
             this.ossMounts = ossMounts;
             return this;
@@ -1234,6 +1279,14 @@ public class CreateCustomAgentRequest extends TeaModel {
         }
         public CreateCustomAgentRequestBodyRuntime getRuntime() {
             return this.runtime;
+        }
+
+        public CreateCustomAgentRequestBody setUseImageCache(Boolean useImageCache) {
+            this.useImageCache = useImageCache;
+            return this;
+        }
+        public Boolean getUseImageCache() {
+            return this.useImageCache;
         }
 
     }
