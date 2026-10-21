@@ -232,7 +232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries pricing based on an OpenAPI triplet and input parameters.</p>
+     * <p>Queries pricing based on the OpenAPI triplet and request parameters.</p>
      * 
      * @param request GetApiPriceRequest
      * @param headers map
@@ -261,7 +261,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries pricing based on an OpenAPI triplet and input parameters.</p>
+     * <p>Queries pricing based on the OpenAPI triplet and request parameters.</p>
      * 
      * @param request GetApiPriceRequest
      * @return GetApiPriceResponse

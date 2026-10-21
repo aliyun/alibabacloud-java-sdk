@@ -1,3 +1,9 @@
+2026-10-21 Version: 1.3.1
+- Update API GetApiPrice: add response parameters Body.code.
+- Update API GetApiPrice: add response parameters Body.message.
+- Update API GetApiPrice: add response parameters Body.success.
+
+
 2026-09-10 Version: 1.3.0
 - Support API GetTerraformPricingMappings.
 
