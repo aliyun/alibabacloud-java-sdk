@@ -23,7 +23,7 @@ public class ResizeAIDBClusterModelResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Indicates whether the current request performed only a capacity dry run.</p>
+     * <p>Indicates whether the current request performs a capacity dry run only.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,7 +32,7 @@ public class ResizeAIDBClusterModelResponseBody extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The capacity that can be directly borrowed from the global pool without reshaping. This parameter is returned only when DryRun is set to true.</p>
+     * <p>The capacity that can be directly borrowed from the large pool without reshaping. This parameter is returned only when DryRun is set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>3000</p>
@@ -41,7 +41,7 @@ public class ResizeAIDBClusterModelResponseBody extends TeaModel {
     public Long poolHitCapacity;
 
     /**
-     * <p>The direct hit ratio of the global pool. Valid values: 0 to 1. This parameter is returned only when DryRun is set to true.</p>
+     * <p>The direct hit ratio of the large pool. Valid values: 0 to 1. This parameter is returned only when DryRun is set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>0.75</p>

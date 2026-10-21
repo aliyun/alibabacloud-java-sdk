@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationRequest extends TeaModel {
     /**
-     * <p>The ID of the existing model operator instance to associate. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
+     * <p>The ID of the associated existing model operator instance. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
      * 
      * <strong>example:</strong>
      * <p>pm-xxxxxx</p>
@@ -34,9 +34,9 @@ public class CreateApplicationRequest extends TeaModel {
     /**
      * <p>The application type. Valid values:</p>
      * <ul>
-     * <li>supabase: Specify this value to create a managed Supabase application.</li>
-     * <li>raycluster: Specify this value to create a managed Ray Cluster application.</li>
-     * <li>polarclaw: Specify this value to create a managed PolarClaw application.</li>
+     * <li>supabase: Pass this value to create a managed Supabase application.</li>
+     * <li>raycluster: Pass this value to create a managed Ray Cluster application.</li>
+     * <li>polarclaw: Pass this value to create a managed PolarClaw application.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -60,7 +60,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String architecture;
 
     /**
-     * <p>The authentication service provider.</p>
+     * <p>The authentication provider.</p>
      * 
      * <strong>example:</strong>
      * <p>feishu</p>
@@ -69,7 +69,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String authProvider;
 
     /**
-     * <p>The authentication provider configuration.</p>
+     * <p>The configuration of the authentication provider.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -78,13 +78,13 @@ public class CreateApplicationRequest extends TeaModel {
     public String authProviderConfig;
 
     /**
-     * <p>Specifies whether automatic creation is enabled and the instance will attach and associate with an EIP.</p>
+     * <p>Specifies whether to automatically create and attach an EIP.</p>
      */
     @NameInMap("AutoAllocatePublicEip")
     public Boolean autoAllocatePublicEip;
 
     /**
-     * <p>Specifies whether to automatically create a Polarlakebase cold storage edition instance. Valid values:</p>
+     * <p>Specifies whether the automatic creation of a Polarlakebase cold storage instance is enabled. Valid values:</p>
      * <ul>
      * <li>false (default): Do not automatically create the instance.</li>
      * <li>true: Automatically create the instance.</li>
@@ -125,7 +125,7 @@ public class CreateApplicationRequest extends TeaModel {
     public java.util.List<CreateApplicationRequestComponents> components;
 
     /**
-     * <p>The ID of the PolarDB instance on which the application depends.</p>
+     * <p>The PolarDB instance ID that the application depends on.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-**************</p>
@@ -143,13 +143,13 @@ public class CreateApplicationRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The expected list of DNAT entries for NAT mapping. Specify this parameter together with VpcNatGatewayId. Leave this parameter empty if you do not want to create DNAT entries.</p>
+     * <p>The list of expected DNAT entries for NAT mapping. Specify this parameter together with VpcNatGatewayId. This parameter can be left empty, which indicates that no DNAT entries are created.</p>
      */
     @NameInMap("DnatEntries")
     public java.util.List<CreateApplicationRequestDnatEntries> dnatEntries;
 
     /**
-     * <p>The dedicated NAT IP address allocated for DNAT mapping, which is separate from the SNAT IP address. The IP address must belong to the gateway, be in the available state, and the vSwitch where the gateway resides must belong to the primary CIDR block reachable from the office network. This parameter must be specified together with VpcNatGatewayId. Prerequisite: An SNAT entry is bound to the vSwitch where the application resides.</p>
+     * <p>The dedicated NAT IP address allocated for DNAT, which is separate from the SNAT IP address. The IP address must belong to the NAT gateway, be in the available state, and the vSwitch where the gateway resides must belong to a primary CIDR block reachable from the office network. Specify this parameter together with VpcNatGatewayId. Prerequisite: An SNAT entry is bound to the vSwitch where the application resides.</p>
      * 
      * <strong>example:</strong>
      * <p>10.64.0.10</p>
@@ -158,7 +158,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String dnatIpAddress;
 
     /**
-     * <p>Specifies whether to perform a dry run. Default value: false. If you set this parameter to true, only parameter and resource validations are performed, and no resources are actually created.</p>
+     * <p>Specifies whether to perform a dry run. Default value: <code>false</code>. If you set this parameter to <code>true</code>, only parameter and resource validations are performed, and no resources are actually created.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -212,11 +212,11 @@ public class CreateApplicationRequest extends TeaModel {
     public String modelBaseUrl;
 
     /**
-     * <p>The model source. Valid values:</p>
+     * <p>The source of the model. Valid values:</p>
      * <ul>
-     * <li>bailian: Model Studio models.</li>
-     * <li>custom: Custom models.</li>
-     * <li>maas: PolarDB model operators.</li>
+     * <li>bailian: Model Studio model.</li>
+     * <li>custom: Custom model.</li>
+     * <li>maas: PolarDB model operator.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -259,8 +259,8 @@ public class CreateApplicationRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The instance ID of the Polarlakebase cold storage or high-performance edition. Default value: empty. If you specify this parameter, the corresponding storage is mounted to the application.</p>
-     * <p>Currently, only the following applications are supported:</p>
+     * <p>The Polarlakebase cold storage or high-performance instance ID. Default value: empty. If you specify this parameter, the corresponding storage is mounted to the application.
+     * Currently, only the following applications are supported:</p>
      * <ul>
      * <li>supabase</li>
      * <li>raycluster</li>
@@ -309,7 +309,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The name of the IP address whitelist group. Default value: default.</p>
+     * <p>The name of the IP address whitelist group. Default value: <code>default</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -318,7 +318,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String securityIPArrayName;
 
     /**
-     * <p>The IP address whitelist. If you do not specify this parameter, the default value 127.0.0.1 is used.</p>
+     * <p>The IP address whitelist. If you do not specify this parameter, the default value <code>127.0.0.1</code> is used.</p>
      * 
      * <strong>example:</strong>
      * <p>127.0.0.1,172.17.0.0/24</p>
@@ -396,7 +396,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The NAT gateway ID of the self-managed VPC NAT gateway for NAT mapping. If you specify this parameter, NAT mapping is enabled when the instance is created. The gateway must be in the same VPC as the application, use the private network (intranet) type, and be active.</p>
+     * <p>The VPC NAT gateway ID for NAT mapping. If you specify this parameter, NAT mapping is enabled when the instance is created. The NAT gateway must be in the same VPC as the application, be of the private network type, and be in the active state.</p>
      * 
      * <strong>example:</strong>
      * <p>ngw-xxx</p>
@@ -901,7 +901,7 @@ public class CreateApplicationRequest extends TeaModel {
         /**
          * <p>The maximum number of application subcomponents of the same specifications. Default value: the value of ComponentReplica.</p>
          * <ul>
-         * <li>This parameter is supported only for raycluster.</li>
+         * <li>This parameter is supported only by raycluster.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1080,7 +1080,7 @@ public class CreateApplicationRequest extends TeaModel {
 
     public static class CreateApplicationRequestDnatEntries extends TeaModel {
         /**
-         * <p>The frontend port. This parameter is optional. By default, the system automatically assigns a port that is not occupied by the gateway. You can call the DescribeApplicationAttribute operation to query the assigned port.</p>
+         * <p>The frontend port. This parameter is optional. By default, the system automatically assigns a port, avoiding ports already occupied by the gateway. You can query the assignment result by calling the DescribeApplicationAttribute operation.</p>
          * 
          * <strong>example:</strong>
          * <p>10001</p>
@@ -1253,7 +1253,7 @@ public class CreateApplicationRequest extends TeaModel {
         public String embedderModel;
 
         /**
-         * <p>The vector dimensions.</p>
+         * <p>The vector dimension.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -1287,6 +1287,42 @@ public class CreateApplicationRequest extends TeaModel {
          */
         @NameInMap("MemoryType")
         public String memoryType;
+
+        /**
+         * <p>The instance ID of the PolarAI embedding model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pm-xxx</p>
+         */
+        @NameInMap("PolarAIEmbedderInstanceId")
+        public String polarAIEmbedderInstanceId;
+
+        /**
+         * <p>The instance ID of the PolarAI graph LLM model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pm-xxx</p>
+         */
+        @NameInMap("PolarAIGraphLlmInstanceId")
+        public String polarAIGraphLlmInstanceId;
+
+        /**
+         * <p>The instance ID of the PolarAI LLM model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pm-xxx</p>
+         */
+        @NameInMap("PolarAILlmInstanceId")
+        public String polarAILlmInstanceId;
+
+        /**
+         * <p>The instance ID of the PolarAI reranker model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pm-xxx</p>
+         */
+        @NameInMap("PolarAIRerankerInstanceId")
+        public String polarAIRerankerInstanceId;
 
         /**
          * <p>The project name, which corresponds to the schema in the database where project data is stored.</p>
@@ -1325,7 +1361,7 @@ public class CreateApplicationRequest extends TeaModel {
         public String visualEmbedderModel;
 
         /**
-         * <p>The vector dimensions of the visual embedder.</p>
+         * <p>The vector dimension of the visual embedder.</p>
          * 
          * <strong>example:</strong>
          * <p>2560</p>
@@ -1415,6 +1451,38 @@ public class CreateApplicationRequest extends TeaModel {
         }
         public String getMemoryType() {
             return this.memoryType;
+        }
+
+        public CreateApplicationRequestMemApplicationSpec setPolarAIEmbedderInstanceId(String polarAIEmbedderInstanceId) {
+            this.polarAIEmbedderInstanceId = polarAIEmbedderInstanceId;
+            return this;
+        }
+        public String getPolarAIEmbedderInstanceId() {
+            return this.polarAIEmbedderInstanceId;
+        }
+
+        public CreateApplicationRequestMemApplicationSpec setPolarAIGraphLlmInstanceId(String polarAIGraphLlmInstanceId) {
+            this.polarAIGraphLlmInstanceId = polarAIGraphLlmInstanceId;
+            return this;
+        }
+        public String getPolarAIGraphLlmInstanceId() {
+            return this.polarAIGraphLlmInstanceId;
+        }
+
+        public CreateApplicationRequestMemApplicationSpec setPolarAILlmInstanceId(String polarAILlmInstanceId) {
+            this.polarAILlmInstanceId = polarAILlmInstanceId;
+            return this;
+        }
+        public String getPolarAILlmInstanceId() {
+            return this.polarAILlmInstanceId;
+        }
+
+        public CreateApplicationRequestMemApplicationSpec setPolarAIRerankerInstanceId(String polarAIRerankerInstanceId) {
+            this.polarAIRerankerInstanceId = polarAIRerankerInstanceId;
+            return this;
+        }
+        public String getPolarAIRerankerInstanceId() {
+            return this.polarAIRerankerInstanceId;
         }
 
         public CreateApplicationRequestMemApplicationSpec setProjectName(String projectName) {
@@ -1555,7 +1623,7 @@ public class CreateApplicationRequest extends TeaModel {
         public String storageCapacity;
 
         /**
-         * <p>The access endpoint of the storage.</p>
+         * <p>The access address of the storage.</p>
          * 
          * <strong>example:</strong>
          * <p>polarfs.example.com</p>
@@ -1564,7 +1632,7 @@ public class CreateApplicationRequest extends TeaModel {
         public String storageEndpoint;
 
         /**
-         * <p>The ID of the storage instance.</p>
+         * <p>The storage instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pfs-xxxx</p>

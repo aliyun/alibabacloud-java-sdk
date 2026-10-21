@@ -15,7 +15,7 @@ public class ModifyAIDBClusterModelRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The new client-facing invocation name. If this parameter is not specified, the existing invocation name is retained.</p>
+     * <p>The new customer-facing invocation name. If you do not specify this parameter, the existing invocation name is retained.</p>
      * 
      * <strong>example:</strong>
      * <p>my-flagship-chat</p>
@@ -24,7 +24,7 @@ public class ModifyAIDBClusterModelRequest extends TeaModel {
     public String displayModelName;
 
     /**
-     * <p>Specifies whether to only preview the change without actually performing it.</p>
+     * <p>Specifies whether to only preview the modification.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -33,7 +33,7 @@ public class ModifyAIDBClusterModelRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The name of the target model. Select a value from the ModelName values returned by the DescribeAvailableModels operation.</p>
+     * <p>The target model name. Select a value from the ModelName values returned by DescribeAvailableModels.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,11 +53,7 @@ public class ModifyAIDBClusterModelRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The restart mode for workers. Valid values:</p>
-     * <ul>
-     * <li>inPlace</li>
-     * <li>recreate</li>
-     * </ul>
+     * <p>The worker restart mode. Valid values: inPlace and recreate.</p>
      * 
      * <strong>example:</strong>
      * <p>inPlace</p>

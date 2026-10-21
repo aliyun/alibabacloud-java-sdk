@@ -15,7 +15,7 @@ public class ResizeAIDBClusterModelRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether to perform only a read-only capacity dry run.</p>
+     * <p>Specifies whether to perform a read-only capacity dry run.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -24,7 +24,7 @@ public class ResizeAIDBClusterModelRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The region ID. Requests are routed to the region where the instance resides.</p>
+     * <p>The region ID. Requests are routed based on the region to which the instance belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ResizeAIDBClusterModelRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The target total capacity. An abstract capacity unit of 1000 is equivalent to one L20N card. The value must be a positive integer.</p>
+     * <p>The target total capacity. The abstract capacity unit is 1000, which equals one L20N equivalent card. The value must be a positive integer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

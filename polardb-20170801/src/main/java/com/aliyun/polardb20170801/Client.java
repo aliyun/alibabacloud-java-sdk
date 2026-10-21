@@ -24818,7 +24818,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the model or the client-facing invocation name of an AI cluster.</p>
+     * <p>Modifies the AI cluster model or the customer-facing invocation name.</p>
      * 
      * @param request ModifyAIDBClusterModelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24874,7 +24874,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the model or the client-facing invocation name of an AI cluster.</p>
+     * <p>Modifies the AI cluster model or the customer-facing invocation name.</p>
      * 
      * @param request ModifyAIDBClusterModelRequest
      * @return ModifyAIDBClusterModelResponse

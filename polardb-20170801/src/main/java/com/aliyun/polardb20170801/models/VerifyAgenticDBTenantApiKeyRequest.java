@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VerifyAgenticDBTenantApiKeyRequest extends TeaModel {
     /**
-     * <p>The plaintext of the API key to be validated.</p>
+     * <p>The plaintext of the API key to validate.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
