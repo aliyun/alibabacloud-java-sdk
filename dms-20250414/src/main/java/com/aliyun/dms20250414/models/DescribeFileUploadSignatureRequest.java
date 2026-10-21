@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeFileUploadSignatureRequest extends TeaModel {
     /**
-     * <p>The parameter used only by the frontend.</p>
+     * <p>For frontend use only.</p>
      * 
      * <strong>example:</strong>
-     * <p>仅前端使用</p>
+     * <p>For frontend use only</p>
      */
     @NameInMap("CallFrom")
     public String callFrom;
@@ -22,6 +22,12 @@ public class DescribeFileUploadSignatureRequest extends TeaModel {
     @NameInMap("DmsUnit")
     public String dmsUnit;
 
+    /**
+     * <p>The workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yrgug4e*******ypey63v</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

@@ -750,7 +750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a custom agent in a personal or shared workspace.</p>
+     * <p>Creates a custom agent in a personal space or workspace.</p>
      * 
      * @param tmpReq CreateCustomAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -884,7 +884,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a custom agent in a personal or shared workspace.</p>
+     * <p>Creates a custom agent in a personal space or workspace.</p>
      * 
      * @param request CreateCustomAgentRequest
      * @return CreateCustomAgentResponse
@@ -2256,7 +2256,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a custom agent by custom agent ID.</p>
+     * <p>Retrieves the detailed description of a custom agent based on the custom agent ID.</p>
      * 
      * @param request DescribeCustomAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2292,7 +2292,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a custom agent by custom agent ID.</p>
+     * <p>Retrieves the detailed description of a custom agent based on the custom agent ID.</p>
      * 
      * @param request DescribeCustomAgentRequest
      * @return DescribeCustomAgentResponse
@@ -2752,7 +2752,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls back after a file is uploaded.</p>
+     * <p>Processes the file upload callback.</p>
      * 
      * @param request FileUploadCallbackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2808,7 +2808,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls back after a file is uploaded.</p>
+     * <p>Processes the file upload callback.</p>
      * 
      * @param request FileUploadCallbackRequest
      * @return FileUploadCallbackResponse
@@ -2819,8 +2819,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Specify the install token issued by IssueAgenticInstallToken to query the agent generated or reused after the token is redeemed. The request fails if the install token does not exist. If the token has not been redeemed, or the associated credential or agent does not exist, the API call succeeds but Data is empty.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries agent information by install token.</p>
+     * <p>Queries the agent associated with an install token after redemption. Data is empty if the token has not been redeemed.</p>
      * 
      * @param request GetAgenticAgentByInstallTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2851,8 +2854,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Specify the install token issued by IssueAgenticInstallToken to query the agent generated or reused after the token is redeemed. The request fails if the install token does not exist. If the token has not been redeemed, or the associated credential or agent does not exist, the API call succeeds but Data is empty.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries agent information by install token.</p>
+     * <p>Queries the agent associated with an install token after redemption. Data is empty if the token has not been redeemed.</p>
      * 
      * @param request GetAgenticAgentByInstallTokenRequest
      * @return GetAgenticAgentByInstallTokenResponse
@@ -3312,10 +3318,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</p>
+     * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total number of model calls, total tokens consumed, and peak TPM. This data is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total call count, total tokens consumed, and peak TPM.</p>
+     * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total number of calls, total tokens consumed, and peak TPM.</p>
      * 
      * @param tmpReq GetDataAgentTaskModelUsageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3373,10 +3379,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</p>
+     * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total number of model calls, total tokens consumed, and peak TPM. This data is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total call count, total tokens consumed, and peak TPM.</p>
+     * <p>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total number of calls, total tokens consumed, and peak TPM.</p>
      * 
      * @param request GetDataAgentTaskModelUsageRequest
      * @return GetDataAgentTaskModelUsageResponse
@@ -3388,10 +3394,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the TPM time series metrics of DataAgent analysis task model usage within a specified time range. The metrics are returned at minute-level granularity, showing the number of tokens consumed in each statistical interval for analyzing model usage trends over time.</p>
+     * <p>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analysis task model usage within a specified time range. It returns the number of tokens consumed in each statistical interval at a minute-level granularity to help you analyze the trend of model usage over time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the TPM time series metrics of DataAgent analysis task model usage within a specified time range, returning token consumption at each time point with minute-level granularity.</p>
+     * <p>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analysis task model usage within a specified time range, returning token consumption at each time point at a minute-level granularity.</p>
      * 
      * @param tmpReq GetDataAgentTaskModelUsageMetricsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3449,10 +3455,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the TPM time series metrics of DataAgent analysis task model usage within a specified time range. The metrics are returned at minute-level granularity, showing the number of tokens consumed in each statistical interval for analyzing model usage trends over time.</p>
+     * <p>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analysis task model usage within a specified time range. It returns the number of tokens consumed in each statistical interval at a minute-level granularity to help you analyze the trend of model usage over time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the TPM time series metrics of DataAgent analysis task model usage within a specified time range, returning token consumption at each time point with minute-level granularity.</p>
+     * <p>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analysis task model usage within a specified time range, returning token consumption at each time point at a minute-level granularity.</p>
      * 
      * @param request GetDataAgentTaskModelUsageMetricsRequest
      * @return GetDataAgentTaskModelUsageMetricsResponse
@@ -3510,7 +3516,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a collaborative workspace.</p>
+     * <p>Queries the details of a workspace.</p>
      * 
      * @param request GetDataAgentWorkspaceInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3546,7 +3552,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a collaborative workspace.</p>
+     * <p>Queries the details of a workspace.</p>
      * 
      * @param request GetDataAgentWorkspaceInfoRequest
      * @return GetDataAgentWorkspaceInfoResponse
@@ -4416,6 +4422,182 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the SQL execution history within the current tenant and returns the results in descending order of execution start time. Only AGENT_QUERY and WORKFLOW_QUERY are included.</p>
+     * 
+     * @param request ListAgenticGlobalSqlExecutionHistoriesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAgenticGlobalSqlExecutionHistoriesResponse
+     */
+    public ListAgenticGlobalSqlExecutionHistoriesResponse listAgenticGlobalSqlExecutionHistoriesWithOptions(ListAgenticGlobalSqlExecutionHistoriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.actorId)) {
+            query.put("ActorId", request.actorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.actorName)) {
+            query.put("ActorName", request.actorName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.actorType)) {
+            query.put("ActorType", request.actorType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogUuid)) {
+            query.put("CatalogUuid", request.catalogUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.databaseUuid)) {
+            query.put("DatabaseUuid", request.databaseUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("Page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scenario)) {
+            query.put("Scenario", request.scenario);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("Size", request.size);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sqlKeyword)) {
+            query.put("SqlKeyword", request.sqlKeyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sqlType)) {
+            query.put("SqlType", request.sqlType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAgenticGlobalSqlExecutionHistories"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAgenticGlobalSqlExecutionHistoriesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the SQL execution history within the current tenant and returns the results in descending order of execution start time. Only AGENT_QUERY and WORKFLOW_QUERY are included.</p>
+     * 
+     * @param request ListAgenticGlobalSqlExecutionHistoriesRequest
+     * @return ListAgenticGlobalSqlExecutionHistoriesResponse
+     */
+    public ListAgenticGlobalSqlExecutionHistoriesResponse listAgenticGlobalSqlExecutionHistories(ListAgenticGlobalSqlExecutionHistoriesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAgenticGlobalSqlExecutionHistoriesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the SQL execution history visible to the current caller, sorted in descending order by execution start time. Only AGENT_QUERY and WORKFLOW_QUERY are included.</p>
+     * 
+     * @param request ListAgenticSqlExecutionHistoriesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAgenticSqlExecutionHistoriesResponse
+     */
+    public ListAgenticSqlExecutionHistoriesResponse listAgenticSqlExecutionHistoriesWithOptions(ListAgenticSqlExecutionHistoriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.actorId)) {
+            query.put("ActorId", request.actorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.actorName)) {
+            query.put("ActorName", request.actorName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.actorType)) {
+            query.put("ActorType", request.actorType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogUuid)) {
+            query.put("CatalogUuid", request.catalogUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.databaseUuid)) {
+            query.put("DatabaseUuid", request.databaseUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("Page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scenario)) {
+            query.put("Scenario", request.scenario);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("Size", request.size);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sqlKeyword)) {
+            query.put("SqlKeyword", request.sqlKeyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sqlType)) {
+            query.put("SqlType", request.sqlType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAgenticSqlExecutionHistories"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAgenticSqlExecutionHistoriesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the SQL execution history visible to the current caller, sorted in descending order by execution start time. Only AGENT_QUERY and WORKFLOW_QUERY are included.</p>
+     * 
+     * @param request ListAgenticSqlExecutionHistoriesRequest
+     * @return ListAgenticSqlExecutionHistoriesResponse
+     */
+    public ListAgenticSqlExecutionHistoriesResponse listAgenticSqlExecutionHistories(ListAgenticSqlExecutionHistoriesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAgenticSqlExecutionHistoriesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the basic information and engine metadata of tables in a specified database by using paging. You can filter the results by keyword and table type, and specify the sorting method.</p>
      * 
      * @param request ListAgenticTableBaseInfoRequest
@@ -4594,7 +4776,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists all custom agents in personal and shared workspaces.</p>
+     * <p>Lists all custom agents in personal and team workspaces.</p>
      * 
      * @param request ListCustomAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4650,7 +4832,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists all custom agents in personal and shared workspaces.</p>
+     * <p>Lists all custom agents in personal and team workspaces.</p>
      * 
      * @param request ListCustomAgentRequest
      * @return ListCustomAgentResponse
@@ -7585,8 +7767,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an Airflow instance in a workspace.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Updates the properties of an Airflow instance.</p>
+     * <p>Updates the information of an Airflow instance.</p>
      * 
      * @param tmpReq UpdateAirflowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7675,8 +7860,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an Airflow instance in a workspace.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Updates the properties of an Airflow instance.</p>
+     * <p>Updates the information of an Airflow instance.</p>
      * 
      * @param request UpdateAirflowRequest
      * @return UpdateAirflowResponse
@@ -7688,7 +7876,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the content of an accuracy test item.</p>
+     * <p>Updates the accuracy test item.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates the content of an accuracy test item.</p>
@@ -7775,7 +7963,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the content of an accuracy test item.</p>
+     * <p>Updates the accuracy test item.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates the content of an accuracy test item.</p>

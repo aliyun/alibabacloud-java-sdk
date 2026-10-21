@@ -11,7 +11,7 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
     public GetDataAgentTaskModelUsageResponseBodyData data;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code returned when a request exception occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>DMS-DA-40411</p>
@@ -20,7 +20,7 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned if the call failed.</p>
+     * <p>The error message returned when the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
@@ -29,7 +29,7 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+     * <p>The request ID. You can use this ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>67E910F2-***695C</p>
@@ -38,10 +38,10 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The request was successful.</li>
-     * <li><strong>false</strong>: The request failed.</li>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -96,20 +96,44 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
     }
 
     public static class GetDataAgentTaskModelUsageResponseBodyData extends TeaModel {
+        /**
+         * <p>The acceleration ratio, which indicates the speed improvement brought by subtask parallelism.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.8</p>
+         */
         @NameInMap("AccelerationRatio")
         public Double accelerationRatio;
 
+        /**
+         * <p>The number of throttled sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("RateLimitedSessionCount")
         public Long rateLimitedSessionCount;
 
+        /**
+         * <p>The total throttling duration of all sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89</p>
+         */
         @NameInMap("TotalLlmWaitDuration")
         public Double totalLlmWaitDuration;
 
+        /**
+         * <p>The total number of sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39</p>
+         */
         @NameInMap("TotalSessionCount")
         public Long totalSessionCount;
 
         /**
-         * <p>The peak TPM (tokens per minute) within the query time range, which is the maximum number of tokens consumed per minute.</p>
+         * <p>The peak TPM within the query time range, which is the maximum number of tokens consumed per minute.</p>
          * 
          * <strong>example:</strong>
          * <p>42000</p>

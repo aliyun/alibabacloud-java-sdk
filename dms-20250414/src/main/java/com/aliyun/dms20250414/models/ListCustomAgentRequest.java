@@ -54,7 +54,7 @@ public class ListCustomAgentRequest extends TeaModel {
     public String searchKey;
 
     /**
-     * <p>The status of the custom agent.</p>
+     * <p>The custom agent status.</p>
      * 
      * <strong>example:</strong>
      * <p>RELEASED</p>

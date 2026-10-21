@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetDataAgentTaskModelUsageMetricsResponseBody extends TeaModel {
     /**
-     * <p>The list of TPM time series metrics for model usage, returned in chronological order.</p>
+     * <p>The list of time-series TPM metrics for model usage. The usage at each time point is returned in chronological order.</p>
      */
     @NameInMap("Data")
     public java.util.List<GetDataAgentTaskModelUsageMetricsResponseBodyData> data;
 
     /**
-     * <p>The error code returned when the request is abnormal.</p>
+     * <p>The error code, which is returned when a request exception occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>DMS-DA-40411</p>
@@ -20,7 +20,7 @@ public class GetDataAgentTaskModelUsageMetricsResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned when the call fails.</p>
+     * <p>The error message, which is returned when the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
@@ -38,11 +38,14 @@ public class GetDataAgentTaskModelUsageMetricsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The request was successful.</li>
-     * <li><strong>false</strong>: The request failed.</li>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -94,7 +97,7 @@ public class GetDataAgentTaskModelUsageMetricsResponseBody extends TeaModel {
 
     public static class GetDataAgentTaskModelUsageMetricsResponseBodyData extends TeaModel {
         /**
-         * <p>The start time of the statistical interval for this time series data point. The value is a UNIX timestamp in seconds.</p>
+         * <p>The start time of the statistical interval for the time-series point. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1735660800</p>
@@ -103,7 +106,7 @@ public class GetDataAgentTaskModelUsageMetricsResponseBody extends TeaModel {
         public Long beginTime;
 
         /**
-         * <p>The end time of the statistical interval for this time series data point. The value is a UNIX timestamp in seconds.</p>
+         * <p>The end time of the statistical interval for the time-series point. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1735660860</p>
@@ -112,7 +115,7 @@ public class GetDataAgentTaskModelUsageMetricsResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The TPM for this time series data point, which is the number of tokens consumed within the statistical interval.</p>
+         * <p>The TPM at the time-series point, which represents the number of tokens consumed in the statistical interval.</p>
          * 
          * <strong>example:</strong>
          * <p>1200</p>

@@ -96,18 +96,48 @@ public class CreateCustomAgentResponseBody extends TeaModel {
     }
 
     public static class CreateCustomAgentResponseBodyDataCallbackConfig extends TeaModel {
+        /**
+         * <p>The callback tool invocation parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ID&quot;:&quot;test&quot;}</p>
+         */
         @NameInMap("CallbackArgs")
         public String callbackArgs;
 
+        /**
+         * <p>The prompt for generating callback tool invocation parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>send web report to <a href="mailto:123456@163.com">123456@163.com</a></p>
+         */
         @NameInMap("CallbackPrompt")
         public String callbackPrompt;
 
+        /**
+         * <p>The callback tool invocation timing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CallbackTime")
         public Integer callbackTime;
 
+        /**
+         * <p>The callback tool identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Mcp serverId (6te...g7a)</p>
+         */
         @NameInMap("ToolId")
         public String toolId;
 
+        /**
+         * <p>The callback tool type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Mcp</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -160,7 +190,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
 
     public static class CreateCustomAgentResponseBodyDataExecutionConfig extends TeaModel {
         /**
-         * <p>Specifies whether to prohibit appending data sources in the session.</p>
+         * <p>Specifies whether to prohibit appending data sources in a session.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -169,7 +199,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public Boolean forbiddenAppendDataSource;
 
         /**
-         * <p>Specifies whether to disable user prompts during the process.</p>
+         * <p>Specifies whether to prohibit user inquiries during the process.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -255,8 +285,8 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         /**
          * <p>The access type. Valid values:</p>
          * <ul>
-         * <li>mcp: MCP integration.</li>
-         * <li>dms_kb: DMS knowledge base integration.</li>
+         * <li>mcp: MCP access.</li>
+         * <li>dms_kb: DMS knowledge base access.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -315,15 +345,43 @@ public class CreateCustomAgentResponseBody extends TeaModel {
     }
 
     public static class CreateCustomAgentResponseBodyDataKnowledgeSemanticConfigList extends TeaModel {
+        /**
+         * <p>The DMS database ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69305251</p>
+         */
         @NameInMap("DbId")
         public String dbId;
 
+        /**
+         * <p>The DMS instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2943299</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The knowledge UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7ca8f50d782*******02e87</p>
+         */
         @NameInMap("KnowledgeUuid")
         public String knowledgeUuid;
 
+        /**
+         * <p>The knowledge semantic type. Valid values:</p>
+         * <ul>
+         * <li>sql_template: SQL template.</li>
+         * <li>ossie_model: Ossie semantic view.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>sql_template</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -429,8 +487,8 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         /**
          * <p>The custom agent type. Valid values:</p>
          * <ul>
-         * <li>Default: System-built-in custom agent.</li>
-         * <li>Common: Regular custom agent.</li>
+         * <li>Default: The system-built-in custom agent.</li>
+         * <li>Common: The common custom agent.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -440,7 +498,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public String agentType;
 
         /**
-         * <p>The Alibaba Cloud account ID.</p>
+         * <p>The Alibaba Cloud main account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>16738266********</p>
@@ -457,6 +515,9 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         @NameInMap("AliyunUid")
         public String aliyunUid;
 
+        /**
+         * <p>The callback feature configuration.</p>
+         */
         @NameInMap("CallbackConfig")
         public CreateCustomAgentResponseBodyDataCallbackConfig callbackConfig;
 
@@ -470,7 +531,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public String creatorUserName;
 
         /**
-         * <p>The ID of the custom agent.</p>
+         * <p>The custom agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ca-4y3ca4khkcu**********ysf</p>
@@ -497,7 +558,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          *   &quot;personal&quot; : {
          *     &quot;DataSourceType&quot; : &quot;remote_data_center&quot;,
          *     &quot;FileId&quot; : &quot;f-5qlrwaw10<strong><strong><strong><strong>s3gpw1z&quot;,
-         *     &quot;Database&quot; : &quot;Sample table</strong></strong></strong>.xlsx&quot;,
+         *     &quot;Database&quot; : &quot;Test table</strong></strong></strong>.xlsx&quot;,
          *     &quot;Tables&quot; : [ &quot;Sheet1&quot; ],
          *     &quot;TableIds&quot; : [ &quot;</strong>****&quot; ],
          *     &quot;RegionId&quot; : &quot;cn-hangzhou&quot;
@@ -511,7 +572,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          * <p>The description of the custom agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>Sample agent description</p>
+         * <p>Agent test description</p>
          */
         @NameInMap("Description")
         public String description;
@@ -541,7 +602,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
-         * <p>The update time.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-11T14:04:32.000+00:00</p>
@@ -556,15 +617,15 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          * <p>Analysis framework:</p>
          * <ol>
          * <li>Monitor core metrics (GMV, order volume, UV, and conversion rate) on a daily, weekly, and monthly basis to analyze trend changes and year-over-year or month-over-month fluctuations.</li>
-         * <li>Segment data by new and existing customers, channels, and regions to identify growth sources and shortcomings.</li>
-         * <li>Conduct funnel analysis based on user behavior paths (browse -&gt; add to cart -&gt; pay) to identify churn stages</li>
+         * <li>Segment data by new and existing customers, channels, and regions to identify growth drivers and shortcomings.</li>
+         * <li>Conduct funnel analysis based on user behavior paths (browse &gt; add to cart &gt; checkout) to identify churn stages</li>
          * </ol>
          */
         @NameInMap("Instruction")
         public String instruction;
 
         /**
-         * <p>Specifies whether a scheduled task is configured.</p>
+         * <p>Indicates whether a scheduled task is configured.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -578,10 +639,10 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>Core metric definitions:</p>
          * <ol>
-         * <li>GMV (Gross Merchandise Volume) refers to the total sum of order amounts, including both paid and unpaid orders.</li>
-         * <li>Order volume refers to the number of valid orders placed per day.</li>
+         * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders.</li>
+         * <li>Order volume refers to the number of valid daily orders.</li>
          * <li>UV (Unique Visitors) refers to the number of deduplicated users visiting the website or app.</li>
-         * <li>Conversion rate = Number of paid orders / UV, reflecting the traffic conversion efficiency</li>
+         * <li>Conversion rate = Paid orders / UV, reflecting the traffic conversion efficiency</li>
          * </ol>
          */
         @NameInMap("Knowledge")
@@ -593,6 +654,9 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         @NameInMap("KnowledgeConfigList")
         public java.util.List<CreateCustomAgentResponseBodyDataKnowledgeConfigList> knowledgeConfigList;
 
+        /**
+         * <p>The knowledge semantic configuration list.</p>
+         */
         @NameInMap("KnowledgeSemanticConfigList")
         public java.util.List<CreateCustomAgentResponseBodyDataKnowledgeSemanticConfigList> knowledgeSemanticConfigList;
 
@@ -618,13 +682,16 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          * <p>The name of the custom agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>Sample agent name</p>
+         * <p>Agent test name</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The next run time of the scheduled task. The value is a timestamp.</p>
+         * <p>The next run time of the scheduled task.</p>
+         * <ul>
+         * <li>Timestamp format.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1767715200</p>
@@ -642,7 +709,10 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public String offlineTime;
 
         /**
-         * <p>The list of recommended questions. You can configure up to 10 recommended questions.</p>
+         * <p>The list of recommended questions.</p>
+         * <ul>
+         * <li>You can configure up to 10 recommended questions.</li>
+         * </ul>
          */
         @NameInMap("RecommendQuestionList")
         public java.util.List<String> recommendQuestionList;
@@ -658,12 +728,15 @@ public class CreateCustomAgentResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the referenced historical session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99crainsjnv*******vynid</p>
          */
         @NameInMap("RelatedSessionId")
         public String relatedSessionId;
 
         /**
-         * <p>The publish time.</p>
+         * <p>The release time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-11T14:04:32.000+00:00</p>
@@ -678,7 +751,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public CreateCustomAgentResponseBodyDataScheduleTaskConfig scheduleTaskConfig;
 
         /**
-         * <p>The status of the custom agent.</p>
+         * <p>The custom agent status.</p>
          * 
          * <strong>example:</strong>
          * <p>NEW</p>
@@ -690,7 +763,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          * <p>The text report format.</p>
          * 
          * <strong>example:</strong>
-         * <p>For the text report, use Chinese characters for all numbers instead of Arabic numerals</p>
+         * <p>The text report requires that all numbers be written as Chinese numerals instead of Arabic numerals</p>
          */
         @NameInMap("TextReportConfig")
         public String textReportConfig;
@@ -705,7 +778,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          * <p>The web report format.</p>
          * 
          * <strong>example:</strong>
-         * <p>For the web report, use Chinese characters for all numbers instead of Arabic numerals</p>
+         * <p>The web report requires that all numbers be written as Chinese numerals instead of Arabic numerals</p>
          */
         @NameInMap("WebReportConfig")
         public String webReportConfig;
@@ -715,7 +788,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          * <ul>
          * <li>default: Default.</li>
          * <li>journal: Journal.</li>
-         * <li>legacy: Legacy.</li>
+         * <li>legacy: Classic.</li>
          * <li>neobrutalism: Neobrutalism.</li>
          * <li>infographic: Infographic.</li>
          * </ul>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDataAgentTaskModelUsageMetricsRequest extends TeaModel {
     /**
-     * <p>The start time of the query time range. The value is a UNIX timestamp in seconds. The recommended interval length is no longer than one month.</p>
+     * <p>The start time of the query time range. The value is a UNIX timestamp in seconds. The recommended time range is up to one month.</p>
      * 
      * <strong>example:</strong>
      * <p>1735660800</p>
@@ -23,7 +23,7 @@ public class GetDataAgentTaskModelUsageMetricsRequest extends TeaModel {
     public String DMSUnit;
 
     /**
-     * <p>The end time of the query time range. The value is a UNIX timestamp in seconds. The recommended interval length is no longer than one month.</p>
+     * <p>The end time of the query time range. The value is a UNIX timestamp in seconds. The recommended time range is up to one month.</p>
      * 
      * <strong>example:</strong>
      * <p>1735747200</p>
@@ -31,9 +31,18 @@ public class GetDataAgentTaskModelUsageMetricsRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The list of billing instance IDs to query.</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <p>The billing level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
     @NameInMap("PayLevel")
     public String payLevel;
 

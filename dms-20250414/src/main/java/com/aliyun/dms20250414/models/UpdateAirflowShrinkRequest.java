@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAirflowShrinkRequest extends TeaModel {
     /**
-     * <p>The unique ID of the Airflow instance.</p>
+     * <p>The unique key ID of the Airflow instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class UpdateAirflowShrinkRequest extends TeaModel {
     public String airflowName;
 
     /**
-     * <p>The specifications of the Airflow instance.</p>
+     * <p>The specification description of the Airflow instance.</p>
      * 
      * <strong>example:</strong>
      * <p>SMALL</p>
@@ -33,7 +33,7 @@ public class UpdateAirflowShrinkRequest extends TeaModel {
     public String appSpec;
 
     /**
-     * <p>A client token to ensure request idempotence.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>token-****</p>
@@ -42,7 +42,7 @@ public class UpdateAirflowShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The directory path where Airflow scans for DAGs.</p>
+     * <p>The DAG directory scanned by Airflow.</p>
      * 
      * <strong>example:</strong>
      * <p>default/dags</p>
@@ -50,6 +50,9 @@ public class UpdateAirflowShrinkRequest extends TeaModel {
     @NameInMap("DagsDir")
     public String dagsDir;
 
+    /**
+     * <p>The list of data mount information.</p>
+     */
     @NameInMap("DataMountInfoList")
     public String dataMountInfoListShrink;
 
@@ -62,10 +65,15 @@ public class UpdateAirflowShrinkRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Specifies whether to enable serverless workers.</p>
+     */
     @NameInMap("EnableServerless")
     public Boolean enableServerless;
 
     /**
+     * <p>The timeout period for a worker to exit.</p>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */
@@ -73,7 +81,7 @@ public class UpdateAirflowShrinkRequest extends TeaModel {
     public Integer gracefulShutdownTimeout;
 
     /**
-     * <p>The directory path where Airflow scans for plugins.</p>
+     * <p>The plugin directory scanned by Airflow.</p>
      * 
      * <strong>example:</strong>
      * <p>default/plugins</p>
@@ -82,7 +90,7 @@ public class UpdateAirflowShrinkRequest extends TeaModel {
     public String pluginsDir;
 
     /**
-     * <p>The path to the requirements file for package dependencies.</p>
+     * <p>The installation file for package dependencies.</p>
      * 
      * <strong>example:</strong>
      * <p>default/requirements.txt</p>
@@ -91,7 +99,7 @@ public class UpdateAirflowShrinkRequest extends TeaModel {
     public String requirementFile;
 
     /**
-     * <p>The path to the startup script for the Airflow instance.</p>
+     * <p>The script loaded at startup of the Airflow instance.</p>
      * 
      * <strong>example:</strong>
      * <p>default/startup.sh</p>
@@ -109,7 +117,7 @@ public class UpdateAirflowShrinkRequest extends TeaModel {
     public Integer workerServerlessReplicas;
 
     /**
-     * <p>The Data Management Service (DMS) workspace ID.</p>
+     * <p>The ID of the Data Management (DMS) workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

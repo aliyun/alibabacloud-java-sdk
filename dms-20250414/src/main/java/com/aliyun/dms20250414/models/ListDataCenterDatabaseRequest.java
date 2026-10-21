@@ -14,7 +14,7 @@ public class ListDataCenterDatabaseRequest extends TeaModel {
     public String callFrom;
 
     /**
-     * <p>The current Data Management unit.</p>
+     * <p>The current DMS unit.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -23,7 +23,7 @@ public class ListDataCenterDatabaseRequest extends TeaModel {
     public String dmsUnit;
 
     /**
-     * <p>The import type.</p>
+     * <p>The import type. Valid values:</p>
      * <ul>
      * <li>FILE</li>
      * </ul>
@@ -44,7 +44,7 @@ public class ListDataCenterDatabaseRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The keyword for fuzzy match of databases.</p>
+     * <p>The keyword used for fuzzy search of databases.</p>
      * 
      * <strong>example:</strong>
      * <p>testdb</p>
@@ -52,6 +52,12 @@ public class ListDataCenterDatabaseRequest extends TeaModel {
     @NameInMap("SearchKey")
     public String searchKey;
 
+    /**
+     * <p>The workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8vrxbemhm*******v91y3fjy</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

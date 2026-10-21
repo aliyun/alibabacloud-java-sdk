@@ -11,7 +11,7 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
     public UpdateDataAgentAccuracyTestResponseBodyData data;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code returned when an exception occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
@@ -20,7 +20,7 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message returned when the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>Specified parameter Tid is not valid.</p>
@@ -38,10 +38,10 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The request was successful.                                 </li>
-     * <li><strong>false</strong>: The request failed.</li>
+     * <li><strong>true</strong>: The request is successful.                                 </li>
+     * <li><strong>false</strong>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -115,17 +115,29 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
         public String agentId;
 
         /**
-         * <p>The data source. We recommend that you configure this parameter in a custom agent.</p>
+         * <p>The evaluation dataset.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;DataSourceType\&quot;:\&quot;database\&quot;,\&quot;RegionId\&quot;:\&quot;cn-hangzhou\&quot;,\&quot;DmsInstanceId\&quot;:\&quot;27xxxxx\&quot;,\&quot;DmsDatabaseId\&quot;:\&quot;752xxxxx\&quot;,\&quot;Database\&quot;:\&quot;employees\&quot;,\&quot;Tables\&quot;:[\&quot;employees\&quot;,\&quot;salaries\&quot;,\&quot;departments\&quot;]}]</p>
+         * <p>ds-9z6***74al</p>
          */
         @NameInMap("Dataset")
         public String dataset;
 
+        /**
+         * <p>The data source information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;DataSourceType&quot;:&quot;remote_data_center&quot;,&quot;DmsDatabaseId&quot;:&quot;f-894<em><strong>01m&quot;,&quot;FileId&quot;:&quot;f-894</strong></em>01m&quot;,&quot;Database&quot;:&quot;data.csv&quot;,&quot;Tables&quot;:[&quot;example&quot;],&quot;TableIds&quot;:[&quot;aij5***qf8&quot;],&quot;RegionId&quot;:&quot;cn-hangzhou&quot;}]</p>
+         */
         @NameInMap("Datasource")
         public String datasource;
 
+        /**
+         * <p>The description of the evaluation item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Customer Agent\&quot;s Evaluation</p>
+         */
         @NameInMap("Desc")
         public String desc;
 
@@ -147,6 +159,12 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
         @NameInMap("FileId")
         public String fileId;
 
+        /**
+         * <p>The maximum concurrency limit for the evaluation task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
         @NameInMap("MaxConcurrent")
         public Integer maxConcurrent;
 
@@ -159,9 +177,21 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
         @NameInMap("Mode")
         public Integer mode;
 
+        /**
+         * <p>The name of the evaluation item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Evaluation_for_customagent213</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Reserved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("NeedDelete")
         public Boolean needDelete;
 

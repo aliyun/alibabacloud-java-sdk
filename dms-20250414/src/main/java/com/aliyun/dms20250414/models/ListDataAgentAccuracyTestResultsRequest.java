@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataAgentAccuracyTestResultsRequest extends TeaModel {
     /**
-     * <p>The instance ID of the accuracy test.</p>
+     * <p>The instance ID of the accuracy test to which the task belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>at-106n4rg17gv9fxxxxxxxxxx</p>
@@ -14,7 +14,7 @@ public class ListDataAgentAccuracyTestResultsRequest extends TeaModel {
     public String accuracyTestInsId;
 
     /**
-     * <p>The result ID used to retrieve a single record.</p>
+     * <p>The ID of the result used to exactly match a single record.</p>
      * 
      * <strong>example:</strong>
      * <p>at-emhnbwewfngrxxxxxxxxxx</p>
@@ -23,7 +23,7 @@ public class ListDataAgentAccuracyTestResultsRequest extends TeaModel {
     public String accuracyTestResultId;
 
     /**
-     * <p>The subtask ID used to filter results.</p>
+     * <p>The ID of the subtask used to filter results.</p>
      * 
      * <strong>example:</strong>
      * <p>f1eb8728-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
@@ -41,7 +41,7 @@ public class ListDataAgentAccuracyTestResultsRequest extends TeaModel {
     public String accuracyTestTaskId;
 
     /**
-     * <p>The maximum number of entries per page.</p>
+     * <p>The maximum number of results per page.</p>
      * 
      * <strong>example:</strong>
      * <p>nu use</p>
@@ -86,7 +86,7 @@ public class ListDataAgentAccuracyTestResultsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The workspace ID.</p>
+     * <p>The ID of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>8wfig6l33n4f4xxxxxxxxxx</p>

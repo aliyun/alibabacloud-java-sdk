@@ -7,8 +7,8 @@ public class CreateCustomAgentRequest extends TeaModel {
     /**
      * <p>The type of the custom agent. Valid values:</p>
      * <ul>
-     * <li>Default: The built-in custom agent. Each workspace can have at most one agent of this type, and it cannot be deleted.</li>
-     * <li>Common: A regular custom agent.</li>
+     * <li>Default: the system-built-in custom agent. Each workspace can have at most one Default agent, and it cannot be deleted.</li>
+     * <li>Common: a regular custom agent.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -17,6 +17,9 @@ public class CreateCustomAgentRequest extends TeaModel {
     @NameInMap("AgentType")
     public String agentType;
 
+    /**
+     * <p>The callback feature configuration.</p>
+     */
     @NameInMap("CallbackConfig")
     public CreateCustomAgentRequestCallbackConfig callbackConfig;
 
@@ -30,23 +33,23 @@ public class CreateCustomAgentRequest extends TeaModel {
     public String DMSUnit;
 
     /**
-     * <p>The specified data scope in <strong>JSON character string format</strong>.</p>
+     * <p>The specified data scope, in <strong>JSON character string format</strong>.</p>
      * <ul>
-     * <li>General parameter description:<ul>
-     * <li>tableFlag: Set to true to specify the data scope.</li>
-     * <li>scope: Set to personal as a fixed value.</li>
-     * <li>personal: The parameters for file and database types.</li>
+     * <li>General parameter descriptions<ul>
+     * <li>tableFlag: true specifies the data scope.</li>
+     * <li>scope: personal is a fixed value.</li>
+     * <li>personal: the parameters for file and database types.</li>
      * </ul>
      * </li>
      * </ul>
-     * <p><strong>File type</strong>: Pass parameters in the following format:</p>
+     * <p><strong>File type</strong>: pass parameters in the following format:</p>
      * <ul>
-     * <li>DataSourceType: Set to remote_data_center as a fixed value.</li>
-     * <li>FileId: The file ID.</li>
-     * <li>Database: The database name returned by the ListDataCenterTable operation, which is usually the file name.</li>
-     * <li>Tables: The table names returned by the ListDataCenterTable operation.</li>
-     * <li>TableIds: The table IDs returned by the ListDataCenterTable operation.</li>
-     * <li>RegionId: The current region.</li>
+     * <li>DataSourceType: remote_data_center is a fixed value.</li>
+     * <li>FileId: the file ID.</li>
+     * <li>Database: the database name returned by the ListDataCenterTable operation, which is usually the file name.</li>
+     * <li>Tables: the table names returned by the ListDataCenterTable operation.</li>
+     * <li>TableIds: the table IDs returned by the ListDataCenterTable operation.</li>
+     * <li>RegionId: the current region.</li>
      * </ul>
      * <pre><code>{
      *   &quot;tableFlag&quot;: true,
@@ -65,18 +68,18 @@ public class CreateCustomAgentRequest extends TeaModel {
      *   }
      * }
      * </code></pre>
-     * <p><strong>Database type</strong>: Pass parameters in the following format:</p>
+     * <p><strong>Database type</strong>: pass parameters in the following format:</p>
      * <ul>
-     * <li>DataSourceType: Set to database as a fixed value.</li>
-     * <li>DmsInstanceId: The DMS instance ID returned by the data center operation.</li>
-     * <li>DmsDatabaseId: The DMS database ID returned by the data center operation.</li>
-     * <li>FileId: The instance name. (Deprecated)</li>
-     * <li>DbName: The database name returned by the data center operation.</li>
-     * <li>Database: The database name returned by the data center operation.</li>
-     * <li>Tables: The table names returned by the data center operation.</li>
-     * <li>TableIds: The table IDs returned by the data center operation.</li>
-     * <li>Engine: The engine type, such as mysql or postgresql.</li>
-     * <li>RegionId: The current region.</li>
+     * <li>DataSourceType: database is a fixed value.</li>
+     * <li>DmsInstanceId: the DMS instance ID returned by the data center API.</li>
+     * <li>DmsDatabaseId: the DMS database ID returned by the data center API.</li>
+     * <li>FileId: the instance name (<strong>[Deprecated]</strong>).</li>
+     * <li>DbName: the database name returned by the data center API.</li>
+     * <li>Database: the database name returned by the data center API.</li>
+     * <li>Tables: the table names returned by the data center API.</li>
+     * <li>TableIds: the table IDs returned by the data center API.</li>
+     * <li>Engine: the database engine type, such as mysql or postgresql.</li>
+     * <li>RegionId: the current region.</li>
      * </ul>
      * <pre><code>{
      *   &quot;tableFlag&quot;: true,
@@ -107,7 +110,7 @@ public class CreateCustomAgentRequest extends TeaModel {
      *   &quot;personal&quot; : {
      *     &quot;DataSourceType&quot; : &quot;remote_data_center&quot;,
      *     &quot;FileId&quot; : &quot;f-5qlrwaw10<strong><strong><strong><strong>s3gpw1z&quot;,
-     *     &quot;Database&quot; : &quot;Sample table</strong></strong></strong>.xlsx&quot;,
+     *     &quot;Database&quot; : &quot;Test table</strong></strong></strong>.xlsx&quot;,
      *     &quot;Tables&quot; : [ &quot;Sheet1&quot; ],
      *     &quot;TableIds&quot; : [ &quot;</strong>****&quot; ],
      *     &quot;RegionId&quot; : &quot;cn-hangzhou&quot;
@@ -121,7 +124,7 @@ public class CreateCustomAgentRequest extends TeaModel {
      * <p>The description of the custom agent.</p>
      * 
      * <strong>example:</strong>
-     * <p>Sample agent description</p>
+     * <p>Agent test description</p>
      */
     @NameInMap("Description")
     public String description;
@@ -133,30 +136,36 @@ public class CreateCustomAgentRequest extends TeaModel {
     public CreateCustomAgentRequestExecutionConfig executionConfig;
 
     /**
-     * <p>The instructions. Maximum length: 10,000 characters.</p>
+     * <p>The instructions.</p>
+     * <ul>
+     * <li>Input limit: up to 10,000 characters.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Core metric definitions:</p>
      * <ol>
-     * <li>GMV (Gross Merchandise Volume) refers to the total sum of order amounts, including both paid and unpaid orders.</li>
-     * <li>Order volume refers to the number of valid orders placed per day.</li>
+     * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders.</li>
+     * <li>Order volume refers to the number of valid daily orders.</li>
      * <li>UV (Unique Visitors) refers to the number of deduplicated users visiting the website or app.</li>
-     * <li>Conversion rate = Number of paid orders / UV, reflecting the traffic conversion efficiency</li>
+     * <li>Conversion rate = Paid orders / UV, reflecting the traffic conversion efficiency</li>
      * </ol>
      */
     @NameInMap("Instruction")
     public String instruction;
 
     /**
-     * <p>The knowledge. Maximum length: 10,000 characters.</p>
+     * <p>The knowledge.</p>
+     * <ul>
+     * <li>Input limit: up to 10,000 characters.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Core metric definitions:</p>
      * <ol>
-     * <li>GMV (Gross Merchandise Volume) refers to the total sum of order amounts, including both paid and unpaid orders.</li>
-     * <li>Order volume refers to the number of valid orders placed per day.</li>
+     * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders.</li>
+     * <li>Order volume refers to the number of valid daily orders.</li>
      * <li>UV (Unique Visitors) refers to the number of deduplicated users visiting the website or app.</li>
-     * <li>Conversion rate = Number of paid orders / UV, reflecting the traffic conversion efficiency</li>
+     * <li>Conversion rate = Paid orders / UV, reflecting the traffic conversion efficiency</li>
      * </ol>
      */
     @NameInMap("Knowledge")
@@ -168,6 +177,9 @@ public class CreateCustomAgentRequest extends TeaModel {
     @NameInMap("KnowledgeConfigList")
     public java.util.List<CreateCustomAgentRequestKnowledgeConfigList> knowledgeConfigList;
 
+    /**
+     * <p>The knowledge semantic configuration list.</p>
+     */
     @NameInMap("KnowledgeSemanticConfigList")
     public java.util.List<CreateCustomAgentRequestKnowledgeSemanticConfigList> knowledgeSemanticConfigList;
 
@@ -175,13 +187,16 @@ public class CreateCustomAgentRequest extends TeaModel {
      * <p>The name of the custom agent.</p>
      * 
      * <strong>example:</strong>
-     * <p>Sample agent name</p>
+     * <p>Agent test name</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The list of recommended questions. You can configure up to 10 recommended questions.</p>
+     * <p>The list of recommended questions.</p>
+     * <ul>
+     * <li>You can configure up to 10 recommended questions.</li>
+     * </ul>
      */
     @NameInMap("RecommendQuestionList")
     public java.util.List<String> recommendQuestionList;
@@ -205,7 +220,7 @@ public class CreateCustomAgentRequest extends TeaModel {
      * <p>The text report format.</p>
      * 
      * <strong>example:</strong>
-     * <p>For the text report, use Chinese characters for all numbers instead of Arabic numerals</p>
+     * <p>The text report requires that all numbers be written as Chinese numerals instead of Arabic numerals</p>
      */
     @NameInMap("TextReportConfig")
     public String textReportConfig;
@@ -220,7 +235,7 @@ public class CreateCustomAgentRequest extends TeaModel {
      * <p>The web report format.</p>
      * 
      * <strong>example:</strong>
-     * <p>For the web report, use Chinese characters for all numbers instead of Arabic numerals</p>
+     * <p>The web report requires that all numbers be written as Chinese numerals instead of Arabic numerals</p>
      */
     @NameInMap("WebReportConfig")
     public String webReportConfig;
@@ -401,18 +416,48 @@ public class CreateCustomAgentRequest extends TeaModel {
     }
 
     public static class CreateCustomAgentRequestCallbackConfig extends TeaModel {
+        /**
+         * <p>The parameters to invoke the callback tool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ID&quot;:&quot;test&quot;}</p>
+         */
         @NameInMap("CallbackArgs")
         public String callbackArgs;
 
+        /**
+         * <p>The prompt for generating the parameters to invoke the callback tool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>send web report to <a href="mailto:123456@163.com">123456@163.com</a></p>
+         */
         @NameInMap("CallbackPrompt")
         public String callbackPrompt;
 
+        /**
+         * <p>The timing to invoke the callback tool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CallbackTime")
         public Integer callbackTime;
 
+        /**
+         * <p>The callback tool identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Mcp serverId (6te...g7a)</p>
+         */
         @NameInMap("ToolId")
         public String toolId;
 
+        /**
+         * <p>The callback tool type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Mcp</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -465,7 +510,7 @@ public class CreateCustomAgentRequest extends TeaModel {
 
     public static class CreateCustomAgentRequestExecutionConfig extends TeaModel {
         /**
-         * <p>Specifies whether to prohibit appending data sources in the session.</p>
+         * <p>Specifies whether to prohibit appending data sources in a session.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -474,7 +519,7 @@ public class CreateCustomAgentRequest extends TeaModel {
         public Boolean forbiddenAppendDataSource;
 
         /**
-         * <p>Specifies whether to disable user prompts during the process.</p>
+         * <p>Specifies whether to prohibit user inquiries during the process.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -560,8 +605,8 @@ public class CreateCustomAgentRequest extends TeaModel {
         /**
          * <p>The access type. If you do not specify this parameter, the default value is mcp. Valid values:</p>
          * <ul>
-         * <li>mcp: Access through MCP. You must specify the McpServerId parameter.</li>
-         * <li>dms_kb: Access through DMS knowledge base. You must specify the KbUuid parameter.</li>
+         * <li>mcp: access through MCP. You must pass the McpServerId parameter.</li>
+         * <li>dms_kb: access through DMS knowledge base. You must pass the KbUuid parameter.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -620,15 +665,43 @@ public class CreateCustomAgentRequest extends TeaModel {
     }
 
     public static class CreateCustomAgentRequestKnowledgeSemanticConfigList extends TeaModel {
+        /**
+         * <p>The DMS database ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81512473</p>
+         */
         @NameInMap("DbId")
         public String dbId;
 
+        /**
+         * <p>The DMS instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1532071</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The knowledge UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7ca8f50d782*******02e87</p>
+         */
         @NameInMap("KnowledgeUuid")
         public String knowledgeUuid;
 
+        /**
+         * <p>The knowledge semantic type. Valid values:</p>
+         * <ul>
+         * <li>sql_template: SQL template.</li>
+         * <li>ossie_model: Ossie semantic view.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>sql_template</p>
+         */
         @NameInMap("Type")
         public String type;
 

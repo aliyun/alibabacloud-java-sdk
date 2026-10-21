@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCustomAgentResponseBody extends TeaModel {
     /**
-     * <p>The response struct.</p>
+     * <p>The returned struct.</p>
      */
     @NameInMap("Data")
     public ModifyCustomAgentResponseBodyData data;
@@ -96,18 +96,48 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
     }
 
     public static class ModifyCustomAgentResponseBodyDataCallbackConfig extends TeaModel {
+        /**
+         * <p>The parameters to invoke callback tool calling.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ID&quot;:&quot;test&quot;}</p>
+         */
         @NameInMap("CallbackArgs")
         public String callbackArgs;
 
+        /**
+         * <p>The prompt for generating parameters to invoke callback tool calling.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>send web report to <a href="mailto:123456@163.com">123456@163.com</a></p>
+         */
         @NameInMap("CallbackPrompt")
         public String callbackPrompt;
 
+        /**
+         * <p>The timing to invoke callback tool calling.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CallbackTime")
         public Integer callbackTime;
 
+        /**
+         * <p>The callback tool identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Mcp serverId (6te...g7a)</p>
+         */
         @NameInMap("ToolId")
         public String toolId;
 
+        /**
+         * <p>The callback tool type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Mcp</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -169,7 +199,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
         public Boolean forbiddenAppendDataSource;
 
         /**
-         * <p>Specifies whether to disable user prompts during the process.</p>
+         * <p>Specifies whether to disable user inquiries during the process.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -255,8 +285,8 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
         /**
          * <p>The access type. Valid values:</p>
          * <ul>
-         * <li>mcp: Accessed through MCP.</li>
-         * <li>dms_kb: Accessed through the DMS knowledge base.</li>
+         * <li>mcp: Access through MCP.</li>
+         * <li>dms_kb: Access through the DMS knowledge base.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -275,7 +305,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
         public String kbUuid;
 
         /**
-         * <p>The MCP server ID.</p>
+         * <p>The ID of the MCP server.</p>
          * 
          * <strong>example:</strong>
          * <p>nhdpt9adf6ac**********ca</p>
@@ -315,15 +345,43 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
     }
 
     public static class ModifyCustomAgentResponseBodyDataKnowledgeSemanticConfigList extends TeaModel {
+        /**
+         * <p>The DMS database ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69305251</p>
+         */
         @NameInMap("DbId")
         public String dbId;
 
+        /**
+         * <p>The DMS instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2844854</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The knowledge UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7ca8f50d78234******e87</p>
+         */
         @NameInMap("KnowledgeUuid")
         public String knowledgeUuid;
 
+        /**
+         * <p>The knowledge semantic type. Valid values:</p>
+         * <ul>
+         * <li>sql_template: SQL template.</li>
+         * <li>ossie_model: Ossie semantic view.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>sql_template</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -368,7 +426,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
 
     public static class ModifyCustomAgentResponseBodyDataScheduleTaskConfig extends TeaModel {
         /**
-         * <p>The cron expression for scheduled execution.</p>
+         * <p>The cron expression for time-based scheduling.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 0 ? * 1-7</p>
@@ -430,7 +488,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
          * <p>The custom agent type. Valid values:</p>
          * <ul>
          * <li>Default: The system-built-in custom agent. Each workspace can have at most one Default type, and it cannot be deleted.</li>
-         * <li>Common: The common custom agent.</li>
+         * <li>Common: A common custom agent.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -457,6 +515,9 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
         @NameInMap("AliyunUid")
         public String aliyunUid;
 
+        /**
+         * <p>The callback feature configuration.</p>
+         */
         @NameInMap("CallbackConfig")
         public ModifyCustomAgentResponseBodyDataCallbackConfig callbackConfig;
 
@@ -511,7 +572,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
          * <p>The description of the custom agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>Agent test description</p>
+         * <p>Test agent description</p>
          */
         @NameInMap("Description")
         public String description;
@@ -555,9 +616,9 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>Analysis framework:</p>
          * <ol>
-         * <li>Monitor core metrics (GMV, order volume, UV, and conversion rate) on a daily, weekly, and monthly basis, and analyze trend changes and year-over-year or month-over-month fluctuations.</li>
+         * <li>Monitor core metrics (GMV, order volume, UV, conversion rate) on a daily, weekly, and monthly basis, and analyze trend changes and year-over-year or month-over-month fluctuations.</li>
          * <li>Segment by new and existing customers, channels, and regions to identify growth drivers and weaknesses.</li>
-         * <li>Conduct funnel analysis based on user behavior paths (browse -&gt; add to cart -&gt; pay) to locate churn points</li>
+         * <li>Conduct funnel analysis based on user behavior paths (browse → add to cart → pay) to locate churn points</li>
          * </ol>
          */
         @NameInMap("Instruction")
@@ -581,7 +642,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
          * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including both successfully paid and unpaid orders.</li>
          * <li>Order volume is the number of valid orders placed per day.</li>
          * <li>UV (Unique Visitors) refers to the number of deduplicated users who visit the website or app.</li>
-         * <li>Conversion rate = paid orders / UV, reflecting the traffic conversion efficiency</li>
+         * <li>Conversion rate = Number of paid orders / UV, reflecting the traffic conversion efficiency</li>
          * </ol>
          */
         @NameInMap("Knowledge")
@@ -593,6 +654,9 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
         @NameInMap("KnowledgeConfigList")
         public java.util.List<ModifyCustomAgentResponseBodyDataKnowledgeConfigList> knowledgeConfigList;
 
+        /**
+         * <p>The knowledge semantic configuration list.</p>
+         */
         @NameInMap("KnowledgeSemanticConfigList")
         public java.util.List<ModifyCustomAgentResponseBodyDataKnowledgeSemanticConfigList> knowledgeSemanticConfigList;
 
@@ -618,13 +682,16 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
          * <p>The name of the custom agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>Agent test name</p>
+         * <p>Test agent name</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The next execution time of the scheduled task in timestamp format.</p>
+         * <p>The next run time of the scheduled task.</p>
+         * <ul>
+         * <li>Timestamp format.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1767715200</p>
@@ -696,7 +763,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
          * <p>The text report format.</p>
          * 
          * <strong>example:</strong>
-         * <p>The text report requires that all numbers use Chinese numerals instead of Arabic numerals</p>
+         * <p>The text report requires that all numbers be spelled out in words instead of using Arabic numerals</p>
          */
         @NameInMap("TextReportConfig")
         public String textReportConfig;
@@ -711,7 +778,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
          * <p>The web report format.</p>
          * 
          * <strong>example:</strong>
-         * <p>The web report requires that all numbers use Chinese numerals instead of Arabic numerals</p>
+         * <p>The web report requires that all numbers be spelled out in words instead of using Arabic numerals</p>
          */
         @NameInMap("WebReportConfig")
         public String webReportConfig;
@@ -721,8 +788,8 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
          * <ul>
          * <li>default: Default.</li>
          * <li>journal: Journal.</li>
-         * <li>legacy: Classic.</li>
-         * <li>neobrutalism: Stylized.</li>
+         * <li>legacy: Legacy.</li>
+         * <li>neobrutalism: Neobrutalism.</li>
          * <li>infographic: Infographic.</li>
          * </ul>
          * 

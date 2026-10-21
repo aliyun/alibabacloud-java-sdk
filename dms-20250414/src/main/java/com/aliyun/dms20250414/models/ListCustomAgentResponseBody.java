@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCustomAgentResponseBody extends TeaModel {
     /**
-     * <p>The response struct.</p>
+     * <p>The returned struct.</p>
      */
     @NameInMap("Data")
     public ListCustomAgentResponseBodyData data;
@@ -20,7 +20,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned when the request fails.</p>
+     * <p>The error message returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>Specified parameter Tid is not valid.</p>
@@ -97,7 +97,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
 
     public static class ListCustomAgentResponseBodyDataContentCallbackConfig extends TeaModel {
         /**
-         * <p>The parameters for callback tool invocation.</p>
+         * <p>The callback tool invocation parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;ID&quot;:&quot;test&quot;}</p>
@@ -124,7 +124,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
         public Integer callbackTime;
 
         /**
-         * <p>The identifier of the callback tool.</p>
+         * <p>The callback tool identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>For example, MCP server ID (6te...g7a)</p>
@@ -199,7 +199,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
         public Boolean forbiddenAppendDataSource;
 
         /**
-         * <p>Specifies whether to skip user inquiries during the process.</p>
+         * <p>Specifies whether to prohibit user inquiries during the process.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -345,15 +345,43 @@ public class ListCustomAgentResponseBody extends TeaModel {
     }
 
     public static class ListCustomAgentResponseBodyDataContentKnowledgeSemanticConfigList extends TeaModel {
+        /**
+         * <p>The DMS database ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69293629</p>
+         */
         @NameInMap("DbId")
         public String dbId;
 
+        /**
+         * <p>The DMS instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2979631</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The knowledge UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7ca8f50d78234******e87</p>
+         */
         @NameInMap("KnowledgeUuid")
         public String knowledgeUuid;
 
+        /**
+         * <p>The knowledge semantic type. Valid values:</p>
+         * <ul>
+         * <li>sql_template: SQL template.</li>
+         * <li>ossie_model: Ossie semantic view.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>sql_template</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -398,7 +426,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
 
     public static class ListCustomAgentResponseBodyDataContentScheduleTaskConfig extends TeaModel {
         /**
-         * <p>The cron expression for time-based periodic scheduling.</p>
+         * <p>The cron expression for time-based scheduling.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 0 ? * 1-7</p>
@@ -407,7 +435,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
         public String cronExpression;
 
         /**
-         * <p>The question for the periodic task.</p>
+         * <p>The question for the scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>Analyze this data and provide a brief report</p>
@@ -416,7 +444,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
         public String query;
 
         /**
-         * <p>The referenced historical session ID.</p>
+         * <p>The reference historical session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4m24*****mg7j2v</p>
@@ -470,7 +498,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
         public String agentType;
 
         /**
-         * <p>The ID of the main Alibaba Cloud account.</p>
+         * <p>The ID of the Alibaba Cloud main account.</p>
          * 
          * <strong>example:</strong>
          * <p>16738266********</p>
@@ -479,7 +507,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
         public String aliyunParentId;
 
         /**
-         * <p>The Alibaba Cloud account ID.</p>
+         * <p>The ID of the Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>20372822********</p>
@@ -488,7 +516,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
         public String aliyunUid;
 
         /**
-         * <p>The callback configuration.</p>
+         * <p>The callback feature configuration.</p>
          */
         @NameInMap("CallbackConfig")
         public ListCustomAgentResponseBodyDataContentCallbackConfig callbackConfig;
@@ -530,7 +558,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
          *   &quot;personal&quot; : {
          *     &quot;DataSourceType&quot; : &quot;remote_data_center&quot;,
          *     &quot;FileId&quot; : &quot;f-5qlrwaw10<strong><strong><strong><strong>s3gpw1z&quot;,
-         *     &quot;Database&quot; : &quot;TestTable</strong></strong></strong>.xlsx&quot;,
+         *     &quot;Database&quot; : &quot;Test table</strong></strong></strong>.xlsx&quot;,
          *     &quot;Tables&quot; : [ &quot;Sheet1&quot; ],
          *     &quot;TableIds&quot; : [ &quot;</strong>****&quot; ],
          *     &quot;RegionId&quot; : &quot;cn-hangzhou&quot;
@@ -541,7 +569,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
         public String dataJson;
 
         /**
-         * <p>Indicates whether the agent is displayed by default.</p>
+         * <p>Specifies whether the agent is displayed by default.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -550,7 +578,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
         public Integer defaultAgent;
 
         /**
-         * <p>The description of the custom agent.</p>
+         * <p>The custom agent description.</p>
          * 
          * <strong>example:</strong>
          * <p>Agent test description</p>
@@ -597,7 +625,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>Analysis framework:</p>
          * <ol>
-         * <li>Monitor core metrics (GMV, order volume, UV, conversion rate) on a daily, weekly, and monthly basis, and analyze trend changes and year-over-year and month-over-month fluctuations.</li>
+         * <li>Monitor core metrics (GMV, order volume, UV, conversion rate) on a daily, weekly, and monthly basis, and analyze trend changes and year-over-year or month-over-month fluctuations.</li>
          * <li>Segment by new and existing customers, channels, and regions to identify growth sources and shortcomings.</li>
          * <li>Conduct funnel analysis based on user behavior paths (browse -&gt; add to cart -&gt; pay) to locate churn points</li>
          * </ol>
@@ -606,7 +634,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
         public String instruction;
 
         /**
-         * <p>Indicates whether a periodic task is configured.</p>
+         * <p>Specifies whether a scheduled task is configured.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -620,10 +648,10 @@ public class ListCustomAgentResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>Core metric definitions:</p>
          * <ol>
-         * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders.</li>
+         * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including both successfully paid and unpaid orders.</li>
          * <li>Order volume is the number of valid daily orders.</li>
          * <li>UV (Unique Visitors) refers to the number of deduplicated users visiting the website or app.</li>
-         * <li>Conversion rate = paid orders / UV, reflecting the traffic conversion efficiency</li>
+         * <li>Conversion rate = Number of paid orders / UV, reflecting the traffic conversion efficiency</li>
          * </ol>
          */
         @NameInMap("Knowledge")
@@ -635,6 +663,9 @@ public class ListCustomAgentResponseBody extends TeaModel {
         @NameInMap("KnowledgeConfigList")
         public java.util.List<ListCustomAgentResponseBodyDataContentKnowledgeConfigList> knowledgeConfigList;
 
+        /**
+         * <p>The knowledge semantic configuration list.</p>
+         */
         @NameInMap("KnowledgeSemanticConfigList")
         public java.util.List<ListCustomAgentResponseBodyDataContentKnowledgeSemanticConfigList> knowledgeSemanticConfigList;
 
@@ -657,7 +688,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
         public String modifierUserName;
 
         /**
-         * <p>The name of the custom agent.</p>
+         * <p>The custom agent name.</p>
          * 
          * <strong>example:</strong>
          * <p>Agent test name</p>
@@ -666,7 +697,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The next run time of the periodic task.</p>
+         * <p>The next run time of the scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>1767715200</p>
@@ -684,7 +715,10 @@ public class ListCustomAgentResponseBody extends TeaModel {
         public String offlineTime;
 
         /**
-         * <p>The list of recommended questions. You can configure up to 10 recommended questions.</p>
+         * <p>The recommended question list.</p>
+         * <ul>
+         * <li>You can configure up to 10 recommended questions.</li>
+         * </ul>
          */
         @NameInMap("RecommendQuestionList")
         public java.util.List<String> recommendQuestionList;
@@ -708,7 +742,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
         public String relatedSessionId;
 
         /**
-         * <p>The publish time.</p>
+         * <p>The release time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-11T14:04:32.000+00:00</p>
@@ -717,7 +751,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
         public String releaseTime;
 
         /**
-         * <p>The periodic task configuration.</p>
+         * <p>The scheduled task configuration.</p>
          */
         @NameInMap("ScheduleTaskConfig")
         public ListCustomAgentResponseBodyDataContentScheduleTaskConfig scheduleTaskConfig;
@@ -741,7 +775,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
         public String textReportConfig;
 
         /**
-         * <p>The list of user-specified skills.</p>
+         * <p>The user-specified skill list.</p>
          */
         @NameInMap("UserSpecifiedSkillList")
         public java.util.List<String> userSpecifiedSkillList;
@@ -760,8 +794,8 @@ public class ListCustomAgentResponseBody extends TeaModel {
          * <ul>
          * <li>default: Default.</li>
          * <li>journal: Journal.</li>
-         * <li>legacy: Classic.</li>
-         * <li>neobrutalism: Stylized.</li>
+         * <li>legacy: Legacy.</li>
+         * <li>neobrutalism: Neobrutalism.</li>
          * <li>infographic: Infographic.</li>
          * </ul>
          * 

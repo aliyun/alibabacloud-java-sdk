@@ -1,3 +1,8 @@
+2026-10-21 Version: 4.3.0
+- Support API ListAgenticGlobalSqlExecutionHistories.
+- Support API ListAgenticSqlExecutionHistories.
+
+
 2026-10-14 Version: 4.2.0
 - Support API AddAgenticDataSource.
 - Support API CreateAgenticSqlExecuteCredential.
