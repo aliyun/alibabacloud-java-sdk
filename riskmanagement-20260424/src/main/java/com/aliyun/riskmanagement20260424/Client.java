@@ -1706,7 +1706,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解封申请列表及分页信息</p>
+     * <p>Queries the list of port unblocking applications and pagination information.</p>
      * 
      * @param request QueryForOperationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1774,7 +1774,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解封申请列表及分页信息</p>
+     * <p>Queries the list of port unblocking applications and pagination information.</p>
      * 
      * @param request QueryForOperationRequest
      * @return QueryForOperationResponse
@@ -2293,7 +2293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交 TCP25端口免审解封申请</p>
+     * <p>Claims privileges.</p>
      * 
      * @param request SubmitAutoAuditUnblockRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2349,7 +2349,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交 TCP25端口免审解封申请</p>
+     * <p>Claims privileges.</p>
      * 
      * @param request SubmitAutoAuditUnblockRequest
      * @return SubmitAutoAuditUnblockResponse

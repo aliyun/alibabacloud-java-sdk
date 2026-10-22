@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class SubmitAutoAuditUnblockResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * <ul>
+     * <li><strong>200</strong>: Success.</li>
+     * <li><strong>Other values (such as 400 and 500)</strong>: Failure.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +18,12 @@ public class SubmitAutoAuditUnblockResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The submission result.</p>
+     * <ul>
+     * <li><strong>true</strong>: The submission succeeded.</li>
+     * <li><strong>false</strong>: The submission failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +31,8 @@ public class SubmitAutoAuditUnblockResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful‌</p>
      */
@@ -26,6 +40,8 @@ public class SubmitAutoAuditUnblockResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6B57D35D-9DAC-5393-AE39-07697E37C2E7</p>
      */
@@ -33,6 +49,12 @@ public class SubmitAutoAuditUnblockResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

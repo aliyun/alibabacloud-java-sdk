@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryForOperationRequest extends TeaModel {
     /**
+     * <p>The end time of the application.</p>
+     * 
      * <strong>example:</strong>
      * <p>1791937232000</p>
      */
@@ -12,6 +14,8 @@ public class QueryForOperationRequest extends TeaModel {
     public Long applyTimeEnd;
 
     /**
+     * <p>The start time of the application.</p>
+     * 
      * <strong>example:</strong>
      * <p>1791937132000</p>
      */
@@ -19,6 +23,13 @@ public class QueryForOperationRequest extends TeaModel {
     public Long applyTimeStart;
 
     /**
+     * <p>The asset type. Valid values:</p>
+     * <ul>
+     * <li><strong>EIP</strong>: VPC public IP address.</li>
+     * <li><strong>SLB</strong>: load balancing.</li>
+     * <li><strong>ECS</strong>: Public IP address in the classic network.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>EIP</p>
      */
@@ -26,6 +37,8 @@ public class QueryForOperationRequest extends TeaModel {
     public String assetType;
 
     /**
+     * <p>The end time of the review.</p>
+     * 
      * <strong>example:</strong>
      * <p>1791937232000</p>
      */
@@ -33,6 +46,8 @@ public class QueryForOperationRequest extends TeaModel {
     public Long auditTimeEnd;
 
     /**
+     * <p>The start time of the review.</p>
+     * 
      * <strong>example:</strong>
      * <p>1791937132000</p>
      */
@@ -40,6 +55,11 @@ public class QueryForOperationRequest extends TeaModel {
     public Long auditTimeStart;
 
     /**
+     * <p>The current page number.</p>
+     * <blockquote>
+     * <p>Default value: 1.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -47,6 +67,8 @@ public class QueryForOperationRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The customer UID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1647796581073291</p>
      */
@@ -54,6 +76,8 @@ public class QueryForOperationRequest extends TeaModel {
     public String customerUid;
 
     /**
+     * <p>IP</p>
+     * 
      * <strong>example:</strong>
      * <p>12.3*.22.11</p>
      */
@@ -61,6 +85,8 @@ public class QueryForOperationRequest extends TeaModel {
     public String ip;
 
     /**
+     * <p>The number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -68,6 +94,15 @@ public class QueryForOperationRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The task status. Valid values:</p>
+     * <ul>
+     * <li><strong>auditing</strong>: Under review.</li>
+     * <li><strong>approved</strong>: Approved.</li>
+     * <li><strong>rejected</strong>: Rejected.</li>
+     * <li><strong>effective</strong>: Effective.</li>
+     * <li><strong>ineffective</strong>: Ineffective.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>approved</p>
      */

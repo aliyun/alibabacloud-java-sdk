@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class QueryForOperationResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The query results.</p>
+     */
     @NameInMap("Data")
     public QueryForOperationResponseBodyData data;
 
     /**
+     * <p>The message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +29,8 @@ public class QueryForOperationResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEE90F8C-EDC2-5394-953B-D07A121612B5</p>
      */
@@ -29,6 +38,12 @@ public class QueryForOperationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,8 @@ public class QueryForOperationResponseBody extends TeaModel {
 
     public static class QueryForOperationResponseBodyDataList extends TeaModel {
         /**
+         * <p>The application time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1788873796000</p>
          */
@@ -89,6 +106,13 @@ public class QueryForOperationResponseBody extends TeaModel {
         public Long applyTime;
 
         /**
+         * <p>The asset type. Valid values:</p>
+         * <ul>
+         * <li><strong>EIP</strong>: VPC public IP address.</li>
+         * <li><strong>SLB</strong>: load balancing.</li>
+         * <li><strong>ECS</strong>: Public IP address in the classic network.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>EIP</p>
          */
@@ -96,6 +120,8 @@ public class QueryForOperationResponseBody extends TeaModel {
         public String assetType;
 
         /**
+         * <p>The review remarks.</p>
+         * 
          * <strong>example:</strong>
          * <p>agree</p>
          */
@@ -103,6 +129,8 @@ public class QueryForOperationResponseBody extends TeaModel {
         public String auditMemo;
 
         /**
+         * <p>The review time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1791937132000</p>
          */
@@ -110,6 +138,8 @@ public class QueryForOperationResponseBody extends TeaModel {
         public Long auditTime;
 
         /**
+         * <p>The reviewer.</p>
+         * 
          * <strong>example:</strong>
          * <p>149754</p>
          */
@@ -117,6 +147,8 @@ public class QueryForOperationResponseBody extends TeaModel {
         public String auditor;
 
         /**
+         * <p>The customer UID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1068723216148614</p>
          */
@@ -124,6 +156,8 @@ public class QueryForOperationResponseBody extends TeaModel {
         public String customerUid;
 
         /**
+         * <p>The type of the sent email.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -131,6 +165,12 @@ public class QueryForOperationResponseBody extends TeaModel {
         public String emailType;
 
         /**
+         * <p>Specifies whether the email contains an unsubscribe option. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -138,6 +178,8 @@ public class QueryForOperationResponseBody extends TeaModel {
         public Boolean hasUnsubscribe;
 
         /**
+         * <p>The unique ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>710864062</p>
          */
@@ -145,6 +187,8 @@ public class QueryForOperationResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The IP address of the asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.0.158.58</p>
          */
@@ -152,6 +196,8 @@ public class QueryForOperationResponseBody extends TeaModel {
         public String ip;
 
         /**
+         * <p>The description of the number of sent emails.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -159,6 +205,15 @@ public class QueryForOperationResponseBody extends TeaModel {
         public String sendCount;
 
         /**
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li><strong>auditing</strong>: Under review.</li>
+         * <li><strong>approved</strong>: Approved.</li>
+         * <li><strong>rejected</strong>: Rejected.</li>
+         * <li><strong>effective</strong>: Effective.</li>
+         * <li><strong>ineffective</strong>: Ineffective.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Executing</p>
          */
@@ -166,6 +221,8 @@ public class QueryForOperationResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -285,6 +342,11 @@ public class QueryForOperationResponseBody extends TeaModel {
 
     public static class QueryForOperationResponseBodyDataPageInfo extends TeaModel {
         /**
+         * <p>The page number from which the query results are displayed.</p>
+         * <blockquote>
+         * <p>Default value: 1, which indicates that the query results are displayed from the first page.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -292,6 +354,8 @@ public class QueryForOperationResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>The number of entries to return on each page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -299,6 +363,8 @@ public class QueryForOperationResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of events.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -337,9 +403,15 @@ public class QueryForOperationResponseBody extends TeaModel {
     }
 
     public static class QueryForOperationResponseBodyData extends TeaModel {
+        /**
+         * <p>The event data.</p>
+         */
         @NameInMap("List")
         public java.util.List<QueryForOperationResponseBodyDataList> list;
 
+        /**
+         * <p>The pagination information.</p>
+         */
         @NameInMap("PageInfo")
         public QueryForOperationResponseBodyDataPageInfo pageInfo;
 

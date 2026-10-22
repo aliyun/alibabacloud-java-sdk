@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class SubmitAutoAuditUnblockRequest extends TeaModel {
     /**
+     * <p>The list of assets.</p>
+     * <blockquote>
+     * <p>The array supports up to 50 IP addresses.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;domain&quot;:&quot;&quot;,&quot;ip&quot;:&quot;120.26.29.16&quot;,&quot;assetType&quot;:&quot;EIP&quot;}]</p>
      */
@@ -12,6 +17,11 @@ public class SubmitAutoAuditUnblockRequest extends TeaModel {
     public String assetList;
 
     /**
+     * <p>The auditor.</p>
+     * <blockquote>
+     * <p>You do not need to specify this parameter. It does not take effect.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>none</p>
      */
@@ -19,6 +29,8 @@ public class SubmitAutoAuditUnblockRequest extends TeaModel {
     public String auditor;
 
     /**
+     * <p>The customer UID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1317334647812936</p>
      */
@@ -26,6 +38,8 @@ public class SubmitAutoAuditUnblockRequest extends TeaModel {
     public String customerUid;
 
     /**
+     * <p>The type of the email to send.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -33,6 +47,12 @@ public class SubmitAutoAuditUnblockRequest extends TeaModel {
     public String emailType;
 
     /**
+     * <p>Specifies whether the email includes an unsubscribe option.</p>
+     * <ul>
+     * <li><strong>true</strong>: Included.</li>
+     * <li><strong>false</strong>: Not included.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -40,6 +60,8 @@ public class SubmitAutoAuditUnblockRequest extends TeaModel {
     public Boolean hasUnsubscribe;
 
     /**
+     * <p>The description of the number of emails to send.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -47,8 +69,10 @@ public class SubmitAutoAuditUnblockRequest extends TeaModel {
     public String sendCount;
 
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
-     * <p>使用说明。</p>
+     * <p>Usage instructions</p>
      */
     @NameInMap("UseDesc")
     public String useDesc;
