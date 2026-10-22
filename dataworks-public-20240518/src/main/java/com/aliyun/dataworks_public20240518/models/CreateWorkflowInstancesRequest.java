@@ -87,7 +87,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
     public java.util.List<CreateWorkflowInstancesRequestTags> tags;
 
     /**
-     * <p>The node parameters, which are used to set parameters for specific nodes. The value is in JSON format. The key is the node ID, and the value format refers to the node script parameters (Task.Script.Parameter in the response of the GetTask operation).</p>
+     * <p>The task parameters, which are used to set parameters for specific tasks. The value is in JSON format. The key is the task ID, and the value format refers to the task script parameters (Task.Script.Parameter in the response of the GetTask operation).</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -103,8 +103,8 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
      * <ul>
      * <li>SupplementData: data backfill. The methods for specifying RootTaskIds and IncludeTaskIds vary based on the data backfill mode. For more information, see the parameter description of DefaultRunProperties.Mode.</li>
      * <li>ManualWorkflow: manually triggered workflow. You must set WorkflowId to the ID of the manually triggered workflow. RootTaskIds is optional. If you do not specify RootTaskIds, the default root node list of the manually triggered workflow is used.</li>
-     * <li>Manual: manually triggered node. You only need to specify RootTaskIds, which is the list of manually triggered nodes to be run.</li>
-     * <li>SmokeTest: smoke test. You only need to specify RootTaskIds, which is the list of test nodes to be run.</li>
+     * <li>Manual: manually triggered task. You only need to specify RootTaskIds, which is the list of manually triggered tasks to be run.</li>
+     * <li>SmokeTest: smoke test. You only need to specify RootTaskIds, which is the list of test tasks to be run.</li>
      * <li>TriggerWorkflow: event-triggered workflow. You must set WorkflowId to the ID of the event-triggered workflow. IncludeTaskIds is optional. If you do not specify IncludeTaskIds, the entire workflow is run.</li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -116,7 +116,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The ID of the workflow to which the node belongs. The WorkflowId of a periodic node is always 1.</p>
+     * <p>The ID of the workflow. The WorkflowId of a scheduled task is always 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
     public Long workflowId;
 
     /**
-     * <p>The workflow parameters. This parameter takes effect only when a specific workflow is specified (WorkflowId != 1). For a periodic workflow or an event-triggered workflow, the format is key=value, and the priority is lower than that of node parameters. For a manually triggered workflow, the format is JSON, and the priority is higher than that of node parameters.</p>
+     * <p>The workflow parameters. This parameter takes effect only when a specific workflow is specified (WorkflowId != 1). For a periodic workflow or an event-triggered workflow, the format is key=value, and the priority is lower than that of task parameters. For a manually triggered workflow, the format is JSON, and the priority is higher than that of task parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;key=value&quot; format:
@@ -434,7 +434,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         public CreateWorkflowInstancesRequestDefaultRunPropertiesAnalysis analysis;
 
         /**
-         * <p>The data source name mappings for data backfill runs. The key of the map is DataSource.Name in the node definition, and the value is DataSource.Name used during data backfill runs. This parameter takes effect only when Type is set to SupplementData. If this parameter is not configured, an empty map is passed, or the key is not matched, the node continues to use the original data source. Currently, only EMR Spark SQL, EMR Shell, and EMR Spark nodes are supported.</p>
+         * <p>The data source name mappings for data backfill runs. The key of the map is DataSource.Name in the task definition, and the value is DataSource.Name used during data backfill runs. This parameter takes effect only when Type is set to SupplementData. If this parameter is not configured, an empty map is passed, or the key is not matched, the task continues to use the original data source. Currently, only EMR Spark SQL, EMR Shell, and EMR Spark tasks are supported.</p>
          */
         @NameInMap("DataSourceNameMappings")
         public java.util.Map<String, String> dataSourceNameMappings;
@@ -446,7 +446,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         public java.util.List<Long> excludeProjectIds;
 
         /**
-         * <p>The list of node IDs to exclude from the run.</p>
+         * <p>The list of task IDs to exclude from the run.</p>
          */
         @NameInMap("ExcludeTaskIds")
         public java.util.List<Long> excludeTaskIds;
@@ -458,7 +458,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         public java.util.List<Long> includeProjectIds;
 
         /**
-         * <p>The list of node IDs to include in the run.</p>
+         * <p>The list of task IDs to include in the run.</p>
          */
         @NameInMap("IncludeTaskIds")
         public java.util.List<Long> includeTaskIds;
@@ -468,7 +468,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
          * <ul>
          * <li>General: general mode. You can specify only one value for RootTaskIds. IncludeTaskIds is optional. If you do not specify IncludeTaskIds, the value of RootTaskIds is included by default.</li>
          * <li>ManualSelection: manual selection mode. You can specify multiple values for RootTaskIds. IncludeTaskIds is optional. If you do not specify IncludeTaskIds, the values of RootTaskIds are included by default.</li>
-         * <li>Chain: chain mode. RootTaskIds must be left empty. You must specify two IDs for IncludeTaskIds, which are the start and end nodes.</li>
+         * <li>Chain: chain mode. RootTaskIds must be left empty. You must specify two IDs for IncludeTaskIds, which are the start and end tasks.</li>
          * <li>AllDownstream: all downstream mode. You can specify only one value for RootTaskIds.</li>
          * </ul>
          * 
@@ -492,7 +492,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         public String order;
 
         /**
-         * <p>The number of parallel nodes. A value of 2 to 10 indicates the parallelism, and a value of 1 indicates serial execution. This parameter is required when Type is set to SupplementData.</p>
+         * <p>The number of parallel tasks. A value of 2 to 10 indicates the parallelism, and a value of 1 indicates serial execution. This parameter is required when Type is set to SupplementData.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -523,25 +523,25 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         public String priorityWeightStrategy;
 
         /**
-         * <p>The list of root node IDs.</p>
+         * <p>The list of root task IDs.</p>
          * <ul>
          * <li>When Type is set to SupplementData, RootTaskIds is required except when Mode is set to Chain.</li>
          * <li>When Type is set to ManualWorkflow, RootTaskIds is optional. If you do not specify RootTaskIds, the default root node list of the manually triggered workflow is used.</li>
-         * <li>When Type is set to Manual, RootTaskIds is required and specifies the list of manually triggered nodes to be run.</li>
-         * <li>When Type is set to SmokeTest, RootTaskIds is required and specifies the list of test nodes to be run.</li>
+         * <li>When Type is set to Manual, RootTaskIds is required and specifies the list of manual tasks to be run.</li>
+         * <li>When Type is set to SmokeTest, RootTaskIds is required and specifies the list of test tasks to be run.</li>
          * </ul>
          */
         @NameInMap("RootTaskIds")
         public java.util.List<Long> rootTaskIds;
 
         /**
-         * <p>The run policy. If this field is left empty, the node configuration is used.</p>
+         * <p>The run policy. If this field is left empty, the task configuration is used.</p>
          */
         @NameInMap("RunPolicy")
         public CreateWorkflowInstancesRequestDefaultRunPropertiesRunPolicy runPolicy;
 
         /**
-         * <p>The identifier of the custom scheduling resource group. If this field is left empty, the node configuration is used.</p>
+         * <p>The identifier of the custom scheduling resource group. If this field is left empty, the task configuration is used.</p>
          * 
          * <strong>example:</strong>
          * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>

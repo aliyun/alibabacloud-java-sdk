@@ -19,7 +19,7 @@ public class CreateWorkflowDefinitionRequest extends TeaModel {
      * <blockquote>
      * <p>How do I quickly obtain a FlowSpec template?</p>
      * <ul>
-     * <li>Open a workflow in DataStudio and click Show Spec in the upper-right corner to obtain the FlowSpec description for the current workflow. You can quickly build a compliant template based on this FlowSpec description.</li>
+     * <li>Open a workflow in Data Studio and click Show Spec in the upper-right corner to obtain the FlowSpec description for the current workflow. You can quickly build a compliant template based on this FlowSpec description.</li>
      * </ul>
      * </blockquote>
      * <blockquote>

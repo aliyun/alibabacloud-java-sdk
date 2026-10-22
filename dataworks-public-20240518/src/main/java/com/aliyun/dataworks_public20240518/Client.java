@@ -1620,7 +1620,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <p>Notice: This operation does not support batch operations. If you specify multiple publish entities in the parameters, all entities except the first one are ignored.
-     * This operation is part of the new data development capabilities and applies only to workspaces that use the new data development feature. If the new data development feature is not used, use the corresponding operation of the 2020-05-18 version.</p>
+     * This operation is part of the new Data Studio capabilities and applies only to workspaces that use the new Data Studio feature. If the new Data Studio feature is not used, use the corresponding operation of the 2020-05-18 version.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -1666,7 +1666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <p>Notice: This operation does not support batch operations. If you specify multiple publish entities in the parameters, all entities except the first one are ignored.
-     * This operation is part of the new data development capabilities and applies only to workspaces that use the new data development feature. If the new data development feature is not used, use the corresponding operation of the 2020-05-18 version.</p>
+     * This operation is part of the new Data Studio capabilities and applies only to workspaces that use the new Data Studio feature. If the new Data Studio feature is not used, use the corresponding operation of the 2020-05-18 version.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -5682,11 +5682,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <p>Notice: This operation does not support batch operations. If more than one workflow is defined in the FlowSpec, all workflows except the first one are ignored. In addition, nodes defined within the workflow are also directly ignored. Call the CreateNode operation to create internal nodes one by one.</notice>
-     * This operation is part of the new DataStudio capabilities and applies only to workspaces that use the new DataStudio. If you do not use the new DataStudio, use the corresponding operation of the 2020-05-18 version.</p>
+     * This operation is part of the new Data Studio capabilities and applies only to workspaces that use the new Data Studio. If you do not use the new Data Studio, use the corresponding operation of the 2020-05-18 version.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a workflow in a specified directory in DataStudio.</p>
+     * <p>Creates a workflow in a specified directory in Data Studio.</p>
      * 
      * @param request CreateWorkflowDefinitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5724,11 +5724,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <p>Notice: This operation does not support batch operations. If more than one workflow is defined in the FlowSpec, all workflows except the first one are ignored. In addition, nodes defined within the workflow are also directly ignored. Call the CreateNode operation to create internal nodes one by one.</notice>
-     * This operation is part of the new DataStudio capabilities and applies only to workspaces that use the new DataStudio. If you do not use the new DataStudio, use the corresponding operation of the 2020-05-18 version.</p>
+     * This operation is part of the new Data Studio capabilities and applies only to workspaces that use the new Data Studio. If you do not use the new Data Studio, use the corresponding operation of the 2020-05-18 version.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a workflow in a specified directory in DataStudio.</p>
+     * <p>Creates a workflow in a specified directory in Data Studio.</p>
      * 
      * @param request CreateWorkflowDefinitionRequest
      * @return CreateWorkflowDefinitionResponse
@@ -5740,7 +5740,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a later edition to use this feature.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a workflow instance based on configurations, such as a data backfill workflow instance.</p>
@@ -5837,7 +5837,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a later edition to use this feature.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a workflow instance based on configurations, such as a data backfill workflow instance.</p>
@@ -6112,8 +6112,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><notice>After a UDF function is published, it cannot be deleted. You must take it offline before deleting it.</notice>
-     * This API operation belongs to the new data development capabilities and applies only to workspaces that use the new data development feature. If you do not use the new data development feature, use the corresponding API operation of the 2020-05-18 version.</p>
+     * <p><notice>After a UDF function is deployed, it cannot be deleted. You must undeploy it before deleting it.</notice>
+     * This API operation belongs to the new Data Studio capabilities and applies only to workspaces that use the new Data Studio feature. If you do not use the new Data Studio feature, use the corresponding API operation of the 2020-05-18 version.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a component.</p>
@@ -6152,8 +6152,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><notice>After a UDF function is published, it cannot be deleted. You must take it offline before deleting it.</notice>
-     * This API operation belongs to the new data development capabilities and applies only to workspaces that use the new data development feature. If you do not use the new data development feature, use the corresponding API operation of the 2020-05-18 version.</p>
+     * <p><notice>After a UDF function is deployed, it cannot be deleted. You must undeploy it before deleting it.</notice>
+     * This API operation belongs to the new Data Studio capabilities and applies only to workspaces that use the new Data Studio feature. If you do not use the new Data Studio feature, use the corresponding API operation of the 2020-05-18 version.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a component.</p>
@@ -9865,11 +9865,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li>You must purchase DataWorks Basic Edition or a later edition to use this operation.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified column in a Data Map table.</p>
+     * <p>Retrieves the details of a specified column in a DataWorks Data Map table.</p>
      * 
      * @param request GetColumnRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9898,11 +9898,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li>You must purchase DataWorks Basic Edition or a later edition to use this operation.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified column in a Data Map table.</p>
+     * <p>Retrieves the details of a specified column in a DataWorks Data Map table.</p>
      * 
      * @param request GetColumnRequest
      * @return GetColumnResponse
@@ -14282,11 +14282,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li>You must purchase DataWorks Basic Edition or later to use this API.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the column list of a specified table in DataWorks Data Map.</p>
+     * <p>Queries the columns of a specified table in DataWorks Data Map.</p>
      * 
      * @param request ListColumnsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14315,11 +14315,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li>You must purchase DataWorks Basic Edition or later to use this API.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the column list of a specified table in DataWorks Data Map.</p>
+     * <p>Queries the columns of a specified table in DataWorks Data Map.</p>
      * 
      * @param request ListColumnsRequest
      * @return ListColumnsResponse
@@ -17317,12 +17317,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Standard Edition or later to use this operation.</li>
-     * <li>This operation queries the upstream and downstream entities of the current entity and the lineage relationships between entities.</li>
+     * <li>You must purchase DataWorks Standard Edition or a more advanced edition to use this operation.</li>
+     * <li>This operation queries the upstream and downstream entities of the current entity and the lineage relationships between the entities.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of upstream and downstream lineage entities for a given entity in DataWorks Data Map, with an option to include specific lineage relationship information.</p>
+     * <p>Queries the upstream and downstream lineage entities of a given entity in DataWorks Data Map. You can specify whether to include detailed lineage relationship information.</p>
      * 
      * @param request ListLineagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17351,12 +17351,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Standard Edition or later to use this operation.</li>
-     * <li>This operation queries the upstream and downstream entities of the current entity and the lineage relationships between entities.</li>
+     * <li>You must purchase DataWorks Standard Edition or a more advanced edition to use this operation.</li>
+     * <li>This operation queries the upstream and downstream entities of the current entity and the lineage relationships between the entities.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of upstream and downstream lineage entities for a given entity in DataWorks Data Map, with an option to include specific lineage relationship information.</p>
+     * <p>Queries the upstream and downstream lineage entities of a given entity in DataWorks Data Map. You can specify whether to include detailed lineage relationship information.</p>
      * 
      * @param request ListLineagesRequest
      * @return ListLineagesResponse
@@ -18594,7 +18594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or later to use this operation.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of workspace roles by paging.</p>
@@ -18659,7 +18659,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or later to use this operation.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of workspace roles by paging.</p>
@@ -19703,7 +19703,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or later to use this API.</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this API.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -19742,7 +19742,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or later to use this API.</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this API.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -20624,10 +20624,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is part of the new data development capabilities and applies only to workspaces that use the new data development feature. If you do not use the new data development feature, use the corresponding operation in the 2020-05-18 version.</p>
+     * <p>This operation is part of the new Data Studio capabilities and applies only to workspaces that use the new Data Studio feature. If you do not use the new Data Studio feature, use the corresponding operation in the 2020-05-18 version.</p>
      * 
      * <b>summary</b> : 
-     * <p>Moves a specified data development file resource to a specified data development folder.</p>
+     * <p>Moves a specified Data Studio file resource to a specified Data Studio folder.</p>
      * 
      * @param request MoveResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20667,10 +20667,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is part of the new data development capabilities and applies only to workspaces that use the new data development feature. If you do not use the new data development feature, use the corresponding operation in the 2020-05-18 version.</p>
+     * <p>This operation is part of the new Data Studio capabilities and applies only to workspaces that use the new Data Studio feature. If you do not use the new Data Studio feature, use the corresponding operation in the 2020-05-18 version.</p>
      * 
      * <b>summary</b> : 
-     * <p>Moves a specified data development file resource to a specified data development folder.</p>
+     * <p>Moves a specified Data Studio file resource to a specified Data Studio folder.</p>
      * 
      * @param request MoveResourceRequest
      * @return MoveResourceResponse

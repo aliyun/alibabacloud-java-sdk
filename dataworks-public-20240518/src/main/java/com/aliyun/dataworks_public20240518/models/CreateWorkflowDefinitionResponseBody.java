@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateWorkflowDefinitionResponseBody extends TeaModel {
     /**
-     * <p>The unique identifier of the DataStudio workflow.</p>
+     * <p>The unique identifier of the Data Studio workflow.</p>
      * <blockquote>
      * <p>Notice: This field is of the Long type before SDK 8.0.0 and of the String type in SDK 8.0.0 and later. <strong>This change does not affect the normal use of the SDK, and the parameter is still returned based on the type defined in the SDK</strong>. The type change may cause project compilation failures only when you upgrade the SDK across version 8.0.0. In this case, you must manually correct the data type.</notice></p>
      * </blockquote>
