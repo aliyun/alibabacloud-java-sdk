@@ -635,7 +635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Immediately ends a penetration test.</p>
+     * <p>Immediately terminates a penetration test.</p>
      * 
      * @param request EndPenetrationTestRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -667,7 +667,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Immediately ends a penetration test.</p>
+     * <p>Immediately terminates a penetration test.</p>
      * 
      * @param request EndPenetrationTestRequest
      * @return EndPenetrationTestResponse
@@ -1706,6 +1706,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>解封申请列表及分页信息</p>
+     * 
+     * @param request QueryForOperationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryForOperationResponse
+     */
+    public QueryForOperationResponse queryForOperationWithOptions(QueryForOperationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applyTimeEnd)) {
+            query.put("ApplyTimeEnd", request.applyTimeEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applyTimeStart)) {
+            query.put("ApplyTimeStart", request.applyTimeStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.assetType)) {
+            query.put("AssetType", request.assetType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.auditTimeEnd)) {
+            query.put("AuditTimeEnd", request.auditTimeEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.auditTimeStart)) {
+            query.put("AuditTimeStart", request.auditTimeStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerUid)) {
+            query.put("CustomerUid", request.customerUid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ip)) {
+            query.put("Ip", request.ip);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryForOperation"),
+            new TeaPair("version", "2026-04-24"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryForOperationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>解封申请列表及分页信息</p>
+     * 
+     * @param request QueryForOperationRequest
+     * @return QueryForOperationResponse
+     */
+    public QueryForOperationResponse queryForOperation(QueryForOperationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryForOperationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the subscription status of the cloud security guide.</p>
      * 
      * @param request QueryGuideSubStatusRequest
@@ -1787,7 +1867,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询渗透测试申请列表</p>
+     * <p>Queries the list of penetration test applications.</p>
      * 
      * @param request QueryPenetrationTestListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1823,7 +1903,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询渗透测试申请列表</p>
+     * <p>Queries the list of penetration test applications.</p>
      * 
      * @param request QueryPenetrationTestListRequest
      * @return QueryPenetrationTestListResponse
@@ -2209,6 +2289,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitApplyRecordResponse submitApplyRecord(SubmitApplyRecordRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitApplyRecordWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交 TCP25端口免审解封申请</p>
+     * 
+     * @param request SubmitAutoAuditUnblockRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitAutoAuditUnblockResponse
+     */
+    public SubmitAutoAuditUnblockResponse submitAutoAuditUnblockWithOptions(SubmitAutoAuditUnblockRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.assetList)) {
+            query.put("AssetList", request.assetList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.auditor)) {
+            query.put("Auditor", request.auditor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerUid)) {
+            query.put("CustomerUid", request.customerUid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.emailType)) {
+            query.put("EmailType", request.emailType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hasUnsubscribe)) {
+            query.put("HasUnsubscribe", request.hasUnsubscribe);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sendCount)) {
+            query.put("SendCount", request.sendCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useDesc)) {
+            query.put("UseDesc", request.useDesc);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitAutoAuditUnblock"),
+            new TeaPair("version", "2026-04-24"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitAutoAuditUnblockResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交 TCP25端口免审解封申请</p>
+     * 
+     * @param request SubmitAutoAuditUnblockRequest
+     * @return SubmitAutoAuditUnblockResponse
+     */
+    public SubmitAutoAuditUnblockResponse submitAutoAuditUnblock(SubmitAutoAuditUnblockRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitAutoAuditUnblockWithOptions(request, runtime);
     }
 
     /**

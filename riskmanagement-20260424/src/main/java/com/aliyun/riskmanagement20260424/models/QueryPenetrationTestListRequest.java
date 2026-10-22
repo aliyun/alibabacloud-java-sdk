@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class QueryPenetrationTestListRequest extends TeaModel {
     /**
+     * <p>The current page number.</p>
+     * <blockquote>
+     * <p>Default value: 1</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +17,11 @@ public class QueryPenetrationTestListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The number of entries to return on each page.</p>
+     * <blockquote>
+     * <p>Valid values: 1 to 100. Default value: 10.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

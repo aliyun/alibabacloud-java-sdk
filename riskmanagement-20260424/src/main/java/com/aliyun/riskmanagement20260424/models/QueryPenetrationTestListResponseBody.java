@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class QueryPenetrationTestListResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * <ul>
+     * <li><strong>200</strong>: Successful.</li>
+     * <li><strong>Other values (such as 400 and 500)</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The query results.</p>
+     */
     @NameInMap("Data")
     public QueryPenetrationTestListResponseBodyData data;
 
     /**
+     * <p>The message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +33,8 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>99D93ED4-D462-5FC5-8518-9BC1C49C7B6C</p>
      */
@@ -29,6 +42,12 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.                               </li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +101,8 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
 
     public static class QueryPenetrationTestListResponseBodyDataList extends TeaModel {
         /**
+         * <p>The application time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1788873796000</p>
          */
@@ -89,6 +110,13 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
         public Long applyTime;
 
         /**
+         * <p>The type of the asset. Valid values:</p>
+         * <ul>
+         * <li><strong>EIP</strong>: Public IP address of a VPC.</li>
+         * <li><strong>SLB</strong>: Server Load Balancer (SLB) instance for load balancing.</li>
+         * <li><strong>ECS</strong>: Public IP address of an ECS instance in the classic network.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>EIP</p>
          */
@@ -96,6 +124,11 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
         public String assetType;
 
         /**
+         * <p>The unique identity ID of the alerting event record.</p>
+         * <blockquote>
+         * <p>The data type of this field is Long. Precision loss may occur during the procedure to serialize or deserialize the numeric sequence. Make sure that the value does not exceed 9007199254740991.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>710864062</p>
          */
@@ -103,6 +136,8 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The IP address of the asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.0.158.58</p>
          */
@@ -110,6 +145,15 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
         public String ip;
 
         /**
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li><strong>early_end</strong>: The user applied for early termination.</li>
+         * <li><strong>expired</strong>: The authorization expired.</li>
+         * <li><strong>auditing</strong>: Under review.</li>
+         * <li><strong>approved</strong>: Approved.</li>
+         * <li><strong>rejected</strong>: Rejected.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>early_end</p>
          */
@@ -117,6 +161,8 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The end time of the test.</p>
+         * 
          * <strong>example:</strong>
          * <p>1788873796000</p>
          */
@@ -124,6 +170,8 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
         public Long testEndDate;
 
         /**
+         * <p>The start date of the test.</p>
+         * 
          * <strong>example:</strong>
          * <p>1788873796000</p>
          */
@@ -195,6 +243,11 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
 
     public static class QueryPenetrationTestListResponseBodyDataPageInfo extends TeaModel {
         /**
+         * <p>The page number of the returned page.</p>
+         * <blockquote>
+         * <p>Default value: 1, which indicates the first page.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -202,6 +255,8 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>The number of entries returned per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>24</p>
          */
@@ -209,6 +264,8 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of events.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -247,9 +304,15 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
     }
 
     public static class QueryPenetrationTestListResponseBodyData extends TeaModel {
+        /**
+         * <p>The event data.</p>
+         */
         @NameInMap("List")
         public java.util.List<QueryPenetrationTestListResponseBodyDataList> list;
 
+        /**
+         * <p>The pagination information.</p>
+         */
         @NameInMap("PageInfo")
         public QueryPenetrationTestListResponseBodyDataPageInfo pageInfo;
 

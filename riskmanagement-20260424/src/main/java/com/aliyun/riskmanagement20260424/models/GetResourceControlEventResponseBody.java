@@ -14,13 +14,13 @@ public class GetResourceControlEventResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data list.</p>
+     * <p>The list of returned data.</p>
      */
     @NameInMap("Data")
     public GetResourceControlEventResponseBodyData data;
 
     /**
-     * <p>The prompt message.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
      * <p>successful‌</p>
@@ -38,10 +38,10 @@ public class GetResourceControlEventResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the call is successful.</p>
      * <ul>
-     * <li><strong>true</strong>: The call was successful.</li>
-     * <li><strong>false</strong>: The call failed.</li>
+     * <li><strong>true</strong>: The call is successful.</li>
+     * <li><strong>false</strong>: The call fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -95,9 +95,102 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetResourceControlEventResponseBodyDataApplyRecordListAnomalyHours extends TeaModel {
+        /**
+         * <p>The traffic exceptions in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150323855</p>
+         */
+        @NameInMap("AbnormalBytes")
+        public Long abnormalBytes;
+
+        /**
+         * <p>The anomaly description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The traffic for the domain name cdn-newfile.stomics.tech increased to 54.78 GB between 03:00 and 04:00 on October 22, 2026, approximately 386 times the historical baseline of 0.14 GB. During this period, about 99.7% of the traffic was concentrated in the 14.22.49 CIDR block. Approximately 160 IP addresses accessed the domain, with no single IP accounting for a large proportion. The traffic involved 258 large files, primarily in tar.gz format, with an empty Referer header, indicating batch downloads or abnormal data pulling. Verify whether this was caused by a version release, image synchronization, or partner downloads. If the cause cannot be confirmed, temporarily throttle or block this CIDR block and implement access control for large files</p>
+         */
+        @NameInMap("AnomalyDesc")
+        public String anomalyDesc;
+
+        /**
+         * <p>The baseline traffic in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58819577119</p>
+         */
+        @NameInMap("BaselineBytes")
+        public Long baselineBytes;
+
+        /**
+         * <p>The anomaly hour.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-10-22 03:00:23</p>
+         */
+        @NameInMap("Hour")
+        public String hour;
+
+        /**
+         * <p>The traffic multiplier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>391.29</p>
+         */
+        @NameInMap("TrafRatio")
+        public Double trafRatio;
+
+        public static GetResourceControlEventResponseBodyDataApplyRecordListAnomalyHours build(java.util.Map<String, ?> map) throws Exception {
+            GetResourceControlEventResponseBodyDataApplyRecordListAnomalyHours self = new GetResourceControlEventResponseBodyDataApplyRecordListAnomalyHours();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResourceControlEventResponseBodyDataApplyRecordListAnomalyHours setAbnormalBytes(Long abnormalBytes) {
+            this.abnormalBytes = abnormalBytes;
+            return this;
+        }
+        public Long getAbnormalBytes() {
+            return this.abnormalBytes;
+        }
+
+        public GetResourceControlEventResponseBodyDataApplyRecordListAnomalyHours setAnomalyDesc(String anomalyDesc) {
+            this.anomalyDesc = anomalyDesc;
+            return this;
+        }
+        public String getAnomalyDesc() {
+            return this.anomalyDesc;
+        }
+
+        public GetResourceControlEventResponseBodyDataApplyRecordListAnomalyHours setBaselineBytes(Long baselineBytes) {
+            this.baselineBytes = baselineBytes;
+            return this;
+        }
+        public Long getBaselineBytes() {
+            return this.baselineBytes;
+        }
+
+        public GetResourceControlEventResponseBodyDataApplyRecordListAnomalyHours setHour(String hour) {
+            this.hour = hour;
+            return this;
+        }
+        public String getHour() {
+            return this.hour;
+        }
+
+        public GetResourceControlEventResponseBodyDataApplyRecordListAnomalyHours setTrafRatio(Double trafRatio) {
+            this.trafRatio = trafRatio;
+            return this;
+        }
+        public Double getTrafRatio() {
+            return this.trafRatio;
+        }
+
+    }
+
     public static class GetResourceControlEventResponseBodyDataApplyRecordListEventTimeRecord extends TeaModel {
         /**
-         * <p>The time when the alert ended.</p>
+         * <p>The end time of the alert.</p>
          * <blockquote>
          * <p>Format: yyyy-MM-dd HH:mm:ss</p>
          * </blockquote>
@@ -109,7 +202,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String alertEndTime;
 
         /**
-         * <p>The time when the first alert was triggered.</p>
+         * <p>The time of the first alert.</p>
          * <blockquote>
          * <p>Format: yyyy-MM-dd HH:mm:ss</p>
          * </blockquote>
@@ -121,7 +214,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String alertStartTime;
 
         /**
-         * <p>The time when the control action was lifted.</p>
+         * <p>The time when the restriction is lifted.</p>
          * <blockquote>
          * <p>Format: yyyy-MM-dd HH:mm:ss</p>
          * </blockquote>
@@ -145,7 +238,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String applyTime;
 
         /**
-         * <p>The time when the alert was ignored.</p>
+         * <p>The time when the alert is ignored.</p>
          * <blockquote>
          * <p>Format: yyyy-MM-dd HH:mm:ss</p>
          * </blockquote>
@@ -157,7 +250,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String ignoreAlertTime;
 
         /**
-         * <p>The time when the instance was shut down.</p>
+         * <p>The time when the instance is shut down.</p>
          * <blockquote>
          * <p>Format: yyyy-MM-dd HH:mm:ss</p>
          * </blockquote>
@@ -169,7 +262,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String instanceCloseTime;
 
         /**
-         * <p>The time when the instance was scanned.</p>
+         * <p>The time when the instance is scanned.</p>
          * <blockquote>
          * <p>Format: yyyy-MM-dd HH:mm:ss</p>
          * </blockquote>
@@ -181,7 +274,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String instanceScanTime;
 
         /**
-         * <p>The time of the latest detection.</p>
+         * <p>The time of the latest check.</p>
          * <blockquote>
          * <p>Format: yyyy-MM-dd HH:mm:ss</p>
          * </blockquote>
@@ -193,7 +286,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String lastCheckTime;
 
         /**
-         * <p>The time when the mining alert was processed.</p>
+         * <p>The processing time of the mining alert.</p>
          * <blockquote>
          * <p>Format: yyyy-MM-dd HH:mm:ss</p>
          * </blockquote>
@@ -229,7 +322,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String processTime;
 
         /**
-         * <p>The time when the control action ended.</p>
+         * <p>The end time of the restriction.</p>
          * <blockquote>
          * <p>Format: yyyy-MM-dd HH:mm:ss</p>
          * </blockquote>
@@ -241,7 +334,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String punishEndTime;
 
         /**
-         * <p>The time when the control action started.</p>
+         * <p>The start time of the restriction.</p>
          * <blockquote>
          * <p>Format: yyyy-MM-dd HH:mm:ss</p>
          * </blockquote>
@@ -265,7 +358,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String rejectTime;
 
         /**
-         * <p>The removal time.</p>
+         * <p>The time when the restriction is removed.</p>
          * <blockquote>
          * <p>Format: yyyy-MM-dd HH:mm:ss</p>
          * </blockquote>
@@ -277,7 +370,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String removeTime;
 
         /**
-         * <p>The time when the risk check succeeded.</p>
+         * <p>The time when the risk check succeeds.</p>
          * <blockquote>
          * <p>Format: yyyy-MM-dd HH:mm:ss</p>
          * </blockquote>
@@ -425,6 +518,12 @@ public class GetResourceControlEventResponseBody extends TeaModel {
 
     public static class GetResourceControlEventResponseBodyDataApplyRecordList extends TeaModel {
         /**
+         * <p>The details of abnormal hours for CDN traffic exceptions.</p>
+         */
+        @NameInMap("AnomalyHours")
+        public java.util.List<GetResourceControlEventResponseBodyDataApplyRecordListAnomalyHours> anomalyHours;
+
+        /**
          * <p>The reason for approval.</p>
          * 
          * <strong>example:</strong>
@@ -449,7 +548,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String rejectReason;
 
         /**
-         * <p>The remarks.</p>
+         * <p>The remark.</p>
          * 
          * <strong>example:</strong>
          * <p>Test Desc for Draft</p>
@@ -458,13 +557,13 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String remark;
 
         /**
-         * <p>The task status. Valid values:</p>
+         * <p>The task status.</p>
          * <ul>
-         * <li><strong>Executing</strong>: executing</li>
-         * <li><strong>Removed</strong>: removed</li>
-         * <li><strong>Alerting</strong>: alerting</li>
-         * <li><strong>Ended</strong>: ended</li>
-         * <li><strong>Processed</strong>: processed by the user and under platform review</li>
+         * <li><strong>Executing</strong>: In progress.</li>
+         * <li><strong>Removed</strong>: Removed.</li>
+         * <li><strong>Alerting</strong>: Alerting.</li>
+         * <li><strong>Ended</strong>: Ended.</li>
+         * <li><strong>Processed</strong>: Processed by the user and under platform review.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -476,6 +575,14 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public static GetResourceControlEventResponseBodyDataApplyRecordList build(java.util.Map<String, ?> map) throws Exception {
             GetResourceControlEventResponseBodyDataApplyRecordList self = new GetResourceControlEventResponseBodyDataApplyRecordList();
             return TeaModel.build(map, self);
+        }
+
+        public GetResourceControlEventResponseBodyDataApplyRecordList setAnomalyHours(java.util.List<GetResourceControlEventResponseBodyDataApplyRecordListAnomalyHours> anomalyHours) {
+            this.anomalyHours = anomalyHours;
+            return this;
+        }
+        public java.util.List<GetResourceControlEventResponseBodyDataApplyRecordListAnomalyHours> getAnomalyHours() {
+            return this.anomalyHours;
         }
 
         public GetResourceControlEventResponseBodyDataApplyRecordList setApprovalReason(String approvalReason) {
@@ -522,13 +629,13 @@ public class GetResourceControlEventResponseBody extends TeaModel {
 
     public static class GetResourceControlEventResponseBodyData extends TeaModel {
         /**
-         * <p>The list of application records.</p>
+         * <p>The list of application record information.</p>
          */
         @NameInMap("ApplyRecordList")
         public java.util.List<GetResourceControlEventResponseBodyDataApplyRecordList> applyRecordList;
 
         /**
-         * <p>The recommended action from the assistant.</p>
+         * <p>The handling suggestions from the assistant.</p>
          * 
          * <strong>example:</strong>
          * <p>assistant tip</p>
@@ -548,8 +655,8 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         /**
          * <p>The traffic direction. Valid values:</p>
          * <ul>
-         * <li><strong>in</strong>: inbound to the cloud. </li>
-         * <li><strong>out</strong>: outbound from the cloud.</li>
+         * <li><strong>in</strong>: Inbound to the cloud. </li>
+         * <li><strong>out</strong>: Outbound from the cloud.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -631,7 +738,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String snapshotUrl;
 
         /**
-         * <p>The attack source IP address.</p>
+         * <p>The source IP address of the attack.</p>
          * 
          * <strong>example:</strong>
          * <p>36.134.124.185</p>
@@ -649,7 +756,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         public String srcPort;
 
         /**
-         * <p>The recommended action.</p>
+         * <p>The handling suggestions.</p>
          * 
          * <strong>example:</strong>
          * <p>Suggestion</p>

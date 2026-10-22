@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetResourceControlEventRequest extends TeaModel {
     /**
-     * <p>The language. Valid values:</p>
+     * <p>The language environment.</p>
      * <ul>
-     * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li>Chinese (default): <strong>zh</strong></li>
+     * <li>English: <strong>en</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class GetResourceControlEventRequest extends TeaModel {
     public String aliyunLang;
 
     /**
-     * <p>The alert event ID.</p>
+     * <p>The ID of the alert event.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class GetResourceControlEventRequest extends TeaModel {
     public String eventId;
 
     /**
-     * <p>The list of specified event IDs.</p>
+     * <p>The list of event IDs.</p>
      */
     @NameInMap("EventIdList")
     public java.util.List<String> eventIdList;
