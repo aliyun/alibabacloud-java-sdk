@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDigitalEmployeeSkillVersionsResponseBody extends TeaModel {
     /**
-     * <p>A list of previous skill versions.</p>
+     * <p>The historical versions.</p>
      */
     @NameInMap("data")
     public java.util.List<ListDigitalEmployeeSkillVersionsResponseBodyData> data;
@@ -42,7 +42,7 @@ public class ListDigitalEmployeeSkillVersionsResponseBody extends TeaModel {
 
     public static class ListDigitalEmployeeSkillVersionsResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the skill version was created.</p>
+         * <p>The creation time in RFC 3339 format with the UTC time zone.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -70,7 +70,7 @@ public class ListDigitalEmployeeSkillVersionsResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>Indicates whether the skill version is enabled.</p>
+         * <p>Indicates whether the version is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -79,7 +79,7 @@ public class ListDigitalEmployeeSkillVersionsResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The remark for the skill version.</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>remark</p>
@@ -97,7 +97,7 @@ public class ListDigitalEmployeeSkillVersionsResponseBody extends TeaModel {
         public String skillName;
 
         /**
-         * <p>The time when the skill version was last updated.</p>
+         * <p>The update time in RFC 3339 format with the UTC time zone.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -107,7 +107,7 @@ public class ListDigitalEmployeeSkillVersionsResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>The version number.</p>
+         * <p>The version.</p>
          * 
          * <strong>example:</strong>
          * <p>1770386951147366810</p>

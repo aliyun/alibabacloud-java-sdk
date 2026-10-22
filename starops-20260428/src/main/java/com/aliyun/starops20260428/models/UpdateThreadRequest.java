@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateThreadRequest extends TeaModel {
     /**
-     * <p>The attributes of the thread.</p>
+     * <p>The properties.</p>
      */
     @NameInMap("attributes")
     public java.util.Map<String, String> attributes;
 
     /**
-     * <p>The status of the thread.</p>
+     * <p>The session status.</p>
      * 
      * <strong>example:</strong>
      * <p>active</p>
@@ -20,7 +20,7 @@ public class UpdateThreadRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The title of the thread.</p>
+     * <p>The session title.</p>
      * 
      * <strong>example:</strong>
      * <p>title</p>

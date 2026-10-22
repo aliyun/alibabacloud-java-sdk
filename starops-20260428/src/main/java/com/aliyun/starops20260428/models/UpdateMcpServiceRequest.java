@@ -15,7 +15,7 @@ public class UpdateMcpServiceRequest extends TeaModel {
      * <p>The description of the MCP service.</p>
      * 
      * <strong>example:</strong>
-     * <p>通过 MCP 调用日志查询工具。</p>
+     * <p>Call the log query tool through MCP</p>
      */
     @NameInMap("description")
     public String description;
@@ -24,7 +24,7 @@ public class UpdateMcpServiceRequest extends TeaModel {
      * <p>The display name of the MCP service.</p>
      * 
      * <strong>example:</strong>
-     * <p>日志查询</p>
+     * <p>Log Query</p>
      */
     @NameInMap("displayName")
     public String displayName;
@@ -120,7 +120,7 @@ public class UpdateMcpServiceRequest extends TeaModel {
         public java.util.Map<String, String> keyInfo;
 
         /**
-         * <p>The authentication type. Currently, only bearer is supported.</p>
+         * <p>The authentication type. Currently, bearer is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>bearer</p>
@@ -168,11 +168,18 @@ public class UpdateMcpServiceRequest extends TeaModel {
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <p>The custom HTTP request headers appended when calling the MCP service.</p>
+         */
         @NameInMap("headers")
         public java.util.Map<String, String> headers;
 
         /**
-         * <p>The platform type of the MCP service. Valid values: AIGateway and Custom.</p>
+         * <p>The MCP service platform type. Valid values:</p>
+         * <ul>
+         * <li>AIGateway</li>
+         * <li>Custom</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,7 +198,11 @@ public class UpdateMcpServiceRequest extends TeaModel {
         public Long timeout;
 
         /**
-         * <p>The transport protocol of the MCP service. Valid values: http and sse.</p>
+         * <p>The transport protocol of the MCP service. Valid values:</p>
+         * <ul>
+         * <li>http</li>
+         * <li>sse</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -257,7 +268,7 @@ public class UpdateMcpServiceRequest extends TeaModel {
 
     public static class UpdateMcpServiceRequestNetwork extends TeaModel {
         /**
-         * <p>The IP address used to access the MCP service over the VPC network.</p>
+         * <p>The IP address used to access the MCP service within the VPC network.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.12</p>
@@ -266,7 +277,7 @@ public class UpdateMcpServiceRequest extends TeaModel {
         public String accessIp;
 
         /**
-         * <p>The port used to access the MCP service over the VPC network. Valid values: 1 to 65535.</p>
+         * <p>The port used to access the MCP service within the VPC network. Valid values: 1 to 65535.</p>
          * 
          * <strong>example:</strong>
          * <p>8080</p>
@@ -293,7 +304,11 @@ public class UpdateMcpServiceRequest extends TeaModel {
         public String mcpServerId;
 
         /**
-         * <p>The network access mode of the MCP service. Valid values: public and vpc.</p>
+         * <p>The network access mode of the MCP service. Valid values:</p>
+         * <ul>
+         * <li>public</li>
+         * <li>vpc</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -440,7 +455,7 @@ public class UpdateMcpServiceRequest extends TeaModel {
          * <p>The description of the MCP tool.</p>
          * 
          * <strong>example:</strong>
-         * <p>查询指定日志库中的日志。</p>
+         * <p>Queries logs in a specified Logstore</p>
          */
         @NameInMap("description")
         public String description;
@@ -449,7 +464,7 @@ public class UpdateMcpServiceRequest extends TeaModel {
          * <p>The display name of the MCP tool.</p>
          * 
          * <strong>example:</strong>
-         * <p>日志查询工具</p>
+         * <p>Log Query Tool</p>
          */
         @NameInMap("displayName")
         public String displayName;
@@ -514,7 +529,7 @@ public class UpdateMcpServiceRequest extends TeaModel {
          * <p>The title of the MCP tool.</p>
          * 
          * <strong>example:</strong>
-         * <p>查询日志</p>
+         * <p>Query Logs</p>
          */
         @NameInMap("title")
         public String title;

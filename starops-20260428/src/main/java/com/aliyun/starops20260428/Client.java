@@ -153,7 +153,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Creates a digital employee.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a DigitalEmployee.</p>
+     * <p>Creates a digital employee.</p>
      * 
      * @param request CreateDigitalEmployeeRequest
      * @param headers map
@@ -234,7 +234,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Creates a digital employee.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a DigitalEmployee.</p>
+     * <p>Creates a digital employee.</p>
      * 
      * @param request CreateDigitalEmployeeRequest
      * @return CreateDigitalEmployeeResponse
@@ -731,8 +731,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the tool list from a remote MCP service.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Retrieves the tool list from a remote MCP server.</p>
+     * <p>Retrieves the tool list from a remote MCP service.</p>
      * 
      * @param request FetchRemoteMcpToolsRequest
      * @param headers map
@@ -769,8 +772,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the tool list from a remote MCP service.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Retrieves the tool list from a remote MCP server.</p>
+     * <p>Retrieves the tool list from a remote MCP service.</p>
      * 
      * @param request FetchRemoteMcpToolsRequest
      * @return FetchRemoteMcpToolsResponse
@@ -952,8 +958,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the entity data of a digital human.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the entity data of a digital employee.</p>
+     * <p>Queries the entity data of a digital human.</p>
      * 
      * @param request GetDigitalEmployeeEntityDataRequest
      * @param headers map
@@ -994,8 +1003,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the entity data of a digital human.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the entity data of a digital employee.</p>
+     * <p>Queries the entity data of a digital human.</p>
      * 
      * @param request GetDigitalEmployeeEntityDataRequest
      * @return GetDigitalEmployeeEntityDataResponse
@@ -1008,10 +1020,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the details of a specified skill for a digital employee.</p>
+     * <p>Retrieves the details of a skill.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specific skill.</p>
+     * <p>Retrieves the details of a skill.</p>
      * 
      * @param request GetDigitalEmployeeSkillRequest
      * @param headers map
@@ -1045,10 +1057,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the details of a specified skill for a digital employee.</p>
+     * <p>Retrieves the details of a skill.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specific skill.</p>
+     * <p>Retrieves the details of a skill.</p>
      * 
      * @param request GetDigitalEmployeeSkillRequest
      * @return GetDigitalEmployeeSkillResponse
@@ -1101,6 +1113,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the configuration of an MCP service.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries an MCP service.</p>
      * 
@@ -1129,6 +1144,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the configuration of an MCP service.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries an MCP service.</p>
      * 
@@ -1143,10 +1161,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the details of a thread.</p>
+     * <p>Retrieves a session.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a thread.</p>
+     * <p>Retrieves a session.</p>
      * 
      * @param request GetThreadRequest
      * @param headers map
@@ -1174,10 +1192,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the details of a thread.</p>
+     * <p>Retrieves a session.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a thread.</p>
+     * <p>Retrieves a session.</p>
      * 
      * @param request GetThreadRequest
      * @return GetThreadResponse
@@ -1308,10 +1326,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Lists the previous versions of a skill.</p>
+     * <p>Lists historical versions of a skill.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists the versions of a skill.</p>
+     * <p>Lists skill versions.</p>
      * 
      * @param request ListDigitalEmployeeSkillVersionsRequest
      * @param headers map
@@ -1339,10 +1357,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Lists the previous versions of a skill.</p>
+     * <p>Lists historical versions of a skill.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists the versions of a skill.</p>
+     * <p>Lists skill versions.</p>
      * 
      * @param request ListDigitalEmployeeSkillVersionsRequest
      * @return ListDigitalEmployeeSkillVersionsResponse
@@ -1355,10 +1373,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Lists the skills of a specified digital employee.</p>
+     * <p>Lists skills.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists the skills of a digital employee.</p>
+     * <p>Lists skills.</p>
      * 
      * @param request ListDigitalEmployeeSkillsRequest
      * @param headers map
@@ -1400,10 +1418,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Lists the skills of a specified digital employee.</p>
+     * <p>Lists skills.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists the skills of a digital employee.</p>
+     * <p>Lists skills.</p>
      * 
      * @param request ListDigitalEmployeeSkillsRequest
      * @return ListDigitalEmployeeSkillsResponse
@@ -1502,6 +1520,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of MCP services.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the list of MCP services.</p>
      * 
@@ -1540,6 +1561,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of MCP services.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the list of MCP services.</p>
      * 
@@ -1554,10 +1578,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>List sessions</p>
+     * <p>Lists sessions.</p>
      * 
      * <b>summary</b> : 
-     * <p>List sessions</p>
+     * <p>Lists sessions.</p>
      * 
      * @param tmpReq ListThreadsRequest
      * @param headers map
@@ -1617,10 +1641,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>List sessions</p>
+     * <p>Lists sessions.</p>
      * 
      * <b>summary</b> : 
-     * <p>List sessions</p>
+     * <p>Lists sessions.</p>
      * 
      * @param request ListThreadsRequest
      * @return ListThreadsResponse
@@ -1829,6 +1853,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the configuration of an MCP service.</p>
+     * 
      * <b>summary</b> : 
      * <p>Updates an MCP service.</p>
      * 
@@ -1883,6 +1910,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the configuration of an MCP service.</p>
+     * 
      * <b>summary</b> : 
      * <p>Updates an MCP service.</p>
      * 
@@ -1897,10 +1927,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates a thread.</p>
+     * <p>Updates a session.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates a thread.</p>
+     * <p>Updates a session.</p>
      * 
      * @param request UpdateThreadRequest
      * @param headers map
@@ -1942,10 +1972,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates a thread.</p>
+     * <p>Updates a session.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates a thread.</p>
+     * <p>Updates a session.</p>
      * 
      * @param request UpdateThreadRequest
      * @return UpdateThreadResponse

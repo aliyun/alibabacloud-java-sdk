@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListThreadsRequest extends TeaModel {
     /**
-     * <p>Filters the results. If this parameter is omitted, the operation returns all threads in the instance.</p>
+     * <p>The filter conditions for the query. If this parameter is not specified, all topics under the instance are queried.</p>
      */
     @NameInMap("filter")
     public java.util.List<ListThreadsRequestFilter> filter;
 
     /**
-     * <p>Specifies whether to include threads created by missions.</p>
+     * <p>Specifies whether to include threads created by mission.</p>
      */
     @NameInMap("includeMission")
     public Boolean includeMission;
@@ -35,7 +35,7 @@ public class ListThreadsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The status of the thread.</p>
+     * <p>The session status.</p>
      * 
      * <strong>example:</strong>
      * <p>active</p>
@@ -44,7 +44,7 @@ public class ListThreadsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The thread ID.</p>
+     * <p>The session ID.</p>
      * 
      * <strong>example:</strong>
      * <p>thread-123123</p>
@@ -107,7 +107,7 @@ public class ListThreadsRequest extends TeaModel {
 
     public static class ListThreadsRequestFilter extends TeaModel {
         /**
-         * <p>The filter key. Supported values are title, workspace, and project.</p>
+         * <p>The filter key. Valid values: title, workspace, and project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class ListThreadsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value for the filter key.</p>
+         * <p>The value to set.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

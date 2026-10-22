@@ -20,7 +20,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
     public String channel;
 
     /**
-     * <p>The creation time.</p>
+     * <p>The creation time in UTC, which follows the RFC 3339 format.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The default rule of the digital employee.</p>
+     * <p>The default rules of the digital employee.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -66,7 +66,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
     public String employeeType;
 
     /**
-     * <p>The knowledge base list.</p>
+     * <p>The list of knowledge bases.</p>
      */
     @NameInMap("knowledges")
     public GetDigitalEmployeeResponseBodyKnowledges knowledges;
@@ -108,7 +108,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
+     * <p>The ARN of the RAM role.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::12345678912:role/testrole</p>
@@ -126,6 +126,15 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
     public GetDigitalEmployeeResponseBodySandboxNetworkPolicy sandboxNetworkPolicy;
 
     /**
+     * <p>The status of the digital employee. Valid values: 0 (normal) and 1 (disabled).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("status")
+    public Integer status;
+
+    /**
      * <p>The tags.</p>
      */
     @NameInMap("tags")
@@ -141,7 +150,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
     public GetDigitalEmployeeResponseBodyToolPolicy toolPolicy;
 
     /**
-     * <p>The modification time.</p>
+     * <p>The update time in UTC, which follows the RFC 3339 format.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -267,6 +276,14 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         return this.sandboxNetworkPolicy;
     }
 
+    public GetDigitalEmployeeResponseBody setStatus(Integer status) {
+        this.status = status;
+        return this;
+    }
+    public Integer getStatus() {
+        return this.status;
+    }
+
     public GetDigitalEmployeeResponseBody setTags(java.util.List<Tag> tags) {
         this.tags = tags;
         return this;
@@ -293,7 +310,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
 
     public static class GetDigitalEmployeeResponseBodyKnowledgesBailian extends TeaModel {
         /**
-         * <p>The knowledge base attributes.</p>
+         * <p>The attributes of the knowledge base.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -302,7 +319,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         public String attributes;
 
         /**
-         * <p>The Bailian index ID.</p>
+         * <p>The ID of the Model Studio index.</p>
          * 
          * <strong>example:</strong>
          * <p>index-xxxx</p>
@@ -320,7 +337,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The Bailian workspace ID.</p>
+         * <p>The ID of the Model Studio workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>llm-xxxxx</p>
@@ -369,13 +386,13 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
 
     public static class GetDigitalEmployeeResponseBodyKnowledges extends TeaModel {
         /**
-         * <p>The Bailian knowledge base list.</p>
+         * <p>The list of Model Studio knowledge bases.</p>
          */
         @NameInMap("bailian")
         public java.util.List<GetDigitalEmployeeResponseBodyKnowledgesBailian> bailian;
 
         /**
-         * <p>The SOP knowledge base list.</p>
+         * <p>The list of SOP knowledge bases.</p>
          */
         @NameInMap("sop")
         public java.util.List<java.util.Map<String, ?>> sop;
@@ -405,7 +422,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
 
     public static class GetDigitalEmployeeResponseBodySandboxNetworkPolicy extends TeaModel {
         /**
-         * <p>The list of allowed CIDRs or IP addresses.</p>
+         * <p>The list of allowed CIDR blocks or IP addresses.</p>
          */
         @NameInMap("allowCidrs")
         public java.util.List<String> allowCidrs;
@@ -417,7 +434,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         public java.util.List<String> allowFqdns;
 
         /**
-         * <p>Indicates whether the sandbox network ACL is enabled.</p>
+         * <p>Specifies whether to enable the sandbox network ACL.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -486,7 +503,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         public String decision;
 
         /**
-         * <p>The cloud product code.</p>
+         * <p>The code of the cloud service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -537,7 +554,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
 
     public static class GetDigitalEmployeeResponseBodyToolPolicyAliyun extends TeaModel {
         /**
-         * <p>The auto-pass policy. Each entry is a RAM Action string in the format of product:ApiName, product:Prefix*, or product:<em>. Matched actions are automatically approved without human confirmation. If this parameter is empty or not configured, built-in read-only actions (Get</em>, List*, Describe*) are automatically approved. Unmatched actions require human-in-the-loop (HIL) confirmation.</p>
+         * <p>The automatic allow policy. Each entry is a RAM action string in the format of product:ApiName, product:Prefix*, or product:<em>. If an action matches an entry, the action is automatically allowed without manual confirmation. If this parameter is empty or not configured, built-in read-only actions (Get</em>, List*, and Describe*) are automatically allowed. Unmatched actions require human-in-the-loop (HIL) confirmation.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;log:Get*&quot;,&quot;log:List*&quot;]</p>
@@ -546,7 +563,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         public java.util.List<String> autoPassPolicy;
 
         /**
-         * <p>The explicit deny policy with the highest priority. Each entry is a RAM Action string in the format of product:ApiName, product:Prefix*, or product:*. If this parameter is empty or not configured, no actions are actively denied. STAROps directly denies matched actions. The Pop side performs secondary fallback enforcement.</p>
+         * <p>The explicit deny policy, which has the highest priority. Each entry is a RAM action string in the format of product:ApiName, product:Prefix*, or product:*. If this parameter is empty or not configured, no operations are actively denied. If an action matches a STAROps entry, the action is directly denied. The POP layer provides a secondary fallback check.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;]</p>
@@ -555,7 +572,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         public java.util.List<String> denyPolicy;
 
         /**
-         * <p>Indicates whether the policy is enabled.</p>
+         * <p>Specifies whether the policy is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -564,7 +581,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The list of Alibaba Cloud CLI tool policy statements.</p>
+         * <p>The list of Aliyun CLI tool policy statements.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]</p>
@@ -615,7 +632,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
 
     public static class GetDigitalEmployeeResponseBodyToolPolicy extends TeaModel {
         /**
-         * <p>The security policy configuration for Alibaba Cloud CLI tool calling invokes.</p>
+         * <p>The security policy configuration to invoke Aliyun CLI tools.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;enable&quot;:true,&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConnectorCreateInput extends TeaModel {
     /**
-     * <p>The authentication configuration used to access the target service.</p>
+     * <p>The authentication configuration for accessing the target service.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("authentication")
@@ -68,13 +68,13 @@ public class ConnectorCreateInput extends TeaModel {
     public String displayName;
 
     /**
-     * <p>Specifies whether the connector is enabled after creation.</p>
+     * <p>Specifies whether to enable the connector after creation.</p>
      */
     @NameInMap("enabled")
     public Boolean enabled;
 
     /**
-     * <p>The execution policy of the connector.</p>
+     * <p>The execution policy for the connector.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("policy")
@@ -91,7 +91,7 @@ public class ConnectorCreateInput extends TeaModel {
     public String provider;
 
     /**
-     * <p>The runtime configuration of the connector.</p>
+     * <p>The runtime configuration for the connector.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("runtime")

@@ -68,7 +68,7 @@ public class GetMcpServiceResponseBody extends TeaModel {
         public java.util.Map<String, String> keyInfo;
 
         /**
-         * <p>The authentication type. Currently, bearer is supported.</p>
+         * <p>The authentication type. Currently, only bearer is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>bearer</p>
@@ -115,6 +115,12 @@ public class GetMcpServiceResponseBody extends TeaModel {
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <p>The custom HTTP request headers appended when calling the MCP service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;X-Custom-Header&quot;:&quot;example-value&quot;}</p>
+         */
         @NameInMap("headers")
         public java.util.Map<String, String> headers;
 
@@ -265,7 +271,7 @@ public class GetMcpServiceResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The virtual private cloud (VPC) ID.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-xxx</p>
@@ -372,7 +378,7 @@ public class GetMcpServiceResponseBody extends TeaModel {
         public java.util.Map<String, ?> annotations;
 
         /**
-         * <p>Indicates whether user confirmation is required before the MCP tool is called.</p>
+         * <p>Indicates whether user confirmation is required before calling the MCP tool.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -384,7 +390,7 @@ public class GetMcpServiceResponseBody extends TeaModel {
          * <p>The description of the MCP tool.</p>
          * 
          * <strong>example:</strong>
-         * <p>查询指定日志库中的日志。</p>
+         * <p>Query logs in a specified Logstore</p>
          */
         @NameInMap("description")
         public String description;
@@ -393,7 +399,7 @@ public class GetMcpServiceResponseBody extends TeaModel {
          * <p>The display name of the MCP tool.</p>
          * 
          * <strong>example:</strong>
-         * <p>日志查询工具</p>
+         * <p>Log Query Tool</p>
          */
         @NameInMap("displayName")
         public String displayName;
@@ -444,7 +450,7 @@ public class GetMcpServiceResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The JSON Schema of the MCP tool output.</p>
+         * <p>The JSON Schema of the MCP tool output results.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;type&quot;:&quot;object&quot;}</p>
@@ -456,7 +462,7 @@ public class GetMcpServiceResponseBody extends TeaModel {
          * <p>The title of the MCP tool.</p>
          * 
          * <strong>example:</strong>
-         * <p>查询日志</p>
+         * <p>Query Logs</p>
          */
         @NameInMap("title")
         public String title;
@@ -567,7 +573,7 @@ public class GetMcpServiceResponseBody extends TeaModel {
          * <p>The description of the MCP service.</p>
          * 
          * <strong>example:</strong>
-         * <p>通过 MCP 调用日志查询工具。</p>
+         * <p>Call the log query tool through MCP</p>
          */
         @NameInMap("description")
         public String description;
@@ -576,7 +582,7 @@ public class GetMcpServiceResponseBody extends TeaModel {
          * <p>The display name of the MCP service.</p>
          * 
          * <strong>example:</strong>
-         * <p>日志查询</p>
+         * <p>Log Query</p>
          */
         @NameInMap("displayName")
         public String displayName;

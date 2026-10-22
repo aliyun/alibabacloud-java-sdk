@@ -93,7 +93,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
 
     public static class ListDigitalEmployeesResponseBodyDigitalEmployeesKnowledgesBailian extends TeaModel {
         /**
-         * <p>The knowledge base attributes.</p>
+         * <p>The attributes of the knowledge base.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -102,7 +102,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         public String attributes;
 
         /**
-         * <p>The Bailian index ID.</p>
+         * <p>The Model Studio index ID.</p>
          * 
          * <strong>example:</strong>
          * <p>index-xxxx</p>
@@ -120,7 +120,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The Bailian workspace ID.</p>
+         * <p>The Model Studio workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>llm-xxxx</p>
@@ -169,7 +169,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
 
     public static class ListDigitalEmployeesResponseBodyDigitalEmployeesKnowledges extends TeaModel {
         /**
-         * <p>The list of Bailian knowledge bases.</p>
+         * <p>The list of Model Studio knowledge bases.</p>
          */
         @NameInMap("bailian")
         public java.util.List<ListDigitalEmployeesResponseBodyDigitalEmployeesKnowledgesBailian> bailian;
@@ -205,13 +205,16 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
 
     public static class ListDigitalEmployeesResponseBodyDigitalEmployees extends TeaModel {
         /**
-         * <p>The attributes.</p>
+         * <p>The attributes of the digital employee.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;value&quot;}</p>
          */
         @NameInMap("attributes")
         public java.util.Map<String, String> attributes;
 
         /**
-         * <p>The channel type of the digital employee.</p>
+         * <p>The channel type.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -220,7 +223,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         public String channel;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time in RFC 3339 format. The time zone is UTC.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -299,13 +302,22 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         public String roleArn;
 
         /**
+         * <p>The status of the digital employee. Valid values: 0: Normal. 1: Disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("status")
+        public Integer status;
+
+        /**
          * <p>The tags.</p>
          */
         @NameInMap("tags")
         public java.util.List<Tag> tags;
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time in RFC 3339 format. The time zone is UTC.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -405,6 +417,14 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         }
         public String getRoleArn() {
             return this.roleArn;
+        }
+
+        public ListDigitalEmployeesResponseBodyDigitalEmployees setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
         }
 
         public ListDigitalEmployeesResponseBodyDigitalEmployees setTags(java.util.List<Tag> tags) {

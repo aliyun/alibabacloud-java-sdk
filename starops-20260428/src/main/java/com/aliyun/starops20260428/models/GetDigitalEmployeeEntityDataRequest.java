@@ -15,7 +15,7 @@ public class GetDigitalEmployeeEntityDataRequest extends TeaModel {
     public Long from;
 
     /**
-     * <p>Only the .entity or .topo semantic sources of the current digital employee can be queried. Explicit access to internal storage or external data sources is prohibited.</p>
+     * <p>Only the .entity or .topo semantic sources of the current digital human can be queried. Explicit access to internal storage or external data sources is prohibited.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

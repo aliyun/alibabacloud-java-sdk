@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDigitalEmployeesShrinkRequest extends TeaModel {
     /**
-     * <p>Filters digital employees by channel type. If this parameter is not specified, the default channel is used.</p>
+     * <p>The channel type.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -32,7 +32,7 @@ public class ListDigitalEmployeesShrinkRequest extends TeaModel {
     public String employeeType;
 
     /**
-     * <p>The page size. Default value: 20. Maximum value: 100.</p>
+     * <p>The number of entries to return per page. Default value: 20. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
