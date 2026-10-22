@@ -1000,10 +1000,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If the API incurs fees, add the following bold statement as the first sentence: <strong>Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of XXX.</strong></p>
+     * <p>If the API operation incurs fees, add the bold text &quot;<strong>Make sure that you fully understand the billing methods and pricing of the XXX product before you call this API operation.</strong>&quot; as the first sentence. Make &quot;pricing&quot; a hyperlink to <a href="https://www.aliyun.com/price/product#/ecs/detail">https://www.aliyun.com/price/product#/ecs/detail</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the asynchronous results of AI safety guardrail multimodal content moderation, supporting audio and video modalities.</p>
+     * <p>Queries the asynchronous detection results of AI security guardrails for multimodal content, supporting audio and video modalities.</p>
      * 
      * @param request MultiModalGuardAsyncResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1039,10 +1039,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If the API incurs fees, add the following bold statement as the first sentence: <strong>Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of XXX.</strong></p>
+     * <p>If the API operation incurs fees, add the bold text &quot;<strong>Make sure that you fully understand the billing methods and pricing of the XXX product before you call this API operation.</strong>&quot; as the first sentence. Make &quot;pricing&quot; a hyperlink to <a href="https://www.aliyun.com/price/product#/ecs/detail">https://www.aliyun.com/price/product#/ecs/detail</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the asynchronous results of AI safety guardrail multimodal content moderation, supporting audio and video modalities.</p>
+     * <p>Queries the asynchronous detection results of AI security guardrails for multimodal content, supporting audio and video modalities.</p>
      * 
      * @param request MultiModalGuardAsyncResultRequest
      * @return MultiModalGuardAsyncResultResponse

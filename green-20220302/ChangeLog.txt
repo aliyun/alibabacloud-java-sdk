@@ -1,3 +1,7 @@
+2026-10-22 Version: 3.6.9
+- Update API MultiModalGuardAsyncResult: add response parameters Body.Data.RedactResult.
+
+
 2026-10-10 Version: 3.6.8
 - Update API ImageModeration: add response parameters Body.Data.Frame.
 - Update API ImageModeration: add response parameters Body.Data.FrameNum.
