@@ -23,7 +23,7 @@ public class ListAIStaffChatMessagesRequest extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>The number of records per page. Valid values: 10 to 100.</p>
+     * <p>The number of entries per page. Valid values: 10 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class ListAIStaffChatMessagesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The gmtCreate value of the last record on the previous page. Leave this parameter empty for the first page.</p>
+     * <p>The creation time of the last entry on the previous page. Do not specify this parameter when you query the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>

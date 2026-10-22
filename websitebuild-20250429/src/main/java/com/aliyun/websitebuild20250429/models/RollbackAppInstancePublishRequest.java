@@ -23,7 +23,7 @@ public class RollbackAppInstancePublishRequest extends TeaModel {
     public String deployChannel;
 
     /**
-     * <p>The publish number.</p>
+     * <p>The release number.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>

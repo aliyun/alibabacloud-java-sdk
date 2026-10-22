@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GrantPromotionOfferForPartnerResponseBody extends TeaModel {
     /**
-     * <p>The details of the permission verification failure.</p>
+     * <p>The details of the permission check failure.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class GrantPromotionOfferForPartnerResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether a retry is allowed.</p>
+     * <p>Indicates whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class GrantPromotionOfferForPartnerResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name. The name can contain digits, letters, and hyphens (-). It must start with a letter and cannot end with a hyphen (-). The name cannot exceed 36 characters in length.</p>
+     * <p>The application name. The name can contain digits, letters, and hyphens (-). It must start with a letter, cannot end with a hyphen (-), and cannot exceed 36 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>or</p>
@@ -32,7 +32,7 @@ public class GrantPromotionOfferForPartnerResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>The dynamic code. This parameter is not in use. Ignore it.</p>
+     * <p>The dynamic code. This field is currently unused and can be ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -50,7 +50,7 @@ public class GrantPromotionOfferForPartnerResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters returned.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -219,7 +219,7 @@ public class GrantPromotionOfferForPartnerResponseBody extends TeaModel {
         public String recordId;
 
         /**
-         * <p>Indicates whether the operation is successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

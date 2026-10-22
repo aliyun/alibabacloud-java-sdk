@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnbindAppDomainResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access was denied.</p>
+     * <p>The detailed reason for the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class UnbindAppDomainResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Indicates whether a retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -41,7 +41,7 @@ public class UnbindAppDomainResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace the %s placeholder in the ErrMessage response parameter.</p>
+     * <p>The dynamic error message used to replace the %s placeholder in the ErrMessage response parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -50,7 +50,7 @@ public class UnbindAppDomainResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -71,7 +71,7 @@ public class UnbindAppDomainResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The error code.</p>
+     * <p>The root error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -83,13 +83,13 @@ public class UnbindAppDomainResponseBody extends TeaModel {
      * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request is synchronously processed.</p>
+     * <p>Indicates whether the request is processed synchronously.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -192,7 +192,7 @@ public class UnbindAppDomainResponseBody extends TeaModel {
 
     public static class UnbindAppDomainResponseBodyModule extends TeaModel {
         /**
-         * <p>Indicates whether the operation is successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

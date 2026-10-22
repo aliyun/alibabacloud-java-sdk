@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppPluginVersionsRequest extends TeaModel {
     /**
-     * <p>The current page number. The value must be an integer greater than 0. Default value: 1.</p>
+     * <p>The page number. Valid values: integers greater than 0. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListAppPluginVersionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The gateway plug-in ID.</p>
+     * <p>The ID of the gateway plug-in.</p>
      * 
      * <strong>example:</strong>
      * <p>1bae9ceaceea432d91c7069fab0dfc02</p>

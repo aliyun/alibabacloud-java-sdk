@@ -23,7 +23,7 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The name of the application to query.</p>
+     * <p>The name of the application.</p>
      * 
      * <strong>example:</strong>
      * <p>dewuApp</p>
@@ -41,7 +41,10 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message used to replace <code>%s</code> in the error message of the <strong>ErrMessage</strong> response parameter. If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
+     * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
+     * <blockquote>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -89,7 +92,7 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Specifies whether the request is processed synchronously.</p>
+     * <p>Specifies whether the processing is synchronous.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -192,7 +195,7 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
 
     public static class QueryInspirationBalanceResponseBodyModule extends TeaModel {
         /**
-         * <p>The remaining quota, which is calculated by subtracting totalUsed from totalQuota.</p>
+         * <p>The remaining quota (totalQuota - totalUsed).</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -201,7 +204,7 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
         public Long remaining;
 
         /**
-         * <p>The string representation of the remaining quota.</p>
+         * <p>The string format of the remaining quota.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -210,7 +213,7 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
         public String remainingStr;
 
         /**
-         * <p>The total quota, which is the sum of the initQuota values of all valid accounts.</p>
+         * <p>The total quota (the sum of initQuota of all valid accounts).</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -219,7 +222,7 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
         public Long totalQuota;
 
         /**
-         * <p>The string representation of the total quota.</p>
+         * <p>The string format of the total quota.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -228,7 +231,7 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
         public String totalQuotaStr;
 
         /**
-         * <p>The used quota, which is the sum of the used values of all valid accounts.</p>
+         * <p>The consumed quota (the sum of used of all valid accounts).</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -237,7 +240,7 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
         public Long totalUsed;
 
         /**
-         * <p>The string representation of the used quota.</p>
+         * <p>The string format of the consumed quota.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

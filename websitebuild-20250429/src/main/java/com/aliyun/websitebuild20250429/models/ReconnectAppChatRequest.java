@@ -23,13 +23,19 @@ public class ReconnectAppChatRequest extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>The last event ID.</p>
+     * <p>The ID of the last event.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("LastEventId")
     public Integer lastEventId;
 
     /**
      * <p>The creation time of the latest message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-08-28 10:25:41</p>
      */
     @NameInMap("LatestMessageCreateTime")
     public String latestMessageCreateTime;

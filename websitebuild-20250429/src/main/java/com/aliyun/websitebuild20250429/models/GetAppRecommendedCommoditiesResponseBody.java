@@ -14,7 +14,7 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retries are allowed.</p>
+     * <p>Specifies whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -41,10 +41,7 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace <code>%s</code> in the error message returned by <strong>ErrMessage</strong>.</p>
-     * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
-     * </blockquote>
+     * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response parameter. If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the <strong>DtsJobId</strong> request parameter is invalid.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -59,13 +56,13 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The data table module.</p>
+     * <p>The data table module. Valid values:</p>
      * <ul>
-     * <li><p>ABTest: experiment data table</p>
+     * <li><p>ABTest: Experiment data table.</p>
      * </li>
-     * <li><p>ExperimentTool: experiment tool table</p>
+     * <li><p>ExperimentTool: Experiment tool table.</p>
      * </li>
-     * <li><p>DataDiagnosis: data diagnosis</p>
+     * <li><p>DataDiagnosis: Data diagnosis.</p>
      * </li>
      * </ul>
      */
@@ -203,7 +200,7 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
 
     public static class GetAppRecommendedCommoditiesResponseBodyModuleCommodities extends TeaModel {
         /**
-         * <p>The click action type. Valid values: CONSULT (add WeCom), BUY (purchase), and AUTO (automatic issuance).</p>
+         * <p>The click action type. Valid values: CONSULT, BUY, and AUTO.</p>
          * 
          * <strong>example:</strong>
          * <p>CONSULT</p>
@@ -222,6 +219,9 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
 
         /**
          * <p>The display description of the recommendation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Add a WeCom consultant to receive inspiration points for free</p>
          */
         @NameInMap("Description")
         public String description;
@@ -233,7 +233,7 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         public java.util.Map<String, String> extend;
 
         /**
-         * <p>The order type. Valid values: BUY (purchase) and UPGRADE (upgrade).</p>
+         * <p>The order type. Valid values: BUY and UPGRADE.</p>
          * 
          * <strong>example:</strong>
          * <p>DESC</p>
@@ -260,7 +260,7 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         public String promotionCommodityId;
 
         /**
-         * <p>The recommendation type. Valid values: COMMODITY (commodity recommendation) and ACTIVITY (promotion activity recommendation).</p>
+         * <p>The recommendation type. Valid values: COMMODITY and ACTIVITY.</p>
          * 
          * <strong>example:</strong>
          * <p>COMMODITY</p>
@@ -288,6 +288,9 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
 
         /**
          * <p>The display title of the recommendation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Add a consultant as a friend to receive an extra 1,000 inspiration points</p>
          */
         @NameInMap("Title")
         public String title;

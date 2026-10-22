@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access was denied.</p>
+     * <p>The detailed reason for access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -41,7 +41,7 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
+     * <p>The dynamic message. This parameter is not used and can be ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -50,13 +50,13 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters returned.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The response object.</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("Module")
     public GetAppWorkspaceDirectoryResponseBodyModule module;
@@ -83,7 +83,7 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
      * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;

@@ -14,7 +14,7 @@ public class AppService extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The creation time in ISO 8601 format in the UTC time zone (Z).</p>
+     * <p>The creation time in ISO 8601 format, in the UTC time zone (Z).</p>
      * 
      * <strong>example:</strong>
      * <p>2025-07-30T02:08:40Z</p>
@@ -24,12 +24,15 @@ public class AppService extends TeaModel {
 
     /**
      * <p>The deletion flag.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Deleted")
     public Integer deleted;
 
     /**
-     * <p>The end time in ISO 8601 format in the UTC time zone (Z).</p>
+     * <p>The end time in ISO 8601 format, in the UTC time zone (Z).</p>
      * 
      * <strong>example:</strong>
      * <p>2025-07-18T02:23:00Z</p>
@@ -39,12 +42,15 @@ public class AppService extends TeaModel {
 
     /**
      * <p>esp bizId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>p20202933455</p>
      */
     @NameInMap("EspBizId")
     public String espBizId;
 
     /**
-     * <p>The modification time.</p>
+     * <p>The update time.</p>
      * 
      * <strong>example:</strong>
      * <p>Tue Sep 09 10:27:49 CST 2025</p>
@@ -63,6 +69,9 @@ public class AppService extends TeaModel {
 
     /**
      * <p>The service name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Website design service</p>
      */
     @NameInMap("Name")
     public String name;
@@ -96,12 +105,15 @@ public class AppService extends TeaModel {
 
     /**
      * <p>The application identifier.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>inst-001</p>
      */
     @NameInMap("Slug")
     public String slug;
 
     /**
-     * <p>The start time as a UNIX timestamp in milliseconds.</p>
+     * <p>The start time, specified as a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1754447102000</p>
@@ -120,6 +132,9 @@ public class AppService extends TeaModel {
 
     /**
      * <p>The user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123241414</p>
      */
     @NameInMap("UserId")
     public String userId;

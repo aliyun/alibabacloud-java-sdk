@@ -16,6 +16,9 @@ public class OperateSupabaseForAdminRequest extends TeaModel {
 
     /**
      * <p>The environment identifier.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>staging</p>
      */
     @NameInMap("Env")
     public String env;
@@ -48,7 +51,7 @@ public class OperateSupabaseForAdminRequest extends TeaModel {
     public String orderByClause;
 
     /**
-     * <p>The column used for sorting.</p>
+     * <p>The sort field.</p>
      * 
      * <strong>example:</strong>
      * <p>CreationTime</p>
@@ -75,7 +78,7 @@ public class OperateSupabaseForAdminRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

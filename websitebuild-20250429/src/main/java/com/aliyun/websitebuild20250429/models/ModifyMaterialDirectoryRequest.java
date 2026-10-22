@@ -15,7 +15,7 @@ public class ModifyMaterialDirectoryRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The folder ID.</p>
+     * <p>The ID of the folder.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,11 +25,11 @@ public class ModifyMaterialDirectoryRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The new name of the folder.</p>
+     * <p>The updated name of the folder.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>视频管理</p>
+     * <p>Video management</p>
      */
     @NameInMap("Name")
     public String name;

@@ -14,7 +14,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether a retry is allowed.</p>
+     * <p>Indicates whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The app name.</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>dewuApp</p>
@@ -41,7 +41,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public Integer currentPageNum;
 
     /**
-     * <p>The request result.</p>
+     * <p>The request results.</p>
      */
     @NameInMap("Data")
     public java.util.List<AppInstanceAggregate> data;
@@ -71,7 +71,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The maximum number of results per query.</p>
+     * <p>The maximum number of results to return for each query.</p>
      * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
@@ -90,7 +90,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public Boolean nextPage;
 
     /**
-     * <p>The token used to start the next query. This parameter is empty if no next query exists.</p>
+     * <p>The token that is used to start the next query. This parameter is empty if no subsequent query is required.</p>
      * 
      * <strong>example:</strong>
      * <p>dw+qdTi1EjVSWX/INJdYNw==</p>
@@ -126,7 +126,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is <strong>true</strong>. Narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+     * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -135,7 +135,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public Boolean resultLimit;
 
     /**
-     * <p>The root error code.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -144,10 +144,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The exception message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>System exception</p>
+     * <p>System error</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;

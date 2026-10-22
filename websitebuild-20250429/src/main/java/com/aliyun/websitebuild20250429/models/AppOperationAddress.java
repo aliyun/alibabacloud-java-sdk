@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AppOperationAddress extends TeaModel {
     /**
-     * <p>The operation button list.</p>
+     * <p>The action button list.</p>
      */
     @NameInMap("Actions")
     public java.util.List<AppOperateAction> actions;
@@ -24,42 +24,60 @@ public class AppOperationAddress extends TeaModel {
 
     /**
      * <p>The application publishing URL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://abcd.scd.wanwang.xin">https://abcd.scd.wanwang.xin</a></p>
      */
     @NameInMap("AppPublishUrl")
     public String appPublishUrl;
 
     /**
-     * <p>The overview page operation button list.</p>
+     * <p>The overview page action button list.</p>
      */
     @NameInMap("DashboardActions")
     public java.util.List<AppOperateAction> dashboardActions;
 
     /**
      * <p>The professional design URL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://zero.msea.aliyun.com/forward/v1/website/websiteLogin?bizId=WS20250915163734000001&callBackUrl=/Designer/index">https://zero.msea.aliyun.com/forward/v1/website/websiteLogin?bizId=WS20250915163734000001&amp;callBackUrl=/Designer/index</a></p>
      */
     @NameInMap("DesignUrl")
     public String designUrl;
 
     /**
      * <p>The application instance logon URL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://zero.msea.aliyun.com/forward/v1/website/websiteLogin?bizId=WS20250915163734000001&callBackUrl=/Admin/SiteAdmin/Index">https://zero.msea.aliyun.com/forward/v1/website/websiteLogin?bizId=WS20250915163734000001&amp;callBackUrl=/Admin/SiteAdmin/Index</a></p>
      */
     @NameInMap("InstanceLoginUrl")
     public String instanceLoginUrl;
 
     /**
      * <p>The renewal purchase URL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://common-buy.aliyun.com/?orderType=RENEW&commodityCode=domain_website_public_cn&instanceId=12313213">https://common-buy.aliyun.com/?orderType=RENEW&amp;commodityCode=domain_website_public_cn&amp;instanceId=12313213</a></p>
      */
     @NameInMap("RenewBuyUrl")
     public String renewBuyUrl;
 
     /**
      * <p>The service delivery URL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://zero.msea.aliyun.com/forward/v1/website/websiteLogin?bizId=WS20250915163734000001&callBackUrl=/Admin/SiteAdmin/Index">https://zero.msea.aliyun.com/forward/v1/website/websiteLogin?bizId=WS20250915163734000001&amp;callBackUrl=/Admin/SiteAdmin/Index</a></p>
      */
     @NameInMap("ServerDeliveryUrl")
     public String serverDeliveryUrl;
 
     /**
      * <p>The upgrade purchase URL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://common-buy.aliyun.com/?orderType=UPGRADE&commodityCode=domain_website_public_cn&instanceId=12313213">https://common-buy.aliyun.com/?orderType=UPGRADE&amp;commodityCode=domain_website_public_cn&amp;instanceId=12313213</a></p>
      */
     @NameInMap("UpgradeBuyUrl")
     public String upgradeBuyUrl;

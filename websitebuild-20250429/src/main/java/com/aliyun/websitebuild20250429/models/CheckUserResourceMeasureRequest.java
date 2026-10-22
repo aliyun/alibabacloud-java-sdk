@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckUserResourceMeasureRequest extends TeaModel {
     /**
-     * <p>The owner ID, which can be a website ID or an Alibaba Cloud account ID.</p>
+     * <p>The belong ID, such as the website ID or Alibaba Cloud user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -14,11 +14,7 @@ public class CheckUserResourceMeasureRequest extends TeaModel {
     public String belongId;
 
     /**
-     * <p>The type of the owner ID. Valid values:</p>
-     * <ul>
-     * <li>siteId</li>
-     * <li>uid.</li>
-     * </ul>
+     * <p>The belong ID type, such as siteId or uid.</p>
      * 
      * <strong>example:</strong>
      * <p>USER</p>
@@ -36,6 +32,15 @@ public class CheckUserResourceMeasureRequest extends TeaModel {
     public String bizType;
 
     /**
+     * <p>The optional compatible total for APP_WORKSPACE. Valid values: 0 to 100000. If provided, it takes precedence over ResourceValue and does not repeatedly add the used quota. For new calls, only ResourceValue is required. This field is not used for APP/USER.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21</p>
+     */
+    @NameInMap("DesiredTotal")
+    public Long desiredTotal;
+
+    /**
      * <p>The ESP business ID.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +50,7 @@ public class CheckUserResourceMeasureRequest extends TeaModel {
     public String espBizId;
 
     /**
-     * <p>The order module information. If this parameter is empty, espBizId and bizType cannot be empty.</p>
+     * <p>The order component information. If this field is empty, EspBizId and BizType cannot be empty.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;siteversion&quot;:&quot;test&quot;}</p>
@@ -54,7 +59,7 @@ public class CheckUserResourceMeasureRequest extends TeaModel {
     public String orderComponentParams;
 
     /**
-     * <p>The resource identifier.</p>
+     * <p>The resource code.</p>
      * 
      * <strong>example:</strong>
      * <p>InspirationTokens</p>
@@ -63,11 +68,7 @@ public class CheckUserResourceMeasureRequest extends TeaModel {
     public String resourceCode;
 
     /**
-     * <p>The resource value. This parameter is empty by default and is required only for feature-type resources. Valid values:</p>
-     * <ul>
-     * <li>0: Not supported.</li>
-     * <li>1: Supported.</li>
-     * </ul>
+     * <p>The resource value. Default is empty. Required only for feature resources. A value of 0 indicates not supported, and 1 indicates supported.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -102,6 +103,14 @@ public class CheckUserResourceMeasureRequest extends TeaModel {
     }
     public String getBizType() {
         return this.bizType;
+    }
+
+    public CheckUserResourceMeasureRequest setDesiredTotal(Long desiredTotal) {
+        this.desiredTotal = desiredTotal;
+        return this;
+    }
+    public Long getDesiredTotal() {
+        return this.desiredTotal;
     }
 
     public CheckUserResourceMeasureRequest setEspBizId(String espBizId) {

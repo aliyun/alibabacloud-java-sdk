@@ -37,13 +37,13 @@ public class UploadMaterialFileRequest extends TeaModel {
      * <p>The file name.</p>
      * 
      * <strong>example:</strong>
-     * <p>TestFile</p>
+     * <p>Test file</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The OSS object key.</p>
+     * <p>The key of the OSS object.</p>
      * 
      * <strong>example:</strong>
      * <p>backend/detection/objects/r-0008ujvfksltf5j45n81/task-000hckiuwyau0gwn17vq.jpg</p>

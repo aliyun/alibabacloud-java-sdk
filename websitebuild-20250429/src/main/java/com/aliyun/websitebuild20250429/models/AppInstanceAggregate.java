@@ -4,62 +4,92 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class AppInstanceAggregate extends TeaModel {
+    /**
+     * <p>The list of AI agents associated with the application.</p>
+     */
     @NameInMap("AiStaffList")
     public java.util.List<AppAiStaff> aiStaffList;
 
     /**
-     * <p>The application operation address.</p>
+     * <p>The operation address of the application.</p>
      */
     @NameInMap("AppOperationAddress")
     public AppOperationAddress appOperationAddress;
 
+    /**
+     * <p>The list of service instances associated with the application.</p>
+     */
     @NameInMap("AppServiceList")
     public java.util.List<AppServiceAggregate> appServiceList;
 
     /**
      * <p>The application subtype.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SEO_CONTENT</p>
      */
     @NameInMap("AppSubType")
     public String appSubType;
 
     /**
      * <p>The application type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WEBSITE</p>
      */
     @NameInMap("AppType")
     public String appType;
 
     /**
      * <p>The business ID of the application instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WS20250915163734000001</p>
      */
     @NameInMap("BizId")
     public String bizId;
 
     /**
      * <p>The build type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CLOUD_DREAM_SAAS</p>
      */
     @NameInMap("BuildType")
     public String buildType;
 
     /**
      * <p>The creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-01-01 00:00:00</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
      * <p>Indicates whether the instance is deleted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Deleted")
     public Integer deleted;
 
     /**
      * <p>The application description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>base</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The business ID of the design specification.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WS20250801151731000007</p>
      */
     @NameInMap("DesignSpecBizId")
     public String designSpecBizId;
@@ -72,72 +102,111 @@ public class AppInstanceAggregate extends TeaModel {
 
     /**
      * <p>The primary domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>stxycw.com</p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
      * <p>The end time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-01-05T15:59:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the associated delivery order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>p20202933455</p>
      */
     @NameInMap("EspBizId")
     public String espBizId;
 
     /**
      * <p>The deletion time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-01-01 00:00:00</p>
      */
     @NameInMap("GmtDelete")
     public String gmtDelete;
 
     /**
-     * <p>The modification time.</p>
+     * <p>The update time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-08-28T02:25:41Z</p>
      */
     @NameInMap("GmtModified")
     public String gmtModified;
 
     /**
-     * <p>The publish time.</p>
+     * <p>The publication time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-01-01 00:00:00</p>
      */
     @NameInMap("GmtPublish")
     public String gmtPublish;
 
     /**
-     * <p>The application icon.</p>
+     * <p>The URL of the application icon.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>icon/WS20250626112715000001/thumbnail.jpg</p>
      */
     @NameInMap("IconUrl")
     public String iconUrl;
 
     /**
      * <p>The application name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>docs</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The details.</p>
+     * <p>The partner details.</p>
      */
     @NameInMap("PartnerDetail")
     public AppInstanceAggregatePartnerDetail partnerDetail;
 
+    /**
+     * <p>The configuration and runtime information of the application instance.</p>
+     */
     @NameInMap("Profile")
     public AppInstanceProfile profile;
 
+    /**
+     * <p>The ID of the enterprise resource group to which the instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek2smovqqpvuly</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The website domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abcd.scd.wanwang.xin</p>
      */
     @NameInMap("SiteHost")
     public String siteHost;
 
     /**
      * <p>The application identifier.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>31104757</p>
      */
     @NameInMap("Slug")
     public String slug;
@@ -153,42 +222,66 @@ public class AppInstanceAggregate extends TeaModel {
 
     /**
      * <p>The start time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-03-24T10:10Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>trial,draft,live,refunded,expired,released</p>
+     * 
+     * <strong>example:</strong>
+     * <p>live</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The status text.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Published</p>
      */
     @NameInMap("StatusText")
     public String statusText;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<AppInstanceAggregateTags> tags;
 
+    /**
+     * <p>The application template record information.</p>
+     */
     @NameInMap("TemplateRecord")
     public TemplateRecord templateRecord;
 
     /**
-     * <p>The application thumbnail.</p>
+     * <p>The URL of the application thumbnail.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>thumbnails/WS20250626112715000001/thumbnail.jpg</p>
      */
     @NameInMap("ThumbnailUrl")
     public String thumbnailUrl;
 
     /**
      * <p>The user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123241414</p>
      */
     @NameInMap("UserId")
     public String userId;
 
     /**
      * <p>The version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-04-02</p>
      */
     @NameInMap("Version")
     public String version;
@@ -471,17 +564,29 @@ public class AppInstanceAggregate extends TeaModel {
     }
 
     public static class AppInstanceAggregatePartnerDetailBindData extends TeaModel {
+        /**
+         * <p>The external business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS20250801153127000002</p>
+         */
         @NameInMap("BizId")
         public String bizId;
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1672123722000</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Wed Nov 26 10:15:28 CST 2025</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
@@ -503,16 +608,28 @@ public class AppInstanceAggregate extends TeaModel {
 
         /**
          * <p>The primary key of the parent record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1123213</p>
          */
         @NameInMap("ParentPk")
         public String parentPk;
 
         /**
          * <p>The partner ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         @NameInMap("PartnerId")
         public String partnerId;
 
+        /**
+         * <p>The Alibaba Cloud account ID of the bound user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -596,10 +713,19 @@ public class AppInstanceAggregate extends TeaModel {
 
         /**
          * <p>The partner ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         @NameInMap("PartnerId")
         public String partnerId;
 
+        /**
+         * <p>The partner binding status. Valid values: BOUND (bound) and UNBOUND (unbound).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BOUND</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -636,7 +762,7 @@ public class AppInstanceAggregate extends TeaModel {
 
     public static class AppInstanceAggregateTags extends TeaModel {
         /**
-         * <p>The tag key of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>. If this parameter is specified, it cannot be an empty string.</p>
+         * <p>The tag key of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>. If you specify this parameter, it cannot be an empty string.</p>
          * <p>The tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
@@ -646,8 +772,11 @@ public class AppInstanceAggregate extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>. If this parameter is specified, it can be an empty string.</p>
+         * <p>The tag value of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>. If you specify this parameter, it can be an empty string.</p>
          * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ufo</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

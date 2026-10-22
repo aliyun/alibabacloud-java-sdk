@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModuleResultsValue extends TeaModel {
     /**
-     * <p>Returned only for APP_WORKSPACE quantity pre-checks. This is the final total quantity to be saved, not the increment for the current operation. The issue quantity is the sum of common issues and reputation issues, and the competitor quantity is the total number of competitors after editing. This field is empty for APP and USER checks.</p>
+     * <p>Returned only for APP_WORKSPACE: the target total amount for this check, which is the used amount in the saved configuration plus the ResourceValue. If a compatible DesiredTotal is provided, this total amount is used directly. The used amount for issues is the sum of regular and reputation issues in the saved configuration, and the used amount for competitors is the number of competitors. This field is empty for APP and USER checks.</p>
      * 
      * <strong>example:</strong>
      * <p>21</p>
@@ -32,7 +32,7 @@ public class ModuleResultsValue extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>Returned only for APP_WORKSPACE quantity pre-checks. This is the maximum number of issues or competitors allowed by the current commodity version, not the remaining quota. This field is empty for APP and USER checks or when the version benefits cannot be determined.</p>
+     * <p>Returned only for APP_WORKSPACE quantity pre-checks: the maximum number of issues or competitors allowed by the current product edition, which is not the remaining quota. This field is empty for APP and USER checks or when the edition benefits cannot be determined.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -41,7 +41,7 @@ public class ModuleResultsValue extends TeaModel {
     public Long limit;
 
     /**
-     * <p>Indicates whether the check is passed.</p>
+     * <p>Indicates whether the check passed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,7 +50,7 @@ public class ModuleResultsValue extends TeaModel {
     public Boolean passed;
 
     /**
-     * <p>The resource identifier.</p>
+     * <p>The resource code.</p>
      * 
      * <strong>example:</strong>
      * <p>InspirationTokens</p>
@@ -59,7 +59,7 @@ public class ModuleResultsValue extends TeaModel {
     public String resourceCode;
 
     /**
-     * <p>Indicates whether a purchasable higher version exists that can accommodate the DesiredTotal. This field is true only when the current version capacity is insufficient and a higher version meets the requirements. Otherwise, it is false. This field may be empty for APP and USER checks. This field does not indicate that an upgrade has been performed or an upgrade order has been created.</p>
+     * <p>Indicates whether a purchasable higher edition exists that can accommodate the DesiredTotal. This field is true only when the capacity of the current edition is insufficient and a higher edition meets the requirement. Otherwise, it is false. This field may be empty for APP and USER checks. This field does not indicate that an upgrade has been performed or an upgrade order has been created.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

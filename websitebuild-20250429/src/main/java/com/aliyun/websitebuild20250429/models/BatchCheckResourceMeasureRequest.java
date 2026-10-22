@@ -41,7 +41,7 @@ public class BatchCheckResourceMeasureRequest extends TeaModel {
     public String espBizId;
 
     /**
-     * <p>The order module information. This parameter is automatically populated when it is empty.</p>
+     * <p>The order component information. This parameter is automatically populated if left empty.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;siteversion&quot;:&quot;test&quot;}</p>

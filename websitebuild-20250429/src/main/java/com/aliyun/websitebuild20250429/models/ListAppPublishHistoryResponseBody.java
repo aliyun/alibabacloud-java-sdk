@@ -69,7 +69,7 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
      * <ul>
      * <li>ABTest: experiment data table</li>
      * <li>ExperimentTool: experiment tool table</li>
-     * <li>DataDiagnosis: data diagnostics</li>
+     * <li>DataDiagnosis: data diagnosis</li>
      * </ul>
      */
     @NameInMap("Module")
@@ -241,6 +241,9 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
 
         /**
          * <p>The commit hash of the code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>890243d5977e74d80eebd4734f7b05f626f84cb1</p>
          */
         @NameInMap("CommitHash")
         public String commitHash;
@@ -256,6 +259,9 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
 
         /**
          * <p>The code of the current release step.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INIT</p>
          */
         @NameInMap("CurrentStepCode")
         public String currentStepCode;
@@ -289,6 +295,9 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
 
         /**
          * <p>The code of the release step where the error occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BUILDING</p>
          */
         @NameInMap("ErrorStepCode")
         public String errorStepCode;
@@ -302,8 +311,8 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the resource allocation for the financial unit is successful. Valid values:</p>
          * <ul>
-         * <li>true: successful</li>
-         * <li>false: failed</li>
+         * <li>true: The allocation is successful.</li>
+         * <li>false: The allocation fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -322,7 +331,7 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
         public String msg;
 
         /**
-         * <p>The sort order. Valid values: ASC and DESC.</p>
+         * <p>The sort type. Valid values: ASC and DESC.</p>
          * 
          * <strong>example:</strong>
          * <p>DESC</p>
@@ -332,6 +341,9 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
 
         /**
          * <p>The code of the release order type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEPLOY</p>
          */
         @NameInMap("OrderTypeCode")
         public String orderTypeCode;
@@ -364,7 +376,7 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
         public Long publishOrderId;
 
         /**
-         * <p>The release time, in the UTC format yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.SSS\&quot;Z\&quot;.</p>
+         * <p>The release time in the UTC format yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.SSS\&quot;Z\&quot;.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -571,8 +583,8 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
         /**
          * <p>Specifies whether to display the history of applying alert templates to application groups. Valid values:</p>
          * <ul>
-         * <li>true: displayed.</li>
-         * <li>false: not displayed. Default value.</li>
+         * <li>true: Display.</li>
+         * <li>false: Do not display. This is the default value.</li>
          * </ul>
          */
         @NameInMap("History")

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryInspirationConsumeRecordsRequest extends TeaModel {
     /**
-     * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
+     * <p>The end time of the query. The time is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1762999521</p>
@@ -14,7 +14,7 @@ public class QueryInspirationConsumeRecordsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The field by which to sort the results.</p>
+     * <p>The field used for sorting.</p>
      * 
      * <strong>example:</strong>
      * <p>CreationTime</p>
@@ -23,7 +23,7 @@ public class QueryInspirationConsumeRecordsRequest extends TeaModel {
     public String orderColumn;
 
     /**
-     * <p>The sort order. Valid values: ASC, DESC.</p>
+     * <p>The sort order. Valid values: ASC and DESC.</p>
      * 
      * <strong>example:</strong>
      * <p>DESC</p>
@@ -50,16 +50,16 @@ public class QueryInspirationConsumeRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the scenario.</p>
+     * <p>The scenario name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Skylark-Personnel Authentication</p>
+     * <p>Bailingniao-Personnel Authentication</p>
      */
     @NameInMap("SceneName")
     public String sceneName;
 
     /**
-     * <p>The start time of the query. The time is in ISO 8601 format and the time zone is UTC (Z).</p>
+     * <p>The start time of the query. The time is in ISO 8601 format and uses the UTC time zone (Z).</p>
      * 
      * <strong>example:</strong>
      * <p>2025-10-19T16:00:00Z</p>

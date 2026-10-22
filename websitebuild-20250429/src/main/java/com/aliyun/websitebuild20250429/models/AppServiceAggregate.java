@@ -15,12 +15,15 @@ public class AppServiceAggregate extends TeaModel {
 
     /**
      * <p>The deletion flag.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Deleted")
     public Integer deleted;
 
     /**
-     * <p>The end time. It is in ISO 8601 format and uses the UTC (Z) time zone.</p>
+     * <p>The end time. It is in ISO 8601 format and uses the UTC time zone (Z).</p>
      * 
      * <strong>example:</strong>
      * <p>2025-07-18T02:23:00Z</p>
@@ -30,6 +33,9 @@ public class AppServiceAggregate extends TeaModel {
 
     /**
      * <p>esp bizId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>p20202933455</p>
      */
     @NameInMap("EspBizId")
     public String espBizId;
@@ -69,6 +75,9 @@ public class AppServiceAggregate extends TeaModel {
 
     /**
      * <p>The service name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Website design service</p>
      */
     @NameInMap("Name")
     public String name;
@@ -80,7 +89,7 @@ public class AppServiceAggregate extends TeaModel {
     public java.util.List<TreeNode> nodeList;
 
     /**
-     * <p>The unique identifier for an operation.</p>
+     * <p>Uniquely identifies an operation.</p>
      */
     @NameInMap("OperationAddress")
     public AppOperationAddress operationAddress;
@@ -108,6 +117,9 @@ public class AppServiceAggregate extends TeaModel {
 
     /**
      * <p>The application identifier.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>inst-001</p>
      */
     @NameInMap("Slug")
     public String slug;
@@ -132,6 +144,9 @@ public class AppServiceAggregate extends TeaModel {
 
     /**
      * <p>The user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123241414</p>
      */
     @NameInMap("UserId")
     public String userId;

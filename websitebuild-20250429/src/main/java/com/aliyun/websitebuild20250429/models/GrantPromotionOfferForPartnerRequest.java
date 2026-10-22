@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GrantPromotionOfferForPartnerRequest extends TeaModel {
     /**
      * <p>The activity code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACT202606001</p>
      */
     @NameInMap("ActivityCode")
     public String activityCode;
@@ -38,7 +41,7 @@ public class GrantPromotionOfferForPartnerRequest extends TeaModel {
     public String channel;
 
     /**
-     * <p>The employee code.</p>
+     * <p>The employee ID.</p>
      * 
      * <strong>example:</strong>
      * <p>WB02409424</p>

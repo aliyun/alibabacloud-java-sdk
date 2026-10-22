@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAppPluginRequest extends TeaModel {
     /**
-     * <p>The gateway plug-in ID.</p>
+     * <p>The ID of the gateway plugin.</p>
      * 
      * <strong>example:</strong>
      * <p>aliplayer-react</p>

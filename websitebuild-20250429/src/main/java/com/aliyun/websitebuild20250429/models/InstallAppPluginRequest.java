@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InstallAppPluginRequest extends TeaModel {
     /**
-     * <p>The gateway plug-in ID.</p>
+     * <p>The ID of the gateway plugin.</p>
      * 
      * <strong>example:</strong>
      * <p>1bae9ceaceea432d91c7069fab0dfc02</p>
@@ -14,7 +14,7 @@ public class InstallAppPluginRequest extends TeaModel {
     public String pluginId;
 
     /**
-     * <p>The locked version. Leave empty to follow the latest version.</p>
+     * <p>The locked version. If left empty, the latest version is used.</p>
      * 
      * <strong>example:</strong>
      * <p>1.0.7</p>

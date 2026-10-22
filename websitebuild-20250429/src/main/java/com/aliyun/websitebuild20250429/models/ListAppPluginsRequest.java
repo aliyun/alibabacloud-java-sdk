@@ -14,7 +14,8 @@ public class ListAppPluginsRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The maximum number of results to return per query. Valid values: 10 to 100. Default value: 20.</p>
+     * <p>The maximum number of results to return per query.</p>
+     * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +24,7 @@ public class ListAppPluginsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to start the next query. If there is no next query, this value is empty.</p>
+     * <p>The token used to start the next query. This parameter is empty if no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>0l45bkwM022Dt+rOvPi/oQ==</p>

@@ -96,7 +96,7 @@ public class GetMiniAppBindingResponseBody extends TeaModel {
         public String productionQrCodeUrl;
 
         /**
-         * <p>The extension information.</p>
+         * <p>The extended information.</p>
          */
         @NameInMap("SettingValues")
         public java.util.Map<String, String> settingValues;

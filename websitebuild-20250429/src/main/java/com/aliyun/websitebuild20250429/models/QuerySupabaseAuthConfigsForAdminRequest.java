@@ -26,12 +26,15 @@ public class QuerySupabaseAuthConfigsForAdminRequest extends TeaModel {
 
     /**
      * <p>The environment identifier.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>staging</p>
      */
     @NameInMap("Env")
     public String env;
 
     /**
-     * <p>The field by which to sort the results.</p>
+     * <p>The sort field.</p>
      * 
      * <strong>example:</strong>
      * <p>gmtCreated</p>
@@ -40,7 +43,7 @@ public class QuerySupabaseAuthConfigsForAdminRequest extends TeaModel {
     public String orderColumn;
 
     /**
-     * <p>The sort type. Valid values: ASC and DESC.</p>
+     * <p>The sort order. Valid values: ASC, DESC.</p>
      * 
      * <strong>example:</strong>
      * <p>DESC</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryInspirationAccountDetailsRequest extends TeaModel {
     /**
-     * <p>The end time of the query. The time is in ISO 8601 format and in the UTC (Z) time zone.</p>
+     * <p>The end time of the query. The time is in the ISO 8601 standard and the UTC (Z) time zone.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-07-23T16:00:00Z</p>
@@ -50,7 +50,7 @@ public class QueryInspirationAccountDetailsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The filter for the source type. Examples: FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, and PURCHASED.</p>
+     * <p>The source type filter, such as FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, or PURCHASED.</p>
      * 
      * <strong>example:</strong>
      * <p>MARKET_CLOUD_DREAM</p>
@@ -59,7 +59,7 @@ public class QueryInspirationAccountDetailsRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The start time of the query. The time is in ISO 8601 format and in the UTC (Z) time zone.</p>
+     * <p>The start time of the query. The time is in the ISO 8601 standard and the UTC (Z) time zone.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-06-21T16:00:00Z</p>

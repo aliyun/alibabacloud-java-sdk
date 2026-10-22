@@ -14,7 +14,7 @@ public class OnlineAppInstanceResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retries are allowed.</p>
+     * <p>Indicates whether a retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class OnlineAppInstanceResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name. The name can contain digits, letters, and hyphens (-). It must start with a letter and cannot end with a hyphen (-). The name can be up to 36 characters in length.</p>
+     * <p>The name of the application. The name can contain digits, letters, and hyphens (-). It must start with a letter, cannot end with a hyphen (-), and cannot exceed 36 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>stg.mlp_finance_cap_refund_hi</p>
@@ -32,7 +32,7 @@ public class OnlineAppInstanceResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>The dynamic error code. This parameter will be deprecated.</p>
+     * <p>The dynamic error code. This parameter is about to be deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -50,7 +50,7 @@ public class OnlineAppInstanceResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -86,13 +86,13 @@ public class OnlineAppInstanceResponseBody extends TeaModel {
      * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request is synchronously processed.</p>
+     * <p>Indicates whether the request is processed synchronously.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

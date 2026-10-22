@@ -25,11 +25,11 @@ public class ModifyMaterialFileRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The new name of the file after modification.</p>
+     * <p>The updated file name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试文件</p>
+     * <p>Test file</p>
      */
     @NameInMap("Name")
     public String name;

@@ -15,7 +15,7 @@ public class MoveMaterialFileRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The folder ID.</p>
+     * <p>The directory ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

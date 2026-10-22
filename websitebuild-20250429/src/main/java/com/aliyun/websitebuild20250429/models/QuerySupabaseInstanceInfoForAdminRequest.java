@@ -25,13 +25,16 @@ public class QuerySupabaseInstanceInfoForAdminRequest extends TeaModel {
     public String env;
 
     /**
-     * <p>The field by which to sort the results.</p>
+     * <p>The sort field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gmtCreated</p>
      */
     @NameInMap("OrderColumn")
     public String orderColumn;
 
     /**
-     * <p>The sort order. Valid values: ASC and DESC.</p>
+     * <p>The sort order. Valid values: ASC, DESC.</p>
      * 
      * <strong>example:</strong>
      * <p>ASC</p>

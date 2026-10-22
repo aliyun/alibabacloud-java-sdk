@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access is denied.</p>
+     * <p>The detailed cause of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Specifies whether retries are allowed.</p>
+     * <p>Indicates whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -41,7 +41,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic message. This parameter is not used. Ignore this parameter.</p>
+     * <p>The dynamic message. This field is not in use and can be ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -56,7 +56,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Specifies whether the deletion is successful.</p>
+     * <p>Indicates whether the deletion is successful.</p>
      */
     @NameInMap("Module")
     public QueryInspirationConsumeRecordsResponseBodyModule module;
@@ -220,6 +220,9 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
 
         /**
          * <p>The consumption type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1 round of conversation</p>
          */
         @NameInMap("ConsumeType")
         public String consumeType;
@@ -235,12 +238,15 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
 
         /**
          * <p>The unique identifier of the consumption record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RECORD_1</p>
          */
         @NameInMap("RecordKey")
         public String recordKey;
 
         /**
-         * <p>The name of the consumption scenario, such as AI application development, AI creative image generation, AI video creation, or AI content creation.</p>
+         * <p>The name of the consumption scenario, such as AI application development, AI creative image generation, AI video creation, and AI content creation.</p>
          * 
          * <strong>example:</strong>
          * <p>Home improvement</p>
@@ -341,6 +347,9 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
 
         /**
          * <p>The consumption type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1 round of conversation</p>
          */
         @NameInMap("ConsumeType")
         public String consumeType;
@@ -355,7 +364,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         public String metaData;
 
         /**
-         * <p>The name of the consumption scenario, such as AI application development, AI creative image generation, AI video creation, or AI content creation.</p>
+         * <p>The name of the consumption scenario, such as AI application development, AI creative image generation, AI video creation, and AI content creation.</p>
          * 
          * <strong>example:</strong>
          * <p>Home improvement</p>
@@ -429,7 +438,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         public Integer currentPageNum;
 
         /**
-         * <p>The request results.</p>
+         * <p>The request result.</p>
          */
         @NameInMap("Data")
         public java.util.List<QueryInspirationConsumeRecordsResponseBodyModuleData> data;
@@ -441,7 +450,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         public QueryInspirationConsumeRecordsResponseBodyModuleNext next;
 
         /**
-         * <p>Specifies whether a next page exists.</p>
+         * <p>Indicates whether a next page exists.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -459,7 +468,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>Specifies whether a previous page exists.</p>
+         * <p>Indicates whether a previous page exists.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -468,7 +477,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         public Boolean prePage;
 
         /**
-         * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+         * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is <strong>true</strong>. Narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
          */
         @NameInMap("ResultLimit")
         public Boolean resultLimit;

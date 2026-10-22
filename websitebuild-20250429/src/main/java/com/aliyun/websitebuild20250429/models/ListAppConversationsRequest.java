@@ -23,8 +23,7 @@ public class ListAppConversationsRequest extends TeaModel {
     public String endModifyTime;
 
     /**
-     * <p>The number of entries per query.</p>
-     * <p>Valid values: 10 to 100. Default value: 20.</p>
+     * <p>The maximum number of results to return for a single query. Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -33,7 +32,7 @@ public class ListAppConversationsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+     * <p>The token that is used to start the next query. If no next query is available, this parameter is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>0l45bkwM022Dt+rOvPi/oQ==</p>

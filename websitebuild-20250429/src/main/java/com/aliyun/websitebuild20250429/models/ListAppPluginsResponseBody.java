@@ -14,7 +14,7 @@ public class ListAppPluginsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retries are allowed.</p>
+     * <p>Indicates whether a retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -41,9 +41,9 @@ public class ListAppPluginsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace <code>%s</code> in the error message of the <strong>ErrMessage</strong> response parameter.</p>
+     * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the value of the <strong>DtsJobId</strong> request parameter is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,8 @@ public class ListAppPluginsResponseBody extends TeaModel {
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The maximum number of results to return per query. Valid values: 10 to 100. Default value: 20.</p>
+     * <p>The maximum number of results to return per query.</p>
+     * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -74,7 +75,7 @@ public class ListAppPluginsResponseBody extends TeaModel {
     public java.util.List<ListAppPluginsResponseBodyModule> module;
 
     /**
-     * <p>The token used to start the next query. If there is no next query, this value is empty.</p>
+     * <p>The token used to start the next query. This parameter is empty if no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
@@ -256,7 +257,7 @@ public class ListAppPluginsResponseBody extends TeaModel {
         public String desc;
 
         /**
-         * <p>The image display setting. Valid values:</p>
+         * <p>Specifies whether to display the image. Valid values:</p>
          * <ul>
          * <li><strong>0</strong> (None): Not displayed.</li>
          * <li><strong>1</strong> (Always): Always displayed.</li>
@@ -269,7 +270,8 @@ public class ListAppPluginsResponseBody extends TeaModel {
         public Integer display;
 
         /**
-         * <p>Specifies whether to enable scheduled delivery of resource snapshots. Valid values:</p>
+         * <p>Specifies whether to enable scheduled delivery of resource snapshots.</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li>true: Enabled.</li>
          * <li>false: Disabled.</li>
@@ -301,7 +303,7 @@ public class ListAppPluginsResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>The modification time. The value is in the ISO 8601 format and the UTC time zone.</p>
+         * <p>The update time in ISO 8601 format in the UTC time zone.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -338,11 +340,7 @@ public class ListAppPluginsResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Indicates whether the plugin is deleted. Valid values:</p>
-         * <ul>
-         * <li>0: No.</li>
-         * <li>1: Yes.</li>
-         * </ul>
+         * <p>Indicates whether the item is deleted. Valid values: 0 (no) and 1 (yes).</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -354,7 +352,7 @@ public class ListAppPluginsResponseBody extends TeaModel {
          * <p>The name of the plugin.</p>
          * 
          * <strong>example:</strong>
-         * <p>File name</p>
+         * <p>Filename</p>
          */
         @NameInMap("Name")
         public String name;

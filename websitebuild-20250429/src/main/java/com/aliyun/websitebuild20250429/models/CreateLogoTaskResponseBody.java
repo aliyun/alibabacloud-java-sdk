@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLogoTaskResponseBody extends TeaModel {
     /**
-     * <p>The error code. If the request is successful, this field is not returned. If the request fails, this field is returned. For more information, see the error codes in this topic.</p>
+     * <p>The error code. If the request is successful, the ErrorCode field is not returned. If the request fails, the ErrorCode field is returned. For more information, see the error code list in this topic.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -32,7 +32,7 @@ public class CreateLogoTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class CreateLogoTaskResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The task ID returned when the call is successful. Keep this ID safe. This ID is required when you query the creation status.</p>
+     * <p>The task ID returned when the call is successful. Note: Keep this ID secure. You must use this ID to query the status of the device creation.</p>
      * 
      * <strong>example:</strong>
      * <p>c3r127e325at9yd</p>

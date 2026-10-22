@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyMaterialDirectoryResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The detailed reason for the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -23,7 +23,7 @@ public class ModifyMaterialDirectoryResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name.</p>
+     * <p>The name of the application.</p>
      * 
      * <strong>example:</strong>
      * <p>or</p>
@@ -56,7 +56,7 @@ public class ModifyMaterialDirectoryResponseBody extends TeaModel {
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The error code. If the request is successful, this field is not returned. If the request fails, this field is returned. For more information, see the error codes in this topic.</p>
+     * <p>The error code. If the request succeeds, the ErrorCode parameter is not returned. If the request fails, the ErrorCode parameter is returned. For more information, see the error codes in this topic.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -74,7 +74,7 @@ public class ModifyMaterialDirectoryResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
-     * <p>Indicates whether the folder was modified successfully.</p>
+     * <p>Indicates whether the update was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -101,10 +101,10 @@ public class ModifyMaterialDirectoryResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The root error message.</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
@@ -119,7 +119,7 @@ public class ModifyMaterialDirectoryResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>Indicates whether the request was processed synchronously.</p>
+     * <p>Indicates whether the request is processed synchronously.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

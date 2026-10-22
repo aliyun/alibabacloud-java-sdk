@@ -44,7 +44,7 @@ public class TreeNode extends TeaModel {
      * <p>The node name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Single-channel output</p>
+     * <p>Single output</p>
      */
     @NameInMap("NodeName")
     public String nodeName;
@@ -60,6 +60,9 @@ public class TreeNode extends TeaModel {
 
     /**
      * <p>The operator role.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>System</p>
      */
     @NameInMap("OperatorRole")
     public String operatorRole;

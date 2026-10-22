@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckUserResourceMeasureResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access is denied.</p>
+     * <p>The detailed reason for access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,10 +14,10 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether a retry is allowed. Valid values:</p>
+     * <p>Specifies whether retries are allowed. Valid values:</p>
      * <ul>
-     * <li>false: A retry is not allowed.</li>
-     * <li>true: A retry is allowed.</li>
+     * <li>false: Retries are not allowed.</li>
+     * <li>true: Retries are allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name. The application with this name is queried.</p>
+     * <p>The name of the application.</p>
      * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
@@ -45,9 +45,9 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response element.</p>
+     * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -57,13 +57,13 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The returned error arguments.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The response object.</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("Module")
     public CheckUserResourceMeasureResponseBodyModule module;
@@ -78,7 +78,7 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The error code.</p>
+     * <p>The root error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -87,16 +87,16 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The exception message.</p>
+     * <p>The root error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>The backup parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -199,7 +199,16 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
 
     public static class CheckUserResourceMeasureResponseBodyModule extends TeaModel {
         /**
-         * <p>The error code when the check fails. This value is null when the check passes.</p>
+         * <p>Returned only for APP_WORKSPACE: the target total for this check, which is the used quota in the saved configuration plus ResourceValue. If the compatible DesiredTotal is provided, this total is used directly. The used quota for questions is the sum of common and word-of-mouth questions in the saved configuration. The used quota for competitors is the number of competitors. This field is empty for APP and USER checks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21</p>
+         */
+        @NameInMap("DesiredTotal")
+        public Long desiredTotal;
+
+        /**
+         * <p>The error code when the check fails. This field is null when the check passes.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -208,13 +217,22 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error message when the check fails. This value is null when the check passes.</p>
+         * <p>The error message when the check fails. This field is null when the check passes.</p>
          * 
          * <strong>example:</strong>
          * <p>stream push failed</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
+
+        /**
+         * <p>Returned only for APP_WORKSPACE quantity dry runs: the maximum number of questions or competitors allowed by the current commodity edition, not the remaining quota. This field is empty for APP and USER checks or when the edition benefits cannot be determined.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
+        @NameInMap("Limit")
+        public Long limit;
 
         /**
          * <p>Indicates whether the check is passed.</p>
@@ -226,7 +244,7 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
         public Boolean passed;
 
         /**
-         * <p>The resource identifier.</p>
+         * <p>The resource code.</p>
          * 
          * <strong>example:</strong>
          * <p>TransitRouterVpcAttachment</p>
@@ -234,9 +252,26 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
         @NameInMap("ResourceCode")
         public String resourceCode;
 
+        /**
+         * <p>Indicates whether a purchasable higher edition exists that can accommodate the DesiredTotal. This field is true only when the current edition capacity is insufficient and a higher edition meets the requirements. Otherwise, it is false. This field may be empty for APP and USER checks. This field does not indicate that an upgrade has been performed or an upgrade order has been created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("UpgradeAvailable")
+        public Boolean upgradeAvailable;
+
         public static CheckUserResourceMeasureResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
             CheckUserResourceMeasureResponseBodyModule self = new CheckUserResourceMeasureResponseBodyModule();
             return TeaModel.build(map, self);
+        }
+
+        public CheckUserResourceMeasureResponseBodyModule setDesiredTotal(Long desiredTotal) {
+            this.desiredTotal = desiredTotal;
+            return this;
+        }
+        public Long getDesiredTotal() {
+            return this.desiredTotal;
         }
 
         public CheckUserResourceMeasureResponseBodyModule setErrorCode(String errorCode) {
@@ -255,6 +290,14 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
             return this.errorMessage;
         }
 
+        public CheckUserResourceMeasureResponseBodyModule setLimit(Long limit) {
+            this.limit = limit;
+            return this;
+        }
+        public Long getLimit() {
+            return this.limit;
+        }
+
         public CheckUserResourceMeasureResponseBodyModule setPassed(Boolean passed) {
             this.passed = passed;
             return this;
@@ -269,6 +312,14 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
         }
         public String getResourceCode() {
             return this.resourceCode;
+        }
+
+        public CheckUserResourceMeasureResponseBodyModule setUpgradeAvailable(Boolean upgradeAvailable) {
+            this.upgradeAvailable = upgradeAvailable;
+            return this;
+        }
+        public Boolean getUpgradeAvailable() {
+            return this.upgradeAvailable;
         }
 
     }

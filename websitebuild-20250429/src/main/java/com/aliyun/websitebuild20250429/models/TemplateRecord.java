@@ -14,7 +14,10 @@ public class TemplateRecord extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The replication status.</p>
+     * <p>The copy status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>copying</p>
      */
     @NameInMap("CopyStatus")
     public String copyStatus;
@@ -30,7 +33,7 @@ public class TemplateRecord extends TeaModel {
     public String gmtCreate;
 
     /**
-     * <p>The modification time.</p>
+     * <p>The update time.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +62,9 @@ public class TemplateRecord extends TeaModel {
 
     /**
      * <p>The user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12343131221311</p>
      */
     @NameInMap("UserId")
     public String userId;

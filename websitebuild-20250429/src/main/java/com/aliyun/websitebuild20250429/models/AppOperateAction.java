@@ -15,6 +15,9 @@ public class AppOperateAction extends TeaModel {
 
     /**
      * <p>The text used to display the action name in the user interface.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Renew</p>
      */
     @NameInMap("ActionText")
     public String actionText;
@@ -26,7 +29,10 @@ public class AppOperateAction extends TeaModel {
     public Boolean enable;
 
     /**
-     * <p>The URL to navigate to when the action is clicked.</p>
+     * <p>The URL to redirect to when the action is clicked.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://common-buy.aliyun.com/?orderType=RENEW&commodityCode=domain_website_public_cn&instanceId=12313213">https://common-buy.aliyun.com/?orderType=RENEW&amp;commodityCode=domain_website_public_cn&amp;instanceId=12313213</a></p>
      */
     @NameInMap("Href")
     public String href;

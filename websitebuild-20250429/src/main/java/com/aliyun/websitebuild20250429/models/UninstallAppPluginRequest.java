@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UninstallAppPluginRequest extends TeaModel {
     /**
-     * <p>The gateway plugin ID.</p>
+     * <p>The ID of the gateway plug-in.</p>
      * 
      * <strong>example:</strong>
      * <p>1bae9ceaceea432d91c7069fab0dfc02</p>

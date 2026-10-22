@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OperateSupabaseForAdminResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access was denied.</p>
+     * <p>The detailed reasons for access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,10 +14,10 @@ public class OperateSupabaseForAdminResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed. Valid values:</p>
+     * <p>Specifies whether a retry is allowed. Valid values:</p>
      * <ul>
-     * <li>false: Retry is not allowed.</li>
-     * <li>true: Retry is allowed.</li>
+     * <li>false: A retry is not allowed.</li>
+     * <li>true: A retry is allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class OperateSupabaseForAdminResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name.</p>
+     * <p>The app name.</p>
      * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
@@ -87,7 +87,7 @@ public class OperateSupabaseForAdminResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
      * <p>System exception</p>
@@ -96,7 +96,7 @@ public class OperateSupabaseForAdminResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>The reserved parameter.</p>
+     * <p>The fallback parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

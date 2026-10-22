@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UninstallAppPluginResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access was denied.</p>
+     * <p>The detailed reason why access is denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class UninstallAppPluginResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Indicates whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class UninstallAppPluginResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name.</p>
+     * <p>The name of the application.</p>
      * 
      * <strong>example:</strong>
      * <p>ish-intelligence-store-platform-admin-web</p>
@@ -41,7 +41,7 @@ public class UninstallAppPluginResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic message. Currently not used. Ignore this parameter.</p>
+     * <p>The dynamic message. This parameter is not used and can be ignored.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/u6qw3gxzu3b7sbj/u6qw3gxzu3b7sbj.diff.zip?Expires=1740975709&OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&Signature=FP7dDnkrLlOZHmRRORVqbLOtv9c%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/u6qw3gxzu3b7sbj/u6qw3gxzu3b7sbj.diff.zip?Expires=1740975709&amp;OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&amp;Signature=FP7dDnkrLlOZHmRRORVqbLOtv9c%3D</a></p>
@@ -50,7 +50,7 @@ public class UninstallAppPluginResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -83,7 +83,7 @@ public class UninstallAppPluginResponseBody extends TeaModel {
      * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>System exception.</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
@@ -201,7 +201,7 @@ public class UninstallAppPluginResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

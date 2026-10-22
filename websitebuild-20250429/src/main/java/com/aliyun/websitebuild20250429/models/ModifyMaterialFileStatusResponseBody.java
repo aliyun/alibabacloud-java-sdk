@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyMaterialFileStatusResponseBody extends TeaModel {
     /**
-     * <p>The details of the permission verification failure.</p>
+     * <p>The details of the permission check failure.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class ModifyMaterialFileStatusResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Indicates whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class ModifyMaterialFileStatusResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name.</p>
+     * <p>The name of the app.</p>
      * 
      * <strong>example:</strong>
      * <p>or</p>
@@ -32,7 +32,7 @@ public class ModifyMaterialFileStatusResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>The dynamic code. This parameter is not in use. Ignore this parameter.</p>
+     * <p>The dynamic code. This parameter is not used and can be ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -50,13 +50,13 @@ public class ModifyMaterialFileStatusResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Indicates whether the modification is successful.</p>
+     * <p>Indicates whether the update was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -83,16 +83,16 @@ public class ModifyMaterialFileStatusResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request is synchronously processed.</p>
+     * <p>Indicates whether the request is processed synchronously.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

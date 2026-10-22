@@ -23,7 +23,7 @@ public class GetMiniAppBindingRequest extends TeaModel {
     public String channel;
 
     /**
-     * <p>The list of extension information keys.</p>
+     * <p>The list of extended information keys.</p>
      * 
      * <strong>example:</strong>
      * <p>SERVER_DOMAIN</p>

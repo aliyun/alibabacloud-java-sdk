@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MoveMaterialFileResponseBody extends TeaModel {
     /**
-     * <p>The details of the permission verification failure.</p>
+     * <p>The details of the permission check failure.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,10 +14,10 @@ public class MoveMaterialFileResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether a retry is allowed. Valid values:</p>
+     * <p>Indicates whether retries are allowed. Valid values:</p>
      * <ul>
-     * <li>false: A retry is not allowed.</li>
-     * <li>true: A retry is allowed.</li>
+     * <li>false: Retries are not allowed.</li>
+     * <li>true: Retries are allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class MoveMaterialFileResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name. The name can contain digits, letters, and hyphens (-). It must start with a letter and cannot end with a hyphen (-). The name cannot exceed 36 characters in length.</p>
+     * <p>The application name. The name can contain digits, letters, and hyphens (-). It must start with a letter, cannot end with a hyphen (-), and cannot exceed 36 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
@@ -54,7 +54,7 @@ public class MoveMaterialFileResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters returned.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -78,7 +78,7 @@ public class MoveMaterialFileResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
-     * <p>Indicates whether the files were moved successfully.</p>
+     * <p>Indicates whether the move operation was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -96,7 +96,7 @@ public class MoveMaterialFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The error code.</p>
+     * <p>The root error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -108,7 +108,7 @@ public class MoveMaterialFileResponseBody extends TeaModel {
      * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;

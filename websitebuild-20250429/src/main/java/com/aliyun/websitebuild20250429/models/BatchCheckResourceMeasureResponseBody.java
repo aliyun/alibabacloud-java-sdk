@@ -14,7 +14,7 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Specifies whether a retry is allowed.</p>
+     * <p>Specifies whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -71,7 +71,7 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The error code.</p>
+     * <p>The root error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -192,13 +192,13 @@ public class BatchCheckResourceMeasureResponseBody extends TeaModel {
 
     public static class BatchCheckResourceMeasureResponseBodyModule extends TeaModel {
         /**
-         * <p>Indicates whether all checks are passed.</p>
+         * <p>Indicates whether all checks passed.</p>
          */
         @NameInMap("AllPassed")
         public Boolean allPassed;
 
         /**
-         * <p>The check results for each resource. The key is the resourceCode.</p>
+         * <p>The check results for each resource, where the key is the resourceCode.</p>
          */
         @NameInMap("Results")
         public java.util.Map<String, ModuleResultsValue> results;

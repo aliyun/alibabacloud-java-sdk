@@ -14,7 +14,7 @@ public class DeleteMaterialDirectoryRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The folder ID.</p>
+     * <p>The ID of the folder.</p>
      * 
      * <strong>example:</strong>
      * <p>68157a0a-769a-4364-bbdc-a0e2cf3d5ad</p>

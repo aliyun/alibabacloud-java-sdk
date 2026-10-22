@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetOssUploadPolicyResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access was denied.</p>
+     * <p>The detailed reason for the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,10 +14,10 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed. Valid values:</p>
+     * <p>Indicates whether retries are allowed. Valid values:</p>
      * <ul>
-     * <li>false: Retry is not allowed.</li>
-     * <li>true: Retry is allowed.</li>
+     * <li>false: Retries are not allowed.</li>
+     * <li>true: Retries are allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name.</p>
+     * <p>The app name.</p>
      * 
      * <strong>example:</strong>
      * <p>ish-intelligence-store-platform-admin-web</p>
@@ -54,7 +54,7 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters returned.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -93,7 +93,7 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request is synchronously processed.</p>
+     * <p>Indicates whether the request is processed synchronously.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

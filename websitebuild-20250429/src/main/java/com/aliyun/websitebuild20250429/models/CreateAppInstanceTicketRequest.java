@@ -14,7 +14,7 @@ public class CreateAppInstanceTicketRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The Client ID of the device for which you want to revoke the access credential.</p>
+     * <p>The client ID of the device whose access credentials need to be revoked.</p>
      * 
      * <strong>example:</strong>
      * <p>d566aaf2-7c88-40a4-982f-6abef0be13c9</p>
@@ -22,6 +22,9 @@ public class CreateAppInstanceTicketRequest extends TeaModel {
     @NameInMap("ClientId")
     public String clientId;
 
+    /**
+     * <p>The user role that the ticket will assume.</p>
+     */
     @NameInMap("Role")
     public String role;
 

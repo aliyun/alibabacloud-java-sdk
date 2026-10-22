@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AllocateSupabaseForAdminResponseBody extends TeaModel {
     /**
-     * <p>The details of the permission verification failure.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Specifies whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name.</p>
+     * <p>The name of the app.</p>
      * 
      * <strong>example:</strong>
      * <p>or</p>
@@ -50,7 +50,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -80,7 +80,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The root error message.</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
      * <p>System exception</p>
@@ -89,7 +89,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request is synchronously processed.</p>
+     * <p>Specifies whether the request is processed synchronously.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -237,7 +237,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String dbPublicUrl;
 
         /**
-         * <p>The database type.</p>
+         * <p>The type of the database.</p>
          * 
          * <strong>example:</strong>
          * <p>ORACLE</p>
@@ -246,7 +246,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String dbType;
 
         /**
-         * <p>The extra information.</p>
+         * <p>The additional information.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;appId\&quot;:\&quot;APP_NTJAK8P11SNZDJ3M6BWC\&quot;}</p>
@@ -264,7 +264,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String instanceCreateFinishedTime;
 
         /**
-         * <p>The instance creation status.</p>
+         * <p>The creation status of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1111</p>
@@ -282,7 +282,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public Integer isDeleted;
 
         /**
-         * <p>The password used to access the ApsaraDB RDS database.</p>
+         * <p>The access password of the RDS database.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -300,7 +300,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String serviceKey;
 
         /**
-         * <p>The instance status. Valid values:</p>
+         * <p>The status of the instance. Valid values:</p>
          * <ul>
          * <li>0: Paused.</li>
          * <li>1: Running.</li>
@@ -385,7 +385,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String supabasePublicUrl;
 
         /**
-         * <p>The tenant ID.</p>
+         * <p>The ID of the tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>GFCBAMJH-zh_CN</p>

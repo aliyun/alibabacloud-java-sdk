@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExportMaterialFileResponseBody extends TeaModel {
     /**
-     * <p>The details of the permission verification failure.</p>
+     * <p>The details of the permission check failure.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class ExportMaterialFileResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Indicates whether a retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class ExportMaterialFileResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name. The name can contain digits, letters, and hyphens (-). It must start with a letter and cannot end with a hyphen (-). The name cannot exceed 36 characters in length.</p>
+     * <p>The application name. The name can contain digits, letters, and hyphens (-). It must start with a letter, cannot end with a hyphen (-), and can be up to 36 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
@@ -50,13 +50,13 @@ public class ExportMaterialFileResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The error code. If the request is successful, the ErrorCode field is not returned. If the request fails, the ErrorCode field is returned. For more information, see the error codes in this topic.</p>
+     * <p>The error code. If the request is successful, the ErrorCode parameter is not returned. If the request fails, the ErrorCode parameter is returned. For more information, see the error codes in this topic.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -98,16 +98,16 @@ public class ExportMaterialFileResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The root error message.</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

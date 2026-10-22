@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyMaterialFileResponseBody extends TeaModel {
     /**
-     * <p>The details of the permission verification failure.</p>
+     * <p>The details of the permission check failure.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class ModifyMaterialFileResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Indicates whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -50,7 +50,7 @@ public class ModifyMaterialFileResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters returned.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -74,7 +74,7 @@ public class ModifyMaterialFileResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
-     * <p>Indicates whether the modification was successful.</p>
+     * <p>Indicates whether the update was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -92,7 +92,7 @@ public class ModifyMaterialFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The root error code.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -101,16 +101,16 @@ public class ModifyMaterialFileResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The root error message.</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

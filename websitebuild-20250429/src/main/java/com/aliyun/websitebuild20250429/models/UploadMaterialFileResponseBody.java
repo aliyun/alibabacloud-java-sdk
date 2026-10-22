@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadMaterialFileResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access was denied.</p>
+     * <p>The detailed reason for access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class UploadMaterialFileResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Indicates whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -50,13 +50,13 @@ public class UploadMaterialFileResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters returned.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The error code. The ErrorCode field is not returned if the request is successful. The ErrorCode field is returned if the request fails. For more information, see the error codes in this topic.</p>
+     * <p>The error code. If the request is successful, the ErrorCode field is not returned. If the request fails, the ErrorCode field is returned. For more information, see the error codes in this topic.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -92,7 +92,7 @@ public class UploadMaterialFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The error code.</p>
+     * <p>The root error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -101,7 +101,7 @@ public class UploadMaterialFileResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The exception message.</p>
+     * <p>The root exception message.</p>
      * 
      * <strong>example:</strong>
      * <p>System exception</p>
@@ -110,7 +110,7 @@ public class UploadMaterialFileResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -119,7 +119,7 @@ public class UploadMaterialFileResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>Indicates whether the request is synchronously processed.</p>
+     * <p>Indicates whether the operation is processed synchronously.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

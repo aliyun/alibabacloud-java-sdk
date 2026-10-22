@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAIStaffChatMessagesResponseBody extends TeaModel {
     /**
-     * <p>The access denied details.</p>
+     * <p>The access denial details.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Specifies whether a retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name.</p>
+     * <p>The name of the app.</p>
      * 
      * <strong>example:</strong>
      * <p>or</p>
@@ -41,7 +41,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic message. This parameter is not in use. Ignore it.</p>
+     * <p>The dynamic message. This parameter is not in use and can be ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -50,7 +50,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -83,7 +83,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System error</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
@@ -219,7 +219,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
         public String chatStatus;
 
         /**
-         * <p>The ID of the data API operation that is called.</p>
+         * <p>The ID of the invoked data API.</p>
          * 
          * <strong>example:</strong>
          * <p>domain cnamen<a href="http://www.buyhao8.com">www.buyhao8.com</a> <a href="http://www.buyhao8.com.a1.initrr.comn">www.buyhao8.com.a1.initrr.comn</a></p>
@@ -255,7 +255,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1591339051000</p>
@@ -273,7 +273,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
         public String messageId;
 
         /**
-         * <p>The business extension metadata in Map format. The value must be a JSON string.</p>
+         * <p>The business extension metadata. The value must be a JSON string in map format.</p>
          */
         @NameInMap("MetaData")
         public java.util.Map<String, ?> metaData;
@@ -289,7 +289,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
          * </li>
          * <li><p>function: Function.</p>
          * </li>
-         * <li><p>plugin: Plugin.</p>
+         * <li><p>plugin: Plug-in.</p>
          * </li>
          * <li><p>tool: Tool.</p>
          * </li>
@@ -449,8 +449,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
 
     public static class ListAIStaffChatMessagesResponseBodyModule extends TeaModel {
         /**
-         * <p>The sender type.</p>
-         * <p>Valid values:</p>
+         * <p>The sender type. Valid values:</p>
          * <ul>
          * <li><strong>ADMIN</strong>: System.</li>
          * <li><strong>CUSTOMER</strong>: Visitor.</li>

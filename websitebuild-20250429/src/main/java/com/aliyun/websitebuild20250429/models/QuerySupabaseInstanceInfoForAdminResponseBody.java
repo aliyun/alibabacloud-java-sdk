@@ -14,7 +14,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether a retry is allowed.</p>
+     * <p>Indicates whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -41,9 +41,9 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which replaces the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
+     * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the value of the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters returned.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -240,7 +240,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
         public String dbPublicUrl;
 
         /**
-         * <p>The database type (rds/polardb).</p>
+         * <p>The database type. Valid values: rds, polardb.</p>
          * 
          * <strong>example:</strong>
          * <p>ORACLE</p>
@@ -249,7 +249,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
         public String dbType;
 
         /**
-         * <p>The extra information.</p>
+         * <p>The additional information.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;appId\&quot;:\&quot;APP_NTJAK8P11SNZDJ3M6BWC\&quot;}</p>
@@ -258,7 +258,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
         public String extra;
 
         /**
-         * <p>The time when the instance creation was completed.</p>
+         * <p>The completion time of the instance creation.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -267,7 +267,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
         public String instanceCreateFinishedTime;
 
         /**
-         * <p>The instance creation status.</p>
+         * <p>The creation status of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1111</p>
@@ -285,7 +285,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
         public Integer isDeleted;
 
         /**
-         * <p>The access password of the RDS database.</p>
+         * <p>The access password for the RDS database.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -303,11 +303,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
         public String serviceKey;
 
         /**
-         * <p>The status. Valid values:</p>
-         * <ul>
-         * <li>0: Paused.</li>
-         * <li>1: Running.</li>
-         * </ul>
+         * <p>The status. Valid values: 0: Paused. 1: Running.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -370,7 +366,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
         public String supabasePrivateIp;
 
         /**
-         * <p>The public endpoint of the Supabase instance.</p>
+         * <p>The public network connection endpoint of the Supabase instance.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>

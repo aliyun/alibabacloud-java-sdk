@@ -1,3 +1,10 @@
+2026-10-22 Version: 2.38.6
+- Update API CheckUserResourceMeasure: add request parameters DesiredTotal.
+- Update API CheckUserResourceMeasure: add response parameters Body.Module.DesiredTotal.
+- Update API CheckUserResourceMeasure: add response parameters Body.Module.Limit.
+- Update API CheckUserResourceMeasure: add response parameters Body.Module.UpgradeAvailable.
+
+
 2026-10-15 Version: 2.38.5
 - Update API BatchCheckResourceMeasure: add response parameters Body.Module.Results.DesiredTotal.
 - Update API BatchCheckResourceMeasure: add response parameters Body.Module.Results.Limit.

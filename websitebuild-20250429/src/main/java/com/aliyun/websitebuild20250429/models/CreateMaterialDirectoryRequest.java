@@ -19,7 +19,7 @@ public class CreateMaterialDirectoryRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>图片管理</p>
+     * <p>Image management</p>
      */
     @NameInMap("Name")
     public String name;

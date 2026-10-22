@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppPublishStatusResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial.</p>
+     * <p>The detailed reason for the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -211,6 +211,9 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
 
         /**
          * <p>The code of the current publish step.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INIT</p>
          */
         @NameInMap("CurrentStepCode")
         public String currentStepCode;
@@ -244,6 +247,9 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
 
         /**
          * <p>The code of the publish step where the error occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BUILDING</p>
          */
         @NameInMap("ErrorStepCode")
         public String errorStepCode;
@@ -279,7 +285,7 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         public String msg;
 
         /**
-         * <p>The sort order.</p>
+         * <p>The sort type, such as ASC or DESC.</p>
          * 
          * <strong>example:</strong>
          * <p>DESC</p>
@@ -289,12 +295,15 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
 
         /**
          * <p>The code of the publish order type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEPLOY</p>
          */
         @NameInMap("OrderTypeCode")
         public String orderTypeCode;
 
         /**
-         * <p>The task completion percentage.</p>
+         * <p>The completion percentage of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

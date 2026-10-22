@@ -15,18 +15,27 @@ public class AppServiceProfile extends TeaModel {
 
     /**
      * <p>The design type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Language_Pack</p>
      */
     @NameInMap("DesignType")
     public String designType;
 
     /**
      * <p>The design type description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Language pack</p>
      */
     @NameInMap("DesignTypeText")
     public String designTypeText;
 
     /**
      * <p>The Lingxiao instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lx-1</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -51,6 +60,9 @@ public class AppServiceProfile extends TeaModel {
 
     /**
      * <p>The service specification description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Basic edition</p>
      */
     @NameInMap("ServiceSpecText")
     public String serviceSpecText;

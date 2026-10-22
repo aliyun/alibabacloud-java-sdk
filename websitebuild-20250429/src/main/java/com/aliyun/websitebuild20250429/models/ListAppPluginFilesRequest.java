@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppPluginFilesRequest extends TeaModel {
     /**
-     * <p>The gateway plug-in ID.</p>
+     * <p>The ID of the gateway plugin.</p>
      * 
      * <strong>example:</strong>
      * <p>aliplayer-react</p>
@@ -14,7 +14,7 @@ public class ListAppPluginFilesRequest extends TeaModel {
     public String pluginId;
 
     /**
-     * <p>The version number. If not specified, the currently active version is used.</p>
+     * <p>The version number. If you do not specify this parameter, the currently active version is used.</p>
      * 
      * <strong>example:</strong>
      * <p>1.1.3</p>

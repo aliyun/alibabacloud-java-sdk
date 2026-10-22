@@ -16,12 +16,15 @@ public class AllocateSupabaseForAdminRequest extends TeaModel {
 
     /**
      * <p>The environment identifier.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>staging</p>
      */
     @NameInMap("Env")
     public String env;
 
     /**
-     * <p>The field by which to sort the results.</p>
+     * <p>The sort column.</p>
      * 
      * <strong>example:</strong>
      * <p>gmtCreated</p>
@@ -30,7 +33,7 @@ public class AllocateSupabaseForAdminRequest extends TeaModel {
     public String orderColumn;
 
     /**
-     * <p>The sort order. Valid values: ASC and DESC.</p>
+     * <p>The sort order. Valid values: ASC, DESC.</p>
      * 
      * <strong>example:</strong>
      * <p>BUY</p>

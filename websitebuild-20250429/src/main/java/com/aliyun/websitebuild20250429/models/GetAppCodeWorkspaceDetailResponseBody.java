@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access is denied.</p>
+     * <p>The detailed reasons for the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,10 +14,10 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Specifies whether retry is allowed. Valid values:</p>
+     * <p>Specifies whether retries are allowed. Valid values:</p>
      * <ul>
-     * <li>false: Retry is not allowed.</li>
-     * <li>true: Retry is allowed.</li>
+     * <li>false: Retries are not allowed.</li>
+     * <li>true: Retries are allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,9 +45,9 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message. This value is used to replace the <code>%s</code> placeholder in the error message returned in the <strong>ErrMessage</strong> parameter.</p>
+     * <p>The dynamic error message, which is used to replace the <code>%s</code> in the error message of the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -210,7 +210,7 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
         public String changeLog;
 
         /**
-         * <p>The creation time in UTC. The time follows the ISO 8601 standard.</p>
+         * <p>The creation time in UTC. The time is in the ISO 8601 format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -270,7 +270,10 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
         public Integer activeLogicalNumber;
 
         /**
-         * <p>The code commit hash value.</p>
+         * <p>The code commit hash.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>890243d5977e74d80eebd4734f7b05f626f84cb1</p>
          */
         @NameInMap("CommitHash")
         public String commitHash;
@@ -294,7 +297,7 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
         public Integer maxLogicalNumber;
 
         /**
-         * <p>The site ID. You can call <a href="~~ListSites~~">ListSites</a> to retrieve the site ID.</p>
+         * <p>The site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>865181640657408</p>
@@ -303,7 +306,7 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
         public String siteId;
 
         /**
-         * <p>The operation description information.</p>
+         * <p>The operation description.</p>
          */
         @NameInMap("Snapshots")
         public java.util.List<GetAppCodeWorkspaceDetailResponseBodyModuleSnapshots> snapshots;

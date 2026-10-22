@@ -25,16 +25,16 @@ public class QueryMaterialFileSummaryInfoRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The file name.</p>
+     * <p>The name of the file.</p>
      * 
      * <strong>example:</strong>
-     * <p>文件名</p>
+     * <p>File name</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The field by which to sort the results.</p>
+     * <p>The field used for sorting.</p>
      * 
      * <strong>example:</strong>
      * <p>CreationTime</p>
@@ -43,7 +43,7 @@ public class QueryMaterialFileSummaryInfoRequest extends TeaModel {
     public String orderColumn;
 
     /**
-     * <p>The sort order. Valid values: ASC and DESC.</p>
+     * <p>The sort order. Valid values: ASC, DESC.</p>
      * 
      * <strong>example:</strong>
      * <p>BUY</p>
@@ -70,13 +70,13 @@ public class QueryMaterialFileSummaryInfoRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The file status.</p>
+     * <p>The file statuses.</p>
      */
     @NameInMap("StatusList")
     public java.util.List<String> statusList;
 
     /**
-     * <p>The file type.</p>
+     * <p>The file types.</p>
      */
     @NameInMap("TypeList")
     public java.util.List<String> typeList;

@@ -4,11 +4,17 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class GetUserAccessTokenForPartnerRequest extends TeaModel {
+    /**
+     * <p>The website domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abcd.scd.wanwang.xin</p>
+     */
     @NameInMap("SiteHost")
     public String siteHost;
 
     /**
-     * <p>The credential for connecting to the cloud application.</p>
+     * <p>The credential used to connect to the cloud application.</p>
      * <blockquote>
      * <p>This parameter is displayed for non-initial calls.</p>
      * </blockquote>

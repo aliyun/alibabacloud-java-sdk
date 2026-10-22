@@ -15,12 +15,18 @@ public class GetAppRecommendedCommoditiesRequest extends TeaModel {
 
     /**
      * <p>The extended information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("Extend")
     public String extend;
 
     /**
      * <p>The resource filtering conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("ResourceConditions")
     public String resourceConditions;

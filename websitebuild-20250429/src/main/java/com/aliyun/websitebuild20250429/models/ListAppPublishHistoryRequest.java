@@ -15,6 +15,9 @@ public class ListAppPublishHistoryRequest extends TeaModel {
 
     /**
      * <p>The deployment channel.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PC</p>
      */
     @NameInMap("DeployChannel")
     public String deployChannel;
@@ -66,6 +69,9 @@ public class ListAppPublishHistoryRequest extends TeaModel {
 
     /**
      * <p>The release environment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PROD</p>
      */
     @NameInMap("PublishEnv")
     public String publishEnv;
@@ -90,6 +96,9 @@ public class ListAppPublishHistoryRequest extends TeaModel {
 
     /**
      * <p>The release subchannel.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>current</p>
      */
     @NameInMap("Subchannel")
     public String subchannel;

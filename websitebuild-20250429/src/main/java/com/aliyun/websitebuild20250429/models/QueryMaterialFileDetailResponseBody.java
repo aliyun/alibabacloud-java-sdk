@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryMaterialFileDetailResponseBody extends TeaModel {
     /**
-     * <p>The details of the permission verification failure.</p>
+     * <p>The details of the permission check failure.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class QueryMaterialFileDetailResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether a retry is allowed.</p>
+     * <p>Indicates whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class QueryMaterialFileDetailResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name. The application with this name is queried.</p>
+     * <p>The name of the application.</p>
      * 
      * <strong>example:</strong>
      * <p>or</p>
@@ -50,13 +50,13 @@ public class QueryMaterialFileDetailResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The error code. If the request is successful, the ErrorCode field is not returned. If the request fails, the ErrorCode field is returned. For more information, see the error codes in this topic.</p>
+     * <p>The error code. If the request is successful, the ErrorCode parameter is not returned. If the request fails, the ErrorCode parameter is returned. For more information, see the error codes in this topic.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -104,13 +104,13 @@ public class QueryMaterialFileDetailResponseBody extends TeaModel {
      * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -42,7 +42,7 @@ public class UpdateMiniAppBindingResponseBody extends TeaModel {
 
     public static class UpdateMiniAppBindingResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the operation is successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

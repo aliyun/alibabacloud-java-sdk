@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppPluginResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access was denied.</p>
+     * <p>The detailed reason for the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -23,7 +23,7 @@ public class GetAppPluginResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name.</p>
+     * <p>The name of the application.</p>
      * 
      * <strong>example:</strong>
      * <p>dewuApp</p>
@@ -41,7 +41,7 @@ public class GetAppPluginResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace the <code>%s</code> in the <strong>ErrMessage</strong> response parameter.</p>
+     * <p>The dynamic error message, which is used to replace <code>%s</code> in the error message returned by the <strong>ErrMessage</strong> parameter.</p>
      * <blockquote>
      * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
      * </blockquote>
@@ -53,7 +53,7 @@ public class GetAppPluginResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters returned.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -92,7 +92,7 @@ public class GetAppPluginResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -233,8 +233,8 @@ public class GetAppPluginResponseBody extends TeaModel {
         /**
          * <p>The image display mode. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong> (None): Not displayed.</li>
-         * <li><strong>1</strong> (Always): Always displayed.</li>
+         * <li><strong>0</strong> (None): The image is not displayed.</li>
+         * <li><strong>1</strong> (Always): The image is always displayed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -244,8 +244,7 @@ public class GetAppPluginResponseBody extends TeaModel {
         public Integer display;
 
         /**
-         * <p>Specifies whether scheduled delivery of resource snapshots is enabled.</p>
-         * <p>Valid values:</p>
+         * <p>Indicates whether scheduled delivery of resource snapshots is enabled. Valid values:</p>
          * <ul>
          * <li>true: Enabled.</li>
          * <li>false: Disabled.</li>
@@ -261,7 +260,7 @@ public class GetAppPluginResponseBody extends TeaModel {
          * <p>The extended information.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;deliveryNodeName\&quot;:\&quot;bindDomainAndPublish\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Finish\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Provider\&quot;}</p>
+         * <p>{&quot;deliveryNodeName&quot;:&quot;Bind domain name and publish&quot;,&quot;deliveryNodeStatus&quot;:&quot;Finish&quot;,&quot;deliveryOperatorRole&quot;:&quot;Provider&quot;}</p>
          */
         @NameInMap("Extend")
         public String extend;
@@ -303,7 +302,7 @@ public class GetAppPluginResponseBody extends TeaModel {
         public String hooks;
 
         /**
-         * <p>The popularity count.</p>
+         * <p>The popularity.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -312,7 +311,7 @@ public class GetAppPluginResponseBody extends TeaModel {
         public Integer hotCount;
 
         /**
-         * <p>The plug-in description.</p>
+         * <p>The plugin description.</p>
          * 
          * <strong>example:</strong>
          * <p>@lALPM2AwTOg9IUHNAUDNAUA</p>
@@ -321,7 +320,7 @@ public class GetAppPluginResponseBody extends TeaModel {
         public String icon;
 
         /**
-         * <p>The bound API Gateway plug-in ID.</p>
+         * <p>The ID of the associated API gateway plugin.</p>
          * 
          * <strong>example:</strong>
          * <p>1bae9ceaceea432d91c7069fab0dfc02</p>
@@ -330,7 +329,7 @@ public class GetAppPluginResponseBody extends TeaModel {
         public String pluginId;
 
         /**
-         * <p>The plug-in name. The name can contain uppercase and lowercase letters, Chinese characters, digits, and underscores (_). The name must be 4 to 50 characters in length and cannot start with an underscore.</p>
+         * <p>The name of the plugin. The name must be 4 to 50 characters in length and can contain uppercase and lowercase letters, Chinese characters, digits, and underscores (_). It cannot start with an underscore.</p>
          * 
          * <strong>example:</strong>
          * <p>tf_testaccapigatewayplugin29311</p>
@@ -339,7 +338,7 @@ public class GetAppPluginResponseBody extends TeaModel {
         public String pluginName;
 
         /**
-         * <p>The image repository URL.</p>
+         * <p>The URL of the image repository.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -375,7 +374,7 @@ public class GetAppPluginResponseBody extends TeaModel {
         public String tags;
 
         /**
-         * <p>The application instance version.</p>
+         * <p>The version of the application instance.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-04-02</p>

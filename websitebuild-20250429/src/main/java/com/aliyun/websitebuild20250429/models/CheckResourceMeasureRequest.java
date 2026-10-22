@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckResourceMeasureRequest extends TeaModel {
     /**
-     * <p>The owner ID, which can be a website ID or an Alibaba Cloud user ID.</p>
+     * <p>The ID of the owner, such as the website ID or Alibaba Cloud user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -14,7 +14,7 @@ public class CheckResourceMeasureRequest extends TeaModel {
     public String belongId;
 
     /**
-     * <p>The owner ID type. Valid values: siteId and uid.</p>
+     * <p>The type of the owner ID. Valid values: siteId and uid.</p>
      * 
      * <strong>example:</strong>
      * <p>USER</p>
@@ -32,7 +32,7 @@ public class CheckResourceMeasureRequest extends TeaModel {
     public String bizType;
 
     /**
-     * <p>This parameter is used only for APP_WORKSPACE. It specifies the final total amount of issues or competitors after editing. For legacy APP or USER, it retains the incremental semantics of ResourceValue.</p>
+     * <p>The desired total for APP_WORKSPACE. Valid values: 0 to 100000. If this parameter is specified, it takes precedence over ResourceValue and is not added to the existing usage. For new calls, you only need to specify ResourceValue. This parameter is not used for APP or USER.</p>
      * 
      * <strong>example:</strong>
      * <p>21</p>
@@ -68,11 +68,7 @@ public class CheckResourceMeasureRequest extends TeaModel {
     public String resourceCode;
 
     /**
-     * <p>The resource value. This parameter is required only for feature resources and is empty by default. Valid values:</p>
-     * <ul>
-     * <li>0: Not supported.</li>
-     * <li>1: Supported.</li>
-     * </ul>
+     * <p>The resource value. This parameter is empty by default and is required only for feature resources. Valid values: 0: Not supported. 1: Supported.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PublishAppInstanceResponseBody extends TeaModel {
     /**
-     * <p>The access denied details.</p>
+     * <p>The access denial information.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class PublishAppInstanceResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Specifies whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class PublishAppInstanceResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name.</p>
+     * <p>The app name.</p>
      * 
      * <strong>example:</strong>
      * <p>dewuApp</p>
@@ -41,7 +41,7 @@ public class PublishAppInstanceResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
+     * <p>The dynamic message. This parameter is currently unused and can be ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -50,7 +50,7 @@ public class PublishAppInstanceResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -80,10 +80,10 @@ public class PublishAppInstanceResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>System exception.</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
