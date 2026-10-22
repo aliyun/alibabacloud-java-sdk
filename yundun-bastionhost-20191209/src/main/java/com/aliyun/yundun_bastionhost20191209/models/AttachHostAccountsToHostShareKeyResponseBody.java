@@ -14,7 +14,7 @@ public class AttachHostAccountsToHostShareKeyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The results of the operation.</p>
+     * <p>The result of the operation.</p>
      */
     @NameInMap("Results")
     public java.util.List<AttachHostAccountsToHostShareKeyResponseBodyResults> results;

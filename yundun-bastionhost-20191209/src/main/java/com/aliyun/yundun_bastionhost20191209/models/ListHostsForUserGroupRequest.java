@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHostsForUserGroupRequest extends TeaModel {
     /**
-     * <p>The address of the host. You can set this parameter to a domain name or an IP address. Exact match is supported.</p>
+     * <p>The address of the host to query. You can use a domain name or an IP address. Only exact match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
@@ -14,7 +14,7 @@ public class ListHostsForUserGroupRequest extends TeaModel {
     public String hostAddress;
 
     /**
-     * <p>The name of the host. Exact match is supported.</p>
+     * <p>The name of the host to query. Only exact match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -23,9 +23,9 @@ public class ListHostsForUserGroupRequest extends TeaModel {
     public String hostName;
 
     /**
-     * <p>The ID of the bastion host instance that contains the user group.</p>
+     * <p>The ID of the Bastionhost instance to which the user group belongs.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the instance ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -36,12 +36,10 @@ public class ListHostsForUserGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Specifies whether to query for authorized or unauthorized hosts. Valid values:</p>
+     * <p>The mode of the host list to query. Valid values:</p>
      * <ul>
-     * <li><p><strong>Authorized</strong> (default)</p>
-     * </li>
-     * <li><p><strong>Unauthorized</strong></p>
-     * </li>
+     * <li><strong>Authorized</strong>: authorized (default)</li>
+     * <li><strong>Unauthorized</strong>: unauthorized</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,12 +49,10 @@ public class ListHostsForUserGroupRequest extends TeaModel {
     public String mode;
 
     /**
-     * <p>The operating system of the host. Valid values:</p>
+     * <p>The operating system type of the host to query. Valid values:</p>
      * <ul>
-     * <li><p><strong>Linux</strong></p>
-     * </li>
-     * <li><p><strong>Windows</strong></p>
-     * </li>
+     * <li><strong>Linux</strong></li>
+     * <li><strong>Windows</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,7 +62,7 @@ public class ListHostsForUserGroupRequest extends TeaModel {
     public String OSType;
 
     /**
-     * <p>The page number of the page to return. Default value: 1.</p>
+     * <p>The page number of the current page in paging. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -75,9 +71,9 @@ public class ListHostsForUserGroupRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.<br>Maximum value: 100. Default value: 20.<br></p>
+     * <p>The maximum number of entries to return on each page in paging.<br>Maximum value: 100. Default value: 20. If this parameter is left empty, 20 entries are returned by default.</p>
      * <blockquote>
-     * <p>We recommend that you specify this parameter.</p>
+     * <p>Specify a value for this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -86,13 +82,19 @@ public class ListHostsForUserGroupRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The ID of the region where the bastion host instance is located.</p>
+     * <p>The region ID of the Bastionhost instance to which the user group belongs.</p>
      * <blockquote>
-     * <p>For more information about regions and their corresponding IDs, see <a href="https://help.aliyun.com/document_detail/40654.html">regions and availability zones</a>.</p>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -102,9 +104,9 @@ public class ListHostsForUserGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the user group whose hosts you want to list.</p>
+     * <p>The ID of the user group whose authorized hosts you want to query.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to obtain the user group ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateUserGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
@@ -14,7 +14,7 @@ public class CreateUserGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the user group.</p>
+     * <p>The ID of the created user group.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

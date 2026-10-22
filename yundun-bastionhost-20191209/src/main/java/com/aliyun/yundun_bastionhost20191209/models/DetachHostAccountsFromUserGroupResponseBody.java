@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetachHostAccountsFromUserGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
@@ -14,7 +14,7 @@ public class DetachHostAccountsFromUserGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of the call.</p>
+     * <p>The call results of the operation.</p>
      */
     @NameInMap("Results")
     public java.util.List<DetachHostAccountsFromUserGroupResponseBodyResults> results;
@@ -42,18 +42,13 @@ public class DetachHostAccountsFromUserGroupResponseBody extends TeaModel {
 
     public static class DetachHostAccountsFromUserGroupResponseBodyResultsHostAccounts extends TeaModel {
         /**
-         * <p>The return code that indicates whether permissions on the specified host account were revoked from the user group. Valid values:</p>
+         * <p>The result code of removing the authorized host account from the user group. Valid values:</p>
          * <ul>
-         * <li><p><strong>OK</strong>: The call was successful.</p>
-         * </li>
-         * <li><p><strong>UNEXPECTED</strong>: An unknown error occurred.</p>
-         * </li>
-         * <li><p><strong>INVALID_ARGUMENT</strong>: A request parameter is invalid.</p>
-         * </li>
-         * <li><p><strong>OBJECT_NOT_FOUND</strong>: The specified object on which you want to perform the operation does not exist.</p>
-         * </li>
-         * <li><p><strong>OBJECT_AlREADY_EXISTS</strong>: The specified object on which you want to perform the operation already exists.</p>
-         * </li>
+         * <li><strong>OK</strong>: The operation was successful.</li>
+         * <li><strong>UNEXPECTED</strong>: An unknown error occurred.</li>
+         * <li><strong>INVALID_ARGUMENT</strong>: The request parameters are invalid.</li>
+         * <li><strong>OBJECT_NOT_FOUND</strong>: The specified object does not exist.</li>
+         * <li><strong>OBJECT_AlREADY_EXISTS</strong>: The specified object already exists.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -63,7 +58,7 @@ public class DetachHostAccountsFromUserGroupResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The ID of the host account.</p>
+         * <p>The host account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>１</p>
@@ -72,7 +67,7 @@ public class DetachHostAccountsFromUserGroupResponseBody extends TeaModel {
         public String hostAccountId;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>This parameter is deprecated and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -113,18 +108,13 @@ public class DetachHostAccountsFromUserGroupResponseBody extends TeaModel {
 
     public static class DetachHostAccountsFromUserGroupResponseBodyResults extends TeaModel {
         /**
-         * <p>The return code that indicates whether the call was successful. Valid values:</p>
+         * <p>The result code of the operation. Valid values:</p>
          * <ul>
-         * <li><p><strong>OK</strong>: The call was successful.</p>
-         * </li>
-         * <li><p><strong>UNEXPECTED</strong>: An unknown error occurred.</p>
-         * </li>
-         * <li><p><strong>INVALID_ARGUMENT</strong>: A request parameter is invalid.</p>
-         * </li>
-         * <li><p><strong>OBJECT_NOT_FOUND</strong>: The specified object on which you want to perform the operation does not exist.</p>
-         * </li>
-         * <li><p><strong>OBJECT_AlREADY_EXISTS</strong>: The specified object on which you want to perform the operation already exists.</p>
-         * </li>
+         * <li><strong>OK</strong>: The operation was successful.</li>
+         * <li><strong>UNEXPECTED</strong>: An unknown error occurred.</li>
+         * <li><strong>INVALID_ARGUMENT</strong>: The request parameters are invalid.</li>
+         * <li><strong>OBJECT_NOT_FOUND</strong>: The specified object does not exist.</li>
+         * <li><strong>OBJECT_AlREADY_EXISTS</strong>: The specified object already exists.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,13 +124,13 @@ public class DetachHostAccountsFromUserGroupResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The result of revoking permissions on the specified host accounts from the user group.</p>
+         * <p>The results of removing authorized host accounts from the user group.</p>
          */
         @NameInMap("HostAccounts")
         public java.util.List<DetachHostAccountsFromUserGroupResponseBodyResultsHostAccounts> hostAccounts;
 
         /**
-         * <p>The ID of the host.</p>
+         * <p>The host ID.</p>
          * 
          * <strong>example:</strong>
          * <p>１</p>
@@ -149,7 +139,7 @@ public class DetachHostAccountsFromUserGroupResponseBody extends TeaModel {
         public String hostId;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>This parameter is deprecated and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -158,7 +148,7 @@ public class DetachHostAccountsFromUserGroupResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The ID of the group.</p>
+         * <p>The user group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>１</p>

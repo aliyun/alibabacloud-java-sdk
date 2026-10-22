@@ -51,9 +51,9 @@ public class CreateReviewRuleRequest extends TeaModel {
     /**
      * <p>The type of the auditable asset scope rule. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: all projects.</p>
+     * <li><p><strong>1</strong>: All projects.</p>
      * </li>
-     * <li><p><strong>2</strong>: specified projects.</p>
+     * <li><p><strong>2</strong>: Specified projects.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

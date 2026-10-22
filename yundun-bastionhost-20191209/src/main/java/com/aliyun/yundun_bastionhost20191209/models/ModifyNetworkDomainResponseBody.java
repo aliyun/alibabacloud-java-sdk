@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyNetworkDomainResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>ED49CD1E-3510-5E5C-9133-E2067B656501</p>

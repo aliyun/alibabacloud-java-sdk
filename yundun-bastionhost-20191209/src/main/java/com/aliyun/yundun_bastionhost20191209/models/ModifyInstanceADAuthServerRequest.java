@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceADAuthServerRequest extends TeaModel {
     /**
-     * <p>The username of the account that is used for the AD server.</p>
+     * <p>The server account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifyInstanceADAuthServerRequest extends TeaModel {
     public String account;
 
     /**
-     * <p>The Base distinguished name (DN).</p>
+     * <p>The base distinguished name (Base DN).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class ModifyInstanceADAuthServerRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The field that is used to indicate the email address of a user on the AD server.</p>
+     * <p>The server attribute name that maps to the user email address.</p>
      * 
      * <strong>example:</strong>
      * <p>emailAttr</p>
@@ -44,7 +44,7 @@ public class ModifyInstanceADAuthServerRequest extends TeaModel {
     public String emailMapping;
 
     /**
-     * <p>The condition that is used to filter users.</p>
+     * <p>The filter condition for users.</p>
      * 
      * <strong>example:</strong>
      * <p>(objectClass=top)</p>
@@ -53,9 +53,9 @@ public class ModifyInstanceADAuthServerRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>The bastion host ID.</p>
+     * <p>The instance ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -65,16 +65,20 @@ public class ModifyInstanceADAuthServerRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Specifies whether the AD authentication server is the default server. A value of true indicates that the server is the default AD authentication server. A value of false indicates that the server is not the default AD authentication server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsDefault")
     public String isDefault;
 
     /**
      * <p>Specifies whether SSL is supported. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong></p>
-     * </li>
-     * <li><p><strong>false</strong></p>
-     * </li>
+     * <li><strong>true</strong>: Supported.</li>
+     * <li><strong>false</strong>: Not supported.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,20 +87,44 @@ public class ModifyInstanceADAuthServerRequest extends TeaModel {
     @NameInMap("IsSSL")
     public String isSSL;
 
+    /**
+     * <p>Specifies whether to synchronize the email address. A value of true indicates that the email address is synchronized. A value of false indicates that the email address is not synchronized.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsSyncEmailAttr")
     public String isSyncEmailAttr;
 
+    /**
+     * <p>Specifies whether to synchronize the mobile phone number. A value of true indicates that the mobile phone number is synchronized. A value of false indicates that the mobile phone number is not synchronized.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsSyncMobileAttr")
     public String isSyncMobileAttr;
 
+    /**
+     * <p>Specifies whether to synchronize the display name. A value of true indicates that the display name is synchronized. A value of false indicates that the display name is not synchronized.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsSyncNameAttr")
     public String isSyncNameAttr;
 
+    /**
+     * <p>Specifies whether to synchronize the organization to which the user belongs as a user group. A value of true indicates that the organization is synchronized as a user group. A value of false indicates that the organization is not synchronized as a user group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsSyncOuAsUserGroup")
     public String isSyncOuAsUserGroup;
 
     /**
-     * <p>The field that is used to indicate the mobile phone number of a user on the AD server.</p>
+     * <p>The server attribute name that maps to the user mobile phone number.</p>
      * 
      * <strong>example:</strong>
      * <p>mobileAttr</p>
@@ -105,7 +133,7 @@ public class ModifyInstanceADAuthServerRequest extends TeaModel {
     public String mobileMapping;
 
     /**
-     * <p>The field that is used to indicate the name of a user on the AD server.</p>
+     * <p>The server attribute name that maps to the username.</p>
      * 
      * <strong>example:</strong>
      * <p>nameAttr</p>
@@ -114,7 +142,7 @@ public class ModifyInstanceADAuthServerRequest extends TeaModel {
     public String nameMapping;
 
     /**
-     * <p>The password of the account that is used for the AD server.</p>
+     * <p>The password of the server account.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -123,7 +151,7 @@ public class ModifyInstanceADAuthServerRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>The port that is used to access the server.</p>
+     * <p>The port used to access the server.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -133,7 +161,7 @@ public class ModifyInstanceADAuthServerRequest extends TeaModel {
     public String port;
 
     /**
-     * <p>The region ID of the bastion host.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
      * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
@@ -145,7 +173,7 @@ public class ModifyInstanceADAuthServerRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The address of the AD server.</p>
+     * <p>The address of the server.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -154,11 +182,17 @@ public class ModifyInstanceADAuthServerRequest extends TeaModel {
     @NameInMap("Server")
     public String server;
 
+    /**
+     * <p>The name of the AD authentication server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AD Server</p>
+     */
     @NameInMap("ServerName")
     public String serverName;
 
     /**
-     * <p>The address of the secondary AD server.</p>
+     * <p>The address of the standby server.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
@@ -166,6 +200,12 @@ public class ModifyInstanceADAuthServerRequest extends TeaModel {
     @NameInMap("StandbyServer")
     public String standbyServer;
 
+    /**
+     * <p>The interval at which user snapshots are automatically synchronized, in hours. Valid values: 0, and 4 to 168. A value of 0 indicates that automatic synchronization is disabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("SyncInterval")
     public String syncInterval;
 

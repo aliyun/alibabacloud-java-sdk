@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHostsRequest extends TeaModel {
     /**
-     * <p>The address of the host that you want to query. You can set this parameter to a domain name or an IP address. Only exact match is supported.</p>
+     * <p>The address of the host. A domain name or an IP address is supported. Only exact match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>1.1.XX.XX</p>
@@ -14,9 +14,9 @@ public class ListHostsRequest extends TeaModel {
     public String hostAddress;
 
     /**
-     * <p>The ID of the host group to which the host to be queried belongs.</p>
+     * <p>The ID of the host group to which the host belongs.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to query the ID of the host group.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to query the host group ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class ListHostsRequest extends TeaModel {
     public String hostGroupId;
 
     /**
-     * <p>The name of the host that you want to query. Only exact match is supported.</p>
+     * <p>The name of the host. Only exact match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>host</p>
@@ -35,9 +35,9 @@ public class ListHostsRequest extends TeaModel {
     public String hostName;
 
     /**
-     * <p>The ID of the bastion host on which you want to query hosts.</p>
+     * <p>The instance ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -48,12 +48,10 @@ public class ListHostsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The operating system of the host that you want to query. Valid values:</p>
+     * <p>The operating system of the host. Valid values:</p>
      * <ul>
-     * <li><p><strong>Linux</strong></p>
-     * </li>
-     * <li><p><strong>Windows</strong></p>
-     * </li>
+     * <li><strong>Linux</strong></li>
+     * <li><strong>Windows</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,9 +70,9 @@ public class ListHostsRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * <p>Settings for paging. Specifies the number of host information entries to return per page in a paged query. Default value: <strong>10</strong>, which indicates that 10 host information entries are displayed per page.</p>
      * <blockquote>
-     * <p>We recommend that you do not leave this parameter empty.</p>
+     * <p>Do not leave PageSize empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -83,11 +81,17 @@ public class ListHostsRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 
     /**
-     * <p>The region ID of the bastion host on which you want to query hosts.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
      * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
@@ -99,14 +103,11 @@ public class ListHostsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The source of the host that you want to query. Valid values:</p>
+     * <p>The source of the host. Valid values:</p>
      * <ul>
-     * <li><p><strong>Local</strong>: a host in a data center</p>
-     * </li>
-     * <li><p><strong>Ecs</strong>: an Elastic Compute Service (ECS) instance</p>
-     * </li>
-     * <li><p><strong>Rds</strong>: a host in an ApsaraDB MyBase dedicated cluster</p>
-     * </li>
+     * <li><strong>Local</strong>: local host</li>
+     * <li><strong>Ecs</strong>: ECS instance</li>
+     * <li><strong>Rds</strong>: ApsaraDB RDS dedicated cluster host</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,7 +117,7 @@ public class ListHostsRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The ID of the ECS instance or the host in an ApsaraDB MyBase dedicated cluster that you want to query. Only exact match is supported.</p>
+     * <p>The ECS instance ID or the dedicated cluster host ID that corresponds to the host. Only exact match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp19ienyt0yax748****</p>
@@ -125,12 +126,10 @@ public class ListHostsRequest extends TeaModel {
     public String sourceInstanceId;
 
     /**
-     * <p>The status of the host that you want to query. Valid values:</p>
+     * <p>The status of the host. Valid values:</p>
      * <ul>
-     * <li><p><strong>Normal</strong>: normal</p>
-     * </li>
-     * <li><p><strong>Release</strong>: released</p>
-     * </li>
+     * <li><strong>Normal</strong>: normal</li>
+     * <li><strong>Release</strong>: released</li>
      * </ul>
      * 
      * <strong>example:</strong>

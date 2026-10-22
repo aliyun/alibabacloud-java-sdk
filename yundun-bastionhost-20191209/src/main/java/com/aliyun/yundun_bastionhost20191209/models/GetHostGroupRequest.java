@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetHostGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the asset group to query.</p>
+     * <p>The ID of the asset group that you want to query.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListHostGroups</a> operation to query the asset group ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class GetHostGroupRequest extends TeaModel {
     public String hostGroupId;
 
     /**
-     * <p>The ID of the bastion host whose asset group you want to query.</p>
+     * <p>The instance ID of the bastion host to which the asset group belongs.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -30,13 +30,19 @@ public class GetHostGroupRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The region ID of the bastion host whose asset group you want to query.</p>
+     * <p>The region ID of the bastion host to which the asset group belongs.</p>
      * <blockquote>
-     * <p>For more information about the mapping between region IDs and region names, <a href="https://help.aliyun.com/document_detail/40654.html">see Regions and zones</a>.</p>
+     * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

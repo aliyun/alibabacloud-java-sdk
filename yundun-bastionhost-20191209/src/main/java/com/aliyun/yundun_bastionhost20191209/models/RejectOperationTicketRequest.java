@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RejectOperationTicketRequest extends TeaModel {
     /**
-     * <p>The review remarks.</p>
+     * <p>The approval comment.</p>
      * 
      * <strong>example:</strong>
      * <p>Reject</p>
@@ -14,9 +14,9 @@ public class RejectOperationTicketRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The ID of the bastion host.</p>
+     * <p>The instance ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the parameter value.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,9 +27,9 @@ public class RejectOperationTicketRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the O\&amp;M application that you want to reject.</p>
+     * <p>The ID of the O&amp;M application to be rejected.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2584313.html">ListOperationTickets</a> operation to query the IDs of all O\&amp;M applications that require review.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2584313.html">ListOperationTickets</a> operation to query the IDs of all O&amp;M applications that require approval.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -39,11 +39,17 @@ public class RejectOperationTicketRequest extends TeaModel {
     @NameInMap("OperationTicketId")
     public String operationTicketId;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The region ID of the bastion host.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
      * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>

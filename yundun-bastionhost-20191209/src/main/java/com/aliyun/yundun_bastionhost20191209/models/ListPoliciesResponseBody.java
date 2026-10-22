@@ -11,7 +11,7 @@ public class ListPoliciesResponseBody extends TeaModel {
     public java.util.List<ListPoliciesResponseBodyPolicies> policies;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
@@ -20,7 +20,7 @@ public class ListPoliciesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of control policies that are returned.</p>
+     * <p>The total number of control policies returned.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -59,7 +59,7 @@ public class ListPoliciesResponseBody extends TeaModel {
 
     public static class ListPoliciesResponseBodyPolicies extends TeaModel {
         /**
-         * <p>The remarks of the control policy.</p>
+         * <p>The comment of the control policy.</p>
          * 
          * <strong>example:</strong>
          * <p>Comment</p>
@@ -68,7 +68,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The control policy ID.</p>
+         * <p>The ID of the control policy.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -77,7 +77,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         public String policyId;
 
         /**
-         * <p>The name of the control policy.</p>
+         * <p>The Policy Name of the control policy.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

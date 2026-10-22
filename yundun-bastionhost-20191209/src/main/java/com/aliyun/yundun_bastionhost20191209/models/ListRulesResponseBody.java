@@ -14,13 +14,13 @@ public class ListRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The authorization rules that are returned.</p>
+     * <p>The authorization rules returned.</p>
      */
     @NameInMap("Rules")
     public java.util.List<ListRulesResponseBodyRules> rules;
 
     /**
-     * <p>The total number of authorization rules that are returned.</p>
+     * <p>The total number of authorization rules returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +59,7 @@ public class ListRulesResponseBody extends TeaModel {
 
     public static class ListRulesResponseBodyRules extends TeaModel {
         /**
-         * <p>The remarks of the authorization rule.</p>
+         * <p>The description of the authorization rule.</p>
          * 
          * <strong>example:</strong>
          * <p>comment</p>
@@ -68,7 +68,7 @@ public class ListRulesResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The end time of the validity period of the authorization rule. The value is a timestamp. Unit: seconds.</p>
+         * <p>The end time of the validity period for the authorization rule. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1709258400</p>
@@ -77,7 +77,7 @@ public class ListRulesResponseBody extends TeaModel {
         public Long effectiveEndTime;
 
         /**
-         * <p>The start time of the validity period of the authorization rule. The value is a timestamp. Unit: seconds.</p>
+         * <p>The start time of the validity period for the authorization rule. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1685499134</p>
@@ -86,7 +86,7 @@ public class ListRulesResponseBody extends TeaModel {
         public Long effectiveStartTime;
 
         /**
-         * <p>The authorization rule ID.</p>
+         * <p>The ID of the authorization rule.</p>
          * 
          * <strong>example:</strong>
          * <p>13</p>
@@ -104,12 +104,10 @@ public class ListRulesResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The state of the authorization rule.</p>
+         * <p>The state of the authorization rule. Valid values:</p>
          * <ul>
-         * <li><p><strong>Enabled</strong></p>
-         * </li>
-         * <li><p><strong>Disabled</strong></p>
-         * </li>
+         * <li><strong>Enabled</strong>: Normal.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

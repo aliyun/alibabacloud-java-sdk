@@ -16,7 +16,7 @@ public class CreatePolicyRequest extends TeaModel {
     /**
      * <p>The ID of the bastion host instance for which you want to create a control policy.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -40,7 +40,7 @@ public class CreatePolicyRequest extends TeaModel {
      * <p>The priority of the control policy.</p>
      * <ul>
      * <li>Valid values: 1 to 100. Default value: 1, which indicates the policy priority.</li>
-     * <li>Different control policies can have the same priority. If multiple control policies have the same priority, the most recently created policy has the policy priority. Within a single policy, if the same command is configured in both command control and command approval, the priority from high to low is: reject, allow, and approval.</li>
+     * <li>Different control policies can have the same priority. If multiple control policies have the same priority, the most recently created policy has the policy priority. Within a single policy, if the same command is configured in both command control and command approval, the priority from highest to lowest is: reject, allow, and approval.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,6 +51,9 @@ public class CreatePolicyRequest extends TeaModel {
 
     /**
      * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

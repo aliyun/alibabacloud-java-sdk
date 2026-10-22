@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class SetPolicyAccessTimeRangeConfigRequest extends TeaModel {
     /**
-     * <p>The logon period limits.</p>
+     * <p>The logon time limit configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AccessTimeRangeConfig")
     public SetPolicyAccessTimeRangeConfigRequestAccessTimeRangeConfig accessTimeRangeConfig;
 
     /**
-     * <p>The bastion host ID.</p>
+     * <p>The instance ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to retrieve this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -25,9 +25,9 @@ public class SetPolicyAccessTimeRangeConfigRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The control policy ID.</p>
+     * <p>The ID of the control policy.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to retrieve this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -37,13 +37,19 @@ public class SetPolicyAccessTimeRangeConfigRequest extends TeaModel {
     @NameInMap("PolicyId")
     public String policyId;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The region ID of the bastion host.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -99,13 +105,13 @@ public class SetPolicyAccessTimeRangeConfigRequest extends TeaModel {
 
     public static class SetPolicyAccessTimeRangeConfigRequestAccessTimeRangeConfigEffectiveTime extends TeaModel {
         /**
-         * <p>The days of the week during which users can log on to the assets.</p>
+         * <p>The days of the week when logon is allowed.</p>
          */
         @NameInMap("Days")
         public java.util.List<Integer> days;
 
         /**
-         * <p>The time periods of the day during which users can log on to the assets.</p>
+         * <p>The hours of the day when logon is allowed.</p>
          */
         @NameInMap("Hours")
         public java.util.List<Integer> hours;
@@ -135,7 +141,7 @@ public class SetPolicyAccessTimeRangeConfigRequest extends TeaModel {
 
     public static class SetPolicyAccessTimeRangeConfigRequestAccessTimeRangeConfig extends TeaModel {
         /**
-         * <p>The details about the periods during which users can log on to the assets.</p>
+         * <p>The details of the allowed logon periods.</p>
          */
         @NameInMap("EffectiveTime")
         public java.util.List<SetPolicyAccessTimeRangeConfigRequestAccessTimeRangeConfigEffectiveTime> effectiveTime;

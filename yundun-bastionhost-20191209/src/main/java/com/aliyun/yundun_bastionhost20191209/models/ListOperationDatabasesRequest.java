@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOperationDatabasesRequest extends TeaModel {
     /**
-     * <p>The address of the database.</p>
+     * <p>The address of the database instance.</p>
      * 
      * <strong>example:</strong>
      * <p>10.167.XX.XX</p>
@@ -14,7 +14,7 @@ public class ListOperationDatabasesRequest extends TeaModel {
     public String databaseAddress;
 
     /**
-     * <p>The name of the database. This parameter supports only exact matches.</p>
+     * <p>The name of the database instance. Exact match is used.</p>
      * 
      * <strong>example:</strong>
      * <p>aaa</p>
@@ -25,14 +25,10 @@ public class ListOperationDatabasesRequest extends TeaModel {
     /**
      * <p>The database type. Valid values:</p>
      * <ul>
-     * <li><p><strong>MySQL</strong></p>
-     * </li>
-     * <li><p><strong>SQLServer</strong></p>
-     * </li>
-     * <li><p><strong>Oracle</strong></p>
-     * </li>
-     * <li><p><strong>PostgreSQL</strong></p>
-     * </li>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>SQLServer</strong></li>
+     * <li><strong>Oracle</strong></li>
+     * <li><strong>PostgreSQL</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,9 +38,9 @@ public class ListOperationDatabasesRequest extends TeaModel {
     public String databaseType;
 
     /**
-     * <p>The ID of the Bastionhost instance.</p>
+     * <p>The instance ID of the bastion host.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the value of this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -55,7 +51,7 @@ public class ListOperationDatabasesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number. The default value is <strong>1</strong>.</p>
+     * <p>The page number of the current page for a paged query. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -64,9 +60,9 @@ public class ListOperationDatabasesRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.<br>The maximum value is 100. The default value is 20. If you do not specify this parameter, 20 entries are returned.<br></p>
+     * <p>The maximum number of entries to return on each page for a paged query.<br>The maximum value of the PageSize parameter is 100. Default value: 20. If the PageSize parameter is left empty, 20 entries are returned by default.</p>
      * <blockquote>
-     * <p>Specify a value for this parameter.</p>
+     * <p>Do not leave the PageSize parameter empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -75,13 +71,19 @@ public class ListOperationDatabasesRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The region ID of the Bastionhost instance.</p>
+     * <p>The region ID of the bastion host.</p>
      * <blockquote>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -91,14 +93,11 @@ public class ListOperationDatabasesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The source of the database. Valid values:</p>
+     * <p>The source of the database instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>Local</strong>: a local database</p>
-     * </li>
-     * <li><p><strong>Rds</strong>: an ApsaraDB RDS database</p>
-     * </li>
-     * <li><p><strong>PolarDB</strong>: a PolarDB database</p>
-     * </li>
+     * <li><strong>Local</strong>: on-premises database</li>
+     * <li><strong>Rds</strong>: ApsaraDB RDS database</li>
+     * <li><strong>PolarDB</strong>: PolarDB database</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -108,7 +107,7 @@ public class ListOperationDatabasesRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The ID of the source instance. This parameter supports only exact matches.</p>
+     * <p>The instance ID of the ApsaraDB RDS instance. Exact match.</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp19ienyt0yax748****</p>
@@ -117,12 +116,10 @@ public class ListOperationDatabasesRequest extends TeaModel {
     public String sourceInstanceId;
 
     /**
-     * <p>The status of the source instance. You can use this parameter to filter the results.</p>
+     * <p>Filters database instances by instance status. Valid values:</p>
      * <ul>
-     * <li><p><strong>Normal</strong>: The instance is running.</p>
-     * </li>
-     * <li><p><strong>RemoteRelease</strong>: The instance is released.</p>
-     * </li>
+     * <li><strong>Normal</strong>: normal</li>
+     * <li><strong>RemoteRelease</strong>: released</li>
      * </ul>
      * 
      * <strong>example:</strong>

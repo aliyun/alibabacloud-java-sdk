@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class ResetHostAccountCredentialRequest extends TeaModel {
     /**
-     * <p>The type of logon credential to clear. Valid values:</p>
+     * <p>The type of the logon credential to purge. Valid values:</p>
      * <ul>
-     * <li><p><strong>Password</strong>: The password.</p>
-     * </li>
-     * <li><p><strong>PrivateKey</strong>: The SSH private key.</p>
-     * </li>
+     * <li><strong>Password</strong>: password</li>
+     * <li><strong>PrivateKey</strong>: SSH private key</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -21,9 +19,9 @@ public class ResetHostAccountCredentialRequest extends TeaModel {
     public String credentialType;
 
     /**
-     * <p>The ID of the host account. The logon credential of this account will be cleared.</p>
+     * <p>The ID of the host account whose logon credentials you want to purge.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to obtain this parameter.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to obtain the value of this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -34,9 +32,9 @@ public class ResetHostAccountCredentialRequest extends TeaModel {
     public String hostAccountId;
 
     /**
-     * <p>The ID of the Bastionhost instance. The instance contains the host account.</p>
+     * <p>The instance ID of the Bastionhost instance to which the host account whose logon credentials you want to purge belongs.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the value of this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -46,13 +44,19 @@ public class ResetHostAccountCredentialRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The region ID of the Bastionhost instance.</p>
+     * <p>The region ID of the Bastionhost instance to which the host account whose logon credentials you want to purge belongs.</p>
      * <blockquote>
-     * <p>For information about region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -100,6 +100,9 @@ public class CreateHostAccountRequest extends TeaModel {
 
     /**
      * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
@@ -132,10 +135,10 @@ public class CreateHostAccountRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The password rotation mode of the account. Default value: Self.</p>
+     * <p>The password change mode of the account. Default value: Self.</p>
      * <ul>
-     * <li><strong>Privileged</strong>: uses a privileged account to rotate the password.</li>
-     * <li><strong>Self</strong>: does not use a privileged account to rotate the password.<blockquote>
+     * <li><strong>Privileged</strong>: uses a privileged account to change the password.</li>
+     * <li><strong>Self</strong>: does not use a privileged account to change the password.<blockquote>
      * <p>Only supported in V3.2.47 and later.</p>
      * </blockquote>
      * </li>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListNetworkDomainsRequest extends TeaModel {
     /**
-     * <p>The ID of the Bastionhost instance.</p>
+     * <p>The instance ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the instance ID.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -29,10 +29,8 @@ public class ListNetworkDomainsRequest extends TeaModel {
     /**
      * <p>The type of the network domain. Valid values:</p>
      * <ul>
-     * <li><p><strong>Direct</strong>: direct connection</p>
-     * </li>
-     * <li><p><strong>Proxy</strong>: proxy connection</p>
-     * </li>
+     * <li><strong>Direct</strong>: direct connection</li>
+     * <li><strong>Proxy</strong>: proxy</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +40,7 @@ public class ListNetworkDomainsRequest extends TeaModel {
     public String networkDomainType;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the current page for paging in a paged query. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,9 +49,9 @@ public class ListNetworkDomainsRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.<br> The maximum value is 100. The default value is 20. If you do not specify this parameter, 20 entries are returned on each page.<br></p>
+     * <p>The maximum number of entries to return on each page for paging in a paged query.<br>Maximum value: 100. Default value: 20. If this parameter is left empty, 20 entries are returned by default.</p>
      * <blockquote>
-     * <p>Do not leave the PageSize value empty.</p>
+     * <p>Do not leave this parameter empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -62,13 +60,19 @@ public class ListNetworkDomainsRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
      * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>For more information about regions and zones, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

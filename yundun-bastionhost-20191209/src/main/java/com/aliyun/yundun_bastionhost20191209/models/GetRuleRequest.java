@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetRuleRequest extends TeaModel {
     /**
-     * <p>The bastion host ID.</p>
+     * <p>The ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to retrieve this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -17,13 +17,19 @@ public class GetRuleRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The region ID of the bastion host.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,7 +41,7 @@ public class GetRuleRequest extends TeaModel {
     /**
      * <p>The ID of the authorization rule to query.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758868.html">ListRules</a> operation to query the authorization rule ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758868.html">ListRules</a> operation to retrieve this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

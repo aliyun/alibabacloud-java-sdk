@@ -18,7 +18,7 @@ public class AddHostsToGroupRequest extends TeaModel {
     public String hostGroupId;
 
     /**
-     * <p>The IDs of the hosts that you want to add to the asset group. This parameter is a JSON-formatted string. A maximum of 100 host IDs are supported.</p>
+     * <p>The IDs of the hosts that you want to add to the asset group. This parameter is a JSON-formatted string. You can add up to 100 host IDs.</p>
      * <blockquote>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query host IDs.</p>
      * </blockquote>
@@ -45,6 +45,9 @@ public class AddHostsToGroupRequest extends TeaModel {
 
     /**
      * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

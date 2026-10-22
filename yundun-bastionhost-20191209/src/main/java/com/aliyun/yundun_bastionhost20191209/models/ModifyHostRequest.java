@@ -14,9 +14,9 @@ public class ModifyHostRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The ID of the host.</p>
+     * <p>The ID of the host to be updated.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query the ID of the host.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query the host ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,7 +27,7 @@ public class ModifyHostRequest extends TeaModel {
     public String hostId;
 
     /**
-     * <p>The new name of the host. The name can be up to 128 characters.</p>
+     * <p>The new name of the host. The name can be up to 128 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>TestHost</p>
@@ -36,7 +36,7 @@ public class ModifyHostRequest extends TeaModel {
     public String hostName;
 
     /**
-     * <p>The new internal endpoint of the host. You can set this parameter to a domain name or an IP address.</p>
+     * <p>The new private network address of the host. You can specify a domain name or an IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>193.168.XX.XX</p>
@@ -45,7 +45,7 @@ public class ModifyHostRequest extends TeaModel {
     public String hostPrivateAddress;
 
     /**
-     * <p>The new public endpoint of the host. You can set this parameter to a domain name or an IP address.</p>
+     * <p>The new public address of the host. You can specify a domain name or an IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>200.1.XX.XX</p>
@@ -54,9 +54,9 @@ public class ModifyHostRequest extends TeaModel {
     public String hostPublicAddress;
 
     /**
-     * <p>The ID of the bastion host on which you want to modify the information about the host.</p>
+     * <p>The ID of the Bastionhost instance to which the host belongs.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the instance ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -67,7 +67,7 @@ public class ModifyHostRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the new network domain to which the host belongs.</p>
+     * <p>The ID of the network domain to which the host belongs.</p>
      * <blockquote>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758827.html">ListNetworkDomains</a> operation to query the network domain ID.</p>
      * </blockquote>
@@ -79,12 +79,10 @@ public class ModifyHostRequest extends TeaModel {
     public String networkDomainId;
 
     /**
-     * <p>The new operating system of the host. Valid values:</p>
+     * <p>The new operating system type of the host. Valid values:</p>
      * <ul>
-     * <li><p><strong>Linux</strong></p>
-     * </li>
-     * <li><p><strong>Windows</strong></p>
-     * </li>
+     * <li><strong>Linux</strong></li>
+     * <li><strong>Windows</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -94,16 +92,12 @@ public class ModifyHostRequest extends TeaModel {
     public String OSType;
 
     /**
-     * <p>The preferred key exchange algorithm of the host. If you set OSType to Linux, you can modify this parameter. Valid values:</p>
+     * <p>The preferred key exchange algorithm for the host. You can modify this parameter only when the OSType parameter is set to Linux. Valid values: </p>
      * <ul>
-     * <li><p><strong>default</strong></p>
-     * </li>
-     * <li><p><strong>diffie-hellman-group1-sha1</strong></p>
-     * </li>
-     * <li><p><strong>diffie-hellman-group14-sha1</strong></p>
-     * </li>
-     * <li><p><strong>diffie-hellman-group-exchange-sha1</strong></p>
-     * </li>
+     * <li><strong>default</strong>: Default mode.</li>
+     * <li><strong>diffie-hellman-group1-sha1</strong>: Compatibility mode for the diffie-hellman-group1-sha1 algorithm.</li>
+     * <li><strong>diffie-hellman-group14-sha1</strong>: Compatibility mode for the diffie-hellman-group14-sha1 algorithm.</li>
+     * <li><strong>diffie-hellman-group-exchange-sha1</strong>: Compatibility mode for the diffie-hellman-group-exchange-sha1 algorithm.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -112,11 +106,17 @@ public class ModifyHostRequest extends TeaModel {
     @NameInMap("PrefKex")
     public String prefKex;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The region ID of the bastion host on which you want to modify the information about the host.</p>
+     * <p>The region ID of the Bastionhost instance to which the host belongs.</p>
      * <blockquote>
      * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>

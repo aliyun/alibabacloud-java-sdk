@@ -32,6 +32,9 @@ public class DeleteHostAccountRequest extends TeaModel {
 
     /**
      * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
@@ -39,7 +42,7 @@ public class DeleteHostAccountRequest extends TeaModel {
     /**
      * <p>The region ID of the Bastionhost instance where the host account resides.</p>
      * <blockquote>
-     * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

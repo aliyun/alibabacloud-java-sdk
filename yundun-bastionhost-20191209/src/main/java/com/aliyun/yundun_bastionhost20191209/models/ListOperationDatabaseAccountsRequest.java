@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOperationDatabaseAccountsRequest extends TeaModel {
     /**
-     * <p>The name of the database account. Exact match is supported.</p>
+     * <p>The name of the database account. Exact match.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -14,9 +14,9 @@ public class ListOperationDatabaseAccountsRequest extends TeaModel {
     public String databaseAccountName;
 
     /**
-     * <p>The database ID.</p>
+     * <p>The database instance ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758856.html">ListOperationDatabases</a> operation to query the database ID.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/2758856.html">ListOperationDatabases</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,9 +26,9 @@ public class ListOperationDatabaseAccountsRequest extends TeaModel {
     public String databaseId;
 
     /**
-     * <p>The ID of the bastion host.</p>
+     * <p>The ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -38,11 +38,17 @@ public class ListOperationDatabaseAccountsRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("OperationProjectId")
     public String operationProjectId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the current page for a paged query. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,10 +57,10 @@ public class ListOperationDatabaseAccountsRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page.<br>
-     * Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <p>The maximum number of entries to return on each page for a paged query.
+     * <br>The maximum value of the PageSize parameter is 100. The default number of entries returned per page is 20. If the PageSize parameter is left empty, 20 entries are returned by default.</p>
      * <blockquote>
-     * <p>We recommend that you do not leave this parameter empty.</p>
+     * <p>Do not leave the PageSize parameter empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -64,9 +70,9 @@ public class ListOperationDatabaseAccountsRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The region ID of the bastion host.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

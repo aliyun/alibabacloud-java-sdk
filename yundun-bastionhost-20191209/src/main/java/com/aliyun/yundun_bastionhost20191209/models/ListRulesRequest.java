@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListRulesRequest extends TeaModel {
     /**
-     * <p>The bastion host ID.</p>
+     * <p>The instance ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class ListRulesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number of the current page for paging in a paged query. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,10 +27,9 @@ public class ListRulesRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page.<br>
-     * Valid values: 1 to 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <p>The maximum number of entries to return on each page for paging in a paged query. Maximum value: 100. Default value: 20. If this parameter is left empty, 20 entries are returned by default.</p>
      * <blockquote>
-     * <p>We recommend that you do not leave this parameter empty.</p>
+     * <p>Specify a value for this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,11 +38,17 @@ public class ListRulesRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The region ID of the bastion host.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
      * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
@@ -64,12 +69,10 @@ public class ListRulesRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The state of the authorization rule to query.</p>
+     * <p>The state of the authorization rule to query. Valid values:</p>
      * <ul>
-     * <li><p><strong>Enabled</strong></p>
-     * </li>
-     * <li><p><strong>Disabled</strong></p>
-     * </li>
+     * <li><strong>Enabled</strong>: Normal.</li>
+     * <li><strong>Disabled</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

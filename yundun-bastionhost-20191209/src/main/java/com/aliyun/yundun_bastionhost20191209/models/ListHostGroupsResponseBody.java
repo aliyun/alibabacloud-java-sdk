@@ -59,7 +59,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
 
     public static class ListHostGroupsResponseBodyHostGroups extends TeaModel {
         /**
-         * <p>The remarks of the asset group.</p>
+         * <p>The description of the asset group.</p>
          * 
          * <strong>example:</strong>
          * <p>Comment</p>
@@ -68,7 +68,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The asset group ID.</p>
+         * <p>The ID of the asset group.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

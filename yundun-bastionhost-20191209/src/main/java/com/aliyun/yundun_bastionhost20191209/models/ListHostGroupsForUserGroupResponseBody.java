@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHostGroupsForUserGroupResponseBody extends TeaModel {
     /**
-     * <p>The host groups returned.</p>
+     * <p>The list of host groups returned.</p>
      */
     @NameInMap("HostGroups")
     public java.util.List<ListHostGroupsForUserGroupResponseBodyHostGroups> hostGroups;

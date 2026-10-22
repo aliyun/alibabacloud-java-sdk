@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class SetPolicyIPAclConfigRequest extends TeaModel {
     /**
-     * <p>The access control settings for source IP addresses.</p>
+     * <p>The source IP address restriction configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("IPAclConfig")
     public SetPolicyIPAclConfigRequestIPAclConfig IPAclConfig;
 
     /**
-     * <p>The bastion host ID.</p>
+     * <p>The ID of the bastion host instance.</p>
      * <blockquote>
-     * <p>You can call the DescribeInstances operation to query the bastion host ID.<a href="~~153281~~"></a></p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the bastion host instance ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,7 +27,7 @@ public class SetPolicyIPAclConfigRequest extends TeaModel {
     /**
      * <p>The ID of the control policy that you want to modify.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -37,13 +37,19 @@ public class SetPolicyIPAclConfigRequest extends TeaModel {
     @NameInMap("PolicyId")
     public String policyId;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
      * <p>The region ID of the bastion host.</p>
      * <blockquote>
-     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -99,12 +105,10 @@ public class SetPolicyIPAclConfigRequest extends TeaModel {
 
     public static class SetPolicyIPAclConfigRequestIPAclConfig extends TeaModel {
         /**
-         * <p>The mode of access control on source IP addresses. Valid values:</p>
+         * <p>The source IP address restriction mode. Valid values:</p>
          * <ul>
-         * <li><p><strong>black</strong>: blacklist mode.</p>
-         * </li>
-         * <li><p><strong>white</strong>: whitelist mode.</p>
-         * </li>
+         * <li><strong>black</strong>: blacklist mode</li>
+         * <li><strong>white</strong>: whitelist mode</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -115,15 +119,13 @@ public class SetPolicyIPAclConfigRequest extends TeaModel {
         public String aclType;
 
         /**
-         * <p>The source IP addresses in the blacklist or whitelist.</p>
+         * <p>The list of restricted source IP addresses.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>This parameter is required if AclType is set to white.</p>
-         * </li>
-         * <li><p>If AclType is set to black but you do not want to add IP addresses to the blacklist, you can leave IPs empty.</p>
-         * </li>
+         * <li>When AclType is set to white, the IPs list is required.</li>
+         * <li>When AclType is set to black but you do not need to set a source IP blacklist, pass an empty list for IPs.</li>
          * </ul>
+         * </blockquote>
          * <p>This parameter is required.</p>
          */
         @NameInMap("IPs")

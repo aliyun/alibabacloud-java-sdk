@@ -28,7 +28,7 @@ public class CreateDatabaseAccountRequest extends TeaModel {
     public String databaseId;
 
     /**
-     * <p>The database name. This parameter is required when the database corresponding to DatabaseId is PostgreSQL or Oracle.</p>
+     * <p>The database name. This parameter is required when the database that corresponds to DatabaseId is PostgreSQL or Oracle.</p>
      * 
      * <strong>example:</strong>
      * <p>orcl</p>
@@ -50,7 +50,7 @@ public class CreateDatabaseAccountRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The logon attribute. This parameter is required for Oracle databases. Valid values:</p>
+     * <p>The logon property. This parameter is required for Oracle databases. Valid values:</p>
      * <ul>
      * <li>SERVICENAME</li>
      * <li>SID</li>
@@ -73,6 +73,9 @@ public class CreateDatabaseAccountRequest extends TeaModel {
 
     /**
      * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

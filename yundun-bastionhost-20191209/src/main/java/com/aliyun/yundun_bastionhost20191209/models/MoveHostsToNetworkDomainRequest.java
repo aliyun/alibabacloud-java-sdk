@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class MoveHostsToNetworkDomainRequest extends TeaModel {
     /**
-     * <p>The IDs of the hosts that you want to add to the network domain.</p>
+     * <p>The IDs of the hosts to move to the network domain.</p>
      */
     @NameInMap("HostIds")
     public java.util.List<String> hostIds;
 
     /**
-     * <p>The bastion host ID.</p>
+     * <p>The instance ID of the Bastionhost.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the parameter value.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -24,9 +24,9 @@ public class MoveHostsToNetworkDomainRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the network domain to which you want to add hosts.</p>
+     * <p>The ID of the destination network domain.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758827.html">ListNetworkDomains</a> operation to query the network domain ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758827.html">ListNetworkDomains</a> operation to query the parameter value.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -36,11 +36,17 @@ public class MoveHostsToNetworkDomainRequest extends TeaModel {
     @NameInMap("NetworkDomainId")
     public String networkDomainId;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The region ID of the bastion host.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
      * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>

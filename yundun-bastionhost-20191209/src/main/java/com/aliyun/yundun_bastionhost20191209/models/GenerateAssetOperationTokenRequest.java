@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GenerateAssetOperationTokenRequest extends TeaModel {
     /**
-     * <p>The ID of the asset account.</p>
+     * <p>The ID of the asset account for which you want to apply for an O&amp;M token.</p>
      * <blockquote>
-     * <p>You must specify at least one of <code>AssetAccountId</code> and <code>AssetAccountName</code>. If you specify both parameters, <code>AssetAccountId</code> is used.</p>
+     * <p>You must specify at least one of AssetAccountId and AssetAccountName. If both are specified, AssetAccountId takes precedence.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class GenerateAssetOperationTokenRequest extends TeaModel {
     public String assetAccountId;
 
     /**
-     * <p>The name of the asset account. If this parameter specifies a custom account, you must enter the actual account name.</p>
+     * <p>The name of the host account. If the account is a custom account, specify the actual account name.</p>
      * <blockquote>
-     * <p>If you specify both <code>AssetAccountId</code> and <code>AssetAccountName</code>, <code>AssetAccountId</code> is used.</p>
+     * <p>If both AssetAccountId and AssetAccountName are specified, AssetAccountId takes precedence.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class GenerateAssetOperationTokenRequest extends TeaModel {
     public String assetAccountName;
 
     /**
-     * <p>The password that is encoded in Base64. This parameter is required if you want to generate an O\&amp;M token for a custom account.</p>
+     * <p>The Base64-encoded password. This parameter is required when you apply for an O&amp;M token for a custom account.</p>
      * 
      * <strong>example:</strong>
      * <p>dGVzdHBhc3N3b3Jk</p>
@@ -38,23 +38,17 @@ public class GenerateAssetOperationTokenRequest extends TeaModel {
     public String assetAccountPassword;
 
     /**
-     * <p>The protocol that is used to connect to the asset. Valid values:</p>
+     * <p>The name of the protocol. Valid values:</p>
      * <ul>
-     * <li><p><strong>SSH</strong></p>
-     * </li>
-     * <li><p><strong>RDP</strong></p>
-     * </li>
-     * <li><p><strong>Oracle</strong></p>
-     * </li>
-     * <li><p><strong>PostgreSQL</strong></p>
-     * </li>
-     * <li><p><strong>MySQL</strong></p>
-     * </li>
-     * <li><p><strong>SQLServer</strong></p>
-     * </li>
+     * <li><strong>SSH</strong></li>
+     * <li><strong>RDP</strong></li>
+     * <li><strong>Oracle</strong></li>
+     * <li><strong>PostgreSQL</strong></li>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>SQLServer</strong></li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required if you want to generate an O\&amp;M token for a custom account.</p>
+     * <p>This parameter is required when you apply for an O&amp;M token for a custom account.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -64,7 +58,7 @@ public class GenerateAssetOperationTokenRequest extends TeaModel {
     public String assetAccountProtocolName;
 
     /**
-     * <p>The ID of the asset.</p>
+     * <p>The ID of the asset for which you want to apply for an O&amp;M token.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,12 +68,10 @@ public class GenerateAssetOperationTokenRequest extends TeaModel {
     public String assetId;
 
     /**
-     * <p>The type of the asset for which you want to generate an O\&amp;M token. Valid values:</p>
+     * <p>The Asset Type for which you want to apply for a token. Valid values:</p>
      * <ul>
-     * <li><p><strong>Host</strong></p>
-     * </li>
-     * <li><p><strong>Database</strong></p>
-     * </li>
+     * <li><strong>Host</strong>: host</li>
+     * <li><strong>Database</strong>: database</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -90,9 +82,9 @@ public class GenerateAssetOperationTokenRequest extends TeaModel {
     public String assetType;
 
     /**
-     * <p>The name of the database. This parameter is required for a custom account if you set OperationMode to Sso and AssetAccountProtocolName to PostgreSQL or Oracle.</p>
+     * <p>The name of the database. This parameter is required when OperationMode is set to Sso, AssetAccountProtocolName is set to PostgreSQL or Oracle, and the account is a custom account.</p>
      * <blockquote>
-     * <p>This parameter is supported only by bastion hosts of V3.2.44 or later.</p>
+     * <p>This parameter is supported only in Bastionhost V3.2.44 and later.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -102,9 +94,9 @@ public class GenerateAssetOperationTokenRequest extends TeaModel {
     public String databaseSchema;
 
     /**
-     * <p>The ID of the bastion host instance.</p>
+     * <p>The instance ID of the Bastionhost instance for which you want to apply for an O&amp;M token.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the value of this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -115,16 +107,14 @@ public class GenerateAssetOperationTokenRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The logon attribute. This parameter is required if you set OperationMode to Sso and use a custom Oracle account. Valid values:</p>
+     * <p>The logon attribute. This parameter is required when OperationMode is set to Sso and the account is a custom Oracle account. Valid values:</p>
      * <ul>
-     * <li><p><strong>SERVICENAME</strong></p>
-     * </li>
-     * <li><p><strong>SID</strong></p>
+     * <li><strong>SERVICENAME</strong></li>
+     * <li><strong>SID</strong><blockquote>
+     * <p>This parameter is supported only in Bastionhost V3.2.44 and later.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>This parameter is supported only by bastion hosts of V3.2.44 or later.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>SID</p>
@@ -136,16 +126,14 @@ public class GenerateAssetOperationTokenRequest extends TeaModel {
     public String loginAttribute;
 
     /**
-     * <p>The O\&amp;M mode. Valid values:</p>
+     * <p>The O&amp;M logon method. Valid values:</p>
      * <ul>
-     * <li><p><strong>WebToken</strong>: generates an O\&amp;M token.</p>
-     * </li>
-     * <li><p><strong>Sso</strong>: logs on to the client.</p>
+     * <li><strong>WebToken</strong>: obtain an O&amp;M token</li>
+     * <li><strong>Sso</strong>: log on by using a local client<blockquote>
+     * <p>This parameter is supported only in Bastionhost V3.2.44 and later. If this parameter is left empty, the default value WebToken is used.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>This parameter is supported only by bastion hosts of V3.2.44 or later. If you do not specify this parameter, WebToken is used.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Sso</p>
@@ -154,7 +142,7 @@ public class GenerateAssetOperationTokenRequest extends TeaModel {
     public String operationMode;
 
     /**
-     * <p>The remarks for the logon. This parameter is required if your administrator enables logon remarks in the control policy.</p>
+     * <p>The logon note. This parameter is required when the administrator enables the logon note feature in the control policy.</p>
      * 
      * <strong>example:</strong>
      * <p>comment</p>
@@ -163,9 +151,9 @@ public class GenerateAssetOperationTokenRequest extends TeaModel {
     public String operationNote;
 
     /**
-     * <p>The region ID of the bastion host instance.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>For more information about region IDs, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -175,16 +163,14 @@ public class GenerateAssetOperationTokenRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The type of the client that you want to use for O\&amp;M on a Linux asset. This parameter is required if you set OperationMode to Sso and the asset protocol to SSH. Valid values:</p>
+     * <p>The type of the local client to be opened for O&amp;M operations on Linux assets. This parameter is required when OperationMode is set to Sso and the asset protocol is SSH. Valid values:</p>
      * <ul>
-     * <li><p><strong>ssh</strong>: opens a client that supports the SSH protocol to perform O\&amp;M with SSH permissions.</p>
-     * </li>
-     * <li><p><strong>sftp</strong>: opens a client that supports the SFTP protocol to perform O\&amp;M with SFTP permissions.</p>
+     * <li><strong>ssh</strong>: open an SSH client to perform O&amp;M operations with SSH permissions</li>
+     * <li><strong>sftp</strong>: open an SFTP client to perform O&amp;M operations with SFTP permissions<blockquote>
+     * <p>This parameter is supported only in Bastionhost V3.2.44 and later.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>This parameter is supported only by bastion hosts of V3.2.44 or later.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>ssh</p>

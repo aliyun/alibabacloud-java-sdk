@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNetworkDomainsResponseBody extends TeaModel {
     /**
-     * <p>The list of network domains.</p>
+     * <p>The network domains.</p>
      */
     @NameInMap("NetworkDomains")
     public java.util.List<ListNetworkDomainsResponseBodyNetworkDomains> networkDomains;
@@ -59,12 +59,10 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
 
     public static class ListNetworkDomainsResponseBodyNetworkDomainsProxiesState extends TeaModel {
         /**
-         * <p>The node type of the proxy server. Valid values:</p>
+         * <p>The type of the proxy server node. Valid values:</p>
          * <ul>
-         * <li><p><strong>Master</strong>: the master proxy server</p>
-         * </li>
-         * <li><p><strong>Slave</strong>: the slave proxy server</p>
-         * </li>
+         * <li><strong>Master</strong>: primary proxy server</li>
+         * <li><strong>Slave</strong>: secondary proxy server</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -74,12 +72,10 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
         public String nodeType;
 
         /**
-         * <p>The status of the proxy server. Valid values:</p>
+         * <p>The status of the proxy server.</p>
          * <ul>
-         * <li><p><strong>Available</strong></p>
-         * </li>
-         * <li><p><strong>Unavailable</strong></p>
-         * </li>
+         * <li><strong>Available</strong>: available</li>
+         * <li><strong>Unavailable</strong>: unavailable</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -113,7 +109,7 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
 
     public static class ListNetworkDomainsResponseBodyNetworkDomains extends TeaModel {
         /**
-         * <p>The comments on the network domain.</p>
+         * <p>The description of the network domain.</p>
          * 
          * <strong>example:</strong>
          * <p>comment</p>
@@ -122,12 +118,10 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>Indicates whether the network domain is a built-in domain.</p>
+         * <p>Indicates whether the network domain is a built-in network domain.</p>
          * <ul>
-         * <li><p><strong>true</strong>: yes</p>
-         * </li>
-         * <li><p><strong>false</strong>: no</p>
-         * </li>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -157,10 +151,8 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
         /**
          * <p>The type of the network domain. Valid values:</p>
          * <ul>
-         * <li><p><strong>Direct</strong>: direct connection</p>
-         * </li>
-         * <li><p><strong>Proxy</strong>: proxy connection</p>
-         * </li>
+         * <li><strong>Direct</strong>: direct connection</li>
+         * <li><strong>Proxy</strong>: proxy</li>
          * </ul>
          * 
          * <strong>example:</strong>

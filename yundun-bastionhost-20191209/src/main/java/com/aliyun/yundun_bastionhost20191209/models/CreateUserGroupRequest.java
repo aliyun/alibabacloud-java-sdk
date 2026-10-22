@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateUserGroupRequest extends TeaModel {
     /**
-     * <p>The description of the user group. The description can be up to 500 characters in length.</p>
+     * <p>The description of the user group to create. The description can be up to 500 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>comment</p>
@@ -14,9 +14,9 @@ public class CreateUserGroupRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The ID of the bastion host for which you want to create a user group.</p>
+     * <p>The ID of the bastion host instance for which you want to create a user group.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -26,6 +26,12 @@ public class CreateUserGroupRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
@@ -42,7 +48,7 @@ public class CreateUserGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the user group that you want to create. This name can be a up to 128 characters in length.</p>
+     * <p>The name of the user group to create. The name can be up to 128 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

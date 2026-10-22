@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHostsForUserRequest extends TeaModel {
     /**
-     * <p>The endpoint of the host that you want to query. You can set this parameter to a domain name or an IP address. Only exact match is supported.</p>
+     * <p>The address of the host to query. You can use a domain name or an IP address. Only exact match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
@@ -14,7 +14,7 @@ public class ListHostsForUserRequest extends TeaModel {
     public String hostAddress;
 
     /**
-     * <p>The name of the host that you want to query. Only exact match is supported.</p>
+     * <p>The name of the host to query. Only exact match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -23,9 +23,9 @@ public class ListHostsForUserRequest extends TeaModel {
     public String hostName;
 
     /**
-     * <p>The ID of the bastion host on which you want to query the hosts that the user is authorized or not authorized to manage.</p>
+     * <p>The ID of the Bastionhost instance to which the user belongs.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -36,12 +36,10 @@ public class ListHostsForUserRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Specifies the category of the hosts that you want to query. Valid values:</p>
+     * <p>The mode of the host list to query. Valid values:</p>
      * <ul>
-     * <li><p><strong>Authorized</strong>: queries the hosts that the user is authorized to manage. This is the default value.</p>
-     * </li>
-     * <li><p><strong>Unauthorized</strong>: queries the hosts that the user is not authorized to manage.</p>
-     * </li>
+     * <li><strong>Authorized</strong>: Authorized hosts. This is the default value.</li>
+     * <li><strong>Unauthorized</strong>: Unauthorized hosts.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,12 +49,10 @@ public class ListHostsForUserRequest extends TeaModel {
     public String mode;
 
     /**
-     * <p>The operating system of the host that you want to query. Valid values:</p>
+     * <p>The operating system type of the host to query. Valid values:</p>
      * <ul>
-     * <li><p><strong>Linux</strong></p>
-     * </li>
-     * <li><p><strong>Windows</strong></p>
-     * </li>
+     * <li><strong>Linux</strong></li>
+     * <li><strong>Windows</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,7 +62,7 @@ public class ListHostsForUserRequest extends TeaModel {
     public String OSType;
 
     /**
-     * <p>The number of the page. Default value: 1.</p>
+     * <p>The page number of the current page in a paging query. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -75,10 +71,9 @@ public class ListHostsForUserRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page.<br>
-     * Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
+     * <p>The maximum number of entries to return on each page for a paging query.<br>The maximum value of the PageSize parameter is 100. Default value: 20. If this parameter is left empty, 20 entries are returned by default.</p>
      * <blockquote>
-     * <p>We recommend that you do not leave this parameter empty.</p>
+     * <p>Specify a value for the PageSize parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -87,11 +82,17 @@ public class ListHostsForUserRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The region ID of the bastion host on which you want to query the hosts that the user is authorized or not authorized to manage.</p>
+     * <p>The region ID of the Bastionhost instance to which the user belongs.</p>
      * <blockquote>
      * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
@@ -103,9 +104,9 @@ public class ListHostsForUserRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the user.</p>
+     * <p>The ID of the user to query.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query the ID of the user.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

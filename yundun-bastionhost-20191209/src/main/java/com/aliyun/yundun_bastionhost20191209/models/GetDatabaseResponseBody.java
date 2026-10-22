@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDatabaseResponseBody extends TeaModel {
     /**
-     * <p>The returned detailed information about the database.</p>
+     * <p>The details of the database instance.</p>
      */
     @NameInMap("Database")
     public GetDatabaseResponseBodyDatabase database;
@@ -42,12 +42,10 @@ public class GetDatabaseResponseBody extends TeaModel {
 
     public static class GetDatabaseResponseBodyDatabase extends TeaModel {
         /**
-         * <p>The address type of the database. Valid values:</p>
+         * <p>The address type of the database instance. Valid values:</p>
          * <ul>
-         * <li><p>Public</p>
-         * </li>
-         * <li><p>Private</p>
-         * </li>
+         * <li>Public: public address.</li>
+         * <li>Private: private endpoint. The database is accessed over a private network.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -57,7 +55,7 @@ public class GetDatabaseResponseBody extends TeaModel {
         public String activeAddressType;
 
         /**
-         * <p>The remarks of the database.</p>
+         * <p>The description of the database instance.</p>
          * 
          * <strong>example:</strong>
          * <p>comment</p>
@@ -66,7 +64,7 @@ public class GetDatabaseResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The database ID.</p>
+         * <p>The instance ID of the database.</p>
          * 
          * <strong>example:</strong>
          * <p>22</p>
@@ -75,7 +73,7 @@ public class GetDatabaseResponseBody extends TeaModel {
         public String databaseId;
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The name of the database instance.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -93,7 +91,7 @@ public class GetDatabaseResponseBody extends TeaModel {
         public Long databasePort;
 
         /**
-         * <p>The internal endpoint of the database.</p>
+         * <p>The private endpoint of the database instance. The database is accessed over a private network.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-bp1zq******</p>
@@ -102,7 +100,7 @@ public class GetDatabaseResponseBody extends TeaModel {
         public String databasePrivateAddress;
 
         /**
-         * <p>The public endpoint of the database.</p>
+         * <p>The public address of the database instance.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-uf65******</p>
@@ -111,16 +109,12 @@ public class GetDatabaseResponseBody extends TeaModel {
         public String databasePublicAddress;
 
         /**
-         * <p>The database engine. Valid values:</p>
+         * <p>The type of the database. Valid values:</p>
          * <ul>
-         * <li><p><strong>mysql</strong></p>
-         * </li>
-         * <li><p><strong>sqlserver</strong></p>
-         * </li>
-         * <li><p><strong>postgresql</strong></p>
-         * </li>
-         * <li><p><strong>oracle</strong></p>
-         * </li>
+         * <li><strong>mysql</strong></li>
+         * <li><strong>sqlserver</strong></li>
+         * <li><strong>postgresql</strong></li>
+         * <li><strong>oracle</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -139,14 +133,11 @@ public class GetDatabaseResponseBody extends TeaModel {
         public String networkDomainId;
 
         /**
-         * <p>The database type. Valid values:</p>
+         * <p>The source of the database instance. Valid values:</p>
          * <ul>
-         * <li><p><strong>Local</strong>: on-premises database.</p>
-         * </li>
-         * <li><p><strong>Rds</strong>: ApsaraDB RDS instance.</p>
-         * </li>
-         * <li><p><strong>PolarDB</strong>: PolarDB cluster.</p>
-         * </li>
+         * <li><strong>Local</strong>: a local database instance.</li>
+         * <li><strong>Rds</strong>: an ApsaraDB RDS database instance.</li>
+         * <li><strong>PolarDB</strong>: a PolarDB database instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -156,9 +147,9 @@ public class GetDatabaseResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The ID of the ApsaraDB RDS instance or PolarDB cluster.</p>
+         * <p>The instance ID of the ApsaraDB RDS or PolarDB instance that corresponds to the database.</p>
          * <blockquote>
-         * <p>If <strong>Source</strong> is set to <strong>Local</strong>, this parameter is empty.</p>
+         * <p>If <strong>Source</strong> is set to <strong>Local</strong>, this parameter returns an empty value.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -168,7 +159,7 @@ public class GetDatabaseResponseBody extends TeaModel {
         public String sourceInstanceId;
 
         /**
-         * <p>The region ID of the ApsaraDB RDS instance or PolarDB cluster.</p>
+         * <p>The region ID of the ApsaraDB RDS instance or PolarDB instance that corresponds to the database.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -177,12 +168,10 @@ public class GetDatabaseResponseBody extends TeaModel {
         public String sourceInstanceRegionId;
 
         /**
-         * <p>The status of the database. Valid values:</p>
+         * <p>The instance status of the database. Valid values:</p>
          * <ul>
-         * <li><p><strong>Normal</strong></p>
-         * </li>
-         * <li><p><strong>Release</strong></p>
-         * </li>
+         * <li><strong>Normal</strong>: normal.</li>
+         * <li><strong>Release</strong>: released.</li>
          * </ul>
          * 
          * <strong>example:</strong>

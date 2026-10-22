@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHostsForUserGroupResponseBody extends TeaModel {
     /**
-     * <p>A list of hosts.</p>
+     * <p>The list of hosts returned.</p>
      */
     @NameInMap("Hosts")
     public java.util.List<ListHostsForUserGroupResponseBodyHosts> hosts;
@@ -20,7 +20,7 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of hosts.</p>
+     * <p>The total number of hosts returned.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -61,10 +61,8 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
         /**
          * <p>The address type of the host. Valid values:</p>
          * <ul>
-         * <li><p><strong>Public</strong>: a public IP address</p>
-         * </li>
-         * <li><p><strong>Private</strong>: a private IP address</p>
-         * </li>
+         * <li><strong>Public</strong>: public address</li>
+         * <li><strong>Private</strong>: private network address</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -74,7 +72,7 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
         public String activeAddressType;
 
         /**
-         * <p>The remarks of the host.</p>
+         * <p>The description of the host.</p>
          * 
          * <strong>example:</strong>
          * <p>comment</p>
@@ -101,7 +99,7 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
         public String hostName;
 
         /**
-         * <p>The private IP address of the host. This can be a domain name or an IP address.</p>
+         * <p>The private network address of the host, which can be a domain name or an IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
@@ -110,7 +108,7 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
         public String hostPrivateAddress;
 
         /**
-         * <p>The public IP address of the host. This can be a domain name or an IP address.</p>
+         * <p>The public address of the host, which can be a domain name or an IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>10.158.XX.XX</p>
@@ -119,12 +117,10 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
         public String hostPublicAddress;
 
         /**
-         * <p>The OS type of the host. Valid values:</p>
+         * <p>The operating system type of the host. Valid values:</p>
          * <ul>
-         * <li><p><strong>Linux</strong></p>
-         * </li>
-         * <li><p><strong>Windows</strong></p>
-         * </li>
+         * <li><strong>Linux</strong></li>
+         * <li><strong>Windows</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>

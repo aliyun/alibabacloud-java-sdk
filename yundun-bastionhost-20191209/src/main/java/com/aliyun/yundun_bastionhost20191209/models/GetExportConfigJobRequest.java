@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetExportConfigJobRequest extends TeaModel {
     /**
-     * <p>The ID of the Bastionhost instance.</p>
+     * <p>The instance ID of the bastion host.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class GetExportConfigJobRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the configuration backup export job.</p>
+     * <p>The ID of the configuration backup export task.</p>
      * <blockquote>
-     * <p>This parameter is the JobId returned after you successfully call the CreateExportConfigJob operation to create a configuration backup export job.</p>
+     * <p>This parameter is the JobId returned after you successfully call the CreateExportConfigJob operation to create a configuration backup export task.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -31,7 +31,7 @@ public class GetExportConfigJobRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The region ID of the Bastionhost instance.</p>
+     * <p>The region ID of the bastion host.</p>
      * <blockquote>
      * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>

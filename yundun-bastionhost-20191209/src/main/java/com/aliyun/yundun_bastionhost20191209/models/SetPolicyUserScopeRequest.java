@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class SetPolicyUserScopeRequest extends TeaModel {
     /**
-     * <p>The bastion host ID.</p>
+     * <p>The ID of the bastion host instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class SetPolicyUserScopeRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the control policy that you want to modify.</p>
+     * <p>The ID of the control policy to modify.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -30,13 +30,19 @@ public class SetPolicyUserScopeRequest extends TeaModel {
     @NameInMap("PolicyId")
     public String policyId;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
      * <p>The region ID of the bastion host.</p>
      * <blockquote>
-     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -46,14 +52,11 @@ public class SetPolicyUserScopeRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The scope of users to whom the control policy applies. Valid values:</p>
+     * <p>The user scope for the control policy. Valid values:</p>
      * <ul>
-     * <li><p><strong>All</strong>: The control policy applies to all users.</p>
-     * </li>
-     * <li><p><strong>User</strong>: The control policy applies to specified users.</p>
-     * </li>
-     * <li><p><strong>UserGroup</strong>: The control policy applies to specified user groups.</p>
-     * </li>
+     * <li><strong>All</strong>: The policy applies to all users.</li>
+     * <li><strong>User</strong>: The policy applies to selected users.</li>
+     * <li><strong>UserGroup</strong>: The policy applies to selected user groups.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -64,18 +67,18 @@ public class SetPolicyUserScopeRequest extends TeaModel {
     public String scopeType;
 
     /**
-     * <p>The user groups to which the control policy applies.</p>
+     * <p>The user group scope for the control policy.</p>
      * <blockquote>
-     * <p>This parameter is required if ScopeType is set to UserGroup. You can specify up to 100 user group IDs.</p>
+     * <p>This parameter is required when ScopeType is set to UserGroup. A maximum of 100 user groups can be specified.</p>
      * </blockquote>
      */
     @NameInMap("UserGroupIds")
     public java.util.List<String> userGroupIds;
 
     /**
-     * <p>The users to whom the control policy applies.</p>
+     * <p>The user scope for the control policy.</p>
      * <blockquote>
-     * <p>This parameter is required if ScopeType is set to User. You can specify up to 500 user IDs.</p>
+     * <p>This parameter is required when ScopeType is set to User. A maximum of 500 users can be specified.</p>
      * </blockquote>
      */
     @NameInMap("UserIds")

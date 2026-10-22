@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateHostGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the created asset group.</p>
+     * <p>The ID of the asset group.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

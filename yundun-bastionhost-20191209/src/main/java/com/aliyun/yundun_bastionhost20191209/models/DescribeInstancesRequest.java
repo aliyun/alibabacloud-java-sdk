@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstancesRequest extends TeaModel {
     /**
-     * <p>The IDs of the bastion host instances.</p>
+     * <p>The ID of the Bastionhost instance.</p>
      * 
      * <strong>example:</strong>
      * <p>bastionhost-cn-78v1ghxxxxx</p>
@@ -14,21 +14,21 @@ public class DescribeInstancesRequest extends TeaModel {
     public java.util.List<String> instanceId;
 
     /**
-     * <p>The status of the bastion host instance. Valid values:</p>
+     * <p>The status of the Bastionhost instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>PENDING</strong>: The instance is not initialized.</p>
+     * <li><p><strong>PENDING</strong>: Uninitialized</p>
      * </li>
-     * <li><p><strong>CREATING</strong>: The instance is being created.</p>
+     * <li><p><strong>CREATING</strong>: Creating </p>
      * </li>
-     * <li><p><strong>RUNNING</strong>: The instance is running.</p>
+     * <li><p><strong>RUNNING</strong>: Running </p>
      * </li>
-     * <li><p><strong>EXPIRED</strong>: The instance is expired.</p>
+     * <li><p><strong>EXPIRED</strong>: Expired </p>
      * </li>
-     * <li><p><strong>CREATE_FAILED</strong>: The instance creation failed.</p>
+     * <li><p><strong>CREATE_FAILED</strong>: Creation failed</p>
      * </li>
-     * <li><p><strong>UPGRADING</strong>: The instance is being upgraded.</p>
+     * <li><p><strong>UPGRADING</strong>: Upgrading</p>
      * </li>
-     * <li><p><strong>UPGRADE_FAILED</strong>: The instance upgrade failed.</p>
+     * <li><p><strong>UPGRADE_FAILED</strong>: Upgrade failed</p>
      * </li>
      * </ul>
      * 
@@ -39,7 +39,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String instanceStatus;
 
     /**
-     * <p>The page number to return. Default value: <strong>1</strong>.</p>
+     * <p>Specifies the page number of the returned results. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -48,7 +48,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of bastion host instances to return on each page. Default value: <strong>10</strong>.</p>
+     * <p>Settings for a paged query. Specifies the number of Bastionhost instances to display on each page during paging. Default value: <strong>10</strong>, which indicates that 10 Bastionhost instances are displayed on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -57,7 +57,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region in which the bastion host instances reside.</p>
+     * <p>The region ID of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -66,7 +66,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the bastion host instance belongs.</p>
+     * <p>The ID of the resource group to which the Bastionhost instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm26ougi****</p>
@@ -75,7 +75,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tags attached to the bastion host instances.</p>
+     * <p>The tags of the Bastionhost instance.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeInstancesRequestTag> tag;
@@ -143,7 +143,7 @@ public class DescribeInstancesRequest extends TeaModel {
 
     public static class DescribeInstancesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -152,7 +152,7 @@ public class DescribeInstancesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>testapi</p>

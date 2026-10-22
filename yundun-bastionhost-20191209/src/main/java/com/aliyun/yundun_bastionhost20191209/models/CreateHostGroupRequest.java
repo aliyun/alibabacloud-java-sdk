@@ -38,6 +38,9 @@ public class CreateHostGroupRequest extends TeaModel {
 
     /**
      * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
@@ -45,7 +48,7 @@ public class CreateHostGroupRequest extends TeaModel {
     /**
      * <p>The region ID of the bastion host instance where you want to create the asset group.</p>
      * <blockquote>
-     * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

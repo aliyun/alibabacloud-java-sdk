@@ -38,7 +38,7 @@ public class CreateHostRequest extends TeaModel {
     public String hostName;
 
     /**
-     * <p>The private network address of the host to create. You can specify a domain name or an IP address.</p>
+     * <p>The private network address of the host to create. You can set this parameter to a domain name or an IP address.</p>
      * <blockquote>
      * <p>This parameter is required if <strong>ActiveAddressType</strong> is set to <strong>Private</strong>.</p>
      * </blockquote>
@@ -50,7 +50,7 @@ public class CreateHostRequest extends TeaModel {
     public String hostPrivateAddress;
 
     /**
-     * <p>The public address of the host to create. You can specify a domain name or an IP address.</p>
+     * <p>The public address of the host to create. You can set this parameter to a domain name or an IP address.</p>
      * <blockquote>
      * <p>This parameter is required if <strong>ActiveAddressType</strong> is set to <strong>Public</strong>.</p>
      * </blockquote>
@@ -84,7 +84,7 @@ public class CreateHostRequest extends TeaModel {
     public Long instanceMemberId;
 
     /**
-     * <p>The region ID of the ECS instance or dedicated cluster host.  </p>
+     * <p>The region ID of the ECS instance or the host in the dedicated cluster.  </p>
      * <blockquote>
      * <p>This parameter is required if <strong>Source</strong> is set to <strong>Ecs</strong> or <strong>Rds</strong>.</p>
      * </blockquote>
@@ -123,6 +123,9 @@ public class CreateHostRequest extends TeaModel {
 
     /**
      * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
@@ -144,7 +147,7 @@ public class CreateHostRequest extends TeaModel {
      * <ul>
      * <li><strong>Local</strong>: on-premises host.</li>
      * <li><strong>Ecs</strong>: ECS instance.</li>
-     * <li><strong>Rds</strong>: ApsaraDB RDS dedicated cluster host.</li>
+     * <li><strong>Rds</strong>: host in an ApsaraDB RDS dedicated cluster.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -155,7 +158,7 @@ public class CreateHostRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The instance ID of the ECS instance or dedicated cluster host.  </p>
+     * <p>The instance ID of the ECS instance or the host in the dedicated cluster.  </p>
      * <blockquote>
      * <p>This parameter is required if <strong>Source</strong> is set to <strong>Ecs</strong> or <strong>Rds</strong>.</p>
      * </blockquote>

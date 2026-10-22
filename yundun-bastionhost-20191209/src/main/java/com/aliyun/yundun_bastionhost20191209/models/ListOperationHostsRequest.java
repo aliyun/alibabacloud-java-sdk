@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOperationHostsRequest extends TeaModel {
     /**
-     * <p>The address of the host. You can specify a domain name or an IP address. Only exact matches are supported.</p>
+     * <p>The address of the host to query. You can use a domain name or an IP address. Fuzzy match is not supported. Only exact match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>10.162.XX.XX</p>
@@ -14,7 +14,7 @@ public class ListOperationHostsRequest extends TeaModel {
     public String hostAddress;
 
     /**
-     * <p>The name of the host. Only exact matches are supported.</p>
+     * <p>The name of the host to query. Fuzzy match is not supported. Only exact match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -23,9 +23,9 @@ public class ListOperationHostsRequest extends TeaModel {
     public String hostName;
 
     /**
-     * <p>The ID of the Bastionhost instance.</p>
+     * <p>The instance ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -36,12 +36,10 @@ public class ListOperationHostsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The operating system of the host. Valid values:</p>
+     * <p>The operating system of the host to query. Valid values:</p>
      * <ul>
-     * <li><p><strong>Linux</strong></p>
-     * </li>
-     * <li><p><strong>Windows</strong></p>
-     * </li>
+     * <li><strong>Linux</strong></li>
+     * <li><strong>Windows</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,11 +48,17 @@ public class ListOperationHostsRequest extends TeaModel {
     @NameInMap("OSType")
     public String OSType;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("OperationProjectId")
     public String operationProjectId;
 
     /**
-     * <p>The number of the page to return. The default value is 1.</p>
+     * <p>The page number of the current page for a paged query. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -63,9 +67,9 @@ public class ListOperationHostsRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.<br> The maximum value is 100. The default value is 20. If you do not specify this parameter, the default value is used.<br></p>
+     * <p>The maximum number of entries to return on each page for a paged query.<br>Maximum value of PageSize: 100. Default value: 20. If you leave PageSize empty, 20 entries are returned by default.</p>
      * <blockquote>
-     * <p>Specify a value for this parameter.</p>
+     * <p>Do not leave PageSize empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -75,9 +79,9 @@ public class ListOperationHostsRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The ID of the region where the Bastionhost instance resides.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>For more information about regions and zones, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -87,12 +91,10 @@ public class ListOperationHostsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The source of the host. Valid values:</p>
+     * <p>The source of the host to query. Valid values:</p>
      * <ul>
-     * <li><p><strong>Local</strong>: a local host</p>
-     * </li>
-     * <li><p><strong>Ecs</strong>: an ECS instance</p>
-     * </li>
+     * <li><strong>Local</strong>: local host</li>
+     * <li><strong>Ecs</strong>: ECS instance</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,7 +104,7 @@ public class ListOperationHostsRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The ID of the ECS instance. Only exact matches are supported.</p>
+     * <p>The ECS instance ID. Exact search.</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp19ienyt0yax748****</p>
@@ -111,12 +113,10 @@ public class ListOperationHostsRequest extends TeaModel {
     public String sourceInstanceId;
 
     /**
-     * <p>The state of the host. Valid values:</p>
+     * <p>The status of the host to query. Valid values:</p>
      * <ul>
-     * <li><p><strong>Normal</strong>: The host is running.</p>
-     * </li>
-     * <li><p><strong>Release</strong>: The host is released.</p>
-     * </li>
+     * <li><strong>Normal</strong>: Normal</li>
+     * <li><strong>Release</strong>: Released</li>
      * </ul>
      * 
      * <strong>example:</strong>

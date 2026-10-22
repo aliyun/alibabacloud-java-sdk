@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetHostShareKeyRequest extends TeaModel {
     /**
-     * <p>The ID of the shared key whose information you want to query.</p>
+     * <p>The ID of the host shared key to query.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/462973.html">ListHostShareKeys</a> operation to query the shared key ID.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/462973.html">ListHostShareKeys</a> to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class GetHostShareKeyRequest extends TeaModel {
     public String hostShareKeyId;
 
     /**
-     * <p>The bastion host ID.</p>
+     * <p>The instance ID of the bastion host.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>You can invoke <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -30,13 +30,19 @@ public class GetHostShareKeyRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
      * <p>The region ID of the bastion host.</p>
      * <blockquote>
-     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

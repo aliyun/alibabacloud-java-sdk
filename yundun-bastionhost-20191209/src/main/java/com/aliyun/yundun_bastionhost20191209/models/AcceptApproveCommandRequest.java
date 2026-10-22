@@ -7,7 +7,7 @@ public class AcceptApproveCommandRequest extends TeaModel {
     /**
      * <p>The ID of the command to be approved for execution.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2584310.html">ListApproveCommands</a> operation to query all command IDs that require approval.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2584310.html">ListApproveCommands</a> operation to query the IDs of all commands that require approval.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -20,7 +20,7 @@ public class AcceptApproveCommandRequest extends TeaModel {
     /**
      * <p>The instance ID of the bastion host.</p>
      * <blockquote>
-     * <p>You can call the DescribeInstances operation to obtain the bastion host instance ID.</p>
+     * <p>You can call the DescribeInstances operation to query the bastion host instance ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -32,6 +32,9 @@ public class AcceptApproveCommandRequest extends TeaModel {
 
     /**
      * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

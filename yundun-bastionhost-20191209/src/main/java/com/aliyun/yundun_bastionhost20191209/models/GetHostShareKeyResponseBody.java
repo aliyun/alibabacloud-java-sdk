@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetHostShareKeyResponseBody extends TeaModel {
     /**
-     * <p>The returned information about the shared key.</p>
+     * <p>The details of the shared key.</p>
      */
     @NameInMap("HostShareKey")
     public GetHostShareKeyResponseBodyHostShareKey hostShareKey;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
@@ -42,7 +42,7 @@ public class GetHostShareKeyResponseBody extends TeaModel {
 
     public static class GetHostShareKeyResponseBodyHostShareKey extends TeaModel {
         /**
-         * <p>The ID of the shared key.</p>
+         * <p>The ID of the host shared key.</p>
          * 
          * <strong>example:</strong>
          * <p>10427</p>
@@ -51,7 +51,7 @@ public class GetHostShareKeyResponseBody extends TeaModel {
         public String hostShareKeyId;
 
         /**
-         * <p>The name of the shared key.</p>
+         * <p>The name of the host shared key.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -60,7 +60,7 @@ public class GetHostShareKeyResponseBody extends TeaModel {
         public String hostShareKeyName;
 
         /**
-         * <p>The time when the information about the shared key was last modified. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the host shared key was last modified, in seconds (UNIX timestamp format).</p>
          * 
          * <strong>example:</strong>
          * <p>1644287246</p>

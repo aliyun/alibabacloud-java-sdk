@@ -7,7 +7,7 @@ public class AttachDatabaseAccountsToUserGroupRequest extends TeaModel {
     /**
      * <p>The array of database objects.</p>
      * <blockquote>
-     * <p>A maximum of 10 databases and 10 database accounts are supported. You can leave the database accounts unspecified. If no accounts are specified, permissions are granted at the database level.</p>
+     * <p>A maximum of 10 databases and 10 database accounts are supported. You can leave the database accounts unspecified. If no database accounts are specified, permissions are granted at the database level.</p>
      * </blockquote>
      */
     @NameInMap("Databases")
@@ -28,6 +28,9 @@ public class AttachDatabaseAccountsToUserGroupRequest extends TeaModel {
 
     /**
      * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
@@ -107,7 +110,7 @@ public class AttachDatabaseAccountsToUserGroupRequest extends TeaModel {
         public java.util.List<String> databaseAccountIds;
 
         /**
-         * <p>The ID of the database instance to authorize.</p>
+         * <p>The ID of the database instance to which you want to grant permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>58</p>

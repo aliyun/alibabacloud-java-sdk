@@ -1,3 +1,12 @@
+2026-10-22 Version: 1.7.1
+- Update API DescribeInstanceAttribute: add response parameters Body.InstanceAttribute.AiCreditsTotal.
+- Update API DescribeInstanceAttribute: add response parameters Body.InstanceAttribute.AiCreditsUs.
+- Update API DescribeInstanceAttribute: add response parameters Body.InstanceAttribute.AiOpsAuditStatus.
+- Update API DescribeInstances: add response parameters Body.Instances.$.AiCreditsTotal.
+- Update API DescribeInstances: add response parameters Body.Instances.$.AiCreditsUs.
+- Update API DescribeInstances: add response parameters Body.Instances.$.AiOpsAuditStatus.
+
+
 2026-08-14 Version: 1.7.0
 - Support API AttachMembersToProject.
 - Support API AttachProjectManagersToProjectAuthorization.

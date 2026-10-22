@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRuleRequest extends TeaModel {
     /**
-     * <p>The remarks of the authorization rule. The remarks can be up to 500 characters in length.</p>
+     * <p>The description of the authorization rule. Maximum length: 500 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>comment</p>
@@ -14,13 +14,13 @@ public class CreateRuleRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The information about the database that runs on your server.</p>
+     * <p>The database information.</p>
      */
     @NameInMap("Databases")
     public java.util.List<CreateRuleRequestDatabases> databases;
 
     /**
-     * <p>The end time of the validity period of the authorization rule. Specify a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The end time of the validity period for the authorization rule, in seconds (timestamp format).</p>
      * 
      * <strong>example:</strong>
      * <p>1672502400</p>
@@ -29,7 +29,7 @@ public class CreateRuleRequest extends TeaModel {
     public Long effectiveEndTime;
 
     /**
-     * <p>The start time of the validity period of the authorization rule. Specify a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The start time of the validity period for the authorization rule, in seconds (timestamp format).</p>
      * 
      * <strong>example:</strong>
      * <p>1669630029</p>
@@ -38,7 +38,7 @@ public class CreateRuleRequest extends TeaModel {
     public Long effectiveStartTime;
 
     /**
-     * <p>The information about the asset group that you want to authorize to manage.</p>
+     * <p>The asset group information to authorize.</p>
      */
     @NameInMap("HostGroups")
     public java.util.List<CreateRuleRequestHostGroups> hostGroups;
@@ -50,9 +50,9 @@ public class CreateRuleRequest extends TeaModel {
     public java.util.List<CreateRuleRequestHosts> hosts;
 
     /**
-     * <p>The bastion host ID.</p>
+     * <p>The instance ID of the bastion host.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -62,13 +62,19 @@ public class CreateRuleRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
      * <p>The region ID of the bastion host.</p>
      * <blockquote>
-     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -78,7 +84,7 @@ public class CreateRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the authorization rule. The name can be up to 128 characters in length.</p>
+     * <p>The name of the authorization rule. Maximum length: 128 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,13 +94,13 @@ public class CreateRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>An array that consists of user group IDs.</p>
+     * <p>The array of user group IDs.</p>
      */
     @NameInMap("UserGroupIds")
     public java.util.List<String> userGroupIds;
 
     /**
-     * <p>An array that consists of user IDs.</p>
+     * <p>The array of user IDs.</p>
      */
     @NameInMap("UserIds")
     public java.util.List<String> userIds;
@@ -202,13 +208,13 @@ public class CreateRuleRequest extends TeaModel {
 
     public static class CreateRuleRequestDatabases extends TeaModel {
         /**
-         * <p>An array that consists of database account IDs.</p>
+         * <p>The array of database account IDs.</p>
          */
         @NameInMap("DatabaseAccountIds")
         public java.util.List<String> databaseAccountIds;
 
         /**
-         * <p>The database ID.</p>
+         * <p>The database instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -241,7 +247,7 @@ public class CreateRuleRequest extends TeaModel {
 
     public static class CreateRuleRequestHostGroups extends TeaModel {
         /**
-         * <p>An array that consists of asset account names.</p>
+         * <p>The array of asset account names.</p>
          */
         @NameInMap("HostAccountNames")
         public java.util.List<String> hostAccountNames;
@@ -280,7 +286,7 @@ public class CreateRuleRequest extends TeaModel {
 
     public static class CreateRuleRequestHosts extends TeaModel {
         /**
-         * <p>An array that consists of host account IDs.</p>
+         * <p>The array of host account IDs.</p>
          */
         @NameInMap("HostAccountIds")
         public java.util.List<String> hostAccountIds;

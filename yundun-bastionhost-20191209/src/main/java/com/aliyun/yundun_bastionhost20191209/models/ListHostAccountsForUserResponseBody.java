@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHostAccountsForUserResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the queried host accounts.</p>
+     * <p>The list of host accounts returned.</p>
      */
     @NameInMap("HostAccounts")
     public java.util.List<ListHostAccountsForUserResponseBodyHostAccounts> hostAccounts;
@@ -20,7 +20,7 @@ public class ListHostAccountsForUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of host accounts that were queried.</p>
+     * <p>The total number of host accounts returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -77,7 +77,7 @@ public class ListHostAccountsForUserResponseBody extends TeaModel {
         public String hostAccountName;
 
         /**
-         * <p>The ID of the host for which the host accounts were queried.</p>
+         * <p>The ID of the host to which the host account belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -86,12 +86,10 @@ public class ListHostAccountsForUserResponseBody extends TeaModel {
         public String hostId;
 
         /**
-         * <p>Indicates whether the user is authorized to manage the host account. Valid values:</p>
+         * <p>Indicates whether the host account is authorized to the current user. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: yes</p>
-         * </li>
-         * <li><p><strong>false</strong>: no</p>
-         * </li>
+         * <li><strong>true</strong>: Authorized.</li>
+         * <li><strong>false</strong>: Unauthorized.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -101,12 +99,10 @@ public class ListHostAccountsForUserResponseBody extends TeaModel {
         public Boolean isAuthorized;
 
         /**
-         * <p>The protocol that is used by the host. Valid values:</p>
+         * <p>The protocol name of the host account. Valid values:</p>
          * <ul>
-         * <li><p><strong>SSH</strong></p>
-         * </li>
-         * <li><p><strong>RDP</strong></p>
-         * </li>
+         * <li><strong>SSH</strong></li>
+         * <li><strong>RDP</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>

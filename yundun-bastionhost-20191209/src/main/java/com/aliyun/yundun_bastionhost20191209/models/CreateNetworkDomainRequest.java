@@ -14,9 +14,9 @@ public class CreateNetworkDomainRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The instance ID of the Bastionhost instance for which you want to create a network domain.</p>
+     * <p>The ID of the Bastionhost instance for which you want to create a network domain.</p>
      * <blockquote>
-     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the instance ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -39,8 +39,8 @@ public class CreateNetworkDomainRequest extends TeaModel {
     /**
      * <p>The type of the network domain to create. Valid values:</p>
      * <ul>
-     * <li>Direct: direct connection. Bastionhost is directly connected to the asset network without an intermediate proxy server.</li>
-     * <li>Proxy: proxy connection. If the network where the assets reside is not connected to the Bastionhost network, you can use a proxy server to forward network requests and manage assets in different network environments.</li>
+     * <li>Direct: The bastion host directly connects to the asset network without going through an intermediate proxy server.</li>
+     * <li>Proxy: When the asset network cannot communicate with the bastion host network, a proxy server forwards network requests to enable O&amp;M on assets in different network environments.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -52,6 +52,9 @@ public class CreateNetworkDomainRequest extends TeaModel {
 
     /**
      * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

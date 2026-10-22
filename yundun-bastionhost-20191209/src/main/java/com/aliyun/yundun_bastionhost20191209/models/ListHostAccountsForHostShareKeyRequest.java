@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListHostAccountsForHostShareKeyRequest extends TeaModel {
     /**
-     * <p>The shared key ID.</p>
+     * <p>The ID of the host shared key.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/462973.html">ListHostShareKeys</a> operation to query the shared key ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/462973.html">ListHostShareKeys</a> operation to retrieve this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class ListHostAccountsForHostShareKeyRequest extends TeaModel {
     public String hostShareKeyId;
 
     /**
-     * <p>The bastion host ID.</p>
+     * <p>The instance ID of the Bastionhost.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to retrieve this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -30,7 +30,7 @@ public class ListHostAccountsForHostShareKeyRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>Specifies the page number of the returned results. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -39,7 +39,7 @@ public class ListHostAccountsForHostShareKeyRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * <p>The Settings for the paged query determine the number of host accounts associated with the host shared key to return on each page during paging. Default value: <strong>10</strong>, which indicates that 10 host accounts associated with the host shared key are displayed on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,13 +47,19 @@ public class ListHostAccountsForHostShareKeyRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The region ID of the bastion host.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

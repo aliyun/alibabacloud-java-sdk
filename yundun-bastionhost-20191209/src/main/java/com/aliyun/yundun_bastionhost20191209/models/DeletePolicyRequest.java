@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeletePolicyRequest extends TeaModel {
     /**
-     * <p>The instance ID of the bastion host where the control policy to be deleted resides.</p>
+     * <p>The instance ID of the bastion host to which the control policy to be deleted belongs.</p>
      * <blockquote>
-     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class DeletePolicyRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the control policy to be deleted.</p>
+     * <p>The ID of the control policy to delete.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to obtain this parameter.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -32,6 +32,9 @@ public class DeletePolicyRequest extends TeaModel {
 
     /**
      * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
@@ -39,7 +42,7 @@ public class DeletePolicyRequest extends TeaModel {
     /**
      * <p>The region ID of the bastion host.</p>
      * <blockquote>
-     * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

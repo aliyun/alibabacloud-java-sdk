@@ -21,8 +21,8 @@ public class AcceptOperationTicketRequest extends TeaModel {
      * <li><p><strong>1</strong>: The O&amp;M engineer can log on only once during the validity period.</p>
      * <blockquote>
      * <ul>
-     * <li>The logon limit for database asset O&amp;M approval can only be set to unlimited.</li>
-     * <li>If an empty character string is passed, the default value is unlimited.</li>
+     * <li>The logon limit for database asset O&amp;M approval can only be set to no limit on the number of logons in Settings.</li>
+     * <li>If an empty character string is passed, the default value is no limit on the number of logons.</li>
      * </ul>
      * </blockquote>
      * </li>
@@ -55,7 +55,7 @@ public class AcceptOperationTicketRequest extends TeaModel {
     /**
      * <p>The ID of the bastion host instance.</p>
      * <blockquote>
-     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -80,6 +80,9 @@ public class AcceptOperationTicketRequest extends TeaModel {
 
     /**
      * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

@@ -5,34 +5,34 @@ import com.aliyun.tea.*;
 
 public class SetPolicyAssetScopeRequest extends TeaModel {
     /**
-     * <p>The databases to which the control policy applies.</p>
+     * <p>The scope of database assets to which the control policy applies.</p>
      * <blockquote>
-     * <p>Required when ScopeType is set to Database. A maximum of 500 databases can be specified.</p>
+     * <p>Required when ScopeType is set to Database. You can specify up to 500 databases.</p>
      * </blockquote>
      */
     @NameInMap("Databases")
     public java.util.List<SetPolicyAssetScopeRequestDatabases> databases;
 
     /**
-     * <p>The asset groups to which the control policy applies.</p>
+     * <p>The scope of asset groups to which the control policy applies.</p>
      * <blockquote>
-     * <p>Required when ScopeType is set to HostGroup. A maximum of 100 asset groups can be specified.</p>
+     * <p>Required when ScopeType is set to HostGroup. You can specify up to 100 asset groups.</p>
      * </blockquote>
      */
     @NameInMap("HostGroups")
     public java.util.List<SetPolicyAssetScopeRequestHostGroups> hostGroups;
 
     /**
-     * <p>The hosts to which the control policy applies.</p>
+     * <p>The scope of hosts to which the control policy applies.</p>
      * <blockquote>
-     * <p>Required when ScopeType is set to Host. A maximum of 500 hosts can be specified.</p>
+     * <p>Required when ScopeType is set to Host. You can specify up to 500 hosts.</p>
      * </blockquote>
      */
     @NameInMap("Hosts")
     public java.util.List<SetPolicyAssetScopeRequestHosts> hosts;
 
     /**
-     * <p>The instance ID of the bastion host.</p>
+     * <p>The Bastionhost instance ID.</p>
      * <blockquote>
      * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
@@ -59,12 +59,15 @@ public class SetPolicyAssetScopeRequest extends TeaModel {
 
     /**
      * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The region ID of the bastion host.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
      * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
@@ -76,12 +79,12 @@ public class SetPolicyAssetScopeRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The asset scope for the control policy. Valid values:</p>
+     * <p>The scope of assets to which the control policy applies. Valid values:</p>
      * <ul>
-     * <li><strong>All</strong>: applies to all assets.</li>
-     * <li><strong>Host</strong>: applies to selected hosts.</li>
-     * <li><strong>Database</strong>: applies to selected databases.</li>
-     * <li><strong>HostGroup</strong>: applies to selected asset groups.</li>
+     * <li><strong>All</strong>: all assets</li>
+     * <li><strong>Host</strong>: selected hosts</li>
+     * <li><strong>Database</strong>: selected databases</li>
+     * <li><strong>HostGroup</strong>: selected asset groups</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -164,8 +167,8 @@ public class SetPolicyAssetScopeRequest extends TeaModel {
         /**
          * <p>The scope of database accounts to which the control policy applies. Valid values:</p>
          * <ul>
-         * <li><strong>All</strong>: applies to all accounts in the database.</li>
-         * <li><strong>AccountId</strong>: applies to specified accounts in the database.</li>
+         * <li><strong>All</strong>: all accounts in the database</li>
+         * <li><strong>AccountId</strong>: specified accounts in the database</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -175,7 +178,7 @@ public class SetPolicyAssetScopeRequest extends TeaModel {
         public String accountScopeType;
 
         /**
-         * <p>The database accounts to which the control policy applies.</p>
+         * <p>The scope of database accounts to which the control policy applies.</p>
          * <blockquote>
          * <p>Required when AccountScopeType is set to AccountId.</p>
          * </blockquote>
@@ -225,7 +228,7 @@ public class SetPolicyAssetScopeRequest extends TeaModel {
 
     public static class SetPolicyAssetScopeRequestHostGroups extends TeaModel {
         /**
-         * <p>The asset accounts to which the control policy applies.</p>
+         * <p>The scope of asset accounts to which the control policy applies.</p>
          * <blockquote>
          * <p>Required when AccountScopeType is set to AccountNames.</p>
          * </blockquote>
@@ -236,8 +239,8 @@ public class SetPolicyAssetScopeRequest extends TeaModel {
         /**
          * <p>The scope of asset accounts to which the control policy applies. Valid values:</p>
          * <ul>
-         * <li><strong>All</strong>: applies to all accounts in the asset group.</li>
-         * <li><strong>AccountName</strong>: applies to specified accounts in the asset group.</li>
+         * <li><strong>All</strong>: all accounts in the asset group</li>
+         * <li><strong>AccountName</strong>: specified accounts in the asset group</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -247,7 +250,7 @@ public class SetPolicyAssetScopeRequest extends TeaModel {
         public String accountScopeType;
 
         /**
-         * <p>The asset group ID.</p>
+         * <p>The ID of the asset group.</p>
          * 
          * <strong>example:</strong>
          * <p>86</p>
@@ -290,8 +293,8 @@ public class SetPolicyAssetScopeRequest extends TeaModel {
         /**
          * <p>The scope of host accounts to which the control policy applies. Valid values:</p>
          * <ul>
-         * <li><strong>All</strong>: applies to all accounts on the host.</li>
-         * <li><strong>AccountId</strong>: applies to specified accounts on the host.</li>
+         * <li><strong>All</strong>: all accounts on the host</li>
+         * <li><strong>AccountId</strong>: specified accounts on the host</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -301,7 +304,7 @@ public class SetPolicyAssetScopeRequest extends TeaModel {
         public String accountScopeType;
 
         /**
-         * <p>The host accounts to which the control policy applies.</p>
+         * <p>The scope of host accounts to which the control policy applies.</p>
          * <blockquote>
          * <p>Required when AccountScopeType is set to AccountId.</p>
          * </blockquote>
@@ -310,7 +313,7 @@ public class SetPolicyAssetScopeRequest extends TeaModel {
         public java.util.List<String> hostAccountIds;
 
         /**
-         * <p>The host ID.</p>
+         * <p>The ID of the host.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

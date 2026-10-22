@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteHostRequest extends TeaModel {
     /**
-     * <p>The ID of the host that you want to delete.</p>
+     * <p>The ID of the host to be deleted.</p>
      * <blockquote>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query this parameter.</p>
      * </blockquote>
@@ -18,7 +18,7 @@ public class DeleteHostRequest extends TeaModel {
     public String hostId;
 
     /**
-     * <p>The instance ID of the bastion host where the host that you want to delete resides.</p>
+     * <p>The instance ID of the bastion host to which the host to be deleted belongs.</p>
      * <blockquote>
      * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</p>
      * </blockquote>
@@ -32,12 +32,15 @@ public class DeleteHostRequest extends TeaModel {
 
     /**
      * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The region ID of the bastion host instance where the host that you want to delete resides.</p>
+     * <p>The region ID of the bastion host instance to which the host to be deleted belongs.</p>
      * <blockquote>
      * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>

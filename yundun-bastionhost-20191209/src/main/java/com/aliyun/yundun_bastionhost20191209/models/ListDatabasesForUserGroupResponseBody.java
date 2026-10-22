@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDatabasesForUserGroupResponseBody extends TeaModel {
     /**
-     * <p>The list of databases that are queried.</p>
+     * <p>The queried databases.</p>
      */
     @NameInMap("Databases")
     public java.util.List<ListDatabasesForUserGroupResponseBodyDatabases> databases;
 
     /**
-     * <p>The unique ID that Alibaba Cloud generates for the request.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
@@ -20,7 +20,7 @@ public class ListDatabasesForUserGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of databases that are queried.</p>
+     * <p>The total number of queried databases.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -59,12 +59,10 @@ public class ListDatabasesForUserGroupResponseBody extends TeaModel {
 
     public static class ListDatabasesForUserGroupResponseBodyDatabases extends TeaModel {
         /**
-         * <p>The type of the database address. Valid values:</p>
+         * <p>The address type of the database. Valid values:</p>
          * <ul>
-         * <li><p><strong>Public</strong>: public address</p>
-         * </li>
-         * <li><p><strong>Private</strong>: private address</p>
-         * </li>
+         * <li><strong>Public</strong>: public network address</li>
+         * <li><strong>Private</strong>: private network address</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -83,7 +81,7 @@ public class ListDatabasesForUserGroupResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The total number of database accounts that are queried.</p>
+         * <p>The total number of queried database accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -92,7 +90,7 @@ public class ListDatabasesForUserGroupResponseBody extends TeaModel {
         public Long databaseAccountCount;
 
         /**
-         * <p>The ID of the database instance to which the database account belongs.</p>
+         * <p>The instance ID of the database to which the database account belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -119,7 +117,7 @@ public class ListDatabasesForUserGroupResponseBody extends TeaModel {
         public Long databasePort;
 
         /**
-         * <p>The private endpoint of the database, which can be a domain name or an IP address.</p>
+         * <p>The private network address of the database, which can be a domain name or an IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-bp1******</p>
@@ -139,14 +137,10 @@ public class ListDatabasesForUserGroupResponseBody extends TeaModel {
         /**
          * <p>The type of the database. Valid values:</p>
          * <ul>
-         * <li><p><strong>MySQL</strong></p>
-         * </li>
-         * <li><p><strong>Oracle</strong></p>
-         * </li>
-         * <li><p><strong>PostgreSQL</strong></p>
-         * </li>
-         * <li><p><strong>SQLServer</strong></p>
-         * </li>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>Oracle</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * <li><strong>SQLServer</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -164,21 +158,30 @@ public class ListDatabasesForUserGroupResponseBody extends TeaModel {
         @NameInMap("NetworkDomainId")
         public String networkDomainId;
 
+        /**
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("ProjectId")
         public String projectId;
 
+        /**
+         * <p>The project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("ProjectName")
         public String projectName;
 
         /**
          * <p>The source of the database. Valid values:</p>
          * <ul>
-         * <li><p><strong>Local</strong>: local database instance</p>
-         * </li>
-         * <li><p><strong>Rds</strong>: RDS database instance</p>
-         * </li>
-         * <li><p><strong>PolarDB</strong>: PolarDB database instance</p>
-         * </li>
+         * <li><strong>Local</strong>: self-managed database instance</li>
+         * <li><strong>Rds</strong>: ApsaraDB RDS instance</li>
+         * <li><strong>PolarDB</strong>: PolarDB instance</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -188,7 +191,7 @@ public class ListDatabasesForUserGroupResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The ID of the RDS instance or PolarDB instance that corresponds to the database.</p>
+         * <p>The instance ID of the ApsaraDB RDS or PolarDB instance that corresponds to the database.</p>
          * <blockquote>
          * <p>If <strong>Source</strong> is set to <strong>Local</strong>, this parameter is empty.</p>
          * </blockquote>

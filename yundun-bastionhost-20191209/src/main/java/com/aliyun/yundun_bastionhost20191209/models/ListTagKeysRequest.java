@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagKeysRequest extends TeaModel {
     /**
-     * <p>The page number to return.</p>
+     * <p>The page number of the current page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListTagKeysRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The maximum number of entries to return on each page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,12 +32,20 @@ public class ListTagKeysRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek2jpqvnr6yd3a</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The type of the resource.</p>
-     * <p>The only valid value is INSTANCE, which represents a Bastionhost instance.</p>
+     * <p>The resource type definition. Valid values:</p>
+     * <ul>
+     * <li>INSTANCE: Bastionhost instance.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

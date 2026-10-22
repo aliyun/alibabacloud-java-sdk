@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyRuleRequest extends TeaModel {
     /**
-     * <p>The new remarks of the authorization rule. It can be up to 500 characters in length.</p>
+     * <p>The new remarks for the authorization rule. The remarks can be up to 500 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>TEST</p>
@@ -14,13 +14,13 @@ public class ModifyRuleRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The databases and database accounts that a user associated with the modified rule can manage.</p>
+     * <p>The new list of database instances and database accounts associated with the authorization rule.</p>
      */
     @NameInMap("Databases")
     public java.util.List<ModifyRuleRequestDatabases> databases;
 
     /**
-     * <p>The end time of the new validity period of the authorization rule. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The new end time of the validity period for the authorization rule. The value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1672502400</p>
@@ -29,7 +29,7 @@ public class ModifyRuleRequest extends TeaModel {
     public Long effectiveEndTime;
 
     /**
-     * <p>The start time of the new validity period of the authorization rule. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The new start time of the validity period for the authorization rule. The value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1669630029</p>
@@ -38,22 +38,19 @@ public class ModifyRuleRequest extends TeaModel {
     public Long effectiveStartTime;
 
     /**
-     * <p>The asset groups and asset accounts that a user associated with the modified rule can manage.</p>
+     * <p>The new list of asset groups and accounts associated with the authorization rule.</p>
      */
     @NameInMap("HostGroups")
     public java.util.List<ModifyRuleRequestHostGroups> hostGroups;
 
     /**
-     * <p>An array that consists of the host IDs and host account IDs with which the modified authorization rule is associated.</p>
+     * <p>The new array of host IDs and host account IDs associated with the authorization rule.</p>
      */
     @NameInMap("Hosts")
     public java.util.List<ModifyRuleRequestHosts> hosts;
 
     /**
-     * <p>The ID of the bastion host whose authorization rule you want to modify.</p>
-     * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
-     * </blockquote>
+     * <p>The ID of the Bastionhost instance to which the authorization rule to be updated belongs. &gt; You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the value of this parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,14 +59,17 @@ public class ModifyRuleRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The region ID of the bastion host to which the authorization rule to modify belongs.</p>
-     * <blockquote>
-     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
-     * </blockquote>
+     * <p>The region ID of the Bastionhost instance to which the authorization rule to be updated belongs. &gt; For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -78,7 +78,7 @@ public class ModifyRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the authorization rule to modify.</p>
+     * <p>The ID of the authorization rule to be updated.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class ModifyRuleRequest extends TeaModel {
     public String ruleId;
 
     /**
-     * <p>The new name of the authorization rule. The name must be 1 to 128 characters in length and can contain periods (.), underscores (_), hyphens (-), single quotation marks (\&quot;), and spaces. It cannot start with a special character.</p>
+     * <p>The new name of the authorization rule. The name must be 1 to 128 characters in length and cannot start with a special character. It can contain only periods (.), underscores (_), hyphens (-), single quotation marks (\&quot;), and spaces.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -97,13 +97,13 @@ public class ModifyRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The IDs of the user groups with which the modified authorization rule is associated.</p>
+     * <p>The new list of user group IDs associated with the authorization rule.</p>
      */
     @NameInMap("UserGroupIds")
     public java.util.List<String> userGroupIds;
 
     /**
-     * <p>The IDs of the users with whom the modified authorization rule is associated.</p>
+     * <p>The new list of user IDs associated with the authorization rule.</p>
      */
     @NameInMap("UserIds")
     public java.util.List<String> userIds;
@@ -219,13 +219,13 @@ public class ModifyRuleRequest extends TeaModel {
 
     public static class ModifyRuleRequestDatabases extends TeaModel {
         /**
-         * <p>The database account IDs.</p>
+         * <p>The list of database account IDs.</p>
          */
         @NameInMap("DatabaseAccountIds")
         public java.util.List<String> databaseAccountIds;
 
         /**
-         * <p>The database ID.</p>
+         * <p>The database instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -258,7 +258,7 @@ public class ModifyRuleRequest extends TeaModel {
 
     public static class ModifyRuleRequestHostGroups extends TeaModel {
         /**
-         * <p>The names of the asset accounts.</p>
+         * <p>The list of asset account names.</p>
          */
         @NameInMap("HostAccountNames")
         public java.util.List<String> hostAccountNames;
@@ -297,7 +297,7 @@ public class ModifyRuleRequest extends TeaModel {
 
     public static class ModifyRuleRequestHosts extends TeaModel {
         /**
-         * <p>The host account IDs.</p>
+         * <p>The list of host account IDs.</p>
          */
         @NameInMap("HostAccountIds")
         public java.util.List<String> hostAccountIds;

@@ -7,7 +7,7 @@ public class GetDatabaseRequest extends TeaModel {
     /**
      * <p>The ID of the database to query.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758822.html">ListDatabases</a> operation to query the database ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758822.html">ListDatabases</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class GetDatabaseRequest extends TeaModel {
     public String databaseId;
 
     /**
-     * <p>The ID of the bastion host that manages the database to query.</p>
+     * <p>The instance ID of the bastion host where the database resides.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -30,13 +30,19 @@ public class GetDatabaseRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The region ID of the bastion host that manages the database to query.</p>
+     * <p>The region ID of the bastion host where the database resides.</p>
      * <blockquote>
-     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

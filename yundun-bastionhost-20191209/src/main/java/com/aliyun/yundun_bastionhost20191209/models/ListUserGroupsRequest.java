@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListUserGroupsRequest extends TeaModel {
     /**
-     * <p>The ID of the bastion host on which you want to query user groups.</p>
+     * <p>The ID of the Bastionhost instance whose user groups you want to query.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/462953.html">DescribeInstances </a>operation to query the ID of the bastion host.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the instance ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class ListUserGroupsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The page number for paging. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,7 +27,10 @@ public class ListUserGroupsRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <p>The maximum number of entries to return on each page for paging. Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned by default.</p>
+     * <blockquote>
+     * <p>Specify a value for this parameter.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -35,13 +38,19 @@ public class ListUserGroupsRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The region ID of the bastion host on which you want to query user groups.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/462924.html">Regions and zones</a>.</p>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -51,7 +60,7 @@ public class ListUserGroupsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the user group that you want to query. Only exact match is supported.</p>
+     * <p>The name of the user group to query. Only exact match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>TestGroup01</p>

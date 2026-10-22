@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyNetworkDomainRequest extends TeaModel {
     /**
-     * <p>The new remarks of the network domain.</p>
+     * <p>The new description of the network domain.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -14,9 +14,9 @@ public class ModifyNetworkDomainRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The ID of the bastion host to which the network domain to modify belongs.</p>
+     * <p>The instance ID of the Bastionhost instance to which the network domain to be modified belongs.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the parameter value.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,7 +27,7 @@ public class ModifyNetworkDomainRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the network domain to modify.</p>
+     * <p>The ID of the network domain to be modified.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,12 +46,10 @@ public class ModifyNetworkDomainRequest extends TeaModel {
     public String networkDomainName;
 
     /**
-     * <p>The new connection mode of the network domain. Valid values:</p>
+     * <p>The new type of the network domain. Valid values:</p>
      * <ul>
-     * <li><p><strong>Direct</strong></p>
-     * </li>
-     * <li><p><strong>Proxy</strong></p>
-     * </li>
+     * <li><strong>Direct</strong>: Direct connection.</li>
+     * <li><strong>Proxy</strong>: Proxy.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,6 +58,12 @@ public class ModifyNetworkDomainRequest extends TeaModel {
     @NameInMap("NetworkDomainType")
     public String networkDomainType;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
@@ -70,7 +74,7 @@ public class ModifyNetworkDomainRequest extends TeaModel {
     public java.util.List<ModifyNetworkDomainRequestProxies> proxies;
 
     /**
-     * <p>The region ID of the bastion host to which the network domain to modify belongs.</p>
+     * <p>The region ID of the Bastionhost instance to which the network domain to be modified belongs.</p>
      * <blockquote>
      * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
@@ -152,7 +156,7 @@ public class ModifyNetworkDomainRequest extends TeaModel {
 
     public static class ModifyNetworkDomainRequestProxies extends TeaModel {
         /**
-         * <p>The new IP address of the proxy server.</p>
+         * <p>The new address of the proxy server.</p>
          * 
          * <strong>example:</strong>
          * <p>114.21**.**</p>
@@ -161,12 +165,10 @@ public class ModifyNetworkDomainRequest extends TeaModel {
         public String address;
 
         /**
-         * <p>The node type of the proxy server to modify. Valid values:</p>
+         * <p>The type of the proxy server node to be modified. Valid values:</p>
          * <ul>
-         * <li><p><strong>Master</strong>: primary proxy server.</p>
-         * </li>
-         * <li><p><strong>Slave</strong>: secondary proxy server.</p>
-         * </li>
+         * <li><strong>Master</strong>: Primary proxy server.</li>
+         * <li><strong>Slave</strong>: Secondary proxy server.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -185,7 +187,7 @@ public class ModifyNetworkDomainRequest extends TeaModel {
         public String password;
 
         /**
-         * <p>The new port of the proxy server.</p>
+         * <p>The new Server Port of the proxy server.</p>
          * 
          * <strong>example:</strong>
          * <p>22</p>
@@ -194,14 +196,11 @@ public class ModifyNetworkDomainRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The new proxy mode. Valid values:</p>
+         * <p>The new proxy type. Valid values:</p>
          * <ul>
-         * <li><p><strong>SSHProxy</strong></p>
-         * </li>
-         * <li><p><strong>HTTPProxy</strong></p>
-         * </li>
-         * <li><p><strong>Socks5Proxy</strong></p>
-         * </li>
+         * <li><strong>SSHProxy</strong>: SSH proxy.</li>
+         * <li><strong>HTTPProxy</strong>: HTTP proxy.</li>
+         * <li><strong>Socks5Proxy</strong>: SOCKS5 proxy.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -211,7 +210,7 @@ public class ModifyNetworkDomainRequest extends TeaModel {
         public String proxyType;
 
         /**
-         * <p>The new username of the proxy server account.</p>
+         * <p>The new username of the proxy server.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDatabasesForUserGroupRequest extends TeaModel {
     /**
-     * <p>The address of the database that you want to query. Only term query is supported.</p>
+     * <p>The address of the database to query. Only exact match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p><code>47.101.**.**</code></p>
@@ -14,7 +14,7 @@ public class ListDatabasesForUserGroupRequest extends TeaModel {
     public String databaseAddress;
 
     /**
-     * <p>The name of the database instance that you want to query.</p>
+     * <p>The name of the database instance to query.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -23,16 +23,12 @@ public class ListDatabasesForUserGroupRequest extends TeaModel {
     public String databaseName;
 
     /**
-     * <p>The type of the database that you want to query. Valid values:</p>
+     * <p>The type of the database to query. Valid values:</p>
      * <ul>
-     * <li><p><strong>MySQL</strong></p>
-     * </li>
-     * <li><p><strong>Oracle</strong></p>
-     * </li>
-     * <li><p><strong>PostgreSQL</strong></p>
-     * </li>
-     * <li><p><strong>SQLServer</strong></p>
-     * </li>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>Oracle</strong></li>
+     * <li><strong>PostgreSQL</strong></li>
+     * <li><strong>SQLServer</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,9 +38,9 @@ public class ListDatabasesForUserGroupRequest extends TeaModel {
     public String databaseType;
 
     /**
-     * <p>The ID of the Bastionhost instance.</p>
+     * <p>The instance ID of the Bastionhost.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -64,7 +60,7 @@ public class ListDatabasesForUserGroupRequest extends TeaModel {
     public String networkDomainId;
 
     /**
-     * <p>The page number of the paged query. Default value: 1.</p>
+     * <p>The page number of the page to return in a paged query. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -73,9 +69,9 @@ public class ListDatabasesForUserGroupRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The maximum number of entries to return on each page for a paged query.<br> The maximum value of the PageSize parameter is 100. By default, 20 entries are returned on each page. If you leave the PageSize parameter empty, 20 entries are returned.</p>
+     * <p>The maximum number of entries to return on each page in a paged query. Maximum value: 100. Default value: 20. If this parameter is left empty, 20 entries are returned by default.</p>
      * <blockquote>
-     * <p>We recommend that you do not leave the PageSize parameter empty.</p>
+     * <p>Do not leave this parameter empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -84,13 +80,19 @@ public class ListDatabasesForUserGroupRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
      * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

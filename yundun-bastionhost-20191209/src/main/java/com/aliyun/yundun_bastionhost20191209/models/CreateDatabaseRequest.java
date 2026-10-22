@@ -7,8 +7,8 @@ public class CreateDatabaseRequest extends TeaModel {
     /**
      * <p>The address type of the new database. Valid values:</p>
      * <ul>
-     * <li>Public: public address</li>
-     * <li>Private: private network address</li>
+     * <li>Public: public endpoint.</li>
+     * <li>Private: private endpoint.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,7 +19,7 @@ public class CreateDatabaseRequest extends TeaModel {
     public String activeAddressType;
 
     /**
-     * <p>The remarks of the new database. The value can be up to 500 characters in length.</p>
+     * <p>The description of the new database. The value can be up to 500 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>cpp</p>
@@ -28,7 +28,7 @@ public class CreateDatabaseRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The name of the new database instance. This parameter is required when the database source is <strong>Local</strong>.</p>
+     * <p>The name of the new database instance. This parameter is required if Source is set to <strong>Local</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>Test01</p>
@@ -37,7 +37,7 @@ public class CreateDatabaseRequest extends TeaModel {
     public String databaseName;
 
     /**
-     * <p>The port used to access the database. This parameter is required when the database source is <strong>Local</strong>.</p>
+     * <p>The port of the database. This parameter is required if Source is set to <strong>Local</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>5433</p>
@@ -46,9 +46,9 @@ public class CreateDatabaseRequest extends TeaModel {
     public Integer databasePort;
 
     /**
-     * <p>The private network address. IPv4 addresses and domain name formats are supported.</p>
+     * <p>The private endpoint. IPv4 addresses and domain names are supported.</p>
      * <blockquote>
-     * <p>This parameter is required when ActiveAddressType is set to Private.</p>
+     * <p>This parameter is required if ActiveAddressType is set to Private.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -58,9 +58,9 @@ public class CreateDatabaseRequest extends TeaModel {
     public String databasePrivateAddress;
 
     /**
-     * <p>The public address. IPv4 addresses and domain name formats are supported.</p>
+     * <p>The public endpoint. IPv4 addresses and domain names are supported.</p>
      * <blockquote>
-     * <p>This parameter is required when ActiveAddressType is set to Public.</p>
+     * <p>This parameter is required if ActiveAddressType is set to Public.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -70,7 +70,7 @@ public class CreateDatabaseRequest extends TeaModel {
     public String databasePublicAddress;
 
     /**
-     * <p>The database type. Valid values:</p>
+     * <p>The type of the database. Valid values:</p>
      * <ul>
      * <li><strong>MySQL</strong></li>
      * <li><strong>Oracle</strong></li>
@@ -120,10 +120,10 @@ public class CreateDatabaseRequest extends TeaModel {
     public String networkDomainId;
 
     /**
-     * <p>The endpoint type of the PolarDB cluster. This parameter is required when Source is set to PolarDB. Valid values:</p>
+     * <p>The endpoint type of the PolarDB cluster. This parameter is required if Source is set to PolarDB. Valid values:</p>
      * <ul>
-     * <li>Cluster: cluster endpoint</li>
-     * <li>Primary: primary endpoint</li>
+     * <li>Cluster: cluster endpoint.</li>
+     * <li>Primary: primary endpoint.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -134,6 +134,9 @@ public class CreateDatabaseRequest extends TeaModel {
 
     /**
      * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
@@ -153,9 +156,9 @@ public class CreateDatabaseRequest extends TeaModel {
     /**
      * <p>The source of the new database. Valid values:</p>
      * <ul>
-     * <li>Local: self-managed database instance</li>
-     * <li>Rds: ApsaraDB RDS instance</li>
-     * <li>PolarDB: PolarDB cluster</li>
+     * <li>Local: self-managed database instance.</li>
+     * <li>Rds: ApsaraDB RDS instance.</li>
+     * <li>PolarDB: PolarDB cluster.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -168,7 +171,7 @@ public class CreateDatabaseRequest extends TeaModel {
     /**
      * <p>The instance ID of the new database.  </p>
      * <blockquote>
-     * <p>This parameter is required when <strong>Source</strong> is set to <strong>Rds</strong> or <strong>PolarDB</strong>.</p>
+     * <p>This parameter is required if <strong>Source</strong> is set to <strong>Rds</strong> or <strong>PolarDB</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -180,7 +183,7 @@ public class CreateDatabaseRequest extends TeaModel {
     /**
      * <p>The region ID of the new database instance.</p>
      * <blockquote>
-     * <p>This parameter is required when <strong>Source</strong> is set to <strong>Rds</strong> or <strong>PolarDB</strong>.</p>
+     * <p>This parameter is required if <strong>Source</strong> is set to <strong>Rds</strong> or <strong>PolarDB</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

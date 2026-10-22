@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class RemoveUsersFromGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the bastion host for which you want to remove users from the user group.</p>
+     * <p>The ID of the Bastionhost instance to which the user group from which you want to remove users belongs.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the value of this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -17,11 +17,17 @@ public class RemoveUsersFromGroupRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The region ID of the bastion host for which you want to remove users from the user group.</p>
+     * <p>The region ID of the Bastionhost instance to which the user group from which you want to remove users belongs.</p>
      * <blockquote>
      * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
@@ -35,7 +41,7 @@ public class RemoveUsersFromGroupRequest extends TeaModel {
     /**
      * <p>The ID of the user group from which you want to remove users.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to query the ID of the user group.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to query the value of this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -46,9 +52,9 @@ public class RemoveUsersFromGroupRequest extends TeaModel {
     public String userGroupId;
 
     /**
-     * <p>The ID of the user who you want to remove. The value is a JSON string. You can add up to 100 user IDs. If you specify multiple IDs, separate the IDs with commas (,).</p>
+     * <p>The IDs of the users that you want to remove. The value of this parameter is a JSON string. You can specify up to 100 user IDs. Separate multiple IDs with commas (,).</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query the IDs of users.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query user IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class DetachDatabaseAccountsFromUserGroupRequest extends TeaModel {
     /**
-     * <p>The information about the database.</p>
+     * <p>The information about the databases from which you want to remove authorization.</p>
      */
     @NameInMap("Databases")
     public java.util.List<DetachDatabaseAccountsFromUserGroupRequestDatabases> databases;
 
     /**
-     * <p>The bastion host ID.</p>
+     * <p>The ID of the bastion host instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -23,13 +23,19 @@ public class DetachDatabaseAccountsFromUserGroupRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
      * <p>The region ID of the bastion host.</p>
      * <blockquote>
-     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,9 +45,9 @@ public class DetachDatabaseAccountsFromUserGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the user group from which you want to revoke permissions on databases and database accounts.</p>
+     * <p>The ID of the user group from which you want to remove authorized databases and database accounts.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to query the ID of the user group.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -98,13 +104,13 @@ public class DetachDatabaseAccountsFromUserGroupRequest extends TeaModel {
 
     public static class DetachDatabaseAccountsFromUserGroupRequestDatabases extends TeaModel {
         /**
-         * <p>An array that consists of database account IDs.</p>
+         * <p>The IDs of the database accounts from which you want to remove authorization.</p>
          */
         @NameInMap("DatabaseAccountIds")
         public java.util.List<String> databaseAccountIds;
 
         /**
-         * <p>The ID of the database on which the permissions are to be revoked.</p>
+         * <p>The instance ID of the database from which you want to remove authorization.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>

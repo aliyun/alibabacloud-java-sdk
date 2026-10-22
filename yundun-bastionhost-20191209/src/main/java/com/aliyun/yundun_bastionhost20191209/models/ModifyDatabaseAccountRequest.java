@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyDatabaseAccountRequest extends TeaModel {
     /**
-     * <p>The ID of the database account to modify.</p>
+     * <p>The ID of the database account to be modified.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758839.html">ListDatabaseAccounts</a> operation to query the database account ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758839.html">ListDatabaseAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class ModifyDatabaseAccountRequest extends TeaModel {
     public String databaseAccountId;
 
     /**
-     * <p>The new username of the database account. The username can be up to 128 characters in length.</p>
+     * <p>The new name of the database account. The name can be up to 128 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>aaa</p>
@@ -27,7 +27,7 @@ public class ModifyDatabaseAccountRequest extends TeaModel {
     public String databaseAccountName;
 
     /**
-     * <p>The new name of the database. This parameter is required if the database engine is PostgreSQL or Oracle.</p>
+     * <p>The new database schema name. This parameter is required when the database specified by DatabaseId is a PostgreSQL or Oracle database.</p>
      * 
      * <strong>example:</strong>
      * <p>orcl</p>
@@ -36,9 +36,9 @@ public class ModifyDatabaseAccountRequest extends TeaModel {
     public String databaseSchema;
 
     /**
-     * <p>The ID of the bastion host that manages the database account to modify.</p>
+     * <p>The instance ID of the Bastionhost instance where the database account to be modified resides.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -57,11 +57,17 @@ public class ModifyDatabaseAccountRequest extends TeaModel {
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The region ID of the bastion host that manages the database account to modify.</p>
+     * <p>The region ID of the Bastionhost instance where the database account to be modified resides.</p>
      * <blockquote>
      * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class SetPolicyProtocolConfigShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the Bastionhost instance.</p>
+     * <p>The instance ID of the bastion host.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the instance ID.</p>
+     * <p>You can invoke <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class SetPolicyProtocolConfigShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the control policy that you want to modify.</p>
+     * <p>The ID of the control policy to modify.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to obtain the policy ID.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -30,6 +30,12 @@ public class SetPolicyProtocolConfigShrinkRequest extends TeaModel {
     @NameInMap("PolicyId")
     public String policyId;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
@@ -41,9 +47,9 @@ public class SetPolicyProtocolConfigShrinkRequest extends TeaModel {
     public String protocolConfigShrink;
 
     /**
-     * <p>The ID of the region where the Bastionhost instance resides.</p>
+     * <p>The region ID of the bastion host.</p>
      * <blockquote>
-     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

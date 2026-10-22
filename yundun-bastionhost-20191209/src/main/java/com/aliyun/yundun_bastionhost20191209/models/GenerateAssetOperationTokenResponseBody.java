@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateAssetOperationTokenResponseBody extends TeaModel {
     /**
-     * <p>The asset operation token.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("AssetOperationToken")
     public GenerateAssetOperationTokenResponseBodyAssetOperationToken assetOperationToken;
@@ -42,7 +42,7 @@ public class GenerateAssetOperationTokenResponseBody extends TeaModel {
 
     public static class GenerateAssetOperationTokenResponseBodyAssetOperationToken extends TeaModel {
         /**
-         * <p>The number of remaining uses for the token.</p>
+         * <p>The remaining number of times the O&amp;M token can be used.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -51,7 +51,7 @@ public class GenerateAssetOperationTokenResponseBody extends TeaModel {
         public Long countLeft;
 
         /**
-         * <p>The expiration time of the token. This value is a UNIX timestamp.</p>
+         * <p>The expiration time of the O&amp;M token. The value is a UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1709110797</p>
@@ -60,7 +60,7 @@ public class GenerateAssetOperationTokenResponseBody extends TeaModel {
         public Long expireTime;
 
         /**
-         * <p>Indicates whether the token has a use limit.</p>
+         * <p>Indicates whether the number of uses is limited.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -87,7 +87,7 @@ public class GenerateAssetOperationTokenResponseBody extends TeaModel {
         public Long renewCount;
 
         /**
-         * <p>The single sign-on (SSO) URL.</p>
+         * <p>The single sign-on URL.</p>
          * 
          * <strong>example:</strong>
          * <p>sso://eyJOT0RFX0NPTU1PTiI6eyJNb2R******</p>
@@ -96,7 +96,7 @@ public class GenerateAssetOperationTokenResponseBody extends TeaModel {
         public String ssoUrl;
 
         /**
-         * <p>The O\&amp;M token that is requested.</p>
+         * <p>The requested O&amp;M token.</p>
          * 
          * <strong>example:</strong>
          * <p>NmYyMmEzNmMwYzljNGY******</p>
@@ -105,7 +105,7 @@ public class GenerateAssetOperationTokenResponseBody extends TeaModel {
         public String token;
 
         /**
-         * <p>The ID of the O\&amp;M token.</p>
+         * <p>The ID of the O&amp;M token.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

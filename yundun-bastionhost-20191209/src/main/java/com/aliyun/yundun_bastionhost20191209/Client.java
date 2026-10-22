@@ -94,11 +94,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Approves a command execution request submitted by an O&amp;M engineer.
+     * <p>Approves a command execution request from an O&amp;M engineer.
      * The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>If an O&amp;M engineer executes a command configured in a command approval control policy, the administrator receives an approval request for the command in the Bastionhost console. The command can be executed only after the administrator approves it. If the approval is rejected, the command cannot be executed.</p>
+     * <p>If an O&amp;M engineer runs a command that is configured in a command approval control policy, the administrator receives an approval request for the command in the Bastionhost console. The command can be run only after the administrator approves the request. If the administrator rejects the request, the command cannot be run.</p>
      * 
      * @param request AcceptApproveCommandRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -142,11 +142,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Approves a command execution request submitted by an O&amp;M engineer.
+     * <p>Approves a command execution request from an O&amp;M engineer.
      * The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>If an O&amp;M engineer executes a command configured in a command approval control policy, the administrator receives an approval request for the command in the Bastionhost console. The command can be executed only after the administrator approves it. If the approval is rejected, the command cannot be executed.</p>
+     * <p>If an O&amp;M engineer runs a command that is configured in a command approval control policy, the administrator receives an approval request for the command in the Bastionhost console. The command can be run only after the administrator approves the request. If the administrator rejects the request, the command cannot be run.</p>
      * 
      * @param request AcceptApproveCommandRequest
      * @return AcceptApproveCommandResponse
@@ -158,11 +158,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used by administrators to approve O&amp;M requests submitted by O&amp;M engineers.
-     * This operation has a single-user QPS limit of 10 requests per second. If this limit is exceeded, API calls are throttled, which may affect your business. Please call this operation appropriately.</p>
+     * <p>Approves an O&amp;M request submitted by an O&amp;M engineer.
+     * The China site Chinese version of this China Chinese China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China.</p>
      * 
      * <b>summary</b> : 
-     * <p>If an administrator enables O&amp;M approval in a control policy, an O&amp;M engineer must submit an O&amp;M request and obtain administrator approval before logging on to an asset.</p>
+     * <p>If an administrator enables O&amp;M approval in a control policy, O&amp;M engineers must submit an O&amp;M request and obtain administrator approval before they can log on to assets.</p>
      * 
      * @param request AcceptOperationTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -222,11 +222,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used by administrators to approve O&amp;M requests submitted by O&amp;M engineers.
-     * This operation has a single-user QPS limit of 10 requests per second. If this limit is exceeded, API calls are throttled, which may affect your business. Please call this operation appropriately.</p>
+     * <p>Approves an O&amp;M request submitted by an O&amp;M engineer.
+     * The China site Chinese version of this China Chinese China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China.</p>
      * 
      * <b>summary</b> : 
-     * <p>If an administrator enables O&amp;M approval in a control policy, an O&amp;M engineer must submit an O&amp;M request and obtain administrator approval before logging on to an asset.</p>
+     * <p>If an administrator enables O&amp;M approval in a control policy, O&amp;M engineers must submit an O&amp;M request and obtain administrator approval before they can log on to assets.</p>
      * 
      * @param request AcceptOperationTicketRequest
      * @return AcceptOperationTicketResponse
@@ -296,7 +296,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Adds multiple hosts to a specified host group in a batch. By adding multiple hosts to a host group, you can centrally manage these hosts and grant permissions in a batch.</p>
      * <h3>QPS limit</h3>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
      * 
      * <b>summary</b> : 
      * <p>Adds multiple hosts to a specified asset group in a batch.</p>
@@ -349,7 +349,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Adds multiple hosts to a specified host group in a batch. By adding multiple hosts to a host group, you can centrally manage these hosts and grant permissions in a batch.</p>
      * <h3>QPS limit</h3>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
      * 
      * <b>summary</b> : 
      * <p>Adds multiple hosts to a specified asset group in a batch.</p>
@@ -419,7 +419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h3>Operation description</h3>
      * <p>This operation adds users to a user group in a batch. After you create a user group by calling the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation, you can call this operation to add multiple users to the user group for batch authorization and management.</p>
      * <h3>QPS limit</h3>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Call this operation as appropriate.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
      * 
      * <b>summary</b> : 
      * <p>Adds users to a user group in a batch.</p>
@@ -473,7 +473,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h3>Operation description</h3>
      * <p>This operation adds users to a user group in a batch. After you create a user group by calling the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation, you can call this operation to add multiple users to the user group for batch authorization and management.</p>
      * <h3>QPS limit</h3>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Call this operation as appropriate.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
      * 
      * <b>summary</b> : 
      * <p>Adds users to a user group in a batch.</p>
@@ -1290,11 +1290,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation configures a public IP address whitelist for a Bastionhost instance. By default, instances accept traffic from all public IP addresses. To restrict access, add IP addresses to the whitelist. This ensures only traffic from whitelisted IP addresses can reach the instance.
-     * Each user is limited to 30 queries per second (QPS) for this operation. The system throttles API calls that exceed this limit. This may affect your services, so plan your calls accordingly.</p>
+     * <p>Configures the public IP address whitelist for a Bastionhost instance. By default, all public IP addresses are allowed to access the Bastionhost instance. To restrict public network access, call this operation to add specified public IP addresses to the whitelist and restrict public network traffic to the Bastionhost instance.
+     * The queries per second (QPS) limit for a single user is 30 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</p>
      * 
      * <b>summary</b> : 
-     * <p>After enabling public network access for a Bastionhost instance, you can add IP addresses to a whitelist to control access.</p>
+     * <p>Adds specified public IP addresses to the whitelist of a Bastionhost instance after public network access is enabled to allow public network traffic to access the instance.</p>
      * 
      * @param request ConfigInstanceWhiteListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1338,11 +1338,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation configures a public IP address whitelist for a Bastionhost instance. By default, instances accept traffic from all public IP addresses. To restrict access, add IP addresses to the whitelist. This ensures only traffic from whitelisted IP addresses can reach the instance.
-     * Each user is limited to 30 queries per second (QPS) for this operation. The system throttles API calls that exceed this limit. This may affect your services, so plan your calls accordingly.</p>
+     * <p>Configures the public IP address whitelist for a Bastionhost instance. By default, all public IP addresses are allowed to access the Bastionhost instance. To restrict public network access, call this operation to add specified public IP addresses to the whitelist and restrict public network traffic to the Bastionhost instance.
+     * The queries per second (QPS) limit for a single user is 30 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</p>
      * 
      * <b>summary</b> : 
-     * <p>After enabling public network access for a Bastionhost instance, you can add IP addresses to a whitelist to control access.</p>
+     * <p>Adds specified public IP addresses to the whitelist of a Bastionhost instance after public network access is enabled to allow public network traffic to access the instance.</p>
      * 
      * @param request ConfigInstanceWhiteListRequest
      * @return ConfigInstanceWhiteListResponse
@@ -1354,7 +1354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Imports database assets into a bastion host. Supported database types include MySQL, SQL Server, and PostgreSQL for ApsaraDB RDS instances, MySQL, PostgreSQL, and PostgreSQL (Compatible with Oracle) for PolarDB clusters, and MySQL, SQL Server, PostgreSQL, and Oracle for self-managed databases.</p>
+     * <p>Imports database assets into a bastion host. Supported database types include MySQL, SQL Server, PostgreSQL, and Oracle for ApsaraDB RDS instances, MySQL, PostgreSQL, and PolarDB for PostgreSQL (Compatible with Oracle) for PolarDB clusters, and MySQL, SQL Server, PostgreSQL, and Oracle for self-managed databases.</p>
      * 
      * @param request CreateDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1446,7 +1446,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Imports database assets into a bastion host. Supported database types include MySQL, SQL Server, and PostgreSQL for ApsaraDB RDS instances, MySQL, PostgreSQL, and PostgreSQL (Compatible with Oracle) for PolarDB clusters, and MySQL, SQL Server, PostgreSQL, and Oracle for self-managed databases.</p>
+     * <p>Imports database assets into a bastion host. Supported database types include MySQL, SQL Server, PostgreSQL, and Oracle for ApsaraDB RDS instances, MySQL, PostgreSQL, and PolarDB for PostgreSQL (Compatible with Oracle) for PolarDB clusters, and MySQL, SQL Server, PostgreSQL, and Oracle for self-managed databases.</p>
      * 
      * @param request CreateDatabaseRequest
      * @return CreateDatabaseResponse
@@ -1674,7 +1674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>After you create a host in Bastionhost, you can create a host account for the host to manage the existing account of the host in Bastionhost. After you create a host account, O&amp;M engineers can use the account to log on to the host through Bastionhost for O&amp;M operations.</p>
+     * <p>After you add a host to Bastionhost, you can create a host account for the host to manage the existing account of the host in Bastionhost. After a host account is created, O&amp;M engineers can use the account to log on to the host through Bastionhost for O&amp;M operations.</p>
      * 
      * @param request CreateHostAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1750,7 +1750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>After you create a host in Bastionhost, you can create a host account for the host to manage the existing account of the host in Bastionhost. After you create a host account, O&amp;M engineers can use the account to log on to the host through Bastionhost for O&amp;M operations.</p>
+     * <p>After you add a host to Bastionhost, you can create a host account for the host to manage the existing account of the host in Bastionhost. After a host account is created, O&amp;M engineers can use the account to log on to the host through Bastionhost for O&amp;M operations.</p>
      * 
      * @param request CreateHostAccountRequest
      * @return CreateHostAccountResponse
@@ -1822,7 +1822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The shared key feature of Bastionhost allows you to store private keys used for host logon in Bastionhost. After being stored, a private key can be shared across multiple host accounts to improve host account management efficiency.</p>
+     * <p>The shared key feature of Bastionhost allows you to store private keys used for host logon in Bastionhost. After a private key is stored, it can be shared across multiple host accounts to improve host account management efficiency.</p>
      * 
      * @param request CreateHostShareKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1874,7 +1874,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The shared key feature of Bastionhost allows you to store private keys used for host logon in Bastionhost. After being stored, a private key can be shared across multiple host accounts to improve host account management efficiency.</p>
+     * <p>The shared key feature of Bastionhost allows you to store private keys used for host logon in Bastionhost. After a private key is stored, it can be shared across multiple host accounts to improve host account management efficiency.</p>
      * 
      * @param request CreateHostShareKeyRequest
      * @return CreateHostShareKeyResponse
@@ -1886,7 +1886,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>If you want to perform unified O&amp;M on assets that are distributed across different network environments or that are not connected to the virtual private cloud (VPC) where Bastionhost resides, use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain in Bastionhost and add the proxy server, and then add the assets to the network domain to manage them through Bastionhost.</p>
+     * <p>To centrally manage assets that are distributed across different network environments or that cannot communicate with the virtual private cloud (VPC) where Bastionhost is deployed, use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain in Bastionhost, add the proxy server to the network domain, and then add the assets to the network domain. This way, you can manage the assets through Bastionhost.</p>
      * 
      * @param request CreateNetworkDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1942,7 +1942,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>If you want to perform unified O&amp;M on assets that are distributed across different network environments or that are not connected to the virtual private cloud (VPC) where Bastionhost resides, use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain in Bastionhost and add the proxy server, and then add the assets to the network domain to manage them through Bastionhost.</p>
+     * <p>To centrally manage assets that are distributed across different network environments or that cannot communicate with the virtual private cloud (VPC) where Bastionhost is deployed, use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain in Bastionhost, add the proxy server to the network domain, and then add the assets to the network domain. This way, you can manage the assets through Bastionhost.</p>
      * 
      * @param request CreateNetworkDomainRequest
      * @return CreateNetworkDomainResponse
@@ -1954,7 +1954,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an O&amp;M request. When an administrator enables O&amp;M approval in control policies, O&amp;M engineers must create an O&amp;M request and obtain administrator approval before performing O&amp;M operations.</p>
+     * <p>Creates an O&amp;M request. When an administrator enables O&amp;M approval in a control policy, O&amp;M engineers must create an O&amp;M request and obtain administrator approval before performing O&amp;M operations.</p>
      * 
      * @param request CreateOperationTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2022,7 +2022,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an O&amp;M request. When an administrator enables O&amp;M approval in control policies, O&amp;M engineers must create an O&amp;M request and obtain administrator approval before performing O&amp;M operations.</p>
+     * <p>Creates an O&amp;M request. When an administrator enables O&amp;M approval in a control policy, O&amp;M engineers must create an O&amp;M request and obtain administrator approval before performing O&amp;M operations.</p>
      * 
      * @param request CreateOperationTicketRequest
      * @return CreateOperationTicketResponse
@@ -2034,7 +2034,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Controls O&amp;M behaviors through Settings for command control, command approval, protocol control, and access control policy to effectively prevent users from executing high-risk commands or performing misoperations, ensuring O&amp;M security.</p>
+     * <p>Manages O&amp;M behaviors by configuring command control, command approval, protocol control, and access control policies to effectively prevent users from executing high-risk commands or performing misoperations, ensuring O&amp;M security.</p>
      * 
      * @param request CreatePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2086,7 +2086,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Controls O&amp;M behaviors through Settings for command control, command approval, protocol control, and access control policy to effectively prevent users from executing high-risk commands or performing misoperations, ensuring O&amp;M security.</p>
+     * <p>Manages O&amp;M behaviors by configuring command control, command approval, protocol control, and access control policies to effectively prevent users from executing high-risk commands or performing misoperations, ensuring O&amp;M security.</p>
      * 
      * @param request CreatePolicyRequest
      * @return CreatePolicyResponse
@@ -2342,7 +2342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can create authorization rules to authorize multiple users to manage assets. You can also specify a validity period for an authorization rule. This way, you can manage users and assets in a more efficient manner and limit the time periods during which users can access assets.</p>
+     * <p>Creates an authorization rule to grant multiple users batch access to assets and set the validity period for their access. The authorization rule feature improves the efficiency of managing users and assets, and controls the time period during which users can access assets.</p>
      * 
      * @param request CreateRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2418,7 +2418,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can create authorization rules to authorize multiple users to manage assets. You can also specify a validity period for an authorization rule. This way, you can manage users and assets in a more efficient manner and limit the time periods during which users can access assets.</p>
+     * <p>Creates an authorization rule to grant multiple users batch access to assets and set the validity period for their access. The authorization rule feature improves the efficiency of managing users and assets, and controls the time period during which users can access assets.</p>
      * 
      * @param request CreateRuleRequest
      * @return CreateRuleResponse
@@ -2550,8 +2550,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a user group for a bastion host as an administrator. After creating the group, use the <a href="https://help.aliyun.com/document_detail/204600.html">AddUsersToGroup</a> operation to add multiple users at once, enabling centralized user authorization and management.
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>Creates a user group for a bastion host. Bastion host administrators can use this operation to create a user group and then call the <a href="https://help.aliyun.com/document_detail/204600.html">AddUsersToGroup</a> operation to add users to the user group in batches. Adding users to the same user group enables unified authorization and management of bastion host users.
+     * The China site Chinese edition single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a user group for a bastion host.</p>
@@ -2602,8 +2602,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a user group for a bastion host as an administrator. After creating the group, use the <a href="https://help.aliyun.com/document_detail/204600.html">AddUsersToGroup</a> operation to add multiple users at once, enabling centralized user authorization and management.
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>Creates a user group for a bastion host. Bastion host administrators can use this operation to create a user group and then call the <a href="https://help.aliyun.com/document_detail/204600.html">AddUsersToGroup</a> operation to add users to the user group in batches. Adding users to the same user group enables unified authorization and management of bastion host users.
+     * The China site Chinese edition single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a user group for a bastion host.</p>
@@ -2744,7 +2744,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a database account.</p>
+     * <p>Deletes a single database account.</p>
      * 
      * @param request DeleteDatabaseAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2788,7 +2788,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a database account.</p>
+     * <p>Deletes a single database account.</p>
      * 
      * @param request DeleteDatabaseAccountRequest
      * @return DeleteDatabaseAccountResponse
@@ -2862,7 +2862,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>After you delete a host account, you must manually enter the host account and password when you log on to the host through Bastionhost.</p>
      * </blockquote>
      * <h3>Rate limit</h3>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered. This may affect your business. Call this operation as needed.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Use this operation appropriately.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a single host account.</p>
@@ -2915,7 +2915,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>After you delete a host account, you must manually enter the host account and password when you log on to the host through Bastionhost.</p>
      * </blockquote>
      * <h3>Rate limit</h3>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered. This may affect your business. Call this operation as needed.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Use this operation appropriately.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a single host account.</p>
@@ -2930,7 +2930,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation deletes a single host group. When all hosts in a host group on a bastion host no longer need to be maintained through the bastion host, you can call this operation to delete the host group.</p>
+     * <p>This operation deletes a single host group. If all hosts in a host group on a bastion host no longer need to be managed through the bastion host, you can call this operation to delete the host group.</p>
      * <h3>QPS limit</h3>
      * <p>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</p>
      * 
@@ -2979,7 +2979,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation deletes a single host group. When all hosts in a host group on a bastion host no longer need to be maintained through the bastion host, you can call this operation to delete the host group.</p>
+     * <p>This operation deletes a single host group. If all hosts in a host group on a bastion host no longer need to be managed through the bastion host, you can call this operation to delete the host group.</p>
      * <h3>QPS limit</h3>
      * <p>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</p>
      * 
@@ -3048,7 +3048,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a network domain.</p>
+     * <p>Deletes a single network domain.</p>
      * 
      * @param request DeleteNetworkDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3092,7 +3092,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a network domain.</p>
+     * <p>Deletes a single network domain.</p>
      * 
      * @param request DeleteNetworkDomainRequest
      * @return DeleteNetworkDomainResponse
@@ -3368,7 +3368,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an authorization rule.</p>
+     * <p>Deletes a single authorization rule.</p>
      * 
      * @param request DeleteRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3412,7 +3412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an authorization rule.</p>
+     * <p>Deletes a single authorization rule.</p>
      * 
      * @param request DeleteRuleRequest
      * @return DeleteRuleResponse
@@ -3590,10 +3590,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to purchase an Encryption Service instance. This is a prepaid product, and the operation synchronously deducts the payment.</p>
+     * <p>You can directly call this operation to purchase an HSM instance. For prepaid products, the payment is deducted synchronously.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries all attribute information of an instance, such as the instance ID and instance description.</p>
+     * <p>Queries all the attributes of an instance, such as the instance ID and description.</p>
      * 
      * @param request DescribeInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3629,10 +3629,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to purchase an Encryption Service instance. This is a prepaid product, and the operation synchronously deducts the payment.</p>
+     * <p>You can directly call this operation to purchase an HSM instance. For prepaid products, the payment is deducted synchronously.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries all attribute information of an instance, such as the instance ID and instance description.</p>
+     * <p>Queries all the attributes of an instance, such as the instance ID and description.</p>
      * 
      * @param request DescribeInstanceAttributeRequest
      * @return DescribeInstanceAttributeResponse
@@ -3644,7 +3644,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of Bastionhost instances.</p>
+     * <p>Queries the list of instances.</p>
      * 
      * @param request DescribeInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3704,7 +3704,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of Bastionhost instances.</p>
+     * <p>Queries the list of instances.</p>
      * 
      * @param request DescribeInstancesRequest
      * @return DescribeInstancesResponse
@@ -3820,7 +3820,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes permissions on databases and database accounts from a user group.</p>
+     * <p>Removes databases and database accounts that are authorized to a user group.</p>
      * 
      * @param request DetachDatabaseAccountsFromUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3868,7 +3868,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes permissions on databases and database accounts from a user group.</p>
+     * <p>Removes databases and database accounts that are authorized to a user group.</p>
      * 
      * @param request DetachDatabaseAccountsFromUserGroupRequest
      * @return DetachDatabaseAccountsFromUserGroupResponse
@@ -3880,7 +3880,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disassociate host accounts from a shared key.</p>
+     * <p>Removes the association between host accounts and a host shared key.</p>
      * 
      * @param request DetachHostAccountsFromHostShareKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3928,7 +3928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disassociate host accounts from a shared key.</p>
+     * <p>Removes the association between host accounts and a host shared key.</p>
      * 
      * @param request DetachHostAccountsFromHostShareKeyRequest
      * @return DetachHostAccountsFromHostShareKeyResponse
@@ -3996,7 +3996,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes the permissions on one or more hosts and host accounts from a user group.</p>
+     * <p>Removes authorized hosts and host accounts from a user group.</p>
      * 
      * @param request DetachHostAccountsFromUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4044,7 +4044,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes the permissions on one or more hosts and host accounts from a user group.</p>
+     * <p>Removes authorized hosts and host accounts from a user group.</p>
      * 
      * @param request DetachHostAccountsFromUserGroupRequest
      * @return DetachHostAccountsFromUserGroupResponse
@@ -4656,7 +4656,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call this operation to request O&amp;M tokens for bastions or databases, which allows you to manage assets.</p>
+     * <p>Applies for a host or database O&amp;M token to perform O&amp;M operations on assets.</p>
      * 
      * @param request GenerateAssetOperationTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4736,7 +4736,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call this operation to request O&amp;M tokens for bastions or databases, which allows you to manage assets.</p>
+     * <p>Applies for a host or database O&amp;M token to perform O&amp;M operations on assets.</p>
      * 
      * @param request GenerateAssetOperationTokenRequest
      * @return GenerateAssetOperationTokenResponse
@@ -4806,7 +4806,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the detailed information about a database.</p>
+     * <p>Retrieves the details of a specified database.</p>
      * 
      * @param request GetDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4850,7 +4850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the detailed information about a database.</p>
+     * <p>Retrieves the details of a specified database.</p>
      * 
      * @param request GetDatabaseRequest
      * @return GetDatabaseResponse
@@ -4862,7 +4862,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the detailed information about a database account.</p>
+     * <p>Retrieves the details of a specified database account.</p>
      * 
      * @param request GetDatabaseAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4906,7 +4906,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the detailed information about a database account.</p>
+     * <p>Retrieves the details of a specified database account.</p>
      * 
      * @param request GetDatabaseAccountRequest
      * @return GetDatabaseAccountResponse
@@ -4918,7 +4918,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a configuration export task for a Bastionhost instance.</p>
+     * <p>Retrieves the details of a configuration backup export task. This operation is supported only for Bastionhost V3.2.44 and later.</p>
      * 
      * @param request GetExportConfigJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4958,7 +4958,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a configuration export task for a Bastionhost instance.</p>
+     * <p>Retrieves the details of a configuration backup export task. This operation is supported only for Bastionhost V3.2.44 and later.</p>
      * 
      * @param request GetExportConfigJobRequest
      * @return GetExportConfigJobResponse
@@ -4970,7 +4970,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a host, such as the name, source, address, protocol, and service port.</p>
+     * <p>Includes information such as the hostname, source, host address, and protocol port.</p>
      * 
      * @param request GetHostRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5014,7 +5014,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a host, such as the name, source, address, protocol, and service port.</p>
+     * <p>Includes information such as the hostname, source, host address, and protocol port.</p>
      * 
      * @param request GetHostRequest
      * @return GetHostResponse
@@ -5026,7 +5026,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a host account on a host managed by a Bastionhost instance, such as the protocol type and account name.</p>
+     * <p>Retrieves the details of a specified host account.</p>
      * 
      * @param request GetHostAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5070,7 +5070,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a host account on a host managed by a Bastionhost instance, such as the protocol type and account name.</p>
+     * <p>Retrieves the details of a specified host account.</p>
      * 
      * @param request GetHostAccountRequest
      * @return GetHostAccountResponse
@@ -5082,7 +5082,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a host group.</p>
+     * <p>Retrieves the details of a specified asset group.</p>
      * 
      * @param request GetHostGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5126,7 +5126,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a host group.</p>
+     * <p>Retrieves the details of a specified asset group.</p>
      * 
      * @param request GetHostGroupRequest
      * @return GetHostGroupResponse
@@ -5138,7 +5138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a shared key.</p>
+     * <p>Queries the details of a host shared key.</p>
      * 
      * @param request GetHostShareKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5182,7 +5182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a shared key.</p>
+     * <p>Queries the details of a host shared key.</p>
      * 
      * @param request GetHostShareKeyRequest
      * @return GetHostShareKeyResponse
@@ -5194,13 +5194,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3></h3>
-     * <p>Queries the Active Directory (AD) authentication settings of a bastion host. After you configure AD authentication, you can import AD-authenticated users into the bastion host. The imported users can then log on to the bastion host to perform O\&amp;M operations on servers.</p>
-     * <h3>Limit</h3>
-     * <p>This operation can be called up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered and your business may be affected. Take note of this limit when you call this operation.</p>
+     * <h3>Usage notes</h3>
+     * <p>This operation queries the Active Directory (AD) authentication configurations of a Bastionhost instance. You can use the AD authentication feature of Bastionhost to synchronize users from an AD server to Bastionhost. After the synchronization is complete, users can perform O&amp;M operations on servers by using Bastionhost. For enterprise-level managed operations, you can also refer to Alibaba Cloud Managed Services.</p>
+     * <h3>QPS limits</h3>
+     * <p>The queries per second (QPS) limit on this operation is 10 per user. If the number of API invocations exceeds the limit, throttling is triggered, which may affect your business. Invoke this operation at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the settings of Active Directory (AD) authentication on a bastion host.</p>
+     * <p>Queries the Active Directory (AD) authentication configurations of a Bastionhost instance.</p>
      * 
      * @param request GetInstanceADAuthServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5240,13 +5240,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3></h3>
-     * <p>Queries the Active Directory (AD) authentication settings of a bastion host. After you configure AD authentication, you can import AD-authenticated users into the bastion host. The imported users can then log on to the bastion host to perform O\&amp;M operations on servers.</p>
-     * <h3>Limit</h3>
-     * <p>This operation can be called up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered and your business may be affected. Take note of this limit when you call this operation.</p>
+     * <h3>Usage notes</h3>
+     * <p>This operation queries the Active Directory (AD) authentication configurations of a Bastionhost instance. You can use the AD authentication feature of Bastionhost to synchronize users from an AD server to Bastionhost. After the synchronization is complete, users can perform O&amp;M operations on servers by using Bastionhost. For enterprise-level managed operations, you can also refer to Alibaba Cloud Managed Services.</p>
+     * <h3>QPS limits</h3>
+     * <p>The queries per second (QPS) limit on this operation is 10 per user. If the number of API invocations exceeds the limit, throttling is triggered, which may affect your business. Invoke this operation at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the settings of Active Directory (AD) authentication on a bastion host.</p>
+     * <p>Queries the Active Directory (AD) authentication configurations of a Bastionhost instance.</p>
      * 
      * @param request GetInstanceADAuthServerRequest
      * @return GetInstanceADAuthServerResponse
@@ -5472,7 +5472,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the details of a specified control policy.</p>
+     * <p>Retrieves the details of a specified control policy.</p>
      * 
      * @param request GetPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5516,7 +5516,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the details of a specified control policy.</p>
+     * <p>Retrieves the details of a specified control policy.</p>
      * 
      * @param request GetPolicyRequest
      * @return GetPolicyResponse
@@ -5528,7 +5528,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the assets to which a control policy applies.</p>
+     * <p>Retrieves the asset scope of a specified control policy.</p>
      * 
      * @param request GetPolicyAssetScopeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5572,7 +5572,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the assets to which a control policy applies.</p>
+     * <p>Retrieves the asset scope of a specified control policy.</p>
      * 
      * @param request GetPolicyAssetScopeRequest
      * @return GetPolicyAssetScopeResponse
@@ -5584,7 +5584,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the scope of users to whom a control policy applies.</p>
+     * <p>Retrieves the effective user scope of a specified control policy.</p>
      * 
      * @param request GetPolicyUserScopeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5628,7 +5628,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the scope of users to whom a control policy applies.</p>
+     * <p>Retrieves the effective user scope of a specified control policy.</p>
      * 
      * @param request GetPolicyUserScopeRequest
      * @return GetPolicyUserScopeResponse
@@ -5796,7 +5796,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the detailed information about an authorization rule.</p>
+     * <p>Retrieves the details of a specified authorization rule.</p>
      * 
      * @param request GetRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5840,7 +5840,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the detailed information about an authorization rule.</p>
+     * <p>Retrieves the details of a specified authorization rule.</p>
      * 
      * @param request GetRuleRequest
      * @return GetRuleResponse
@@ -5904,7 +5904,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a user group in a bastion host.</p>
+     * <p>Retrieves the details of a specified Bastionhost user group.</p>
      * 
      * @param request GetUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5948,7 +5948,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a user group in a bastion host.</p>
+     * <p>Retrieves the details of a specified Bastionhost user group.</p>
      * 
      * @param request GetUserGroupRequest
      * @return GetUserGroupResponse
@@ -6022,11 +6022,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries commands pending review as a Bastionhost administrator.
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This API operation allows administrators to retrieve the list of commands that require approval.
+     * The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries commands to be reviewed.</p>
+     * <p>Retrieves the list of commands that require approval.</p>
      * 
      * @param request ListApproveCommandsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6074,11 +6074,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries commands pending review as a Bastionhost administrator.
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This API operation allows administrators to retrieve the list of commands that require approval.
+     * The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries commands to be reviewed.</p>
+     * <p>Retrieves the list of commands that require approval.</p>
      * 
      * @param request ListApproveCommandsRequest
      * @return ListApproveCommandsResponse
@@ -6090,7 +6090,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the database accounts of a database.</p>
+     * <p>Retrieves a list of database accounts.</p>
      * 
      * @param request ListDatabaseAccountsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6146,7 +6146,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the database accounts of a database.</p>
+     * <p>Retrieves a list of database accounts.</p>
      * 
      * @param request ListDatabaseAccountsRequest
      * @return ListDatabaseAccountsResponse
@@ -6226,7 +6226,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the database accounts of a database and whether a user group is authorized to manage each database account.</p>
+     * <p>Queries the list of authorized and unauthorized database accounts for a user group.</p>
      * 
      * @param request ListDatabaseAccountsForUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6286,7 +6286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the database accounts of a database and whether a user group is authorized to manage each database account.</p>
+     * <p>Queries the list of authorized and unauthorized database accounts for a user group.</p>
      * 
      * @param request ListDatabaseAccountsForUserGroupRequest
      * @return ListDatabaseAccountsForUserGroupResponse
@@ -6298,7 +6298,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the databases that are managed by a bastion host.</p>
+     * <p>Queries the databases of a specified Bastionhost instance.</p>
      * 
      * @param request ListDatabasesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6362,7 +6362,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the databases that are managed by a bastion host.</p>
+     * <p>Queries the databases of a specified Bastionhost instance.</p>
      * 
      * @param request ListDatabasesRequest
      * @return ListDatabasesResponse
@@ -6374,7 +6374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the databases that a user is authorized to manage.</p>
+     * <p>Queries the list of databases authorized for a user.</p>
      * 
      * @param request ListDatabasesForUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6442,7 +6442,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the databases that a user is authorized to manage.</p>
+     * <p>Queries the list of databases authorized for a user.</p>
      * 
      * @param request ListDatabasesForUserRequest
      * @return ListDatabasesForUserResponse
@@ -6454,7 +6454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the databases that a user group is authorized to manage through a Bastionhost instance.</p>
+     * <p>Queries the databases authorized for a user group.</p>
      * 
      * @param request ListDatabasesForUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6522,7 +6522,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the databases that a user group is authorized to manage through a Bastionhost instance.</p>
+     * <p>Queries the databases authorized for a user group.</p>
      * 
      * @param request ListDatabasesForUserGroupRequest
      * @return ListDatabasesForUserGroupResponse
@@ -6534,7 +6534,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the host accounts that are configured for a host in a Bastionhost instance. Host accounts are the credentials used by O&amp;M engineers to log on to the host.</p>
+     * <p>Retrieves a list of host accounts.</p>
      * 
      * @param request ListHostAccountsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6598,7 +6598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the host accounts that are configured for a host in a Bastionhost instance. Host accounts are the credentials used by O&amp;M engineers to log on to the host.</p>
+     * <p>Retrieves a list of host accounts.</p>
      * 
      * @param request ListHostAccountsRequest
      * @return ListHostAccountsResponse
@@ -6610,7 +6610,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the host accounts that are associated with a shared key.</p>
+     * <p>Retrieves the host accounts associated with a host shared key.</p>
      * 
      * @param request ListHostAccountsForHostShareKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6662,7 +6662,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the host accounts that are associated with a shared key.</p>
+     * <p>Retrieves the host accounts associated with a host shared key.</p>
      * 
      * @param request ListHostAccountsForHostShareKeyRequest
      * @return ListHostAccountsForHostShareKeyResponse
@@ -6674,7 +6674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the host accounts of a host and whether a user is authorized to manage each host account.</p>
+     * <p>Queries the list of authorized and unauthorized host accounts for a specified user on a specified host.</p>
      * 
      * @param request ListHostAccountsForUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6734,7 +6734,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the host accounts of a host and whether a user is authorized to manage each host account.</p>
+     * <p>Queries the list of authorized and unauthorized host accounts for a specified user on a specified host.</p>
      * 
      * @param request ListHostAccountsForUserRequest
      * @return ListHostAccountsForUserResponse
@@ -6746,7 +6746,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the host accounts of a host and whether a user group is authorized to manage each host account.</p>
+     * <p>Queries the authorized and unauthorized host accounts for a specified user group on a specified host.</p>
      * 
      * @param request ListHostAccountsForUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6806,7 +6806,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the host accounts of a host and whether a user group is authorized to manage each host account.</p>
+     * <p>Queries the authorized and unauthorized host accounts for a specified user group on a specified host.</p>
      * 
      * @param request ListHostAccountsForUserGroupRequest
      * @return ListHostAccountsForUserGroupResponse
@@ -6818,7 +6818,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the names of the host accounts that a specified user is authorized to manage in a specified host group.</p>
+     * <p>Queries the names of host accounts authorized for a specified user in a specified host group.</p>
      * 
      * @param request ListHostGroupAccountNamesForUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6866,7 +6866,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the names of the host accounts that a specified user is authorized to manage in a specified host group.</p>
+     * <p>Queries the names of host accounts authorized for a specified user in a specified host group.</p>
      * 
      * @param request ListHostGroupAccountNamesForUserRequest
      * @return ListHostGroupAccountNamesForUserResponse
@@ -6878,7 +6878,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the names of the host accounts that a user group is authorized to manage in a host group.</p>
+     * <p>Queries the names of host accounts authorized for a specified user group in a specified host group.</p>
      * 
      * @param request ListHostGroupAccountNamesForUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6926,7 +6926,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the names of the host accounts that a user group is authorized to manage in a host group.</p>
+     * <p>Queries the names of host accounts authorized for a specified user group in a specified host group.</p>
      * 
      * @param request ListHostGroupAccountNamesForUserGroupRequest
      * @return ListHostGroupAccountNamesForUserGroupResponse
@@ -6938,7 +6938,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of asset groups that are managed by a bastion host.</p>
+     * <p>Queries the asset groups under a specified bastion host.</p>
      * 
      * @param request ListHostGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6990,7 +6990,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of asset groups that are managed by a bastion host.</p>
+     * <p>Queries the asset groups under a specified bastion host.</p>
      * 
      * @param request ListHostGroupsRequest
      * @return ListHostGroupsResponse
@@ -7002,7 +7002,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of host groups that a bastion host user is authorized or is not authorized to manage.</p>
+     * <p>Queries the authorized or unauthorized host groups for a specified Bastionhost user.</p>
      * 
      * @param request ListHostGroupsForUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7062,7 +7062,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of host groups that a bastion host user is authorized or is not authorized to manage.</p>
+     * <p>Queries the authorized or unauthorized host groups for a specified Bastionhost user.</p>
      * 
      * @param request ListHostGroupsForUserRequest
      * @return ListHostGroupsForUserResponse
@@ -7074,7 +7074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the hosts that a specified user group is authorized or not authorized to manage.</p>
+     * <p>Queries the authorized or unauthorized host groups for a specified Bastionhost user group.</p>
      * 
      * @param request ListHostGroupsForUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7134,7 +7134,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the hosts that a specified user group is authorized or not authorized to manage.</p>
+     * <p>Queries the authorized or unauthorized host groups for a specified Bastionhost user group.</p>
      * 
      * @param request ListHostGroupsForUserGroupRequest
      * @return ListHostGroupsForUserGroupResponse
@@ -7146,7 +7146,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the shared keys that are associated with a host.</p>
+     * <p>Queries the list of host shared keys.</p>
      * 
      * @param request ListHostShareKeysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7194,7 +7194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the shared keys that are associated with a host.</p>
+     * <p>Queries the list of host shared keys.</p>
      * 
      * @param request ListHostShareKeysRequest
      * @return ListHostShareKeysResponse
@@ -7206,7 +7206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the hosts in a bastion host.</p>
+     * <p>Queries the hosts of a specified Bastionhost instance.</p>
      * 
      * @param request ListHostsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7282,7 +7282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the hosts in a bastion host.</p>
+     * <p>Queries the hosts of a specified Bastionhost instance.</p>
      * 
      * @param request ListHostsRequest
      * @return ListHostsResponse
@@ -7294,7 +7294,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the hosts that a user group is authorized or not authorized to manage.</p>
+     * <p>Queries the list of authorized or unauthorized hosts for a specified Bastionhost user.</p>
      * 
      * @param request ListHostsForUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7362,7 +7362,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the hosts that a user group is authorized or not authorized to manage.</p>
+     * <p>Queries the list of authorized or unauthorized hosts for a specified Bastionhost user.</p>
      * 
      * @param request ListHostsForUserRequest
      * @return ListHostsForUserResponse
@@ -7374,7 +7374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the authorized or unauthorized hosts for a bastion host user group.</p>
+     * <p>Queries the list of authorized or unauthorized hosts for a specified Bastionhost user group.</p>
      * 
      * @param request ListHostsForUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7442,7 +7442,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the authorized or unauthorized hosts for a bastion host user group.</p>
+     * <p>Queries the list of authorized or unauthorized hosts for a specified Bastionhost user group.</p>
      * 
      * @param request ListHostsForUserGroupRequest
      * @return ListHostsForUserGroupResponse
@@ -7642,7 +7642,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the network domains configured in a Bastionhost instance. Network domains define the connectivity between Bastionhost and the hosts or databases that it manages.</p>
+     * <p>Queries the network domains of a specified Bastionhost instance.</p>
      * 
      * @param request ListNetworkDomainsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7698,7 +7698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the network domains configured in a Bastionhost instance. Network domains define the connectivity between Bastionhost and the hosts or databases that it manages.</p>
+     * <p>Queries the network domains of a specified Bastionhost instance.</p>
      * 
      * @param request ListNetworkDomainsRequest
      * @return ListNetworkDomainsResponse
@@ -7710,7 +7710,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of database accounts that the current Resource Access Management (RAM) user is authorized to manage.</p>
+     * <p>Retrieves a list of authorized database accounts.</p>
      * 
      * @param request ListOperationDatabaseAccountsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7766,7 +7766,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of database accounts that the current Resource Access Management (RAM) user is authorized to manage.</p>
+     * <p>Retrieves a list of authorized database accounts.</p>
      * 
      * @param request ListOperationDatabaseAccountsRequest
      * @return ListOperationDatabaseAccountsResponse
@@ -7778,7 +7778,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the databases that the current Resource Access Management (RAM) user is authorized to access.</p>
+     * <p>Retrieves the list of databases authorized for the current Resource Access Management (RAM) user.</p>
      * 
      * @param request ListOperationDatabasesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7850,7 +7850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the databases that the current Resource Access Management (RAM) user is authorized to access.</p>
+     * <p>Retrieves the list of databases authorized for the current Resource Access Management (RAM) user.</p>
      * 
      * @param request ListOperationDatabasesRequest
      * @return ListOperationDatabasesResponse
@@ -7926,7 +7926,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the hosts that the current Resource Access Management (RAM) user is authorized to perform O&amp;M operations on through a Bastionhost instance.</p>
+     * <p>Retrieves the list of hosts with authorization for the current Resource Access Management (RAM) user.</p>
      * 
      * @param request ListOperationHostsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7998,7 +7998,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the hosts that the current Resource Access Management (RAM) user is authorized to perform O&amp;M operations on through a Bastionhost instance.</p>
+     * <p>Retrieves the list of hosts with authorization for the current Resource Access Management (RAM) user.</p>
      * 
      * @param request ListOperationHostsRequest
      * @return ListOperationHostsResponse
@@ -8010,11 +8010,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the list of O&amp;M applications that require approval for an administrator.
-     * The queries per second (QPS) limit for a single user for this operation is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
+     * <p>This API operation allows administrators to retrieve a list of O&amp;M tickets pending approval.
+     * The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of O&amp;M applications that require approval.</p>
+     * <p>Retrieves a list of O&amp;M tickets pending approval.</p>
      * 
      * @param request ListOperationTicketsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8066,11 +8066,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the list of O&amp;M applications that require approval for an administrator.
-     * The queries per second (QPS) limit for a single user for this operation is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
+     * <p>This API operation allows administrators to retrieve a list of O&amp;M tickets pending approval.
+     * The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of O&amp;M applications that require approval.</p>
+     * <p>Retrieves a list of O&amp;M tickets pending approval.</p>
      * 
      * @param request ListOperationTicketsRequest
      * @return ListOperationTicketsResponse
@@ -8082,7 +8082,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of control policies.</p>
+     * <p>Queries the control policies.</p>
      * 
      * @param request ListPoliciesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8134,7 +8134,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of control policies.</p>
+     * <p>Queries the control policies.</p>
      * 
      * @param request ListPoliciesRequest
      * @return ListPoliciesResponse
@@ -8146,7 +8146,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询项目授权列表</p>
+     * <p>Queries the list of project authorizations.</p>
      * 
      * @param request ListProjectAuthorizationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8198,7 +8198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询项目授权列表</p>
+     * <p>Queries the list of project authorizations.</p>
      * 
      * @param request ListProjectAuthorizationsRequest
      * @return ListProjectAuthorizationsResponse
@@ -8278,7 +8278,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询项目列表</p>
+     * <p>Queries a list of projects.</p>
      * 
      * @param request ListProjectsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8330,7 +8330,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询项目列表</p>
+     * <p>Queries a list of projects.</p>
      * 
      * @param request ListProjectsRequest
      * @return ListProjectsResponse
@@ -8606,7 +8606,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of authorization rules of a bastion host.</p>
+     * <p>Queries the authorization rules of a specified Bastionhost instance.</p>
      * 
      * @param request ListRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8662,7 +8662,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of authorization rules of a bastion host.</p>
+     * <p>Queries the authorization rules of a specified Bastionhost instance.</p>
      * 
      * @param request ListRulesRequest
      * @return ListRulesResponse
@@ -8674,7 +8674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tag keys on resources.</p>
+     * <p>Queries the tags bound to a resource.</p>
      * 
      * @param request ListTagKeysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8722,7 +8722,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tag keys on resources.</p>
+     * <p>Queries the tags bound to a resource.</p>
      * 
      * @param request ListTagKeysRequest
      * @return ListTagKeysResponse
@@ -8798,7 +8798,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of pending automated O&amp;M approval requests.</p>
+     * <p>Retrieves the list of pending automated O&amp;M approvals.</p>
      * 
      * @param request ListTodoOpsTaskApprovalsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8854,7 +8854,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of pending automated O&amp;M approval requests.</p>
+     * <p>Retrieves the list of pending automated O&amp;M approvals.</p>
      * 
      * @param request ListTodoOpsTaskApprovalsRequest
      * @return ListTodoOpsTaskApprovalsResponse
@@ -8866,7 +8866,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of user groups on a bastion host.</p>
+     * <p>Queries the user groups of a specified Bastionhost instance.</p>
      * 
      * @param request ListUserGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8918,7 +8918,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of user groups on a bastion host.</p>
+     * <p>Queries the user groups of a specified Bastionhost instance.</p>
      * 
      * @param request ListUserGroupsRequest
      * @return ListUserGroupsResponse
@@ -9210,7 +9210,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the basic information about a database.</p>
+     * <p>Modifies the basic information of a database.</p>
      * 
      * @param request ModifyDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9286,7 +9286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the basic information about a database.</p>
+     * <p>Modifies the basic information of a database.</p>
      * 
      * @param request ModifyDatabaseRequest
      * @return ModifyDatabaseResponse
@@ -9298,7 +9298,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the basic information about a database account.</p>
+     * <p>Modifies the basic information of a database account.</p>
      * 
      * @param request ModifyDatabaseAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9354,7 +9354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the basic information about a database account.</p>
+     * <p>Modifies the basic information of a database account.</p>
      * 
      * @param request ModifyDatabaseAccountRequest
      * @return ModifyDatabaseAccountResponse
@@ -9426,13 +9426,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the ModifyHost operation to modify the basic information about a host in a data center, an Elastic Compute Service (ECS) instance, or a host in an ApsaraDB MyBase dedicated cluster.</p>
+     * <p>This operation updates the basic information of on-premises hosts, ECS hosts, and hosts in dedicated ApsaraDB RDS clusters.</p>
      * <blockquote>
-     * <p>The basic information about ECS instances and hosts in ApsaraDB MyBase dedicated clusters within your Alibaba Cloud account is synchronized to Bastionhost on a regular basis. After you modify the basic information about an ECS instance or a host in an ApsaraDB MyBase dedicated cluster, the modification result may be overwritten by the synchronized information.</p>
+     * <p>If you update the basic information of an ECS host or a host in a dedicated ApsaraDB RDS cluster, the changes may be overwritten. This is because Bastionhost periodically synchronizes the basic information of ECS hosts and hosts in dedicated ApsaraDB RDS clusters.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies information about a host. The information includes the address, name, and description of the host and the operating system that the host runs.</p>
+     * <p>Updates the address, name, operating system type, and description of a host.</p>
      * 
      * @param request ModifyHostRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9504,13 +9504,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the ModifyHost operation to modify the basic information about a host in a data center, an Elastic Compute Service (ECS) instance, or a host in an ApsaraDB MyBase dedicated cluster.</p>
+     * <p>This operation updates the basic information of on-premises hosts, ECS hosts, and hosts in dedicated ApsaraDB RDS clusters.</p>
      * <blockquote>
-     * <p>The basic information about ECS instances and hosts in ApsaraDB MyBase dedicated clusters within your Alibaba Cloud account is synchronized to Bastionhost on a regular basis. After you modify the basic information about an ECS instance or a host in an ApsaraDB MyBase dedicated cluster, the modification result may be overwritten by the synchronized information.</p>
+     * <p>If you update the basic information of an ECS host or a host in a dedicated ApsaraDB RDS cluster, the changes may be overwritten. This is because Bastionhost periodically synchronizes the basic information of ECS hosts and hosts in dedicated ApsaraDB RDS clusters.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies information about a host. The information includes the address, name, and description of the host and the operating system that the host runs.</p>
+     * <p>Updates the address, name, operating system type, and description of a host.</p>
      * 
      * @param request ModifyHostRequest
      * @return ModifyHostResponse
@@ -9606,7 +9606,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the name or description of the specified host group.</p>
+     * <p>Modifies the name or description of an asset group.</p>
      * 
      * @param request ModifyHostGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9658,7 +9658,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the name or description of the specified host group.</p>
+     * <p>Modifies the name or description of an asset group.</p>
      * 
      * @param request ModifyHostGroupRequest
      * @return ModifyHostGroupResponse
@@ -9670,7 +9670,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a shared key.</p>
+     * <p>Updates a host shared key.</p>
      * 
      * @param request ModifyHostShareKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9726,7 +9726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a shared key.</p>
+     * <p>Updates a host shared key.</p>
      * 
      * @param request ModifyHostShareKeyRequest
      * @return ModifyHostShareKeyResponse
@@ -9738,7 +9738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the endpoint type of one or more hosts for O\\\\\\\\\\\\&amp;M. Public and private IP addresses are supported.</p>
+     * <p>Modifies the endpoint type used for host O&amp;M. Bastionhost supports O&amp;M over the Internet and private networks.</p>
      * 
      * @param request ModifyHostsActiveAddressTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9786,7 +9786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the endpoint type of one or more hosts for O\\\\\\\\\\\\&amp;M. Public and private IP addresses are supported.</p>
+     * <p>Modifies the endpoint type used for host O&amp;M. Bastionhost supports O&amp;M over the Internet and private networks.</p>
      * 
      * @param request ModifyHostsActiveAddressTypeRequest
      * @return ModifyHostsActiveAddressTypeResponse
@@ -9798,16 +9798,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>Changes the port for the O\&amp;M protocol on one or more hosts. If the standard port for your O\&amp;M protocol is vulnerable to attacks, specify a custom port instead. For example, the standard SSH port is port 22.</p>
+     * <h3>Usage notes</h3>
+     * <p>This operation modifies the ports of O&amp;M protocols for multiple hosts. If you consider the standard ports of O&amp;M protocols insecure and vulnerable to attacks, such as port 22 for SSH, you can call this operation to specify custom ports.</p>
      * <blockquote>
-     * <p>Ports 0 to 1024 are reserved for Bastionhost. Do not change the port for the O\&amp;M protocol to a reserved port.</p>
+     * <p>Ports 0 to 1024 are reserved for Bastionhost. Do not specify a reserved port as a custom port.</p>
      * </blockquote>
-     * <h2>QPS limit</h2>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 10 times per second. Requests that exceed this limit are throttled, which may affect your business. Plan your calls accordingly.</p>
      * 
      * <b>summary</b> : 
-     * <p>Changes the port for the O\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&amp;M protocol on one or more hosts.</p>
+     * <p>Modifies the ports used by Bastionhost for the RDP and SSH protocols on hosts. By default, Bastionhost uses port 3389 for RDP and port 22 for SSH. If you have configured custom ports on your hosts, you can call this operation to update the port settings.</p>
      * 
      * @param request ModifyHostsPortRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9859,16 +9859,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>Changes the port for the O\&amp;M protocol on one or more hosts. If the standard port for your O\&amp;M protocol is vulnerable to attacks, specify a custom port instead. For example, the standard SSH port is port 22.</p>
+     * <h3>Usage notes</h3>
+     * <p>This operation modifies the ports of O&amp;M protocols for multiple hosts. If you consider the standard ports of O&amp;M protocols insecure and vulnerable to attacks, such as port 22 for SSH, you can call this operation to specify custom ports.</p>
      * <blockquote>
-     * <p>Ports 0 to 1024 are reserved for Bastionhost. Do not change the port for the O\&amp;M protocol to a reserved port.</p>
+     * <p>Ports 0 to 1024 are reserved for Bastionhost. Do not specify a reserved port as a custom port.</p>
      * </blockquote>
-     * <h2>QPS limit</h2>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 10 times per second. Requests that exceed this limit are throttled, which may affect your business. Plan your calls accordingly.</p>
      * 
      * <b>summary</b> : 
-     * <p>Changes the port for the O\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&amp;M protocol on one or more hosts.</p>
+     * <p>Modifies the ports used by Bastionhost for the RDP and SSH protocols on hosts. By default, Bastionhost uses port 3389 for RDP and port 22 for SSH. If you have configured custom ports on your hosts, you can call this operation to update the port settings.</p>
      * 
      * @param request ModifyHostsPortRequest
      * @return ModifyHostsPortResponse
@@ -9940,7 +9940,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the settings of the Active Directory (AD) authentication server of a bastion host.</p>
+     * <p>Modifies the configuration of the Active Directory (AD) authentication server for a Bastionhost instance.</p>
      * 
      * @param request ModifyInstanceADAuthServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10056,7 +10056,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the settings of the Active Directory (AD) authentication server of a bastion host.</p>
+     * <p>Modifies the configuration of the Active Directory (AD) authentication server for a Bastionhost instance.</p>
      * 
      * @param request ModifyInstanceADAuthServerRequest
      * @return ModifyInstanceADAuthServerResponse
@@ -10282,7 +10282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the basic information about a network domain.</p>
+     * <p>Modifies the basic information of a network domain.</p>
      * 
      * @param request ModifyNetworkDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10342,7 +10342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the basic information about a network domain.</p>
+     * <p>Modifies the basic information of a network domain.</p>
      * 
      * @param request ModifyNetworkDomainRequest
      * @return ModifyNetworkDomainResponse
@@ -10354,7 +10354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the basic information about a control policy.</p>
+     * <p>Modifies the basic information of a control policy.</p>
      * 
      * @param request ModifyPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10410,7 +10410,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the basic information about a control policy.</p>
+     * <p>Modifies the basic information of a control policy.</p>
      * 
      * @param request ModifyPolicyRequest
      * @return ModifyPolicyResponse
@@ -10678,7 +10678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the basic information of an authorization rule.</p>
+     * <p>Updates the basic information of an authorization rule.</p>
      * 
      * @param request ModifyRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10758,7 +10758,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the basic information of an authorization rule.</p>
+     * <p>Updates the basic information of an authorization rule.</p>
      * 
      * @param request ModifyRuleRequest
      * @return ModifyRuleResponse
@@ -10874,7 +10874,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the information about a user group.</p>
+     * <p>Modifies the information of a user group.</p>
      * 
      * @param request ModifyUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10926,7 +10926,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the information about a user group.</p>
+     * <p>Modifies the information of a user group.</p>
      * 
      * @param request ModifyUserGroupRequest
      * @return ModifyUserGroupResponse
@@ -11002,7 +11002,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds multiple databases to a network domain at a time.</p>
+     * <p>Moves multiple databases to a specified network domain.</p>
      * 
      * @param request MoveDatabasesToNetworkDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11050,7 +11050,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds multiple databases to a network domain at a time.</p>
+     * <p>Moves multiple databases to a specified network domain.</p>
      * 
      * @param request MoveDatabasesToNetworkDomainRequest
      * @return MoveDatabasesToNetworkDomainResponse
@@ -11062,7 +11062,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds multiple hosts to a network domain at a time.</p>
+     * <p>Moves multiple hosts to a specified network domain.</p>
      * 
      * @param request MoveHostsToNetworkDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11110,7 +11110,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds multiple hosts to a network domain at a time.</p>
+     * <p>Moves multiple hosts to a specified network domain.</p>
      * 
      * @param request MoveHostsToNetworkDomainRequest
      * @return MoveHostsToNetworkDomainResponse
@@ -11178,11 +11178,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Rejects an O\&amp;M engineer\&quot;s command execution request as a Bastionhost administrator.
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This API operation allows administrators to reject command execution requests from O&amp;M engineers.
+     * The queries per second (QPS) limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>If an O\\\\\\&amp;M engineer attempts to run a command specified in the Command Approval section of the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</p>
+     * <p>Rejects a command execution request. If an O&amp;M engineer executes a command configured in a command approval policy, the administrator receives an approval request in the Bastionhost console. The command can be executed only after the administrator approves it. If the request is rejected, the command cannot be executed.</p>
      * 
      * @param request RejectApproveCommandRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11226,11 +11226,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Rejects an O\&amp;M engineer\&quot;s command execution request as a Bastionhost administrator.
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This API operation allows administrators to reject command execution requests from O&amp;M engineers.
+     * The queries per second (QPS) limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>If an O\\\\\\&amp;M engineer attempts to run a command specified in the Command Approval section of the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</p>
+     * <p>Rejects a command execution request. If an O&amp;M engineer executes a command configured in a command approval policy, the administrator receives an approval request in the Bastionhost console. The command can be executed only after the administrator approves it. If the request is rejected, the command cannot be executed.</p>
      * 
      * @param request RejectApproveCommandRequest
      * @return RejectApproveCommandResponse
@@ -11298,11 +11298,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Rejects an O\&amp;M engineer\&quot;s O\&amp;M application as a Bastionhost administrator.
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>Rejects an O&amp;M application submitted by an O&amp;M engineer.
+     * The queries per second (QPS) limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>If a Bastionhost administrator enables O\\\\\\\\\\\\&amp;M Approval on the Create Control Policy page, O\\\\\\\\\\\\&amp;M engineers can log on to assets to perform O\\\\\\\\\\\\&amp;M operations only after the administrator approves their O\\\\\\\\\\\\&amp;M applications.</p>
+     * <p>Rejects an O&amp;M application. If O&amp;M approval is enabled in the control policy configured by the administrator, O&amp;M engineers must apply for O&amp;M and obtain administrator approval before logging on to assets.</p>
      * 
      * @param request RejectOperationTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11350,11 +11350,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Rejects an O\&amp;M engineer\&quot;s O\&amp;M application as a Bastionhost administrator.
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>Rejects an O&amp;M application submitted by an O&amp;M engineer.
+     * The queries per second (QPS) limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>If a Bastionhost administrator enables O\\\\\\\\\\\\&amp;M Approval on the Create Control Policy page, O\\\\\\\\\\\\&amp;M engineers can log on to assets to perform O\\\\\\\\\\\\&amp;M operations only after the administrator approves their O\\\\\\\\\\\\&amp;M applications.</p>
+     * <p>Rejects an O&amp;M application. If O&amp;M approval is enabled in the control policy configured by the administrator, O&amp;M engineers must apply for O&amp;M and obtain administrator approval before logging on to assets.</p>
      * 
      * @param request RejectOperationTicketRequest
      * @return RejectOperationTicketResponse
@@ -11422,12 +11422,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Removes multiple hosts from an asset group. If certain hosts no longer need to be managed through an asset group, you can use this operation to remove them.</p>
-     * <h1><a href="#qps-"></a>QPS limit</h1>
-     * <p>You can call this API operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * <p>This operation removes multiple hosts from a host group. If some hosts no longer require unified management through a host group, you can use this operation to remove them.</p>
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit per user is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes multiple hosts from an asset group at a time.</p>
+     * <p>Removes multiple hosts from a specified host group.</p>
      * 
      * @param request RemoveHostsFromGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11475,12 +11475,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Removes multiple hosts from an asset group. If certain hosts no longer need to be managed through an asset group, you can use this operation to remove them.</p>
-     * <h1><a href="#qps-"></a>QPS limit</h1>
-     * <p>You can call this API operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * <p>This operation removes multiple hosts from a host group. If some hosts no longer require unified management through a host group, you can use this operation to remove them.</p>
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit per user is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes multiple hosts from an asset group at a time.</p>
+     * <p>Removes multiple hosts from a specified host group.</p>
      * 
      * @param request RemoveHostsFromGroupRequest
      * @return RemoveHostsFromGroupResponse
@@ -11550,12 +11550,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Removes one or more users from a user group at once. Use this operation when users transfer to new positions, resign, or switch to another user group.</p>
-     * <h2>QPS limit</h2>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <h3>Usage notes</h3>
+     * <p>This operation removes multiple users from a user group. You can call this operation to remove users from a user group in batches when users resign or transfer to other departments and their permissions need to be revoked, or when users switch to another user group.</p>
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes one or more users from a user group.</p>
+     * <p>Removes multiple users from a user group.</p>
      * 
      * @param request RemoveUsersFromGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11603,12 +11604,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Removes one or more users from a user group at once. Use this operation when users transfer to new positions, resign, or switch to another user group.</p>
-     * <h2>QPS limit</h2>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <h3>Usage notes</h3>
+     * <p>This operation removes multiple users from a user group. You can call this operation to remove users from a user group in batches when users resign or transfer to other departments and their permissions need to be revoked, or when users switch to another user group.</p>
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes one or more users from a user group.</p>
+     * <p>Removes multiple users from a user group.</p>
      * 
      * @param request RemoveUsersFromGroupRequest
      * @return RemoveUsersFromGroupResponse
@@ -11620,7 +11622,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews an O\\\\\\&amp;M token for one hour.</p>
+     * <p>Renews an O&amp;M token. Each call extends the validity of the token by one hour.</p>
      * 
      * @param request RenewAssetOperationTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11664,7 +11666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews an O\\\\\\&amp;M token for one hour.</p>
+     * <p>Renews an O&amp;M token. Each call extends the validity of the token by one hour.</p>
      * 
      * @param request RenewAssetOperationTokenRequest
      * @return RenewAssetOperationTokenResponse
@@ -11676,7 +11678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Clears the credential (password or SSH private key) for a specified host account.</p>
+     * <p>Purges the logon credentials (password or SSH private key) of a specified host account.</p>
      * 
      * @param request ResetHostAccountCredentialRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11724,7 +11726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Clears the credential (password or SSH private key) for a specified host account.</p>
+     * <p>Purges the logon credentials (password or SSH private key) of a specified host account.</p>
      * 
      * @param request ResetHostAccountCredentialRequest
      * @return ResetHostAccountCredentialResponse
@@ -11736,7 +11738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures the logon period limits in a control policy.</p>
+     * <p>Configures the logon time limit settings for a specified control policy.</p>
      * 
      * @param tmpReq SetPolicyAccessTimeRangeConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11790,7 +11792,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures the logon period limits in a control policy.</p>
+     * <p>Configures the logon time limit settings for a specified control policy.</p>
      * 
      * @param request SetPolicyAccessTimeRangeConfigRequest
      * @return SetPolicyAccessTimeRangeConfigResponse
@@ -11802,7 +11804,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures the O\\&amp;M approval setting in a control policy.</p>
+     * <p>Configures the O&amp;M approval configuration for a specified control policy.</p>
      * 
      * @param tmpReq SetPolicyApprovalConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11856,7 +11858,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures the O\\&amp;M approval setting in a control policy.</p>
+     * <p>Configures the O&amp;M approval configuration for a specified control policy.</p>
      * 
      * @param request SetPolicyApprovalConfigRequest
      * @return SetPolicyApprovalConfigResponse
@@ -11868,7 +11870,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the asset scope for a specified control policy.</p>
+     * <p>Sets the effective asset scope for a specified control policy.</p>
      * 
      * @param request SetPolicyAssetScopeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11928,7 +11930,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the asset scope for a specified control policy.</p>
+     * <p>Sets the effective asset scope for a specified control policy.</p>
      * 
      * @param request SetPolicyAssetScopeRequest
      * @return SetPolicyAssetScopeResponse
@@ -11940,7 +11942,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Specifies the commands that can or cannot be run by the users or on the assets associated with the policy and the commands that must be reviewed.</p>
+     * <p>Configures the commands that are allowed or denied, and the commands that require approval for the users and hosts to which a specified policy applies.</p>
      * 
      * @param tmpReq SetPolicyCommandConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11994,7 +11996,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Specifies the commands that can or cannot be run by the users or on the assets associated with the policy and the commands that must be reviewed.</p>
+     * <p>Configures the commands that are allowed or denied, and the commands that require approval for the users and hosts to which a specified policy applies.</p>
      * 
      * @param request SetPolicyCommandConfigRequest
      * @return SetPolicyCommandConfigResponse
@@ -12006,7 +12008,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Specifies whether a source IP address can access the assets to which a control policy applies.</p>
+     * <p>Configures whether source IP addresses can access hosts to which the current policy applies.</p>
      * 
      * @param tmpReq SetPolicyIPAclConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12060,7 +12062,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Specifies whether a source IP address can access the assets to which a control policy applies.</p>
+     * <p>Configures whether source IP addresses can access hosts to which the current policy applies.</p>
      * 
      * @param request SetPolicyIPAclConfigRequest
      * @return SetPolicyIPAclConfigResponse
@@ -12072,7 +12074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the Remote Desktop Protocol (RDP), Secure Shell (SSH), and SSH File Transfer Protocol (SFTP) options for a control policy.</p>
+     * <p>Configures the RDP, SSH, and SFTP options of a control policy.</p>
      * 
      * @param tmpReq SetPolicyProtocolConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12126,7 +12128,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the Remote Desktop Protocol (RDP), Secure Shell (SSH), and SSH File Transfer Protocol (SFTP) options for a control policy.</p>
+     * <p>Configures the RDP, SSH, and SFTP options of a control policy.</p>
      * 
      * @param request SetPolicyProtocolConfigRequest
      * @return SetPolicyProtocolConfigResponse
@@ -12138,7 +12140,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Specifies the users to whom a control policy applies.</p>
+     * <p>Sets the user scope for a specified control policy.</p>
      * 
      * @param request SetPolicyUserScopeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12194,7 +12196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Specifies the users to whom a control policy applies.</p>
+     * <p>Sets the user scope for a specified control policy.</p>
      * 
      * @param request SetPolicyUserScopeRequest
      * @return SetPolicyUserScopeResponse

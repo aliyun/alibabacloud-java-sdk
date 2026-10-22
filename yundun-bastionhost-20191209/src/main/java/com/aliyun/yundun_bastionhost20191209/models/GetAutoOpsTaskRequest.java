@@ -7,7 +7,7 @@ public class GetAutoOpsTaskRequest extends TeaModel {
     /**
      * <p>The instance ID of the bastion host.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -16,6 +16,12 @@ public class GetAutoOpsTaskRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
@@ -32,7 +38,7 @@ public class GetAutoOpsTaskRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the O&amp;M task that you want to query.</p>
+     * <p>The ID of the O&amp;M task to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

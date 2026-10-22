@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListDatabasesRequest extends TeaModel {
     /**
-     * <p>The engine of the database to query. Valid values:</p>
+     * <p>The type of the database. Valid values:</p>
      * <ul>
-     * <li><p><strong>MySQL</strong></p>
-     * </li>
-     * <li><p><strong>Oracle</strong></p>
-     * </li>
-     * <li><p><strong>PostgreSQL</strong></p>
-     * </li>
-     * <li><p><strong>SQLServer</strong></p>
-     * </li>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>Oracle</strong></li>
+     * <li><strong>PostgreSQL</strong></li>
+     * <li><strong>SQLServer</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,9 +20,9 @@ public class ListDatabasesRequest extends TeaModel {
     public String databaseType;
 
     /**
-     * <p>The ID of the asset group to query. This operation returns the databases in the asset group.</p>
+     * <p>The ID of the host group.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to query the ID of the asset group.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to query the value of this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -36,9 +32,9 @@ public class ListDatabasesRequest extends TeaModel {
     public String hostGroupId;
 
     /**
-     * <p>The ID of the bastion host to query.</p>
+     * <p>The instance ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -49,7 +45,7 @@ public class ListDatabasesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the network domain where the database to query resides.</p>
+     * <p>The ID of the network domain to which the database belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -58,7 +54,7 @@ public class ListDatabasesRequest extends TeaModel {
     public String networkDomainId;
 
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The page number of the current page for paging in a paged query. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -67,10 +63,9 @@ public class ListDatabasesRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page.
-     * Valid values: 1 to100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <p>The maximum number of entries to return on each page for paging in a paged query.<br>The maximum value of the PageSize parameter is 100. Default value: 20. If this parameter is left empty, 20 entries are returned by default.</p>
      * <blockquote>
-     * <p>We recommend that you do not leave this parameter empty.</p>
+     * <p>Do not leave the PageSize parameter empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -79,11 +74,17 @@ public class ListDatabasesRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The region ID of the bastion host to query.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
      * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
@@ -95,14 +96,11 @@ public class ListDatabasesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The type of the database to query. Valid values:</p>
+     * <p>The source of the database. Valid values:</p>
      * <ul>
-     * <li><p><strong>Local</strong>: on-premises database.</p>
-     * </li>
-     * <li><p><strong>Rds</strong>: ApsaraDB for RDS instance.</p>
-     * </li>
-     * <li><p><strong>PolarDB</strong>: PolarDB cluster</p>
-     * </li>
+     * <li><strong>Local</strong>: local database instance</li>
+     * <li><strong>Rds</strong>: ApsaraDB RDS instance</li>
+     * <li><strong>PolarDB</strong>: PolarDB instance</li>
      * </ul>
      * 
      * <strong>example:</strong>

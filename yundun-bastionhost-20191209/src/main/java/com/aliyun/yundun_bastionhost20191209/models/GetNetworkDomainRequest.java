@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetNetworkDomainRequest extends TeaModel {
     /**
-     * <p>Indicates whether to immediately recheck the status of the proxy server. Valid values:</p>
+     * <p>Specifies whether to immediately re-check the proxy server status. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Immediately rechecks the status of the proxy server and returns the latest ProxyState and ProxyStateErrorCode.</p>
+     * <li><p><strong>true</strong>: Immediately re-checks the proxy server status and returns the latest ProxyState/ProxyStateErrorCode.</p>
      * </li>
-     * <li><p><strong>false</strong>: (Default) Returns the currently recorded status without rechecking the proxy server.</p>
+     * <li><p><strong>false</strong>: Default value. Does not re-check the proxy server status and directly returns the currently recorded status.</p>
      * </li>
      * </ul>
      * 
@@ -20,9 +20,9 @@ public class GetNetworkDomainRequest extends TeaModel {
     public String checkProxyState;
 
     /**
-     * <p>The ID of the Bastionhost instance.</p>
+     * <p>The instance ID of the bastion host.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to get this parameter.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -35,7 +35,7 @@ public class GetNetworkDomainRequest extends TeaModel {
     /**
      * <p>The ID of the network domain to query.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/2758827.html">ListNetworkDomains</a> operation to get this parameter.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758827.html">ListNetworkDomains</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -45,13 +45,19 @@ public class GetNetworkDomainRequest extends TeaModel {
     @NameInMap("NetworkDomainId")
     public String networkDomainId;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The region ID of the Bastionhost instance.</p>
+     * <p>The region ID of the bastion host.</p>
      * <blockquote>
-     * <p>For more information about region IDs, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

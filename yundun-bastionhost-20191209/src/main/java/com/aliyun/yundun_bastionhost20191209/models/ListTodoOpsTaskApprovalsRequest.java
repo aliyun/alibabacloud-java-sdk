@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListTodoOpsTaskApprovalsRequest extends TeaModel {
     /**
-     * <p>The instance ID of the bastion host.</p>
+     * <p>The instance ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class ListTodoOpsTaskApprovalsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The task name or task remarks to query. Fuzzy match is supported.</p>
+     * <p>The name or comment of the task to query. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -36,9 +36,9 @@ public class ListTodoOpsTaskApprovalsRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The maximum number of entries per page in a paging query.<br>The maximum value of the PageSize parameter is 100. The default number of entries per page is 20. If PageSize is left empty, 20 entries are returned by default.</p>
+     * <p>The maximum number of entries to return on each page in a paging query.<br>The maximum value of the PageSize parameter is 100. The default number of entries per page is 20. If the PageSize parameter is left empty, 20 entries are returned by default.</p>
      * <blockquote>
-     * <p>Do not leave PageSize empty.</p>
+     * <p>Specify a value for the PageSize parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,13 +47,19 @@ public class ListTodoOpsTaskApprovalsRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The region ID of the bastion host.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,11 +69,11 @@ public class ListTodoOpsTaskApprovalsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The task scheduling type used to filter results. Valid values:</p>
+     * <p>The scheduling type of the task. Valid values:</p>
      * <ul>
-     * <li><strong>FixTime</strong>: scheduled execution.</li>
-     * <li><strong>CycleInterval</strong>: periodic execution.</li>
-     * <li><strong>Manual</strong>: manually triggered by the user.</li>
+     * <li><strong>FixTime</strong>: Scheduled execution.</li>
+     * <li><strong>CycleInterval</strong>: Periodic execution.</li>
+     * <li><strong>Manual</strong>: Manually triggered execution.</li>
      * </ul>
      * 
      * <strong>example:</strong>
