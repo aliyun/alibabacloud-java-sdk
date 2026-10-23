@@ -1,3 +1,7 @@
+2026-10-23 Version: 1.0.3
+- Update API UpdateDataMaskingUsers: add request parameters UserList.$.AuthDb.
+
+
 2026-10-19 Version: 1.0.2
 - Update API ListRegions: add request parameters LoadAll.
 
