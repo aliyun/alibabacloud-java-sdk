@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteAppResourcePermissionsShrinkRequest extends TeaModel {
     /**
-     * <p>撤权范围</p>
+     * <p>The scope of the permissions to be revoked.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("items")
     public String itemsShrink;
 
     /**
-     * <p>资源所属租户 ID；省略为调用人当前租户</p>
+     * <p>The ID of the tenant to which the resource belongs. If not specified, the current tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -21,7 +21,7 @@ public class DeleteAppResourcePermissionsShrinkRequest extends TeaModel {
     public String resourceTenantId;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAgentWorkLogResponseBody extends TeaModel {
     /**
-     * <p>业务状态码；成功为200</p>
+     * <p>The business status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class GetAgentWorkLogResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>按时间倒序的 Agent 工作记录，未保存记录时为空列表</p>
+     * <p>The agent operation records in reverse chronological order. If no records are saved, an empty list is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>[]</p>
@@ -23,16 +23,16 @@ public class GetAgentWorkLogResponseBody extends TeaModel {
     public java.util.List<GetAgentWorkLogResponseBodyLogs> logs;
 
     /**
-     * <p>错误描述</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>请求的资源不存在</p>
+     * <p>The requested resource does not exist</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>当前页码，从1开始</p>
+     * <p>The current page number, starting from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class GetAgentWorkLogResponseBody extends TeaModel {
     public Long page;
 
     /**
-     * <p>每页条数，取值1至100</p>
+     * <p>The number of entries per page. Valid values: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -50,7 +50,7 @@ public class GetAgentWorkLogResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>请求追踪ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -59,7 +59,7 @@ public class GetAgentWorkLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>筛选后的工作日志总条数</p>
+     * <p>The total number of filtered operation log entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -130,7 +130,7 @@ public class GetAgentWorkLogResponseBody extends TeaModel {
 
     public static class GetAgentWorkLogResponseBodyLogs extends TeaModel {
         /**
-         * <p>记录类型：THINK、REPLY、TOOL_CALL、SKILL_CALL或ARTIFACT</p>
+         * <p>The record type. Valid values: THINK, REPLY, TOOL_CALL, SKILL_CALL, and ARTIFACT.</p>
          * 
          * <strong>example:</strong>
          * <p>REPLY</p>
@@ -139,16 +139,16 @@ public class GetAgentWorkLogResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>已保存的原始记录内容；工具调用与产物元数据为JSON字符串</p>
+         * <p>The saved raw record content. Tool invocations and artifact metadata are represented as JSON strings.</p>
          * 
          * <strong>example:</strong>
-         * <p>已完成本轮数据查询</p>
+         * <p>The data query for the current round is completed</p>
          */
         @NameInMap("detail")
         public String detail;
 
         /**
-         * <p>该条工作记录耗时，单位毫秒；产物记录为0</p>
+         * <p>The duration of this operation record, in milliseconds. The value is 0 for artifact records.</p>
          * 
          * <strong>example:</strong>
          * <p>1200</p>
@@ -157,7 +157,7 @@ public class GetAgentWorkLogResponseBody extends TeaModel {
         public Long duration;
 
         /**
-         * <p>所属节点key（nodeKey），不是会话ID</p>
+         * <p>The key of the node to which the record belongs. This is not the session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>query.amount</p>
@@ -166,7 +166,7 @@ public class GetAgentWorkLogResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>记录事件时间，ISO-8601格式；源记录无时间时为空字符串</p>
+         * <p>The time when the event was recorded, in ISO 8601 format. If the source record has no time, an empty string is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-14T08:00:00Z</p>

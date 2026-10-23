@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetWorkflowInstanceResponseBody extends TeaModel {
     /**
-     * <p>空间内唯一外部需求编号</p>
+     * <p>The unique external requirement number within the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>REQ-1001</p>
@@ -14,7 +14,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
     public String businessId;
 
     /**
-     * <p>业务状态码，来自统一 POP 响应包装</p>
+     * <p>The business status code from the unified POP response wrapper.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>协作空间 ID</p>
+     * <p>The ID of the collaboration workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>cg_20261016_abc123</p>
@@ -32,7 +32,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
     public String collaborationGroupId;
 
     /**
-     * <p>逻辑实例创建时间，ISO8601</p>
+     * <p>The creation time of the logical instance in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-10-16T10:30:00+08:00</p>
@@ -41,19 +41,19 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
     public String createdAt;
 
     /**
-     * <p>首个活动节点，终态为 null</p>
+     * <p>The first active node. This value is null when the instance reaches a terminal state.</p>
      */
     @NameInMap("currentNode")
     public GetWorkflowInstanceResponseBodyCurrentNode currentNode;
 
     /**
-     * <p>全部活动节点，支持并行 DAG</p>
+     * <p>All active nodes. Parallel DAGs are supported.</p>
      */
     @NameInMap("currentNodes")
     public java.util.List<GetWorkflowInstanceResponseBodyCurrentNodes> currentNodes;
 
     /**
-     * <p>当前计划终态时间，未结束为 null</p>
+     * <p>The time when the current plan reached a terminal state. This value is null if the plan has not ended.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-10-16T10:30:00+08:00</p>
@@ -62,16 +62,16 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
     public String endedAt;
 
     /**
-     * <p>外部发起人标签，不参与鉴权</p>
+     * <p>The external initiator label. This label is not used for authentication.</p>
      * 
      * <strong>example:</strong>
-     * <p>外部发起人张三</p>
+     * <p>External Initiator Zhang San</p>
      */
     @NameInMap("initiator")
     public String initiator;
 
     /**
-     * <p>稳定逻辑实例 ID，工作项重启不改变</p>
+     * <p>The stable logical instance ID. This ID does not change when the work item is restarted.</p>
      * 
      * <strong>example:</strong>
      * <p>wfi_20261016_abc123</p>
@@ -80,16 +80,16 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>用户可见错误描述，来自统一 POP 响应包装</p>
+     * <p>The user-visible error description from the unified POP response wrapper.</p>
      * 
      * <strong>example:</strong>
-     * <p>请求的资源不存在</p>
+     * <p>The requested resource does not exist</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>原始计划暂停范围</p>
+     * <p>The raw plan pause scope.</p>
      * 
      * <strong>example:</strong>
      * <p>ALL</p>
@@ -98,7 +98,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
     public String pauseScope;
 
     /**
-     * <p>当前物理计划修订 ID</p>
+     * <p>The revision ID of the current physical plan.</p>
      * 
      * <strong>example:</strong>
      * <p>plan_20261016_abc123</p>
@@ -107,13 +107,13 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
     public String planId;
 
     /**
-     * <p>可见图进度</p>
+     * <p>The visible graph progress.</p>
      */
     @NameInMap("progress")
     public GetWorkflowInstanceResponseBodyProgress progress;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request tracking ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -122,7 +122,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>原始计划审核状态</p>
+     * <p>The raw plan review status.</p>
      * 
      * <strong>example:</strong>
      * <p>APPROVED</p>
@@ -131,7 +131,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
     public String reviewStatus;
 
     /**
-     * <p>当前物理计划修订号</p>
+     * <p>The revision number of the current physical plan.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -140,7 +140,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
     public Long revision;
 
     /**
-     * <p>当前运行 ID，重启后会改变</p>
+     * <p>The current run ID. This ID changes after a restart.</p>
      * 
      * <strong>example:</strong>
      * <p>run_20261016_abc123</p>
@@ -149,7 +149,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
     public String runId;
 
     /**
-     * <p>原始 BUILDING/RUNNING/SUCCEEDED/FAILED/CANCELLED</p>
+     * <p>The raw runtime status. Valid values: BUILDING, RUNNING, SUCCEEDED, FAILED, and CANCELLED.</p>
      * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
@@ -158,7 +158,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
     public String runtimeStatus;
 
     /**
-     * <p>当前计划节点首次开始时间，未执行为 null</p>
+     * <p>The time when the current plan node started for the first time. This value is null if the node has not been executed.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-10-16T10:30:00+08:00</p>
@@ -167,7 +167,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
     public String startedAt;
 
     /**
-     * <p>运行状态版本</p>
+     * <p>The runtime status version.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -185,7 +185,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>创建时绑定的工作流模板 ID</p>
+     * <p>The ID of the workflow template bound at creation.</p>
      * 
      * <strong>example:</strong>
      * <p>wft_20261016_abc123</p>
@@ -194,16 +194,16 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
     public String templateId;
 
     /**
-     * <p>当前需求标题</p>
+     * <p>The current requirement title.</p>
      * 
      * <strong>example:</strong>
-     * <p>季度经营分析报告</p>
+     * <p>Quarterly Business Analysis Report</p>
      */
     @NameInMap("title")
     public String title;
 
     /**
-     * <p>关联工作项 ID</p>
+     * <p>The ID of the associated work item.</p>
      * 
      * <strong>example:</strong>
      * <p>wi_20261016_abc123</p>
@@ -410,16 +410,16 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
 
     public static class GetWorkflowInstanceResponseBodyCurrentNode extends TeaModel {
         /**
-         * <p>当前处理人展示名</p>
+         * <p>The display name of the current handler.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("handler")
         public String handler;
 
         /**
-         * <p>处理人或数字员工标识</p>
+         * <p>The identifier of the handler or digital worker.</p>
          * 
          * <strong>example:</strong>
          * <p>user_10086</p>
@@ -428,7 +428,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         public String handlerId;
 
         /**
-         * <p>真实运行节点 nodeKey</p>
+         * <p>The nodeKey of the actual running node.</p>
          * 
          * <strong>example:</strong>
          * <p>node_key_confirm</p>
@@ -437,16 +437,16 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>节点展示名</p>
+         * <p>The display name of the node.</p>
          * 
          * <strong>example:</strong>
-         * <p>需求确认</p>
+         * <p>Requirement Confirmation</p>
          */
         @NameInMap("nodeName")
         public String nodeName;
 
         /**
-         * <p>真实节点类型 AGENT/HUMAN/CONDITION</p>
+         * <p>The actual node type. Valid values: AGENT, HUMAN, and CONDITION.</p>
          * 
          * <strong>example:</strong>
          * <p>AGENT</p>
@@ -455,7 +455,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         public String nodeType;
 
         /**
-         * <p>节点运行状态</p>
+         * <p>The running status of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -520,16 +520,16 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
 
     public static class GetWorkflowInstanceResponseBodyCurrentNodes extends TeaModel {
         /**
-         * <p>当前处理人展示名</p>
+         * <p>The display name of the current handler.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("handler")
         public String handler;
 
         /**
-         * <p>处理人或数字员工标识</p>
+         * <p>The identifier of the handler or digital worker.</p>
          * 
          * <strong>example:</strong>
          * <p>user_10086</p>
@@ -538,7 +538,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         public String handlerId;
 
         /**
-         * <p>真实运行节点 nodeKey</p>
+         * <p>The nodeKey of the actual running node.</p>
          * 
          * <strong>example:</strong>
          * <p>node_key_confirm</p>
@@ -547,16 +547,16 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>节点展示名</p>
+         * <p>The display name of the node.</p>
          * 
          * <strong>example:</strong>
-         * <p>需求确认</p>
+         * <p>Requirement Confirmation</p>
          */
         @NameInMap("nodeName")
         public String nodeName;
 
         /**
-         * <p>真实节点类型 AGENT/HUMAN/CONDITION</p>
+         * <p>The actual node type. Valid values: AGENT, HUMAN, and CONDITION.</p>
          * 
          * <strong>example:</strong>
          * <p>AGENT</p>
@@ -565,7 +565,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         public String nodeType;
 
         /**
-         * <p>节点运行状态</p>
+         * <p>The running status of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -630,7 +630,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
 
     public static class GetWorkflowInstanceResponseBodyProgress extends TeaModel {
         /**
-         * <p>已成功或跳过的可见节点数</p>
+         * <p>The number of visible nodes that have succeeded or been skipped.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -639,7 +639,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         public Long completedCount;
 
         /**
-         * <p>当前图可见节点总数，非固定六节点</p>
+         * <p>The total number of visible nodes in the current graph. This number is not fixed to six.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

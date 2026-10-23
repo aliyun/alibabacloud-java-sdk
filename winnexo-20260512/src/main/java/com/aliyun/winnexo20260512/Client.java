@@ -214,10 +214,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>按待办ID集合批量作废；已完结/不存在不报错（幂等）</p>
+     * <p>Cancels to-do items in batches based on a set of to-do IDs. No error is reported for completed or non-existent items, ensuring idempotence.</p>
      * 
      * <b>summary</b> : 
-     * <p>BatchCancelTodos</p>
+     * <p>Cancels to-do items in batches.</p>
      * 
      * @param tmpReq BatchCancelTodosRequest
      * @param headers map
@@ -263,10 +263,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>按待办ID集合批量作废；已完结/不存在不报错（幂等）</p>
+     * <p>Cancels to-do items in batches based on a set of to-do IDs. No error is reported for completed or non-existent items, ensuring idempotence.</p>
      * 
      * <b>summary</b> : 
-     * <p>BatchCancelTodos</p>
+     * <p>Cancels to-do items in batches.</p>
      * 
      * @param request BatchCancelTodosRequest
      * @return BatchCancelTodosResponse
@@ -279,10 +279,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员批量排产、暂停、恢复或删除工作项；单项失败不回滚其他项</p>
+     * <p>Performs batch operations to schedule, pause, resume, or delete work items for valid members. A failure in a single item does not roll back other items.</p>
      * 
      * <b>summary</b> : 
-     * <p>BatchOperateWorkItems</p>
+     * <p>Performs batch operations to schedule, pause, resume, or delete work items for valid members. A failure in a single item does not roll back other items.</p>
      * 
      * @param tmpReq BatchOperateWorkItemsRequest
      * @param headers map
@@ -340,10 +340,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员批量排产、暂停、恢复或删除工作项；单项失败不回滚其他项</p>
+     * <p>Performs batch operations to schedule, pause, resume, or delete work items for valid members. A failure in a single item does not roll back other items.</p>
      * 
      * <b>summary</b> : 
-     * <p>BatchOperateWorkItems</p>
+     * <p>Performs batch operations to schedule, pause, resume, or delete work items for valid members. A failure in a single item does not roll back other items.</p>
      * 
      * @param request BatchOperateWorkItemsRequest
      * @return BatchOperateWorkItemsResponse
@@ -433,10 +433,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>作废待办；todoId 定位不存在返回 404，按 workItemId 批量尽力而为</p>
+     * <p>Cancels a to-do item. If the to-do item specified by todoId is not found, a 404 error is returned. If workItemId is used, the system makes a best-effort attempt to cancel to-do items in batches.</p>
      * 
      * <b>summary</b> : 
-     * <p>CancelTodo</p>
+     * <p>Cancels a to-do item.</p>
      * 
      * @param request CancelTodoRequest
      * @param headers map
@@ -480,10 +480,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>作废待办；todoId 定位不存在返回 404，按 workItemId 批量尽力而为</p>
+     * <p>Cancels a to-do item. If the to-do item specified by todoId is not found, a 404 error is returned. If workItemId is used, the system makes a best-effort attempt to cancel to-do items in batches.</p>
      * 
      * <b>summary</b> : 
-     * <p>CancelTodo</p>
+     * <p>Cancels a to-do item.</p>
      * 
      * @param request CancelTodoRequest
      * @return CancelTodoResponse
@@ -496,10 +496,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>本人需 APP/VIEW，代查他人需 APP/MANAGE。</p>
+     * <p>Requires the APP/VIEW permission to check your own permissions and the APP/MANAGE permission to check permissions on behalf of others.</p>
      * 
      * <b>summary</b> : 
-     * <p>检查应用内资源权限</p>
+     * <p>Checks resource permissions within an application.</p>
      * 
      * @param request CheckAppResourcePermissionRequest
      * @param headers map
@@ -559,10 +559,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>本人需 APP/VIEW，代查他人需 APP/MANAGE。</p>
+     * <p>Requires the APP/VIEW permission to check your own permissions and the APP/MANAGE permission to check permissions on behalf of others.</p>
      * 
      * <b>summary</b> : 
-     * <p>检查应用内资源权限</p>
+     * <p>Checks resource permissions within an application.</p>
      * 
      * @param request CheckAppResourcePermissionRequest
      * @return CheckAppResourcePermissionResponse
@@ -575,10 +575,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>整批逐应用鉴权后，复用 service 的常数级查询。</p>
+     * <p>After authenticating each application in the batch, reuses the constant-time query of the service.</p>
      * 
      * <b>summary</b> : 
-     * <p>批量检查应用内资源权限</p>
+     * <p>Checks resource permissions within applications in batches.</p>
      * 
      * @param tmpReq CheckAppResourcePermissionsBatchRequest
      * @param headers map
@@ -636,10 +636,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>整批逐应用鉴权后，复用 service 的常数级查询。</p>
+     * <p>After authenticating each application in the batch, reuses the constant-time query of the service.</p>
      * 
      * <b>summary</b> : 
-     * <p>批量检查应用内资源权限</p>
+     * <p>Checks resource permissions within applications in batches.</p>
      * 
      * @param request CheckAppResourcePermissionsBatchRequest
      * @return CheckAppResourcePermissionsBatchResponse
@@ -699,10 +699,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</p>
+     * <p>Manages personal or specified writing workspace memory based on the authenticated user. The workspace mode inherits the permissions of active members.</p>
      * 
      * <b>summary</b> : 
-     * <p>按类型或全部清空自动记忆</p>
+     * <p>Clears automatic memory.</p>
      * 
      * @param request ClearAutoMemoryRequest
      * @param headers map
@@ -750,10 +750,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</p>
+     * <p>Manages personal or specified writing workspace memory based on the authenticated user. The workspace mode inherits the permissions of active members.</p>
      * 
      * <b>summary</b> : 
-     * <p>按类型或全部清空自动记忆</p>
+     * <p>Clears automatic memory.</p>
      * 
      * @param request ClearAutoMemoryRequest
      * @return ClearAutoMemoryResponse
@@ -833,10 +833,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>按工作流批量关闭待办；命中该空间该工作流 run 的全部 PENDING 待办（幂等）</p>
+     * <p>Closes to-do items in batches by workflow. This operation matches all PENDING to-do items for the specified workflow run in the workspace and is idempotent.</p>
      * 
      * <b>summary</b> : 
-     * <p>CloseWorkflowTodos</p>
+     * <p>Closes workflow to-do items in batches.</p>
      * 
      * @param request CloseWorkflowTodosRequest
      * @param headers map
@@ -880,10 +880,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>按工作流批量关闭待办；命中该空间该工作流 run 的全部 PENDING 待办（幂等）</p>
+     * <p>Closes to-do items in batches by workflow. This operation matches all PENDING to-do items for the specified workflow run in the workspace and is idempotent.</p>
      * 
      * <b>summary</b> : 
-     * <p>CloseWorkflowTodos</p>
+     * <p>Closes workflow to-do items in batches.</p>
      * 
      * @param request CloseWorkflowTodosRequest
      * @return CloseWorkflowTodosResponse
@@ -896,10 +896,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>统计当前用户的待办角标（待处理数与未读数）</p>
+     * <p>Retrieves the to-do badge statistics for the current user, including the number of pending and unread items.</p>
      * 
      * <b>summary</b> : 
-     * <p>CountTodos</p>
+     * <p>Retrieves the to-do badge statistics.</p>
      * 
      * @param request CountTodosRequest
      * @param headers map
@@ -939,10 +939,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>统计当前用户的待办角标（待处理数与未读数）</p>
+     * <p>Retrieves the to-do badge statistics for the current user, including the number of pending and unread items.</p>
      * 
      * <b>summary</b> : 
-     * <p>CountTodos</p>
+     * <p>Retrieves the to-do badge statistics.</p>
      * 
      * @param request CountTodosRequest
      * @return CountTodosResponse
@@ -1222,21 +1222,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>OpenAPI 创建语义图谱（同步快建占位记录 0.0.0）并在创建时绑定数据源。
-     *     内容编辑走个人草稿接口，正式发布走产品控制台。
-     *     业务编排：
-     *     1. 权限校验（个人 Token 校验语义管理权限；部署/系统级 Token 放行）
-     *     2. 同步落库 active 占位记录（schemaVersion 固定 0.0.0）并绑定数据源；
-     *        不写 history、不触发 runtime 重建
-     *     3. 图谱内容后续经个人草稿编辑，在控制台正式发布
-     *     错误码：
-     *     - ERR.GraphSchema.GraphNameInvalid: 图谱名称不合法
-     *     - ERR.GraphSchema.GraphNameDuplicated: 图谱名称已存在
-     *     - ERR.GraphSchema.DisplayNameInvalid: 展示名不合法或重复
-     *     - ERR.GraphDataSource.*: 数据源不存在 / 非 RDB 类不可绑定</p>
+     * <p>Creates a semantic graph through OpenAPI by synchronously creating a placeholder record with version 0.0.0 and associates a data source during creation.
+     * You can edit content through the personal draft API and officially publish it through the product console.
+     * Workflow:</p>
+     * <ol>
+     * <li>Verifies permissions. Personal tokens verify semantic management permissions. Deployment or system-level tokens are also allowed.</li>
+     * <li>Synchronously writes an active placeholder record to the database with schemaVersion fixed to 0.0.0 and associates the data source. History is not recorded, and runtime reconstruction is not triggered.</li>
+     * <li>You can subsequently edit the graph content through personal drafts and officially publish it in the console.
+     * Error codes:</li>
+     * </ol>
+     * <ul>
+     * <li>ERR.GraphSchema.GraphNameInvalid: The graph name is invalid.</li>
+     * <li>ERR.GraphSchema.GraphNameDuplicated: The graph name already exists.</li>
+     * <li>ERR.GraphSchema.DisplayNameInvalid: The display name is invalid or duplicated.</li>
+     * <li>ERR.GraphDataSource.*: The data source does not exist or is not an RDB type and cannot be associated.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>创建语义图谱并绑定数据源</p>
+     * <p>Creates a semantic graph and associates a data source.</p>
      * 
      * @param request CreateGraphRequest
      * @param headers map
@@ -1288,21 +1291,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>OpenAPI 创建语义图谱（同步快建占位记录 0.0.0）并在创建时绑定数据源。
-     *     内容编辑走个人草稿接口，正式发布走产品控制台。
-     *     业务编排：
-     *     1. 权限校验（个人 Token 校验语义管理权限；部署/系统级 Token 放行）
-     *     2. 同步落库 active 占位记录（schemaVersion 固定 0.0.0）并绑定数据源；
-     *        不写 history、不触发 runtime 重建
-     *     3. 图谱内容后续经个人草稿编辑，在控制台正式发布
-     *     错误码：
-     *     - ERR.GraphSchema.GraphNameInvalid: 图谱名称不合法
-     *     - ERR.GraphSchema.GraphNameDuplicated: 图谱名称已存在
-     *     - ERR.GraphSchema.DisplayNameInvalid: 展示名不合法或重复
-     *     - ERR.GraphDataSource.*: 数据源不存在 / 非 RDB 类不可绑定</p>
+     * <p>Creates a semantic graph through OpenAPI by synchronously creating a placeholder record with version 0.0.0 and associates a data source during creation.
+     * You can edit content through the personal draft API and officially publish it through the product console.
+     * Workflow:</p>
+     * <ol>
+     * <li>Verifies permissions. Personal tokens verify semantic management permissions. Deployment or system-level tokens are also allowed.</li>
+     * <li>Synchronously writes an active placeholder record to the database with schemaVersion fixed to 0.0.0 and associates the data source. History is not recorded, and runtime reconstruction is not triggered.</li>
+     * <li>You can subsequently edit the graph content through personal drafts and officially publish it in the console.
+     * Error codes:</li>
+     * </ol>
+     * <ul>
+     * <li>ERR.GraphSchema.GraphNameInvalid: The graph name is invalid.</li>
+     * <li>ERR.GraphSchema.GraphNameDuplicated: The graph name already exists.</li>
+     * <li>ERR.GraphSchema.DisplayNameInvalid: The display name is invalid or duplicated.</li>
+     * <li>ERR.GraphDataSource.*: The data source does not exist or is not an RDB type and cannot be associated.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>创建语义图谱并绑定数据源</p>
+     * <p>Creates a semantic graph and associates a data source.</p>
      * 
      * @param request CreateGraphRequest
      * @return CreateGraphResponse
@@ -4484,10 +4490,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>创建待办（sourceType 仅接受 OPEN_API）；处理人不校验存在性，由调用方保证映射正确</p>
+     * <p>Creates a to-do item. The sourceType parameter only accepts OPEN_API. The existence of assignees is not verified, and the caller must ensure the correct mapping.</p>
      * 
      * <b>summary</b> : 
-     * <p>CreateTodo</p>
+     * <p>Creates a to-do item.</p>
      * 
      * @param tmpReq CreateTodoRequest
      * @param headers map
@@ -4565,10 +4571,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>创建待办（sourceType 仅接受 OPEN_API）；处理人不校验存在性，由调用方保证映射正确</p>
+     * <p>Creates a to-do item. The sourceType parameter only accepts OPEN_API. The existence of assignees is not verified, and the caller must ensure the correct mapping.</p>
      * 
      * <b>summary</b> : 
-     * <p>CreateTodo</p>
+     * <p>Creates a to-do item.</p>
      * 
      * @param request CreateTodoRequest
      * @return CreateTodoResponse
@@ -4852,10 +4858,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员创建 Workflow 工作项并复制模板执行快照；仅接受 WORKFLOW 类型</p>
+     * <p>Creates a workflow work item for a valid member and copies the template execution snapshot. Only the WORKFLOW type is supported.</p>
      * 
      * <b>summary</b> : 
-     * <p>CreateWorkItem</p>
+     * <p>Creates a workflow work item for a valid member and copies the template execution snapshot. Only the WORKFLOW type is supported.</p>
      * 
      * @param tmpReq CreateWorkItemRequest
      * @param headers map
@@ -4949,10 +4955,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员创建 Workflow 工作项并复制模板执行快照；仅接受 WORKFLOW 类型</p>
+     * <p>Creates a workflow work item for a valid member and copies the template execution snapshot. Only the WORKFLOW type is supported.</p>
      * 
      * <b>summary</b> : 
-     * <p>CreateWorkItem</p>
+     * <p>Creates a workflow work item for a valid member and copies the template execution snapshot. Only the WORKFLOW type is supported.</p>
      * 
      * @param request CreateWorkItemRequest
      * @return CreateWorkItemResponse
@@ -4965,10 +4971,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>组合既有创建与排产，不旁路工作项权限或运行准入。</p>
+     * <p>Combines creation and scheduling without bypassing work item permissions or run admission.</p>
      * 
      * <b>summary</b> : 
-     * <p>幂等创建工作流实例</p>
+     * <p>Creates a work item idempotently by business ID in a specified collaboration workspace, starts an actual run based on a workflow template, and returns the logical instance and the current execution view.</p>
      * 
      * @param tmpReq CreateWorkflowInstanceRequest
      * @param headers map
@@ -5042,10 +5048,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>组合既有创建与排产，不旁路工作项权限或运行准入。</p>
+     * <p>Combines creation and scheduling without bypassing work item permissions or run admission.</p>
      * 
      * <b>summary</b> : 
-     * <p>幂等创建工作流实例</p>
+     * <p>Creates a work item idempotently by business ID in a specified collaboration workspace, starts an actual run based on a workflow template, and returns the logical instance and the current execution view.</p>
      * 
      * @param request CreateWorkflowInstanceRequest
      * @return CreateWorkflowInstanceResponse
@@ -5058,10 +5064,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员保存全新工作流模板；同名模板不会覆盖</p>
+     * <p>Creates a new workflow template. Templates with the same name are not overwritten.</p>
      * 
      * <b>summary</b> : 
-     * <p>CreateWorkflowTemplate</p>
+     * <p>Creates a new workflow template. Templates with the same name are not overwritten.</p>
      * 
      * @param tmpReq CreateWorkflowTemplateRequest
      * @param headers map
@@ -5082,6 +5088,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.action)) {
+            body.put("action", request.action);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.collaborationGroupId)) {
             body.put("collaborationGroupId", request.collaborationGroupId);
         }
@@ -5111,10 +5121,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员保存全新工作流模板；同名模板不会覆盖</p>
+     * <p>Creates a new workflow template. Templates with the same name are not overwritten.</p>
      * 
      * <b>summary</b> : 
-     * <p>CreateWorkflowTemplate</p>
+     * <p>Creates a new workflow template. Templates with the same name are not overwritten.</p>
      * 
      * @param request CreateWorkflowTemplateRequest
      * @return CreateWorkflowTemplateResponse
@@ -5127,10 +5137,77 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>逐应用通过 MANAGE 校验后，调用原有原子删除能力。</p>
+     * <p>Generates a draft version of a workflow template for editing by a storage management administrator. If the selected version is a draft, it is returned as-is (idempotent, no new version is created). If the selected version is committed, replication of its content is performed for content generation of a v(maximum version number + 1) draft. The effective version remains unchanged. You can subsequently use UpdateWorkflowTemplate and pass the returned version to save or commit the draft.</p>
      * 
      * <b>summary</b> : 
-     * <p>批量删除应用内资源权限</p>
+     * <p>Creates a draft of a workflow template.</p>
+     * 
+     * @param request CreateWorkflowTemplateDraftVersionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateWorkflowTemplateDraftVersionResponse
+     */
+    public CreateWorkflowTemplateDraftVersionResponse createWorkflowTemplateDraftVersionWithOptions(CreateWorkflowTemplateDraftVersionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.collaborationGroupId)) {
+            body.put("collaborationGroupId", request.collaborationGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            body.put("templateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            body.put("version", request.version);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateWorkflowTemplateDraftVersion"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/createWorkflowTemplateDraftVersion"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateWorkflowTemplateDraftVersionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Generates a draft version of a workflow template for editing by a storage management administrator. If the selected version is a draft, it is returned as-is (idempotent, no new version is created). If the selected version is committed, replication of its content is performed for content generation of a v(maximum version number + 1) draft. The effective version remains unchanged. You can subsequently use UpdateWorkflowTemplate and pass the returned version to save or commit the draft.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a draft of a workflow template.</p>
+     * 
+     * @param request CreateWorkflowTemplateDraftVersionRequest
+     * @return CreateWorkflowTemplateDraftVersionResponse
+     */
+    public CreateWorkflowTemplateDraftVersionResponse createWorkflowTemplateDraftVersion(CreateWorkflowTemplateDraftVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createWorkflowTemplateDraftVersionWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Verifies MANAGE permissions for each application and then calls the original atomic deletion capability.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes multiple resource permissions within an application.</p>
      * 
      * @param tmpReq DeleteAppResourcePermissionsRequest
      * @param headers map
@@ -5180,10 +5257,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>逐应用通过 MANAGE 校验后，调用原有原子删除能力。</p>
+     * <p>Verifies MANAGE permissions for each application and then calls the original atomic deletion capability.</p>
      * 
      * <b>summary</b> : 
-     * <p>批量删除应用内资源权限</p>
+     * <p>Deletes multiple resource permissions within an application.</p>
      * 
      * @param request DeleteAppResourcePermissionsRequest
      * @return DeleteAppResourcePermissionsResponse
@@ -5413,10 +5490,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员删除非处理中工作项；级联清理待办、节点话题与运行时</p>
+     * <p>Deletes a non-processing work item by a valid member and cascades the cleanup of to-do items, node topics, and runtimes.</p>
      * 
      * <b>summary</b> : 
-     * <p>DeleteWorkItem</p>
+     * <p>Deletes a non-processing work item by a valid member and cascades the cleanup of to-do items, node topics, and runtimes.</p>
      * 
      * @param request DeleteWorkItemRequest
      * @param headers map
@@ -5460,10 +5537,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员删除非处理中工作项；级联清理待办、节点话题与运行时</p>
+     * <p>Deletes a non-processing work item by a valid member and cascades the cleanup of to-do items, node topics, and runtimes.</p>
      * 
      * <b>summary</b> : 
-     * <p>DeleteWorkItem</p>
+     * <p>Deletes a non-processing work item by a valid member and cascades the cleanup of to-do items, node topics, and runtimes.</p>
      * 
      * @param request DeleteWorkItemRequest
      * @return DeleteWorkItemResponse
@@ -5476,10 +5553,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员物理删除工作流模板及其步骤；不执行工作项依赖校验</p>
+     * <p>Physically deletes a workflow template and its steps for valid members without performing work item dependency checks.</p>
      * 
      * <b>summary</b> : 
-     * <p>DeleteWorkflowTemplate</p>
+     * <p>Physically deletes a workflow template and its steps for valid members without performing work item dependency checks.</p>
      * 
      * @param request DeleteWorkflowTemplateRequest
      * @param headers map
@@ -5523,10 +5600,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员物理删除工作流模板及其步骤；不执行工作项依赖校验</p>
+     * <p>Physically deletes a workflow template and its steps for valid members without performing work item dependency checks.</p>
      * 
      * <b>summary</b> : 
-     * <p>DeleteWorkflowTemplate</p>
+     * <p>Physically deletes a workflow template and its steps for valid members without performing work item dependency checks.</p>
      * 
      * @param request DeleteWorkflowTemplateRequest
      * @return DeleteWorkflowTemplateResponse
@@ -5535,6 +5612,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteWorkflowTemplateWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a specified version of a workflow template as a workspace administrator. Only inactive versions can be deleted. The system denies requests to delete the active version or the last version of the template with a 409 error. After deletion, the list of remaining versions is returned.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified version of a workflow template.</p>
+     * 
+     * @param request DeleteWorkflowTemplateVersionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteWorkflowTemplateVersionResponse
+     */
+    public DeleteWorkflowTemplateVersionResponse deleteWorkflowTemplateVersionWithOptions(DeleteWorkflowTemplateVersionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.collaborationGroupId)) {
+            body.put("collaborationGroupId", request.collaborationGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            body.put("templateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            body.put("version", request.version);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteWorkflowTemplateVersion"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/deleteWorkflowTemplateVersion"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteWorkflowTemplateVersionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a specified version of a workflow template as a workspace administrator. Only inactive versions can be deleted. The system denies requests to delete the active version or the last version of the template with a 409 error. After deletion, the list of remaining versions is returned.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified version of a workflow template.</p>
+     * 
+     * @param request DeleteWorkflowTemplateVersionRequest
+     * @return DeleteWorkflowTemplateVersionResponse
+     */
+    public DeleteWorkflowTemplateVersionResponse deleteWorkflowTemplateVersion(DeleteWorkflowTemplateVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteWorkflowTemplateVersionWithOptions(request, headers, runtime);
     }
 
     /**
@@ -5685,10 +5829,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员导出可回流导入的精简模板定义</p>
+     * <p>Exports a simplified template definition that can be re-imported by valid members.</p>
      * 
      * <b>summary</b> : 
-     * <p>ExportWorkflowTemplate</p>
+     * <p>Exports a simplified template definition that can be re-imported by valid members.</p>
      * 
      * @param request ExportWorkflowTemplateRequest
      * @param headers map
@@ -5709,6 +5853,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
             body.put("templateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            body.put("version", request.version);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -5732,10 +5880,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员导出可回流导入的精简模板定义</p>
+     * <p>Exports a simplified template definition that can be re-imported by valid members.</p>
      * 
      * <b>summary</b> : 
-     * <p>ExportWorkflowTemplate</p>
+     * <p>Exports a simplified template definition that can be re-imported by valid members.</p>
      * 
      * @param request ExportWorkflowTemplateRequest
      * @return ExportWorkflowTemplateResponse
@@ -5748,10 +5896,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员调用 LLM 生成非持久化模板草稿；消耗租户 LLM 配额</p>
+     * <p>Generates a non-persistent template draft by calling a large language model (LLM) and consumes the LLM quota of the tenant.</p>
      * 
      * <b>summary</b> : 
-     * <p>GenerateWorkflowTemplateDraft</p>
+     * <p>Generates a non-persistent template draft by calling a large language model (LLM) and consumes the LLM quota of the tenant.</p>
      * 
      * @param tmpReq GenerateWorkflowTemplateDraftRequest
      * @param headers map
@@ -5805,10 +5953,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员调用 LLM 生成非持久化模板草稿；消耗租户 LLM 配额</p>
+     * <p>Generates a non-persistent template draft by calling a large language model (LLM) and consumes the LLM quota of the tenant.</p>
      * 
      * <b>summary</b> : 
-     * <p>GenerateWorkflowTemplateDraft</p>
+     * <p>Generates a non-persistent template draft by calling a large language model (LLM) and consumes the LLM quota of the tenant.</p>
      * 
      * @param request GenerateWorkflowTemplateDraftRequest
      * @return GenerateWorkflowTemplateDraftResponse
@@ -5821,10 +5969,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询工作流 Agent 工作日志</p>
+     * <p>Queries the operation logs of a workflow agent.</p>
      * 
      * <b>summary</b> : 
-     * <p>GetAgentWorkLog</p>
+     * <p>Queries the operation logs of a workflow agent.</p>
      * 
      * @param request GetAgentWorkLogRequest
      * @param headers map
@@ -5876,10 +6024,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询工作流 Agent 工作日志</p>
+     * <p>Queries the operation logs of a workflow agent.</p>
      * 
      * <b>summary</b> : 
-     * <p>GetAgentWorkLog</p>
+     * <p>Queries the operation logs of a workflow agent.</p>
      * 
      * @param request GetAgentWorkLogRequest
      * @return GetAgentWorkLogResponse
@@ -6448,10 +6596,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</p>
+     * <p>Manages personal or specified collaborative writing workspace memories based on the authenticated user. The workspace mode follows the permissions of active members.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询自动记忆拾取开关</p>
+     * <p>Queries the automatic memory collection switch.</p>
      * 
      * @param request GetMemoryAutoExtractionSwitchRequest
      * @param headers map
@@ -6495,10 +6643,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</p>
+     * <p>Manages personal or specified collaborative writing workspace memories based on the authenticated user. The workspace mode follows the permissions of active members.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询自动记忆拾取开关</p>
+     * <p>Queries the automatic memory collection switch.</p>
      * 
      * @param request GetMemoryAutoExtractionSwitchRequest
      * @return GetMemoryAutoExtractionSwitchResponse
@@ -6511,10 +6659,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</p>
+     * <p>Manages personal memories or memories of a specified writing workspace based on the authenticated user. The workspace mode inherits the permissions of active members.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询个人或协作空间记忆详情</p>
+     * <p>Queries the details of a memory.</p>
      * 
      * @param request GetMemoryDetailRequest
      * @param headers map
@@ -6558,10 +6706,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</p>
+     * <p>Manages personal memories or memories of a specified writing workspace based on the authenticated user. The workspace mode inherits the permissions of active members.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询个人或协作空间记忆详情</p>
+     * <p>Queries the details of a memory.</p>
      * 
      * @param request GetMemoryDetailRequest
      * @return GetMemoryDetailResponse
@@ -6574,10 +6722,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询实例节点完整详情</p>
+     * <p>Queries the complete details of an instance node.</p>
      * 
      * <b>summary</b> : 
-     * <p>GetNodeDetail</p>
+     * <p>Queries the details of an instance node.</p>
      * 
      * @param request GetNodeDetailRequest
      * @param headers map
@@ -6625,10 +6773,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询实例节点完整详情</p>
+     * <p>Queries the complete details of an instance node.</p>
      * 
      * <b>summary</b> : 
-     * <p>GetNodeDetail</p>
+     * <p>Queries the details of an instance node.</p>
      * 
      * @param request GetNodeDetailRequest
      * @return GetNodeDetailResponse
@@ -7309,10 +7457,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询待办（无已读副作用）；todoId/workItemId/messageId 三选一，优先级 todoId &gt; workItemId &gt; messageId</p>
+     * <p>Queries to-do items without triggering the read status side effect. You must specify one of the following parameters: todoId, workItemId, or messageId. The priority order is todoId &gt; workItemId &gt; messageId.</p>
      * 
      * <b>summary</b> : 
-     * <p>GetTodo</p>
+     * <p>Queries to-do items.</p>
      * 
      * @param request GetTodoRequest
      * @param headers map
@@ -7360,10 +7508,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询待办（无已读副作用）；todoId/workItemId/messageId 三选一，优先级 todoId &gt; workItemId &gt; messageId</p>
+     * <p>Queries to-do items without triggering the read status side effect. You must specify one of the following parameters: todoId, workItemId, or messageId. The priority order is todoId &gt; workItemId &gt; messageId.</p>
      * 
      * <b>summary</b> : 
-     * <p>GetTodo</p>
+     * <p>Queries to-do items.</p>
      * 
      * @param request GetTodoRequest
      * @return GetTodoResponse
@@ -7376,10 +7524,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询待办详情；当前调用者为 PENDING 处理人时自动填充 readAt（已读副作用）</p>
+     * <p>Queries the details of a to-do item. If the current caller is a PENDING assignee, the readAt field is automatically populated to mark the item as read.</p>
      * 
      * <b>summary</b> : 
-     * <p>GetTodoDetail</p>
+     * <p>Queries the processing details of a to-do item.</p>
      * 
      * @param request GetTodoDetailRequest
      * @param headers map
@@ -7419,10 +7567,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询待办详情；当前调用者为 PENDING 处理人时自动填充 readAt（已读副作用）</p>
+     * <p>Queries the details of a to-do item. If the current caller is a PENDING assignee, the readAt field is automatically populated to mark the item as read.</p>
      * 
      * <b>summary</b> : 
-     * <p>GetTodoDetail</p>
+     * <p>Queries the processing details of a to-do item.</p>
      * 
      * @param request GetTodoDetailRequest
      * @return GetTodoDetailResponse
@@ -7869,10 +8017,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员读取当前空间可见工作项详情</p>
+     * <p>Retrieves the details of a work item visible to valid members in the current collaboration space.</p>
      * 
      * <b>summary</b> : 
-     * <p>GetWorkItem</p>
+     * <p>Retrieves the details of a work item visible to valid members in the current collaboration space.</p>
      * 
      * @param request GetWorkItemRequest
      * @param headers map
@@ -7916,10 +8064,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员读取当前空间可见工作项详情</p>
+     * <p>Retrieves the details of a work item visible to valid members in the current collaboration space.</p>
      * 
      * <b>summary</b> : 
-     * <p>GetWorkItem</p>
+     * <p>Retrieves the details of a work item visible to valid members in the current collaboration space.</p>
      * 
      * @param request GetWorkItemRequest
      * @return GetWorkItemResponse
@@ -7932,10 +8080,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>校验调用者工作项权限后 302 跳转到产物短期签名下载地址</p>
+     * <p>Redirects to the short-term signed download URL of the artifact with an HTTP 302 status code after validating the caller\&quot;s permissions for the work item.</p>
      * 
      * <b>summary</b> : 
-     * <p>GetWorkItemArtifactAccess</p>
+     * <p>Redirects to the short-term signed download URL of the artifact with an HTTP 302 status code after validating the caller\&quot;s permissions for the work item.</p>
      * 
      * @param request GetWorkItemArtifactAccessRequest
      * @param headers map
@@ -7981,10 +8129,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>校验调用者工作项权限后 302 跳转到产物短期签名下载地址</p>
+     * <p>Redirects to the short-term signed download URL of the artifact with an HTTP 302 status code after validating the caller\&quot;s permissions for the work item.</p>
      * 
      * <b>summary</b> : 
-     * <p>GetWorkItemArtifactAccess</p>
+     * <p>Redirects to the short-term signed download URL of the artifact with an HTTP 302 status code after validating the caller\&quot;s permissions for the work item.</p>
      * 
      * @param request GetWorkItemArtifactAccessRequest
      * @return GetWorkItemArtifactAccessResponse
@@ -7997,10 +8145,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>校验调用者工作项权限后 302 跳转到输入附件短期预览地址</p>
+     * <p>Redirects to the short-term preview URL of the specified attachment with a 302 status code after validating the caller\&quot;s work item permissions.</p>
      * 
      * <b>summary</b> : 
-     * <p>GetWorkItemAttachmentAccess</p>
+     * <p>Redirects to the short-term preview URL of the specified attachment with a 302 status code after validating the caller\&quot;s work item permissions.</p>
      * 
      * @param request GetWorkItemAttachmentAccessRequest
      * @param headers map
@@ -8046,10 +8194,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>校验调用者工作项权限后 302 跳转到输入附件短期预览地址</p>
+     * <p>Redirects to the short-term preview URL of the specified attachment with a 302 status code after validating the caller\&quot;s work item permissions.</p>
      * 
      * <b>summary</b> : 
-     * <p>GetWorkItemAttachmentAccess</p>
+     * <p>Redirects to the short-term preview URL of the specified attachment with a 302 status code after validating the caller\&quot;s work item permissions.</p>
      * 
      * @param request GetWorkItemAttachmentAccessRequest
      * @return GetWorkItemAttachmentAccessResponse
@@ -8062,10 +8210,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>以当前成员和工作项可见性读取实例。</p>
+     * <p>Retrieves the instance based on the current member and work item visibility.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询工作流实例详情</p>
+     * <p>Queries the current running, review, and pause statuses of a work item, along with the actual active nodes and execution progress, by using a stable logical instance ID.</p>
      * 
      * @param request GetWorkflowInstanceRequest
      * @param headers map
@@ -8105,10 +8253,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>以当前成员和工作项可见性读取实例。</p>
+     * <p>Retrieves the instance based on the current member and work item visibility.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询工作流实例详情</p>
+     * <p>Queries the current running, review, and pause statuses of a work item, along with the actual active nodes and execution progress, by using a stable logical instance ID.</p>
      * 
      * @param request GetWorkflowInstanceRequest
      * @return GetWorkflowInstanceResponse
@@ -8121,10 +8269,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员读取协作空间工作流模板当前配置</p>
+     * <p>Retrieves the current configuration of a workflow template in a collaboration workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>GetWorkflowTemplate</p>
+     * <p>Retrieves the current configuration of a workflow template in a collaboration workspace.</p>
      * 
      * @param request GetWorkflowTemplateRequest
      * @param headers map
@@ -8145,6 +8293,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
             body.put("templateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            body.put("version", request.version);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -8168,10 +8320,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员读取协作空间工作流模板当前配置</p>
+     * <p>Retrieves the current configuration of a workflow template in a collaboration workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>GetWorkflowTemplate</p>
+     * <p>Retrieves the current configuration of a workflow template in a collaboration workspace.</p>
      * 
      * @param request GetWorkflowTemplateRequest
      * @return GetWorkflowTemplateResponse
@@ -8285,10 +8437,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员导入可移植模板 JSON 并创建新模板；无论名称是否相同都新建</p>
+     * <p>Imports a portable template JSON and creates a new template. A new template is created regardless of whether the name is identical.</p>
      * 
      * <b>summary</b> : 
-     * <p>ImportWorkflowTemplate</p>
+     * <p>Imports a portable template JSON and creates a new template. A new template is created regardless of whether the name is identical.</p>
      * 
      * @param tmpReq ImportWorkflowTemplateRequest
      * @param headers map
@@ -8338,10 +8490,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员导入可移植模板 JSON 并创建新模板；无论名称是否相同都新建</p>
+     * <p>Imports a portable template JSON and creates a new template. A new template is created regardless of whether the name is identical.</p>
      * 
      * <b>summary</b> : 
-     * <p>ImportWorkflowTemplate</p>
+     * <p>Imports a portable template JSON and creates a new template. A new template is created regardless of whether the name is identical.</p>
      * 
      * @param request ImportWorkflowTemplateRequest
      * @return ImportWorkflowTemplateResponse
@@ -8751,10 +8903,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>APP/MANAGE 授权后按安全应用前缀分页。</p>
+     * <p>Pages results by secure application prefix after APP/MANAGE authorization.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询应用内全部原始资源授权</p>
+     * <p>Queries the resource authorization records within an application.</p>
      * 
      * @param tmpReq ListAppResourcePermissionRecordsRequest
      * @param headers map
@@ -8832,10 +8984,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>APP/MANAGE 授权后按安全应用前缀分页。</p>
+     * <p>Pages results by secure application prefix after APP/MANAGE authorization.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询应用内全部原始资源授权</p>
+     * <p>Queries the resource authorization records within an application.</p>
      * 
      * @param request ListAppResourcePermissionRecordsRequest
      * @return ListAppResourcePermissionRecordsResponse
@@ -8848,10 +9000,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>强制应用前缀，本人需 VIEW，代查他人需 MANAGE。</p>
+     * <p>An application prefix is required. The VIEW permission is required to query your own permissions, and the MANAGE permission is required to query permissions on behalf of others.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询用户应用内有效资源权限</p>
+     * <p>Queries the valid resource permissions of a user within an application.</p>
      * 
      * @param tmpReq ListAppResourceUserPermissionsRequest
      * @param headers map
@@ -8925,10 +9077,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>强制应用前缀，本人需 VIEW，代查他人需 MANAGE。</p>
+     * <p>An application prefix is required. The VIEW permission is required to query your own permissions, and the MANAGE permission is required to query permissions on behalf of others.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询用户应用内有效资源权限</p>
+     * <p>Queries the valid resource permissions of a user within an application.</p>
      * 
      * @param request ListAppResourceUserPermissionsRequest
      * @return ListAppResourceUserPermissionsResponse
@@ -9725,10 +9877,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询实例节点列表</p>
+     * <p>Queries the node list of an instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>ListInstanceNodes</p>
+     * <p>Queries the node list of an instance.</p>
      * 
      * @param request ListInstanceNodesRequest
      * @param headers map
@@ -9772,10 +9924,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询实例节点列表</p>
+     * <p>Queries the node list of an instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>ListInstanceNodes</p>
+     * <p>Queries the node list of an instance.</p>
      * 
      * @param request ListInstanceNodesRequest
      * @return ListInstanceNodesResponse
@@ -9942,19 +10094,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <ul>
-     * <li>This API operation queries the output list of the current logged-in user.</li>
-     * <li><code>tenantId</code> is a common parameter. If not specified, the default tenant of the caller is used.</li>
-     * <li>Filtering is supported through parameters such as <code>operatingObjectName</code>, <code>itemType</code>, and <code>keyword</code>.</li>
-     * <li>Set <code>sharedOnly</code> to <code>true</code> to display only outputs with sharing enabled.</li>
-     * <li>Pagination is controlled by <code>page</code> (page number) and <code>pageSize</code> (number of items per page). By default, the first page is returned with 20 records per page.</li>
-     * <li>Results are sorted by update time in descending order by default.</li>
-     * <li>The <code>tenant_id</code> or <code>user_id</code> values passed in the request body by the caller are ignored. This information is derived only from the authenticated identity.</li>
-     * </ul>
+     * <p>If collaborationGroupId is not provided, queries the personal outputs of the current invoker. If provided, queries the outputs of the specified collaboration workspace and verifies the real-time access permissions of the current workspace members and source resources. The invoker identity and tenant permissions are determined by the authentication context.
+     * sessionId requires an exact match for a regular session, skill session, or node execution session. tags requires all labels to match simultaneously. bizId requires an exact match for the business ID of the file registration or associated workflow instance. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using AND, and are executed before counting and paging.
+     * Labels and business IDs are derived from file registrations or workflow instance associations. Unregistered labels or business IDs are not inferred from titles. Paging defaults to page 1 with 20 items per page, up to a maximum of 100 items, sorted in descending order by update time. The response structure remains compatible with the original API.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the output list of the current user. Filtering by conditions and pagination are supported.</p>
+     * <p>Performs a paged query to retrieve the visible outputs of the current user or a specified collaboration workspace. Supports paging and filtering by session, labels, business ID, and existing output filter conditions.</p>
      * 
      * @param tmpReq ListOutputFilesRequest
      * @param headers map
@@ -10036,19 +10181,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <ul>
-     * <li>This API operation queries the output list of the current logged-in user.</li>
-     * <li><code>tenantId</code> is a common parameter. If not specified, the default tenant of the caller is used.</li>
-     * <li>Filtering is supported through parameters such as <code>operatingObjectName</code>, <code>itemType</code>, and <code>keyword</code>.</li>
-     * <li>Set <code>sharedOnly</code> to <code>true</code> to display only outputs with sharing enabled.</li>
-     * <li>Pagination is controlled by <code>page</code> (page number) and <code>pageSize</code> (number of items per page). By default, the first page is returned with 20 records per page.</li>
-     * <li>Results are sorted by update time in descending order by default.</li>
-     * <li>The <code>tenant_id</code> or <code>user_id</code> values passed in the request body by the caller are ignored. This information is derived only from the authenticated identity.</li>
-     * </ul>
+     * <p>If collaborationGroupId is not provided, queries the personal outputs of the current invoker. If provided, queries the outputs of the specified collaboration workspace and verifies the real-time access permissions of the current workspace members and source resources. The invoker identity and tenant permissions are determined by the authentication context.
+     * sessionId requires an exact match for a regular session, skill session, or node execution session. tags requires all labels to match simultaneously. bizId requires an exact match for the business ID of the file registration or associated workflow instance. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using AND, and are executed before counting and paging.
+     * Labels and business IDs are derived from file registrations or workflow instance associations. Unregistered labels or business IDs are not inferred from titles. Paging defaults to page 1 with 20 items per page, up to a maximum of 100 items, sorted in descending order by update time. The response structure remains compatible with the original API.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the output list of the current user. Filtering by conditions and pagination are supported.</p>
+     * <p>Performs a paged query to retrieve the visible outputs of the current user or a specified collaboration workspace. Supports paging and filtering by session, labels, business ID, and existing output filter conditions.</p>
      * 
      * @param request ListOutputFilesRequest
      * @return ListOutputFilesResponse
@@ -10550,10 +10688,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>分页查询当前用户的待办列表；筛选组内并集、组间交集，全不传 = 全部</p>
+     * <p>Performs a paging query on the to-do list for the current user. For paging, filters within a group use a union, and filters across groups use an intersection. If no filters are specified, all items are returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>ListTodos</p>
+     * <p>Performs a paging query on the to-do list.</p>
      * 
      * @param tmpReq ListTodosRequest
      * @param headers map
@@ -10651,10 +10789,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>分页查询当前用户的待办列表；筛选组内并集、组间交集，全不传 = 全部</p>
+     * <p>Performs a paging query on the to-do list for the current user. For paging, filters within a group use a union, and filters across groups use an intersection. If no filters are specified, all items are returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>ListTodos</p>
+     * <p>Performs a paging query on the to-do list.</p>
      * 
      * @param request ListTodosRequest
      * @return ListTodosResponse
@@ -11174,10 +11312,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员列出有权访问工作项的全部历史产物</p>
+     * <p>Lists all historical artifacts of a work item accessible to authorized members.</p>
      * 
      * <b>summary</b> : 
-     * <p>ListWorkItemArtifacts</p>
+     * <p>Lists all historical artifacts of a work item accessible to authorized members.</p>
      * 
      * @param request ListWorkItemArtifactsRequest
      * @param headers map
@@ -11221,10 +11359,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员列出有权访问工作项的全部历史产物</p>
+     * <p>Lists all historical artifacts of a work item accessible to authorized members.</p>
      * 
      * <b>summary</b> : 
-     * <p>ListWorkItemArtifacts</p>
+     * <p>Lists all historical artifacts of a work item accessible to authorized members.</p>
      * 
      * @param request ListWorkItemArtifactsRequest
      * @return ListWorkItemArtifactsResponse
@@ -11237,10 +11375,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员分页筛选当前空间可见工作项；page/pageSize 与 nextToken/maxResults 并存，令牌优先</p>
+     * <p>Lists visible work items in the current workspace for valid members with pagination. The nextToken and maxResults parameters take precedence over the page and pageSize parameters.</p>
      * 
      * <b>summary</b> : 
-     * <p>ListWorkItems</p>
+     * <p>Lists visible work items in the current workspace for valid members with pagination. The nextToken and maxResults parameters take precedence over the page and pageSize parameters.</p>
      * 
      * @param tmpReq ListWorkItemsRequest
      * @param headers map
@@ -11330,10 +11468,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员分页筛选当前空间可见工作项；page/pageSize 与 nextToken/maxResults 并存，令牌优先</p>
+     * <p>Lists visible work items in the current workspace for valid members with pagination. The nextToken and maxResults parameters take precedence over the page and pageSize parameters.</p>
      * 
      * <b>summary</b> : 
-     * <p>ListWorkItems</p>
+     * <p>Lists visible work items in the current workspace for valid members with pagination. The nextToken and maxResults parameters take precedence over the page and pageSize parameters.</p>
      * 
      * @param request ListWorkItemsRequest
      * @return ListWorkItemsResponse
@@ -11346,10 +11484,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>复用详情投影，避免工作项列表与实例状态混用。</p>
+     * <p>Reuses detail projections to avoid mixing work item lists with instance statuses.</p>
      * 
      * <b>summary</b> : 
-     * <p>分页筛选工作流实例</p>
+     * <p>Queries workflow instances visible to the current invoker in a specified collaboration space through a paged query, and supports paging and filtering by status, external requirement ID, initiator, keyword, and sorting conditions.</p>
      * 
      * @param request ListWorkflowInstancesRequest
      * @param headers map
@@ -11421,10 +11559,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>复用详情投影，避免工作项列表与实例状态混用。</p>
+     * <p>Reuses detail projections to avoid mixing work item lists with instance statuses.</p>
      * 
      * <b>summary</b> : 
-     * <p>分页筛选工作流实例</p>
+     * <p>Queries workflow instances visible to the current invoker in a specified collaboration space through a paged query, and supports paging and filtering by status, external requirement ID, initiator, keyword, and sorting conditions.</p>
      * 
      * @param request ListWorkflowInstancesRequest
      * @return ListWorkflowInstancesResponse
@@ -11437,10 +11575,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员分页搜索当前协作空间的有效模板；page/pageSize 与 nextToken/maxResults 并存，令牌优先</p>
+     * <p>Queries all versions of a workflow template for active members. Returns draft and submitted versions in descending order by version number, and marks the unique effective version.</p>
      * 
      * <b>summary</b> : 
-     * <p>ListWorkflowTemplates</p>
+     * <p>Queries the versions of a workflow template.</p>
+     * 
+     * @param request ListWorkflowTemplateVersionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListWorkflowTemplateVersionsResponse
+     */
+    public ListWorkflowTemplateVersionsResponse listWorkflowTemplateVersionsWithOptions(ListWorkflowTemplateVersionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.collaborationGroupId)) {
+            body.put("collaborationGroupId", request.collaborationGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            body.put("templateId", request.templateId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListWorkflowTemplateVersions"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/listWorkflowTemplateVersions"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListWorkflowTemplateVersionsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries all versions of a workflow template for active members. Returns draft and submitted versions in descending order by version number, and marks the unique effective version.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the versions of a workflow template.</p>
+     * 
+     * @param request ListWorkflowTemplateVersionsRequest
+     * @return ListWorkflowTemplateVersionsResponse
+     */
+    public ListWorkflowTemplateVersionsResponse listWorkflowTemplateVersions(ListWorkflowTemplateVersionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listWorkflowTemplateVersionsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Searches for valid templates in the current collaboration space with pagination. Supports both page/pageSize and nextToken/maxResults parameters, with token-based pagination taking precedence.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries valid templates in the current collaboration space with pagination. Supports both page/pageSize and nextToken/maxResults parameters, with token-based pagination taking precedence.</p>
      * 
      * @param request ListWorkflowTemplatesRequest
      * @param headers map
@@ -11500,10 +11701,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员分页搜索当前协作空间的有效模板；page/pageSize 与 nextToken/maxResults 并存，令牌优先</p>
+     * <p>Searches for valid templates in the current collaboration space with pagination. Supports both page/pageSize and nextToken/maxResults parameters, with token-based pagination taking precedence.</p>
      * 
      * <b>summary</b> : 
-     * <p>ListWorkflowTemplates</p>
+     * <p>Queries valid templates in the current collaboration space with pagination. Supports both page/pageSize and nextToken/maxResults parameters, with token-based pagination taking precedence.</p>
      * 
      * @param request ListWorkflowTemplatesRequest
      * @return ListWorkflowTemplatesResponse
@@ -11516,10 +11717,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>标记当前用户的待办已读；markAllRead 优先于 todoIds，两者皆空不报错</p>
+     * <p>Marks the to-do items of the current user as read. The markAllRead parameter takes precedence over the todoIds parameter. If both parameters are empty, no error is returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>MarkTodosRead</p>
+     * <p>Marks to-do items as read.</p>
      * 
      * @param tmpReq MarkTodosReadRequest
      * @param headers map
@@ -11569,10 +11770,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>标记当前用户的待办已读；markAllRead 优先于 todoIds，两者皆空不报错</p>
+     * <p>Marks the to-do items of the current user as read. The markAllRead parameter takes precedence over the todoIds parameter. If both parameters are empty, no error is returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>MarkTodosRead</p>
+     * <p>Marks to-do items as read.</p>
      * 
      * @param request MarkTodosReadRequest
      * @return MarkTodosReadResponse
@@ -11913,10 +12114,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员暂停工作项绑定的整个 Workflow</p>
+     * <p>Pauses the entire workflow bound to a work item for active members.</p>
      * 
      * <b>summary</b> : 
-     * <p>PauseWorkItem</p>
+     * <p>Pauses the entire workflow bound to a work item for active members.</p>
      * 
      * @param request PauseWorkItemRequest
      * @param headers map
@@ -11960,10 +12161,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员暂停工作项绑定的整个 Workflow</p>
+     * <p>Pauses the entire workflow bound to a work item for active members.</p>
      * 
      * <b>summary</b> : 
-     * <p>PauseWorkItem</p>
+     * <p>Pauses the entire workflow bound to a work item for active members.</p>
      * 
      * @param request PauseWorkItemRequest
      * @return PauseWorkItemResponse
@@ -12421,10 +12622,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员查询工作项 feed 分组视图；服务端游标分页（cursor/pageSize）</p>
+     * <p>Queries the grouped view of the work item feed for active members with server-side cursor pagination.</p>
      * 
      * <b>summary</b> : 
-     * <p>QueryWorkItemFeed</p>
+     * <p>Queries the grouped view of the work item feed for active members with server-side cursor pagination.</p>
      * 
      * @param tmpReq QueryWorkItemFeedRequest
      * @param headers map
@@ -12514,10 +12715,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员查询工作项 feed 分组视图；服务端游标分页（cursor/pageSize）</p>
+     * <p>Queries the grouped view of the work item feed for active members with server-side cursor pagination.</p>
      * 
      * <b>summary</b> : 
-     * <p>QueryWorkItemFeed</p>
+     * <p>Queries the grouped view of the work item feed for active members with server-side cursor pagination.</p>
      * 
      * @param request QueryWorkItemFeedRequest
      * @return QueryWorkItemFeedResponse
@@ -12617,10 +12818,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>先检查全部应用的 MANAGE 权限，再执行一次原子批量注册。</p>
+     * <p>Checks the MANAGE permission for all applications first, and then performs an atomic batch registration.</p>
      * 
      * <b>summary</b> : 
-     * <p>批量注册应用内资源权限</p>
+     * <p>Registers in-app resource permissions in bulk.</p>
      * 
      * @param tmpReq RegisterAppResourcePermissionsRequest
      * @param headers map
@@ -12670,10 +12871,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>先检查全部应用的 MANAGE 权限，再执行一次原子批量注册。</p>
+     * <p>Checks the MANAGE permission for all applications first, and then performs an atomic batch registration.</p>
      * 
      * <b>summary</b> : 
-     * <p>批量注册应用内资源权限</p>
+     * <p>Registers in-app resource permissions in bulk.</p>
      * 
      * @param request RegisterAppResourcePermissionsRequest
      * @return RegisterAppResourcePermissionsResponse
@@ -13316,10 +13517,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</p>
+     * <p>Manages personal memory or the memory of a specified writing workspace based on the authenticated user. Workspace mode inherits the permissions of active members.</p>
      * 
      * <b>summary</b> : 
-     * <p>覆盖或清空手动记忆</p>
+     * <p>Overwrites or clears manual memory.</p>
      * 
      * @param request ReplaceManualMemoryRequest
      * @param headers map
@@ -13367,10 +13568,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</p>
+     * <p>Manages personal memory or the memory of a specified writing workspace based on the authenticated user. Workspace mode inherits the permissions of active members.</p>
      * 
      * <b>summary</b> : 
-     * <p>覆盖或清空手动记忆</p>
+     * <p>Overwrites or clears manual memory.</p>
      * 
      * @param request ReplaceManualMemoryRequest
      * @return ReplaceManualMemoryResponse
@@ -13555,10 +13756,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>重跑失败的工作流节点</p>
+     * <p>Reruns a failed workflow node.</p>
      * 
      * <b>summary</b> : 
-     * <p>RerunNodeAI</p>
+     * <p>Reruns a workflow node.</p>
      * 
      * @param request RerunNodeAIRequest
      * @param headers map
@@ -13606,10 +13807,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>重跑失败的工作流节点</p>
+     * <p>Reruns a failed workflow node.</p>
      * 
      * <b>summary</b> : 
-     * <p>RerunNodeAI</p>
+     * <p>Reruns a workflow node.</p>
      * 
      * @param request RerunNodeAIRequest
      * @return RerunNodeAIResponse
@@ -13776,10 +13977,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员解析工作项产物短期签名下载地址</p>
+     * <p>Retrieves the short-term signed download URL for a work item artifact.</p>
      * 
      * <b>summary</b> : 
-     * <p>ResolveWorkItemArtifactAccess</p>
+     * <p>Retrieves the short-term signed download URL for a work item artifact.</p>
      * 
      * @param request ResolveWorkItemArtifactAccessRequest
      * @param headers map
@@ -13827,10 +14028,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员解析工作项产物短期签名下载地址</p>
+     * <p>Retrieves the short-term signed download URL for a work item artifact.</p>
      * 
      * <b>summary</b> : 
-     * <p>ResolveWorkItemArtifactAccess</p>
+     * <p>Retrieves the short-term signed download URL for a work item artifact.</p>
      * 
      * @param request ResolveWorkItemArtifactAccessRequest
      * @return ResolveWorkItemArtifactAccessResponse
@@ -13843,10 +14044,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员解析工作项输入附件短期预览地址</p>
+     * <p>Retrieves the short-term preview URL for an input attachment of a valid member parsing work item.</p>
      * 
      * <b>summary</b> : 
-     * <p>ResolveWorkItemAttachmentAccess</p>
+     * <p>Retrieves the short-term preview URL for an input attachment of a valid member parsing work item.</p>
      * 
      * @param request ResolveWorkItemAttachmentAccessRequest
      * @param headers map
@@ -13894,10 +14095,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员解析工作项输入附件短期预览地址</p>
+     * <p>Retrieves the short-term preview URL for an input attachment of a valid member parsing work item.</p>
      * 
      * <b>summary</b> : 
-     * <p>ResolveWorkItemAttachmentAccess</p>
+     * <p>Retrieves the short-term preview URL for an input attachment of a valid member parsing work item.</p>
      * 
      * @param request ResolveWorkItemAttachmentAccessRequest
      * @return ResolveWorkItemAttachmentAccessResponse
@@ -13910,10 +14111,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员从当前 Plan 暂停点恢复工作项</p>
+     * <p>Resumes work items from the current plan pause point as an effective member.</p>
      * 
      * <b>summary</b> : 
-     * <p>ResumeWorkItem</p>
+     * <p>Resumes work items from the current plan pause point as an effective member.</p>
      * 
      * @param request ResumeWorkItemRequest
      * @param headers map
@@ -13957,10 +14158,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员从当前 Plan 暂停点恢复工作项</p>
+     * <p>Resumes work items from the current plan pause point as an effective member.</p>
      * 
      * <b>summary</b> : 
-     * <p>ResumeWorkItem</p>
+     * <p>Resumes work items from the current plan pause point as an effective member.</p>
      * 
      * @param request ResumeWorkItemRequest
      * @return ResumeWorkItemResponse
@@ -14883,10 +15084,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员幂等排产工作项并物化固定 Plan</p>
+     * <p>Idempotently schedules work items for valid members and materializes a fixed plan.</p>
      * 
      * <b>summary</b> : 
-     * <p>ScheduleWorkItem</p>
+     * <p>Idempotently schedules work items for valid members and materializes a fixed plan.</p>
      * 
      * @param request ScheduleWorkItemRequest
      * @param headers map
@@ -14934,10 +15135,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员幂等排产工作项并物化固定 Plan</p>
+     * <p>Idempotently schedules work items for valid members and materializes a fixed plan.</p>
      * 
      * <b>summary</b> : 
-     * <p>ScheduleWorkItem</p>
+     * <p>Idempotently schedules work items for valid members and materializes a fixed plan.</p>
      * 
      * @param request ScheduleWorkItemRequest
      * @return ScheduleWorkItemResponse
@@ -14950,15 +15151,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>仅供 Winnexo 轻量工作台使用。</li>
-     * <li>按关键词分页搜索当前平台用户可见的阿里钉群聊。</li>
-     * <li>响应不包含 DWS 原始对象。</li>
+     * <li>Available only for the Winnexo lightweight workspace.</li>
+     * <li>Searches for DingTalk group chats visible to the current platform user by keyword in a paginated manner.</li>
+     * <li>The response does not include DWS raw objects.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Winnexo 轻量工作台搜索阿里钉群聊。</p>
+     * <p>Searches for DingTalk group chats in the Winnexo lightweight workspace.</p>
      * 
      * @param request SearchAliDingGroupChatsRequest
      * @param headers map
@@ -15010,15 +15211,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>仅供 Winnexo 轻量工作台使用。</li>
-     * <li>按关键词分页搜索当前平台用户可见的阿里钉群聊。</li>
-     * <li>响应不包含 DWS 原始对象。</li>
+     * <li>Available only for the Winnexo lightweight workspace.</li>
+     * <li>Searches for DingTalk group chats visible to the current platform user by keyword in a paginated manner.</li>
+     * <li>The response does not include DWS raw objects.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Winnexo 轻量工作台搜索阿里钉群聊。</p>
+     * <p>Searches for DingTalk group chats in the Winnexo lightweight workspace.</p>
      * 
      * @param request SearchAliDingGroupChatsRequest
      * @return SearchAliDingGroupChatsResponse
@@ -15281,10 +15482,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员设置工作项个人置顶</p>
+     * <p>Sets the personal pin status of a work item for a valid member.</p>
      * 
      * <b>summary</b> : 
-     * <p>SetWorkItemPinned</p>
+     * <p>Sets the personal pin status of a work item for a valid member.</p>
      * 
      * @param request SetWorkItemPinnedRequest
      * @param headers map
@@ -15332,10 +15533,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员设置工作项个人置顶</p>
+     * <p>Sets the personal pin status of a work item for a valid member.</p>
      * 
      * <b>summary</b> : 
-     * <p>SetWorkItemPinned</p>
+     * <p>Sets the personal pin status of a work item for a valid member.</p>
      * 
      * @param request SetWorkItemPinnedRequest
      * @return SetWorkItemPinnedResponse
@@ -15344,6 +15545,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.setWorkItemPinnedWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The workspace administrator configures the Settings for the effective version of a workflow template. Only versions with a commit are allowed, and each template can have only one effective version. Before taking effect, the version is re-verified based on the current workspace members, digital workers, capabilities, and storage management. Existing work items use their own execute snapshots and are not affected.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Sets the effective version of a workflow.</p>
+     * 
+     * @param request SetWorkflowTemplateEffectiveVersionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetWorkflowTemplateEffectiveVersionResponse
+     */
+    public SetWorkflowTemplateEffectiveVersionResponse setWorkflowTemplateEffectiveVersionWithOptions(SetWorkflowTemplateEffectiveVersionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.collaborationGroupId)) {
+            body.put("collaborationGroupId", request.collaborationGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            body.put("templateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            body.put("version", request.version);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetWorkflowTemplateEffectiveVersion"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/setWorkflowTemplateEffectiveVersion"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetWorkflowTemplateEffectiveVersionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The workspace administrator configures the Settings for the effective version of a workflow template. Only versions with a commit are allowed, and each template can have only one effective version. Before taking effect, the version is re-verified based on the current workspace members, digital workers, capabilities, and storage management. Existing work items use their own execute snapshots and are not affected.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Sets the effective version of a workflow.</p>
+     * 
+     * @param request SetWorkflowTemplateEffectiveVersionRequest
+     * @return SetWorkflowTemplateEffectiveVersionResponse
+     */
+    public SetWorkflowTemplateEffectiveVersionResponse setWorkflowTemplateEffectiveVersion(SetWorkflowTemplateEffectiveVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.setWorkflowTemplateEffectiveVersionWithOptions(request, headers, runtime);
     }
 
     /**
@@ -15456,10 +15724,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>提交待办作答结果；本人重复提交幂等返回首次结果，他人抢先返回 409 AlreadyCompleted</p>
+     * <p>Submits the answers for a to-do item. Repeated submissions by the same user are idempotent and return the initial result. If another user completes the item first, a 409 AlreadyCompleted error is returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>SubmitTodo</p>
+     * <p>Submits answers for a to-do item.</p>
      * 
      * @param tmpReq SubmitTodoRequest
      * @param headers map
@@ -15509,10 +15777,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>提交待办作答结果；本人重复提交幂等返回首次结果，他人抢先返回 409 AlreadyCompleted</p>
+     * <p>Submits the answers for a to-do item. Repeated submissions by the same user are idempotent and return the initial result. If another user completes the item first, a 409 AlreadyCompleted error is returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>SubmitTodo</p>
+     * <p>Submits answers for a to-do item.</p>
      * 
      * @param request SubmitTodoRequest
      * @return SubmitTodoResponse
@@ -15630,10 +15898,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>终止当前工作流实例</p>
+     * <p>Terminates the current workflow instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>TerminateInstance</p>
+     * <p>Terminates a workflow instance.</p>
      * 
      * @param request TerminateInstanceRequest
      * @param headers map
@@ -15681,10 +15949,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>终止当前工作流实例</p>
+     * <p>Terminates the current workflow instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>TerminateInstance</p>
+     * <p>Terminates a workflow instance.</p>
      * 
      * @param request TerminateInstanceRequest
      * @return TerminateInstanceResponse
@@ -15989,10 +16257,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>转办待办给指定用户；目标剔除操作人本人，整单原子校验</p>
+     * <p>Reassigns a to-do task to specified users. The operator is excluded from the target list, and atomic validation is performed for the entire task.</p>
      * 
      * <b>summary</b> : 
-     * <p>TransferTodo</p>
+     * <p>Reassigns a to-do task.</p>
      * 
      * @param tmpReq TransferTodoRequest
      * @param headers map
@@ -16046,10 +16314,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>转办待办给指定用户；目标剔除操作人本人，整单原子校验</p>
+     * <p>Reassigns a to-do task to specified users. The operator is excluded from the target list, and atomic validation is performed for the entire task.</p>
      * 
      * <b>summary</b> : 
-     * <p>TransferTodo</p>
+     * <p>Reassigns a to-do task.</p>
      * 
      * @param request TransferTodoRequest
      * @return TransferTodoResponse
@@ -16771,10 +17039,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</p>
+     * <p>Manages personal memories or memories of a specified collaborative writing workspace based on the authenticated user. In workspace mode, the permissions of active members are applied.</p>
      * 
      * <b>summary</b> : 
-     * <p>更新自动记忆拾取开关</p>
+     * <p>Updates the automatic memory collection toggle.</p>
      * 
      * @param request UpdateMemoryAutoExtractionSwitchRequest
      * @param headers map
@@ -16826,10 +17094,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</p>
+     * <p>Manages personal memories or memories of a specified collaborative writing workspace based on the authenticated user. In workspace mode, the permissions of active members are applied.</p>
      * 
      * <b>summary</b> : 
-     * <p>更新自动记忆拾取开关</p>
+     * <p>Updates the automatic memory collection toggle.</p>
      * 
      * @param request UpdateMemoryAutoExtractionSwitchRequest
      * @return UpdateMemoryAutoExtractionSwitchResponse
@@ -17396,10 +17664,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员按乐观版本编辑工作项；workflowTemplateIds 未传保持绑定</p>
+     * <p>Updates a work item using optimistic locking. If workflowTemplateIds is not specified, the existing bindings are retained.</p>
      * 
      * <b>summary</b> : 
-     * <p>UpdateWorkItem</p>
+     * <p>Updates a work item using optimistic locking. If workflowTemplateIds is not specified, the existing bindings are retained.</p>
      * 
      * @param tmpReq UpdateWorkItemRequest
      * @param headers map
@@ -17497,10 +17765,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员按乐观版本编辑工作项；workflowTemplateIds 未传保持绑定</p>
+     * <p>Updates a work item using optimistic locking. If workflowTemplateIds is not specified, the existing bindings are retained.</p>
      * 
      * <b>summary</b> : 
-     * <p>UpdateWorkItem</p>
+     * <p>Updates a work item using optimistic locking. If workflowTemplateIds is not specified, the existing bindings are retained.</p>
      * 
      * @param request UpdateWorkItemRequest
      * @return UpdateWorkItemResponse
@@ -17513,10 +17781,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员整体覆盖更新工作流模板；最后一次保存生效</p>
+     * <p>Overwrites and updates a workflow template. The last save takes effect.</p>
      * 
      * <b>summary</b> : 
-     * <p>UpdateWorkflowTemplate</p>
+     * <p>Overwrites and updates a workflow template. The last save takes effect.</p>
      * 
      * @param tmpReq UpdateWorkflowTemplateRequest
      * @param headers map
@@ -17537,6 +17805,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.action)) {
+            body.put("action", request.action);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.collaborationGroupId)) {
             body.put("collaborationGroupId", request.collaborationGroupId);
         }
@@ -17545,8 +17817,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("definition", request.definitionShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceVersion)) {
+            body.put("sourceVersion", request.sourceVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
             body.put("templateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            body.put("version", request.version);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionDescription)) {
+            body.put("versionDescription", request.versionDescription);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -17570,10 +17854,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>有效成员整体覆盖更新工作流模板；最后一次保存生效</p>
+     * <p>Overwrites and updates a workflow template. The last save takes effect.</p>
      * 
      * <b>summary</b> : 
-     * <p>UpdateWorkflowTemplate</p>
+     * <p>Overwrites and updates a workflow template. The last save takes effect.</p>
      * 
      * @param request UpdateWorkflowTemplateRequest
      * @return UpdateWorkflowTemplateResponse

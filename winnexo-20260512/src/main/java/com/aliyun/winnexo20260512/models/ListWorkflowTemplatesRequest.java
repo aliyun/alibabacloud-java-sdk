@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWorkflowTemplatesRequest extends TeaModel {
     /**
-     * <p>协作空间 ID</p>
+     * <p>The ID of the collaboration space.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListWorkflowTemplatesRequest extends TeaModel {
     public String collaborationGroupId;
 
     /**
-     * <p>模板名称/描述模糊搜索关键词</p>
+     * <p>The keyword for fuzzy search in the template name or description.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -24,7 +24,7 @@ public class ListWorkflowTemplatesRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>单页最大返回数量（1~100）；传入时优先于 pageSize</p>
+     * <p>The maximum number of entries to return per page. Valid values: 1 to 100. This parameter takes precedence over pageSize if both are specified.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,7 +33,7 @@ public class ListWorkflowTemplatesRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>翻页令牌，取上次响应返回的 nextToken；传入时优先于 page</p>
+     * <p>The pagination token. Obtain the token from the nextToken parameter in the previous response. This parameter takes precedence over page if both are specified.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -42,7 +42,7 @@ public class ListWorkflowTemplatesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>页码；传入 nextToken 时忽略</p>
+     * <p>The page number. This parameter is ignored if nextToken is specified.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,7 +51,7 @@ public class ListWorkflowTemplatesRequest extends TeaModel {
     public Long page;
 
     /**
-     * <p>每页条数（1~100）</p>
+     * <p>The number of entries per page. Valid values: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -60,7 +60,7 @@ public class ListWorkflowTemplatesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

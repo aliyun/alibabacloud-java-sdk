@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAppResourcePermissionsResponseBody extends TeaModel {
     /**
-     * <p>业务状态码；成功为 200</p>
+     * <p>The business status code. The value 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DeleteAppResourcePermissionsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>删除的权限记录数</p>
+     * <p>The number of deleted permission records.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -23,16 +23,16 @@ public class DeleteAppResourcePermissionsResponseBody extends TeaModel {
     public Long deletedCount;
 
     /**
-     * <p>错误描述；成功时为空</p>
+     * <p>The error message. This field is empty if the request is successful.</p>
      * 
      * <strong>example:</strong>
-     * <p>请求的资源不存在</p>
+     * <p>The requested resource does not exist</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWorkItemArtifactsResponseBody extends TeaModel {
     /**
-     * <p>业务状态码；成功为200</p>
+     * <p>The business status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ListWorkItemArtifactsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>历史产物列表</p>
+     * <p>The list of historical artifacts.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -23,16 +23,16 @@ public class ListWorkItemArtifactsResponseBody extends TeaModel {
     public java.util.List<ListWorkItemArtifactsResponseBodyItems> items;
 
     /**
-     * <p>错误描述</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>请求的资源不存在</p>
+     * <p>The requested resource does not exist</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪ID</p>
+     * <p>The request trace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -41,7 +41,7 @@ public class ListWorkItemArtifactsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>返回产物数量</p>
+     * <p>The total number of returned artifacts.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -96,7 +96,7 @@ public class ListWorkItemArtifactsResponseBody extends TeaModel {
 
     public static class ListWorkItemArtifactsResponseBodyItemsRef extends TeaModel {
         /**
-         * <p>产物ID</p>
+         * <p>The artifact ID.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -105,7 +105,7 @@ public class ListWorkItemArtifactsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>引用类型</p>
+         * <p>The reference data type.</p>
          * 
          * <strong>example:</strong>
          * <p>WORK_ITEM_ARTIFACT</p>
@@ -114,7 +114,7 @@ public class ListWorkItemArtifactsResponseBody extends TeaModel {
         public String kind;
 
         /**
-         * <p>OpenAPI 产物访问入口</p>
+         * <p>The OpenAPI artifact access endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -155,7 +155,7 @@ public class ListWorkItemArtifactsResponseBody extends TeaModel {
 
     public static class ListWorkItemArtifactsResponseBodyItems extends TeaModel {
         /**
-         * <p>产物ID</p>
+         * <p>The artifact ID.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -164,7 +164,7 @@ public class ListWorkItemArtifactsResponseBody extends TeaModel {
         public String artifactId;
 
         /**
-         * <p>产物键</p>
+         * <p>The artifact key.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -173,7 +173,7 @@ public class ListWorkItemArtifactsResponseBody extends TeaModel {
         public String artifactKey;
 
         /**
-         * <p>节点尝试序号</p>
+         * <p>The node attempt sequence number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -182,7 +182,7 @@ public class ListWorkItemArtifactsResponseBody extends TeaModel {
         public Long attemptSeq;
 
         /**
-         * <p>内容类型</p>
+         * <p>The content type.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -191,7 +191,7 @@ public class ListWorkItemArtifactsResponseBody extends TeaModel {
         public String contentType;
 
         /**
-         * <p>创建时间(ISO8601)</p>
+         * <p>The creation time in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -200,7 +200,7 @@ public class ListWorkItemArtifactsResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>节点键</p>
+         * <p>The node key.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -209,7 +209,7 @@ public class ListWorkItemArtifactsResponseBody extends TeaModel {
         public String nodeKey;
 
         /**
-         * <p>计划ID</p>
+         * <p>The plan ID.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -218,7 +218,7 @@ public class ListWorkItemArtifactsResponseBody extends TeaModel {
         public String planId;
 
         /**
-         * <p>引用信息</p>
+         * <p>The reference information.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -227,7 +227,7 @@ public class ListWorkItemArtifactsResponseBody extends TeaModel {
         public ListWorkItemArtifactsResponseBodyItemsRef ref;
 
         /**
-         * <p>运行ID</p>
+         * <p>The run ID.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -236,7 +236,7 @@ public class ListWorkItemArtifactsResponseBody extends TeaModel {
         public String runId;
 
         /**
-         * <p>内容SHA-256</p>
+         * <p>The SHA-256 hash of the content.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -245,7 +245,7 @@ public class ListWorkItemArtifactsResponseBody extends TeaModel {
         public String sha256;
 
         /**
-         * <p>产物大小(字节)</p>
+         * <p>The artifact size in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -254,7 +254,7 @@ public class ListWorkItemArtifactsResponseBody extends TeaModel {
         public Long sizeBytes;
 
         /**
-         * <p>产物摘要</p>
+         * <p>The artifact summary.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -263,7 +263,7 @@ public class ListWorkItemArtifactsResponseBody extends TeaModel {
         public String summary;
 
         /**
-         * <p>产物标题</p>
+         * <p>The artifact title.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -272,7 +272,7 @@ public class ListWorkItemArtifactsResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>会话轮次序号</p>
+         * <p>The session turn sequence number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -281,7 +281,7 @@ public class ListWorkItemArtifactsResponseBody extends TeaModel {
         public Long turnSeq;
 
         /**
-         * <p>产物类型</p>
+         * <p>The artifact type.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -290,7 +290,7 @@ public class ListWorkItemArtifactsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>工作项ID</p>
+         * <p>The work item ID.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>

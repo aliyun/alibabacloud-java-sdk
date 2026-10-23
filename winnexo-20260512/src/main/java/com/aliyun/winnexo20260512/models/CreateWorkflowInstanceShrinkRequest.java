@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateWorkflowInstanceShrinkRequest extends TeaModel {
     /**
-     * <p>Workflow 必填验收标准</p>
+     * <p>The required acceptance criteria for the workflow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>完成全部审批节点并产出报告</p>
+     * <p>Complete all approval nodes and generate the report</p>
      */
     @NameInMap("acceptanceCriteria")
     public String acceptanceCriteria;
 
     /**
-     * <p>空间内唯一需求编号，重复请求幂等</p>
+     * <p>The unique requirement ID in the workspace. Repeated requests are idempotent.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CreateWorkflowInstanceShrinkRequest extends TeaModel {
     public String businessId;
 
     /**
-     * <p>协作空间 ID</p>
+     * <p>The collaboration workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,16 +35,16 @@ public class CreateWorkflowInstanceShrinkRequest extends TeaModel {
     public String collaborationGroupId;
 
     /**
-     * <p>外部发起人展示标签</p>
+     * <p>The display label of the external initiator.</p>
      * 
      * <strong>example:</strong>
-     * <p>外部发起人张三</p>
+     * <p>External Initiator Zhang San</p>
      */
     @NameInMap("initiator")
     public String initiator;
 
     /**
-     * <p>工作项优先级</p>
+     * <p>The work item priority.</p>
      * 
      * <strong>example:</strong>
      * <p>HIGH</p>
@@ -53,7 +53,7 @@ public class CreateWorkflowInstanceShrinkRequest extends TeaModel {
     public String priority;
 
     /**
-     * <p>工作流模板 ID，最多 64 字符</p>
+     * <p>The workflow template ID. Maximum length: 64 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class CreateWorkflowInstanceShrinkRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+     * <p>The tenant ID. This is a common parameter explicitly passed by using --tenant-id in winnexo-cli.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -72,20 +72,20 @@ public class CreateWorkflowInstanceShrinkRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>需求标题</p>
+     * <p>The requirement title.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>季度经营分析报告</p>
+     * <p>Quarterly Business Analysis Report</p>
      */
     @NameInMap("title")
     public String title;
 
     /**
-     * <p>业务变量对象，tags 可为字符串标签列表</p>
+     * <p>The business variable object. The tags field can be a list of string tags.</p>
      * 
      * <strong>example:</strong>
-     * <p>tags=季度报告</p>
+     * <p>tags=Quarterly Report</p>
      */
     @NameInMap("variables")
     public String variablesShrink;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkItemResponseBody extends TeaModel {
     /**
-     * <p>验收标准</p>
+     * <p>The acceptance criteria.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -14,7 +14,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public String acceptanceCriteria;
 
     /**
-     * <p>已应用的状态版本</p>
+     * <p>The applied status version.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public Long appliedStatusVersion;
 
     /**
-     * <p>输入附件列表</p>
+     * <p>The list of input attachments.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -32,7 +32,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public java.util.List<UpdateWorkItemResponseBodyAttachments> attachments;
 
     /**
-     * <p>业务状态（七态）</p>
+     * <p>The business status (seven states).</p>
      * 
      * <strong>example:</strong>
      * <p>PROCESSING</p>
@@ -41,7 +41,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public String businessStatus;
 
     /**
-     * <p>调用者是否可删除</p>
+     * <p>Indicates whether the caller can delete the item.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -50,7 +50,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public Boolean canDelete;
 
     /**
-     * <p>调用者是否可管理</p>
+     * <p>Indicates whether the caller can manage the item.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -59,7 +59,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public Boolean canManage;
 
     /**
-     * <p>是否可独立调整可见范围</p>
+     * <p>Indicates whether the visibility scope can be adjusted independently.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -68,7 +68,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public Boolean canManageVisibility;
 
     /**
-     * <p>调用者是否可重命名</p>
+     * <p>Indicates whether the caller can rename the item.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -77,7 +77,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public Boolean canRename;
 
     /**
-     * <p>业务状态码；成功为200</p>
+     * <p>The business status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -86,7 +86,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>协作空间ID</p>
+     * <p>The collaboration workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -95,7 +95,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public String collaborationGroupId;
 
     /**
-     * <p>协作人用户ID列表</p>
+     * <p>The list of user IDs of the collaborators.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -104,7 +104,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public java.util.List<Long> collaboratorUserIds;
 
     /**
-     * <p>关联会话ID</p>
+     * <p>The ID of the associated conversation.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -113,7 +113,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>创建时间(ISO8601)</p>
+     * <p>The creation time (ISO 8601).</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -122,7 +122,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public String createdAt;
 
     /**
-     * <p>创建人用户ID</p>
+     * <p>The user ID of the creator.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -131,7 +131,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public Long createdByUserId;
 
     /**
-     * <p>创建来源：DEFAULT/TASK</p>
+     * <p>The creation source. Valid values: DEFAULT and TASK.</p>
      * 
      * <strong>example:</strong>
      * <p>DEFAULT</p>
@@ -140,7 +140,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public String creationType;
 
     /**
-     * <p>当前物理计划ID</p>
+     * <p>The current physical plan ID.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -149,7 +149,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public String currentPlanId;
 
     /**
-     * <p>当前修订号</p>
+     * <p>The current revision number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -158,7 +158,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public Long currentRevision;
 
     /**
-     * <p>当前运行ID</p>
+     * <p>The current run ID.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -167,7 +167,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public String currentRunId;
 
     /**
-     * <p>当前运行序号</p>
+     * <p>The current run sequence number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -176,7 +176,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public Long currentRunSeq;
 
     /**
-     * <p>当前步骤名称</p>
+     * <p>The current step name.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -185,7 +185,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public String currentStepName;
 
     /**
-     * <p>描述</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -194,7 +194,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>输入快照版本</p>
+     * <p>The input snapshot version.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -203,7 +203,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public Long inputVersion;
 
     /**
-     * <p>工作项类型</p>
+     * <p>The work item type.</p>
      * 
      * <strong>example:</strong>
      * <p>WORKFLOW</p>
@@ -212,7 +212,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public String itemType;
 
     /**
-     * <p>最近进入处理中的时间(ISO8601)</p>
+     * <p>The time when the item last entered the processing state (ISO 8601).</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -221,7 +221,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public String lastProcessingAt;
 
     /**
-     * <p>是否为兼容期自由探索话题</p>
+     * <p>Indicates whether it is a free exploration topic during the compatibility period.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -230,7 +230,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public Boolean legacyTopic;
 
     /**
-     * <p>可见成员用户ID列表</p>
+     * <p>The list of user IDs of visible members.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -239,16 +239,16 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public java.util.List<Long> memberUserIds;
 
     /**
-     * <p>错误描述</p>
+     * <p>The error description.</p>
      * 
      * <strong>example:</strong>
-     * <p>请求的资源不存在</p>
+     * <p>The requested resource does not exist</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>修改时间(ISO8601)</p>
+     * <p>The modification time (ISO 8601).</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -257,7 +257,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public String modifiedAt;
 
     /**
-     * <p>负责人用户ID</p>
+     * <p>The user ID of the owner.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -266,7 +266,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public Long ownerUserId;
 
     /**
-     * <p>调用者个人置顶状态</p>
+     * <p>The personal pin status of the caller.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -275,7 +275,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public Boolean pinned;
 
     /**
-     * <p>优先级</p>
+     * <p>The priority.</p>
      * 
      * <strong>example:</strong>
      * <p>HIGH</p>
@@ -284,7 +284,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public String priority;
 
     /**
-     * <p>已完成进度</p>
+     * <p>The completed progress.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -293,7 +293,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public Long progressCompleted;
 
     /**
-     * <p>总进度</p>
+     * <p>The total progress.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -302,7 +302,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public Long progressTotal;
 
     /**
-     * <p>请求追踪ID</p>
+     * <p>The request tracking ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -311,7 +311,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>任务执行ID</p>
+     * <p>The task execution ID.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -320,7 +320,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public String sourceExecutionId;
 
     /**
-     * <p>任务来源ID</p>
+     * <p>The task source ID.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -329,7 +329,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public String sourceTaskId;
 
     /**
-     * <p>任务来源名称</p>
+     * <p>The task source name.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -338,7 +338,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public String sourceTaskName;
 
     /**
-     * <p>任务触发键</p>
+     * <p>The task trigger key.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -347,7 +347,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public String sourceTriggerKey;
 
     /**
-     * <p>任务来源类型</p>
+     * <p>The task source type.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -356,7 +356,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>标题</p>
+     * <p>The title.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -365,7 +365,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public String title;
 
     /**
-     * <p>任务触发时区</p>
+     * <p>The task trigger time zone.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -374,7 +374,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public String triggerTimezone;
 
     /**
-     * <p>任务触发时间(ISO8601)</p>
+     * <p>The task trigger time (ISO 8601).</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -383,7 +383,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public String triggeredAt;
 
     /**
-     * <p>乐观版本号</p>
+     * <p>The optimistic version number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -392,7 +392,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public Long version;
 
     /**
-     * <p>可见范围</p>
+     * <p>The visibility scope.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -401,7 +401,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public String visibility;
 
     /**
-     * <p>可见范围来源：SELF/TASK/TEMPLATE</p>
+     * <p>The source of the visibility scope. Valid values: SELF, TASK, and TEMPLATE.</p>
      * 
      * <strong>example:</strong>
      * <p>SELF</p>
@@ -410,7 +410,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public String visibilitySource;
 
     /**
-     * <p>工作项ID</p>
+     * <p>The work item ID.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -419,7 +419,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public String workItemId;
 
     /**
-     * <p>Workflow四态投影</p>
+     * <p>The workflow status projection (four states).</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -428,7 +428,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     public String workflowStatus;
 
     /**
-     * <p>绑定的工作流模板ID列表</p>
+     * <p>The list of IDs for the bound workflow templates.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -827,7 +827,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
 
     public static class UpdateWorkItemResponseBodyAttachments extends TeaModel {
         /**
-         * <p>附件ID</p>
+         * <p>The attachment ID.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -836,7 +836,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
         public String attachmentId;
 
         /**
-         * <p>内容类型</p>
+         * <p>The content type.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -845,7 +845,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
         public String contentType;
 
         /**
-         * <p>附件访问入口（OpenAPI 302 前置）</p>
+         * <p>The access URL of the attachment (prefixed with an OpenAPI 302 redirect).</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -854,7 +854,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
         public String refUrl;
 
         /**
-         * <p>附件资源ID</p>
+         * <p>The resource ID of the attachment.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -863,7 +863,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>附件资源类型</p>
+         * <p>The resource type of the attachment.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -872,7 +872,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
         public String resourceKind;
 
         /**
-         * <p>附件大小(字节)</p>
+         * <p>The size of the attachment in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -881,7 +881,7 @@ public class UpdateWorkItemResponseBody extends TeaModel {
         public Long sizeBytes;
 
         /**
-         * <p>附件标题</p>
+         * <p>The title of the attachment.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>

@@ -20,7 +20,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
     public java.util.List<ListOutputFilesResponseBodyItems> items;
 
     /**
-     * <p>The prompt message.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>
@@ -38,7 +38,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
     public Long page;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of items per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -47,16 +47,16 @@ public class ListOutputFilesResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The request trace ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
+     * <p>123e4567-e89b-42d3-a456-426614174007</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>The total number of outputs that meet the specified conditions.</p>
+     * <p>The total number of matching outputs.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -127,10 +127,10 @@ public class ListOutputFilesResponseBody extends TeaModel {
 
     public static class ListOutputFilesResponseBodyItemsOutputItemsEmailInfo extends TeaModel {
         /**
-         * <p>The email body.</p>
+         * <p>The email content.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>The quarterly business report has been generated. Please review</p>
          */
         @NameInMap("body")
         public String body;
@@ -139,7 +139,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
          * <p>The content type, such as MARKDOWN, JSONML, or HTML.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>MARKDOWN</p>
          */
         @NameInMap("contentType")
         public String contentType;
@@ -148,7 +148,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
          * <p>The recipient list.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>[&quot;<a href="mailto:reader@example.com">reader@example.com</a>&quot;]</p>
          */
         @NameInMap("recipients")
         public java.util.List<String> recipients;
@@ -157,7 +157,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
          * <p>The email subject.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>Quarterly business analysis report</p>
          */
         @NameInMap("subject")
         public String subject;
@@ -206,7 +206,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
          * <p>The file description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Sample description</p>
+         * <p>Quarterly revenue, cost, and trend analysis report</p>
          */
         @NameInMap("description")
         public String description;
@@ -215,16 +215,16 @@ public class ListOutputFilesResponseBody extends TeaModel {
          * <p>The file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>SampleName.pdf</p>
+         * <p>Quarterly business analysis report.pdf</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The file path (OSS object key).</p>
+         * <p>The file location. It is compatible with file URLs and legacy OSS object keys. The specific value is derived from the output registration information.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="https://example.com/oss/file.pdf">https://example.com/oss/file.pdf</a></p>
+         * <p>reports/2026/quarterly-report.pdf</p>
          */
         @NameInMap("path")
         public String path;
@@ -233,7 +233,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
          * <p>The file type, such as .pdf or .md.</p>
          * 
          * <strong>example:</strong>
-         * <p>text</p>
+         * <p>.pdf</p>
          */
         @NameInMap("type")
         public String type;
@@ -282,7 +282,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
          * <p>The number of completed slides.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>8</p>
          */
         @NameInMap("completedSlides")
         public Long completedSlides;
@@ -291,7 +291,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
          * <p>The PPT file ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>examplePptId</p>
+         * <p>ppt_123e4567-e89b-42d3-a456-426614174015</p>
          */
         @NameInMap("pptId")
         public String pptId;
@@ -300,7 +300,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
          * <p>The PPT name.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>Quarterly Business Analysis Report</p>
          */
         @NameInMap("pptName")
         public String pptName;
@@ -309,7 +309,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
          * <p>The total number of slides.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>10</p>
          */
         @NameInMap("totalSlides")
         public Long totalSlides;
@@ -355,40 +355,40 @@ public class ListOutputFilesResponseBody extends TeaModel {
 
     public static class ListOutputFilesResponseBodyItemsOutputItems extends TeaModel {
         /**
-         * <p>The creation time in ISO 8601 format.</p>
+         * <p>The creation time of the output detail, serialized from a backend datetime value into an ISO 8601 string, with time zone information returned along with the original value.</p>
          * 
          * <strong>example:</strong>
-         * <p>2023-10-01T12:00:00Z</p>
+         * <p>2026-10-12T03:10:00+00:00</p>
          */
         @NameInMap("createTime")
         public String createTime;
 
         /**
-         * <p>The email information. This field is present only when the output type is email.</p>
+         * <p>The email information, present when the type is email.</p>
          */
         @NameInMap("emailInfo")
         public ListOutputFilesResponseBodyItemsOutputItemsEmailInfo emailInfo;
 
         /**
-         * <p>The file information. This field is present only when the output type is file.</p>
+         * <p>The file information, present when the type is file.</p>
          */
         @NameInMap("fileInfo")
         public ListOutputFilesResponseBodyItemsOutputItemsFileInfo fileInfo;
 
         /**
-         * <p>The database creation time in ISO 8601 format.</p>
+         * <p>The creation time of the output or detail, serialized from a backend datetime value into an ISO 8601 string, with time zone information returned along with the original value.</p>
          * 
          * <strong>example:</strong>
-         * <p>2023-10-01T12:00:00Z</p>
+         * <p>2026-10-12T03:10:00+00:00</p>
          */
         @NameInMap("gmtCreate")
         public String gmtCreate;
 
         /**
-         * <p>The database update time in ISO 8601 format.</p>
+         * <p>The update time of the output or detail, serialized from a backend datetime value into an ISO 8601 string, with time zone information returned along with the original value.</p>
          * 
          * <strong>example:</strong>
-         * <p>2023-10-01T12:00:00Z</p>
+         * <p>2026-10-12T03:12:00+00:00</p>
          */
         @NameInMap("gmtModified")
         public String gmtModified;
@@ -397,16 +397,16 @@ public class ListOutputFilesResponseBody extends TeaModel {
          * <p>The output name.</p>
          * 
          * <strong>example:</strong>
-         * <p>exampleItemName</p>
+         * <p>Quarterly business analysis report.pdf</p>
          */
         @NameInMap("itemName")
         public String itemName;
 
         /**
-         * <p>The type of the output item. Valid values: ppt, html, document, picture, slides, video, audio, email, and others.</p>
+         * <p>The output item type. Valid values: ppt, html, document, picture, slides, video, audio, email, and others.</p>
          * 
          * <strong>example:</strong>
-         * <p>ppt</p>
+         * <p>document</p>
          */
         @NameInMap("itemType")
         public String itemType;
@@ -415,7 +415,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
          * <p>The internationalized display name of the output detail type.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>Document</p>
          */
         @NameInMap("itemTypeDisplayName")
         public String itemTypeDisplayName;
@@ -424,7 +424,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
          * <p>The message ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>exampleMessageId</p>
+         * <p>msg_123e4567-e89b-42d3-a456-426614174012</p>
          */
         @NameInMap("messageId")
         public String messageId;
@@ -433,7 +433,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
          * <p>The output detail ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_example_value</p>
+         * <p>item_123e4567-e89b-42d3-a456-426614174010</p>
          */
         @NameInMap("outputItemId")
         public String outputItemId;
@@ -448,10 +448,10 @@ public class ListOutputFilesResponseBody extends TeaModel {
         public Boolean shareEnabled;
 
         /**
-         * <p>The share token. This field is present only when sharing is enabled. You can use this token to access the public share preview endpoint.</p>
+         * <p>The share token, present when sharing is enabled. You can use this token to access the public share preview API.</p>
          * 
          * <strong>example:</strong>
-         * <p>example_share_token</p>
+         * <p>demo_public_preview_token</p>
          */
         @NameInMap("shareToken")
         public String shareToken;
@@ -460,13 +460,13 @@ public class ListOutputFilesResponseBody extends TeaModel {
          * <p>The skill output ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>exampleSkillOutputId</p>
+         * <p>skillout_123e4567-e89b-42d3-a456-426614174011</p>
          */
         @NameInMap("skillOutputId")
         public String skillOutputId;
 
         /**
-         * <p>The slides information. This field is present only when the output type is slides.</p>
+         * <p>The slide deck information, present when the type is slide deck.</p>
          */
         @NameInMap("slidesInfo")
         public ListOutputFilesResponseBodyItemsOutputItemsSlidesInfo slidesInfo;
@@ -475,7 +475,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
          * <p>The task execution ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>exampleTaskExecutionId</p>
+         * <p>execution_123e4567-e89b-42d3-a456-426614174013</p>
          */
         @NameInMap("taskExecutionId")
         public String taskExecutionId;
@@ -609,28 +609,28 @@ public class ListOutputFilesResponseBody extends TeaModel {
 
     public static class ListOutputFilesResponseBodyItems extends TeaModel {
         /**
-         * <p>The session ID.</p>
+         * <p>The conversation ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>exampleConversationId</p>
+         * <p>session_123e4567-e89b-42d3-a456-426614174008</p>
          */
         @NameInMap("conversationId")
         public String conversationId;
 
         /**
-         * <p>The creation time in ISO 8601 format.</p>
+         * <p>The creation time of the output or detail, serialized from a backend datetime value into an ISO 8601 string, with time zone information returned along with the original value.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>2026-10-12T03:10:00+00:00</p>
          */
         @NameInMap("gmtCreate")
         public String gmtCreate;
 
         /**
-         * <p>The update time in ISO 8601 format.</p>
+         * <p>The update time of the output or detail, serialized from a backend datetime value into an ISO 8601 string, with time zone information returned along with the original value.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>2026-10-12T03:12:00+00:00</p>
          */
         @NameInMap("gmtModified")
         public String gmtModified;
@@ -639,16 +639,16 @@ public class ListOutputFilesResponseBody extends TeaModel {
          * <p>The output name.</p>
          * 
          * <strong>example:</strong>
-         * <p>SampleName.pdf</p>
+         * <p>Quarterly business analysis report.pdf</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The name of the digital employee (operating object).</p>
+         * <p>The name of the digital worker (operating object).</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>Business Analysis Assistant</p>
          */
         @NameInMap("operatingObjectName")
         public String operatingObjectName;
@@ -657,7 +657,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
          * <p>The output ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>exampleOutputId</p>
+         * <p>output_123e4567-e89b-42d3-a456-426614174009</p>
          */
         @NameInMap("outputId")
         public String outputId;
@@ -669,7 +669,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         public java.util.List<ListOutputFilesResponseBodyItemsOutputItems> outputItems;
 
         /**
-         * <p>The output type. Valid values: <code>conversation/skill/task</code>.</p>
+         * <p>The output type: <code>conversation/skill/task</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>conversation</p>
@@ -678,10 +678,10 @@ public class ListOutputFilesResponseBody extends TeaModel {
         public String outputType;
 
         /**
-         * <p>The internationalized display name of the output type.</p>
+         * <p>The localized display name of the output type.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>Conversation output</p>
          */
         @NameInMap("outputTypeDisplayName")
         public String outputTypeDisplayName;
@@ -690,16 +690,16 @@ public class ListOutputFilesResponseBody extends TeaModel {
          * <p>The skill output ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>exampleSkillOutputId</p>
+         * <p>skillout_123e4567-e89b-42d3-a456-426614174011</p>
          */
         @NameInMap("skillOutputId")
         public String skillOutputId;
 
         /**
-         * <p>The node ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_example_value</p>
+         * <p>task_123e4567-e89b-42d3-a456-426614174014</p>
          */
         @NameInMap("taskId")
         public String taskId;

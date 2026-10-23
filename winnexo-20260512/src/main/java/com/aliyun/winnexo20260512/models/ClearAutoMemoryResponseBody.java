@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ClearAutoMemoryResponseBody extends TeaModel {
     /**
-     * <p>本次成功删除的自动记忆文件数量；无可清空记忆时为 0</p>
+     * <p>The number of automatic memory files successfully deleted in this request. The value is 0 if no memory is available to be cleared.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -14,7 +14,7 @@ public class ClearAutoMemoryResponseBody extends TeaModel {
     public Long clearedCount;
 
     /**
-     * <p>业务状态码；成功为 200，失败时为对应错误码</p>
+     * <p>The business status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,16 +23,16 @@ public class ClearAutoMemoryResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>错误描述；成功时为空字符串，失败时返回具体原因</p>
+     * <p>The error description.</p>
      * 
      * <strong>example:</strong>
-     * <p>当前用户不是群组 cg_12345 的活跃成员</p>
+     * <p>The current user is not an active member of the group cg_12345</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪 ID，用于定位本次调用</p>
+     * <p>The request tracking ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -41,7 +41,7 @@ public class ClearAutoMemoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>本次清空的自动记忆类型；取值为 user、feedback、reference、project 或 all</p>
+     * <p>The type of automatic memory cleared in this request. Valid values: user, feedback, reference, project, and all.</p>
      * 
      * <strong>example:</strong>
      * <p>project</p>

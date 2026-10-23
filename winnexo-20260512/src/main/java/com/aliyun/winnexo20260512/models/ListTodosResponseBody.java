@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTodosResponseBody extends TeaModel {
     /**
-     * <p>业务状态码；成功为200</p>
+     * <p>The business status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ListTodosResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>是否还有更多数据</p>
+     * <p>Indicates whether more data is available.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -23,13 +23,13 @@ public class ListTodosResponseBody extends TeaModel {
     public Boolean hasMore;
 
     /**
-     * <p>当前页待办列表</p>
+     * <p>The list of to-do items on the current page.</p>
      */
     @NameInMap("items")
     public java.util.List<ListTodosResponseBodyItems> items;
 
     /**
-     * <p>本次生效的单页最大返回数量</p>
+     * <p>The effective maximum number of entries to return per page for the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,16 +38,16 @@ public class ListTodosResponseBody extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>错误描述</p>
+     * <p>The error description.</p>
      * 
      * <strong>example:</strong>
-     * <p>请求的资源不存在</p>
+     * <p>The requested resource does not exist</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>下一页翻页令牌；无更多数据时为空字符串</p>
+     * <p>The pagination token for the next page. This field is an empty string if no more data is available.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -56,7 +56,7 @@ public class ListTodosResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>当前页码</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -65,7 +65,7 @@ public class ListTodosResponseBody extends TeaModel {
     public Long page;
 
     /**
-     * <p>生效单页条数</p>
+     * <p>The effective number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -74,7 +74,7 @@ public class ListTodosResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>请求追踪ID</p>
+     * <p>The request tracking ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -83,7 +83,7 @@ public class ListTodosResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>筛选条件下可见总数</p>
+     * <p>The total number of visible items under the filter conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -178,7 +178,7 @@ public class ListTodosResponseBody extends TeaModel {
 
     public static class ListTodosResponseBodyItems extends TeaModel {
         /**
-         * <p>处理人数量</p>
+         * <p>The number of assignees.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -187,7 +187,7 @@ public class ListTodosResponseBody extends TeaModel {
         public Long assigneeCount;
 
         /**
-         * <p>完成时间（北京时间 YYYY-MM-DD HH:mm:ss）</p>
+         * <p>The completion time in the YYYY-MM-DD HH:mm:ss format (UTC+8).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-12 10:00:00</p>
@@ -196,7 +196,7 @@ public class ListTodosResponseBody extends TeaModel {
         public String completedAt;
 
         /**
-         * <p>完成人用户ID；未完成为空</p>
+         * <p>The user ID of the user who completed the item. This field is empty if the item is not completed.</p>
          * 
          * <strong>example:</strong>
          * <p>42</p>
@@ -205,16 +205,16 @@ public class ListTodosResponseBody extends TeaModel {
         public String completedByUserId;
 
         /**
-         * <p>完成人姓名；未完成为空</p>
+         * <p>The name of the user who completed the item. This field is empty if the item is not completed.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>John Doe</p>
          */
         @NameInMap("completedByUserName")
         public String completedByUserName;
 
         /**
-         * <p>创建时间（北京时间 YYYY-MM-DD HH:mm:ss）</p>
+         * <p>The creation time in the YYYY-MM-DD HH:mm:ss format (UTC+8).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-12 10:00:00</p>
@@ -223,7 +223,7 @@ public class ListTodosResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>最后修改时间（北京时间 YYYY-MM-DD HH:mm:ss）</p>
+         * <p>The last modification time in the YYYY-MM-DD HH:mm:ss format (UTC+8).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-12 10:00:00</p>
@@ -232,7 +232,7 @@ public class ListTodosResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>调用者是否已读</p>
+         * <p>Indicates whether the caller has read the item.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -241,7 +241,7 @@ public class ListTodosResponseBody extends TeaModel {
         public Boolean isRead;
 
         /**
-         * <p>发出该待办的 assistant 消息ID；无会话来源为空</p>
+         * <p>The message ID of the assistant that sent the to-do item. This field is empty if there is no conversation source.</p>
          * 
          * <strong>example:</strong>
          * <p>msg-1</p>
@@ -250,7 +250,7 @@ public class ListTodosResponseBody extends TeaModel {
         public String messageId;
 
         /**
-         * <p>调用者的处理人行状态</p>
+         * <p>The action status of the caller as an assignee.</p>
          * 
          * <strong>example:</strong>
          * <p>PENDING</p>
@@ -259,7 +259,7 @@ public class ListTodosResponseBody extends TeaModel {
         public String myAssigneeStatus;
 
         /**
-         * <p>调用者的列表展示状态</p>
+         * <p>The list display status for the caller.</p>
          * 
          * <strong>example:</strong>
          * <p>TODO</p>
@@ -268,7 +268,7 @@ public class ListTodosResponseBody extends TeaModel {
         public String myDisplayState;
 
         /**
-         * <p>优先级</p>
+         * <p>The priority.</p>
          * 
          * <strong>example:</strong>
          * <p>HIGH</p>
@@ -277,7 +277,7 @@ public class ListTodosResponseBody extends TeaModel {
         public String priority;
 
         /**
-         * <p>问题数量</p>
+         * <p>The number of questions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -286,13 +286,13 @@ public class ListTodosResponseBody extends TeaModel {
         public Long questionCount;
 
         /**
-         * <p>问题摘要列表</p>
+         * <p>The list of question summaries.</p>
          */
         @NameInMap("questionSummaries")
         public java.util.List<String> questionSummaries;
 
         /**
-         * <p>来源上下文（创建时原样透传）</p>
+         * <p>The source context. This context is passed through as-is during creation.</p>
          * 
          * <strong>example:</strong>
          * <p>source=openapi</p>
@@ -301,7 +301,7 @@ public class ListTodosResponseBody extends TeaModel {
         public java.util.Map<String, ?> sourceContext;
 
         /**
-         * <p>待办来源类型</p>
+         * <p>The source type of the to-do item.</p>
          * 
          * <strong>example:</strong>
          * <p>WORKFLOW</p>
@@ -310,7 +310,7 @@ public class ListTodosResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>待办主状态</p>
+         * <p>The primary status of the to-do item.</p>
          * 
          * <strong>example:</strong>
          * <p>PENDING</p>
@@ -319,16 +319,16 @@ public class ListTodosResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>待办标题</p>
+         * <p>The to-do title.</p>
          * 
          * <strong>example:</strong>
-         * <p>治理审批</p>
+         * <p>Governance approval</p>
          */
         @NameInMap("title")
         public String title;
 
         /**
-         * <p>待办ID</p>
+         * <p>The to-do ID.</p>
          * 
          * <strong>example:</strong>
          * <p>todo_abc123</p>

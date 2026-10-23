@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryWorkItemFeedResponseBody extends TeaModel {
     /**
-     * <p>业务状态码；成功为200</p>
+     * <p>The business status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>当前页条目；entryType 决定生效字段（WORK_ITEM→item / TASK_GROUP→聚合字段）</p>
+     * <p>The entries on the current page. The entryType determines the effective fields: WORK_ITEM maps to item, and TASK_GROUP maps to aggregation fields.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -23,7 +23,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
     public java.util.List<QueryWorkItemFeedResponseBodyEntries> entries;
 
     /**
-     * <p>是否还有更多数据</p>
+     * <p>Indicates whether more data is available.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -32,16 +32,16 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
     public Boolean hasMore;
 
     /**
-     * <p>错误描述</p>
+     * <p>The error description.</p>
      * 
      * <strong>example:</strong>
-     * <p>请求的资源不存在</p>
+     * <p>The requested resource does not exist</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>下一页游标</p>
+     * <p>The cursor for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -50,7 +50,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
     public String nextCursor;
 
     /**
-     * <p>请求追踪ID</p>
+     * <p>The request tracking ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -59,7 +59,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>可见池按个人范围计数</p>
+     * <p>The number of items in the visible pool by personal scope.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -68,7 +68,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
     public java.util.Map<String, ?> scopeCounts;
 
     /**
-     * <p>可见池按业务状态计数</p>
+     * <p>The number of items in the visible pool by business status.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -77,7 +77,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
     public java.util.Map<String, ?> statusCounts;
 
     /**
-     * <p>可见池条目总数</p>
+     * <p>The total number of entries in the visible pool.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -86,7 +86,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
     public Long totalEntryCount;
 
     /**
-     * <p>可见池工作项总数</p>
+     * <p>The total number of work items in the visible pool.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -181,7 +181,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
 
     public static class QueryWorkItemFeedResponseBodyEntriesItemAttachments extends TeaModel {
         /**
-         * <p>附件ID</p>
+         * <p>The attachment ID.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -190,7 +190,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String attachmentId;
 
         /**
-         * <p>内容类型</p>
+         * <p>The content type.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -199,7 +199,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String contentType;
 
         /**
-         * <p>附件访问入口（OpenAPI 302 前置）</p>
+         * <p>The access URL of the attachment (prefixed with an OpenAPI 302 redirect).</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -208,7 +208,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String refUrl;
 
         /**
-         * <p>附件资源ID</p>
+         * <p>The attachment resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -217,7 +217,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>附件资源类型</p>
+         * <p>The attachment resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -226,7 +226,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String resourceKind;
 
         /**
-         * <p>附件大小(字节)</p>
+         * <p>The attachment size in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -235,7 +235,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Long sizeBytes;
 
         /**
-         * <p>附件标题</p>
+         * <p>The attachment title.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -308,7 +308,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
 
     public static class QueryWorkItemFeedResponseBodyEntriesItem extends TeaModel {
         /**
-         * <p>验收标准</p>
+         * <p>The acceptance criteria.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -317,7 +317,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String acceptanceCriteria;
 
         /**
-         * <p>已应用的状态版本</p>
+         * <p>The applied status version.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -326,7 +326,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Long appliedStatusVersion;
 
         /**
-         * <p>输入附件列表</p>
+         * <p>The list of input attachments.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -335,7 +335,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public java.util.List<QueryWorkItemFeedResponseBodyEntriesItemAttachments> attachments;
 
         /**
-         * <p>业务状态（七态）</p>
+         * <p>The business status (seven states).</p>
          * 
          * <strong>example:</strong>
          * <p>PROCESSING</p>
@@ -344,7 +344,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String businessStatus;
 
         /**
-         * <p>调用者是否可删除</p>
+         * <p>Indicates whether the caller can delete the item.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -353,7 +353,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Boolean canDelete;
 
         /**
-         * <p>调用者是否可管理</p>
+         * <p>Indicates whether the caller can manage the item.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -362,7 +362,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Boolean canManage;
 
         /**
-         * <p>是否可独立调整可见范围</p>
+         * <p>Indicates whether the visibility scope can be adjusted independently.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -371,7 +371,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Boolean canManageVisibility;
 
         /**
-         * <p>调用者是否可重命名</p>
+         * <p>Indicates whether the caller can rename the item.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -380,7 +380,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Boolean canRename;
 
         /**
-         * <p>协作空间ID</p>
+         * <p>The collaboration workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -389,7 +389,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String collaborationGroupId;
 
         /**
-         * <p>协作人用户ID列表</p>
+         * <p>The list of user IDs of the collaborators.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -398,7 +398,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public java.util.List<Long> collaboratorUserIds;
 
         /**
-         * <p>关联会话ID</p>
+         * <p>The associated conversation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -407,7 +407,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String conversationId;
 
         /**
-         * <p>创建时间(ISO8601)</p>
+         * <p>The creation time, in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -416,7 +416,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>创建人用户ID</p>
+         * <p>The user ID of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -425,7 +425,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Long createdByUserId;
 
         /**
-         * <p>创建来源：DEFAULT/TASK</p>
+         * <p>The creation source. Valid values: DEFAULT and TASK.</p>
          * 
          * <strong>example:</strong>
          * <p>DEFAULT</p>
@@ -434,7 +434,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String creationType;
 
         /**
-         * <p>当前物理计划ID</p>
+         * <p>The current physical plan ID.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -443,7 +443,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String currentPlanId;
 
         /**
-         * <p>当前修订号</p>
+         * <p>The current revision number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -452,7 +452,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Long currentRevision;
 
         /**
-         * <p>当前运行ID</p>
+         * <p>The current run ID.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -461,7 +461,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String currentRunId;
 
         /**
-         * <p>当前运行序号</p>
+         * <p>The current run sequence number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -470,7 +470,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Long currentRunSeq;
 
         /**
-         * <p>当前步骤名称</p>
+         * <p>The current step name.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -479,7 +479,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String currentStepName;
 
         /**
-         * <p>描述</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -488,7 +488,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>输入快照版本</p>
+         * <p>The input snapshot version.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -497,7 +497,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Long inputVersion;
 
         /**
-         * <p>工作项类型</p>
+         * <p>The work item type.</p>
          * 
          * <strong>example:</strong>
          * <p>WORKFLOW</p>
@@ -506,7 +506,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String itemType;
 
         /**
-         * <p>最近进入处理中的时间(ISO8601)</p>
+         * <p>The time when the item last entered the processing state, in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -515,7 +515,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String lastProcessingAt;
 
         /**
-         * <p>是否为兼容期自由探索话题</p>
+         * <p>Indicates whether the topic is a free exploration topic during the compatibility period.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -524,7 +524,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Boolean legacyTopic;
 
         /**
-         * <p>可见成员用户ID列表</p>
+         * <p>The list of user IDs of visible members.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -533,7 +533,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public java.util.List<Long> memberUserIds;
 
         /**
-         * <p>修改时间(ISO8601)</p>
+         * <p>The modification time, in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -542,7 +542,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String modifiedAt;
 
         /**
-         * <p>负责人用户ID</p>
+         * <p>The user ID of the owner.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -551,7 +551,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Long ownerUserId;
 
         /**
-         * <p>调用者个人置顶状态</p>
+         * <p>The pinned status for the caller.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -560,7 +560,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Boolean pinned;
 
         /**
-         * <p>优先级</p>
+         * <p>The priority.</p>
          * 
          * <strong>example:</strong>
          * <p>HIGH</p>
@@ -569,7 +569,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String priority;
 
         /**
-         * <p>已完成进度</p>
+         * <p>The completed progress.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -578,7 +578,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Long progressCompleted;
 
         /**
-         * <p>总进度</p>
+         * <p>The total progress.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -587,7 +587,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Long progressTotal;
 
         /**
-         * <p>任务执行ID</p>
+         * <p>The task execution ID.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -596,7 +596,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String sourceExecutionId;
 
         /**
-         * <p>任务来源ID</p>
+         * <p>The task source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -605,7 +605,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String sourceTaskId;
 
         /**
-         * <p>任务来源名称</p>
+         * <p>The task source name.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -614,7 +614,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String sourceTaskName;
 
         /**
-         * <p>任务触发键</p>
+         * <p>The task trigger key.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -623,7 +623,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String sourceTriggerKey;
 
         /**
-         * <p>任务来源类型</p>
+         * <p>The task source type.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -632,7 +632,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>标题</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -641,7 +641,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>任务触发时区</p>
+         * <p>The time zone when the task is triggered.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -650,7 +650,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String triggerTimezone;
 
         /**
-         * <p>任务触发时间(ISO8601)</p>
+         * <p>The task trigger time, in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -659,7 +659,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String triggeredAt;
 
         /**
-         * <p>乐观版本号</p>
+         * <p>The optimistic version number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -668,7 +668,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Long version;
 
         /**
-         * <p>可见范围</p>
+         * <p>The visibility scope.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -677,7 +677,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String visibility;
 
         /**
-         * <p>可见范围来源：SELF/TASK/TEMPLATE</p>
+         * <p>The source of the visibility scope. Valid values: SELF, TASK, and TEMPLATE.</p>
          * 
          * <strong>example:</strong>
          * <p>SELF</p>
@@ -686,7 +686,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String visibilitySource;
 
         /**
-         * <p>工作项ID</p>
+         * <p>The work item ID.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -695,7 +695,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String workItemId;
 
         /**
-         * <p>Workflow四态投影</p>
+         * <p>The workflow status projection (four states).</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -704,7 +704,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String workflowStatus;
 
         /**
-         * <p>绑定的工作流模板ID列表</p>
+         * <p>The list of bound workflow template IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1081,7 +1081,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
 
     public static class QueryWorkItemFeedResponseBodyEntriesItemsAttachments extends TeaModel {
         /**
-         * <p>附件ID</p>
+         * <p>The attachment ID.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1090,7 +1090,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String attachmentId;
 
         /**
-         * <p>内容类型</p>
+         * <p>The content type.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1099,7 +1099,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String contentType;
 
         /**
-         * <p>附件访问入口（OpenAPI 302 前置）</p>
+         * <p>The access URL of the attachment (prefixed with an OpenAPI 302 redirect).</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1108,7 +1108,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String refUrl;
 
         /**
-         * <p>附件资源ID</p>
+         * <p>The attachment resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1117,7 +1117,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>附件资源类型</p>
+         * <p>The attachment resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1126,7 +1126,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String resourceKind;
 
         /**
-         * <p>附件大小(字节)</p>
+         * <p>The attachment size in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1135,7 +1135,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Long sizeBytes;
 
         /**
-         * <p>附件标题</p>
+         * <p>The attachment title.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1208,7 +1208,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
 
     public static class QueryWorkItemFeedResponseBodyEntriesItems extends TeaModel {
         /**
-         * <p>验收标准</p>
+         * <p>The acceptance criteria.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1217,7 +1217,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String acceptanceCriteria;
 
         /**
-         * <p>已应用的状态版本</p>
+         * <p>The applied status version.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1226,7 +1226,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Long appliedStatusVersion;
 
         /**
-         * <p>输入附件列表</p>
+         * <p>The list of input attachments.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1235,7 +1235,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public java.util.List<QueryWorkItemFeedResponseBodyEntriesItemsAttachments> attachments;
 
         /**
-         * <p>业务状态（七态）</p>
+         * <p>The business status (seven states).</p>
          * 
          * <strong>example:</strong>
          * <p>PROCESSING</p>
@@ -1244,7 +1244,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String businessStatus;
 
         /**
-         * <p>调用者是否可删除</p>
+         * <p>Indicates whether the caller can delete the item.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1253,7 +1253,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Boolean canDelete;
 
         /**
-         * <p>调用者是否可管理</p>
+         * <p>Indicates whether the caller can manage the item.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1262,7 +1262,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Boolean canManage;
 
         /**
-         * <p>是否可独立调整可见范围</p>
+         * <p>Indicates whether the visibility scope can be adjusted independently.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1271,7 +1271,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Boolean canManageVisibility;
 
         /**
-         * <p>调用者是否可重命名</p>
+         * <p>Indicates whether the caller can rename the item.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1280,7 +1280,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Boolean canRename;
 
         /**
-         * <p>协作空间ID</p>
+         * <p>The collaboration workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1289,7 +1289,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String collaborationGroupId;
 
         /**
-         * <p>协作人用户ID列表</p>
+         * <p>The list of user IDs of the collaborators.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1298,7 +1298,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public java.util.List<Long> collaboratorUserIds;
 
         /**
-         * <p>关联会话ID</p>
+         * <p>The associated conversation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1307,7 +1307,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String conversationId;
 
         /**
-         * <p>创建时间(ISO8601)</p>
+         * <p>The creation time, in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1316,7 +1316,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>创建人用户ID</p>
+         * <p>The user ID of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1325,7 +1325,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Long createdByUserId;
 
         /**
-         * <p>创建来源：DEFAULT/TASK</p>
+         * <p>The creation source. Valid values: DEFAULT and TASK.</p>
          * 
          * <strong>example:</strong>
          * <p>DEFAULT</p>
@@ -1334,7 +1334,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String creationType;
 
         /**
-         * <p>当前物理计划ID</p>
+         * <p>The current physical plan ID.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1343,7 +1343,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String currentPlanId;
 
         /**
-         * <p>当前修订号</p>
+         * <p>The current revision number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1352,7 +1352,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Long currentRevision;
 
         /**
-         * <p>当前运行ID</p>
+         * <p>The current run ID.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1361,7 +1361,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String currentRunId;
 
         /**
-         * <p>当前运行序号</p>
+         * <p>The current run sequence number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1370,7 +1370,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Long currentRunSeq;
 
         /**
-         * <p>当前步骤名称</p>
+         * <p>The current step name.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1379,7 +1379,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String currentStepName;
 
         /**
-         * <p>描述</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1388,7 +1388,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>输入快照版本</p>
+         * <p>The input snapshot version.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1397,7 +1397,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Long inputVersion;
 
         /**
-         * <p>工作项类型</p>
+         * <p>The work item type.</p>
          * 
          * <strong>example:</strong>
          * <p>WORKFLOW</p>
@@ -1406,7 +1406,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String itemType;
 
         /**
-         * <p>最近进入处理中的时间(ISO8601)</p>
+         * <p>The time when the item last entered the processing state, in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1415,7 +1415,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String lastProcessingAt;
 
         /**
-         * <p>是否为兼容期自由探索话题</p>
+         * <p>Indicates whether the topic is a free exploration topic during the compatibility period.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1424,7 +1424,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Boolean legacyTopic;
 
         /**
-         * <p>可见成员用户ID列表</p>
+         * <p>The list of user IDs of visible members.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1433,7 +1433,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public java.util.List<Long> memberUserIds;
 
         /**
-         * <p>修改时间(ISO8601)</p>
+         * <p>The modification time, in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1442,7 +1442,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String modifiedAt;
 
         /**
-         * <p>负责人用户ID</p>
+         * <p>The user ID of the owner.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1451,7 +1451,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Long ownerUserId;
 
         /**
-         * <p>调用者个人置顶状态</p>
+         * <p>The pinned status for the caller.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1460,7 +1460,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Boolean pinned;
 
         /**
-         * <p>优先级</p>
+         * <p>The priority.</p>
          * 
          * <strong>example:</strong>
          * <p>HIGH</p>
@@ -1469,7 +1469,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String priority;
 
         /**
-         * <p>已完成进度</p>
+         * <p>The completed progress.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1478,7 +1478,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Long progressCompleted;
 
         /**
-         * <p>总进度</p>
+         * <p>The total progress.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1487,7 +1487,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Long progressTotal;
 
         /**
-         * <p>任务执行ID</p>
+         * <p>The task execution ID.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1496,7 +1496,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String sourceExecutionId;
 
         /**
-         * <p>任务来源ID</p>
+         * <p>The task source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1505,7 +1505,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String sourceTaskId;
 
         /**
-         * <p>任务来源名称</p>
+         * <p>The task source name.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1514,7 +1514,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String sourceTaskName;
 
         /**
-         * <p>任务触发键</p>
+         * <p>The task trigger key.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1523,7 +1523,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String sourceTriggerKey;
 
         /**
-         * <p>任务来源类型</p>
+         * <p>The task source type.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1532,7 +1532,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>标题</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1541,7 +1541,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>任务触发时区</p>
+         * <p>The time zone when the task is triggered.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1550,7 +1550,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String triggerTimezone;
 
         /**
-         * <p>任务触发时间(ISO8601)</p>
+         * <p>The task trigger time, in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1559,7 +1559,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String triggeredAt;
 
         /**
-         * <p>乐观版本号</p>
+         * <p>The optimistic version number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1568,7 +1568,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Long version;
 
         /**
-         * <p>可见范围</p>
+         * <p>The visibility scope.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1577,7 +1577,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String visibility;
 
         /**
-         * <p>可见范围来源：SELF/TASK/TEMPLATE</p>
+         * <p>The source of the visibility scope. Valid values: SELF, TASK, and TEMPLATE.</p>
          * 
          * <strong>example:</strong>
          * <p>SELF</p>
@@ -1586,7 +1586,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String visibilitySource;
 
         /**
-         * <p>工作项ID</p>
+         * <p>The work item ID.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1595,7 +1595,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String workItemId;
 
         /**
-         * <p>Workflow四态投影</p>
+         * <p>The workflow status projection (four states).</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1604,7 +1604,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String workflowStatus;
 
         /**
-         * <p>绑定的工作流模板ID列表</p>
+         * <p>The list of bound workflow template IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -1981,7 +1981,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
 
     public static class QueryWorkItemFeedResponseBodyEntries extends TeaModel {
         /**
-         * <p>条目类型</p>
+         * <p>The entry type.</p>
          * 
          * <strong>example:</strong>
          * <p>WORK_ITEM</p>
@@ -1990,7 +1990,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String entryType;
 
         /**
-         * <p>是否还有更多未展示的子项</p>
+         * <p>Indicates whether more child items are available.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1999,7 +1999,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Boolean hasMoreChildren;
 
         /**
-         * <p>普通工作项行内容</p>
+         * <p>The content of a regular work item row.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -2008,7 +2008,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public QueryWorkItemFeedResponseBodyEntriesItem item;
 
         /**
-         * <p>任务聚合行内最新五条工作项</p>
+         * <p>The latest five work items in the task aggregation row.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -2017,7 +2017,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public java.util.List<QueryWorkItemFeedResponseBodyEntriesItems> items;
 
         /**
-         * <p>最近工作项时间(ISO8601)</p>
+         * <p>The time of the latest work item, in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -2026,7 +2026,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String latestWorkItemAt;
 
         /**
-         * <p>命中的工作项总数</p>
+         * <p>The total number of matched work items.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -2035,7 +2035,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public Long matchedWorkItemCount;
 
         /**
-         * <p>来源任务ID</p>
+         * <p>The source task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -2044,7 +2044,7 @@ public class QueryWorkItemFeedResponseBody extends TeaModel {
         public String sourceTaskId;
 
         /**
-         * <p>任务名称</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>

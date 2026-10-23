@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTodoResponseBody extends TeaModel {
     /**
-     * <p>业务状态码；成功为200</p>
+     * <p>The business status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,16 +14,16 @@ public class GetTodoResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>错误描述</p>
+     * <p>The error description.</p>
      * 
      * <strong>example:</strong>
-     * <p>请求的资源不存在</p>
+     * <p>The requested resource does not exist</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪ID</p>
+     * <p>The request trace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -32,16 +32,16 @@ public class GetTodoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>todoId 查询时的单条结果（其余查询为空）；字段集同 getTodoDetail 平铺结构</p>
+     * <p>The single result returned when you query by todoId. This field is empty for other query types. The field set is the same as the flattened structure of getTodoDetail.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例待办键值对</p>
+     * <p>Sample to-do key-value pair</p>
      */
     @NameInMap("todo")
     public java.util.Map<String, ?> todo;
 
     /**
-     * <p>workItemId/messageId 查询时的多条结果（todoId 查询为空）</p>
+     * <p>The multiple results returned when you query by workItemId or messageId. This field is empty for todoId queries.</p>
      */
     @NameInMap("todos")
     public java.util.List<GetTodoResponseBodyTodos> todos;
@@ -93,7 +93,7 @@ public class GetTodoResponseBody extends TeaModel {
 
     public static class GetTodoResponseBodyTodosAssignees extends TeaModel {
         /**
-         * <p>处理时间（北京时间）；未处理为空</p>
+         * <p>The processing time in UTC+8. This field is empty if the item is unprocessed.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-16T10:30:00+08:00</p>
@@ -102,7 +102,7 @@ public class GetTodoResponseBody extends TeaModel {
         public String actedAt;
 
         /**
-         * <p>处理人来源：ORIGINAL/TRANSFERRED</p>
+         * <p>The source of the assignee. Valid values: ORIGINAL and TRANSFERRED.</p>
          * 
          * <strong>example:</strong>
          * <p>ORIGINAL</p>
@@ -111,7 +111,7 @@ public class GetTodoResponseBody extends TeaModel {
         public String assigneeSource;
 
         /**
-         * <p>处理人用户ID</p>
+         * <p>The user ID of the assignee.</p>
          * 
          * <strong>example:</strong>
          * <p>42</p>
@@ -120,7 +120,7 @@ public class GetTodoResponseBody extends TeaModel {
         public String assigneeUserId;
 
         /**
-         * <p>已读时间（北京时间）；未读为空</p>
+         * <p>The read time in UTC+8. This field is empty if the item is unread.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-12 10:01:00</p>
@@ -129,7 +129,7 @@ public class GetTodoResponseBody extends TeaModel {
         public String readAt;
 
         /**
-         * <p>处理人行状态</p>
+         * <p>The action status of the assignee.</p>
          * 
          * <strong>example:</strong>
          * <p>PENDING</p>
@@ -138,7 +138,7 @@ public class GetTodoResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>转出人用户ID；仅转办产生</p>
+         * <p>The user ID of the person who transferred the task. This field is populated only when the task is transferred.</p>
          * 
          * <strong>example:</strong>
          * <p>43</p>
@@ -203,13 +203,13 @@ public class GetTodoResponseBody extends TeaModel {
 
     public static class GetTodoResponseBodyTodos extends TeaModel {
         /**
-         * <p>全部处理人</p>
+         * <p>The assignees.</p>
          */
         @NameInMap("assignees")
         public java.util.List<GetTodoResponseBodyTodosAssignees> assignees;
 
         /**
-         * <p>完成时间（北京时间）</p>
+         * <p>The completion time in UTC+8.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-12 10:00:00</p>
@@ -218,7 +218,7 @@ public class GetTodoResponseBody extends TeaModel {
         public String completedAt;
 
         /**
-         * <p>完成人用户ID</p>
+         * <p>The user ID of the person who completed the to-do item.</p>
          * 
          * <strong>example:</strong>
          * <p>42</p>
@@ -227,7 +227,7 @@ public class GetTodoResponseBody extends TeaModel {
         public String completedByUserId;
 
         /**
-         * <p>创建时间（北京时间）</p>
+         * <p>The creation time in UTC+8.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-12 10:00:00</p>
@@ -236,7 +236,7 @@ public class GetTodoResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>最后修改时间（北京时间）</p>
+         * <p>The last modification time in UTC+8.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-12 10:00:00</p>
@@ -245,7 +245,7 @@ public class GetTodoResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>assistant 消息ID；无会话来源为空</p>
+         * <p>The ID of the assistant message. This field is empty if there is no conversation source.</p>
          * 
          * <strong>example:</strong>
          * <p>msg-1</p>
@@ -254,7 +254,7 @@ public class GetTodoResponseBody extends TeaModel {
         public String messageId;
 
         /**
-         * <p>优先级</p>
+         * <p>The priority.</p>
          * 
          * <strong>example:</strong>
          * <p>MEDIUM</p>
@@ -263,25 +263,25 @@ public class GetTodoResponseBody extends TeaModel {
         public String priority;
 
         /**
-         * <p>问题清单（JSONB 原样）</p>
+         * <p>The list of questions in the original JSONB format.</p>
          * 
          * <strong>example:</strong>
-         * <p>q1=示例问题</p>
+         * <p>q1=Sample question</p>
          */
         @NameInMap("questions")
         public java.util.Map<String, ?> questions;
 
         /**
-         * <p>作答内容（JSONB 原样）</p>
+         * <p>The response content in the original JSONB format.</p>
          * 
          * <strong>example:</strong>
-         * <p>result=同意</p>
+         * <p>result=Approved</p>
          */
         @NameInMap("resultPayload")
         public java.util.Map<String, ?> resultPayload;
 
         /**
-         * <p>来源上下文（原样透传）</p>
+         * <p>The source context passed through in its original format.</p>
          * 
          * <strong>example:</strong>
          * <p>source=openapi</p>
@@ -290,7 +290,7 @@ public class GetTodoResponseBody extends TeaModel {
         public java.util.Map<String, ?> sourceContext;
 
         /**
-         * <p>待办主状态</p>
+         * <p>The primary status of the to-do item.</p>
          * 
          * <strong>example:</strong>
          * <p>PENDING</p>
@@ -299,25 +299,25 @@ public class GetTodoResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>待办摘要</p>
+         * <p>The summary of the to-do item.</p>
          * 
          * <strong>example:</strong>
-         * <p>待办事项摘要</p>
+         * <p>To-do item summary</p>
          */
         @NameInMap("summary")
         public String summary;
 
         /**
-         * <p>待办标题</p>
+         * <p>The title of the to-do item.</p>
          * 
          * <strong>example:</strong>
-         * <p>治理审批</p>
+         * <p>Governance approval</p>
          */
         @NameInMap("title")
         public String title;
 
         /**
-         * <p>待办ID</p>
+         * <p>The ID of the to-do item.</p>
          * 
          * <strong>example:</strong>
          * <p>todo_abc123</p>

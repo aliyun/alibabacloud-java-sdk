@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MarkTodosReadRequest extends TeaModel {
     /**
-     * <p>全部标记已读（优先于 todoIds）</p>
+     * <p>Specifies whether to mark all to-do items as read. This parameter takes precedence over the todoIds parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +14,7 @@ public class MarkTodosReadRequest extends TeaModel {
     public Boolean markAllRead;
 
     /**
-     * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -23,7 +23,7 @@ public class MarkTodosReadRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>待办ID列表（≤100；markAllRead=true 时忽略）</p>
+     * <p>The list of to-do item IDs. You can specify up to 100 IDs. This parameter is ignored if markAllRead is set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>todo_abc123</p>

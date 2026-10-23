@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetNodeDetailResponseBody extends TeaModel {
     /**
-     * <p>按思考、技能、工具、回复和产物分组的实际工作过程</p>
+     * <p>The actual work process grouped by thoughts, skills, tools, replies, and artifacts.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;thoughts&quot;:[],&quot;skillCalls&quot;:[],&quot;toolCalls&quot;:[],&quot;replies&quot;:[],&quot;artifacts&quot;:[]}</p>
@@ -14,7 +14,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
     public GetNodeDetailResponseBodyAgentWorkProcess agentWorkProcess;
 
     /**
-     * <p>已保存的节点产物摘要与稳定引用，不包含inline正文；无产物时为空列表</p>
+     * <p>The artifacts: saved node work records and artifacts.</p>
      * 
      * <strong>example:</strong>
      * <p>[]</p>
@@ -23,7 +23,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
     public java.util.List<GetNodeDetailResponseBodyArtifacts> artifacts;
 
     /**
-     * <p>节点执行尝试序号</p>
+     * <p>The sequence number of the node execution attempt.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
     public Long attemptSeq;
 
     /**
-     * <p>业务状态码；成功为200</p>
+     * <p>The business status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -41,7 +41,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>节点会话ID，未创建时为空</p>
+     * <p>The node conversation ID. This parameter is empty if no conversation is created.</p>
      * 
      * <strong>example:</strong>
      * <p>conversation_example</p>
@@ -50,7 +50,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>当前节点会话是否可以继续输入</p>
+     * <p>Indicates whether the current node conversation can continue to receive input.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -59,25 +59,25 @@ public class GetNodeDetailResponseBody extends TeaModel {
     public Boolean conversationWritable;
 
     /**
-     * <p>节点负责人展示名称，未知时为空</p>
+     * <p>The display name of the node owner. This parameter is empty if the owner is unknown.</p>
      * 
      * <strong>example:</strong>
-     * <p>数字员工</p>
+     * <p>Digital worker</p>
      */
     @NameInMap("handler")
     public String handler;
 
     /**
-     * <p>错误描述</p>
+     * <p>The error description.</p>
      * 
      * <strong>example:</strong>
-     * <p>请求的资源不存在</p>
+     * <p>The requested resource does not exist</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>节点 key（nodeKey）</p>
+     * <p>The node key.</p>
      * 
      * <strong>example:</strong>
      * <p>query.amount</p>
@@ -86,16 +86,16 @@ public class GetNodeDetailResponseBody extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>节点展示名称，与节点列表同源</p>
+     * <p>The display name of the node, which shares the same source as the node list.</p>
      * 
      * <strong>example:</strong>
-     * <p>查询签单金额</p>
+     * <p>Query signed amount</p>
      */
     @NameInMap("nodeName")
     public String nodeName;
 
     /**
-     * <p>节点类型，返回实际枚举</p>
+     * <p>The node type. The actual enum value is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>AGENT</p>
@@ -104,7 +104,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
     public String nodeType;
 
     /**
-     * <p>请求追踪ID</p>
+     * <p>The request tracking ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -113,7 +113,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>节点结果摘要，不含inline正文</p>
+     * <p>The node result summary, excluding inline content.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -122,7 +122,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
     public java.util.Map<String, ?> result;
 
     /**
-     * <p>是否有待派发续轮</p>
+     * <p>Indicates whether there are pending follow-up turns to be dispatched.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -131,7 +131,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
     public Boolean resumePending;
 
     /**
-     * <p>节点AI工作记录时间线，与GetAgentWorkLog同源，duration单位毫秒；无记录时为空列表</p>
+     * <p>The run log: saved node work records and artifacts.</p>
      * 
      * <strong>example:</strong>
      * <p>[]</p>
@@ -149,7 +149,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
     public Long stateVersion;
 
     /**
-     * <p>节点运行状态，返回实际枚举</p>
+     * <p>The node running status. The actual enum value is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
@@ -158,7 +158,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>当前节点关联的待办ID列表，元素为待办ID字符串</p>
+     * <p>The list of to-do IDs associated with the current node.</p>
      * 
      * <strong>example:</strong>
      * <p>[]</p>
@@ -167,7 +167,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
     public java.util.List<String> todoIds;
 
     /**
-     * <p>当前尝试的对话轮序号</p>
+     * <p>The sequence number of the conversation turn in the current attempt.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -176,7 +176,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
     public Long turnSeq;
 
     /**
-     * <p>节点等待原因，未等待时为空</p>
+     * <p>The reason why the node is waiting. This parameter is empty if the node is not waiting.</p>
      * 
      * <strong>example:</strong>
      * <p>HUMAN_INPUT</p>
@@ -351,7 +351,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
 
     public static class GetNodeDetailResponseBodyAgentWorkProcessArtifacts extends TeaModel {
         /**
-         * <p>登记产物ID；仅来自结果摘要的产物可能为空</p>
+         * <p>The registered artifact ID. This parameter may be empty for artifacts derived only from the result summary.</p>
          * 
          * <strong>example:</strong>
          * <p>artifact_example</p>
@@ -360,7 +360,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
         public String artifactId;
 
         /**
-         * <p>产物在节点结果中的唯一key</p>
+         * <p>The unique key of the artifact in the node result.</p>
          * 
          * <strong>example:</strong>
          * <p>amount_report</p>
@@ -369,7 +369,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
         public String artifactKey;
 
         /**
-         * <p>产物稳定引用，包含kind、id、url；登记产物URL为重新鉴权入口，可为空</p>
+         * <p>The stable reference of the artifact, including kind, id, and url. The URL of a registered artifact is a re-authentication entry point and can be empty.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;kind&quot;:&quot;INLINE&quot;,&quot;id&quot;:&quot;amount_report&quot;,&quot;url&quot;:&quot;inline://amount_report&quot;}</p>
@@ -378,25 +378,25 @@ public class GetNodeDetailResponseBody extends TeaModel {
         public java.util.Map<String, String> ref;
 
         /**
-         * <p>产物摘要，不含inline正文</p>
+         * <p>The artifact summary, excluding inline content.</p>
          * 
          * <strong>example:</strong>
-         * <p>已完成签单金额统计</p>
+         * <p>Signed amount statistics completed</p>
          */
         @NameInMap("summary")
         public String summary;
 
         /**
-         * <p>产物展示标题</p>
+         * <p>The display title of the artifact.</p>
          * 
          * <strong>example:</strong>
-         * <p>签单金额统计报告</p>
+         * <p>Signed amount statistics report</p>
          */
         @NameInMap("title")
         public String title;
 
         /**
-         * <p>产物类型</p>
+         * <p>The artifact type.</p>
          * 
          * <strong>example:</strong>
          * <p>TEXT</p>
@@ -461,7 +461,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
 
     public static class GetNodeDetailResponseBodyAgentWorkProcessReplies extends TeaModel {
         /**
-         * <p>记录类型：THINK、REPLY、TOOL_CALL、SKILL_CALL或ARTIFACT</p>
+         * <p>The record type. Valid values: THINK, REPLY, TOOL_CALL, SKILL_CALL, or ARTIFACT.</p>
          * 
          * <strong>example:</strong>
          * <p>REPLY</p>
@@ -470,16 +470,16 @@ public class GetNodeDetailResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>已保存的原始记录内容；工具调用与产物元数据为JSON字符串</p>
+         * <p>The saved original record content. Tool invocation and artifact metadata are JSON strings.</p>
          * 
          * <strong>example:</strong>
-         * <p>已完成本轮数据查询</p>
+         * <p>Data query for this turn completed</p>
          */
         @NameInMap("detail")
         public String detail;
 
         /**
-         * <p>该条工作记录耗时，单位毫秒；产物记录为0</p>
+         * <p>The time taken for this work record, in milliseconds. The value is 0 for artifact records.</p>
          * 
          * <strong>example:</strong>
          * <p>1200</p>
@@ -488,7 +488,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
         public Long duration;
 
         /**
-         * <p>所属节点key（nodeKey），不是会话ID</p>
+         * <p>The key of the parent node, not the conversation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>query.amount</p>
@@ -497,7 +497,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>记录事件时间，ISO-8601格式；源记录无时间时为空字符串</p>
+         * <p>The time when the event is recorded, in ISO-8601 format. This is an empty string if the source record has no time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-14T08:00:00Z</p>
@@ -554,7 +554,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
 
     public static class GetNodeDetailResponseBodyAgentWorkProcessSkillCalls extends TeaModel {
         /**
-         * <p>记录类型：THINK、REPLY、TOOL_CALL、SKILL_CALL或ARTIFACT</p>
+         * <p>The record type. Valid values: THINK, REPLY, TOOL_CALL, SKILL_CALL, or ARTIFACT.</p>
          * 
          * <strong>example:</strong>
          * <p>SKILL_CALL</p>
@@ -563,16 +563,16 @@ public class GetNodeDetailResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>已保存的原始记录内容；工具调用与产物元数据为JSON字符串</p>
+         * <p>The saved original record content. Tool invocation and artifact metadata are JSON strings.</p>
          * 
          * <strong>example:</strong>
-         * <p>已完成本轮数据查询</p>
+         * <p>Data query for this turn completed</p>
          */
         @NameInMap("detail")
         public String detail;
 
         /**
-         * <p>该条工作记录耗时，单位毫秒；产物记录为0</p>
+         * <p>The time taken for this work record, in milliseconds. The value is 0 for artifact records.</p>
          * 
          * <strong>example:</strong>
          * <p>1200</p>
@@ -581,7 +581,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
         public Long duration;
 
         /**
-         * <p>所属节点key（nodeKey），不是会话ID</p>
+         * <p>The key of the parent node, not the conversation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>query.amount</p>
@@ -590,7 +590,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>记录事件时间，ISO-8601格式；源记录无时间时为空字符串</p>
+         * <p>The time when the event is recorded, in ISO-8601 format. This is an empty string if the source record has no time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-14T08:00:00Z</p>
@@ -647,7 +647,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
 
     public static class GetNodeDetailResponseBodyAgentWorkProcessThoughts extends TeaModel {
         /**
-         * <p>记录类型：THINK、REPLY、TOOL_CALL、SKILL_CALL或ARTIFACT</p>
+         * <p>The record type. Valid values: THINK, REPLY, TOOL_CALL, SKILL_CALL, or ARTIFACT.</p>
          * 
          * <strong>example:</strong>
          * <p>THINK</p>
@@ -656,16 +656,16 @@ public class GetNodeDetailResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>已保存的原始记录内容；工具调用与产物元数据为JSON字符串</p>
+         * <p>The saved original record content. Tool invocation and artifact metadata are JSON strings.</p>
          * 
          * <strong>example:</strong>
-         * <p>已完成本轮数据查询</p>
+         * <p>Data query for this turn completed</p>
          */
         @NameInMap("detail")
         public String detail;
 
         /**
-         * <p>该条工作记录耗时，单位毫秒；产物记录为0</p>
+         * <p>The time taken for this work record, in milliseconds. The value is 0 for artifact records.</p>
          * 
          * <strong>example:</strong>
          * <p>1200</p>
@@ -674,7 +674,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
         public Long duration;
 
         /**
-         * <p>所属节点key（nodeKey），不是会话ID</p>
+         * <p>The key of the parent node, not the conversation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>query.amount</p>
@@ -683,7 +683,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>记录事件时间，ISO-8601格式；源记录无时间时为空字符串</p>
+         * <p>The time when the event is recorded, in ISO-8601 format. This is an empty string if the source record has no time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-14T08:00:00Z</p>
@@ -740,7 +740,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
 
     public static class GetNodeDetailResponseBodyAgentWorkProcessToolCalls extends TeaModel {
         /**
-         * <p>记录类型：THINK、REPLY、TOOL_CALL、SKILL_CALL或ARTIFACT</p>
+         * <p>The record type. Valid values: THINK, REPLY, TOOL_CALL, SKILL_CALL, or ARTIFACT.</p>
          * 
          * <strong>example:</strong>
          * <p>TOOL_CALL</p>
@@ -749,16 +749,16 @@ public class GetNodeDetailResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>已保存的原始记录内容；工具调用与产物元数据为JSON字符串</p>
+         * <p>The saved original record content. Tool invocation and artifact metadata are JSON strings.</p>
          * 
          * <strong>example:</strong>
-         * <p>已完成本轮数据查询</p>
+         * <p>Data query for this turn completed</p>
          */
         @NameInMap("detail")
         public String detail;
 
         /**
-         * <p>该条工作记录耗时，单位毫秒；产物记录为0</p>
+         * <p>The time taken for this work record, in milliseconds. The value is 0 for artifact records.</p>
          * 
          * <strong>example:</strong>
          * <p>1200</p>
@@ -767,7 +767,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
         public Long duration;
 
         /**
-         * <p>所属节点key（nodeKey），不是会话ID</p>
+         * <p>The key of the parent node, not the conversation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>query.amount</p>
@@ -776,7 +776,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>记录事件时间，ISO-8601格式；源记录无时间时为空字符串</p>
+         * <p>The time when the event is recorded, in ISO-8601 format. This is an empty string if the source record has no time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-14T08:00:00Z</p>
@@ -833,7 +833,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
 
     public static class GetNodeDetailResponseBodyAgentWorkProcess extends TeaModel {
         /**
-         * <p>节点产物摘要与稳定引用，与顶层artifacts一致；无产物时为空列表</p>
+         * <p>The artifacts: saved node work records and artifacts.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -842,7 +842,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
         public java.util.List<GetNodeDetailResponseBodyAgentWorkProcessArtifacts> artifacts;
 
         /**
-         * <p>已保存的回复记录，action为REPLY；无记录时为空列表</p>
+         * <p>The replies: saved node work records and artifacts.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -851,7 +851,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
         public java.util.List<GetNodeDetailResponseBodyAgentWorkProcessReplies> replies;
 
         /**
-         * <p>已保存的技能调用记录，action为SKILL_CALL；无记录时为空列表</p>
+         * <p>The skill calls: saved node work records and artifacts.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -860,7 +860,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
         public java.util.List<GetNodeDetailResponseBodyAgentWorkProcessSkillCalls> skillCalls;
 
         /**
-         * <p>已保存的思考记录，action为THINK；无记录时为空列表</p>
+         * <p>The thoughts: saved node work records and artifacts.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -869,7 +869,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
         public java.util.List<GetNodeDetailResponseBodyAgentWorkProcessThoughts> thoughts;
 
         /**
-         * <p>已保存的工具调用记录，action为TOOL_CALL；无记录时为空列表</p>
+         * <p>The tool calls: saved node work records and artifacts.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -926,7 +926,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
 
     public static class GetNodeDetailResponseBodyArtifacts extends TeaModel {
         /**
-         * <p>登记产物ID；仅来自结果摘要的产物可能为空</p>
+         * <p>The registered artifact ID. This parameter may be empty for artifacts derived only from the result summary.</p>
          * 
          * <strong>example:</strong>
          * <p>artifact_example</p>
@@ -935,7 +935,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
         public String artifactId;
 
         /**
-         * <p>产物在节点结果中的唯一key</p>
+         * <p>The unique key of the artifact in the node result.</p>
          * 
          * <strong>example:</strong>
          * <p>amount_report</p>
@@ -944,7 +944,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
         public String artifactKey;
 
         /**
-         * <p>产物稳定引用，包含kind、id、url；登记产物URL为重新鉴权入口，可为空</p>
+         * <p>The stable reference of the artifact, including kind, id, and url. The URL of a registered artifact is a re-authentication entry point and can be empty.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;kind&quot;:&quot;INLINE&quot;,&quot;id&quot;:&quot;amount_report&quot;,&quot;url&quot;:&quot;inline://amount_report&quot;}</p>
@@ -953,25 +953,25 @@ public class GetNodeDetailResponseBody extends TeaModel {
         public java.util.Map<String, String> ref;
 
         /**
-         * <p>产物摘要，不含inline正文</p>
+         * <p>The artifact summary, excluding inline content.</p>
          * 
          * <strong>example:</strong>
-         * <p>已完成签单金额统计</p>
+         * <p>Signed amount statistics completed</p>
          */
         @NameInMap("summary")
         public String summary;
 
         /**
-         * <p>产物展示标题</p>
+         * <p>The display title of the artifact.</p>
          * 
          * <strong>example:</strong>
-         * <p>签单金额统计报告</p>
+         * <p>Signed amount statistics report</p>
          */
         @NameInMap("title")
         public String title;
 
         /**
-         * <p>产物类型</p>
+         * <p>The artifact type.</p>
          * 
          * <strong>example:</strong>
          * <p>TEXT</p>
@@ -1036,7 +1036,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
 
     public static class GetNodeDetailResponseBodyRunLog extends TeaModel {
         /**
-         * <p>记录类型：THINK、REPLY、TOOL_CALL、SKILL_CALL或ARTIFACT</p>
+         * <p>The record type. Valid values: THINK, REPLY, TOOL_CALL, SKILL_CALL, or ARTIFACT.</p>
          * 
          * <strong>example:</strong>
          * <p>REPLY</p>
@@ -1045,16 +1045,16 @@ public class GetNodeDetailResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>已保存的原始记录内容；工具调用与产物元数据为JSON字符串</p>
+         * <p>The saved original record content. Tool invocation and artifact metadata are JSON strings.</p>
          * 
          * <strong>example:</strong>
-         * <p>已完成本轮数据查询</p>
+         * <p>Data query for this turn completed</p>
          */
         @NameInMap("detail")
         public String detail;
 
         /**
-         * <p>该条工作记录耗时，单位毫秒；产物记录为0</p>
+         * <p>The time taken for this work record, in milliseconds. The value is 0 for artifact records.</p>
          * 
          * <strong>example:</strong>
          * <p>1200</p>
@@ -1063,7 +1063,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
         public Long duration;
 
         /**
-         * <p>所属节点key（nodeKey），不是会话ID</p>
+         * <p>The key of the parent node, not the conversation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>query.amount</p>
@@ -1072,7 +1072,7 @@ public class GetNodeDetailResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>记录事件时间，ISO-8601格式；源记录无时间时为空字符串</p>
+         * <p>The time when the event is recorded, in ISO-8601 format. This is an empty string if the source record has no time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-14T08:00:00Z</p>

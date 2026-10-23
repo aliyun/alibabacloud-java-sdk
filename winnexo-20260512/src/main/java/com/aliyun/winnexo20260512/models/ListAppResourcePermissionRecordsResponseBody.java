@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppResourcePermissionRecordsResponseBody extends TeaModel {
     /**
-     * <p>业务状态码；成功为 200</p>
+     * <p>The business status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,22 +14,22 @@ public class ListAppResourcePermissionRecordsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>当前页授权记录</p>
+     * <p>The authorization records on the current page.</p>
      */
     @NameInMap("items")
     public java.util.List<ListAppResourcePermissionRecordsResponseBodyItems> items;
 
     /**
-     * <p>错误描述；成功时为空</p>
+     * <p>The error message. This parameter is empty if the request is successful.</p>
      * 
      * <strong>example:</strong>
-     * <p>请求的资源不存在</p>
+     * <p>The requested resource does not exist</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>页码</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class ListAppResourcePermissionRecordsResponseBody extends TeaModel {
     public Long page;
 
     /**
-     * <p>每页条数</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -47,7 +47,7 @@ public class ListAppResourcePermissionRecordsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -56,7 +56,7 @@ public class ListAppResourcePermissionRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>记录总数</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -127,7 +127,7 @@ public class ListAppResourcePermissionRecordsResponseBody extends TeaModel {
 
     public static class ListAppResourcePermissionRecordsResponseBodyItems extends TeaModel {
         /**
-         * <p>创建时间</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-16T10:30:00+08:00</p>
@@ -136,7 +136,7 @@ public class ListAppResourcePermissionRecordsResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>到期时间</p>
+         * <p>The expiration time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-12-31T23:59:59+08:00</p>
@@ -145,7 +145,7 @@ public class ListAppResourcePermissionRecordsResponseBody extends TeaModel {
         public String expireAt;
 
         /**
-         * <p>授权人平台用户 ID</p>
+         * <p>The platform user ID of the grantor.</p>
          * 
          * <strong>example:</strong>
          * <p>10086</p>
@@ -154,7 +154,7 @@ public class ListAppResourcePermissionRecordsResponseBody extends TeaModel {
         public String grantedBy;
 
         /**
-         * <p>主体 ID</p>
+         * <p>The grantee ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10086</p>
@@ -163,16 +163,16 @@ public class ListAppResourcePermissionRecordsResponseBody extends TeaModel {
         public String granteeId;
 
         /**
-         * <p>主体名称</p>
+         * <p>The grantee name.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("granteeName")
         public String granteeName;
 
         /**
-         * <p>跨租户 USER 所属租户</p>
+         * <p>The ID of the tenant to which the cross-tenant user belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -181,7 +181,7 @@ public class ListAppResourcePermissionRecordsResponseBody extends TeaModel {
         public String granteeTenantId;
 
         /**
-         * <p>主体类型</p>
+         * <p>The grantee type.</p>
          * 
          * <strong>example:</strong>
          * <p>USER</p>
@@ -190,7 +190,7 @@ public class ListAppResourcePermissionRecordsResponseBody extends TeaModel {
         public String granteeType;
 
         /**
-         * <p>权限点</p>
+         * <p>The permission.</p>
          * 
          * <strong>example:</strong>
          * <p>APP/VIEW</p>
@@ -199,7 +199,7 @@ public class ListAppResourcePermissionRecordsResponseBody extends TeaModel {
         public String permission;
 
         /**
-         * <p>权限记录 ID</p>
+         * <p>The ID of the permission record.</p>
          * 
          * <strong>example:</strong>
          * <p>1001</p>
@@ -208,7 +208,7 @@ public class ListAppResourcePermissionRecordsResponseBody extends TeaModel {
         public Long permissionId;
 
         /**
-         * <p>资源键</p>
+         * <p>The resource key.</p>
          * 
          * <strong>example:</strong>
          * <p>app.demo.resource_1</p>
@@ -217,7 +217,7 @@ public class ListAppResourcePermissionRecordsResponseBody extends TeaModel {
         public String resourceKey;
 
         /**
-         * <p>资源类型</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>APP_RESOURCE</p>
@@ -226,7 +226,7 @@ public class ListAppResourcePermissionRecordsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>更新时间</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-16T10:30:00+08:00</p>

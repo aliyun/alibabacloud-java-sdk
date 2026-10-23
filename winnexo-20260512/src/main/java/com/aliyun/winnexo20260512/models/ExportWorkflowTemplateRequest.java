@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExportWorkflowTemplateRequest extends TeaModel {
     /**
-     * <p>协作空间 ID</p>
+     * <p>The collaboration workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ExportWorkflowTemplateRequest extends TeaModel {
     public String collaborationGroupId;
 
     /**
-     * <p>模板 ID</p>
+     * <p>The template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,13 +25,22 @@ public class ExportWorkflowTemplateRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
      */
     @NameInMap("tenantId")
     public String tenantId;
+
+    /**
+     * <p>The version number of the template to export. The format is a lowercase v followed by a positive integer, such as v1. If not specified, the effective version is used. If no effective version exists, the latest version is used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
+     */
+    @NameInMap("version")
+    public String version;
 
     public static ExportWorkflowTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         ExportWorkflowTemplateRequest self = new ExportWorkflowTemplateRequest();
@@ -60,6 +69,14 @@ public class ExportWorkflowTemplateRequest extends TeaModel {
     }
     public String getTenantId() {
         return this.tenantId;
+    }
+
+    public ExportWorkflowTemplateRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

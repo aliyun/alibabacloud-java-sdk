@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TerminateInstanceRequest extends TeaModel {
     /**
-     * <p>协作空间ID</p>
+     * <p>The ID of the collaboration workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class TerminateInstanceRequest extends TeaModel {
     public String collaborationGroupId;
 
     /**
-     * <p>物理工作流实例ID（planId）</p>
+     * <p>The physical workflow instance ID (planId).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,17 +25,17 @@ public class TerminateInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>终止原因</p>
+     * <p>The reason for termination.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>用户终止</p>
+     * <p>Terminated by user</p>
      */
     @NameInMap("reason")
     public String reason;
 
     /**
-     * <p>租户ID，缺省使用调用方默认租户</p>
+     * <p>The tenant ID. If not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

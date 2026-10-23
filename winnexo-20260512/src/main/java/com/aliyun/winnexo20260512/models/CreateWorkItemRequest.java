@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateWorkItemRequest extends TeaModel {
     /**
-     * <p>验收标准</p>
+     * <p>The acceptance criteria.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -14,7 +14,7 @@ public class CreateWorkItemRequest extends TeaModel {
     public String acceptanceCriteria;
 
     /**
-     * <p>输入附件稳定引用</p>
+     * <p>The stable references of the input attachments.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -23,7 +23,7 @@ public class CreateWorkItemRequest extends TeaModel {
     public java.util.List<CreateWorkItemRequestAttachments> attachments;
 
     /**
-     * <p>协作空间 ID</p>
+     * <p>The ID of the collaboration workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class CreateWorkItemRequest extends TeaModel {
     public String collaborationGroupId;
 
     /**
-     * <p>协作人用户ID列表</p>
+     * <p>The list of user IDs of the collaborators.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -42,7 +42,7 @@ public class CreateWorkItemRequest extends TeaModel {
     public java.util.List<Long> collaboratorUserIds;
 
     /**
-     * <p>关联会话ID</p>
+     * <p>The ID of the associated conversation.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -51,7 +51,7 @@ public class CreateWorkItemRequest extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>工作项描述</p>
+     * <p>The description of the work item.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -60,7 +60,7 @@ public class CreateWorkItemRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>工作项类型；仅接受 WORKFLOW</p>
+     * <p>The type of the work item. Only WORKFLOW is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,7 +70,7 @@ public class CreateWorkItemRequest extends TeaModel {
     public String itemType;
 
     /**
-     * <p>负责人用户ID；缺省为调用者本人</p>
+     * <p>The user ID of the owner. If this parameter is not specified, the ID of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -79,7 +79,7 @@ public class CreateWorkItemRequest extends TeaModel {
     public Long ownerUserId;
 
     /**
-     * <p>排产优先级</p>
+     * <p>The scheduling priority.</p>
      * 
      * <strong>example:</strong>
      * <p>HIGH</p>
@@ -88,7 +88,7 @@ public class CreateWorkItemRequest extends TeaModel {
     public String priority;
 
     /**
-     * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -97,7 +97,7 @@ public class CreateWorkItemRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>工作项标题</p>
+     * <p>The title of the work item.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -107,7 +107,7 @@ public class CreateWorkItemRequest extends TeaModel {
     public String title;
 
     /**
-     * <p>绑定的工作流模板ID列表</p>
+     * <p>The list of IDs of the bound workflow templates.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -218,7 +218,7 @@ public class CreateWorkItemRequest extends TeaModel {
 
     public static class CreateWorkItemRequestAttachments extends TeaModel {
         /**
-         * <p>内容类型</p>
+         * <p>The content type.</p>
          * 
          * <strong>example:</strong>
          * <p>application/pdf</p>
@@ -227,7 +227,7 @@ public class CreateWorkItemRequest extends TeaModel {
         public String contentType;
 
         /**
-         * <p>附件引用地址</p>
+         * <p>The reference URL of the attachment.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -236,7 +236,7 @@ public class CreateWorkItemRequest extends TeaModel {
         public String refUrl;
 
         /**
-         * <p>附件资源ID</p>
+         * <p>The resource ID of the attachment.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -246,7 +246,7 @@ public class CreateWorkItemRequest extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>附件资源类型</p>
+         * <p>The resource type of the attachment.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -256,7 +256,7 @@ public class CreateWorkItemRequest extends TeaModel {
         public String resourceKind;
 
         /**
-         * <p>附件大小(字节)，上限 20MB</p>
+         * <p>The size of the attachment in bytes. The maximum size is 20 MB.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -265,7 +265,7 @@ public class CreateWorkItemRequest extends TeaModel {
         public Long sizeBytes;
 
         /**
-         * <p>附件标题</p>
+         * <p>The title of the attachment.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>

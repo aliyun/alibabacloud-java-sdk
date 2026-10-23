@@ -5,7 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateWorkflowTemplateRequest extends TeaModel {
     /**
-     * <p>协作空间 ID</p>
+     * <p>The write action. Valid values: SAVE: Saves the template as a draft without taking effect. SUBMIT: Saves and submits the template and sets it as the only effective version. Default value: SUBMIT.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUBMIT</p>
+     */
+    @NameInMap("action")
+    public String action;
+
+    /**
+     * <p>The ID of the collaboration workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +24,7 @@ public class CreateWorkflowTemplateRequest extends TeaModel {
     public String collaborationGroupId;
 
     /**
-     * <p>完整模板定义 JSON（name/description/steps）</p>
+     * <p>The complete JSON definition of the template, including name, description, and steps.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +34,7 @@ public class CreateWorkflowTemplateRequest extends TeaModel {
     public java.util.Map<String, ?> definition;
 
     /**
-     * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -36,6 +45,14 @@ public class CreateWorkflowTemplateRequest extends TeaModel {
     public static CreateWorkflowTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateWorkflowTemplateRequest self = new CreateWorkflowTemplateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateWorkflowTemplateRequest setAction(String action) {
+        this.action = action;
+        return this;
+    }
+    public String getAction() {
+        return this.action;
     }
 
     public CreateWorkflowTemplateRequest setCollaborationGroupId(String collaborationGroupId) {

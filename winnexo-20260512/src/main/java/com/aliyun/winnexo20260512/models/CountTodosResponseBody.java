@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CountTodosResponseBody extends TeaModel {
     /**
-     * <p>业务状态码；成功为200</p>
+     * <p>The business status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,16 +14,16 @@ public class CountTodosResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>错误描述</p>
+     * <p>The error description.</p>
      * 
      * <strong>example:</strong>
-     * <p>请求的资源不存在</p>
+     * <p>The requested resource does not exist</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>待处理数量（PENDING 主状态）</p>
+     * <p>The number of pending items with the primary status of PENDING.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -32,7 +32,7 @@ public class CountTodosResponseBody extends TeaModel {
     public Long pendingCount;
 
     /**
-     * <p>请求追踪ID</p>
+     * <p>The request tracking ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -41,7 +41,7 @@ public class CountTodosResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>未读数量（处理人 readAt 为空）</p>
+     * <p>The number of unread items where the readAt field of the handler is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

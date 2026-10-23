@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckAppResourcePermissionResponseBody extends TeaModel {
     /**
-     * <p>目标用户是否拥有该资源权限</p>
+     * <p>Indicates whether the target user has the permission on the resource.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class CheckAppResourcePermissionResponseBody extends TeaModel {
     public Boolean allowed;
 
     /**
-     * <p>业务状态码；成功为 200</p>
+     * <p>The business status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,16 +23,16 @@ public class CheckAppResourcePermissionResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>错误描述；成功时为空</p>
+     * <p>The error description. This field is empty if the request is successful.</p>
      * 
      * <strong>example:</strong>
-     * <p>请求的资源不存在</p>
+     * <p>The requested resource does not exist</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>目标权限点</p>
+     * <p>The target permission.</p>
      * 
      * <strong>example:</strong>
      * <p>APP/VIEW</p>
@@ -41,7 +41,7 @@ public class CheckAppResourcePermissionResponseBody extends TeaModel {
     public String permission;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request trace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -50,7 +50,7 @@ public class CheckAppResourcePermissionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>首段为 APP 应用键的点分资源键</p>
+     * <p>The dot-separated resource key. The first segment is the APP application key.</p>
      * 
      * <strong>example:</strong>
      * <p>app.demo.resource_1</p>
@@ -59,7 +59,7 @@ public class CheckAppResourcePermissionResponseBody extends TeaModel {
     public String resourceKey;
 
     /**
-     * <p>固定为 APP_RESOURCE</p>
+     * <p>The resource type. Set the value to APP_RESOURCE.</p>
      * 
      * <strong>example:</strong>
      * <p>APP_RESOURCE</p>

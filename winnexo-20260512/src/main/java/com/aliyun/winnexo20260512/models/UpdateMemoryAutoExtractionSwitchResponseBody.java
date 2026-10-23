@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateMemoryAutoExtractionSwitchResponseBody extends TeaModel {
     /**
-     * <p>本次同步清空的自动记忆文件数量；未清空或无可清空记忆时为 0</p>
+     * <p>The number of automatic memory files cleared in this synchronous operation. The value is 0 if no files are cleared or no memories are available to be cleared.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -14,7 +14,7 @@ public class UpdateMemoryAutoExtractionSwitchResponseBody extends TeaModel {
     public Long clearedCount;
 
     /**
-     * <p>业务状态码；成功为 200，失败时为对应错误码</p>
+     * <p>The business status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class UpdateMemoryAutoExtractionSwitchResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>更新后的自动记忆拾取开关状态；true 为开启，false 为关闭</p>
+     * <p>The updated status of the automatic memory collection toggle. A value of true indicates that the feature is enabled, and a value of false indicates that the feature is disabled.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -32,16 +32,16 @@ public class UpdateMemoryAutoExtractionSwitchResponseBody extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>错误描述；成功时为空字符串，失败时返回具体原因</p>
+     * <p>The error description.</p>
      * 
      * <strong>example:</strong>
-     * <p>当前用户不是群组 cg_12345 的活跃成员</p>
+     * <p>The current user is not an active member of the group cg_12345</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪 ID，用于定位本次调用</p>
+     * <p>The request tracking ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CloseWorkflowTodosRequest extends TeaModel {
     /**
-     * <p>协作空间 ID（命中范围限定该空间内）</p>
+     * <p>The ID of the collaborative workspace. The match scope is limited to this workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CloseWorkflowTodosRequest extends TeaModel {
     public String collaborationGroupId;
 
     /**
-     * <p>工作流 ID（run 粒度）</p>
+     * <p>The workflow ID at the run level.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CloseWorkflowTodosRequest extends TeaModel {
     public String sourceWorkflowId;
 
     /**
-     * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitTodoResponseBody extends TeaModel {
     /**
-     * <p>业务状态码；成功为200</p>
+     * <p>The business status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class SubmitTodoResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>完成时间（ISO8601 UTC；与其他北京时间格式化字段格式不同）</p>
+     * <p>The completion time in ISO 8601 UTC format. Note that this format differs from other time fields formatted in UTC+8.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-10-12T02:00:00+00:00</p>
@@ -23,7 +23,7 @@ public class SubmitTodoResponseBody extends TeaModel {
     public String completedAt;
 
     /**
-     * <p>完成人用户ID</p>
+     * <p>The user ID of the user who completed the item.</p>
      * 
      * <strong>example:</strong>
      * <p>42</p>
@@ -32,16 +32,16 @@ public class SubmitTodoResponseBody extends TeaModel {
     public String completedByUserId;
 
     /**
-     * <p>错误描述</p>
+     * <p>The error description.</p>
      * 
      * <strong>example:</strong>
-     * <p>请求的资源不存在</p>
+     * <p>The requested resource does not exist</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪ID</p>
+     * <p>The request tracking ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -50,7 +50,7 @@ public class SubmitTodoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>提交后状态（恒为 COMPLETED）</p>
+     * <p>The status after submission. This value is always COMPLETED.</p>
      * 
      * <strong>example:</strong>
      * <p>COMPLETED</p>
@@ -59,7 +59,7 @@ public class SubmitTodoResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>待办ID</p>
+     * <p>The ID of the to-do item.</p>
      * 
      * <strong>example:</strong>
      * <p>todo_abc123</p>

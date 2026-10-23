@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMemoryAutoExtractionSwitchRequest extends TeaModel {
     /**
-     * <p>写作协作空间 ID；ownerType 为 group 时必填，且当前鉴权用户须为该空间的活跃成员；ownerType 为 user 时不传</p>
+     * <p>The collaboration workspace ID. This parameter is required when ownerType is set to group.</p>
      * 
      * <strong>example:</strong>
      * <p>cg_12345</p>
@@ -14,7 +14,7 @@ public class GetMemoryAutoExtractionSwitchRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>记忆归属范围；user 为当前鉴权用户的个人记忆，group 为指定写作协作空间的记忆；不传时默认为 user</p>
+     * <p>The owner type. A value of user indicates the personal memory of the authenticated user, and a value of group indicates the memory of the specified collaboration workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>group</p>
@@ -23,7 +23,7 @@ public class GetMemoryAutoExtractionSwitchRequest extends TeaModel {
     public String ownerType;
 
     /**
-     * <p>租户 ID，查询参数；不传时使用调用方的默认租户</p>
+     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10001</p>

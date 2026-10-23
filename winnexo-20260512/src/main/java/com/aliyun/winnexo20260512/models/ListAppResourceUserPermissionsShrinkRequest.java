@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppResourceUserPermissionsShrinkRequest extends TeaModel {
     /**
-     * <p>页码</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListAppResourceUserPermissionsShrinkRequest extends TeaModel {
     public Long page;
 
     /**
-     * <p>每页条数</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,13 +23,13 @@ public class ListAppResourceUserPermissionsShrinkRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>权限点筛选</p>
+     * <p>The permission points to filter.</p>
      */
     @NameInMap("permissions")
     public String permissionsShrink;
 
     /**
-     * <p>应用键或其子路径</p>
+     * <p>The application key or its subpath.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class ListAppResourceUserPermissionsShrinkRequest extends TeaModel {
     public String resourceKeyPrefix;
 
     /**
-     * <p>资源所属租户 ID；省略为调用人当前租户</p>
+     * <p>The ID of the tenant to which the resource belongs. If you do not specify this parameter, the current tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -48,7 +48,7 @@ public class ListAppResourceUserPermissionsShrinkRequest extends TeaModel {
     public String resourceTenantId;
 
     /**
-     * <p>固定为 APP_RESOURCE</p>
+     * <p>The resource type. Set the value to APP_RESOURCE.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class ListAppResourceUserPermissionsShrinkRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>目标平台用户 ID</p>
+     * <p>The ID of the target platform user.</p>
      * 
      * <strong>example:</strong>
      * <p>10086</p>
@@ -67,7 +67,7 @@ public class ListAppResourceUserPermissionsShrinkRequest extends TeaModel {
     public Long targetUserId;
 
     /**
-     * <p>目标用户所属租户；跨租户目标必填</p>
+     * <p>The tenant to which the target user belongs. This parameter is required for cross-tenant targets.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -76,7 +76,7 @@ public class ListAppResourceUserPermissionsShrinkRequest extends TeaModel {
     public String targetUserTenantId;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. If you do not specify this parameter, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

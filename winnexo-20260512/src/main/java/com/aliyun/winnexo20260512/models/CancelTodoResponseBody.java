@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelTodoResponseBody extends TeaModel {
     /**
-     * <p>作废条数</p>
+     * <p>The number of canceled to-do items.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class CancelTodoResponseBody extends TeaModel {
     public Long cancelledCount;
 
     /**
-     * <p>业务状态码；成功为200</p>
+     * <p>The business status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,16 +23,16 @@ public class CancelTodoResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>错误描述</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>请求的资源不存在</p>
+     * <p>The requested resource does not exist</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -41,7 +41,7 @@ public class CancelTodoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>作废后状态</p>
+     * <p>The status after cancellation.</p>
      * 
      * <strong>example:</strong>
      * <p>CANCELLED</p>
@@ -50,7 +50,7 @@ public class CancelTodoResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>作废的待办ID（按 workItemId 定位时为空）</p>
+     * <p>The ID of the canceled to-do item. This parameter is empty if the to-do item is located by workItemId.</p>
      * 
      * <strong>example:</strong>
      * <p>todo_abc123</p>

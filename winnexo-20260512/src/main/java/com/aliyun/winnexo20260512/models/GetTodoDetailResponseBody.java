@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTodoDetailResponseBody extends TeaModel {
     /**
-     * <p>处理人数量</p>
+     * <p>The number of assignees.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -14,13 +14,13 @@ public class GetTodoDetailResponseBody extends TeaModel {
     public Long assigneeCount;
 
     /**
-     * <p>全部处理人</p>
+     * <p>All assignees.</p>
      */
     @NameInMap("assignees")
     public java.util.List<GetTodoDetailResponseBodyAssignees> assignees;
 
     /**
-     * <p>附件策略（当前版本附件不落库）</p>
+     * <p>The attachment policy. Attachments are not stored in the database in the current version.</p>
      * 
      * <strong>example:</strong>
      * <p>allowUpload=true</p>
@@ -29,7 +29,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
     public java.util.Map<String, ?> attachmentPolicy;
 
     /**
-     * <p>业务状态码；成功为200</p>
+     * <p>The business status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -38,7 +38,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>完成时间（北京时间 YYYY-MM-DD HH:mm:ss）</p>
+     * <p>The completion time in UTC+8 (YYYY-MM-DD HH:mm:ss).</p>
      * 
      * <strong>example:</strong>
      * <p>2026-10-12 10:00:00</p>
@@ -47,7 +47,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
     public String completedAt;
 
     /**
-     * <p>完成人用户ID；未完成为空</p>
+     * <p>The user ID of the user who completed the item. This field is empty if the item is not completed.</p>
      * 
      * <strong>example:</strong>
      * <p>42</p>
@@ -56,16 +56,16 @@ public class GetTodoDetailResponseBody extends TeaModel {
     public String completedByUserId;
 
     /**
-     * <p>完成人姓名；未完成为空</p>
+     * <p>The name of the user who completed the item. This field is empty if the item is not completed.</p>
      * 
      * <strong>example:</strong>
-     * <p>张三</p>
+     * <p>Zhang San</p>
      */
     @NameInMap("completedByUserName")
     public String completedByUserName;
 
     /**
-     * <p>创建时间（北京时间 YYYY-MM-DD HH:mm:ss）</p>
+     * <p>The creation time in UTC+8 (YYYY-MM-DD HH:mm:ss).</p>
      * 
      * <strong>example:</strong>
      * <p>2026-10-12 10:00:00</p>
@@ -74,7 +74,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
     public String gmtCreate;
 
     /**
-     * <p>最后修改时间（北京时间 YYYY-MM-DD HH:mm:ss）</p>
+     * <p>The last modification time in UTC+8 (YYYY-MM-DD HH:mm:ss).</p>
      * 
      * <strong>example:</strong>
      * <p>2026-10-12 10:00:00</p>
@@ -83,7 +83,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
     public String gmtModified;
 
     /**
-     * <p>调用者是否已读</p>
+     * <p>Indicates whether the caller has read the item.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -92,16 +92,16 @@ public class GetTodoDetailResponseBody extends TeaModel {
     public Boolean isRead;
 
     /**
-     * <p>错误描述</p>
+     * <p>The error description.</p>
      * 
      * <strong>example:</strong>
-     * <p>请求的资源不存在</p>
+     * <p>The requested resource does not exist</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>发出该待办的 assistant 消息ID；无会话来源为空</p>
+     * <p>The ID of the assistant message that generated the to-do item. This field is empty if there is no conversation source.</p>
      * 
      * <strong>example:</strong>
      * <p>msg-1</p>
@@ -110,7 +110,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
     public String messageId;
 
     /**
-     * <p>调用者的处理人行状态</p>
+     * <p>The action status of the caller as the assignee.</p>
      * 
      * <strong>example:</strong>
      * <p>PENDING</p>
@@ -119,7 +119,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
     public String myAssigneeStatus;
 
     /**
-     * <p>调用者的列表展示状态</p>
+     * <p>The list display status for the caller.</p>
      * 
      * <strong>example:</strong>
      * <p>TODO</p>
@@ -128,7 +128,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
     public String myDisplayState;
 
     /**
-     * <p>调用者权限（canSubmit/canTransfer）</p>
+     * <p>The permissions of the caller, such as canSubmit and canTransfer.</p>
      * 
      * <strong>example:</strong>
      * <p>APP/VIEW=true</p>
@@ -137,7 +137,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
     public java.util.Map<String, ?> myPermissions;
 
     /**
-     * <p>优先级</p>
+     * <p>The priority.</p>
      * 
      * <strong>example:</strong>
      * <p>HIGH</p>
@@ -146,13 +146,13 @@ public class GetTodoDetailResponseBody extends TeaModel {
     public String priority;
 
     /**
-     * <p>问题清单（结构化投影）</p>
+     * <p>The list of questions (structured projection).</p>
      */
     @NameInMap("questions")
     public java.util.List<GetTodoDetailResponseBodyQuestions> questions;
 
     /**
-     * <p>请求追踪ID</p>
+     * <p>The request tracking ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -161,16 +161,16 @@ public class GetTodoDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>作答内容（JSONB 原样；未提交为空对象缺省）</p>
+     * <p>The response content in JSONB format as-is. Defaults to an empty object if not submitted.</p>
      * 
      * <strong>example:</strong>
-     * <p>result=同意</p>
+     * <p>result=Approved</p>
      */
     @NameInMap("resultPayload")
     public java.util.Map<String, ?> resultPayload;
 
     /**
-     * <p>来源上下文（创建时原样透传）</p>
+     * <p>The source context. This context is passed through as-is during creation.</p>
      * 
      * <strong>example:</strong>
      * <p>source=openapi</p>
@@ -179,7 +179,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
     public java.util.Map<String, ?> sourceContext;
 
     /**
-     * <p>待办来源类型</p>
+     * <p>The source type of the to-do item.</p>
      * 
      * <strong>example:</strong>
      * <p>WORKFLOW</p>
@@ -188,7 +188,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>工作流ID（sourceType=WORKFLOW 时必有）</p>
+     * <p>The workflow ID. This field is required when sourceType is set to WORKFLOW.</p>
      * 
      * <strong>example:</strong>
      * <p>wf-1</p>
@@ -197,7 +197,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
     public String sourceWorkflowId;
 
     /**
-     * <p>待办主状态</p>
+     * <p>The primary status of the to-do item.</p>
      * 
      * <strong>example:</strong>
      * <p>PENDING</p>
@@ -206,25 +206,25 @@ public class GetTodoDetailResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>待办摘要</p>
+     * <p>The summary of the to-do item.</p>
      * 
      * <strong>example:</strong>
-     * <p>请审批以下事项</p>
+     * <p>Please approve the following items</p>
      */
     @NameInMap("summary")
     public String summary;
 
     /**
-     * <p>待办标题</p>
+     * <p>The title of the to-do item.</p>
      * 
      * <strong>example:</strong>
-     * <p>治理审批</p>
+     * <p>Governance approval</p>
      */
     @NameInMap("title")
     public String title;
 
     /**
-     * <p>待办ID</p>
+     * <p>The ID of the to-do item.</p>
      * 
      * <strong>example:</strong>
      * <p>todo_abc123</p>
@@ -447,7 +447,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
 
     public static class GetTodoDetailResponseBodyAssignees extends TeaModel {
         /**
-         * <p>处理时间（北京时间）；未处理为空</p>
+         * <p>The action time in UTC+8. This field is empty if the item is not processed.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-16T10:30:00+08:00</p>
@@ -456,7 +456,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
         public String actedAt;
 
         /**
-         * <p>处理人来源：ORIGINAL/TRANSFERRED</p>
+         * <p>The source of the assignee. Valid values: ORIGINAL and TRANSFERRED.</p>
          * 
          * <strong>example:</strong>
          * <p>ORIGINAL</p>
@@ -465,7 +465,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
         public String assigneeSource;
 
         /**
-         * <p>处理人用户ID</p>
+         * <p>The user ID of the assignee.</p>
          * 
          * <strong>example:</strong>
          * <p>42</p>
@@ -474,7 +474,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
         public String assigneeUserId;
 
         /**
-         * <p>已读时间（北京时间）；未读为空</p>
+         * <p>The read time in UTC+8. This field is empty if the item is unread.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-12 10:01:00</p>
@@ -483,7 +483,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
         public String readAt;
 
         /**
-         * <p>处理人行状态</p>
+         * <p>The action status of the assignee.</p>
          * 
          * <strong>example:</strong>
          * <p>PENDING</p>
@@ -492,7 +492,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>转出人用户ID；仅转办产生</p>
+         * <p>The user ID of the user who transferred the task. This field is populated only when the task is transferred.</p>
          * 
          * <strong>example:</strong>
          * <p>43</p>
@@ -557,25 +557,25 @@ public class GetTodoDetailResponseBody extends TeaModel {
 
     public static class GetTodoDetailResponseBodyQuestionsOptions extends TeaModel {
         /**
-         * <p>选项补充说明</p>
+         * <p>The supplementary description of the option.</p>
          * 
          * <strong>example:</strong>
-         * <p>选项补充说明</p>
+         * <p>Supplementary description of the option</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>选项文案（引用键）</p>
+         * <p>The option text (reference key).</p>
          * 
          * <strong>example:</strong>
-         * <p>通过</p>
+         * <p>Approve</p>
          */
         @NameInMap("label")
         public String label;
 
         /**
-         * <p>是否推荐</p>
+         * <p>Indicates whether the option is recommended.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -616,7 +616,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
 
     public static class GetTodoDetailResponseBodyQuestions extends TeaModel {
         /**
-         * <p>是否允许自定义输入</p>
+         * <p>Indicates whether custom input is allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -625,16 +625,16 @@ public class GetTodoDetailResponseBody extends TeaModel {
         public Boolean allowCustom;
 
         /**
-         * <p>自定义输入项文案</p>
+         * <p>The text for the custom input field.</p>
          * 
          * <strong>example:</strong>
-         * <p>其他</p>
+         * <p>Other</p>
          */
         @NameInMap("customLabel")
         public String customLabel;
 
         /**
-         * <p>自定义输入长度上限</p>
+         * <p>The maximum length for custom input.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -643,16 +643,16 @@ public class GetTodoDetailResponseBody extends TeaModel {
         public Long customMaxLength;
 
         /**
-         * <p>自定义输入占位符</p>
+         * <p>The placeholder for custom input.</p>
          * 
          * <strong>example:</strong>
-         * <p>请说明</p>
+         * <p>Please specify</p>
          */
         @NameInMap("customPlaceholder")
         public String customPlaceholder;
 
         /**
-         * <p>TEXT 题长度上限</p>
+         * <p>The maximum length for text questions.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -661,7 +661,7 @@ public class GetTodoDetailResponseBody extends TeaModel {
         public Long maxLength;
 
         /**
-         * <p>作答形态：SINGLE_CHOICE/MULTI_CHOICE/TEXT</p>
+         * <p>The response mode. Valid values: SINGLE_CHOICE, MULTI_CHOICE, and TEXT.</p>
          * 
          * <strong>example:</strong>
          * <p>SINGLE_CHOICE</p>
@@ -670,31 +670,31 @@ public class GetTodoDetailResponseBody extends TeaModel {
         public String mode;
 
         /**
-         * <p>选项（选择类必有）</p>
+         * <p>The options. This field is required for choice questions.</p>
          */
         @NameInMap("options")
         public java.util.List<GetTodoDetailResponseBodyQuestionsOptions> options;
 
         /**
-         * <p>TEXT 题占位符</p>
+         * <p>The placeholder for text questions.</p>
          * 
          * <strong>example:</strong>
-         * <p>请输入</p>
+         * <p>Please enter</p>
          */
         @NameInMap("placeholder")
         public String placeholder;
 
         /**
-         * <p>问题正文（引用键）</p>
+         * <p>The question text (reference key).</p>
          * 
          * <strong>example:</strong>
-         * <p>是否通过审批</p>
+         * <p>Whether to approve</p>
          */
         @NameInMap("question")
         public String question;
 
         /**
-         * <p>是否必答</p>
+         * <p>Indicates whether the question is required.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

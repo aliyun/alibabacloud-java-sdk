@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchOperateWorkItemsResponseBody extends TeaModel {
     /**
-     * <p>业务状态码；成功为200</p>
+     * <p>The business status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class BatchOperateWorkItemsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>逐项结果，顺序与请求一致</p>
+     * <p>The results for each item. The order of the results matches the order of the items in the request.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -23,16 +23,16 @@ public class BatchOperateWorkItemsResponseBody extends TeaModel {
     public java.util.List<BatchOperateWorkItemsResponseBodyItems> items;
 
     /**
-     * <p>错误描述</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>请求的资源不存在</p>
+     * <p>The requested resource does not exist</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -41,7 +41,7 @@ public class BatchOperateWorkItemsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>跳过或失败数量</p>
+     * <p>The number of skipped or failed operations.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,7 +50,7 @@ public class BatchOperateWorkItemsResponseBody extends TeaModel {
     public Long skipped;
 
     /**
-     * <p>成功数量</p>
+     * <p>The number of successful operations.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -113,7 +113,7 @@ public class BatchOperateWorkItemsResponseBody extends TeaModel {
 
     public static class BatchOperateWorkItemsResponseBodyItems extends TeaModel {
         /**
-         * <p>跳过或失败原因</p>
+         * <p>The reason for skipping or failure.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -122,7 +122,7 @@ public class BatchOperateWorkItemsResponseBody extends TeaModel {
         public String reason;
 
         /**
-         * <p>是否执行成功</p>
+         * <p>Indicates whether the execution was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -131,7 +131,7 @@ public class BatchOperateWorkItemsResponseBody extends TeaModel {
         public Boolean success;
 
         /**
-         * <p>工作项ID</p>
+         * <p>The ID of the work item.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchAliDingGroupChatsResponseBody extends TeaModel {
     /**
-     * <p>业务状态码</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class SearchAliDingGroupChatsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>是否还有下一页</p>
+     * <p>Indicates whether more pages are available.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -22,11 +22,14 @@ public class SearchAliDingGroupChatsResponseBody extends TeaModel {
     @NameInMap("hasMore")
     public Boolean hasMore;
 
+    /**
+     * <p>The user group tree node information.</p>
+     */
     @NameInMap("items")
     public java.util.List<SearchAliDingGroupChatsResponseBodyItems> items;
 
     /**
-     * <p>错误描述，成功时为空</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>
@@ -35,7 +38,7 @@ public class SearchAliDingGroupChatsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>下一页分页游标，末页为空</p>
+     * <p>The starting cursor for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,7 +47,7 @@ public class SearchAliDingGroupChatsResponseBody extends TeaModel {
     public String nextCursor;
 
     /**
-     * <p>请求追踪 ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>request-id</p>
@@ -107,7 +110,7 @@ public class SearchAliDingGroupChatsResponseBody extends TeaModel {
 
     public static class SearchAliDingGroupChatsResponseBodyItems extends TeaModel {
         /**
-         * <p>阿里钉群聊 ID</p>
+         * <p>The conversation ID. This ID is typically used for JSSDK.</p>
          * 
          * <strong>example:</strong>
          * <p>cid-example</p>
@@ -116,7 +119,14 @@ public class SearchAliDingGroupChatsResponseBody extends TeaModel {
         public String chatId;
 
         /**
-         * <p>会话类型</p>
+         * <p>The conversation type. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: one-on-one chat.</li>
+         * <li><strong>1</strong>: group chat.</li>
+         * </ul>
+         * <blockquote>
+         * <p>For a one-on-one chat, you do not need to specify <strong>openConversationId</strong>. Specify the employee ID in <strong>receiverUserIdList</strong>. For a one-on-one chat between two users, specify the employee ID of either user. For a one-on-one chat between a user and a bot, specify the employee ID of the user.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>INTERNAL_GROUP</p>
@@ -125,7 +135,7 @@ public class SearchAliDingGroupChatsResponseBody extends TeaModel {
         public String conversationType;
 
         /**
-         * <p>当前用户是否开启免打扰</p>
+         * <p>Indicates whether the current user has enabled the Do Not Disturb mode.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -134,10 +144,10 @@ public class SearchAliDingGroupChatsResponseBody extends TeaModel {
         public Boolean muted;
 
         /**
-         * <p>群聊标题</p>
+         * <p>The title of the scheduled meeting.</p>
          * 
          * <strong>example:</strong>
-         * <p>客户项目群</p>
+         * <p>Customer project group</p>
          */
         @NameInMap("title")
         public String title;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImportWorkflowTemplateRequest extends TeaModel {
     /**
-     * <p>协作空间 ID</p>
+     * <p>The collaboration workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ImportWorkflowTemplateRequest extends TeaModel {
     public String collaborationGroupId;
 
     /**
-     * <p>可移植模板 JSON（stepId/sortOrder 可省略）</p>
+     * <p>The portable template JSON. The stepId and sortOrder fields can be omitted.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ImportWorkflowTemplateRequest extends TeaModel {
     public java.util.Map<String, ?> template;
 
     /**
-     * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. If omitted, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

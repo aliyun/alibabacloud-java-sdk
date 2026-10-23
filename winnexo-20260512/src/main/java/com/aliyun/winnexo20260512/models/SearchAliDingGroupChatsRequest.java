@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchAliDingGroupChatsRequest extends TeaModel {
     /**
-     * <p>分页游标，首页传 0</p>
+     * <p>The cursor for the paged query. Set this parameter to 0 for the first request. For subsequent paging requests, set this parameter to the value of <strong>nextCursor</strong> returned in the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,7 +14,7 @@ public class SearchAliDingGroupChatsRequest extends TeaModel {
     public String cursor;
 
     /**
-     * <p>是否排除免打扰群聊</p>
+     * <p>Specifies whether to exclude muted group chats.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -23,17 +23,17 @@ public class SearchAliDingGroupChatsRequest extends TeaModel {
     public Boolean excludeMuted;
 
     /**
-     * <p>群聊搜索关键词</p>
+     * <p>The keyword for search. The keyword always matches the name field. If the description field is defined in the schema, the keyword also matches the description field.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>客户项目</p>
+     * <p>Customer project</p>
      */
     @NameInMap("keyword")
     public String keyword;
 
     /**
-     * <p>每页条数，范围 1-100</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -42,7 +42,7 @@ public class SearchAliDingGroupChatsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>租户 ID，公共参数；缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

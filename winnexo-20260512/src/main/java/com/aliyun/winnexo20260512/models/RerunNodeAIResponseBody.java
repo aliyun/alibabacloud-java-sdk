@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RerunNodeAIResponseBody extends TeaModel {
     /**
-     * <p>业务状态码；成功为200</p>
+     * <p>The business status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class RerunNodeAIResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>物理实例ID</p>
+     * <p>The physical instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>plan_example</p>
@@ -23,16 +23,16 @@ public class RerunNodeAIResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>错误描述</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>请求的资源不存在</p>
+     * <p>The requested resource does not exist</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>已安排重跑的节点 key</p>
+     * <p>The key of the node scheduled for rerun.</p>
      * 
      * <strong>example:</strong>
      * <p>query.amount</p>
@@ -41,7 +41,7 @@ public class RerunNodeAIResponseBody extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>请求追踪ID</p>
+     * <p>The request trace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -50,7 +50,7 @@ public class RerunNodeAIResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>重跑事实接受为 true，不表示 AI 已完成；失败通过 Code 和 Message 返回</p>
+     * <p>Indicates whether the rerun request is accepted. A value of true indicates that the rerun is accepted, but does not mean that the AI has completed the task. Failures are returned through the Code and Message fields.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -59,7 +59,7 @@ public class RerunNodeAIResponseBody extends TeaModel {
     public Boolean rerunAccepted;
 
     /**
-     * <p>状态版本</p>
+     * <p>The state version.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

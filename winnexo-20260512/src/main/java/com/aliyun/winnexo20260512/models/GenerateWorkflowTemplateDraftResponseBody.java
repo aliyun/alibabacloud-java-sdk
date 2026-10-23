@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
     /**
-     * <p>业务状态码；成功为200</p>
+     * <p>The business status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>生成的非持久化模板草稿</p>
+     * <p>The generated non-persistent template draft.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -23,16 +23,16 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
     public GenerateWorkflowTemplateDraftResponseBodyDraft draft;
 
     /**
-     * <p>错误描述</p>
+     * <p>The error description.</p>
      * 
      * <strong>example:</strong>
-     * <p>请求的资源不存在</p>
+     * <p>The requested resource does not exist</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪ID</p>
+     * <p>The request tracking ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -79,7 +79,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
 
     public static class GenerateWorkflowTemplateDraftResponseBodyDraftSteps extends TeaModel {
         /**
-         * <p>模型档位</p>
+         * <p>The model tier.</p>
          * 
          * <strong>example:</strong>
          * <p>standard</p>
@@ -88,7 +88,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
         public String modelMode;
 
         /**
-         * <p>步骤名称</p>
+         * <p>The name of the step.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -97,7 +97,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>智能体负责人名称</p>
+         * <p>The name of the responsible agent.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -106,7 +106,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
         public String ownerAgentName;
 
         /**
-         * <p>负责人类型：MEMBER 人工 / AGENT 智能体</p>
+         * <p>The type of the owner. Valid values: MEMBER: Human. AGENT: Agent.</p>
          * 
          * <strong>example:</strong>
          * <p>MEMBER</p>
@@ -115,7 +115,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
         public String ownerType;
 
         /**
-         * <p>人工负责人用户ID</p>
+         * <p>The user ID of the human owner.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -124,7 +124,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
         public Long ownerUserId;
 
         /**
-         * <p>审核人用户ID列表</p>
+         * <p>The list of user IDs of the reviewers.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -133,7 +133,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
         public java.util.List<Long> reviewerUserIds;
 
         /**
-         * <p>步骤顺序</p>
+         * <p>The order of the step.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -142,7 +142,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
         public Long sortOrder;
 
         /**
-         * <p>步骤处理说明</p>
+         * <p>The processing instructions for the step.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -151,7 +151,16 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
         public String specification;
 
         /**
-         * <p>步骤ID</p>
+         * <p>The array of structured segments for the step instructions. Supported types include text, mention, skill, app, files, and web_search. The fields and nested attachments of each segment are retained as returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;type&quot;:&quot;text&quot;,&quot;content&quot;:&quot;Organize input materials&quot;}]</p>
+         */
+        @NameInMap("specificationJson")
+        public java.util.List<java.util.Map<String, ?>> specificationJson;
+
+        /**
+         * <p>The ID of the step.</p>
          * 
          * <strong>example:</strong>
          * <p>collect</p>
@@ -228,6 +237,14 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
             return this.specification;
         }
 
+        public GenerateWorkflowTemplateDraftResponseBodyDraftSteps setSpecificationJson(java.util.List<java.util.Map<String, ?>> specificationJson) {
+            this.specificationJson = specificationJson;
+            return this;
+        }
+        public java.util.List<java.util.Map<String, ?>> getSpecificationJson() {
+            return this.specificationJson;
+        }
+
         public GenerateWorkflowTemplateDraftResponseBodyDraftSteps setStepId(String stepId) {
             this.stepId = stepId;
             return this;
@@ -240,7 +257,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
 
     public static class GenerateWorkflowTemplateDraftResponseBodyDraft extends TeaModel {
         /**
-         * <p>模板描述</p>
+         * <p>The description of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -249,7 +266,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>模板名称</p>
+         * <p>The name of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -258,7 +275,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>有序步骤</p>
+         * <p>The ordered steps.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>

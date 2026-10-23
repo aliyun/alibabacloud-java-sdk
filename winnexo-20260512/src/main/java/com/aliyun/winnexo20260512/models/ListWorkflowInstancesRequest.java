@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWorkflowInstancesRequest extends TeaModel {
     /**
-     * <p>精确需求编号</p>
+     * <p>The exact requirement ID.</p>
      * 
      * <strong>example:</strong>
      * <p>REQ-1001</p>
@@ -14,7 +14,7 @@ public class ListWorkflowInstancesRequest extends TeaModel {
     public String businessId;
 
     /**
-     * <p>协作空间 ID</p>
+     * <p>The collaboration space ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,25 +24,25 @@ public class ListWorkflowInstancesRequest extends TeaModel {
     public String collaborationGroupId;
 
     /**
-     * <p>精确外部发起人标签</p>
+     * <p>The exact external initiator tag.</p>
      * 
      * <strong>example:</strong>
-     * <p>外部发起人张三</p>
+     * <p>External initiator Zhang San</p>
      */
     @NameInMap("initiator")
     public String initiator;
 
     /**
-     * <p>标题或需求编号关键词</p>
+     * <p>The keyword for the title or requirement ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>季度报告</p>
+     * <p>Quarterly report</p>
      */
     @NameInMap("keyword")
     public String keyword;
 
     /**
-     * <p>页码，从 1 开始</p>
+     * <p>The page number. Pages start from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,7 +51,7 @@ public class ListWorkflowInstancesRequest extends TeaModel {
     public Long page;
 
     /**
-     * <p>每页数量 1-100</p>
+     * <p>The number of entries per page. Valid values: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -60,7 +60,7 @@ public class ListWorkflowInstancesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>排序字段</p>
+     * <p>The sort field.</p>
      * 
      * <strong>example:</strong>
      * <p>GMT_CREATE</p>
@@ -69,7 +69,7 @@ public class ListWorkflowInstancesRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>排序方向</p>
+     * <p>The sort order.</p>
      * 
      * <strong>example:</strong>
      * <p>DESC</p>
@@ -78,7 +78,7 @@ public class ListWorkflowInstancesRequest extends TeaModel {
     public String sortOrder;
 
     /**
-     * <p>Running/Completed/Failed/Terminated 筛选</p>
+     * <p>Filters the instances by status. Valid values: Running, Completed, Failed, and Terminated.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -87,7 +87,7 @@ public class ListWorkflowInstancesRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+     * <p>The tenant ID. This is a common parameter. If you use winnexo-cli, pass this parameter explicitly by using --tenant-id.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

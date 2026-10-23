@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelTodoRequest extends TeaModel {
     /**
-     * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -14,7 +14,7 @@ public class CancelTodoRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>待办ID（与 workItemId 二选一）</p>
+     * <p>The ID of the to-do item. You must specify either this parameter or workItemId.</p>
      * 
      * <strong>example:</strong>
      * <p>todo_abc123</p>
@@ -23,7 +23,7 @@ public class CancelTodoRequest extends TeaModel {
     public String todoId;
 
     /**
-     * <p>工作项ID（按来源批量作废；与 todoId 二选一）</p>
+     * <p>The ID of the work item. You can use this parameter to cancel to-do items in batches by source. You must specify either this parameter or todoId.</p>
      * 
      * <strong>example:</strong>
      * <p>wi_1</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTodoRequest extends TeaModel {
     /**
-     * <p>assistant 消息ID（按消息反查多条）</p>
+     * <p>The ID of the assistant message. This parameter is used to query multiple to-do items by message.</p>
      * 
      * <strong>example:</strong>
      * <p>msg-1</p>
@@ -14,7 +14,7 @@ public class GetTodoRequest extends TeaModel {
     public String messageId;
 
     /**
-     * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -23,7 +23,7 @@ public class GetTodoRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>待办ID（单条查询）</p>
+     * <p>The ID of the to-do item (get).</p>
      * 
      * <strong>example:</strong>
      * <p>todo_abc123</p>
@@ -32,7 +32,7 @@ public class GetTodoRequest extends TeaModel {
     public String todoId;
 
     /**
-     * <p>工作项ID（按来源反查多条）</p>
+     * <p>The ID of the work item. This parameter is used to query multiple to-do items by source.</p>
      * 
      * <strong>example:</strong>
      * <p>wi_1</p>

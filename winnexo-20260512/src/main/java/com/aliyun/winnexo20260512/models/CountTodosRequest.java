@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CountTodosRequest extends TeaModel {
     /**
-     * <p>协作空间 ID（可选过滤；不传 = 全部空间）</p>
+     * <p>The collaboration workspace ID. This parameter is optional and used for filtering. If this parameter is not specified, all workspaces are included.</p>
      * 
      * <strong>example:</strong>
      * <p>cg_123</p>
@@ -14,7 +14,7 @@ public class CountTodosRequest extends TeaModel {
     public String collaborationGroupId;
 
     /**
-     * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

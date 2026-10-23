@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteAppResourcePermissionsRequest extends TeaModel {
     /**
-     * <p>撤权范围</p>
+     * <p>The scope of the permissions to be revoked.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("items")
     public java.util.List<DeleteAppResourcePermissionsRequestItems> items;
 
     /**
-     * <p>资源所属租户 ID；省略为调用人当前租户</p>
+     * <p>The ID of the tenant to which the resource belongs. If not specified, the current tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -21,7 +21,7 @@ public class DeleteAppResourcePermissionsRequest extends TeaModel {
     public String resourceTenantId;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -60,13 +60,13 @@ public class DeleteAppResourcePermissionsRequest extends TeaModel {
 
     public static class DeleteAppResourcePermissionsRequestItems extends TeaModel {
         /**
-         * <p>GRANTEE 主体 ID 列表</p>
+         * <p>The list of grantee principal IDs.</p>
          */
         @NameInMap("granteeIds")
         public java.util.List<String> granteeIds;
 
         /**
-         * <p>GRANTEE USER 所属租户；同资源租户可省略，跨租户 USER 必填</p>
+         * <p>The ID of the tenant to which the grantee user belongs. This parameter is optional if the user and the resource belong to the same tenant, and is required for cross-tenant users.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -75,7 +75,7 @@ public class DeleteAppResourcePermissionsRequest extends TeaModel {
         public String granteeTenantId;
 
         /**
-         * <p>GRANTEE 主体类型</p>
+         * <p>The grantee principal type.</p>
          * 
          * <strong>example:</strong>
          * <p>USER</p>
@@ -84,7 +84,7 @@ public class DeleteAppResourcePermissionsRequest extends TeaModel {
         public String granteeType;
 
         /**
-         * <p>RESOURCE 是否包含点分后代资源；省略为 false</p>
+         * <p>Specifies whether to include dot-separated descendant resources for the RESOURCE. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -93,7 +93,7 @@ public class DeleteAppResourcePermissionsRequest extends TeaModel {
         public Boolean includeDescendants;
 
         /**
-         * <p>首段为 APP 应用键的点分资源键</p>
+         * <p>The dot-separated resource key whose first segment is the application key of the APP.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class DeleteAppResourcePermissionsRequest extends TeaModel {
         public String resourceKey;
 
         /**
-         * <p>固定为 APP_RESOURCE</p>
+         * <p>The resource type. Set the value to APP_RESOURCE.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +113,7 @@ public class DeleteAppResourcePermissionsRequest extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>删除范围：按资源或按主体</p>
+         * <p>The deletion scope: by resource or by principal.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

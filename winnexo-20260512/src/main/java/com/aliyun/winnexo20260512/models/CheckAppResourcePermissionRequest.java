@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckAppResourcePermissionRequest extends TeaModel {
     /**
-     * <p>需要检查的权限点</p>
+     * <p>The permission to check.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CheckAppResourcePermissionRequest extends TeaModel {
     public String permission;
 
     /**
-     * <p>首段为 APP 应用键的点分资源键</p>
+     * <p>The dot-separated resource key. The first segment is the APP application key.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CheckAppResourcePermissionRequest extends TeaModel {
     public String resourceKey;
 
     /**
-     * <p>资源所属租户 ID；省略为调用人当前租户</p>
+     * <p>The ID of the tenant to which the resource belongs. If not specified, the current tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -34,7 +34,7 @@ public class CheckAppResourcePermissionRequest extends TeaModel {
     public String resourceTenantId;
 
     /**
-     * <p>固定为 APP_RESOURCE</p>
+     * <p>The resource type. Set the value to APP_RESOURCE.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class CheckAppResourcePermissionRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>目标平台用户 ID</p>
+     * <p>The ID of the target platform user.</p>
      * 
      * <strong>example:</strong>
      * <p>10086</p>
@@ -53,7 +53,7 @@ public class CheckAppResourcePermissionRequest extends TeaModel {
     public Long targetUserId;
 
     /**
-     * <p>目标用户所属租户；跨租户目标必填</p>
+     * <p>The ID of the tenant to which the target user belongs. This parameter is required for cross-tenant targets.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -62,7 +62,7 @@ public class CheckAppResourcePermissionRequest extends TeaModel {
     public String targetUserTenantId;
 
     /**
-     * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

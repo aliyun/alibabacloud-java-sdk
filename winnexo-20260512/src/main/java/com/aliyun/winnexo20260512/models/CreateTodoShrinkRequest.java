@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTodoShrinkRequest extends TeaModel {
     /**
-     * <p>处理人平台用户ID列表（1~100，去重后生效）</p>
+     * <p>The list of platform user IDs of the assignees. You can specify 1 to 100 IDs. Duplicate IDs are automatically removed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateTodoShrinkRequest extends TeaModel {
     public String assigneeUserIdsShrink;
 
     /**
-     * <p>协作空间 ID（可选）</p>
+     * <p>The ID of the collaboration workspace. This parameter is optional.</p>
      * 
      * <strong>example:</strong>
      * <p>cg_123</p>
@@ -24,7 +24,7 @@ public class CreateTodoShrinkRequest extends TeaModel {
     public String collaborationGroupId;
 
     /**
-     * <p>优先级</p>
+     * <p>The priority.</p>
      * 
      * <strong>example:</strong>
      * <p>MEDIUM</p>
@@ -33,7 +33,7 @@ public class CreateTodoShrinkRequest extends TeaModel {
     public String priority;
 
     /**
-     * <p>问题清单（1~N）</p>
+     * <p>The list of questions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class CreateTodoShrinkRequest extends TeaModel {
     public String questionsShrink;
 
     /**
-     * <p>来源上下文（原样透传落库，不校验）</p>
+     * <p>The source context. The value is passed through and stored in the database as-is without validation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class CreateTodoShrinkRequest extends TeaModel {
     public String sourceContextShrink;
 
     /**
-     * <p>待办来源（仅 OPEN_API）</p>
+     * <p>The source of the to-do item. Only OPEN_API is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class CreateTodoShrinkRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -72,11 +72,11 @@ public class CreateTodoShrinkRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>待办标题（≤200 字）</p>
+     * <p>The title of the to-do item. The maximum length is 200 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>治理审批</p>
+     * <p>Governance approval</p>
      */
     @NameInMap("title")
     public String title;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitTodoRequest extends TeaModel {
     /**
-     * <p>作答数组（question 原文须与待办问题对齐）</p>
+     * <p>The array of answers. The original text of the question must match the to-do question.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class SubmitTodoRequest extends TeaModel {
     public java.util.List<SubmitTodoRequestAnswers> answers;
 
     /**
-     * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -24,7 +24,7 @@ public class SubmitTodoRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>待办ID</p>
+     * <p>The ID of the to-do item.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +64,7 @@ public class SubmitTodoRequest extends TeaModel {
 
     public static class SubmitTodoRequestAnswers extends TeaModel {
         /**
-         * <p>作答值数组</p>
+         * <p>The array of answer values.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -74,11 +74,11 @@ public class SubmitTodoRequest extends TeaModel {
         public java.util.List<String> answer;
 
         /**
-         * <p>对应 questions[].question 原文</p>
+         * <p>The original text that corresponds to questions[].question.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>是否通过审批</p>
+         * <p>Whether to approve</p>
          */
         @NameInMap("question")
         public String question;

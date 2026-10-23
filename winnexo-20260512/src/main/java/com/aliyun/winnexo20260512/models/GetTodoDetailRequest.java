@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTodoDetailRequest extends TeaModel {
     /**
-     * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -14,7 +14,7 @@ public class GetTodoDetailRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>待办ID</p>
+     * <p>The ID of the to-do item.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
