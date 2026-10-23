@@ -14,10 +14,10 @@ public class ModifyDeployMachineResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the update is successful. Valid values:</p>
+     * <p>Indicates whether the update was successful. Valid values:</p>
      * <ul>
-     * <li>true: Successful.</li>
-     * <li>false: Failed.</li>
+     * <li>true: The update was successful.</li>
+     * <li>false: The update failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

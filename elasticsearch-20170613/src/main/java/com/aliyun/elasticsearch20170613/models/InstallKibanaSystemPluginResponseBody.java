@@ -13,6 +13,9 @@ public class InstallKibanaSystemPluginResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The names of the Kibana plugins installed by this request.</p>
+     */
     @NameInMap("Result")
     public java.util.List<String> result;
 

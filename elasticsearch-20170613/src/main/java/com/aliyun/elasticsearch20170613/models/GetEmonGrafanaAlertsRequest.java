@@ -4,6 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class GetEmonGrafanaAlertsRequest extends TeaModel {
+    /**
+     * <p>This GET operation does not require a request body.</p>
+     */
     @NameInMap("body")
     public String body;
 

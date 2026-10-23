@@ -62,8 +62,8 @@ public class UpdateDictResponseBody extends TeaModel {
         /**
          * <p>The source type of the dictionary file. Valid values:</p>
          * <ul>
-         * <li>OSS: OSS open storage.</li>
-         * <li>ORIGIN: retains the previously uploaded dictionary.</li>
+         * <li>OSS: Object Storage Service (OSS).</li>
+         * <li>ORIGIN: The previously uploaded dictionary is retained.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -73,10 +73,10 @@ public class UpdateDictResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The dictionary type. Valid values:</p>
+         * <p>The type of the dictionary. Valid values:</p>
          * <ul>
-         * <li>MAIN: IK main tokenizer dictionary.</li>
-         * <li>STOP: IK stopword dictionary.</li>
+         * <li>MAIN: The IK main dictionary.</li>
+         * <li>STOP: The IK stopword dictionary.</li>
          * </ul>
          * 
          * <strong>example:</strong>

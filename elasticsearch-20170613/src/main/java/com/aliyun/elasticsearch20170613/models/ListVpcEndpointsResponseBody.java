@@ -14,7 +14,7 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The endpoint details.</p>
+     * <p>The endpoint information.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListVpcEndpointsResponseBodyResult> result;
@@ -42,9 +42,9 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
 
     public static class ListVpcEndpointsResponseBodyResult extends TeaModel {
         /**
-         * <p>The endpoint connection status. Valid values:</p>
+         * <p>The connection status of the endpoint. Valid values:</p>
          * <ul>
-         * <li><p>Pending: Being modified.</p>
+         * <li><p>Pending: Modifying.</p>
          * </li>
          * <li><p>Connecting: Connecting.</p>
          * </li>
@@ -52,11 +52,11 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
          * </li>
          * <li><p>Disconnecting: Disconnecting.</p>
          * </li>
-         * <li><p>Disconnected: Not connected.</p>
+         * <li><p>Disconnected: Disconnected.</p>
          * </li>
-         * <li><p>Deleting: Being deleted.</p>
+         * <li><p>Deleting: Deleting.</p>
          * </li>
-         * <li><p>ServiceDeleted: The service associated with the endpoint has been deleted.</p>
+         * <li><p>ServiceDeleted: The service corresponding to the endpoint is deleted.</p>
          * </li>
          * </ul>
          * 
@@ -67,7 +67,7 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
         public String connectionStatus;
 
         /**
-         * <p>The time when the endpoint was created.</p>
+         * <p>The time when the endpoint was created. The time is in UTC and follows the ISO 8601 standard.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-07-22T01:19:24Z</p>
@@ -80,7 +80,7 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
          * <ul>
          * <li><p>Normal: Normal.</p>
          * </li>
-         * <li><p>FinancialLocked: Financial lock.</p>
+         * <li><p>FinancialLocked: Locked due to overdue payment.</p>
          * </li>
          * </ul>
          * 
@@ -91,7 +91,7 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
         public String endpointBusinessStatus;
 
         /**
-         * <p>The endpoint domain name, which is used for connection configuration.</p>
+         * <p>The domain name of the endpoint, which is used for connection configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>ep-bp18s6wy9420wdi4****.epsrv-bp1bz3efowa4kc0****.cn-hangzhou.privatelink.aliyuncs.com</p>
@@ -100,7 +100,7 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
         public String endpointDomain;
 
         /**
-         * <p>The endpoint ID.</p>
+         * <p>The ID of the endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>ep-bp1tah7zbrwmkjef****</p>
@@ -109,7 +109,7 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
         public String endpointId;
 
         /**
-         * <p>The endpoint name.</p>
+         * <p>The name of the endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -118,15 +118,15 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
         public String endpointName;
 
         /**
-         * <p>The endpoint status. Valid values:</p>
+         * <p>The status of the endpoint. Valid values:</p>
          * <ul>
-         * <li><p>Creating: Being created.</p>
+         * <li><p>Creating: The endpoint is being created.</p>
          * </li>
-         * <li><p>Active: Active.</p>
+         * <li><p>Active: The endpoint is available.</p>
          * </li>
-         * <li><p>Pending: Being modified.</p>
+         * <li><p>Pending: The endpoint is being modified.</p>
          * </li>
-         * <li><p>Deleting: Being deleted.</p>
+         * <li><p>Deleting: The endpoint is being deleted.</p>
          * </li>
          * </ul>
          * 

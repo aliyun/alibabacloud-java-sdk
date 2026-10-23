@@ -41,9 +41,15 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
     }
 
     public static class GetClusterDataInformationResponseBodyResultMetaInfo extends TeaModel {
+        /**
+         * <p>The fields corresponding to the index mapping.</p>
+         */
         @NameInMap("fields")
         public java.util.List<String> fields;
 
+        /**
+         * <p>The list of indexes in the cluster.</p>
+         */
         @NameInMap("indices")
         public java.util.List<String> indices;
 
@@ -65,6 +71,9 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
         @NameInMap("settings")
         public String settings;
 
+        /**
+         * <p>The type of the specified index.</p>
+         */
         @NameInMap("typeName")
         public java.util.List<String> typeName;
 

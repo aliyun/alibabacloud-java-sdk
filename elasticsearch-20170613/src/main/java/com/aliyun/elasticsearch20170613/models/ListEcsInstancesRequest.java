@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEcsInstancesRequest extends TeaModel {
     /**
-     * <p>The list of ECS instance IDs. The value can be a JSON array that consists of up to 100 instance IDs separated by commas (,).</p>
+     * <p>The list of ECS instance IDs. The value can be a JSON array that consists of multiple instance IDs. You can specify up to 100 IDs. Separate multiple IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;i-bp13y63575oypr9d****&quot;,&quot;i-bp1gyhphjaj73jsr****&quot;]</p>
@@ -14,7 +14,7 @@ public class ListEcsInstancesRequest extends TeaModel {
     public String ecsInstanceIds;
 
     /**
-     * <p>The ECS instance name.</p>
+     * <p>The name of the ECS instance.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -41,10 +41,10 @@ public class ListEcsInstancesRequest extends TeaModel {
     public Integer size;
 
     /**
-     * <p>The ECS instance tags. The following fields must be included:</p>
+     * <p>Instance tags of the ECS instance. A tag must contain the following fields:</p>
      * <ul>
-     * <li>tagKey: the tag key.</li>
-     * <li>tagValue: the tag value.</li>
+     * <li>tagKey: instance tag key</li>
+     * <li>tagValue: instance tag value</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class ListEcsInstancesRequest extends TeaModel {
     public String tags;
 
     /**
-     * <p>The VPC ID of the ECS instance.</p>
+     * <p>The ID of the VPC where the ECS instance resides.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp16k1dvzxtmagcva****</p>

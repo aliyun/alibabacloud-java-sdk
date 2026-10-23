@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InitModelRequest extends TeaModel {
     /**
-     * <p>The API key for the AISearch open platform.</p>
+     * <p>The API key for the AI Search Open Platform.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class InitModelRequest extends TeaModel {
     public String apiKey;
 
     /**
-     * <p>The service registration address of the AISearch open platform.</p>
+     * <p>The service registration address for the AI Search Open Platform.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class InitModelRequest extends TeaModel {
     public String httpSchema;
 
     /**
-     * <p>The models to initialize. If this parameter is left empty, all built-in models are initialized.</p>
+     * <p>Specifies the models to initialize. If this parameter is left empty, all built-in models are initialized.</p>
      */
     @NameInMap("models")
     public java.util.List<InitModelRequestModels> models;
@@ -99,13 +99,13 @@ public class InitModelRequest extends TeaModel {
         /**
          * <p>The model type. Valid values:</p>
          * <ul>
-         * <li>text_embedding: text embedding</li>
-         * <li>rerank: reranking</li>
-         * <li>doc_split: document splitting</li>
-         * <li>completion: large language model service</li>
-         * <li>query_analyze: query analysis</li>
-         * <li>doc_analyze: document content parsing</li>
-         * <li>img_analyze: image content parsing</li>
+         * <li>text_embedding: Text embedding.</li>
+         * <li>rerank: Reranking.</li>
+         * <li>doc_split: Document splitting.</li>
+         * <li>completion: Large language model service.</li>
+         * <li>query_analyze: Query analysis. </li>
+         * <li>doc_analyze: Document content parsing.</li>
+         * <li>img_analyze: Image content parsing.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class InitModelRequest extends TeaModel {
         public String modelType;
 
         /**
-         * <p>The service ID of the AISearch open platform.</p>
+         * <p>The service ID for the Search Open Platform.</p>
          * 
          * <strong>example:</strong>
          * <p>ops-text-embedding-**</p>

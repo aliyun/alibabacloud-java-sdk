@@ -11,7 +11,7 @@ public class ListInstanceHistoryEventsShrinkRequest extends TeaModel {
     public java.util.List<ListInstanceHistoryEventsShrinkRequestBody> body;
 
     /**
-     * <p>The end time for querying by event creation time. Specify a timestamp in milliseconds.</p>
+     * <p>The end time for querying events by creation time. The value is a timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1645596516000</p>
@@ -20,7 +20,7 @@ public class ListInstanceHistoryEventsShrinkRequest extends TeaModel {
     public String eventCreateEndTime;
 
     /**
-     * <p>The start time for querying by event creation time. Specify a timestamp in milliseconds.</p>
+     * <p>The start time for querying events by creation time. The value is a timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1645596516000</p>
@@ -35,7 +35,7 @@ public class ListInstanceHistoryEventsShrinkRequest extends TeaModel {
     public String eventCycleStatusShrink;
 
     /**
-     * <p>The end time for querying by event execution time. Specify a timestamp in milliseconds.</p>
+     * <p>The end time for querying events by execution time. The value is a timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1645596516000</p>
@@ -44,7 +44,7 @@ public class ListInstanceHistoryEventsShrinkRequest extends TeaModel {
     public String eventExecuteEndTime;
 
     /**
-     * <p>The start time for querying by event execution time. Specify a timestamp in milliseconds.</p>
+     * <p>The start time for querying events by execution time. The value is a timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1645596516000</p>
@@ -53,7 +53,7 @@ public class ListInstanceHistoryEventsShrinkRequest extends TeaModel {
     public String eventExecuteStartTime;
 
     /**
-     * <p>The end time for querying by event completion time. Specify a timestamp in milliseconds.</p>
+     * <p>The end time for querying events by completion time. The value is a timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1645596516000</p>
@@ -62,7 +62,7 @@ public class ListInstanceHistoryEventsShrinkRequest extends TeaModel {
     public String eventFinashEndTime;
 
     /**
-     * <p>The start time for querying by event completion time. Specify a timestamp in milliseconds.</p>
+     * <p>The start time for querying events by completion time. The value is a timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1645596516000</p>
@@ -237,10 +237,10 @@ public class ListInstanceHistoryEventsShrinkRequest extends TeaModel {
 
     public static class ListInstanceHistoryEventsShrinkRequestBody extends TeaModel {
         /**
-         * <p>Specifies whether to sort in descending order. Valid values:</p>
+         * <p>Specifies whether to sort the results in descending order. Valid values:</p>
          * <ul>
-         * <li>true (default): yes</li>
-         * <li>false: no</li>
+         * <li>true: Sorts the results in descending order. This is the default value.</li>
+         * <li>false: Sorts the results in ascending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -250,11 +250,11 @@ public class ListInstanceHistoryEventsShrinkRequest extends TeaModel {
         public Boolean desc;
 
         /**
-         * <p>The field by which the results are sorted. Valid values:</p>
+         * <p>The field by which to sort the returned results. Valid values:</p>
          * <ul>
-         * <li>event_time: event creation time</li>
-         * <li>event_execute_start_time: event execution time</li>
-         * <li>event_execute_finish_time: event completion time</li>
+         * <li>event_time: the creation time of the event</li>
+         * <li>event_execute_start_time: the execution time of the event</li>
+         * <li>event_execute_finish_time: the completion time of the event</li>
          * </ul>
          * 
          * <strong>example:</strong>

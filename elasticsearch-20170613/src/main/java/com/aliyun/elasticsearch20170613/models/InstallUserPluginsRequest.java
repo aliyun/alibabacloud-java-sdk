@@ -5,14 +5,26 @@ import com.aliyun.tea.*;
 
 public class InstallUserPluginsRequest extends TeaModel {
     /**
-     * <p>The list of custom plugins to install.</p>
+     * <p>The list of custom plugins.</p>
      * 
      * <strong>example:</strong>
-     * <p>[     {&quot;name&quot;: &quot;pluginName1.zip&quot;},     {&quot;name&quot;: &quot;pluginName2.zip&quot;} ]</p>
+     * <p>[
+     *   {
+     *     &quot;elasticsearchVersion&quot;: &quot;8.17.0&quot;,
+     *     &quot;pluginType&quot;: &quot;CUSTOM_PLUGIN&quot;,
+     *     &quot;name&quot;: &quot;analysis-stempel&quot;,
+     *     &quot;description&quot;: &quot;The Stempel Analysis plugin is <em><strong>&quot;,
+     *     &quot;version&quot;: &quot;8.17.0&quot;,
+     *     &quot;fileVersion&quot;: &quot;CAEQnwIYgYDAzYfNj4oaI</strong></em>&quot;
+     *   }
+     * ]</p>
      */
     @NameInMap("body")
     public String body;
 
+    /**
+     * <p>Specifies whether to forcibly install custom user plugins. Default value: false. Instances with the legacy architecture do not support forced installation.</p>
+     */
     @NameInMap("force")
     public Boolean force;
 

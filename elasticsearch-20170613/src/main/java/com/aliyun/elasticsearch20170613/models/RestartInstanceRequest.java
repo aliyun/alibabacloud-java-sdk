@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RestartInstanceRequest extends TeaModel {
     /**
-     * <p>The restart parameter information.</p>
+     * <p>The restart parameters.</p>
      * 
      * <strong>example:</strong>
      * <ol>
@@ -28,7 +28,7 @@ public class RestartInstanceRequest extends TeaModel {
     public String body;
 
     /**
-     * <p>A unique token used to ensure the idempotence of the request. The client generates this value. The value must be unique among different requests and cannot exceed 64 ASCII characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can generate the value of this parameter on the client side. Ensure that the value is unique across different requests and contains a maximum of 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
@@ -37,10 +37,10 @@ public class RestartInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to ignore the cluster status and forcibly restart the cluster.</p>
+     * <p>Specifies whether to ignore the cluster state and force a restart. Valid values:</p>
      * <ul>
-     * <li>true: ignores the cluster status</li>
-     * <li>false (default): does not ignore the cluster status</li>
+     * <li>true: Ignores the cluster state.</li>
+     * <li>false: Does not ignore the cluster state. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
@@ -45,7 +45,7 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
          * <p>Indicates whether X-Pack monitoring is enabled. Valid values:</p>
          * <ul>
          * <li>true: Enabled.</li>
-         * <li>false: Not enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -54,11 +54,14 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
         @NameInMap("enable")
         public Boolean enable;
 
+        /**
+         * <p>The list of access endpoints for the Elasticsearch instance associated with X-Pack monitoring.</p>
+         */
         @NameInMap("endpoints")
         public java.util.List<String> endpoints;
 
         /**
-         * <p>The instance ID of the Elasticsearch instance associated with X-Pack monitoring.</p>
+         * <p>The Elasticsearch instance ID associated with X-Pack monitoring.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-n6w1o1x0w001c****</p>
@@ -66,6 +69,9 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
         @NameInMap("esInstanceId")
         public String esInstanceId;
 
+        /**
+         * <p>The list of Kibana-managed pipelines associated with X-Pack monitoring.</p>
+         */
         @NameInMap("pipelineIds")
         public java.util.List<String> pipelineIds;
 

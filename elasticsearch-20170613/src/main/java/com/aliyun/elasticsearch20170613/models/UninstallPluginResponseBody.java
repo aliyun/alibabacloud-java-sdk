@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UninstallPluginResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
@@ -13,6 +13,9 @@ public class UninstallPluginResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The names of the Elasticsearch plug-ins uninstalled by this request.</p>
+     */
     @NameInMap("Result")
     public java.util.List<String> result;
 

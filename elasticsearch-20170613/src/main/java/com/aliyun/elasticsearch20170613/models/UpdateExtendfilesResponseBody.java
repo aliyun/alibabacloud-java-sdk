@@ -60,7 +60,7 @@ public class UpdateExtendfilesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The source of the extension file. Only ORIGIN (retained original extension file) is supported.</p>
+         * <p>The source of the extension file. Only ORIGIN is supported, which indicates the original extension file to be retained.</p>
          * 
          * <strong>example:</strong>
          * <p>ORIGIN</p>

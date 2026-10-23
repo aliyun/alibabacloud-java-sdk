@@ -4,6 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UninstallLogstashPluginResponseBody extends TeaModel {
+    /**
+     * <p>The response headers of this call.</p>
+     */
     @NameInMap("Headers")
     public java.util.Map<String, ?> headers;
 
@@ -16,6 +19,9 @@ public class UninstallLogstashPluginResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The names of the Logstash plugins uninstalled by this request.</p>
+     */
     @NameInMap("Result")
     public java.util.List<String> result;
 

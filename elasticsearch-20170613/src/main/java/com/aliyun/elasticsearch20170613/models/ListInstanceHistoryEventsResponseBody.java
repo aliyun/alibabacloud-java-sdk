@@ -11,7 +11,7 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
     public ListInstanceHistoryEventsResponseBodyHeaders headers;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>D1A6830A-F59B-4E05-BFAC-9496C21DBBA7</p>
@@ -124,7 +124,7 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
         public String ecsId;
 
         /**
-         * <p>The event creation time.</p>
+         * <p>The creation time of the event. The time is displayed in UTC and follows the ISO 8601 standard.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-12-07T00:00:00Z</p>
@@ -147,7 +147,7 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
         public String eventCycleStatus;
 
         /**
-         * <p>The event execution time.</p>
+         * <p>The execution time of the event. The time is displayed in UTC and follows the ISO 8601 standard.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-12-07T00:00:00Z</p>
@@ -156,7 +156,7 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
         public String eventExecuteTime;
 
         /**
-         * <p>The event completion time.</p>
+         * <p>The completion time of the event. The time is displayed in UTC and follows the ISO 8601 standard.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-12-07T00:00:00Z</p>
@@ -181,12 +181,12 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
         /**
          * <p>The event type. Valid values:</p>
          * <ul>
-         * <li>ECS:AUTO_RESTART: ECS node automatic restart.</li>
-         * <li>Instance:InstanceFailure.Reboot:Executed: ECS instance restart completed (ECS instance error).</li>
-         * <li>Instance:InstanceFailure.Reboot:Executing: ECS instance restart started (instance error).</li>
-         * <li>Instance:SystemFailure.Reboot:Executed: ECS instance restart completed (system error).</li>
-         * <li>Instance:SystemFailure.Reboot:Executing: ECS instance restart started (system error).</li>
-         * <li>Instance:SystemFailure.Reboot:Failed: ECS instance restart failed (system error).</li>
+         * <li>ECS:AUTO_RESTART: The ECS node is automatically restarted.</li>
+         * <li>Instance:InstanceFailure.Reboot:Executed: The restart of the ECS instance is complete due to an instance error.</li>
+         * <li>Instance:InstanceFailure.Reboot:Executing: The restart of the ECS instance starts due to an instance error.</li>
+         * <li>Instance:SystemFailure.Reboot:Executed: The restart of the ECS instance is complete due to a system error.</li>
+         * <li>Instance:SystemFailure.Reboot:Executing: The restart of the ECS instance starts due to a system error.</li>
+         * <li>Instance:SystemFailure.Reboot:Failed: The restart of the ECS instance fails due to a system error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -214,7 +214,7 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
         public String nodeIP;
 
         /**
-         * <p>The region ID where the event occurred.</p>
+         * <p>The ID of the region where the event occurred.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

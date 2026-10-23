@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCollectorNameResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
@@ -42,7 +42,7 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
 
     public static class UpdateCollectorNameResponseBodyResultConfigs extends TeaModel {
         /**
-         * <p>The file content.</p>
+         * <p>The content of the file.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -53,7 +53,7 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The file name.</p>
+         * <p>The name of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>fields.yml</p>
@@ -86,7 +86,7 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
 
     public static class UpdateCollectorNameResponseBodyResultExtendConfigsMachines extends TeaModel {
         /**
-         * <p>The status of the collector on the ECS instance. Valid values: <strong>heartOk</strong> (normal heartbeat), <strong>heartLost</strong> (abnormal heartbeat), <strong>uninstalled</strong> (not installed), and <strong>failed</strong> (installation failed).</p>
+         * <p>The status of each collector on the ECS instance. Valid values: <strong>heartOk</strong> (heartbeat normal), <strong>heartLost</strong> (heartbeat abnormal), <strong>uninstalled</strong> (not installed), and <strong>failed</strong> (installation failed).</p>
          * 
          * <strong>example:</strong>
          * <p>heartOk</p>
@@ -95,7 +95,7 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
         public String agentStatus;
 
         /**
-         * <p>The list of ECS machine IDs.</p>
+         * <p>The IDs of the ECS instances.</p>
          * 
          * <strong>example:</strong>
          * <p>c1b9fde5172b84f82b9928e825a7b8988</p>
@@ -130,9 +130,9 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
         /**
          * <p>The configuration type. Valid values:</p>
          * <ul>
-         * <li>collectorTargetInstance: the collector Output.</li>
-         * <li>collectorDeployMachine: the machine on which the collector is deployed.</li>
-         * <li>collectorElasticsearchForKibana: the Elasticsearch instance that supports Kibana Dashboard.</li>
+         * <li>collectorTargetInstance: the output of the collector</li>
+         * <li>collectorDeployMachine: the machine where the collector is deployed</li>
+         * <li>collectorElasticsearchForKibana: the information about the Elasticsearch instance that supports Kibana Dashboard</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -142,10 +142,10 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
         public String configType;
 
         /**
-         * <p>Indicates whether Monitoring is enabled. Displayed when <strong>configType</strong> is <strong>collectorTargetInstance</strong> and <strong>instanceType</strong> is <strong>elasticsearch</strong>. Valid values:</p>
+         * <p>Specifies whether to enable monitoring. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorTargetInstance</strong> and <strong>instanceType</strong> is set to <strong>elasticsearch</strong>. Valid values:</p>
          * <ul>
-         * <li>true: Enabled.</li>
-         * <li>false: Not enabled.</li>
+         * <li>true: enables monitoring.</li>
+         * <li>false: disables monitoring.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -155,7 +155,7 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
         public Boolean enableMonitoring;
 
         /**
-         * <p>The machine group ID. Displayed when <strong>configType</strong> is <strong>collectorDeployMachine</strong>.</p>
+         * <p>The ID of the machine group. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorDeployMachine</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>default_ct-cn-5i2l75bz4776****</p>
@@ -164,7 +164,7 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
         public String groupId;
 
         /**
-         * <p>The internal-facing access address of Kibana on the private network after Kibana Dashboard is enabled. Displayed when <strong>configType</strong> is <strong>collectorElasticsearchForKibana</strong>.</p>
+         * <p>The internal-facing access address of Kibana on the private network after Kibana Dashboard is enabled. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorElasticsearchForKibana</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-4591jumei000u****-kibana.internal.elasticsearch.aliyuncs.com:5601</p>
@@ -172,11 +172,14 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
         @NameInMap("host")
         public String host;
 
+        /**
+         * <p>The access endpoints of the instance specified by the collector output. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorTargetInstance</strong>.</p>
+         */
         @NameInMap("hosts")
         public java.util.List<String> hosts;
 
         /**
-         * <p>The instance ID associated with the collector. When <strong>configType</strong> is <strong>collectorTargetInstance</strong>, this is the instance ID of the collector Output. When <strong>configType</strong> is <strong>collectorDeployMachines</strong> and <strong>type</strong> is <strong>ACKCluster</strong>, this is the ACK cluster ID.</p>
+         * <p>Instance ID of the instance associated with the collector. If <strong>configType</strong> is set to <strong>collectorTargetInstance</strong>, this parameter indicates instance ID of the instance specified by the collector output. If <strong>configType</strong> is set to <strong>collectorDeployMachines</strong> and <strong>type</strong> is set to <strong>ACKCluster</strong>, this parameter indicates instance ID of the ACK cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-n6w1o1****</p>
@@ -185,7 +188,7 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The type of instance specified in the collector Output. Valid values: elasticsearch and logstash. Displayed when <strong>configType</strong> is <strong>collectorTargetInstance</strong>.</p>
+         * <p>The type of the instance specified by the collector output. Valid values: elasticsearch and logstash. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorTargetInstance</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>elasticsearch</p>
@@ -194,7 +197,7 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The public network access address of Kibana after Kibana Dashboard is enabled. Displayed when <strong>configType</strong> is <strong>collectorElasticsearchForKibana</strong>.</p>
+         * <p>The public network access address of Kibana after Kibana Dashboard is enabled. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorElasticsearchForKibana</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://es-cn-4591jumei000u****.kibana.elasticsearch.aliyuncs.com:5601">https://es-cn-4591jumei000u****.kibana.elasticsearch.aliyuncs.com:5601</a></p>
@@ -203,7 +206,7 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
         public String kibanaHost;
 
         /**
-         * <p>The list of ECS machines on which the collector is deployed. Displayed when <strong>configType</strong> is <strong>collectorDeployMachines</strong> and <strong>type</strong> is <strong>ECSInstanceId</strong>.</p>
+         * <p>The information about the ECS instances where the collector is deployed. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorDeployMachines</strong> and <strong>type</strong> is set to <strong>ECSInstanceId</strong>.</p>
          */
         @NameInMap("machines")
         public java.util.List<UpdateCollectorNameResponseBodyResultExtendConfigsMachines> machines;
@@ -218,7 +221,7 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The number of pods that are successfully collected in the ACK cluster. Displayed when <strong>configType</strong> is <strong>collectorDeployMachines</strong> and <strong>type</strong> is <strong>ACKCluster</strong>.</p>
+         * <p>The number of pods from which data is successfully collected in the ACK cluster. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorDeployMachines</strong> and <strong>type</strong> is set to <strong>ACKCluster</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -227,7 +230,7 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
         public String successPodsCount;
 
         /**
-         * <p>The total number of pods collected in the ACK cluster. Displayed when <strong>configType</strong> is <strong>collectorDeployMachines</strong> and <strong>type</strong> is <strong>ACKCluster</strong>.</p>
+         * <p>The total number of pods from which data is collected in the ACK cluster. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorDeployMachines</strong> and <strong>type</strong> is set to <strong>ACKCluster</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -236,10 +239,10 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
         public String totalPodsCount;
 
         /**
-         * <p>The type of machine on which the collector is deployed. Displayed when <strong>configType</strong> is <strong>collectorDeployMachine</strong>. Valid values:</p>
+         * <p>The type of the machine where the collector is deployed. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorDeployMachine</strong>. Valid values:</p>
          * <ul>
-         * <li>ECSInstanceId: ECS instance.</li>
-         * <li>ACKCluster: Container Kubernetes cluster.</li>
+         * <li>ECSInstanceId: ECS instance</li>
+         * <li>ACKCluster: Container Service for Kubernetes (ACK) cluster</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -249,7 +252,7 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The username used to access the instance specified in the collector Output. Default value: elastic. Displayed when <strong>configType</strong> is <strong>collectorTargetInstance</strong> or <strong>collectorElasticsearchForKibana</strong>.</p>
+         * <p>The username used to access the instance specified by the collector output. Default value: elastic. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorTargetInstance</strong> or <strong>collectorElasticsearchForKibana</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>elastic</p>
@@ -377,6 +380,9 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
     }
 
     public static class UpdateCollectorNameResponseBodyResult extends TeaModel {
+        /**
+         * <p>The collection path of Filebeat. This parameter is displayed when the collector is deployed on an ECS instance.</p>
+         */
         @NameInMap("collectorPaths")
         public java.util.List<String> collectorPaths;
 
@@ -387,10 +393,10 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
         public java.util.List<UpdateCollectorNameResponseBodyResultConfigs> configs;
 
         /**
-         * <p>Indicates whether the collector is validated and created. Valid values:</p>
+         * <p>Specifies whether to verify and update the collector. Valid values:</p>
          * <ul>
-         * <li>true: Only validated, not updated.</li>
-         * <li>false: Validated and updated.</li>
+         * <li>true: only verifies the request without updating the collector.</li>
+         * <li>false: verifies and updates the collector.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -406,7 +412,7 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
         public java.util.List<UpdateCollectorNameResponseBodyResultExtendConfigs> extendConfigs;
 
         /**
-         * <p>The time when the collector was created.</p>
+         * <p>The time when the collector was created. The time is in the YYYY-MM-DDTHH:mm:ss.SSS+HHMM format, where the suffix indicates the time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-06-20T07:26:47.000+0000</p>
@@ -415,7 +421,7 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
         public String gmtCreatedTime;
 
         /**
-         * <p>The time when the collector was last updated.</p>
+         * <p>The time when the collector was updated. The time is in the YYYY-MM-DDTHH:mm:ss.SSS+HHMM format, where the suffix indicates the time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-06-20T07:26:47.000+0000</p>
@@ -424,7 +430,7 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
         public String gmtUpdateTime;
 
         /**
-         * <p>The collector name.</p>
+         * <p>The name of the collector.</p>
          * 
          * <strong>example:</strong>
          * <p>ct-test</p>
@@ -433,7 +439,7 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The account ID.</p>
+         * <p>The ID of the account.</p>
          * 
          * <strong>example:</strong>
          * <p>16852099488*****</p>
@@ -442,7 +448,7 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
         public String ownerId;
 
         /**
-         * <p>The collector instance ID.</p>
+         * <p>The instance ID of the collector.</p>
          * 
          * <strong>example:</strong>
          * <p>ct-cn-77uqof2s7rg5c****</p>
@@ -451,7 +457,7 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
         public String resId;
 
         /**
-         * <p>The collector type. Valid values: fileBeat, metricBeat, heartBeat, and audiBeat.</p>
+         * <p>The type of the collector. Valid values: fileBeat, metricBeat, heartBeat, and audiBeat.</p>
          * 
          * <strong>example:</strong>
          * <p>fileBeat</p>
@@ -460,7 +466,7 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
         public String resType;
 
         /**
-         * <p>The collector version. The supported versions depend on the type of machine on which the collector is deployed:</p>
+         * <p>The version of the collector. The supported versions vary based on the type of the machine where the collector is deployed. Valid values:</p>
          * <ul>
          * <li>ECS: 6.8.5_with_community</li>
          * <li>ACK: 6.8.13_with_community</li>
@@ -473,7 +479,7 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
         public String resVersion;
 
         /**
-         * <p>The collector status. Valid values: activing (taking effect) and active (active).</p>
+         * <p>The status of the collector. Valid values: activing (activating) and active (activated).</p>
          * 
          * <strong>example:</strong>
          * <p>active</p>
@@ -482,7 +488,7 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the VPC where the collector resides.</p>
+         * <p>The ID of the virtual private cloud (VPC) where the collector resides.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp16k1dvzxtma*****</p>

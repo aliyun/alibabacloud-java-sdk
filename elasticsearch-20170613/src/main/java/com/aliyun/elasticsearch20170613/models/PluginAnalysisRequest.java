@@ -6,15 +6,15 @@ import com.aliyun.tea.*;
 public class PluginAnalysisRequest extends TeaModel {
     /**
      * <p>The request body parameters.</p>
-     * <pre><code class="language-[">  {
-     *     &quot;name&quot;: &quot;plugin_name.zip&quot;,// plugin name
+     * <pre><code>[
+     *   {
+     *     &quot;name&quot;: &quot;plugin_name.zip&quot;, // plugin name
      *     &quot;ossObject&quot;: {
-     *       &quot;bucketName&quot;: &quot;bucketName&quot;,// oss bucket name
-     *       &quot;key&quot;: &quot;my_plugin_dir/plugin_name.zip&quot; // oss file name 
+     *       &quot;bucketName&quot;: &quot;bucketName&quot;, // OSS bucket name
+     *       &quot;key&quot;: &quot;my_plugin_dir/plugin_name.zip&quot; // OSS file name 
      *     }
      *   }
      * ]
-     * `
      * </code></pre>
      * 
      * <strong>example:</strong>
@@ -30,10 +30,10 @@ public class PluginAnalysisRequest extends TeaModel {
     public String body;
 
     /**
-     * <p>Specifies whether to perform a pre-upload check. Valid values:</p>
+     * <p>Specifies whether to perform a pre-upgrade check. Valid values:</p>
      * <ul>
-     * <li>true: Only performs the check.</li>
-     * <li>false: Directly uploads the plug-in.</li>
+     * <li>true: performs only the check.</li>
+     * <li>false: uploads the plugin directly.</li>
      * </ul>
      * 
      * <strong>example:</strong>

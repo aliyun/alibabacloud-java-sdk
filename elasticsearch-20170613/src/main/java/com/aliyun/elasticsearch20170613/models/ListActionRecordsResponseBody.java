@@ -4,9 +4,18 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListActionRecordsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6F******</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of instance change records.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListActionRecordsResponseBodyResult> result;
 
@@ -32,30 +41,75 @@ public class ListActionRecordsResponseBody extends TeaModel {
     }
 
     public static class ListActionRecordsResponseBodyResultStatusInfoSubStatusInfo extends TeaModel {
+        /**
+         * <p>The number of completed nodes in the sub-phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("completeNodeCount")
         public Integer completeNodeCount;
 
+        /**
+         * <p>The end time of the sub-phase. The value is a UNIX timestamp in milliseconds.</p>
+         */
         @NameInMap("endTime")
         public Long endTime;
 
+        /**
+         * <p>The exception information for the sub-phase.</p>
+         */
         @NameInMap("exception")
         public String exception;
 
+        /**
+         * <p>The time elapsed for the sub-phase, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("latencyMills")
         public Long latencyMills;
 
+        /**
+         * <p>The total number of nodes involved in the sub-phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("nodeCount")
         public Integer nodeCount;
 
+        /**
+         * <p>The completion progress of the sub-phase, represented as a percentage string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100%</p>
+         */
         @NameInMap("process")
         public String process;
 
+        /**
+         * <p>The start time of the sub-phase. The value is a UNIX timestamp in milliseconds.</p>
+         */
         @NameInMap("startTime")
         public Long startTime;
 
+        /**
+         * <p>The current state of the sub-phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FINISHED</p>
+         */
         @NameInMap("stateType")
         public String stateType;
 
+        /**
+         * <p>The name of the sub-phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>clusterStateWait</p>
+         */
         @NameInMap("subState")
         public String subState;
 
@@ -139,33 +193,81 @@ public class ListActionRecordsResponseBody extends TeaModel {
     }
 
     public static class ListActionRecordsResponseBodyResultStatusInfo extends TeaModel {
+        /**
+         * <p>The number of completed nodes in the phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("completeNodeCount")
         public Integer completeNodeCount;
 
+        /**
+         * <p>The end time of the phase. The value is a UNIX timestamp in milliseconds.</p>
+         */
         @NameInMap("endTime")
         public Long endTime;
 
+        /**
+         * <p>The exception information for the phase.</p>
+         */
         @NameInMap("exception")
         public String exception;
 
+        /**
+         * <p>The time elapsed for the phase, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("latencyMills")
         public Long latencyMills;
 
+        /**
+         * <p>The total number of nodes involved in the phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("nodeCount")
         public Integer nodeCount;
 
+        /**
+         * <p>The completion progress of the phase, represented as a percentage string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100%</p>
+         */
         @NameInMap("process")
         public String process;
 
+        /**
+         * <p>The start time of the phase. The value is a UNIX timestamp in milliseconds.</p>
+         */
         @NameInMap("startTime")
         public Long startTime;
 
+        /**
+         * <p>The current state of the phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FINISHED</p>
+         */
         @NameInMap("stateType")
         public String stateType;
 
+        /**
+         * <p>The name of the phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rolling</p>
+         */
         @NameInMap("subState")
         public String subState;
 
+        /**
+         * <p>The list of status details for the sub-phases included in the current phase.</p>
+         */
         @NameInMap("subStatusInfo")
         public java.util.List<ListActionRecordsResponseBodyResultStatusInfoSubStatusInfo> subStatusInfo;
 
@@ -257,57 +359,123 @@ public class ListActionRecordsResponseBody extends TeaModel {
     }
 
     public static class ListActionRecordsResponseBodyResult extends TeaModel {
+        /**
+         * <p>The name of the operation that triggered the change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RestartInstance</p>
+         */
         @NameInMap("actionName")
         public String actionName;
 
+        /**
+         * <p>The parameters used for the change.</p>
+         */
         @NameInMap("actionParams")
         public java.util.Map<String, ?> actionParams;
 
         @NameInMap("actionResultAccessList")
         public java.util.List<String> actionResultAccessList;
 
+        /**
+         * <p>The end time of the change. The value is a UNIX timestamp in milliseconds.</p>
+         */
         @NameInMap("endTime")
         public Long endTime;
 
+        /**
+         * <p>The ID of the Elasticsearch instance that was changed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-nif24adwc0082****</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <p>The instance information after the change, represented as a JSON string.</p>
+         */
         @NameInMap("metaNow")
         public String metaNow;
 
+        /**
+         * <p>The instance information before the change, represented as a JSON string.</p>
+         */
         @NameInMap("metaOld")
         public String metaOld;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the account that triggered the change belongs.</p>
+         */
         @NameInMap("ownerId")
         public String ownerId;
 
+        /**
+         * <p>The progress of the change, represented as a percentage string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100%</p>
+         */
         @NameInMap("process")
         public String process;
 
+        /**
+         * <p>The field differences before and after the change.</p>
+         */
         @NameInMap("recordDiff")
         public java.util.Map<String, ?> recordDiff;
 
         @NameInMap("recordIds")
         public java.util.List<String> recordIds;
 
+        /**
+         * <p>The ID of the request that triggered the change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request-123</p>
+         */
         @NameInMap("requestId")
         public String requestId;
 
+        /**
+         * <p>The start time of the change. The value is a UNIX timestamp in milliseconds.</p>
+         */
         @NameInMap("startTime")
         public Long startTime;
 
+        /**
+         * <p>The current state of the change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FINISHED</p>
+         */
         @NameInMap("stateType")
         public String stateType;
 
+        /**
+         * <p>The list of status details for each phase of the change.</p>
+         */
         @NameInMap("statusInfo")
         public java.util.List<ListActionRecordsResponseBodyResultStatusInfo> statusInfo;
 
+        /**
+         * <p>The ID of the user that triggered the change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user-123</p>
+         */
         @NameInMap("userId")
         public String userId;
 
         @NameInMap("userInfo")
         public String userInfo;
 
+        /**
+         * <p>The type of the account that triggered the change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customer</p>
+         */
         @NameInMap("userType")
         public String userType;
 

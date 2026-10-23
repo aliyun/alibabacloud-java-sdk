@@ -74,6 +74,99 @@ public class UpdateInstanceResponseBody extends TeaModel {
         return this.result;
     }
 
+    public static class UpdateInstanceResponseBodyResultIndexNodeConfiguration extends TeaModel {
+        /**
+         * <p>The number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
+        @NameInMap("amount")
+        public Integer amount;
+
+        /**
+         * <p>The disk size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
+        @NameInMap("disk")
+        public Integer disk;
+
+        /**
+         * <p>The disk type, such as cloud_essd.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
+         */
+        @NameInMap("diskType")
+        public String diskType;
+
+        /**
+         * <p>The disk performance level (PL), such as PL0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL0</p>
+         */
+        @NameInMap("performanceLevel")
+        public String performanceLevel;
+
+        /**
+         * <p>The node specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elasticsearch.turbo1.ci.xlarge</p>
+         */
+        @NameInMap("spec")
+        public String spec;
+
+        public static UpdateInstanceResponseBodyResultIndexNodeConfiguration build(java.util.Map<String, ?> map) throws Exception {
+            UpdateInstanceResponseBodyResultIndexNodeConfiguration self = new UpdateInstanceResponseBodyResultIndexNodeConfiguration();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateInstanceResponseBodyResultIndexNodeConfiguration setAmount(Integer amount) {
+            this.amount = amount;
+            return this;
+        }
+        public Integer getAmount() {
+            return this.amount;
+        }
+
+        public UpdateInstanceResponseBodyResultIndexNodeConfiguration setDisk(Integer disk) {
+            this.disk = disk;
+            return this;
+        }
+        public Integer getDisk() {
+            return this.disk;
+        }
+
+        public UpdateInstanceResponseBodyResultIndexNodeConfiguration setDiskType(String diskType) {
+            this.diskType = diskType;
+            return this;
+        }
+        public String getDiskType() {
+            return this.diskType;
+        }
+
+        public UpdateInstanceResponseBodyResultIndexNodeConfiguration setPerformanceLevel(String performanceLevel) {
+            this.performanceLevel = performanceLevel;
+            return this;
+        }
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        public UpdateInstanceResponseBodyResultIndexNodeConfiguration setSpec(String spec) {
+            this.spec = spec;
+            return this;
+        }
+        public String getSpec() {
+            return this.spec;
+        }
+
+    }
+
     public static class UpdateInstanceResponseBodyResultKibanaConfiguration extends TeaModel {
         /**
          * <p>The number of nodes.</p>
@@ -85,7 +178,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public Integer amount;
 
         /**
-         * <p>The storage size of the node.</p>
+         * <p>The storage space size of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -161,7 +254,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public Integer amount;
 
         /**
-         * <p>The storage size of the node. Unit: GB.</p>
+         * <p>The storage space size of the node. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -228,7 +321,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
 
     public static class UpdateInstanceResponseBodyResultNodeSpec extends TeaModel {
         /**
-         * <p>The storage size of the node. Unit: GB.</p>
+         * <p>The storage space size of the node. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -289,9 +382,102 @@ public class UpdateInstanceResponseBody extends TeaModel {
 
     }
 
+    public static class UpdateInstanceResponseBodyResultSearchNodeConfiguration extends TeaModel {
+        /**
+         * <p>The number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
+        @NameInMap("amount")
+        public Integer amount;
+
+        /**
+         * <p>The disk size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
+        @NameInMap("disk")
+        public Integer disk;
+
+        /**
+         * <p>The disk type, such as cloud_essd.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
+         */
+        @NameInMap("diskType")
+        public String diskType;
+
+        /**
+         * <p>The disk performance level (PL), such as PL0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL0</p>
+         */
+        @NameInMap("performanceLevel")
+        public String performanceLevel;
+
+        /**
+         * <p>The node specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elasticsearch.turbo1.ci.xlarge</p>
+         */
+        @NameInMap("spec")
+        public String spec;
+
+        public static UpdateInstanceResponseBodyResultSearchNodeConfiguration build(java.util.Map<String, ?> map) throws Exception {
+            UpdateInstanceResponseBodyResultSearchNodeConfiguration self = new UpdateInstanceResponseBodyResultSearchNodeConfiguration();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateInstanceResponseBodyResultSearchNodeConfiguration setAmount(Integer amount) {
+            this.amount = amount;
+            return this;
+        }
+        public Integer getAmount() {
+            return this.amount;
+        }
+
+        public UpdateInstanceResponseBodyResultSearchNodeConfiguration setDisk(Integer disk) {
+            this.disk = disk;
+            return this;
+        }
+        public Integer getDisk() {
+            return this.disk;
+        }
+
+        public UpdateInstanceResponseBodyResultSearchNodeConfiguration setDiskType(String diskType) {
+            this.diskType = diskType;
+            return this;
+        }
+        public String getDiskType() {
+            return this.diskType;
+        }
+
+        public UpdateInstanceResponseBodyResultSearchNodeConfiguration setPerformanceLevel(String performanceLevel) {
+            this.performanceLevel = performanceLevel;
+            return this;
+        }
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        public UpdateInstanceResponseBodyResultSearchNodeConfiguration setSpec(String spec) {
+            this.spec = spec;
+            return this;
+        }
+        public String getSpec() {
+            return this.spec;
+        }
+
+    }
+
     public static class UpdateInstanceResponseBodyResult extends TeaModel {
         /**
-         * <p>The time when the instance was created.</p>
+         * <p>The time when the instance was created. The time is displayed in UTC and formatted in accordance with the ISO 8601 standard.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-07-13T03:58:07.253Z</p>
@@ -309,7 +495,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The internal-facing access domain name of the instance for private network access.</p>
+         * <p>The internal-facing access domain name of the instance on the private network.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-abc.elasticsearch.aliyuncs.com</p>
@@ -325,6 +511,12 @@ public class UpdateInstanceResponseBody extends TeaModel {
          */
         @NameInMap("esVersion")
         public String esVersion;
+
+        /**
+         * <p>The index node configuration. This parameter is supported only by AI engine instances.</p>
+         */
+        @NameInMap("indexNodeConfiguration")
+        public UpdateInstanceResponseBodyResultIndexNodeConfiguration indexNodeConfiguration;
 
         /**
          * <p>The instance ID.</p>
@@ -365,8 +557,8 @@ public class UpdateInstanceResponseBody extends TeaModel {
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <ul>
-         * <li>prepaid: Subscription.</li>
-         * <li>postpaid: Pay-as-you-go.</li>
+         * <li>prepaid: subscription.</li>
+         * <li>postpaid: pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -376,11 +568,17 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public String paymentType;
 
         /**
+         * <p>The search node configuration. This parameter is supported only by AI engine instances.</p>
+         */
+        @NameInMap("searchNodeConfiguration")
+        public UpdateInstanceResponseBodyResultSearchNodeConfiguration searchNodeConfiguration;
+
+        /**
          * <p>The status of the instance. Valid values:</p>
          * <ul>
          * <li>active: Normal.</li>
-         * <li>activating: Taking effect.</li>
-         * <li>inactive: Frozen.</li>
+         * <li>activating: Activating.</li>
+         * <li>inactive: Inactive.</li>
          * <li>invalid: Invalid.</li>
          * </ul>
          * 
@@ -425,6 +623,14 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
         public String getEsVersion() {
             return this.esVersion;
+        }
+
+        public UpdateInstanceResponseBodyResult setIndexNodeConfiguration(UpdateInstanceResponseBodyResultIndexNodeConfiguration indexNodeConfiguration) {
+            this.indexNodeConfiguration = indexNodeConfiguration;
+            return this;
+        }
+        public UpdateInstanceResponseBodyResultIndexNodeConfiguration getIndexNodeConfiguration() {
+            return this.indexNodeConfiguration;
         }
 
         public UpdateInstanceResponseBodyResult setInstanceId(String instanceId) {
@@ -473,6 +679,14 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
         public String getPaymentType() {
             return this.paymentType;
+        }
+
+        public UpdateInstanceResponseBodyResult setSearchNodeConfiguration(UpdateInstanceResponseBodyResultSearchNodeConfiguration searchNodeConfiguration) {
+            this.searchNodeConfiguration = searchNodeConfiguration;
+            return this;
+        }
+        public UpdateInstanceResponseBodyResultSearchNodeConfiguration getSearchNodeConfiguration() {
+            return this.searchNodeConfiguration;
         }
 
         public UpdateInstanceResponseBodyResult setStatus(String status) {

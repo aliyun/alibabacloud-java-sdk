@@ -14,9 +14,9 @@ public class UpdateDiagnosisSettingsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result. Valid values:</p>
+     * <p>Indicates whether the update was successful. Valid values:</p>
      * <ul>
-     * <li>true: The update was successful.</li>
+     * <li>true: The update succeeded.</li>
      * <li>false: The update failed.</li>
      * </ul>
      * 

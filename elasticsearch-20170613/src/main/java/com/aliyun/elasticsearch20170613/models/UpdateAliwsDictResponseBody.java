@@ -62,7 +62,7 @@ public class UpdateAliwsDictResponseBody extends TeaModel {
         /**
          * <p>The source type of the dictionary file. Valid values:</p>
          * <ul>
-         * <li>OSS: uses OSS open storage.</li>
+         * <li>OSS: uses OSS public storage.</li>
          * <li>ORIGIN: retains the previously uploaded dictionary.</li>
          * </ul>
          * 
@@ -73,7 +73,7 @@ public class UpdateAliwsDictResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The dictionary type. Valid values: ALI_WS (AliNLP tokenizer).</p>
+         * <p>The dictionary type. Valid value: ALI_WS (AliNLP word segmentation).</p>
          * 
          * <strong>example:</strong>
          * <p>ALI_WS</p>

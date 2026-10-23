@@ -16,7 +16,7 @@ public class CreateSnapshotResponseBody extends TeaModel {
     /**
      * <p>The returned result. Valid values:</p>
      * <ul>
-     * <li>true: The manual snapshot backup is successful.</li>
+     * <li>true: The manual snapshot backup succeeded.</li>
      * <li>false: The manual snapshot backup failed.</li>
      * </ul>
      * 

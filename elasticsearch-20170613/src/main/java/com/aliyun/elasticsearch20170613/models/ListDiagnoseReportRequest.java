@@ -14,7 +14,7 @@ public class ListDiagnoseReportRequest extends TeaModel {
     public Boolean detail;
 
     /**
-     * <p>The end timestamp of the query. Unit: milliseconds.</p>
+     * <p>The end timestamp for the query. Unit: milliseconds.</p>
      * <ul>
      * <li>Minimum value: 1000000000000</li>
      * <li>Maximum value: 2000000000000</li>
@@ -62,7 +62,7 @@ public class ListDiagnoseReportRequest extends TeaModel {
     public Integer size;
 
     /**
-     * <p>The start timestamp of the query. Unit: milliseconds.</p>
+     * <p>The start timestamp for the query. Unit: milliseconds.</p>
      * <ul>
      * <li>Minimum value: 1000000000000</li>
      * <li>Maximum value: 2000000000000</li>
@@ -76,7 +76,7 @@ public class ListDiagnoseReportRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The trigger method of the health diagnostics. Valid values:</p>
+     * <p>The trigger method for health diagnostics. Valid values:</p>
      * <ul>
      * <li>SYSTEM (default): automatically triggered by the system</li>
      * <li>INNER: internally triggered</li>

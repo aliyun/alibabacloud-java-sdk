@@ -11,7 +11,7 @@ public class ListPipelineResponseBody extends TeaModel {
     public ListPipelineResponseBodyHeaders headers;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
@@ -20,7 +20,7 @@ public class ListPipelineResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned results.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListPipelineResponseBodyResult> result;
@@ -81,7 +81,7 @@ public class ListPipelineResponseBody extends TeaModel {
 
     public static class ListPipelineResponseBodyResult extends TeaModel {
         /**
-         * <p>The time when the pipeline was created.</p>
+         * <p>The time when the pipeline was created. The format is YYYY-MM-DDTHH:mm:ss.SSSZ, where the trailing Z indicates UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-08-05T03:10:38.188Z</p>
@@ -90,7 +90,7 @@ public class ListPipelineResponseBody extends TeaModel {
         public String gmtCreatedTime;
 
         /**
-         * <p>The time when the pipeline was last updated.</p>
+         * <p>The time when the pipeline was updated. The format is YYYY-MM-DDTHH:mm:ss.SSSZ, where the trailing Z indicates UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-08-05T08:43:31.757Z</p>
@@ -99,7 +99,7 @@ public class ListPipelineResponseBody extends TeaModel {
         public String gmtUpdateTime;
 
         /**
-         * <p>The pipeline ID.</p>
+         * <p>The ID of the pipeline.</p>
          * 
          * <strong>example:</strong>
          * <p>pipeline_test</p>
@@ -108,11 +108,11 @@ public class ListPipelineResponseBody extends TeaModel {
         public String pipelineId;
 
         /**
-         * <p>The pipeline status. Valid values:</p>
+         * <p>The status of the pipeline. Valid values:</p>
          * <ul>
-         * <li>NOT_DEPLOYED: not deployed.</li>
-         * <li>RUNNING: running.</li>
-         * <li>DELETED: deleted. This status is not displayed in the console.</li>
+         * <li>NOT_DEPLOYED: not deployed</li>
+         * <li>RUNNING: running</li>
+         * <li>DELETED: deleted (this status is not displayed in the console)</li>
          * </ul>
          * 
          * <strong>example:</strong>

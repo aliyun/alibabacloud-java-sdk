@@ -14,7 +14,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The result.</p>
      */
     @NameInMap("Result")
     public MoveResourceGroupResponseBodyResult result;
@@ -62,8 +62,8 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         /**
          * <p>The source type. Valid values:</p>
          * <ul>
-         * <li>OSS: OSS open storage (the OSS bucket must be publicly readable).</li>
-         * <li>ORIGIN: retains the previously uploaded dictionary.</li>
+         * <li>OSS: Object Storage Service (OSS). Make sure that the OSS bucket is publicly readable.</li>
+         * <li>ORIGIN: The previously uploaded dictionary is retained.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -75,10 +75,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         /**
          * <p>The dictionary type. Valid values:</p>
          * <ul>
-         * <li>STOP: stopword.</li>
-         * <li>MAIN: main dictionary.</li>
-         * <li>SYNONYMS: synonym dictionary.</li>
-         * <li>ALI_WS: Alibaba dictionary.</li>
+         * <li>STOP: Stopword dictionary.</li>
+         * <li>MAIN: Main dictionary.</li>
+         * <li>SYNONYMS: Synonym dictionary.</li>
+         * <li>ALI_WS: Alibaba Cloud dictionary.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -137,7 +137,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public Integer amount;
 
         /**
-         * <p>The storage space size of the node. Unit: GB.</p>
+         * <p>The storage space of the node. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -213,7 +213,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public Integer amount;
 
         /**
-         * <p>The storage space size of the node. Unit: GB.</p>
+         * <p>The storage space of the node. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -356,7 +356,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
 
     public static class MoveResourceGroupResponseBodyResultNodeSpec extends TeaModel {
         /**
-         * <p>The storage space size of the node. Unit: GB.</p>
+         * <p>The storage space of the node. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -435,8 +435,8 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         /**
          * <p>The source type. Valid values:</p>
          * <ul>
-         * <li>OSS: OSS open storage (the OSS bucket must be publicly readable).</li>
-         * <li>ORIGIN: retains the previously uploaded dictionary.</li>
+         * <li>OSS: Object Storage Service (OSS). Make sure that the OSS bucket is publicly readable.</li>
+         * <li>ORIGIN: The previously uploaded dictionary is retained.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -448,10 +448,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         /**
          * <p>The dictionary type. Valid values:</p>
          * <ul>
-         * <li>STOP: stopword.</li>
-         * <li>MAIN: main dictionary.</li>
-         * <li>SYNONYMS: synonym dictionary.</li>
-         * <li>ALI_WS: Alibaba dictionary.</li>
+         * <li>STOP: Stopword dictionary.</li>
+         * <li>MAIN: Main dictionary.</li>
+         * <li>SYNONYMS: Synonym dictionary.</li>
+         * <li>ALI_WS: Alibaba Cloud dictionary.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -501,7 +501,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
 
     public static class MoveResourceGroupResponseBodyResult extends TeaModel {
         /**
-         * <p>The time when the instance was created.</p>
+         * <p>The time when the instance was created. The time follows the YYYY-MM-DDTHH:mm:ss.SSSZ format, where Z indicates UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-07-06T10:18:48.662Z</p>
@@ -510,7 +510,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The instance name.</p>
+         * <p>The name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-abc</p>
@@ -519,13 +519,13 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The IK dictionary configuration.</p>
+         * <p>The IK dictionary configurations.</p>
          */
         @NameInMap("dictList")
         public java.util.List<MoveResourceGroupResponseBodyResultDictList> dictList;
 
         /**
-         * <p>The internal network access address of the instance.</p>
+         * <p>The internal endpoint of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-nif1q8auz0003****.elasticsearch.aliyuncs.com</p>
@@ -534,7 +534,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>The instance version.</p>
+         * <p>The version of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>6.7.0_with_X-Pack</p>
@@ -552,7 +552,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The Kibana node configuration.</p>
+         * <p>The Kibana node configurations.</p>
          */
         @NameInMap("kibanaConfiguration")
         public MoveResourceGroupResponseBodyResultKibanaConfiguration kibanaConfiguration;
@@ -567,7 +567,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public String kibanaDomain;
 
         /**
-         * <p>The Kibana public network port.</p>
+         * <p>The public port of Kibana.</p>
          * 
          * <strong>example:</strong>
          * <p>5601</p>
@@ -576,13 +576,13 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public Integer kibanaPort;
 
         /**
-         * <p>The master node configuration.</p>
+         * <p>The master node configurations.</p>
          */
         @NameInMap("masterConfiguration")
         public MoveResourceGroupResponseBodyResultMasterConfiguration masterConfiguration;
 
         /**
-         * <p>The network configuration.</p>
+         * <p>The network configurations.</p>
          */
         @NameInMap("networkConfig")
         public MoveResourceGroupResponseBodyResultNetworkConfig networkConfig;
@@ -597,7 +597,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public Integer nodeAmount;
 
         /**
-         * <p>The data node configuration.</p>
+         * <p>The data node configurations.</p>
          */
         @NameInMap("nodeSpec")
         public MoveResourceGroupResponseBodyResultNodeSpec nodeSpec;
@@ -605,8 +605,8 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <ul>
-         * <li>prepaid: subscription.</li>
-         * <li>postpaid: pay-as-you-go.</li>
+         * <li>prepaid: Subscription.</li>
+         * <li>postpaid: Pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -625,7 +625,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public String publicDomain;
 
         /**
-         * <p>The public network port.</p>
+         * <p>The public port.</p>
          * 
          * <strong>example:</strong>
          * <p>9200</p>
@@ -637,7 +637,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
          * <p>The status of the instance. Valid values:</p>
          * <ul>
          * <li>active: Normal.</li>
-         * <li>activating: Taking effect.</li>
+         * <li>activating: Activating.</li>
          * <li>inactive: Frozen.</li>
          * <li>invalid: Invalid.</li>
          * </ul>
@@ -649,13 +649,13 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The synonym dictionary configuration.</p>
+         * <p>The synonym dictionary configurations.</p>
          */
         @NameInMap("synonymsDicts")
         public java.util.List<MoveResourceGroupResponseBodyResultSynonymsDicts> synonymsDicts;
 
         /**
-         * <p>The time when the instance was last updated.</p>
+         * <p>The time when the instance was last updated. The time follows the YYYY-MM-DDTHH:mm:ss.SSSZ format, where Z indicates UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-07-18T10:10:04.484Z</p>

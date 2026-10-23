@@ -42,7 +42,7 @@ public class UpgradeInfoResponseBody extends TeaModel {
 
     public static class UpgradeInfoResponseBodyResultUpgradeInfo extends TeaModel {
         /**
-         * <p>The current repo version.</p>
+         * <p>The current repository version.</p>
          * 
          * <strong>example:</strong>
          * <p>1.7.3</p>
@@ -51,7 +51,7 @@ public class UpgradeInfoResponseBody extends TeaModel {
         public String curRepoVersion;
 
         /**
-         * <p>The repo version available for upgrade.</p>
+         * <p>The upgradable repository version.</p>
          * 
          * <strong>example:</strong>
          * <p>1.7.3</p>
@@ -60,7 +60,7 @@ public class UpgradeInfoResponseBody extends TeaModel {
         public String updateRepoVersion;
 
         /**
-         * <p>Indicates whether an upgradeable version is available.</p>
+         * <p>Indicates whether an upgradable version is available.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -87,7 +87,7 @@ public class UpgradeInfoResponseBody extends TeaModel {
         public String curEsVersion;
 
         /**
-         * <p>The kernel version available for upgrade.</p>
+         * <p>The upgradable kernel version.</p>
          * 
          * <strong>example:</strong>
          * <p>2.2.4</p>
@@ -96,7 +96,7 @@ public class UpgradeInfoResponseBody extends TeaModel {
         public String upgradeApackVersion;
 
         /**
-         * <p>The Elasticsearch version available for upgrade.</p>
+         * <p>The upgradable Elasticsearch version.</p>
          * 
          * <strong>example:</strong>
          * <p>8.17.0</p>

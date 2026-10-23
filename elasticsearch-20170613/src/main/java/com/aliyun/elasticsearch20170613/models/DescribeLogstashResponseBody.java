@@ -84,9 +84,9 @@ public class DescribeLogstashResponseBody extends TeaModel {
 
     public static class DescribeLogstashResponseBodyResultZoneInfos extends TeaModel {
         /**
-         * <p>The zone status. Valid values:</p>
+         * <p>The status of the zone. Valid values:</p>
          * <ul>
-         * <li>ISOLATION: offline.</li>
+         * <li>ISOLATION: Offline.</li>
          * <li>NORMAL: Normal.</li>
          * </ul>
          * 
@@ -189,7 +189,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
 
     public static class DescribeLogstashResponseBodyResultNetworkConfig extends TeaModel {
         /**
-         * <p>The network type. Currently, only Virtual Private Cloud (VPC) is supported.</p>
+         * <p>The network type. Only VPC is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc</p>
@@ -207,7 +207,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The zone in which the instance resides.</p>
+         * <p>The zone where the instance is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-*</p>
@@ -274,10 +274,10 @@ public class DescribeLogstashResponseBody extends TeaModel {
         public Integer disk;
 
         /**
-         * <p>Indicates whether cloud disk encryption is enabled. Valid values:</p>
+         * <p>Specifies whether cloud disk encryption is used. Valid values:</p>
          * <ul>
-         * <li>true: Enabled.</li>
-         * <li>false: Disabled.</li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -296,7 +296,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>The node specification.</p>
+         * <p>The specifications of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>elasticsearch.sn1ne.large</p>
@@ -344,6 +344,9 @@ public class DescribeLogstashResponseBody extends TeaModel {
     }
 
     public static class DescribeLogstashResponseBodyResult extends TeaModel {
+        /**
+         * <p>The extended configurations of the Logstash instance.</p>
+         */
         @NameInMap("ExtendConfigs")
         public java.util.List<java.util.Map<String, ?>> extendConfigs;
 
@@ -357,7 +360,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The instance tags.</p>
+         * <p>The instance labels.</p>
          */
         @NameInMap("Tags")
         public java.util.List<DescribeLogstashResponseBodyResultTags> tags;
@@ -369,7 +372,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
         public java.util.List<DescribeLogstashResponseBodyResultZoneInfos> zoneInfos;
 
         /**
-         * <p>The instance configuration information.</p>
+         * <p>The configuration information of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;slowlog.threshold.warn&quot;: &quot;2s&quot;,&quot;slowlog.threshold.info&quot;: &quot;1s&quot;,&quot;slowlog.threshold.debug&quot;: &quot;500ms&quot;,&quot;slowlog.threshold.trace&quot;: &quot;100ms&quot; }</p>
@@ -387,7 +390,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The instance name.</p>
+         * <p>The name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ls-cn-abc</p>
@@ -395,6 +398,12 @@ public class DescribeLogstashResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The time when the instance expires. The value is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1715826092044</p>
+         */
         @NameInMap("endTime")
         public Long endTime;
 
@@ -414,7 +423,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The network configuration.</p>
+         * <p>The network configurations.</p>
          */
         @NameInMap("networkConfig")
         public DescribeLogstashResponseBodyResultNetworkConfig networkConfig;
@@ -437,8 +446,8 @@ public class DescribeLogstashResponseBody extends TeaModel {
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <ul>
-         * <li>prepaid: subscription</li>
-         * <li>postpaid: pay-as-you-go</li>
+         * <li>prepaid: Subscription.</li>
+         * <li>postpaid: Pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -451,9 +460,9 @@ public class DescribeLogstashResponseBody extends TeaModel {
          * <p>The status of the instance. Valid values:</p>
          * <ul>
          * <li>active: Normal.</li>
-         * <li>activating: Taking effect.</li>
+         * <li>activating: Activating.</li>
          * <li>inactive: Frozen.</li>
-         * <li>invalid: Expired.</li>
+         * <li>invalid: Invalid.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -472,7 +481,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
-         * <p>The instance version.</p>
+         * <p>The version of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>7.4.0_with_X-Pack</p>

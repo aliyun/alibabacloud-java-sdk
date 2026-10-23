@@ -4,9 +4,18 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class NetworkConfig extends TeaModel {
+    /**
+     * <p>The number of load balancing instances in a single zone. This parameter is supported only for the HP_ALILB type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("lbReplica")
     public Integer lbReplica;
 
+    /**
+     * <p>The list of vSwitch and load balancing configurations for each zone in the Network Load Balancer (NLB) architecture.</p>
+     */
     @NameInMap("loadBalanceConfig")
     public java.util.List<NetworkConfigLoadBalanceConfig> loadBalanceConfig;
 
@@ -20,7 +29,7 @@ public class NetworkConfig extends TeaModel {
     public String loadBalanceType;
 
     /**
-     * <p>The network type. Only Virtual Private Cloud (VPC) is supported.</p>
+     * <p>The network type. Only VPC is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc</p>
@@ -38,7 +47,7 @@ public class NetworkConfig extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The zone ID of the network.</p>
+     * <p>The ID of the zone to which the network belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-e</p>
@@ -56,7 +65,7 @@ public class NetworkConfig extends TeaModel {
     public String vswitchId;
 
     /**
-     * <p>The IP whitelist group configuration. You do not need to set this parameter when you call the createInstance operation to create an instance because the setting does not take effect during instance creation. Use a separate API operation to configure whitelists for different roles.</p>
+     * <p>The IP whitelist group configuration. You do not need to specify this parameter when creating an instance, and it does not take effect during instance creation. You must use a separate API operation to configure whitelists for different roles.</p>
      */
     @NameInMap("whiteIpGroupList")
     public java.util.List<WhiteIpGroup> whiteIpGroupList;
@@ -132,7 +141,10 @@ public class NetworkConfig extends TeaModel {
 
     public static class NetworkConfigLoadBalanceConfig extends TeaModel {
         /**
-         * <p>可用区信息，如: cn-hangzhou-i</p>
+         * <p>The zone information, such as cn-hangzhou-i.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         @NameInMap("vsArea")
         public String vsArea;

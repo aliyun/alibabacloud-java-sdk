@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListInstanceIndicesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to retrieve all indexes. Valid values:</p>
+     * <p>Specifies whether to retrieve all indices. Valid values:</p>
      * <ul>
-     * <li><p>true: Returns the index list including system indexes.</p>
+     * <li><p>true: returns a list of indices including system indices.</p>
      * </li>
-     * <li><p>false (default): Returns the index list excluding system indexes.</p>
+     * <li><p>false: returns a list of indices excluding system indices. Default value: false.</p>
      * </li>
      * </ul>
      * 
@@ -20,11 +20,11 @@ public class ListInstanceIndicesRequest extends TeaModel {
     public Boolean all;
 
     /**
-     * <p>Specifies whether to display only managed indexes. Valid values:</p>
+     * <p>Specifies whether to view only managed indices. Valid values:</p>
      * <ul>
-     * <li><p>true: Displays only managed indexes.</p>
+     * <li><p>true: views only managed indices.</p>
      * </li>
-     * <li><p>false (default): Displays all indexes.</p>
+     * <li><p>false: views all indices. Default value: false.</p>
      * </li>
      * </ul>
      * 
@@ -35,11 +35,11 @@ public class ListInstanceIndicesRequest extends TeaModel {
     public Boolean isManaged;
 
     /**
-     * <p>Specifies whether to display only OpenStore cold-phase indexes. Valid values:</p>
+     * <p>Specifies whether to view only OpenStore cold-phase indices. Valid values:</p>
      * <ul>
-     * <li><p>true: Displays only OpenStore cold-phase indexes.</p>
+     * <li><p>true: views only OpenStore cold-phase indices.</p>
      * </li>
-     * <li><p>false (default): Displays all indexes.</p>
+     * <li><p>false: views all indices. Default value: false.</p>
      * </li>
      * </ul>
      * 
@@ -59,7 +59,7 @@ public class ListInstanceIndicesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The page number of the instance list. Minimum value: 1. Default value: 1.</p>
+     * <p>The page number. Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -68,7 +68,7 @@ public class ListInstanceIndicesRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>The number of entries per page for paging. Maximum value: 100. Default value: 20.</p>
+     * <p>The paging Settings for the number of entries per page in a paged query. Maximum value: 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>

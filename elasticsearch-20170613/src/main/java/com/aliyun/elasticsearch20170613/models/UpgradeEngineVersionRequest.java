@@ -4,14 +4,17 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpgradeEngineVersionRequest extends TeaModel {
+    /**
+     * <p>The list of plug-in configurations to install or uninstall during the version upgrade.</p>
+     */
     @NameInMap("plugins")
     public java.util.List<UpgradeEngineVersionRequestPlugins> plugins;
 
     /**
      * <p>The upgrade type. Valid values:</p>
      * <ul>
-     * <li>engineVersion (default): major engine version upgrade.</li>
-     * <li>aliVersion: kernel version upgrade.</li>
+     * <li>engineVersion: Major engine version upgrade. This is the default value.</li>
+     * <li>aliVersion: Kernel version upgrade.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,7 +33,7 @@ public class UpgradeEngineVersionRequest extends TeaModel {
     public String version;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can generate the token on the client side. The token must be unique across different requests and can be up to 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
@@ -41,11 +44,11 @@ public class UpgradeEngineVersionRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a pre-upgrade check. Valid values:</p>
      * <ul>
-     * <li>true: performs a check.</li>
-     * <li>false (default): does not perform a check.</li>
+     * <li>true: Performs the check.</li>
+     * <li>false: Does not perform the check. This is the default value.</li>
      * </ul>
      * <blockquote>
-     * <p>Warning:  The version upgrade check involves checks on cluster YML, plug-in configurations, cluster status, indexes, and resources. Perform a pre-upgrade check before upgrading. Otherwise, upgrade issues may occur.</p>
+     * <p>Warning:  The version upgrade check includes checks on the cluster YML file, plug-in configurations, cluster status, indexes, and resources. Perform a pre-upgrade check before the upgrade to prevent upgrade issues.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -57,10 +60,13 @@ public class UpgradeEngineVersionRequest extends TeaModel {
     /**
      * <p>The update strategy. Valid values:</p>
      * <ul>
-     * <li>blue_green: blue-green deployment.</li>
-     * <li>normal: in-place update.</li>
-     * <li>intelligent: intelligent update.</li>
+     * <li>blue_green: Blue-green deployment.</li>
+     * <li>normal: In-place update.</li>
+     * <li>intelligent: Intelligent update.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>blue_green</p>
      */
     @NameInMap("updateStrategy")
     public String updateStrategy;
@@ -120,25 +126,35 @@ public class UpgradeEngineVersionRequest extends TeaModel {
 
     public static class UpgradeEngineVersionRequestPlugins extends TeaModel {
         /**
-         * <p>Specifies whether to install or uninstall the plug-in. A value of true indicates install, and a value of false indicates uninstall.</p>
+         * <p>Specifies whether to install or uninstall the plug-in. Valid values:</p>
+         * <ul>
+         * <li>true: Installs the plug-in.</li>
+         * <li>false: Uninstalls the plug-in.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("enable")
         public String enable;
 
         /**
-         * <p>The fileVersion of the plug-in. Refer to the response of ListUserPlugin.</p>
+         * <p>The file version of the plug-in. For more information, see the response of ListUserPlugin.</p>
          */
         @NameInMap("fileVersion")
         public String fileVersion;
 
         /**
-         * <p>The plug-in name.</p>
+         * <p>The name of the plug-in.</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The Elasticsearch version for the plug-in, such as 7.16.2.</p>
+         * <p>The Elasticsearch version corresponding to the plug-in, such as 7.16.2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7.16.2</p>
          */
         @NameInMap("version")
         public String version;

@@ -78,7 +78,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         public String suggest;
 
         /**
-         * <p>The type of the diagnostic result. Valid values: TEXT (text description), CONSOLE_API (console-triggered), and ES_API (API-triggered).</p>
+         * <p>The type of the diagnostic result. Valid values: TEXT (text description), CONSOLE_API (triggered by the console), and ES_API (triggered by the API).</p>
          * 
          * <strong>example:</strong>
          * <p>ES_API</p>
@@ -190,21 +190,54 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnoseReportResponseBodyResultItems extends TeaModel {
+        /**
+         * <p>The description of the diagnostic conclusion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Everything is normal</p>
+         */
         @NameInMap("desc")
         public String desc;
 
+        /**
+         * <p>The diagnostic details. This parameter is empty if details are not required.</p>
+         */
         @NameInMap("detail")
         public java.util.Map<String, ?> detail;
 
+        /**
+         * <p>The code of the diagnostic item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster.health</p>
+         */
         @NameInMap("item")
         public String item;
 
+        /**
+         * <p>The name of the diagnostic item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cluster health</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The health status of the diagnostic item. Valid values: GREEN, YELLOW, and RED.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GREEN</p>
+         */
         @NameInMap("state")
         public String state;
 
+        /**
+         * <p>The handling suggestion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pay attention to GC</p>
+         */
         @NameInMap("suggest")
         public String suggest;
 
@@ -265,7 +298,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
 
     public static class DescribeDiagnoseReportResponseBodyResult extends TeaModel {
         /**
-         * <p>The timestamp when the report was created. Unit: ms.</p>
+         * <p>The timestamp when the report was created. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1535745731000</p>
@@ -279,11 +312,17 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         @NameInMap("diagnoseItems")
         public java.util.List<DescribeDiagnoseReportResponseBodyResultDiagnoseItems> diagnoseItems;
 
+        /**
+         * <p>The diagnosis mode. Valid values: RULE and AGENT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RULE</p>
+         */
         @NameInMap("diagnosisMode")
         public String diagnosisMode;
 
         /**
-         * <p>The overall health of the cluster in the report. Valid values: GREEN, YELLOW, RED, and UNKNOWN.</p>
+         * <p>The overall health status of the cluster in the report. Valid values: GREEN, YELLOW, RED, and UNKNOWN.</p>
          * 
          * <strong>example:</strong>
          * <p>YELLOW</p>
@@ -292,7 +331,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         public String health;
 
         /**
-         * <p>The instance ID of the diagnosed instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-abc</p>
@@ -300,6 +339,9 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <p>The list of diagnostic item details. This parameter may be empty if details are not required.</p>
+         */
         @NameInMap("items")
         public java.util.List<DescribeDiagnoseReportResponseBodyResultItems> items;
 
@@ -313,7 +355,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         public String reportId;
 
         /**
-         * <p>The diagnostic status. Valid values: SUCCESS, FAILED, and RUNNING.</p>
+         * <p>The diagnosis status. Valid values: SUCCESS, FAILED, and RUNNING.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -322,7 +364,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The method used to trigger the health diagnostics. Valid values: SYSTEM (automatically triggered by the system), INNER (internally triggered), and USER (manually triggered by the user).</p>
+         * <p>The trigger method of the health diagnosis. Valid values: SYSTEM (automatically triggered by the system), INNER (internally triggered), and USER (manually triggered by the user).</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM</p>

@@ -41,6 +41,9 @@ public class UpdatePublicWhiteIpsResponseBody extends TeaModel {
     }
 
     public static class UpdatePublicWhiteIpsResponseBodyResult extends TeaModel {
+        /**
+         * <p>The public IP address access whitelist.</p>
+         */
         @NameInMap("publicIpWhitelist")
         public java.util.List<String> publicIpWhitelist;
 

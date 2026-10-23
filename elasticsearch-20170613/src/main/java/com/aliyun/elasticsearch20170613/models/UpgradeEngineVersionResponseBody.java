@@ -62,11 +62,11 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
         /**
          * <p>The error type. Valid values:</p>
          * <ul>
-         * <li>clusterStatus: cluster health status.</li>
-         * <li>clusterConfigYml: cluster YML file.</li>
-         * <li>clusterConfigPlugins: cluster configuration file.</li>
-         * <li>clusterResource: cluster resources.</li>
-         * <li>clusterSnapshot: cluster snapshot.</li>
+         * <li>clusterStatus: Cluster health status.</li>
+         * <li>clusterConfigYml: Cluster YML file.</li>
+         * <li>clusterConfigPlugins: Cluster configuration file.</li>
+         * <li>clusterResource: Cluster resources.</li>
+         * <li>clusterSnapshot: Cluster snapshot.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,10 +108,10 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
 
     public static class UpgradeEngineVersionResponseBodyResult extends TeaModel {
         /**
-         * <p>Indicates whether the check is passed. Valid values:</p>
+         * <p>Specifies whether the check is passed. Valid values:</p>
          * <ul>
-         * <li>success: passed.</li>
-         * <li>failed: not passed.</li>
+         * <li>success: Passed.</li>
+         * <li>failed: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -129,10 +129,10 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
         /**
          * <p>The check type. Valid values:</p>
          * <ul>
-         * <li>checkClusterHealth: cluster health status.</li>
-         * <li>checkConfigCompatible: configuration compatibility status.</li>
-         * <li>checkClusterResource: resource space status.</li>
-         * <li>checkClusterSnapshot: whether a snapshot exists.</li>
+         * <li>checkClusterHealth: Cluster health status.</li>
+         * <li>checkConfigCompatible: Configuration compatibility status.</li>
+         * <li>checkClusterResource: Resource space status.</li>
+         * <li>checkClusterSnapshot: Snapshot existence.</li>
          * </ul>
          * 
          * <strong>example:</strong>

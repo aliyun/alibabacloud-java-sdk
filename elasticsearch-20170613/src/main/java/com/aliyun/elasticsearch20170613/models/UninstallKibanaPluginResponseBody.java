@@ -13,6 +13,9 @@ public class UninstallKibanaPluginResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The names of the Kibana plug-ins uninstalled in the current request.</p>
+     */
     @NameInMap("Result")
     public java.util.List<String> result;
 

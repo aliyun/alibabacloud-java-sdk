@@ -62,7 +62,7 @@ public class UpdateSynonymsDictsResponseBody extends TeaModel {
         /**
          * <p>The source type of the dictionary file. Valid values:</p>
          * <ul>
-         * <li>OSS: OSS open storage.</li>
+         * <li>OSS: OSS.</li>
          * <li>ORIGIN: retains the previously uploaded dictionary.</li>
          * </ul>
          * 
@@ -73,7 +73,7 @@ public class UpdateSynonymsDictsResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The dictionary type. Valid values: SYNONYMS (synonym).</p>
+         * <p>The dictionary type. Valid value: SYNONYMS (synonyms).</p>
          * 
          * <strong>example:</strong>
          * <p>SYNONYMS</p>

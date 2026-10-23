@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstanceRequest extends TeaModel {
     /**
-     * <p>The instance name. Fuzzy match is supported. For example, if you search for <strong>abc</strong>, all instances whose names contain <strong>abc</strong> may be returned, such as <strong>abc</strong>, <strong>abcde</strong>, <strong>xyabc</strong>, and <strong>xabcy</strong>.</p>
+     * <p>The instance name. Fuzzy search is supported. For example, if you search for <strong>abc</strong>, instances such as <strong>abc</strong>, <strong>abcde</strong>, <strong>xyabc</strong>, and <strong>xabcy</strong> may be returned.</p>
      * 
      * <strong>example:</strong>
      * <p>aliyunes_test1</p>
@@ -14,7 +14,7 @@ public class ListInstanceRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The instance version.</p>
+     * <p>The Elasticsearch version of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>6.7_with_X-Pack</p>
@@ -24,6 +24,14 @@ public class ListInstanceRequest extends TeaModel {
 
     /**
      * <p>The edition of the instance. Valid values:</p>
+     * <ul>
+     * <li><p>x-pack: Commercial Edition</p>
+     * </li>
+     * <li><p>advanced/IS: Advanced Edition</p>
+     * </li>
+     * <li><p>community: Basic Edition</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>advanced</p>
@@ -41,7 +49,7 @@ public class ListInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number of the instance list.</p>
+     * <p>The page number of the instance list. Minimum value: <strong>1</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,6 +59,12 @@ public class ListInstanceRequest extends TeaModel {
 
     /**
      * <p>The billing method of the instance. Valid values:</p>
+     * <ul>
+     * <li><p>postpaid: pay-as-you-go</p>
+     * </li>
+     * <li><p>prepaid: subscription</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>postpaid</p>
@@ -68,7 +82,7 @@ public class ListInstanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The number of entries per page in a paged query. Settings the number of entries per page for paging. Maximum value: <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The paging Settings for the number of entries per page in a paged query. Maximum value: <strong>100</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -76,6 +90,12 @@ public class ListInstanceRequest extends TeaModel {
     @NameInMap("size")
     public Integer size;
 
+    /**
+     * <p>The instance status used for filtering. Valid values: active, activating, inactive, invalid, and unknown.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>active</p>
+     */
     @NameInMap("status")
     public String status;
 
@@ -89,7 +109,7 @@ public class ListInstanceRequest extends TeaModel {
     public String tags;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) in which the instance resides.</p>
+     * <p>The ID of the virtual private cloud (VPC) to which the instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp16k1dvzxtmagcva****</p>
@@ -98,7 +118,7 @@ public class ListInstanceRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The zone ID of the instance.</p>
+     * <p>The ID of the zone to which the instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-i</p>

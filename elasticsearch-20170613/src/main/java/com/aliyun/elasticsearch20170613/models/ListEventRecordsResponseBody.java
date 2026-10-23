@@ -14,7 +14,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The result.</p>
      */
     @NameInMap("Result")
     public ListEventRecordsResponseBodyResult result;
@@ -42,13 +42,13 @@ public class ListEventRecordsResponseBody extends TeaModel {
 
     public static class ListEventRecordsResponseBodyResultResultShowContentActionSuggest extends TeaModel {
         /**
-         * <p>The suggested action.</p>
+         * <p>The recommended actions.</p>
          */
         @NameInMap("suggestActions")
         public java.util.List<String> suggestActions;
 
         /**
-         * <p>The text of the suggested action.</p>
+         * <p>The text of the recommended action.</p>
          * 
          * <strong>example:</strong>
          * <p>“”</p>
@@ -57,7 +57,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
         public String suggestText;
 
         /**
-         * <p>The type of the suggested action.</p>
+         * <p>The type of the recommended action.</p>
          * 
          * <strong>example:</strong>
          * <p>promptText</p>
@@ -98,7 +98,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
 
     public static class ListEventRecordsResponseBodyResultResultShowContent extends TeaModel {
         /**
-         * <p>The suggested action.</p>
+         * <p>The recommended actions.</p>
          */
         @NameInMap("actionSuggest")
         public ListEventRecordsResponseBodyResultResultShowContentActionSuggest actionSuggest;
@@ -122,7 +122,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
         public String eventStatus;
 
         /**
-         * <p>The time when the event occurred.</p>
+         * <p>The time when the event occurred. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-08 18:31:01</p>
@@ -131,7 +131,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
         public String eventTime;
 
         /**
-         * <p>The end time of the O&amp;M execution for the event.</p>
+         * <p>The end time of the O&amp;M execution for the event. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-08 18:41:01</p>
@@ -140,7 +140,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
         public String executeFinishTime;
 
         /**
-         * <p>The start time of the O&amp;M execution for the event.</p>
+         * <p>The start time of the O&amp;M execution for the event. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-08 18:31:00</p>
@@ -149,7 +149,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
         public String executeStartTime;
 
         /**
-         * <p>The instance ID of the instance on which the event occurred.</p>
+         * <p>The instance ID where the event occurred.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-a5cb2dece****</p>
@@ -239,7 +239,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
 
     public static class ListEventRecordsResponseBodyResultResult extends TeaModel {
         /**
-         * <p>Indicates whether automatic alerting is enabled.</p>
+         * <p>Indicates whether automatic alerting is triggered.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -293,7 +293,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
         public String product;
 
         /**
-         * <p>The scheduled execution time.</p>
+         * <p>The scheduled execution time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-08 18:41:01</p>
@@ -302,7 +302,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
         public String scheduleExecuteTime;
 
         /**
-         * <p>The scheduled end time.</p>
+         * <p>The scheduled end time of the execution. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-08 18:41:01</p>
@@ -448,7 +448,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
 
     public static class ListEventRecordsResponseBodyResult extends TeaModel {
         /**
-         * <p>The returned content.</p>
+         * <p>The response content.</p>
          */
         @NameInMap("result")
         public java.util.List<ListEventRecordsResponseBodyResultResult> result;

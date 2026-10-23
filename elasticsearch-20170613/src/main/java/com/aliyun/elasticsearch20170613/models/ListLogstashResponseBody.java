@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListLogstashResponseBody extends TeaModel {
     /**
-     * <p>The request header information.</p>
+     * <p>The request headers.</p>
      */
     @NameInMap("Headers")
     public ListLogstashResponseBodyHeaders headers;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>AC442F2F-5068-4434-AA21-E78947A9****</p>
@@ -123,7 +123,7 @@ public class ListLogstashResponseBody extends TeaModel {
 
     public static class ListLogstashResponseBodyResultNetworkConfig extends TeaModel {
         /**
-         * <p>The network type. Currently, only Virtual Private Cloud (VPC) is supported.</p>
+         * <p>The network type. Only VPC is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc</p>
@@ -132,7 +132,7 @@ public class ListLogstashResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the virtual private cloud (VPC).</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-abc</p>
@@ -141,7 +141,7 @@ public class ListLogstashResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The zone where the instance resides.</p>
+         * <p>The zone where the instance is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-*</p>
@@ -150,7 +150,7 @@ public class ListLogstashResponseBody extends TeaModel {
         public String vsArea;
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>The ID of the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-def</p>
@@ -208,10 +208,10 @@ public class ListLogstashResponseBody extends TeaModel {
         public Integer disk;
 
         /**
-         * <p>Indicates whether disk encryption is enabled. Valid values:</p>
+         * <p>Specifies whether disk encryption is enabled. Valid values:</p>
          * <ul>
-         * <li>true: Enabled.</li>
-         * <li>false: Disabled.</li>
+         * <li>true: enabled.</li>
+         * <li>false: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -230,7 +230,7 @@ public class ListLogstashResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>The instance specification.</p>
+         * <p>The instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>logstash.n4.small</p>
@@ -294,7 +294,7 @@ public class ListLogstashResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The instance name.</p>
+         * <p>The name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ls-cn-abc</p>
@@ -303,6 +303,8 @@ public class ListLogstashResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The expiration time of the subscription instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>4928745600000</p>
          */
@@ -319,7 +321,7 @@ public class ListLogstashResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The network configuration.</p>
+         * <p>The network configurations.</p>
          */
         @NameInMap("networkConfig")
         public ListLogstashResponseBodyResultNetworkConfig networkConfig;
@@ -334,13 +336,17 @@ public class ListLogstashResponseBody extends TeaModel {
         public Integer nodeAmount;
 
         /**
-         * <p>The configuration information of data nodes.</p>
+         * <p>The configurations of the data node.</p>
          */
         @NameInMap("nodeSpec")
         public ListLogstashResponseBodyResultNodeSpec nodeSpec;
 
         /**
-         * <p>The billing method of the instance. Valid values: prepaid (subscription) and postpaid (pay-as-you-go).</p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li>prepaid: subscription.</li>
+         * <li>postpaid: pay-as-you-go.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>postpaid</p>
@@ -348,11 +354,23 @@ public class ListLogstashResponseBody extends TeaModel {
         @NameInMap("paymentType")
         public String paymentType;
 
+        /**
+         * <p>The ID of the resource group to which the Logstash instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm2h5vbzd****</p>
+         */
         @NameInMap("resourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The instance status. Valid values: active (Normal), activating (taking effect), inactive (frozen), and invalid (expired).</p>
+         * <p>The status of the instance. Valid values:</p>
+         * <ul>
+         * <li>active: normal.</li>
+         * <li>activating: activating.</li>
+         * <li>inactive: frozen.</li>
+         * <li>invalid: invalid.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>active</p>
@@ -370,7 +388,7 @@ public class ListLogstashResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
-         * <p>The instance version. Currently, only 6.7.0_with_X-Pack and 7.4.0_with_X-Pack are supported.</p>
+         * <p>The version of the instance. Only 6.7.0_with_X-Pack and 7.4.0_with_X-Pack are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>6.7.0_with_X-Pack</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEventRecordsRequest extends TeaModel {
     /**
-     * <p>The start time of the event query.</p>
+     * <p>The start time for the event query. Specify a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1746516590000</p>
@@ -14,7 +14,7 @@ public class ListEventRecordsRequest extends TeaModel {
     public String beginTime;
 
     /**
-     * <p>The end time of the event query.</p>
+     * <p>The end time for the event query. Specify a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1746775790000</p>
@@ -23,7 +23,7 @@ public class ListEventRecordsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The page number for a paged query.</p>
+     * <p>The page number in the paging Settings.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class ListEventRecordsRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>The number of entries per page for a paged query.</p>
+     * <p>The number of entries per page in the paging Settings.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,7 +41,7 @@ public class ListEventRecordsRequest extends TeaModel {
     public Integer size;
 
     /**
-     * <p>The filter object content. If this parameter is left empty, event records of all instances are returned. The value varies based on the filter type.</p>
+     * <p>The content of the object to filter. If this parameter is empty, event records for all instances are returned. Note: Specify the corresponding value based on the filter type.</p>
      * 
      * <strong>example:</strong>
      * <p>**</p>
@@ -50,7 +50,7 @@ public class ListEventRecordsRequest extends TeaModel {
     public String termContent;
 
     /**
-     * <p>The filter object type. If this parameter is left empty, event records of all types are returned.</p>
+     * <p>The object type to filter. If this parameter is empty, event records of all types are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>InstanceId</p>

@@ -41,20 +41,38 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnosisSettingsResponseBodyResult extends TeaModel {
+        /**
+         * <p>Indicates whether intelligent diagnostics is authorized to access the Elasticsearch API.</p>
+         */
         @NameInMap("authorizationStatus")
         public Boolean authorizationStatus;
 
+        /**
+         * <p>The maximum number of diagnostic executions allowed per day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("dailyLimit")
         public Integer dailyLimit;
 
+        /**
+         * <p>Indicates whether daily scheduled diagnostics are enabled.</p>
+         */
         @NameInMap("dailyScheduleEnabled")
         public Boolean dailyScheduleEnabled;
 
+        /**
+         * <p>The running mode of intelligent diagnostics, such as AGENT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AGENT</p>
+         */
         @NameInMap("diagnosisMode")
         public String diagnosisMode;
 
         /**
-         * <p>The common scenarios of intelligent diagnosis and optimization.</p>
+         * <p>The common scenarios for intelligent O&amp;M.</p>
          * 
          * <strong>example:</strong>
          * <p>Business Search</p>
@@ -62,11 +80,14 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
         @NameInMap("scene")
         public String scene;
 
+        /**
+         * <p>The list of identifiers for the selected intelligent diagnostics items.</p>
+         */
         @NameInMap("selectedItems")
         public java.util.List<String> selectedItems;
 
         /**
-         * <p>The UNIX timestamp when the intelligent diagnosis and optimization common scenarios were last updated.</p>
+         * <p>The UNIX timestamp when the common scenarios for intelligent O&amp;M were last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1588994035385</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetEmonMonitorDataResponseBody extends TeaModel {
     /**
-     * <p>The request status code.</p>
+     * <p>The status code of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -38,10 +38,10 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
     public java.util.List<GetEmonMonitorDataResponseBodyResult> result;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Specifies whether the request is successful. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
+     * <li>true: Successful.</li>
+     * <li>false: Unsuccessful.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +97,7 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
 
     public static class GetEmonMonitorDataResponseBodyResult extends TeaModel {
         /**
-         * <p>The real-time metric monitoring data. Format: <code>{timestamp:data}</code>.</p>
+         * <p>The real-time metric monitoring data. The format is <code>{timestamp:data}</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;1586249280&quot;: 465.1980465119913, &quot;1586249300&quot;: 213.45243650423305 }</p>
@@ -106,7 +106,7 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
         public java.util.Map<String, ?> dps;
 
         /**
-         * <p>The completeness of time series data points in the metric query result. A value of 1.0 indicates 100% completeness.</p>
+         * <p>The completeness of the time series curve data points in the result returned by the metric query. A value of 1.0 indicates 100% completeness.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0</p>
@@ -115,7 +115,7 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
         public Float integrity;
 
         /**
-         * <p>The timestamp when the request reaches the server. This is used for troubleshooting.</p>
+         * <p>The timestamp when the request reaches the server. This parameter is used for troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>1522127381471</p>
@@ -133,7 +133,7 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
         public String metric;
 
         /**
-         * <p>If the queries contain wildcards, the result includes multiple matching time series data sequences. The summary is the aggregation of the values across these time series at each time point, based on the aggregator type specified in the query. Currently, only avg is supported as the aggregation method.</p>
+         * <p>If the queries contain wildcards, the result includes multiple matched time series data records. The summary is the aggregation of the value sets of these time series at each time point based on the aggregator type provided in the query. Currently, only the avg aggregation method is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCollectorResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>8466BDFB-C513-4B8D-B4E3-5AB256AB****</p>
@@ -42,7 +42,7 @@ public class CreateCollectorResponseBody extends TeaModel {
 
     public static class CreateCollectorResponseBodyResult extends TeaModel {
         /**
-         * <p>The ID of the collector that is created.</p>
+         * <p>The ID of the created collector.</p>
          * 
          * <strong>example:</strong>
          * <p>ct-cn-4135is2tj194p****</p>

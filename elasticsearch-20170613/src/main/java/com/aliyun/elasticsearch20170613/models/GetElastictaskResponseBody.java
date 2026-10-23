@@ -42,7 +42,7 @@ public class GetElastictaskResponseBody extends TeaModel {
 
     public static class GetElastictaskResponseBodyResultElasticExpansionTask extends TeaModel {
         /**
-         * <p>The trigger cycle, specified as a Quartz Cron expression.</p>
+         * <p>The trigger cycle, which uses a Quartz Cron expression.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 0 ? * MON</p>
@@ -51,7 +51,7 @@ public class GetElastictaskResponseBody extends TeaModel {
         public String cronExpression;
 
         /**
-         * <p>The number of elastic data nodes during peak hours.</p>
+         * <p>The target number of elastic data nodes during peak hours.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -68,11 +68,14 @@ public class GetElastictaskResponseBody extends TeaModel {
         @NameInMap("replicaCount")
         public Integer replicaCount;
 
+        /**
+         * <p>The list of target index names for the elastic scaling task. Wildcards are supported.</p>
+         */
         @NameInMap("targetIndices")
         public java.util.List<String> targetIndices;
 
         /**
-         * <p>The cause. Currently, only <strong>crontab</strong> is supported, which indicates scheduled triggering.</p>
+         * <p>The Cause. Currently, only <strong>crontab</strong> is supported, which indicates scheduled triggering.</p>
          * 
          * <strong>example:</strong>
          * <p>crontab</p>
@@ -129,7 +132,7 @@ public class GetElastictaskResponseBody extends TeaModel {
 
     public static class GetElastictaskResponseBodyResultElasticShrinkTask extends TeaModel {
         /**
-         * <p>The trigger cycle, specified as a Quartz Cron expression.</p>
+         * <p>The trigger cycle, which uses a Quartz Cron expression.</p>
          * 
          * <strong>example:</strong>
          * <p>4 4 4 ? * WED</p>
@@ -138,7 +141,7 @@ public class GetElastictaskResponseBody extends TeaModel {
         public String cronExpression;
 
         /**
-         * <p>The number of elastic data nodes during off-peak hours.</p>
+         * <p>The target number of elastic data nodes during off-peak hours.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -155,11 +158,14 @@ public class GetElastictaskResponseBody extends TeaModel {
         @NameInMap("replicaCount")
         public Integer replicaCount;
 
+        /**
+         * <p>The list of target index names for the elastic scaling task. Wildcards are supported.</p>
+         */
         @NameInMap("targetIndices")
         public java.util.List<String> targetIndices;
 
         /**
-         * <p>The cause. Currently, only crontab is supported, which indicates scheduled triggering.</p>
+         * <p>The Cause. Currently, only crontab is supported, which indicates scheduled triggering.</p>
          * 
          * <strong>example:</strong>
          * <p>crontab</p>

@@ -4,6 +4,12 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class EstimatedLogstashRestartTimeRequest extends TeaModel {
+    /**
+     * <p>The restart parameters, including the restart type, target nodes, blue-green deployment options, and concurrency settings.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;restartType&quot;:&quot;nodeIp&quot;,&quot;nodes&quot;:[&quot;172.16.xx.xx&quot;],&quot;blueGreenDep&quot;:true}</p>
+     */
     @NameInMap("body")
     public String body;
 

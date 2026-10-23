@@ -14,10 +14,10 @@ public class InitializeOperationRoleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result. Valid values:</p>
+     * <p>The result. Valid values:</p>
      * <ul>
-     * <li>true: Created.</li>
-     * <li>false: Failed to create.</li>
+     * <li>true: The creation succeeded.</li>
+     * <li>false: The creation failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

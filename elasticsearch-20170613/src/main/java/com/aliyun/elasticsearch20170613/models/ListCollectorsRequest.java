@@ -50,11 +50,11 @@ public class ListCollectorsRequest extends TeaModel {
     public Integer size;
 
     /**
-     * <p>The type of machine on which the collector is deployed. If this parameter is not specified, all types are returned. Valid values:</p>
+     * <p>Specifies the type of machine on which the collector is deployed. If you do not specify this parameter, all types are returned. Valid values:</p>
      * <ul>
      * <li><p>ECS: ECS instance</p>
      * </li>
-     * <li><p>ACK: Container Kubernetes cluster</p>
+     * <li><p>ACK: ACK cluster</p>
      * </li>
      * </ul>
      * 

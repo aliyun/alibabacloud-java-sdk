@@ -13,6 +13,9 @@ public class InstallSystemPluginResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The names of the Elasticsearch plugins installed in this request.</p>
+     */
     @NameInMap("Result")
     public java.util.List<String> result;
 

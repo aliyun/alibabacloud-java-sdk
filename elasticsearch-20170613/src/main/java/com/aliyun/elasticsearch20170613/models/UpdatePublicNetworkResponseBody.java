@@ -42,7 +42,7 @@ public class UpdatePublicNetworkResponseBody extends TeaModel {
 
     public static class UpdatePublicNetworkResponseBodyResult extends TeaModel {
         /**
-         * <p>The status of the public network address switch.</p>
+         * <p>The status of the public endpoint switch.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

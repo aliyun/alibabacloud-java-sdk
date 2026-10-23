@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPipelineRequest extends TeaModel {
     /**
-     * <p>The page number of the current page in a paged query. Valid values: 1 to 200. Default value: 1.</p>
+     * <p>Specifies the page number for a paged query. Valid values: 1 to 200. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListPipelineRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>The pipeline ID.</p>
+     * <p>The ID of the pipeline.</p>
      * 
      * <strong>example:</strong>
      * <p>pipeline_test</p>
@@ -23,7 +23,7 @@ public class ListPipelineRequest extends TeaModel {
     public String pipelineId;
 
     /**
-     * <p>The number of pipelines per page in a paged query. Valid values: 1 to 200.</p>
+     * <p>Specifies the number of pipelines per page for a paged query. Valid values: 1 to 200.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>

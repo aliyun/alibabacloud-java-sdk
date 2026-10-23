@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class NodeSpec extends TeaModel {
     /**
-     * <p>Storage space size of data nodes, in GB.</p>
+     * <p>The disk size of the data node, in GB.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,10 +14,10 @@ public class NodeSpec extends TeaModel {
     public Integer disk;
 
     /**
-     * <p>Whether to enable cloud disk encryption for data nodes:</p>
+     * <p>Specifies whether to enable cloud disk encryption for the data node. Valid values:</p>
      * <ul>
-     * <li>true: Enabled</li>
-     * <li>false: Disabled</li>
+     * <li>true: Enabled.</li>
+     * <li>false: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,17 +27,20 @@ public class NodeSpec extends TeaModel {
     public Boolean diskEncryption;
 
     /**
-     * <p>Storage preference.</p>
+     * <p>The storage preference.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>high_availability</p>
      */
     @NameInMap("diskPreference")
     public String diskPreference;
 
     /**
-     * <p>Storage type of data nodes. Supported values:</p>
+     * <p>The storage type of the data node. Valid values:</p>
      * <ul>
-     * <li>cloud_ssd: SSD cloud disk</li>
-     * <li>cloud_essd: ESSD cloud disk</li>
-     * <li>cloud_efficiency: Ultra cloud disk</li>
+     * <li>cloud_ssd: standard SSD</li>
+     * <li>cloud_essd: ESSD</li>
+     * <li>cloud_efficiency: ultra disk</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +50,7 @@ public class NodeSpec extends TeaModel {
     public String diskType;
 
     /**
-     * <p>Performance level of ESSD cloud disks. Required when the disk type of data nodes is ESSD cloud disk. Supported values: PL1, PL2, PL3.</p>
+     * <p>The performance level (PL) of the ESSD. This parameter is required when the disk type of the data node is ESSD. Valid values: PL1, PL2, and PL3.</p>
      * 
      * <strong>example:</strong>
      * <p>PL1</p>
@@ -56,7 +59,7 @@ public class NodeSpec extends TeaModel {
     public String performanceLevel;
 
     /**
-     * <p>Data node specification. Specification details can be viewed in <a href="https://help.aliyun.com/document_detail/271718.html">Product Specifications</a>.</p>
+     * <p>The specifications of the data node. For more information, see <a href="https://help.aliyun.com/document_detail/271718.html">Product specifications</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

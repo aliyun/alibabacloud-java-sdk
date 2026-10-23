@@ -14,7 +14,7 @@ public class UpdateILMPolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The result.</p>
      * 
      * <strong>example:</strong>
      * <p>my-policy</p>

@@ -16,7 +16,7 @@ public class RenewInstanceResponseBody extends TeaModel {
     /**
      * <p>The returned result. Valid values:</p>
      * <ul>
-     * <li>true: The renewal was successful.</li>
+     * <li>true: The renewal succeeded.</li>
      * <li>false: The renewal failed.</li>
      * </ul>
      * 

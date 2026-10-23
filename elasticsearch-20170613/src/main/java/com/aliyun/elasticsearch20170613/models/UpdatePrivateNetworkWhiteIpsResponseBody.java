@@ -41,6 +41,9 @@ public class UpdatePrivateNetworkWhiteIpsResponseBody extends TeaModel {
     }
 
     public static class UpdatePrivateNetworkWhiteIpsResponseBodyResult extends TeaModel {
+        /**
+         * <p>The VPC private network access whitelist.</p>
+         */
         @NameInMap("privateNetworkIpWhiteList")
         public java.util.List<String> privateNetworkIpWhiteList;
 

@@ -14,7 +14,7 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The index template details.</p>
+     * <p>The details of the index template.</p>
      */
     @NameInMap("Result")
     public DescribeIndexTemplateResponseBodyResult result;
@@ -42,7 +42,7 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
 
     public static class DescribeIndexTemplateResponseBodyResultTemplate extends TeaModel {
         /**
-         * <p>The aliases configuration.</p>
+         * <p>The aliases.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;mydata\&quot;:{}}</p>
@@ -51,7 +51,7 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
         public String aliases;
 
         /**
-         * <p>The mappings configuration.</p>
+         * <p>The mappings.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;properties\&quot;:{\&quot;created_at\&quot;:{\&quot;format\&quot;:\&quot;EEE MMM dd HH:mm:ss Z yyyy\&quot;,\&quot;type\&quot;:\&quot;date\&quot;},\&quot;host_name\&quot;:{\&quot;type\&quot;:\&quot;keyword\&quot;}}}</p>
@@ -60,7 +60,7 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
         public String mappings;
 
         /**
-         * <p>The settings configuration.</p>
+         * <p>The settings.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;index.refresh_interval\&quot;:\&quot;1s\&quot;}</p>
@@ -117,7 +117,7 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
         public Boolean dataStream;
 
         /**
-         * <p>The lifecycle policy name.</p>
+         * <p>The life epoch Policy Name.</p>
          * 
          * <strong>example:</strong>
          * <p>cube_default_ilm_policy</p>
@@ -125,11 +125,14 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
         @NameInMap("ilmPolicy")
         public String ilmPolicy;
 
+        /**
+         * <p>The list of index name patterns that match this index template.</p>
+         */
         @NameInMap("indexPatterns")
         public java.util.List<String> indexPatterns;
 
         /**
-         * <p>The index template name.</p>
+         * <p>The name of the index template.</p>
          * 
          * <strong>example:</strong>
          * <p>data-stream-default</p>

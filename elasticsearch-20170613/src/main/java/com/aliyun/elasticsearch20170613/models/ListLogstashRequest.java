@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLogstashRequest extends TeaModel {
     /**
-     * <p>The instance name. Fuzzy match is supported. For example, if you search for an instance named abc, instances named abc, abcde, xyabc, and xabcy may all be returned.</p>
+     * <p>The name of the instance. Fuzzy match is supported. For example, if you search for instances named abc, the system may return all instances whose names are abc, abcde, xyabc, or xabcy.</p>
      * 
      * <strong>example:</strong>
      * <p>ls-cn-abc</p>
@@ -32,7 +32,7 @@ public class ListLogstashRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm2h5vbzd****</p>
@@ -41,7 +41,7 @@ public class ListLogstashRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The number of entries per page in Settings for paging. Default value: 20.</p>
+     * <p>The number of entries per page in a paging query. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -59,7 +59,7 @@ public class ListLogstashRequest extends TeaModel {
     public String tags;
 
     /**
-     * <p>The instance version.</p>
+     * <p>The version of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>5.5.3_with_X-Pack</p>

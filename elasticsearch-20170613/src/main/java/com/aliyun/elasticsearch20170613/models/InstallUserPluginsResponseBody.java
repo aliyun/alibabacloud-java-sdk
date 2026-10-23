@@ -13,6 +13,9 @@ public class InstallUserPluginsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of custom user plugins submitted for installation.</p>
+     */
     @NameInMap("Result")
     public java.util.List<String> result;
 
