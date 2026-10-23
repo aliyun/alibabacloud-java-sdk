@@ -14,7 +14,7 @@ public class CreateRoleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the RAM role.</p>
+     * <p>The RAM role information.</p>
      */
     @NameInMap("Role")
     public CreateRoleResponseBodyRole role;
@@ -42,7 +42,7 @@ public class CreateRoleResponseBody extends TeaModel {
 
     public static class CreateRoleResponseBodyRole extends TeaModel {
         /**
-         * <p>Indicates whether console logon is allowed for the RAM role.</p>
+         * <p>Indicates whether the RAM role is allowed to log on to the console.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -69,7 +69,7 @@ public class CreateRoleResponseBody extends TeaModel {
         public String assumeRolePolicyDocument;
 
         /**
-         * <p>The time when the RAM role was created.</p>
+         * <p>The creation time. The time is displayed in UTC in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>2015-01-23T12:33:18Z</p>
@@ -81,7 +81,7 @@ public class CreateRoleResponseBody extends TeaModel {
          * <p>The description of the RAM role.</p>
          * 
          * <strong>example:</strong>
-         * <p>ECS management role.</p>
+         * <p>ECS management role</p>
          */
         @NameInMap("Description")
         public String description;

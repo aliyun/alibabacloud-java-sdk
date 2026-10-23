@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateRoleResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -14,7 +14,7 @@ public class UpdateRoleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information of the RAM role.</p>
+     * <p>The information about the RAM role.</p>
      */
     @NameInMap("Role")
     public UpdateRoleResponseBodyRole role;
@@ -42,7 +42,7 @@ public class UpdateRoleResponseBody extends TeaModel {
 
     public static class UpdateRoleResponseBodyRole extends TeaModel {
         /**
-         * <p>Specifies whether the RAM role is allowed to log on to the console.</p>
+         * <p>Specifies whether to allow the RAM role to log on to the console.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -69,7 +69,7 @@ public class UpdateRoleResponseBody extends TeaModel {
         public String assumeRolePolicyDocument;
 
         /**
-         * <p>The time when the RAM role was created.</p>
+         * <p>The time when the RAM role was created. The time is displayed in UTC in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>2015-01-23T12:33:18Z</p>
@@ -114,7 +114,7 @@ public class UpdateRoleResponseBody extends TeaModel {
         public String roleName;
 
         /**
-         * <p>The time when the RAM role was updated.</p>
+         * <p>The time when the RAM role was updated. The time is displayed in UTC in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>2015-01-23T12:33:18Z</p>

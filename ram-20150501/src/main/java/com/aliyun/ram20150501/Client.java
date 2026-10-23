@@ -8,31 +8,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-beijing", "ram.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "ram.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "ram.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "ram.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "ram.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "ram.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "ram.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "ram.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "ram.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "ram.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "ram.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "ram.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "ram.aliyuncs.com"),
-            new TeaPair("us-east-1", "ram.aliyuncs.com"),
-            new TeaPair("eu-west-1", "ram.aliyuncs.com"),
-            new TeaPair("us-west-1", "ram.aliyuncs.com"),
-            new TeaPair("eu-central-1", "ram.aliyuncs.com"),
-            new TeaPair("me-east-1", "ram.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "ram.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "ram.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-1", "ram.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "ram.aliyuncs.com")
-        );
+        this._endpointRule = "central";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("ram", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -697,7 +673,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Operation description</h3>
+     * <h3>Usage notes</h3>
      * <p>For more information about RAM roles, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</p>
      * 
      * <b>summary</b> : 
@@ -759,7 +735,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Operation description</h3>
+     * <h3>Usage notes</h3>
      * <p>For more information about RAM roles, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</p>
      * 
      * <b>summary</b> : 
@@ -937,7 +913,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Decodes the permission diagnostic information from the response body of a request that was denied due to missing RAM permissions.</p>
+     * <p>Decodes the diagnostic information from the response body of a request that is denied due to insufficient RAM permissions.</p>
      * 
      * @param request DecodeDiagnosticMessageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -969,7 +945,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Decodes the permission diagnostic information from the response body of a request that was denied due to missing RAM permissions.</p>
+     * <p>Decodes the diagnostic information from the response body of a request that is denied due to insufficient RAM permissions.</p>
      * 
      * @param request DecodeDiagnosticMessageRequest
      * @return DecodeDiagnosticMessageResponse
@@ -1577,6 +1553,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>产生最近访问信息</p>
+     * 
+     * @param request GenerateServiceLastAccessedDetailsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GenerateServiceLastAccessedDetailsResponse
+     */
+    public GenerateServiceLastAccessedDetailsResponse generateServiceLastAccessedDetailsWithOptions(GenerateServiceLastAccessedDetailsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.arn)) {
+            query.put("Arn", request.arn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.granularity)) {
+            query.put("Granularity", request.granularity);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GenerateServiceLastAccessedDetails"),
+            new TeaPair("version", "2015-05-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateServiceLastAccessedDetailsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>产生最近访问信息</p>
+     * 
+     * @param request GenerateServiceLastAccessedDetailsRequest
+     * @return GenerateServiceLastAccessedDetailsResponse
+     */
+    public GenerateServiceLastAccessedDetailsResponse generateServiceLastAccessedDetails(GenerateServiceLastAccessedDetailsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.generateServiceLastAccessedDetailsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the last time when an AccessKey pair was used.</p>
      * 
      * @param request GetAccessKeyLastUsedRequest
@@ -1952,6 +1976,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetSecurityPreferenceResponse getSecurityPreference() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getSecurityPreferenceWithOptions(runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询最后访问信息</p>
+     * 
+     * @param request GetServiceLastAccessedDetailsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetServiceLastAccessedDetailsResponse
+     */
+    public GetServiceLastAccessedDetailsResponse getServiceLastAccessedDetailsWithOptions(GetServiceLastAccessedDetailsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.marker)) {
+            query.put("Marker", request.marker);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxItems)) {
+            query.put("MaxItems", request.maxItems);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetServiceLastAccessedDetails"),
+            new TeaPair("version", "2015-05-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetServiceLastAccessedDetailsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询最后访问信息</p>
+     * 
+     * @param request GetServiceLastAccessedDetailsRequest
+     * @return GetServiceLastAccessedDetailsResponse
+     */
+    public GetServiceLastAccessedDetailsResponse getServiceLastAccessedDetails(GetServiceLastAccessedDetailsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getServiceLastAccessedDetailsWithOptions(request, runtime);
     }
 
     /**
@@ -3471,10 +3547,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to update the description of the RAM role <code>ECSAdmin</code> to <code>ECS administrator</code>.</p>
+     * <p>This topic provides an example of updating the description of the RAM role <code>ECSAdmin</code> to <code>ECS administrator</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Calls the UpdateRole operation to update the information of a RAM role.</p>
+     * <p>Updates the information of a RAM role.</p>
      * 
      * @param request UpdateRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3522,10 +3598,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to update the description of the RAM role <code>ECSAdmin</code> to <code>ECS administrator</code>.</p>
+     * <p>This topic provides an example of updating the description of the RAM role <code>ECSAdmin</code> to <code>ECS administrator</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Calls the UpdateRole operation to update the information of a RAM role.</p>
+     * <p>Updates the information of a RAM role.</p>
      * 
      * @param request UpdateRoleRequest
      * @return UpdateRoleResponse

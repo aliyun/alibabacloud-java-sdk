@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateRoleRequest extends TeaModel {
     /**
-     * <p>Specifies whether console logon is allowed for the RAM role. Valid values:</p>
+     * <p>Specifies whether the RAM role is allowed to log on to the console. Valid values:</p>
      * <ul>
-     * <li>true: Console logon is allowed.</li>
-     * <li>false: Console logon is not allowed.</li>
+     * <li>true: allowed</li>
+     * <li>false: not allowed</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class CreateRoleRequest extends TeaModel {
     public Boolean allowConsoleLogin;
 
     /**
-     * <p>The trust policy. Specifies one or more principals that are allowed to assume the RAM role. The principal can be an Alibaba Cloud account, an Alibaba Cloud service, or an identity provider.</p>
+     * <p>The trust policy. Specifies one or more principals that are allowed to assume the RAM role. The principals can be Alibaba Cloud accounts, Alibaba Cloud services, or identity providers.</p>
      * <blockquote>
      * <p>Resource Access Management (RAM) users cannot assume RAM roles whose trusted entity is an Alibaba Cloud service.</p>
      * </blockquote>
@@ -34,10 +34,10 @@ public class CreateRoleRequest extends TeaModel {
 
     /**
      * <p>The description of the RAM role.</p>
-     * <p>The description must be 1 to 1024 characters in length.</p>
+     * <p>The description must be 1 to 1,024 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>ECS management role.</p>
+     * <p>ECS management role</p>
      */
     @NameInMap("Description")
     public String description;
@@ -45,7 +45,7 @@ public class CreateRoleRequest extends TeaModel {
     /**
      * <p>The maximum session duration of the RAM role.</p>
      * <p>Valid values: 3600 to 43200. Unit: seconds. Default value: 3600.</p>
-     * <p>If you leave this parameter empty, the default value is used.</p>
+     * <p>If this parameter is left empty, the default value is used.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>

@@ -1,3 +1,8 @@
+2026-10-23 Version: 1.4.0
+- Support API GenerateServiceLastAccessedDetails.
+- Support API GetServiceLastAccessedDetails.
+
+
 2026-08-27 Version: 1.3.0
 - Support API CreateServiceLinkedRole.
 - Support API DeleteServiceLinkedRole.

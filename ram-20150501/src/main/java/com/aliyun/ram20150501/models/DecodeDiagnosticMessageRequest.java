@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DecodeDiagnosticMessageRequest extends TeaModel {
     /**
-     * <p>The encoded diagnostic message obtained from the <code>AccessDeniedDetail.EncodedDiagnosticMessage</code> field in the response body when an API request is denied due to insufficient permissions. Pass this parameter to decode the permission diagnostic information when calling this operation.</p>
+     * <p>The encoded diagnostic information obtained from the <code>AccessDeniedDetail.EncodedDiagnosticMessage</code> field in the response body when an API request is denied due to insufficient permissions. This parameter is used to decode the access denied diagnostic information and is required when you call this operation.</p>
      * 
      * <strong>example:</strong>
      * <p>AQEAAAAAZBgxr0U1MjA1NTM1LUM4BBktMzE5RS1CODgxLUU1QTI0RDNFQTM1****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateRoleRequest extends TeaModel {
     /**
-     * <p>Specifies whether the RAM role is allowed to log on to the console.</p>
+     * <p>Specifies whether to allow the RAM role to log on to the console.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,8 +23,7 @@ public class UpdateRoleRequest extends TeaModel {
     public String newAssumeRolePolicyDocument;
 
     /**
-     * <p>The description of the RAM role.</p>
-     * <p>The description must be 1 to 1024 characters in length.</p>
+     * <p>The description of the RAM role. The description must be 1 to 1,024 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>ECS management role</p>
@@ -33,8 +32,7 @@ public class UpdateRoleRequest extends TeaModel {
     public String newDescription;
 
     /**
-     * <p>The maximum session duration of the RAM role.</p>
-     * <p>Valid values: 3600 to 43200. Unit: seconds. Default value: 3600.</p>
+     * <p>The maximum session duration of the RAM role. Valid values: 3600 to 43200. Unit: seconds. Default value: 3600.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -43,8 +41,7 @@ public class UpdateRoleRequest extends TeaModel {
     public Long newMaxSessionDuration;
 
     /**
-     * <p>The name of the RAM role.</p>
-     * <p>The name must be 1 to 64 characters in length and can contain letters, digits, periods (.), and hyphens (-).</p>
+     * <p>The name of the RAM role. The name must be 1 to 64 characters in length and can contain letters, digits, periods (.), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>ECSAdmin</p>
