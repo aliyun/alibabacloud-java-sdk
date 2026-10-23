@@ -1,3 +1,7 @@
+2026-10-23 Version: 5.12.0
+- Support API GenerateProductContent.
+
+
 2026-10-21 Version: 5.11.1
 - Update API ImageMattingAsync: add request parameters BizId.
 - Update API ImageRecognitionAsync: add request parameters BizId.
