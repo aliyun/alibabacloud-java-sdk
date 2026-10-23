@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindPolarClawAgentRequest extends TeaModel {
     /**
-     * <p>The agent ID.</p>
+     * <p>The ID of the agent to associate.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class BindPolarClawAgentRequest extends TeaModel {
     public String agentId;
 
     /**
-     * <p>The application ID.</p>
+     * <p>The application ID. You can call the DescribeApplications operation to obtain the application ID from the returned Items list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class BindPolarClawAgentRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The channel ID.</p>
+     * <p>The channel plugin ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class BindPolarClawAgentRequest extends TeaModel {
     public String channel;
 
     /**
-     * <p>The account ID for the channel. If omitted, the default value is \&quot;default\&quot;.</p>
+     * <p>The channel account ID. If you do not specify this parameter, the default value is default.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>

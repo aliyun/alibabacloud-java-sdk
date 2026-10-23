@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyModelServiceRequest extends TeaModel {
     /**
-     * <p>The API key for the model service.</p>
+     * <p>The API key of the model service.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -14,7 +14,7 @@ public class ModifyModelServiceRequest extends TeaModel {
     public String apiKey;
 
     /**
-     * <p>The address of the upstream service.</p>
+     * <p>The upstream service URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></p>
@@ -23,7 +23,7 @@ public class ModifyModelServiceRequest extends TeaModel {
     public String baseUrl;
 
     /**
-     * <p>The ID of the gateway instance.</p>
+     * <p>The gateway cluster ID. You can obtain this ID from the GwClusterId parameter returned by the CreateGateway operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class ModifyModelServiceRequest extends TeaModel {
     public String gwClusterId;
 
     /**
-     * <p>The cost in points per million input tokens.</p>
+     * <p>The number of input points.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -52,7 +52,7 @@ public class ModifyModelServiceRequest extends TeaModel {
     public String modelCategory;
 
     /**
-     * <p>The ID of the model service.</p>
+     * <p>The model service ID. You can obtain this ID from the ModelServiceId parameter returned by the CreateModelService operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class ModifyModelServiceRequest extends TeaModel {
     public String modelServiceId;
 
     /**
-     * <p>The name of the model service.</p>
+     * <p>The model service name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class ModifyModelServiceRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The cost in points per million output tokens.</p>
+     * <p>The number of output points.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -83,14 +83,10 @@ public class ModifyModelServiceRequest extends TeaModel {
     /**
      * <p>The protocol type. Valid values:</p>
      * <ul>
-     * <li><p><strong>openai</strong></p>
-     * </li>
-     * <li><p><strong>anthropic</strong></p>
-     * </li>
-     * <li><p><strong>bailian</strong></p>
-     * </li>
-     * <li><p><strong>vllm</strong></p>
-     * </li>
+     * <li><strong>openai</strong></li>
+     * <li><strong>anthropic</strong></li>
+     * <li><strong>bailian</strong></li>
+     * <li><strong>vllm</strong></li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -110,7 +106,7 @@ public class ModifyModelServiceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The cost in points per request.</p>
+     * <p>The number of requests.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

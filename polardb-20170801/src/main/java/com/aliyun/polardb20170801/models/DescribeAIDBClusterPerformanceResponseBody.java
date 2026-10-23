@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
     /**
-     * <p>The API key for the model service.</p>
+     * <p>An API key for the model service.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -32,8 +32,8 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
     public String DBType;
 
     /**
-     * <p>The version number of the database AI engine.</p>
-     * <p>Example: 3.0</p>
+     * <p>The version number of the database AI DPI engine.</p>
+     * <p>  -3.0</p>
      * 
      * <strong>example:</strong>
      * <p>3.0</p>
@@ -42,7 +42,7 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
     public String DBVersion;
 
     /**
-     * <p>The end of the time range that was queried. The time is in the <code>YYYY-MM-DDThh:mmZ</code> format and is in UTC.</p>
+     * <p>The end time of the query. The end time must be later than the start time. Specify the time in the <code>YYYY-MM-DDThh:mmZ</code> format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-11-16T16:00Z</p>
@@ -51,7 +51,7 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The time granularity of the performance data. Valid values:</p>
+     * <p>The data granularity of performance. Valid values:</p>
      * <ul>
      * <li>60</li>
      * <li>3600</li>
@@ -64,7 +64,7 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
     public String interval;
 
     /**
-     * <p>The details of the instance performance parameters.</p>
+     * <p>The details of the instance performance metrics.</p>
      */
     @NameInMap("PerformanceKeys")
     public java.util.List<DescribeAIDBClusterPerformanceResponseBodyPerformanceKeys> performanceKeys;
@@ -79,7 +79,7 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range that was queried. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is in UTC.</p>
+     * <p>The start time of the query. Specify the time in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-11-15T16:00Z</p>
@@ -166,7 +166,7 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
 
     public static class DescribeAIDBClusterPerformanceResponseBodyPerformanceKeysPoints extends TeaModel {
         /**
-         * <p>The UNIX timestamp that indicates when the metric was collected. Unit: milliseconds.</p>
+         * <p>The specific time point of the monitoring metric. The format is a UNIX timestamp, and the unit is milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1724206183</p>
@@ -175,7 +175,7 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
         public Long timestamp;
 
         /**
-         * <p>The value of the metric.</p>
+         * <p>The value of the monitoring metric.</p>
          * 
          * <strong>example:</strong>
          * <p>42.38</p>
@@ -208,7 +208,7 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
 
     public static class DescribeAIDBClusterPerformanceResponseBodyPerformanceKeys extends TeaModel {
         /**
-         * <p>The ID of the cluster node.</p>
+         * <p>The ID of the database cluster node.</p>
          * 
          * <strong>example:</strong>
          * <p>pi-*************</p>
@@ -217,7 +217,7 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
         public String DBNodeId;
 
         /**
-         * <p>The performance metric.</p>
+         * <p>The performance metrics.</p>
          * 
          * <strong>example:</strong>
          * <p>PolarDBAIModelCall</p>
@@ -226,7 +226,7 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
         public String measurement;
 
         /**
-         * <p>The name of the specific performance metric.</p>
+         * <p>The specific measurement name of the performance metrics.</p>
          * 
          * <strong>example:</strong>
          * <p>model_input_amount</p>

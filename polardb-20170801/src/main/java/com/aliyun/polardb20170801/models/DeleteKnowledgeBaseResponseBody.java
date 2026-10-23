@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteKnowledgeBaseResponseBody extends TeaModel {
     /**
-     * <p>The unique ID of the knowledge base.</p>
+     * <p>The unique identifier of the knowledge base.</p>
      * 
      * <strong>example:</strong>
      * <p>pkb-xxxxx</p>

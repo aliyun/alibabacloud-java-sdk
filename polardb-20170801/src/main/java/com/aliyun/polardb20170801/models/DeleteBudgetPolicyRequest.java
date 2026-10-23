@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteBudgetPolicyRequest extends TeaModel {
     /**
-     * <p>The ID of the cost budget policy.</p>
+     * <p>The ID of the budget policy to delete. You can obtain the ID from the BudgetPolicyId returned by CreateBudgetPolicy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteBudgetPolicyRequest extends TeaModel {
     public String budgetPolicyId;
 
     /**
-     * <p>The gateway instance ID.</p>
+     * <p>The ID of the gateway instance. You can obtain the ID from the GwClusterId returned by CreateGateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

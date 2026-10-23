@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyRateLimitPolicyRequest extends TeaModel {
     /**
-     * <p>The gateway instance ID.</p>
+     * <p>The ID of the gateway instance. You can obtain the ID from the GwClusterId parameter returned by CreateGateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifyRateLimitPolicyRequest extends TeaModel {
     public String gwClusterId;
 
     /**
-     * <p>The rate limit policy ID.</p>
+     * <p>The ID of the throttling policy to be modified. You can obtain the ID from the PolicyId parameter returned by CreateRateLimitPolicy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ModifyRateLimitPolicyRequest extends TeaModel {
     public String policyId;
 
     /**
-     * <p>The maximum number of requests per minute.</p>
+     * <p>The limit on the number of requests per minute.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -34,7 +34,7 @@ public class ModifyRateLimitPolicyRequest extends TeaModel {
     public String rateLimitRpm;
 
     /**
-     * <p>The maximum number of tokens per minute.</p>
+     * <p>The limit on the number of tokens per minute.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

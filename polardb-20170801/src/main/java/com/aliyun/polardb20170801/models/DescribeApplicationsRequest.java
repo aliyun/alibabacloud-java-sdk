@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationsRequest extends TeaModel {
     /**
-     * <p>The list of application IDs. If specified, only the information of these applications is returned.</p>
+     * <p>The list of application IDs. If specified, only the information about these applications is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
@@ -15,6 +15,9 @@ public class DescribeApplicationsRequest extends TeaModel {
 
     /**
      * <p>The application engine filter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>polardb_polarclaw</p>
      */
     @NameInMap("ApplicationTypes")
     public String applicationTypes;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBudgetPoliciesRequest extends TeaModel {
     /**
-     * <p>The dimension object ID. This parameter is required when BudgetDimensionType is set to ConsumerGroup or Consumer.</p>
+     * <p>The ID of the dimension object. This parameter is required when BudgetDimensionType is set to ConsumerGroup or Consumer.</p>
      * 
      * <strong>example:</strong>
      * <p>cg-p3gk2oh55c**</p>
@@ -14,10 +14,10 @@ public class DescribeBudgetPoliciesRequest extends TeaModel {
     public String budgetDimensionRefId;
 
     /**
-     * <p>The policy type. Valid values:</p>
+     * <p>The type of the policy. Valid values:</p>
      * <ul>
-     * <li><strong>ConsumerGroup</strong>: total budget for a user group</li>
-     * <li><strong>Consumer</strong>: total budget for a user</li>
+     * <li><strong>ConsumerGroup</strong>: Total budget for consumer groups.</li>
+     * <li><strong>Consumer</strong>: Total budget for consumers.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DescribeBudgetPoliciesRequest extends TeaModel {
     public String budgetDimensionType;
 
     /**
-     * <p>The budget policy ID.</p>
+     * <p>The ID of the budget policy.</p>
      * 
      * <strong>example:</strong>
      * <p>023aacc1effc4b56bb154bfbec6baxxx</p>
@@ -78,14 +78,20 @@ public class DescribeBudgetPoliciesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The name of the object associated with the scope of the budget policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-group</p>
+     */
     @NameInMap("ScopeRefName")
     public String scopeRefName;
 
     /**
-     * <p>The policy status. Valid values:</p>
+     * <p>The status of the policy. Valid values:</p>
      * <ul>
-     * <li><strong>Enabled</strong>: enabled</li>
-     * <li><strong>Disenabled</strong>: disabled</li>
+     * <li><strong>Enabled</strong>: Enabled.</li>
+     * <li><strong>Disenabled</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

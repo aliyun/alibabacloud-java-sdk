@@ -621,7 +621,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a single-turn knowledge base question answering.</p>
+     * <p>Answers a single-turn question based on a knowledge base.</p>
      * 
      * @param request AnswerKnowledgeBaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -693,7 +693,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a single-turn knowledge base question answering.</p>
+     * <p>Answers a single-turn question based on a knowledge base.</p>
      * 
      * @param request AnswerKnowledgeBaseRequest
      * @return AnswerKnowledgeBaseResponse
@@ -775,6 +775,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ApplyApplicationPromptsResponse applyApplicationPrompts(ApplyApplicationPromptsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.applyApplicationPromptsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>应用Lakebase挂载参数模板</p>
+     * 
+     * @param request ApplyLakebaseMountParameterGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ApplyLakebaseMountParameterGroupResponse
+     */
+    public ApplyLakebaseMountParameterGroupResponse applyLakebaseMountParameterGroupWithOptions(ApplyLakebaseMountParameterGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.parameterGroupId)) {
+            query.put("ParameterGroupId", request.parameterGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.polarFsInstanceId)) {
+            query.put("PolarFsInstanceId", request.polarFsInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ApplyLakebaseMountParameterGroup"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ApplyLakebaseMountParameterGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>应用Lakebase挂载参数模板</p>
+     * 
+     * @param request ApplyLakebaseMountParameterGroupRequest
+     * @return ApplyLakebaseMountParameterGroupResponse
+     */
+    public ApplyLakebaseMountParameterGroupResponse applyLakebaseMountParameterGroup(ApplyLakebaseMountParameterGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.applyLakebaseMountParameterGroupWithOptions(request, runtime);
     }
 
     /**
@@ -883,11 +935,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>This API associates an agent from a PolarClaw application with a communication channel. You specify the application with <code>ApplicationId</code>, the agent with <code>AgentId</code>, and the channel with <code>Channel</code>. You can optionally specify an account ID for the channel with <code>ChannelAccountId</code>.</p>
+     * <h2>Request description</h2>
+     * <p>This API operation associates a PolarClaw agent (specified by AgentId) of a PolarClaw application (identified by ApplicationId) with a given communication channel (Channel). If necessary, you can also specify the account ID (ChannelAccountId) within the channel.</p>
      * 
      * <b>summary</b> : 
-     * <p>Binds a PolarClaw Agent to a channel.</p>
+     * <p>Associates a specified channel with a specific PolarClaw agent.</p>
      * 
      * @param request BindPolarClawAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -931,11 +983,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>This API associates an agent from a PolarClaw application with a communication channel. You specify the application with <code>ApplicationId</code>, the agent with <code>AgentId</code>, and the channel with <code>Channel</code>. You can optionally specify an account ID for the channel with <code>ChannelAccountId</code>.</p>
+     * <h2>Request description</h2>
+     * <p>This API operation associates a PolarClaw agent (specified by AgentId) of a PolarClaw application (identified by ApplicationId) with a given communication channel (Channel). If necessary, you can also specify the account ID (ChannelAccountId) within the channel.</p>
      * 
      * <b>summary</b> : 
-     * <p>Binds a PolarClaw Agent to a channel.</p>
+     * <p>Associates a specified channel with a specific PolarClaw agent.</p>
      * 
      * @param request BindPolarClawAgentRequest
      * @return BindPolarClawAgentResponse
@@ -2797,7 +2849,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Generates activation codes for the lightweight version.</p>
+     * <p>Generates an activation code for the lightweight edition.</p>
      * 
      * @param request CreateActivationCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2861,7 +2913,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Generates activation codes for the lightweight version.</p>
+     * <p>Generates an activation code for the lightweight edition.</p>
      * 
      * @param request CreateActivationCodeRequest
      * @return CreateActivationCodeResponse
@@ -2896,6 +2948,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.parentBranchId)) {
             query.put("ParentBranchId", request.parentBranchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentTimestamp)) {
+            query.put("ParentTimestamp", request.parentTimestamp);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
@@ -2962,6 +3018,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.historyRetentionSeconds)) {
+            query.put("HistoryRetentionSeconds", request.historyRetentionSeconds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
             query.put("ProjectName", request.projectName);
         }
@@ -3001,6 +3061,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateAgenticDBProjectResponse createAgenticDBProject(CreateAgenticDBProjectRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createAgenticDBProjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates an independent business tenant without creating an API key.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an AgenticDB tenant.</p>
+     * 
+     * @param request CreateAgenticDBTenantRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAgenticDBTenantResponse
+     */
+    public CreateAgenticDBTenantResponse createAgenticDBTenantWithOptions(CreateAgenticDBTenantRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantName)) {
+            query.put("TenantName", request.tenantName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAgenticDBTenant"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAgenticDBTenantResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates an independent business tenant without creating an API key.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an AgenticDB tenant.</p>
+     * 
+     * @param request CreateAgenticDBTenantRequest
+     * @return CreateAgenticDBTenantResponse
+     */
+    public CreateAgenticDBTenantResponse createAgenticDBTenant(CreateAgenticDBTenantRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAgenticDBTenantWithOptions(request, runtime);
     }
 
     /**
@@ -3481,9 +3603,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>Each cluster can have up to three manually created backups at the same time.</li>
-     * <li>If the error message <code>Exceeding the daily backup times of this DB cluster</code> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before you call this operation.</li>
-     * <li>After you call this operation, a backup task is created in the background. If the data volume is large, the backup may take a long time. Wait until the backup is complete.</li>
+     * <li>Each cluster can have up to three manually created backups at a time.</li>
+     * <li>If the error message <code>Exceeding the daily backup times of this DB cluster</code> appears, it indicates that three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete a backup</a> before you call this operation.</li>
+     * <li>After you call this operation, a backup task is created in the background. If the data volume is large, the task may take a long time to complete.</li>
      * </ul>
      * </blockquote>
      * 
@@ -3546,9 +3668,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>Each cluster can have up to three manually created backups at the same time.</li>
-     * <li>If the error message <code>Exceeding the daily backup times of this DB cluster</code> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before you call this operation.</li>
-     * <li>After you call this operation, a backup task is created in the background. If the data volume is large, the backup may take a long time. Wait until the backup is complete.</li>
+     * <li>Each cluster can have up to three manually created backups at a time.</li>
+     * <li>If the error message <code>Exceeding the daily backup times of this DB cluster</code> appears, it indicates that three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete a backup</a> before you call this operation.</li>
+     * <li>After you call this operation, a backup task is created in the background. If the data volume is large, the task may take a long time to complete.</li>
      * </ul>
      * </blockquote>
      * 
@@ -7948,6 +8070,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only tenants whose projects and branches have been completely cleaned up can be deleted. After a successful deletion, all API keys associated with the tenant become invalid. This operation does not automatically clean up projects, branches, or storage.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an AgenticDB tenant.</p>
+     * 
+     * @param request DeleteAgenticDBTenantRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAgenticDBTenantResponse
+     */
+    public DeleteAgenticDBTenantResponse deleteAgenticDBTenantWithOptions(DeleteAgenticDBTenantRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAgenticDBTenant"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAgenticDBTenantResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Only tenants whose projects and branches have been completely cleaned up can be deleted. After a successful deletion, all API keys associated with the tenant become invalid. This operation does not automatically clean up projects, branches, or storage.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an AgenticDB tenant.</p>
+     * 
+     * @param request DeleteAgenticDBTenantRequest
+     * @return DeleteAgenticDBTenantResponse
+     */
+    public DeleteAgenticDBTenantResponse deleteAgenticDBTenant(DeleteAgenticDBTenantRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAgenticDBTenantWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Deletes an API key of an AgenticDB tenant.</p>
      * 
@@ -8255,7 +8435,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a cost budget policy.</p>
+     * <p>Deletes a budget policy.</p>
      * 
      * @param request DeleteBudgetPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8295,7 +8475,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a cost budget policy.</p>
+     * <p>Deletes a budget policy.</p>
      * 
      * @param request DeleteBudgetPolicyRequest
      * @return DeleteBudgetPolicyResponse
@@ -10023,14 +10203,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>A successful operation returns the ID of the deleted agent and the number of removed bindings.</li>
-     * <li>Ensure you provide the correct target <code>AgentId</code>. An incorrect ID can cause the operation to fail or affect an unintended agent.</li>
+     * <li>After this API is executed, it returns the ID of the successfully removed agent and the number of removed bindings.</li>
+     * <li>Ensure that you know the target <code>AgentId</code> before calling this API. Otherwise, the operation may fail or affect unexpected agents.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>This operation removes an agent and its associated bindings from a specified PolarClaw.</p>
+     * <p>Removes an agent and its associated bindings from a specified PolarClaw.</p>
      * 
      * @param request DeletePolarClawAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10070,14 +10250,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>A successful operation returns the ID of the deleted agent and the number of removed bindings.</li>
-     * <li>Ensure you provide the correct target <code>AgentId</code>. An incorrect ID can cause the operation to fail or affect an unintended agent.</li>
+     * <li>After this API is executed, it returns the ID of the successfully removed agent and the number of removed bindings.</li>
+     * <li>Ensure that you know the target <code>AgentId</code> before calling this API. Otherwise, the operation may fail or affect unexpected agents.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>This operation removes an agent and its associated bindings from a specified PolarClaw.</p>
+     * <p>Removes an agent and its associated bindings from a specified PolarClaw.</p>
      * 
      * @param request DeletePolarClawAgentRequest
      * @return DeletePolarClawAgentResponse
@@ -10707,7 +10887,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the API key of a model service.</p>
+     * <p>Queries the API keys for the model service.</p>
      * 
      * @param request DescribeAIDBClusterApiKeysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10743,7 +10923,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the API key of a model service.</p>
+     * <p>Queries the API keys for the model service.</p>
      * 
      * @param request DescribeAIDBClusterApiKeysRequest
      * @return DescribeAIDBClusterApiKeysResponse
@@ -11187,12 +11367,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This operation filters and returns a list of model operators based on the RelativeDBClusterId and KubeType parameters.</li>
-     * <li>Note: Make sure that the RelativeDBClusterId provided in the request matches the instance ID of an existing PolarDB database instance. Otherwise, the data cannot be retrieved.</li>
+     * <li>This operation allows you to filter and retrieve a list of model operators by using the <code>RelativeDBClusterId</code> and <code>KubeType</code> parameters.</li>
+     * <li>Note: Make sure that the <code>RelativeDBClusterId</code> you provide matches the instance ID of an existing PolarDB database. Otherwise, the data cannot be retrieved.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of model operators for a specified PolarDB database instance.</p>
+     * <p>Retrieves the list of model operators for a specified PolarDB instance.</p>
      * 
      * @param request DescribeAIDBClusterTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11258,12 +11438,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This operation filters and returns a list of model operators based on the RelativeDBClusterId and KubeType parameters.</li>
-     * <li>Note: Make sure that the RelativeDBClusterId provided in the request matches the instance ID of an existing PolarDB database instance. Otherwise, the data cannot be retrieved.</li>
+     * <li>This operation allows you to filter and retrieve a list of model operators by using the <code>RelativeDBClusterId</code> and <code>KubeType</code> parameters.</li>
+     * <li>Note: Make sure that the <code>RelativeDBClusterId</code> you provide matches the instance ID of an existing PolarDB database. Otherwise, the data cannot be retrieved.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of model operators for a specified PolarDB database instance.</p>
+     * <p>Retrieves the list of model operators for a specified PolarDB instance.</p>
      * 
      * @param request DescribeAIDBClusterTasksRequest
      * @return DescribeAIDBClusterTasksResponse
@@ -12063,6 +12243,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the earliest restorable time for an AgenticDB branch.</p>
+     * 
+     * @param request DescribeAgenticDBBranchRestoreWindowRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAgenticDBBranchRestoreWindowResponse
+     */
+    public DescribeAgenticDBBranchRestoreWindowResponse describeAgenticDBBranchRestoreWindowWithOptions(DescribeAgenticDBBranchRestoreWindowRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.branchId)) {
+            query.put("BranchId", request.branchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAgenticDBBranchRestoreWindow"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAgenticDBBranchRestoreWindowResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the earliest restorable time for an AgenticDB branch.</p>
+     * 
+     * @param request DescribeAgenticDBBranchRestoreWindowRequest
+     * @return DescribeAgenticDBBranchRestoreWindowResponse
+     */
+    public DescribeAgenticDBBranchRestoreWindowResponse describeAgenticDBBranchRestoreWindow(DescribeAgenticDBBranchRestoreWindowRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAgenticDBBranchRestoreWindowWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the list of AgenticDB branches.</p>
      * 
      * @param request DescribeAgenticDBBranchesRequest
@@ -12233,7 +12473,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of AgenticDB compute instances.</p>
+     * <p>Queries a list of AgenticDB compute instances.</p>
      * 
      * @param request DescribeAgenticDBComputeClustersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12285,7 +12525,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of AgenticDB compute instances.</p>
+     * <p>Queries a list of AgenticDB compute instances.</p>
      * 
      * @param request DescribeAgenticDBComputeClustersRequest
      * @return DescribeAgenticDBComputeClustersResponse
@@ -12353,7 +12593,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of AgenticDB projects.</p>
+     * <p>Queries the actual history retention window of an AgenticDB project.</p>
+     * 
+     * @param request DescribeAgenticDBProjectHistoryRetentionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAgenticDBProjectHistoryRetentionResponse
+     */
+    public DescribeAgenticDBProjectHistoryRetentionResponse describeAgenticDBProjectHistoryRetentionWithOptions(DescribeAgenticDBProjectHistoryRetentionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAgenticDBProjectHistoryRetention"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAgenticDBProjectHistoryRetentionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the actual history retention window of an AgenticDB project.</p>
+     * 
+     * @param request DescribeAgenticDBProjectHistoryRetentionRequest
+     * @return DescribeAgenticDBProjectHistoryRetentionResponse
+     */
+    public DescribeAgenticDBProjectHistoryRetentionResponse describeAgenticDBProjectHistoryRetention(DescribeAgenticDBProjectHistoryRetentionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAgenticDBProjectHistoryRetentionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of AgenticDB projects.</p>
      * 
      * @param request DescribeAgenticDBProjectsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12409,7 +12705,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of AgenticDB projects.</p>
+     * <p>Queries a list of AgenticDB projects.</p>
      * 
      * @param request DescribeAgenticDBProjectsRequest
      * @return DescribeAgenticDBProjectsResponse
@@ -12481,7 +12777,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a specified API key.</p>
+     * <p>Queries the details of the API key.</p>
      * 
      * @param request DescribeApikeyAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12525,7 +12821,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a specified API key.</p>
+     * <p>Queries the details of the API key.</p>
      * 
      * @param request DescribeApikeyAttributeRequest
      * @return DescribeApikeyAttributeResponse
@@ -12537,7 +12833,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API queries all relevant information about a specific PolarDB application, including but not limited to component details and connection endpoints.</p>
+     * <p>This API queries all relevant information about a specific PolarDB application, including but not limited to component details and endpoints.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of a specified PolarDB instance application.</p>
@@ -12572,7 +12868,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API queries all relevant information about a specific PolarDB application, including but not limited to component details and connection endpoints.</p>
+     * <p>This API queries all relevant information about a specific PolarDB application, including but not limited to component details and endpoints.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of a specified PolarDB instance application.</p>
@@ -13099,7 +13395,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of applications for all PolarDB instances in a specified region.</p>
+     * <p>Retrieves a list of applications for all PolarDB instances in a specified region.</p>
      * 
      * @param request DescribeApplicationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13155,7 +13451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of applications for all PolarDB instances in a specified region.</p>
+     * <p>Retrieves a list of applications for all PolarDB instances in a specified region.</p>
      * 
      * @param request DescribeApplicationsRequest
      * @return DescribeApplicationsResponse
@@ -13359,7 +13655,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of backup logs and returns their download URLs.</p>
+     * <p>Queries the download links for redo log backups.</p>
+     * 
+     * @param request DescribeBackupLogDownloadLinksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeBackupLogDownloadLinksResponse
+     */
+    public DescribeBackupLogDownloadLinksResponse describeBackupLogDownloadLinksWithOptions(DescribeBackupLogDownloadLinksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.backupLogIds)) {
+            query.put("BackupLogIds", request.backupLogIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expireHours)) {
+            query.put("ExpireHours", request.expireHours);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeBackupLogDownloadLinks"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeBackupLogDownloadLinksResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the download links for redo log backups.</p>
+     * 
+     * @param request DescribeBackupLogDownloadLinksRequest
+     * @return DescribeBackupLogDownloadLinksResponse
+     */
+    public DescribeBackupLogDownloadLinksResponse describeBackupLogDownloadLinks(DescribeBackupLogDownloadLinksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeBackupLogDownloadLinksWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of backup logs and retrieves their download URLs.</p>
      * 
      * @param request DescribeBackupLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13427,7 +13775,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of backup logs and returns their download URLs.</p>
+     * <p>Queries the list of backup logs and retrieves their download URLs.</p>
      * 
      * @param request DescribeBackupLogsRequest
      * @return DescribeBackupLogsResponse
@@ -13719,7 +14067,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of a batch task.</p>
+     * <p>Queries the status details of a batch task.</p>
      * 
      * @param request DescribeBatchTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13751,7 +14099,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of a batch task.</p>
+     * <p>Queries the status details of a batch task.</p>
      * 
      * @param request DescribeBatchTaskRequest
      * @return DescribeBatchTaskResponse
@@ -13833,7 +14181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries cost budget policies.</p>
+     * <p>Queries budget policies.</p>
      * 
      * @param request DescribeBudgetPoliciesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13897,7 +14245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries cost budget policies.</p>
+     * <p>Queries budget policies.</p>
      * 
      * @param request DescribeBudgetPoliciesRequest
      * @return DescribeBudgetPoliciesResponse
@@ -14049,7 +14397,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries cold storage instances.</p>
+     * <p>Queries cold storage instance information.</p>
      * 
      * @param request DescribeColdStorageInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14137,7 +14485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries cold storage instances.</p>
+     * <p>Queries cold storage instance information.</p>
      * 
      * @param request DescribeColdStorageInstanceRequest
      * @return DescribeColdStorageInstanceResponse
@@ -14209,7 +14557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of consumers.</p>
+     * <p>Queries a list of consumers.</p>
      * 
      * @param request DescribeConsumersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14269,7 +14617,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of consumers.</p>
+     * <p>Queries a list of consumers.</p>
      * 
      * @param request DescribeConsumersRequest
      * @return DescribeConsumersResponse
@@ -16033,7 +16381,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of PolarDB clusters or the details of clusters with RAM authorization.</p>
+     * <p>Queries a list of PolarDB clusters or the details of clusters with RAM authorization.</p>
      * 
      * @param request DescribeDBClustersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16145,7 +16493,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of PolarDB clusters or the details of clusters with RAM authorization.</p>
+     * <p>Queries a list of PolarDB clusters or the details of clusters with RAM authorization.</p>
      * 
      * @param request DescribeDBClustersRequest
      * @return DescribeDBClustersResponse
@@ -17229,7 +17577,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the attributes of an PolarDB on ENS cluster.</p>
+     * <p>Queries the details of an edge cluster.</p>
      * 
      * @param request DescribeDbClusterAttributeZonalRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17281,7 +17629,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the attributes of an PolarDB on ENS cluster.</p>
+     * <p>Queries the details of an edge cluster.</p>
      * 
      * @param request DescribeDbClusterAttributeZonalRequest
      * @return DescribeDbClusterAttributeZonalResponse
@@ -17505,7 +17853,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of extensions.</p>
+     * <p>Queries plugin details.</p>
      * 
      * @param request DescribeExtensionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17561,7 +17909,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of extensions.</p>
+     * <p>Queries plugin details.</p>
      * 
      * @param request DescribeExtensionsRequest
      * @return DescribeExtensionsResponse
@@ -17689,7 +18037,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Viewing gateway instance details</p>
+     * <p>Queries the details of a gateway instance.</p>
      * 
      * @param request DescribeGatewayAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17725,7 +18073,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Viewing gateway instance details</p>
+     * <p>Queries the details of a gateway instance.</p>
      * 
      * @param request DescribeGatewayAttributeRequest
      * @return DescribeGatewayAttributeResponse
@@ -24954,7 +25302,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the description of an account in a PolarDB on ENS cluster.</p>
+     * <p>Modifies the description of a PolarDB on ENS account.</p>
      * 
      * @param request ModifyAccountDescriptionZonalRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -25014,7 +25362,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the description of an account in a PolarDB on ENS cluster.</p>
+     * <p>Modifies the description of a PolarDB on ENS account.</p>
      * 
      * @param request ModifyAccountDescriptionZonalRequest
      * @return ModifyAccountDescriptionZonalResponse
@@ -25410,6 +25758,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyActiveOperationTasksResponse modifyActiveOperationTasks(ModifyActiveOperationTasksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyActiveOperationTasksWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the history retention window of an AgenticDB project.</p>
+     * 
+     * @param request ModifyAgenticDBProjectHistoryRetentionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyAgenticDBProjectHistoryRetentionResponse
+     */
+    public ModifyAgenticDBProjectHistoryRetentionResponse modifyAgenticDBProjectHistoryRetentionWithOptions(ModifyAgenticDBProjectHistoryRetentionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.historyRetentionSeconds)) {
+            query.put("HistoryRetentionSeconds", request.historyRetentionSeconds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyAgenticDBProjectHistoryRetention"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyAgenticDBProjectHistoryRetentionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the history retention window of an AgenticDB project.</p>
+     * 
+     * @param request ModifyAgenticDBProjectHistoryRetentionRequest
+     * @return ModifyAgenticDBProjectHistoryRetentionResponse
+     */
+    public ModifyAgenticDBProjectHistoryRetentionResponse modifyAgenticDBProjectHistoryRetention(ModifyAgenticDBProjectHistoryRetentionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyAgenticDBProjectHistoryRetentionWithOptions(request, runtime);
     }
 
     /**
@@ -30120,7 +30528,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a rate limit policy.</p>
+     * <p>Modifies a throttling policy.</p>
      * 
      * @param request ModifyRateLimitPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30168,7 +30576,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a rate limit policy.</p>
+     * <p>Modifies a throttling policy.</p>
      * 
      * @param request ModifyRateLimitPolicyRequest
      * @return ModifyRateLimitPolicyResponse
@@ -30898,7 +31306,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Registers an OSS file in a knowledge base.</p>
+     * <p>Registers an OSS file for a knowledge base.</p>
      * 
      * @param request RegisterKnowledgeBaseFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30938,7 +31346,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Registers an OSS file in a knowledge base.</p>
+     * <p>Registers an OSS file for a knowledge base.</p>
      * 
      * @param request RegisterKnowledgeBaseFileRequest
      * @return RegisterKnowledgeBaseFileResponse
@@ -31142,7 +31550,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unpairs a PolarClaw device.</p>
+     * <p>Removes a paired PolarClaw device.</p>
      * 
      * @param request RemovePolarClawDevicePairRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31178,7 +31586,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unpairs a PolarClaw device.</p>
+     * <p>Removes a paired PolarClaw device.</p>
      * 
      * @param request RemovePolarClawDevicePairRequest
      * @return RemovePolarClawDevicePairResponse
@@ -32390,10 +32798,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves memory data from a specified application.</p>
+     * <p>Retrieves memory data in a specified application.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves memories from a specified application.</p>
+     * <p>Retrieves memories.</p>
      * 
      * @param request SearchMemoriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32457,10 +32865,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves memory data from a specified application.</p>
+     * <p>Retrieves memory data in a specified application.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves memories from a specified application.</p>
+     * <p>Retrieves memories.</p>
      * 
      * @param request SearchMemoriesRequest
      * @return SearchMemoriesResponse
@@ -32995,6 +33403,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>调用前，先通过 BindPolarClawAgent 为指定应用、Agent 和通道建立绑定。本接口使用同一组 ApplicationId、AgentId 和 Channel 解除绑定。</p>
+     * 
      * <b>summary</b> : 
      * <p>Unbinds a PolarClaw Agent.</p>
      * 
@@ -33039,6 +33451,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>调用前，先通过 BindPolarClawAgent 为指定应用、Agent 和通道建立绑定。本接口使用同一组 ApplicationId、AgentId 和 Channel 解除绑定。</p>
+     * 
      * <b>summary</b> : 
      * <p>Unbinds a PolarClaw Agent.</p>
      * 
@@ -33134,7 +33550,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Uninstalls a PolarClaw plugin.</p>
+     * <p>Uninstalls the PolarClaw plugin.</p>
      * 
      * @param request UninstallPolarClawPluginRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -33174,7 +33590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Uninstalls a PolarClaw plugin.</p>
+     * <p>Uninstalls the PolarClaw plugin.</p>
      * 
      * @param request UninstallPolarClawPluginRequest
      * @return UninstallPolarClawPluginResponse

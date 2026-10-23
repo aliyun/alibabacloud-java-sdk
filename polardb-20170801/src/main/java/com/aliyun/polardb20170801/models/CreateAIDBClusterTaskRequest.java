@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAIDBClusterTaskRequest extends TeaModel {
     /**
+     * <p>The name of the custom OSS bucket.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-bucket</p>
      */
@@ -31,6 +33,8 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public String DBInstanceClass;
 
     /**
+     * <p>The data service mode. A value of custom indicates that custom OSS is used, and a value of cold_storage indicates that cold storage is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>cold_storage</p>
      */
@@ -58,7 +62,7 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     /**
      * <p>The type of the model service. Valid values:</p>
      * <ul>
-     * <li><strong>aitrain</strong>: Model operator tuning.</li>
+     * <li><strong>aitrain</strong>: model operator fine-tuning.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -71,8 +75,8 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     /**
      * <p>The name of the model.</p>
      * <ul>
-     * <li><strong>For a preset model, specify the selected model name.</strong></li>
-     * <li><strong>For a custom model, specify the path of the model (the trained model in a cold storage instance).</strong></li>
+     * <li><strong>For a preset model, specify the name of the selected model.</strong></li>
+     * <li><strong>For a custom model, specify the path of the model (the model trained in a cold storage instance).</strong></li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -85,8 +89,8 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     /**
      * <p>The source of the model. Valid values:</p>
      * <ul>
-     * <li><strong>public</strong>: Preset model.</li>
-     * <li><strong>custom</strong>: Custom model.</li>
+     * <li><strong>public</strong>: preset model.</li>
+     * <li><strong>custom</strong>: custom model.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -154,6 +158,12 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     @NameInMap("TaskName")
     public String taskName;
 
+    /**
+     * <p>The model fine-tuning architecture.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lora</p>
+     */
     @NameInMap("TuneArch")
     public String tuneArch;
 

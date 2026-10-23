@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAgenticDBProjectResponseBody extends TeaModel {
     /**
-     * <p>The time when the project was created.</p>
-     * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+     * <p>The creation time.</p>
+     * <p>The time is displayed in ISO 8601 format in the UTC time zone (YYYY-MM-DDTHH:mm:ssZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2026-06-10T11:00:00Z</p>
@@ -15,7 +15,7 @@ public class DescribeAgenticDBProjectResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The ID of the default branch.</p>
+     * <p>The default branch ID.</p>
      * 
      * <strong>example:</strong>
      * <p>br-1a2b3c4d5e6f</p>
@@ -24,7 +24,7 @@ public class DescribeAgenticDBProjectResponseBody extends TeaModel {
     public String defaultBranchId;
 
     /**
-     * <p>The name of the default branch.</p>
+     * <p>The default branch name.</p>
      * 
      * <strong>example:</strong>
      * <p>main</p>
@@ -33,13 +33,22 @@ public class DescribeAgenticDBProjectResponseBody extends TeaModel {
     public String defaultBranchName;
 
     /**
-     * <p>The description of the project.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>Production analytics database</p>
      */
     @NameInMap("Description")
     public String description;
+
+    /**
+     * <p>The retention period for recent records of the project. This parameter may be empty for older projects. To query the current effective value, call DescribeAgenticDBProjectHistoryRetention.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>604800</p>
+     */
+    @NameInMap("HistoryRetentionSeconds")
+    public Long historyRetentionSeconds;
 
     /**
      * <p>Project ID</p>
@@ -69,12 +78,7 @@ public class DescribeAgenticDBProjectResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The project status. Valid values:</p>
-     * <ul>
-     * <li>Active: Normal.</li>
-     * <li>Destroying: Being destroyed.</li>
-     * <li>Destroyed: Destroyed.</li>
-     * </ul>
+     * <p>The project status. Valid values: Active (Normal), Destroying (Destroying), and Destroyed (Destroyed).</p>
      * 
      * <strong>example:</strong>
      * <p>Active</p>
@@ -83,7 +87,7 @@ public class DescribeAgenticDBProjectResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The ID of the tenant to which the project belongs.</p>
+     * <p>The tenant ID.</p>
      * 
      * <strong>example:</strong>
      * <p>t-4b83e0da66674951</p>
@@ -126,6 +130,14 @@ public class DescribeAgenticDBProjectResponseBody extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public DescribeAgenticDBProjectResponseBody setHistoryRetentionSeconds(Long historyRetentionSeconds) {
+        this.historyRetentionSeconds = historyRetentionSeconds;
+        return this;
+    }
+    public Long getHistoryRetentionSeconds() {
+        return this.historyRetentionSeconds;
     }
 
     public DescribeAgenticDBProjectResponseBody setProjectId(String projectId) {

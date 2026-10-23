@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteConsumerGroupRequest extends TeaModel {
     /**
-     * <p>The name of the consumer group.</p>
+     * <p>The ID of the consumer group to delete. You can obtain the ID from the ConsumerGroupId parameter returned by the CreateConsumerGroup operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteConsumerGroupRequest extends TeaModel {
     public String consumerGroupName;
 
     /**
-     * <p>The gateway instance ID.</p>
+     * <p>The ID of the gateway instance. You can obtain the ID from the GwClusterId parameter returned by the CreateGateway operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

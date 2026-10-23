@@ -31,7 +31,7 @@ public class CreateModelApiRequest extends TeaModel {
     public String forceModel;
 
     /**
-     * <p>The gateway instance ID.</p>
+     * <p>The gateway instance ID. You can obtain the ID from the GwClusterId returned by CreateGateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,7 +56,7 @@ public class CreateModelApiRequest extends TeaModel {
     public String modelCategory;
 
     /**
-     * <p>The model API name.</p>
+     * <p>The name of the model API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -92,7 +92,7 @@ public class CreateModelApiRequest extends TeaModel {
     public String protocol;
 
     /**
-     * <p>The number of input points.</p>
+     * <p>The number of input tokens.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -101,7 +101,7 @@ public class CreateModelApiRequest extends TeaModel {
     public String recordInput;
 
     /**
-     * <p>The number of output points.</p>
+     * <p>The number of output tokens.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -119,7 +119,7 @@ public class CreateModelApiRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The list of routing rules (JSON array string).</p>
+     * <p>The list of routing rules, which is a JSON array string.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

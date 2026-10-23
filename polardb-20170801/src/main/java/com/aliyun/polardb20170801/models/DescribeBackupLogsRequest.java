@@ -24,7 +24,7 @@ public class DescribeBackupLogsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. The time is in the <code>YYYY-MM-DDThh:mmZ</code> format. The time is displayed in UTC.</p>
+     * <p>The end time of the query. The end time must be later than the start time. Specify the time in the <code>YYYY-MM-DDThh:mmZ</code> format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class DescribeBackupLogsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. The value must be an integer that is greater than 0 and does not exceed the maximum value of the Integer data type. The default value is <strong>1</strong>.</p>
+     * <p>The page number. Valid values: an integer greater than 0 and up to the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -49,16 +49,13 @@ public class DescribeBackupLogsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p><strong>30</strong></p>
-     * </li>
-     * <li><p><strong>50</strong></p>
-     * </li>
-     * <li><p><strong>100</strong></p>
-     * </li>
+     * <li><strong>30</strong> </li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
      * </ul>
-     * <p>The default value is <strong>30</strong>.</p>
+     * <p>Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -73,7 +70,7 @@ public class DescribeBackupLogsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. The time is in the <code>YYYY-MM-DDThh:mmZ</code> format. The time is displayed in UTC.</p>
+     * <p>The start time of the query. Specify the time in the <code>YYYY-MM-DDThh:mmZ</code> format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

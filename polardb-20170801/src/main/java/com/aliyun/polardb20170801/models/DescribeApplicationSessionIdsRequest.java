@@ -15,7 +15,8 @@ public class DescribeApplicationSessionIdsRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The end of the time range to query.</p>
+     * <p>The end time of the query.</p>
+     * <p>The time follows the ISO 8601 standard and is in the UTC time zone (format: YYYY-MM-DDTHH:mmZ).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +63,7 @@ public class DescribeApplicationSessionIdsRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the <code>YYYY-MM-DDThh:mmZ</code> format (UTC).</p>
+     * <p>The start time of the query. The time is in the <code>YYYY-MM-DDThh:mmZ</code> format (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -15,6 +15,9 @@ public class ModifyDBClusterRequest extends TeaModel {
 
     /**
      * <p>The connection resource quota of the AgenticDB cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("ConnectionResourceQuota")
     public Long connectionResourceQuota;

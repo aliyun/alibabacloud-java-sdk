@@ -4,6 +4,12 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class CreateBatchTaskRequest extends TeaModel {
+    /**
+     * <p>The target application type of the batch task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>polarclaw</p>
+     */
     @NameInMap("ApplicationType")
     public String applicationType;
 
@@ -15,7 +21,7 @@ public class CreateBatchTaskRequest extends TeaModel {
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The task parameters.</p>
+     * <p>The archive parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;skillName&quot;:&quot;github&quot;,&quot;version&quot;:&quot;1.0.0&quot;},{&quot;skillName&quot;:&quot;skill-vetter&quot;,&quot;version&quot;:&quot;1.0.1&quot;}]</p>
@@ -26,7 +32,7 @@ public class CreateBatchTaskRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the regions of all clusters in your account.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view the region information of all clusters under the target account.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -37,7 +43,7 @@ public class CreateBatchTaskRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the batch task.</p>
+     * <p>The description of the model service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

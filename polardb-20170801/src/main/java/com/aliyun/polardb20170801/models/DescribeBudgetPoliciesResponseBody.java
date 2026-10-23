@@ -111,7 +111,7 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
 
     public static class DescribeBudgetPoliciesResponseBodyItems extends TeaModel {
         /**
-         * <p>The alert threshold percentage. Valid values: 0 to 100.</p>
+         * <p>The alert threshold percentage (0 to 100).</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -120,7 +120,7 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
         public String alertThresholdPct;
 
         /**
-         * <p>Indicates whether the alert threshold has been triggered.</p>
+         * <p>Indicates whether the alert threshold is triggered.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -129,7 +129,7 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
         public Boolean alertTriggered;
 
         /**
-         * <p>The dimension object ID. This parameter is required when BudgetDimensionType is set to ConsumerGroup or Consumer.</p>
+         * <p>The ID of the dimension object. This parameter is required when BudgetDimensionType is set to ConsumerGroup or Consumer.</p>
          * 
          * <strong>example:</strong>
          * <p>cg-p3gk2oh55c**</p>
@@ -138,10 +138,10 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
         public String budgetDimensionRefId;
 
         /**
-         * <p>The policy type. Valid values:</p>
+         * <p>The type of the policy. Valid values:</p>
          * <ul>
-         * <li><strong>ConsumerGroup</strong>: total budget for a user group</li>
-         * <li><strong>Consumer</strong>: total budget for a user</li>
+         * <li><strong>ConsumerGroup</strong>: Total budget for consumer groups.</li>
+         * <li><strong>Consumer</strong>: Total budget for consumers.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -160,7 +160,7 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
         public String budgetPoints;
 
         /**
-         * <p>The budget policy ID.</p>
+         * <p>The ID of the budget policy.</p>
          * 
          * <strong>example:</strong>
          * <p>023aacc1effc4b56bb154bfbec6ba9**</p>
@@ -171,9 +171,9 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
         /**
          * <p>The budget type. Valid values:</p>
          * <ul>
-         * <li><strong>GlobalTotal</strong>: global total budget</li>
-         * <li><strong>ConsumerTotal</strong>: total budget for a user</li>
-         * <li><strong>ConsumerGroupTotal</strong>: total budget for a user group</li>
+         * <li><strong>GlobalTotal</strong>: Global total budget.</li>
+         * <li><strong>ConsumerTotal</strong>: Total budget for consumers.</li>
+         * <li><strong>ConsumerGroupTotal</strong>: Total budget for consumer groups.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -183,7 +183,7 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
         public String budgetType;
 
         /**
-         * <p>Indicates whether the quota has been exceeded.</p>
+         * <p>Indicates whether the quota is exceeded.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -192,7 +192,7 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
         public String exceeded;
 
         /**
-         * <p>The time when the policy was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-03-19T14:13:53+08:00</p>
@@ -201,7 +201,7 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
-         * <p>The time when the policy was last modified.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-08T10:43:28+08:00</p>
@@ -219,7 +219,7 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
         public String gwClusterId;
 
         /**
-         * <p>The day of the month on which the budget resets. Valid values: 1 to 28.</p>
+         * <p>The day of the month when the budget is reset (1 to 28).</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -228,10 +228,10 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
         public String resetDayOfMonth;
 
         /**
-         * <p>The policy status. Valid values:</p>
+         * <p>The status of the policy. Valid values:</p>
          * <ul>
-         * <li><strong>Enabled</strong>: enabled</li>
-         * <li><strong>Disenabled</strong>: disabled</li>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disenabled</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

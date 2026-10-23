@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeConsumersRequest extends TeaModel {
     /**
-     * <p>The user group ID.</p>
+     * <p>The ID of the consumer group.</p>
      * 
      * <strong>example:</strong>
      * <p>cg-xxxxxxxx</p>
@@ -14,7 +14,7 @@ public class DescribeConsumersRequest extends TeaModel {
     public String consumerGroupId;
 
     /**
-     * <p>The user ID.</p>
+     * <p>The ID of the consumer.</p>
      * 
      * <strong>example:</strong>
      * <p>c-mqveroemc***</p>
@@ -22,9 +22,18 @@ public class DescribeConsumersRequest extends TeaModel {
     @NameInMap("ConsumerId")
     public String consumerId;
 
+    /**
+     * <p>The name used to filter consumers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("ConsumerName")
     public String consumerName;
 
+    /**
+     * <p>The list of names used to filter consumers.</p>
+     */
     @NameInMap("ConsumerNameList")
     public String consumerNameList;
 

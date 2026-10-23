@@ -17,7 +17,7 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries returned on the current page.</p>
+     * <p>The number of entries on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

@@ -24,6 +24,12 @@ public class DescribeExtensionsRequest extends TeaModel {
     @NameInMap("DBName")
     public String DBName;
 
+    /**
+     * <p>The name of the database plugin to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>jueming</p>
+     */
     @NameInMap("ExtensionName")
     public String extensionName;
 

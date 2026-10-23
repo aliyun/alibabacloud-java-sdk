@@ -44,7 +44,7 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public Boolean autoUseCoupon;
 
     /**
-     * <p>The initial model capacity of the instance. The value must be a positive integer. A capacity unit of 1000 is equivalent to one L20N equivalent card.</p>
+     * <p>The initial model capacity of the instance. The value must be a positive integer. A capacity unit of 1000 is equivalent to one L20N card.</p>
      * 
      * <strong>example:</strong>
      * <p>4000</p>
@@ -52,6 +52,12 @@ public class CreateAIDBClusterRequest extends TeaModel {
     @NameInMap("Capacity")
     public Long capacity;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the token on the client side. Ensure that the token is unique across different requests. The token is case-sensitive and can be up to 64 ASCII characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -211,10 +217,10 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>If the billing method is <strong>Prepaid</strong>, you must pass parameter. Specifies the upfront cluster as yearly or monthly. Valid values: </p>
+     * <p>This parameter is required when the <strong>PayType</strong> parameter is set to <strong>Prepaid</strong>. Specifies the billing cycle of the subscription cluster. Valid values: </p>
      * <ul>
-     * <li><strong>Year</strong>: yearly. The unit is year.</li>
-     * <li><strong>Month</strong>: monthly. The unit is month.</li>
+     * <li><strong>Year</strong>: yearly subscription.</li>
+     * <li><strong>Month</strong>: monthly subscription.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -282,10 +288,10 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public java.util.List<CreateAIDBClusterRequestTimeSlices> timeSlices;
 
     /**
-     * <p>The subscription duration. This parameter is required when the billing method is set to <strong>Prepaid</strong>.</p>
+     * <p>The subscription duration. This parameter is required when the <strong>PayType</strong> parameter is set to <strong>Prepaid</strong>.</p>
      * <ul>
-     * <li>If <strong>Period</strong> is set to <strong>Month</strong>, the value of <strong>UsedTime</strong> is an integer ranging from <code>1</code> to <code>9</code>.</li>
-     * <li>If <strong>Period</strong> is set to <strong>Year</strong>, the value of <strong>UsedTime</strong> is an integer ranging from <code>1</code> to <code>3</code>.</li>
+     * <li>If the <strong>Period</strong> parameter is set to <strong>Month</strong>, the value of <strong>UsedTime</strong> must be an integer in the range of <code>[1-9]</code>.</li>
+     * <li>If the <strong>Period</strong> parameter is set to <strong>Year</strong>, the value of <strong>UsedTime</strong> must be an integer in the range of <code>[1-3]</code>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -295,7 +301,7 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String usedTime;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC).</p>
+     * <p>The ID of the VPC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

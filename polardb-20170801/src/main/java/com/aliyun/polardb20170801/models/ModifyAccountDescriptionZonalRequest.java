@@ -29,7 +29,7 @@ public class ModifyAccountDescriptionZonalRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must ensure that the token is unique among different requests. The token is case-sensitive and can be up to 64 ASCII characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token is case-sensitive and can be up to 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f5********************</p>
@@ -38,10 +38,7 @@ public class ModifyAccountDescriptionZonalRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The cluster ID.</p>
-     * <blockquote>
-     * <p>Note: This operation applies only to PolarDB on ENS. The DBClusterId must be the ID of an edge cluster. Regular PolarDB cluster IDs are not accepted.</p>
-     * </blockquote>
+     * <p>The cluster ID. This operation is applicable only to PolarDB on ENS. You must use the ID of an edge cluster. You can call the DescribeDBClustersZonal operation and obtain the DBClusterId from the Items list in the response. Regular PolarDB cluster IDs are not accepted.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

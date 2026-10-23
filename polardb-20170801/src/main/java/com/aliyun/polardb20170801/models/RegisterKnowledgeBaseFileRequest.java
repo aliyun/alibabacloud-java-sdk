@@ -25,7 +25,7 @@ public class RegisterKnowledgeBaseFileRequest extends TeaModel {
     public String knowledgeBaseId;
 
     /**
-     * <p>The ID of the region where the knowledge base resides.</p>
+     * <p>The region ID of the knowledge base.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

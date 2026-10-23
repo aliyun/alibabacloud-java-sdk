@@ -16,7 +16,7 @@ public class DescribeAIDBClusterTaskAttributeRequest extends TeaModel {
     /**
      * <p>The query mode. Valid values:</p>
      * <ul>
-     * <li><strong>RelatedAITask</strong>: queries task details.</li>
+     * <li><strong>RelatedAITask</strong>: queries task details</li>
      * </ul>
      * 
      * <strong>example:</strong>

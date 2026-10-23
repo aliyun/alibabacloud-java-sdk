@@ -20,13 +20,19 @@ public class DescribeAIDBClusterTasksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of items per page.</p>
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -41,7 +47,7 @@ public class DescribeAIDBClusterTasksRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The PolarDB instance ID.</p>
+     * <p>The instance ID of the associated PolarDB instance.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-2ze88***</p>

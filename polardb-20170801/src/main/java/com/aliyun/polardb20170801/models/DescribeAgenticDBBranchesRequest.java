@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAgenticDBBranchesRequest extends TeaModel {
     /**
-     * <p>The branch name for fuzzy match.</p>
+     * <p>The branch name for fuzzy matching.</p>
      * 
      * <strong>example:</strong>
      * <p>feature</p>
@@ -14,7 +14,7 @@ public class DescribeAgenticDBBranchesRequest extends TeaModel {
     public String branchName;
 
     /**
-     * <p>The AgenticDB cluster ID.</p>
+     * <p>The ID of the AgenticDB cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class DescribeAgenticDBBranchesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the project to which the branch belongs.</p>
+     * <p>The project ID.</p>
      * 
      * <strong>example:</strong>
      * <p>proj-a1b2c3d4e5f6</p>
@@ -61,12 +61,7 @@ public class DescribeAgenticDBBranchesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The status filter. Valid values:</p>
-     * <ul>
-     * <li>Running</li>
-     * <li>Pending</li>
-     * <li>Paused</li>
-     * </ul>
+     * <p>The status used to filter branches. Valid values: Running, Pending, and Paused.</p>
      * 
      * <strong>example:</strong>
      * <p>Active</p>
@@ -75,7 +70,7 @@ public class DescribeAgenticDBBranchesRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The ID of the tenant to which the branch belongs.</p>
+     * <p>The tenant ID.</p>
      * 
      * <strong>example:</strong>
      * <p>t-4b83e0da66674951</p>

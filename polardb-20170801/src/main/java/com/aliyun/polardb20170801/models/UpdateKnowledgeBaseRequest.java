@@ -14,7 +14,7 @@ public class UpdateKnowledgeBaseRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The unique ID of the knowledge base.</p>
+     * <p>The ID of the knowledge base to update. You can obtain the ID from the response of the CreateKnowledgeBase operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,11 +45,11 @@ public class UpdateKnowledgeBaseRequest extends TeaModel {
     /**
      * <p>The search mode. Valid values:</p>
      * <ul>
-     * <li>balanced (default): balanced mode.</li>
-     * <li>precise: precise mode.</li>
-     * <li>semantic: semantic mode.</li>
+     * <li>balanced: Balanced mode. This is the default value.</li>
+     * <li>precise: Precise mode.</li>
+     * <li>semantic: Semantic mode.</li>
      * <li>knn: KNN mode.</li>
-     * <li>rrf: reciprocal rank fusion (RRF) mode.</li>
+     * <li>rrf: RRF fusion.</li>
      * </ul>
      * 
      * <strong>example:</strong>

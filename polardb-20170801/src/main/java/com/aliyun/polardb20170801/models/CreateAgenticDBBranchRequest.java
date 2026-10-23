@@ -25,7 +25,7 @@ public class CreateAgenticDBBranchRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The description of the branch.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>Feature branch for analytics</p>
@@ -34,7 +34,7 @@ public class CreateAgenticDBBranchRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the parent branch. If this parameter is not specified, the branch is derived from the main branch by default.</p>
+     * <p>The ID of the parent branch. By default, the branch is derived from the main branch.</p>
      * 
      * <strong>example:</strong>
      * <p>br-1a2b3c4d5e6f</p>
@@ -43,7 +43,16 @@ public class CreateAgenticDBBranchRequest extends TeaModel {
     public String parentBranchId;
 
     /**
-     * <p>The ID of the project to which the branch belongs.</p>
+     * <p>Creates the branch based on the data of the parent branch at the specified point in time. If you do not specify this parameter, the latest data is used. The value must be in RFC 3339 format with a time zone and support up to nine fractional digits for seconds. Empty strings and future times are not supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-10-15T07:32:00.123456Z</p>
+     */
+    @NameInMap("ParentTimestamp")
+    public String parentTimestamp;
+
+    /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,7 +72,7 @@ public class CreateAgenticDBBranchRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the tenant to which the branch belongs.</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -107,6 +116,14 @@ public class CreateAgenticDBBranchRequest extends TeaModel {
     }
     public String getParentBranchId() {
         return this.parentBranchId;
+    }
+
+    public CreateAgenticDBBranchRequest setParentTimestamp(String parentTimestamp) {
+        this.parentTimestamp = parentTimestamp;
+        return this;
+    }
+    public String getParentTimestamp() {
+        return this.parentTimestamp;
     }
 
     public CreateAgenticDBBranchRequest setProjectId(String projectId) {

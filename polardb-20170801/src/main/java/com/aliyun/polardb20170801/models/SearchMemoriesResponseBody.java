@@ -4,9 +4,21 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class SearchMemoriesResponseBody extends TeaModel {
+    /**
+     * <p>The current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Page")
     public String page;
 
+    /**
+     * <p>The number of records per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
@@ -25,9 +37,21 @@ public class SearchMemoriesResponseBody extends TeaModel {
     @NameInMap("Results")
     public java.util.List<SearchMemoriesResponseBodyResults> results;
 
+    /**
+     * <p>The total number of matching records.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Total")
     public String total;
 
+    /**
+     * <p>The total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalPages")
     public String totalPages;
 
@@ -87,7 +111,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
     public static class SearchMemoriesResponseBodyResults extends TeaModel {
         /**
          * <p>The creation time.</p>
-         * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * <p>The time follows the ISO 8601 standard in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-09-26T08:25:44Z</p>
@@ -135,7 +159,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
          * <p>The metadata.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;tags\&quot;:\&quot;Issue_date_2023-11-30,VD_现行有效\&quot;}</p>
+         * <p>{&quot;tags&quot;:&quot;Issue_date_2023-11-30,VD_Valid&quot;}</p>
          */
         @NameInMap("Metadata")
         public String metadata;
@@ -151,7 +175,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
 
         /**
          * <p>The update time.</p>
-         * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * <p>The time follows the ISO 8601 standard in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-16T02:27:33Z</p>

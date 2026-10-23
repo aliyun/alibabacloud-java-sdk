@@ -128,7 +128,7 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The element reference of the image in the Docling source document structure.</p>
+         * <p>The element reference of the image in the source document structure.</p>
          * 
          * <strong>example:</strong>
          * <p>#/pictures/1</p>
@@ -209,7 +209,7 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
         public java.util.List<String> captions;
 
         /**
-         * <p>The list of structured element references in the Docling source document associated with the shard, which can be used to precisely locate the original elements.</p>
+         * <p>The list of structured element references of the source document associated with the shard, which can be used to precisely locate the original elements.</p>
          */
         @NameInMap("DocItems")
         public java.util.List<String> docItems;

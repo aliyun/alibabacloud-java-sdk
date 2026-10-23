@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLakebaseS3AccountRequest extends TeaModel {
     /**
-     * <p>The PolarFS instance ID.</p>
+     * <p>The PolarFS instance ID. You can obtain the ID from the PolarFsInstanceId parameter returned by the CreatePolarFs operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,9 +25,9 @@ public class CreateLakebaseS3AccountRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The Access Key of the S3 account.</p>
+     * <p>The access key of the S3 account.</p>
      * <blockquote>
-     * <p>The account name can contain only uppercase letters, lowercase letters, and digits, and cannot exceed 32 characters in length.</p>
+     * <p>The account name supports only uppercase and lowercase letters and digits, and can be up to 32 characters in length.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -38,7 +38,7 @@ public class CreateLakebaseS3AccountRequest extends TeaModel {
     public String userAccAk;
 
     /**
-     * <p>A policy document in JSON format that defines the permissions of the S3 account. If this parameter is not specified, the default policy is used.</p>
+     * <p>The policy document in JSON format that defines the permissions of the S3 account. If this parameter is not specified, the default policy is used.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Version&quot;:&quot;2012-10-17&quot;,&quot;Statement&quot;:[{&quot;Effect&quot;:&quot;Allow&quot;,&quot;Action&quot;:[&quot;s3:<em>&quot;],&quot;Resource&quot;:[&quot;</em>&quot;]}]}</p>
@@ -47,9 +47,9 @@ public class CreateLakebaseS3AccountRequest extends TeaModel {
     public String userAccPolicy;
 
     /**
-     * <p>The Secret Key of the S3 account (@sensitive, encryption in transit).</p>
+     * <p>The secret key of the S3 account (@sensitive, encryption in transit).</p>
      * <blockquote>
-     * <p>The key must contain uppercase letters, lowercase letters, and digits, and must be greater than 18 and no more than 32 characters in length.</p>
+     * <p>The value must contain both uppercase and lowercase letters and digits, and must be 19 to 32 characters in length.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

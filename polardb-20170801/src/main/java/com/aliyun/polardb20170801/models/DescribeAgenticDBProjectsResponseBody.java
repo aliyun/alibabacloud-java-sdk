@@ -93,8 +93,7 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
 
     public static class DescribeAgenticDBProjectsResponseBodyItems extends TeaModel {
         /**
-         * <p>The time when the project was created.</p>
-         * <p>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * <p>The creation time. The time is in ISO 8601 format and the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-10T11:00:00Z</p>
@@ -112,7 +111,7 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
-         * <p>The default branch ID.</p>
+         * <p>The ID of the default branch.</p>
          * 
          * <strong>example:</strong>
          * <p>br-1a2b3c4d5e6f</p>
@@ -121,7 +120,7 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
         public String defaultBranchId;
 
         /**
-         * <p>The default branch name.</p>
+         * <p>The name of the default branch.</p>
          * 
          * <strong>example:</strong>
          * <p>main</p>
@@ -130,13 +129,22 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
         public String defaultBranchName;
 
         /**
-         * <p>The description of the project.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>Production analytics database</p>
          */
         @NameInMap("Description")
         public String description;
+
+        /**
+         * <p>The retention period for recent records of the project. This field may be empty for older projects. To query the current effective value, call DescribeAgenticDBProjectHistoryRetention.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>604800</p>
+         */
+        @NameInMap("HistoryRetentionSeconds")
+        public Long historyRetentionSeconds;
 
         /**
          * <p>Project ID</p>
@@ -148,7 +156,7 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
         public String projectId;
 
         /**
-         * <p>The project name.</p>
+         * <p>The name of the project.</p>
          * 
          * <strong>example:</strong>
          * <p>analytics-prod</p>
@@ -171,7 +179,7 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the tenant to which the project belongs.</p>
+         * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>t-4b83e0da66674951</p>
@@ -222,6 +230,14 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeAgenticDBProjectsResponseBodyItems setHistoryRetentionSeconds(Long historyRetentionSeconds) {
+            this.historyRetentionSeconds = historyRetentionSeconds;
+            return this;
+        }
+        public Long getHistoryRetentionSeconds() {
+            return this.historyRetentionSeconds;
         }
 
         public DescribeAgenticDBProjectsResponseBodyItems setProjectId(String projectId) {

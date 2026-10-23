@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeColdStorageInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the PolarDB cluster.</p>
+     * <p>The PolarDB cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-wz9062015ly7526jc</p>
@@ -23,19 +23,15 @@ public class DescribeColdStorageInstanceRequest extends TeaModel {
     public String DBName;
 
     /**
-     * <p>The type of the supported engine. The return value is the sum of the values of the supported engine types.</p>
+     * <p>The supported engine types. The return value is the sum of the following engine type values:</p>
      * <ul>
-     * <li><p>1: Search engine</p>
-     * </li>
-     * <li><p>2: LindormTSDB</p>
-     * </li>
-     * <li><p>4: LindormTable</p>
-     * </li>
-     * <li><p>8: File engine</p>
-     * </li>
+     * <li>1: search engine</li>
+     * <li>2: time series engine</li>
+     * <li>4: wide table engine</li>
+     * <li>8: file engine</li>
      * </ul>
      * <blockquote>
-     * <p>For example, if \<code>EngineType\\</code> is 15 (8 + 4 + 2 + 1), the instance supports the search engine, LindormTSDB, LindormTable, and file engine. If \<code>EngineType\\</code> is 6 (4 + 2), the instance supports LindormTSDB and LindormTable.</p>
+     * <p>For example, if the EngineType value is 15, 15 = 8 + 4 + 2 + 1, which indicates that the instance supports the search engine, time series engine, wide table engine, and file engine. If the EngineType value is 6, 6 = 4 + 2, which indicates that the instance supports the time series engine and wide table engine.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -45,7 +41,7 @@ public class DescribeColdStorageInstanceRequest extends TeaModel {
     public String engineType;
 
     /**
-     * <p>The expiration time of the cluster. Note: This parameter is returned only for subscription clusters. An empty value is returned for pay-as-you-go clusters.</p>
+     * <p>The expiration time of the cluster. Note: A specific value is returned only for clusters whose billing method is Prepaid (subscription). For Postpaid (pay-as-you-go) clusters, a null value is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-11-14T16:00:00Z</p>
@@ -55,10 +51,8 @@ public class DescribeColdStorageInstanceRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li><p>If you do not specify the <strong>MaxResults</strong> parameter, the query is not paged. The value of the <strong>MaxResults</strong> parameter in the response indicates the total number of entries.</p>
-     * </li>
-     * <li><p>If you specify the <strong>MaxResults</strong> parameter, the query is paged. <strong>MaxResults</strong> specifies the number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. The value of the <strong>MaxResults</strong> parameter in the response indicates the number of entries on the current page. The recommended value is <strong>20</strong>.</p>
-     * </li>
+     * <li>If you do not specify the <strong>MaxResults</strong> parameter, batch query is not required. The value of the <strong>MaxResults</strong> parameter returned after the API call indicates the total number of list entries.</li>
+     * <li>If you specify the <strong>MaxResults</strong> parameter, batch query is required. The value of <strong>MaxResults</strong> indicates the number of entries displayed per batch. Valid values: <strong>1</strong> to <strong>100</strong>. The value of the <strong>MaxResults</strong> parameter returned after the API call indicates the number of list entries in the current query batch. Set the <strong>MaxResults</strong> parameter to <strong>20</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,7 +62,7 @@ public class DescribeColdStorageInstanceRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A token to retrieve the next page of results. Set this parameter to the \<code>NextToken\\</code> value from a previous call. You do not need to specify this parameter for the first call.</p>
+     * <p>The query token. Set the value to the NextToken value returned from the previous API call. If there are no more queries, do not specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>c2FpXzIwMjIwNjI5X2Jhay9zYWlfc3VtbWVyX3RyZWFzdXJlX3Bvb2xfbG9nLkNTVg==</p>
@@ -77,7 +71,7 @@ public class DescribeColdStorageInstanceRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The object type. Valid values: \<code>TABLE\\</code>, \<code>PARTITION_TABLE\\</code>, and \<code>LOB\\</code>.</p>
+     * <p>The object type. Valid values: TABLE, PARTITION_TABLE, and LOB.</p>
      * 
      * <strong>example:</strong>
      * <p>TABLE</p>
@@ -113,11 +107,11 @@ public class DescribeColdStorageInstanceRequest extends TeaModel {
      * <p>The region ID.</p>
      * <blockquote>
      * <ul>
-     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a>.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the region information of all clusters under the target account.</li>
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>If you do not specify this parameter, the operation queries scheduled tasks in all regions within your account.</li>
+     * <li>If this parameter is left empty, scheduled tasks in all regions under the current account are queried by default.</li>
      * </ul>
      * 
      * <strong>example:</strong>

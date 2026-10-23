@@ -15,7 +15,7 @@ public class DescribeApplicationLogsRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The subcomponent instance ID.</p>
+     * <p>The instance ID of the subcomponent.</p>
      * 
      * <strong>example:</strong>
      * <p>pac-xxx</p>
@@ -33,7 +33,7 @@ public class DescribeApplicationLogsRequest extends TeaModel {
     public String containerName;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the <code>yyyy-MM-ddTHH:mmZ</code> format (UTC).</p>
+     * <p>The end time of the query. The time must be in the <code>yyyy-MM-ddTHH:mmZ</code> format (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,7 +76,7 @@ public class DescribeApplicationLogsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>30</strong>. Valid values: 30 to 100.</p>
+     * <p>The number of entries per page. Valid values: 30 to 100. Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -98,7 +98,7 @@ public class DescribeApplicationLogsRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the <code>YYYY-MM-DDThh:mmZ</code> format (UTC).</p>
+     * <p>The start time of the query. The time must be in the <code>YYYY-MM-DDThh:mmZ</code> format (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -108,7 +108,7 @@ public class DescribeApplicationLogsRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The log type. This parameter is used for polarclaw instances. Currently, only gateway is supported.</p>
+     * <p>The log type. This parameter is used for polarclaw instances. Valid value: gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>gateway</p>

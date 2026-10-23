@@ -19,7 +19,7 @@ public class DescribeAIDBClustersRequest extends TeaModel {
     public String aiNodeType;
 
     /**
-     * <p>The description of the cluster. Fuzzy match is supported.</p>
+     * <p>The cluster description. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-****************</p>
@@ -37,7 +37,7 @@ public class DescribeAIDBClustersRequest extends TeaModel {
     public String DBClusterIds;
 
     /**
-     * <p>The status of the cluster. Valid values:</p>
+     * <p>The cluster status. Valid values:</p>
      * <ul>
      * <li><strong>Creating</strong>: The cluster is being created.</li>
      * <li><strong>Running</strong>: The cluster is running.</li>
@@ -50,7 +50,7 @@ public class DescribeAIDBClustersRequest extends TeaModel {
      * <li><strong>NetAddressDeleting</strong>: The network connectivity is being deleted.</li>
      * <li><strong>NetAddressModifying</strong>: The network connectivity is being modified. </li>
      * <li><strong>Deleted</strong>: The cluster is released.</li>
-     * <li><strong>ClassChanged</strong>: Resources are being revoked after you upgrade or decrease the quota.</li>
+     * <li><strong>ClassChanged</strong>: Resources are being revoked after an upgrade or decrease the quota.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,7 +75,7 @@ public class DescribeAIDBClustersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
+     * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
      * <p>Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -230,7 +230,7 @@ public class DescribeAIDBClustersRequest extends TeaModel {
 
     public static class DescribeAIDBClustersRequestTag extends TeaModel {
         /**
-         * <p>The tag key. You can filter clusters by tag. You can specify up to 20 tag key-value pairs. The number n in each tag pair must be unique and must be a consecutive integer starting from 1. The value of Tag.n.Key is Tag.n.Value.</p>
+         * <p>The tag key. You can use tags to filter the cluster list. You can specify up to 20 tag key-value pairs. The number n in each tag pair must be unique and must be a consecutive integer starting from 1. The value of Tag.n.Key is Tag.n.Value.</p>
          * 
          * <strong>example:</strong>
          * <p>testKey</p>

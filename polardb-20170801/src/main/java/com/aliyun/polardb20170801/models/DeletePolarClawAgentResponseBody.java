@@ -23,7 +23,7 @@ public class DeletePolarClawAgentResponseBody extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The status code.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>

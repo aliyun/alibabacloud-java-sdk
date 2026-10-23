@@ -69,9 +69,21 @@ public class AddPolarFsPathMappingRequest extends TeaModel {
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <p>The AccessKey ID of the storage bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("BucketAccessKeyId")
         public String bucketAccessKeyId;
 
+        /**
+         * <p>The AccessKey secret of the storage bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("BucketAccessKeySecret")
         public String bucketAccessKeySecret;
 

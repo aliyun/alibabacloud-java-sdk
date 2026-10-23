@@ -7,9 +7,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     /**
      * <p>The node type. Valid values:</p>
      * <ul>
-     * <li>vnode: ACK-managed.</li>
-     * <li>container: Logon-enabled container.</li>
-     * <li>maas: Model service.</li>
+     * <li>vnode: ACK-managed node.</li>
+     * <li>container: container that supports logon.</li>
+     * <li>maas: model service.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,8 +37,8 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     public String command;
 
     /**
-     * <p>The time when the cluster was created.
-     * The time follows the ISO 8601 standard in UTC (YYYY-MM-DDTHH:mm:ssZ).</p>
+     * <p>The time when the cluster was created.</p>
+     * <p>The time follows the ISO 8601 standard in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2020-08-14T05:58:42Z</p>
@@ -56,7 +56,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     public Long currentCapacity;
 
     /**
-     * <p>The custom OSS path of the model currently used by the instance.</p>
+     * <p>The custom Object Storage Service (OSS) path of the model currently used by the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>/my-model-bucket/models/qwen3</p>
@@ -90,7 +90,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
      * <li><strong>Deleting</strong>: The cluster is being released.</li>
      * <li><strong>DBNodeCreating</strong>: Nodes are being added.</li>
      * <li><strong>DBNodeDeleting</strong>: Nodes are being deleted.</li>
-     * <li><strong>ClassChanging</strong>: The node specifications are being changed.</li>
+     * <li><strong>ClassChanging</strong>: The node specifications are being changed. </li>
      * <li><strong>Deleted</strong>: The cluster is released.</li>
      * </ul>
      * 
@@ -100,20 +100,26 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("DBClusterStatus")
     public String DBClusterStatus;
 
+    /**
+     * <p>The database instance status description. A value of ACTIVATION indicates that the database instance is running.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACTIVATION</p>
+     */
     @NameInMap("DBInstanceStatusDesc")
     public String DBInstanceStatusDesc;
 
     /**
-     * <p>The details of the nodes.</p>
+     * <p>The details of the node information.</p>
      */
     @NameInMap("DBNodes")
     public java.util.List<DescribeAIDBClusterAttributeResponseBodyDBNodes> DBNodes;
 
     /**
-     * <p>The cluster version. Valid values:
-     * <strong>1.0</strong>
-     * <strong>2.0</strong>
-     * <strong>3.0</strong></p>
+     * <p>The cluster version. Valid values:</p>
+     * <p><strong>1.0</strong></p>
+     * <p><strong>2.0</strong></p>
+     * <p><strong>3.0</strong></p>
      * 
      * <strong>example:</strong>
      * <p>1.0</p>
@@ -121,6 +127,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("DBVersion")
     public String DBVersion;
 
+    /**
+     * <p>Specifies whether the dedicated host mode is used.</p>
+     */
     @NameInMap("DedicatedHostModel")
     public Boolean dedicatedHostModel;
 
@@ -134,7 +143,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     public String ecsSecurityGroupId;
 
     /**
-     * <p>The list of network endpoints for the instance.</p>
+     * <p>The list of network endpoint addresses of the instance.</p>
      */
     @NameInMap("EndpointList")
     public java.util.List<DescribeAIDBClusterAttributeResponseBodyEndpointList> endpointList;
@@ -142,9 +151,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     /**
      * <p>The expiration time of the cluster.</p>
      * <blockquote>
-     * <p>A specific value is returned only for clusters whose billing method is <strong>Prepaid</strong> (subscription). For clusters whose billing method is <strong>Postpaid</strong> (pay-as-you-go), an empty value is returned.
-     * The time follows the ISO 8601 standard in UTC (YYYY-MM-DDTHH:mm:ssZ).</p>
+     * <p>A specific value is returned only for clusters whose billing method is <strong>Prepaid</strong> (subscription). For clusters whose billing method is <strong>Postpaid</strong> (pay-as-you-go), an empty value is returned.</p>
      * </blockquote>
+     * <p>The time follows the ISO 8601 standard in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2020-11-14T16:00:00Z</p>
@@ -155,8 +164,10 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the cluster has expired. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The cluster has expired.</li>
-     * <li><strong>false</strong>: The cluster has not expired.</li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -165,9 +176,21 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("Expired")
     public Boolean expired;
 
+    /**
+     * <p>The ID of the AI gateway instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pg-2ze24rr575j5b18cg</p>
+     */
     @NameInMap("GatewayId")
     public String gatewayId;
 
+    /**
+     * <p>The model inference engine.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sglang</p>
+     */
     @NameInMap("InferenceEngine")
     public String inferenceEngine;
 
@@ -199,7 +222,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     public String kubeClusterId;
 
     /**
-     * <p>The lock mode of the instance. Valid value: <strong>lock</strong>. This value indicates that the instance is automatically locked due to expiration or overdue payments.</p>
+     * <p>The lock mode of the instance. A value of <strong>lock</strong> indicates that the instance has expired or has an overdue payment.</p>
      * 
      * <strong>example:</strong>
      * <p>Unlock</p>
@@ -216,6 +239,12 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("MaxQPM")
     public String maxQPM;
 
+    /**
+     * <p>The maximum number of tokens allowed per minute.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
     @NameInMap("MaxTPM")
     public String maxTPM;
 
@@ -228,6 +257,12 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("ModelName")
     public String modelName;
 
+    /**
+     * <p>The name of the workspace to which the model belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-model-space</p>
+     */
     @NameInMap("ModelSpaceName")
     public String modelSpaceName;
 
@@ -243,8 +278,8 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     /**
      * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li><strong>Postpaid</strong>: Pay-as-you-go.</li>
-     * <li><strong>Prepaid</strong>: Subscription.</li>
+     * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+     * <li><strong>Prepaid</strong>: subscription</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -254,7 +289,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     public String payType;
 
     /**
-     * <p>The custom OSS path of the model before the last change.</p>
+     * <p>The custom model OSS path before the last change.</p>
      * 
      * <strong>example:</strong>
      * <p>/my-model-bucket/models/qwen2</p>
@@ -292,8 +327,8 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     /**
      * <p>The architecture type. Valid values:</p>
      * <ul>
-     * <li>container: AI container.</li>
-     * <li>ainode: AI node.</li>
+     * <li>container: AI container</li>
+     * <li>ainode: AI node</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -323,14 +358,23 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("StorageType")
     public String storageType;
 
+    /**
+     * <p>The time slice configuration for pay-as-you-go billing.</p>
+     */
     @NameInMap("TimeSlicesInfo")
     public DescribeAIDBClusterAttributeResponseBodyTimeSlicesInfo timeSlicesInfo;
 
+    /**
+     * <p>The cycle type of the time slice configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>daily</p>
+     */
     @NameInMap("TimeSlicesType")
     public String timeSlicesType;
 
     /**
-     * <p>The ID of the VPC specified for zone switchover.</p>
+     * <p>The VPC ID specified for zone switching.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-*******************</p>
@@ -350,6 +394,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <p>The Kubernetes configuration of the virtual node.</p>
+     */
     @NameInMap("VnodeKubernetesConfig")
     public DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfig vnodeKubernetesConfig;
 
@@ -822,21 +869,36 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     public static class DescribeAIDBClusterAttributeResponseBodyDBNodesSupportedApis extends TeaModel {
         /**
          * <p>The name of the API supported by the database node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Completions</p>
          */
         @NameInMap("ApiName")
         public String apiName;
 
+        /**
+         * <p>The generation mode of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stream</p>
+         */
         @NameInMap("GenerationMode")
         public String generationMode;
 
         /**
          * <p>The path of the supported API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/v1/chat/completions</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
          * <p>The protocol type of the supported API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         @NameInMap("Protocol")
         public String protocol;
@@ -906,8 +968,8 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         public String cpuCores;
 
         /**
-         * <p>The time when the node was created.
-         * The time follows the ISO 8601 standard in UTC (YYYY-MM-DDTHH:mm:ssZ).</p>
+         * <p>The time when the node was created.</p>
+         * <p>The time follows the ISO 8601 standard in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-08-14T05:58:42Z</p>
@@ -916,7 +978,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The node specifications.</p>
+         * <p>The cluster specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>polar.pg.g8.8xlarge.gu30</p>
@@ -948,12 +1010,12 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
          * <li><strong>Creating</strong>: The node is being created. </li>
          * <li><strong>Running</strong>: The node is running. </li>
          * <li><strong>Deleting</strong>: The node is being deleted.  </li>
-         * <li><strong>Rebooting</strong>: The node is restarting.  </li>
+         * <li><strong>Rebooting</strong>: The node is being restarted.  </li>
          * <li><strong>DBNodeCreating</strong>: Nodes are being added.  </li>
          * <li><strong>DBNodeDeleting</strong>: Nodes are being deleted. </li>
          * <li><strong>ClassChanging</strong>: The node specifications are being changed.  </li>
          * <li><strong>MinorVersionUpgrading</strong>: The minor version is being upgraded.</li>
-         * <li><strong>Maintaining</strong>: The instance is under maintenance.  </li>
+         * <li><strong>Maintaining</strong>: The instance is being maintained.  </li>
          * <li><strong>Switching</strong>: A switchover is in progress.</li>
          * </ul>
          * 
@@ -999,6 +1061,12 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("MemorySize")
         public String memorySize;
 
+        /**
+         * <p>The model name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Qwen3-Embedding-8B</p>
+         */
         @NameInMap("ModelName")
         public String modelName;
 
@@ -1054,7 +1122,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The zone ID.</p>
+         * <p>The zone.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-d</p>
@@ -1231,7 +1299,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
 
     public static class DescribeAIDBClusterAttributeResponseBodyEndpointListNetInfoItems extends TeaModel {
         /**
-         * <p>The database endpoint.</p>
+         * <p>The database connection address.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-**********.rwlb.rds.aliyuncs.com</p>
@@ -1240,11 +1308,11 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         public String connectionString;
 
         /**
-         * <p>The network type of the endpoint. Valid values:</p>
+         * <p>The network type of the connection string. Valid values:</p>
          * <ul>
-         * <li><strong>Public</strong>: Public network endpoint.</li>
-         * <li><strong>Private</strong>: Private network endpoint.</li>
-         * <li><strong>Inner</strong>: Private network endpoint (classic network).</li>
+         * <li><strong>Public</strong>: Public network address.</li>
+         * <li><strong>Private</strong>: Private network address.</li>
+         * <li><strong>Inner</strong>: Private network address (classic network).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1295,7 +1363,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
 
     public static class DescribeAIDBClusterAttributeResponseBodyEndpointList extends TeaModel {
         /**
-         * <p>The list of network information for the instance.</p>
+         * <p>The list of network information of the instance.</p>
          */
         @NameInMap("NetInfoItems")
         public java.util.List<DescribeAIDBClusterAttributeResponseBodyEndpointListNetInfoItems> netInfoItems;
@@ -1316,9 +1384,21 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeAIDBClusterAttributeResponseBodyTimeSlicesInfoTimeSlices extends TeaModel {
+        /**
+         * <p>The start time of the time slice, in the HH:mm format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08:00</p>
+         */
         @NameInMap("BeginTime")
         public String beginTime;
 
+        /**
+         * <p>The end time of the time slice, in the HH:mm format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18:00</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
@@ -1346,6 +1426,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeAIDBClusterAttributeResponseBodyTimeSlicesInfo extends TeaModel {
+        /**
+         * <p>The list of time slices for pay-as-you-go billing.</p>
+         */
         @NameInMap("TimeSlices")
         public java.util.List<DescribeAIDBClusterAttributeResponseBodyTimeSlicesInfoTimeSlices> timeSlices;
 
@@ -1365,9 +1448,21 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfigLabels extends TeaModel {
+        /**
+         * <p>The key of the node label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>environment</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the node label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>production</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -1395,12 +1490,30 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfigTaints extends TeaModel {
+        /**
+         * <p>The scheduling effect of the node taint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NoSchedule</p>
+         */
         @NameInMap("Effect")
         public String effect;
 
+        /**
+         * <p>The key of the node taint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dedicated</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the node taint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>groupName</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -1436,9 +1549,15 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfig extends TeaModel {
+        /**
+         * <p>The list of Kubernetes node labels.</p>
+         */
         @NameInMap("Labels")
         public java.util.List<DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfigLabels> labels;
 
+        /**
+         * <p>The list of Kubernetes node taints.</p>
+         */
         @NameInMap("Taints")
         public java.util.List<DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfigTaints> taints;
 

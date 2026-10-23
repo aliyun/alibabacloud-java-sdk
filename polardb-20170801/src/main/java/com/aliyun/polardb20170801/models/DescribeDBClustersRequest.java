@@ -73,7 +73,7 @@ public class DescribeDBClustersRequest extends TeaModel {
     public String DBVersion;
 
     /**
-     * <p>The query mode for the list. A value of Simple indicates the brief mode, in which only the basic metadata of the clusters is returned.</p>
+     * <p>The query mode for the list. A value of Simple indicates the simplified mode, in which only the basic metadata of the clusters is returned.</p>
      * <blockquote>
      * <p>If this parameter is not specified, the detailed mode is used by default, and the detailed information of the clusters is returned.</p>
      * </blockquote>
@@ -127,8 +127,8 @@ public class DescribeDBClustersRequest extends TeaModel {
     /**
      * <p>The billing method. Valid values: </p>
      * <ul>
-     * <li><strong>Postpaid</strong>: pay-as-you-go</li>
-     * <li><strong>Prepaid</strong>: subscription</li>
+     * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+     * <li><strong>Prepaid</strong>: subscription.</li>
      * </ul>
      * 
      * <strong>example:</strong>

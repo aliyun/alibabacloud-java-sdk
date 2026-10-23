@@ -5,14 +5,26 @@ import com.aliyun.tea.*;
 
 public class DescribeAIDBClusterApiKeysResponseBody extends TeaModel {
     /**
-     * <p>API Keys。</p>
+     * <p>The API keys.</p>
      */
     @NameInMap("ApiKeys")
     public java.util.List<DescribeAIDBClusterApiKeysResponseBodyApiKeys> apiKeys;
 
+    /**
+     * <p>The current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
@@ -74,7 +86,7 @@ public class DescribeAIDBClusterApiKeysResponseBody extends TeaModel {
 
         /**
          * <p>The creation time.</p>
-         * <p>The time is displayed in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * <p>The time is displayed in ISO 8601 format in UTC (YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-09T03:19:19Z</p>

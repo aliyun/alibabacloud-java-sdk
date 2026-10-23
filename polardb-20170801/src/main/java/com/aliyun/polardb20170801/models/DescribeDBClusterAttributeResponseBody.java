@@ -122,12 +122,18 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The connection resource quota (AgenticDB exclusive).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("ConnectionResourceQuota")
     public Long connectionResourceQuota;
 
     /**
      * <p>The number of connection resources used (AgenticDB exclusive).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("ConnectionResourceUsed")
     public Long connectionResourceUsed;
@@ -612,6 +618,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("StandbyHAMode")
     public String standbyHAMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Enable</p>
+     */
     @NameInMap("StorageAutoScale")
     public String storageAutoScale;
 
@@ -655,6 +665,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("StorageType")
     public String storageType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>800</p>
+     */
     @NameInMap("StorageUpperBound")
     public Integer storageUpperBound;
 
@@ -1346,6 +1360,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("BranchTime")
         public String branchTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("DBClusterDescription")
         public String DBClusterDescription;
 
@@ -1639,12 +1657,24 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("Orca")
         public String orca;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RemoteMemoryMax")
         public Integer remoteMemoryMax;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RemoteMemoryMin")
         public Integer remoteMemoryMin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RemoteMemoryRecommended")
         public Integer remoteMemoryRecommended;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAgenticDBProjectRequest extends TeaModel {
     /**
-     * <p>The AgenticDB cluster ID.</p>
+     * <p>The ID of the AgenticDB cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateAgenticDBProjectRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The default branch name. Default value: main.</p>
+     * <p>The name of the default branch. Default value: main.</p>
      * 
      * <strong>example:</strong>
      * <p>main</p>
@@ -33,7 +33,16 @@ public class CreateAgenticDBProjectRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The project name. The name must be unique within the same tenant.</p>
+     * <p>The retention period for historical data to support creating branches at specific points in time. Default value: 604800 seconds (7 days). Valid values: 3600 to 2592000 seconds (1 hour to 30 days), inclusive. The actual range is subject to the service configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>604800</p>
+     */
+    @NameInMap("HistoryRetentionSeconds")
+    public Long historyRetentionSeconds;
+
+    /**
+     * <p>The name of the project. The name must be unique within the tenant.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +62,7 @@ public class CreateAgenticDBProjectRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the tenant to which the project belongs.</p>
+     * <p>The ID of the tenant.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -89,6 +98,14 @@ public class CreateAgenticDBProjectRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateAgenticDBProjectRequest setHistoryRetentionSeconds(Long historyRetentionSeconds) {
+        this.historyRetentionSeconds = historyRetentionSeconds;
+        return this;
+    }
+    public Long getHistoryRetentionSeconds() {
+        return this.historyRetentionSeconds;
     }
 
     public CreateAgenticDBProjectRequest setProjectName(String projectName) {

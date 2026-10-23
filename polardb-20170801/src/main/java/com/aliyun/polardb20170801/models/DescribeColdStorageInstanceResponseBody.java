@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeColdStorageInstanceResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries returned. Default value: 10.</p>
+     * <p>The maximum number of data entries to read in this request. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -14,7 +14,7 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results. If this parameter is not returned, all results have been returned.</p>
+     * <p>The query token. Set the value to the NextToken value returned from the previous API call. If there are no more queries, do not specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>c2FpXzIwMjIwNjI5X2Jhay9zYWlfc3VtbWVyX3RyZWFzdXJlX3Bvb2xfbG9nLkNTVg==</p>
@@ -32,12 +32,10 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
     public String objectType;
 
     /**
-     * <p>Indicates whether the OSS bucket is enabled.</p>
+     * <p>Specifies whether OSS storage space is enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: enabled</p>
-     * </li>
-     * <li><p><strong>false</strong>: disabled</p>
-     * </li>
+     * <li><strong>true</strong>: enabled</li>
+     * <li><strong>false</strong>: disabled</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,13 +45,13 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
     public String ossClusterEnabled;
 
     /**
-     * <p>The list of OSS addresses for the cold storage instances.</p>
+     * <p>The list of OSS addresses for the cold storage instance.</p>
      */
     @NameInMap("OssClusterInfoList")
     public java.util.List<DescribeColdStorageInstanceResponseBodyOssClusterInfoList> ossClusterInfoList;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -62,7 +60,7 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries on the current page.</p>
+     * <p>The number of records on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -89,7 +87,7 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the cluster supports cold storage. If the cluster does not support cold storage, the switch is not displayed on the console.</p>
+     * <p>Specifies whether the current cluster supports enabling cold storage. For clusters that do not support this feature, the switch is not displayed on the page.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -104,7 +102,7 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
     public java.util.List<DescribeColdStorageInstanceResponseBodyTables> tables;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -215,7 +213,7 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
 
     public static class DescribeColdStorageInstanceResponseBodyOssClusterInfoList extends TeaModel {
         /**
-         * <p>The time when the cluster was created.</p>
+         * <p>The creation time of the cluster. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-10T17:01:16Z</p>
@@ -224,7 +222,7 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
         public String createdTime;
 
         /**
-         * <p>The ID of the cold storage instance.</p>
+         * <p>The cold storage instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-*****************</p>
@@ -233,7 +231,7 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
         public String ossClusterId;
 
         /**
-         * <p>The ID of the region where the task is located.</p>
+         * <p>The region ID of the region where the task resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -318,22 +316,16 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
         public String size;
 
         /**
-         * <p>The status of the task. Valid values:</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><p><strong>Scheduled</strong>: The task is waiting to be executed.</p>
-         * </li>
-         * <li><p><strong>Running</strong>: The task is in progress.</p>
-         * </li>
-         * <li><p><strong>Succeed</strong>: The task is successful.</p>
-         * </li>
-         * <li><p><strong>Cancelling</strong>: The task is being stopped.</p>
-         * </li>
-         * <li><p><strong>Canceled</strong>: The task is stopped.</p>
-         * </li>
-         * <li><p><strong>Waiting</strong>: The task is waiting for a preset time.</p>
-         * </li>
+         * <li><strong>Scheduled</strong>: waiting for execution</li>
+         * <li><strong>Running</strong>: running</li>
+         * <li><strong>Succeed</strong>: succeeded</li>
+         * <li><strong>Cancelling</strong>: cancelling</li>
+         * <li><strong>Canceled</strong>: canceled</li>
+         * <li><strong>Waiting</strong>: waiting for the preset time</li>
          * </ul>
-         * <p>To query multiple statuses, separate them with commas (,). If you do not specify this parameter, all statuses are queried.</p>
+         * <p>To query multiple statuses, separate them with commas (,). The default value is empty, which indicates that all statuses are selected.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -388,7 +380,7 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
         public java.util.List<DescribeColdStorageInstanceResponseBodyTablesChildObjects> childObjects;
 
         /**
-         * <p>The database name.</p>
+         * <p>The name of the database.</p>
          * 
          * <strong>example:</strong>
          * <p>test_db</p>
@@ -397,7 +389,7 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
         public String DB;
 
         /**
-         * <p>The database name.</p>
+         * <p>The name of the database.</p>
          * 
          * <strong>example:</strong>
          * <p>test_db</p>
@@ -406,7 +398,7 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
         public String DBName;
 
         /**
-         * <p>The name of the large object (LOB) field.</p>
+         * <p>The name of the LOB field.</p>
          * 
          * <strong>example:</strong>
          * <p>user</p>
@@ -415,7 +407,7 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
         public String fieldName;
 
         /**
-         * <p>The ID of the OSS-based cluster.</p>
+         * <p>The OSS cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-*****************</p>
@@ -442,7 +434,7 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
         public String size;
 
         /**
-         * <p>The status of the task.</p>
+         * <p>The task status.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -451,7 +443,7 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The table name.</p>
+         * <p>The name of the table.</p>
          * 
          * <strong>example:</strong>
          * <p>user</p>
@@ -460,7 +452,7 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
         public String table;
 
         /**
-         * <p>The table name.</p>
+         * <p>The name of the table.</p>
          * 
          * <strong>example:</strong>
          * <p>test_table</p>

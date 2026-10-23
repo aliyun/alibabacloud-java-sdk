@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAgenticDBBranchResponseBody extends TeaModel {
     /**
-     * <p>The ID of the compute cluster associated with the branch.</p>
+     * <p>The ID of the compute cluster for the branch.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-g0lsayq8c5qe</p>
@@ -14,7 +14,7 @@ public class DescribeAgenticDBBranchResponseBody extends TeaModel {
     public String branchComputeClusterId;
 
     /**
-     * <p>The number of compute nodes. The value is fixed to 1 in the initial phase.</p>
+     * <p>The number of compute nodes. The value is fixed to 1 in the first phase.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class DescribeAgenticDBBranchResponseBody extends TeaModel {
     public String branchId;
 
     /**
-     * <p>The branch name.</p>
+     * <p>The name of the branch.</p>
      * 
      * <strong>example:</strong>
      * <p>feature-analytics</p>
@@ -41,8 +41,7 @@ public class DescribeAgenticDBBranchResponseBody extends TeaModel {
     public String branchName;
 
     /**
-     * <p>The time when the branch was created.</p>
-     * <p>The time is in the ISO 8601 standard in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+     * <p>The creation time. The time follows the ISO 8601 standard in the UTC time zone. Format: YYYY-MM-DDTHH:mm:ssZ.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-06-10T11:00:00Z</p>
@@ -51,7 +50,7 @@ public class DescribeAgenticDBBranchResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The description of the branch.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>Feature branch for analytics</p>
@@ -78,7 +77,7 @@ public class DescribeAgenticDBBranchResponseBody extends TeaModel {
     public String lastActivatedAt;
 
     /**
-     * <p>The maximum compute unit.</p>
+     * <p>The maximum number of compute units (CUs).</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -87,7 +86,7 @@ public class DescribeAgenticDBBranchResponseBody extends TeaModel {
     public String maxCU;
 
     /**
-     * <p>The minimum compute unit.</p>
+     * <p>The minimum number of compute units (CUs).</p>
      * 
      * <strong>example:</strong>
      * <p>0.25</p>
@@ -114,7 +113,16 @@ public class DescribeAgenticDBBranchResponseBody extends TeaModel {
     public String parentBranchName;
 
     /**
-     * <p>The ID of the project to which the branch belongs.</p>
+     * <p>The historical time of the parent branch specified when the branch is created. The time follows the RFC 3339 standard in the UTC time zone. If no historical time is specified or for old records, this value may be empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-10-15T07:32:00.123456Z</p>
+     */
+    @NameInMap("ParentTimestamp")
+    public String parentTimestamp;
+
+    /**
+     * <p>The project ID.</p>
      * 
      * <strong>example:</strong>
      * <p>proj-a1b2c3d4e5f6</p>
@@ -132,7 +140,7 @@ public class DescribeAgenticDBBranchResponseBody extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>C3D4E5F6-A7B8-9012-CDEF-345678901CDE</p>
@@ -141,12 +149,7 @@ public class DescribeAgenticDBBranchResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the branch. Valid values:</p>
-     * <ul>
-     * <li>Running</li>
-     * <li>Pending</li>
-     * <li>Paused</li>
-     * </ul>
+     * <p>The status of the branch. Valid values: Running, Pending, and Paused.</p>
      * 
      * <strong>example:</strong>
      * <p>Active</p>
@@ -155,7 +158,7 @@ public class DescribeAgenticDBBranchResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The ID of the tenant to which the branch belongs.</p>
+     * <p>The tenant ID.</p>
      * 
      * <strong>example:</strong>
      * <p>t-4b83e0da66674951</p>
@@ -262,6 +265,14 @@ public class DescribeAgenticDBBranchResponseBody extends TeaModel {
     }
     public String getParentBranchName() {
         return this.parentBranchName;
+    }
+
+    public DescribeAgenticDBBranchResponseBody setParentTimestamp(String parentTimestamp) {
+        this.parentTimestamp = parentTimestamp;
+        return this;
+    }
+    public String getParentTimestamp() {
+        return this.parentTimestamp;
     }
 
     public DescribeAgenticDBBranchResponseBody setProjectId(String projectId) {
