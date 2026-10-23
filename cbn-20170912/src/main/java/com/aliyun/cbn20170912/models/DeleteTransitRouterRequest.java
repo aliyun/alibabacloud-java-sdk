@@ -18,10 +18,10 @@ public class DeleteTransitRouterRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run, including permission and instance status verification. Valid values:</p>
+     * <p>Specifies whether to perform a dry run for this deletion request, including permission and instance status checks. Valid values:</p>
      * <ul>
      * <li><strong>false</strong> (default): Sends a normal request. If the request passes the check, the transit router instance is deleted.</li>
-     * <li><strong>true</strong>: Sends a check request. Only the check is performed. The transit router instance is not deleted. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li><strong>true</strong>: Sends a check request. Only the validation is performed, and the transit router instance is not deleted. The system checks whether the required parameters are specified and whether the request format is valid. If the check fails, the corresponding error is returned. If the check passes, the error code <code>DryRunOperation</code> is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterEcrAttachmentsRequest extends TeaModel {
     /**
-     * <p>The CEN instance ID.</p>
+     * <p>The Cloud Enterprise Network (CEN) instance ID. If you specify this parameter, you must also specify RegionId.</p>
      * 
      * <strong>example:</strong>
      * <p>cen-7qthudw0ll6jmc****</p>
@@ -14,7 +14,7 @@ public class ListTransitRouterEcrAttachmentsRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The number of entries per page for a paged query. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return per page. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,10 +23,10 @@ public class ListTransitRouterEcrAttachmentsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the next query. Valid values: </p>
+     * <p>The token used to start the next query. Valid values: </p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next query exists. </li>
-     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
+     * <li>If <strong>NextToken</strong> is empty, no next query is available. </li>
+     * <li>If <strong>NextToken</strong> returns a value, the value is the token used to start the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class ListTransitRouterEcrAttachmentsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the transit router instance.</p>
+     * <p>The region ID of the transit router. If you specify this parameter, you must also specify CenId.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
      * 
      * <strong>example:</strong>
@@ -65,7 +65,7 @@ public class ListTransitRouterEcrAttachmentsRequest extends TeaModel {
     public java.util.List<ListTransitRouterEcrAttachmentsRequestTag> tag;
 
     /**
-     * <p>The ECR connection ID.</p>
+     * <p>The ID of the ECR connection.</p>
      * 
      * <strong>example:</strong>
      * <p>tr-attach-nls9fzkfat8934****</p>
@@ -178,7 +178,7 @@ public class ListTransitRouterEcrAttachmentsRequest extends TeaModel {
     public static class ListTransitRouterEcrAttachmentsRequestTag extends TeaModel {
         /**
          * <p>The tag key of the resource.</p>
-         * <p>The tag key cannot be an empty string. It can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key cannot be an empty string. It can be up to 64 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https:// </code>.</p>
          * <p>You can specify up to 20 tag keys at a time.</p>
          * 
          * <strong>example:</strong>
@@ -189,8 +189,8 @@ public class ListTransitRouterEcrAttachmentsRequest extends TeaModel {
 
         /**
          * <p>The tag value of the resource.</p>
-         * <p>The tag value can be an empty string or up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</p>
+         * <p>The tag value can be an empty string or a string of up to 128 characters. It cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https:// </code>.</p>
+         * <p>Each tag key corresponds to a tag value. You can specify up to 20 tag values at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>TagValue</p>

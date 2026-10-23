@@ -15,7 +15,7 @@ public class AttachCenChildInstanceRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The ID of the network instance to attach.</p>
+     * <p>The ID of the network instance to be attached.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class AttachCenChildInstanceRequest extends TeaModel {
     /**
      * <p>The Alibaba Cloud account ID to which the network instance belongs.</p>
      * <blockquote>
-     * <p>This parameter is required if you want to attach a cross-account network instance.</p>
+     * <p>This parameter is required if you want to load a cross-account network instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -37,8 +37,8 @@ public class AttachCenChildInstanceRequest extends TeaModel {
     public Long childInstanceOwnerId;
 
     /**
-     * <p>The region of the network instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>The region ID of the network instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,11 +50,11 @@ public class AttachCenChildInstanceRequest extends TeaModel {
     /**
      * <p>The type of the network instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>VPC</strong>: virtual private cloud.</p>
+     * <li><p><strong>VPC</strong>: VPC.</p>
      * </li>
-     * <li><p><strong>VBR</strong>: border router.</p>
+     * <li><p><strong>VBR</strong>: VBR.</p>
      * </li>
-     * <li><p><strong>CCN</strong>: Cloud Connect Network.</p>
+     * <li><p><strong>CCN</strong>: CCN.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

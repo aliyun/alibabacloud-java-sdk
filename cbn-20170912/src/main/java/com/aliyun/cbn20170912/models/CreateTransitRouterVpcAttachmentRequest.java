@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     /**
-     * <p>Specifies whether to allow the Enterprise Edition transit router to automatically publish routing entries to the VPC instance.</p>
+     * <p>Specifies whether the Enterprise Edition transit router automatically publishes route entries to the VPC instance.</p>
      * <ul>
-     * <li><strong>false</strong> (default): No.</li>
-     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong> (default): does not automatically publish route entries.</li>
+     * <li><strong>true</strong>: automatically publishes route entries.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The billing method. Default value: <strong>POSTPAY</strong>, which indicates pay-as-you-go.</p>
+     * <p>The billing method. Default value: <strong>POSTPAY</strong>, which indicates the pay-as-you-go billing method.</p>
      * 
      * <strong>example:</strong>
      * <p>POSTPAY</p>
@@ -37,9 +37,9 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>Generate a unique value from your client for this parameter. ClientToken supports only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system uses the RequestId of the API request as the ClientToken. The RequestId of each API request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -49,10 +49,10 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to execute a dry run, including permission and instance status verification. Valid values:</p>
+     * <p>Specifies whether to perform a dry run on the request, including permission checks and instance status validation. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): Sends a normal request and creates the VPC connection after the request passes the check.</li>
-     * <li><strong>true</strong>: Sends a check request. Only the check is performed, and the VPC connection is not created. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li><strong>false</strong> (default): sends a normal request and creates a VPC after the check passes. Use this value to create a VPC.</li>
+     * <li><strong>true</strong>: sends a dry run request for validation only without creating the VPC attachment. The check includes whether required parameters are specified and whether the request format is valid. If the check fails, the corresponding error is returned. If the check passes, the error code <code>DryRunOperation</code> is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,8 +74,8 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the VPC-connected instance.</p>
-     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the region ID.</p>
+     * <p>The ID of the region where the VPC instance is deployed.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> to query region IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -97,8 +97,8 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     public java.util.List<CreateTransitRouterVpcAttachmentRequestTag> tag;
 
     /**
-     * <p>The description of the VPC connection.</p>
-     * <p>The description can be empty or 1 to 256 characters in length, and cannot start with http:// or https://.</p>
+     * <p>The description of the VPC attachment.</p>
+     * <p>The description can be left empty or can contain 1 to 256 characters. It cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>testname</p>
@@ -107,8 +107,8 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     public String transitRouterAttachmentDescription;
 
     /**
-     * <p>The name of the VPC connection.</p>
-     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
+     * <p>The name of the VPC attachment.</p>
+     * <p>The name can be left empty or can contain 1 to 128 characters. It cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>testname</p>
@@ -126,13 +126,13 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     public String transitRouterId;
 
     /**
-     * <p>The list of feature attributes for the VPC connection (to be deprecated, use the new parameter Options instead).</p>
+     * <p>The list of feature attributes for the VPC attachment (to be deprecated — use the new Options parameter instead).</p>
      */
     @NameInMap("TransitRouterVPCAttachmentOptions")
     public java.util.Map<String, String> transitRouterVPCAttachmentOptions;
 
     /**
-     * <p>The instance ID of the VPC-connected instance.</p>
+     * <p>The instance ID of the VPC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -142,9 +142,9 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The Alibaba Cloud account ID to which the VPC-connected instance belongs. The default value is the Alibaba Cloud account ID of the current logon user.</p>
+     * <p>The ID of the Alibaba Cloud account to which the VPC instance belongs. The default value is the ID of the current logon Alibaba Cloud account.</p>
      * <blockquote>
-     * <p>This parameter is required if you want to load a cross-account network instance.</p>
+     * <p>This parameter is required if you want to attach a network instance that belongs to a different account.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -320,10 +320,10 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
 
     public static class CreateTransitRouterVpcAttachmentRequestOptions extends TeaModel {
         /**
-         * <p>Specifies whether to enable the appliance mode.</p>
+         * <p>Specifies whether to enable the network appliance traffic redirection mode.</p>
          * <ul>
-         * <li><strong>disable</strong> (default): No.</li>
-         * <li><strong>enable</strong>: Yes.</li>
+         * <li><strong>disable</strong> (default): disabled.</li>
+         * <li><strong>enable</strong>: enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -333,10 +333,10 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
         public String applianceModeSupport;
 
         /**
-         * <p>Specifies whether IPv6 is supported.</p>
+         * <p>Specifies whether to enable IPv6 support.</p>
          * <ul>
-         * <li><strong>disable</strong> (default): No.</li>
-         * <li><strong>enable</strong>: Yes.</li>
+         * <li><strong>disable</strong> (default): disabled.</li>
+         * <li><strong>enable</strong>: enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -371,7 +371,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     public static class CreateTransitRouterVpcAttachmentRequestTag extends TeaModel {
         /**
          * <p>The tag key of the resource.</p>
-         * <p>Once specified, the tag key cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>If this parameter is specified, it cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify up to 20 tag keys at a time.</p>
          * 
          * <strong>example:</strong>
@@ -382,8 +382,8 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
 
         /**
          * <p>The tag value of the resource.</p>
-         * <p>Once specified, the tag value cannot be empty. The tag value can be up to 128 characters in length, and cannot start with aliyun or acs:, or contain http:// or https://.</p>
-         * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</p>
+         * <p>If this parameter is specified, it cannot be empty. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+         * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag key-value pairs at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>tagtest</p>
@@ -416,7 +416,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
 
     public static class CreateTransitRouterVpcAttachmentRequestZoneMappings extends TeaModel {
         /**
-         * <p>The ID of the vSwitch instance in a zone supported by the Enterprise Edition transit router.</p>
+         * <p>The vSwitch instance in a zone supported by the Enterprise Edition transit router.</p>
          * <p>You can select vSwitch instances for up to 10 zones at a time.</p>
          * <p>This parameter is required.</p>
          * 
@@ -428,7 +428,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
 
         /**
          * <p>The ID of a zone supported by the Enterprise Edition transit router.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query zone IDs.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> to query zone IDs.</p>
          * <p>You can select up to 10 zones at a time.</p>
          * <p>This parameter is required.</p>
          * 

@@ -21,7 +21,7 @@ public class UpdateTransitRouterRequest extends TeaModel {
      * <p>Specifies whether to perform a dry run for this modification request, including permission and instance status checks. Valid values:</p>
      * <ul>
      * <li><strong>false</strong> (default): Sends a normal request. After the request passes the check, the transit router instance information is directly modified.</li>
-     * <li><strong>true</strong>: Sends a check request. Only the check is performed, and the transit router instance information is not modified. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check passes, the corresponding request ID is returned.</li>
+     * <li><strong>true</strong>: Sends a check request. Only the validation is performed, and the transit router instance information is not modified. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check passes, the corresponding request ID is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>

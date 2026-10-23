@@ -370,15 +370,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you create a network instance connection, you must set the association and forwarding relationship for it by associating the network instance connection with an Enterprise Edition transit router route table. After the association is created, the Enterprise Edition transit router forwards traffic of the network instance based on the route entries in the route table. Before you invoke this operation, take note of the following information:</p>
+     * <p>After you create a network instance connection, you must configure the route table association to associate the network instance connection with an Enterprise Edition transit router route table. After the association is established, the Enterprise Edition transit router forwards traffic from the network instance based on the route entry information in the route table. Before you call this operation to create a route table association, take note of the following information:</p>
      * <ul>
-     * <li>Only Enterprise Edition transit router route tables support route table associations. For information about the regions and zones that support Enterprise Edition transit routers, see <a href="https://help.aliyun.com/document_detail/181681.html">What is Cloud Enterprise Network (CEN)?</a>.</li>
-     * <li>Each network instance connection can be associated with only one Enterprise Edition transit router route table.</li>
-     * <li><strong>AssociateTransitRouterAttachmentWithRouteTable</strong> is an asynchronous operation. After you send a request, the system returns a <strong>RequestId</strong> but the association between the network instance connection and the route table is not complete. The association task is still running in the background. You can call <strong>ListTransitRouterRouteTableAssociations</strong> to query the association status between the network instance connection and the route table.<ul>
-     * <li>If the association status is <strong>Associating</strong>, the network instance connection is being associated with the route table. In this state, you can only query the association but cannot perform other operations.</li>
-     * <li>If the association status is <strong>Active</strong>, the network instance connection is associated with the route table.</li>
+     * <li>Only Enterprise Edition transit router route tables support route table associations. For more information about the regions and zones that support Enterprise Edition transit routers, see <a href="https://help.aliyun.com/document_detail/181681.html">What is Cloud Enterprise Network?</a>.</li>
+     * <li>A network instance connection can be associated with only one Enterprise Edition transit router route table.</li>
+     * <li>The <strong>AssociateTransitRouterAttachmentWithRouteTable</strong> operation is asynchronous. After you send the request, the system returns a <strong>RequestId</strong>, but the route table association is not immediately established. The system continues to process the association task in the background. You can call the <strong>ListTransitRouterRouteTableAssociations</strong> operation to query the association status between the network instance connection and the route table.<ul>
+     * <li>If the association status is <strong>Associating</strong>, the route table association is being established between the network instance connection and the route table. In this state, you can only query the association status. You cannot perform other operations.</li>
+     * <li>If the association status is <strong>Active</strong>, the route table association is successfully established between the network instance connection and the route table.</li>
      * </ul>
      * </li>
+     * <li>Before you perform the association operation, make sure that the network instance connection is in the Attached state.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -442,15 +443,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you create a network instance connection, you must set the association and forwarding relationship for it by associating the network instance connection with an Enterprise Edition transit router route table. After the association is created, the Enterprise Edition transit router forwards traffic of the network instance based on the route entries in the route table. Before you invoke this operation, take note of the following information:</p>
+     * <p>After you create a network instance connection, you must configure the route table association to associate the network instance connection with an Enterprise Edition transit router route table. After the association is established, the Enterprise Edition transit router forwards traffic from the network instance based on the route entry information in the route table. Before you call this operation to create a route table association, take note of the following information:</p>
      * <ul>
-     * <li>Only Enterprise Edition transit router route tables support route table associations. For information about the regions and zones that support Enterprise Edition transit routers, see <a href="https://help.aliyun.com/document_detail/181681.html">What is Cloud Enterprise Network (CEN)?</a>.</li>
-     * <li>Each network instance connection can be associated with only one Enterprise Edition transit router route table.</li>
-     * <li><strong>AssociateTransitRouterAttachmentWithRouteTable</strong> is an asynchronous operation. After you send a request, the system returns a <strong>RequestId</strong> but the association between the network instance connection and the route table is not complete. The association task is still running in the background. You can call <strong>ListTransitRouterRouteTableAssociations</strong> to query the association status between the network instance connection and the route table.<ul>
-     * <li>If the association status is <strong>Associating</strong>, the network instance connection is being associated with the route table. In this state, you can only query the association but cannot perform other operations.</li>
-     * <li>If the association status is <strong>Active</strong>, the network instance connection is associated with the route table.</li>
+     * <li>Only Enterprise Edition transit router route tables support route table associations. For more information about the regions and zones that support Enterprise Edition transit routers, see <a href="https://help.aliyun.com/document_detail/181681.html">What is Cloud Enterprise Network?</a>.</li>
+     * <li>A network instance connection can be associated with only one Enterprise Edition transit router route table.</li>
+     * <li>The <strong>AssociateTransitRouterAttachmentWithRouteTable</strong> operation is asynchronous. After you send the request, the system returns a <strong>RequestId</strong>, but the route table association is not immediately established. The system continues to process the association task in the background. You can call the <strong>ListTransitRouterRouteTableAssociations</strong> operation to query the association status between the network instance connection and the route table.<ul>
+     * <li>If the association status is <strong>Associating</strong>, the route table association is being established between the network instance connection and the route table. In this state, you can only query the association status. You cannot perform other operations.</li>
+     * <li>If the association status is <strong>Active</strong>, the route table association is successfully established between the network instance connection and the route table.</li>
      * </ul>
      * </li>
+     * <li>Before you perform the association operation, make sure that the network instance connection is in the Attached state.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -564,11 +566,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>CEN supports attaching cross-account network instances. Before attaching a cross-account network instance, the CEN instance must be authorized by the cross-account network instance:</p>
+     * <p>CEN supports attaching cross-account network instances. Before attaching a cross-account network instance, the CEN instance must be authorized by the network instance:</p>
      * <ul>
-     * <li>For cross-account VPC instance authorization, refer to <a href="https://help.aliyun.com/document_detail/126224.html">GrantInstanceToCen</a>.</li>
-     * <li>For cross-account Cloud Connect Network instance authorization, refer to <a href="https://help.aliyun.com/document_detail/126141.html">GrantInstanceToCbn</a>.</li>
-     * <li>Cross-account border router instance authorization is not available by default. To use this feature, contact your account manager.</li>
+     * <li>To authorize a cross-account VPC instance, see <a href="https://help.aliyun.com/document_detail/126224.html">GrantInstanceToCen</a>.</li>
+     * <li>To authorize a cross-account CCN instance, see <a href="https://help.aliyun.com/document_detail/126141.html">GrantInstanceToCbn</a>.</li>
+     * <li>The cross-account VBR instance authorization feature is disabled by default. To use this feature, contact your account manager.
+     * This operation applies only to CEN instances that do not have an Enterprise Edition transit router. If the specified CEN instance has an Enterprise Edition transit router, the OperationFailed.InvalidTransitRouter error is returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -636,11 +639,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>CEN supports attaching cross-account network instances. Before attaching a cross-account network instance, the CEN instance must be authorized by the cross-account network instance:</p>
+     * <p>CEN supports attaching cross-account network instances. Before attaching a cross-account network instance, the CEN instance must be authorized by the network instance:</p>
      * <ul>
-     * <li>For cross-account VPC instance authorization, refer to <a href="https://help.aliyun.com/document_detail/126224.html">GrantInstanceToCen</a>.</li>
-     * <li>For cross-account Cloud Connect Network instance authorization, refer to <a href="https://help.aliyun.com/document_detail/126141.html">GrantInstanceToCbn</a>.</li>
-     * <li>Cross-account border router instance authorization is not available by default. To use this feature, contact your account manager.</li>
+     * <li>To authorize a cross-account VPC instance, see <a href="https://help.aliyun.com/document_detail/126224.html">GrantInstanceToCen</a>.</li>
+     * <li>To authorize a cross-account CCN instance, see <a href="https://help.aliyun.com/document_detail/126141.html">GrantInstanceToCbn</a>.</li>
+     * <li>The cross-account VBR instance authorization feature is disabled by default. To use this feature, contact your account manager.
+     * This operation applies only to CEN instances that do not have an Enterprise Edition transit router. If the specified CEN instance has an Enterprise Edition transit router, the OperationFailed.InvalidTransitRouter error is returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2884,23 +2888,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>For information about the regions and zones supported by Enterprise Edition transit routers, see <a href="https://help.aliyun.com/document_detail/181681.html">What is Cloud Enterprise Network?</a>.</li>
-     * <li>You can create a VBR connection on an Enterprise Edition transit router in the following ways:<ul>
-     * <li>If you have already created an Enterprise Edition transit router instance in the target region, you can create a VBR connection by specifying <strong>VbrId</strong>, <strong>RegionId</strong>, and <strong>TransitRouterId</strong>.</li>
-     * <li>If you do not have an Enterprise Edition transit router instance in the target region, you can create a VBR connection by specifying <strong>VbrId</strong>, <strong>CenId</strong>, and <strong>RegionId</strong>. The system automatically creates an Enterprise Edition transit router instance when the VBR connection is created.</li>
+     * <li>You can create a VBR connection on an Enterprise Edition transit router by using one of the following methods:<ul>
+     * <li>If you have already created an Enterprise Edition transit router instance that can forward and perform routing in the target region, you can create a VBR connection by specifying <strong>VbrId</strong>, <strong>RegionId</strong>, and <strong>TransitRouterId</strong>.</li>
+     * <li>If you have not created an Enterprise Edition transit router instance in the target region, you can create a VBR connection by specifying <strong>VbrId</strong>, <strong>CenId</strong>, and <strong>RegionId</strong>. The system performs automatic creation of an Enterprise Edition transit router instance that can forward and perform routing when the VBR connection is created.</li>
      * </ul>
      * </li>
-     * <li><strong>CreateTransitRouterVbrAttachment</strong> is an asynchronous operation. After you send a request, the system returns a VBR connection ID but the VBR connection is not yet created. The creation task runs in the background. You can call <strong>ListTransitRouterVbrAttachments</strong> to query the status of the VBR connection.<ul>
+     * <li><strong>CreateTransitRouterVbrAttachment</strong> is an asynchronous operation. The system returns a VBR connection ID, but the VBR connection is not yet created and the creation task is still running in the background. You can call <strong>ListTransitRouterVbrAttachments</strong> to query the status of the VBR connection.<ul>
      * <li>If the VBR connection is in the <strong>Attaching</strong> state, the VBR connection is being created. In this state, you can only query the VBR connection and cannot perform other operations.</li>
      * <li>If the VBR connection is in the <strong>Attached</strong> state, the VBR connection is created.</li>
      * </ul>
      * </li>
-     * <li>The Alibaba Cloud account that owns the transit router and the Alibaba Cloud account that owns the VBR instance must belong to the same enterprise.</li>
-     * <li>Transit routers support connecting to VBR instances that belong to the same account or a different account. Before creating a cross-account VBR connection, obtain authorization from the VBR instance owner. For more information, see <a href="https://help.aliyun.com/document_detail/181553.html">Grant permissions for cross-account network instances</a>.</li>
-     * <li>After a VBR connection is created, the VBR connection does not establish route learning or association forwarding relationships with any transit router route table by default.</li>
+     * <li>The Alibaba Cloud account to which the transit router belongs and the Alibaba Cloud account to which the VBR belongs must belong to the same enterprise.</li>
+     * <li>Transit routers support connecting VBRs within the same account and across accounts. Before creating a cross-account VBR connection, obtain authorization for the cross-account VBR. For more information, see <a href="https://help.aliyun.com/document_detail/181553.html">Grant permissions on cross-account network instances</a>.</li>
+     * <li>After a VBR connection is created, the VBR connection does not establish route learning or associated forwarding relationships with any transit router route tables by default.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Invokes the CreateTransitRouterVbrAttachment operation to connect a Virtual Border Router (VBR) network instance to a transit router instance in the same region. After the connection is established, the transit router can help you achieve private network peering.</p>
+     * <p>Creates a VBR connection on an Enterprise Edition transit router. You can invoke the CreateTransitRouterVbrAttachment operation to connect a virtual border router (VBR) network instance to a transit router instance that can forward and perform routing in the same region. After the connection is established, the transit router enables private network peering.</p>
      * 
      * @param request CreateTransitRouterVbrAttachmentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2990,23 +2994,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>For information about the regions and zones supported by Enterprise Edition transit routers, see <a href="https://help.aliyun.com/document_detail/181681.html">What is Cloud Enterprise Network?</a>.</li>
-     * <li>You can create a VBR connection on an Enterprise Edition transit router in the following ways:<ul>
-     * <li>If you have already created an Enterprise Edition transit router instance in the target region, you can create a VBR connection by specifying <strong>VbrId</strong>, <strong>RegionId</strong>, and <strong>TransitRouterId</strong>.</li>
-     * <li>If you do not have an Enterprise Edition transit router instance in the target region, you can create a VBR connection by specifying <strong>VbrId</strong>, <strong>CenId</strong>, and <strong>RegionId</strong>. The system automatically creates an Enterprise Edition transit router instance when the VBR connection is created.</li>
+     * <li>You can create a VBR connection on an Enterprise Edition transit router by using one of the following methods:<ul>
+     * <li>If you have already created an Enterprise Edition transit router instance that can forward and perform routing in the target region, you can create a VBR connection by specifying <strong>VbrId</strong>, <strong>RegionId</strong>, and <strong>TransitRouterId</strong>.</li>
+     * <li>If you have not created an Enterprise Edition transit router instance in the target region, you can create a VBR connection by specifying <strong>VbrId</strong>, <strong>CenId</strong>, and <strong>RegionId</strong>. The system performs automatic creation of an Enterprise Edition transit router instance that can forward and perform routing when the VBR connection is created.</li>
      * </ul>
      * </li>
-     * <li><strong>CreateTransitRouterVbrAttachment</strong> is an asynchronous operation. After you send a request, the system returns a VBR connection ID but the VBR connection is not yet created. The creation task runs in the background. You can call <strong>ListTransitRouterVbrAttachments</strong> to query the status of the VBR connection.<ul>
+     * <li><strong>CreateTransitRouterVbrAttachment</strong> is an asynchronous operation. The system returns a VBR connection ID, but the VBR connection is not yet created and the creation task is still running in the background. You can call <strong>ListTransitRouterVbrAttachments</strong> to query the status of the VBR connection.<ul>
      * <li>If the VBR connection is in the <strong>Attaching</strong> state, the VBR connection is being created. In this state, you can only query the VBR connection and cannot perform other operations.</li>
      * <li>If the VBR connection is in the <strong>Attached</strong> state, the VBR connection is created.</li>
      * </ul>
      * </li>
-     * <li>The Alibaba Cloud account that owns the transit router and the Alibaba Cloud account that owns the VBR instance must belong to the same enterprise.</li>
-     * <li>Transit routers support connecting to VBR instances that belong to the same account or a different account. Before creating a cross-account VBR connection, obtain authorization from the VBR instance owner. For more information, see <a href="https://help.aliyun.com/document_detail/181553.html">Grant permissions for cross-account network instances</a>.</li>
-     * <li>After a VBR connection is created, the VBR connection does not establish route learning or association forwarding relationships with any transit router route table by default.</li>
+     * <li>The Alibaba Cloud account to which the transit router belongs and the Alibaba Cloud account to which the VBR belongs must belong to the same enterprise.</li>
+     * <li>Transit routers support connecting VBRs within the same account and across accounts. Before creating a cross-account VBR connection, obtain authorization for the cross-account VBR. For more information, see <a href="https://help.aliyun.com/document_detail/181553.html">Grant permissions on cross-account network instances</a>.</li>
+     * <li>After a VBR connection is created, the VBR connection does not establish route learning or associated forwarding relationships with any transit router route tables by default.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Invokes the CreateTransitRouterVbrAttachment operation to connect a Virtual Border Router (VBR) network instance to a transit router instance in the same region. After the connection is established, the transit router can help you achieve private network peering.</p>
+     * <p>Creates a VBR connection on an Enterprise Edition transit router. You can invoke the CreateTransitRouterVbrAttachment operation to connect a virtual border router (VBR) network instance to a transit router instance that can forward and perform routing in the same region. After the connection is established, the transit router enables private network peering.</p>
      * 
      * @param request CreateTransitRouterVbrAttachmentRequest
      * @return CreateTransitRouterVbrAttachmentResponse
@@ -3019,28 +3023,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can create a VPC connection on an Enterprise Edition transit router in the following two ways:<ul>
-     * <li>If you have already created an Enterprise Edition transit router instance in the target region, you can create a VPC connection by specifying <strong>VpcId</strong>, <strong>ZoneMappings.N.VSwitchId</strong>, <strong>ZoneMappings.N.ZoneId</strong>, <strong>TransitRouterId</strong>, and <strong>RegionId</strong>.</li>
-     * <li>If you do not have an Enterprise Edition transit router instance in the target region, you can create a VPC connection by specifying <strong>VpcId</strong>, <strong>ZoneMappings.N.VSwitchId</strong>, <strong>ZoneMappings.N.ZoneId</strong>, <strong>CenId</strong>, and <strong>RegionId</strong>. The system performs automatic creation of an Enterprise Edition transit router instance when the VPC connection is created.</li>
+     * <li>You can create a VPC attachment for an Enterprise Edition transit router in two ways:<ul>
+     * <li>If you have already created an Enterprise Edition transit router instance in the target region, specify <strong>VpcId</strong>, <strong>ZoneMappings.N.VSwitchId</strong>, <strong>ZoneMappings.N.ZoneId</strong>, <strong>TransitRouterId</strong>, and <strong>RegionId</strong> to create the VPC attachment.</li>
+     * <li>If you have not created an Enterprise Edition transit router instance in the target region, specify <strong>VpcId</strong>, <strong>ZoneMappings.N.VSwitchId</strong>, <strong>ZoneMappings.N.ZoneId</strong>, <strong>CenId</strong>, and <strong>RegionId</strong> to create the VPC attachment. The system uses automatic creation to create an Enterprise Edition transit router instance when you create the VPC attachment.</li>
      * </ul>
      * </li>
-     * <li>The <strong>CreateTransitRouterVpcAttachment</strong> operation is asynchronous. After you send a request, the system returns a VPC connection ID, but the VPC connection is not yet created. The creation node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/261222.html">ListTransitRouterVpcAttachments</a> operation to query the status of the VPC connection.<ul>
-     * <li>If the VPC connection is in the <strong>Attaching</strong> state, the VPC connection is being created. In this state, you can only execute query operations on the VPC connection but cannot execute other operations.</li>
-     * <li>If the VPC connection is in the <strong>Attached</strong> state, the VPC connection is created.</li>
+     * <li><strong>CreateTransitRouterVpcAttachment</strong> is an asynchronous operation. The system returns a VPC attachment ID before the VPC attachment is created. The creation task runs in the background. Call <a href="https://help.aliyun.com/document_detail/261222.html">ListTransitRouterVpcAttachments</a> to query the status of the VPC attachment.<ul>
+     * <li>When the VPC attachment is in the <strong>Attaching</strong> state, the VPC attachment is being created. In this state, you can only query the VPC attachment and cannot execute other operations.</li>
+     * <li>When the VPC attachment is in the <strong>Attached</strong> state, the VPC attachment is created.</li>
      * </ul>
      * </li>
-     * <li>After a VPC connection is created, the VPC connection does not establish routing learning or associate forwarding relationships with any transit router routing table by default.</li>
+     * <li>After a VPC attachment is created, it does not associate with any transit router route table for route learning relationships or forwarding relationships by default.</li>
      * </ul>
      * <h3>Before you begin</h3>
-     * <p>Before you call this operation to create a VPC connection, make sure that the following conditions are met:</p>
+     * <p>Before you call this operation to create a VPC attachment, make sure that the following requirements are met:</p>
      * <ul>
-     * <li>The VPC instance has at least one vSwitch instance in a zone supported by the Enterprise Edition transit router, and the vSwitch instance has at least one idle IP address. For information about the regions and zones supported by Enterprise Edition transit routers, see <a href="https://help.aliyun.com/document_detail/181681.html">Regions and zones supported by Enterprise Edition transit routers</a>.</li>
-     * <li>If you want to connect a cross-account VPC-connected instance, obtain the cross-account VPC-connected instance authorization first. For more information, see <a href="https://help.aliyun.com/document_detail/181553.html">Cross-account VPC-connected instance authorization</a>.</li>
-     * <li>Fees are incurred after a VPC connection is created. Make sure that you understand the billing rules. For more information, see <a href="https://help.aliyun.com/document_detail/189836.html">Billing</a>.</li>
+     * <li>The VPC instance has at least one vSwitch instance with at least one available IP address in a zone supported by the Enterprise Edition transit router. For information about the regions and zones supported by Enterprise Edition transit routers, see <a href="https://help.aliyun.com/document_detail/181681.html">Regions and zones supported by Enterprise Edition transit routers</a>.</li>
+     * <li>If you want to attach a VPC-connected instance that belongs to a different account, obtain cross-account authorization first. For more information, see <a href="https://help.aliyun.com/document_detail/181553.html">Cross-account VPC-connected instance authorization</a>.</li>
+     * <li>Creating a VPC attachment incurs fees. Make sure that you understand the billing rules. For more information, see <a href="https://help.aliyun.com/document_detail/189836.html">Billing</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Calls the CreateTransitRouterVpcAttachment operation to connect a Virtual Private Cloud (VPC) instance to a transit router instance for private network peering. After the connection is established, the transit router instance can help you achieve private network peering.</p>
+     * <p>Calls the CreateTransitRouterVpcAttachment operation to attach a Virtual Private Cloud (VPC) instance to an Enterprise Edition transit router instance to enable private network peering. After the attachment is created, the transit router instance helps you implement private network connectivity through forwarding and routing.</p>
      * 
      * @param tmpReq CreateTransitRouterVpcAttachmentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3155,28 +3159,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can create a VPC connection on an Enterprise Edition transit router in the following two ways:<ul>
-     * <li>If you have already created an Enterprise Edition transit router instance in the target region, you can create a VPC connection by specifying <strong>VpcId</strong>, <strong>ZoneMappings.N.VSwitchId</strong>, <strong>ZoneMappings.N.ZoneId</strong>, <strong>TransitRouterId</strong>, and <strong>RegionId</strong>.</li>
-     * <li>If you do not have an Enterprise Edition transit router instance in the target region, you can create a VPC connection by specifying <strong>VpcId</strong>, <strong>ZoneMappings.N.VSwitchId</strong>, <strong>ZoneMappings.N.ZoneId</strong>, <strong>CenId</strong>, and <strong>RegionId</strong>. The system performs automatic creation of an Enterprise Edition transit router instance when the VPC connection is created.</li>
+     * <li>You can create a VPC attachment for an Enterprise Edition transit router in two ways:<ul>
+     * <li>If you have already created an Enterprise Edition transit router instance in the target region, specify <strong>VpcId</strong>, <strong>ZoneMappings.N.VSwitchId</strong>, <strong>ZoneMappings.N.ZoneId</strong>, <strong>TransitRouterId</strong>, and <strong>RegionId</strong> to create the VPC attachment.</li>
+     * <li>If you have not created an Enterprise Edition transit router instance in the target region, specify <strong>VpcId</strong>, <strong>ZoneMappings.N.VSwitchId</strong>, <strong>ZoneMappings.N.ZoneId</strong>, <strong>CenId</strong>, and <strong>RegionId</strong> to create the VPC attachment. The system uses automatic creation to create an Enterprise Edition transit router instance when you create the VPC attachment.</li>
      * </ul>
      * </li>
-     * <li>The <strong>CreateTransitRouterVpcAttachment</strong> operation is asynchronous. After you send a request, the system returns a VPC connection ID, but the VPC connection is not yet created. The creation node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/261222.html">ListTransitRouterVpcAttachments</a> operation to query the status of the VPC connection.<ul>
-     * <li>If the VPC connection is in the <strong>Attaching</strong> state, the VPC connection is being created. In this state, you can only execute query operations on the VPC connection but cannot execute other operations.</li>
-     * <li>If the VPC connection is in the <strong>Attached</strong> state, the VPC connection is created.</li>
+     * <li><strong>CreateTransitRouterVpcAttachment</strong> is an asynchronous operation. The system returns a VPC attachment ID before the VPC attachment is created. The creation task runs in the background. Call <a href="https://help.aliyun.com/document_detail/261222.html">ListTransitRouterVpcAttachments</a> to query the status of the VPC attachment.<ul>
+     * <li>When the VPC attachment is in the <strong>Attaching</strong> state, the VPC attachment is being created. In this state, you can only query the VPC attachment and cannot execute other operations.</li>
+     * <li>When the VPC attachment is in the <strong>Attached</strong> state, the VPC attachment is created.</li>
      * </ul>
      * </li>
-     * <li>After a VPC connection is created, the VPC connection does not establish routing learning or associate forwarding relationships with any transit router routing table by default.</li>
+     * <li>After a VPC attachment is created, it does not associate with any transit router route table for route learning relationships or forwarding relationships by default.</li>
      * </ul>
      * <h3>Before you begin</h3>
-     * <p>Before you call this operation to create a VPC connection, make sure that the following conditions are met:</p>
+     * <p>Before you call this operation to create a VPC attachment, make sure that the following requirements are met:</p>
      * <ul>
-     * <li>The VPC instance has at least one vSwitch instance in a zone supported by the Enterprise Edition transit router, and the vSwitch instance has at least one idle IP address. For information about the regions and zones supported by Enterprise Edition transit routers, see <a href="https://help.aliyun.com/document_detail/181681.html">Regions and zones supported by Enterprise Edition transit routers</a>.</li>
-     * <li>If you want to connect a cross-account VPC-connected instance, obtain the cross-account VPC-connected instance authorization first. For more information, see <a href="https://help.aliyun.com/document_detail/181553.html">Cross-account VPC-connected instance authorization</a>.</li>
-     * <li>Fees are incurred after a VPC connection is created. Make sure that you understand the billing rules. For more information, see <a href="https://help.aliyun.com/document_detail/189836.html">Billing</a>.</li>
+     * <li>The VPC instance has at least one vSwitch instance with at least one available IP address in a zone supported by the Enterprise Edition transit router. For information about the regions and zones supported by Enterprise Edition transit routers, see <a href="https://help.aliyun.com/document_detail/181681.html">Regions and zones supported by Enterprise Edition transit routers</a>.</li>
+     * <li>If you want to attach a VPC-connected instance that belongs to a different account, obtain cross-account authorization first. For more information, see <a href="https://help.aliyun.com/document_detail/181553.html">Cross-account VPC-connected instance authorization</a>.</li>
+     * <li>Creating a VPC attachment incurs fees. Make sure that you understand the billing rules. For more information, see <a href="https://help.aliyun.com/document_detail/189836.html">Billing</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Calls the CreateTransitRouterVpcAttachment operation to connect a Virtual Private Cloud (VPC) instance to a transit router instance for private network peering. After the connection is established, the transit router instance can help you achieve private network peering.</p>
+     * <p>Calls the CreateTransitRouterVpcAttachment operation to attach a Virtual Private Cloud (VPC) instance to an Enterprise Edition transit router instance to enable private network peering. After the attachment is created, the transit router instance helps you implement private network connectivity through forwarding and routing.</p>
      * 
      * @param request CreateTransitRouterVpcAttachmentRequest
      * @return CreateTransitRouterVpcAttachmentResponse
@@ -4388,25 +4392,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>DeleteTransitRouter</em>* is an asynchronous operation. After you send a request, the system returns a <strong>RequestId</strong> but the transit router instance is not yet deleted. The deletion task continues to run in the background. You can call the <strong>ListTransitRouters</strong> operation to query the status of the transit router instance. </p>
+     * <p><em>DeleteTransitRouter</em>* is an asynchronous operation. After you send a request, the system returns a <strong>RequestId</strong> but the transit router instance is not immediately deleted. The deletion task runs in the background. You can call the <strong>ListTransitRouters</strong> operation to query the status of the transit router instance. </p>
      * <ul>
-     * <li>If the transit router instance is in the <strong>Deleting</strong> state, the transit router instance is being deleted. In this state, you can only query the transit router instance. You cannot perform other operations on the transit router instance.</li>
+     * <li>If the transit router instance is in the <strong>Deleting</strong> state, the transit router instance is being deleted. In this state, you can only query the transit router instance but cannot perform other operations on it.</li>
      * <li>If the transit router instance cannot be found, the transit router instance is deleted.</li>
      * </ul>
      * <h3>Before you begin</h3>
      * <p>Before you delete a transit router instance, make sure that the following conditions are met:</p>
      * <ul>
      * <li>No connections exist on the transit router instance.<ul>
-     * <li>To delete a Virtual Private Cloud (VPC) connection, see <a href="https://help.aliyun.com/document_detail/261220.html">DeleteTransitRouterVpcAttachment</a>.</li>
+     * <li>To delete a virtual private cloud (VPC) connection, see <a href="https://help.aliyun.com/document_detail/261220.html">DeleteTransitRouterVpcAttachment</a>.</li>
      * <li>To delete an Express Connect Router (ECR) connection, see <a href="https://help.aliyun.com/document_detail/2715447.html">DeleteTransitRouterEcrAttachment</a>.</li>
      * <li>To delete a Cloud Connect Network (CCN) connection, see <a href="https://help.aliyun.com/document_detail/65915.html">DetachCenChildInstance</a>.</li>
      * <li>To delete a VPN connection, see <a href="https://help.aliyun.com/document_detail/443992.html">DeleteTransitRouterVpnAttachment</a>.</li>
      * <li>To delete an inter-region connection, see <a href="https://help.aliyun.com/document_detail/261227.html">DeleteTransitRouterPeerAttachment</a>.</li>
-     * <li>To delete a Virtual Border Router (VBR) connection, see <a href="https://help.aliyun.com/document_detail/261223.html">DeleteTransitRouterVbrAttachment</a>.</li>
+     * <li>To delete a virtual border router (VBR) connection, see <a href="https://help.aliyun.com/document_detail/261223.html">DeleteTransitRouterVbrAttachment</a>.</li>
      * </ul>
      * </li>
      * <li>No custom route tables exist on the transit router instance. For more information, see <a href="https://help.aliyun.com/document_detail/261235.html">DeleteTransitRouterRouteTable</a>.</li>
-     * <li>No custom route entries, route prefixes, or aggregate routes exist in the default route table of the transit router instance. For more information, see<ul>
+     * <li>No custom route entries, route prefixes, or aggregate routes exist in the default route table of the transit router instance. For more information, see:<ul>
      * <li>To delete custom route entries of an Enterprise Edition transit router, see <a href="https://help.aliyun.com/document_detail/468291.html">DeleteTransitRouterRouteEntry</a>.</li>
      * <li>To disassociate a prefix list, see <a href="https://help.aliyun.com/document_detail/468312.html">DeleteTransitRouterPrefixListAssociation</a>.</li>
      * <li>To delete an aggregate route, see <a href="https://help.aliyun.com/document_detail/476070.html">DeleteTransitRouteTableAggregation</a>.</li>
@@ -4417,7 +4421,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Calls the DeleteTransitRouter operation to delete an Enterprise Edition transit router instance.</p>
+     * <p>Deletes an Enterprise Edition transit router instance.</p>
      * 
      * @param request DeleteTransitRouterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4473,25 +4477,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>DeleteTransitRouter</em>* is an asynchronous operation. After you send a request, the system returns a <strong>RequestId</strong> but the transit router instance is not yet deleted. The deletion task continues to run in the background. You can call the <strong>ListTransitRouters</strong> operation to query the status of the transit router instance. </p>
+     * <p><em>DeleteTransitRouter</em>* is an asynchronous operation. After you send a request, the system returns a <strong>RequestId</strong> but the transit router instance is not immediately deleted. The deletion task runs in the background. You can call the <strong>ListTransitRouters</strong> operation to query the status of the transit router instance. </p>
      * <ul>
-     * <li>If the transit router instance is in the <strong>Deleting</strong> state, the transit router instance is being deleted. In this state, you can only query the transit router instance. You cannot perform other operations on the transit router instance.</li>
+     * <li>If the transit router instance is in the <strong>Deleting</strong> state, the transit router instance is being deleted. In this state, you can only query the transit router instance but cannot perform other operations on it.</li>
      * <li>If the transit router instance cannot be found, the transit router instance is deleted.</li>
      * </ul>
      * <h3>Before you begin</h3>
      * <p>Before you delete a transit router instance, make sure that the following conditions are met:</p>
      * <ul>
      * <li>No connections exist on the transit router instance.<ul>
-     * <li>To delete a Virtual Private Cloud (VPC) connection, see <a href="https://help.aliyun.com/document_detail/261220.html">DeleteTransitRouterVpcAttachment</a>.</li>
+     * <li>To delete a virtual private cloud (VPC) connection, see <a href="https://help.aliyun.com/document_detail/261220.html">DeleteTransitRouterVpcAttachment</a>.</li>
      * <li>To delete an Express Connect Router (ECR) connection, see <a href="https://help.aliyun.com/document_detail/2715447.html">DeleteTransitRouterEcrAttachment</a>.</li>
      * <li>To delete a Cloud Connect Network (CCN) connection, see <a href="https://help.aliyun.com/document_detail/65915.html">DetachCenChildInstance</a>.</li>
      * <li>To delete a VPN connection, see <a href="https://help.aliyun.com/document_detail/443992.html">DeleteTransitRouterVpnAttachment</a>.</li>
      * <li>To delete an inter-region connection, see <a href="https://help.aliyun.com/document_detail/261227.html">DeleteTransitRouterPeerAttachment</a>.</li>
-     * <li>To delete a Virtual Border Router (VBR) connection, see <a href="https://help.aliyun.com/document_detail/261223.html">DeleteTransitRouterVbrAttachment</a>.</li>
+     * <li>To delete a virtual border router (VBR) connection, see <a href="https://help.aliyun.com/document_detail/261223.html">DeleteTransitRouterVbrAttachment</a>.</li>
      * </ul>
      * </li>
      * <li>No custom route tables exist on the transit router instance. For more information, see <a href="https://help.aliyun.com/document_detail/261235.html">DeleteTransitRouterRouteTable</a>.</li>
-     * <li>No custom route entries, route prefixes, or aggregate routes exist in the default route table of the transit router instance. For more information, see<ul>
+     * <li>No custom route entries, route prefixes, or aggregate routes exist in the default route table of the transit router instance. For more information, see:<ul>
      * <li>To delete custom route entries of an Enterprise Edition transit router, see <a href="https://help.aliyun.com/document_detail/468291.html">DeleteTransitRouterRouteEntry</a>.</li>
      * <li>To disassociate a prefix list, see <a href="https://help.aliyun.com/document_detail/468312.html">DeleteTransitRouterPrefixListAssociation</a>.</li>
      * <li>To delete an aggregate route, see <a href="https://help.aliyun.com/document_detail/476070.html">DeleteTransitRouteTableAggregation</a>.</li>
@@ -4502,7 +4506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Calls the DeleteTransitRouter operation to delete an Enterprise Edition transit router instance.</p>
+     * <p>Deletes an Enterprise Edition transit router instance.</p>
      * 
      * @param request DeleteTransitRouterRequest
      * @return DeleteTransitRouterResponse
@@ -7367,6 +7371,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询指定转发路由器的资源预留配置信息</p>
+     * 
+     * @param request DescribeTransitRouterCapacityReservationsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeTransitRouterCapacityReservationsResponse
+     */
+    public DescribeTransitRouterCapacityReservationsResponse describeTransitRouterCapacityReservationsWithOptions(DescribeTransitRouterCapacityReservationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.transitRouterId)) {
+            query.put("TransitRouterId", request.transitRouterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            query.put("Version", request.version);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeTransitRouterCapacityReservations"),
+            new TeaPair("version", "2017-09-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeTransitRouterCapacityReservationsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询指定转发路由器的资源预留配置信息</p>
+     * 
+     * @param request DescribeTransitRouterCapacityReservationsRequest
+     * @return DescribeTransitRouterCapacityReservationsResponse
+     */
+    public DescribeTransitRouterCapacityReservationsResponse describeTransitRouterCapacityReservations(DescribeTransitRouterCapacityReservationsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeTransitRouterCapacityReservationsWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>The <strong>DetachCenChildInstance</strong> operation supports detaching only network instances from a Basic Edition transit router.</p>
      * 
@@ -9082,13 +9134,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>You can query the information about ECR connections under an Enterprise Edition transit router in the following three ways: </p>
      * <ul>
-     * <li>Query the information about all ECR connections under an Enterprise Edition transit router instance by specifying the transit router instance ID. </li>
-     * <li>Query the information about all ECR connections under an Enterprise Edition transit router instance by specifying the Cloud Enterprise Network (CEN) instance ID and the region ID of the transit router instance. </li>
-     * <li>Query the information about a specific ECR connection by specifying only the <strong>TransitRouterAttachmentId</strong> parameter.</li>
+     * <li>Query the information about all ECR connections under the instance by using the Enterprise Edition transit router instance ID. </li>
+     * <li>Query the information about all ECR connections under the instance by using the Cloud Enterprise Network (CEN) instance ID and the region ID of the Enterprise Edition transit router. </li>
+     * <li>Query specific ECR connection information by using only the <strong>TransitRouterAttachmentId</strong> parameter.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the connection information about Express Connect Router (ECR) instances under an Enterprise Edition transit router, including the total number of entries, connection status, connection IDs, and the payer of network instances.</p>
+     * <p>Queries the connection information of Express Connect Router (ECR) connections under an Enterprise Edition transit router, including the total number of entries, connection status, connection ID, and payer of the network instance.</p>
      * 
      * @param request ListTransitRouterEcrAttachmentsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9162,13 +9214,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>You can query the information about ECR connections under an Enterprise Edition transit router in the following three ways: </p>
      * <ul>
-     * <li>Query the information about all ECR connections under an Enterprise Edition transit router instance by specifying the transit router instance ID. </li>
-     * <li>Query the information about all ECR connections under an Enterprise Edition transit router instance by specifying the Cloud Enterprise Network (CEN) instance ID and the region ID of the transit router instance. </li>
-     * <li>Query the information about a specific ECR connection by specifying only the <strong>TransitRouterAttachmentId</strong> parameter.</li>
+     * <li>Query the information about all ECR connections under the instance by using the Enterprise Edition transit router instance ID. </li>
+     * <li>Query the information about all ECR connections under the instance by using the Cloud Enterprise Network (CEN) instance ID and the region ID of the Enterprise Edition transit router. </li>
+     * <li>Query specific ECR connection information by using only the <strong>TransitRouterAttachmentId</strong> parameter.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the connection information about Express Connect Router (ECR) instances under an Enterprise Edition transit router, including the total number of entries, connection status, connection IDs, and the payer of network instances.</p>
+     * <p>Queries the connection information of Express Connect Router (ECR) connections under an Enterprise Edition transit router, including the total number of entries, connection status, connection ID, and payer of the network instance.</p>
      * 
      * @param request ListTransitRouterEcrAttachmentsRequest
      * @return ListTransitRouterEcrAttachmentsResponse
@@ -9363,12 +9415,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>RegionId must be used together with CenId and cannot be used alone. Otherwise, multicast domain information is not displayed. However, TransitRouterId and TransitRouterMulticastDomainId can be used independently.</li>
-     * <li>Ensure that the parameter values you specify are correct when you call this operation. If you specify invalid parameter values, the system still returns a <strong>RequestId</strong> but does not display detailed multicast domain information.</li>
+     * <li>RegionId must be used in combination with CenId and cannot be used alone. Otherwise, the multicast domain information is not displayed. However, TransitRouterId and TransitRouterMulticastDomainId can be used alone.</li>
+     * <li>Make sure that the input parameter values are correct when you call this operation. If the input parameters are invalid, the operation still returns <strong>RequestId</strong>, but the detailed information about the multicast domains is not displayed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about multicast domains, such as the status, multicast domain ID, and description of multicast domains.</p>
+     * <p>Queries information about multicast domains, such as the status, multicast domain ID, and description.</p>
      * 
      * @param request ListTransitRouterMulticastDomainsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9445,12 +9497,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>RegionId must be used together with CenId and cannot be used alone. Otherwise, multicast domain information is not displayed. However, TransitRouterId and TransitRouterMulticastDomainId can be used independently.</li>
-     * <li>Ensure that the parameter values you specify are correct when you call this operation. If you specify invalid parameter values, the system still returns a <strong>RequestId</strong> but does not display detailed multicast domain information.</li>
+     * <li>RegionId must be used in combination with CenId and cannot be used alone. Otherwise, the multicast domain information is not displayed. However, TransitRouterId and TransitRouterMulticastDomainId can be used alone.</li>
+     * <li>Make sure that the input parameter values are correct when you call this operation. If the input parameters are invalid, the operation still returns <strong>RequestId</strong>, but the detailed information about the multicast domains is not displayed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about multicast domains, such as the status, multicast domain ID, and description of multicast domains.</p>
+     * <p>Queries information about multicast domains, such as the status, multicast domain ID, and description.</p>
      * 
      * @param request ListTransitRouterMulticastDomainsRequest
      * @return ListTransitRouterMulticastDomainsResponse
@@ -9592,14 +9644,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query inter-region connections under an Enterprise Edition transit router in the following ways:</p>
+     * <p>You can query the information about inter-region connections under an Enterprise Edition transit router in the following two ways:</p>
      * <ul>
-     * <li>Query all inter-region connections under an Enterprise Edition transit router by specifying the transit router instance ID.</li>
-     * <li>Query all inter-region connections under an Enterprise Edition transit router by specifying the Cloud Enterprise Network (CEN) instance ID and the region ID of the Enterprise Edition transit router instance.</li>
+     * <li>Query the information about all inter-region connections under the Enterprise Edition transit router by using instance ID of the Enterprise Edition transit router.</li>
+     * <li>Query the information about all inter-region connections under the Enterprise Edition transit router by using instance ID of the Cloud Enterprise Network (CEN) instance and the region ID of the Enterprise Edition transit router.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of inter-region connections under an Enterprise Edition transit router by calling the ListTransitRouterPeerAttachments operation.</p>
+     * <p>Queries the details of inter-region connections under an Enterprise Edition transit router.</p>
      * 
      * @param request ListTransitRouterPeerAttachmentsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9671,14 +9723,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query inter-region connections under an Enterprise Edition transit router in the following ways:</p>
+     * <p>You can query the information about inter-region connections under an Enterprise Edition transit router in the following two ways:</p>
      * <ul>
-     * <li>Query all inter-region connections under an Enterprise Edition transit router by specifying the transit router instance ID.</li>
-     * <li>Query all inter-region connections under an Enterprise Edition transit router by specifying the Cloud Enterprise Network (CEN) instance ID and the region ID of the Enterprise Edition transit router instance.</li>
+     * <li>Query the information about all inter-region connections under the Enterprise Edition transit router by using instance ID of the Enterprise Edition transit router.</li>
+     * <li>Query the information about all inter-region connections under the Enterprise Edition transit router by using instance ID of the Cloud Enterprise Network (CEN) instance and the region ID of the Enterprise Edition transit router.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of inter-region connections under an Enterprise Edition transit router by calling the ListTransitRouterPeerAttachments operation.</p>
+     * <p>Queries the details of inter-region connections under an Enterprise Edition transit router.</p>
      * 
      * @param request ListTransitRouterPeerAttachmentsRequest
      * @return ListTransitRouterPeerAttachmentsResponse
@@ -11376,6 +11428,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyTransitRouteTableAggregationResponse modifyTransitRouteTableAggregation(ModifyTransitRouteTableAggregationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyTransitRouteTableAggregationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>配置企业版转发路由器的资源预留相关属性</p>
+     * 
+     * @param tmpReq ModifyTransitRouterCapacityReservationsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyTransitRouterCapacityReservationsResponse
+     */
+    public ModifyTransitRouterCapacityReservationsResponse modifyTransitRouterCapacityReservationsWithOptions(ModifyTransitRouterCapacityReservationsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyTransitRouterCapacityReservationsShrinkRequest request = new ModifyTransitRouterCapacityReservationsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.deploymentSets)) {
+            request.deploymentSetsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.deploymentSets, "DeploymentSets", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.minimumTransitRouterCapacities)) {
+            request.minimumTransitRouterCapacitiesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.minimumTransitRouterCapacities, "MinimumTransitRouterCapacities", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.resetCapacityReservations)) {
+            request.resetCapacityReservationsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resetCapacityReservations, "ResetCapacityReservations", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deploymentSetsShrink)) {
+            query.put("DeploymentSets", request.deploymentSetsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minimumTransitRouterCapacitiesShrink)) {
+            query.put("MinimumTransitRouterCapacities", request.minimumTransitRouterCapacitiesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resetCapacityReservationsShrink)) {
+            query.put("ResetCapacityReservations", request.resetCapacityReservationsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transitRouterId)) {
+            query.put("TransitRouterId", request.transitRouterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            query.put("Version", request.version);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyTransitRouterCapacityReservations"),
+            new TeaPair("version", "2017-09-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyTransitRouterCapacityReservationsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>配置企业版转发路由器的资源预留相关属性</p>
+     * 
+     * @param request ModifyTransitRouterCapacityReservationsRequest
+     * @return ModifyTransitRouterCapacityReservationsResponse
+     */
+    public ModifyTransitRouterCapacityReservationsResponse modifyTransitRouterCapacityReservations(ModifyTransitRouterCapacityReservationsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyTransitRouterCapacityReservationsWithOptions(request, runtime);
     }
 
     /**
@@ -13618,7 +13748,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p><em>UpdateTransitRouter</em>* is an asynchronous operation. After you send a request, the system returns a <strong>RequestId</strong>, but the modification of the transit router instance is not yet complete. The modification task continues to run in the background. You can call the <strong>ListTransitRouters</strong> operation to query the status of the transit router instance. </p>
      * <ul>
-     * <li>If the transit router instance is in the <strong>Modifying</strong> state, the transit router instance is being modified. In this state, you can only query the transit router instance but cannot perform other operations on it.</li>
+     * <li>If the transit router instance is in the <strong>Modifying</strong> state, the transit router instance is being modified. In this state, you can only query the transit router instance. You cannot perform other operations on it.</li>
      * <li>If the transit router instance is in the <strong>Active</strong> state, the transit router instance has been modified.</li>
      * </ul>
      * 
@@ -13693,7 +13823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p><em>UpdateTransitRouter</em>* is an asynchronous operation. After you send a request, the system returns a <strong>RequestId</strong>, but the modification of the transit router instance is not yet complete. The modification task continues to run in the background. You can call the <strong>ListTransitRouters</strong> operation to query the status of the transit router instance. </p>
      * <ul>
-     * <li>If the transit router instance is in the <strong>Modifying</strong> state, the transit router instance is being modified. In this state, you can only query the transit router instance but cannot perform other operations on it.</li>
+     * <li>If the transit router instance is in the <strong>Modifying</strong> state, the transit router instance is being modified. In this state, you can only query the transit router instance. You cannot perform other operations on it.</li>
      * <li>If the transit router instance is in the <strong>Active</strong> state, the transit router instance has been modified.</li>
      * </ul>
      * 

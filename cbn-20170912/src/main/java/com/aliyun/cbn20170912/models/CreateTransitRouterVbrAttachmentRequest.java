@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateTransitRouterVbrAttachmentRequest extends TeaModel {
     /**
-     * <p>Specifies whether to allow the Enterprise Edition transit router to automatically publish route entries to the VBR instance.</p>
+     * <p>Specifies whether to enable the Enterprise Edition transit router instance that can forward traffic to automatically publish route entry and routing information to the VBR instance.</p>
+     * <p>Valid values:</p>
      * <ul>
      * <li><strong>false</strong> (default): no.</li>
      * <li><strong>true</strong>: yes.</li>
@@ -18,7 +19,7 @@ public class CreateTransitRouterVbrAttachmentRequest extends TeaModel {
     public Boolean autoPublishRouteEnabled;
 
     /**
-     * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
+     * <p>The Cloud Enterprise Network (CEN) instance ID. This parameter is required when TransitRouterId is not specified. The system performs automatic creation of an Enterprise Edition transit router instance that can forward and perform routing in the region specified by RegionId.</p>
      * 
      * <strong>example:</strong>
      * <p>cen-j3jzhw1zpau2km****</p>
@@ -27,10 +28,9 @@ public class CreateTransitRouterVbrAttachmentRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -40,10 +40,10 @@ public class CreateTransitRouterVbrAttachmentRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run, including permission and instance status verification. Valid values:</p>
+     * <p>Specifies whether to perform a dry run on the request, including permission and instance status checks. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): sends a normal request. If the request passes the check, the VBR connection is created.</li>
-     * <li><strong>true</strong>: sends a check request. Only verification is performed without creating the VBR connection. The system checks whether required parameters are specified and whether the request format is valid. If the check fails, the corresponding error is returned. If the check succeeds, the corresponding request ID is returned.</li>
+     * <li><strong>false</strong> (default): sends a normal request and creates the VBR connection after the check passes.</li>
+     * <li><strong>true</strong>: sends a check request and only performs the check without creating the VBR connection. The check items include whether required parameters are specified and the request format. If the check fails, an error is returned. If the check passes, the request ID is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,8 +59,8 @@ public class CreateTransitRouterVbrAttachmentRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the VBR instance.</p>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID of the VBR. This parameter is required and must be used in combination with VbrId and CenId or TransitRouterId.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query region IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -102,7 +102,7 @@ public class CreateTransitRouterVbrAttachmentRequest extends TeaModel {
     public String transitRouterAttachmentName;
 
     /**
-     * <p>The Enterprise Edition transit router instance ID.</p>
+     * <p>The Enterprise Edition transit router instance ID. This parameter is required when CenId is not specified. It is used to create a VBR connection on an existing Enterprise Edition transit router instance that can forward and perform routing.</p>
      * 
      * <strong>example:</strong>
      * <p>tr-bp1su1ytdxtataupl****</p>
@@ -121,9 +121,9 @@ public class CreateTransitRouterVbrAttachmentRequest extends TeaModel {
     public String vbrId;
 
     /**
-     * <p>The Alibaba Cloud account ID of the Alibaba Cloud account that owns the VBR instance. The default value is the Alibaba Cloud account ID of the current logon account.</p>
+     * <p>The Alibaba Cloud account ID to which the VBR instance belongs. The default value is the Alibaba Cloud account ID of the current logon.</p>
      * <blockquote>
-     * <p>This parameter is required if you want to load a network instance that belongs to a different account.</p>
+     * <p>This parameter is required if you want to load a cross-account network instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -260,7 +260,7 @@ public class CreateTransitRouterVbrAttachmentRequest extends TeaModel {
     public static class CreateTransitRouterVbrAttachmentRequestTag extends TeaModel {
         /**
          * <p>The tag key of the resource.</p>
-         * <p>Once specified, the tag key cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key cannot be an empty string. It can be up to 64 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify up to 20 tag keys at a time.</p>
          * 
          * <strong>example:</strong>
@@ -271,8 +271,8 @@ public class CreateTransitRouterVbrAttachmentRequest extends TeaModel {
 
         /**
          * <p>The tag value of the resource.</p>
-         * <p>Once specified, the tag value cannot be empty. The tag value can be up to 128 characters in length, and cannot start with aliyun or acs:, or contain http:// or https://.</p>
-         * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</p>
+         * <p>The tag value cannot be empty. It can be up to 128 characters in length, and cannot start with aliyun or acs:, or contain http:// or https://.</p>
+         * <p>Each tag key corresponds to a tag value. You can specify up to 20 tag values at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>TagValue</p>
