@@ -9865,7 +9865,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a later edition to use this operation.</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -9898,7 +9898,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a later edition to use this operation.</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -14282,7 +14282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or later to use this API.</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -14315,7 +14315,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or later to use this API.</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -17322,7 +17322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the upstream and downstream lineage entities of a given entity in DataWorks Data Map. You can specify whether to include detailed lineage relationship information.</p>
+     * <p>Queries the upstream and downstream lineage entities for a specified entity in Data Map, with an option to include detailed lineage relationship information.</p>
      * 
      * @param request ListLineagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17356,7 +17356,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the upstream and downstream lineage entities of a given entity in DataWorks Data Map. You can specify whether to include detailed lineage relationship information.</p>
+     * <p>Queries the upstream and downstream lineage entities for a specified entity in Data Map, with an option to include detailed lineage relationship information.</p>
      * 
      * @param request ListLineagesRequest
      * @return ListLineagesResponse

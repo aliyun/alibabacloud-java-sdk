@@ -20,7 +20,7 @@ public class Column extends TeaModel {
     public String comment;
 
     /**
-     * <p>Specifies whether the column is a foreign key. Currently, only the MaxCompute type is supported.</p>
+     * <p>Indicates whether the column is a foreign key. This is supported only by the MaxCompute type.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -30,21 +30,21 @@ public class Column extends TeaModel {
 
     /**
      * <p>The ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</p>
-     * <p>The format is <code>${EntityType}:${Instance ID or URL-encoded URL}:${Catalog ID}:${Database name}:${Schema name}:${Table name}:${Column name}</code>. Use an empty string as a placeholder for non-existent levels.</p>
+     * <p>The format is <code>${EntityType}:${Instance ID or URL-encoded URL}:${Data catalog identifier}:${Database name}:${Schema name}:${Table name}:${Column name}</code>. Use an empty string as a placeholder for non-existent levels.</p>
      * <blockquote>
-     * <p>For MaxCompute and DLF types, use an empty string as a placeholder for the instance ID. For the MaxCompute type, the database name is the MaxCompute project name. Projects with the three-tier model enabled require the schema name. For projects without the three-tier model enabled, use an empty string as a placeholder for the schema name.</p>
+     * <p>For MaxCompute and DLF types, use an empty string as a placeholder for the instance ID. For the MaxCompute type, the database name is the MaxCompute project name. Projects with the three-tier model enabled must provide the schema name. For projects without the three-tier model enabled, use an empty string as a placeholder for the schema name.</p>
      * </blockquote>
      * <blockquote>
-     * <p>For the StarRocks type, the catalog ID is the catalog name. For the DLF type, the catalog ID is the catalog ID. Other types do not support the catalog level, and an empty string can be used as a placeholder.</p>
+     * <p>For the StarRocks type, the data catalog identifier is the catalog name. For the DLF type, the data catalog identifier is the catalog ID. Other types do not support the catalog level, and an empty string can be used as a placeholder.</p>
      * </blockquote>
-     * <p>The following are the ID formats for several common types:</p>
+     * <p>The ID formats for several common types are as follows:</p>
      * <p><code>maxcompute-column:::project_name:[schema_name]:table_name:column_name</code></p>
      * <p><code>dlf-column::catalog_id:database_name::table_name:column_name</code></p>
      * <p><code>hms-column:instance_id::database_name::table_name:column_name</code></p>
      * <p><code>holo-column:instance_id::database_name:schema_name:table_name:column_name</code></p>
      * <p><code>mysql-column:(instance_id|encoded_jdbc_url)::database_name::table_name:column_name</code></p>
      * <blockquote>
-     * <p>Where:<br><code>instance_id</code>: The instance ID, which is required when the data source is registered in instance mode.<br><code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string, which is required when the data source is registered in connection string mode.<br><code>catalog_id</code>: The DLF catalog ID.<br><code>project_name</code>: The MaxCompute project name.<br><code>database_name</code>: The database name.<br><code>schema_name</code>: The schema name. For the MaxCompute type, this is required only if the three-tier model is enabled for the project. If it is not enabled, use an empty string as a placeholder.<br><code>table_name</code>: The table name.<br><code>column_name</code>: The column name.</p>
+     * <p>Where:<br><code>instance_id</code>: The instance ID, which is required when the data source is registered in instance mode.<br><code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string, which is required when the data source is registered in connection string mode.<br><code>catalog_id</code>: The DLF catalog ID.<br><code>project_name</code>: The MaxCompute project name.<br><code>database_name</code>: The database name.<br><code>schema_name</code>: The schema name. For the MaxCompute type, this is required only if the three-tier model is enabled for the project. Otherwise, use an empty string as a placeholder.<br><code>table_name</code>: The table name.<br><code>column_name</code>: The column name.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class Column extends TeaModel {
     public String name;
 
     /**
-     * <p>Specifies whether the column is a partition key.</p>
+     * <p>Indicates whether the column is a partition key.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -81,7 +81,7 @@ public class Column extends TeaModel {
     public Integer position;
 
     /**
-     * <p>Specifies whether the column is a primary key. Currently, only the MaxCompute type is supported.</p>
+     * <p>Indicates whether the column is a primary key. This is supported only by the MaxCompute type.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -89,11 +89,14 @@ public class Column extends TeaModel {
     @NameInMap("PrimaryKey")
     public Boolean primaryKey;
 
+    /**
+     * <p>The statistical metrics of the column, where the key is the metric name and the value is the statistical value in string format. Current metrics include the number of production runs in the last 30 days (prodRunCount30d) and the number of downstream dependent tasks (downstreamTaskCount30d). Metrics without statistical values are not returned.</p>
+     */
     @NameInMap("StatisticsInfos")
     public java.util.Map<String, String> statisticsInfos;
 
     /**
-     * <p>The ID of the table. Refer to the Table object.</p>
+     * <p>The table ID. For more information, see the <code>Table</code> object.</p>
      * 
      * <strong>example:</strong>
      * <p>maxcompute-table:::project_name:[schema_name]:table_name</p>
@@ -225,7 +228,7 @@ public class Column extends TeaModel {
         public java.util.Map<String, java.util.List<String>> customAttributes;
 
         /**
-         * <p>The business description of the column. Currently, only MaxCompute, HMS (EMR cluster), and DLF types are supported.</p>
+         * <p>The business description of the column. This is supported only by MaxCompute, HMS (EMR cluster), and DLF types.</p>
          * 
          * <strong>example:</strong>
          * <p>Business description of Column 1</p>

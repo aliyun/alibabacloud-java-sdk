@@ -17,7 +17,7 @@ public class LineageEntity extends TeaModel {
      * <p>The entity ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>maxcompute-table:123456::test_project::test_tbl</p>
+     * <p>maxcompute-table:::project_name:[schema_name]:table_name</p>
      */
     @NameInMap("Id")
     public String id;
