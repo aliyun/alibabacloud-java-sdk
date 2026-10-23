@@ -97,7 +97,7 @@ public class CreateDataAgentSkillMetaResponseBody extends TeaModel {
 
     public static class CreateDataAgentSkillMetaResponseBodyData extends TeaModel {
         /**
-         * <p>The Alibaba Cloud account ID.</p>
+         * <p>The ID of the parent Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>16738266********</p>
@@ -106,7 +106,7 @@ public class CreateDataAgentSkillMetaResponseBody extends TeaModel {
         public String aliyunParentUid;
 
         /**
-         * <p>The Alibaba Cloud user ID.</p>
+         * <p>The Alibaba Cloud account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>20372822********</p>
@@ -133,11 +133,7 @@ public class CreateDataAgentSkillMetaResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether the skill is available. Valid values:</p>
-         * <ul>
-         * <li>true: The skill is available.</li>
-         * <li>false: The skill is not available.</li>
-         * </ul>
+         * <p>Indicates whether the skill is available. Valid values: true and false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -155,7 +151,7 @@ public class CreateDataAgentSkillMetaResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
-         * <p>The update time.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-11T14:04:32.000+00:00</p>
@@ -164,10 +160,7 @@ public class CreateDataAgentSkillMetaResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The skill parsing error message.</p>
-         * <ul>
-         * <li>This message is returned when the skill status is INVALID.</li>
-         * </ul>
+         * <p>The error message for skill parsing. This message is returned when the skill status is INVALID.</p>
          * 
          * <strong>example:</strong>
          * <p>SKILL.md file not exist.</p>

@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataAgentSkillMetaRequest extends TeaModel {
     /**
-     * <p>The skill description.</p>
-     * <ul>
-     * <li>Optional. If not specified, the system parses the ZIP package specified by UploadLocation to obtain the skill description.</li>
-     * </ul>
+     * <p>The skill description. This parameter is optional. If not specified, the backend parses the ZIP package specified by UploadLocation to obtain the skill description.</p>
      * 
      * <strong>example:</strong>
      * <p>This is a demo skill description.</p>
@@ -17,10 +14,16 @@ public class CreateDataAgentSkillMetaRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The skill name.</p>
-     * <ul>
-     * <li>Optional. If not specified, the system parses the ZIP package specified by UploadLocation to obtain the skill name.</li>
-     * </ul>
+     * <p>The skill ID. If you specify this parameter, the uploaded skill overwrites the existing skill and replaces the original skill content. Note: The name of the original skill and the newly uploaded skill must be identical.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ski-04pomiln*************j0</p>
+     */
+    @NameInMap("SkillId")
+    public String skillId;
+
+    /**
+     * <p>The skill name. This parameter is optional. If not specified, the backend parses the ZIP package specified by UploadLocation to obtain the skill name.</p>
      * 
      * <strong>example:</strong>
      * <p>data-query-skill</p>
@@ -29,9 +32,9 @@ public class CreateDataAgentSkillMetaRequest extends TeaModel {
     public String skillName;
 
     /**
-     * <p>The full path to the uploaded skill ZIP file.</p>
+     * <p>The full path for the skill ZIP file upload.</p>
      * <ul>
-     * <li>Format: Concatenate the file name to the UploadDir value returned by the DescribeSkillFileUploadSignature operation.</li>
+     * <li>Format: The UploadDir field returned by the DescribeSkillFileUploadSignature operation concatenated with the file name.</li>
      * <li>Example: ${UploadDir}/${Filename}</li>
      * </ul>
      */
@@ -58,6 +61,14 @@ public class CreateDataAgentSkillMetaRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateDataAgentSkillMetaRequest setSkillId(String skillId) {
+        this.skillId = skillId;
+        return this;
+    }
+    public String getSkillId() {
+        return this.skillId;
     }
 
     public CreateDataAgentSkillMetaRequest setSkillName(String skillName) {

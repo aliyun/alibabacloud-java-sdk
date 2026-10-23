@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SendChatMessageShrinkRequest extends TeaModel {
     /**
-     * <p><strong>[Optimized]</strong> This field is now automatically obtained by the backend. You do not need to specify this field.</p>
+     * <p><strong>[Optimized]</strong> This field is now automatically retrieved in the background. You do not need to specify it.</p>
      * 
      * <strong>example:</strong>
      * <p>agent_***</p>
@@ -14,7 +14,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String agentId;
 
     /**
-     * <p><strong>[Optimized]</strong> This field is now automatically obtained by the backend. You do not need to specify this field when calling the API.</p>
+     * <p><strong>[Optimized]</strong> This field is now automatically retrieved in the background. You do not need to specify it when calling the API.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -23,7 +23,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String DMSUnit;
 
     /**
-     * <p>The data source information. This parameter can be left empty. This parameter supports only one data source. Use the DataSources parameter instead.</p>
+     * <p>The data source information. This parameter can be left empty. You can specify only one data source for this parameter. Use the DataSources parameter instead.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -38,7 +38,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String dataSourcesShrink;
 
     /**
-     * <p>The message content to send to the Agent.</p>
+     * <p>The content of the message sent to the agent.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,15 +48,15 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String message;
 
     /**
-     * <p>The message type. Default value: <code>[primary]</code>.  </p>
+     * <p>The message type. Default value: <code>primary</code>.  </p>
      * <ul>
-     * <li><p>For regular interactions with the Agent, set the message type to <code>[primary]</code>.</p>
+     * <li><p>In normal interactions with the agent, the message type is <code>primary</code>.</p>
      * </li>
-     * <li><p>When the message is a response to the Agent\&quot;s Human-in-Loop question, set the type to <code>[additional]</code>.</p>
+     * <li><p>When the message is a response to a human-in-the-loop question from the agent, the type must be <code>additional</code>.</p>
      * </li>
-     * <li><p>When the message is intended to trigger report generation, set the type to <code>[report]</code>.</p>
+     * <li><p>When the message is intended to trigger report generation, the type must be <code>report</code>.</p>
      * </li>
-     * <li><p>When the message is intended to cancel the current session, set the type to <code>[cancel]</code>.</p>
+     * <li><p>When the message is intended to cancel the current session, the type must be <code>cancel</code>.</p>
      * </li>
      * </ul>
      * 
@@ -67,7 +67,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String messageType;
 
     /**
-     * <p>The parent session ID.</p>
+     * <p>The ID of the parent session.</p>
      * 
      * <strong>example:</strong>
      * <p>20qrliuoo7p2vlsfg*****</p>
@@ -76,16 +76,16 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String parentSessionId;
 
     /**
-     * <p>This field is required when the message type is <code>additional</code>. Specify the specific question that the Agent asks the user through Human-in-Loop.</p>
+     * <p>Required when the message type is <code>additional</code>. Specifies the specific question asked by the agent to the user through human-in-the-loop.</p>
      * 
      * <strong>example:</strong>
-     * <p>Provide the criteria for calculating GMV</p>
+     * <p>Provide the calculation criteria for GMV</p>
      */
     @NameInMap("Question")
     public String question;
 
     /**
-     * <p>The quoted content. This is typically used during interactions with the Agent.</p>
+     * <p>The quoted content. This is typically used when interacting with the agent.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;version&quot;:&quot;v0&quot;}</p>
@@ -95,8 +95,8 @@ public class SendChatMessageShrinkRequest extends TeaModel {
 
     /**
      * <p><strong>Important</strong></p>
-     * <p>When this message is a reply to an Agent message (for example, the Agent asks a clarifying question through ASK_HUMAN), set reply_to to the exact Checkpoint sequence number carried in that Agent message. If this message is not a targeted reply, such as requesting the Agent to perform further in-depth analysis after analysis is complete, you can leave reply_to empty or set it to &quot;0&quot;.  </p>
-     * <p>This field affects how the Agent decides to process the message. Incorrect values may lead to analysis results that do not meet expectations.</p>
+     * <p>When this message is a reply to an agent message, such as an agent asking for clarification through ASK_HUMAN, <code>reply_to</code> must exactly match the checkpoint sequence number carried by that agent message. If this message is not a targeted reply, such as requesting the agent to perform further in-depth analysis after the initial analysis is complete, you can leave <code>reply_to</code> empty or set it to &quot;0&quot;.  </p>
+     * <p>This field affects how the agent decides to process the message. Passing an incorrect value may lead to suboptimal analysis results.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -105,7 +105,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String replyTo;
 
     /**
-     * <p>The special configuration for the current session. For the same session, only the configuration included in the first SendMessage call takes effect.</p>
+     * <p>The special configurations for the current session. For the same session, only the configurations specified in the first SendMessage call take effect.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -114,11 +114,11 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String sessionConfigShrink;
 
     /**
-     * <p>The session ID. This is an optional field used for multi-turn sessions.</p>
+     * <p>The session ID. This optional field is used for multi-turn sessions.</p>
      * <ul>
-     * <li>You can start a session without specifying this field. The response includes the SessionID of the current session.</li>
+     * <li>You can start a session without specifying this field. The response will include the session ID for the current session.</li>
      * <li>You can also manually create a session ID by calling the CreateDataAgentSession operation and include the ID when initiating a session.</li>
-     * <li>For multi-turn conversations (such as follow-up questions or confirming execution plans), specify the SessionID returned by the previous SendChatMessage call.</li>
+     * <li>If you need multi-turn conversations, such as follow-up questions or confirming execution plans, specify the session ID returned by the previous SendChatMessage operation in this operation.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -134,7 +134,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String taskConfigShrink;
 
     /**
-     * <p>The OSS bucket of the user. If this parameter is not specified, the analysis data is securely stored in built-in storage.</p>
+     * <p>The Object Storage Service (OSS) bucket of the user. If this parameter is left empty, the analysis process is securely stored in the built-in storage.</p>
      * 
      * <strong>example:</strong>
      * <p>my-bucket</p>

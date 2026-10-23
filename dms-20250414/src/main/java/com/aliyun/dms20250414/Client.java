@@ -1203,6 +1203,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.skillId)) {
+            query.put("SkillId", request.skillId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.skillName)) {
             query.put("SkillName", request.skillName);
         }
@@ -7076,14 +7080,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li><code>message_type</code> defaults to <code>primary</code>. To append information or cancel a session, set it to <code>additional</code> or <code>cancel</code>.</li>
-     * <li>The <code>reply_to</code> field indicates which Agent message this message is a response to. The default value is <code>0</code>.</li>
+     * <li><code>message_type</code> defaults to <code>primary</code>. When you need to append information or cancel a session, set it to <code>additional</code> or <code>cancel</code>.</li>
+     * <li>The <code>reply_to</code> field indicates which agent message this message is responding to. The default value is <code>0</code>.</li>
      * <li>When <code>message_type</code> is <code>additional</code>, the <code>question</code> field is required.</li>
-     * <li><code>quoted_message</code> can be used to quote the content of a previous user message.</li>
+     * <li><code>quoted_message</code> can be used to quote previous user messages.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Sends a user message to a specified session or cancels a session.</p>
+     * <p>Sends a user message to a specified session or cancels the session.</p>
      * 
      * @param tmpReq SendChatMessageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7191,14 +7195,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li><code>message_type</code> defaults to <code>primary</code>. To append information or cancel a session, set it to <code>additional</code> or <code>cancel</code>.</li>
-     * <li>The <code>reply_to</code> field indicates which Agent message this message is a response to. The default value is <code>0</code>.</li>
+     * <li><code>message_type</code> defaults to <code>primary</code>. When you need to append information or cancel a session, set it to <code>additional</code> or <code>cancel</code>.</li>
+     * <li>The <code>reply_to</code> field indicates which agent message this message is responding to. The default value is <code>0</code>.</li>
      * <li>When <code>message_type</code> is <code>additional</code>, the <code>question</code> field is required.</li>
-     * <li><code>quoted_message</code> can be used to quote the content of a previous user message.</li>
+     * <li><code>quoted_message</code> can be used to quote previous user messages.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Sends a user message to a specified session or cancels a session.</p>
+     * <p>Sends a user message to a specified session or cancels the session.</p>
      * 
      * @param request SendChatMessageRequest
      * @return SendChatMessageResponse
@@ -7642,7 +7646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only the parameters passed in the current request are modified. Unpassed parameters remain unchanged. The data source type cannot be modified.</p>
+     * <p>Only the parameters passed in the current request are modified. Unspecified parameters remain unchanged. The data source type cannot be modified.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates the connection, authentication, or display information of an existing data source.</p>
@@ -7753,7 +7757,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only the parameters passed in the current request are modified. Unpassed parameters remain unchanged. The data source type cannot be modified.</p>
+     * <p>Only the parameters passed in the current request are modified. Unspecified parameters remain unchanged. The data source type cannot be modified.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates the connection, authentication, or display information of an existing data source.</p>

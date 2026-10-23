@@ -29,7 +29,7 @@ public class UpdateAgenticDataSourceResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The request ID, which is used to trace the call.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>request-1234567890</p>
@@ -119,10 +119,10 @@ public class UpdateAgenticDataSourceResponseBody extends TeaModel {
         /**
          * <p>The authentication method. Valid values:</p>
          * <ul>
-         * <li>-1: No authentication required.</li>
-         * <li>0: Username and password.</li>
-         * <li>1: Password only.</li>
-         * <li>2: Password-free.</li>
+         * <li>-1: no authentication required</li>
+         * <li>0: username and password</li>
+         * <li>1: password only</li>
+         * <li>2: password-free</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,8 +143,8 @@ public class UpdateAgenticDataSourceResponseBody extends TeaModel {
         /**
          * <p>The registration method of the data source. Valid values:</p>
          * <ul>
-         * <li>INSTANCE_ID: Select an existing cloud instance.</li>
-         * <li>HOST_PORT: Register by endpoint and port.</li>
+         * <li>INSTANCE_ID: select an existing cloud instance</li>
+         * <li>HOST_PORT: register by endpoint and port</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -219,11 +219,11 @@ public class UpdateAgenticDataSourceResponseBody extends TeaModel {
         /**
          * <p>The source of the data source. Valid values:</p>
          * <ul>
-         * <li>RDS: ApsaraDB instance.</li>
-         * <li>PUBLIC_OWN: Self-managed database on the Internet.</li>
-         * <li>ECS_OWN: Self-managed database on an ECS instance.</li>
-         * <li>GATEWAY: Connected through Database Gateway.</li>
-         * <li>VPC_IDC: Connected through a VPC or IDC.</li>
+         * <li>RDS: ApsaraDB instance</li>
+         * <li>PUBLIC_OWN: self-managed database on the Internet</li>
+         * <li>ECS_OWN: self-managed database on an ECS instance</li>
+         * <li>GATEWAY: connected through Database Gateway</li>
+         * <li>VPC_IDC: connected through a VPC or IDC</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -278,7 +278,7 @@ public class UpdateAgenticDataSourceResponseBody extends TeaModel {
         public String resourceAccountId;
 
         /**
-         * <p>The ARN of the RAM role used to access the data source. This parameter is empty if role-based authorization is not used.</p>
+         * <p>The ARN of the RAM role used to access the data source. This parameter is empty if role authorization is not used.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::123456789012****:role/DataSourceRole</p>
@@ -298,9 +298,9 @@ public class UpdateAgenticDataSourceResponseBody extends TeaModel {
         /**
          * <p>The status of the data source. Valid values:</p>
          * <ul>
-         * <li>0: Normal.</li>
-         * <li>-1: Deleted.</li>
-         * <li>-2: Disabled.</li>
+         * <li>0: normal</li>
+         * <li>-1: deleted</li>
+         * <li>-2: disabled</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -312,8 +312,8 @@ public class UpdateAgenticDataSourceResponseBody extends TeaModel {
         /**
          * <p>Specifies whether to use the cloud instance name as the data source name. Valid values:</p>
          * <ul>
-         * <li>1: Yes.</li>
-         * <li>0: No.</li>
+         * <li>1: yes</li>
+         * <li>0: no</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -325,9 +325,9 @@ public class UpdateAgenticDataSourceResponseBody extends TeaModel {
         /**
          * <p>The SSL settings. Valid values:</p>
          * <ul>
-         * <li>1: Enabled.</li>
-         * <li>0: Disabled.</li>
-         * <li>-1: Use default settings.</li>
+         * <li>1: enabled</li>
+         * <li>0: disabled</li>
+         * <li>-1: default settings</li>
          * </ul>
          * 
          * <strong>example:</strong>
