@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPolicyGroupsResponseBody extends TeaModel {
     /**
-     * <p>The pagination token that indicates the position up to which data has been read in the current call. An empty value indicates that all data has been read.</p>
+     * <p>The token that indicates the read position returned by the current call. An empty value indicates that all data has been read.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</p>
@@ -75,18 +75,48 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
     }
 
     public static class ListPolicyGroupsResponseBodyPolicyGroupModelAccessPolicies extends TeaModel {
+        /**
+         * <p>The access policy rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
         @NameInMap("AccessPolicyRuleId")
         public Long accessPolicyRuleId;
 
+        /**
+         * <p>The CIDR IP address block to which the rule applies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/8</p>
+         */
         @NameInMap("CidrIp")
         public String cidrIp;
 
+        /**
+         * <p>The description of the access policy rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The access policy action. ALLOW indicates that access is allowed, and DENY indicates that access is denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALLOW</p>
+         */
         @NameInMap("Policy")
         public String policy;
 
+        /**
+         * <p>The priority of the access policy rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
@@ -190,7 +220,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         public String customProxy;
 
         /**
-         * <p>The proxy IP address of the transparent proxy. The value must be in IPv4 format.</p>
+         * <p>The transparent proxy IP address. The format is an IPv4 address.</p>
          * 
          * <strong>example:</strong>
          * <p>47.100.XX.XX</p>
@@ -199,7 +229,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         public String hostAddr;
 
         /**
-         * <p>Indicates whether network redirection is enabled. After this feature is enabled, traffic is redirected to the client-side network by default.</p>
+         * <p>Indicates whether network redirection is enabled. If enabled, traffic is redirected to the client-side network by default.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -208,7 +238,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         public String netRedirect;
 
         /**
-         * <p>The port of the transparent proxy. Valid values: 1 to 65535.</p>
+         * <p>The transparent proxy port. Valid values: 1 to 65535.</p>
          * 
          * <strong>example:</strong>
          * <p>1145</p>
@@ -217,7 +247,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         public String port;
 
         /**
-         * <p>The proxy password. The value must be 1 to 256 characters in length and cannot contain Chinese characters or whitespace characters.</p>
+         * <p>The proxy password. The length ranges from 1 to 256 characters. Chinese characters and whitespace characters are not allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>password</p>
@@ -235,7 +265,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         public String proxyType;
 
         /**
-         * <p>The proxy username. The value must be 1 to 256 characters in length and cannot contain Chinese characters or whitespace characters.</p>
+         * <p>The proxy username. The length ranges from 1 to 256 characters. Chinese characters and whitespace characters are not allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>username</p>
@@ -244,7 +274,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         public String proxyUserName;
 
         /**
-         * <p>The list of proxy rules.</p>
+         * <p>The proxy rule list.</p>
          */
         @NameInMap("Rules")
         public java.util.List<ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicyRules> rules;
@@ -367,7 +397,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         public Integer watermarkColor;
 
         /**
-         * <p>The custom watermark content. The value can be up to 10 characters in length and does not support emoji characters.</p>
+         * <p>The custom watermark content. The length cannot exceed 10 characters, and emoji characters are not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>custom text</p>
@@ -464,6 +494,9 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
     }
 
     public static class ListPolicyGroupsResponseBodyPolicyGroupModel extends TeaModel {
+        /**
+         * <p>The list of access policy rules.</p>
+         */
         @NameInMap("AccessPolicies")
         public java.util.List<ListPolicyGroupsResponseBodyPolicyGroupModelAccessPolicies> accessPolicies;
 
@@ -477,7 +510,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         public String cameraRedirect;
 
         /**
-         * <p>The clipboard permission.</p>
+         * <p>The clipboard permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>readwrite</p>
@@ -495,7 +528,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The file transfer policy for the HTML5 client.</p>
+         * <p>The HTML5 client file transfer policy.</p>
          * 
          * <strong>example:</strong>
          * <p>download</p>
@@ -504,7 +537,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         public String html5FileTransfer;
 
         /**
-         * <p>The local disk mapping permission.</p>
+         * <p>The local disk mapping permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -522,7 +555,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         public String lockResolution;
 
         /**
-         * <p>The network redirection settings.</p>
+         * <p>The network redirection.</p>
          */
         @NameInMap("NetRedirectPolicy")
         public ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicy netRedirectPolicy;
@@ -540,7 +573,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
          * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Default policy.</p>
+         * <p>Default policy</p>
          */
         @NameInMap("PolicyGroupName")
         public String policyGroupName;
@@ -552,7 +585,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         public ListPolicyGroupsResponseBodyPolicyGroupModelPolicyRelatedResources policyRelatedResources;
 
         /**
-         * <p>The height of the resolution.</p>
+         * <p>The resolution height.</p>
          * 
          * <strong>example:</strong>
          * <p>1080</p>
@@ -561,7 +594,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         public Integer sessionResolutionHeight;
 
         /**
-         * <p>The width of the resolution.</p>
+         * <p>The resolution width.</p>
          * 
          * <strong>example:</strong>
          * <p>1920</p>
@@ -570,7 +603,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         public Integer sessionResolutionWidth;
 
         /**
-         * <p>The screen watermark settings.</p>
+         * <p>The screen watermark.</p>
          */
         @NameInMap("Watermark")
         public ListPolicyGroupsResponseBodyPolicyGroupModelWatermark watermark;

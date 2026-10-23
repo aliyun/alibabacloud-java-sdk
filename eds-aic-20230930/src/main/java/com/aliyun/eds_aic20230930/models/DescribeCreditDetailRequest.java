@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeCreditDetailRequest extends TeaModel {
     /**
-     * <p>The agent types. This parameter is used to filter credit change details by agent type.</p>
+     * <p>The list of agent types. This parameter is used to filter credit change details by agent type.</p>
      */
     @NameInMap("AgentTypes")
     public java.util.List<String> agentTypes;
 
     /**
-     * <p>The end time. The value is a UNIX timestamp in milliseconds.</p>
+     * <p>The end time. The time is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1782906240000</p>
@@ -20,13 +20,13 @@ public class DescribeCreditDetailRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The instance IDs.</p>
+     * <p>The list of instance IDs.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The maximum number of entries to return for this query.</p>
+     * <p>The maximum number of entries to return for this request.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -44,7 +44,7 @@ public class DescribeCreditDetailRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The package IDs.</p>
+     * <p>The list of package IDs.</p>
      */
     @NameInMap("PackageIds")
     public java.util.List<String> packageIds;
@@ -68,13 +68,19 @@ public class DescribeCreditDetailRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The start time. The value is a UNIX timestamp in milliseconds.</p>
+     * <p>The start time. The time is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1782819840000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
+
+    /**
+     * <p>The list of task IDs. This parameter is used to filter credit details by task.</p>
+     */
+    @NameInMap("TaskIds")
+    public java.util.List<String> taskIds;
 
     public static DescribeCreditDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCreditDetailRequest self = new DescribeCreditDetailRequest();
@@ -151,6 +157,14 @@ public class DescribeCreditDetailRequest extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
+    }
+
+    public DescribeCreditDetailRequest setTaskIds(java.util.List<String> taskIds) {
+        this.taskIds = taskIds;
+        return this;
+    }
+    public java.util.List<String> getTaskIds() {
+        return this.taskIds;
     }
 
 }

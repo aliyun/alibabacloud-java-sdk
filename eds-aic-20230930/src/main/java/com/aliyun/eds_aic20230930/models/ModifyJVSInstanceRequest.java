@@ -23,13 +23,16 @@ public class ModifyJVSInstanceRequest extends TeaModel {
     public Boolean applyToAll;
 
     /**
-     * <p>The credit limit configuration. Subsequent quota configurations overwrite previous ones.</p>
+     * <p>The credit limit configuration. Subsequent configurations overwrite previous ones.</p>
      */
     @NameInMap("CreditConfig")
     public java.util.List<ModifyJVSInstanceRequestCreditConfig> creditConfig;
 
     /**
      * <p>The image ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>imgc-075cllfeuazh0****</p>
      */
     @NameInMap("ImageId")
     public String imageId;
@@ -104,7 +107,7 @@ public class ModifyJVSInstanceRequest extends TeaModel {
 
     public static class ModifyJVSInstanceRequestCreditConfig extends TeaModel {
         /**
-         * <p>The quota limit.</p>
+         * <p>The credit limit.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -113,7 +116,7 @@ public class ModifyJVSInstanceRequest extends TeaModel {
         public Long creditLimit;
 
         /**
-         * <p>The period of the current credit.</p>
+         * <p>The time dimension for the current credit.</p>
          * 
          * <strong>example:</strong>
          * <p>day</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class RebootAndroidInstancesInGroupRequest extends TeaModel {
     /**
-     * <p>A list of instance IDs.</p>
+     * <p>The list of instance IDs.</p>
      */
     @NameInMap("AndroidInstanceIds")
     public java.util.List<String> androidInstanceIds;
 
     /**
-     * <p>Specifies whether to forcefully reboot the instances. If a Cloud Phone instance cannot be shut down because of system or network errors, you can force a reboot. This operation may cause data loss.</p>
+     * <p>Specifies whether to force a restart. You can force a restart if a cloud phone cannot be shut down due to system or network exceptions. Unsaved data may be lost.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -19,11 +19,14 @@ public class RebootAndroidInstancesInGroupRequest extends TeaModel {
     @NameInMap("ForceStop")
     public Boolean forceStop;
 
+    /**
+     * <p>Specifies whether to skip parameter validation. A value of true indicates that validation is skipped. If the value is false or not specified, validation is performed.</p>
+     */
     @NameInMap("IgnoreParamValidation")
     public Boolean ignoreParamValidation;
 
     /**
-     * <p>The sales mode. This parameter is deprecated.</p>
+     * <p><strong>[Deprecated]</strong> The sales mode.</p>
      * 
      * <strong>example:</strong>
      * <p>Instance</p>

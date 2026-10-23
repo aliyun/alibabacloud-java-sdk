@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RunAgentTaskShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the region where the Mobile node resides.</p>
+     * <p>The region ID of the Mobile node.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -29,7 +29,7 @@ public class RunAgentTaskShrinkRequest extends TeaModel {
     public Integer maxSteps;
 
     /**
-     * <p>The runtime configuration that contains the runtime parameters such as skills for the current task.</p>
+     * <p>The runtime configuration that carries the runtime parameters such as skills for the current task.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Skills&quot;:[&quot;sk-abc&quot;,&quot;sk-def&quot;]}</p>
@@ -38,7 +38,7 @@ public class RunAgentTaskShrinkRequest extends TeaModel {
     public String runConfigShrink;
 
     /**
-     * <p>Specifies whether to save the task artifacts to your OSS.</p>
+     * <p>Specifies whether to write the task artifacts to the user\&quot;s OSS.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -47,7 +47,7 @@ public class RunAgentTaskShrinkRequest extends TeaModel {
     public Boolean saveArtifacts;
 
     /**
-     * <p>The ID of the scheduling plan. When specified, the execute record is associated with the corresponding scheduled node, which facilitates aggregate query by scheduling aggregation dimension.</p>
+     * <p>The scheduling plan ID. If specified, the execute record is associated with the corresponding scheduled node to facilitate aggregate query by scheduling dimension aggregation.</p>
      * 
      * <strong>example:</strong>
      * <p>sch-260625-pbj2****</p>
@@ -56,13 +56,13 @@ public class RunAgentTaskShrinkRequest extends TeaModel {
     public String scheduleId;
 
     /**
-     * <p>The list of targets. Each element is an object that contains an InstanceId and a SessionId.</p>
+     * <p>The Targets array. Each element is an object that contains InstanceId and SessionId.</p>
      */
     @NameInMap("Targets")
     public java.util.List<RunAgentTaskShrinkRequestTargets> targets;
 
     /**
-     * <p>The ID of the task configuration. This parameter is used to trigger a task with the specified configuration.</p>
+     * <p>The task configuration ID used to trigger a task with the specified configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>tsk-260625-49be****</p>
@@ -71,7 +71,7 @@ public class RunAgentTaskShrinkRequest extends TeaModel {
     public String taskConfigId;
 
     /**
-     * <p>The timeout period of the task in seconds. Valid values: 300 to 3600. Default value: 3600.</p>
+     * <p>The timeout period for the task in seconds. Valid values: 300 to 3600. Default value: 3600.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -80,7 +80,7 @@ public class RunAgentTaskShrinkRequest extends TeaModel {
     public Integer timeoutSeconds;
 
     /**
-     * <p>The user prompt in natural language. The agent performs operations based on this prompt.</p>
+     * <p>The user prompt in natural language based on which the agent performs operations.</p>
      * 
      * <strong>example:</strong>
      * <p>Download DingTalk from the app store</p>
@@ -175,7 +175,7 @@ public class RunAgentTaskShrinkRequest extends TeaModel {
 
     public static class RunAgentTaskShrinkRequestTargets extends TeaModel {
         /**
-         * <p>The ID of the Mobile node, such as acp-xxx.</p>
+         * <p>The Mobile node ID, such as acp-xxx.</p>
          * 
          * <strong>example:</strong>
          * <p>acp-5hh4a31emkt6u****</p>

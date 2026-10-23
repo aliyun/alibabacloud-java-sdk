@@ -13,6 +13,9 @@ public class RebootAndroidInstancesInGroupResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The task information.</p>
+     */
     @NameInMap("Tasks")
     public RebootAndroidInstancesInGroupResponseBodyTasks tasks;
 
@@ -39,6 +42,8 @@ public class RebootAndroidInstancesInGroupResponseBody extends TeaModel {
 
     public static class RebootAndroidInstancesInGroupResponseBodyTasksChildTasks extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>acp-xxxx</p>
          */
@@ -46,6 +51,8 @@ public class RebootAndroidInstancesInGroupResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The child task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>t-xxxx</p>
          */
@@ -76,10 +83,15 @@ public class RebootAndroidInstancesInGroupResponseBody extends TeaModel {
     }
 
     public static class RebootAndroidInstancesInGroupResponseBodyTasks extends TeaModel {
+        /**
+         * <p>The child tasks.</p>
+         */
         @NameInMap("ChildTasks")
         public java.util.List<RebootAndroidInstancesInGroupResponseBodyTasksChildTasks> childTasks;
 
         /**
+         * <p>The parent task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>t-xxxx</p>
          */

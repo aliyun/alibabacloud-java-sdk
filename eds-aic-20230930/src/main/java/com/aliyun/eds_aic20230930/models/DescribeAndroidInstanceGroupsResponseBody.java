@@ -11,7 +11,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
     public java.util.List<DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel> instanceGroupModel;
 
     /**
-     * <p>The token that indicates the read position returned by the current call. An empty value indicates that all data has been read.</p>
+     * <p>The token that indicates the position of the current read. An empty value indicates that all data has been read.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
@@ -85,7 +85,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The ID of the Internet bandwidth throttling rule (applies only to premium bandwidth).</p>
+         * <p>The ID of the Internet bandwidth throttling rule. This rule applies only to premium bandwidth.</p>
          * 
          * <strong>example:</strong>
          * <p>qos-3kh93uu0vdbka****</p>
@@ -118,13 +118,13 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
 
     public static class DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRules extends TeaModel {
         /**
-         * <p>The Internet bandwidth throttling rules bound to the instances.</p>
+         * <p>The information about the Internet bandwidth throttling rules bound to the instance.</p>
          */
         @NameInMap("InstanceQosRule")
         public java.util.List<DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRulesInstanceQosRule> instanceQosRule;
 
         /**
-         * <p>The total number of Internet bandwidth throttling rules for the instance group.</p>
+         * <p>The total number of Internet bandwidth throttling rules bound to the instance group.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -241,7 +241,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
 
     public static class DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel extends TeaModel {
         /**
-         * <p>The delivery group ID.</p>
+         * <p>The ID of the delivery group.</p>
          * 
          * <strong>example:</strong>
          * <p>aig-48xr63m4dybjk****</p>
@@ -283,12 +283,12 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
          * <p>The status of the bandwidth plan.
          * Valid values:</p>
          * <ul>
-         * <li>Creating: creating</li>
-         * <li>Releasing: releasing</li>
-         * <li>InUse: in use</li>
-         * <li>Failed: failed</li>
-         * <li>Expired: expired</li>
-         * <li>Available: available and unbound, billing in progress</li>
+         * <li>Creating: The bandwidth plan is being created.</li>
+         * <li>Releasing: The bandwidth plan is being released.</li>
+         * <li>InUse: The bandwidth plan is in use.</li>
+         * <li>Failed: The operation failed.</li>
+         * <li>Expired: The bandwidth plan has expired.</li>
+         * <li>Available: The bandwidth plan is unbound and being billed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -307,13 +307,13 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public String bandwidthPackageType;
 
         /**
-         * <p>The Internet bandwidth throttling rules for the instance group.</p>
+         * <p>The information about the Internet bandwidth throttling rules bound to the instance group.</p>
          */
         @NameInMap("BindQosRules")
         public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRules bindQosRules;
 
         /**
-         * <p>The order source. CLOUDPHONE indicates AI Cloud Phone.</p>
+         * <p>The order source. A value of CLOUDPHONE indicates AI Cloud Phone.</p>
          * 
          * <strong>example:</strong>
          * <p>CLOUDPHONE</p>
@@ -347,7 +347,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is not available for public use.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -393,7 +393,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The image ID.</p>
+         * <p>The ID of the image.</p>
          * 
          * <strong>example:</strong>
          * <p>imgc-06zyt9m93zwax****</p>
@@ -420,7 +420,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public String installedAppList;
 
         /**
-         * <p>The ID of the instance group.</p>
+         * <p>The instance group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ag-h67a2cs0zprfdh****</p>
@@ -438,7 +438,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public String instanceGroupName;
 
         /**
-         * <p>The instance group specifications.</p>
+         * <p>The specifications of the instance group.</p>
          * 
          * <strong>example:</strong>
          * <p>acp.basic.small</p>
@@ -466,7 +466,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is not available for public use.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -487,7 +487,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         /**
          * <p>The network type of the instance.</p>
          * <blockquote>
-         * <p>Currently, this field is returned only for instance groups in the standard network.</p>
+         * <p>This field is returned only for instance groups in the standard network.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -515,7 +515,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public String officeSiteId;
 
         /**
-         * <p>The ID of the plan package for the AI Cloud Phone.</p>
+         * <p>The ID of the plan for the AI Cloud Phone.</p>
          * 
          * <strong>example:</strong>
          * <p>cmag-bp1bpyt7sfeleukh****</p>
@@ -524,7 +524,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public String packageId;
 
         /**
-         * <p>The ID of the policy.</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-c6n38xucps8kl****</p>
@@ -578,6 +578,15 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public String saleMode;
 
         /**
+         * <p>Indicates whether the single-instance mode is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("SingleInstanceMode")
+        public Boolean singleInstanceMode;
+
+        /**
          * <p>The system version.</p>
          * 
          * <strong>example:</strong>
@@ -593,7 +602,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public java.util.List<DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelTags> tags;
 
         /**
-         * <p>The vSwitch ID in the VPC.</p>
+         * <p>The ID of the vSwitch in the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-t4n0yqs009ho024wt****</p>
@@ -901,6 +910,14 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         }
         public String getSaleMode() {
             return this.saleMode;
+        }
+
+        public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel setSingleInstanceMode(Boolean singleInstanceMode) {
+            this.singleInstanceMode = singleInstanceMode;
+            return this;
+        }
+        public Boolean getSingleInstanceMode() {
+            return this.singleInstanceMode;
         }
 
         public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel setSystemVersion(String systemVersion) {

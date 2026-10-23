@@ -43,11 +43,11 @@ public class CreateScheduledTaskRequest extends TeaModel {
     public CreateScheduledTaskRequestRunConfig runConfig;
 
     /**
-     * <p>The task name.</p>
+     * <p>The name of the task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Auto-reply to DingTalk messages</p>
+     * <p>Automatically reply to DingTalk messages</p>
      */
     @NameInMap("TaskName")
     public String taskName;
@@ -117,7 +117,7 @@ public class CreateScheduledTaskRequest extends TeaModel {
 
     public static class CreateScheduledTaskRequestRunConfig extends TeaModel {
         /**
-         * <p>The extended parameters as a JSON string.</p>
+         * <p>The JSON string of extended parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;batchSize&quot;:&quot;1000&quot;}</p>
@@ -135,7 +135,7 @@ public class CreateScheduledTaskRequest extends TeaModel {
         public Integer maxSteps;
 
         /**
-         * <p>The list of skill IDs, up to 1. Written to aim_task_config.run_config when the scheduled task is created and read when the callback is delivered.</p>
+         * <p>The list of skill IDs. You can specify up to 1 skill ID. The value is written to aim_task_config.run_config when the scheduled task is created and read when the callback is delivered.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;sk-abc&quot;]</p>
@@ -144,7 +144,7 @@ public class CreateScheduledTaskRequest extends TeaModel {
         public java.util.List<String> skills;
 
         /**
-         * <p>The timeout in seconds.</p>
+         * <p>The timeout period in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>

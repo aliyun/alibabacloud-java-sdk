@@ -11,7 +11,7 @@ public class DescribeImageListResponseBody extends TeaModel {
     public java.util.List<DescribeImageListResponseBodyData> data;
 
     /**
-     * <p>The position from which the current call returns the read data. An empty value indicates that all data has been read.</p>
+     * <p>The token that indicates the position to which the current call has read. An empty value indicates that all data has been read.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</p>
@@ -178,7 +178,7 @@ public class DescribeImageListResponseBody extends TeaModel {
         public String imageName;
 
         /**
-         * <p>The image distribution region information. The key is the region and the value is the distribution information.</p>
+         * <p>The image distribution information by region. The key is the region, and the value is the distribution information.</p>
          */
         @NameInMap("ImageRegionDistributeMap")
         public java.util.Map<String, DataImageRegionDistributeMapValue> imageRegionDistributeMap;

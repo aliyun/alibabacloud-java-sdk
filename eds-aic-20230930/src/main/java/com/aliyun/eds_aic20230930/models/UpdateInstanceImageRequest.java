@@ -4,11 +4,14 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class UpdateInstanceImageRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to skip parameter validation. A value of true indicates that validation is skipped. A value of false or an empty value indicates that validation is performed.</p>
+     */
     @NameInMap("IgnoreParamValidation")
     public Boolean ignoreParamValidation;
 
     /**
-     * <p>The ID of the image. Call <a href="t2730769.xdita#"></a>to query the list of images for cloud phones.</p>
+     * <p>The image ID. You can call the <a href="https://help.aliyun.com/document_detail/2807324.html">DescribeImageList</a> operation to query the image list of cloud phones.</p>
      * 
      * <strong>example:</strong>
      * <p>imgc-075cllfeuazh0****</p>
@@ -23,7 +26,7 @@ public class UpdateInstanceImageRequest extends TeaModel {
     public java.util.List<String> instanceIdList;
 
     /**
-     * <p>Specifies whether to reset the instance. If you reset the instance, all user data on the instance is cleared.</p>
+     * <p>Specifies whether to reset the instance. A reset clears all user data on the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

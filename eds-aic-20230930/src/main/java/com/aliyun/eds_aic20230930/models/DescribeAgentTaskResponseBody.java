@@ -217,12 +217,7 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
         public String currentStatus;
 
         /**
-         * <p>The source of the digest. Valid values:</p>
-         * <ul>
-         * <li>PROMPT_AUTO: Automatically generated.</li>
-         * <li>RESULT_AUTO: Refined from the result.</li>
-         * <li>USER: Edited by the user.</li>
-         * </ul>
+         * <p>The source of the digest. Valid values: PROMPT_AUTO (automatically generated), RESULT_AUTO (refined from the result), and USER (edited by the user).</p>
          * 
          * <strong>example:</strong>
          * <p>PROMPT_AUTO</p>
@@ -239,6 +234,9 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The reason for the task status.</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
@@ -261,13 +259,16 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
         public String steps;
 
         /**
-         * <p>The task digest text, with a maximum of 25 characters.</p>
+         * <p>The task digest text, up to 25 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Download DingTalk</p>
          */
         @NameInMap("TaskDigest")
         public String taskDigest;
 
         /**
-         * <p>The time consumed by the task. This field is returned only when CurrentStatus is FAILED or COMPLETED.</p>
+         * <p>The duration of the task. This field is returned only when CurrentStatus is FAILED or COMPLETED.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -285,7 +286,7 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The node task result (desired state). This field is returned only when CurrentStatus is COMPLETED or FAILED.</p>
+         * <p>The task result (desired state) of the node. This field is returned only when CurrentStatus is COMPLETED or FAILED.</p>
          * 
          * <strong>example:</strong>
          * <p>DingTalk downloaded successfully</p>
@@ -294,7 +295,7 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
         public String taskResult;
 
         /**
-         * <p>The user instruction in natural language based on which the agent performs operations.</p>
+         * <p>The user prompt in natural language that instructs the agent to perform operations.</p>
          * 
          * <strong>example:</strong>
          * <p>Download DingTalk from the app store</p>

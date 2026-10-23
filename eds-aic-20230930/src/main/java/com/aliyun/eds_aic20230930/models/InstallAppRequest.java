@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class InstallAppRequest extends TeaModel {
     /**
-     * <p>The application IDs.</p>
+     * <p>The list of application IDs.</p>
      */
     @NameInMap("AppIdList")
     public java.util.List<String> appIdList;
 
     /**
-     * <p>The instance group IDs.</p>
+     * <p>The list of instance groups.</p>
      */
     @NameInMap("InstanceGroupIdList")
     public java.util.List<String> instanceGroupIdList;
 
     /**
-     * <p>The instance IDs.</p>
+     * <p>The list of instances.</p>
      */
     @NameInMap("InstanceIdList")
     public java.util.List<String> instanceIdList;

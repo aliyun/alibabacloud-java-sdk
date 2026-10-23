@@ -14,8 +14,7 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     public String bizRegionId;
 
     /**
-     * <p>The billing method.
-     * [_single.params.ChargeType.enum. PrePaid]Subscription.</p>
+     * <p>The billing method.</p>
      * 
      * <strong>example:</strong>
      * <p>PostPaid</p>
@@ -24,22 +23,25 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The IDs of the instance groups.</p>
+     * <p>The list of instance group IDs.</p>
      */
     @NameInMap("InstanceGroupIds")
     public java.util.List<String> instanceGroupIds;
 
     /**
-     * <p>The name of the instance group. Fuzzy match is supported.</p>
+     * <p>The instance group name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>Cloud Phone</p>
+     * <p>CloudPhone</p>
      */
     @NameInMap("InstanceGroupName")
     public String instanceGroupName;
 
     /**
      * <p>The instance version. A value of basic indicates a Wuying Cloud Phone instance, and a value of EnterpriseAi indicates a JVS Mobile instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EnterpriseAi</p>
      */
     @NameInMap("InstanceVersion")
     public String instanceVersion;
@@ -54,7 +56,7 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     public String keyPairId;
 
     /**
-     * <p>The maximum number of entries to return on each page in a paging query. Valid values: 1 to 100. Default value: 100.</p>
+     * <p>The maximum number of entries to return per page in a paging query. Valid values: 1 to 100. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -63,7 +65,7 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that indicates the starting position for the query. If this parameter is left empty, the query starts from the beginning.</p>
+     * <p>The pagination token that specifies the starting position of the query. If you leave this parameter empty, the query starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
@@ -72,7 +74,7 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the policy.</p>
+     * <p>The policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pg-1b77w6xrqfubi****</p>
@@ -91,12 +93,18 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
 
     /**
      * <p>The sort field. A value of CreationTime indicates the creation time, and a value of ExpiredTime indicates the expiration time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CreationTime</p>
      */
     @NameInMap("SortKey")
     public String sortKey;
 
     /**
      * <p>The sort order. A value of ASC indicates ascending order, and a value of DESC indicates descending order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ASC</p>
      */
     @NameInMap("SortType")
     public String sortType;
@@ -237,7 +245,7 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
         /**
          * <p>The tag key. You can specify 1 to 20 tag keys.</p>
          * <blockquote>
-         * <p>Notice: A tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
+         * <p>Notice: The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -249,7 +257,7 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
         /**
          * <p>The tag value.</p>
          * <blockquote>
-         * <p>Notice: A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>Notice: The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

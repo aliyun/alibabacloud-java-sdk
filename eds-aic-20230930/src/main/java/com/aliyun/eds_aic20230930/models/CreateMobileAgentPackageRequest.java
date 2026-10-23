@@ -16,11 +16,11 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Automatic payment is enabled. Make sure that your account balance is sufficient.</li>
-     * <li><strong>false</strong> (default): Only an order is generated and no payment is deducted.</li>
+     * <li><strong>true</strong>: Automatic payment. You must ensure that your account balance is sufficient.</li>
+     * <li><strong>false</strong> (default): Generates an order without deducting fees.</li>
      * </ul>
      * <blockquote>
-     * <p>If the balance of your payment method is insufficient, you can set this parameter to false. In this case, an unpaid order is generated, and you can log on to the WUYING Cloud Phone console to complete the payment.</p>
+     * <p>If your payment method has an insufficient balance, you can set this parameter to false. An unpaid order will be generated, and you can log on to the WUYING Cloud Phone console to pay the order.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,6 +41,15 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
      */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
+
+    /**
+     * <p>The bandwidth package ID, which is used to associate an existing bandwidth package when creating an instance. The value must be prefixed with np- and followed by lowercase letters and digits. The bandwidth package must be an AI premium bandwidth package (CBWP_ECD) that belongs to the current account. If this parameter is left empty, the default bandwidth package allocation logic applies.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>np-791ncq8qcuoop9hta</p>
+     */
+    @NameInMap("BandwidthPackageId")
+    public String bandwidthPackageId;
 
     /**
      * <p>The region where the instance resides. Only cn-hangzhou is supported.</p>
@@ -74,6 +83,9 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
 
     /**
      * <p>The image ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>imgc-075cllfeuazh0****</p>
      */
     @NameInMap("ImageId")
     public String imageId;
@@ -118,10 +130,10 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the subscription duration of the resource. Valid values:</p>
+     * <p>The unit of the subscription duration. Valid values:</p>
      * <ul>
-     * <li><strong>Month</strong>: Month.</li>
-     * <li><strong>Year</strong>: Year.</li>
+     * <li><strong>Month</strong>: Months.</li>
+     * <li><strong>Year</strong>: Years.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -172,6 +184,14 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     }
     public Boolean getAutoRenew() {
         return this.autoRenew;
+    }
+
+    public CreateMobileAgentPackageRequest setBandwidthPackageId(String bandwidthPackageId) {
+        this.bandwidthPackageId = bandwidthPackageId;
+        return this;
+    }
+    public String getBandwidthPackageId() {
+        return this.bandwidthPackageId;
     }
 
     public CreateMobileAgentPackageRequest setBizRegionId(String bizRegionId) {

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
     /**
-     * <p>The results of the instance connection tasks.</p>
+     * <p>The instance connection task results.</p>
      */
     @NameInMap("InstanceConnectionModels")
     public java.util.List<BatchGetAcpConnectionTicketResponseBodyInstanceConnectionModels> instanceConnectionModels;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7B9EFA4F-4305-5968-BAEE-BD8B8DE5****</p>
@@ -42,7 +42,7 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
 
     public static class BatchGetAcpConnectionTicketResponseBodyInstanceConnectionModels extends TeaModel {
         /**
-         * <p>The ID of the delivery group.</p>
+         * <p>The delivery group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>aig-1uzb6heg797z3****</p>
@@ -51,6 +51,8 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
         public String appInstanceGroupId;
 
         /**
+         * <p>The physical instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ai-0caoetkqi8kj****</p>
          */
@@ -58,6 +60,8 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
         public String appInstanceId;
 
         /**
+         * <p>The error cause.</p>
+         * 
          * <strong>example:</strong>
          * <p>InvalidResourceId.NotFound</p>
          */
@@ -65,7 +69,7 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The ID of the cloud phone instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>acp-ajxvwo1u0hqvd****</p>
@@ -74,6 +78,8 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The persistent session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>p-abdywvcksdb****</p>
          */
@@ -81,7 +87,7 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
         public String persistentAppInstanceId;
 
         /**
-         * <p>The port used for establishing a connection.</p>
+         * <p>The connection port.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -90,7 +96,7 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou@c9f5c2e8-f5c4-4b01-8602-000cae94****</p>
@@ -99,7 +105,7 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The state of the task. If FINISHED is returned, it indicates that a value can be retrieved from the Ticket field. If the returned value is not FINISHED, you still need to use this operation to query the Ticket generation result by using TaskId.</p>
+         * <p>The task status. A value of FINISHED indicates that you can obtain the ticket from the Ticket field. Otherwise, you must use the TaskId to call this operation and query the ticket generation result.</p>
          * 
          * <strong>example:</strong>
          * <p>FINISHED</p>
@@ -108,7 +114,7 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
         public String taskStatus;
 
         /**
-         * <p>The ticket used to connect to the cloud phone instance.</p>
+         * <p>The ticket used to connect to the user instance.</p>
          * 
          * <strong>example:</strong>
          * <p>piVE58_AdmVSVW7SEW3<em>AE5</em>p8mmO5gvItsNOmv4S_f_cNpoU_BOTwChTBoNM1ZJeedfK9zxYnbN5hossqIZCr6t7SGxRigm2Cb4fGaCdBZWIzmgdHq6sXXZQg4KFWufyvpeV<em>0</em>Cm58slMT1tJw3****</p>

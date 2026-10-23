@@ -32,7 +32,7 @@ public class ModifyScheduledTaskShrinkRequest extends TeaModel {
     public String runConfigShrink;
 
     /**
-     * <p>The scheduled task ID.</p>
+     * <p>The ID of the scheduled task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class ModifyScheduledTaskShrinkRequest extends TeaModel {
     public String scheduledId;
 
     /**
-     * <p>Switches the status. Valid values: ACTIVE and DISABLED.</p>
+     * <p>The status toggle. Valid values: ACTIVE and DISABLED.</p>
      * 
      * <strong>example:</strong>
      * <p>ACTIVE</p>
@@ -51,10 +51,10 @@ public class ModifyScheduledTaskShrinkRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The task name.</p>
+     * <p>The name of the task.</p>
      * 
      * <strong>example:</strong>
-     * <p>NewTaskName</p>
+     * <p>New task name</p>
      */
     @NameInMap("TaskName")
     public String taskName;

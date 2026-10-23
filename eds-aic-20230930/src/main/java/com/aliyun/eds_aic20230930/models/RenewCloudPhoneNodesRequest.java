@@ -29,13 +29,16 @@ public class RenewCloudPhoneNodesRequest extends TeaModel {
     public java.util.List<String> nodeIds;
 
     /**
-     * <p>The redirect URL for the payment success page.</p>
+     * <p>The redirect URL after a successful payment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wya.wuying.aliyun.com/instanceGroup</p>
      */
     @NameInMap("PaidCallBackUrl")
     public String paidCallBackUrl;
 
     /**
-     * <p>The subscription period. The unit is specified by PeriodUnit.</p>
+     * <p>The subscription period of the resource. The unit is specified by PeriodUnit.</p>
      * <ul>
      * <li>If PeriodUnit is set to <strong>year</strong>, the only valid value is 1.</li>
      * <li>If PeriodUnit is set to <strong>month</strong>, valid values are 1, 2, 3, and 6.</li>
@@ -57,7 +60,10 @@ public class RenewCloudPhoneNodesRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The ID of the promotion.</p>
+     * <p>The promotion ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50003308011****</p>
      */
     @NameInMap("PromotionId")
     public String promotionId;

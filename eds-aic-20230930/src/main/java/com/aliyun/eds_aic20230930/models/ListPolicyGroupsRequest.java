@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPolicyGroupsRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries per page for a paged query. Valid values: 1 to 100. Default value: 20.</p>
+     * <p>The maximum number of entries to return on each page for a paging query. Valid values: 1 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListPolicyGroupsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that marks the position from which to start reading. Leave this parameter empty to read from the beginning.</p>
+     * <p>The token used to mark the position from which to start reading. An empty value indicates that the query starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>

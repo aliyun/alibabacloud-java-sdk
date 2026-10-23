@@ -20,7 +20,7 @@ public class DescribeScheduledTasksRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that indicates the position from which to start reading. Leave this parameter empty to read from the beginning.</p>
+     * <p>The token that specifies the starting position for the current read operation. An empty value indicates that the read operation starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
@@ -47,7 +47,7 @@ public class DescribeScheduledTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Filters by scheduled task IDs.</p>
+     * <p>The filter for scheduled task IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;scheduled-abcd1234&quot;]</p>
@@ -56,7 +56,7 @@ public class DescribeScheduledTasksRequest extends TeaModel {
     public java.util.List<String> scheduledIds;
 
     /**
-     * <p>Filters by status: ACTIVE/DISABLED.</p>
+     * <p>The status filter. Valid values: ACTIVE, DISABLED.</p>
      * 
      * <strong>example:</strong>
      * <p>ACTIVE</p>
@@ -68,7 +68,7 @@ public class DescribeScheduledTasksRequest extends TeaModel {
      * <p>The task name.</p>
      * 
      * <strong>example:</strong>
-     * <p>DataSync</p>
+     * <p>Data synchronization</p>
      */
     @NameInMap("TaskName")
     public String taskName;

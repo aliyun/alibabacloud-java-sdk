@@ -23,13 +23,16 @@ public class ExpandDataVolumeRequest extends TeaModel {
     public String bizRegionId;
 
     /**
-     * <p>The list of cloud phone matrix IDs.</p>
+     * <p>The IDs of the cloud phone matrices.</p>
      */
     @NameInMap("NodeIds")
     public java.util.List<String> nodeIds;
 
     /**
      * <p>The redirect URL for the payment success page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wya.wuying.aliyun.com/instanceGroup</p>
      */
     @NameInMap("PaidCallBackUrl")
     public String paidCallBackUrl;
@@ -44,7 +47,7 @@ public class ExpandDataVolumeRequest extends TeaModel {
     public Integer phoneDataVolume;
 
     /**
-     * <p>The promotion ID.</p>
+     * <p>The ID of the promotion.</p>
      * 
      * <strong>example:</strong>
      * <p>50003308011****</p>

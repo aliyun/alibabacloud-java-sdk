@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCreditPackageResponseBody extends TeaModel {
     /**
-     * <p>The information about the credit boost packages.</p>
+     * <p>The credit package information.</p>
      */
     @NameInMap("CreditsPackageInfos")
     public java.util.List<DescribeCreditPackageResponseBodyCreditsPackageInfos> creditsPackageInfos;
@@ -20,7 +20,7 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
     public Boolean isFirstPurchase;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC****</p>
@@ -110,7 +110,7 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
 
     public static class DescribeCreditPackageResponseBodyCreditsPackageInfos extends TeaModel {
         /**
-         * <p>The number of available credits in the current credit boost package.</p>
+         * <p>The number of available credits in the current credit package.</p>
          * 
          * <strong>example:</strong>
          * <p>70</p>
@@ -118,11 +118,17 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
         @NameInMap("AvailableCredits")
         public String availableCredits;
 
+        /**
+         * <p>The creation time. The time is in UTC and follows the ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-04-10T01:31:32Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The ID of the credit boost package.</p>
+         * <p>The ID of the credit package.</p>
          * 
          * <strong>example:</strong>
          * <p>crp-xagydbhfkah****</p>
@@ -131,7 +137,7 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
         public String creditPackageId;
 
         /**
-         * <p>The status of the credit boost package.</p>
+         * <p>The status of the credit package.</p>
          * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>
@@ -140,7 +146,7 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
         public String creditPackageStatus;
 
         /**
-         * <p>The effective period of the credit boost package. The time format is YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The effective period of the credit package. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-30 00:00:00</p>
@@ -149,7 +155,7 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
         public String effectiveTime;
 
         /**
-         * <p>The number of consumed credits in the current credit boost package.</p>
+         * <p>The number of consumed credits in the current credit package.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -158,7 +164,7 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
         public String exhaustedCredits;
 
         /**
-         * <p>The expiration time of the credit boost package. The time format is YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The expiration time of the credit package. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-30 00:00:00</p>
@@ -167,7 +173,7 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
-         * <p>The total number of credits in the current credit boost package.</p>
+         * <p>The total number of credits in the current credit package.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

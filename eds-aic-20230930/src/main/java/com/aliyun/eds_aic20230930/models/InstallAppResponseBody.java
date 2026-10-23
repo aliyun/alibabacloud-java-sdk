@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InstallAppResponseBody extends TeaModel {
     /**
-     * <p>The child task objects.</p>
+     * <p>The child task information.</p>
      */
     @NameInMap("ChildTaskInfo")
     public java.util.List<InstallAppResponseBodyChildTaskInfo> childTaskInfo;
@@ -60,6 +60,9 @@ public class InstallAppResponseBody extends TeaModel {
     public static class InstallAppResponseBodyChildTaskInfo extends TeaModel {
         /**
          * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("AppId")
         public String appId;

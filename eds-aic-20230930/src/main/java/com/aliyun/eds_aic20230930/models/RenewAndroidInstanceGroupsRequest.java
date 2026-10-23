@@ -14,16 +14,22 @@ public class RenewAndroidInstanceGroupsRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The instance group IDs.</p>
+     * <p>The list of instance group IDs.</p>
      */
     @NameInMap("InstanceGroupIds")
     public java.util.List<String> instanceGroupIds;
 
+    /**
+     * <p>The redirect URL to the payment success page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wya.wuying.aliyun.com/instanceGroup</p>
+     */
     @NameInMap("PaidCallBackUrl")
     public String paidCallBackUrl;
 
     /**
-     * <p>The renewal duration.</p>
+     * <p>Specifies the renewal duration. The unit is specified by the PeriodUnit parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -32,7 +38,7 @@ public class RenewAndroidInstanceGroupsRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the renewal duration specified by <code>Period</code>. Default value: Month.</p>
+     * <p>The unit of the renewal duration, which is the unit of the Period parameter. Default value: Month.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -40,6 +46,12 @@ public class RenewAndroidInstanceGroupsRequest extends TeaModel {
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    /**
+     * <p>The promotion ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50003308011****</p>
+     */
     @NameInMap("PromotionId")
     public String promotionId;
 

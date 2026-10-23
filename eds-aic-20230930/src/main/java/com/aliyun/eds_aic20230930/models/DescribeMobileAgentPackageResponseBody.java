@@ -14,7 +14,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The message returned by the API operation.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success.</p>
@@ -144,13 +144,13 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         public String expiredAt;
 
         /**
-         * <p>The list of node instance IDs.</p>
+         * <p>The node instance IDs.</p>
          */
         @NameInMap("InstanceIds")
         public java.util.List<String> instanceIds;
 
         /**
-         * <p>The credit quota of the package.</p>
+         * <p>The package credit quota.</p>
          * 
          * <strong>example:</strong>
          * <p>8000</p>
@@ -168,7 +168,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         public String packageId;
 
         /**
-         * <p>The package specifications.</p>
+         * <p>The package specification.</p>
          * 
          * <strong>example:</strong>
          * <p>advanced</p>
@@ -176,6 +176,9 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         @NameInMap("PackageSpec")
         public String packageSpec;
 
+        /**
+         * <p>The name of the package specification.</p>
+         */
         @NameInMap("PackageSpecName")
         public String packageSpecName;
 
@@ -188,9 +191,15 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         @NameInMap("PackageStatus")
         public String packageStatus;
 
+        /**
+         * <p>The end time of the package period.</p>
+         */
         @NameInMap("PeriodEndTime")
         public String periodEndTime;
 
+        /**
+         * <p>The start time of the package period.</p>
+         */
         @NameInMap("PeriodStartTime")
         public String periodStartTime;
 
@@ -201,7 +210,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         public java.util.List<DescribeMobileAgentPackageResponseBodyPackageListTags> tags;
 
         /**
-         * <p>The number of used credits.</p>
+         * <p>The number of credits used.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>

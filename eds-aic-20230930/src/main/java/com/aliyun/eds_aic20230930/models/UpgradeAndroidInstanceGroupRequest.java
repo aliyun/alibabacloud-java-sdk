@@ -33,12 +33,18 @@ public class UpgradeAndroidInstanceGroupRequest extends TeaModel {
 
     /**
      * <p>The redirect URL for the payment success page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wya.wuying.aliyun.com/instanceGroup</p>
      */
     @NameInMap("PaidCallBackUrl")
     public String paidCallBackUrl;
 
     /**
      * <p>The ID of the promotion.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50003308011****</p>
      */
     @NameInMap("PromotionId")
     public String promotionId;

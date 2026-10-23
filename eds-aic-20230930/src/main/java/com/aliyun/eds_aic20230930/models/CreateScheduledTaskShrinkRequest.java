@@ -43,11 +43,11 @@ public class CreateScheduledTaskShrinkRequest extends TeaModel {
     public String runConfigShrink;
 
     /**
-     * <p>The task name.</p>
+     * <p>The name of the task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Auto-reply to DingTalk messages</p>
+     * <p>Automatically reply to DingTalk messages</p>
      */
     @NameInMap("TaskName")
     public String taskName;

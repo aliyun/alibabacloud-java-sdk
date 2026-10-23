@@ -22,6 +22,9 @@ public class UpdateInstanceImageResponseBody extends TeaModel {
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <p>The task information.</p>
+     */
     @NameInMap("Tasks")
     public UpdateInstanceImageResponseBodyTasks tasks;
 
@@ -56,6 +59,8 @@ public class UpdateInstanceImageResponseBody extends TeaModel {
 
     public static class UpdateInstanceImageResponseBodyTasksChildTasks extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>acp-xxxx</p>
          */
@@ -63,6 +68,8 @@ public class UpdateInstanceImageResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The child task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>t-xxxx</p>
          */
@@ -93,10 +100,15 @@ public class UpdateInstanceImageResponseBody extends TeaModel {
     }
 
     public static class UpdateInstanceImageResponseBodyTasks extends TeaModel {
+        /**
+         * <p>The child tasks.</p>
+         */
         @NameInMap("ChildTasks")
         public java.util.List<UpdateInstanceImageResponseBodyTasksChildTasks> childTasks;
 
         /**
+         * <p>The parent task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>t-xxxx</p>
          */

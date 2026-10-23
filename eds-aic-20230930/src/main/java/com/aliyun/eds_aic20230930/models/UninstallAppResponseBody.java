@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UninstallAppResponseBody extends TeaModel {
     /**
-     * <p>A list of subtasks.</p>
+     * <p>The child task information.</p>
      */
     @NameInMap("ChildTaskInfo")
     public java.util.List<UninstallAppResponseBodyChildTaskInfo> childTaskInfo;
@@ -60,12 +60,15 @@ public class UninstallAppResponseBody extends TeaModel {
     public static class UninstallAppResponseBodyChildTaskInfo extends TeaModel {
         /**
          * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
-         * <p>The subtask ID.</p>
+         * <p>The child task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>t-ybde48cevxxxx</p>

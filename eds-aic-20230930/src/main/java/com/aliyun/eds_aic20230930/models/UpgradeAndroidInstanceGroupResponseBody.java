@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeAndroidInstanceGroupResponseBody extends TeaModel {
     /**
-     * <p>The instance IDs created by the scale-out.</p>
+     * <p>The instance IDs created during the scale-out.</p>
      * 
      * <strong>example:</strong>
      * <p>[\&quot;acp-2iowaqjyw9nrd****\&quot;, \&quot;acp-2iowaqjyw9nrd****\&quot;]</p>

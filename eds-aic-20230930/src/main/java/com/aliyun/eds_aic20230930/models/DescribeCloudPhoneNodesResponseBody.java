@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries per page for a paged query.</p>
+     * <p>The maximum number of entries per page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,10 +14,10 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Indicates whether a next query token exists. Valid values:</p>
+     * <p>Indicates whether a token for the next query is available. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
-     * <li>If <strong>NextToken</strong> has a return value, the value is the token for the next query.</li>
+     * <li>If <strong>NextToken</strong> is empty, no next query is available.</li>
+     * <li>If <strong>NextToken</strong> returns a value, the value is the token used to start the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -175,7 +175,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         public String networkType;
 
         /**
-         * <p>The vSwitch ID in the VPC.</p>
+         * <p>The ID of the vSwitch in the virtual private cloud (VPC).</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-j6cjgev6fv3ftw4f0****</p>
@@ -232,7 +232,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
 
     public static class DescribeCloudPhoneNodesResponseBodyNodeModelPhoneDataInfo extends TeaModel {
         /**
-         * <p>The ID of the independent device storage.</p>
+         * <p>The ID of the dedicated internal storage.</p>
          * 
          * <strong>example:</strong>
          * <p>pd-dhusabisshj****</p>
@@ -241,7 +241,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         public String phoneDataId;
 
         /**
-         * <p>The storage capacity of the independent device storage. Unit: GiB.</p>
+         * <p>The storage capacity of the dedicated internal storage. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -273,9 +273,21 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudPhoneNodesResponseBodyNodeModelTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>phone</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -313,7 +325,12 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         public String bandwidthPackageId;
 
         /**
-         * <p>The status of the bandwidth plan. Valid values: 0: initializing. 1: normal. 2: deleted.</p>
+         * <p>The status of the bandwidth plan. Valid values:</p>
+         * <ul>
+         * <li>0: Initialized.</li>
+         * <li>1: Normal.</li>
+         * <li>2: Deleted.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -336,6 +353,12 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         @NameInMap("BizTags")
         public java.util.List<DescribeCloudPhoneNodesResponseBodyNodeModelBizTags> bizTags;
 
+        /**
+         * <p>The order source. A value of CLOUDPHONE indicates an AI cloud phone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CLOUDPHONE</p>
+         */
         @NameInMap("Channel")
         public String channel;
 
@@ -376,7 +399,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         public String gmtExpired;
 
         /**
-         * <p>The most recent modification time.</p>
+         * <p>The last modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-02-13 02:03:14</p>
@@ -427,7 +450,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         public String networkType;
 
         /**
-         * <p>The cloud phone matrix ID.</p>
+         * <p>The ID of the cloud phone matrix.</p>
          * 
          * <strong>example:</strong>
          * <p>cpn-ehs0yoedq8ntm****</p>
@@ -444,11 +467,17 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>The ID of the package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cmag-bp19i1yxu60r7twy****</p>
+         */
         @NameInMap("PackageId")
         public String packageId;
 
         /**
-         * <p>The number of instances under the cloud phone matrix.</p>
+         * <p>The number of instances provisioned under the cloud phone matrix.</p>
          * 
          * <strong>example:</strong>
          * <p>25</p>
@@ -457,7 +486,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         public Integer phoneCount;
 
         /**
-         * <p>The independent device storage information.</p>
+         * <p>The dedicated internal storage information.</p>
          */
         @NameInMap("PhoneDataInfo")
         public DescribeCloudPhoneNodesResponseBodyNodeModelPhoneDataInfo phoneDataInfo;
@@ -499,7 +528,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         public String serverType;
 
         /**
-         * <p>The size of the shared device storage. Unit: GiB.</p>
+         * <p>The size of the shared internal storage. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -516,9 +545,18 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The size of the swap space.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SwapSize")
         public Integer swapSize;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeCloudPhoneNodesResponseBodyNodeModelTags> tags;
 

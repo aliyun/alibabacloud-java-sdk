@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCreditPackageResponseBody extends TeaModel {
     /**
-     * <p>The ID of the credit top-up package.</p>
+     * <p>The ID of the credit package.</p>
      * 
      * <strong>example:</strong>
      * <p>crp-bt7e2t4anbq50****</p>
@@ -13,11 +13,14 @@ public class CreateCreditPackageResponseBody extends TeaModel {
     @NameInMap("CreditPackageId")
     public String creditPackageId;
 
+    /**
+     * <p>The IDs of the credit packages created in this request.</p>
+     */
     @NameInMap("CreditPackageIds")
     public java.util.List<String> creditPackageIds;
 
     /**
-     * <p>The effective period of the credit top-up package. The time format is YYYY-MM-DD HH:mm:ss.</p>
+     * <p>The effective time of the credit package. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-04-30 00:00:00</p>
@@ -26,7 +29,7 @@ public class CreateCreditPackageResponseBody extends TeaModel {
     public String effectiveTime;
 
     /**
-     * <p>The expiration time of the credit top-up package. The time format is YYYY-MM-DD HH:mm:ss.</p>
+     * <p>The expiration time of the credit package. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-10-30 00:00:00</p>

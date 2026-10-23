@@ -14,7 +14,16 @@ public class BatchGetAcpConnectionTicketRequest extends TeaModel {
     public String connectionMode;
 
     /**
-     * <p>The ID of the user to whom the cloud phone instance is assigned.</p>
+     * <p>The ID of the assigned user. If you do not specify this parameter, the system user assigned in the background is used to obtain the ticket.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;
+     * The usage of this parameter varies based on the Cloud Phone edition and the instance streaming mode:</p>
+     * <ul>
+     * <li>Cloud Phone Instance Edition or Cloud Phone Matrix Edition (preemptive mode): You can obtain a <code>Ticket</code> only by using the same <code>EnduserId</code>.</li>
+     * <li>Cloud Phone Matrix Edition (collaborative mode): You can pass different <code>EnduserId</code> values to obtain <code>Ticket</code> values and stream for different users (up to 5) at the same time. You can pass only one <code>EnduserId</code> at a time.</li>
+     * </ul>
+     * <blockquote>
+     * <p>You can define the instance streaming mode by using the <code>StreamMode</code> parameter of the <code>ModifyCloudPhoneNode</code> operation.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>user</p>
@@ -23,7 +32,7 @@ public class BatchGetAcpConnectionTicketRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>The ID of the instance group.</p>
+     * <p>The instance group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ag-25nt4kk9whjh****</p>
@@ -32,17 +41,20 @@ public class BatchGetAcpConnectionTicketRequest extends TeaModel {
     public String instanceGroupId;
 
     /**
-     * <p>The IDs of the cloud phone instances. You can specify 1 to 100 IDs of cloud phone instances.</p>
+     * <p>The list of Cloud Phone instance IDs. You can specify 1 to 100 IDs.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The instance connection task, which is used to query whether the ticket retrieval task is completed.</p>
+     * <p>The instance connection tasks. This parameter is used to query whether the ticket retrieval task is completed.</p>
      */
     @NameInMap("InstanceTasks")
     public java.util.List<BatchGetAcpConnectionTicketRequestInstanceTasks> instanceTasks;
 
+    /**
+     * <p>The list of custom connection ports.</p>
+     */
     @NameInMap("Ports")
     public java.util.List<String> ports;
 
@@ -101,7 +113,7 @@ public class BatchGetAcpConnectionTicketRequest extends TeaModel {
 
     public static class BatchGetAcpConnectionTicketRequestInstanceTasks extends TeaModel {
         /**
-         * <p>The ID of the cloud phone instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>acp-fkuit0cmyfvzz****</p>
@@ -110,7 +122,7 @@ public class BatchGetAcpConnectionTicketRequest extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou@c9f5c2e8-f5c4-4b01-8602-000cae94****</p>

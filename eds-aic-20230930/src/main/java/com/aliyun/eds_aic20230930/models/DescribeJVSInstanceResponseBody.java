@@ -20,7 +20,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that specifies the starting position for the next query. An empty value indicates that the query starts from the beginning.</p>
+     * <p>The token that indicates the starting position of the current query. If this parameter is empty, the query starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
@@ -28,6 +28,12 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The number of pending upgrades.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("PendingUpgradeCount")
     public Integer pendingUpgradeCount;
 
@@ -103,9 +109,18 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeJVSInstanceResponseBodyDataAgentVersion extends TeaModel {
+        /**
+         * <p>The AI Engine version upgrade status.</p>
+         */
         @NameInMap("UpgradeStatus")
         public String upgradeStatus;
 
+        /**
+         * <p>The AI Engine version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2607W1</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -134,7 +149,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
 
     public static class DescribeJVSInstanceResponseBodyDataCreditConfig extends TeaModel {
         /**
-         * <p>The limit value.</p>
+         * <p>The credit limit.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -175,21 +190,54 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeJVSInstanceResponseBodyDataInstalledSkills extends TeaModel {
+        /**
+         * <p>The skill description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Current weather and forecasts with wttr.in via curl for locations, rain, temperature, travel planning.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The skill icon URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.example.com/icon.png">https://www.example.com/icon.png</a></p>
+         */
         @NameInMap("IconUrl")
         public String iconUrl;
 
+        /**
+         * <p>The skill installation time.</p>
+         */
         @NameInMap("InstalledAt")
         public String installedAt;
 
+        /**
+         * <p>The skill ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-04zzrgosj6xd1****</p>
+         */
         @NameInMap("SkillId")
         public String skillId;
 
+        /**
+         * <p>The skill name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>weather</p>
+         */
         @NameInMap("SkillName")
         public String skillName;
 
+        /**
+         * <p>The skill type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
+         */
         @NameInMap("SkillType")
         public String skillType;
 
@@ -291,6 +339,9 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeJVSInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>The AI Engine version and upgrade status.</p>
+         */
         @NameInMap("AgentVersion")
         public DescribeJVSInstanceResponseBodyDataAgentVersion agentVersion;
 
@@ -304,7 +355,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The credit limit configuration. Subsequent quota configurations overwrite previous configurations.</p>
+         * <p>The credit limit configuration. If multiple configurations are delivered, the subsequent configurations overwrite the previous ones.</p>
          */
         @NameInMap("CreditConfig")
         public java.util.List<DescribeJVSInstanceResponseBodyDataCreditConfig> creditConfig;
@@ -318,6 +369,9 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>The list of skills installed on the instance.</p>
+         */
         @NameInMap("InstalledSkills")
         public java.util.List<DescribeJVSInstanceResponseBodyDataInstalledSkills> installedSkills;
 
@@ -358,7 +412,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The used credit.</p>
+         * <p>The used credits.</p>
          */
         @NameInMap("UsedCredit")
         public java.util.List<DescribeJVSInstanceResponseBodyDataUsedCredit> usedCredit;

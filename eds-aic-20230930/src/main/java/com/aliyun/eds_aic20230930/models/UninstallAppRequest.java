@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class UninstallAppRequest extends TeaModel {
     /**
-     * <p>A list of application IDs.</p>
+     * <p>The list of application IDs.</p>
      */
     @NameInMap("AppIdList")
     public java.util.List<String> appIdList;
 
     /**
-     * <p>A list of instance group IDs. You must specify either this parameter or <code>InstanceIdList</code>. If you specify both, only <code>InstanceGroupIdList</code> takes precedence.</p>
+     * <p>The list of instance group IDs. You must specify either this parameter or the InstanceIdList parameter. If both parameters are specified, only the InstanceGroupIdList parameter takes effect.</p>
      */
     @NameInMap("InstanceGroupIdList")
     public java.util.List<String> instanceGroupIdList;
 
     /**
-     * <p>A list of instance IDs. You must specify either this parameter or <code>InstanceGroupIdList</code>. If you specify both, only <code>InstanceGroupIdList</code> takes precedence.</p>
+     * <p>The list of instance IDs. You must specify either this parameter or the InstanceGroupIdList parameter. If both parameters are specified, only the InstanceGroupIdList parameter takes effect.</p>
      */
     @NameInMap("InstanceIdList")
     public java.util.List<String> instanceIdList;

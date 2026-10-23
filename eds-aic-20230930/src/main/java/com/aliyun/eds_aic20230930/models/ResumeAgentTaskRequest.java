@@ -5,14 +5,17 @@ import com.aliyun.tea.*;
 
 public class ResumeAgentTaskRequest extends TeaModel {
     /**
-     * <p>The additional prompt to append. This parameter takes effect only when the task is passively paused, such as when the task is paused and waiting for user confirmation.</p>
+     * <p>The additional prompt. This parameter takes effect only when the task is passively paused, such as pausing to wait for user confirmation.</p>
      * 
      * <strong>example:</strong>
-     * <p>验证码为***。</p>
+     * <p>The verification code is ***</p>
      */
     @NameInMap("AdditionalPrompt")
     public String additionalPrompt;
 
+    /**
+     * <p>The list of clarification answers submitted when resuming the task.</p>
+     */
     @NameInMap("ClarificationAnswers")
     public java.util.List<ResumeAgentTaskRequestClarificationAnswers> clarificationAnswers;
 
@@ -23,6 +26,12 @@ public class ResumeAgentTaskRequest extends TeaModel {
     @NameInMap("TaskIds")
     public java.util.List<String> taskIds;
 
+    /**
+     * <p>The ID of the tool invoke to resume.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ca*****01</p>
+     */
     @NameInMap("ToolCallId")
     public String toolCallId;
 
@@ -64,12 +73,27 @@ public class ResumeAgentTaskRequest extends TeaModel {
     }
 
     public static class ResumeAgentTaskRequestClarificationAnswers extends TeaModel {
+        /**
+         * <p>The custom input content in the clarification answer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Simply ****</p>
+         */
         @NameInMap("CustomValue")
         public String customValue;
 
+        /**
+         * <p>The ID of the clarification item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cl*****-1</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The list of selected option IDs in the clarification answer.</p>
+         */
         @NameInMap("SelectedIds")
         public java.util.List<String> selectedIds;
 

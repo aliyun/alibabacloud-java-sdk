@@ -16,6 +16,9 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
     @NameInMap("InstanceGroupInfos")
     public java.util.List<CreateAndroidInstanceGroupResponseBodyInstanceGroupInfos> instanceGroupInfos;
 
+    /**
+     * <p>The bandwidth plan order information.</p>
+     */
     @NameInMap("NetworkPackageOrderModel")
     public CreateAndroidInstanceGroupResponseBodyNetworkPackageOrderModel networkPackageOrderModel;
 
@@ -122,9 +125,21 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
     }
 
     public static class CreateAndroidInstanceGroupResponseBodyNetworkPackageOrderModel extends TeaModel {
+        /**
+         * <p>The ID of the Internet Shared Bandwidth.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cbwp-uf63gsv8j0ir53*****</p>
+         */
         @NameInMap("BandwidthPackageId")
         public String bandwidthPackageId;
 
+        /**
+         * <p>The bandwidth plan order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25954415983*****</p>
+         */
         @NameInMap("BandwidthPackageOrderId")
         public String bandwidthPackageOrderId;
 

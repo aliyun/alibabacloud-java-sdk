@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExpandPhoneDataVolumeRequest extends TeaModel {
     /**
-     * <p>Whether to enable automatic payment. The default value is false.</p>
+     * <p>Specifies whether to enable automatic payment. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -23,16 +23,22 @@ public class ExpandPhoneDataVolumeRequest extends TeaModel {
     public String bizRegionId;
 
     /**
-     * <p>A list of cloud phone matrix instance IDs. You can specify 1 to 100 IDs.</p>
+     * <p>The IDs of the cloud phone matrix instances. You can specify 1 to 100 instance IDs.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <p>The redirect URL to the payment success page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wya.wuying.aliyun.com/instanceGroup</p>
+     */
     @NameInMap("PaidCallBackUrl")
     public String paidCallBackUrl;
 
     /**
-     * <p>The target size of the phone storage, in GiB.&gt;Notice: The new value must be greater than the current size of the phone storage.</p>
+     * <p>The expected size of the independent device storage after the expansion. Unit: GiB.&gt;Notice: The new value must be greater than the original independent device storage size of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

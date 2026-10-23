@@ -30,7 +30,7 @@ public class DescribeImageListRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is not yet available for public use.</p>
+     * <p>This parameter is not publicly available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class DescribeImageListRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The maximum number of entries per page for a paged query. Valid values: 1 to 100. Default value: 20.</p>
+     * <p>The maximum number of entries to return per page during paging in a paged query. Valid values: 1 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -71,7 +71,7 @@ public class DescribeImageListRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The position from which the read operation starts. An empty value indicates that the read operation starts from the beginning.</p>
+     * <p>The token that specifies the starting position for the query. If this parameter is empty, the query starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</p>
@@ -90,6 +90,9 @@ public class DescribeImageListRequest extends TeaModel {
 
     /**
      * <p>The operating system type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Android 12</p>
      */
     @NameInMap("SystemType")
     public String systemType;

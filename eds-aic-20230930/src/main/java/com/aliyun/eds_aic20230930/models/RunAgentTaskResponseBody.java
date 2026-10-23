@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class RunAgentTaskResponseBody extends TeaModel {
     /**
-     * <p>The status code of the API operation.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;200&quot; indicates success</p>
+     * <p>For example, &quot;200&quot; indicates success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -100,7 +100,7 @@ public class RunAgentTaskResponseBody extends TeaModel {
          * <li>COMPLETED: The task is completed.</li>
          * <li>FAILED: The task failed.</li>
          * <li>TIMEOUT: The task execution timed out.</li>
-         * <li>CALL_FOR_USER: The task is waiting for user operations.</li>
+         * <li>CALL_FOR_USER: The task is waiting for user action.</li>
          * <li>PAUSING: The task is being paused.</li>
          * <li>PAUSED: The task is paused.</li>
          * <li>CANCELLING: The task is being canceled.</li>
@@ -116,7 +116,7 @@ public class RunAgentTaskResponseBody extends TeaModel {
         public String currentStatus;
 
         /**
-         * <p>The ID of the Mobile node.</p>
+         * <p>The Mobile node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>acp-ek65k51zoxia3x8xz</p>
@@ -125,7 +125,7 @@ public class RunAgentTaskResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The time when the task was created. The time is in the ISO 8601 format.</p>
+         * <p>The time when the task was created, in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-13T17:42:19Z</p>
@@ -143,7 +143,7 @@ public class RunAgentTaskResponseBody extends TeaModel {
         public String sessionId;
 
         /**
-         * <p>The globally unique ID of the task.</p>
+         * <p>The globally unique task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>t-imr0fufqd7cle****</p>
@@ -152,7 +152,7 @@ public class RunAgentTaskResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The user prompt in natural language. The agent performs operations based on this prompt.</p>
+         * <p>The user prompt in natural language based on which the agent performs operations.</p>
          * 
          * <strong>example:</strong>
          * <p>Download DingTalk from the app store</p>

@@ -7,11 +7,11 @@ public class CreateCreditPackageRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Enables automatic payment. Make sure that your account balance is sufficient.</li>
-     * <li><strong>false</strong> (default): Generates an order without deducting payment.</li>
+     * <li><strong>true</strong>: enables automatic payment. Make sure that your account balance is sufficient.</li>
+     * <li><strong>false</strong> (default): generates an unpaid order without deducting fees.</li>
      * </ul>
      * <blockquote>
-     * <p>If the balance of your payment method is insufficient, set this parameter to false. An unpaid order is generated. You can log on to the WUYING Cloud Phone console to complete the payment.</p>
+     * <p>If the balance of your payment method is insufficient, you can change the Settings of this parameter to false to generate an unpaid order. Then, you can log on to the WUYING Cloud Phone console to complete the payment.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,6 +20,12 @@ public class CreateCreditPackageRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>The channel cookie. This parameter is passed through to the sales system when you place an order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>channel-cookie-credit</p>
+     */
     @NameInMap("ChannelCookie")
     public String channelCookie;
 
@@ -32,11 +38,17 @@ public class CreateCreditPackageRequest extends TeaModel {
     @NameInMap("CreditAmount")
     public String creditAmount;
 
+    /**
+     * <p>The number of credit packages to purchase.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PackageAmount")
     public String packageAmount;
 
     /**
-     * <p>The subscription duration of the purchased resource. The unit is specified by PeriodUnit.</p>
+     * <p>The subscription period of the resource. The unit is specified by PeriodUnit.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -45,10 +57,10 @@ public class CreateCreditPackageRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the subscription duration for the purchased resource. Valid values:</p>
+     * <p>The unit of the subscription period. Valid values:</p>
      * <ul>
-     * <li><strong>Month</strong>: Month.</li>
-     * <li><strong>Year</strong>: Year.</li>
+     * <li><strong>Month</strong>: months.</li>
+     * <li><strong>Year</strong>: years.</li>
      * </ul>
      * 
      * <strong>example:</strong>

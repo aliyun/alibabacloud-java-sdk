@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RunCommandResponseBody extends TeaModel {
     /**
-     * <p>The command execution ID. Use this ID to query the execution result.</p>
+     * <p>The command execution ID. You can use this ID to query the command execution result.</p>
      * 
      * <strong>example:</strong>
      * <p>t-gov2ujrk32v4****</p>
@@ -22,9 +22,18 @@ public class RunCommandResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of command execution information for each cloud phone instance.</p>
+     */
     @NameInMap("RunCommandInfos")
     public java.util.List<RunCommandResponseBodyRunCommandInfos> runCommandInfos;
 
+    /**
+     * <p>The batch task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t-bp67acfmxazb4p****</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
@@ -66,12 +75,30 @@ public class RunCommandResponseBody extends TeaModel {
     }
 
     public static class RunCommandResponseBodyRunCommandInfos extends TeaModel {
+        /**
+         * <p>The instance-level child task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-bp67acfmxazb4p****</p>
+         */
         @NameInMap("ChildTaskId")
         public String childTaskId;
 
+        /**
+         * <p>The cloud phone instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acp-uto81vfd8t8z****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The command execution ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B8ED2BA9-0C6A-5643-818F-B5D60A64****</p>
+         */
         @NameInMap("InvokeId")
         public String invokeId;
 
