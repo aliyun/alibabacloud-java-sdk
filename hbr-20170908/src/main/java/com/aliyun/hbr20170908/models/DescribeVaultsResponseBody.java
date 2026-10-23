@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVaultsResponseBody extends TeaModel {
     /**
-     * <p>The return code. A value of 200 indicates success.</p>
+     * <p>The return code. 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeVaultsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned message. The value &quot;successful&quot; is returned for a successful request. An error message is returned for a failed request.</p>
+     * <p>The returned message. &quot;successful&quot; is returned for a successful request, and the corresponding error message is returned if an error occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -23,7 +23,7 @@ public class DescribeVaultsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The page number. Pages start from 1. Default value: 1.</p>
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,7 +50,11 @@ public class DescribeVaultsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -153,6 +157,13 @@ public class DescribeVaultsResponseBody extends TeaModel {
         @NameInMap("CommonNas")
         public Integer commonNas;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
+        @NameInMap("Cpfs")
+        public Integer cpfs;
+
         @NameInMap("Csg")
         public Integer csg;
 
@@ -216,6 +227,14 @@ public class DescribeVaultsResponseBody extends TeaModel {
         }
         public Integer getCommonNas() {
             return this.commonNas;
+        }
+
+        public DescribeVaultsResponseBodyVaultsVaultBackupPlanStatistics setCpfs(Integer cpfs) {
+            this.cpfs = cpfs;
+            return this;
+        }
+        public Integer getCpfs() {
+            return this.cpfs;
         }
 
         public DescribeVaultsResponseBodyVaultsVaultBackupPlanStatistics setCsg(Integer csg) {

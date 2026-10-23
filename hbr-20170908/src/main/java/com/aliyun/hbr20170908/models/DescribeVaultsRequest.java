@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVaultsRequest extends TeaModel {
     /**
-     * <p>The page number. Pages start from 1. Default value: 1.</p>
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class DescribeVaultsRequest extends TeaModel {
     public Boolean replication;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-*********************</p>
@@ -65,7 +65,7 @@ public class DescribeVaultsRequest extends TeaModel {
     public java.util.List<DescribeVaultsRequestTag> tag;
 
     /**
-     * <p>The backup vault ID.</p>
+     * <p>The ID of the backup vault.</p>
      * 
      * <strong>example:</strong>
      * <p>v-*********************</p>
@@ -92,7 +92,7 @@ public class DescribeVaultsRequest extends TeaModel {
     public Long vaultOwnerId;
 
     /**
-     * <p>The region ID of the backup vault.</p>
+     * <p>The ID of the region to which the backup vault belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -101,7 +101,11 @@ public class DescribeVaultsRequest extends TeaModel {
     public String vaultRegionId;
 
     /**
-     * <p>The type of the backup vault. Valid values.</p>
+     * <p>The type of the backup vault. Valid values:</p>
+     * <ul>
+     * <li><strong>STANDARD</strong>: A standard vault. It can be used for ECS File Backup Standard Edition, OSS backup, and NAS backup.</li>
+     * <li><strong>OTS_BACKUP</strong>: A Tablestore vault. It can only be used for Tablestore backup. Tablestore requires this type of vault.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>STANDARD</p>

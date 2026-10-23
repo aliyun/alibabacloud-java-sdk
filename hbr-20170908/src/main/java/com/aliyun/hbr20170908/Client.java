@@ -4491,7 +4491,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about one or more backup vaults that meet the specified conditions.</p>
+     * <p>Queries the information of one or more backup vaults that meet the specified conditions.</p>
      * 
      * @param request DescribeVaultsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4565,7 +4565,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about one or more backup vaults that meet the specified conditions.</p>
+     * <p>Queries the information of one or more backup vaults that meet the specified conditions.</p>
      * 
      * @param request DescribeVaultsRequest
      * @return DescribeVaultsResponse
@@ -5359,7 +5359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of backup points.</p>
+     * <p>Queries backup points.</p>
      * 
      * @param request ListSnapshotsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5423,7 +5423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of backup points.</p>
+     * <p>Queries backup points.</p>
      * 
      * @param request ListSnapshotsRequest
      * @return ListSnapshotsResponse

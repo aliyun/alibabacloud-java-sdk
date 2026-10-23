@@ -14,7 +14,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The maximum number of results returned.</p>
+     * <p>The maximum number of returned results.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The return message. The value &quot;successful&quot; is returned for successful requests. An error message is returned for failed requests.</p>
+     * <p>The returned message. A value of successful indicates success. If an error occurs, the corresponding error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -32,7 +32,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The token for the next page. An empty NextToken indicates that no more pages are available.</p>
+     * <p>The token for the next page. If NextToken is empty, no more pages exist.</p>
      * 
      * <strong>example:</strong>
      * <p>aWQj********MCMy</p>
@@ -56,10 +56,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
     public java.util.List<ListSnapshotsResponseBodySnapshots> snapshots;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         public Long actualBytes;
 
         /**
-         * <p>The actual number of nodes.</p>
+         * <p>The actual number of items.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -166,7 +166,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         public Long actualItems;
 
         /**
-         * <p>The time when the backup was archived.</p>
+         * <p>The archive time.</p>
          * 
          * <strong>example:</strong>
          * <p>1640334062</p>
@@ -175,7 +175,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         public Long archiveTime;
 
         /**
-         * <p>The backup type. The value is <strong>COMPLETE</strong>, which indicates a full backup.</p>
+         * <p>The backup type. A value of <strong>COMPLETE</strong> indicates a full backup.</p>
          * 
          * <strong>example:</strong>
          * <p>COMPLETE</p>
@@ -184,7 +184,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         public String backupType;
 
         /**
-         * <p>The amount of data that has been backed up, in bytes.</p>
+         * <p>The amount of backed up data, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>800</p>
@@ -202,7 +202,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         public Long bytesTotal;
 
         /**
-         * <p>When <strong>SourceType</strong> is set to <strong>ECS_FILE</strong> or <strong>File</strong>, this parameter indicates the backup client ID. In other cases, it indicates the ID of the backup data source.</p>
+         * <p>The ID of the backup client when the value of <strong>SourceType</strong> is <strong>ECS_FILE</strong> or <strong>File</strong>. In other cases, this parameter indicates the ID of the backup data source.</p>
          * 
          * <strong>example:</strong>
          * <p>c-*********************</p>
@@ -211,7 +211,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         public String clientId;
 
         /**
-         * <p>The backup completion time. A UNIX timestamp, in seconds.</p>
+         * <p>The backup completion time. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1642496679</p>
@@ -220,7 +220,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         public Long completeTime;
 
         /**
-         * <p>The time when the backup point was created, in seconds.</p>
+         * <p>The creation time of the backup point, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1607436917</p>
@@ -229,7 +229,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The time when the backup was created.</p>
+         * <p>The backup creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1642496679</p>
@@ -256,7 +256,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         public String exclude;
 
         /**
-         * <p>The backup expiration time.</p>
+         * <p>The expiration time of the backup.</p>
          * 
          * <strong>example:</strong>
          * <p>1771901707</p>
@@ -283,7 +283,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The Tablestore instance name.</p>
+         * <p>The name of the Tablestore instance.</p>
          * 
          * <strong>example:</strong>
          * <p>instancename</p>
@@ -292,7 +292,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The number of nodes that have been backed up.</p>
+         * <p>The number of backed up items.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -301,7 +301,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         public Long itemsDone;
 
         /**
-         * <p>The total number of nodes to back up.</p>
+         * <p>The total number of items to back up.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -310,7 +310,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         public Long itemsTotal;
 
         /**
-         * <p>The backup job ID.</p>
+         * <p>The ID of the backup job.</p>
          * 
          * <strong>example:</strong>
          * <p>job-00030j3chkt******2</p>
@@ -319,7 +319,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The source path.</p>
+         * <p>The backup path.</p>
          * 
          * <strong>example:</strong>
          * <p>/home</p>
@@ -328,13 +328,13 @@ public class ListSnapshotsResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>The list of source paths.</p>
+         * <p>The list of backup paths.</p>
          */
         @NameInMap("Paths")
         public java.util.List<String> paths;
 
         /**
-         * <p>The backup plan ID.</p>
+         * <p>The ID of the backup plan.</p>
          * 
          * <strong>example:</strong>
          * <p>po-123***7890</p>
@@ -343,7 +343,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         public String planId;
 
         /**
-         * <p>The protected source data size, in bytes. When SourceType is set to ECS_FILE, this indicates the protected cloud disk capacity.</p>
+         * <p>The size of the protected source data, in bytes. When the value of SourceType is ECS_FILE, this parameter indicates the capacity of the protected cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>42949672960</p>
@@ -352,7 +352,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         public Long protectedDataSize;
 
         /**
-         * <p>The end time of the Tablestore backup job execution. A UNIX timestamp, in milliseconds.</p>
+         * <p>The end time of the Tablestore backup job. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1642521709966</p>
@@ -361,7 +361,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         public Long rangeEnd;
 
         /**
-         * <p>The start time of the Tablestore backup job execution. A UNIX timestamp, in milliseconds.</p>
+         * <p>The start time of the Tablestore backup job. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1642492553038</p>
@@ -388,7 +388,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         public String snapshotHash;
 
         /**
-         * <p>The backup point ID.</p>
+         * <p>The ID of the backup point.</p>
          * 
          * <strong>example:</strong>
          * <p>s-00047mxg17p26*****b</p>
@@ -400,11 +400,11 @@ public class ListSnapshotsResponseBody extends TeaModel {
          * <p>The data source type. Valid values:</p>
          * <ul>
          * <li><strong>ECS_FILE</strong>: ECS file backup</li>
-         * <li><strong>File</strong>: On-premises file backup</li>
+         * <li><strong>File</strong>: on-premises file backup</li>
          * <li><strong>OSS</strong>: OSS backup</li>
          * <li><strong>NAS</strong>: Alibaba Cloud NAS backup</li>
-         * <li><strong>COMMON_NAS</strong>: On-premises NAS backup</li>
-         * <li><strong>CONTAINER</strong>: Container backup</li>
+         * <li><strong>COMMON_NAS</strong>: on-premises NAS backup</li>
+         * <li><strong>CONTAINER</strong>: container backup</li>
          * <li><strong>OTS_TABLE</strong>: Tablestore backup</li>
          * <li><strong>COMMON_FILE_SYSTEM</strong>: CPFS backup</li>
          * </ul>
@@ -416,7 +416,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The backup point status.</p>
+         * <p>The status of the backup point. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>COMPLETE</p>
@@ -425,7 +425,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The storage class.</p>
+         * <p>The storage class. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>STANDARD</p>

@@ -1,3 +1,7 @@
+2026-10-23 Version: 2.9.1
+- Update API DescribeVaults: add response parameters Body.Vaults.$.BackupPlanStatistics.Cpfs.
+
+
 2026-09-03 Version: 2.9.0
 - Support API DescribeFeatureTrialInfo.
 - Support API GetTrialInfo.

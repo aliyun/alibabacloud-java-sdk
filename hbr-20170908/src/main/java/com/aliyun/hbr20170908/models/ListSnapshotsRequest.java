@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSnapshotsRequest extends TeaModel {
     /**
-     * <p>The end completion time. A UNIX timestamp, in seconds. Only backup points with a completion time earlier than this value are returned.</p>
+     * <p>The end completion time. The value is a UNIX timestamp in seconds. Only backup points whose completion time is less than this value are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1776059382</p>
@@ -14,7 +14,7 @@ public class ListSnapshotsRequest extends TeaModel {
     public Long completeTimeEnd;
 
     /**
-     * <p>The start completion time. A UNIX timestamp, in seconds. Only backup points with a completion time greater than or equal to this value are returned.</p>
+     * <p>The start completion time. The value is a UNIX timestamp in seconds. Only backup points whose completion time is greater than or equal to this value are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1776059082</p>
@@ -23,7 +23,7 @@ public class ListSnapshotsRequest extends TeaModel {
     public Long completeTimeStart;
 
     /**
-     * <p>The maximum number of results to return in a paged query. Default value: 10. The value must be greater than 1.</p>
+     * <p>The maximum number of results to return for a paged query. Default value: 10. The value must be greater than 1.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class ListSnapshotsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. You do not need to specify this parameter for the first request. For subsequent pages, pass in the <strong>NextToken</strong> value returned from the previous request. An empty <strong>NextToken</strong> indicates that no more pages are available. This parameter cannot be used together with <strong>Skip</strong>.</p>
+     * <p>The pagination token. You do not need to specify this parameter for the first query. When you query the next page, set this parameter to the <strong>NextToken</strong> value returned from the previous page. If <strong>NextToken</strong> is empty, no more pages exist. This parameter cannot be used together with <strong>Skip</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJJbmRleCI6NjUwMX0=</p>
@@ -41,7 +41,7 @@ public class ListSnapshotsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The backup plan ID. This is an optional filter condition. If specified, only backup points under the specified backup plan are returned.</p>
+     * <p>The ID of the backup plan. This is an optional filter. If you specify this parameter, only the backup points under the specified backup plan are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>po-0000****123</p>
@@ -50,7 +50,7 @@ public class ListSnapshotsRequest extends TeaModel {
     public String planId;
 
     /**
-     * <p>The ID of the protected resource. The protected resource must exist, and its data source type must match the <strong>SourceType</strong> parameter.</p>
+     * <p>The ID of the protected resource. The protected resource must exist, and its data source type must be the same as the value of the <strong>SourceType</strong> parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,7 +69,7 @@ public class ListSnapshotsRequest extends TeaModel {
     public Integer skip;
 
     /**
-     * <p>The data source type. The value must match the data source type of the protected resource (ProtectedResourceId). The supported data source types are listed in the valid values.</p>
+     * <p>The data source type. It must be the same as the data source type of the protected resource specified by ProtectedResourceId. Valid values:</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class ListSnapshotsRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The vault ID. This is an optional filter condition. If specified, only backup points in the specified vault are returned.</p>
+     * <p>The ID of the vault. This is an optional filter. If you specify this parameter, only the backup points in the specified vault are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>v-00030j3c******sn</p>
