@@ -23,7 +23,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The query page number.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for paged query.</p>
+     * <p>The number of entries per page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -59,7 +59,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public String statuses;
 
     /**
-     * <p>The end time for querying backup jobs.</p>
+     * <p>The end time of the backup task query. The time is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1747728000</p>
@@ -68,7 +68,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public Long timePeriodEndTime;
 
     /**
-     * <p>The start time for querying backup jobs.</p>
+     * <p>The start time of the backup task query. The time is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1747708000</p>

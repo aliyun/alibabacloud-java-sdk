@@ -5,19 +5,25 @@ import com.aliyun.tea.*;
 
 public class DataZoneSupportCompactionServiceValue extends TeaModel {
     /**
-     * <p>The availability zone ID.</p>
+     * <p>The zone ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-*******n-f</p>
      */
     @NameInMap("zoneId")
     public String zoneId;
 
     /**
      * <p>The resource level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MEDIUM</p>
      */
     @NameInMap("resourceLevel")
     public String resourceLevel;
 
     /**
-     * <p>Indicates whether this is the recommended option.</p>
+     * <p>Indicates whether the configuration is recommended.</p>
      */
     @NameInMap("recommended")
     public Boolean recommended;

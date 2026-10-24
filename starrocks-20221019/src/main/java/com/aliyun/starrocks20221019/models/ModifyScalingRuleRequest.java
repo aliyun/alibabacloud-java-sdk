@@ -5,7 +5,16 @@ import com.aliyun.tea.*;
 
 public class ModifyScalingRuleRequest extends TeaModel {
     /**
-     * <p>New trigger type.</p>
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-b25e21e24388****</p>
+     */
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    /**
+     * <p>The new trigger type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +24,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public String newTriggerType;
 
     /**
-     * <p>Compute group ID.</p>
+     * <p>The ID of the compute group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +34,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public String nodeGroupId;
 
     /**
-     * <p>Old trigger type.</p>
+     * <p>The original trigger type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +44,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public String oldTriggerType;
 
     /**
-     * <p>Rule content.</p>
+     * <p>The content of the rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,7 +79,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>ID of the scaling rule to modify.</p>
+     * <p>The ID of the scaling rule to be modified.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,6 +91,14 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public static ModifyScalingRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyScalingRuleRequest self = new ModifyScalingRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyScalingRuleRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public ModifyScalingRuleRequest setNewTriggerType(String newTriggerType) {

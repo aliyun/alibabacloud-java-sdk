@@ -23,7 +23,7 @@ public class DescribeBackupPoliciesRequest extends TeaModel {
     public String policyId;
 
     /**
-     * <p>The ID of the region where the instance resides.</p>
+     * <p>The region ID of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

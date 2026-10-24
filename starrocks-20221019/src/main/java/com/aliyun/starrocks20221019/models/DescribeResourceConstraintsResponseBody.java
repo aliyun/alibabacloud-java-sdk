@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeResourceConstraintsResponseBody extends TeaModel {
     /**
-     * <p>Details about the access denial.</p>
+     * <p>AccessDeniedDetail</p>
      * 
      * <strong>example:</strong>
      * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</p>
@@ -14,7 +14,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The response data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DescribeResourceConstraintsResponseBodyData data;
@@ -29,7 +29,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The error code. A value of <code>Success</code> indicates that the request was successful.</p>
+     * <p>The error code. A value of 200 indicates that the query task is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -56,7 +56,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -154,7 +154,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         public Integer min;
 
         /**
-         * <p>The step.</p>
+         * <p>The step size.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -212,7 +212,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         public Integer _default;
 
         /**
-         * <p>The maximum number of disks.</p>
+         * <p>The maximum value.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -230,7 +230,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         public Integer min;
 
         /**
-         * <p>The step.</p>
+         * <p>The step size.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -306,7 +306,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         public Integer min;
 
         /**
-         * <p>The step.</p>
+         * <p>The step size.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -358,7 +358,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>BE 存储约束描述</p>
+         * <p>BE storage constraint description</p>
          */
         @NameInMap("Desc")
         public String desc;
@@ -370,7 +370,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         public DescribeResourceConstraintsResponseBodyDataBeStorageConstraintsDiskNumberConstraint diskNumberConstraint;
 
         /**
-         * <p>Indicates whether this is the default option.</p>
+         * <p>Indicates whether it is the default.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -379,7 +379,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>The disk performance level.</p>
+         * <p>The disk level.</p>
          * 
          * <strong>example:</strong>
          * <p>PL1</p>
@@ -451,7 +451,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         public Integer cpu;
 
         /**
-         * <p>The disk count.</p>
+         * <p>The number of disks.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -463,7 +463,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
          * <p>The display name.</p>
          * 
          * <strong>example:</strong>
-         * <p>20核 88GiB 8*7300GiB 本地HDD盘</p>
+         * <p>20 vCPUs, 88 GiB, 8 × 7300 GiB local HDDs</p>
          */
         @NameInMap("Display")
         public String display;
@@ -487,7 +487,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>Indicates whether this is the default option.</p>
+         * <p>Indicates whether the resource is the default. Currently, this parameter only supports true and does not support false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -496,7 +496,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         public String isDefault;
 
         /**
-         * <p>The memory size, in GiB.</p>
+         * <p>The memory size. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>88</p>
@@ -505,7 +505,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         public Integer memory;
 
         /**
-         * <p>The storage size, in GiB.</p>
+         * <p>The storage size. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>7300</p>
@@ -613,7 +613,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         public Integer min;
 
         /**
-         * <p>The step.</p>
+         * <p>The step size.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -665,7 +665,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
          * <p>The display name.</p>
          * 
          * <strong>example:</strong>
-         * <p>标准版</p>
+         * <p>Standard edition</p>
          */
         @NameInMap("Display")
         public String display;
@@ -731,7 +731,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         public Integer min;
 
         /**
-         * <p>The step.</p>
+         * <p>The step size.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -780,7 +780,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
 
     public static class DescribeResourceConstraintsResponseBodyDataHaFeResourceSpec extends TeaModel {
         /**
-         * <p>The CU (Compute Unit) size.</p>
+         * <p>The CU size.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -798,7 +798,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         public Integer nodeNumber;
 
         /**
-         * <p>The storage size, in GiB.</p>
+         * <p>The storage size. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -839,7 +839,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
 
     public static class DescribeResourceConstraintsResponseBodyDataLocalSSDInstanceTypeConstraints extends TeaModel {
         /**
-         * <p>The number of vCPUs.</p>
+         * <p>The number of CPU cores.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -848,7 +848,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         public Integer cpu;
 
         /**
-         * <p>The disk count.</p>
+         * <p>The number of disks.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -860,7 +860,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
          * <p>The display name.</p>
          * 
          * <strong>example:</strong>
-         * <p>[i2g]16核 64GiB 1*1788GiB 本地SSD盘</p>
+         * <p>[i2g] 16 vCPUs, 64 GiB, 1 × 1788 GiB local SSD</p>
          */
         @NameInMap("Display")
         public String display;
@@ -884,7 +884,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>Indicates whether this is the default option.</p>
+         * <p>Indicates whether it is the default.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -902,7 +902,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         public Integer memory;
 
         /**
-         * <p>The storage size, in GiB.</p>
+         * <p>The storage size. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>1788</p>
@@ -983,7 +983,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
 
     public static class DescribeResourceConstraintsResponseBodyDataNormalFeResourceSpec extends TeaModel {
         /**
-         * <p>The CU (Compute Unit) size.</p>
+         * <p>The CU size.</p>
          * 
          * <strong>example:</strong>
          * <p>64</p>
@@ -1001,7 +1001,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         public Integer nodeNumber;
 
         /**
-         * <p>The storage size, in GiB.</p>
+         * <p>The storage size. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -1045,7 +1045,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
          * <p>The display name.</p>
          * 
          * <strong>example:</strong>
-         * <p>标准版</p>
+         * <p>Standard edition</p>
          */
         @NameInMap("Display")
         public String display;
@@ -1099,7 +1099,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         public String defaultVersion;
 
         /**
-         * <p>The available versions.</p>
+         * <p>The version definition.</p>
          */
         @NameInMap("Versions")
         public java.util.List<String> versions;
@@ -1164,7 +1164,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         public Integer min;
 
         /**
-         * <p>The step.</p>
+         * <p>The step size.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -1213,19 +1213,19 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
 
     public static class DescribeResourceConstraintsResponseBodyData extends TeaModel {
         /**
-         * <p>The CU sizes for agents.</p>
+         * <p>The Agent Cu size.</p>
          */
         @NameInMap("AgentCu")
         public java.util.List<Integer> agentCu;
 
         /**
-         * <p>The available CU (Compute Unit) sizes for BE nodes.</p>
+         * <p>The compute unit (CU) size of the BE node.</p>
          */
         @NameInMap("BeCu")
         public java.util.List<Integer> beCu;
 
         /**
-         * <p>The CU sizes for BE nodes on ECS.</p>
+         * <p>The BeCu size on ECS.</p>
          */
         @NameInMap("BeCuOnEcs")
         public java.util.List<Integer> beCuOnEcs;
@@ -1237,25 +1237,25 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         public DescribeResourceConstraintsResponseBodyDataBeNumber beNumber;
 
         /**
-         * <p>The storage constraints for BE nodes.</p>
+         * <p>The BE storage constraints.</p>
          */
         @NameInMap("BeStorageConstraints")
         public java.util.List<DescribeResourceConstraintsResponseBodyDataBeStorageConstraints> beStorageConstraints;
 
         /**
-         * <p>The specification constraints for big data instance types.</p>
+         * <p>The big data instance type specification constraints.</p>
          */
         @NameInMap("BigDataInstanceTypeConstraints")
         public java.util.List<DescribeResourceConstraintsResponseBodyDataBigDataInstanceTypeConstraints> bigDataInstanceTypeConstraints;
 
         /**
-         * <p>The available CU sizes for FE nodes.</p>
+         * <p>The CU size of the FE node.</p>
          */
         @NameInMap("FeCu")
         public java.util.List<Integer> feCu;
 
         /**
-         * <p>The CU sizes for FE nodes on ECS.</p>
+         * <p>The FeCu size on ECS.</p>
          */
         @NameInMap("FeCuOnEcs")
         public java.util.List<Integer> feCuOnEcs;
@@ -1267,25 +1267,25 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         public DescribeResourceConstraintsResponseBodyDataFeNumber feNumber;
 
         /**
-         * <p>The instance types for FE nodes.</p>
+         * <p>The FE specification type.</p>
          */
         @NameInMap("FeSpecType")
         public java.util.List<DescribeResourceConstraintsResponseBodyDataFeSpecType> feSpecType;
 
         /**
-         * <p>The storage size for the FE node.</p>
+         * <p>The storage size of the FE node.</p>
          */
         @NameInMap("FeStorage")
         public DescribeResourceConstraintsResponseBodyDataFeStorage feStorage;
 
         /**
-         * <p>The high availability (HA) FE node configuration.</p>
+         * <p>The high-availability FE node configuration.</p>
          */
         @NameInMap("HaFeResourceSpec")
         public DescribeResourceConstraintsResponseBodyDataHaFeResourceSpec haFeResourceSpec;
 
         /**
-         * <p>The specification constraints for local SSD instance types.</p>
+         * <p>The local SSD instance type constraints.</p>
          */
         @NameInMap("LocalSSDInstanceTypeConstraints")
         public java.util.List<DescribeResourceConstraintsResponseBodyDataLocalSSDInstanceTypeConstraints> localSSDInstanceTypeConstraints;
@@ -1297,18 +1297,13 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         public DescribeResourceConstraintsResponseBodyDataNormalFeResourceSpec normalFeResourceSpec;
 
         /**
-         * <p>The instance type for compute nodes. Valid values:</p>
+         * <p>The compute group specification type. Valid values:</p>
          * <ul>
-         * <li><p><code>standard</code>: Standard.</p>
-         * </li>
-         * <li><p><code>localSSD</code>: Local SSD.</p>
-         * </li>
-         * <li><p><code>bigData</code>: Large-capacity storage.</p>
-         * </li>
-         * <li><p><code>ramEnhanced</code>: Memory-enhanced.</p>
-         * </li>
-         * <li><p><code>networkEnhanced</code>: Network-enhanced.</p>
-         * </li>
+         * <li>standard: standard edition</li>
+         * <li>localSSD: local SSD</li>
+         * <li>bigData: large-capacity storage</li>
+         * <li>ramEnhanced: memory-enhanced instance family</li>
+         * <li>networkEnhanced: network-enhanced</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1318,10 +1313,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         public java.util.List<DescribeResourceConstraintsResponseBodyDataSpecType> specType;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong></p>
          * 
          * <strong>example:</strong>
-         * <p>Deprecated.</p>
+         * <p><strong>[Deprecated]</strong></p>
          */
         @NameInMap("SplitDiskThresholdMap")
         public java.util.Map<String, java.util.Map<String, ?>> splitDiskThresholdMap;
@@ -1333,13 +1328,13 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         public DescribeResourceConstraintsResponseBodyDataVersionConstraint versionConstraint;
 
         /**
-         * <p>The EED types supported in each availability zone.</p>
+         * <p>The EED types supported by the zone.</p>
          */
         @NameInMap("ZoneSupportedEedTypes")
         public java.util.Map<String, java.util.List<String>> zoneSupportedEedTypes;
 
         /**
-         * <p>The instance types supported in each availability zone.</p>
+         * <p>The types supported by the zone.</p>
          */
         @NameInMap("ZoneSupportedSpecTypes")
         public java.util.Map<String, java.util.List<String>> zoneSupportedSpecTypes;
@@ -1351,7 +1346,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         public DescribeResourceConstraintsResponseBodyDataCompactionServiceCuConstraint compactionServiceCuConstraint;
 
         /**
-         * <p>The compaction services supported in each availability zone.</p>
+         * <p>The compaction service configurations supported by each zone.</p>
          */
         @NameInMap("zoneSupportCompactionService")
         public java.util.Map<String, java.util.List<DataZoneSupportCompactionServiceValue>> zoneSupportCompactionService;

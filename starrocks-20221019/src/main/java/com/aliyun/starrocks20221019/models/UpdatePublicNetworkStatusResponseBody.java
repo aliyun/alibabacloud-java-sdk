@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePublicNetworkStatusResponseBody extends TeaModel {
     /**
-     * <p>Access denied details.</p>
+     * <p>AccessDeniedDetail</p>
      * 
      * <strong>example:</strong>
      * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</p>
@@ -14,7 +14,7 @@ public class UpdatePublicNetworkStatusResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Data returned by the operation.</p>
+     * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class UpdatePublicNetworkStatusResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The HTTP status code of the request.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -50,7 +50,7 @@ public class UpdatePublicNetworkStatusResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>32A44F0D-BFF6-5664-999A-218BBDE7****</p>
@@ -59,7 +59,7 @@ public class UpdatePublicNetworkStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

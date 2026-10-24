@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class InstanceConfigDto extends TeaModel {
     /**
+     * <p>The configuration item name.</p>
+     * 
      * <strong>example:</strong>
      * <p>storage_root_path</p>
      */
@@ -12,6 +14,8 @@ public class InstanceConfigDto extends TeaModel {
     public String configKey;
 
     /**
+     * <p>The configuration type.</p>
+     * 
      * <strong>example:</strong>
      * <p>BE</p>
      */
@@ -19,6 +23,8 @@ public class InstanceConfigDto extends TeaModel {
     public String configType;
 
     /**
+     * <p>The configuration item value.</p>
+     * 
      * <strong>example:</strong>
      * <p>value1</p>
      */
@@ -26,6 +32,8 @@ public class InstanceConfigDto extends TeaModel {
     public String configValue;
 
     /**
+     * <p>The compute group ID, which is required only when the parameter is exclusive to the compute group. In other scenarios, leave it empty or set it to the cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ng-e24924dxxxxx</p>
      */

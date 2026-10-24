@@ -41,7 +41,7 @@ public class CreateScalingRuleResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The HTTP request status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -59,7 +59,7 @@ public class CreateScalingRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

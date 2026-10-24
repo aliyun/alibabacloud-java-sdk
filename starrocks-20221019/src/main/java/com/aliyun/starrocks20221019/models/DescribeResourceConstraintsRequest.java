@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeResourceConstraintsRequest extends TeaModel {
     /**
-     * <p>Specifies the instance architecture. Valid values:</p>
+     * <p>The instance architecture. Valid values:</p>
      * <ul>
-     * <li><p>onEci: The instance is deployed on ECI.</p>
-     * </li>
-     * <li><p>onEcs: The instance is deployed on ECS.</p>
-     * </li>
-     * <li><p>onBareMetal: The instance is deployed on a bare metal resource pool.</p>
-     * </li>
+     * <li>onEci: Deployed on ECI.</li>
+     * <li>onEcs: Deployed on ECS.</li>
+     * <li>onBareMetal: Deployed on a bare metal resource pool.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,12 +19,10 @@ public class DescribeResourceConstraintsRequest extends TeaModel {
     public String architecture;
 
     /**
-     * <p>Specifies the instance edition. Valid values:</p>
+     * <p>The instance edition. Valid values:</p>
      * <ul>
-     * <li><p>trial: The entry-level edition.</p>
-     * </li>
-     * <li><p>official: The Standard Edition.</p>
-     * </li>
+     * <li>trial: Trial edition.</li>
+     * <li>official: Standard edition.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,14 +32,11 @@ public class DescribeResourceConstraintsRequest extends TeaModel {
     public String packageType;
 
     /**
-     * <p>Specifies the run mode of the cluster. Valid values:</p>
+     * <p>The running mode of the cluster. Valid values:</p>
      * <ul>
-     * <li><p>shared_nothing: The shared-nothing mode.</p>
-     * </li>
-     * <li><p>shared_data: The shared-data mode.</p>
-     * </li>
-     * <li><p>lakehouse: The data lake analytics mode.</p>
-     * </li>
+     * <li>shared_nothing: Integrated storage and compute.</li>
+     * <li>shared_data: Separated storage and compute.</li>
+     * <li>lakehouse: Data lakehouse analysis.</li>
      * </ul>
      * 
      * <strong>example:</strong>

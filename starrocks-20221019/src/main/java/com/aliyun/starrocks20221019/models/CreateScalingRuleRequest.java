@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateScalingRuleRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-b25e21e24388****</p>
+     */
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    /**
      * <p>The compute group ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -62,6 +71,14 @@ public class CreateScalingRuleRequest extends TeaModel {
     public static CreateScalingRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateScalingRuleRequest self = new CreateScalingRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateScalingRuleRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public CreateScalingRuleRequest setNodeGroupId(String nodeGroupId) {

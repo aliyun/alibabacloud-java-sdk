@@ -140,7 +140,7 @@ public class ListGatewayResponseBody extends TeaModel {
          * <p>The gateway name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Gateway 1</p>
+         * <p>网关1</p>
          */
         @NameInMap("GatewayName")
         public String gatewayName;

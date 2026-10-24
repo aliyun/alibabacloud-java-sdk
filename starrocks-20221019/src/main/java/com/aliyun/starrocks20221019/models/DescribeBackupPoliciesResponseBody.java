@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupPoliciesResponseBody extends TeaModel {
     /**
-     * <p>Details about the access denial.</p>
+     * <p>AccessDeniedDetail</p>
      * 
      * <strong>example:</strong>
      * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</p>
@@ -14,7 +14,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Information about the instance.</p>
+     * <p>The instance information.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeBackupPoliciesResponseBodyData> data;
@@ -56,7 +56,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -180,7 +180,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         public String minute;
 
         /**
-         * <p>The backup policy ID.</p>
+         * <p>The tag policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -189,13 +189,13 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         public String policyId;
 
         /**
-         * <p>The numeric values for the policy execution cycle.</p>
+         * <p>The values for the policy execution cycle.</p>
          */
         @NameInMap("RecurrenceValues")
         public java.util.List<Integer> recurrenceValues;
 
         /**
-         * <p>The timeout period for the backup job.</p>
+         * <p>The timeout period of the backup task, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>

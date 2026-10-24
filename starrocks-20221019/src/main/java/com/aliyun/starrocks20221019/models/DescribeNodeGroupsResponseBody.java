@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNodeGroupsResponseBody extends TeaModel {
     /**
-     * <p>The details of the permission verification failure.</p>
+     * <p>The details of the permission check failure.</p>
      * 
      * <strong>example:</strong>
      * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</p>
@@ -56,7 +56,7 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -65,7 +65,7 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of query results.</p>
+     * <p>The total number of returned entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -238,7 +238,7 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
         public String architecture;
 
         /**
-         * <p>The creation time of the compute group.</p>
+         * <p>The creation time of the compute group. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1742179008000</p>
@@ -247,7 +247,7 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
         public Long beginTime;
 
         /**
-         * <p>The instance ID associated with the bill. For default compute groups (FE compute group and the default BE compute group), this value is the instance ID. Otherwise, it is the compute group ID.</p>
+         * <p>The instance ID corresponding to the bill. For the default compute groups (the FE compute group and the default BE compute group), the value of this field is the instance ID. Otherwise, the value is the compute group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c-96f3bc7f04b2****</p>
@@ -281,7 +281,7 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
         public String componentType;
 
         /**
-         * <p>The number of CUs. A CU (Compute Unit) is the basic metering unit of the service. 1 CU = 1 CPU core + 4 GiB memory. When SpecType is memory-enhanced instance family, 1 CU = 1 CPU core + 8 GiB memory.</p>
+         * <p>The number of CUs. A CU (Compute Unit) is the basic metering unit of the service. 1 CU equals 1 vCPU and 4 GiB of memory. If SpecType is set to the memory-enhanced instance family, 1 CU equals 1 vCPU and 8 GiB of memory.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -290,7 +290,7 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
         public Integer cu;
 
         /**
-         * <p>Indicates whether this is the default compute group.</p>
+         * <p>Indicates whether the compute group is the default compute group.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -344,7 +344,7 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The expiration time of the compute group.</p>
+         * <p>The expiration time of the compute group. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1742179008000</p>
@@ -371,7 +371,7 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The local SSD instance type of the node group. This value is meaningful only when the deployment is based on ECS instances and SpecType is local SSD or large-scale storage.</p>
+         * <p>The local SSD instance specification of the node group. This value is valid only when the instance is based on ECS and SpecType is localSSD or bigData.</p>
          * 
          * <strong>example:</strong>
          * <p>local_ssd_4_4xlarge</p>
@@ -380,7 +380,7 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
         public String localStorageInstanceType;
 
         /**
-         * <p>The ratio of memory size to the number of CUs. The value is 8 when SpecType is memory-enhanced instance family, and 4 for other specification types.</p>
+         * <p>The ratio of memory size to the number of CUs. The value is 8 when SpecType is the memory-enhanced instance family, and 4 for other specification types.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -407,13 +407,13 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
         public String nodeGroupName;
 
         /**
-         * <p>The information about nodes in the compute group.</p>
+         * <p>The information about the nodes contained in the compute group.</p>
          */
         @NameInMap("NodeInfo")
         public java.util.List<DescribeNodeGroupsResponseBodyDataNodeInfo> nodeInfo;
 
         /**
-         * <p>The billing type:</p>
+         * <p>The billing method. Valid values:</p>
          * <ol>
          * <li>Subscription (prePaid).</li>
          * <li>Pay-as-you-go (postPaid).</li>
@@ -426,7 +426,7 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
         public String payType;
 
         /**
-         * <p>The public network address. This field has a value only when EnablePublicNetwork is set to true.</p>
+         * <p>The public IP address. This parameter has a value only when EnablePublicNetwork is set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>fe-c-79b0bb9f58ef****.starrocks.aliyuncs.com</p>
@@ -464,9 +464,9 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
         /**
          * <p>The compute group specification type. Valid values:</p>
          * <ul>
-         * <li>standard: Standard.</li>
+         * <li>standard: Standard Edition.</li>
          * <li>localSSD: Local SSD.</li>
-         * <li>bigData: Large-scale storage.</li>
+         * <li>bigData: Large-capacity storage.</li>
          * <li>ramEnhanced: Memory-enhanced instance family.</li>
          * <li>networkEnhanced: Network-enhanced.</li>
          * </ul>
@@ -483,23 +483,23 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
          * <li>UNPAID: Unpaid.</li>
          * <li>PAID: Paid.</li>
          * <li>CREATING_FAILED: Creation failed.</li>
-         * <li>CREATING: Being created.</li>
+         * <li>CREATING: Creating.</li>
          * <li>RUNNING: Running.</li>
-         * <li>MODIFYING_CONFIG: Configuration being modified.</li>
-         * <li>MODIFYING_TIMEZONE: Time zone being modified.</li>
-         * <li>ELASTIC_SCALING_OUT: Elastic scale-out in progress.</li>
-         * <li>ELASTIC_SCALING_IN: Elastic scale-in in progress.</li>
-         * <li>SCALING_OUT: Scale-out in progress.</li>
+         * <li>MODIFYING_CONFIG: Modifying configurations.</li>
+         * <li>MODIFYING_TIMEZONE: Modifying the time zone.</li>
+         * <li>ELASTIC_SCALING_OUT: Elastically scaling out.</li>
+         * <li>ELASTIC_SCALING_IN: Elastically scaling in.</li>
+         * <li>SCALING_OUT: Scaling out.</li>
          * <li>RESTARTING: Restarting.</li>
-         * <li>SCALING_IN: Scale-in in progress.</li>
+         * <li>SCALING_IN: Scaling in.</li>
          * <li>SCALING_UP: Scaling up.</li>
          * <li>SCALING_DOWN: Scaling down.</li>
          * <li>UPGRADING: Upgrading.</li>
          * <li>ENABLE_PUBLIC_NETWORK: Enabling public network access.</li>
          * <li>DISABLE_PUBLIC_NETWORK: Disabling public network access.</li>
-         * <li>SWITCH_AZ: Switching zone.</li>
+         * <li>SWITCH_AZ: Switching the zone.</li>
          * <li>DISABLE: Disabled.</li>
-         * <li>DELETING: Being deleted.</li>
+         * <li>DELETING: Deleting.</li>
          * <li>DELETED: Deleted.</li>
          * </ul>
          * 
@@ -512,10 +512,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
         /**
          * <p>The performance level (PL) of the cloud disk. Valid values:</p>
          * <ul>
-         * <li>pl0: Maximum random read/write IOPS of 10,000 per disk.</li>
-         * <li>pl1: Maximum random read/write IOPS of 50,000 per disk.</li>
-         * <li>pl2: Maximum random read/write IOPS of 100,000 per disk.</li>
-         * <li>pl3: Maximum random read/write IOPS of 1,000,000 per disk.</li>
+         * <li>pl0: Up to 10,000 random read/write IOPS per disk.</li>
+         * <li>pl1: Up to 50,000 random read/write IOPS per disk.</li>
+         * <li>pl2: Up to 100,000 random read/write IOPS per disk.</li>
+         * <li>pl3: Up to 1,000,000 random read/write IOPS per disk.</li>
          * </ul>
          * 
          * <strong>example:</strong>

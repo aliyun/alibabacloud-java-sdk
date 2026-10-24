@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOperationHistoryRequest extends TeaModel {
     /**
-     * <p>End time of the operation.</p>
+     * <p>The end time of the operation. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1742179008000</p>
@@ -14,7 +14,7 @@ public class ListOperationHistoryRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListOperationHistoryRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Operation ID.</p>
+     * <p>The operation ID.</p>
      * 
      * <strong>example:</strong>
      * <p>op-f49743caa809****</p>
@@ -33,14 +33,11 @@ public class ListOperationHistoryRequest extends TeaModel {
     public String operationId;
 
     /**
-     * <p>Operation status:</p>
+     * <p>The operation status. Valid values:</p>
      * <ul>
-     * <li><p>COMPLETED: completed</p>
-     * </li>
-     * <li><p>TERMINATED: terminated</p>
-     * </li>
-     * <li><p>HUMAN_PROCESSING: pending manual processing</p>
-     * </li>
+     * <li>COMPLETED: Completed.</li>
+     * <li>TERMINATED: Terminated.</li>
+     * <li>HUMAN_PROCESSING: Pending manual processing.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,148 +47,78 @@ public class ListOperationHistoryRequest extends TeaModel {
     public String operationStatus;
 
     /**
-     * <p>Operation type. Valid values:</p>
+     * <p>The operation type. Valid values:</p>
      * <ul>
-     * <li><p>trial_to_official: upgrade from Trial Edition to Standard Edition</p>
-     * </li>
-     * <li><p>upgrade_version: upgrade version</p>
-     * </li>
-     * <li><p>update_configuration: update configuration</p>
-     * </li>
-     * <li><p>update_public_network_status: update public network status</p>
-     * </li>
-     * <li><p>create_cluster: create cluster</p>
-     * </li>
-     * <li><p>delete_cluster: delete cluster</p>
-     * </li>
-     * <li><p>disable_cluster: stop cluster</p>
-     * </li>
-     * <li><p>enable_cluster: resume cluster</p>
-     * </li>
-     * <li><p>restart_cluster: restart cluster</p>
-     * </li>
-     * <li><p>migrate_cluster: migrate cluster</p>
-     * </li>
-     * <li><p>renew_cluster: renew cluster</p>
-     * </li>
-     * <li><p>modify_charge_type: change billing method</p>
-     * </li>
-     * <li><p>UPGRADE: upgrade cluster</p>
-     * </li>
-     * <li><p>DOWNGRADE: downgrade cluster</p>
-     * </li>
-     * <li><p>create_node_group: create node group</p>
-     * </li>
-     * <li><p>delete_node_group: delete node group</p>
-     * </li>
-     * <li><p>disable_node_group: stop node group</p>
-     * </li>
-     * <li><p>enable_node_group: resume node group</p>
-     * </li>
-     * <li><p>sre_operation: O\&amp;M cluster</p>
-     * </li>
-     * <li><p>resource_change: resource change</p>
-     * </li>
-     * <li><p>disable_postpaid_resource: disable pay-as-you-go resources</p>
-     * </li>
-     * <li><p>enable_postpaid_resource: enable pay-as-you-go resources</p>
-     * </li>
-     * <li><p>restart_node_group: restart compute group</p>
-     * </li>
-     * <li><p>enable_ha_cluster: enable high availability (HA) for cluster</p>
-     * </li>
-     * <li><p>restart_node: restart node</p>
-     * </li>
-     * <li><p>backup: data backup</p>
-     * </li>
-     * <li><p>delete_backup: delete data backup</p>
-     * </li>
-     * <li><p>cancel_backup_task: cancel data backup</p>
-     * </li>
-     * <li><p>modify_timezone: modify system time zone</p>
-     * </li>
-     * <li><p>restore: data restoration</p>
-     * </li>
-     * <li><p>switch_az: switch primary and secondary zones</p>
-     * </li>
-     * <li><p>rollback_upgrade_version: roll back version upgrade</p>
-     * </li>
-     * <li><p>scale_out_fe: scale out FE</p>
-     * </li>
-     * <li><p>scale_in_fe: scale in FE</p>
-     * </li>
-     * <li><p>upgrade_fe_cu: upgrade FE CU specification</p>
-     * </li>
-     * <li><p>downgrade_fe_cu: downgrade FE CU specification</p>
-     * </li>
-     * <li><p>increase_fe_disk_size: increase FE disk size</p>
-     * </li>
-     * <li><p>decrease_fe_disk_size: decrease FE disk size</p>
-     * </li>
-     * <li><p>increase_fe_disk_number: increase FE disk count</p>
-     * </li>
-     * <li><p>decrease_fe_disk_number: decrease FE disk count</p>
-     * </li>
-     * <li><p>upgrade_fe_disk_performance_level: upgrade FE disk performance level</p>
-     * </li>
-     * <li><p>downgrade_fe_disk_performance_level: downgrade FE disk performance level</p>
-     * </li>
-     * <li><p>create_agent: create Agent</p>
-     * </li>
-     * <li><p>upgrade_agent_cu: upgrade Agent CU specification</p>
-     * </li>
-     * <li><p>scale_out_be: scale out BE</p>
-     * </li>
-     * <li><p>scale_in_be: scale in BE</p>
-     * </li>
-     * <li><p>upgrade_be_cu: upgrade BE CU specification</p>
-     * </li>
-     * <li><p>downgrade_be_cu: downgrade BE CU specification</p>
-     * </li>
-     * <li><p>increase_be_disk_size: increase BE disk size</p>
-     * </li>
-     * <li><p>decrease_be_disk_size: decrease BE disk size</p>
-     * </li>
-     * <li><p>increase_be_disk_number: increase BE disk count</p>
-     * </li>
-     * <li><p>decrease_be_disk_number: decrease BE disk count</p>
-     * </li>
-     * <li><p>upgrade_be_disk_performance_level: upgrade BE disk performance level</p>
-     * </li>
-     * <li><p>downgrade_be_disk_performance_level: downgrade BE disk performance level</p>
-     * </li>
-     * <li><p>upgrade_be_spec_type: upgrade BE specification type</p>
-     * </li>
-     * <li><p>downgrade_be_spec_type: downgrade BE specification type</p>
-     * </li>
-     * <li><p>scale_out_cn: scale out CN</p>
-     * </li>
-     * <li><p>scale_in_cn: scale in CN</p>
-     * </li>
-     * <li><p>upgrade_cn_cu: upgrade CN CU specification</p>
-     * </li>
-     * <li><p>downgrade_cn_cu: downgrade CN CU specification</p>
-     * </li>
-     * <li><p>increase_cn_disk_size: increase CN disk size</p>
-     * </li>
-     * <li><p>decrease_cn_disk_size: decrease CN disk size</p>
-     * </li>
-     * <li><p>increase_cn_disk_number: increase CN disk count</p>
-     * </li>
-     * <li><p>decrease_cn_disk_number: decrease CN disk count</p>
-     * </li>
-     * <li><p>upgrade_cn_disk_performance: upgrade CN disk performance level</p>
-     * </li>
-     * <li><p>downgrade_cn_disk_performance: downgrade CN disk performance level</p>
-     * </li>
-     * <li><p>upgrade_cn_spec_type: upgrade CN specification type</p>
-     * </li>
-     * <li><p>downgrade_cn_spec_type: downgrade CN specification type</p>
-     * </li>
-     * <li><p>elastic_scale_out_cn: elastically scale out CN</p>
-     * </li>
-     * <li><p>elastic_scale_in_cn: elastically scale in CN</p>
-     * </li>
+     * <li>trial_to_official: Upgrades the trial edition to the standard edition.</li>
+     * <li>upgrade_version: Upgrades the version.</li>
+     * <li>update_configuration: Updates the configuration.</li>
+     * <li>update_public_network_status: Updates the public network status.</li>
+     * <li>create_cluster: Creates a cluster.</li>
+     * <li>delete_cluster: Deletes a cluster.</li>
+     * <li>disable_cluster: Stops a cluster.</li>
+     * <li>enable_cluster: Recovers a cluster.</li>
+     * <li>restart_cluster: Restarts a cluster.</li>
+     * <li>migrate_cluster: Migrates a cluster.</li>
+     * <li>renew_cluster: Renews a cluster.</li>
+     * <li>modify_charge_type: Changes the billing method.</li>
+     * <li>UPGRADE: Upgrades a cluster.</li>
+     * <li>DOWNGRADE: Downgrades a cluster.</li>
+     * <li>create_node_group: Creates a node group.</li>
+     * <li>delete_node_group: Deletes a node group.</li>
+     * <li>disable_node_group: Stops a node group.</li>
+     * <li>enable_node_group: Recovers a node group.</li>
+     * <li>sre_operation: Performs O&amp;M on a cluster.</li>
+     * <li>resource_change: Changes resources.</li>
+     * <li>disable_postpaid_resource: Disables pay-as-you-go resources.</li>
+     * <li>enable_postpaid_resource: Recovers pay-as-you-go resources.</li>
+     * <li>restart_node_group: Restarts a compute group.</li>
+     * <li>enable_ha_cluster: Enables high availability (HA) to keep the cluster active.</li>
+     * <li>restart_node: Restarts a node.</li>
+     * <li>backup: Backs up data.</li>
+     * <li>delete_backup: Deletes a data backup.</li>
+     * <li>cancel_backup_task: Cancels a data backup task.</li>
+     * <li>modify_timezone: Modifies the system time zone.</li>
+     * <li>restore: Recovers data.</li>
+     * <li>switch_az: Switches the primary and secondary zones.</li>
+     * <li>rollback_upgrade_version: Rolls back a version upgrade.</li>
+     * <li>scale_out_fe: Scales out FE nodes.</li>
+     * <li>scale_in_fe: Scales in FE nodes.</li>
+     * <li>upgrade_fe_cu: Upgrades the FE CU specifications.</li>
+     * <li>downgrade_fe_cu: Decrease the quota of FE CU specifications.</li>
+     * <li>increase_fe_disk_size: Increases the FE disk size.</li>
+     * <li>decrease_fe_disk_size: Decreases the FE disk size.</li>
+     * <li>increase_fe_disk_number: Increases the number of FE disks.</li>
+     * <li>decrease_fe_disk_number: Decreases the number of FE disks.</li>
+     * <li>upgrade_fe_disk_performance_level: Upgrades the FE disk performance level (PL).</li>
+     * <li>downgrade_fe_disk_performance_level: Decrease the quota of the FE disk performance level (PL).</li>
+     * <li>create_agent: Creates an agent.</li>
+     * <li>upgrade_agent_cu: Upgrades the agent CU specifications.</li>
+     * <li>scale_out_be: Scales out BE nodes.</li>
+     * <li>scale_in_be: Scales in BE nodes.</li>
+     * <li>upgrade_be_cu: Upgrades the BE CU specifications.</li>
+     * <li>downgrade_be_cu: Decrease the quota of BE CU specifications.</li>
+     * <li>increase_be_disk_size: Increases the BE disk size.</li>
+     * <li>decrease_be_disk_size: Decreases the BE disk size.</li>
+     * <li>increase_be_disk_number: Increases the number of BE disks.</li>
+     * <li>decrease_be_disk_number: Decreases the number of BE disks.</li>
+     * <li>upgrade_be_disk_performance_level: Upgrades the BE disk performance level (PL).</li>
+     * <li>downgrade_be_disk_performance_level: Decrease the quota of the BE disk performance level (PL).</li>
+     * <li>upgrade_be_spec_type: Upgrades the BE specification type.</li>
+     * <li>downgrade_be_spec_type: Decrease the quota of the BE specification type.</li>
+     * <li>scale_out_cn: Scales out CN nodes.</li>
+     * <li>scale_in_cn: Scales in CN nodes.</li>
+     * <li>upgrade_cn_cu: Upgrades the CN CU specifications.</li>
+     * <li>downgrade_cn_cu: Decrease the quota of CN CU specifications.</li>
+     * <li>increase_cn_disk_size: Increases the CN disk size.</li>
+     * <li>decrease_cn_disk_size: Decreases the CN disk size.</li>
+     * <li>increase_cn_disk_number: Increases the number of CN disks.</li>
+     * <li>decrease_cn_disk_number: Decreases the number of CN disks.</li>
+     * <li>upgrade_cn_disk_performance: Upgrades the CN disk performance level (PL).</li>
+     * <li>downgrade_cn_disk_performance: Decrease the quota of the CN disk performance level (PL).</li>
+     * <li>upgrade_cn_spec_type: Upgrades the CN specification type.</li>
+     * <li>downgrade_cn_spec_type: Decrease the quota of the CN specification type.</li>
+     * <li>elastic_scale_out_cn: Elastically scales out CN nodes.</li>
+     * <li>elastic_scale_in_cn: Elastically scales in CN nodes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -201,7 +128,7 @@ public class ListOperationHistoryRequest extends TeaModel {
     public String operationType;
 
     /**
-     * <p>Page number of the current page. Default value: 1.</p>
+     * <p>The page number of the current page. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -210,7 +137,7 @@ public class ListOperationHistoryRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Number of entries per page for paged queries. Default value: 10.</p>
+     * <p>The number of entries per page for paging in a paged query. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -219,7 +146,7 @@ public class ListOperationHistoryRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Start time of the operation.</p>
+     * <p>The start time of the operation. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1742179008000</p>

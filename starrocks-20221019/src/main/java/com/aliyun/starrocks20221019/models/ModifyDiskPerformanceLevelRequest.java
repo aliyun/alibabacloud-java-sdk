@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyDiskPerformanceLevelRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically purchase (pay for) all products specified in the Products parameter. Valid values:</p>
+     * <p>Specifies whether automatic payment is enabled for all products specified in the Products parameter. Valid values:</p>
      * <ul>
-     * <li>true: Automatic payment.</li>
-     * <li>false: No automatic payment.</li>
+     * <li>true: automatic payment.</li>
+     * <li>false: no automatic payment.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -47,7 +47,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -169,7 +169,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     public static class DescribeInstancesResponseBodyDataVSwitches extends TeaModel {
         /**
-         * <p>Indicates whether this is the primary vSwitch.</p>
+         * <p>Specifies whether the vSwitch is the primary vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -237,7 +237,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String aclId;
 
         /**
-         * <p>The AI dedicated cluster ID, prefixed with af-. This value is returned if an unreleased dedicated cluster exists (including clusters being created). This value is empty if no dedicated cluster has been created.</p>
+         * <p>The AI dedicated cluster ID. The ID is prefixed with af-. This parameter is returned if an unreleased dedicated cluster exists, including those being created. If no dedicated cluster is created, this parameter is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>af-498ae4af</p>
@@ -246,7 +246,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String aiFunctionClusterId;
 
         /**
-         * <p>The internal network connection endpoint of the AI dedicated cluster, in the format fe-{AiFunctionClusterId}-internal.starrocks.aliyuncs.com. This value is returned only after the dedicated cluster is created. This value is empty if no dedicated cluster has been created.</p>
+         * <p>The internal network connection endpoint of the AI dedicated cluster. The format is fe-{AiFunctionClusterId}-internal.starrocks.aliyuncs.com. This parameter is returned only after the dedicated cluster is created. If no dedicated cluster is created, this parameter is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>fe-af-498ae4af-internal.starrocks.aliyuncs.com</p>
@@ -255,7 +255,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String aiFunctionEndpoint;
 
         /**
-         * <p>The billing instance ID for the AI function.</p>
+         * <p>The AI function billing instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aif-xxxxxxxx</p>
          */
         @NameInMap("AiFunctionInstanceId")
         public String aiFunctionInstanceId;
@@ -263,9 +266,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * <p>The instance architecture. Valid values:</p>
          * <ul>
-         * <li>onEci: deployed on Elastic Container Instance (ECI).</li>
-         * <li>onECS: deployed on Elastic Compute Service (ECS).</li>
-         * <li>onBareMetal: deployed on a bare metal resource pool.</li>
+         * <li>onEci: Deployed based on Elastic Container Instance (ECI).</li>
+         * <li>onECS: Deployed based on Elastic Compute Service (ECS).</li>
+         * <li>onBareMetal: Deployed based on bare metal resource pools.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -284,13 +287,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Long beginTime;
 
         /**
-         * <p>Indicates whether the AI center is enabled. Default value: false.</p>
+         * <p>Specifies whether the AI center is enabled. Default value: false.</p>
          */
         @NameInMap("EnableAiFunction")
         public Boolean enableAiFunction;
 
         /**
-         * <p>Indicates whether automatic minor version upgrades are enabled.</p>
+         * <p>Specifies whether automatic minor version upgrades are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -298,11 +301,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("EnableAutoMinorVersionUpgrade")
         public Boolean enableAutoMinorVersionUpgrade;
 
+        /**
+         * <p>Specifies whether disaster recovery is enabled.</p>
+         */
         @NameInMap("EnableMultiAz")
         public Boolean enableMultiAz;
 
         /**
-         * <p>Indicates whether SSL is enabled.</p>
+         * <p>Specifies whether SSL is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -311,7 +317,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean enableSSL;
 
         /**
-         * <p>Indicates whether the audit plug-in is enabled.</p>
+         * <p>Specifies whether the audit plug-in is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -320,7 +326,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean enabledAuditLoader;
 
         /**
-         * <p>Indicates whether encryption is enabled.</p>
+         * <p>Specifies whether encryption is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -329,7 +335,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean encrypted;
 
         /**
-         * <p>The time when the cluster expires.</p>
+         * <p>The expiration time of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>4889001600000</p>
@@ -361,32 +367,32 @@ public class DescribeInstancesResponseBody extends TeaModel {
          * <li>not_init: Not initialized.</li>
          * <li>unpaid: Pending payment.</li>
          * <li>paid: Paid.</li>
-         * <li>creating: Being created.</li>
+         * <li>creating: Creating.</li>
          * <li>creating_failed: Creation failed.</li>
          * <li>created: Created.</li>
          * <li>running: Running.</li>
-         * <li>updating: Being upgraded.</li>
-         * <li>agent_creating: Agent is being created.</li>
-         * <li>agent_scaling_up: Agent specifications are being upgraded.</li>
-         * <li>modifying_config: Configuration is being updated.</li>
+         * <li>updating: Updating.</li>
+         * <li>agent_creating: Creating the agent.</li>
+         * <li>agent_scaling_up: Scaling up the agent.</li>
+         * <li>modifying_config: Updating configurations.</li>
          * <li>scaling_out: Scaling out.</li>
          * <li>restarting: Restarting.</li>
          * <li>scaling_in: Scaling in.</li>
-         * <li>scaling_up: Specifications are being upgraded.</li>
-         * <li>scaling_down: Specifications are being downgraded.</li>
-         * <li>upgrading: Version is being upgraded.</li>
-         * <li>enable_public_network: Public network access is being enabled.</li>
-         * <li>disable_public_network: Public network access is being disabled.</li>
-         * <li>convert_from_trial_to_official: Edition is being converted.</li>
-         * <li>migration_cluster_to_serverless: Cluster is being migrated.</li>
-         * <li>modifying_timezone: Time zone is being modified.</li>
-         * <li>switch_az: Primary/secondary zone switchover is in progress.</li>
-         * <li>enabling: Being resumed.</li>
+         * <li>scaling_up: Scaling up.</li>
+         * <li>scaling_down: Scaling down.</li>
+         * <li>upgrading: Upgrading.</li>
+         * <li>enable_public_network: Enabling public network access.</li>
+         * <li>disable_public_network: Disabling public network access.</li>
+         * <li>convert_from_trial_to_official: Converting the edition.</li>
+         * <li>migration_cluster_to_serverless: Migrating the cluster.</li>
+         * <li>modifying_timezone: Modifying the time zone.</li>
+         * <li>switch_az: Switching the primary and secondary zones.</li>
+         * <li>enabling: Resuming.</li>
          * <li>disable: Unavailable.</li>
          * <li>actively_disabled: Unavailable.</li>
-         * <li>deleting: Being deleted.</li>
+         * <li>deleting: Deleting.</li>
          * <li>deleting_failed: Deletion failed.</li>
-         * <li>deleted_with_error: Creation failed and terminated.</li>
+         * <li>deleted_with_error: Ended due to creation failure.</li>
          * <li>deleted: Deleted.</li>
          * </ul>
          * 
@@ -397,7 +403,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String instanceStatus;
 
         /**
-         * <p>Indicates whether read/write splitting is enabled. When enabled, the Leader FE node handles write requests and other nodes handle read requests.</p>
+         * <p>Specifies whether read/write splitting is enabled. If enabled, the leader FE node processes write requests and other nodes process read requests.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -463,7 +469,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String monitorType;
 
         /**
-         * <p>The OSS path.</p>
+         * <p>The OSS address.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://sr-c-****</p>
@@ -487,8 +493,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>prePaid: subscription.</li>
-         * <li>postPaid: pay-as-you-go.</li>
+         * <li>prePaid: Subscription.</li>
+         * <li>postPaid: Pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -519,8 +525,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
          * <p>The running mode of the cluster. Valid values:</p>
          * <ul>
          * <li>shared_nothing: Shared-nothing architecture.</li>
-         * <li>shared_data: Storage-compute disaggregation.</li>
-         * <li>lakehouse: Data lakehouse analytics.</li>
+         * <li>shared_data: Shared-data architecture.</li>
+         * <li>lakehouse: Lakehouse.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -530,7 +536,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String runMode;
 
         /**
-         * <p>The duration that the cluster has been running. Unit: seconds.</p>
+         * <p>The running time of the cluster. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3645445</p>
@@ -539,7 +545,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Long runningTime;
 
         /**
-         * <p>Indicates whether the security group is a managed security group.</p>
+         * <p>Specifies whether the security group is a managed security group.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -557,13 +563,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String sgId;
 
         /**
-         * <p>The tags that are bound to the instance.</p>
+         * <p>The tags bound to the instance.</p>
          */
         @NameInMap("Tags")
         public java.util.List<DescribeInstancesResponseBodyDataTags> tags;
 
         /**
-         * <p>The vSwitches.</p>
+         * <p>The list of vSwitches.</p>
          */
         @NameInMap("VSwitches")
         public java.util.List<DescribeInstancesResponseBodyDataVSwitches> vSwitches;
@@ -578,7 +584,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String version;
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1rbvag1cafkj4prwXXX</p>

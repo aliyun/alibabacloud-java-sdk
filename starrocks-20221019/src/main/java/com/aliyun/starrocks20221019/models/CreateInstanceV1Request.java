@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceV1Request extends TeaModel {
     /**
-     * <p>The administrator password of the instance.</p>
+     * <p>The password of the instance administrator.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,11 +21,10 @@ public class CreateInstanceV1Request extends TeaModel {
     public CreateInstanceV1RequestAgentNodeGroup agentNodeGroup;
 
     /**
-     * <p>Specifies whether to automatically purchase (pay for) all products specified in the Products parameter.</p>
-     * <p>Valid values:</p>
+     * <p>Specifies whether automatic payment is enabled for all products specified in the Products parameter. Valid values:</p>
      * <ul>
-     * <li>true: Automatic payment.</li>
-     * <li>false: No automatic payment.</li>
+     * <li>true: Enables automatic payment.</li>
+     * <li>false: Disables automatic payment.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,7 +34,7 @@ public class CreateInstanceV1Request extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when payType is set to PrePaid. Auto-renewal is disabled by default.</p>
+     * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when PayType is set to PrePaid. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -44,13 +43,13 @@ public class CreateInstanceV1Request extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The BE or CN node group information.</p>
+     * <p>The information about the BE or CN compute groups.</p>
      */
     @NameInMap("BackendNodeGroups")
     public java.util.List<CreateInstanceV1RequestBackendNodeGroups> backendNodeGroups;
 
     /**
-     * <p>Ensures the idempotence of the request. Generate a unique parameter value from your client. The ClientToken value supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -59,7 +58,7 @@ public class CreateInstanceV1Request extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The name of the DLF Catalog.</p>
+     * <p>The name of the DLF catalog.</p>
      * 
      * <strong>example:</strong>
      * <p>paimon_test</p>
@@ -68,7 +67,7 @@ public class CreateInstanceV1Request extends TeaModel {
     public String dlfCatalogName;
 
     /**
-     * <p>The type of the DLF Catalog. Valid values: paimon and iceberg.</p>
+     * <p>The type of the DLF catalog, such as paimon or iceberg.</p>
      * 
      * <strong>example:</strong>
      * <p>paimon</p>
@@ -77,7 +76,7 @@ public class CreateInstanceV1Request extends TeaModel {
     public String dlfCatalogType;
 
     /**
-     * <p>The subscription duration. This parameter takes effect only when payType is set to PrePaid.</p>
+     * <p>The subscription duration. This parameter takes effect only when PayType is set to PrePaid.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -86,7 +85,7 @@ public class CreateInstanceV1Request extends TeaModel {
     public Integer duration;
 
     /**
-     * <p>Specifies whether to enable the AI Center. Default value: false.</p>
+     * <p>Specifies whether to enable the AI center. Default value: false.</p>
      */
     @NameInMap("EnableAiFunction")
     public Boolean enableAiFunction;
@@ -107,13 +106,13 @@ public class CreateInstanceV1Request extends TeaModel {
     public Boolean encrypted;
 
     /**
-     * <p>The FE node group information.</p>
+     * <p>The information about the FE node groups.</p>
      */
     @NameInMap("FrontendNodeGroups")
     public java.util.List<CreateInstanceV1RequestFrontendNodeGroups> frontendNodeGroups;
 
     /**
-     * <p>The gateway type. Valid values: Slb and Privatezone.</p>
+     * <p>The gateway type. Generally, the value is Slb or Privatezone.</p>
      * 
      * <strong>example:</strong>
      * <p>Traditional\&quot;\&quot;</p>
@@ -141,7 +140,7 @@ public class CreateInstanceV1Request extends TeaModel {
     public String kmsKeyId;
 
     /**
-     * <p>The username of the associated Resource Access Management (RAM) user or the name of the associated RAM role.</p>
+     * <p>The username of the associated Resource Access Management (RAM) user or the name of the RAM role.</p>
      * 
      * <strong>example:</strong>
      * <p>aliyun.test1</p>
@@ -150,7 +149,7 @@ public class CreateInstanceV1Request extends TeaModel {
     public String linkedRamUserName;
 
     /**
-     * <p>The Observer node group information. Specify this parameter only when you need to enable multi-zone disaster recovery. The Observer node group specifications must be the same as those of the FE node group.</p>
+     * <p>The information about the Observer compute group. Specify this parameter only when you need to enable multi-zone disaster recovery. The configuration of the Observer compute group must be consistent with the specifications of the FE node group.</p>
      */
     @NameInMap("ObserverNodeGroups")
     public java.util.List<CreateInstanceV1RequestObserverNodeGroups> observerNodeGroups;
@@ -165,10 +164,10 @@ public class CreateInstanceV1Request extends TeaModel {
     public String ossAccessingRoleName;
 
     /**
-     * <p>The instance edition:</p>
+     * <p>The instance edition. Valid values:</p>
      * <ul>
-     * <li>  Entry edition (trial).</li>
-     * <li> Standard edition (official).</li>
+     * <li>trial: Trial Edition.</li>
+     * <li>official: Standard Edition.</li>
      * </ul>
      * 
      * <p>This parameter is required.</p>
@@ -180,7 +179,7 @@ public class CreateInstanceV1Request extends TeaModel {
     public String packageType;
 
     /**
-     * <p>The billing method. Valid values:</p>
+     * <p>The billing method of the instance. Valid values:</p>
      * <ol>
      * <li>prePaid: subscription.</li>
      * <li>postPaid: pay-as-you-go.</li>
@@ -195,12 +194,12 @@ public class CreateInstanceV1Request extends TeaModel {
     public String payType;
 
     /**
-     * <p>The unit of the subscription duration. Valid values:</p>
+     * <p>The unit of the billing cycle. Valid values:</p>
      * <ul>
      * <li>Month</li>
      * <li>Year</li>
      * </ul>
-     * This parameter takes effect only when payType is set to PrePaid.
+     * This parameter takes effect only when PayType is set to PrePaid.
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -209,11 +208,7 @@ public class CreateInstanceV1Request extends TeaModel {
     public String pricingCycle;
 
     /**
-     * <p>The RAM authentication type. Valid values:</p>
-     * <ul>
-     * <li>RS: Resource Access Management (RAM) user.</li>
-     * <li>RR: RAM role.</li>
-     * </ul>
+     * <p>The RAM authentication type. A value of RS indicates a Resource Access Management (RAM) user, and a value of RR indicates a RAM role.</p>
      * 
      * <strong>example:</strong>
      * <p>RR</p>
@@ -259,11 +254,12 @@ public class CreateInstanceV1Request extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The running mode of the cluster. Valid values:</p>
+     * <p>The run mode of the cluster. Valid values:</p>
      * <ul>
-     * <li>shared_nothing: compute-storage coupled.</li>
-     * <li>shared_data: compute-storage decoupled.</li>
+     * <li>shared_nothing: shared-nothing architecture.</li>
+     * <li>shared_data: shared-data architecture.</li>
      * </ul>
+     * 
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -273,7 +269,7 @@ public class CreateInstanceV1Request extends TeaModel {
     public String runMode;
 
     /**
-     * <p>The instance tags.</p>
+     * <p>The tags of the instance.</p>
      */
     @NameInMap("Tags")
     public java.util.List<CreateInstanceV1RequestTags> tags;
@@ -295,7 +291,7 @@ public class CreateInstanceV1Request extends TeaModel {
     public String version;
 
     /**
-     * <p>VPC ID。</p>
+     * <p>The VPC ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -585,7 +581,7 @@ public class CreateInstanceV1Request extends TeaModel {
 
     public static class CreateInstanceV1RequestAgentNodeGroup extends TeaModel {
         /**
-         * <p>The number of CUs. A CU (Compute Unit) is the basic metering unit of the service. 1 CU = 1 CPU core + 4 GiB memory.</p>
+         * <p>The number of compute units (CUs). A CU is the basic metering unit of the service. 1 CU equals 1 vCPU and 4 GiB of memory.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -610,7 +606,7 @@ public class CreateInstanceV1Request extends TeaModel {
 
     public static class CreateInstanceV1RequestBackendNodeGroups extends TeaModel {
         /**
-         * <p>The number of CUs. A CU (Compute Unit) is the basic metering unit of the service. 1 CU = 1 CPU core + 4 GiB memory. When SpecType is set to memory-enhanced instance family, 1 CU = 1 CPU core + 8 GiB memory.</p>
+         * <p>The number of CUs. A CU (Compute Unit) is the basic metering unit of the service. 1 CU equals 1 vCPU and 4 GiB of memory. If SpecType is set to the memory-enhanced instance family, 1 CU equals 1 vCPU and 8 GiB of memory.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -631,7 +627,7 @@ public class CreateInstanceV1Request extends TeaModel {
         public Integer diskNumber;
 
         /**
-         * <p>The local SSD instance type of the node group. This parameter takes effect only when the instance is ECS-based and SpecType is set to local SSD or large-scale storage.</p>
+         * <p>The local SSD instance type of the node group. This parameter is valid only when the instance is based on ECS and SpecType is set to localSSD or bigData.</p>
          * 
          * <strong>example:</strong>
          * <p>local_ssd_4_4xlarge</p>
@@ -649,7 +645,14 @@ public class CreateInstanceV1Request extends TeaModel {
         public Integer residentNodeNumber;
 
         /**
-         * <p>The specification type of the node group. Valid values:</p>
+         * <p>The instance family category of the compute group. Valid values:</p>
+         * <ul>
+         * <li>standard: Standard.</li>
+         * <li>localSSD: Local SSD.</li>
+         * <li>bigData: Large storage.</li>
+         * <li>ramEnhanced: Memory-enhanced instance family.</li>
+         * <li>networkEnhanced: Network-enhanced.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>standard</p>
@@ -659,6 +662,12 @@ public class CreateInstanceV1Request extends TeaModel {
 
         /**
          * <p>The performance level (PL) of the cloud disk. Valid values:</p>
+         * <ul>
+         * <li>pl0: A single disk delivers up to 10,000 random read/write IOPS.</li>
+         * <li>pl1: A single disk delivers up to 50,000 random read/write IOPS.</li>
+         * <li>pl2: A single disk delivers up to 100,000 random read/write IOPS.</li>
+         * <li>pl3: A single disk delivers up to 1,000,000 random read/write IOPS.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>pl1</p>
@@ -757,7 +766,7 @@ public class CreateInstanceV1Request extends TeaModel {
 
     public static class CreateInstanceV1RequestFrontendNodeGroups extends TeaModel {
         /**
-         * <p>The number of CUs. A CU (Compute Unit) is the basic metering unit of the service. 1 CU = 1 CPU core + 4 GiB memory.</p>
+         * <p>The number of compute units (CUs). A CU is the basic metering unit of the service. 1 CU equals 1 vCPU and 4 GiB of memory.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -775,7 +784,7 @@ public class CreateInstanceV1Request extends TeaModel {
         public Integer diskNumber;
 
         /**
-         * <p>The local SSD instance type. This parameter does not need to be set for the FE node group.</p>
+         * <p>The local SSD instance type. You do not need to set this parameter for FE compute groups.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -793,7 +802,7 @@ public class CreateInstanceV1Request extends TeaModel {
         public Integer residentNodeNumber;
 
         /**
-         * <p>The specification type of the node group. Only standard is supported.</p>
+         * <p>The specification type of the compute group. Only standard is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>standard</p>
@@ -802,7 +811,7 @@ public class CreateInstanceV1Request extends TeaModel {
         public String specType;
 
         /**
-         * <p>The performance level (PL) of the cloud disk. Only pl1 is supported, which provides up to 50,000 random read/write IOPS per disk.</p>
+         * <p>The performance level (PL) of the cloud disk. Only pl1 is supported, where a single disk delivers up to 50,000 random read/write IOPS.</p>
          * 
          * <strong>example:</strong>
          * <p>pl1</p>
@@ -901,7 +910,7 @@ public class CreateInstanceV1Request extends TeaModel {
 
     public static class CreateInstanceV1RequestObserverNodeGroups extends TeaModel {
         /**
-         * <p>The number of CUs. A CU (Compute Unit) is the basic metering unit of the service. 1 CU = 1 CPU core + 4 GiB memory.</p>
+         * <p>The number of compute units (CUs). A CU is the basic metering unit of the service. 1 CU equals 1 vCPU and 4 GiB of memory.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -919,7 +928,7 @@ public class CreateInstanceV1Request extends TeaModel {
         public Integer diskNumber;
 
         /**
-         * <p>The local SSD instance type. This parameter does not need to be set for the Observer node group.</p>
+         * <p>The instance specification for local SSDs. You do not need to specify this parameter for the Observer compute group.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -937,7 +946,7 @@ public class CreateInstanceV1Request extends TeaModel {
         public Integer residentNodeNumber;
 
         /**
-         * <p>The specification type of the node group. Only standard is supported.</p>
+         * <p>The specification type of the compute group. Only standard is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>standard</p>
@@ -946,7 +955,7 @@ public class CreateInstanceV1Request extends TeaModel {
         public String specType;
 
         /**
-         * <p>The performance level (PL) of the cloud disk. Only pl1 is supported, which provides up to 50,000 random read/write IOPS per disk.</p>
+         * <p>The performance level (PL) of the cloud disk. Only PL1 is supported, which delivers up to 50,000 random read/write IOPS per disk.</p>
          * 
          * <strong>example:</strong>
          * <p>pl1</p>

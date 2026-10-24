@@ -5,7 +5,16 @@ import com.aliyun.tea.*;
 
 public class DeleteScalingRuleRequest extends TeaModel {
     /**
-     * <p>Compute group ID.</p>
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-b25e21e24388****</p>
+     */
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    /**
+     * <p>The node group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +24,7 @@ public class DeleteScalingRuleRequest extends TeaModel {
     public String nodeGroupId;
 
     /**
-     * <p>ID of the scaling rule to delete.</p>
+     * <p>The ID of the scaling rule to be deleted.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +34,7 @@ public class DeleteScalingRuleRequest extends TeaModel {
     public String scalingRuleId;
 
     /**
-     * <p>Trigger type.</p>
+     * <p>The trigger type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +46,14 @@ public class DeleteScalingRuleRequest extends TeaModel {
     public static DeleteScalingRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteScalingRuleRequest self = new DeleteScalingRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteScalingRuleRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public DeleteScalingRuleRequest setNodeGroupId(String nodeGroupId) {

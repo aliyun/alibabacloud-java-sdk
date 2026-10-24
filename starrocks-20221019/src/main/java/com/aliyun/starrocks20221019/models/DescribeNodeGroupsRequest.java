@@ -14,7 +14,7 @@ public class DescribeNodeGroupsRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The page number for paging. Default value: 1.</p>
+     * <p>The page number for a paged query. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeNodeGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for paging. Default value: 10.</p>
+     * <p>The number of entries per page for a paged query. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -48,7 +48,7 @@ public class DescribeNodeGroupsRequest extends TeaModel {
     public String componentType;
 
     /**
-     * <p><strong>[Deprecated]</strong> The instance ID. This parameter is deprecated.</p>
+     * <p><strong>[Deprecated]</strong> The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -77,23 +77,23 @@ public class DescribeNodeGroupsRequest extends TeaModel {
      * <li>UNPAID: Unpaid.</li>
      * <li>PAID: Paid.</li>
      * <li>CREATING_FAILED: Creation failed.</li>
-     * <li>CREATING: Being created.</li>
+     * <li>CREATING: Creating.</li>
      * <li>RUNNING: Running.</li>
-     * <li>MODIFYING_CONFIG: Configuration being modified.</li>
-     * <li>MODIFYING_TIMEZONE: Time zone being modified.</li>
-     * <li>ELASTIC_SCALING_OUT: Elastic scale-out in progress.</li>
-     * <li>ELASTIC_SCALING_IN: Elastic scale-in in progress.</li>
-     * <li>SCALING_OUT: Scale-out in progress.</li>
+     * <li>MODIFYING_CONFIG: Modifying configurations.</li>
+     * <li>MODIFYING_TIMEZONE: Modifying the time zone.</li>
+     * <li>ELASTIC_SCALING_OUT: Elastically scaling out.</li>
+     * <li>ELASTIC_SCALING_IN: Elastically scaling in.</li>
+     * <li>SCALING_OUT: Scaling out.</li>
      * <li>RESTARTING: Restarting.</li>
-     * <li>SCALING_IN: Scale-in in progress.</li>
+     * <li>SCALING_IN: Scaling in.</li>
      * <li>SCALING_UP: Scaling up.</li>
      * <li>SCALING_DOWN: Scaling down.</li>
      * <li>UPGRADING: Upgrading.</li>
      * <li>ENABLE_PUBLIC_NETWORK: Enabling public network access.</li>
      * <li>DISABLE_PUBLIC_NETWORK: Disabling public network access.</li>
-     * <li>SWITCH_AZ: Switching zone.</li>
+     * <li>SWITCH_AZ: Switching the zone.</li>
      * <li>DISABLE: Disabled.</li>
-     * <li>DELETING: Being deleted.</li>
+     * <li>DELETING: Deleting.</li>
      * <li>DELETED: Deleted.</li>
      * </ul>
      * 

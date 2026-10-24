@@ -26,7 +26,7 @@ public class UpdateNodeGroupDescriptionRequest extends TeaModel {
      * <p>The RAM authorization information.</p>
      * 
      * <strong>example:</strong>
-     * <p>Optional</p>
+     * <p>可以不填</p>
      */
     @NameInMap("X-Acs-Ram-Auth-Context")
     public String xAcsRamAuthContext;
