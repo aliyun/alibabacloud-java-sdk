@@ -61,7 +61,7 @@ public class UpdateKnowledgeSpaceShrinkRequest extends TeaModel {
     public String rerankModel;
 
     /**
-     * <p>The default chunking strategy configuration for the knowledge space. Both simple strategies and composite strategies that match by content type are supported.</p>
+     * <p>The default chunking strategy configuration for the knowledge space. Simple strategies and composite strategies matched by content type are supported.</p>
      */
     @NameInMap("ShardingStrategyConfig")
     public String shardingStrategyConfigShrink;

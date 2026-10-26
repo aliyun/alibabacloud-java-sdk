@@ -7,7 +7,7 @@ public class DescribeDBClusterVersionRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters within your account, such as the cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters under your account, such as the cluster ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,10 +18,10 @@ public class DescribeDBClusterVersionRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether to return the latest version information or the list of available upgrade versions. Valid values:</p>
+     * <p>Specifies whether to return the latest version information or a list of upgradable versions. Valid values:</p>
      * <ul>
-     * <li>LATEST_VERSION: queries the latest version information.</li>
-     * <li>AVAILABLE_VERSION: queries the list of available upgrade versions.</li>
+     * <li>LATEST_VERSION: Queries the latest version information.</li>
+     * <li>AVAILABLE_VERSION: Queries the list of upgradable versions.</li>
      * </ul>
      * 
      * <strong>example:</strong>

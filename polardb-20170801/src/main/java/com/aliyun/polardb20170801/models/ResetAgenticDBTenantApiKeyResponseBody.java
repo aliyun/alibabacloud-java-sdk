@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetAgenticDBTenantApiKeyResponseBody extends TeaModel {
     /**
-     * <p>The new API key in plaintext. This value is returned only in this response.</p>
+     * <p>The plaintext of the new API key, which is returned only in this response.</p>
      * 
      * <strong>example:</strong>
      * <p>pagc_key_cGFnYy1icDFh...newSignature22ch</p>
@@ -14,7 +14,7 @@ public class ResetAgenticDBTenantApiKeyResponseBody extends TeaModel {
     public String apiKey;
 
     /**
-     * <p>The resource ID of the API key. This value remains unchanged after the reset.</p>
+     * <p>The API key resource ID, which remains unchanged after the reset.</p>
      * 
      * <strong>example:</strong>
      * <p>ak-71304e39c7e841a1</p>
@@ -23,8 +23,8 @@ public class ResetAgenticDBTenantApiKeyResponseBody extends TeaModel {
     public String apiKeyId;
 
     /**
-     * <p>The reset time, which is the effective period of the new key.</p>
-     * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+     * <p>The reset time, which indicates the effective period of the new key.</p>
+     * <p>The time follows the ISO 8601 standard in the UTC time zone. Format: YYYY-MM-DDTHH:mm:ssZ.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-06-10T14:00:00Z</p>
@@ -34,7 +34,7 @@ public class ResetAgenticDBTenantApiKeyResponseBody extends TeaModel {
 
     /**
      * <p>The expiration time.</p>
-     * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+     * <p>The time follows the ISO 8601 standard in the UTC time zone. Format: YYYY-MM-DDTHH:mm:ssZ.</p>
      * 
      * <strong>example:</strong>
      * <p>2027-01-01T00:00:00Z</p>

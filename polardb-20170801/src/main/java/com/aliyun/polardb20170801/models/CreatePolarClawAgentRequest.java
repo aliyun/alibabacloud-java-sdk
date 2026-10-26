@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePolarClawAgentRequest extends TeaModel {
     /**
-     * <p>The agent ID.</p>
+     * <p>The agent name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CreatePolarClawAgentRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The avatar\&quot;s URL or path.</p>
+     * <p>The avatar URL or path.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -43,7 +43,7 @@ public class CreatePolarClawAgentRequest extends TeaModel {
     public String emoji;
 
     /**
-     * <p>Specifies whether to restart the gateway after the agent is created. The default value is <code>true</code>.</p>
+     * <p>Specifies whether to restart the gateway after creation. Default value: true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -52,7 +52,7 @@ public class CreatePolarClawAgentRequest extends TeaModel {
     public Boolean restart;
 
     /**
-     * <p>The absolute path of the agent workspace.</p>
+     * <p>The absolute path of the agent working directory.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

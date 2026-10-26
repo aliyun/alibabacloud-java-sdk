@@ -47,7 +47,7 @@ public class ApprovePolarClawDevicePairResponseBody extends TeaModel {
     public String pairRequestId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>25C70FF3-D49B-594D-BECE-0DE2BA1D8BBB</p>
@@ -110,7 +110,7 @@ public class ApprovePolarClawDevicePairResponseBody extends TeaModel {
 
     public static class ApprovePolarClawDevicePairResponseBodyDevice extends TeaModel {
         /**
-         * <p>The creation time of the device pairing, in Unix milliseconds.</p>
+         * <p>The creation time of the device pairing in Unix milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1778662316663</p>
@@ -128,7 +128,7 @@ public class ApprovePolarClawDevicePairResponseBody extends TeaModel {
         public String deviceFamily;
 
         /**
-         * <p>The unique ID of the device.</p>
+         * <p>The unique identifier of the device.</p>
          * 
          * <strong>example:</strong>
          * <p>device-l7rdl36iz6op66zf</p>
@@ -146,7 +146,7 @@ public class ApprovePolarClawDevicePairResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The operating system of the device.</p>
+         * <p>The operating system platform.</p>
          * 
          * <strong>example:</strong>
          * <p>linux</p>
@@ -155,7 +155,7 @@ public class ApprovePolarClawDevicePairResponseBody extends TeaModel {
         public String platform;
 
         /**
-         * <p>The role of the device.</p>
+         * <p>The device role.</p>
          * 
          * <strong>example:</strong>
          * <p>operator</p>
@@ -164,7 +164,7 @@ public class ApprovePolarClawDevicePairResponseBody extends TeaModel {
         public String role;
 
         /**
-         * <p>A list of permission scopes.</p>
+         * <p>The list of permission scopes.</p>
          */
         @NameInMap("Scopes")
         public java.util.List<String> scopes;

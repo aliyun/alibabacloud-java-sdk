@@ -23,7 +23,7 @@ public class UpdateKnowledgeSpaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the asynchronous workflow task. This value is empty if no actual model change occurs.</p>
+     * <p>The ID of the asynchronous workflow task. This parameter is empty when no actual model changes occur.</p>
      * 
      * <strong>example:</strong>
      * <p>52*****03</p>

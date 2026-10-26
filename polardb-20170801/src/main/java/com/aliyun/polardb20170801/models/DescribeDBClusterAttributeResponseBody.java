@@ -1354,9 +1354,17 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterAttributeResponseBodyBranchChildBranch extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2/2</p>
+         */
         @NameInMap("BranchLsn")
         public String branchLsn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2026-01-01T00:00:00Z</p>
+         */
         @NameInMap("BranchTime")
         public String branchTime;
 
@@ -1370,6 +1378,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("HasChild")
         public Boolean hasChild;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pc-2bbb22b2bb22bb222</p>
+         */
         @NameInMap("InsName")
         public String insName;
 

@@ -742,6 +742,9 @@ public class ModifyBackupPolicyRequest extends TeaModel {
 
         /**
          * <p>The storage class used by the advanced backup policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
          */
         @NameInMap("StorageClass")
         public String storageClass;

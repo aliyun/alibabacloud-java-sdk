@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnbindPolarClawAgentRequest extends TeaModel {
     /**
-     * <p>The agent ID to unbind.</p>
+     * <p>The ID of the agent to disassociate.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class UnbindPolarClawAgentRequest extends TeaModel {
     public String channel;
 
     /**
-     * <p>The channel account ID. Omit this parameter to remove all bindings for the specified agent ID and channel plugin ID.</p>
+     * <p>The channel account ID. If you do not specify this parameter, all bindings under the specified agent and channel are removed.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>

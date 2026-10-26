@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyResourceControlRequest extends TeaModel {
     /**
-     * <p>The modified maximum number of CPU cores. The minimum value is 1. The maximum value is determined by the cluster kernel parameter resource_control_cpu_count_limit. You must specify one and only one of this parameter and MaxCpu.</p>
+     * <p>The updated maximum number of CPU cores. The minimum value is 1, and the maximum value is determined by the resource_control_cpu_count_limit kernel parameter of the cluster. You must specify exactly one of the MaxCpu and CpuCount parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -14,7 +14,7 @@ public class ModifyResourceControlRequest extends TeaModel {
     public Integer cpuCount;
 
     /**
-     * <p>The PolarDB cluster ID.</p>
+     * <p>The ID of the PolarDB cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ModifyResourceControlRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The modified maximum CPU quota percentage. Valid values: 1 to 100. You must specify one and only one of this parameter and CpuCount.</p>
+     * <p>The updated maximum CPU quota percentage. Valid values: 1 to 100. You must specify exactly one of the MaxCpu and CpuCount parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -33,7 +33,7 @@ public class ModifyResourceControlRequest extends TeaModel {
     public Integer maxCpu;
 
     /**
-     * <p>The region ID of the PolarDB cluster.</p>
+     * <p>The ID of the region where the PolarDB cluster is deployed.</p>
      * <blockquote>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available regions.</p>
      * </blockquote>
@@ -45,7 +45,7 @@ public class ModifyResourceControlRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the resource control rule. The name must be 1 to 63 ASCII bytes in length, start with a letter, and can contain only letters, digits, and underscores.</p>
+     * <p>The name of the resource control rule. The name must be 1 to 63 ASCII characters in length, start with a letter, and contain only letters, digits, and underscores.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

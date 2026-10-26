@@ -14,7 +14,7 @@ public class ModifyDBClusterStoragePerformanceResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The order ID.</p>
+     * <p>The ID of the generated order.</p>
      * 
      * <strong>example:</strong>
      * <p>2035629******</p>

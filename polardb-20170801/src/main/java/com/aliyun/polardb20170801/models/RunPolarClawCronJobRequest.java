@@ -15,7 +15,7 @@ public class RunPolarClawCronJobRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The ID of the cron job to run.</p>
+     * <p>The ID of the scheduled task to execute.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class RunPolarClawCronJobRequest extends TeaModel {
     public String mode;
 
     /**
-     * <p>Specifies whether to restart the gateway after the job completes. Default value: true.</p>
+     * <p>Specifies whether to restart the gateway after creation. Default value: true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

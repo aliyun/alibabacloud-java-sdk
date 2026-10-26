@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ApplyLakebaseMountParameterGroupRequest extends TeaModel {
     /**
+     * <p>The parameter template ID. The ID starts with pagp-.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ApplyLakebaseMountParameterGroupRequest extends TeaModel {
     public String parameterGroupId;
 
     /**
+     * <p>The PolarFS instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ApplyLakebaseMountParameterGroupRequest extends TeaModel {
     public String polarFsInstanceId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

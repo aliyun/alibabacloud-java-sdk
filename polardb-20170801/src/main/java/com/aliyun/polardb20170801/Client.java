@@ -293,13 +293,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>The <code>ApplicationId</code> and <code>ServerName</code> parameters are required.</li>
-     * <li>The <code>ApplicationId</code> parameter specifies the application ID.</li>
-     * <li>The <code>ServerName</code> parameter specifies the MCP server name to add.</li>
-     * <li>A successful response returns the request ID, a message, a status code, the application ID, and the server name.</li>
-     * <li>If the request fails, the API may return a 500 error code with a detailed error message.</li>
+     * <li><code>ApplicationId</code> and <code>ServerName</code> are required query parameters.</li>
+     * <li><code>ApplicationId</code> specifies the ID of the application program to operate on.</li>
+     * <li><code>ServerName</code> specifies the name of the MCP server to add.</li>
+     * <li>A successful response returns the request ID, message, status code, application program ID, and server name.</li>
+     * <li>In case of a failed request, a 500 error code may be returned, along with a specific error message describing the fault.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -349,13 +349,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>The <code>ApplicationId</code> and <code>ServerName</code> parameters are required.</li>
-     * <li>The <code>ApplicationId</code> parameter specifies the application ID.</li>
-     * <li>The <code>ServerName</code> parameter specifies the MCP server name to add.</li>
-     * <li>A successful response returns the request ID, a message, a status code, the application ID, and the server name.</li>
-     * <li>If the request fails, the API may return a 500 error code with a detailed error message.</li>
+     * <li><code>ApplicationId</code> and <code>ServerName</code> are required query parameters.</li>
+     * <li><code>ApplicationId</code> specifies the ID of the application program to operate on.</li>
+     * <li><code>ServerName</code> specifies the name of the MCP server to add.</li>
+     * <li>A successful response returns the request ID, message, status code, application program ID, and server name.</li>
+     * <li>In case of a failed request, a 500 error code may be returned, along with a specific error message describing the fault.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -779,7 +779,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>应用Lakebase挂载参数模板</p>
+     * <p>Applies a parameter template to Lakebase.</p>
      * 
      * @param request ApplyLakebaseMountParameterGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -819,7 +819,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>应用Lakebase挂载参数模板</p>
+     * <p>Applies a parameter template to Lakebase.</p>
      * 
      * @param request ApplyLakebaseMountParameterGroupRequest
      * @return ApplyLakebaseMountParameterGroupResponse
@@ -831,7 +831,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Approves a PolarClaw device pairing.</p>
+     * <p>Approves PolarClaw device pairing.</p>
      * 
      * @param request ApprovePolarClawDevicePairRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -867,7 +867,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Approves a PolarClaw device pairing.</p>
+     * <p>Approves PolarClaw device pairing.</p>
      * 
      * @param request ApprovePolarClawDevicePairRequest
      * @return ApprovePolarClawDevicePairResponse
@@ -3127,7 +3127,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an API key for an AgenticDB tenant.</p>
+     * <p>Creates an AgenticDB tenant API key.</p>
      * 
      * @param request CreateAgenticDBTenantApiKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3175,7 +3175,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an API key for an AgenticDB tenant.</p>
+     * <p>Creates an AgenticDB tenant API key.</p>
      * 
      * @param request CreateAgenticDBTenantApiKeyRequest
      * @return CreateAgenticDBTenantApiKeyResponse
@@ -3689,14 +3689,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>Each cluster can have a maximum of three manually created backups at a time.</li>
-     * <li>If the error message <code>Exceeding the daily backup times of this DB cluster</code> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before you call this operation.</li>
-     * <li>After you call this operation, a backup task is created in the background. If the data volume is large, the backup may take a long time. Wait until the backup is complete.</li>
+     * <li>A maximum of three manually created backups can exist for each cluster at the same time.</li>
+     * <li>If the error message <code>Exceeding the daily backup times of this DB cluster</code> is returned, it indicates that three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete a backup</a> before you call this operation.</li>
+     * <li>After you call this operation, a backup task is created in the background. If the data volume is large, the task may take a long time to complete.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates API keys in batches.</p>
+     * <p>Creates multiple API keys.</p>
      * 
      * @param request CreateBatchConsumerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3754,14 +3754,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>Each cluster can have a maximum of three manually created backups at a time.</li>
-     * <li>If the error message <code>Exceeding the daily backup times of this DB cluster</code> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before you call this operation.</li>
-     * <li>After you call this operation, a backup task is created in the background. If the data volume is large, the backup may take a long time. Wait until the backup is complete.</li>
+     * <li>A maximum of three manually created backups can exist for each cluster at the same time.</li>
+     * <li>If the error message <code>Exceeding the daily backup times of this DB cluster</code> is returned, it indicates that three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete a backup</a> before you call this operation.</li>
+     * <li>After you call this operation, a backup task is created in the background. If the data volume is large, the task may take a long time to complete.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates API keys in batches.</p>
+     * <p>Creates multiple API keys.</p>
      * 
      * @param request CreateBatchConsumerRequest
      * @return CreateBatchConsumerResponse
@@ -6653,11 +6653,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>Use this operation to create a PolarClaw Agent. You can optionally specify an <code>emoji</code> and an <code>avatar</code>.</p>
+     * <h2>Request description</h2>
+     * <p>You can use this API to create a PolarClaw agent and optionally configure its <code>Emoji</code> and <code>Avatar</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a PolarClaw Agent.</p>
+     * <p>Creates a new PolarClaw agent.</p>
      * 
      * @param request CreatePolarClawAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6709,11 +6709,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>Use this operation to create a PolarClaw Agent. You can optionally specify an <code>emoji</code> and an <code>avatar</code>.</p>
+     * <h2>Request description</h2>
+     * <p>You can use this API to create a PolarClaw agent and optionally configure its <code>Emoji</code> and <code>Avatar</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a PolarClaw Agent.</p>
+     * <p>Creates a new PolarClaw agent.</p>
      * 
      * @param request CreatePolarClawAgentRequest
      * @return CreatePolarClawAgentResponse
@@ -6725,10 +6725,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description.</h2>
      * 
      * <b>summary</b> : 
-     * <p>Creates a channel in PolarClaw.</p>
+     * <p>Creates a new communication channel in PolarClaw.</p>
      * 
      * @param tmpReq CreatePolarClawChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6786,10 +6786,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description.</h2>
      * 
      * <b>summary</b> : 
-     * <p>Creates a channel in PolarClaw.</p>
+     * <p>Creates a new communication channel in PolarClaw.</p>
      * 
      * @param request CreatePolarClawChannelRequest
      * @return CreatePolarClawChannelResponse
@@ -6801,8 +6801,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>Use this API to create a cron job. You can configure the job\&quot;s payload, execution frequency, timezone, target channel, recipients, and a failure alert mechanism.</p>
+     * <h2>Request description</h2>
+     * <p>You can use this API to define and create a scheduled task. The task is triggered periodically based on a specified schedule and carries specific messages or instructions. This API supports advanced options such as custom execution frequency, time zone settings, and failure alert mechanisms. You can also configure details such as message content, target channels, and recipients.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a PolarClaw scheduled task.</p>
@@ -6911,8 +6911,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>Use this API to create a cron job. You can configure the job\&quot;s payload, execution frequency, timezone, target channel, recipients, and a failure alert mechanism.</p>
+     * <h2>Request description</h2>
+     * <p>You can use this API to define and create a scheduled task. The task is triggered periodically based on a specified schedule and carries specific messages or instructions. This API supports advanced options such as custom execution frequency, time zone settings, and failure alert mechanisms. You can also configure details such as message content, target channels, and recipients.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a PolarClaw scheduled task.</p>
@@ -7063,13 +7063,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><strong>Path</strong>: The absolute path of the directory to create.</li>
-     * <li><strong>Recursive</strong>: Specifies whether to recursively create parent directories. The default value is <code>false</code>.</li>
-     * <li>This operation creates a directory structure with one or more levels in the specified PolarFS instance.</li>
-     * <li>Setting <code>Recursive</code> to <code>true</code> automatically creates all non-existent parent directories.</li>
-     * <li>Ensure that you have sufficient permissions to create the directory.</li>
+     * <li><strong>Path</strong>: The absolute path of the folder to create.</li>
+     * <li><strong>Recursive</strong>: Specifies whether to use recursion to create parent folders. Default value: <code>false</code>.</li>
+     * <li>This operation supports creating single-level or multi-level folder structures in a specified PolarFS instance.</li>
+     * <li>If the <code>Recursive</code> Settings are <code>true</code>, the automatic creation of all non-existent parent folders is enabled.</li>
+     * <li>Ensure that you have sufficient permissions when creating a folder.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7109,13 +7109,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><strong>Path</strong>: The absolute path of the directory to create.</li>
-     * <li><strong>Recursive</strong>: Specifies whether to recursively create parent directories. The default value is <code>false</code>.</li>
-     * <li>This operation creates a directory structure with one or more levels in the specified PolarFS instance.</li>
-     * <li>Setting <code>Recursive</code> to <code>true</code> automatically creates all non-existent parent directories.</li>
-     * <li>Ensure that you have sufficient permissions to create the directory.</li>
+     * <li><strong>Path</strong>: The absolute path of the folder to create.</li>
+     * <li><strong>Recursive</strong>: Specifies whether to use recursion to create parent folders. Default value: <code>false</code>.</li>
+     * <li>This operation supports creating single-level or multi-level folder structures in a specified PolarFS instance.</li>
+     * <li>If the <code>Recursive</code> Settings are <code>true</code>, the automatic creation of all non-existent parent folders is enabled.</li>
+     * <li>Ensure that you have sufficient permissions when creating a folder.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7195,20 +7195,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Resource Control limits the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. Querying Resource Control CPU usage is not supported.</p>
-     * <h3>Before you begin</h3>
+     * <p>Resource Control limits the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules, but does not support querying CPU utilization for Resource Control.</p>
+     * <h3>Limits</h3>
      * <ul>
-     * <li>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
+     * <li>Applies only to PolarDB for MySQL Cluster Edition that supports Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
      * <li>The cluster kernel parameter loose_enable_resource_control must be set to ON.</li>
      * <li>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</li>
-     * <li>The maximum value of CpuCount is determined by the kernel parameter resource_control_cpu_count_limit of the target cluster.<blockquote>
+     * <li>The maximum value of CpuCount is determined by the resource_control_cpu_count_limit kernel parameter of the target cluster.<blockquote>
      * <p>Notice: This is a notice.</notice></p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can set MaxCpu to specify the maximum CPU quota percentage that the rule can use, or set CpuCount to specify the maximum number of CPU cores that the rule can use. You must specify one and only one of MaxCpu and CpuCount when creating a rule.</p>
+     * <p>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can use MaxCpu to specify the maximum CPU quota percentage or CpuCount to specify the maximum number of CPU cores that the rule can use. You must specify exactly one of the MaxCpu and CpuCount parameters when you create the rule.</p>
      * 
      * @param request CreateResourceControlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7256,20 +7256,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Resource Control limits the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. Querying Resource Control CPU usage is not supported.</p>
-     * <h3>Before you begin</h3>
+     * <p>Resource Control limits the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules, but does not support querying CPU utilization for Resource Control.</p>
+     * <h3>Limits</h3>
      * <ul>
-     * <li>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
+     * <li>Applies only to PolarDB for MySQL Cluster Edition that supports Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
      * <li>The cluster kernel parameter loose_enable_resource_control must be set to ON.</li>
      * <li>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</li>
-     * <li>The maximum value of CpuCount is determined by the kernel parameter resource_control_cpu_count_limit of the target cluster.<blockquote>
+     * <li>The maximum value of CpuCount is determined by the resource_control_cpu_count_limit kernel parameter of the target cluster.<blockquote>
      * <p>Notice: This is a notice.</notice></p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can set MaxCpu to specify the maximum CPU quota percentage that the rule can use, or set CpuCount to specify the maximum number of CPU cores that the rule can use. You must specify one and only one of MaxCpu and CpuCount when creating a rule.</p>
+     * <p>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can use MaxCpu to specify the maximum CPU quota percentage or CpuCount to specify the maximum number of CPU cores that the rule can use. You must specify exactly one of the MaxCpu and CpuCount parameters when you create the rule.</p>
      * 
      * @param request CreateResourceControlRequest
      * @return CreateResourceControlResponse
@@ -16244,11 +16244,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>For more information about the minor Milvus versions and details of PolarDB for MySQL Cluster Edition, see <a href="https://help.aliyun.com/document_detail/471239.html">Minor Milvus version description</a> and <a href="https://help.aliyun.com/document_detail/423884.html">Release notes</a>.</p>
+     * <p>For more information about the Milvus versions of PolarDB for MySQL clusters, see <a href="https://help.aliyun.com/document_detail/471239.html">Milvus version overview</a> and <a href="https://help.aliyun.com/document_detail/423884.html">Kernel release notes</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of the current Milvus version of a PolarDB for MySQL cluster.</p>
+     * <p>Queries the details of the current kernel version of a PolarDB for MySQL cluster.</p>
      * 
      * @param request DescribeDBClusterVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16301,11 +16301,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>For more information about the minor Milvus versions and details of PolarDB for MySQL Cluster Edition, see <a href="https://help.aliyun.com/document_detail/471239.html">Minor Milvus version description</a> and <a href="https://help.aliyun.com/document_detail/423884.html">Release notes</a>.</p>
+     * <p>For more information about the Milvus versions of PolarDB for MySQL clusters, see <a href="https://help.aliyun.com/document_detail/471239.html">Milvus version overview</a> and <a href="https://help.aliyun.com/document_detail/423884.html">Kernel release notes</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of the current Milvus version of a PolarDB for MySQL cluster.</p>
+     * <p>Queries the details of the current kernel version of a PolarDB for MySQL cluster.</p>
      * 
      * @param request DescribeDBClusterVersionRequest
      * @return DescribeDBClusterVersionResponse
@@ -24802,7 +24802,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List PolarClaw device pairings</p>
+     * <p>Lists PolarClaw device pairings.</p>
      * 
      * @param request ListPolarClawDevicePairsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24834,7 +24834,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List PolarClaw device pairings</p>
+     * <p>Lists PolarClaw device pairings.</p>
      * 
      * @param request ListPolarClawDevicePairsRequest
      * @return ListPolarClawDevicePairsResponse
@@ -28982,7 +28982,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the node specifications of a PolarDB cluster.</p>
+     * <p>Modifies the node specifications of a PolarDB cluster.</p>
      * 
      * @param request ModifyDBNodeClassRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29074,7 +29074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the node specifications of a PolarDB cluster.</p>
+     * <p>Modifies the node specifications of a PolarDB cluster.</p>
      * 
      * @param request ModifyDBNodeClassRequest
      * @return ModifyDBNodeClassResponse
@@ -30588,20 +30588,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Resource Control limits the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. It does not support querying Resource Control CPU usage.</p>
-     * <h3>Before you begin</h3>
+     * <p>Resource Control is used to limit the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules, but does not support querying Resource Control CPU utilization.</p>
+     * <h3>Limits</h3>
      * <ul>
-     * <li>This operation applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
+     * <li>Applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
      * <li>The cluster kernel parameter loose_enable_resource_control must be set to ON.</li>
      * <li>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</li>
-     * <li>The maximum value of CpuCount is determined by the cluster kernel parameter resource_control_cpu_count_limit.<blockquote>
+     * <li>The maximum value of CpuCount is determined by the resource_control_cpu_count_limit kernel parameter of the target cluster.<blockquote>
      * <p>Notice: This is a notice.</notice></p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the CPU quota of an existing resource control rule in a specified PolarDB for MySQL cluster. You can modify the current quota value or switch between the maximum CPU percentage mode and the maximum CPU core count mode. You must specify one and only one of the MaxCpu and CpuCount parameters.</p>
+     * <p>Modifies the CPU quota of an existing resource control rule in a specified PolarDB for MySQL cluster. You can modify the current quota value or switch between the maximum CPU quota percentage mode and the maximum CPU core count mode. When modifying the rule, you must specify exactly one of the MaxCpu and CpuCount parameters.</p>
      * 
      * @param request ModifyResourceControlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30649,20 +30649,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Resource Control limits the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. It does not support querying Resource Control CPU usage.</p>
-     * <h3>Before you begin</h3>
+     * <p>Resource Control is used to limit the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules, but does not support querying Resource Control CPU utilization.</p>
+     * <h3>Limits</h3>
      * <ul>
-     * <li>This operation applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
+     * <li>Applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
      * <li>The cluster kernel parameter loose_enable_resource_control must be set to ON.</li>
      * <li>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</li>
-     * <li>The maximum value of CpuCount is determined by the cluster kernel parameter resource_control_cpu_count_limit.<blockquote>
+     * <li>The maximum value of CpuCount is determined by the resource_control_cpu_count_limit kernel parameter of the target cluster.<blockquote>
      * <p>Notice: This is a notice.</notice></p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the CPU quota of an existing resource control rule in a specified PolarDB for MySQL cluster. You can modify the current quota value or switch between the maximum CPU percentage mode and the maximum CPU core count mode. You must specify one and only one of the MaxCpu and CpuCount parameters.</p>
+     * <p>Modifies the CPU quota of an existing resource control rule in a specified PolarDB for MySQL cluster. You can modify the current quota value or switch between the maximum CPU quota percentage mode and the maximum CPU core count mode. When modifying the rule, you must specify exactly one of the MaxCpu and CpuCount parameters.</p>
      * 
      * @param request ModifyResourceControlRequest
      * @return ModifyResourceControlResponse
@@ -31042,7 +31042,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a PolarClaw configuration.</p>
+     * <p>Updates the PolarClaw configuration.</p>
      * 
      * @param tmpReq PatchPolarClawConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31088,7 +31088,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a PolarClaw configuration.</p>
+     * <p>Updates the PolarClaw configuration.</p>
      * 
      * @param request PatchPolarClawConfigRequest
      * @return PatchPolarClawConfigResponse
@@ -31930,7 +31930,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resets an api key.</p>
+     * <p>Resets an API key.</p>
      * 
      * @param request ResetConsumerApiKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31970,7 +31970,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resets an api key.</p>
+     * <p>Resets an API key.</p>
      * 
      * @param request ResetConsumerApiKeyRequest
      * @return ResetConsumerApiKeyResponse
@@ -32742,7 +32742,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Runs a PolarClaw cron job.</p>
+     * <p>Executes a PolarClaw scheduled task.</p>
      * 
      * @param request RunPolarClawCronJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32786,7 +32786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Runs a PolarClaw cron job.</p>
+     * <p>Executes a PolarClaw scheduled task.</p>
      * 
      * @param request RunPolarClawCronJobRequest
      * @return RunPolarClawCronJobResponse
@@ -33404,11 +33404,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>调用前，先通过 BindPolarClawAgent 为指定应用、Agent 和通道建立绑定。本接口使用同一组 ApplicationId、AgentId 和 Channel 解除绑定。</p>
+     * <h2>Request description</h2>
+     * <p>Before calling this operation, use BindPolarClawAgent to establish a binding for the specified application, agent, and channel. This operation uses the same ApplicationId, AgentId, and Channel to remove the binding.</p>
      * 
      * <b>summary</b> : 
-     * <p>Unbinds a PolarClaw Agent.</p>
+     * <p>Disassociates a PolarClaw agent.</p>
      * 
      * @param request UnbindPolarClawAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -33452,11 +33452,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>调用前，先通过 BindPolarClawAgent 为指定应用、Agent 和通道建立绑定。本接口使用同一组 ApplicationId、AgentId 和 Channel 解除绑定。</p>
+     * <h2>Request description</h2>
+     * <p>Before calling this operation, use BindPolarClawAgent to establish a binding for the specified application, agent, and channel. This operation uses the same ApplicationId, AgentId, and Channel to remove the binding.</p>
      * 
      * <b>summary</b> : 
-     * <p>Unbinds a PolarClaw Agent.</p>
+     * <p>Disassociates a PolarClaw agent.</p>
      * 
      * @param request UnbindPolarClawAgentRequest
      * @return UnbindPolarClawAgentResponse
@@ -34456,7 +34456,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the PolarClaw Skill configuration.</p>
+     * <p>Updates the PolarClaw skill configuration.</p>
      * 
      * @param tmpReq UpdatePolarClawSkillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -34510,7 +34510,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the PolarClaw Skill configuration.</p>
+     * <p>Updates the PolarClaw skill configuration.</p>
      * 
      * @param request UpdatePolarClawSkillRequest
      * @return UpdatePolarClawSkillResponse

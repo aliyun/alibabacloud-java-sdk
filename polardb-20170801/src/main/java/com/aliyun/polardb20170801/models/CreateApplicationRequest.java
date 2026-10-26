@@ -1190,6 +1190,34 @@ public class CreateApplicationRequest extends TeaModel {
         @NameInMap("LlmModel")
         public String llmModel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pm-xxxxxx</p>
+         */
+        @NameInMap("PolarAIEmbedderInstanceId")
+        public String polarAIEmbedderInstanceId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>pm-xxxxxx</p>
+         */
+        @NameInMap("PolarAILlmInstanceId")
+        public String polarAILlmInstanceId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>pm-xxxxxx</p>
+         */
+        @NameInMap("PolarAIRerankerInstanceId")
+        public String polarAIRerankerInstanceId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>pm-xxxxxx</p>
+         */
+        @NameInMap("PolarAIVlInstanceId")
+        public String polarAIVlInstanceId;
+
         public static CreateApplicationRequestKnowledgeApplicationSpec build(java.util.Map<String, ?> map) throws Exception {
             CreateApplicationRequestKnowledgeApplicationSpec self = new CreateApplicationRequestKnowledgeApplicationSpec();
             return TeaModel.build(map, self);
@@ -1217,6 +1245,38 @@ public class CreateApplicationRequest extends TeaModel {
         }
         public String getLlmModel() {
             return this.llmModel;
+        }
+
+        public CreateApplicationRequestKnowledgeApplicationSpec setPolarAIEmbedderInstanceId(String polarAIEmbedderInstanceId) {
+            this.polarAIEmbedderInstanceId = polarAIEmbedderInstanceId;
+            return this;
+        }
+        public String getPolarAIEmbedderInstanceId() {
+            return this.polarAIEmbedderInstanceId;
+        }
+
+        public CreateApplicationRequestKnowledgeApplicationSpec setPolarAILlmInstanceId(String polarAILlmInstanceId) {
+            this.polarAILlmInstanceId = polarAILlmInstanceId;
+            return this;
+        }
+        public String getPolarAILlmInstanceId() {
+            return this.polarAILlmInstanceId;
+        }
+
+        public CreateApplicationRequestKnowledgeApplicationSpec setPolarAIRerankerInstanceId(String polarAIRerankerInstanceId) {
+            this.polarAIRerankerInstanceId = polarAIRerankerInstanceId;
+            return this;
+        }
+        public String getPolarAIRerankerInstanceId() {
+            return this.polarAIRerankerInstanceId;
+        }
+
+        public CreateApplicationRequestKnowledgeApplicationSpec setPolarAIVlInstanceId(String polarAIVlInstanceId) {
+            this.polarAIVlInstanceId = polarAIVlInstanceId;
+            return this;
+        }
+        public String getPolarAIVlInstanceId() {
+            return this.polarAIVlInstanceId;
         }
 
     }

@@ -15,7 +15,7 @@ public class ResetConsumerApiKeyRequest extends TeaModel {
     public String consumerId;
 
     /**
-     * <p>The ID of the gateway instance.</p>
+     * <p>The gateway instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

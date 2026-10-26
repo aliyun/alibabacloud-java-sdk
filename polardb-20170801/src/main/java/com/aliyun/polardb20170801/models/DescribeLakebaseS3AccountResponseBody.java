@@ -32,7 +32,7 @@ public class DescribeLakebaseS3AccountResponseBody extends TeaModel {
     public String userAccPolicy;
 
     /**
-     * <p>The Secret Key of the S3 account (masked).</p>
+     * <p>The masked Secret Key of the S3 account.</p>
      * 
      * <strong>example:</strong>
      * <p>password***</p>

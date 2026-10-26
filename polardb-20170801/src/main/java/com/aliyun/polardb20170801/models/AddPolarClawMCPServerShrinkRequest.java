@@ -15,7 +15,7 @@ public class AddPolarClawMCPServerShrinkRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The configuration object for the MCP server.</p>
+     * <p>The MCP server configuration object.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -30,7 +30,7 @@ public class AddPolarClawMCPServerShrinkRequest extends TeaModel {
     public String serverConfigShrink;
 
     /**
-     * <p>The unique identifier for the MCP server.</p>
+     * <p>The unique identifier of the MCP server.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

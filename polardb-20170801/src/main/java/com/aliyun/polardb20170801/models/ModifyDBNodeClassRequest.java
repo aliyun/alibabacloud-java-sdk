@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyDBNodeClassRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically use coupons. Valid values:</p>
+     * <p>Specifies whether to automatically use a coupon. Valid values:</p>
      * <ul>
-     * <li>true (default): Uses coupons.</li>
-     * <li>false: Does not use coupons.</li>
+     * <li>true (default): Uses the coupon.</li>
+     * <li>false: Does not use the coupon.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ModifyDBNodeClassRequest extends TeaModel {
     public Boolean autoUseCoupon;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token is case-sensitive and can contain a maximum of 64 ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and is case-sensitive. The value can be up to 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</p>
@@ -56,7 +56,7 @@ public class ModifyDBNodeClassRequest extends TeaModel {
     public String DBNodeTargetClass;
 
     /**
-     * <p>The node type. Set this parameter to DLNode only when you change the node specifications of an AI node.</p>
+     * <p>The node type. Set the value to DLNode only when you modify the node specifications of an AI node.</p>
      * 
      * <strong>example:</strong>
      * <p>DLNode</p>
@@ -65,10 +65,10 @@ public class ModifyDBNodeClassRequest extends TeaModel {
     public String DBNodeType;
 
     /**
-     * <p>The type of the specification change. Valid values: </p>
+     * <p>The modification type. Valid values: </p>
      * <ul>
-     * <li><strong>Upgrade</strong>: upgrades the specifications.</li>
-     * <li><strong>Downgrade</strong>: downgrades the specifications.</li>
+     * <li><strong>Upgrade</strong>: Upgrades the specifications.</li>
+     * <li><strong>Downgrade</strong>: Downgrades the specifications.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -85,11 +85,11 @@ public class ModifyDBNodeClassRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The latest start time of the scheduled specification change task. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format (UTC).</p>
+     * <p>The latest time to start the scheduled task. The time follows the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time is displayed in UTC.</p>
      * <blockquote>
      * <ul>
      * <li>The latest time must be at least 30 minutes later than the start time.</li>
-     * <li>If <code>PlannedStartTime</code> is set but this parameter is not specified, the latest time defaults to <code>start time + 30 minutes</code>. For example, if <code>PlannedStartTime</code> is set to <code>2021-01-14T09:00:00Z</code> and this parameter is left empty, the task starts no later than <code>2021-01-14T09:30:00Z</code>.</li>
+     * <li>If <code>PlannedStartTime</code> is specified but this parameter is left empty, the latest time to start the task defaults to 30 minutes after the start time. For example, if <code>PlannedStartTime</code> is set to <code>2021-01-14T09:00:00Z</code> and this parameter is left empty, the task starts at <code>2021-01-14T09:30:00Z</code> at the latest.</li>
      * </ul>
      * </blockquote>
      * 
@@ -101,6 +101,7 @@ public class ModifyDBNodeClassRequest extends TeaModel {
 
     /**
      * <p>The planned transient disconnection time.</p>
+     * <p>The time follows the ISO 8601 standard in the <code>YYYY-MM-DDTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-14T09:30:00Z</p>
@@ -109,12 +110,12 @@ public class ModifyDBNodeClassRequest extends TeaModel {
     public String plannedFlashingOffTime;
 
     /**
-     * <p>The earliest start time of the scheduled specification change task. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format (UTC).</p>
+     * <p>The earliest time to start the scheduled upgrade or downgrade task within the specified time window. The time follows the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time is displayed in UTC.</p>
      * <blockquote>
      * <ul>
-     * <li>This parameter takes effect when <code>ModifyType</code> is set to <code>Upgrade</code> or <code>Downgrade</code>.</li>
-     * <li>The start time must be within the next 24 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, the valid range for the start time is from <code>2021-01-14T09:00:00Z</code> to <code>2021-01-15T09:00:00Z</code>.</li>
-     * <li>If this parameter is left empty, the specification change task is immediately executed.</li>
+     * <li>This parameter takes effect only when <code>ModifyType</code> is set to <code>Upgrade</code> or <code>Downgrade</code>.</li>
+     * <li>The start time must be within the next 24 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, the allowed start time ranges from <code>2021-01-14T09:00:00Z</code> to <code>2021-01-15T09:00:00Z</code>.</li>
+     * <li>If this parameter is left empty, the upgrade task is executed immediately by default.</li>
      * </ul>
      * </blockquote>
      * 
@@ -125,7 +126,7 @@ public class ModifyDBNodeClassRequest extends TeaModel {
     public String plannedStartTime;
 
     /**
-     * <p>The coupon code. If this parameter is not specified, the default coupon is used.</p>
+     * <p>The coupon code. If this parameter is left empty, the default coupon is used.</p>
      * 
      * <strong>example:</strong>
      * <p>727xxxxxx934</p>
@@ -140,14 +141,14 @@ public class ModifyDBNodeClassRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The cluster sub-series. Valid values:</p>
+     * <p>The sub-edition of the cluster. Valid values:</p>
      * <ul>
-     * <li><p><strong>normal_exclusive</strong>: Dedicated</p>
+     * <li><p><strong>normal_exclusive</strong>: Dedicated.</p>
      * </li>
-     * <li><p><strong>normal_general</strong>: General-purpose</p>
+     * <li><p><strong>normal_general</strong>: General-purpose.</p>
      * </li>
      * </ul>
-     * <p>This parameter is required when you change specifications between Dedicated and General-purpose.</p>
+     * <p>This parameter is required when you change the specifications between Dedicated and General-purpose.</p>
      * 
      * <strong>example:</strong>
      * <p>normal_general</p>

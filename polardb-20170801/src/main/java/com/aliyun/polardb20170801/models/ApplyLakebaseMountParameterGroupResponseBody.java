@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ApplyLakebaseMountParameterGroupResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F45FFACC-xxx</p>
      */
@@ -12,6 +14,8 @@ public class ApplyLakebaseMountParameterGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The asynchronous task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */

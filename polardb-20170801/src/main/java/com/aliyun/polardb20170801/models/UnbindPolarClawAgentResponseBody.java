@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnbindPolarClawAgentResponseBody extends TeaModel {
     /**
-     * <p>The agent ID.</p>
+     * <p>Agent ID</p>
      * 
      * <strong>example:</strong>
      * <p>work</p>
@@ -23,7 +23,7 @@ public class UnbindPolarClawAgentResponseBody extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The status code of the response.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -41,7 +41,7 @@ public class UnbindPolarClawAgentResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The number of removed bindings.</p>
+     * <p>The actual number of bindings removed.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,7 +50,7 @@ public class UnbindPolarClawAgentResponseBody extends TeaModel {
     public Integer removedCount;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>24A1990B-4F6E-482B-B8CB-75C612******</p>
@@ -59,7 +59,7 @@ public class UnbindPolarClawAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of bindings after the operation.</p>
+     * <p>The total number of global bindings after the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

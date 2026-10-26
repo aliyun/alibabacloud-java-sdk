@@ -17,7 +17,7 @@ public class DescribeLakebaseS3AccountRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all available regions for your account, including region IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all available regions for the current account, including region IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -30,7 +30,7 @@ public class DescribeLakebaseS3AccountRequest extends TeaModel {
     /**
      * <p>The Access Key of the S3 account.</p>
      * <blockquote>
-     * <p>The account name supports only uppercase letters, lowercase letters, and digits, with a maximum length of 32 characters.</p>
+     * <p>The account name can contain only letters and digits and can be up to 32 characters in length.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
