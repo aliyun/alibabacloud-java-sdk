@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
     /**
-     * <p>The price information, including the price and discount rule details.</p>
+     * <p>The PriceInfo data type, which includes pricing and discount rule information.</p>
      */
     @NameInMap("PriceInfo")
     public DescribeInstanceModificationPriceResponseBodyPriceInfo priceInfo;
@@ -174,6 +174,12 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
     public static class DescribeInstanceModificationPriceResponseBodyPriceInfoPrice extends TeaModel {
         /**
          * <p>The currency unit. Valid values:</p>
+         * <ul>
+         * <li><p>China site: CNY.</p>
+         * </li>
+         * <li><p>International site: USD.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>CNY</p>
@@ -203,7 +209,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
         public Float originalPrice;
 
         /**
-         * <p>The transaction price, which is equal to the original price minus the discount.</p>
+         * <p>The final price, which is the original price minus the discount.</p>
          * 
          * <strong>example:</strong>
          * <p>113.880</p>
@@ -261,6 +267,8 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
     public static class DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice extends TeaModel {
         /**
          * <p>The currency unit.</p>
+         * <p>China site: CNY.</p>
+         * <p>International site: USD.</p>
          * 
          * <strong>example:</strong>
          * <p>CNY</p>
@@ -287,7 +295,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
         public Float originalPrice;
 
         /**
-         * <p>The transaction price, which is equal to the original price minus the discount.</p>
+         * <p>The final price, which is the original price minus the discount.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -413,7 +421,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
         public DescribeInstanceModificationPriceResponseBodyPriceInfoPrice price;
 
         /**
-         * <p>The related price.</p>
+         * <p>The associated price.</p>
          */
         @NameInMap("RelatedPrice")
         public DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPrice relatedPrice;

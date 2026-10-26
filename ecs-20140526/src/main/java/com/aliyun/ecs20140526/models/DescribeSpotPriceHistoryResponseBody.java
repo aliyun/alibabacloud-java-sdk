@@ -16,7 +16,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
     public String currency;
 
     /**
-     * <p>The start row of the next page. Set the <code>Offset</code> parameter to this value to query the next page of data.</p>
+     * <p>The starting row of the next page. You can use this value to query the next page of data by setting the <code>Offset</code> parameter to this value.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>

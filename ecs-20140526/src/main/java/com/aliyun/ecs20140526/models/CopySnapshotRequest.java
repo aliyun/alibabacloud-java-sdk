@@ -6,14 +6,14 @@ import com.aliyun.tea.*;
 public class CopySnapshotRequest extends TeaModel {
     /**
      * <blockquote>
-     * <p>This parameter is in invitational preview and is not publicly available.</p>
+     * <p>This parameter is in invitational preview and is not supported.</p>
      * </blockquote>
      */
     @NameInMap("Arn")
     public java.util.List<CopySnapshotRequestArn> arn;
 
     /**
-     * <p>Ensures the idempotence of the request. The value is generated from your client and must be unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -33,7 +33,7 @@ public class CopySnapshotRequest extends TeaModel {
 
     /**
      * <p>The description of the new snapshot. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
-     * <p>Default value: null.</p>
+     * <p>Default value: empty.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,8 +43,8 @@ public class CopySnapshotRequest extends TeaModel {
     public String destinationSnapshotDescription;
 
     /**
-     * <p>The name of the new snapshot. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with http:// or https://. The name can contain characters that are classified as letter in Unicode, including Chinese characters, digits, and others. The name can also contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
-     * <p>Default value: null.</p>
+     * <p>The name of the new snapshot. The name must be 2 to 128 characters in length, must start with a letter or a Chinese character, and cannot start with http:// or https://. It supports characters in the Letter category of Unicode, including English letters, Chinese characters, and digits. It can contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>Default value: empty.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class CopySnapshotRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is not publicly available.</p>
+     * <p>This parameter is not available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -67,8 +67,8 @@ public class CopySnapshotRequest extends TeaModel {
     /**
      * <p>Specifies whether to encrypt the cloud disk. Valid values:</p>
      * <ul>
-     * <li>true: encrypts the cloud disk.</li>
-     * <li>false: does not encrypt the cloud disk.</li>
+     * <li>true: yes.</li>
+     * <li>false: no.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -79,7 +79,7 @@ public class CopySnapshotRequest extends TeaModel {
     public Boolean encrypted;
 
     /**
-     * <p>The customer master key (CMK) in the destination region.</p>
+     * <p>The KMS customer master key (CMK) in the destination region.</p>
      * 
      * <strong>example:</strong>
      * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
@@ -91,7 +91,7 @@ public class CopySnapshotRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the source snapshot. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region where the source snapshot resides. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class CopySnapshotRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>This parameter is not publicly available.</p>
+     * <p>This parameter is not available.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4p****</p>
@@ -116,8 +116,8 @@ public class CopySnapshotRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The retention period of the new snapshot, in days. The snapshot undergoes automatic release when the retention period expires. Valid values: 1 to 65536.</p>
-     * <p>Default value: null, which indicates that the snapshot is not subject to automatic release.</p>
+     * <p>The retention period of the new snapshot. Unit: days. The snapshot is subject to automatic release when the retention period expires. Valid values: 1 to 65536.</p>
+     * <p>Default value: empty, which indicates that the snapshot is not subject to automatic release.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -277,7 +277,7 @@ public class CopySnapshotRequest extends TeaModel {
     public static class CopySnapshotRequestArn extends TeaModel {
         /**
          * <blockquote>
-         * <p>This parameter is not publicly available.</p>
+         * <p>This parameter is not available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -288,7 +288,7 @@ public class CopySnapshotRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is not publicly available.</p>
+         * <p>This parameter is not available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -299,7 +299,7 @@ public class CopySnapshotRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is not publicly available.</p>
+         * <p>This parameter is not available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -341,7 +341,7 @@ public class CopySnapshotRequest extends TeaModel {
 
     public static class CopySnapshotRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the new snapshot. Once specified, the tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+         * <p>The tag key of the new snapshot. If you specify this parameter, it cannot be an empty string. The tag key can be up to 128 characters in length, cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -350,7 +350,7 @@ public class CopySnapshotRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the new snapshot. Once specified, the tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+         * <p>The tag value of the new snapshot. If you specify this parameter, it can be an empty string. The tag value can be up to 128 characters in length, cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

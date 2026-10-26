@@ -8,7 +8,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
     public DescribeCapacityReservationsResponseBodyCapacityReservationSet capacityReservationSet;
 
     /**
-     * <p>The maximum number of entries per page.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -17,7 +17,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next query.</p>
+     * <p>The pagination token for the next capacity reservation query.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -35,7 +35,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries that match the query conditions.</p>
+     * <p>The total number of entries that meet the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeDiagnosticMetricSetsRequest extends TeaModel {
     /**
-     * <p>The number of entries per page for a paged query. Maximum value: 100.</p>
+     * <p>The maximum number of entries per page for a paging query. Maximum value: 100.</p>
      * <p>Default value:</p>
      * <ul>
-     * <li>If this parameter is not specified, the default value is 10.</li>
-     * <li>If the specified value is greater than 100, the default value is 100.</li>
+     * <li>If no Settings are specified, the default value is 10.</li>
+     * <li>If the Settings value is greater than 100, the default value is 100.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,13 +19,13 @@ public class DescribeDiagnosticMetricSetsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The list of diagnostic metric set IDs.</p>
+     * <p>The IDs of the diagnostic metric sets.</p>
      */
     @NameInMap("MetricSetIds")
     public java.util.List<String> metricSetIds;
 
     /**
-     * <p>The pagination token. Set this parameter to the value of <code>NextToken</code> returned in the previous call. You do not need to set this parameter for the first request.</p>
+     * <p>The pagination token. Set the value to the <code>NextToken</code> value returned from the previous call. Leave this parameter empty for the first call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -34,7 +34,7 @@ public class DescribeDiagnosticMetricSetsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,8 +55,8 @@ public class DescribeDiagnosticMetricSetsRequest extends TeaModel {
     /**
      * <p>The type of the diagnostic metric set. Valid values:</p>
      * <ul>
-     * <li>User: user.</li>
-     * <li>Common: common.</li>
+     * <li>User: user-created.</li>
+     * <li>Common: public.</li>
      * </ul>
      * <p>Default value: User.</p>
      * 

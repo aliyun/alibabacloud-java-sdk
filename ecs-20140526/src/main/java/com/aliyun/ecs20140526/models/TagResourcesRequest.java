@@ -11,7 +11,7 @@ public class TagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the resources. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The list of resource IDs. Array length: 1 to 50.</p>
+     * <p>The array of resource IDs. Array length: 1 to 50.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
-     * <p>The type of the resource. Valid values:</p>
+     * <p>The resource type. Valid values:</p>
      * <ul>
      * <li>instance: ECS instance.</li>
      * <li>disk: cloud disk.</li>
@@ -43,7 +43,7 @@ public class TagResourcesRequest extends TeaModel {
      * <li>securitygroup: security group.</li>
      * <li>volume: storage volume.</li>
      * <li>eni: Elastic Network Interface (ENI).</li>
-     * <li>ddh: dedicated host.</li>
+     * <li>ddh: ECS dedicated host.</li>
      * <li>ddhcluster: dedicated host cluster.</li>
      * <li>keypair: SSH key pair.</li>
      * <li>launchtemplate: launch template.</li>
@@ -52,7 +52,7 @@ public class TagResourcesRequest extends TeaModel {
      * <li>elasticityassurance: elasticity assurance.</li>
      * <li>capacityreservation: capacity reservation.</li>
      * <li>command: Cloud Assistant command.</li>
-     * <li>invocation: Cloud Assistant command execution or file sending result.</li>
+     * <li>invocation: Cloud Assistant command execution or file delivery result.</li>
      * <li>activation: Cloud Assistant managed instance activation code.</li>
      * <li>managedinstance: Cloud Assistant managed instance.</li>
      * </ul>
@@ -65,7 +65,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags. Array length: 1 to 20. If the array contains multiple tag objects, the tag key <code>Key</code> must be unique.</p>
+     * <p>The array of tags. Array length: 1 to 20. If the array contains multiple tag objects, the tag key Key must be unique.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -134,7 +134,7 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The tag key. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key. It cannot be empty or an empty string. It can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. The tag value cannot be null but can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value. It cannot be null but can be an empty string. It can be up to 128 characters in length and cannot contain http:// or https://.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

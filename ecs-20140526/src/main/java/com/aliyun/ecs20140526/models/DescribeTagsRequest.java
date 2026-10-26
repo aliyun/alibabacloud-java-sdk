@@ -4,58 +4,24 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagsRequest extends TeaModel {
-    /**
-     * <blockquote>
-     * <p>This parameter is about to be deprecated. To ensure compatibility, use other parameters instead.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>null</p>
-     */
     @NameInMap("Category")
     public String category;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The page number of the tag list.</p>
-     * <p>Minimum value: 1.</p>
-     * <p>Default value: 1.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries per page for a paged query.</p>
-     * <p>Maximum value: 100.</p>
-     * <p>Default value: 50.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>50</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The ID of the resource to which the tag is attached. For example, if ResourceType is set to instance, ResourceId indicates the instance ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>s-946ntx4wr****</p>
-     */
     @NameInMap("ResourceId")
     public String resourceId;
 
@@ -65,33 +31,9 @@ public class DescribeTagsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The resource type. Valid values:</p>
-     * <ul>
-     * <li>instance: ECS instance.</li>
-     * <li>disk: cloud disk.</li>
-     * <li>snapshot: snapshot.</li>
-     * <li>image: image.</li>
-     * <li>securitygroup: security group.</li>
-     * <li>volume: storage volume.</li>
-     * <li>eni: Elastic Network Interface (ENI).</li>
-     * <li>ddh: dedicated host.</li>
-     * <li>keypair: SSH key pair.</li>
-     * <li>launchtemplate: launch template.</li>
-     * <li>reservedinstance: reserved instance.</li>
-     * <li>snapshotpolicy: automatic snapshot policy.</li>
-     * </ul>
-     * <p>All valid values are in lowercase.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>snapshot</p>
-     */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    /**
-     * <p>The tags.</p>
-     */
     @NameInMap("Tag")
     public java.util.List<DescribeTagsRequestTag> tag;
 
@@ -181,21 +123,9 @@ public class DescribeTagsRequest extends TeaModel {
     }
 
     public static class DescribeTagsRequestTag extends TeaModel {
-        /**
-         * <p>The tag key of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestKey</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. The tag value cannot contain http:// or https://.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestValue</p>
-         */
         @NameInMap("Value")
         public String value;
 

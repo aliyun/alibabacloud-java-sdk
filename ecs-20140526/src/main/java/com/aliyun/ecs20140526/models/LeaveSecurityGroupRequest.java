@@ -7,7 +7,7 @@ public class LeaveSecurityGroupRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p>If you specify this parameter, leave NetworkInterfaceId empty.</p>
+     * <p>If you specify this parameter, you must leave NetworkInterfaceId empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class LeaveSecurityGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The Elastic Network Interface (ENI) ID.</p>
+     * <p>The ID of the network interface controller (NIC).</p>
      * <blockquote>
-     * <p>If you specify this parameter, leave InstanceId empty.</p>
+     * <p>If you specify this parameter, you must leave InstanceId empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,10 +35,10 @@ public class LeaveSecurityGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <ul>
-     * <li>You do not need to specify the region ID when removing an instance from a security group.</li>
-     * <li>You must specify the region ID of the Elastic Network Interface (ENI) when removing an ENI from a security group.</li>
+     * <li>You do not need to specify the region ID when you remove an instance from a security group.</li>
+     * <li>You must specify the region ID of the network interface controller (NIC) when you remove a network interface controller (NIC) from a security group.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class LeaveSecurityGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The security group ID.</p>
+     * <p>The ID of the security group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

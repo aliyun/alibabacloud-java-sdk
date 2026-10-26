@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePlanMaintenanceWindowShrinkRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable or disable the O&amp;M window.</p>
+     * <p>Specifies whether to enable the window. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: Enabled.</li>
      * <li><strong>false</strong>: Disabled.</li>
@@ -18,11 +18,17 @@ public class CreatePlanMaintenanceWindowShrinkRequest extends TeaModel {
     @NameInMap("Enable")
     public Boolean enable;
 
+    /**
+     * <p>The minimum interval between two scheduled O&amp;M events for the same instance. Valid values: 1 to 48. Unit: hours.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24</p>
+     */
     @NameInMap("MinMaintenanceInterval")
     public Integer minMaintenanceInterval;
 
     /**
-     * <p>The name of the O&amp;M window. You can specify a custom name. The name can be up to 200 characters in length.</p>
+     * <p>The name of the O&amp;M window. You can customize the name. The name can be up to 200 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +38,7 @@ public class CreatePlanMaintenanceWindowShrinkRequest extends TeaModel {
     public String planWindowName;
 
     /**
-     * <p>The region ID. You can call DescribeRegions to query the most recent region list.</p>
+     * <p>The region ID. This parameter is required for Alibaba Cloud SDK routing. However, specifying any region ID for this operation yields the same result. The O&amp;M window applies to all ECS instances across the network that meet the resource filtering conditions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,14 +58,14 @@ public class CreatePlanMaintenanceWindowShrinkRequest extends TeaModel {
     public String supportMaintenanceAction;
 
     /**
-     * <p>The resources on which the O&amp;M window takes effect.</p>
+     * <p>The resources to which the O&amp;M window applies.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TargetResource")
     public String targetResourceShrink;
 
     /**
-     * <p>The recurring cycle of the O&amp;M window.</p>
+     * <p>The recurrence cycle of the window.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TimePeriod")

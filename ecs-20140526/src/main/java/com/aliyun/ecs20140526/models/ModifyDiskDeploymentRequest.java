@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyDiskDeploymentRequest extends TeaModel {
     /**
-     * <p>The type of the cloud disk to change to. This parameter takes effect only when you migrate data between dedicated block storage clusters. Currently, only cloud_essd (enterprise SSD) is supported.</p>
-     * <p>Default value: empty, which indicates that the cloud disk type is not changed.</p>
+     * <p>The new disk category. This parameter is valid only during migration between different dedicated block storage clusters. Currently, only cloud_essd (ESSD) is supported.</p>
+     * <p>Default value: empty, which indicates that the disk category is not changed.</p>
      * 
      * <strong>example:</strong>
      * <p>cloud_essd</p>
@@ -25,10 +25,10 @@ public class ModifyDiskDeploymentRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>Specifies whether to perform only a dry run. Valid values:</p>
+     * <p>Specifies whether to only precheck the request. Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run. The system checks the required parameters, request syntax, business restrictions, and ECS inventory. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.</li>
-     * <li>false: performs a dry run and sends the request. If the check succeeds, a 2XX HTTP status code is returned and the disk is migrated.</li>
+     * <li>true: sends a precheck request. The check items include whether required parameters are specified, the request format, business limits, and ECS inventory. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.</li>
+     * <li>false: sends a normal request. If the check succeeds, a 2xx HTTP status code is returned and the disk is directly migrated.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -45,12 +45,12 @@ public class ModifyDiskDeploymentRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The performance level (PL) of the standard SSD. This parameter takes effect only when you migrate a disk between different dedicated block storage clusters. Valid values:</p>
+     * <p>The new ESSD performance level. This parameter is valid only during migration between different dedicated block storage clusters. Valid values:</p>
      * <ul>
-     * <li>PL0: A maximum of 10,000 random read/write IOPS per disk.</li>
-     * <li>PL1: A maximum of 50,000 random read/write IOPS per disk.</li>
+     * <li>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</li>
+     * <li>PL1: A single disk can deliver up to 50,000 random read/write IOPS.</li>
      * </ul>
-     * <p>Default value: empty, which indicates that the performance level (PL) is not changed during migration.</p>
+     * <p>Default value: empty, which indicates that the performance level is not changed.</p>
      * 
      * <strong>example:</strong>
      * <p>PL1</p>
@@ -65,10 +65,10 @@ public class ModifyDiskDeploymentRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the dedicated block storage cluster.</p>
+     * <p>The ID of the dedicated block storage cluster. Before migrating a disk into a dedicated block storage cluster, you must purchase and create the cluster, and ensure that the disk and the destination cluster are in the same zone.</p>
      * <ul>
-     * <li>To migrate a disk to a dedicated block storage cluster, you must specify StorageClusterId.</li>
-     * <li>To migrate a disk to a public cloud block storage cluster, StorageClusterId must be empty.</li>
+     * <li>When migrating a disk to a dedicated block storage cluster, you must specify <code>StorageClusterId</code>.</li>
+     * <li>When migrating a disk to a public cloud block storage cluster, <code>StorageClusterId</code> must be empty.</li>
      * </ul>
      * <p>Default value: empty, which indicates that the disk is migrated to a public cloud block storage cluster.</p>
      * 

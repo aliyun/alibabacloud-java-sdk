@@ -12,10 +12,10 @@ public class ResetDisksRequest extends TeaModel {
     public java.util.List<ResetDisksRequestDisk> disk;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform a dry run on the request. Valid values:</p>
      * <ul>
-     * <li>true: performs a dry run without actually rolling back the cloud disks. The system checks whether required parameters are specified, whether the request format is valid, and whether resource status constraints are met. If the check fails, the corresponding error message is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
-     * <li>false: performs a dry run and sends the request. If the check succeeds, the cloud disk rollback operation is initiated.</li>
+     * <li>true: performs a dry run. The system checks the required parameters, request format, and resource status. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li>false: performs a standard request. If the request passes the dry run, the cloud disks are rolled back.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -119,7 +119,7 @@ public class ResetDisksRequest extends TeaModel {
         public String diskId;
 
         /**
-         * <p>The snapshot ID that corresponds to the specified cloud disk in the instance snapshot. Valid values of N: 1 to 10.</p>
+         * <p>The ID of the snapshot that corresponds to the cloud disk in the instance snapshot. Valid values of N: 1 to 10.</p>
          * 
          * <strong>example:</strong>
          * <p>s-j6cdofbycydvg7ey****</p>

@@ -5,20 +5,19 @@ import com.aliyun.tea.*;
 
 public class ReportInstancesStatusRequest extends TeaModel {
     /**
-     * <p>The detailed description of the anomalous issue.</p>
+     * <p>The detailed description of the exception.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>本地盘不可用，挂载点拒绝访问，无法加载文件。</p>
+     * <p>The local disk is unavailable, access to the mount point is denied, and files cannot be loaded</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The list of device names of the disks that have the same anomalous issue and are attached to the instance. You can specify up to 100 device names.</p>
-     * <p>If you are using an ECS Bare Metal server instance, specify the SLOT information list of the disk devices.</p>
+     * <p>The device names of the attached disks that have the same exception. You can specify up to 100 device names. If you use ECS Bare Metal instances, specify the slot information of the disk devices.</p>
      * <blockquote>
-     * <p>For ECS bare metal instances, this parameter is required when the <code>Reason</code> parameter is set to <code>abnormal-local-disk</code> or <code>abnormal-cloud-disk</code>, or when the <code>IssueCategory</code> parameter is set to <code>hardware-disk-error</code>.</p>
+     * <p>For ECS Bare Metal instances, this parameter is required when the Reason parameter is set to abnormal-local-disk or abnormal-cloud-disk, or when the IssueCategory parameter is set to hardware-disk-error.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,9 +27,9 @@ public class ReportInstancesStatusRequest extends TeaModel {
     public java.util.List<String> device;
 
     /**
-     * <p>The list of IDs of the disks that have the same anomalous issue. You can specify up to 100 disk IDs. If you are using an ECS Bare Metal server instance, specify the SN list of the disk devices.</p>
+     * <p>The IDs of the disks that have the same exception. You can specify up to 100 disk IDs. If you use ECS Bare Metal instances, specify the serial numbers (SNs) of the disk devices.</p>
      * <blockquote>
-     * <p>This parameter is required when the <code>Reason</code> parameter is set to <code>abnormal-local-disk</code> or <code>abnormal-cloud-disk</code>, or when the <code>IssueCategory</code> parameter is set to <code>hardware-disk-error</code>.</p>
+     * <p>This parameter is required when the Reason parameter is set to abnormal-local-disk or abnormal-cloud-disk, or when the IssueCategory parameter is set to hardware-disk-error.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -40,7 +39,7 @@ public class ReportInstancesStatusRequest extends TeaModel {
     public java.util.List<String> diskId;
 
     /**
-     * <p>The time when the instance failures ended. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end time of the instance failures. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2017-11-31T06:32:31Z</p>
@@ -49,7 +48,7 @@ public class ReportInstancesStatusRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The list of ECS instance IDs. You can specify up to 100 instance IDs.</p>
+     * <p>The IDs of the ECS instances. You can specify up to 100 instance IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,17 +58,17 @@ public class ReportInstancesStatusRequest extends TeaModel {
     public java.util.List<String> instanceId;
 
     /**
-     * <p>The category of the anomalous issue. This parameter is applicable only to Elastic Compute Service Bare Metal Instance instances. Valid values:</p>
+     * <p>The category of the exception. This parameter is applicable only to ECS Bare Metal instances. Valid values:</p>
      * <ul>
-     * <li>hardware-cpu-error: CPU failure.</li>
-     * <li>hardware-motherboard-error: Motherboard failure.</li>
-     * <li>hardware-mem-error: Memory failure.</li>
-     * <li>hardware-power-error: Power failure.</li>
-     * <li>hardware-disk-error: Disk failure.</li>
-     * <li>hardware-networkcard-error: Network interface controller (NIC) failure.</li>
-     * <li>hardware-raidcard-error: SAS/RAID card failure.</li>
-     * <li>hardware-fan-error: Fan failure.</li>
-     * <li>others: Other failures.</li>
+     * <li>hardware-cpu-error: CPU failure</li>
+     * <li>hardware-motherboard-error: Motherboard failure</li>
+     * <li>hardware-mem-error: Memory failure</li>
+     * <li>hardware-power-error: Power supply failure</li>
+     * <li>hardware-disk-error: Disk failure</li>
+     * <li>hardware-networkcard-error: Network interface controller (NIC) failure</li>
+     * <li>hardware-raidcard-error: SAS/RAID card failure</li>
+     * <li>hardware-fan-error: Fan failure</li>
+     * <li>others: Other exceptions</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,14 +84,14 @@ public class ReportInstancesStatusRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The impact of the anomalous issue on the ECS instance. Valid values:</p>
+     * <p>The impact of the exception on the ECS instance. Valid values:</p>
      * <ul>
-     * <li>instance-hang: The ECS instance is unavailable or cannot be connected to.</li>
-     * <li>instance-stuck-in-status: The ECS instance is stuck in a specific state, such as Starting or Stopping, for an extended period of time.</li>
-     * <li>abnormal-network: A network exception occurred on the ECS instance.</li>
-     * <li>abnormal-local-disk: A local disk attached to the ECS instance is abnormal.</li>
-     * <li>abnormal-cloud-disk: A cloud disk or Shared Block Storage device attached to the ECS instance is abnormal.</li>
-     * <li>others: Other exception types. If none of the preceding values apply, set <code>Reason=others</code> and provide more information in <code>Description</code>.</li>
+     * <li>instance-hang: The ECS instance is unavailable or unreachable.</li>
+     * <li>instance-stuck-in-status: The ECS instance remains in a specific state, such as Starting or Stopping, for an extended period.</li>
+     * <li>abnormal-network: A network exception occurs on the ECS instance.</li>
+     * <li>abnormal-local-disk: An exception occurs on the local disk attached to the ECS instance.</li>
+     * <li>abnormal-cloud-disk: An exception occurs on the disk or Shared Block Storage attached to the ECS instance.</li>
+     * <li>others: Other exception types. If none of the preceding impact types apply, you can set Reason to others and provide more information in Description.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,7 +101,7 @@ public class ReportInstancesStatusRequest extends TeaModel {
     public String reason;
 
     /**
-     * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent list of Alibaba Cloud regions.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -118,7 +117,7 @@ public class ReportInstancesStatusRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The time when the instance failures started. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The start time of the instance failures. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2017-11-30T06:32:31Z</p>

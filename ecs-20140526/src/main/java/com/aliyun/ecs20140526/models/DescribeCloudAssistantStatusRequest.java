@@ -14,7 +14,7 @@ public class DescribeCloudAssistantStatusRequest extends TeaModel {
     public java.util.List<String> instanceId;
 
     /**
-     * <p>The maximum number of entries per page for a paged query. If <strong>InstanceId</strong> is set, this parameter is ignored.</p>
+     * <p>The maximum number of entries to return on each page during a paged query. This parameter is invalid if the <strong>InstanceId</strong> parameter Settings are configured.</p>
      * <p>Maximum value: 50.</p>
      * <p>Default value: 10.</p>
      * 
@@ -25,7 +25,7 @@ public class DescribeCloudAssistantStatusRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
+     * <p>The pagination token. Set the value to the NextToken value returned from the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2</p>
@@ -55,7 +55,7 @@ public class DescribeCloudAssistantStatusRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to perform paging operations.</p>
+     * <p>This parameter will be taken offline soon. We recommend that you use NextToken and MaxResults to perform paged queries.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class DescribeCloudAssistantStatusRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to perform paging operations.</p>
+     * <p>This parameter will be taken offline soon. We recommend that you use NextToken and MaxResults to perform paged queries.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -76,7 +76,7 @@ public class DescribeCloudAssistantStatusRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateImageRequest extends TeaModel {
     /**
-     * <p>The system architecture. After a data disk snapshot is used as the system disk of the image, specify the system architecture of the system disk by using this parameter. Valid values:</p>
+     * <p>The system architecture. After you specify a data disk snapshot as the system disk of the image, you must use Architecture to determine the system architecture of the system disk. Valid values:</p>
      * <ul>
      * <li>i386.</li>
      * <li>x86_64.</li>
@@ -24,11 +24,11 @@ public class CreateImageRequest extends TeaModel {
      * <ul>
      * <li>BIOS: BIOS boot mode.</li>
      * <li>UEFI: UEFI boot mode.</li>
-     * <li>UEFI-Preferred: dual boot mode.</li>
+     * <li>UEFI-Preferred: Dual boot mode.</li>
      * </ul>
      * <notice>
      * 
-     * <p>To prevent instances from failing to start due to an unsupported boot mode, make sure that you understand the boot modes supported by the target image before specifying this parameter. For more information about image boot modes, see <a href="~~2244655#b9caa9b8bb1wf~~">Image boot modes</a>.</p>
+     * <p>To prevent the instance from failing to start due to an unsupported boot mode, make sure that you understand the boot modes supported by the target image before you select this parameter. For more information about image boot modes, see <a href="~~2244655#b9caa9b8bb1wf~~">Image boot modes</a>.</p>
      * </notice>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class CreateImageRequest extends TeaModel {
     public String bootMode;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -47,7 +47,7 @@ public class CreateImageRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the image. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
+     * <p>The image description. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>ImageTestDescription</p>
@@ -56,9 +56,9 @@ public class CreateImageRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The image detection strategy. If this parameter is not specified, detection is not triggered. Only the Standard detection mode is supported. </p>
+     * <p>The image detection strategy. If you do not configure this parameter, detection is not triggered. Only the standard (Standard) detection mode is supported. </p>
      * <blockquote>
-     * <p>Most Linux and Windows versions are supported. For more information about image detection items and operating system limitations, see <a href="https://help.aliyun.com/document_detail/439819.html">Image detection overview</a> and <a href="https://help.aliyun.com/document_detail/475800.html">Operating system limitations for image detection</a>.</p>
+     * <p>Most Linux and Windows versions are supported. For more information about image detection items and operating system limits, see <a href="https://help.aliyun.com/document_detail/439819.html">Image detection overview</a> and <a href="https://help.aliyun.com/document_detail/475800.html">Operating system limits for image detection</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -68,7 +68,7 @@ public class CreateImageRequest extends TeaModel {
     public String detectionStrategy;
 
     /**
-     * <p>The collection of disk and snapshot information used to create the custom image. If you want to create a custom image from system disk and data disk snapshots, use this parameter to specify the snapshots.</p>
+     * <p>The disks and snapshots used to create the custom image. If you want to create a custom image from a system disk snapshot and data disk snapshots, use this parameter to specify the snapshots.</p>
      */
     @NameInMap("DiskDeviceMapping")
     public java.util.List<CreateImageRequestDiskDeviceMapping> diskDeviceMapping;
@@ -77,13 +77,13 @@ public class CreateImageRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The image feature-related properties.</p>
+     * <p>The image feature attributes.</p>
      */
     @NameInMap("Features")
     public CreateImageRequestFeatures features;
 
     /**
-     * <p>The image family name. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with aliyun or acs:. The name cannot contain http:// or https://. The name can contain digits, colons (:), underscores (_), or hyphens (-).</p>
+     * <p>The name of the image family. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with aliyun or acs:, and cannot contain http:// or https://. It can contain digits, colons (:), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>hangzhou-daily-update</p>
@@ -92,7 +92,7 @@ public class CreateImageRequest extends TeaModel {
     public String imageFamily;
 
     /**
-     * <p>The image name. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with http:// or https://. The name can contain digits, colons (:), underscores (_), or hyphens (-).</p>
+     * <p>The image name. It must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with http:// or https://. It can contain digits, colons (:), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>TestCentOS</p>
@@ -103,7 +103,7 @@ public class CreateImageRequest extends TeaModel {
     /**
      * <p>The image version.</p>
      * <blockquote>
-     * <p>If you specify an instance ID (<code>InstanceId</code>) and the image of the instance is an Alibaba Cloud Marketplace image or a custom image created from an Alibaba Cloud Marketplace image, this parameter must be the same as the <code>ImageVersion</code> of the current instance image or left empty.</p>
+     * <p>If you specify the instance ID (<code>InstanceId</code>) and the image of the instance is an Alibaba Cloud Marketplace image or a custom image created from an Alibaba Cloud Marketplace image, this parameter must be the same as the <code>ImageVersion</code> of the current instance image or left empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -128,7 +128,7 @@ public class CreateImageRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The operating system distribution. After a data disk snapshot is used as the system disk of the image, specify the operating system distribution of the system disk by using this parameter. Valid values:</p>
+     * <p>The operating system. After you specify a data disk snapshot as the system disk of the image, you must use Platform to determine the operating system distribution of the system disk. Valid values:</p>
      * <ul>
      * <li>Aliyun</li>
      * <li>Anolis</li>
@@ -166,7 +166,7 @@ public class CreateImageRequest extends TeaModel {
     public String platform;
 
     /**
-     * <p>The region ID of the image. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID of the image. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the latest list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -176,9 +176,9 @@ public class CreateImageRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the custom image belongs. If you do not set this parameter to a specific value, the created image belongs to the default resource group.</p>
+     * <p>The ID of the resource group to which the custom image belongs. If you do not specify this parameter, the created image belongs to the default resource group.</p>
      * <blockquote>
-     * <p>If you invoke this operation as a Resource Access Management (RAM) user and <code>ResourceGroupId</code> is left empty, note that when the RAM user does not have permissions on the default resource group, the error message <code>Forbidden: User not authorized to operate on the specified resource</code> is returned. Set a resource group ID that the RAM user has permissions on, or grant the RAM user permissions on the default resource group by using the corresponding Alibaba Cloud account before invoking this operation again.</p>
+     * <p>If you use a Resource Access Management (RAM) user to invoke this operation and <code>ResourceGroupId</code> is left empty, note that if the RAM user does not have permissions on the default resource group, the operation returns the error message <code>Forbidden: User not authorized to operate on the specified resource</code>. Specify the ID of a resource group that the RAM user has permissions on, or use the corresponding Alibaba Cloud account to grant the RAM user permissions on the default resource group in the RAM Settings before you invoke this operation again.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -194,15 +194,15 @@ public class CreateImageRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The Secure Boot-related parameters.</p>
+     * <p>The secure boot parameters.</p>
      */
     @NameInMap("SecureBootOptions")
     public CreateImageRequestSecureBootOptions secureBootOptions;
 
     /**
-     * <p>The snapshot ID used to create the custom image.</p>
+     * <p>The ID of the snapshot used to create the custom image.</p>
      * <blockquote>
-     * <p>If you want to create a custom image only from the system disk snapshot of an instance, you can use this parameter or the <code>DiskDeviceMapping.N.SnapshotId</code> parameter. To include data disk snapshots, use only the <code>DiskDeviceMapping.N.SnapshotId</code> parameter to specify snapshots.</p>
+     * <p>If you create a custom image only from the system disk snapshot of an instance, you can use this parameter or the <code>DiskDeviceMapping.N.SnapshotId</code> parameter. If you add data disk snapshots, you can only use the <code>DiskDeviceMapping.N.SnapshotId</code> parameter to specify the snapshots.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -400,11 +400,11 @@ public class CreateImageRequest extends TeaModel {
 
     public static class CreateImageRequestDiskDeviceMapping extends TeaModel {
         /**
-         * <p>The device name in the custom image. Valid values:</p>
+         * <p>The device name of the disk in the custom image. Valid values:</p>
          * <ul>
          * <li><p>The device name of the system disk must be /dev/xvda.</p>
          * </li>
-         * <li><p>The device names of data disks are in alphabetical order from /dev/xvdb to /dev/xvdz and cannot be duplicated.</p>
+         * <li><p>The device names of data disks range from /dev/xvdb to /dev/xvdz and cannot be duplicate.</p>
          * </li>
          * </ul>
          * 
@@ -415,7 +415,7 @@ public class CreateImageRequest extends TeaModel {
         public String device;
 
         /**
-         * <p>The type of the disk in the new image. You can use this parameter to set a data disk snapshot as the system disk of the image. If you do not specify this parameter, the disk type defaults to the type of the disk corresponding to the snapshot. Valid values:</p>
+         * <p>The disk type in the new image. You can use this parameter to use a data disk snapshot as the system disk of the image. If you do not specify this parameter, the default value is the disk type corresponding to the snapshot. Valid values:</p>
          * <ul>
          * <li>system: system disk. Only one system disk snapshot can be specified.</li>
          * <li>data: data disk. Up to 16 data disk snapshots can be specified.</li>
@@ -430,12 +430,12 @@ public class CreateImageRequest extends TeaModel {
         /**
          * <p>The size of the disk. Unit: GiB. The valid values and default value of DiskDeviceMapping.N.Size depend on DiskDeviceMapping.N.SnapshotId:</p>
          * <ul>
-         * <li>If SnapshotId is not specified, the valid values and default value of Size are:<ul>
+         * <li>If SnapshotId is not specified, the valid values and default value of Size are as follows:<ul>
          * <li>Basic disk: 5 to 2000 GiB. Default value: 5.</li>
          * <li>Other disks: 20 to 32768 GiB. Default value: 20.</li>
          * </ul>
          * </li>
-         * <li>If SnapshotId is specified, the value of Size must be greater than or equal to the size of the snapshot. The default value is the size of the snapshot.</li>
+         * <li>If SnapshotId is specified, the value of Size must be greater than or equal to the size of the snapshot specified by SnapshotId. The default value is the size of the snapshot.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -496,10 +496,10 @@ public class CreateImageRequest extends TeaModel {
         /**
          * <p>The metadata access mode of the image. Valid values:</p>
          * <ul>
-         * <li>v1: When you use this image to create an ECS instance, you cannot set the metadata access mode to hardened mode only.</li>
-         * <li>v2: When you use this image to create an ECS instance, you can set the metadata access mode to hardened mode only.</li>
+         * <li>v1: When you create an ECS instance from this image, you cannot set the metadata access mode to Reinforced.</li>
+         * <li>v2: When you create an ECS instance from this image, you can set the metadata access mode to Reinforced.</li>
          * </ul>
-         * <p>Default value: When a snapshot is used to create the image, the default value is v1. When an instance is used to create the image, the default value is the ImdsSupport property of the image used to create the instance.</p>
+         * <p>Default value: If you create an image from a snapshot, the default value is v1. If you create an image from an instance, the default value is the ImdsSupport attribute value of the image used when the instance was created.</p>
          * 
          * <strong>example:</strong>
          * <p>v2</p>
@@ -524,11 +524,11 @@ public class CreateImageRequest extends TeaModel {
 
     public static class CreateImageRequestSecureBootOptions extends TeaModel {
         /**
-         * <p>Specifies whether the image supports Secure Boot. Valid values:</p>
+         * <p>Specifies whether the image supports secure boot. Valid values:</p>
          * <ul>
-         * <li>supported: Secure Boot is supported.</li>
-         * <li>unsupported: Secure Boot is not supported.<blockquote>
-         * <p>Secure Boot supports only the UEFI or UEFI-Preferred boot mode.</p>
+         * <li>supported: The image supports secure boot.</li>
+         * <li>unsupported: The image does not support secure boot.<blockquote>
+         * <p>Secure Boot only supports the UEFI or UEFI-Preferred boot mode.</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -553,7 +553,7 @@ public class CreateImageRequest extends TeaModel {
 
     public static class CreateImageRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the image. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the image. Valid values of N: 1 to 20. If you specify this parameter, it cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code> or contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>KeyTest</p>
@@ -562,7 +562,7 @@ public class CreateImageRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the image. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the image. Valid values of N: 1 to 20. If you specify this parameter, it can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>ValueTest</p>

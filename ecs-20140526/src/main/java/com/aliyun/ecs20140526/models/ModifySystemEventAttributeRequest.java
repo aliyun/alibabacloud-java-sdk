@@ -25,7 +25,7 @@ public class ModifySystemEventAttributeRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The new planned execution time of the system event. Specify the time in the <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/iso-8601-time-format">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The new scheduled execution time of the system event. Specify the time in the <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/iso-8601-time-format">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

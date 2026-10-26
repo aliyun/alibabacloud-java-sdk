@@ -4,42 +4,18 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourceByTagsResponseBody extends TeaModel {
-    /**
-     * <p>The page number of the results.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries per page.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>50</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1C1E5359-71D7-44D8-8FAA-0327B549157X</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Resources")
     public DescribeResourceByTagsResponseBodyResources resources;
 
-    /**
-     * <p>The total number of returned resources.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>8</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

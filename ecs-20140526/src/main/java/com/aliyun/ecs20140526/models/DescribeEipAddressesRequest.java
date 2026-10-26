@@ -7,24 +7,66 @@ public class DescribeEipAddressesRequest extends TeaModel {
     @NameInMap("Filter")
     public java.util.List<DescribeEipAddressesRequestFilter> filter;
 
+    /**
+     * <p>The ID of the EIP to query. You can enter up to 50 IDs. Separate multiple IDs with commas.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-2zeerraiwb7ujxscd****</p>
+     */
     @NameInMap("AllocationId")
     public String allocationId;
 
+    /**
+     * <p>The ID of the associated cloud service instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-2zebb08phyccdvf****</p>
+     */
     @NameInMap("AssociatedInstanceId")
     public String associatedInstanceId;
 
+    /**
+     * <p>The type of the associated cloud service instance. Valid values: EcsInstance, SlbInstance, Nat, HaVip, NetworkInterface, and IpAddress.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EcsInstance</p>
+     */
     @NameInMap("AssociatedInstanceType")
     public String associatedInstanceType;
 
+    /**
+     * <p>The billing method of the EIP. Valid values: PostPaid (pay-as-you-go) and PrePaid (subscription).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <p>The EIP address to query. You can enter up to 50 addresses. Separate multiple addresses with commas.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>47.75.XX.XX</p>
+     */
     @NameInMap("EipAddress")
     public String eipAddress;
 
+    /**
+     * <p>The line type. Valid values include BGP and BGP_PRO.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BGP</p>
+     */
     @NameInMap("ISP")
     public String ISP;
 
+    /**
+     * <p>The lock type. Valid values: financial (locked due to overdue payment) and security (locked due to security reasons).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>financial</p>
+     */
     @NameInMap("LockReason")
     public String lockReason;
 
@@ -34,14 +76,24 @@ public class DescribeEipAddressesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The page number. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Maximum value: 100. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
+     * <p>The ID of the region where the EIP resides. You can call the DescribeRegions operation to query region IDs.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -52,6 +104,12 @@ public class DescribeEipAddressesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The status of the EIP. Valid values: Associating, Unassociating, InUse, Available, and Releasing.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Available</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -189,9 +247,21 @@ public class DescribeEipAddressesRequest extends TeaModel {
     }
 
     public static class DescribeEipAddressesRequestFilter extends TeaModel {
+        /**
+         * <p>The first filter key. Set the value to CreationStartTime, which specifies the start time of resource creation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreationStartTime</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The first filter value. Specify the time in UTC in the YYYY-MM-DDThh:mmZ format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-01T01:00Z</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -14,8 +14,8 @@ public class RenewInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Renews the instance to a <a href="https://help.aliyun.com/document_detail/63396.html">unified expiration date</a>. Valid values: 1 to 28.</p>
-     * <p>To use this parameter, you must <a href="~~63396#694cb636c0rp6~~">set a unified expiration date for ECS instances</a>. The value of this parameter must match the unified expiration date that you have set. Otherwise, the call fails.</p>
+     * <p>The day on which to renew the instance to a <a href="https://help.aliyun.com/document_detail/63396.html">unified expiration date</a>. Valid values: 1 to 28.</p>
+     * <p>To use this parameter, you must first <a href="~~63396#694cb636c0rp6~~">set a unified expiration date for ECS instances</a>. The value of this parameter must match the unified expiration date that you have set. Otherwise, the call fails.</p>
      * <blockquote>
      * <p>You must specify either the renewal period parameters (Period and PeriodUnit) or the unified expiration date parameter (ExpectedRenewDay), but not both.</p>
      * </blockquote>
@@ -27,7 +27,7 @@ public class RenewInstanceRequest extends TeaModel {
     public Integer expectedRenewDay;
 
     /**
-     * <p>The instance ID of the instance that you want to renewal.</p>
+     * <p>The ID of the instance that you want to renew.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class RenewInstanceRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the renewal period. This parameter specifies the unit of Period. Valid values:</p>
+     * <p>The unit of the renewal period. This parameter specifies the unit for the Period parameter. Valid values:</p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
      * <li>Week.</li>

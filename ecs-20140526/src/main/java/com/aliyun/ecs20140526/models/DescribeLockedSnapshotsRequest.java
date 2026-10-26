@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeLockedSnapshotsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to perform only a dry run. Valid values: </p>
+     * <p>Specifies whether to only precheck the request. Valid values: </p>
      * <ul>
-     * <li>true: performs only a dry run. The system checks the request for potential issues, including required parameters, request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned. </li>
-     * <li>false (default): performs a dry run and sends the request. If the request passes the dry run, the operation is performed.</li>
+     * <li>true: The request is prechecked but not executed. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the precheck, an error is returned. If the request passes the precheck, the DryRunOperation error code is returned. </li>
+     * <li>false: The request is prechecked and executed if it passes the precheck. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,9 +20,9 @@ public class DescribeLockedSnapshotsRequest extends TeaModel {
     /**
      * <p>The lock status. Valid values: </p>
      * <ul>
-     * <li>compliance-cooloff: The snapshot is locked in compliance mode but is still within the cooling-off period. The snapshot cannot be deleted, but users with the required RAM permissions can unlock the snapshot, extend or shorten the cooling-off period, or extend or shorten the lock duration. </li>
+     * <li>compliance-cooloff: The snapshot is locked in compliance mode but is still in the cooling-off period. The snapshot cannot be deleted, but users with the required RAM permissions can unlock the snapshot, extend or shorten the cooling-off period, and extend or shorten the lock duration. </li>
      * <li>compliance: The snapshot is locked in compliance mode and the cooling-off period has ended. The snapshot cannot be unlocked or deleted, but users with the required RAM permissions can extend the lock duration. </li>
-     * <li>expired: The snapshot was previously locked, but the lock duration has ended and the lock has expired. The snapshot is currently unlocked and can be deleted.</li>
+     * <li>expired: The snapshot was locked, but the lock duration has ended and the lock has expired. The snapshot is currently unlocked and can be deleted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,11 +32,11 @@ public class DescribeLockedSnapshotsRequest extends TeaModel {
     public String lockStatus;
 
     /**
-     * <p>The maximum number of entries per page for a paging query. Maximum value: 100. </p>
+     * <p>The number of entries per page during paging for a paged query. Maximum value: 100. </p>
      * <p>Default value: </p>
      * <ul>
-     * <li>If this parameter is not specified or is set to a value less than 10, the default value is 10. </li>
-     * <li>If this parameter is set to a value greater than 100, the default value is 100.</li>
+     * <li>If no Settings are specified or the Settings value is less than 10, the default value is 10. </li>
+     * <li>If the Settings value is greater than 100, the default value is 100.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class DescribeLockedSnapshotsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Set this parameter to the <code>NextToken</code> value returned in the previous API call.</p>
+     * <p>The query token. Set the value to the NextToken parameter value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -69,7 +69,7 @@ public class DescribeLockedSnapshotsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/api-ecs-2014-05-26-describeregions">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/api-ecs-2014-05-26-describeregions">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -93,7 +93,7 @@ public class DescribeLockedSnapshotsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The list of snapshot IDs. Valid values of array length: 1 to 100.</p>
+     * <p>The snapshot IDs. Array length: 1 to 100.</p>
      */
     @NameInMap("SnapshotIds")
     public java.util.List<String> snapshotIds;

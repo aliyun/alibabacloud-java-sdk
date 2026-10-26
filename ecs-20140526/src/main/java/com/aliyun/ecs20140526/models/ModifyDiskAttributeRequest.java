@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyDiskAttributeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the performance burst feature for disks that support burst. Valid values:</p>
+     * <p>Specifies whether to enable the performance burst feature for a cloud disk that supports this feature. Valid values:</p>
      * <ul>
-     * <li>true: Enabled.</li>
-     * <li>false: Disabled.</li>
+     * <li>true: Yes.</li>
+     * <li>false: No.</li>
      * </ul>
      * <blockquote>
-     * <p>An error is returned if you specify any value for a disk that does not support the burst feature.</p>
+     * <p>An error is returned if you specify this parameter for a cloud disk that does not support the performance burst feature.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,14 +21,14 @@ public class ModifyDiskAttributeRequest extends TeaModel {
     public Boolean burstingEnabled;
 
     /**
-     * <p>Specifies whether to delete the automatic snapshots of the disk when the disk is deleted. Valid values:</p>
+     * <p>Specifies whether to delete the automatic snapshots of the cloud disk when the cloud disk is deleted. Valid values:</p>
      * <ul>
      * <li><p>true: Enabled.</p>
      * </li>
      * <li><p>false: Disabled.</p>
      * </li>
      * </ul>
-     * <p>Default value: null, which indicates that the current value remains unchanged.</p>
+     * <p>Default value: null. A value of null indicates that the current value is not changed.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -37,15 +37,15 @@ public class ModifyDiskAttributeRequest extends TeaModel {
     public Boolean deleteAutoSnapshot;
 
     /**
-     * <p>Specifies whether to release the disk when the associated instance is released. Default value: null, which indicates that the current value remains unchanged.</p>
-     * <p>&lt;props=&quot;china&quot;&gt;Disks that have the multi-attach feature enabled do not support this parameter.</p>
-     * <p>An error is returned if you set <code>DeleteWithInstance</code> to <code>false</code> in the following cases: </p>
+     * <p>Specifies whether to release the cloud disk when the instance is released. Default value: null. A value of null indicates that the current value is not changed.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;This parameter is not supported for cloud disks that have the multi-attach feature enabled.</p>
+     * <p>An error is returned if you set the <code>DeleteWithInstance</code> parameter to <code>false</code> in the following scenarios: </p>
      * <ul>
-     * <li>The category of the disk is local disk (ephemeral).  </li>
-     * <li>The category of the disk is basic disk (cloud) and the disk is not detachable (Portable=false).</li>
+     * <li>The category of the cloud disk is local disk (ephemeral).  </li>
+     * <li>The category of the cloud disk is basic cloud disk (cloud) and the cloud disk is not removable (Portable=false).</li>
      * </ul>
      * <blockquote>
-     * <p>Warning: If you set DeleteWithInstance to false and the ECS instance to which the disk is attached is security-locked with &quot;LockReason&quot; : &quot;security&quot; in OperationLocks, the DeleteWithInstance setting is ignored and the disk is released together with the instance.</p>
+     * <p>Warning: If you set this parameter to false, the cloud disk is not released when the instance is released. However, if the ECS instance to which the cloud disk is attached is locked for security reasons and the &quot;LockReason&quot; : &quot;security&quot; state is added to OperationLocks, the DeleteWithInstance attribute of the cloud disk is ignored and the cloud disk is released along with the instance.</warning></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class ModifyDiskAttributeRequest extends TeaModel {
     public Boolean deleteWithInstance;
 
     /**
-     * <p>The description of the disk. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description of the cloud disk. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>TestDescription</p>
@@ -64,9 +64,9 @@ public class ModifyDiskAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the disk whose attributes you want to modify.</p>
+     * <p>The ID of the cloud disk whose attributes you want to modify.</p>
      * <blockquote>
-     * <p>The DiskId and DiskIds.N parameters cannot be specified at the same time. Specify one of them as needed.</p>
+     * <p>You cannot specify both the <code>DiskId</code> and <code>DiskIds.N</code> parameters. Specify one of them based on your business requirements.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -76,9 +76,9 @@ public class ModifyDiskAttributeRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>The IDs of the disks whose attributes you want to modify. Valid values of N: 0 to 100.</p>
+     * <p>The IDs of the cloud disks whose attributes you want to modify. Valid values of N: 0 to 100.</p>
      * <blockquote>
-     * <p>The DiskId and DiskIds.N parameters cannot be specified at the same time. Specify one of them as needed.</p>
+     * <p>You cannot specify both the <code>DiskId</code> and <code>DiskIds.N</code> parameters. Specify one of them based on your business requirements.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class ModifyDiskAttributeRequest extends TeaModel {
     public java.util.List<String> diskIds;
 
     /**
-     * <p>The name of the disk. The name must be 2 to 128 characters in length and can contain letters, digits, and characters categorized as letter in Unicode, including Chinese characters. The name can contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The name of the cloud disk. The name must be 2 to 128 characters in length and can contain letters and digits in Unicode. It can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>MyDiskName</p>
@@ -97,14 +97,14 @@ public class ModifyDiskAttributeRequest extends TeaModel {
     public String diskName;
 
     /**
-     * <p>Specifies whether to enable the automatic snapshot policy for the disk. Valid values:</p>
+     * <p>Specifies whether to enable the automatic snapshot policy feature for the cloud disk. Valid values:</p>
      * <ul>
      * <li>true: Enabled.</li>
      * <li>false: Disabled.</li>
      * </ul>
-     * <p>Default value: null, which indicates that the current value remains unchanged.</p>
+     * <p>Default value: null. A value of null indicates that the current value is not changed.</p>
      * <blockquote>
-     * <p><strong>[Deprecated]</strong> This parameter is deprecated. The automatic snapshot policy feature is enabled by default for disks after they are created. You only need to associate an automatic snapshot policy with the disk.</p>
+     * <p>This parameter is deprecated. The automatic snapshot policy feature is enabled by default for newly created cloud disks. You only need to apply an automatic snapshot policy to the cloud disk to use the feature.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class ModifyDiskAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

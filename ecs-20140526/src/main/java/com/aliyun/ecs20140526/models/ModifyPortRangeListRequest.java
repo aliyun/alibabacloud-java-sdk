@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyPortRangeListRequest extends TeaModel {
     /**
-     * <p>The entries to add or modify in the port range list.</p>
+     * <p>The array of port list entries to be added or modified.</p>
      */
     @NameInMap("AddEntry")
     public java.util.List<ModifyPortRangeListRequestAddEntry> addEntry;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>Ensures the idempotence of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -20,7 +20,7 @@ public class ModifyPortRangeListRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the port range list. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
+     * <p>The description of the port list. The description must be 2 to 256 characters in length, and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>This is description.</p>
@@ -35,7 +35,7 @@ public class ModifyPortRangeListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the port range list to modify.</p>
+     * <p>The ID of the port list to be modified.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class ModifyPortRangeListRequest extends TeaModel {
     public String portRangeListId;
 
     /**
-     * <p>The name of the port range list. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with http://, https://, com.aliyun, or com.alibabacloud. It can contain letters, Chinese characters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The name of the port list. The name must be 2 to 128 characters in length, and must start with a letter or a Chinese character. It cannot start with http://, https://, com.aliyun, or com.alibabacloud. It can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>PortRangeListNameSample</p>
@@ -54,7 +54,7 @@ public class ModifyPortRangeListRequest extends TeaModel {
     public String portRangeListName;
 
     /**
-     * <p>The region ID of the port range list. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID of the port list. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +64,7 @@ public class ModifyPortRangeListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The entries to delete from the port range list.</p>
+     * <p>The array of port list entries to be deleted.</p>
      */
     @NameInMap("RemoveEntry")
     public java.util.List<ModifyPortRangeListRequestRemoveEntry> removeEntry;
@@ -170,7 +170,7 @@ public class ModifyPortRangeListRequest extends TeaModel {
 
     public static class ModifyPortRangeListRequestAddEntry extends TeaModel {
         /**
-         * <p>The description of the port range. The description must be 2 to 32 characters in length and cannot start with http:// or https://. Valid values of N: 0 to 200.</p>
+         * <p>The description of the port range. The description must be 2 to 32 characters in length, and cannot start with http:// or https://. Valid values of N: 0 to 200.</p>
          * 
          * <strong>example:</strong>
          * <p>This is description.</p>
@@ -179,13 +179,13 @@ public class ModifyPortRangeListRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The port range. Valid values of N: 0 to 200. Settings:</p>
+         * <p>The port range. Valid values of N: 0 to 200. Limits:</p>
          * <ul>
-         * <li><p>The number of entries cannot exceed the maximum number of entries (MaxEntries).</p>
+         * <li><p>The number of entries cannot exceed the maximum entry capacity (<code>MaxEntries</code>).</p>
          * </li>
-         * <li><p>You cannot specify duplicate PortRange values.</p>
+         * <li><p>Duplicate <code>PortRange</code> values are not allowed.</p>
          * </li>
-         * <li><p>The value cannot be the same as a RemoveEntry.N.PortRange parameter value.</p>
+         * <li><p>The value cannot be the same as the <code>RemoveEntry.N.PortRange</code> parameter value.</p>
          * </li>
          * </ul>
          * 
@@ -220,11 +220,11 @@ public class ModifyPortRangeListRequest extends TeaModel {
 
     public static class ModifyPortRangeListRequestRemoveEntry extends TeaModel {
         /**
-         * <p>The port range. Valid values of N: 0 to 200. Settings:</p>
+         * <p>The port range. Valid values of N: 0 to 200. Limits:</p>
          * <ul>
-         * <li><p>You cannot specify duplicate PortRange values.</p>
+         * <li><p>Duplicate <code>PortRange</code> values are not allowed.</p>
          * </li>
-         * <li><p>The value cannot be the same as an AddEntry.N.PortRange parameter value.</p>
+         * <li><p>The value cannot be the same as the <code>AddEntry.N.PortRange</code> parameter value.</p>
          * </li>
          * </ul>
          * 

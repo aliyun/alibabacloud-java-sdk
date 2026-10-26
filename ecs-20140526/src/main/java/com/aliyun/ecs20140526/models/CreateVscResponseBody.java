@@ -14,7 +14,7 @@ public class CreateVscResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the Virtual Storage Channel.</p>
+     * <p>The ID of the virtual storage channel.</p>
      * 
      * <strong>example:</strong>
      * <p>vsc-b*d31dq</p>

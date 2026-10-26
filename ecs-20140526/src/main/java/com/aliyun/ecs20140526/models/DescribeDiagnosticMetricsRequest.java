@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeDiagnosticMetricsRequest extends TeaModel {
     /**
-     * <p>The number of entries per page in a paging query. Maximum value: 100.</p>
+     * <p>The number of entries per page for a paged query. Maximum value: 100.</p>
      * <p>Default value:</p>
      * <ul>
      * <li>If this parameter is not set, the default value is 10.</li>
-     * <li>If the value is set to a number greater than 100, the default value is 100.</li>
+     * <li>If the value set is greater than 100, the default value is 100.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DescribeDiagnosticMetricsRequest extends TeaModel {
     public java.util.List<String> metricIds;
 
     /**
-     * <p>The pagination token. Set this parameter to the <code>NextToken</code> value returned in the previous call. You do not need to set this parameter for the first request.</p>
+     * <p>The pagination token. Set this parameter to the value of NextToken returned in the previous call. Leave this parameter empty for the first call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -34,7 +34,7 @@ public class DescribeDiagnosticMetricsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

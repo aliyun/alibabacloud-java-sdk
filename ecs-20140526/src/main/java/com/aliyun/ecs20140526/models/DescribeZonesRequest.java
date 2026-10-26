@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeZonesRequest extends TeaModel {
     /**
-     * <p>The natural language that is used to filter responses. For more information, see <a href="https://tools.ietf.org/html/rfc7231">RFC 7231</a>. Valid values:  </p>
+     * <p>The language used to filter the returned results, such as Chinese, English, or Japanese. For more information, see <a href="https://tools.ietf.org/html/rfc7231">RFC 7231</a>. Valid values:  </p>
      * <ul>
      * <li>zh-CN: Simplified Chinese.</li>
      * <li>zh-TW: Traditional Chinese.</li>
@@ -24,7 +24,7 @@ public class DescribeZonesRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The billing method supported by resources in the zone. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values: </p>
+     * <p>The billing method of the resources supported in the zone. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values: </p>
      * <ul>
      * <li>PrePaid: subscription.</li>
      * <li>PostPaid: pay-as-you-go.</li>
@@ -44,7 +44,7 @@ public class DescribeZonesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the zones are located. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID of the zone. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the latest list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,11 +60,11 @@ public class DescribeZonesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The bidding policy for pay-as-you-go instances. You can specify this parameter when <code>InstanceChargeType=PostPaid</code>. For more information, see <a href="https://help.aliyun.com/document_detail/52088.html">Spot instances</a>. Valid values:</p>
+     * <p>The bidding policy for pay-as-you-go instances. You can specify this parameter when <code>InstanceChargeType</code> is set to <code>PostPaid</code>. For more information, see <a href="https://help.aliyun.com/document_detail/52088.html">Spot instances</a>. Valid values:</p>
      * <ul>
      * <li>NoSpot: regular pay-as-you-go instance.</li>
-     * <li>SpotWithPriceLimit: spot instance with a maximum price limit.</li>
-     * <li>SpotAsPriceGo: spot instance priced at the market price with the pay-as-you-go price as the upper limit.</li>
+     * <li>SpotWithPriceLimit: spot instance with a maximum price.</li>
+     * <li>SpotAsPriceGo: spot instance whose price is automatically offered by the system, up to the pay-as-you-go price.</li>
      * </ul>
      * <p>Default value: NoSpot.</p>
      * 
@@ -75,10 +75,10 @@ public class DescribeZonesRequest extends TeaModel {
     public String spotStrategy;
 
     /**
-     * <p>Specifies whether to display detailed information.</p>
+     * <p>Specifies whether to display detailed information. Valid values:</p>
      * <ul>
-     * <li>true: Display detailed information.</li>
-     * <li>false: Do not display detailed information.</li>
+     * <li>true: Displays detailed information.</li>
+     * <li>false: Does not display detailed information.</li>
      * </ul>
      * <p>Default value: true.</p>
      * 

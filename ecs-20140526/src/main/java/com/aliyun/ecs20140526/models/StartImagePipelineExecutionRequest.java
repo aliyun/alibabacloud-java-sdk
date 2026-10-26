@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartImagePipelineExecutionRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, and you must ensure that the value is unique among different requests. The <strong>ClientToken</strong> parameter can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -30,7 +30,7 @@ public class StartImagePipelineExecutionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,15 +46,13 @@ public class StartImagePipelineExecutionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<StartImagePipelineExecutionRequestTag> tag;
 
     /**
-     * <blockquote>
-     * <p>This parameter is deprecated.</p>
-     * </blockquote>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated.</p>
      */
     @NameInMap("TemplateTag")
     @Deprecated
@@ -140,7 +138,7 @@ public class StartImagePipelineExecutionRequest extends TeaModel {
 
     public static class StartImagePipelineExecutionRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -149,7 +147,7 @@ public class StartImagePipelineExecutionRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length, and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>
@@ -182,9 +180,7 @@ public class StartImagePipelineExecutionRequest extends TeaModel {
 
     public static class StartImagePipelineExecutionRequestTemplateTag extends TeaModel {
         /**
-         * <blockquote>
-         * <p>This parameter is deprecated.</p>
-         * </blockquote>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -193,9 +189,7 @@ public class StartImagePipelineExecutionRequest extends TeaModel {
         public String key;
 
         /**
-         * <blockquote>
-         * <p>This parameter is deprecated.</p>
-         * </blockquote>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostClustersRequest extends TeaModel {
     /**
-     * <p>The IDs of dedicated host clusters. The value is a JSON array of dedicated host cluster IDs in the format of <code>[&quot;dc-xxxxxxxxx&quot;, &quot;dc-yyyyyyyyy&quot;, … ,&quot;dc-zzzzzzzzz&quot;]</code>. A maximum of 100 IDs are supported. Separate multiple IDs with commas (,).</p>
+     * <p>The list of dedicated host cluster IDs. The value can be a JSON array that consists of multiple dedicated host cluster IDs in the following format: [&quot;dc-xxxxxxxxx&quot;, &quot;dc-yyyyyyyyy&quot;, ..., &quot;dc-zzzzzzzzz&quot;]. You can specify up to 100 IDs. Separate multiple IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;dc-bp12wlf6am0vz9v2****&quot;, &quot;dc-bp12wlf6am0vz9v3****&quot;]</p>
@@ -24,7 +24,7 @@ public class DescribeDedicatedHostClustersRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is not yet available.</p>
+     * <p>This parameter is not available and is not supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class DescribeDedicatedHostClustersRequest extends TeaModel {
 
     /**
      * <p>The page number of the dedicated host cluster list.</p>
-     * <p>Minimum value: 1.</p>
+     * <p>Starting value: 1.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class DescribeDedicatedHostClustersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for the paged query. Settings for paging:</p>
+     * <p>The paging Settings for the number of entries per page in a paged query.</p>
      * <p>Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 
@@ -62,7 +62,7 @@ public class DescribeDedicatedHostClustersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the dedicated host cluster. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID of the dedicated host cluster. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -91,7 +91,7 @@ public class DescribeDedicatedHostClustersRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is not yet available.</p>
+     * <p>This parameter is not available and is not supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -101,13 +101,13 @@ public class DescribeDedicatedHostClustersRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeDedicatedHostClustersRequestTag> tag;
 
     /**
-     * <p>The zone ID of the dedicated host cluster. You can call <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> to query the available zones.</p>
+     * <p>The zone ID of the dedicated host cluster. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the zones in a region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-f</p>
@@ -234,8 +234,8 @@ public class DescribeDedicatedHostClustersRequest extends TeaModel {
 
     public static class DescribeDedicatedHostClustersRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the dedicated host cluster. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>If you use a single tag to filter resources, the resource count with the tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that have all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+         * <p>The tag key of the dedicated host cluster. Valid values of N: 1 to 20. If you specify this parameter, it cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with aliyun or acs:, or contain http:// or https://.</p>
+         * <p>When you use a single tag to filter resources, the resource count returned cannot exceed 1,000. When you use multiple tags to filter resources, the resource count of resources attached to all the specified tags cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -244,7 +244,7 @@ public class DescribeDedicatedHostClustersRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the dedicated host cluster. Valid values of N: 1 to 20. The tag value cannot be an empty string. The tag value can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the dedicated host cluster. Valid values of N: 1 to 20. If you specify this parameter, it cannot be an empty string. The tag value can be up to 64 characters in length, and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

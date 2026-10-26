@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     /**
-     * <p>The retention period of cross-region snapshot replicas. Unit: days. Valid values:</p>
+     * <p>The retention period of cross-region replicated snapshots. Unit: days. Valid values:</p>
      * <ul>
-     * <li>-1: Snapshot replicas are permanently retained.</li>
-     * <li>1 to 65535: the number of days for which snapshot replicas are retained.</li>
+     * <li>-1: The snapshots are permanently retained.</li>
+     * <li>1 to 65535: The snapshots are retained for the specified number of days.</li>
      * </ul>
      * <p>Default value: -1.</p>
      * 
@@ -19,16 +19,16 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     public Integer copiedSnapshotsRetentionDays;
 
     /**
-     * <p>The encryption parameter object for cross-region snapshot replication.</p>
+     * <p>The encryption parameters for cross-region snapshot replication.</p>
      */
     @NameInMap("CopyEncryptionConfiguration")
     public ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfiguration copyEncryptionConfiguration;
 
     /**
-     * <p>Specifies whether to allow automatic cross-region replication.</p>
+     * <p>Specifies whether to enable automatic cross-region replication. Valid values:</p>
      * <ul>
-     * <li>true: allowed.</li>
-     * <li>false: not allowed.</li>
+     * <li>true: Yes.</li>
+     * <li>false: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The destination region to which snapshots are replicated. Currently, you can set only one destination region.</p>
+     * <p>The destination region for cross-region snapshot replication. You can specify only one destination region.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;cn-hangzhou&quot;]</p>
@@ -62,7 +62,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     public java.util.List<ModifyAutoSnapshotPolicyExRequestTargetTags> targetTags;
 
     /**
-     * <p>The ID of the automatic snapshot policy. You can call <a href="https://help.aliyun.com/document_detail/25530.html">DescribeAutoSnapshotPolicyEx</a> to query available automatic snapshot policies.</p>
+     * <p>The ID of the automatic snapshot policy. You can call the <a href="https://help.aliyun.com/document_detail/25530.html">DescribeAutoSnapshotPolicyEx</a> operation to query the available automatic snapshot policies.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,7 +81,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     public String autoSnapshotPolicyName;
 
     /**
-     * <p>The region ID of the automatic snapshot policy. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID of the automatic snapshot policy. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -91,11 +91,11 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The days of the week on which automatic snapshots are created. Unit: days. The cycle is weekly. Valid values: 1 to 7. For example, 1 indicates Monday.</p>
-     * <p>To create multiple automatic snapshots within a week, you can specify multiple days:</p>
+     * <p>The days of the week on which automatic snapshots are created. Valid values: 1 to 7, which represent Monday to Sunday. For example, 1 indicates Monday.</p>
+     * <p>If you want to create automatic snapshots on multiple days within a week, you can specify multiple days:</p>
      * <ul>
      * <li>You can specify up to 7 days.</li>
-     * <li>Multiple days are specified in a JSON array in the format of <code>&quot;1&quot;, &quot;2&quot;, … &quot;7&quot;</code>. Separate the days with commas (,).</li>
+     * <li>Specify multiple days in a JSON array, such as <code>[&quot;1&quot;, &quot;2&quot;, ... &quot;7&quot;]</code>. Separate the days with commas (,).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -107,8 +107,8 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     /**
      * <p>The retention period of automatic snapshots. Unit: days. Valid values:</p>
      * <ul>
-     * <li>-1: Automatic snapshots are permanently retained.</li>
-     * <li>1 to 65536: the number of days for which automatic snapshots are retained.</li>
+     * <li>-1: The snapshots are permanently retained.</li>
+     * <li>1 to 65536: The snapshots are retained for the specified number of days.</li>
      * </ul>
      * <p>Default value: -1.</p>
      * 
@@ -119,11 +119,11 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     public Integer retentionDays;
 
     /**
-     * <p>The points in time at which automatic snapshots are created. The time is displayed in UTC+8. Unit: hours. Valid values: 0 to 23, which correspond to the 24 points in time from 00:00 to 23:00. For example, 1 indicates 01:00.</p>
-     * <p>To create multiple automatic snapshots within a day, you can specify multiple points in time:</p>
+     * <p>The points in time at which automatic snapshots are created. The time is in UTC+8 and measured in hours. Valid values: 0 to 23, which represent 24 points in time from 00:00 to 23:00. For example, 1 indicates 01:00.</p>
+     * <p>If you want to create multiple automatic snapshots within a day, you can specify multiple points in time:</p>
      * <ul>
      * <li>You can specify up to 24 points in time.</li>
-     * <li>Multiple points in time are specified in a JSON array in the format of <code>&quot;0&quot;, &quot;1&quot;, … &quot;23&quot;</code>. Separate the points in time with commas (,).</li>
+     * <li>Specify multiple points in time in a JSON array, such as <code>[&quot;0&quot;, &quot;1&quot;, ... &quot;23&quot;]</code>. Separate the points in time with commas (,).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -251,7 +251,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
 
     public static class ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfigurationArn extends TeaModel {
         /**
-         * <p>This parameter is not publicly available.</p>
+         * <p>This parameter is not available.</p>
          * 
          * <strong>example:</strong>
          * <p>1000000000</p>
@@ -260,7 +260,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
         public Long assumeRoleFor;
 
         /**
-         * <p>This parameter is not publicly available.</p>
+         * <p>This parameter is not available.</p>
          * 
          * <strong>example:</strong>
          * <p>hide</p>
@@ -269,7 +269,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
         public String roleType;
 
         /**
-         * <p>This parameter is not publicly available.</p>
+         * <p>This parameter is not available.</p>
          * 
          * <strong>example:</strong>
          * <p>hide</p>
@@ -310,16 +310,16 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
 
     public static class ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfiguration extends TeaModel {
         /**
-         * <p>This parameter is not publicly available.</p>
+         * <p>This parameter is not available.</p>
          */
         @NameInMap("Arn")
         public java.util.List<ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfigurationArn> arn;
 
         /**
-         * <p>Specifies whether to enable encryption for cross-region snapshot replication. Valid values:</p>
+         * <p>Specifies whether to enable encrypted cross-region snapshot replication. Valid values:</p>
          * <ul>
-         * <li>true: Encryption is enabled. </li>
-         * <li>false: Encryption is not enabled.</li>
+         * <li>true: Yes. </li>
+         * <li>false: No.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -330,7 +330,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
         public Boolean encrypted;
 
         /**
-         * <p>The key ID of the Key Management Service (KMS) key used for encrypted cross-region snapshot replication.</p>
+         * <p>The KMS key ID used for encrypted cross-region snapshot replication.</p>
          * 
          * <strong>example:</strong>
          * <p>0e478b7a-4262-4802-b8cb-00d3fb40826X</p>
@@ -371,19 +371,15 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
 
     public static class ModifyAutoSnapshotPolicyExRequestTargetTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
-         * <p>Valid values of N: 1 to 5.</p>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key. Valid values of N: 1 to 5. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with aliyun or acs: or contain http:// or https://.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
-         * <p>Valid values of N: 1 to 5.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value. Valid values of N: 1 to 5. It can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <blockquote>
-         * <p>If you pass in an empty value or an empty string, the tag value matches any value.</p>
+         * <p>If this parameter is left empty or set to an empty string, it indicates any value.</p>
          * </blockquote>
          */
         @NameInMap("Value")

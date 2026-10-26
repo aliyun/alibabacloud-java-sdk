@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResizeDiskRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">Ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -14,7 +14,7 @@ public class ResizeDiskRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The disk ID. You can call <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> to query disk IDs.</p>
+     * <p>The ID of the cloud disk. You can call the <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> operation to query the ID of the cloud disk.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,12 +24,12 @@ public class ResizeDiskRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>The new disk capacity that you want after expansion. Unit: GiB. Valid values:</p>
+     * <p>The new capacity of the cloud disk. Unit: GiB. Valid values:</p>
      * <ul>
-     * <li><p>System disk:</p>
+     * <li><p>System cloud disk:</p>
      * <ul>
-     * <li>Basic disk: 20 to 500.</li>
-     * <li>Enterprise SSD:<ul>
+     * <li>Basic cloud disk: 20 to 500.</li>
+     * <li>ESSD:<ul>
      * <li>PL0: 1 to 2048.</li>
      * <li>PL1: 20 to 2048.</li>
      * <li>PL2: 461 to 2048.</li>
@@ -37,16 +37,16 @@ public class ResizeDiskRequest extends TeaModel {
      * </ul>
      * </li>
      * <li>ESSD AutoPL disk: 1 to 2048.</li>
-     * <li>Other disk types: 20 to 2048.</li>
+     * <li>Other cloud disk types: 20 to 2048.</li>
      * </ul>
      * </li>
-     * <li><p>Data disk:</p>
+     * <li><p>Data cloud disk:</p>
      * <ul>
-     * <li><p>Ultra disk (cloud_efficiency): 20 to 32768.</p>
+     * <li><p>Ultra cloud disk (cloud_efficiency): 20 to 32768.</p>
      * </li>
      * <li><p>Standard SSD (cloud_ssd): 20 to 32768.</p>
      * </li>
-     * <li><p>Enterprise SSD (cloud_essd): The valid values depend on the value of <code>PerformanceLevel</code>. You can call <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> to query disk information and check the <code>PerformanceLevel</code> parameter in the response.</p>
+     * <li><p>ESSD (cloud_essd): The valid values vary based on the <code>PerformanceLevel</code> parameter. You can call the <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> operation to query the cloud disk information and check the valid values based on the <code>PerformanceLevel</code> parameter in the response.</p>
      * <ul>
      * <li>PL0: 1 to 65536.</li>
      * <li>PL1: 20 to 65536.</li>
@@ -54,22 +54,22 @@ public class ResizeDiskRequest extends TeaModel {
      * <li>PL3: 1261 to 65536.</li>
      * </ul>
      * </li>
-     * <li><p>Basic disk (cloud): 5 to 2000.</p>
+     * <li><p>Basic cloud disk (cloud): 5 to 2000.</p>
      * </li>
      * <li><p>ESSD AutoPL disk (cloud_auto): 1 to 65536.
      * &lt;props=&quot;china&quot;&gt;</p>
      * </li>
      * <li><p>ESSD Entry disk (cloud_essd_entry): 10 to 32768.</p>
      * </li>
-     * <li><p>Elastic ephemeral disk - Standard (elastic_ephemeral_disk_standard): 64 to 8,192.</p>
+     * <li><p>Standard elastic ephemeral disk (elastic_ephemeral_disk_standard): 64 to 8192.</p>
      * </li>
-     * <li><p>Elastic ephemeral disk - Premium (elastic_ephemeral_disk_premium): 64 to 8,192.</p>
+     * <li><p>Premium elastic ephemeral disk (elastic_ephemeral_disk_premium): 64 to 8192.</p>
      * </li>
      * </ul>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>The new disk capacity must be greater than the original disk capacity. Otherwise, an error is returned.</p>
+     * <p>The new capacity must be greater than the original capacity. Otherwise, an error is returned when you call this operation.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -92,11 +92,11 @@ public class ResizeDiskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The method used to expand the disk. Valid values:</p>
+     * <p>The method used to resize the cloud disk. Valid values:</p>
      * <ul>
-     * <li><p>offline (default): offline expansion. After the expansion, you must restart the instance in the console by following the instructions in <a href="https://help.aliyun.com/document_detail/25440.html">Restart an instance</a> or by calling the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation for the changes to take effect.</p>
+     * <li><p>offline: offline resizing. This is the default value. After the cloud disk is resized, you must <a href="https://help.aliyun.com/document_detail/25440.html">restart the instance</a> in the console or call the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation for the resize to take effect.</p>
      * </li>
-     * <li><p>online: online expansion. The expansion takes effect without the need to restart the instance. Supported disk types include ultra disks, standard SSDs, enterprise SSDs, and elastic ephemeral disks.</p>
+     * <li><p>online: online resizing. The cloud disk is resized without the need to restart the instance. This value supports ultra cloud disks, standard SSDs, ESSDs, and elastic ephemeral disks.</p>
      * </li>
      * </ul>
      * 

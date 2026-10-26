@@ -8,7 +8,7 @@ public class RunInstancesResponseBody extends TeaModel {
     public RunInstancesResponseBodyInstanceIdSets instanceIdSets;
 
     /**
-     * <p>The order ID. This parameter is returned only when a subscription ECS instance is created (the request parameter <code>InstanceChargeType=PrePaid</code>).</p>
+     * <p>The order ID. This parameter is returned only when you create a subscription ECS instance by setting the InstanceChargeType request parameter to PrePaid.</p>
      * 
      * <strong>example:</strong>
      * <p>123456****</p>

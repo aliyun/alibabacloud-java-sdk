@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class AllocatePublicIpAddressRequest extends TeaModel {
     /**
-     * <p>The instance ID of the instance to which you want to allocate a public IP address.</p>
+     * <p>The ID of the instance to which you want to assign an IP address.</p>
      * <blockquote>
-     * <p>The public bandwidth of the instance must be greater than 0.</p>
+     * <p>The bandwidth of the instance must be greater than 0.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class AllocatePublicIpAddressRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The public IP address of the instance. If this parameter is left empty, the system randomly assigns an IP address.</p>
+     * <p>The public IP address of the instance. If this parameter is empty, the system randomly assigns an IP address by default.</p>
      * <blockquote>
-     * <p>Only users in the whitelist can specify this parameter. Regular users cannot specify an IP address.</p>
+     * <p>Only whitelisted users can specify this parameter. Regular users cannot specify an IP address.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class AllocatePublicIpAddressRequest extends TeaModel {
     /**
      * <p>The VLAN ID of the instance.</p>
      * <blockquote>
-     * <p>This parameter will be deprecated. For better compatibility, use other parameters.</p>
+     * <p>This parameter is deprecated. To improve compatibility, use other parameters instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

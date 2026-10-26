@@ -10,8 +10,8 @@ public class RenewElasticityAssurancesRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li>true: Automatic payment is enabled.</li>
-     * <li>false: Automatic payment is not enabled.</li>
+     * <li>true: yes.</li>
+     * <li>false: no.</li>
      * </ul>
      * <p>Default value: true.</p>
      * 
@@ -24,9 +24,9 @@ public class RenewElasticityAssurancesRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li><p>true: Auto-renewal is enabled.</p>
+     * <li><p>true: enables auto-renewal.</p>
      * </li>
-     * <li><p>false: Auto-renewal is not enabled.</p>
+     * <li><p>false: disables auto-renewal.</p>
      * </li>
      * </ul>
      * <p>Default value: false.</p>
@@ -38,15 +38,15 @@ public class RenewElasticityAssurancesRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The auto-renewal duration. Unit: months. Valid values: 1, 2, 3, 6, 12, 24, and 36.</p>
+     * <p>The auto-renewal duration in months. Valid values: 1, 2, 3, 6, 12, 24, and 36.</p>
      * <ul>
-     * <li><p>When <code>PeriodUnit=Month</code>, the default value is 1.</p>
+     * <li><p>If PeriodUnit is set to Month, the default value is 1.</p>
      * </li>
-     * <li><p>When <code>PeriodUnit=Year</code>, the default value is 12.</p>
+     * <li><p>If PeriodUnit is set to Year, the default value is 12.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required when <code>AutoRenew</code> is set to <code>true</code>.</p>
+     * <p>This parameter is required when AutoRenew is set to true.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -56,8 +56,7 @@ public class RenewElasticityAssurancesRequest extends TeaModel {
     public Integer autoRenewPeriod;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</p>
-     * <p><code>ClientToken</code> supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>Ensures the idempotence of the request. You can generate a value from your client to ensure that the value is unique across different requests. ClientToken supports only ASCII characters and can be up to 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -72,13 +71,13 @@ public class RenewElasticityAssurancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The renewal duration. The unit of the duration is determined by the <code>PeriodUnit</code> parameter. Valid values:</p>
+     * <p>The renewal duration. The unit is specified by the PeriodUnit parameter. Valid values:</p>
      * <ul>
-     * <li><p>When <code>PeriodUnit</code> is set to <code>Weekly</code>: 1, 2, and 3.</p>
+     * <li><p>If PeriodUnit is set to Weekly, valid values are 1, 2, and 3.</p>
      * </li>
-     * <li><p>When <code>PeriodUnit</code> is set to <code>Month</code>: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</p>
+     * <li><p>If PeriodUnit is set to Month, valid values are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</p>
      * </li>
-     * <li><p>When <code>PeriodUnit</code> is set to <code>Year</code>: 1, 2, 3, 4, and 5.</p>
+     * <li><p>If PeriodUnit is set to Year, valid values are 1, 2, 3, 4, and 5.</p>
      * </li>
      * </ul>
      * <p>Default value: 1.</p>
@@ -92,11 +91,11 @@ public class RenewElasticityAssurancesRequest extends TeaModel {
     /**
      * <p>The unit of the renewal duration. Valid values:</p>
      * <ul>
-     * <li><p>Weekly: week</p>
+     * <li><p>Weekly: week.</p>
      * </li>
-     * <li><p>Month: month</p>
+     * <li><p>Month: month.</p>
      * </li>
-     * <li><p>Year: year</p>
+     * <li><p>Year: year.</p>
      * </li>
      * </ul>
      * <p>Default value: Year.</p>
@@ -108,8 +107,7 @@ public class RenewElasticityAssurancesRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The ID of the region in which the elasticity assurance service resides.</p>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/2680071.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID of the elasticity assurance. You can call <a href="https://help.aliyun.com/document_detail/2680071.html">DescribeRegions</a> to query the latest Alibaba Cloud region list.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -226,9 +224,9 @@ public class RenewElasticityAssurancesRequest extends TeaModel {
 
     public static class RenewElasticityAssurancesRequestPrivatePoolOptions extends TeaModel {
         /**
-         * <p>The list of elasticity assurance service IDs.</p>
-         * <p><strong>Limit</strong>: You can renew up to 20 elasticity assurance services at a time.</p>
-         * <p>You can call <a href="https://help.aliyun.com/document_detail/2679748.html">DescribeElasticityAssurances</a> to query purchased elasticity assurance services.</p>
+         * <p>The list of elasticity assurance IDs. This parameter is required. If this parameter is not specified, the API returns MissingParameter.PrivatePoolOptions.Id.</p>
+         * <p><strong>Limits</strong>: You can renew up to 20 elasticity assurances at a time.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/2679748.html">DescribeElasticityAssurances</a> to query the purchased elasticity assurances.</p>
          */
         @NameInMap("Id")
         public java.util.List<String> id;

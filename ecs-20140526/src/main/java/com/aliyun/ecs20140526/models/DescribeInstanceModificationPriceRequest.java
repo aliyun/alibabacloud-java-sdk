@@ -8,13 +8,14 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     public DescribeInstanceModificationPriceRequestSystemDisk systemDisk;
 
     /**
-     * <p>The information about data disk types.</p>
+     * <p>The data disk information.</p>
      */
     @NameInMap("DataDisk")
     public java.util.List<DescribeInstanceModificationPriceRequestDataDisk> dataDisk;
 
     /**
-     * <p>The end time of the temporary bandwidth upgrade.</p>
+     * <p>The end time of the temporary bandwidth change. The time is in ISO 8601 format and UTC time zone.
+     * This parameter takes effect only when InternetMaxBandwidthOut is not empty.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-12-06T22Z</p>
@@ -23,7 +24,7 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The Internet Service Provider.</p>
+     * <p>The Internet service provider (ISP).</p>
      * 
      * <strong>example:</strong>
      * <p>BGP</p>
@@ -41,7 +42,7 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The instance ID of the instance for which you want to query the upgrade price.</p>
+     * <p>The ID of the instance for which you want to query the upgrade price.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +52,10 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The target instance type for the upgrade. We recommend that you call <a href="https://help.aliyun.com/document_detail/66187.html">DescribeResourcesModification</a> to query the instance types available for upgrade in a specified zone.</p>
+     * <p>The target instance type for the instance upgrade. Before upgrading, call <a href="https://help.aliyun.com/document_detail/66187.html">DescribeResourcesModification</a> to query the instance types available for upgrade in the specified zone.</p>
+     * <blockquote>
+     * <p>When you query the price, the instance type parameter (<code>InstanceType</code>) and the data disk parameter (<code>DataDisk.N.*</code>) cannot be both empty. You must specify at least one of them.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>ecs.g6e.large</p>
@@ -60,7 +64,11 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The network billing method to convert to.</p>
+     * <p>The network billing method. Valid values:</p>
+     * <ul>
+     * <li>PayByBandwidth: pay-by-bandwidth.</li>
+     * <li>PayByTraffic: pay-by-traffic.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>PayByTraffic</p>
@@ -84,7 +92,7 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to view the latest list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -100,7 +108,8 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The start time of the temporary bandwidth upgrade.</p>
+     * <p>The start time of the temporary bandwidth change. The time is in ISO 8601 format and UTC time zone.
+     * This parameter takes effect only when InternetMaxBandwidthOut is not empty.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-12-05T22:40Z</p>
@@ -235,13 +244,16 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
 
     public static class DescribeInstanceModificationPriceRequestSystemDisk extends TeaModel {
         /**
-         * <p>The category of the system disk.</p>
+         * <p>The system disk category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
-         * <p>The performance level of the system disk.</p>
+         * <p>The system disk performance level.</p>
          * 
          * <strong>example:</strong>
          * <p>PL0</p>
@@ -291,16 +303,16 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
 
     public static class DescribeInstanceModificationPriceRequestDataDisk extends TeaModel {
         /**
-         * <p>The type of the data disk. Specify this parameter to query the price of a new subscription data disk attached to an ECS instance. Valid values of N: 1 to 16. Valid values:</p>
+         * <p>The data disk category. You can specify this parameter when you need to query the price of a new subscription data disk attached to the ECS instance. Valid values of N: 1 to 16. Valid values:</p>
          * <ul>
          * <li>cloud_efficiency: ultra disk.</li>
          * <li>cloud_ssd: standard SSD.</li>
          * <li>cloud_essd: enterprise SSD.</li>
          * <li>cloud: basic disk.</li>
          * </ul>
-         * <p>Default value: null.</p>
+         * <p>Default value: None.</p>
          * <blockquote>
-         * <p>When you call this operation, the instance type parameter (<code>InstanceType</code>) and the data disk parameters (<code>DataDisk.N.*</code>) cannot both be empty. Specify at least one of them.</p>
+         * <p>When you query the price, the instance type parameter (<code>InstanceType</code>) and the data disk parameter (<code>DataDisk.N.*</code>) cannot be both empty. You must specify at least one of them.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -310,7 +322,9 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
         public String category;
 
         /**
-         * <p>The ID of the data disk.</p>
+         * <p>The data disk ID.
+         * If DiskId is empty, a new data disk is added.
+         * If DiskId is not empty, the data disk is modified.</p>
          * 
          * <strong>example:</strong>
          * <p>d-bf4rupt9****</p>
@@ -319,7 +333,7 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
         public String diskId;
 
         /**
-         * <p>The performance level of the data disk when the disk type is enterprise SSD. The value of N must be the same as that in <code>DataDisk.N.Category=cloud_essd</code>. Valid values:</p>
+         * <p>The performance level of the data disk when the data disk category is enterprise SSD. The value of N must be the same as the value of N in <code>DataDisk.N.Category=cloud_essd</code>. Valid values:</p>
          * <ul>
          * <li>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</li>
          * <li>PL1: A single disk can deliver up to 50,000 random read/write IOPS.</li>
@@ -327,7 +341,7 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
          * <li>PL3: A single disk can deliver up to 1,000,000 random read/write IOPS.</li>
          * </ul>
          * <p>Default value: PL1.</p>
-         * <p>For information about how to select an ESSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</p>
+         * <p>For more information about how to select an enterprise SSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">enterprise SSD</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>PL1</p>
@@ -336,11 +350,11 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
         public String performanceLevel;
 
         /**
-         * <p>The capacity of the data disk. Valid values of N: 1 to 16. Unit: GiB. Valid values:</p>
+         * <p>The size of the data disk. Valid values of N: 1 to 16. Unit: GiB. Valid values:</p>
          * <ul>
          * <li>cloud_efficiency: 20 to 32768.</li>
          * <li>cloud_ssd: 20 to 32768.</li>
-         * <li>cloud_essd: The valid value range depends on the value of <code>DataDisk.N.PerformanceLevel</code>.    <ul>
+         * <li>cloud_essd: The valid values vary based on the value of <code>DataDisk.N.PerformanceLevel</code>.    <ul>
          * <li>PL0: 1 to 32768.</li>
          * <li>PL1: 20 to 32768.</li>
          * <li>PL2: 461 to 32768.</li>
@@ -349,7 +363,7 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
          * </li>
          * <li>cloud: 5 to 2000.</li>
          * </ul>
-         * <p>Default value: the minimum capacity for the specified data disk type.</p>
+         * <p>Default value: the minimum size allowed for the specified data disk category.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

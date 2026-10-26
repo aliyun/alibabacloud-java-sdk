@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     /**
-     * <p>The association type between the automatic snapshot policy and target resources. Valid values:</p>
+     * <p>The association type between the automatic snapshot policy and the target resources. Valid values:</p>
      * <ul>
-     * <li>AssociatedWithDisk: associate with a disk.</li>
-     * <li>AssociatedWithInstanceTag: associate with an instance tag.</li>
+     * <li>AssociatedWithDisk: Associated with cloud disks.</li>
+     * <li>AssociatedWithInstanceTag: Associated with instance tags.</li>
      * </ul>
      * <p>Default value: AssociatedWithDisk.</p>
-     * <blockquote>
-     * <p>Currently, only the following regions support association with instance tags: Malaysia (Kuala Lumpur), Malaysia (Johor), Philippines (Manila), UK (London), France (Paris), Saudi Arabia (Riyadh) - Partner, UAE (Dubai), China North 5 (Hohhot), China Northwest 2 (Zhongwei), China Southwest 1 (Chengdu), Brazil (São Paulo), Thailand (Bangkok), China South 3 (Guangzhou), China South 2 (Heyuan), Hong Kong (China), Germany (Frankfurt), Mexico, US (Virginia), China East 1 (Hangzhou), China North 1 (Qingdao), China North 2 (Beijing), China East 2 (Shanghai), Singapore, Japan (Tokyo), South Korea (Seoul), China South 1 (Shenzhen), China North 6 (Ulanqab), and China North 3 (Zhangjiakou).</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>AssociatedWithDisk</p>
@@ -22,10 +19,10 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public String associationType;
 
     /**
-     * <p>The retention period of cross-region snapshot replicas. Unit: days. Valid values:</p>
+     * <p>The retention period of cross-region replicated snapshots. Unit: days. Valid values:</p>
      * <ul>
-     * <li>-1: Snapshot replicas are permanently retained.</li>
-     * <li>1 to 65535: Snapshot replicas are retained for the specified number of days.</li>
+     * <li>-1: The snapshots are retained permanently.</li>
+     * <li>1 to 65535: The snapshots are retained for the specified number of days.</li>
      * </ul>
      * <p>Default value: -1.</p>
      * 
@@ -58,7 +55,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek2kkmhmhs****</p>
@@ -74,7 +71,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is not publicly available.</p>
+     * <p>This parameter is not available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -84,13 +81,13 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public String storageLocationArn;
 
     /**
-     * <p>The tags of the automatic snapshot policy.</p>
+     * <p>The list of tags for the automatic snapshot policy.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateAutoSnapshotPolicyRequestTag> tag;
 
     /**
-     * <p>The destination region to which snapshots are replicated across regions. You can set only one destination region.</p>
+     * <p>The destination region for cross-region snapshot replication. You can specify only one destination region.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;cn-hangzhou&quot;]</p>
@@ -99,14 +96,13 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public String targetCopyRegions;
 
     /**
-     * <p>The list of target resource tags. The automatic snapshot policy matches target resources based on tags.
-     * This parameter is required when <code>AssociationType=AssociatedWithInstanceTag</code>.</p>
+     * <p>The list of target resource tags. The automatic snapshot policy matches target resources based on tags. This parameter is required when AssociationType is set to AssociatedWithInstanceTag.</p>
      */
     @NameInMap("TargetTags")
     public java.util.List<CreateAutoSnapshotPolicyRequestTargetTags> targetTags;
 
     /**
-     * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with http:// or https://. It can contain digits, colons (:), underscores (_), and hyphens (-).</p>
      * <p>Default value: null.</p>
      * 
      * <strong>example:</strong>
@@ -126,10 +122,10 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The days of the week on which automatic snapshots are created. Unit: days. The cycle is weekly. Valid values: 1 to 7. For example, 1 indicates Monday. Format description:</p>
+     * <p>The days of the week when automatic snapshots are created. Valid values: 1 to 7, which represent Monday to Sunday. For example, 1 indicates Monday. Format description:</p>
      * <ul>
-     * <li>The parameter value must be a JSON array. For example, [&quot;1&quot;\] indicates that automatic snapshots are created every Monday.</li>
-     * <li>To create multiple automatic snapshots within a week, specify multiple days separated by commas (,). You can specify up to 7 days. For example, [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;\] indicates that automatic snapshots are created every Monday, Wednesday, and Friday.</li>
+     * <li>The parameter must be a JSON array. For example, [&quot;1&quot;] indicates that automatic snapshots are created every Monday.</li>
+     * <li>If you want to create automatic snapshots multiple times a week, you can specify multiple days separated by commas (,). You can specify up to 7 days. For example, [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;] indicates that automatic snapshots are created every Monday, Wednesday, and Friday.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -142,8 +138,8 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     /**
      * <p>The retention period of automatic snapshots. Unit: days. Valid values:</p>
      * <ul>
-     * <li>-1: Automatic snapshots are permanently retained.</li>
-     * <li>1 to 65535: Automatic snapshots are retained for the specified number of days.</li>
+     * <li>-1: The snapshots are retained permanently.</li>
+     * <li>1 to 65535: The snapshots are retained for the specified number of days.</li>
      * </ul>
      * <p>Default value: -1.</p>
      * <p>This parameter is required.</p>
@@ -155,13 +151,13 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public Integer retentionDays;
 
     /**
-     * <p>The points in time at which automatic snapshots are created. The time is displayed in UTC+8. Unit: hours. Valid values: 0 to 23, which represent 00:00 to 23:00 (a total of 24 points in time). For example, 1 indicates 01:00. Format description:</p>
+     * <p>The points in time when automatic snapshots are created. The time is in UTC+8 and measured in hours. Valid values: 0 to 23, which represent the 24 points in time from 00:00 to 23:00. For example, 1 indicates 01:00. Format description:</p>
      * <ul>
-     * <li>The parameter value must be a JSON array. For example, [&quot;1&quot;\] indicates that automatic snapshots are created at 01:00.</li>
-     * <li>To create multiple automatic snapshots within a day, specify multiple points in time separated by commas (,). You can specify up to 24 points in time. For example, [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;\] indicates that automatic snapshots are created at 01:00, 03:00, and 05:00.</li>
+     * <li>The parameter must be a JSON array. For example, [&quot;1&quot;] indicates that automatic snapshots are created at 01:00.</li>
+     * <li>If you want to create multiple automatic snapshots in a day, you can specify multiple points in time separated by commas (,). You can specify up to 24 points in time. For example, [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;] indicates that automatic snapshots are created at 01:00, 03:00, and 05:00.</li>
      * </ul>
      * <blockquote>
-     * <p>If a disk contains a large amount of data and the time required to create a single automatic snapshot exceeds the interval between two consecutive points in time, the next point in time is automatically skipped. For example, you set 09:00, 10:00, 11:00, and 12:00 as the points in time for automatic snapshot creation. Because the disk contains a large amount of data, the snapshot creation starts at 09:00 and is completed at 10:20, which takes 80 minutes. The system skips the 10:00 point in time and creates the next automatic snapshot at 11:00.</p>
+     * <p>If the cloud disk contains a large amount of data and the duration of creating a single automatic snapshot exceeds the interval between two points in time, the system skips the next point in time. For example, if you set the points in time to 09:00, 10:00, 11:00, and 12:00, and the snapshot creation starts at 09:00 and finishes at 10:20, taking 80 minutes, the system skips the 10:00 point in time and creates the next automatic snapshot at 11:00.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -315,7 +311,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public static class CreateAutoSnapshotPolicyRequestCopyEncryptionConfigurationArn extends TeaModel {
         /**
          * <blockquote>
-         * <p>This parameter is not publicly available.</p>
+         * <p>This parameter is not available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -326,7 +322,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is not publicly available.</p>
+         * <p>This parameter is not available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -337,7 +333,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is not publicly available.</p>
+         * <p>This parameter is not available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -380,17 +376,17 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public static class CreateAutoSnapshotPolicyRequestCopyEncryptionConfiguration extends TeaModel {
         /**
          * <blockquote>
-         * <p>This parameter is not publicly available.</p>
+         * <p>This parameter is not available.</p>
          * </blockquote>
          */
         @NameInMap("Arn")
         public java.util.List<CreateAutoSnapshotPolicyRequestCopyEncryptionConfigurationArn> arn;
 
         /**
-         * <p>Specifies whether to enable encryption for cross-region snapshot backup. Valid values:</p>
+         * <p>Specifies whether to enable encryption for cross-region snapshot backups. Valid values:</p>
          * <ul>
-         * <li>true: Enabled.</li>
-         * <li>false: Disabled.</li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -401,7 +397,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
         public Boolean encrypted;
 
         /**
-         * <p>The KMS key ID used for encrypted cross-region snapshot backup.</p>
+         * <p>The KMS key ID used for snapshot geo-redundancy backup encryption.</p>
          * 
          * <strong>example:</strong>
          * <p>0e478b7a-4262-4802-b8cb-00d3fb40826X</p>
@@ -442,7 +438,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
 
     public static class CreateAutoSnapshotPolicyRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the automatic snapshot policy. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
+         * <p>The tag key of the automatic snapshot policy. Valid values of N: 1 to 20. If you specify this parameter, it cannot be an empty string. The tag key can be up to 128 characters in length, and cannot start with aliyun or acs: or contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -451,7 +447,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the automatic snapshot policy. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with acs:. The tag value cannot contain http:// or https://.</p>
+         * <p>The tag value of the automatic snapshot policy. Valid values of N: 1 to 20. If you specify this parameter, it can be an empty string. The tag value can be up to 128 characters in length, and cannot start with acs: or contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>
@@ -486,7 +482,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
         /**
          * <p>The tag key.</p>
          * <p>Valid values of N: 1 to 5.</p>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
+         * <p>If you specify this parameter, it cannot be an empty string. The tag key can be up to 128 characters in length, and cannot start with aliyun or acs: or contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -497,9 +493,9 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
         /**
          * <p>The tag value.</p>
          * <p>Valid values of N: 1 to 5.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value can be up to 128 characters in length, and cannot contain http:// or https://.</p>
          * <blockquote>
-         * <p>If you pass in an empty value or an empty string, it indicates any value.</p>
+         * <p>If you leave this parameter empty or specify an empty string, it indicates any value.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

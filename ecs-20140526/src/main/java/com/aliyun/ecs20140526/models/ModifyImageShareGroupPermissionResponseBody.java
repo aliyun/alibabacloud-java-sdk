@@ -4,6 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyImageShareGroupPermissionResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-42d3-a456-426614174000</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

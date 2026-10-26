@@ -8,7 +8,7 @@ public class DescribeElasticityAssuranceInstancesRequest extends TeaModel {
     public DescribeElasticityAssuranceInstancesRequestPrivatePoolOptions privatePoolOptions;
 
     /**
-     * <p>The maximum number of entries per page for a paging query.</p>
+     * <p>The number of entries to return per page for paging.</p>
      * <p>Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 
@@ -19,7 +19,7 @@ public class DescribeElasticityAssuranceInstancesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the elasticity assurance query. Obtain the value from the result of the previous request.</p>
+     * <p>The pagination token for the query. You can obtain the token from the response of the previous request.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -34,7 +34,7 @@ public class DescribeElasticityAssuranceInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the elasticity assurance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID of the elasticity assurance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

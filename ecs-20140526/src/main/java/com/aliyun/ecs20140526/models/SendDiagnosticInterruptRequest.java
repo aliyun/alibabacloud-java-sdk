@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class SendDiagnosticInterruptRequest extends TeaModel {
     /**
-     * <p>Specifies whether to perform only a dry run. Valid values: ● true: Sends a check request without sending the NMI command. ● false (default): Sends a normal NMI request to trigger a crash dump.</p>
+     * <p>Specifies whether to only precheck the request. Valid values:</p>
+     * <ul>
+     * <li>true: Sends a check request without sending the NMI command.</li>
+     * <li>false: Sends a normal NMI request to trigger a crash dump. Default value: false.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +18,7 @@ public class SendDiagnosticInterruptRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The instance ID of the instance to which you want to send a diagnostic break.</p>
+     * <p>The instance ID to which you want to send a diagnostic break.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

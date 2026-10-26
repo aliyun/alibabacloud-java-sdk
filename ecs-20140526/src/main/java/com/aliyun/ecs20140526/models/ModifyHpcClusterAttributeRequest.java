@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyHpcClusterAttributeRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can generate the value from your client, but you must ensure that the value is unique among different requests. <strong>ClientToken</strong> supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -34,7 +34,7 @@ public class ModifyHpcClusterAttributeRequest extends TeaModel {
     public String hpcClusterId;
 
     /**
-     * <p>The name of the HPC cluster. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain digits, underscores (_), or hyphens (-).</p>
+     * <p>The name of the HPC cluster. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with http:// or https://. It can contain digits, underscores (_), and hyphens (-).</p>
      * <p>Default value: empty.</p>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class ModifyHpcClusterAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent Alibaba Cloud region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

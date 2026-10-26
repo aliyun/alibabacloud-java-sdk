@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ModifyInstanceNetworkOptionsRequest extends TeaModel {
     /**
      * <p>The bandwidth weight.</p>
-     * <p>The supported values vary by instance type. You can call <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the bandwidth weight values supported by the current instance type.</p>
+     * <p>The supported values vary by instance type. You can call <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the bandwidth weight values supported by the instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>Vpc-L1</p>
@@ -15,7 +15,7 @@ public class ModifyInstanceNetworkOptionsRequest extends TeaModel {
     public String bandwidthWeighting;
 
     /**
-     * <p>The instance ID of the instance for which you want to modify the network bandwidth weight.</p>
+     * <p>The instance ID for which to modify the network bandwidth weight.</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp67acfmxazb4p****</p>

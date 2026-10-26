@@ -4,42 +4,18 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagsResponseBody extends TeaModel {
-    /**
-     * <p>The page number of the tag list.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries per page settings for the paged query. This is the paging size.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>50</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>B04B8CF3-4489-432D-83BA-6F128E4F2295</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Tags")
     public DescribeTagsResponseBodyTags tags;
 
-    /**
-     * <p>The total number of tags.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

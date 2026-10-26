@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSendFileResultsRequest extends TeaModel {
     /**
-     * <p>The instance ID. After you specify this parameter, all file sending records of the instance are queried.</p>
+     * <p>The instance ID. If you specify this parameter, all file delivery records of the instance are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>i-hz0jdfwd9f****</p>
@@ -14,13 +14,13 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The overall sending status of the file. The overall status depends on the common execution status of all target instances. Valid values:</p>
+     * <p>The overall delivery status of the file. The overall status depends on the combined execution status of all instances involved in the delivery task. Valid values:</p>
      * <ul>
-     * <li>Pending: The system is validating or sending the file. The overall status is Pending if the file sending status of at least one instance is Pending.</li>
-     * <li>Running: The file is being sent on instances. The overall status is Running if the file sending status of at least one instance is Running.</li>
-     * <li>Success: The file is sent. The overall status is Success if the file sending status of all instances is Success.</li>
-     * <li>Failed: The file failed to be sent. The overall status is Failed if the file sending status of all instances is Failed.</li>
-     * <li>PartialFailed: The file is sent on some instances but failed on others. The overall status is PartialFailed if the file sending status of all instances is Success or Failed.</li>
+     * <li>Pending: The system is verifying or delivering the file. If the file delivery status of at least one instance is Pending, the overall execution status is Pending.</li>
+     * <li>Running: The file is being delivered to the instances. If the file delivery status of at least one instance is Running, the overall execution status is Running.</li>
+     * <li>Success: The file is delivered successfully. If the file delivery status of all instances is Success, the overall execution status is Success.</li>
+     * <li>Failed: The file fails to be delivered. If the file delivery status of all instances is Failed, the overall execution status is Failed.</li>
+     * <li>PartialFailed: The file is delivered to some instances but fails to be delivered to others. If the file delivery status of all instances is either Success or Failed, the overall execution status is PartialFailed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The name of the file. After you specify this parameter, all sending records of the file are queried.</p>
+     * <p>The name of the file. If you specify this parameter, all delivery records of the file with the specified name are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>test.txt</p>
@@ -59,7 +59,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
+     * <p>The query token. Set the value to the NextToken value returned from the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2</p>
@@ -75,7 +75,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to perform paging queries.</p>
+     * <p>This parameter will soon be deprecated. We recommend that you use NextToken and MaxResults for paging.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -86,7 +86,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to perform paging queries.</p>
+     * <p>This parameter will soon be deprecated. We recommend that you use NextToken and MaxResults for paging.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -96,7 +96,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region ID of the ECS instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID of the ECS instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -106,7 +106,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the file sending task belongs. After you specify this parameter, you must also specify ResourceGroupId when sending files. This way, you can filter the file sending results of the specified resource group.</p>
+     * <p>The ID of the resource group to which the file delivery task belongs. If you specify this parameter, you must also specify ResourceGroupId when you deliver the file. This allows you to filter the corresponding file delivery results.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4p****</p>
@@ -121,7 +121,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeSendFileResultsRequestTag> tag;
@@ -253,9 +253,9 @@ public class DescribeSendFileResultsRequest extends TeaModel {
 
     public static class DescribeSendFileResultsRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the file sending task. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
-         * <p>If you use one tag to filter resources, the resource count with the specified tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that are attached with all specified tags cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</p>
-         * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the file delivery task. Valid values of N: 1 to 20. If you specify this parameter, it cannot be an empty string.</p>
+         * <p>If you use a single tag to filter resources, the resource count queried under the tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources attached with multiple tags at the same time cannot exceed 1,000. If the resource count exceeds 1,000, you must call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</p>
+         * <p>The tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -264,7 +264,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the file sending task. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+         * <p>The tag value of the file delivery task. Valid values of N: 1 to 20. This parameter can be an empty string.</p>
          * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>

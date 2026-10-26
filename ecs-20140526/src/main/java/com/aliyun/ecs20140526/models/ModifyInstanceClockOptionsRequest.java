@@ -16,9 +16,9 @@ public class ModifyInstanceClockOptionsRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run. Valid values:</p>
      * <ul>
-     * <li><p>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, the authorization status of the RAM user, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * <li><p>true: sends a check request without querying resource status. The check items include whether the AccessKey pair is valid, the authorization of the Resource Access Management (RAM) user, and whether required parameters are specified. If the check fails, the corresponding error is returned. If the check passes, the <code>DryRunOperation</code> error code is returned.</p>
      * </li>
-     * <li><p>false: performs a dry run and sends the request. If the request passes the dry run, a 2XX HTTP status code is returned and the operation is executed.</p>
+     * <li><p>false: sends a Normal request. If the request passes the check, a 2xx HTTP status code is returned and the resource status is directly queried.</p>
      * </li>
      * </ul>
      * <p>Default value: false.</p>
@@ -48,9 +48,9 @@ public class ModifyInstanceClockOptionsRequest extends TeaModel {
     /**
      * <p>The PTP status. Valid values:</p>
      * <ul>
-     * <li><p>enabled: enables PTP.</p>
+     * <li><p>enabled: Enables PTP.</p>
      * </li>
-     * <li><p>disabled: disables PTP.</p>
+     * <li><p>disabled: Disables PTP.</p>
      * </li>
      * </ul>
      * <p>Default value: disabled.</p>
@@ -62,7 +62,7 @@ public class ModifyInstanceClockOptionsRequest extends TeaModel {
     public String ptpStatus;
 
     /**
-     * <p>The region ID of the ECS instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID of the ECS instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

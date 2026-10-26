@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSnapshotGroupsRequest extends TeaModel {
     /**
-     * <p>This parameter is not publicly available.</p>
+     * <p>This parameter is not available.</p>
      * 
      * <strong>example:</strong>
      * <p>hide</p>
@@ -23,7 +23,7 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of entries per page in a paging query.</p>
+     * <p>The number of entries per page for a paged query.</p>
      * <p>Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 
@@ -43,7 +43,7 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
+     * <p>The query token. Set the value to the NextToken value returned in the last API call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -58,7 +58,7 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,7 +83,7 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the snapshot-consistent group. Valid values of N: 1 to 10.</p>
+     * <p>The IDs of the snapshot-consistent groups. Valid values of N: 1 to 10.</p>
      * 
      * <strong>example:</strong>
      * <p>ssg-j6ciyh3k52qp7ovm****</p>
@@ -98,7 +98,7 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
      * </li>
      * <li><p>accomplished: The snapshot-consistent group is created.</p>
      * </li>
-     * <li><p>failed: The snapshot-consistent group failed to be created.</p>
+     * <li><p>failed: The snapshot-consistent group fails to be created.</p>
      * </li>
      * </ul>
      * 
@@ -109,7 +109,7 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
     public java.util.List<String> status;
 
     /**
-     * <p>The tag key-value pairs of the snapshot-consistent group.</p>
+     * <p>The tags of the snapshot-consistent group.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeSnapshotGroupsRequestTag> tag;

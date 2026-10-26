@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImagePipelinesRequest extends TeaModel {
     /**
-     * <p>The image template ID. Valid values of N: 1 to 20.</p>
+     * <p>The ID of the image template. Valid values of N: 1 to 20.</p>
      * 
      * <strong>example:</strong>
      * <p>ip-2ze5tsl5bp6nf2b3****</p>
@@ -14,7 +14,7 @@ public class DescribeImagePipelinesRequest extends TeaModel {
     public java.util.List<String> imagePipelineId;
 
     /**
-     * <p>The maximum number of entries per page in a paging query. Valid values: 1 to 500.</p>
+     * <p>The maximum number of entries to return per page in a paging query. Valid values: 1 to 500.</p>
      * <p>Default value: 50.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DescribeImagePipelinesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The template name.</p>
+     * <p>The name of the template.</p>
      * 
      * <strong>example:</strong>
      * <p>testImagePipeline</p>
@@ -33,7 +33,7 @@ public class DescribeImagePipelinesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The pagination token. Set the value to the <code>NextToken</code> value returned in the previous call to this operation. You do not need to set this parameter for the first request.</p>
+     * <p>The query token. Set the value to the NextToken value returned from the previous call. You do not need to specify this parameter for the first call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -48,7 +48,7 @@ public class DescribeImagePipelinesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class DescribeImagePipelinesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the enterprise resource group. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</p>
+     * <p>The ID of the resource group. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</p>
      * <blockquote>
      * <p>Filtering by the default resource group is not supported.</p>
      * </blockquote>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyPlanMaintenanceWindowRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable or disable the O&amp;M window. Leave this parameter empty if no modification is needed.</p>
+     * <p>Specifies whether to enable or disable the window. Leave this parameter empty if no modification is required.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -13,11 +13,17 @@ public class ModifyPlanMaintenanceWindowRequest extends TeaModel {
     @NameInMap("Enable")
     public Boolean enable;
 
+    /**
+     * <p>The minimum time interval between the publish time and the scheduled time to execute scheduled O&amp;M events for the same instance. Valid values: 1 to 48. Unit: hours.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24</p>
+     */
     @NameInMap("MinMaintenanceInterval")
     public Integer minMaintenanceInterval;
 
     /**
-     * <p>The ID of the O&amp;M window to modify. This parameter is required.</p>
+     * <p>The ID of the O&amp;M window to be modified. This parameter is required.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +33,7 @@ public class ModifyPlanMaintenanceWindowRequest extends TeaModel {
     public String planWindowId;
 
     /**
-     * <p>The name of the O&amp;M window. Leave this parameter empty if no modification is needed.</p>
+     * <p>The name of the O&amp;M window. Leave this parameter empty if no modification is required.</p>
      * 
      * <strong>example:</strong>
      * <p>WIndowName</p>
@@ -36,7 +42,7 @@ public class ModifyPlanMaintenanceWindowRequest extends TeaModel {
     public String planWindowName;
 
     /**
-     * <p>The region ID of the instance. You can call DescribeRegions to query the most recent region list.</p>
+     * <p>The region ID. This parameter is required for Alibaba Cloud SDK routing. However, specifying any region ID for this operation makes no difference. The O&amp;M window applies to all ECS instances across the network that meet the resource filtering conditions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +52,7 @@ public class ModifyPlanMaintenanceWindowRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The supported O&amp;M actions. Leave this parameter empty if no modification is needed.</p>
+     * <p>The supported O&amp;M actions. Leave this parameter empty if no modification is required.</p>
      * 
      * <strong>example:</strong>
      * <p>Reboot</p>
@@ -55,13 +61,13 @@ public class ModifyPlanMaintenanceWindowRequest extends TeaModel {
     public String supportMaintenanceAction;
 
     /**
-     * <p>The resource to which the O&amp;M window applies. Leave this parameter empty if no modification is needed.</p>
+     * <p>The resources to which the O&amp;M window applies. Leave this parameter empty if no modification is required.</p>
      */
     @NameInMap("TargetResource")
     public ModifyPlanMaintenanceWindowRequestTargetResource targetResource;
 
     /**
-     * <p>The recurring cycle of the O&amp;M window. Leave this parameter empty if no modification is needed.</p>
+     * <p>The recurrence cycle of the window. Leave this parameter empty if no modification is required.</p>
      */
     @NameInMap("TimePeriod")
     public ModifyPlanMaintenanceWindowRequestTimePeriod timePeriod;
@@ -137,7 +143,7 @@ public class ModifyPlanMaintenanceWindowRequest extends TeaModel {
 
     public static class ModifyPlanMaintenanceWindowRequestTargetResourceTags extends TeaModel {
         /**
-         * <p>The key of the tag to which the O&amp;M window applies.</p>
+         * <p>The key of the tag to which the window applies.</p>
          * 
          * <strong>example:</strong>
          * <p>tagKey</p>
@@ -146,7 +152,7 @@ public class ModifyPlanMaintenanceWindowRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag to which the O&amp;M window applies.</p>
+         * <p>The value of the tag to which the window applies.</p>
          * 
          * <strong>example:</strong>
          * <p>tagValue</p>
@@ -188,7 +194,7 @@ public class ModifyPlanMaintenanceWindowRequest extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The type of resource to which the O&amp;M window applies.</p>
+         * <p>The type of resources to which the O&amp;M window is configured to apply.</p>
          * 
          * <strong>example:</strong>
          * <p>Tag</p>
@@ -237,9 +243,9 @@ public class ModifyPlanMaintenanceWindowRequest extends TeaModel {
         /**
          * <p>The end time of the O&amp;M window.</p>
          * <ul>
-         * <li>If PeriodUnit is set to Weekly, the format is Monday,22:00. Monday can be replaced with Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday.</li>
-         * <li>If PeriodUnit is set to Daily, the format is 22:00.</li>
-         * <li>The comma delimiter separates two parts. The first part represents the hour, with valid values from 00 to 23. The second part represents the minute, which currently supports only 00.</li>
+         * <li>If PeriodUnit is set to Weekly, the time range is in the format of Monday,22:00. Monday can be replaced with Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday.</li>
+         * <li>If PeriodUnit is set to Daily, the time range is in the format of 22:00.</li>
+         * <li>The comma (,) is used as a delimiter. The first part represents the hour, with valid values from 00 to 23. The second part represents the minute. Currently, only 00 is supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -251,9 +257,9 @@ public class ModifyPlanMaintenanceWindowRequest extends TeaModel {
         /**
          * <p>The start time of the O&amp;M window.</p>
          * <ul>
-         * <li>If PeriodUnit is set to Weekly, the format is Monday,22:00. Monday can be replaced with Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday.</li>
-         * <li>If PeriodUnit is set to Daily, the format is 22:00.</li>
-         * <li>The comma delimiter separates two parts. The first part represents the hour, with valid values from 00 to 23. The second part represents the minute, which currently supports only 00.</li>
+         * <li>If PeriodUnit is set to Weekly, the time range is in the format of Monday,22:00. Monday can be replaced with Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday.</li>
+         * <li>If PeriodUnit is set to Daily, the time range is in the format of 22:00.</li>
+         * <li>The comma (,) is used as a delimiter. The first part represents the hour, with valid values from 00 to 23. The second part represents the minute. Currently, only 00 is supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -287,7 +293,7 @@ public class ModifyPlanMaintenanceWindowRequest extends TeaModel {
 
     public static class ModifyPlanMaintenanceWindowRequestTimePeriod extends TeaModel {
         /**
-         * <p>The type of the cycle. Valid values: Daily and Weekly.</p>
+         * <p>The type of the recurrence cycle. Valid values: Daily and Weekly.</p>
          * 
          * <strong>example:</strong>
          * <p>Year</p>
@@ -296,7 +302,7 @@ public class ModifyPlanMaintenanceWindowRequest extends TeaModel {
         public String periodUnit;
 
         /**
-         * <p>The time ranges of the recurring O&amp;M window cycle (UTC time zone).</p>
+         * <p>The time ranges of the O&amp;M window recurrence cycle in the UTC time zone.</p>
          */
         @NameInMap("RangeList")
         public java.util.List<ModifyPlanMaintenanceWindowRequestTimePeriodRangeList> rangeList;

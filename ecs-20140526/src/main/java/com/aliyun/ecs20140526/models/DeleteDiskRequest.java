@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDiskRequest extends TeaModel {
     /**
-     * <p>The ID of the disk that you want to release.</p>
+     * <p>The ID of the disk to be released.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

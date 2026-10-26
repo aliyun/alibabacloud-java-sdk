@@ -8,17 +8,17 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public ModifyPrepayInstanceSpecRequestSystemDisk systemDisk;
 
     /**
-     * <p>Specifies whether to automatically complete the payment when you upgrade the instance type. Valid values:</p>
+     * <p>Specifies whether to enable automatic payment when you upgrade the instance type. Valid values:</p>
      * <ul>
-     * <li>true: The payment is automatically completed.</li>
-     * <li>false: An order is created but the payment is not completed.</li>
+     * <li>true: enables automatic payment.</li>
+     * <li>false: generates the order without deducting fees.</li>
      * </ul>
      * <p>Default value: true.</p>
      * <blockquote>
      * <ul>
-     * <li>If automatic payment is enabled, make sure that the balance of your payment method is sufficient. Otherwise, an abnormal order is generated and can only be voided.</li>
-     * <li>If the balance of your payment method is insufficient, set <code>AutoPay</code> to <code>false</code>. An unpaid order is generated. You can log on to the ECS console to complete the payment.</li>
-     * <li>When <code>OperatorType</code> is set to <code>downgrade</code>, the <code>AutoPay</code> parameter is ignored.</li>
+     * <li>When automatic payment is enabled, you must ensure that your payment method balance is sufficient. Otherwise, an abnormal order is generated and can only be canceled.</li>
+     * <li>If your payment method balance is insufficient, you can set <code>AutoPay</code> to <code>false</code> to generate an unpaid order. Then, you can log on to the ECS console to complete the payment.</li>
+     * <li>If the <code>OperatorType</code> parameter is set to <code>downgrade</code>, the <code>AutoPay</code> parameter is ignored.</li>
      * </ul>
      * </blockquote>
      * 
@@ -29,7 +29,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -39,14 +39,15 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is not publicly available.</p>
+     * <p>This parameter is not available.</p>
      * </blockquote>
      */
     @NameInMap("Disk")
     public java.util.List<ModifyPrepayInstanceSpecRequestDisk> disk;
 
     /**
-     * <p>The end time of the temporary instance type change. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+     * <p>The end time of the temporary change. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.
+     * <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a></p>
      * 
      * <strong>example:</strong>
      * <p>2018-01-01T12:05Z</p>
@@ -65,7 +66,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The target instance type for the upgrade or downgrade. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a> or invoke <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a>.</p>
+     * <p>The target instance type for the upgrade or downgrade. For valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,14 +76,14 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>Specifies whether to support cross-cluster upgrade or downgrade of instance types. Valid values:</p>
+     * <p>Specifies whether to allow cross-cluster instance type upgrade. Valid values:</p>
      * <ul>
-     * <li>true: Cross-cluster instance type changes are supported.</li>
-     * <li>false: Cross-cluster instance type changes are not supported.</li>
+     * <li>true: yes.</li>
+     * <li>false: no.</li>
      * </ul>
      * <p>Default value: false.</p>
-     * <p>When the <code>MigrateAcrossZone</code> parameter is set to <code>true</code>, take note of the following items after you upgrade the Elastic Compute Service instance based on the response:</p>
-     * <p>VPC-type instances: For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is changed to an I/O optimized instance, the disk device names and software authorization codes of the server change. For Linux instances, basic disks (cloud) are identified as xvda or xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vda or vdb.</p>
+     * <p>If the <code>MigrateAcrossZone</code> parameter is set to <code>true</code> and you upgrade the ECS instance based on the returned information, take note of the following items:</p>
+     * <p>VPC-connected instances: For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when you upgrade a non-I/O optimized instance to an I/O optimized instance, the disk device names and software authorization codes of the ECS instance change. For Linux instances, basic disks (cloud) are identified as xvda or xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vda or vdb.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -92,7 +93,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is not publicly available.</p>
+     * <p>This parameter is not available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -102,18 +103,18 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public String modifyMode;
 
     /**
-     * <p>The type of the operation. Valid values:</p>
+     * <p>The operation type. Valid values:</p>
      * <blockquote>
-     * <p>This parameter is optional. The system can automatically determine whether the operation is an upgrade or a downgrade. If you specify this parameter, follow the rules below.</p>
+     * <p>You do not need to specify this parameter. The system automatically determines whether to upgrade or downgrade the instance type. If you specify this parameter, follow these rules:</p>
      * </blockquote>
      * <ul>
-     * <li><p>upgrade: upgrades the instance type. Make sure that the balance of your payment method is sufficient.</p>
+     * <li><p>upgrade: upgrades the instance type. Make sure that your payment method balance is sufficient.</p>
      * </li>
-     * <li><p>downgrade: downgrades the instance type. Set <code>OperatorType</code> to <code>downgrade</code> when the instance type specified by <code>InstanceType</code> is lower than the current instance type.</p>
+     * <li><p>downgrade: downgrades the instance type. If the instance type specified by <code>InstanceType</code> is lower than the current instance type, set <code>OperatorType</code> to <code>downgrade</code>.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>For precautions about upgrading or downgrading instance types, see the operation description section above.</p>
+     * <p>For precautions about upgrading or downgrading instance types, see the preceding operation description section.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -129,7 +130,8 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The restart time of the instance. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+     * <p>The time to restart the instance. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.
+     * <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a></p>
      * 
      * <strong>example:</strong>
      * <p>2018-01-01T12:05Z</p>
@@ -140,12 +142,12 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     /**
      * <p>Specifies whether to immediately restart the instance after the instance type change is complete. Valid values:</p>
      * <ul>
-     * <li>true: The instance is immediately restarted.</li>
-     * <li>false: The instance is not immediately restarted.</li>
+     * <li>true: yes.</li>
+     * <li>false: no.</li>
      * </ul>
      * <p>Default value: false.</p>
      * <blockquote>
-     * <p>If the instance is in the <strong>Stopped</strong> state, the instance remains stopped even if you set <code>RebootWhenFinished</code> to <code>true</code>. No operation is performed.</p>
+     * <p>If the instance is in the <strong>Stopped</strong> state, it remains in the Stopped state and no action is performed even if you set <code>RebootWhenFinished</code> to <code>true</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -317,7 +319,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
          * <ul>
          * <li>cloud_efficiency: ultra disk.</li>
          * <li>cloud_ssd: standard SSD.<blockquote>
-         * <p>This parameter is valid only when you upgrade from a <a href="https://help.aliyun.com/document_detail/55263.html">retired instance type</a> to an <a href="https://help.aliyun.com/document_detail/25378.html">in-stock instance family</a> and change a non-I/O optimized instance to an I/O optimized instance. For more information about how to change instance types, see <a href="https://help.aliyun.com/document_detail/25378.html">Increase Quota</a>.</p>
+         * <p>This parameter is valid only when you upgrade from a <a href="https://help.aliyun.com/document_detail/55263.html">retired instance type</a> to a <a href="https://help.aliyun.com/document_detail/25378.html">normally sold instance family</a> and upgrade a non-I/O optimized instance type to an I/O optimized instance type.</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -346,7 +348,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public static class ModifyPrepayInstanceSpecRequestDisk extends TeaModel {
         /**
          * <blockquote>
-         * <p>This parameter is not publicly available.</p>
+         * <p>This parameter is not available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -357,7 +359,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is not publicly available.</p>
+         * <p>This parameter is not available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -368,7 +370,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is not publicly available.</p>
+         * <p>This parameter is not available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

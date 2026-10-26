@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDiagnosticReportsResponseBody extends TeaModel {
     /**
-     * <p>The pagination token returned in this call.</p>
+     * <p>The query token returned for the current call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>

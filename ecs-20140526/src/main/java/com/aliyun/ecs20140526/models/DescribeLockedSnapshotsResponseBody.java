@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeLockedSnapshotsResponseBody extends TeaModel {
     /**
-     * <p>The collection of locked snapshot information.</p>
+     * <p>The locked snapshots information.</p>
      */
     @NameInMap("LockedSnapshotsInfo")
     public java.util.List<DescribeLockedSnapshotsResponseBodyLockedSnapshotsInfo> lockedSnapshotsInfo;
 
     /**
-     * <p>The pagination token returned in this call.</p>
+     * <p>The query token returned by the current call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -59,7 +59,7 @@ public class DescribeLockedSnapshotsResponseBody extends TeaModel {
 
     public static class DescribeLockedSnapshotsResponseBodyLockedSnapshotsInfo extends TeaModel {
         /**
-         * <p>The cooling-off period for compliance mode. Unit: hours.</p>
+         * <p>The cooling-off period in compliance mode. Unit: hours.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -68,7 +68,7 @@ public class DescribeLockedSnapshotsResponseBody extends TeaModel {
         public Integer coolOffPeriod;
 
         /**
-         * <p>The time when the cooling-off period for compliance mode ends. The time follows the <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/iso-8601-time-format">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the cooling-off period in compliance mode ends. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format in accordance with the <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/iso-8601-time-format">ISO 8601</a> standard. UTC+0 is used.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-15T13:00:00Z</p>
@@ -77,7 +77,7 @@ public class DescribeLockedSnapshotsResponseBody extends TeaModel {
         public String coolOffPeriodExpiredTime;
 
         /**
-         * <p>The time when the snapshot was locked. The time follows the <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/iso-8601-time-format">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the snapshot was locked. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format in accordance with the <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/iso-8601-time-format">ISO 8601</a> standard. UTC+0 is used.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-15T10:00:00Z</p>
@@ -95,7 +95,7 @@ public class DescribeLockedSnapshotsResponseBody extends TeaModel {
         public Integer lockDuration;
 
         /**
-         * <p>The start time of the lock duration. The time follows the <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/iso-8601-time-format">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. If a snapshot in the progressing state is locked, the lock duration starts only after the snapshot enters the accomplished state.</p>
+         * <p>The time when the lock duration starts. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format in accordance with the <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/iso-8601-time-format">ISO 8601</a> standard. UTC+0 is used. If you lock a snapshot that is in the progressing state, the lock duration is calculated only after the snapshot enters the accomplished state.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-15T10:00:00Z</p>
@@ -104,7 +104,7 @@ public class DescribeLockedSnapshotsResponseBody extends TeaModel {
         public String lockDurationStartTime;
 
         /**
-         * <p>The time when the lock expires. The time follows the <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/iso-8601-time-format">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the lock expires. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format in accordance with the <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/iso-8601-time-format">ISO 8601</a> standard. UTC+0 is used.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-16T10:00:00Z</p>
@@ -115,7 +115,7 @@ public class DescribeLockedSnapshotsResponseBody extends TeaModel {
         /**
          * <p>The lock mode. Valid values: </p>
          * <ul>
-         * <li>compliance: The snapshot is locked in compliance mode. A snapshot locked in compliance mode cannot be unlocked by any user and can be deleted only after the lock duration expires. Users cannot shorten the lock duration, but users with the required RAM permissions can extend the lock duration at any time. When locking a snapshot in compliance mode, you can optionally specify a cooling-off period.</li>
+         * <li>compliance: The snapshot is locked in compliance mode. A snapshot locked in compliance mode cannot be unlocked by any user and can be deleted only after the lock duration expires. Users cannot shorten the lock duration, but users with the required RAM permissions can extend the lock duration at any time. When you lock a snapshot in compliance mode, you can optionally specify a cooling-off period.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -127,9 +127,9 @@ public class DescribeLockedSnapshotsResponseBody extends TeaModel {
         /**
          * <p>The lock status. Valid values: </p>
          * <ul>
-         * <li>compliance-cooloff: The snapshot is locked in compliance mode but is still within the cooling-off period. The snapshot cannot be deleted, but users with the required RAM permissions can unlock the snapshot, extend or shorten the cooling-off period, or extend or shorten the lock duration. </li>
+         * <li>compliance-cooloff: The snapshot is locked in compliance mode but is still in the cooling-off period. The snapshot cannot be deleted, but users with the required RAM permissions can unlock the snapshot, extend or shorten the cooling-off period, and extend or shorten the lock duration. </li>
          * <li>compliance: The snapshot is locked in compliance mode and the cooling-off period has ended. The snapshot cannot be unlocked or deleted, but users with the required RAM permissions can extend the lock duration. </li>
-         * <li>expired: The snapshot was previously locked, but the lock duration has ended and the lock has expired. The snapshot is currently unlocked and can be deleted.</li>
+         * <li>expired: The snapshot was locked, but the lock duration has ended and the lock has expired. The snapshot is currently unlocked and can be deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>

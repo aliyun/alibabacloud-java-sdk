@@ -8,7 +8,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
     public DescribeImagePipelinesResponseBodyImagePipeline imagePipeline;
 
     /**
-     * <p>The maximum number of entries per page in a paging query.</p>
+     * <p>The number of entries returned per page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -17,7 +17,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token returned in this call. For more information about how to use this token, see the operation description.</p>
+     * <p>The pagination token returned by this call. For more information, see the operation description.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -264,6 +264,25 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageTags getImageTags() {
             return this.imageTags;
+        }
+
+    }
+
+    public static class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageSecurityOptions extends TeaModel {
+        @NameInMap("SecurityScanMode")
+        public String securityScanMode;
+
+        public static DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageSecurityOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageSecurityOptions self = new DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageSecurityOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageSecurityOptions setSecurityScanMode(String securityScanMode) {
+            this.securityScanMode = securityScanMode;
+            return this;
+        }
+        public String getSecurityScanMode() {
+            return this.securityScanMode;
         }
 
     }
@@ -695,6 +714,9 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         @NameInMap("ImagePipelineId")
         public String imagePipelineId;
 
+        @NameInMap("ImageSecurityOptions")
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageSecurityOptions imageSecurityOptions;
+
         @NameInMap("ImportImageOptions")
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions importImageOptions;
 
@@ -836,6 +858,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
         public String getImagePipelineId() {
             return this.imagePipelineId;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setImageSecurityOptions(DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageSecurityOptions imageSecurityOptions) {
+            this.imageSecurityOptions = imageSecurityOptions;
+            return this;
+        }
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageSecurityOptions getImageSecurityOptions() {
+            return this.imageSecurityOptions;
         }
 
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setImportImageOptions(DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions importImageOptions) {

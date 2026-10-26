@@ -79,7 +79,7 @@ public class LockSnapshotResponseBody extends TeaModel {
 
         /**
          * <p>The time when the lock duration starts. The time follows the <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/iso-8601-time-format">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. </p>
-         * <p>If you lock a snapshot that is in the progressing state, the lock duration starts only after the snapshot enters the accomplished state.</p>
+         * <p>If you lock a snapshot that is in the progressing state, the lock duration is calculated only after the snapshot enters the accomplished state.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-15T10:00:00Z</p>
@@ -99,7 +99,7 @@ public class LockSnapshotResponseBody extends TeaModel {
         /**
          * <p>The lock mode. Valid values: </p>
          * <ul>
-         * <li>compliance: The snapshot is locked in compliance mode. A snapshot locked in compliance mode cannot be unlocked by any user and can be deleted only after the lock duration expires. Users cannot shorten the lock duration, but users with the required RAM permissions can extend the lock duration at any time. When locking a snapshot in compliance mode, you can optionally specify a cool-off period.</li>
+         * <li>compliance: the snapshot is locked in compliance mode. A snapshot locked in compliance mode cannot be unlocked by any user and can be deleted only after the lock duration expires. Users cannot shorten the lock duration, but users with the required RAM permissions can extend the lock duration at any time. When you lock a snapshot in compliance mode, you can optionally specify a cool-off period.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -111,9 +111,9 @@ public class LockSnapshotResponseBody extends TeaModel {
         /**
          * <p>The lock status. Valid values: </p>
          * <ul>
-         * <li>compliance-cooloff: The snapshot is locked in compliance mode but is still within the cool-off period. The snapshot cannot be deleted, but users with the required RAM permissions can unlock the snapshot, extend or shorten the cool-off period, and extend or shorten the lock duration. </li>
-         * <li>compliance: The snapshot is locked in compliance mode and the cool-off period has ended. The snapshot cannot be unlocked or deleted, but users with the required RAM permissions can extend the lock duration. </li>
-         * <li>expired: The snapshot was previously locked, but the lock duration has ended and the lock has expired. The snapshot is currently unlocked and can be deleted.</li>
+         * <li>compliance-cooloff: the snapshot is locked in compliance mode and is still in the cool-off period. The snapshot cannot be deleted, but users with the required RAM permissions can unlock the snapshot, extend or shorten the cool-off period, and extend or shorten the lock duration. </li>
+         * <li>compliance: the snapshot is locked in compliance mode and the cool-off period has ended. The snapshot cannot be unlocked or deleted, but users with the required RAM permissions can extend the lock duration. </li>
+         * <li>expired: the snapshot was locked, but the lock duration has ended and the lock has expired. The snapshot is not locked and can be deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class LockSnapshotRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>5EC38E7D-389F-1925-ABE2-D7925A8F****</p>
@@ -14,12 +14,12 @@ public class LockSnapshotRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The cool-off period. In compliance mode, you can set a cool-off period or skip the cool-off period to directly lock the snapshot. </p>
+     * <p>The cool-off period. In compliance mode, you can set a cool-off period or skip the cool-off period to lock the snapshot directly. </p>
      * <p>During the cool-off period, users with the required RAM permissions can unlock the snapshot, extend or shorten the cool-off period, and extend or shorten the lock duration. The snapshot cannot be deleted during the cool-off period. </p>
      * <p>After the cool-off period ends, you can only extend the lock duration. </p>
      * <p>Unit: hours. </p>
-     * <p>Valid values: 0 to 72. A value of 0 indicates that the cool-off period is skipped and the snapshot is directly locked. </p>
-     * <p>If the snapshot has already entered the compliance mode lock period, set this parameter to 0 to extend the lock duration.</p>
+     * <p>Valid values: 0 to 72. A value of 0 indicates that the cool-off period is skipped and the snapshot is locked directly. </p>
+     * <p>If the snapshot has entered the compliance mode lock period, you must set this parameter to 0 to extend the lock duration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,10 +29,10 @@ public class LockSnapshotRequest extends TeaModel {
     public Integer coolOffPeriod;
 
     /**
-     * <p>Specifies whether to perform only a dry run. Valid values: </p>
+     * <p>Specifies whether to only precheck the request. Valid values: </p>
      * <ul>
-     * <li>true: performs only a dry run. The system checks whether required parameters are specified, whether the request format is valid, and whether business restrictions are met. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned. </li>
-     * <li>false (default): performs a dry run and sends the request. If the check succeeds, the operation is performed.</li>
+     * <li>true: sends a check request. The operation is not performed. The system checks whether required parameters are specified, the request format is valid, and the service limits are met. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned. </li>
+     * <li>false (default): sends a normal request. The request is executed after the check succeeds.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,7 +56,7 @@ public class LockSnapshotRequest extends TeaModel {
     /**
      * <p>The lock mode. Valid values: </p>
      * <ul>
-     * <li>compliance: Locks the snapshot in compliance mode. A snapshot locked in compliance mode cannot be unlocked by any user and can be deleted only after the lock duration expires. Users cannot shorten the lock duration, but users with the required RAM permissions can extend the lock duration at any time. When locking a snapshot in compliance mode, you can optionally specify a cool-off period.</li>
+     * <li>compliance: locks the snapshot in compliance mode. A snapshot locked in compliance mode cannot be unlocked by any user and can be deleted only after the lock duration expires. Users cannot shorten the lock duration, but users with the required RAM permissions can extend the lock duration at any time. When you lock a snapshot in compliance mode, you can optionally specify a cool-off period.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -81,7 +81,7 @@ public class LockSnapshotRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/api-ecs-2014-05-26-describeregions">DescribeRegions</a> to query the most recent list of Alibaba Cloud regions.</p>
+     * <p>The region ID. You can call the <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/api-ecs-2014-05-26-describeregions">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

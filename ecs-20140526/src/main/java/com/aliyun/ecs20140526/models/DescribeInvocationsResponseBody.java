@@ -8,7 +8,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     public DescribeInvocationsResponseBodyInvocations invocations;
 
     /**
-     * <p>The pagination token returned in this call.</p>
+     * <p>The pagination token returned by the current call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2</p>
@@ -17,7 +17,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number of the query results.</p>
+     * <p>The page number of the query result.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -45,6 +45,9 @@ public class DescribeInvocationsResponseBody extends TeaModel {
 
     /**
      * <p>The total number of commands.</p>
+     * <blockquote>
+     * <p>The TotalCount parameter is meaningless when you use the MaxResults and NextToken parameters for paging.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1</p>

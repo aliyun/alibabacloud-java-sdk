@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeSpotPriceHistoryRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query the historical prices of spot instances. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
-     * <p>Default value: null, which indicates the current time.</p>
+     * <p>The end time to query the historical prices of spot instances. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+     * <p>Default value: empty. An empty value indicates the current time.</p>
      * 
      * <strong>example:</strong>
      * <p>2017-08-22T08:45:08Z</p>
@@ -25,15 +25,15 @@ public class DescribeSpotPriceHistoryRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>Specifies whether the spot instance is I/O optimized. Valid values:</p>
+     * <p>Specifies whether the spot instance is an I/O optimized instance. Valid values:</p>
      * <ul>
-     * <li><p>optimized: The spot instance is an I/O optimization instance.</p>
+     * <li><p>optimized: The spot instance is an I/O optimized instance.</p>
      * </li>
-     * <li><p>none: The spot instance is not an I/O optimization instance.</p>
+     * <li><p>none: The spot instance is a non-I/O optimized instance.</p>
      * </li>
      * </ul>
-     * <p>Default value for Generation I instance families: none.</p>
-     * <p>Default value for other instance families: optimized.</p>
+     * <p>Default value for Generation I instances: none.</p>
+     * <p>Default value for other instance family types: optimized.</p>
      * 
      * <strong>example:</strong>
      * <p>optimized</p>
@@ -44,8 +44,8 @@ public class DescribeSpotPriceHistoryRequest extends TeaModel {
     /**
      * <p>The network type of the spot instance. Valid values:</p>
      * <ul>
-     * <li>vpc: virtual private cloud (VPC).</li>
-     * <li>classic: classic network. This feature has been retired. For more information, see <a href="https://help.aliyun.com/document_detail/2833134.html">Retirement notice</a>.</li>
+     * <li>vpc: VPC.</li>
+     * <li>classic: classic network. This feature is retired. For more information, see <a href="https://help.aliyun.com/document_detail/2833134.html">Retirement notice</a>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -56,10 +56,10 @@ public class DescribeSpotPriceHistoryRequest extends TeaModel {
     public String networkType;
 
     /**
-     * <p>The type of the operating system platform. Valid values:</p>
+     * <p>The operating system platform of the instance. Valid values:</p>
      * <ul>
-     * <li>linux.</li>
-     * <li>windows.</li>
+     * <li>linux</li>
+     * <li>windows</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,7 +69,7 @@ public class DescribeSpotPriceHistoryRequest extends TeaModel {
     public String OSType;
 
     /**
-     * <p>The row number to start the query from.</p>
+     * <p>The starting row for the query.</p>
      * <p>Default value: 0.</p>
      * 
      * <strong>example:</strong>
@@ -103,10 +103,10 @@ public class DescribeSpotPriceHistoryRequest extends TeaModel {
     /**
      * <p>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values:</p>
      * <ul>
-     * <li>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released for 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain automatic release the instance.</li>
-     * <li>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain automatic release the instance.</li>
+     * <li>1: Alibaba Cloud guarantees that the instance is not automatically released within 1 hour after it is created. After 1 hour, the system automatically compares your bid with the market price and checks resource inventory to determine whether to retain or revoke the instance.</li>
+     * <li>0: Alibaba Cloud does not guarantee that the instance runs for 1 hour after it is created. The system automatically compares your bid with the market price and checks resource inventory to determine whether to retain or revoke the instance.</li>
      * </ul>
-     * <p>Alibaba Cloud sends an ECS system event notification 5 minutes before the instance is released. Spot instances are billed by second. Specify a protection period based on the expected task execution duration.</p>
+     * <p>Alibaba Cloud sends you a notification through an ECS system event 5 minutes before the instance is revoked. Spot instances are billed by the second. Select an appropriate protection period based on the execution duration of specific tasks.</p>
      * <blockquote>
      * <p>This parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.</p>
      * </blockquote>
@@ -118,8 +118,8 @@ public class DescribeSpotPriceHistoryRequest extends TeaModel {
     public Integer spotDuration;
 
     /**
-     * <p>The beginning of the time range to query the historical prices of spot instances. The maximum time range between the start time and end time is 30 days. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
-     * <p>Default value: null, which indicates 3 hours before the end time.</p>
+     * <p>The start time to query the historical prices of spot instances. The time span between the start time and the specified end time cannot exceed 30 days. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+     * <p>Default value: empty. An empty value indicates 3 hours before the end time.</p>
      * 
      * <strong>example:</strong>
      * <p>2017-08-22T08:45:08Z</p>

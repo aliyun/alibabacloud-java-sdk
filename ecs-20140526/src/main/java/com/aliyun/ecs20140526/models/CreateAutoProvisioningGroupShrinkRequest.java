@@ -8,7 +8,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration launchConfiguration;
 
     /**
-     * <p>The name of the auto provisioning group. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The name of the auto provisioning group. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>apg-test</p>
@@ -19,11 +19,11 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     /**
      * <p>The delivery type of the auto provisioning group. Valid values:</p>
      * <ul>
-     * <li><p>request: one-time asynchronous delivery. The group delivers the instance cluster asynchronously only at startup. If scheduling fails, no retry is performed.</p>
+     * <li><p>request: one-time asynchronous delivery. The auto provisioning group asynchronously delivers the instance cluster only at startup and does not retry if the scheduling fails.</p>
      * </li>
-     * <li><p>instant: one-time synchronous delivery. The group synchronously creates instances only at startup and returns the list of successfully created instances and the causes of creation failures in the response.</p>
+     * <li><p>instant: one-time synchronization delivery. The auto provisioning group synchronously creates instances only at startup and returns the list of successfully created instances and the reasons for creation failed in the response.</p>
      * </li>
-     * <li><p>maintain: continuous delivery. The group attempts to deliver the instance cluster at startup and monitors real-time capacity. If the target capacity is not reached, the group continues to create ECS instances.</p>
+     * <li><p>maintain: continuous delivery. The auto provisioning group attempts to deliver the instance cluster at startup, monitoring the real-time capacity, and continues to create ECS instances if the target capacity is not reached.</p>
      * </li>
      * </ul>
      * <p>Default value: maintain.</p>
@@ -34,11 +34,14 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     @NameInMap("AutoProvisioningGroupType")
     public String autoProvisioningGroupType;
 
+    /**
+     * <p>The configuration options when AutoProvisioningGroupType is set to candidate.</p>
+     */
     @NameInMap("CandidateOptions")
     public CreateAutoProvisioningGroupShrinkRequestCandidateOptions candidateOptions;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must ensure that the token is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">Ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
@@ -47,13 +50,13 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The list of data disk configurations.</p>
+     * <p>The list of data disk configurations for the instance.</p>
      */
     @NameInMap("DataDiskConfig")
     public java.util.List<CreateAutoProvisioningGroupShrinkRequestDataDiskConfig> dataDiskConfig;
 
     /**
-     * <p>The billing method for the capacity difference when the sum of <code>PayAsYouGoTargetCapacity</code> and <code>SpotTargetCapacity</code> is less than <code>TotalTargetCapacity</code>. Valid values:</p>
+     * <p>The Billable methods for the capacity difference when the sum of <code>PayAsYouGoTargetCapacity</code> and <code>SpotTargetCapacity</code> is less than <code>TotalTargetCapacity</code>. Valid values:</p>
      * <ul>
      * <li>PayAsYouGo: pay-as-you-go instances.</li>
      * <li>Spot: spot instances.</li>
@@ -76,10 +79,10 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to release instances when the real-time capacity of the auto provisioning group exceeds the target capacity and a scale-in event is triggered. Valid values:</p>
+     * <p>Specifies whether to release the instances that are removed during a scale-down event when the real-time capacity of the auto provisioning group exceeds the target capacity and trigger a scale-down. Valid values:</p>
      * <ul>
-     * <li>termination: releases the scaled-in instances.</li>
-     * <li>no-termination: only removes the scaled-in instances from the auto provisioning group.</li>
+     * <li>termination: releases the removed instances.</li>
+     * <li>no-termination: only removes the instances from the auto provisioning group without releasing them.</li>
      * </ul>
      * <p>Default value: no-termination.</p>
      * 
@@ -94,7 +97,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is in invitational preview and is not publicly available.</p>
+     * <p>This parameter is in invitational preview and is not available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -104,13 +107,13 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     public Boolean hibernationOptionsConfigured;
 
     /**
-     * <p>The list of extended launch templates.</p>
+     * <p>The extended launch templates.</p>
      */
     @NameInMap("LaunchTemplateConfig")
     public java.util.List<CreateAutoProvisioningGroupShrinkRequestLaunchTemplateConfig> launchTemplateConfig;
 
     /**
-     * <p>The ID of the instance launch template associated with the auto provisioning group. You can invoke <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a> to query active instance launch templates. If you specify both a launch template and launch configuration information (<code>LaunchConfiguration.*</code>), the launch template takes precedence.</p>
+     * <p>The ID of the launch template associated with the auto provisioning group. You can invoke the <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a> operation to query active instance launch templates. If you specify both a launch template and launch configurations (<code>LaunchConfiguration.*</code>), the system preferentially uses the launch template.</p>
      * 
      * <strong>example:</strong>
      * <p>lt-bp1fgzds4bdogu03****</p>
@@ -119,7 +122,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     public String launchTemplateId;
 
     /**
-     * <p>The version of the instance launch template associated with the auto provisioning group. You can invoke <a href="https://help.aliyun.com/document_detail/73761.html">DescribeLaunchTemplateVersions</a> to query active instance launch template versions.</p>
+     * <p>The version of the launch template associated with the auto provisioning group. You can invoke the <a href="https://help.aliyun.com/document_detail/73761.html">DescribeLaunchTemplateVersions</a> operation to query active instance launch template versions.</p>
      * <p>Default value: the default version of the launch template.</p>
      * 
      * <strong>example:</strong>
@@ -129,9 +132,9 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     public String launchTemplateVersion;
 
     /**
-     * <p>The maximum price for spot instances in the auto provisioning group.</p>
+     * <p>The maximum price of spot instances in the auto provisioning group.</p>
      * <blockquote>
-     * <p>If both <code>MaxSpotPrice</code> and <code>LaunchTemplateConfig.N.MaxPrice</code> are specified, the lower value is used.</p>
+     * <p>If the Settings for both <code>MaxSpotPrice</code> and <code>LaunchTemplateConfig.N.MaxPrice</code> are specified, the lower value takes precedence.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -141,12 +144,12 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     public Float maxSpotPrice;
 
     /**
-     * <p>The target minimum capacity of the auto provisioning group. Valid values: positive integers.</p>
-     * <p>Take note of the following items:</p>
+     * <p>The minimum target capacity of the auto provisioning group. Valid values: positive integers.</p>
+     * <p>Take note of the following items when you configure this parameter:</p>
      * <ul>
-     * <li>This parameter takes effect only when you create a one-time synchronous auto provisioning group (<code>AutoProvisioningGroupType=instant</code>).</li>
-     * <li>If the instance inventory in the current region is less than this parameter value, the invoke operation fails and no instances are created.</li>
-     * <li>If the instance inventory in the current region is greater than this parameter value, instances are created as expected based on other specified parameter values.</li>
+     * <li>This parameter takes effect only when you create an auto provisioning group of the one-time synchronous delivery type (AutoProvisioningGroupType=instant).</li>
+     * <li>If the instance inventory in the current region is less than the value of this parameter, the API call fails and no instances are created.</li>
+     * <li>If the instance inventory in the current region is greater than the value of this parameter, instances are created based on the values of other specified parameters.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -164,9 +167,9 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     /**
      * <p>The policy for creating pay-as-you-go instances. Valid values:</p>
      * <ul>
-     * <li><p>lowest-price: cost optimization policy. Selects the instance type with the lowest price.</p>
+     * <li><p>lowest-price: cost optimization policy. The instance type with the lowest price is selected.</p>
      * </li>
-     * <li><p>prioritized: priority-based policy. Creates instances based on the priority specified by <code>LaunchTemplateConfig.N.Priority</code>.</p>
+     * <li><p>prioritized: priority-based policy. Instances are created based on the priority specified by <code>LaunchTemplateConfig.N.Priority</code>.</p>
      * </li>
      * </ul>
      * <p>Default value: lowest-price.</p>
@@ -178,7 +181,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     public String payAsYouGoAllocationStrategy;
 
     /**
-     * <p>The target capacity of pay-as-you-go instances in the auto provisioning group. Valid values: less than or equal to the parameter value of <code>TotalTargetCapacity</code>.</p>
+     * <p>The target capacity of pay-as-you-go instances in the auto provisioning group. Valid values: an integer less than or equal to the parameter value of <code>TotalTargetCapacity</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -187,13 +190,13 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     public String payAsYouGoTargetCapacity;
 
     /**
-     * <p>The detailed capacity configuration for subscription instances.</p>
+     * <p>The detailed capacity configurations for subscription instances.</p>
      */
     @NameInMap("PrePaidOptions")
     public CreateAutoProvisioningGroupShrinkRequestPrePaidOptions prePaidOptions;
 
     /**
-     * <p>The ID of the region in which to create the auto provisioning group. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The ID of the region where the auto provisioning group resides. You can invoke the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -218,10 +221,10 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The resource pool policy used to create instances. Take note of the following items when you set this parameter:</p>
+     * <p>The resource pool policy used when creating instances. Take note of the following items when you configure this parameter:</p>
      * <ul>
      * <li>This parameter takes effect only when you create pay-as-you-go instances.</li>
-     * <li>This parameter takes effect only when you create a one-time synchronous auto provisioning group (<code>AutoProvisioningGroupType=instant</code>).</li>
+     * <li>This parameter takes effect only when you create an auto provisioning group of the one-time synchronous delivery type (AutoProvisioningGroupType=instant).</li>
      * </ul>
      */
     @NameInMap("ResourcePoolOptions")
@@ -230,11 +233,11 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     /**
      * <p>The policy for creating spot instances. Valid values:</p>
      * <ul>
-     * <li><p>lowest-price: cost optimization policy. Selects the instance type with the lowest price.</p>
+     * <li><p>lowest-price: cost optimization policy. The instance type with the lowest price is selected.</p>
      * </li>
-     * <li><p>diversified: balanced zone distribution policy. Creates instances in the zones specified in the extended launch template and distributes them evenly across zones.</p>
+     * <li><p>diversified: balanced zone distribution policy. Instances are created in the zones specified by the extended launch template and evenly distributed across the zones.</p>
      * </li>
-     * <li><p>capacity-optimized: capacity optimization distribution policy. Selects the optimal instance type and zone based on inventory availability.</p>
+     * <li><p>capacity-optimized: capacity optimization distribution policy. The optimal instance type and zone are selected based on inventory.</p>
      * </li>
      * </ul>
      * <p>Default value: lowest-price.</p>
@@ -246,7 +249,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     public String spotAllocationStrategy;
 
     /**
-     * <p>The action to take when a spot instance is interrupted. Valid values:</p>
+     * <p>The behavior when a spot instance is interrupted. Valid values:</p>
      * <ul>
      * <li><p>stop: stops the instance.</p>
      * </li>
@@ -262,8 +265,8 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     public String spotInstanceInterruptionBehavior;
 
     /**
-     * <p>Takes effect only when <code>SpotAllocationStrategy</code> is set to <code>lowest-price</code>. Specifies the number of instance types from which the auto provisioning group selects the lowest-priced ones to create instances.</p>
-     * <p>Valid values: less than the value of N in <code>LaunchTemplateConfig.N</code>.</p>
+     * <p>The number of instance types with the lowest prices that are selected by the auto provisioning group to create instances. This parameter takes effect only when <code>SpotAllocationStrategy</code> is set to <code>lowest-price</code>.</p>
+     * <p>Valid values: an integer less than the value of N in <code>LaunchTemplateConfig.N</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -272,7 +275,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     public Integer spotInstancePoolsToUseCount;
 
     /**
-     * <p>The target capacity of spot instances in the auto provisioning group. Valid values: less than or equal to the parameter value of <code>TotalTargetCapacity</code>.</p>
+     * <p>The target capacity of spot instances in the auto provisioning group. Valid values: an integer less than or equal to the parameter value of <code>TotalTargetCapacity</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -281,22 +284,22 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     public String spotTargetCapacity;
 
     /**
-     * <p>The list of system disk configurations.</p>
+     * <p>The list of system disk configurations for the instance.</p>
      */
     @NameInMap("SystemDiskConfig")
     public java.util.List<CreateAutoProvisioningGroupShrinkRequestSystemDiskConfig> systemDiskConfig;
 
     /**
-     * <p>The tags to attach to the auto provisioning group.</p>
+     * <p>The list of tags bound to the auto provisioning group.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateAutoProvisioningGroupShrinkRequestTag> tag;
 
     /**
-     * <p>Specifies whether to release instances auto provisioning group when the auto-provisioning group is deleted. Valid values:</p>
+     * <p>Specifies whether to release the instances in the auto-provisioning group when the group is deleted. Valid values:</p>
      * <ul>
-     * <li>true: releases instances auto provisioning group.</li>
-     * <li>false: retains instances auto provisioning group.</li>
+     * <li>true: releases the instances auto provisioning group.</li>
+     * <li>false: retains the instances auto provisioning group.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -307,10 +310,10 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     public Boolean terminateInstances;
 
     /**
-     * <p>Specifies whether to release instances auto provisioning group when the auto-provisioning group expires. Valid values:</p>
+     * <p>Specifies whether to release the instances in the auto provisioning group when the group expires. Valid values:</p>
      * <ul>
-     * <li>true: releases instances auto provisioning group.</li>
-     * <li>false: only removes instances from the auto-provisioning group.</li>
+     * <li>true: releases the instances in the group.</li>
+     * <li>false: only removes the instances from the group without releasing them.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -322,7 +325,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
 
     /**
      * <p>The total target capacity of the auto provisioning group. Valid values: positive integers.</p>
-     * <p>The total capacity must be greater than or equal to the sum of <code>PayAsYouGoTargetCapacity</code> (the target capacity of pay-as-you-go instances) and <code>SpotTargetCapacity</code> (the target capacity of spot instances).</p>
+     * <p>The total target capacity must be greater than or equal to the sum of <code>PayAsYouGoTargetCapacity</code> (the target capacity of pay-as-you-go instances) and <code>SpotTargetCapacity</code> (the target capacity of spot instances).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -332,9 +335,10 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     public String totalTargetCapacity;
 
     /**
-     * <p>The time when the auto provisioning group starts. This parameter and <code>ValidUntil</code> together determine the validity period.</p>
-     * <p>Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <p>Default value: the UNIX timestamp at which the request takes effect immediately.</p>
+     * <p>The time when the auto provisioning group starts. This parameter and <code>ValidUntil</code> determine the validity period.</p>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>Default value: the UNIX timestamp when the API operation takes effect.
+     * <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a></p>
      * 
      * <strong>example:</strong>
      * <p>2019-04-01T15:10:20Z</p>
@@ -343,9 +347,10 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     public String validFrom;
 
     /**
-     * <p>The time when the auto provisioning group expires. This parameter and <code>ValidFrom</code> together determine the validity period.</p>
-     * <p>Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <p>Default value: 2099-12-31T23:59:59Z.</p>
+     * <p>The time when the auto provisioning group expires. This parameter and <code>ValidFrom</code> determine the validity period.</p>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>Default value: 2099-12-31T23:59:59Z.
+     * <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a></p>
      * 
      * <strong>example:</strong>
      * <p>2019-06-01T15:10:20Z</p>
@@ -657,7 +662,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     public static class CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationArn extends TeaModel {
         /**
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is in invitational preview and is not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -668,7 +673,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is in invitational preview and is not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -679,7 +684,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is in invitational preview and is not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -722,9 +727,9 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     public static class CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationDataDisk extends TeaModel {
         /**
          * <p>The ID of the automatic snapshot policy applied to the data disk.</p>
-         * <p>Take note of the following items:</p>
+         * <p>Take note of the following items when you configure this parameter:</p>
          * <ul>
-         * <li>This parameter takes effect only when you create a one-time synchronous delivery auto provisioning group (AutoProvisioningGroupType=instant).</li>
+         * <li>This parameter takes effect only when you create an auto provisioning group of the one-time synchronous delivery type (AutoProvisioningGroupType=instant).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -736,11 +741,11 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable the performance burst feature. Valid values:</p>
          * <ul>
-         * <li>true: enables the feature.</li>
-         * <li>false: disables the feature.</li>
+         * <li>true: yes.</li>
+         * <li>false: no.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is supported only when DiskCategory is set to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+         * <p>This parameter is supported only when the DiskCategory parameter is set to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -754,11 +759,11 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
          * <ul>
          * <li>cloud_efficiency: ultra disk.</li>
          * <li>cloud_ssd: standard SSD.</li>
-         * <li>cloud_essd: enterprise SSD (ESSD).</li>
+         * <li>cloud_essd: enterprise SSD.</li>
          * <li>cloud: basic disk.</li>
          * </ul>
-         * <p>For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.</p>
-         * <p>If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>For instances with I/O optimization, the default value is cloud_efficiency. For instances without I/O optimization, the default value is cloud.</p>
+         * <p>If both the launch template and the launch configurations are specified, the launch template takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
@@ -767,13 +772,13 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public String category;
 
         /**
-         * <p>Specifies whether the data disk is released when the instance is released. Valid values:</p>
+         * <p>Specifies whether to release the data disk when the instance is released. Valid values:</p>
          * <ul>
-         * <li>true: the data disk is released when the instance is released.</li>
-         * <li>false: the data disk is not released when the instance is released.</li>
+         * <li>true: The data disk is released when the instance is released.</li>
+         * <li>false: The data disk is not released when the instance is released.</li>
          * </ul>
          * <p>Default value: true.</p>
-         * <p>If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>If both the launch template and the launch configurations are specified, the launch template takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -782,7 +787,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public Boolean deleteWithInstance;
 
         /**
-         * <p>The description of the data disk. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>. If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>The description of the data disk. The description must be 2 to 256 characters in length and cannot start with http:// or https://. If both the launch template and the launch configurations are specified, the launch template takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>DataDisk_Description</p>
@@ -791,7 +796,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The mount point of the data disk. If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>The mount point of the data disk. If both the launch template and the launch configurations are specified, the launch template takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>/dev/vd1</p>
@@ -800,9 +805,9 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public String device;
 
         /**
-         * <p>The name of the data disk. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The name of the data disk. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
          * <p>Default value: empty.</p>
-         * <p>If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>If both a launch template and launch configurations are specified, the launch template takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssdData</p>
@@ -812,7 +817,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is not publicly available.</p>
+         * <p>This parameter is not available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -822,13 +827,13 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public String encryptAlgorithm;
 
         /**
-         * <p>Specifies whether data disk N is encrypted. Valid values:</p>
+         * <p>Specifies whether to encrypt data disk N. Valid values:</p>
          * <ul>
-         * <li>true: encrypted.</li>
-         * <li>false: not encrypted.</li>
+         * <li>true: The disk is encrypted.</li>
+         * <li>false: The disk is not encrypted.</li>
          * </ul>
          * <p>Default value: false.</p>
-         * <p>If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>If both the launch template and the launch configurations are specified, the launch template takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -846,15 +851,15 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public String kmsKeyId;
 
         /**
-         * <p>The performance level of the enterprise SSD used as a data disk. The value of N must be the same as that in <code>LaunchConfiguration.DataDisk.N.Category</code>. Valid values:</p>
+         * <p>When you create an enterprise SSD to use as a data disk, configure the Settings for the performance level of the disk. The value of N must be the same as the value of N in LaunchConfiguration.DataDisk.N.Category. Valid values:</p>
          * <ul>
-         * <li>PL0: up to 10,000 random read/write IOPS per disk.</li>
-         * <li>PL1 (default): up to 50,000 random read/write IOPS per disk.</li>
-         * <li>PL2: up to 100,000 random read/write IOPS per disk.</li>
-         * <li>PL3: up to 1,000,000 random read/write IOPS per disk.</li>
+         * <li>PL0: A single enterprise SSD delivers up to 10,000 random read/write IOPS.</li>
+         * <li>PL1 (default): A single enterprise SSD delivers up to 50,000 random read/write IOPS.</li>
+         * <li>PL2: A single enterprise SSD delivers up to 100,000 random read/write IOPS.</li>
+         * <li>PL3: A single enterprise SSD delivers up to 1,000,000 random read/write IOPS.</li>
          * </ul>
-         * <p>For information about how to select an ESSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
-         * <p>If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>For more information about how to select the performance level of an enterprise SSD, see <a href="https://help.aliyun.com/document_detail/122389.html">Enterprise SSDs</a>.</p>
+         * <p>If both the launch template and the launch configurations are specified, the launch template takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>PL1</p>
@@ -866,7 +871,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
          * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1000 × Capacity - Baseline performance}.</p>
          * <p>Baseline performance = min{1,800 + 50 × Capacity, 50,000}.</p>
          * <blockquote>
-         * <p>This parameter is supported only when DiskCategory is set to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+         * <p>This parameter is supported only when the DiskCategory parameter is set to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -876,11 +881,11 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public Long provisionedIops;
 
         /**
-         * <p>The size of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:</p>
+         * <p>The size of data disk N. Unit: GiB. Valid values of N: 1 to 16. Valid values:</p>
          * <ul>
          * <li>cloud_efficiency: 20 to 32768.</li>
          * <li>cloud_ssd: 20 to 32768.</li>
-         * <li>cloud_essd: depends on the value of <code>LaunchConfiguration.DataDisk.N.PerformanceLevel</code>.<ul>
+         * <li>cloud_essd: The valid values are related to the value of LaunchConfiguration.DataDisk.N.PerformanceLevel.<ul>
          * <li>PL0: 40 to 32768.</li>
          * <li>PL1: 20 to 32768.</li>
          * <li>PL2: 461 to 32768.</li>
@@ -890,9 +895,9 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
          * <li>cloud: 5 to 2000.</li>
          * </ul>
          * <blockquote>
-         * <p>The value of this parameter must be greater than or equal to the size of the snapshot specified by <code>LaunchConfiguration.DataDisk.N.SnapshotId</code>.</p>
+         * <p>The value of this parameter must be greater than or equal to the size of the snapshot specified by the LaunchConfiguration.DataDisk.N.SnapshotId parameter.</p>
          * </blockquote>
-         * <p>If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>If both the launch template and the launch configurations are specified, the launch template takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -902,8 +907,8 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
 
         /**
          * <p>The ID of the snapshot used to create data disk N. Valid values of N: 1 to 16.</p>
-         * <p>After you specify this parameter, the <code>LaunchConfiguration.DataDisk.N.Size</code> parameter is ignored. The actual size of the created disk is the size of the specified snapshot. Snapshots created on or before July 15, 2013 cannot be used. Otherwise, the request is rejected.</p>
-         * <p>If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>If this parameter is specified, the LaunchConfiguration.DataDisk.N.Size parameter is ignored, and the size of the created disk is the same as the size of the specified snapshot. You cannot use snapshots that were created on or before July 15, 2013. Otherwise, the request is rejected and an error is returned.</p>
+         * <p>If both the launch template and the launch configurations are specified, the launch template takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>s-bp17441ohwka0yuh****</p>
@@ -1032,10 +1037,10 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
 
     public static class CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSystemDisk extends TeaModel {
         /**
-         * <p>The ID of the automatic snapshot policy to apply to the system disk.</p>
-         * <p>Take note of the following items when you set this parameter:</p>
+         * <p>The ID of the automatic snapshot policy applied to the system disk.</p>
+         * <p>Take note of the following items when you configure this parameter:</p>
          * <ul>
-         * <li>This parameter takes effect only when you create a one-time synchronous auto provisioning group (AutoProvisioningGroupType=instant).</li>
+         * <li>This parameter takes effect only when you create an auto provisioning group of the one-time synchronous delivery type (AutoProvisioningGroupType=instant).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1047,11 +1052,11 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable the performance burst feature. Valid values:</p>
          * <ul>
-         * <li>true: enables the performance burst feature.</li>
-         * <li>false: does not enable the performance burst feature.</li>
+         * <li>true: yes.</li>
+         * <li>false: no.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is supported only when <code>SystemDisk.Category</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disk</a>.</p>
+         * <p>This parameter is supported only when the SystemDisk.Category parameter is set to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1061,7 +1066,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public Boolean burstingEnabled;
 
         /**
-         * <p>The encryption algorithm for the system disk. Valid values:</p>
+         * <p>The encryption algorithm of the system disk. Valid values:</p>
          * <ul>
          * <li><p>aes-256.</p>
          * </li>
@@ -1069,9 +1074,9 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
          * </li>
          * </ul>
          * <p>Default value: aes-256.</p>
-         * <p>If you specify both a launch template and launch configurations, the launch template takes priority.</p>
+         * <p>If both the launch template and the launch configurations are specified, the launch template takes precedence.</p>
          * <blockquote>
-         * <p>This parameter is not publicly available.</p>
+         * <p>This parameter is not available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1083,13 +1088,13 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         /**
          * <p>Specifies whether to encrypt system disk N. Valid values:</p>
          * <ul>
-         * <li><p>true: encrypts the system disk.</p>
+         * <li><p>true: The disk is encrypted.</p>
          * </li>
-         * <li><p>false: does not encrypt the system disk.</p>
+         * <li><p>false: The disk is not encrypted.</p>
          * </li>
          * </ul>
          * <p>Default value: false.</p>
-         * <p>If you specify both a launch template and launch configurations, the launch template takes priority.</p>
+         * <p>If both the launch template and the launch configurations are specified, the launch template takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1111,7 +1116,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
          * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1000 × Capacity - Baseline performance}.</p>
          * <p>Baseline performance = min{1,800 + 50 × Capacity, 50,000}.</p>
          * <blockquote>
-         * <p>This parameter is supported only when SystemDisk.Category is set to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disk</a>.</p>
+         * <p>This parameter is supported only when the SystemDisk.Category parameter is set to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1177,7 +1182,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
 
     public static class CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationTag extends TeaModel {
         /**
-         * <p>The tag key of the instance. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain <code>http://</code> or <code>https://</code>. If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>The tag key of the instance. Valid values of N: 1 to 20. If this parameter is specified, it cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://. If both the launch template and the launch configurations are specified, the launch template takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -1186,7 +1191,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the instance. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with acs:. The tag value cannot contain <code>http://</code> or <code>https://</code>. If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>The tag value of the instance. Valid values of N: 1 to 20. If this parameter is specified, it can be an empty string. The tag value can be up to 128 characters in length. It cannot start with acs:, and cannot contain http:// or https://. If both the launch template and the launch configurations are specified, the launch template takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>
@@ -1220,7 +1225,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     public static class CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationCpuOptions extends TeaModel {
         /**
          * <p>The number of CPU cores.</p>
-         * <p>Default value: see <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/specify-and-view-cpu-options">Specify and view CPU options</a>.</p>
+         * <p>Default value: For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/specify-and-view-cpu-options">Customize CPU options</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1229,10 +1234,10 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public Integer core;
 
         /**
-         * <p>The number of threads per CPU core. The number of vCPUs of the ECS instance = CpuOptions.Core value × CpuOptions.ThreadsPerCore value.</p>
-         * <p>CpuOptions.ThreadsPerCore=1 indicates that CPU hyper-threading is disabled.</p>
-         * <p>Only specific instance types support custom CPU thread counts.</p>
-         * <p>For valid values and default values, see <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/specify-and-view-cpu-options">Specify and view CPU options</a>.</p>
+         * <p>The number of threads per core. The number of vCPUs of the ECS instance = Value of CpuOptions.Core × Value of CpuOptions.ThreadsPerCore.</p>
+         * <p>A value of 1 for CpuOptions.ThreadsPerCore indicates that CPU hyper-threading is disabled.</p>
+         * <p>Only specific instance types support the configuration of the number of threads per core.</p>
+         * <p>Valid values and default value: For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/specify-and-view-cpu-options">Customize CPU options</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1265,10 +1270,10 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
 
     public static class CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationImageOptions extends TeaModel {
         /**
-         * <p>Specifies whether instances that use this image support logon with the ecs-user user. Valid values:</p>
+         * <p>Specifies whether the instance that uses this image supports logons by using the ecs-user username. Valid values:</p>
          * <ul>
-         * <li>true: supported.</li>
-         * <li>false: not supported.</li>
+         * <li>true: yes.</li>
+         * <li>false: no.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1293,9 +1298,21 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     }
 
     public static class CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSchedulerOptions extends TeaModel {
+        /**
+         * <p>The ID of the dedicated host cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc-bp12wlf6bw0vz9v2</p>
+         */
         @NameInMap("DedicatedHostClusterId")
         public String dedicatedHostClusterId;
 
+        /**
+         * <p>The ID of the dedicated host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dh-bp67acfmxazb4p01</p>
+         */
         @NameInMap("DedicatedHostId")
         public String dedicatedHostId;
 
@@ -1323,6 +1340,12 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     }
 
     public static class CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSecurityOptions extends TeaModel {
+        /**
+         * <p>The trusted system mode. Set the value to vTPM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vTPM</p>
+         */
         @NameInMap("TrustedSystemMode")
         public String trustedSystemMode;
 
@@ -1344,20 +1367,21 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     public static class CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration extends TeaModel {
         /**
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is in invitational preview and is not supported.</p>
          * </blockquote>
          */
         @NameInMap("Arn")
         public java.util.List<CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationArn> arn;
 
         /**
-         * <p>The automatic release time of the pay-as-you-go instance. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the UTC+0 time zone. The format is <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
+         * <p>The automatic release time of the pay-as-you-go instance. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * <ul>
-         * <li><p>If the value of seconds (<code>ss</code>) is not <code>00</code>, the start time of the current minute (<code>mm</code>) is used.</p>
+         * <li><p>If the value of the seconds (ss) field is not 00, the time is automatically rounded down to the current minute (mm).</p>
          * </li>
-         * <li><p>The earliest release time is 30 minutes after the current time.</p>
+         * <li><p>The release time must be at least 30 minutes later than the current time.</p>
          * </li>
-         * <li><p>The latest release time cannot be more than three years from the current time.</p>
+         * <li><p>The release time cannot be more than three years later than the current time.
+         * <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a></p>
          * </li>
          * </ul>
          * 
@@ -1368,13 +1392,13 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public String autoReleaseTime;
 
         /**
-         * <p>The running mode of the burstable instance. Valid values:</p>
+         * <p>The performance mode of the burstable instance. Valid values:</p>
          * <ul>
-         * <li>Standard: standard mode. For more information about instance performance, see the performance constrained mode section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
-         * <li>Unlimited: unlimited mode. For more information about instance performance, see the unlimited mode section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
+         * <li>Standard: standard mode. For more information about instance performance, see the &quot;Standard mode&quot; section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
+         * <li>Unlimited: unlimited mode. For more information about instance performance, see the &quot;Unlimited mode&quot; section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
          * </ul>
-         * <p>Default value: none.</p>
-         * <p>If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>Default value: null.</p>
+         * <p>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>Standard</p>
@@ -1383,7 +1407,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public String creditSpecification;
 
         /**
-         * <p>The list of data disk configurations in the launch configuration.</p>
+         * <p>The extended list of disk configurations for the launch template.</p>
          */
         @NameInMap("DataDisk")
         public java.util.List<CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationDataDisk> dataDisk;
@@ -1398,13 +1422,13 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public String deploymentSetId;
 
         /**
-         * <p>The hostname of the instance. Take note of the following items:</p>
+         * <p>The hostname of the instance. Limits:</p>
          * <ul>
-         * <li>Periods (.) and hyphens (-) cannot be used as the first or last characters and cannot be used consecutively.</li>
-         * <li>Windows instances: The hostname must be 2 to 15 characters in length and cannot contain periods (.) or consist entirely of digits. The hostname can contain letters, digits, and hyphens (-).</li>
-         * <li>Instances that run other operating systems such as Linux: The hostname must be 2 to 64 characters in length and can contain multiple periods (.). Each segment separated by a period can contain letters, digits, and hyphens (-).</li>
+         * <li>The hostname cannot start or end with a period (.) or a hyphen (-), and cannot contain consecutive periods (.) or hyphens (-).</li>
+         * <li>For Windows instances: The hostname must be 2 to 15 characters in length. It cannot contain periods (.) and cannot contain only digits. It can contain letters, digits, and hyphens (-).</li>
+         * <li>For other instances such as Linux instances: The hostname must be 2 to 64 characters in length. It can contain multiple periods (.). The characters between two consecutive periods are considered a segment. Each segment can contain letters, digits, and hyphens (-).</li>
          * <li>You cannot specify both <code>LaunchConfiguration.HostName</code> and <code>LaunchConfiguration.HostNames.N</code>. Otherwise, an error is returned.</li>
-         * <li>If you specify both a launch template and launch configuration information, the launch template takes precedence.</li>
+         * <li>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1414,12 +1438,12 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public String hostName;
 
         /**
-         * <p>The list of hostnames for one or more instances. Take note of the following items:</p>
+         * <p>The list of hostnames for one or more instances. Limits:</p>
          * <ul>
-         * <li>This parameter takes effect only when you create a one-time synchronous delivery auto provisioning group (<code>AutoProvisioningGroupType=instant</code>).</li>
-         * <li>N indicates the number of instances. Valid values of N: 1 to 1000. The value must be the same as the value of TotalTargetCapacity.</li>
-         * <li>Periods (.) and hyphens (-) cannot be used as the first or last characters and cannot be used consecutively.</li>
-         * <li>If you specify both a launch template and launch configuration information, the launch template takes precedence.</li>
+         * <li>This parameter takes effect only when you create an auto provisioning group of the one-time synchronous delivery type (AutoProvisioningGroupType=instant).</li>
+         * <li>N indicates the number of instances. Valid values of N: 1 to 1000. The value of N must be the same as the value of the TotalTargetCapacity parameter.</li>
+         * <li>Periods (.) and hyphens (-) cannot be used as the first or last character and cannot be used consecutively.</li>
+         * <li>If both the launch template and the launch configurations are specified, the launch template takes precedence.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1429,7 +1453,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public java.util.List<String> hostNames;
 
         /**
-         * <p>The name of the image family. The name must be 2 to 128 characters in length. The name must start with a letter, and cannot start with <code>aliyun</code> or <code>acs:</code>. The name cannot contain <code>http://</code> or <code>https://</code>. The name can contain digits, colons (:), underscores (_), or hyphens (-).</p>
+         * <p>The name of the image family. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>. It can contain digits, colons (:), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>hangzhou-daily-update</p>
@@ -1438,7 +1462,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public String imageFamily;
 
         /**
-         * <p>The ID of the image used to create instances. You can call <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> to query available image resources. If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>The ID of the image. The image resource selected when the instance is started. You can call the <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> operation to query available image resources. If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>m-bp1g7004ksh0oeuc****</p>
@@ -1447,7 +1471,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The description of the instance. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>. If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>The description of the instance. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>. If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>Instance_Description</p>
@@ -1456,10 +1480,10 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public String instanceDescription;
 
         /**
-         * <p>The name of the instance. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. The name can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>The name of the instance. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. It can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
          * <p>Default value: the <code>InstanceId</code> of the instance.</p>
-         * <p>When you create multiple ECS instances, you can batch configure sequential instance names. For more information, see <a href="https://help.aliyun.com/document_detail/196048.html">Batch configure sequential names or hostnames for multiple instances</a>.</p>
-         * <p>If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>When you create multiple ECS instances, you can batch configure sequential instance names. For more information, see <a href="https://help.aliyun.com/document_detail/196048.html">Batch configure sequential instance names or hostnames</a>.</p>
+         * <p>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>k8s-node-[1,4]-alibabacloud</p>
@@ -1468,15 +1492,15 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The billing method for network usage. Valid values:</p>
+         * <p>The network billing method. Valid values:</p>
          * <ul>
          * <li>PayByBandwidth: pay-by-bandwidth.</li>
          * <li>PayByTraffic: pay-by-traffic.</li>
          * </ul>
          * <blockquote>
-         * <p>In pay-by-traffic mode, the peak inbound and outbound bandwidths are used as upper limits of bandwidths instead of guaranteed performance metrics. When resources are contended for, the peak bandwidths may be limited. If you want guaranteed bandwidth for your business, use pay-by-bandwidth.</p>
+         * <p>In pay-by-traffic mode, the peak inbound and outbound bandwidths are upper limits and are not guaranteed. During resource contention, the peak bandwidths may be limited. If your business requires guaranteed bandwidth, use the pay-by-bandwidth mode.</p>
          * </blockquote>
-         * <p>If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>PayByTraffic</p>
@@ -1487,10 +1511,10 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         /**
          * <p>The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:</p>
          * <ul>
-         * <li>If the maximum outbound public bandwidth is less than or equal to 10 Mbit/s: 1 to 10. Default value: 10.</li>
-         * <li>If the maximum outbound public bandwidth is greater than 10 Mbit/s: 1 to the value of <code>LaunchConfiguration.InternetMaxBandwidthOut</code>. Default value: the value of <code>LaunchConfiguration.InternetMaxBandwidthOut</code>.</li>
+         * <li>When the outbound public bandwidth is less than or equal to 10 Mbit/s: 1 to 10. Default value: 10.</li>
+         * <li>When the outbound public bandwidth is greater than 10 Mbit/s: 1 to the value of <code>LaunchConfiguration.InternetMaxBandwidthOut</code>. Default value: the value of <code>LaunchConfiguration.InternetMaxBandwidthOut</code>.</li>
          * </ul>
-         * <p>If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1501,7 +1525,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         /**
          * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.</p>
          * <p>Default value: 0.</p>
-         * <p>If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1510,13 +1534,13 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public Integer internetMaxBandwidthOut;
 
         /**
-         * <p>Specifies whether the instance is I/O optimized. Valid values:</p>
+         * <p>Specifies whether the instance is an I/O optimization instance. Valid values:</p>
          * <ul>
-         * <li>none: non-I/O optimized.</li>
-         * <li>optimized: I/O optimized.</li>
+         * <li>none: The instance does not support I/O optimization.</li>
+         * <li>optimized: The instance supports I/O optimization.</li>
          * </ul>
-         * <p>For retired instance types, the default value is none. For other instance types, the default value is optimized.</p>
-         * <p>If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>The default value is none for retired instance types and optimized for other instance types.</p>
+         * <p>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>optimized</p>
@@ -1527,10 +1551,10 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         /**
          * <p>The name of the key pair.</p>
          * <ul>
-         * <li>For Windows instances, this parameter is ignored. The default value is empty.</li>
-         * <li>For Linux instances, password-based logon is disabled during initialization.</li>
+         * <li>For Windows instances, this parameter is ignored. Default value: null.</li>
+         * <li>For Linux instances, password logon is disabled by default.</li>
          * </ul>
-         * <p>If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>KeyPair_Name</p>
@@ -1539,10 +1563,10 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public String keyPairName;
 
         /**
-         * <p>The password of the instance. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:</p>
+         * <p>The password of the instance. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:</p>
          * <p><code>()`~!@#$%^&amp;*-_+=|{}`[]`:;\\&quot;&lt;&gt;,.?/</code></p>
          * <p>For Windows instances, the password cannot start with a forward slash (/).</p>
-         * <p>If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>EcsV587!</p>
@@ -1556,7 +1580,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
          * <li>true: uses the preset password.</li>
          * <li>false: does not use the preset password.</li>
          * </ul>
-         * <p>If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1565,7 +1589,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public Boolean passwordInherit;
 
         /**
-         * <p>The name of the instance RAM role. You can call the RAM API <a href="https://help.aliyun.com/document_detail/28713.html">ListRoles</a> to query the instance RAM roles that you have created. If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>The name of the instance RAM role. You can use the RAM API operation <a href="https://help.aliyun.com/document_detail/28713.html">ListRoles</a> to query the instance RAM roles that you have created. If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>RAM_Name</p>
@@ -1574,7 +1598,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public String ramRoleName;
 
         /**
-         * <p>The ID of the resource group to which the instance belongs. If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>The ID of the resource group to which the instance belongs. If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-bp67acfmxazb4p****</p>
@@ -1588,7 +1612,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
          * <li>Active: enables security hardening. This value is applicable only to public images.</li>
          * <li>Deactive: disables security hardening. This value is applicable to all image types.</li>
          * </ul>
-         * <p>If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>
@@ -1612,8 +1636,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public java.util.List<String> securityGroupIds;
 
         /**
-         * <p>The system disk information of the instance. If you specify both a launch template and launch configuration information, the launch template takes precedence.
-         * [_single.params.LaunchConfiguration~SystemD</p>
+         * <p>The system disk configuration of the instance. If both the launch template and the launch configurations are specified, the launch template takes precedence.</p>
          */
         @NameInMap("SystemDisk")
         public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSystemDisk systemDisk;
@@ -1623,11 +1646,11 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
          * <ul>
          * <li>cloud_efficiency: ultra disk.</li>
          * <li>cloud_ssd: standard SSD.</li>
-         * <li>cloud_essd: enterprise SSD (ESSD).</li>
+         * <li>cloud_essd: enterprise SSD.</li>
          * <li>cloud: basic disk.</li>
          * </ul>
-         * <p>For retired instance types that are non-I/O optimized, the default value is cloud. For other instance types, the default value is cloud_efficiency.</p>
-         * <p>If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>The default value is cloud for retired instance types that are not I/O optimization instances, and cloud_efficiency for other instance types.</p>
+         * <p>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
@@ -1637,7 +1660,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
 
         /**
          * <p>The description of the system disk. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
-         * <p>If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>SystemDisk_Description</p>
@@ -1646,9 +1669,9 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public String systemDiskDescription;
 
         /**
-         * <p>The name of the system disk. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
-         * <p>Default value: empty.</p>
-         * <p>If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>The name of the system disk. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. It can contain digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
+         * <p>Default value: null.</p>
+         * <p>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssdSystem</p>
@@ -1657,15 +1680,15 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public String systemDiskName;
 
         /**
-         * <p>The performance level (PL) of the enterprise SSD used as the system disk. Valid values:</p>
+         * <p>The performance level Settings for the standard SSD used as the system disk. Valid values:</p>
          * <ul>
-         * <li>PL0 (default): up to 10,000 random read/write IOPS per disk.</li>
-         * <li>PL1: up to 50,000 random read/write IOPS per disk.</li>
-         * <li>PL2: up to 100,000 random read/write IOPS per disk.</li>
-         * <li>PL3: up to 1,000,000 random read/write IOPS per disk.</li>
+         * <li>PL0 (default): A single enterprise SSD can deliver up to 10,000 random read/write IOPS.</li>
+         * <li>PL1: A single enterprise SSD can deliver up to 50,000 random read/write IOPS.</li>
+         * <li>PL2: A single enterprise SSD can deliver up to 100,000 random read/write IOPS.</li>
+         * <li>PL3: A single enterprise SSD can deliver up to 1,000,000 random read/write IOPS.</li>
          * </ul>
-         * <p>For information about how to select an ESSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
-         * <p>If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>For more information about how to select an enterprise SSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">enterprise SSDs</a>.</p>
+         * <p>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>PL0</p>
@@ -1674,9 +1697,9 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public String systemDiskPerformanceLevel;
 
         /**
-         * <p>The size of the system disk. Unit: GiB. Valid values: 20 to 500. The value of this parameter must be greater than or equal to max{20, size of the image specified by LaunchConfiguration.ImageId}.</p>
-         * <p>Default value: max{40, size of the image specified by LaunchConfiguration.ImageId}.</p>
-         * <p>If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>The size of the system disk. Unit: GiB. Valid values: 20 to 500. The value of this parameter must be greater than or equal to max{20, the size of the image specified by LaunchConfiguration.ImageId}.</p>
+         * <p>Default value: max{40, the size of the image specified by LaunchConfiguration.ImageId}.</p>
+         * <p>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -1685,13 +1708,13 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public Integer systemDiskSize;
 
         /**
-         * <p>The list of tags in the launch configuration.</p>
+         * <p>The extended list of tags for the launch template.</p>
          */
         @NameInMap("Tag")
         public java.util.List<CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationTag> tag;
 
         /**
-         * <p>Instance user data of the instance. Instance user data must be Base64-encoded. The maximum size of the raw data is 32 KB. If you specify both a launch template and launch configuration information, the launch template takes precedence.</p>
+         * <p>Instance user data of the instance. Instance user data must be encoded in Base64. The maximum size of the raw data is 32 KB. If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>ZWNobyBoZWxsbyBlY3Mh</p>
@@ -1702,8 +1725,8 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable auto-renewal. This parameter takes effect when you create subscription instances. Valid values:</p>
          * <ul>
-         * <li>true: enables auto-renewal.</li>
-         * <li>false (default): does not enable auto-renewal.</li>
+         * <li>true: Auto-renewal is enabled.</li>
+         * <li>false (default): Auto-renewal is disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1716,10 +1739,10 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
          * <p>The auto-renewal period. Valid values: </p>
          * <p>&lt;props=&quot;china&quot;&gt;</p>
          * <ul>
-         * <li>If PeriodUnit is set to Week: 1, 2, and 3.</li>
-         * <li>If PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</li>
+         * <li>When PeriodUnit is set to Week: 1, 2, and 3.</li>
+         * <li>When PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</li>
          * </ul>
-         * <p>&lt;props=&quot;intl&quot;&gt;If PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;When PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
          * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -1729,30 +1752,30 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public Integer autoRenewPeriod;
 
         /**
-         * <p>The CPU-related configurations.</p>
+         * <p>The CPU configurations.</p>
          */
         @NameInMap("CpuOptions")
         public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationCpuOptions cpuOptions;
 
         /**
-         * <p>The image-related property information.</p>
-         * <p>Take note of the following items when you set this parameter:</p>
+         * <p>The image properties.</p>
+         * <p>Take note of the following items when you configure this parameter:</p>
          * <ul>
-         * <li>This parameter takes effect only when you create a one-time synchronous auto provisioning group (AutoProvisioningGroupType=instant).</li>
+         * <li>This parameter takes effect only when you create an auto provisioning group of the one-time synchronous delivery type (AutoProvisioningGroupType=instant).</li>
          * </ul>
          */
         @NameInMap("ImageOptions")
         public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationImageOptions imageOptions;
 
         /**
-         * <p>The subscription duration of the resource. Unit: specified by <code>PeriodUnit</code>. This parameter is required when you create subscription instances. Valid values:</p>
+         * <p>The subscription period of the resource. The unit is specified by the PeriodUnit parameter. This parameter is required and takes effect only when you create subscription instances. Valid values:</p>
          * <p>&lt;props=&quot;china&quot;&gt;</p>
          * <ul>
-         * <li>If PeriodUnit is set to Week, valid values of Period are 1, 2, 3, and 4.</li>
-         * <li>If PeriodUnit is set to Month, valid values of Period are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</li>
+         * <li>When PeriodUnit is set to Week, valid values of Period are 1, 2, 3, and 4.</li>
+         * <li>When PeriodUnit is set to Month, valid values of Period are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</li>
          * </ul>
-         * <p>&lt;props=&quot;intl&quot;&gt;If PeriodUnit is set to Month, valid values of Period are 1, 2, 3, 6, and 12.</p>
-         * <p>&lt;props=&quot;partner&quot;&gt;If PeriodUnit is set to Month, valid values of Period are 1, 2, 3, 6, and 12.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;When PeriodUnit is set to Month, valid values of Period are 1, 2, 3, 6, and 12.</p>
+         * <p>&lt;props=&quot;partner&quot;&gt;When PeriodUnit is set to Month, valid values of Period are 1, 2, 3, 6, and 12.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1761,7 +1784,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public Integer period;
 
         /**
-         * <p>The unit of the subscription billable methods duration. Valid values: </p>
+         * <p>The time unit of the subscription Billable methods. Valid values: </p>
          * <p>&lt;props=&quot;china&quot;&gt;</p>
          * <ul>
          * <li>Week.</li>
@@ -1775,22 +1798,28 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         @NameInMap("PeriodUnit")
         public String periodUnit;
 
+        /**
+         * <p>The scheduling options.</p>
+         */
         @NameInMap("SchedulerOptions")
         public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSchedulerOptions schedulerOptions;
 
+        /**
+         * <p>The security options of the instance.</p>
+         */
         @NameInMap("SecurityOptions")
         public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSecurityOptions securityOptions;
 
         /**
          * <p>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values:</p>
          * <ul>
-         * <li>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not subject to automatic release within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the marketplace price and checks the resource inventory to determine whether to retain or revoke the instance.</li>
-         * <li>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the marketplace price and checks the resource inventory to determine whether to retain or revoke the instance.</li>
+         * <li>1: Alibaba Cloud guarantees that the instance is not subject to automatic release within 1 hour after it is created. After 1 hour, the system automatically compares your bid with the marketplace price and checks resource inventory to determine whether to retain or revoke the instance.</li>
+         * <li>0: Alibaba Cloud does not guarantee that the instance is retained for 1 hour after it is created. The system automatically compares your bid with the marketplace price and checks resource inventory to determine whether to retain or revoke the instance.</li>
          * </ul>
-         * <p>Alibaba Cloud sends an ECS system event notification 5 minutes before the instance is released. Spot instances are billed by second. Select an appropriate protection period based on the expected task execution duration.</p>
-         * <p>Take note of the following items when you set this parameter:</p>
+         * <p>Alibaba Cloud sends you a notification by using an ECS system event 5 minutes before the instance is revoked. Spot instances use pay-as-you-go billing by the second. We recommend that you select an appropriate protection period based on the execution duration of your specific nodes.</p>
+         * <p>Take note of the following items when you configure the Settings for this parameter:</p>
          * <ul>
-         * <li>This parameter takes effect only when you create a one-time synchronous auto provisioning group (AutoProvisioningGroupType=instant).</li>
+         * <li>This parameter takes effect only when you create an auto provisioning group of the one-time synchronous delivery type (AutoProvisioningGroupType=instant).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1802,16 +1831,16 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         /**
          * <p>The break mode of the spot instance. Valid values:</p>
          * <ul>
-         * <li><p>Terminate: directly releases the instance.</p>
+         * <li><p>Terminate: The instance is released.</p>
          * </li>
-         * <li><p>Stop: puts the instance into economical mode.</p>
+         * <li><p>Stop: The instance enters economical mode.</p>
          * </li>
          * </ul>
          * <p>For more information about economical mode, see <a href="https://help.aliyun.com/document_detail/63353.html">Economical mode</a>.</p>
          * <p>Default value: Terminate.</p>
-         * <p>Take note of the following items when you set this parameter:</p>
+         * <p>Take note of the following items when you configure the Settings for this parameter:</p>
          * <ul>
-         * <li>This parameter takes effect only when you create a one-time synchronous auto provisioning group (AutoProvisioningGroupType=instant).</li>
+         * <li>This parameter takes effect only when you create an auto provisioning group of the one-time synchronous delivery type (AutoProvisioningGroupType=instant).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2156,10 +2185,15 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     }
 
     public static class CreateAutoProvisioningGroupShrinkRequestCandidateOptions extends TeaModel {
+        /**
+         * <p>Specifies whether to only evaluate the success rate of candidate delivery for the target capacity in the current request. If you set this parameter to true, no scale-out is performed. The system only evaluates the delivery success rate and returns the result in the LaunchResult.CandidateEvaluateLevel field of the response. Default value: false.</p>
+         */
         @NameInMap("Evaluate")
         public Boolean evaluate;
 
         /**
+         * <p>The timeout period for the auto provisioning group to scale out instances to reach the target capacity. After the timeout period expires, no further scale-out attempts are made. Unit: minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -2191,11 +2225,11 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
 
     public static class CreateAutoProvisioningGroupShrinkRequestDataDiskConfig extends TeaModel {
         /**
-         * <p>The category of the data disk. You can specify multiple candidate disk categories. The specified order determines the priority of each disk category. When a disk category is unavailable, the system automatically switches to the next category. Valid values:</p>
+         * <p>The category of the instance data disk. You can use this parameter to specify multiple candidate disk categories. The specified order determines the priority of the disk categories. If a disk category is not active, the system automatically switches to the next disk category. Valid values:</p>
          * <ul>
          * <li>cloud_efficiency: ultra disk.</li>
          * <li>cloud_ssd: standard SSD.</li>
-         * <li>cloud_essd: enterprise SSD (ESSD).</li>
+         * <li>cloud_essd: enterprise SSD.</li>
          * <li>cloud: basic disk.</li>
          * </ul>
          * 
@@ -2222,15 +2256,15 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
 
     public static class CreateAutoProvisioningGroupShrinkRequestLaunchTemplateConfig extends TeaModel {
         /**
-         * <p>The list of architecture types for instance types.</p>
+         * <p>The list of architecture types for the instance types.</p>
          */
         @NameInMap("Architectures")
         public java.util.List<String> architectures;
 
         /**
-         * <p>Specifies whether to include burstable instance types. Valid values:</p>
+         * <p>Specifies whether the instance type is a burstable instance type. Valid values:</p>
          * <ul>
-         * <li>Exclude: excludes burstable instance types.</li>
+         * <li>Exclude: does not include burstable instance types.</li>
          * <li>Include: includes burstable instance types.</li>
          * <li>Required: includes only burstable instance types.</li>
          * </ul>
@@ -2243,20 +2277,20 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public String burstablePerformance;
 
         /**
-         * <p>The list of vCPU core counts for instance types.</p>
+         * <p>The list of vCPU counts for the instance types.</p>
          */
         @NameInMap("Cores")
         public java.util.List<Integer> cores;
 
         /**
-         * <p>The list of instance types to exclude.</p>
+         * <p>The list of instance types to be excluded.</p>
          */
         @NameInMap("ExcludedInstanceTypes")
         public java.util.List<String> excludedInstanceTypes;
 
         /**
-         * <p>The image ID. You can use this parameter to specify the image for the current resource pool. If this parameter is not specified, the image specified by <code>LaunchConfiguration.ImageId</code> or the image configured in the launch template is used by default. You can call <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> to query available image resources.
-         * Note: This parameter is supported only when <code>AutoProvisioningGroupType = instant</code>.</p>
+         * <p>The ID of the image. You can use this parameter to specify the image used by the current resource pool. If this parameter is not specified, the image specified by <code>LaunchConfiguration.ImageId</code> or the image configured in the launch template is used by default. You can call the <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> operation to query available image resources.
+         * Note: This parameter is supported only when <code>AutoProvisioningGroupType</code> is set to <code>instant</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun_3_x64_20G_alibase_20210425.vhd</p>
@@ -2265,11 +2299,11 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The level of the instance family, which is used to filter instance types that meet the requirements. Valid values:</p>
+         * <p>The level of the instance family, which is used to filter the instance types that meet the requirements. Valid values:</p>
          * <ul>
-         * <li>EntryLevel: entry level, which refers to shared instance types. These instance types are more cost-effective but cannot guarantee stable computing performance. They are suitable for scenarios where CPU utilization is typically low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</li>
-         * <li>EnterpriseLevel: enterprise level. These instance types provide stable performance and dedicated resources. They are suitable for scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</li>
-         * <li>CreditEntryLevel: credit-based entry level, which refers to burstable instances. These instance types use CPU credits to ensure computing performance. They are suitable for scenarios where CPU utilization is typically low with occasional bursts. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
+         * <li>EntryLevel: entry-level, which refers to shared instance types. These instance types are more cost-effective but cannot guarantee stable computing performance. They are suitable for business scenarios with low CPU utilization. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</li>
+         * <li>EnterpriseLevel: enterprise-level. These instance types provide stable performance and dedicated resources, and are suitable for business scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</li>
+         * <li>CreditEntryLevel: credit entry-level, which refers to burstable instances. These instance types use CPU credits to ensure computing performance and are suitable for business scenarios with low CPU utilization but occasional CPU bursts. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Burstable instances</a>.</li>
          * </ul>
          * <p>Valid values of N: 1 to 10.</p>
          * 
@@ -2280,7 +2314,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public String instanceFamilyLevel;
 
         /**
-         * <p>The instance type in the extended launch template. Valid values of N: 1 to 20. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+         * <p>The instance type in the extension launch template. Valid values of N: 1 to 20. For more information about valid instance types, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.g5.large</p>
@@ -2289,9 +2323,9 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The maximum price for spot instances in the extended launch template.</p>
+         * <p>The maximum price of spot instances in the extended launch template.</p>
          * <blockquote>
-         * <p>After you set <code>LaunchTemplateConfig</code>, <code>LaunchTemplateConfig.N.MaxPrice</code> is required.</p>
+         * <p>After <code>LaunchTemplateConfig</code> is specified, <code>LaunchTemplateConfig.N.MaxPrice</code> is required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2302,7 +2336,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is in invitational preview and is not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2312,7 +2346,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public Integer maxQuantity;
 
         /**
-         * <p>The list of memory sizes for instance types.</p>
+         * <p>The list of memory sizes for the instance types.</p>
          */
         @NameInMap("Memories")
         public java.util.List<Float> memories;
@@ -2339,11 +2373,11 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The weight of the instance type in the extended launch template. A higher value indicates that a single instance can meet more computing power requirements, which means fewer instances are required. Valid values: greater than 0.</p>
-         * <p>You can calculate the weight based on the computing power of the specified instance type and the minimum computing power of a single node in the cluster. For example, if the minimum computing power of a single node is 8 vCPUs and 60 GiB:</p>
+         * <p>The weight of the instance type in the extended launch template. A higher weight indicates that a single instance has more computing power and fewer instances are required. Valid values: greater than 0.</p>
+         * <p>You can determine the weight based on the computing power of the specified instance type and the minimum computing power of a single node in the cluster. For example, if the minimum computing power of a single node is 8 vCPUs and 60 GiB of memory:</p>
          * <ul>
-         * <li>The weight of an instance type with 8 vCPUs and 60 GiB can be set to 1.</li>
-         * <li>The weight of an instance type with 16 vCPUs and 120 GiB can be set to 2.</li>
+         * <li>The weight of an instance type with 8 vCPUs and 60 GiB of memory can be set to 1.</li>
+         * <li>The weight of an instance type with 16 vCPUs and 120 GiB of memory can be set to 2.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2465,15 +2499,15 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
 
     public static class CreateAutoProvisioningGroupShrinkRequestPrePaidOptionsSpecifyCapacityDistribution extends TeaModel {
         /**
-         * <p>The set of instance types. Duplicates are not allowed, and the instance types must be within the range of LaunchTemplateConfig.InstanceType.</p>
+         * <p>The set of instance types. Duplicate instance types are not allowed, and the instance types must be within the range of LaunchTemplateConfig.InstanceType.</p>
          */
         @NameInMap("InstanceTypes")
         public java.util.List<String> instanceTypes;
 
         /**
-         * <p>The minimum number of instances to deliver within the <code>InstanceTypes</code> range.</p>
+         * <p>The minimum number of instances to be delivered within the InstanceTypes range.</p>
          * <blockquote>
-         * <p>The sum of all MinTargetCapacity values (<code>sum(MinTargetCapacity)</code>) must be less than or equal to TotalTargetCapacity. If any instance type set cannot meet the MinTargetCapacity requirement due to insufficient inventory or other reasons, the entire request fails and no instances are created.</p>
+         * <p>sum(MinTargetCapacity) &lt;= TotalTargetCapacity. The sum of MinTargetCapacity for all instance type sets cannot exceed TotalTargetCapacity. If any instance type set cannot meet the MinTargetCapacity requirement due to inventory or other reasons, the entire request fails.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2507,7 +2541,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
 
     public static class CreateAutoProvisioningGroupShrinkRequestPrePaidOptions extends TeaModel {
         /**
-         * <p>The minimum capacity set for different instance types. This parameter is supported only when <code>AutoProvisioningGroupType = request</code>.</p>
+         * <p>The minimum capacity set for different instance types. This parameter is supported only when AutoProvisioningGroupType is set to request.</p>
          */
         @NameInMap("SpecifyCapacityDistribution")
         public java.util.List<CreateAutoProvisioningGroupShrinkRequestPrePaidOptionsSpecifyCapacityDistribution> specifyCapacityDistribution;
@@ -2529,11 +2563,11 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
 
     public static class CreateAutoProvisioningGroupShrinkRequestSystemDiskConfig extends TeaModel {
         /**
-         * <p>The category of the system disk. You can specify multiple candidate disk categories. The specified order determines the priority of each disk category. When a disk category is unavailable, the system automatically switches to the next category. Valid values:</p>
+         * <p>The category of the instance system disk. You can use this parameter to specify multiple candidate disk categories. The specified order determines the priority of the disk categories. If a disk category is not active, the system automatically switches to the next disk category. Valid values:</p>
          * <ul>
          * <li>cloud_efficiency: ultra disk.</li>
          * <li>cloud_ssd: standard SSD.</li>
-         * <li>cloud_essd: enterprise SSD (ESSD).</li>
+         * <li>cloud_essd: enterprise SSD.</li>
          * <li>cloud: basic disk.</li>
          * </ul>
          * 
@@ -2561,7 +2595,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     public static class CreateAutoProvisioningGroupShrinkRequestTag extends TeaModel {
         /**
          * <p>The tag key of the auto provisioning group.</p>
-         * <p>Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
+         * <p>Valid values of N: 1 to 20. If this parameter is specified, it cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -2571,7 +2605,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
 
         /**
          * <p>The tag value of the auto provisioning group.</p>
-         * <p>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
+         * <p>Valid values of N: 1 to 20. If this parameter is specified, it can be an empty string. The tag value can be up to 128 characters in length. It cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

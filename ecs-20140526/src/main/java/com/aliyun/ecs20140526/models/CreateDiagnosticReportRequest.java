@@ -4,11 +4,14 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateDiagnosticReportRequest extends TeaModel {
+    /**
+     * <p>The extension in JSON format.</p>
+     */
     @NameInMap("AdditionalOptions")
     public java.util.Map<String, String> additionalOptions;
 
     /**
-     * <p>The end time. Takes effect only for diagnostic metrics that do not require Cloud Assistant commands to be run in the guest OS.</p>
+     * <p>The end time. The time follows the ISO 8601 standard and is displayed in UTC. This parameter takes effect only for diagnostic metrics that do not require Cloud Assistant commands to be executed in the guest OS.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-11T14:00Z</p>
@@ -17,7 +20,7 @@ public class CreateDiagnosticReportRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The diagnostic metric set ID. If left empty, the default diagnostic metric set dms-instancedefault for ECS instances is used.</p>
+     * <p>The diagnostic metric set ID. If this parameter is left empty, the default diagnostic metric set dms-instancedefault for ECS instances is used.</p>
      * 
      * <strong>example:</strong>
      * <p>dms-uf6i0tv2refv8wz*****</p>
@@ -26,7 +29,7 @@ public class CreateDiagnosticReportRequest extends TeaModel {
     public String metricSetId;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the latest Alibaba Cloud region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +49,7 @@ public class CreateDiagnosticReportRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The start time. Takes effect only for diagnostic metrics that do not require Cloud Assistant commands to be run in the guest OS.</p>
+     * <p>The start time. The time follows the ISO 8601 standard and is displayed in UTC. This parameter takes effect only for diagnostic metrics that do not require Cloud Assistant commands to be executed in the guest OS.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-11T12:00Z</p>

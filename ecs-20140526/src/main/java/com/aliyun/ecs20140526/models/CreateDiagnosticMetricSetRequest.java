@@ -8,7 +8,7 @@ public class CreateDiagnosticMetricSetRequest extends TeaModel {
      * <p>The description of the diagnostic metric set.</p>
      * 
      * <strong>example:</strong>
-     * <p>远程连接问题诊断</p>
+     * <p>Remote connection issue diagnosis</p>
      */
     @NameInMap("Description")
     public String description;
@@ -24,13 +24,13 @@ public class CreateDiagnosticMetricSetRequest extends TeaModel {
      * <p>The name of the diagnostic metric set.</p>
      * 
      * <strong>example:</strong>
-     * <p>远程连接问题诊断</p>
+     * <p>Remote connection issue diagnosis</p>
      */
     @NameInMap("MetricSetName")
     public String metricSetName;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class CreateDiagnosticMetricSetRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The type of the resource to diagnose.</p>
+     * <p>The resource type.</p>
      * <p>Default value: instance.</p>
      * <p>This parameter is required.</p>
      * 

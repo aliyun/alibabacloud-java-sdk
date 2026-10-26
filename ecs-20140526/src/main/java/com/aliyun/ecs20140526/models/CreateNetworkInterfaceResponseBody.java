@@ -50,7 +50,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public String networkInterfaceName;
 
     /**
-     * <p>The ID of the account that owns the network interface controller (NIC).</p>
+     * <p>The ID of the account to which the network interface controller (NIC) belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>123456****</p>
@@ -80,7 +80,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-2ze88m67qx5z****</p>
@@ -92,7 +92,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public CreateNetworkInterfaceResponseBodySecurityGroupIds securityGroupIds;
 
     /**
-     * <p>The ID of the Virtual Network Operator (VNO) to which the network interface controller (NIC) corresponds.</p>
+     * <p>The ID of the Virtual Network Operator (VNO) associated with the network interface controller (NIC).</p>
      * 
      * <strong>example:</strong>
      * <p>12345678910</p>
@@ -101,7 +101,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public Long serviceID;
 
     /**
-     * <p>Indicates whether the user of the network interface controller (NIC) is an Alibaba Cloud service or a VNO.</p>
+     * <p>Indicates whether the user of the network interface controller (NIC) is a cloud service or a VNO.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -111,7 +111,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is in invitational preview and is not publicly available.</p>
+     * <p>This parameter is in invitational preview and is not yet available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -121,7 +121,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public Boolean sourceDestCheck;
 
     /**
-     * <p>The status of the network interface controller (NIC).</p>
+     * <p>The status of the elastic network interface (ENI).</p>
      * 
      * <strong>example:</strong>
      * <p>Available</p>
@@ -151,7 +151,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the VPC to which the ENI belongs.</p>
+     * <p>The ID of the virtual private cloud (VPC) to which the ENI belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1j7w3gc1cexjqd****</p>

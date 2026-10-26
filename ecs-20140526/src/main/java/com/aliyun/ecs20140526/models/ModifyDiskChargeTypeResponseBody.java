@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDiskChargeTypeResponseBody extends TeaModel {
     /**
-     * <p>The order ID.</p>
+     * <p>The ID of the generated order.</p>
      * 
      * <strong>example:</strong>
      * <p>123456****</p>

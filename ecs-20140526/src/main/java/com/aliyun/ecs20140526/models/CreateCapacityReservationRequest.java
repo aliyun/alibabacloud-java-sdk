@@ -8,7 +8,7 @@ public class CreateCapacityReservationRequest extends TeaModel {
     public CreateCapacityReservationRequestPrivatePoolOptions privatePoolOptions;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <code>ClientToken</code> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, and you must make sure that the value is unique among different requests. The client token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
@@ -17,7 +17,7 @@ public class CreateCapacityReservationRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the capacity reservation. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description of the capacity reservation. The description must be 2 to 256 characters in length, and can contain letters and Chinese characters. It cannot start with http:// or https://.</p>
      * <p>Default value: empty.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class CreateCapacityReservationRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The expiration time of the capacity reservation. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
+     * <p>The expiration time of the capacity reservation. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be displayed in UTC+0. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-10-30T06:32:00Z</p>
@@ -36,10 +36,10 @@ public class CreateCapacityReservationRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The release mode of the capacity reservation. Valid values:</p>
+     * <p>The expiration pattern of the capacity reservation. Valid values:</p>
      * <ul>
-     * <li>Limited: released at a specified time. You must also specify the <code>EndTime</code> parameter.</li>
-     * <li>Unlimited: manual release. No time limit is imposed.</li>
+     * <li>Limited: releases the reservation at a specified time. You must also specify the EndTime parameter.</li>
+     * <li>Unlimited: manual release. The expiration time is not limited.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class CreateCapacityReservationRequest extends TeaModel {
     public String endTimeType;
 
     /**
-     * <p>The total number of instances to reserve for a single instance type.</p>
+     * <p>The total number of instances to be reserved for the instance type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,11 +58,17 @@ public class CreateCapacityReservationRequest extends TeaModel {
     @NameInMap("InstanceAmount")
     public Integer instanceAmount;
 
+    /**
+     * <p>The billing method for the instance. Currently, only PostPaid (pay-as-you-go) is supported. Default value: PostPaid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
+     */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
     /**
-     * <p>The instance type. Currently, you can set a capacity reservation for only one instance type. You can invoke <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the instance types provided by Elastic Compute Service (ECS).</p>
+     * <p>The instance type. Currently, you can configure the settings for a capacity reservation for only one instance type. You can invoke <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the instance types of servers provided by Elastic Compute Service (ECS).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,14 +84,14 @@ public class CreateCapacityReservationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The operating system type of the image used by the instance. This parameter corresponds to the <code>Platform</code> parameter of regional reserved instances. If the operating system type of the capacity reservation matches that of a regional reserved instance, the regional reserved instance can be used to offset the bill for unused capacity in the capacity reservation. Valid values:</p>
+     * <p>The operating system type of the image used by the instance. This parameter corresponds to the Platform parameter of a regional reserved instance. If the operating system type of the capacity reservation matches that of the regional reserved instance, you can use the regional reserved instance to offset the bills for the unused capacity of the capacity reservation. Valid values:</p>
      * <ul>
-     * <li>Windows: Windows Server operating system.</li>
-     * <li>Linux: Linux and Unix-like operating system.</li>
+     * <li>Windows: Windows Server operating systems.</li>
+     * <li>Linux: Linux and Unix-like operating systems.</li>
      * </ul>
      * <p>Default value: Linux.</p>
      * <blockquote>
-     * <p>This parameter is not available for use.</p>
+     * <p>This parameter is not available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -120,9 +126,9 @@ public class CreateCapacityReservationRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The effective mode of the capacity reservation. Currently, only the immediate mode is supported when you call this API operation.</p>
+     * <p>The effective mode of the capacity reservation. Currently, calling this API operation only supports setting the reservation to take effect immediately. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be displayed in UTC.</p>
      * <blockquote>
-     * <p>If you leave this parameter empty, the capacity reservation immediately takes effect.</p>
+     * <p>If this parameter is not specified, the capacity reservation takes effect immediately.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -132,13 +138,13 @@ public class CreateCapacityReservationRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The list of tag pairs bound to the capacity reservation.</p>
+     * <p>The list of tags bound to the capacity reservation.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateCapacityReservationRequestTag> tag;
 
     /**
-     * <p>The zone ID of the capacity reservation. Currently, you can create a capacity reservation in only one zone.</p>
+     * <p>The zone ID of the region to which the capacity reservation belongs. Currently, you can create a capacity reservation in only one zone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -300,8 +306,8 @@ public class CreateCapacityReservationRequest extends TeaModel {
         /**
          * <p>The type of the private pool generated after the capacity reservation takes effect. Valid values:</p>
          * <ul>
-         * <li>Open: open mode. The system automatically matches the open private pool capacity when an instance is started. If no matching private pool capacity is available, the system uses public pool resources to start the instance.</li>
-         * <li>Target: targeted mode. The instance is started by using the specified private pool capacity. If the specified private pool capacity is unavailable, the instance fails to start.</li>
+         * <li>Open: open mode. When an instance is started, the system automatically matches the capacity of an open private pool. If no eligible private pool capacity is available, the instance is started by using public pool resources.</li>
+         * <li>Target: targeted mode. The instance is started by using the capacity of the specified private pool. If the capacity of the private pool is unavailable, the instance fails to be started.</li>
          * </ul>
          * <p>Default value: Open.</p>
          * 
@@ -312,7 +318,7 @@ public class CreateCapacityReservationRequest extends TeaModel {
         public String matchCriteria;
 
         /**
-         * <p>The name of the capacity reservation. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The name of the capacity reservation. The name must be 2 to 128 characters in length, and can contain letters and Chinese characters. It must start with a letter or a Chinese character, and cannot start with http:// or https://. It can contain digits, colons (:), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>crpTestName</p>
@@ -345,7 +351,7 @@ public class CreateCapacityReservationRequest extends TeaModel {
 
     public static class CreateCapacityReservationRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the capacity reservation. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the capacity reservation. Valid values of N: 1 to 20. If this parameter is specified, it cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, or contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -354,7 +360,7 @@ public class CreateCapacityReservationRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the capacity reservation. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the capacity reservation. Valid values of N: 1 to 20. If this parameter is specified, it can be an empty string. The tag value can be up to 128 characters in length. It cannot start with acs:, or contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>
