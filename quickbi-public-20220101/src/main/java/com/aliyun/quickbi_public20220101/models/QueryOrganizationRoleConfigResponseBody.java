@@ -140,7 +140,7 @@ public class QueryOrganizationRoleConfigResponseBody extends TeaModel {
          * <p>Role name.</p>
          * 
          * <strong>example:</strong>
-         * <p>组织管理员</p>
+         * <p>Organization Admin</p>
          */
         @NameInMap("RoleName")
         public String roleName;

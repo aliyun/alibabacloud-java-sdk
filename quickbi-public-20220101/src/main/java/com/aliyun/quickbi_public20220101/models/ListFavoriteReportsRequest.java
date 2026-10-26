@@ -8,7 +8,7 @@ public class ListFavoriteReportsRequest extends TeaModel {
      * <p>Keyword of the work name.</p>
      * 
      * <strong>example:</strong>
-     * <p>财务报表</p>
+     * <p>test</p>
      */
     @NameInMap("Keyword")
     public String keyword;

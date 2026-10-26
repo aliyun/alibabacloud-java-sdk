@@ -75,7 +75,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
          * <p>The name of the directory.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试目录</p>
+         * <p>Test directory</p>
          */
         @NameInMap("Name")
         public String name;
@@ -93,7 +93,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
          * <p>The hierarchical structure of the directory name, which is separated with \&quot;/\&quot;.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试目录</p>
+         * <p>Test directory</p>
          */
         @NameInMap("PathName")
         public String pathName;
@@ -151,7 +151,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
          * <p>Remarks on the work.</p>
          * 
          * <strong>example:</strong>
-         * <p>备注</p>
+         * <p>Description</p>
          */
         @NameInMap("Description")
         public String description;
@@ -166,7 +166,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
          * <p>The name of the Alibaba Cloud account to which the modifier belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>李四</p>
+         * <p>Li Si</p>
          */
         @NameInMap("ModifyName")
         public String modifyName;
@@ -193,7 +193,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
          * <p>The Alibaba Cloud account name of the owner.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Tom</p>
          */
         @NameInMap("OwnerName")
         public String ownerName;
@@ -252,7 +252,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
          * <p>The name of the work.</p>
          * 
          * <strong>example:</strong>
-         * <p>公司地区表</p>
+         * <p>Company Region Table</p>
          */
         @NameInMap("WorkName")
         public String workName;
@@ -294,7 +294,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
          * <p>The name of the workspace to which the work belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试工作空间</p>
+         * <p>Test Workspace</p>
          */
         @NameInMap("WorkspaceName")
         public String workspaceName;

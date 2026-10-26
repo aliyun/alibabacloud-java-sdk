@@ -136,7 +136,7 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
          * <p>Robot\&quot;s nickname.</p>
          * 
          * <strong>example:</strong>
-         * <p>小Q</p>
+         * <p>little Q</p>
          */
         @NameInMap("AgentName")
         public String agentName;
@@ -163,7 +163,7 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
          * <p>Nickname of the creator.</p>
          * 
          * <strong>example:</strong>
-         * <p>诸葛</p>
+         * <p>zhangsan</p>
          */
         @NameInMap("CreateUserName")
         public String createUserName;
@@ -187,7 +187,7 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
          * <p>Module name.</p>
          * 
          * <strong>example:</strong>
-         * <p>小Q</p>
+         * <p>little Q</p>
          */
         @NameInMap("ModuleName")
         public String moduleName;

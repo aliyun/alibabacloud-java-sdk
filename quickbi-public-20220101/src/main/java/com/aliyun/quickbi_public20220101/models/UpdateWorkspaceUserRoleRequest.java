@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkspaceUserRoleRequest extends TeaModel {
     /**
-     * <p>The preset workspace role ID. The existing role is overwritten. Valid values:</p>
+     * <p>The ID of the preset workspace role. This operation overwrites existing roles. Valid values:</p>
      * <ul>
      * <li>25: workspace administrator</li>
      * <li>26: workspace developer</li>
@@ -21,10 +21,7 @@ public class UpdateWorkspaceUserRoleRequest extends TeaModel {
     public Long roleId;
 
     /**
-     * <p>Multiple workspace role IDs, separated by commas. If this parameter is specified, it takes precedence.</p>
-     * <blockquote>
-     * <p>Notice: roleId and roleIds cannot both be empty</p>
-     * </blockquote>
+     * <p>The IDs of multiple workspace roles, separated by commas. If this parameter is specified, it takes precedence. <notice>roleId and roleIds cannot be both empty.</notice></p>
      * 
      * <strong>example:</strong>
      * <p>25,26</p>

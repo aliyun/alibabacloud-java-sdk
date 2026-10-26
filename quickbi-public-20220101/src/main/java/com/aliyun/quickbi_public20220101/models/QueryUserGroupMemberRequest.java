@@ -8,7 +8,7 @@ public class QueryUserGroupMemberRequest extends TeaModel {
      * <p>Keyword for the username or nickname of the user group member.</p>
      * 
      * <strong>example:</strong>
-     * <p>小刘</p>
+     * <p>test</p>
      */
     @NameInMap("Keyword")
     public String keyword;

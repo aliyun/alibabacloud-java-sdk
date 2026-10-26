@@ -66,7 +66,7 @@ public class QueryUserTagMetaListResponseBody extends TeaModel {
          * <p>The description of the tag.</p>
          * 
          * <strong>example:</strong>
-         * <p>用于区分部分职位</p>
+         * <p>Used to distinguish some positions</p>
          */
         @NameInMap("TagDescription")
         public String tagDescription;
@@ -84,7 +84,7 @@ public class QueryUserTagMetaListResponseBody extends TeaModel {
          * <p>The name of the tag.</p>
          * 
          * <strong>example:</strong>
-         * <p>职位</p>
+         * <p>Position</p>
          */
         @NameInMap("TagName")
         public String tagName;

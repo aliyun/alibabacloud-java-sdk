@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetWorksEmbedListRequest extends TeaModel {
     /**
-     * <p>The report name for fuzzy match.</p>
+     * <p>The report name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Test dataset</p>
@@ -34,12 +34,12 @@ public class GetWorksEmbedListRequest extends TeaModel {
     /**
      * <p>The report type. Valid values:</p>
      * <ul>
-     * <li>page: dashboard.</li>
-     * <li>screen: data screen.</li>
-     * <li>report: workbook.</li>
-     * <li>ANALYSIS: ad hoc analysis.</li>
-     * <li>dashboardOfflineQuery: self-service data retrieval.</li>
-     * <li>dataForm: data entry form.</li>
+     * <li>page: Dashboard.</li>
+     * <li>screen: Data screen.</li>
+     * <li>report: Workbook.</li>
+     * <li>ANALYSIS: Ad hoc analysis.</li>
+     * <li>dashboardOfflineQuery: Self-service data retrieval.</li>
+     * <li>dataForm: Data entry.</li>
      * </ul>
      * 
      * <strong>example:</strong>

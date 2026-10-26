@@ -90,7 +90,7 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
          * <p>Name of the preset role.</p>
          * 
          * <strong>example:</strong>
-         * <p>管理员</p>
+         * <p>test</p>
          */
         @NameInMap("RoleName")
         public String roleName;
@@ -149,7 +149,7 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
          * <p>Nickname.</p>
          * 
          * <strong>example:</strong>
-         * <p>我就是那个分析师大神</p>
+         * <p>test</p>
          */
         @NameInMap("NickName")
         public String nickName;

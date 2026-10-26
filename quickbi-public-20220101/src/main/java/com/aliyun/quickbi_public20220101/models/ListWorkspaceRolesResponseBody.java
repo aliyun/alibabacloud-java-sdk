@@ -152,7 +152,7 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
          * <p>Role name.</p>
          * 
          * <strong>example:</strong>
-         * <p>空间管理员</p>
+         * <p>Space administrator</p>
          */
         @NameInMap("RoleName")
         public String roleName;

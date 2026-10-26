@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class QueryOrganizationWorkspaceListRequest extends TeaModel {
     /**
-     * <p>The keyword of the workspace name.</p>
+     * <p>The keyword for the workspace name.</p>
      * 
      * <strong>example:</strong>
-     * <p>application</p>
+     * <p>Program</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
-     * <p>The page number of the workspace list.</p>
+     * <p>The current page number of the workspace list.</p>
      * <ul>
-     * <li>Minimum value: 1.</li>
-     * <li>Default value: 1.</li>
+     * <li>Starting value: 1</li>
+     * <li>Default value: 1</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,10 +27,10 @@ public class QueryOrganizationWorkspaceListRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of rows per page in a paged query.</p>
+     * <p>The number of entries per page in a paging query:</p>
      * <ul>
-     * <li>Default value: 10.</li>
-     * <li>Maximum value: 1000.</li>
+     * <li>Default value: 10</li>
+     * <li>Maximum value: 1000</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class QueryOrganizationWorkspaceListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the user in Quick BI.</p>
+     * <p>The ID of the user in Quick BI. If you specify this parameter, the system queries all workspaces of the user in the organization.</p>
      * 
      * <strong>example:</strong>
      * <p>fe67f61a35a94b7da1a34ba174a7****</p>

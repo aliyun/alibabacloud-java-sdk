@@ -61,6 +61,130 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class QueryDatasetInfoResponseBodyResultCubeTableListChildTables extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("Caption")
+        public String caption;
+
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("Customsql")
+        public Boolean customsql;
+
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("DatasourceId")
+        public String datasourceId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("DsType")
+        public String dsType;
+
+        @NameInMap("FactTable")
+        public Boolean factTable;
+
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("Sql")
+        public String sql;
+
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("TableName")
+        public String tableName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("UniqueId")
+        public String uniqueId;
+
+        public static QueryDatasetInfoResponseBodyResultCubeTableListChildTables build(java.util.Map<String, ?> map) throws Exception {
+            QueryDatasetInfoResponseBodyResultCubeTableListChildTables self = new QueryDatasetInfoResponseBodyResultCubeTableListChildTables();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryDatasetInfoResponseBodyResultCubeTableListChildTables setCaption(String caption) {
+            this.caption = caption;
+            return this;
+        }
+        public String getCaption() {
+            return this.caption;
+        }
+
+        public QueryDatasetInfoResponseBodyResultCubeTableListChildTables setCustomsql(Boolean customsql) {
+            this.customsql = customsql;
+            return this;
+        }
+        public Boolean getCustomsql() {
+            return this.customsql;
+        }
+
+        public QueryDatasetInfoResponseBodyResultCubeTableListChildTables setDatasourceId(String datasourceId) {
+            this.datasourceId = datasourceId;
+            return this;
+        }
+        public String getDatasourceId() {
+            return this.datasourceId;
+        }
+
+        public QueryDatasetInfoResponseBodyResultCubeTableListChildTables setDsType(String dsType) {
+            this.dsType = dsType;
+            return this;
+        }
+        public String getDsType() {
+            return this.dsType;
+        }
+
+        public QueryDatasetInfoResponseBodyResultCubeTableListChildTables setFactTable(Boolean factTable) {
+            this.factTable = factTable;
+            return this;
+        }
+        public Boolean getFactTable() {
+            return this.factTable;
+        }
+
+        public QueryDatasetInfoResponseBodyResultCubeTableListChildTables setSql(String sql) {
+            this.sql = sql;
+            return this;
+        }
+        public String getSql() {
+            return this.sql;
+        }
+
+        public QueryDatasetInfoResponseBodyResultCubeTableListChildTables setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
+        }
+
+        public QueryDatasetInfoResponseBodyResultCubeTableListChildTables setUniqueId(String uniqueId) {
+            this.uniqueId = uniqueId;
+            return this;
+        }
+        public String getUniqueId() {
+            return this.uniqueId;
+        }
+
+    }
+
     public static class QueryDatasetInfoResponseBodyResultCubeTableList extends TeaModel {
         /**
          * <p>Indicates whether the data source table is valid. Valid values:</p>
@@ -74,6 +198,9 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
          */
         @NameInMap("Caption")
         public String caption;
+
+        @NameInMap("ChildTables")
+        public java.util.List<QueryDatasetInfoResponseBodyResultCubeTableListChildTables> childTables;
 
         /**
          * <p>The display name of the table.</p>
@@ -159,6 +286,14 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         }
         public String getCaption() {
             return this.caption;
+        }
+
+        public QueryDatasetInfoResponseBodyResultCubeTableList setChildTables(java.util.List<QueryDatasetInfoResponseBodyResultCubeTableListChildTables> childTables) {
+            this.childTables = childTables;
+            return this;
+        }
+        public java.util.List<QueryDatasetInfoResponseBodyResultCubeTableListChildTables> getChildTables() {
+            return this.childTables;
         }
 
         public QueryDatasetInfoResponseBodyResultCubeTableList setCustomsql(Boolean customsql) {
@@ -441,7 +576,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
          * <p>Test directory</p>
          * 
          * <strong>example:</strong>
-         * <p>测试目录</p>
+         * <p>The name of the directory.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -459,7 +594,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
          * <p>The path of the directory ID, for example, aa/bb/cc/dd.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试目录</p>
+         * <p>The path name of the directory ID, for example, one-level directory /two-level directory.</p>
          */
         @NameInMap("PathName")
         public String pathName;
@@ -809,7 +944,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
          * <p>The unique ID of the data source.</p>
          * 
          * <strong>example:</strong>
-         * <p>大娃</p>
+         * <p>The name of the dataset owner.</p>
          */
         @NameInMap("OwnerName")
         public String ownerName;
@@ -840,7 +975,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
          * <p>Big Baby</p>
          * 
          * <strong>example:</strong>
-         * <p>测试空间</p>
+         * <p>The name of the workspace in which the dataset resides.</p>
          */
         @NameInMap("WorkspaceName")
         public String workspaceName;

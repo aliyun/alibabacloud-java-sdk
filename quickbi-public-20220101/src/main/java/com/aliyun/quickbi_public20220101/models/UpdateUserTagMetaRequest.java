@@ -11,7 +11,7 @@ public class UpdateUserTagMetaRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>部门内的工作职位</p>
+     * <p>Job Positions within the Department</p>
      */
     @NameInMap("TagDescription")
     public String tagDescription;
@@ -38,7 +38,7 @@ public class UpdateUserTagMetaRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>职位</p>
+     * <p>Department</p>
      */
     @NameInMap("TagName")
     public String tagName;

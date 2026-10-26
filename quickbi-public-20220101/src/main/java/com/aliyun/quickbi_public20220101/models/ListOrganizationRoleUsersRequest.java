@@ -8,7 +8,7 @@ public class ListOrganizationRoleUsersRequest extends TeaModel {
      * <p>Keyword for the nickname of the organization member.</p>
      * 
      * <strong>example:</strong>
-     * <p>小刘</p>
+     * <p>zhangsan</p>
      */
     @NameInMap("Keyword")
     public String keyword;

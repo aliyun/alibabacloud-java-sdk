@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryWorksRequest extends TeaModel {
     /**
-     * <p>The report ID.</p>
+     * <p>The work ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

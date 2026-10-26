@@ -89,7 +89,7 @@ public class ListCollectionsResponseBody extends TeaModel {
          * <p>The name of the work.</p>
          * 
          * <strong>example:</strong>
-         * <p>奇异博士</p>
+         * <p>test</p>
          */
         @NameInMap("WorksName")
         public String worksName;
@@ -123,7 +123,7 @@ public class ListCollectionsResponseBody extends TeaModel {
          * <p>Workspace Name.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试工作空间</p>
+         * <p>test</p>
          */
         @NameInMap("WorkspaceName")
         public String workspaceName;

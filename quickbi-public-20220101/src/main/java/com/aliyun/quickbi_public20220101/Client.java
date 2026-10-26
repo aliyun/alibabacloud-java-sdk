@@ -1416,6 +1416,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>生成AIPro超级框嵌入ticket</p>
+     * 
+     * @param request CreateTicket4AiProRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateTicket4AiProResponse
+     */
+    public CreateTicket4AiProResponse createTicket4AiProWithOptions(CreateTicket4AiProRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
+            query.put("AccountName", request.accountName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accountType)) {
+            query.put("AccountType", request.accountType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.aiProId)) {
+            query.put("AiProId", request.aiProId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customParam)) {
+            query.put("CustomParam", request.customParam);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expireTime)) {
+            query.put("ExpireTime", request.expireTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quickBIUserId)) {
+            query.put("QuickBIUserId", request.quickBIUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.systemUid)) {
+            query.put("SystemUid", request.systemUid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ticketNum)) {
+            query.put("TicketNum", request.ticketNum);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateTicket4AiPro"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTicket4AiProResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>生成AIPro超级框嵌入ticket</p>
+     * 
+     * @param request CreateTicket4AiProRequest
+     * @return CreateTicket4AiProResponse
+     */
+    public CreateTicket4AiProResponse createTicket4AiPro(CreateTicket4AiProRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createTicket4AiProWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Generates a ticket to embed Copilot.</p>
      * 
      * @param request CreateTicket4CopilotRequest
@@ -2492,7 +2564,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of embedded reports.</p>
+     * <p>Queries a list of embedded reports.</p>
      * 
      * @param request GetWorksEmbedListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2540,7 +2612,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of embedded reports.</p>
+     * <p>Queries a list of embedded reports.</p>
      * 
      * @param request GetWorksEmbedListRequest
      * @return GetWorksEmbedListResponse
@@ -3707,6 +3779,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改AI Pro嵌入配置</p>
+     * 
+     * @param request ModifyAiproEmbedConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyAiproEmbedConfigResponse
+     */
+    public ModifyAiproEmbedConfigResponse modifyAiproEmbedConfigWithOptions(ModifyAiproEmbedConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentName)) {
+            query.put("AgentName", request.agentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.aiProId)) {
+            query.put("AiProId", request.aiProId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chatHistoryStatus)) {
+            query.put("ChatHistoryStatus", request.chatHistoryStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            query.put("Config", request.config);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memoryEnabled)) {
+            query.put("MemoryEnabled", request.memoryEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.showName)) {
+            query.put("ShowName", request.showName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadEnabled)) {
+            query.put("UploadEnabled", request.uploadEnabled);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyAiproEmbedConfig"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyAiproEmbedConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改AI Pro嵌入配置</p>
+     * 
+     * @param request ModifyAiproEmbedConfigRequest
+     * @return ModifyAiproEmbedConfigResponse
+     */
+    public ModifyAiproEmbedConfigResponse modifyAiproEmbedConfig(ModifyAiproEmbedConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyAiproEmbedConfigWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>When you modify a query statement, you can modify only the top-level JsonObject. You cannot modify parameters that are nested in multiple layers. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/409330.html">Create an API data source</a>.</p>
      * 
@@ -3926,6 +4066,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryAccelerationLogByCubeIdResponse queryAccelerationLogByCubeId(QueryAccelerationLogByCubeIdRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryAccelerationLogByCubeIdWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>概述</p>
+     * 
+     * @param request QueryAiproEmbedConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryAiproEmbedConfigResponse
+     */
+    public QueryAiproEmbedConfigResponse queryAiproEmbedConfigWithOptions(QueryAiproEmbedConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryAiproEmbedConfig"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryAiproEmbedConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>概述</p>
+     * 
+     * @param request QueryAiproEmbedConfigRequest
+     * @return QueryAiproEmbedConfigResponse
+     */
+    public QueryAiproEmbedConfigResponse queryAiproEmbedConfig(QueryAiproEmbedConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryAiproEmbedConfigWithOptions(request, runtime);
     }
 
     /**
@@ -4174,7 +4358,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries dataset optimization suggestions.</p>
+     * <p>Queries optimization suggestions for datasets.</p>
      * 
      * @param request QueryCubeOptimizationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4206,7 +4390,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries dataset optimization suggestions.</p>
+     * <p>Queries optimization suggestions for datasets.</p>
      * 
      * @param request QueryCubeOptimizationRequest
      * @return QueryCubeOptimizationResponse
@@ -5059,7 +5243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of workspaces in the current organization.</p>
+     * <p>Queries the list of workspaces in the current organization.</p>
      * 
      * @param request QueryOrganizationWorkspaceListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5103,7 +5287,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of workspaces in the current organization.</p>
+     * <p>Queries the list of workspaces in the current organization.</p>
      * 
      * @param request QueryOrganizationWorkspaceListRequest
      * @return QueryOrganizationWorkspaceListResponse
@@ -5860,7 +6044,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information of a specified data work.</p>
+     * <p>Queries the details of a specified data work.</p>
      * 
      * @param request QueryWorksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5892,7 +6076,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information of a specified data work.</p>
+     * <p>Queries the details of a specified data work.</p>
      * 
      * @param request QueryWorksRequest
      * @return QueryWorksResponse
@@ -6896,6 +7080,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>更新数据源基础属性</p>
+     * 
+     * @param request UpdateDataSourcePropertiesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDataSourcePropertiesResponse
+     */
+    public UpdateDataSourcePropertiesResponse updateDataSourcePropertiesWithOptions(UpdateDataSourcePropertiesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dsId)) {
+            query.put("DsId", request.dsId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quickBIOwnerId)) {
+            query.put("QuickBIOwnerId", request.quickBIOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.showName)) {
+            query.put("ShowName", request.showName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDataSourceProperties"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDataSourcePropertiesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新数据源基础属性</p>
+     * 
+     * @param request UpdateDataSourcePropertiesRequest
+     * @return UpdateDataSourcePropertiesResponse
+     */
+    public UpdateDataSourcePropertiesResponse updateDataSourceProperties(UpdateDataSourcePropertiesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateDataSourcePropertiesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Change the embedding status of a report, turn on embedding, or turn off embedding.</p>
      * 
      * @param request UpdateEmbeddedStatusRequest
@@ -7220,7 +7460,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the role of a specified member in a workspace. The existing role is overwritten.</p>
+     * <p>Modifies the role of a specified member in a workspace. Existing roles are overwritten.</p>
      * 
      * @param request UpdateWorkspaceUserRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7264,7 +7504,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the role of a specified member in a workspace. The existing role is overwritten.</p>
+     * <p>Modifies the role of a specified member in a workspace. Existing roles are overwritten.</p>
      * 
      * @param request UpdateWorkspaceUserRoleRequest
      * @return UpdateWorkspaceUserRoleResponse

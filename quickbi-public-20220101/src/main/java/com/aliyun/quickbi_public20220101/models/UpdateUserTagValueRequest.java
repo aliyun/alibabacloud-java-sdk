@@ -24,7 +24,7 @@ public class UpdateUserTagValueRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>产品总监</p>
+     * <p>Product Director</p>
      */
     @NameInMap("TagValue")
     public String tagValue;
