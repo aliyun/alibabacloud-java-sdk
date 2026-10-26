@@ -41,7 +41,7 @@ public class ListAppPublishHistoryRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to start the next query. This parameter is empty if no next query is available.</p>
+     * <p>The token that is used to start the next query. If no next query exists, this parameter is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
@@ -95,7 +95,7 @@ public class ListAppPublishHistoryRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The release subchannel.</p>
+     * <p>The release sub-channel.</p>
      * 
      * <strong>example:</strong>
      * <p>current</p>

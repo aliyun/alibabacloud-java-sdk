@@ -1597,7 +1597,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a logo creation task.</p>
+     * <p>Submits a logo generation task.</p>
      * 
      * @param request CreateLogoTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1641,7 +1641,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a logo creation task.</p>
+     * <p>Submits a logo generation task.</p>
      * 
      * @param request CreateLogoTaskRequest
      * @return CreateLogoTaskResponse
@@ -3291,7 +3291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plugin.</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of an instance.</p>
@@ -3326,7 +3326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plugin.</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of an instance.</p>
@@ -3495,7 +3495,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plugin.</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the publish status.</p>
@@ -3538,7 +3538,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plugin.</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the publish status.</p>

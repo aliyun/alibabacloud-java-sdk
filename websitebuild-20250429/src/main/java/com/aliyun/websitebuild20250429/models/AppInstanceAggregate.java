@@ -59,6 +59,12 @@ public class AppInstanceAggregate extends TeaModel {
     public String buildType;
 
     /**
+     * <p>没有关联会话时为 null。</p>
+     */
+    @NameInMap("ConversationInfo")
+    public AppInstanceAggregateConversationInfo conversationInfo;
+
+    /**
      * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
@@ -347,6 +353,14 @@ public class AppInstanceAggregate extends TeaModel {
         return this.buildType;
     }
 
+    public AppInstanceAggregate setConversationInfo(AppInstanceAggregateConversationInfo conversationInfo) {
+        this.conversationInfo = conversationInfo;
+        return this;
+    }
+    public AppInstanceAggregateConversationInfo getConversationInfo() {
+        return this.conversationInfo;
+    }
+
     public AppInstanceAggregate setCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -561,6 +575,31 @@ public class AppInstanceAggregate extends TeaModel {
     }
     public String getVersion() {
         return this.version;
+    }
+
+    public static class AppInstanceAggregateConversationInfo extends TeaModel {
+        /**
+         * <p>0 表示存在空会话。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("ChatNum")
+        public Long chatNum;
+
+        public static AppInstanceAggregateConversationInfo build(java.util.Map<String, ?> map) throws Exception {
+            AppInstanceAggregateConversationInfo self = new AppInstanceAggregateConversationInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public AppInstanceAggregateConversationInfo setChatNum(Long chatNum) {
+            this.chatNum = chatNum;
+            return this;
+        }
+        public Long getChatNum() {
+            return this.chatNum;
+        }
+
     }
 
     public static class AppInstanceAggregatePartnerDetailBindData extends TeaModel {

@@ -7,6 +7,9 @@ public class DispatchConsoleAPIForPartnerRequest extends TeaModel {
     /**
      * <p>The access token obtained by calling GetUserAccessTokenForPartner.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00a00aaa-a000-00a0-a0a0-a0a0a000a00a</p>
      */
     @NameInMap("LiveToken")
     public String liveToken;
@@ -16,8 +19,8 @@ public class DispatchConsoleAPIForPartnerRequest extends TeaModel {
      * <ul>
      * <li><strong>deal</strong>: Handles the alert (quarantine).</li>
      * <li><strong>ignore</strong>: Ignores the alert.</li>
-     * <li><strong>mark_mis_info</strong>: Marks the alert as a false positive (adds to the whitelist).</li>
-     * <li><strong>rm_mark_mis_info</strong>: Unmarks the alert as a false positive (removes from the whitelist).</li>
+     * <li><strong>mark_mis_info</strong>: Marks the alert as a false positive (adds it to the whitelist).</li>
+     * <li><strong>rm_mark_mis_info</strong>: Unmarks the alert as a false positive (removes it from the whitelist).</li>
      * <li><strong>offline_handled</strong>: Marks the alert as handled.</li>
      * </ul>
      * <p>This parameter is required.</p>

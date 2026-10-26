@@ -16,7 +16,7 @@ public class GetUserAccessTokenForPartnerRequest extends TeaModel {
     /**
      * <p>The credential used to connect to the cloud application.</p>
      * <blockquote>
-     * <p>This parameter is displayed for non-initial calls.</p>
+     * <p>This parameter is displayed for subsequent calls.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

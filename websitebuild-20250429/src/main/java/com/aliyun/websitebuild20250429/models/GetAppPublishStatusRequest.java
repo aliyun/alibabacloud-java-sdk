@@ -14,7 +14,7 @@ public class GetAppPublishStatusRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The deployment order ID.</p>
+     * <p>The deployment ticket ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4998717</p>

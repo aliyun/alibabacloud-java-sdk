@@ -223,6 +223,13 @@ public class AppInstanceProfile extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCC</p>
+     */
+    @NameInMap("UpgradeStatus")
+    public String upgradeStatus;
+
     public static AppInstanceProfile build(java.util.Map<String, ?> map) throws Exception {
         AppInstanceProfile self = new AppInstanceProfile();
         return TeaModel.build(map, self);
@@ -426,6 +433,14 @@ public class AppInstanceProfile extends TeaModel {
     }
     public String getTemplateId() {
         return this.templateId;
+    }
+
+    public AppInstanceProfile setUpgradeStatus(String upgradeStatus) {
+        this.upgradeStatus = upgradeStatus;
+        return this;
+    }
+    public String getUpgradeStatus() {
+        return this.upgradeStatus;
     }
 
     public static class AppInstanceProfileIndependentDeployment extends TeaModel {

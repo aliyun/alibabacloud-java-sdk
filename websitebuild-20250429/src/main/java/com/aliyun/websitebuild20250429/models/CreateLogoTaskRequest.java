@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateLogoTaskRequest extends TeaModel {
     /**
      * <p>The logo generation version number. Different versions use different parameter parsing methods.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
      */
     @NameInMap("LogoVersion")
     public String logoVersion;
@@ -32,7 +35,7 @@ public class CreateLogoTaskRequest extends TeaModel {
      * <p>The positive prompt.</p>
      * 
      * <strong>example:</strong>
-     * <p>Strictly follow the original text to extract the summary of the manuscript. Do not arbitrarily fabricate or modify the news data presented in the text. Do not change the meaning or the news facts of the original text. Do not add your own opinions to the summary. Ensure the generated summary is free of grammatical and punctuation errors. When generating the summary, remove information such as the reporter, correspondent, and article source</p>
+     * <p>Strictly extract the summary of the article based on the original text. Do not fabricate or modify the news data in the text, change the original meaning or news facts, or add your own opinions to the summary. Ensure that the generated summary is free of grammatical and punctuation errors. Remove information such as the reporter, correspondent, and source when generating the summary</p>
      */
     @NameInMap("Prompt")
     public String prompt;
