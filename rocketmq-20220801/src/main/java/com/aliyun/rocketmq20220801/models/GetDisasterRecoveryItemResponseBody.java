@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDisasterRecoveryItemResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial. This parameter is returned only if the access is denied because the Resource Access Management (RAM) user does not have the required permissions.</p>
+     * <p>The details of the access denial. This parameter is returned only when the request is denied because the RAM user does not have the required permissions.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -23,7 +23,7 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public GetDisasterRecoveryItemResponseBodyData data;
@@ -65,7 +65,7 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AF9A8B10-C426-530F-A0DD-96320B39****</p>
@@ -171,10 +171,11 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
         public String consumerGroupId;
 
         /**
-         * <p>The order in which messages are delivered to the target instance. The parameter values ​​are as follows:</p>
+         * <p>The ordering of message delivery to the target instance.</p>
+         * <p>The parameter has the following valid values:</p>
          * <ul>
-         * <li>Concurrently: concurrent delivery</li>
-         * <li>Orderly: sequential delivery</li>
+         * <li>Concurrently: Concurrent delivery.</li>
+         * <li>Orderly: Ordered delivery.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -193,11 +194,7 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Instance type</p>
-         * <ul>
-         * <li>ALIYUN_ROCKETMQ: Alibaba Cloud instance</li>
-         * <li>EXTERNAL_ROCKETMQ: External instance, open-source instance, open-source cluster</li>
-         * </ul>
+         * <p>The instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>ALIYUN_ROCKETMQ</p>
@@ -281,7 +278,7 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
 
     public static class GetDisasterRecoveryItemResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the topic mapping task was created.</p>
+         * <p>The creation time, in the format of YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-24 02:57:31</p>
@@ -290,13 +287,13 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Additional Information</p>
+         * <p>The extended information.</p>
          */
         @NameInMap("extInfo")
         public java.util.Map<String, String> extInfo;
 
         /**
-         * <p>The ID of the topic mapping</p>
+         * <p>The ID of the backup plan.</p>
          * 
          * <strong>example:</strong>
          * <p>100070284</p>
@@ -305,7 +302,14 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
         public Long itemId;
 
         /**
-         * <p>The topic mapping task status.</p>
+         * <p>The status of the backup mapping. Valid values:</p>
+         * <ul>
+         * <li>CREATING: Being created.</li>
+         * <li>CHANGING: Being modified.</li>
+         * <li>RUNNING: Running.</li>
+         * <li>MANUAL_STOPPED: Manually stopped.</li>
+         * <li>OVERDUE_STOPPED: Stopped due to overdue payment.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -314,7 +318,7 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
         public String itemStatus;
 
         /**
-         * <p>The ID of the global message backup plan.</p>
+         * <p>The mapping ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1300000016</p>
@@ -323,13 +327,13 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
         public Long planId;
 
         /**
-         * <p>Topics included in the backup mapping</p>
+         * <p>The topics included in the backup mapping.</p>
          */
         @NameInMap("topics")
         public java.util.List<GetDisasterRecoveryItemResponseBodyDataTopics> topics;
 
         /**
-         * <p>The time when the topic mapping task was last updated.</p>
+         * <p>The update time, in the format of YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-26 02:13:10</p>

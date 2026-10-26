@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class FinishMigrationStageRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rmq-cn-pe334f1nx04</p>
      */

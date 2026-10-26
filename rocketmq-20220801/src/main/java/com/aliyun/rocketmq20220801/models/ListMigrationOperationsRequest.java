@@ -4,10 +4,20 @@ package com.aliyun.rocketmq20220801.models;
 import com.aliyun.tea.*;
 
 public class ListMigrationOperationsRequest extends TeaModel {
+    /**
+     * <p>The operation business status.</p>
+     */
     @NameInMap("businessStatus")
     public java.util.List<String> businessStatus;
 
     /**
+     * <p>The filter condition for the query.</p>
+     * <blockquote>
+     * <ul>
+     * <li>Supports filtering by operationKey, which is the topic name.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>xx</p>
      */
@@ -15,25 +25,32 @@ public class ListMigrationOperationsRequest extends TeaModel {
     public String filter;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rmq-cn-zxu37eiqq0x</p>
      */
     @NameInMap("instanceId")
     public String instanceId;
 
+    /**
+     * <p>The operation status.</p>
+     */
     @NameInMap("operationStatus")
     public java.util.List<String> operationStatus;
 
     /**
+     * <p>The operation type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>IMPORT_CONSUMER_GROUP</p>
+     * <p>MIGRATE_MESSAGE</p>
      */
     @NameInMap("operationType")
     public String operationType;
 
     /**
+     * <p>The page number of the results to return.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,6 +60,7 @@ public class ListMigrationOperationsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The page size, which specifies the maximum number of results to return per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

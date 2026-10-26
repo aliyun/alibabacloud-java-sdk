@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateConsumerGroupResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The fault code.</p>
      * 
      * <strong>example:</strong>
      * <p>InvalidConsumerGroupId</p>
@@ -14,7 +14,7 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The result data that is returned.</p>
+     * <p>The returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The dynamic error code.</p>
+     * <p>The dynamic fault code.</p>
      * 
      * <strong>example:</strong>
      * <p>ConsumerGroupId</p>
@@ -32,7 +32,7 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message.</p>
+     * <p>The dynamic fault message.</p>
      * 
      * <strong>example:</strong>
      * <p>consumerGroupId</p>
@@ -50,7 +50,7 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The fault message.</p>
      * 
      * <strong>example:</strong>
      * <p>Parameter consumerGroupId is invalid.</p>
@@ -59,7 +59,7 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Each request has a unique ID that is active and can be used to troubleshoot and locate issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AF9A8B10-C426-530F-A0DD-96320B39****</p>
@@ -68,7 +68,7 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the execute operation was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

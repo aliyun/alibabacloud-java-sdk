@@ -5,14 +5,18 @@ import com.aliyun.tea.*;
 
 public class CreateTopicRequest extends TeaModel {
     /**
+     * <p>The expiration time of the lite topic, in minutes.
+     * Valid values: 30 to 720.
+     * Default value: -1, which indicates the topic never expires.</p>
+     * 
      * <strong>example:</strong>
-     * <p>20</p>
+     * <p>60</p>
      */
     @NameInMap("liteTopicExpiration")
     public Long liteTopicExpiration;
 
     /**
-     * <p>The maximum TPS for message sending.</p>
+     * <p>The maximum transactions per second (TPS) for sending messages.</p>
      * 
      * <strong>example:</strong>
      * <p>1500</p>
@@ -21,16 +25,9 @@ public class CreateTopicRequest extends TeaModel {
     public Long maxSendTps;
 
     /**
-     * <p>The type of messages in the topic that you want to create.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>TRANSACTION: transactional messages</li>
-     * <li>FIFO: ordered messages</li>
-     * <li>DELAY: scheduled or delayed messages</li>
-     * <li>NORMAL: normal messages</li>
-     * </ul>
+     * <p>The message type of the topic to be created.</p>
      * <blockquote>
-     * <p> The type of messages in the topic must be the same as the type of messages that you want to send. For example, if you create a topic whose message type is ordered messages, you can use the topic to send and receive only ordered messages.</p>
+     * <p>Notice: The type of the topic must be the same as the type of messages sent to the topic. For example, if you create a topic of the ordered message type, the topic can be used only to send and receive ordered messages, not other types of messages.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -41,7 +38,7 @@ public class CreateTopicRequest extends TeaModel {
     public String messageType;
 
     /**
-     * <p>The description of the topic that you want to create.</p>
+     * <p>The remarks of the topic to be created.</p>
      * 
      * <strong>example:</strong>
      * <p>This is the remark for test.</p>

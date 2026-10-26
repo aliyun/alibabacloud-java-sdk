@@ -14,7 +14,7 @@ public class ListTracesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("data")
     public ListTracesResponseBodyData data;
@@ -144,7 +144,7 @@ public class ListTracesResponseBody extends TeaModel {
 
     public static class ListTracesResponseBodyDataList extends TeaModel {
         /**
-         * <p>Message born time.</p>
+         * <p>The time when the message was generated, in YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-22 12:17:08</p>
@@ -162,7 +162,7 @@ public class ListTracesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Message id.</p>
+         * <p>The message ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7F00000100207A4F0F294A938F7807AE</p>
@@ -171,13 +171,13 @@ public class ListTracesResponseBody extends TeaModel {
         public String messageId;
 
         /**
-         * <p>Message keys.</p>
+         * <p>The message key.</p>
          */
         @NameInMap("messageKeys")
         public java.util.List<String> messageKeys;
 
         /**
-         * <p>Message tag.</p>
+         * <p>The list of tags.</p>
          * 
          * <strong>example:</strong>
          * <p>xx</p>
@@ -195,7 +195,7 @@ public class ListTracesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The name of the topic.</p>
+         * <p>The topic name.</p>
          * 
          * <strong>example:</strong>
          * <p>topic_test</p>
@@ -268,13 +268,13 @@ public class ListTracesResponseBody extends TeaModel {
 
     public static class ListTracesResponseBodyData extends TeaModel {
         /**
-         * <p>Trace list.</p>
+         * <p>The paginated data.</p>
          */
         @NameInMap("list")
         public java.util.List<ListTracesResponseBodyDataList> list;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -283,7 +283,7 @@ public class ListTracesResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -292,7 +292,7 @@ public class ListTracesResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The total number of returned results.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -14,7 +14,7 @@ public class DeleteTopicResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The result data that is returned.</p>
+     * <p>The returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -59,7 +59,7 @@ public class DeleteTopicResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</p>
+     * <p>The request ID. Each request ID is unique and can be used to troubleshoot and locate issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AF9A8B10-C426-530F-A0DD-96320B39****</p>
@@ -68,7 +68,7 @@ public class DeleteTopicResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful.</p>
+     * <p>Indicates whether the execution was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

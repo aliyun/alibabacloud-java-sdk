@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateConsumerGroupRequest extends TeaModel {
     /**
-     * <p>The consumption retry policy of the consumer group. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry</a>.</p>
+     * <p>The consumption retry policy of the consumer group to be created. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry</a>.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("consumeRetryPolicy")
     public CreateConsumerGroupRequestConsumeRetryPolicy consumeRetryPolicy;
 
     /**
-     * <p>The message delivery method of the consumer group.</p>
-     * <p>Valid values:</p>
+     * <p>The delivery order type of the consumer group to be created.</p>
+     * <p>Valid parameter values:</p>
      * <ul>
      * <li>Concurrently: concurrent delivery</li>
      * <li>Orderly: ordered delivery</li>
@@ -26,27 +26,36 @@ public class CreateConsumerGroupRequest extends TeaModel {
     @NameInMap("deliveryOrderType")
     public String deliveryOrderType;
 
+    /**
+     * <p>Specifies whether to enable exclusive subscription, which means a LiteTopic can only be subscribed to by one consumer. Set to true to enable or false to shutdown.</p>
+     */
     @NameInMap("exclusive")
     public Boolean exclusive;
 
     /**
-     * <p>The maximum number of messages that can be processed by consumers per second.</p>
+     * <p>The maximum TPS for consuming messages.</p>
      * 
      * <strong>example:</strong>
-     * <p>300</p>
+     * <p>1000</p>
      */
     @NameInMap("maxReceiveTps")
     public Long maxReceiveTps;
 
     /**
+     * <p>The subscribe pattern for consumers:</p>
+     * <ul>
+     * <li>CLUSTERING: clustering consumption pattern. All consumers in the ConsumerGroup share the same subscription.</li>
+     * <li>LITE_SELECTIVE: lightweight consumption pattern. Consumers in the ConsumerGroup can have different subscriptions.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>CLUSTERING</p>
+     * <p>LITE_SELECTIVE</p>
      */
     @NameInMap("messageModel")
     public String messageModel;
 
     /**
-     * <p>The description of the consumer group.</p>
+     * <p>The remarks for the consumer group to be created.</p>
      * 
      * <strong>example:</strong>
      * <p>This is the remark for test.</p>
@@ -55,8 +64,10 @@ public class CreateConsumerGroupRequest extends TeaModel {
     public String remark;
 
     /**
+     * <p>The name of the lite-type topic to subscribe to when using the LITE_SELECTIVE consumption pattern.</p>
+     * 
      * <strong>example:</strong>
-     * <p>test1</p>
+     * <p>liteTopicTest</p>
      */
     @NameInMap("topicName")
     public String topicName;
@@ -125,7 +136,7 @@ public class CreateConsumerGroupRequest extends TeaModel {
     public static class CreateConsumerGroupRequestConsumeRetryPolicy extends TeaModel {
         /**
          * <p>The dead-letter topic.</p>
-         * <p>If a message still fails to be consumed after the maximum number of retries specified in the consumption retry policy is reached, the message is delivered to the dead-letter topic for subsequent business recovery or backtracking. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry and dead-letter messages</a>.</p>
+         * <p>If a consumer fails to consume a message and the message still failed after retries, the message is delivered to the dead-letter topic for subsequent business recovery or backtracking. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry and dead-letter messages</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>DLQ_mqtest</p>
@@ -134,7 +145,8 @@ public class CreateConsumerGroupRequest extends TeaModel {
         public String deadLetterTargetTopic;
 
         /**
-         * <p>The fixed interval. Unit: seconds. This parameter takes effect only if you set retryPolicy to FixedRetryPolicy. Valid values:</p>
+         * <p>The fixed retry interval, in seconds. This parameter takes effect when the retry policy is set to FixedRetryPolicy.</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li>Concurrent delivery: 10 to 1800</li>
          * <li>Ordered delivery: 1 to 600</li>
@@ -147,7 +159,7 @@ public class CreateConsumerGroupRequest extends TeaModel {
         public Integer fixedIntervalRetryTime;
 
         /**
-         * <p>The maximum number of retries.</p>
+         * <p>The maximum number of retry attempts.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -156,11 +168,11 @@ public class CreateConsumerGroupRequest extends TeaModel {
         public Integer maxRetryTimes;
 
         /**
-         * <p>The retry policy. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Message retry</a>.</p>
-         * <p>Valid values:</p>
+         * <p>The retry policy type. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Message retry</a>.</p>
+         * <p>Valid parameter values:</p>
          * <ul>
-         * <li>FixedRetryPolicy: fixed-interval retry. This value is valid only if you set deliveryOrderType to Orderly.</li>
-         * <li>DefaultRetryPolicy: exponential backoff retry. This value is valid only if you set deliveryOrderType to Concurrently.</li>
+         * <li>FixedRetryPolicy: fixed-interval retry, supported only for ordered delivery</li>
+         * <li>DefaultRetryPolicy: progressive backoff retry, supported only for concurrent delivery</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

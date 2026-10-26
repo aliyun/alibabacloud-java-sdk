@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteInstanceIpWhitelistRequest extends TeaModel {
     /**
-     * <p>The IP address whitelist.</p>
+     * <p>The IP whitelist.</p>
      * 
      * <strong>example:</strong>
      * <p>0.0.0.0/0</p>
@@ -15,7 +15,7 @@ public class DeleteInstanceIpWhitelistRequest extends TeaModel {
     public String ipWhitelist;
 
     /**
-     * <p>The IP address whitelist.</p>
+     * <p>The list of IP whitelists.</p>
      */
     @NameInMap("ipWhitelists")
     public java.util.List<String> ipWhitelists;

@@ -14,7 +14,7 @@ public class VerifySendMessageResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned by the operation. If the verification succeeds, this field contains the message ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0A64228900207A4F0F2931A4E0D40BE5</p>
@@ -68,7 +68,7 @@ public class VerifySendMessageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates if the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTopicResponseBody extends TeaModel {
     /**
-     * <p>Error code.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>Topic.NotFound</p>
@@ -14,13 +14,13 @@ public class GetTopicResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public GetTopicResponseBodyData data;
 
     /**
-     * <p>Dynamic error code.</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>TopicName</p>
@@ -29,7 +29,7 @@ public class GetTopicResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic error message.</p>
+     * <p>The dynamic error message.</p>
      * 
      * <strong>example:</strong>
      * <p>topicName</p>
@@ -38,7 +38,7 @@ public class GetTopicResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>400</p>
@@ -47,7 +47,7 @@ public class GetTopicResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The topic cannot be found.</p>
@@ -56,7 +56,7 @@ public class GetTopicResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID, each request\&quot;s ID is unique and can be used for troubleshooting and problem localization.</p>
+     * <p>The request ID. Each request has a unique ID that you can use to troubleshoot and locate issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AF9A8B10-C426-530F-A0DD-96320B39****</p>
@@ -65,7 +65,7 @@ public class GetTopicResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the execution was successful.</p>
+     * <p>Indicates whether the operation was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -144,7 +144,7 @@ public class GetTopicResponseBody extends TeaModel {
 
     public static class GetTopicResponseBodyData extends TeaModel {
         /**
-         * <p>Creation time of the topic.</p>
+         * <p>The time when the topic was created, in YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-01 20:05:50</p>
@@ -162,14 +162,16 @@ public class GetTopicResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The expiration time of the lite topic, in minutes.</p>
+         * 
          * <strong>example:</strong>
-         * <p>20</p>
+         * <p>60</p>
          */
         @NameInMap("liteTopicExpiration")
         public Long liteTopicExpiration;
 
         /**
-         * <p>The maximum TPS for message sending.</p>
+         * <p>The maximum TPS for sending messages.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -178,20 +180,13 @@ public class GetTopicResponseBody extends TeaModel {
         public Long maxSendTps;
 
         /**
-         * <p>The type of messages in the topic.</p>
-         * <p>Valid values:</p>
+         * <p>The message type of the topic. Valid values:</p>
          * <ul>
-         * <li>TRANSACTION: transactional messages</li>
-         * <li>FIFO: ordered messages</li>
-         * <li>DELAY: scheduled or delayed messages</li>
-         * <li>NORMAL: normal messages</li>
-         * </ul>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>TRANSACTION: transactional messages</li>
-         * <li>FIFO: ordered messages</li>
-         * <li>DELAY: scheduled or delayed messages</li>
-         * <li>NORMAL: normal messages</li>
+         * <li>TRANSACTION: transactional message</li>
+         * <li>FIFO: ordered message</li>
+         * <li>DELAY: scheduled message or delayed message</li>
+         * <li>LITE: lightweight topic message</li>
+         * <li>NORMAL: normal message</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -201,7 +196,16 @@ public class GetTopicResponseBody extends TeaModel {
         public String messageType;
 
         /**
-         * <p>The region ID to which the instance belongs.</p>
+         * <p>The maximum message priority allowed for the topic. Valid values: 0 to 9. A higher value indicates a higher priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
+         */
+        @NameInMap("priority")
+        public Integer priority;
+
+        /**
+         * <p>The ID of the region to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -210,7 +214,7 @@ public class GetTopicResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>Remark information of the topic.</p>
+         * <p>The remarks for the topic.</p>
          * 
          * <strong>example:</strong>
          * <p>This is the remark for test.</p>
@@ -219,11 +223,10 @@ public class GetTopicResponseBody extends TeaModel {
         public String remark;
 
         /**
-         * <p>The topic status.</p>
-         * <p>Valid values:</p>
+         * <p>The status of the topic. Valid values:</p>
          * <ul>
-         * <li>RUNNING</li>
-         * <li>CREATING</li>
+         * <li>RUNNING: running</li>
+         * <li>CREATING: creating</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -233,7 +236,7 @@ public class GetTopicResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Topic name.</p>
+         * <p>The topic name.</p>
          * 
          * <strong>example:</strong>
          * <p>topic_test</p>
@@ -242,7 +245,7 @@ public class GetTopicResponseBody extends TeaModel {
         public String topicName;
 
         /**
-         * <p>Last modification time of the topic.</p>
+         * <p>The last time the topic was modified, in YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-01 20:05:50</p>
@@ -293,6 +296,14 @@ public class GetTopicResponseBody extends TeaModel {
         }
         public String getMessageType() {
             return this.messageType;
+        }
+
+        public GetTopicResponseBodyData setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
         }
 
         public GetTopicResponseBodyData setRegionId(String regionId) {

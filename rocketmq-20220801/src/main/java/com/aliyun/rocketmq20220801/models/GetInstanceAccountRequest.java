@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetInstanceAccountRequest extends TeaModel {
     /**
-     * <p>The username of the account.</p>
-     * <p>If you do not configure this parameter, the default username of the instance is used.</p>
+     * <p>The username.</p>
+     * <p>If you do not specify this parameter, the system returns details of the default account.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

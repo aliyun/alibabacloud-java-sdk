@@ -14,7 +14,7 @@ public class GetInstanceAccountResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public GetInstanceAccountResponseBodyData data;
@@ -56,7 +56,7 @@ public class GetInstanceAccountResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID, each request\&quot;s ID is unique and can be used for troubleshooting and problem localization.</p>
+     * <p>The unique ID of the request. Use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>B5C59E80-FCFC-5796-ABE4-D39EAAE578E4</p>
@@ -144,12 +144,7 @@ public class GetInstanceAccountResponseBody extends TeaModel {
 
     public static class GetInstanceAccountResponseBodyData extends TeaModel {
         /**
-         * <p>The status of the account.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>DISABLE</li>
-         * <li>ENABLE</li>
-         * </ul>
+         * <p>The account status.</p>
          * 
          * <strong>example:</strong>
          * <p>ENABLE</p>
@@ -158,7 +153,7 @@ public class GetInstanceAccountResponseBody extends TeaModel {
         public String accountStatus;
 
         /**
-         * <p>The password of the account.</p>
+         * <p>The account password.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -167,6 +162,8 @@ public class GetInstanceAccountResponseBody extends TeaModel {
         public String password;
 
         /**
+         * <p>The remark.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -174,7 +171,7 @@ public class GetInstanceAccountResponseBody extends TeaModel {
         public String remark;
 
         /**
-         * <p>The username of the account.</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>

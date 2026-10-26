@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial. This parameter is returned only if the access is denied because the Resource Access Management (RAM) user does not have the required permissions.</p>
+     * <p>The details of the access denial. This parameter is returned only when the request is denied because of insufficient RAM permissions.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -23,7 +23,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public ListDisasterRecoveryItemsResponseBodyData data;
@@ -47,7 +47,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The response code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -161,7 +161,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
 
     public static class ListDisasterRecoveryItemsResponseBodyDataListTopics extends TeaModel {
         /**
-         * <p>The ID of the consumer group.</p>
+         * <p>The consumer group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>group-test</p>
@@ -171,11 +171,11 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
         public String consumerGroupId;
 
         /**
-         * <p>The method used to deliver messages to the destination instance.</p>
-         * <p>Valid values:</p>
+         * <p>The ordering of messages delivered to the target instance.</p>
+         * <p>The parameter has the following valid values:</p>
          * <ul>
-         * <li>Concurrently: concurrent delivery</li>
-         * <li>Orderly: ordered delivery</li>
+         * <li>Concurrently: Concurrent delivery.</li>
+         * <li>Orderly: Ordered delivery.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -278,7 +278,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
 
     public static class ListDisasterRecoveryItemsResponseBodyDataList extends TeaModel {
         /**
-         * <p>The time when the query task was created.</p>
+         * <p>The creation time, in the format of YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-20 03:38:28</p>
@@ -293,7 +293,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
         public java.util.Map<String, String> extInfo;
 
         /**
-         * <p>The ID of the Global Replicator task.</p>
+         * <p>The ID of the backup plan.</p>
          * 
          * <strong>example:</strong>
          * <p>100070284</p>
@@ -302,13 +302,13 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
         public Long itemId;
 
         /**
-         * <p>The status of the topic mapping. Valid values:</p>
+         * <p>The backup mapping status. Valid values:</p>
          * <ul>
-         * <li>CREATING</li>
-         * <li>CHANGING</li>
-         * <li>RUNNING</li>
-         * <li>MANUAL_STOPPED</li>
-         * <li>OVERDUE_STOPPED</li>
+         * <li>CREATING: Being created.</li>
+         * <li>CHANGING: Being modified.</li>
+         * <li>RUNNING: Running.</li>
+         * <li>MANUAL_STOPPED: Manually stopped.</li>
+         * <li>OVERDUE_STOPPED: Stopped due to overdue payment.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -318,7 +318,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
         public String itemStatus;
 
         /**
-         * <p>The ID of the topic mapping.</p>
+         * <p>The mapping ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1300000016</p>
@@ -327,13 +327,13 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
         public Long planId;
 
         /**
-         * <p>The topics involved in the topic mapping.</p>
+         * <p>The topics included in the backup mapping.</p>
          */
         @NameInMap("topics")
         public java.util.List<ListDisasterRecoveryItemsResponseBodyDataListTopics> topics;
 
         /**
-         * <p>The time when the query task was last modified.</p>
+         * <p>The update time, in the format of YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-04 02:19:44</p>
@@ -406,13 +406,13 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
 
     public static class ListDisasterRecoveryItemsResponseBodyData extends TeaModel {
         /**
-         * <p>The Global Replicator tasks.</p>
+         * <p>The paged data.</p>
          */
         @NameInMap("list")
         public java.util.List<ListDisasterRecoveryItemsResponseBodyDataList> list;
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -421,7 +421,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -430,7 +430,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <p>The scroll ID of the request. The ID is automatically generated by the system. The result can be paginated only if this parameter is included in the pagination request.</p>
+         * <p>The scroll ID of the request. This value is automatically generated by the system. Include this value in subsequent paged requests to continue pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>B13D0B07-F24B-4790-88D8-D47A38063D00</p>
@@ -439,7 +439,7 @@ public class ListDisasterRecoveryItemsResponseBody extends TeaModel {
         public String scrollId;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>49</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DataLiteTopicLagMapValue extends TeaModel {
     /**
+     * <p>The number of accumulated messages.</p>
+     * 
      * <strong>example:</strong>
      * <p>300</p>
      */
@@ -12,6 +14,8 @@ public class DataLiteTopicLagMapValue extends TeaModel {
     public Long readyCount;
 
     /**
+     * <p>The delivery latency. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */

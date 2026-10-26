@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTracesRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query.</p>
+     * <p>The end time in YYYY-MM-DD HH:mm:ss format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,8 @@ public class ListTracesRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The lightweight topic name.</p>
+     * 
      * <strong>example:</strong>
      * <p>abc</p>
      */
@@ -23,7 +25,7 @@ public class ListTracesRequest extends TeaModel {
 
     /**
      * <p>The message ID.</p>
-     * <p>This parameter is required if you set queryType to MESSAGE_ID.</p>
+     * <p>Required if queryType is set to MESSAGE_ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0100163E0EC1F1965C04C7906700000000</p>
@@ -33,7 +35,7 @@ public class ListTracesRequest extends TeaModel {
 
     /**
      * <p>The message key.</p>
-     * <p>This parameter is required if you set queryType to MESSAGE_ID.</p>
+     * <p>Required if queryType is set to MESSAGE_KEY.</p>
      * 
      * <strong>example:</strong>
      * <p>order_ceating</p>
@@ -42,7 +44,7 @@ public class ListTracesRequest extends TeaModel {
     public String messageKey;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the returned results.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +54,7 @@ public class ListTracesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of results to display per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,12 +65,6 @@ public class ListTracesRequest extends TeaModel {
 
     /**
      * <p>The query type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>MESSAGE_ID</li>
-     * <li>MESSAGE_KEY</li>
-     * <li>TOPIC</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,7 +74,7 @@ public class ListTracesRequest extends TeaModel {
     public String queryType;
 
     /**
-     * <p>The beginning of the time range to query.</p>
+     * <p>The start time in YYYY-MM-DD HH:mm:ss format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

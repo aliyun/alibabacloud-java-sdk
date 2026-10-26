@@ -19,8 +19,8 @@ public class DeleteConsumerGroupSubscriptionRequest extends TeaModel {
     /**
      * <p>The type of the filter expression. Valid values:</p>
      * <ul>
-     * <li>SQL: filters messages by using SQL expressions.</li>
-     * <li>TAG: filters messages by using tags.</li>
+     * <li>SQL: SQL filtering</li>
+     * <li>TAG: tag filtering</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

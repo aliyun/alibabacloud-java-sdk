@@ -14,7 +14,7 @@ public class GetMessageDetailResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public GetMessageDetailResponseBodyData data;
@@ -162,7 +162,7 @@ public class GetMessageDetailResponseBody extends TeaModel {
         public Integer bodySize;
 
         /**
-         * <p>The client on which the message was produced.</p>
+         * <p>The host from which the message originated.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx.xx.xxx.xx</p>
@@ -171,7 +171,7 @@ public class GetMessageDetailResponseBody extends TeaModel {
         public String bornHost;
 
         /**
-         * <p>The time when the message was generated.</p>
+         * <p>The time when the message was generated, in YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-22 12:17:08</p>
@@ -189,6 +189,8 @@ public class GetMessageDetailResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The lite topic name.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc</p>
          */
@@ -196,7 +198,7 @@ public class GetMessageDetailResponseBody extends TeaModel {
         public String liteTopicName;
 
         /**
-         * <p>The sharding key. This parameter is returned only for ordered messages.</p>
+         * <p>The former sharding key. This field applies only to ordered messages.</p>
          * 
          * <strong>example:</strong>
          * <p>xx</p>
@@ -214,13 +216,13 @@ public class GetMessageDetailResponseBody extends TeaModel {
         public String messageId;
 
         /**
-         * <p>The message keys.</p>
+         * <p>The message key.</p>
          */
         @NameInMap("messageKeys")
         public java.util.List<String> messageKeys;
 
         /**
-         * <p>The tags.</p>
+         * <p>The tag list.</p>
          * 
          * <strong>example:</strong>
          * <p>xx</p>
@@ -238,6 +240,15 @@ public class GetMessageDetailResponseBody extends TeaModel {
         public String messageType;
 
         /**
+         * <p>The priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
+        @NameInMap("priority")
+        public Integer priority;
+
+        /**
          * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
@@ -247,7 +258,7 @@ public class GetMessageDetailResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The broker on which the message was stored.</p>
+         * <p>The log broker host where the message is stored.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx.xx.xxx.xx</p>
@@ -256,7 +267,7 @@ public class GetMessageDetailResponseBody extends TeaModel {
         public String storeHost;
 
         /**
-         * <p>The time when the message was stored.</p>
+         * <p>The time when the message was stored in the log broker, in YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-22 12:17:08</p>
@@ -265,7 +276,7 @@ public class GetMessageDetailResponseBody extends TeaModel {
         public String storeTime;
 
         /**
-         * <p>The default system attributes.</p>
+         * <p>The default system properties.</p>
          */
         @NameInMap("systemProperties")
         public java.util.Map<String, String> systemProperties;
@@ -280,7 +291,7 @@ public class GetMessageDetailResponseBody extends TeaModel {
         public String topicName;
 
         /**
-         * <p>The user attributes.</p>
+         * <p>The user properties.</p>
          */
         @NameInMap("userProperties")
         public java.util.Map<String, String> userProperties;
@@ -376,6 +387,14 @@ public class GetMessageDetailResponseBody extends TeaModel {
         }
         public String getMessageType() {
             return this.messageType;
+        }
+
+        public GetMessageDetailResponseBodyData setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
         }
 
         public GetMessageDetailResponseBodyData setRegionId(String regionId) {

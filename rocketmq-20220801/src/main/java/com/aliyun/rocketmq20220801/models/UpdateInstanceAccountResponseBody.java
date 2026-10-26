@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceAccountResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial. This parameter is returned only if the access is denied because the Resource Access Management (RAM) user does not have the required permissions.</p>
+     * <p>The access denial details. This field is returned only when user access is denied due to lack of RAM permissions.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -68,7 +68,7 @@ public class UpdateInstanceAccountResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AF9A8B10-C426-530F-A0DD-96320B39****</p>
@@ -77,7 +77,7 @@ public class UpdateInstanceAccountResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

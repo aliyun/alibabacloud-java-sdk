@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ExecuteMigrationOperationResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Topic.NotFound</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The return result.</p>
+     */
     @NameInMap("data")
     public ExecuteMigrationOperationResponseBodyData data;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InstanceId</p>
      */
@@ -22,6 +29,8 @@ public class ExecuteMigrationOperationResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>instanceId</p>
      */
@@ -29,6 +38,8 @@ public class ExecuteMigrationOperationResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,8 @@ public class ExecuteMigrationOperationResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>The topic already exists.</p>
      */
@@ -43,6 +56,8 @@ public class ExecuteMigrationOperationResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>814BCD66-2D76-5080-AAD2-E50E5BDB0995</p>
      */
@@ -50,6 +65,8 @@ public class ExecuteMigrationOperationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -127,8 +144,10 @@ public class ExecuteMigrationOperationResponseBody extends TeaModel {
 
     public static class ExecuteMigrationOperationResponseBodyDataOperationParam extends TeaModel {
         /**
+         * <p>The parameter information.</p>
+         * 
          * <strong>example:</strong>
-         * <p>{}</p>
+         * <p>{&quot;action&quot;:&quot;MIGRATE_FORWARD&quot;,&quot;targetStage&quot;:&quot;MIGRATE_FINISH&quot;}</p>
          */
         @NameInMap("paramData")
         public Object paramData;
@@ -150,8 +169,16 @@ public class ExecuteMigrationOperationResponseBody extends TeaModel {
 
     public static class ExecuteMigrationOperationResponseBodyDataOperationResult extends TeaModel {
         /**
+         * <p>The operation result.</p>
+         * 
          * <strong>example:</strong>
-         * <p>{}</p>
+         * <p>{
+         *     &quot;checkStatus&quot;: &quot;WAIT_CHECK&quot;,
+         *     &quot;sourceTopicStatus&quot;: &quot;PERM_6&quot;,
+         *     &quot;targetTopicStatus&quot;: &quot;PERM_4&quot;,
+         *     &quot;checkResult&quot;: {},
+         *     &quot;migrateStage&quot;: &quot;DOUBLE_READ&quot;
+         * }</p>
          */
         @NameInMap("resultData")
         public Object resultData;
@@ -173,6 +200,8 @@ public class ExecuteMigrationOperationResponseBody extends TeaModel {
 
     public static class ExecuteMigrationOperationResponseBodyData extends TeaModel {
         /**
+         * <p>The operation business status.</p>
+         * 
          * <strong>example:</strong>
          * <p>MIGRATE_WAIT</p>
          */
@@ -180,6 +209,8 @@ public class ExecuteMigrationOperationResponseBody extends TeaModel {
         public String businessStatus;
 
         /**
+         * <p>The creation time, in YYYY-MM-DD HH:mm:ss format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-08-01 20:05:50</p>
          */
@@ -187,6 +218,8 @@ public class ExecuteMigrationOperationResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The migration ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>6</p>
          */
@@ -194,6 +227,8 @@ public class ExecuteMigrationOperationResponseBody extends TeaModel {
         public Long migrationId;
 
         /**
+         * <p>The migration operation ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>110</p>
          */
@@ -201,40 +236,56 @@ public class ExecuteMigrationOperationResponseBody extends TeaModel {
         public Long operationId;
 
         /**
+         * <p>The primary key of the operation object.</p>
+         * 
          * <strong>example:</strong>
-         * <p>group01</p>
+         * <p>normal-topic-1</p>
          */
         @NameInMap("operationKey")
         public String operationKey;
 
+        /**
+         * <p>The operation parameter.</p>
+         */
         @NameInMap("operationParam")
         public ExecuteMigrationOperationResponseBodyDataOperationParam operationParam;
 
+        /**
+         * <p>The operation result.</p>
+         */
         @NameInMap("operationResult")
         public ExecuteMigrationOperationResponseBodyDataOperationResult operationResult;
 
         /**
+         * <p>The operation status.</p>
+         * 
          * <strong>example:</strong>
-         * <p>DONE</p>
+         * <p>DOING</p>
          */
         @NameInMap("operationStatus")
         public String operationStatus;
 
         /**
+         * <p>The operation type.</p>
+         * 
          * <strong>example:</strong>
-         * <p>CONNECT_NETWORK</p>
+         * <p>MIGRATE_MESSAGE</p>
          */
         @NameInMap("operationType")
         public String operationType;
 
         /**
+         * <p>The migration stage type.</p>
+         * 
          * <strong>example:</strong>
-         * <p>MIGRATE_METADATA</p>
+         * <p>MIGRATE_MESSAGE</p>
          */
         @NameInMap("stageType")
         public String stageType;
 
         /**
+         * <p>The modification time, in YYYY-MM-DD HH:mm:ss format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-08-01 20:05:50</p>
          */

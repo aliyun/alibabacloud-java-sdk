@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DataTopicLagMapValue extends TeaModel {
     /**
-     * <p>Ready message count</p>
+     * <p>The number of ready messages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DataTopicLagMapValue extends TeaModel {
     public Long readyCount;
 
     /**
-     * <p>The number of messages being consumed.</p>
+     * <p>The number of inflight messages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DataTopicLagMapValue extends TeaModel {
     public Long inflightCount;
 
     /**
-     * <p>Delivery delay time, in seconds</p>
+     * <p>The delivery latency. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -32,7 +32,7 @@ public class DataTopicLagMapValue extends TeaModel {
     public Long deliveryDuration;
 
     /**
-     * <p>lastConsumeTimestamp</p>
+     * <p>The timestamp of the last consumption.</p>
      * 
      * <strong>example:</strong>
      * <p>1735629607846</p>

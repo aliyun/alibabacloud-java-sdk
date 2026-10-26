@@ -14,7 +14,7 @@ public class ListMessagesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("data")
     public ListMessagesResponseBodyData data;
@@ -56,7 +56,7 @@ public class ListMessagesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A3531B6A-5A88-52BD-B3C4-A024C3D0AA2E</p>
@@ -144,7 +144,7 @@ public class ListMessagesResponseBody extends TeaModel {
 
     public static class ListMessagesResponseBodyDataList extends TeaModel {
         /**
-         * <p>Message body.</p>
+         * <p>The message body.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -153,7 +153,7 @@ public class ListMessagesResponseBody extends TeaModel {
         public String body;
 
         /**
-         * <p>Message body size.</p>
+         * <p>The size of the message body.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -162,7 +162,7 @@ public class ListMessagesResponseBody extends TeaModel {
         public Integer bodySize;
 
         /**
-         * <p>The client on which messages are produced.</p>
+         * <p>The client that produced the message.</p>
          * 
          * <strong>example:</strong>
          * <p>xx.xx.xx.xx</p>
@@ -171,7 +171,7 @@ public class ListMessagesResponseBody extends TeaModel {
         public String bornHost;
 
         /**
-         * <p>Message born time.</p>
+         * <p>The time when the message was generated. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-22 12:17:08</p>
@@ -189,6 +189,8 @@ public class ListMessagesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The lite topic name.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc</p>
          */
@@ -196,7 +198,7 @@ public class ListMessagesResponseBody extends TeaModel {
         public String liteTopicName;
 
         /**
-         * <p>The message group. This parameter is returned only for ordered messages.</p>
+         * <p>The message group. This parameter is exclusive to ordered messages.</p>
          * 
          * <strong>example:</strong>
          * <p>xx</p>
@@ -205,7 +207,7 @@ public class ListMessagesResponseBody extends TeaModel {
         public String messageGroup;
 
         /**
-         * <p>Message Id.</p>
+         * <p>The message ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7F000001000114B4340C5ABF94500079</p>
@@ -214,7 +216,7 @@ public class ListMessagesResponseBody extends TeaModel {
         public String messageId;
 
         /**
-         * <p>Message keys.</p>
+         * <p>The message key.</p>
          */
         @NameInMap("messageKeys")
         public java.util.List<String> messageKeys;
@@ -229,7 +231,7 @@ public class ListMessagesResponseBody extends TeaModel {
         public String messageTag;
 
         /**
-         * <p>Message type.</p>
+         * <p>The message type.</p>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
@@ -247,7 +249,7 @@ public class ListMessagesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The broker on which messages are stored.</p>
+         * <p>The log broker server that stored the message.</p>
          * 
          * <strong>example:</strong>
          * <p>xx.xx.xx.xx</p>
@@ -256,7 +258,7 @@ public class ListMessagesResponseBody extends TeaModel {
         public String storeHost;
 
         /**
-         * <p>Message store time.</p>
+         * <p>The time when the message was stored in the log broker. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-22 12:17:08</p>
@@ -265,7 +267,7 @@ public class ListMessagesResponseBody extends TeaModel {
         public String storeTime;
 
         /**
-         * <p>The name of the topic.</p>
+         * <p>The topic name.</p>
          * 
          * <strong>example:</strong>
          * <p>topic_test</p>
@@ -274,7 +276,7 @@ public class ListMessagesResponseBody extends TeaModel {
         public String topicName;
 
         /**
-         * <p>Message user properties.</p>
+         * <p>The user properties.</p>
          */
         @NameInMap("userProperties")
         public java.util.Map<String, String> userProperties;
@@ -416,13 +418,13 @@ public class ListMessagesResponseBody extends TeaModel {
 
     public static class ListMessagesResponseBodyData extends TeaModel {
         /**
-         * <p>The pagination information.</p>
+         * <p>The paged data.</p>
          */
         @NameInMap("list")
         public java.util.List<ListMessagesResponseBodyDataList> list;
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -431,7 +433,7 @@ public class ListMessagesResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -440,8 +442,8 @@ public class ListMessagesResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <p>The scroll ID of the request.</p>
-         * <p>The ID is automatically generated by the system. The result can be paginated only if this parameter is included in the pagination request.</p>
+         * <p>The scroll ID for the request.</p>
+         * <p>This value is automatically generated by the system. You must include this value in subsequent page requests to continue pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>B13D0B07-F24B-4790-88D8-D47A38063D00</p>
@@ -450,7 +452,7 @@ public class ListMessagesResponseBody extends TeaModel {
         public String scrollId;
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

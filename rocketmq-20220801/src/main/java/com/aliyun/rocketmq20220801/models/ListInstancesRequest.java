@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
     /**
-     * <p>The filter condition that is used to query instances. If you do not configure this parameter, all instances are queried.</p>
+     * <p>The filter condition for the query. If you do not specify this parameter, all instances are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>rmq-cn-7e22ody****</p>
@@ -14,9 +14,9 @@ public class ListInstancesRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>The page number.</p>
+     * <p>The paging number. Specifies the page of results to return.</p>
      * <p>Valid values: 1 to 100000000.</p>
-     * <p>If you set this parameter to a value smaller than 1, the system uses 1 as the value. If you set this parameter to a value greater than 100000000, the system uses 100000000 as the value.</p>
+     * <p>If you set this parameter to a value less than 1, the system uses 1 as the default value. If you set this parameter to a value greater than 100000000, the system uses 100000000 as the default value.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -25,9 +25,9 @@ public class ListInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
-     * <p>Value values: 10 to 200.</p>
-     * <p>If you set this parameter to a value smaller than 10, the system uses 10 as the value. If you set this parameter to a value greater than 200, the system uses 200 as the value.</p>
+     * <p>The paging size. The maximum number of results to return on each page.</p>
+     * <p>Valid values: 10 to 200.</p>
+     * <p>If you set this parameter to a value less than 10, the system uses 10 as the default value. If you set this parameter to a value greater than 200, the system uses 200 as the default value.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -45,12 +45,14 @@ public class ListInstancesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The primary edition of the instance.</p>
+     * <p>The primary series encoding of the instance.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>standard: Standard Edition</li>
-     * <li>ultimate: Enterprise Platinum Edition</li>
-     * <li>professional: Professional Edition</li>
+     * <li>standard: Standard Edition.</li>
+     * <li>ultimate: Platinum Edition.</li>
+     * <li>professional: Professional Edition.</li>
+     * <li>dedicated: Dedicated Edition.</li>
+     * <li>shared: Shared Edition.</li>
      * </ul>
      */
     @NameInMap("seriesCodes")
@@ -66,7 +68,7 @@ public class ListInstancesRequest extends TeaModel {
     public String storageSecretKey;
 
     /**
-     * <p>The tags that are used to filter instances.</p>
+     * <p>The list of resource labels that are used to filter instances.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;key&quot;: &quot;rmq-test&quot;, &quot;value&quot;: &quot;test&quot;}]</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceRequest extends TeaModel {
     /**
-     * <p>The access control list for the instance.</p>
+     * <p>The access control information.</p>
      */
     @NameInMap("aclInfo")
     public UpdateInstanceRequestAclInfo aclInfo;
 
     /**
-     * <p>The updated name of the instance.</p>
+     * <p>The updated instance name.</p>
      * 
      * <strong>example:</strong>
      * <p>test_instance</p>
@@ -20,19 +20,19 @@ public class UpdateInstanceRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The updated network information about the instance.</p>
+     * <p>The updated network information of the instance.</p>
      */
     @NameInMap("networkInfo")
     public UpdateInstanceRequestNetworkInfo networkInfo;
 
     /**
-     * <p>Additional configurations of the instance.</p>
+     * <p>The extension configurations of the instance.</p>
      */
     @NameInMap("productInfo")
     public UpdateInstanceRequestProductInfo productInfo;
 
     /**
-     * <p>The updated description of the instance.</p>
+     * <p>The updated remarks for the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>This is the remark for test.</p>
@@ -93,13 +93,7 @@ public class UpdateInstanceRequest extends TeaModel {
         public java.util.List<String> aclTypes;
 
         /**
-         * <p>Indicates whether the authentication-free in VPCs feature is enabled.
-         * Indicates whether the authentication-free in VPCs feature is enabled.
-         * Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>Indicates whether password-free access is enabled for VPC connections under the intelligent identity recognition type.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -132,10 +126,10 @@ public class UpdateInstanceRequest extends TeaModel {
 
     public static class UpdateInstanceRequestNetworkInfoInternetInfo extends TeaModel {
         /**
-         * <p>The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</p>
+         * <p>The public network access IP whitelist.</p>
          * <ul>
-         * <li>If you do not configure an IP address whitelist, all CIDR blocks are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</li>
-         * <li>If you configure an IP address whitelist, only the IP addresses in the whitelist are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</li>
+         * <li>If no IP whitelist is configured, all IP address ranges are allowed to access the ApsaraMQ for RocketMQ server over the public network by default.</li>
+         * <li>If an IP whitelist is configured, only the IP addresses in the whitelist are allowed to access the ApsaraMQ for RocketMQ server over the public network.</li>
          * </ul>
          */
         @NameInMap("ipWhitelist")
@@ -158,7 +152,7 @@ public class UpdateInstanceRequest extends TeaModel {
 
     public static class UpdateInstanceRequestNetworkInfo extends TeaModel {
         /**
-         * <p>The information about the Internet over which the instance is accessed. This parameter takes effect only if the Internet access feature is enabled for the instance.</p>
+         * <p>The public network information. This parameter is valid only when the public network access feature is enabled for the instance.</p>
          */
         @NameInMap("internetInfo")
         public UpdateInstanceRequestNetworkInfoInternetInfo internetInfo;
@@ -180,15 +174,16 @@ public class UpdateInstanceRequest extends TeaModel {
 
     public static class UpdateInstanceRequestProductInfo extends TeaModel {
         /**
-         * <p>Specifies whether to enable the elastic transactions per second (TPS) feature for the instance.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
-         * <p>After you enable the elastic TPS feature for an ApsaraMQ for RocketMQ instance, you can use a specific number of TPS that exceeds the specification limit. You are charged for using the elastic TPS feature. For more information, see <a href="https://help.aliyun.com/document_detail/427237.html">Computing fees</a>.</p>
+         * <p>Specifies whether to enable the adaptive elasticity capability. A value of true indicates enabled, and a value of false indicates shutdown.</p>
+         */
+        @NameInMap("adaptiveElasticity")
+        public Boolean adaptiveElasticity;
+
+        /**
+         * <p>Specifies whether to enable the burstable elastic capacity beyond the specification.</p>
+         * <p>After the burstable elastic capacity is enabled, ApsaraMQ for RocketMQ allows the instance to exceed the TPS limit of the base specification within a certain range. The portion that exceeds the base specification incurs additional elastic specification fees. For more information about billing, see <a href="https://help.aliyun.com/document_detail/427237.html">Computing fee</a>.</p>
          * <blockquote>
-         * <p> The elastic TPS feature is supported only by specific instance editions. For more information, see <a href="https://help.aliyun.com/document_detail/444715.html">Instance editions</a>.</p>
+         * <p>Only instances of specific specifications support the burstable elastic specification capability. For more information about supported instances, see <a href="https://help.aliyun.com/document_detail/444715.html">Instance specifications</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -198,9 +193,9 @@ public class UpdateInstanceRequest extends TeaModel {
         public Boolean autoScaling;
 
         /**
-         * <p>The retention period of messages. Unit: hours.</p>
-         * <p>For information about the valid values of this parameter, see the &quot;Limits on resource quotas&quot; section of the <a href="https://help.aliyun.com/document_detail/440347.html">Limits</a> topic.</p>
-         * <p>ApsaraMQ for RocketMQ supports serverless scaling of message storage. You are charged storage fees based on your actual storage usage. You can change the retention period of messages to manage storage capacity. For more information, see <a href="https://help.aliyun.com/document_detail/427238.html">Storage fees</a>.</p>
+         * <p>The message retention period. Unit: hours.</p>
+         * <p>For the valid values, see <a href="https://help.aliyun.com/document_detail/440347.html">Limits</a> &gt; Resource Quotas &gt; Message retention period limit.</p>
+         * <p>The log broker in ApsaraMQ for RocketMQ is fully serverless and elastic. Fees are charged based on the actual storage space used. You can control the storage capacity of messages by adjusting the message retention period. For more information, see <a href="https://help.aliyun.com/document_detail/427238.html">Storage fee</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>72</p>
@@ -209,8 +204,8 @@ public class UpdateInstanceRequest extends TeaModel {
         public Integer messageRetentionTime;
 
         /**
-         * <p>The ratio of the number of messages that you can send to the number of messages that you can receive on the instance.</p>
-         * <p>Value values: 0.25 to 1.</p>
+         * <p>The ratio of messages sent to messages accepted.</p>
+         * <p>Valid values: [0.25, 1]</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -220,11 +215,9 @@ public class UpdateInstanceRequest extends TeaModel {
 
         /**
          * <p>Specifies whether to enable the message trace feature.</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
-         * <p>This parameter is not in use. By default, the message trace feature is enabled for ApsaraMQ for RocketMQ instances, regardless of whether this parameter is configured.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;This parameter does not take effect. Regardless of whether this parameter is enabled, the instance supports the message trace feature by default.
+         * &lt;props=&quot;china&quot;&gt;This parameter takes effect only for Serverless instances. If the message trace feature is enabled, message trace fees are incurred. For more information about billing, see <a href="https://help.aliyun.com/document_detail/2586280.html">Serverless billing</a>.
+         * &lt;props=&quot;china&quot;&gt;For pay-as-you-go and subscription instances, this parameter does not take effect. The message trace feature is supported by default regardless of whether this parameter is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -235,6 +228,14 @@ public class UpdateInstanceRequest extends TeaModel {
         public static UpdateInstanceRequestProductInfo build(java.util.Map<String, ?> map) throws Exception {
             UpdateInstanceRequestProductInfo self = new UpdateInstanceRequestProductInfo();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateInstanceRequestProductInfo setAdaptiveElasticity(Boolean adaptiveElasticity) {
+            this.adaptiveElasticity = adaptiveElasticity;
+            return this;
+        }
+        public Boolean getAdaptiveElasticity() {
+            return this.adaptiveElasticity;
         }
 
         public UpdateInstanceRequestProductInfo setAutoScaling(Boolean autoScaling) {

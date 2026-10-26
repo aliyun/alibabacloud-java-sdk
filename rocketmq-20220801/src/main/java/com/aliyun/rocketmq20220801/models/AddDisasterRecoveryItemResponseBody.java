@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddDisasterRecoveryItemResponseBody extends TeaModel {
     /**
-     * <p>Access denied details, only in the scenario where the user is denied access due to RAM not having permission</p>
+     * <p>The access denial details. This parameter is returned only when user access is denied due to lack of RAM permissions.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -14,7 +14,7 @@ public class AddDisasterRecoveryItemResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class AddDisasterRecoveryItemResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Return result, mapping task ID</p>
+     * <p>The returned result, which is the ID of the mapping task.</p>
      * 
      * <strong>example:</strong>
      * <p>1300000016</p>
@@ -32,7 +32,7 @@ public class AddDisasterRecoveryItemResponseBody extends TeaModel {
     public Long data;
 
     /**
-     * <p>Dynamic error code</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>InstanceId</p>
@@ -41,7 +41,7 @@ public class AddDisasterRecoveryItemResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic error message</p>
+     * <p>The dynamic error message.</p>
      * 
      * <strong>example:</strong>
      * <p>instanceId</p>
@@ -50,7 +50,7 @@ public class AddDisasterRecoveryItemResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -59,7 +59,7 @@ public class AddDisasterRecoveryItemResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Error message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -68,7 +68,7 @@ public class AddDisasterRecoveryItemResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID. Each request ID is unique and can be used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>AF9A8B10-C426-530F-A0DD-96320B39****</p>
@@ -77,7 +77,7 @@ public class AddDisasterRecoveryItemResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Whether the operation was successful</p>
+     * <p>Indicates whether the execution was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

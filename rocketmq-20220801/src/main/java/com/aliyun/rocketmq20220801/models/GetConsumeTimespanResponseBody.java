@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetConsumeTimespanResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>MissingInstanceId</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("data")
     public GetConsumeTimespanResponseBodyData data;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -22,6 +29,8 @@ public class GetConsumeTimespanResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -29,6 +38,8 @@ public class GetConsumeTimespanResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,8 @@ public class GetConsumeTimespanResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter instanceId is mandatory for this action .</p>
      */
@@ -43,6 +56,8 @@ public class GetConsumeTimespanResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID of the request. Use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>C115601B-8736-5BBF-AC99-7FEAE1245A80</p>
      */
@@ -50,6 +65,8 @@ public class GetConsumeTimespanResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -127,6 +144,8 @@ public class GetConsumeTimespanResponseBody extends TeaModel {
 
     public static class GetConsumeTimespanResponseBodyData extends TeaModel {
         /**
+         * <p>The last time the consumer group consumed a message from this topic.</p>
+         * 
          * <strong>example:</strong>
          * <p>1570761026400</p>
          */
@@ -134,6 +153,8 @@ public class GetConsumeTimespanResponseBody extends TeaModel {
         public Long consumeTimestamp;
 
         /**
+         * <p>The ID of the consumer group.</p>
+         * 
          * <strong>example:</strong>
          * <p>CID-TEST</p>
          */
@@ -141,6 +162,8 @@ public class GetConsumeTimespanResponseBody extends TeaModel {
         public String consumerGroupId;
 
         /**
+         * <p>The ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>rmq-cn-7e22ody****</p>
          */
@@ -148,6 +171,8 @@ public class GetConsumeTimespanResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The production time of the latest message in the topic.</p>
+         * 
          * <strong>example:</strong>
          * <p>1570761026833</p>
          */
@@ -155,6 +180,8 @@ public class GetConsumeTimespanResponseBody extends TeaModel {
         public Long maxTimestamp;
 
         /**
+         * <p>The production time of the earliest message in the topic.</p>
+         * 
          * <strong>example:</strong>
          * <p>1570761026222</p>
          */
@@ -162,6 +189,8 @@ public class GetConsumeTimespanResponseBody extends TeaModel {
         public Long minTimestamp;
 
         /**
+         * <p>The topic to which the consumer group subscribes.</p>
+         * 
          * <strong>example:</strong>
          * <p>topic_test</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class VerifySendMessageRequest extends TeaModel {
     /**
+     * <p>The delivery time for a delayed message, specified as a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1773718320000</p>
      */
@@ -12,6 +14,8 @@ public class VerifySendMessageRequest extends TeaModel {
     public Long deliveryTimeStamp;
 
     /**
+     * <p>The name of the Lite Message Queue topic.</p>
+     * 
      * <strong>example:</strong>
      * <p>abc</p>
      */
@@ -19,7 +23,7 @@ public class VerifySendMessageRequest extends TeaModel {
     public String liteTopicName;
 
     /**
-     * <p>The message body.</p>
+     * <p>The message content.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -28,6 +32,8 @@ public class VerifySendMessageRequest extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the message group. This parameter applies only to ordered messages. Messages with the same group ID are consumed in the order they are sent.</p>
+     * 
      * <strong>example:</strong>
      * <p>testMessageGroup</p>
      */
@@ -35,7 +41,7 @@ public class VerifySendMessageRequest extends TeaModel {
     public String messageGroup;
 
     /**
-     * <p>The message key.</p>
+     * <p>The business key.</p>
      * 
      * <strong>example:</strong>
      * <p>xx</p>
@@ -52,6 +58,12 @@ public class VerifySendMessageRequest extends TeaModel {
     @NameInMap("messageTag")
     public String messageTag;
 
+    /**
+     * <p>The user-defined properties of the message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;test&quot;:&quot;test&quot;}</p>
+     */
     @NameInMap("userProperties")
     public java.util.Map<String, ?> userProperties;
 

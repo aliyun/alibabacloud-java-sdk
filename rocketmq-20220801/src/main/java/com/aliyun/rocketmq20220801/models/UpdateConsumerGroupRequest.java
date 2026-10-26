@@ -5,19 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateConsumerGroupRequest extends TeaModel {
     /**
-     * <p>The new consumption retry policy of the consumer group. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry</a>.</p>
+     * <p>The updated consumption retry policy of the consumer group. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry</a>.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("consumeRetryPolicy")
     public UpdateConsumerGroupRequestConsumeRetryPolicy consumeRetryPolicy;
 
     /**
-     * <p>The new message delivery method of the consumer group.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Concurrently: concurrent delivery</li>
-     * <li>Orderly: ordered delivery</li>
-     * </ul>
+     * <p>Modification is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Concurrently</p>
@@ -27,16 +22,16 @@ public class UpdateConsumerGroupRequest extends TeaModel {
     public String deliveryOrderType;
 
     /**
-     * <p>The maximum number of messages that can be processed by consumers per second.</p>
+     * <p>The upper limit of TPS for consuming messages.</p>
      * 
      * <strong>example:</strong>
-     * <p>100</p>
+     * <p>1000</p>
      */
     @NameInMap("maxReceiveTps")
     public Long maxReceiveTps;
 
     /**
-     * <p>The new description of the consumer group.</p>
+     * <p>The updated remarks of the consumer group.</p>
      * 
      * <strong>example:</strong>
      * <p>This is the remark for test.</p>
@@ -85,7 +80,7 @@ public class UpdateConsumerGroupRequest extends TeaModel {
     public static class UpdateConsumerGroupRequestConsumeRetryPolicy extends TeaModel {
         /**
          * <p>The dead-letter topic.</p>
-         * <p>If a message still fails to be consumed after the maximum number of retries specified in the consumption retry policy is reached, the message is delivered to the dead-letter topic for subsequent business recovery or backtracking. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry and dead-letter messages</a>.</p>
+         * <p>If a consumer fails to consume a message and the message still fails after retries, the message is delivered to the dead-letter topic for subsequent business recovery or review. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry and dead-letter messages</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>DLQ_mqtest</p>
@@ -94,10 +89,11 @@ public class UpdateConsumerGroupRequest extends TeaModel {
         public String deadLetterTargetTopic;
 
         /**
-         * <p>Fixed retry interval, unit: seconds.This option is effective when retryPolicy is FixedRetryPolicy.Value range：</p>
+         * <p>The fixed retry interval. Unit: seconds. This parameter takes effect only when the retry policy is set to FixedRetryPolicy (fixed-interval retry).
+         * Valid values:</p>
          * <ul>
-         * <li>Concurrently:10-1800</li>
-         * <li>Orderly:1-600</li>
+         * <li>Concurrent delivery: 10-1800</li>
+         * <li>Ordered delivery: 1-600</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -116,11 +112,11 @@ public class UpdateConsumerGroupRequest extends TeaModel {
         public Integer maxRetryTimes;
 
         /**
-         * <p>The retry policy. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Message retry</a>.</p>
+         * <p>The retry policy type. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Message retry</a>.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>FixedRetryPolicy: fixed-interval retry. This value is valid only if you set deliveryOrderType to Orderly.</li>
-         * <li>DefaultRetryPolicy: exponential backoff retry. This value is valid only if you set deliveryOrderType to Concurrently.</li>
+         * <li>FixedRetryPolicy: fixed-interval retry. Only ordered delivery is supported.</li>
+         * <li>DefaultRetryPolicy: incremental backoff retry. Only concurrent delivery is supported.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

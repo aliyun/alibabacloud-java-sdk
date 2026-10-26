@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListMigrationsRequest extends TeaModel {
     /**
+     * <p>The filter conditions for the query.</p>
+     * 
      * <strong>example:</strong>
      * <p>xx</p>
      */
@@ -12,15 +14,20 @@ public class ListMigrationsRequest extends TeaModel {
     public String filter;
 
     /**
+     * <p>The migration type. Valid values:</p>
+     * <ul>
+     * <li>INSTANCE_MIGRATION: instance migration</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>RESOURCE_IMPORT</p>
+     * <p>INSTANCE_MIGRATION</p>
      */
     @NameInMap("migrationType")
     public String migrationType;
 
     /**
+     * <p>The page number of the page to return.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +37,7 @@ public class ListMigrationsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +46,12 @@ public class ListMigrationsRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm4goe2ckfiva</p>
+     */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 

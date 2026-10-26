@@ -14,7 +14,7 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("data")
     public java.util.List<ListConsumerGroupSubscriptionsResponseBodyData> data;
@@ -144,10 +144,12 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
 
     public static class ListConsumerGroupSubscriptionsResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether message consumption is consistent. Valid values:</p>
+         * <p>The consistency of the subscription relationship.</p>
          * <ul>
-         * <li>false: Unconsumed messages exist in the consumer group.</li>
-         * <li>true: No unconsumed message exists in the consumer group.</li>
+         * <li><p>false: The subscription relationship is inconsistent.</p>
+         * </li>
+         * <li><p>true: The subscription relationship is consistent.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -177,10 +179,12 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
         public String filterExpression;
 
         /**
-         * <p>The type of the filter expression. Valid values:</p>
+         * <p>The type of the filter expression.</p>
          * <ul>
-         * <li>SQL: filters messages by using SQL expressions.</li>
-         * <li>TAG: filters messages by using tags.</li>
+         * <li><p>SQL: SQL filtering.</p>
+         * </li>
+         * <li><p>TAG: Tag filtering.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -190,23 +194,27 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
         public String filterExpressionType;
 
         /**
-         * <p>The consumption mode of the consumer group. Valid values:</p>
+         * <p>The consumption mode of the consumer group.</p>
          * <ul>
-         * <li>BROADCASTING: broadcasting consumption</li>
-         * <li>CLUSTERING: clustering consumption</li>
+         * <li><p>BROADCASTING: The broadcast consumption mode.</p>
+         * </li>
+         * <li><p>CLUSTERING: The cluster consumption mode.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>BROADCASTING</p>
+         * <p>CLUSTERING</p>
          */
         @NameInMap("messageModel")
         public String messageModel;
 
         /**
-         * <p>The subscription status. Valid values:</p>
+         * <p>The subscription status.</p>
          * <ul>
-         * <li>ONLINE: The consumer group is online. If the consumer group contains multiple consumers, this value is returned as long as one of the consumers is online.</li>
-         * <li>OFFLINE: The consumer group is offline. If the consumer group contains multiple consumers, this value is returned only if all consumers are offline.</li>
+         * <li><p>ONLINE: The consumer group is online. If a consumer group contains multiple consumers, the group is considered online as long as at least one consumer is online.</p>
+         * </li>
+         * <li><p>OFFLINE: The consumer group is offline. If a consumer group contains multiple consumers, the group is considered offline only when all consumers are offline.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

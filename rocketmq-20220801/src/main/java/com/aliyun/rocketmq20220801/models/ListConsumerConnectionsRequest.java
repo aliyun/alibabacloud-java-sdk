@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListConsumerConnectionsRequest extends TeaModel {
     /**
+     * <p>The name of the Lite MSMQ topic.</p>
+     * 
      * <strong>example:</strong>
      * <p>abc</p>
      */
@@ -12,6 +14,8 @@ public class ListConsumerConnectionsRequest extends TeaModel {
     public String liteTopicName;
 
     /**
+     * <p>The name of the lite topic.</p>
+     * 
      * <strong>example:</strong>
      * <p>test1</p>
      */

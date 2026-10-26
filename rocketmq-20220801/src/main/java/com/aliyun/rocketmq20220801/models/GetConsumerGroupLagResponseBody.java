@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetConsumerGroupLagResponseBody extends TeaModel {
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>Topic.NotFound</p>
@@ -20,7 +20,7 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
     public GetConsumerGroupLagResponseBodyData data;
 
     /**
-     * <p>Dynamic error code</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>InstanceId</p>
@@ -38,7 +38,7 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,7 +47,7 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Error message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Parameter instanceId is mandatory for this action .</p>
@@ -144,7 +144,7 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
 
     public static class GetConsumerGroupLagResponseBodyDataTotalLag extends TeaModel {
         /**
-         * <p>Delivery delay time, in seconds</p>
+         * <p>The delivery latency. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -153,7 +153,7 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         public Long deliveryDuration;
 
         /**
-         * <p>The number of messages being consumed.</p>
+         * <p>The number of inflight messages.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -162,7 +162,7 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         public Long inflightCount;
 
         /**
-         * <p>Last consumption time</p>
+         * <p>The timestamp of the last consumption.</p>
          * 
          * <strong>example:</strong>
          * <p>1735629607846</p>
@@ -171,7 +171,7 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         public Long lastConsumeTimestamp;
 
         /**
-         * <p>Ready message count</p>
+         * <p>The number of ready messages.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -220,7 +220,7 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
 
     public static class GetConsumerGroupLagResponseBodyData extends TeaModel {
         /**
-         * <p>Consumer Group ID</p>
+         * <p>The consumer group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CID-TEST</p>
@@ -229,7 +229,7 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         public String consumerGroupId;
 
         /**
-         * <p>Instance ID</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rmq-cn-7e22ody****</p>
@@ -237,11 +237,14 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <p>The message accumulation for lite topics.</p>
+         */
         @NameInMap("liteTopicLagMap")
         public java.util.Map<String, DataLiteTopicLagMapValue> liteTopicLagMap;
 
         /**
-         * <p>Region ID</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -250,12 +253,14 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>Backlog for each topic</p>
+         * <p>The message accumulation for each topic.</p>
          */
         @NameInMap("topicLagMap")
         public java.util.Map<String, DataTopicLagMapValue> topicLagMap;
 
         /**
+         * <p>The name of the subscribed topic.</p>
+         * 
          * <strong>example:</strong>
          * <p>test1</p>
          */
@@ -263,7 +268,7 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         public String topicName;
 
         /**
-         * <p>Total lag count</p>
+         * <p>The total message accumulation.</p>
          */
         @NameInMap("totalLag")
         public GetConsumerGroupLagResponseBodyDataTotalLag totalLag;

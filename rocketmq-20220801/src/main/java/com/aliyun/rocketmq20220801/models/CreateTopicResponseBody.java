@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTopicResponseBody extends TeaModel {
     /**
-     * <p>Error code.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>Topic.Existed</p>
@@ -14,7 +14,7 @@ public class CreateTopicResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Return result.</p>
+     * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class CreateTopicResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>Dynamic error code.</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>TopicName</p>
@@ -32,7 +32,7 @@ public class CreateTopicResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic error message.</p>
+     * <p>The dynamic error message.</p>
      * 
      * <strong>example:</strong>
      * <p>topicName</p>
@@ -41,7 +41,7 @@ public class CreateTopicResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>400</p>
@@ -50,7 +50,7 @@ public class CreateTopicResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The topic already exists.</p>
@@ -59,7 +59,7 @@ public class CreateTopicResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID, each request\&quot;s ID is unique and can be used for troubleshooting and problem localization.</p>
+     * <p>The request ID. Each request has a unique ID, which can be used to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AF9A8B10-C426-530F-A0DD-96320B39****</p>
@@ -68,7 +68,7 @@ public class CreateTopicResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the execution was successful.</p>
+     * <p>Indicates whether the operation was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

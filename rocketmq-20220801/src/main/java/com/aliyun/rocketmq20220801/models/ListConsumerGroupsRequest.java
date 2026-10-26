@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConsumerGroupsRequest extends TeaModel {
     /**
-     * <p>The filter condition for the query. If not provided, all consumer groups under the specified instance will be queried.</p>
+     * <p>The filter condition for the query. If you do not specify this parameter, all consumer groups under the specified instance are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>CID-TEST</p>
@@ -14,7 +14,7 @@ public class ListConsumerGroupsRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>Page number, indicating which page of results to return.</p>
+     * <p>The paging page number. Specifies which page of results to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,8 +23,8 @@ public class ListConsumerGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Page size, the maximum number of results to display per page.</p>
-     * <p>Value range: [10, 100].</p>
+     * <p>The paging size. The maximum number of results to return per page.</p>
+     * <p>Valid values: [10,100].</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

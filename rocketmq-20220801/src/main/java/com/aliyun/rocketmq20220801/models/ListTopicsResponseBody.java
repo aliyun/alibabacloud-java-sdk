@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTopicsResponseBody extends TeaModel {
     /**
-     * <p>Error code.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>Topic.NotFound</p>
@@ -14,13 +14,13 @@ public class ListTopicsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The return result.</p>
      */
     @NameInMap("data")
     public ListTopicsResponseBodyData data;
 
     /**
-     * <p>Dynamic error code.</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>TopicName</p>
@@ -29,7 +29,7 @@ public class ListTopicsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic error message.</p>
+     * <p>The dynamic error message.</p>
      * 
      * <strong>example:</strong>
      * <p>topicName</p>
@@ -38,7 +38,7 @@ public class ListTopicsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>400</p>
@@ -47,7 +47,7 @@ public class ListTopicsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The topic cannot be found.</p>
@@ -56,7 +56,7 @@ public class ListTopicsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID, each request has a unique ID that can be used for troubleshooting and problem localization.</p>
+     * <p>The request ID. Each request has a unique ID that can be used to troubleshoot and locate issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AF9A8B10-C426-530F-A0DD-96320B39****</p>
@@ -65,7 +65,7 @@ public class ListTopicsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the execution was successful.</p>
+     * <p>Indicates whether the operation was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -144,7 +144,7 @@ public class ListTopicsResponseBody extends TeaModel {
 
     public static class ListTopicsResponseBodyDataList extends TeaModel {
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time in YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-01 20:05:50</p>
@@ -153,7 +153,7 @@ public class ListTopicsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rmq-cn-7e22ody****</p>
@@ -162,6 +162,8 @@ public class ListTopicsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The expiration time of a lite topic, in minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -169,7 +171,7 @@ public class ListTopicsResponseBody extends TeaModel {
         public Long liteTopicExpiration;
 
         /**
-         * <p>The maximum TPS for message sending.</p>
+         * <p>The maximum TPS for sending messages.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -178,14 +180,7 @@ public class ListTopicsResponseBody extends TeaModel {
         public Long maxSendTps;
 
         /**
-         * <p>The type of messages in the topic.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>TRANSACTION: transactional messages</li>
-         * <li>FIFO: ordered messages</li>
-         * <li>DELAY: scheduled or delayed messages</li>
-         * <li>NORMAL: normal messages</li>
-         * </ul>
+         * <p>The message type of the topic.</p>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
@@ -194,7 +189,7 @@ public class ListTopicsResponseBody extends TeaModel {
         public String messageType;
 
         /**
-         * <p>The region ID to which the instance belongs.</p>
+         * <p>The ID of the region to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -203,7 +198,7 @@ public class ListTopicsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>Remark information of the topic.</p>
+         * <p>The remarks for the topic.</p>
          * 
          * <strong>example:</strong>
          * <p>This is the remark for test.</p>
@@ -212,12 +207,7 @@ public class ListTopicsResponseBody extends TeaModel {
         public String remark;
 
         /**
-         * <p>The topic status.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>RUNNING</li>
-         * <li>CREATING</li>
-         * </ul>
+         * <p>The status of the topic.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -226,7 +216,7 @@ public class ListTopicsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Topic name.</p>
+         * <p>The topic name.</p>
          * 
          * <strong>example:</strong>
          * <p>topic_test</p>
@@ -235,7 +225,7 @@ public class ListTopicsResponseBody extends TeaModel {
         public String topicName;
 
         /**
-         * <p>Last update time of the topic.</p>
+         * <p>The last modification time of the topic in YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-01 20:05:50</p>
@@ -332,13 +322,13 @@ public class ListTopicsResponseBody extends TeaModel {
 
     public static class ListTopicsResponseBodyData extends TeaModel {
         /**
-         * <p>The topics.</p>
+         * <p>The paged data.</p>
          */
         @NameInMap("list")
         public java.util.List<ListTopicsResponseBodyDataList> list;
 
         /**
-         * <p>Current page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -347,7 +337,7 @@ public class ListTopicsResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
-         * <p>Page size.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -356,7 +346,7 @@ public class ListTopicsResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <p>Total number of results returned.</p>
+         * <p>The total number of returned results.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

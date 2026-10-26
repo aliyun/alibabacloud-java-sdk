@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetConsumerGroupLagRequest extends TeaModel {
     /**
+     * <p>The name of the lite topic.</p>
+     * 
      * <strong>example:</strong>
      * <p>abc</p>
      */
@@ -12,7 +14,7 @@ public class GetConsumerGroupLagRequest extends TeaModel {
     public String liteTopicName;
 
     /**
-     * <p>The topic name.</p>
+     * <p>The name of the topic to which the consumer group subscribes.</p>
      * 
      * <strong>example:</strong>
      * <p>normal-topic-1</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDisasterRecoveryPlanResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial. This parameter is returned only if the access is denied because the Resource Access Management (RAM) user does not have the required permissions.</p>
+     * <p>The details of the access denial. This field is returned only when access is denied due to insufficient RAM permissions.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -23,7 +23,7 @@ public class DeleteDisasterRecoveryPlanResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The response data.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,7 +50,7 @@ public class DeleteDisasterRecoveryPlanResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The response code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -77,7 +77,7 @@ public class DeleteDisasterRecoveryPlanResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListMigrationsResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>MissingInstanceId</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public ListMigrationsResponseBodyData data;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InstanceId</p>
      */
@@ -22,6 +29,8 @@ public class ListMigrationsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>instanceId</p>
      */
@@ -29,6 +38,8 @@ public class ListMigrationsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,8 @@ public class ListMigrationsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>The instance cannot be found.</p>
      */
@@ -43,6 +56,8 @@ public class ListMigrationsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E5897B2E-C3AC-56DC-A482-F0E9E53F48D5</p>
      */
@@ -50,6 +65,8 @@ public class ListMigrationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -127,6 +144,8 @@ public class ListMigrationsResponseBody extends TeaModel {
 
     public static class ListMigrationsResponseBodyDataListCurrentStage extends TeaModel {
         /**
+         * <p>The stage data.</p>
+         * 
          * <strong>example:</strong>
          * <p>[]</p>
          */
@@ -134,6 +153,13 @@ public class ListMigrationsResponseBody extends TeaModel {
         public Object stageData;
 
         /**
+         * <p>The stage status. Valid values:</p>
+         * <ul>
+         * <li>INIT: Not started.</li>
+         * <li>DOING: In progress.</li>
+         * <li>DONE: Completed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DOING</p>
          */
@@ -141,6 +167,14 @@ public class ListMigrationsResponseBody extends TeaModel {
         public String stageStatus;
 
         /**
+         * <p>The stage type. Valid values:</p>
+         * <ul>
+         * <li>CONNECT_NETWORK: Network connection.</li>
+         * <li>MIGRATE_METADATA: Metadata migration.</li>
+         * <li>REPLACE_ENDPOINT: Endpoint replacement.</li>
+         * <li>MIGRATE_MESSAGE: Message migration.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>MIGRATE_METADATA</p>
          */
@@ -180,13 +214,27 @@ public class ListMigrationsResponseBody extends TeaModel {
 
     public static class ListMigrationsResponseBodyDataListMigrationSource extends TeaModel {
         /**
+         * <p>The migration source data.</p>
+         * 
          * <strong>example:</strong>
-         * <p>[]</p>
+         * <p>{
+         * &quot;clusterType&quot;:&quot;INTERNET_NETWORK&quot;,
+         * &quot;aclType&quot;:&quot;NONE&quot;,
+         * &quot;clusterName&quot;:&quot;test&quot;,
+         * &quot;namesrvAddrList&quot;:&quot;47.110.248.xxx:9876&quot;],
+         * &quot;brokerObtainMethod&quot;:&quot;AUTO_OBTAIN&quot;
+         * }</p>
          */
         @NameInMap("sourceData")
         public Object sourceData;
 
         /**
+         * <p>The migration source type. Valid values:</p>
+         * <ul>
+         * <li>EXTERNAL_INSTANCE: External instance.</li>
+         * <li>INTERNAL_INSTANCE: Alibaba Cloud 5.0 instance.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>EXTERNAL_INSTANCE</p>
          */
@@ -218,13 +266,24 @@ public class ListMigrationsResponseBody extends TeaModel {
 
     public static class ListMigrationsResponseBodyDataListMigrationTarget extends TeaModel {
         /**
+         * <p>The migration target data.</p>
+         * 
          * <strong>example:</strong>
-         * <p>[]</p>
+         * <p>{
+         * &quot;clusterType&quot;:&quot;ROCKETMQ_V5&quot;,
+         * &quot;instanceId&quot;:&quot;rmq-cn-778429mp301&quot;,
+         * &quot;regionId&quot;:&quot;cn-hangzhou&quot;
+         * }</p>
          */
         @NameInMap("targetData")
         public Object targetData;
 
         /**
+         * <p>The migration target type. Valid values:</p>
+         * <ul>
+         * <li>INTERNAL_INSTANCE: Alibaba Cloud 5.0 instance.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>INTERNAL_INSTANCE</p>
          */
@@ -256,16 +315,23 @@ public class ListMigrationsResponseBody extends TeaModel {
 
     public static class ListMigrationsResponseBodyDataList extends TeaModel {
         /**
+         * <p>The creation time, in YYYY-MM-DD HH:mm:ss format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-08-01 00:00:00</p>
          */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <p>The current migration stage.</p>
+         */
         @NameInMap("currentStage")
         public ListMigrationsResponseBodyDataListCurrentStage currentStage;
 
         /**
+         * <p>The migration ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>21</p>
          */
@@ -273,26 +339,47 @@ public class ListMigrationsResponseBody extends TeaModel {
         public Long migrationId;
 
         /**
+         * <p>The migration name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
         @NameInMap("migrationName")
         public String migrationName;
 
+        /**
+         * <p>The migration source.</p>
+         */
         @NameInMap("migrationSource")
         public ListMigrationsResponseBodyDataListMigrationSource migrationSource;
 
         /**
+         * <p>The migration status. Valid values:</p>
+         * <ul>
+         * <li>CREATED: Created.</li>
+         * <li>MIGRATING: Migrating.</li>
+         * <li>COMPLETED: Completed.</li>
+         * <li>CANCELLED: Cancelled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>MIGRATING</p>
          */
         @NameInMap("migrationStatus")
         public String migrationStatus;
 
+        /**
+         * <p>The migration target.</p>
+         */
         @NameInMap("migrationTarget")
         public ListMigrationsResponseBodyDataListMigrationTarget migrationTarget;
 
         /**
+         * <p>The migration type. Valid values:</p>
+         * <ul>
+         * <li>INSTANCE_MIGRATION: instance migration</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>INSTANCE_MIGRATION</p>
          */
@@ -300,6 +387,8 @@ public class ListMigrationsResponseBody extends TeaModel {
         public String migrationType;
 
         /**
+         * <p>The modification time, in YYYY-MM-DD HH:mm:ss format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-08-01 20:05:50</p>
          */
@@ -307,6 +396,8 @@ public class ListMigrationsResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */
@@ -401,10 +492,15 @@ public class ListMigrationsResponseBody extends TeaModel {
     }
 
     public static class ListMigrationsResponseBodyData extends TeaModel {
+        /**
+         * <p>The paged data.</p>
+         */
         @NameInMap("list")
         public java.util.List<ListMigrationsResponseBodyDataList> list;
 
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -412,6 +508,8 @@ public class ListMigrationsResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -419,6 +517,8 @@ public class ListMigrationsResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

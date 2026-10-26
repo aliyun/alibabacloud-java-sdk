@@ -5,15 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateDisasterRecoveryPlanRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic consumer progress synchronization.</p>
+     * <p>Specifies whether to enable automatic consumer automatic synchronization.</p>
      * <blockquote>
-     * <p> This parameter takes effect only when you set <code>syncCheckpointEnabled</code> to true.</p>
+     * <p>This parameter takes effect only when consumer automatic synchronization is enabled. That is, the <code>syncCheckpointEnabled</code> field is set to true.</p>
      * </blockquote>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true</li>
-     * <li>false</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -22,13 +17,13 @@ public class CreateDisasterRecoveryPlanRequest extends TeaModel {
     public Boolean autoSyncCheckpoint;
 
     /**
-     * <p>The instances involved in the Global Replicator task. You must specify this parameter.</p>
+     * <p>The instances involved in the backup plan. This parameter is required.</p>
      */
     @NameInMap("instances")
     public java.util.List<CreateDisasterRecoveryPlanRequestInstances> instances;
 
     /**
-     * <p>The description of the Global Replicator task.</p>
+     * <p>The description of the plan.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -37,7 +32,7 @@ public class CreateDisasterRecoveryPlanRequest extends TeaModel {
     public String planDesc;
 
     /**
-     * <p>The name of the Global Replicator task. You must specify this parameter.</p>
+     * <p>The name of the plan. This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -46,7 +41,7 @@ public class CreateDisasterRecoveryPlanRequest extends TeaModel {
     public String planName;
 
     /**
-     * <p>The type of the Global Replicator task. You must specify this parameter. For more information, see <a href="https://help.aliyun.com/document_detail/2843187.html">Global Replicator</a>. Valid values:</p>
+     * <p>The type of the backup plan. This parameter is required. For more information, see <a href="https://help.aliyun.com/document_detail/2843187.html">Global Replicator</a>. Valid values:</p>
      * <ul>
      * <li>ACTIVE_PASSIVE: one-way backup</li>
      * <li>ACTIVE_ACTIVE: two-way backup</li>
@@ -59,12 +54,7 @@ public class CreateDisasterRecoveryPlanRequest extends TeaModel {
     public String planType;
 
     /**
-     * <p>Specifies whether to enable consumer progress synchronization.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true</li>
-     * <li>false</li>
-     * </ul>
+     * <p>Specifies whether to enable consumer offset synchronization.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -127,7 +117,7 @@ public class CreateDisasterRecoveryPlanRequest extends TeaModel {
 
     public static class CreateDisasterRecoveryPlanRequestInstancesMessageProperty extends TeaModel {
         /**
-         * <p>The attribute key.</p>
+         * <p>The key of the property.</p>
          * 
          * <strong>example:</strong>
          * <p>aaa</p>
@@ -136,7 +126,7 @@ public class CreateDisasterRecoveryPlanRequest extends TeaModel {
         public String propertyKey;
 
         /**
-         * <p>The attribute value.</p>
+         * <p>The value of the property.</p>
          * 
          * <strong>example:</strong>
          * <p>bbb</p>
@@ -169,15 +159,10 @@ public class CreateDisasterRecoveryPlanRequest extends TeaModel {
 
     public static class CreateDisasterRecoveryPlanRequestInstances extends TeaModel {
         /**
-         * <p>The authentication method. If you set instanceType to ALIYUN_ROCKETMQ and the instance is an ApsaraMQ for RocketMQ 4.0 instance, you do not need to specify this parameter.</p>
+         * <p>The authentication method. This parameter is not required if instanceType is set to ALIYUN_ROCKETMQ and the instance version is 4.0. Valid values:</p>
          * <ul>
          * <li>NO_AUTH: no authentication</li>
-         * <li>ACL_AUTH: access control list (ACL)-based authentication</li>
-         * </ul>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>NO_AUTH: no authentication</li>
-         * <li>ACL_AUTH: access control list (ACL)-based authentication</li>
+         * <li>ACL_AUTH: ACL authentication</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -187,7 +172,8 @@ public class CreateDisasterRecoveryPlanRequest extends TeaModel {
         public String authType;
 
         /**
-         * <p>The ID of the consumer group.</p>
+         * <p>The ID of the consumer group, which is used to pull messages from the source instance.
+         * <notice>This parameter is required for self-managed instances. For Alibaba Cloud instances, this parameter is automatically generated.</notice></p>
          * 
          * <strong>example:</strong>
          * <p>GID_DS_XXX_YYY</p>
@@ -196,7 +182,7 @@ public class CreateDisasterRecoveryPlanRequest extends TeaModel {
         public String consumerGroupId;
 
         /**
-         * <p>The instance endpoint. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ.</p>
+         * <p>The endpoint URL. This parameter is not required if instanceType is set to ALIYUN_ROCKETMQ. This parameter is required if instanceType is set to EXTERNAL_ROCKETMQ.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -205,7 +191,7 @@ public class CreateDisasterRecoveryPlanRequest extends TeaModel {
         public String endpointUrl;
 
         /**
-         * <p>The instance ID. This parameter is required only if you set instanceType to ALIYUN_ROCKETMQ.</p>
+         * <p>The instance ID. This parameter is not required if instanceType is set to EXTERNAL_ROCKETMQ. This parameter is required if instanceType is set to ALIYUN_ROCKETMQ.</p>
          * 
          * <strong>example:</strong>
          * <p>rmq-cn-******</p>
@@ -214,10 +200,10 @@ public class CreateDisasterRecoveryPlanRequest extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The instance role. Valid values:</p>
+         * <p>The role of the instance. Valid values:</p>
          * <ul>
-         * <li>ACTIVE: primary instance</li>
-         * <li>Passive: secondary instance</li>
+         * <li>ACTIVE: primary</li>
+         * <li>PASSIVE: secondary</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -227,15 +213,10 @@ public class CreateDisasterRecoveryPlanRequest extends TeaModel {
         public String instanceRole;
 
         /**
-         * <p>The instance type. Valid values:</p>
+         * <p>The type of the instance. Valid values:</p>
          * <ul>
-         * <li>ALIYUN_ROCKETMQ: ApsaraMQ for RocketMQ instance</li>
-         * <li>EXTERNAL_ROCKETMQ: external RocketMQ instance</li>
-         * </ul>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>ALIYUN_ROCKETMQ: ApsaraMQ for RocketMQ instance</li>
-         * <li>EXTERNAL_ROCKETMQ: external RocketMQ instance</li>
+         * <li>ALIYUN_ROCKETMQ: Alibaba Cloud instance</li>
+         * <li>EXTERNAL_ROCKETMQ: external instance, open-source instance, or open-source cluster</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -245,16 +226,16 @@ public class CreateDisasterRecoveryPlanRequest extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The message attribute. When you synchronize a message to the destination cluster, the system automatically adds the attribute to the message for SQL-based filtering.</p>
+         * <p>The message filtering property. When a message is synchronized to the destination cluster, this property is automatically added to the message for SQL-based filtering during message consumption.</p>
          */
         @NameInMap("messageProperty")
         public CreateDisasterRecoveryPlanRequestInstancesMessageProperty messageProperty;
 
         /**
-         * <p>The network type. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ. Valid values:</p>
+         * <p>The network type. This parameter is not required if instanceType is set to ALIYUN_ROCKETMQ. This parameter is required if instanceType is set to EXTERNAL_ROCKETMQ. Valid values:</p>
          * <ul>
-         * <li>TCP_INTERNET: Internet over TCP</li>
-         * <li>TCP_VPC: virtual private cloud (VPC) over TCP.</li>
+         * <li>TCP_INTERNET: TCP over the Internet</li>
+         * <li>TCP_VPC: TCP over a VPC</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -264,7 +245,7 @@ public class CreateDisasterRecoveryPlanRequest extends TeaModel {
         public String networkType;
 
         /**
-         * <p>The password used for authentication. This parameter is required only if you set authType to ACL_AUTH. If you set instanceType to ALIYUN_ROCKETMQ, you do not need to specify this parameter.</p>
+         * <p>The password for authentication. This parameter is required if authType is set to ACL_AUTH. This parameter is not required if instanceType is set to ALIYUN_ROCKETMQ.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -273,7 +254,7 @@ public class CreateDisasterRecoveryPlanRequest extends TeaModel {
         public String password;
 
         /**
-         * <p>The region where the instance resides.</p>
+         * <p>The region where the instance is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -282,7 +263,7 @@ public class CreateDisasterRecoveryPlanRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the security group to which the instance belongs. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ and networkType to TCP_VPC.</p>
+         * <p>The ID of the security group. This parameter is required only if instanceType is set to EXTERNAL_ROCKETMQ and networkType is set to TCP_VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-bp17hpmgz9******</p>
@@ -291,7 +272,7 @@ public class CreateDisasterRecoveryPlanRequest extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The username used for authentication. This parameter is required only if you set authType to ACL_AUTH.</p>
+         * <p>The username for authentication. This parameter is required if authType is set to ACL_AUTH.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -300,7 +281,7 @@ public class CreateDisasterRecoveryPlanRequest extends TeaModel {
         public String username;
 
         /**
-         * <p>The ID of the vSwitch with which the instance is associated. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ and networkType to TCP_VPC.</p>
+         * <p>The ID of the vSwitch with which the instance is associated. This parameter is required only if instanceType is set to EXTERNAL_ROCKETMQ and networkType is set to TCP_VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-uf6gwtbn6etadpv******</p>
@@ -309,7 +290,7 @@ public class CreateDisasterRecoveryPlanRequest extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the VPC with which the instance is associated. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ and networkType to TCP_VPC.</p>
+         * <p>The ID of the VPC with which the instance is associated. This parameter is required only if instanceType is set to EXTERNAL_ROCKETMQ and networkType is set to TCP_VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-wz9qt50xhtj9krb******</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConsumerGroupSubscriptionsRequest extends TeaModel {
     /**
-     * <p>The topic name. If you do not specify this parameter, all subscriptions of the consumer group are queried.</p>
+     * <p>The name of the topic. If you do not specify this parameter, all subscription relationships are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>topic_test</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial. This parameter is returned only if the access is denied because the Resource Access Management (RAM) user does not have the required permissions.</p>
+     * <p>The access denied details. This field is returned only when the request is denied because the RAM user does not have the required permissions.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -23,7 +23,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public GetDisasterRecoveryPlanResponseBodyData data;
@@ -47,7 +47,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The response code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -161,7 +161,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
 
     public static class GetDisasterRecoveryPlanResponseBodyDataInstancesMessageProperty extends TeaModel {
         /**
-         * <p>The attribute key.</p>
+         * <p>The property key.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -170,7 +170,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public String propertyKey;
 
         /**
-         * <p>The attribute value.</p>
+         * <p>The property value.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -203,7 +203,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
 
     public static class GetDisasterRecoveryPlanResponseBodyDataInstances extends TeaModel {
         /**
-         * <p>The authentication type.</p>
+         * <p>The authentication method.</p>
          * 
          * <strong>example:</strong>
          * <p>ACL_AUTH</p>
@@ -212,7 +212,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public String authType;
 
         /**
-         * <p>The consumer Group ID.</p>
+         * <p>The consumer group ID used to pull messages from the source instance.</p>
          * 
          * <strong>example:</strong>
          * <p>GID_DS_XXX_YYY</p>
@@ -221,7 +221,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public String consumerGroupId;
 
         /**
-         * <p>The endpoint.</p>
+         * <p>The endpoint address.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -257,7 +257,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The message attribute.</p>
+         * <p>The message filtering property.</p>
          */
         @NameInMap("messageProperty")
         public GetDisasterRecoveryPlanResponseBodyDataInstancesMessageProperty messageProperty;
@@ -272,7 +272,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public String networkType;
 
         /**
-         * <p>The password used for authentication.</p>
+         * <p>The authentication password.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -281,7 +281,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public String password;
 
         /**
-         * <p>The ID of the region where the instance resides.</p>
+         * <p>The region where the instance resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -299,7 +299,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The username used for authentication.</p>
+         * <p>The authentication username.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -317,7 +317,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The virtual private cloud (VPC) ID.</p>
+         * <p>VPC ID</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-wz9qt50xhtj9krb******</p>
@@ -446,15 +446,10 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
 
     public static class GetDisasterRecoveryPlanResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether automatic consumer progress synchronization is enabled.</p>
+         * <p>Specifies whether automatic consumer automatic synchronization is enabled.</p>
          * <blockquote>
-         * <p> This parameter takes effect only when <code>syncCheckpointEnabled</code> is set to true.</p>
+         * <p>This field is valid only when consumer automatic synchronization is enabled, that is, when the <code>syncCheckpointEnabled</code> field is set to true.</p>
          * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -463,7 +458,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public Boolean autoSyncCheckpoint;
 
         /**
-         * <p>The time when the query task was created.</p>
+         * <p>The creation time, in YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-01 20:05:50</p>
@@ -478,13 +473,13 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public java.util.Map<String, String> extInfo;
 
         /**
-         * <p>The instances involved in the Global Replicator task.</p>
+         * <p>The instances participating in the backup plan.</p>
          */
         @NameInMap("instances")
         public java.util.List<GetDisasterRecoveryPlanResponseBodyDataInstances> instances;
 
         /**
-         * <p>The description of the Global Replicator task.</p>
+         * <p>The plan description.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx</p>
@@ -493,7 +488,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public String planDesc;
 
         /**
-         * <p>The ID of the Global Replicator task.</p>
+         * <p>The plan ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1300000016</p>
@@ -502,7 +497,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public Long planId;
 
         /**
-         * <p>The name of the Global Replicator task.</p>
+         * <p>The plan name.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -511,11 +506,11 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public String planName;
 
         /**
-         * <p>The status of the Global Replicator task. Valid values:</p>
+         * <p>The plan status. Valid values:</p>
          * <ul>
-         * <li>CREATED</li>
-         * <li>RUNNING</li>
-         * <li>DELETED</li>
+         * <li>CREATED: created.</li>
+         * <li>RUNNING: running.</li>
+         * <li>DELETED: deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -525,10 +520,10 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public String planStatus;
 
         /**
-         * <p>The type of the Global Replicator task. Valid values:</p>
+         * <p>The plan type. Valid values:</p>
          * <ul>
-         * <li>ACTIVE_PASSIVE: one-way backup</li>
-         * <li>ACTIVE_ACTIVE: two-way backup</li>
+         * <li>ACTIVE_PASSIVE: one-way backup.</li>
+         * <li>ACTIVE_ACTIVE: two-way backup.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -538,12 +533,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public String planType;
 
         /**
-         * <p>Indicates whether consumer progress synchronization is enabled.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>Specifies whether consumer offset synchronization is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -552,7 +542,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public Boolean syncCheckpointEnabled;
 
         /**
-         * <p>The time when the query task was last modified.</p>
+         * <p>The modification time, in YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-01 20:05:50</p>

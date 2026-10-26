@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The fault code.</p>
      * 
      * <strong>example:</strong>
      * <p>MissingInstanceId</p>
@@ -14,7 +14,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The result data that is returned.</p>
+     * <p>The returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The dynamic error code.</p>
+     * <p>The dynamic fault code.</p>
      * 
      * <strong>example:</strong>
      * <p>InstanceId</p>
@@ -32,7 +32,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message.</p>
+     * <p>The dynamic fault message.</p>
      * 
      * <strong>example:</strong>
      * <p>instanceId</p>
@@ -50,7 +50,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The fault message.</p>
      * 
      * <strong>example:</strong>
      * <p>Parameter instanceId is mandatory for this action .</p>
@@ -59,7 +59,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</p>
+     * <p>The request ID. Each request ID is unique and active for troubleshooting and locating issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AA87DE09-DA44-52F4-9515-78B1B607****</p>
@@ -68,7 +68,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful.</p>
+     * <p>Indicates whether the operation is executed successfully.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

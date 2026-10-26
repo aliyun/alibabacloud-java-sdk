@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetConsumerGroupResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The fault code.</p>
      * 
      * <strong>example:</strong>
      * <p>InvalidConsumerGroupId</p>
@@ -14,13 +14,13 @@ public class GetConsumerGroupResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("data")
     public GetConsumerGroupResponseBodyData data;
 
     /**
-     * <p>The dynamic error code.</p>
+     * <p>The dynamic fault code.</p>
      * 
      * <strong>example:</strong>
      * <p>ConsumerGroupId</p>
@@ -29,7 +29,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message.</p>
+     * <p>The dynamic fault message.</p>
      * 
      * <strong>example:</strong>
      * <p>consumerGroupId</p>
@@ -47,7 +47,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The fault message.</p>
      * 
      * <strong>example:</strong>
      * <p>Parameter consumerGroupId is invalid.</p>
@@ -56,7 +56,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</p>
+     * <p>The request ID. Each request has a unique ID, which can be used to troubleshoot and locate faults.</p>
      * 
      * <strong>example:</strong>
      * <p>C7F94090-3358-506A-97DC-34BC803C****</p>
@@ -65,7 +65,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful.</p>
+     * <p>Indicates whether the execute operation was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -145,7 +145,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
     public static class GetConsumerGroupResponseBodyDataConsumeRetryPolicy extends TeaModel {
         /**
          * <p>The dead-letter topic.</p>
-         * <p>If a consumer still fails to consume a message after the message is retried for a specified number of times, the message is delivered to a dead-letter topic for subsequent business recovery or troubleshooting. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry and dead-letter messages</a>.</p>
+         * <p>If a consumer fails to consume a message due to an exception and the message still cannot be consumed after retries, the message is delivered to the dead-letter topic for subsequent business recovery or review. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry and dead-letter messages</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>DLQ_mqtest</p>
@@ -154,10 +154,10 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         public String deadLetterTargetTopic;
 
         /**
-         * <p>Fixed interval retry time,Value range, unit: seconds</p>
+         * <p>The fixed retry interval. Unit: seconds.</p>
          * <ul>
-         * <li>Concurrently:10-1800</li>
-         * <li>Orderly:1-600</li>
+         * <li>Concurrently (concurrent delivery): 10-1800</li>
+         * <li>Orderly (ordered delivery): 1-600</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         public Integer fixedIntervalRetryTime;
 
         /**
-         * <p>The maximum number of retries.</p>
+         * <p>The maximum number of retry attempts.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -176,12 +176,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         public Integer maxRetryTimes;
 
         /**
-         * <p>The retry policy.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>FixedRetryPolicy: fixed-interval retry</li>
-         * <li>DefaultRetryPolicy: exponential backoff retry</li>
-         * </ul>
+         * <p>The retry policy type.</p>
          * 
          * <strong>example:</strong>
          * <p>DefaultRetryPolicy</p>
@@ -245,7 +240,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         public String consumerGroupId;
 
         /**
-         * <p>The time when the consumer group was created.</p>
+         * <p>The time when the consumer group was created, in the format of YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-01 20:05:50</p>
@@ -254,12 +249,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The message delivery method of the consumer group.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Concurrently: concurrent delivery</li>
-         * <li>Orderly: ordered delivery</li>
-         * </ul>
+         * <p>The delivery order of the consumer group.</p>
          * 
          * <strong>example:</strong>
          * <p>Concurrently</p>
@@ -267,11 +257,17 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         @NameInMap("deliveryOrderType")
         public String deliveryOrderType;
 
+        /**
+         * <p>Indicates whether exclusive consumption is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("exclusive")
         public Boolean exclusive;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the instance to which the consumer group belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rmq-cn-7e22ody****</p>
@@ -280,15 +276,21 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Maximum received message tps</p>
+         * <p>The maximum TPS for consuming messages.</p>
          * 
          * <strong>example:</strong>
-         * <p>1000</p>
+         * <p>2000</p>
          */
         @NameInMap("maxReceiveTps")
         public Long maxReceiveTps;
 
         /**
+         * <p>The consumption pattern. Valid values:</p>
+         * <ul>
+         * <li>CLUSTERING: clustering consumption.</li>
+         * <li>LITE_SELECTIVE: LITE_SELECTIVE.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>LITE_SELECTIVE</p>
          */
@@ -296,7 +298,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         public String messageModel;
 
         /**
-         * <p>The ID of the region in which the instance resides.</p>
+         * <p>The region ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -305,7 +307,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The remarks on the consumer group.</p>
+         * <p>The remarks of the consumer group.</p>
          * 
          * <strong>example:</strong>
          * <p>This is the remark for test.</p>
@@ -315,11 +317,6 @@ public class GetConsumerGroupResponseBody extends TeaModel {
 
         /**
          * <p>The status of the consumer group.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>RUNNING</li>
-         * <li>CREATING</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -328,6 +325,8 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The topic name for the lite type.</p>
+         * 
          * <strong>example:</strong>
          * <p>test1</p>
          */
@@ -335,7 +334,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         public String topicName;
 
         /**
-         * <p>The time when the consumer group was last updated.</p>
+         * <p>The time when the consumer group was last updated, in the format of YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-01 20:05:50</p>

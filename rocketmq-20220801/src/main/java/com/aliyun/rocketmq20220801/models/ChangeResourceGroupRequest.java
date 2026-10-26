@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the region in which the instance resides.</p>
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,8 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the instance is changed.</p>
-     * <p>You can call the <a href="https://www.alibabacloud.com/help/resource-management/latest/listresourcegroups">ListResourceGroups</a> operation to query existing resource groups.</p>
+     * <p>The ID of the resource group to which you want to transfer the specified instance.</p>
+     * <p>You can call the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/resource-management/latest/listresourcegroups">ListResourceGroups</a> operation to query existing resource groups.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the resource. Set this parameter to the ID of the ApsaraMQ for RocketMQ instance whose resource group you want to change.</p>
+     * <p>The resource ID, which is the ID of the ApsaraMQ for RocketMQ instance. This parameter specifies the MSMQ queue instance whose resource group you want to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,8 +36,8 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The type of resource.</p>
-     * <p>Set this parameter to <strong>instance</strong>. The value of this parameter cannot be changed.</p>
+     * <p>The resource type.</p>
+     * <p>Set the value to <strong>instance</strong>, which indicates that the resource is an instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

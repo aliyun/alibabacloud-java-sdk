@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDisasterRecoveryCheckpointsRequest extends TeaModel {
     /**
-     * <p>Filter Condition</p>
+     * <p>The filter condition.</p>
      * 
      * <strong>example:</strong>
      * <p>topic_test</p>
@@ -14,7 +14,7 @@ public class ListDisasterRecoveryCheckpointsRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>Source Instance ID</p>
+     * <p>The instance ID of the source instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListDisasterRecoveryCheckpointsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Current page number, starting from 1.</p>
+     * <p>The current page number, starting from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,7 +33,7 @@ public class ListDisasterRecoveryCheckpointsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Page size, the maximum number of results returned per page.</p>
+     * <p>The page size. The maximum number of results to return per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

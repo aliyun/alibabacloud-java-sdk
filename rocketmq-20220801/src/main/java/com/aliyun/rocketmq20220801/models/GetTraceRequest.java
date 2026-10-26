@@ -4,9 +4,21 @@ package com.aliyun.rocketmq20220801.models;
 import com.aliyun.tea.*;
 
 public class GetTraceRequest extends TeaModel {
+    /**
+     * <p>The end time, in YYYY-MM-DD HH:mm:ss format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-09-09 09:00:00</p>
+     */
     @NameInMap("endTime")
     public String endTime;
 
+    /**
+     * <p>The start time, in YYYY-MM-DD HH:mm:ss format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-05-10 10:42:11</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 

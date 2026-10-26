@@ -8,7 +8,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-guangzhou", "rocketmq.cn-guangzhou.aliyuncs.com	")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("rocketmq", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +31,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a topic mapping to a Global Replicator task.</p>
+     * <p>Adds a backup mapping task.</p>
      * 
      * @param request AddDisasterRecoveryItemRequest
      * @param headers map
@@ -62,7 +65,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a topic mapping to a Global Replicator task.</p>
+     * <p>Adds a backup mapping task.</p>
      * 
      * @param request AddDisasterRecoveryItemRequest
      * @return AddDisasterRecoveryItemResponse
@@ -75,7 +78,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the resource group to which a ApsaraMQ for RocketMQ instance belongs.</p>
+     * <p>Modifies the resource group of an instance.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @param headers map
@@ -121,7 +124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the resource group to which a ApsaraMQ for RocketMQ instance belongs.</p>
+     * <p>Modifies the resource group of an instance.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -133,17 +136,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建 Agent 诊断会话</p>
+     * 
+     * @param request CreateAgentConversationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAgentConversationResponse
+     */
+    public CreateAgentConversationResponse createAgentConversationWithOptions(CreateAgentConversationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("clientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.initialMessage)) {
+            body.put("initialMessage", request.initialMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
+            body.put("title", request.title);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAgentConversation"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/conversations"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAgentConversationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建 Agent 诊断会话</p>
+     * 
+     * @param request CreateAgentConversationRequest
+     * @return CreateAgentConversationResponse
+     */
+    public CreateAgentConversationResponse createAgentConversation(CreateAgentConversationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createAgentConversationWithOptions(request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
-     * <p>The ID of the consumer group. The ID is globally unique and is used to identify a consumer group.
-     * The following limits are imposed on the ID:</p>
-     * <ul>
-     * <li>Character limit: The ID can contain letters, digits, underscores (_), hyphens (-), and percent signs (%).</li>
-     * <li>Length limit: The ID must be 1 to 60 characters in length.
-     * For more information about strings that are reserved for the system, see <a href="https://help.aliyun.com/document_detail/440347.html">Limits on parameters</a>.</li>
-     * </ul>
+     * <blockquote>
+     * <p>Notice: The OpenAPI operations provided by Alibaba Cloud are management APIs used to manage and query Alibaba Cloud service resources. Use these operations only in the management link. Do not use them in the core data link for sending and receiving messages, as this may introduce risks to the link.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a consumer group.</p>
+     * <p>Creates a consumer group (ConsumerGroup) for ApsaraMQ for RocketMQ. A consumer group is a load balancing group in ApsaraMQ for RocketMQ that contains multiple consumers with consistent consumption behavior. Consumers must subscribe to related topics by specifying a consumer group to implement message subscription.</p>
      * 
      * @param request CreateConsumerGroupRequest
      * @param headers map
@@ -201,16 +255,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The ID of the consumer group. The ID is globally unique and is used to identify a consumer group.
-     * The following limits are imposed on the ID:</p>
-     * <ul>
-     * <li>Character limit: The ID can contain letters, digits, underscores (_), hyphens (-), and percent signs (%).</li>
-     * <li>Length limit: The ID must be 1 to 60 characters in length.
-     * For more information about strings that are reserved for the system, see <a href="https://help.aliyun.com/document_detail/440347.html">Limits on parameters</a>.</li>
-     * </ul>
+     * <blockquote>
+     * <p>Notice: The OpenAPI operations provided by Alibaba Cloud are management APIs used to manage and query Alibaba Cloud service resources. Use these operations only in the management link. Do not use them in the core data link for sending and receiving messages, as this may introduce risks to the link.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a consumer group.</p>
+     * <p>Creates a consumer group (ConsumerGroup) for ApsaraMQ for RocketMQ. A consumer group is a load balancing group in ApsaraMQ for RocketMQ that contains multiple consumers with consistent consumption behavior. Consumers must subscribe to related topics by specifying a consumer group to implement message subscription.</p>
      * 
      * @param request CreateConsumerGroupRequest
      * @return CreateConsumerGroupResponse
@@ -223,7 +273,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Disaster Recovery Plan</p>
+     * <p>Creates a backup plan.</p>
      * 
      * @param request CreateDisasterRecoveryPlanRequest
      * @param headers map
@@ -277,7 +327,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Disaster Recovery Plan</p>
+     * <p>Creates a backup plan.</p>
      * 
      * @param request CreateDisasterRecoveryPlanRequest
      * @return CreateDisasterRecoveryPlanResponse
@@ -291,11 +341,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query resources of Alibaba Cloud services. Integrate it only into the management and control link. Do not rely on OpenAPI in the core data link for message sending and receiving. Otherwise, risks may occur on the link.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates an ApsaraMQ for RocketMQ 5.x instance.</p>
+     * <p>Creates an ApsaraMQ for RocketMQ 5.x series instance.</p>
      * 
      * @param request CreateInstanceRequest
      * @param headers map
@@ -396,11 +446,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query resources of Alibaba Cloud services. Integrate it only into the management and control link. Do not rely on OpenAPI in the core data link for message sending and receiving. Otherwise, risks may occur on the link.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates an ApsaraMQ for RocketMQ 5.x instance.</p>
+     * <p>Creates an ApsaraMQ for RocketMQ 5.x series instance.</p>
      * 
      * @param request CreateInstanceRequest
      * @return CreateInstanceResponse
@@ -413,7 +463,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an account that is used to access an instance.</p>
+     * <p>Creates an access account for an instance.</p>
      * 
      * @param request CreateInstanceAccountRequest
      * @param headers map
@@ -455,7 +505,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an account that is used to access an instance.</p>
+     * <p>Creates an access account for an instance.</p>
      * 
      * @param request CreateInstanceAccountRequest
      * @return CreateInstanceAccountResponse
@@ -468,7 +518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an access control list (ACL) in a specific instance.</p>
+     * <p>Creates access permissions for a specified instance.</p>
      * 
      * @param request CreateInstanceAclRequest
      * @param headers map
@@ -518,7 +568,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an access control list (ACL) in a specific instance.</p>
+     * <p>Creates access permissions for a specified instance.</p>
      * 
      * @param request CreateInstanceAclRequest
      * @return CreateInstanceAclResponse
@@ -531,7 +581,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an IP address whitelist.</p>
+     * <p>创建实例巡检配置</p>
+     * 
+     * @param request CreateInstanceInspectionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateInstanceInspectionResponse
+     */
+    public CreateInstanceInspectionResponse createInstanceInspectionWithOptions(String instanceId, CreateInstanceInspectionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("clientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.items)) {
+            body.put("items", request.items);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceScope)) {
+            body.put("resourceScope", request.resourceScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schedule)) {
+            body.put("schedule", request.schedule);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateInstanceInspection"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/monitoring/instance-inspections/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + ""),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateInstanceInspectionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建实例巡检配置</p>
+     * 
+     * @param request CreateInstanceInspectionRequest
+     * @return CreateInstanceInspectionResponse
+     */
+    public CreateInstanceInspectionResponse createInstanceInspection(String instanceId, CreateInstanceInspectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createInstanceInspectionWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an IP address whitelist for access control.</p>
      * 
      * @param request CreateInstanceIpWhitelistRequest
      * @param headers map
@@ -565,7 +680,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an IP address whitelist.</p>
+     * <p>Creates an IP address whitelist for access control.</p>
      * 
      * @param request CreateInstanceIpWhitelistRequest
      * @return CreateInstanceIpWhitelistResponse
@@ -578,7 +693,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Topic</p>
+     * <p>Creates a topic for ApsaraMQ for RocketMQ. A topic is the top-level container for message transmission and storage in ApsaraMQ for RocketMQ and is used to identify messages of the same business logic. In the messaging model, producers send messages to topics, and consumers consume messages by subscribing to specified topics.</p>
      * 
      * @param request CreateTopicRequest
      * @param headers map
@@ -624,7 +739,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Topic</p>
+     * <p>Creates a topic for ApsaraMQ for RocketMQ. A topic is the top-level container for message transmission and storage in ApsaraMQ for RocketMQ and is used to identify messages of the same business logic. In the messaging model, producers send messages to topics, and consumers consume messages by subscribing to specified topics.</p>
      * 
      * @param request CreateTopicRequest
      * @return CreateTopicResponse
@@ -636,10 +751,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除 Agent 诊断会话</p>
+     * 
+     * @param request DeleteAgentConversationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAgentConversationResponse
+     */
+    public DeleteAgentConversationResponse deleteAgentConversationWithOptions(String conversationId, DeleteAgentConversationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAgentConversation"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/conversations/" + com.aliyun.openapiutil.Client.getEncodeParam(conversationId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAgentConversationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除 Agent 诊断会话</p>
+     * 
+     * @param request DeleteAgentConversationRequest
+     * @return DeleteAgentConversationResponse
+     */
+    public DeleteAgentConversationResponse deleteAgentConversation(String conversationId, DeleteAgentConversationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteAgentConversationWithOptions(conversationId, request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-     * After you delete a consumer group, the consumer client associated with the consumer group cannot consume messages. Exercise caution when you call this operation.</p>
+     * <p>Notice: OpenAPI operations provided by Alibaba Cloud are management API operations used to manage and query resources of Alibaba Cloud services. Integrate these operations only into management workflows. Do not rely on OpenAPI operations in the core data link for message sending and receiving. Otherwise, risks may occur in the workflows.
+     * After you delete a specified consumer group, consumer clients with the identity of the consumer group cannot consume messages. Invoke this operation with caution.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -670,8 +826,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-     * After you delete a consumer group, the consumer client associated with the consumer group cannot consume messages. Exercise caution when you call this operation.</p>
+     * <p>Notice: OpenAPI operations provided by Alibaba Cloud are management API operations used to manage and query resources of Alibaba Cloud services. Integrate these operations only into management workflows. Do not rely on OpenAPI operations in the core data link for message sending and receiving. Otherwise, risks may occur in the workflows.
+     * After you delete a specified consumer group, consumer clients with the identity of the consumer group cannot consume messages. Invoke this operation with caution.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -686,7 +842,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the subscriptions of a consumer group.</p>
+     * <p>Deletes the subscription of a consumer group.</p>
      * 
      * @param request DeleteConsumerGroupSubscriptionRequest
      * @param headers map
@@ -728,7 +884,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the subscriptions of a consumer group.</p>
+     * <p>Deletes the subscription of a consumer group.</p>
      * 
      * @param request DeleteConsumerGroupSubscriptionRequest
      * @return DeleteConsumerGroupSubscriptionResponse
@@ -741,7 +897,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a topic mapping of a Global Replicator task.</p>
+     * <p>Deletes a backup mapping task.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -767,7 +923,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a topic mapping of a Global Replicator task.</p>
+     * <p>Deletes a backup mapping task.</p>
      * @return DeleteDisasterRecoveryItemResponse
      */
     public DeleteDisasterRecoveryItemResponse deleteDisasterRecoveryItem(String planId, String itemId) throws Exception {
@@ -778,7 +934,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a global message backup plan.</p>
+     * <p>Deletes a backup plan.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -804,7 +960,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a global message backup plan.</p>
+     * <p>Deletes a backup plan.</p>
      * @return DeleteDisasterRecoveryPlanResponse
      */
     public DeleteDisasterRecoveryPlanResponse deleteDisasterRecoveryPlan(String planId) throws Exception {
@@ -870,7 +1026,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete access control ACL user</p>
+     * <p>Deletes the access account information for a specified instance.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -896,7 +1052,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete access control ACL user</p>
+     * <p>Deletes the access account information for a specified instance.</p>
      * @return DeleteInstanceAccountResponse
      */
     public DeleteInstanceAccountResponse deleteInstanceAccount(String instanceId, String username) throws Exception {
@@ -907,7 +1063,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the permissions of a specific account of an instance.</p>
+     * <p>Deletes the permissions of a specified account for a specified resource in a specified instance.</p>
      * 
      * @param request DeleteInstanceAclRequest
      * @param headers map
@@ -945,7 +1101,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the permissions of a specific account of an instance.</p>
+     * <p>Deletes the permissions of a specified account for a specified resource in a specified instance.</p>
      * 
      * @param request DeleteInstanceAclRequest
      * @return DeleteInstanceAclResponse
@@ -958,7 +1114,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a specific IP address whitelist from an instance.</p>
+     * <p>关闭实例巡检配置</p>
+     * 
+     * @param request DeleteInstanceInspectionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteInstanceInspectionResponse
+     */
+    public DeleteInstanceInspectionResponse deleteInstanceInspectionWithOptions(String instanceId, DeleteInstanceInspectionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteInstanceInspection"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/monitoring/instance-inspections/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInstanceInspectionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>关闭实例巡检配置</p>
+     * 
+     * @param request DeleteInstanceInspectionRequest
+     * @return DeleteInstanceInspectionResponse
+     */
+    public DeleteInstanceInspectionResponse deleteInstanceInspection(String instanceId, DeleteInstanceInspectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteInstanceInspectionWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a specified global IP whitelist under a specified instance.</p>
      * 
      * @param tmpReq DeleteInstanceIpWhitelistRequest
      * @param headers map
@@ -1002,7 +1205,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a specific IP address whitelist from an instance.</p>
+     * <p>Deletes a specified global IP whitelist under a specified instance.</p>
      * 
      * @param request DeleteInstanceIpWhitelistRequest
      * @return DeleteInstanceIpWhitelistResponse
@@ -1015,7 +1218,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you delete the topic, the publishing and subscription relationships that are established based on the topic are cleared. Exercise caution when you call this operation.</p>
+     * <p>Deleting a topic clears all publish-subscribe relationships under the topic. Call this operation with caution.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a specified topic.</p>
@@ -1044,7 +1247,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you delete the topic, the publishing and subscription relationships that are established based on the topic are cleared. Exercise caution when you call this operation.</p>
+     * <p>Deleting a topic clears all publish-subscribe relationships under the topic. Call this operation with caution.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a specified topic.</p>
@@ -1058,7 +1261,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Executes a specific operation on a specific migration task.</p>
+     * <p>Performs a specified operation on a specified migration task.</p>
      * 
      * @param request ExecuteMigrationOperationRequest
      * @param headers map
@@ -1098,7 +1301,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Executes a specific operation on a specific migration task.</p>
+     * <p>Performs a specified operation on a specified migration task.</p>
      * 
      * @param request ExecuteMigrationOperationRequest
      * @return ExecuteMigrationOperationResponse
@@ -1111,7 +1314,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>完成当前迁移阶段</p>
+     * <p>Completes the current migration stage for a specified migration task.</p>
      * 
      * @param request FinishMigrationStageRequest
      * @param headers map
@@ -1145,7 +1348,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>完成当前迁移阶段</p>
+     * <p>Completes the current migration stage for a specified migration task.</p>
      * 
      * @param request FinishMigrationStageRequest
      * @return FinishMigrationStageResponse
@@ -1158,7 +1361,146 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the time range within which the consumer offset in a topic can be reset.</p>
+     * <p>查询 Agent 诊断会话详情</p>
+     * 
+     * @param request GetAgentConversationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAgentConversationResponse
+     */
+    public GetAgentConversationResponse getAgentConversationWithOptions(String conversationId, GetAgentConversationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAgentConversation"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/conversations/" + com.aliyun.openapiutil.Client.getEncodeParam(conversationId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentConversationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询 Agent 诊断会话详情</p>
+     * 
+     * @param request GetAgentConversationRequest
+     * @return GetAgentConversationResponse
+     */
+    public GetAgentConversationResponse getAgentConversation(String conversationId, GetAgentConversationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getAgentConversationWithOptions(conversationId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>订阅 Agent 诊断会话事件</p>
+     * 
+     * @param request GetAgentConversationEventsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAgentConversationEventsResponse
+     */
+    public GetAgentConversationEventsResponse getAgentConversationEventsWithOptions(String conversationId, GetAgentConversationEventsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.after)) {
+            query.put("after", request.after);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAgentConversationEvents"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/conversations/" + com.aliyun.openapiutil.Client.getEncodeParam(conversationId) + "/events"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "string")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentConversationEventsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>订阅 Agent 诊断会话事件</p>
+     * 
+     * @param request GetAgentConversationEventsRequest
+     * @return GetAgentConversationEventsResponse
+     */
+    public GetAgentConversationEventsResponse getAgentConversationEvents(String conversationId, GetAgentConversationEventsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getAgentConversationEventsWithOptions(conversationId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询 Agent 诊断会话时间线</p>
+     * 
+     * @param request GetAgentConversationTimelineRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAgentConversationTimelineResponse
+     */
+    public GetAgentConversationTimelineResponse getAgentConversationTimelineWithOptions(String conversationId, GetAgentConversationTimelineRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.after)) {
+            query.put("after", request.after);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.includeImageData)) {
+            query.put("includeImageData", request.includeImageData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAgentConversationTimeline"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/conversations/" + com.aliyun.openapiutil.Client.getEncodeParam(conversationId) + "/timeline"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentConversationTimelineResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询 Agent 诊断会话时间线</p>
+     * 
+     * @param request GetAgentConversationTimelineRequest
+     * @return GetAgentConversationTimelineResponse
+     */
+    public GetAgentConversationTimelineResponse getAgentConversationTimeline(String conversationId, GetAgentConversationTimelineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getAgentConversationTimelineWithOptions(conversationId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the time range in which a consumer offset can be reset for a topic.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1184,7 +1526,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the time range within which the consumer offset in a topic can be reset.</p>
+     * <p>Queries the time range in which a consumer offset can be reset for a topic.</p>
      * @return GetConsumeTimespanResponse
      */
     public GetConsumeTimespanResponse getConsumeTimespan(String instanceId, String consumerGroupId, String topicName) throws Exception {
@@ -1196,11 +1538,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query related resources of Alibaba Cloud services. It is recommended only for integration in management and control data links. Using OpenAPI in the core data link for message sending and receiving is strictly prohibited. Otherwise, risks may occur in the data link.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a specified consumer group.</p>
+     * <p>Retrieves the details of a specified consumer group.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1227,11 +1569,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query related resources of Alibaba Cloud services. It is recommended only for integration in management and control data links. Using OpenAPI in the core data link for message sending and receiving is strictly prohibited. Otherwise, risks may occur in the data link.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a specified consumer group.</p>
+     * <p>Retrieves the details of a specified consumer group.</p>
      * @return GetConsumerGroupResponse
      */
     public GetConsumerGroupResponse getConsumerGroup(String instanceId, String consumerGroupId) throws Exception {
@@ -1242,7 +1584,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Consumer Group Backlog Information</p>
+     * <p>Queries the message accumulation of a consumer group.</p>
      * 
      * @param request GetConsumerGroupLagRequest
      * @param headers map
@@ -1280,7 +1622,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Consumer Group Backlog Information</p>
+     * <p>Queries the message accumulation of a consumer group.</p>
      * 
      * @param request GetConsumerGroupLagRequest
      * @return GetConsumerGroupLagResponse
@@ -1377,7 +1719,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a topic mapping in a Global Replicator task.</p>
+     * <p>Queries the details of a backup plan mapping.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1403,7 +1745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a topic mapping in a Global Replicator task.</p>
+     * <p>Queries the details of a backup plan mapping.</p>
      * @return GetDisasterRecoveryItemResponse
      */
     public GetDisasterRecoveryItemResponse getDisasterRecoveryItem(String planId, String itemId) throws Exception {
@@ -1413,8 +1755,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before querying, make sure you have created a Global Replicator backup plan. Before using Global Replicator, your account must have the AliyunServiceRoleForRMQDisasterRecovery service-linked role. This role is used to grant authorization for ApsaraMQ for RocketMQ to access the EventBridge event bus. The system typically creates this role automatically the first time you use the associated feature. If automatic creation failed, create the role manually.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the details of a Global Replicator task.</p>
+     * <p>Queries the details of a backup plan.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1439,8 +1784,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before querying, make sure you have created a Global Replicator backup plan. Before using Global Replicator, your account must have the AliyunServiceRoleForRMQDisasterRecovery service-linked role. This role is used to grant authorization for ApsaraMQ for RocketMQ to access the EventBridge event bus. The system typically creates this role automatically the first time you use the associated feature. If automatic creation failed, create the role manually.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the details of a Global Replicator task.</p>
+     * <p>Queries the details of a backup plan.</p>
      * @return GetDisasterRecoveryPlanResponse
      */
     public GetDisasterRecoveryPlanResponse getDisasterRecoveryPlan(String planId) throws Exception {
@@ -1452,11 +1800,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * <p>Notice: The OpenAPI operations provided by Alibaba Cloud are management APIs used to manage and query Alibaba Cloud service resources. Use them only in management and control workflows. Do not rely on OpenAPI in core data link workflows for message sending and receiving, as this may introduce risks to the data link.</notice></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the detailed information about an instance.</p>
+     * <p>Retrieves the details of a specified instance.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1483,11 +1831,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * <p>Notice: The OpenAPI operations provided by Alibaba Cloud are management APIs used to manage and query Alibaba Cloud service resources. Use them only in management and control workflows. Do not rely on OpenAPI in core data link workflows for message sending and receiving, as this may introduce risks to the data link.</notice></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the detailed information about an instance.</p>
+     * <p>Retrieves the details of a specified instance.</p>
      * @return GetInstanceResponse
      */
     public GetInstanceResponse getInstance(String instanceId) throws Exception {
@@ -1498,7 +1846,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the account used to access a specific instance.</p>
+     * <p>Retrieves the account details for a specified instance.</p>
      * 
      * @param request GetInstanceAccountRequest
      * @param headers map
@@ -1532,7 +1880,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the account used to access a specific instance.</p>
+     * <p>Retrieves the account details for a specified instance.</p>
      * 
      * @param request GetInstanceAccountRequest
      * @return GetInstanceAccountResponse
@@ -1596,6 +1944,141 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询实例巡检配置</p>
+     * 
+     * @param request GetInstanceInspectionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetInstanceInspectionResponse
+     */
+    public GetInstanceInspectionResponse getInstanceInspectionWithOptions(String instanceId, GetInstanceInspectionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetInstanceInspection"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/monitoring/instance-inspections/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceInspectionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询实例巡检配置</p>
+     * 
+     * @param request GetInstanceInspectionRequest
+     * @return GetInstanceInspectionResponse
+     */
+    public GetInstanceInspectionResponse getInstanceInspection(String instanceId, GetInstanceInspectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getInstanceInspectionWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询实例风险诊断报告</p>
+     * 
+     * @param request GetInstanceInspectionReportRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetInstanceInspectionReportResponse
+     */
+    public GetInstanceInspectionReportResponse getInstanceInspectionReportWithOptions(String reportId, GetInstanceInspectionReportRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetInstanceInspectionReport"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/monitoring/instance-inspections/reports/" + com.aliyun.openapiutil.Client.getEncodeParam(reportId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceInspectionReportResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询实例风险诊断报告</p>
+     * 
+     * @param request GetInstanceInspectionReportRequest
+     * @return GetInstanceInspectionReportResponse
+     */
+    public GetInstanceInspectionReportResponse getInstanceInspectionReport(String reportId, GetInstanceInspectionReportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getInstanceInspectionReportWithOptions(reportId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询实例巡检结果</p>
+     * 
+     * @param request GetInstanceInspectionRunRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetInstanceInspectionRunResponse
+     */
+    public GetInstanceInspectionRunResponse getInstanceInspectionRunWithOptions(String instanceId, String runId, GetInstanceInspectionRunRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetInstanceInspectionRun"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/monitoring/instance-inspections/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/runs/" + com.aliyun.openapiutil.Client.getEncodeParam(runId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceInspectionRunResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询实例巡检结果</p>
+     * 
+     * @param request GetInstanceInspectionRunRequest
+     * @return GetInstanceInspectionRunResponse
+     */
+    public GetInstanceInspectionRunResponse getInstanceInspectionRun(String instanceId, String runId, GetInstanceInspectionRunRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getInstanceInspectionRunWithOptions(instanceId, runId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the information about the IP address whitelist of an instance.</p>
      * 
      * @param tmpReq GetInstanceIpWhitelistRequest
@@ -1649,7 +2132,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the details of a specific message.</p>
+     * <p>Retrieves the details of a specified message.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1675,7 +2158,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the details of a specific message.</p>
+     * <p>Retrieves the details of a specified message.</p>
      * @return GetMessageDetailResponse
      */
     public GetMessageDetailResponse getMessageDetail(String instanceId, String topicName, String messageId) throws Exception {
@@ -1686,7 +2169,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Topic Details</p>
+     * <p>Retrieves the details of a specified topic.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1712,7 +2195,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Topic Details</p>
+     * <p>Retrieves the details of a specified topic.</p>
      * @return GetTopicResponse
      */
     public GetTopicResponse getTopic(String instanceId, String topicName) throws Exception {
@@ -1723,7 +2206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the trace of a specific message in a specific topic.</p>
+     * <p>Retrieves the message trace for a specified message in a specified topic.</p>
      * 
      * @param request GetTraceRequest
      * @param headers map
@@ -1761,7 +2244,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the trace of a specific message in a specific topic.</p>
+     * <p>Retrieves the message trace for a specified message in a specified topic.</p>
      * 
      * @param request GetTraceRequest
      * @return GetTraceResponse
@@ -1774,7 +2257,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the supported zones.</p>
+     * <p>查询 Agent 诊断会话列表</p>
+     * 
+     * @param request ListAgentConversationsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAgentConversationsResponse
+     */
+    public ListAgentConversationsResponse listAgentConversationsWithOptions(ListAgentConversationsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.purpose)) {
+            query.put("purpose", request.purpose);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.q)) {
+            query.put("q", request.q);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAgentConversations"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/conversations"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAgentConversationsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询 Agent 诊断会话列表</p>
+     * 
+     * @param request ListAgentConversationsRequest
+     * @return ListAgentConversationsResponse
+     */
+    public ListAgentConversationsResponse listAgentConversations(ListAgentConversationsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listAgentConversationsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries supported zones.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1800,7 +2342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the supported zones.</p>
+     * <p>Queries supported zones.</p>
      * @return ListAvailableZonesResponse
      */
     public ListAvailableZonesResponse listAvailableZones() throws Exception {
@@ -1811,7 +2353,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the connections of a specific consumer client.</p>
+     * <p>Retrieves the connection information for clients in a specified consumer group.</p>
      * 
      * @param request ListConsumerConnectionsRequest
      * @param headers map
@@ -1849,7 +2391,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the connections of a specific consumer client.</p>
+     * <p>Retrieves the connection information for clients in a specified consumer group.</p>
      * 
      * @param request ListConsumerConnectionsRequest
      * @return ListConsumerConnectionsResponse
@@ -1862,7 +2404,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the subscriptions of a specific consumer group.</p>
+     * <p>Lists the subscription relationships for a consumer group.</p>
      * 
      * @param request ListConsumerGroupSubscriptionsRequest
      * @param headers map
@@ -1896,7 +2438,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the subscriptions of a specific consumer group.</p>
+     * <p>Lists the subscription relationships for a consumer group.</p>
      * 
      * @param request ListConsumerGroupSubscriptionsRequest
      * @return ListConsumerGroupSubscriptionsResponse
@@ -1910,11 +2452,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management API used for managing and querying related resources of Alibaba Cloud services. It is recommended to integrate it only in the management chain. Do not rely on OpenAPI implementation in the core data chain for message sending and receiving, as this may lead to risks in the chain.</p>
+     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query related resources of Alibaba Cloud services. It is recommended only for integration in management and control links. Using OpenAPI in the core data link for message sending and receiving is strictly prohibited. Otherwise, risks may occur in the link.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>List Consumer Groups</p>
+     * <p>Queries the list of consumer groups under a specified instance.</p>
      * 
      * @param request ListConsumerGroupsRequest
      * @param headers map
@@ -1957,11 +2499,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management API used for managing and querying related resources of Alibaba Cloud services. It is recommended to integrate it only in the management chain. Do not rely on OpenAPI implementation in the core data chain for message sending and receiving, as this may lead to risks in the chain.</p>
+     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query related resources of Alibaba Cloud services. It is recommended only for integration in management and control links. Using OpenAPI in the core data link for message sending and receiving is strictly prohibited. Otherwise, risks may occur in the link.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>List Consumer Groups</p>
+     * <p>Queries the list of consumer groups under a specified instance.</p>
      * 
      * @param request ListConsumerGroupsRequest
      * @return ListConsumerGroupsResponse
@@ -1973,8 +2515,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, create a Global Replicator backup plan and add topic mapping items to the plan. Then use the corresponding planId, itemId, and source instance ID to query consumer offset synchronization checkpoints. To use Global Replicator, make sure that your account has the AliyunServiceRoleForRMQDisasterRecovery service-linked role. The system typically performs automatic creation of this role when you first use the associated feature.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries consumer progress synchronization tasks.</p>
+     * <p>Queries the list of consumer offset synchronization checkpoints.</p>
      * 
      * @param request ListDisasterRecoveryCheckpointsRequest
      * @param headers map
@@ -2019,8 +2564,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, create a Global Replicator backup plan and add topic mapping items to the plan. Then use the corresponding planId, itemId, and source instance ID to query consumer offset synchronization checkpoints. To use Global Replicator, make sure that your account has the AliyunServiceRoleForRMQDisasterRecovery service-linked role. The system typically performs automatic creation of this role when you first use the associated feature.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries consumer progress synchronization tasks.</p>
+     * <p>Queries the list of consumer offset synchronization checkpoints.</p>
      * 
      * @param request ListDisasterRecoveryCheckpointsRequest
      * @return ListDisasterRecoveryCheckpointsResponse
@@ -2033,7 +2581,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Global Replicator tasks of an instance.</p>
+     * <p>Queries the list of backup mapping tasks.</p>
      * 
      * @param request ListDisasterRecoveryItemsRequest
      * @param headers map
@@ -2079,7 +2627,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Global Replicator tasks of an instance.</p>
+     * <p>Queries the list of backup mapping tasks.</p>
      * 
      * @param request ListDisasterRecoveryItemsRequest
      * @return ListDisasterRecoveryItemsResponse
@@ -2092,7 +2640,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries Global Replicator tasks.</p>
+     * <p>Queries a list of backup plans.</p>
      * 
      * @param request ListDisasterRecoveryPlansRequest
      * @param headers map
@@ -2138,7 +2686,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries Global Replicator tasks.</p>
+     * <p>Queries a list of backup plans.</p>
      * 
      * @param request ListDisasterRecoveryPlansRequest
      * @return ListDisasterRecoveryPlansResponse
@@ -2151,7 +2699,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the accounts that are used to access a specific instance.</p>
+     * <p>查询巡检模板列表</p>
+     * 
+     * @param request ListInspectionTemplatesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInspectionTemplatesResponse
+     */
+    public ListInspectionTemplatesResponse listInspectionTemplatesWithOptions(ListInspectionTemplatesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListInspectionTemplates"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/monitoring/templates"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInspectionTemplatesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询巡检模板列表</p>
+     * 
+     * @param request ListInspectionTemplatesRequest
+     * @return ListInspectionTemplatesResponse
+     */
+    public ListInspectionTemplatesResponse listInspectionTemplates(ListInspectionTemplatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listInspectionTemplatesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the access accounts for a specified instance.</p>
      * 
      * @param request ListInstanceAccountRequest
      * @param headers map
@@ -2201,7 +2804,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the accounts that are used to access a specific instance.</p>
+     * <p>Retrieves the access accounts for a specified instance.</p>
      * 
      * @param request ListInstanceAccountRequest
      * @return ListInstanceAccountResponse
@@ -2269,6 +2872,207 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询巡检项关联资源</p>
+     * 
+     * @param request ListInstanceInspectionResourcesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInstanceInspectionResourcesResponse
+     */
+    public ListInstanceInspectionResourcesResponse listInstanceInspectionResourcesWithOptions(String instanceId, ListInstanceInspectionResourcesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runId)) {
+            query.put("runId", request.runId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
+            query.put("templateCode", request.templateCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListInstanceInspectionResources"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/monitoring/instance-inspections/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/resources"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstanceInspectionResourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询巡检项关联资源</p>
+     * 
+     * @param request ListInstanceInspectionResourcesRequest
+     * @return ListInstanceInspectionResourcesResponse
+     */
+    public ListInstanceInspectionResourcesResponse listInstanceInspectionResources(String instanceId, ListInstanceInspectionResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listInstanceInspectionResourcesWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询实例巡检历史</p>
+     * 
+     * @param request ListInstanceInspectionRunsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInstanceInspectionRunsResponse
+     */
+    public ListInstanceInspectionRunsResponse listInstanceInspectionRunsWithOptions(String instanceId, ListInstanceInspectionRunsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("endTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reportStatus)) {
+            query.put("reportStatus", request.reportStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.result)) {
+            query.put("result", request.result);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("sortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("startTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
+            query.put("templateCode", request.templateCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListInstanceInspectionRuns"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/monitoring/instance-inspections/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/runs"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstanceInspectionRunsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询实例巡检历史</p>
+     * 
+     * @param request ListInstanceInspectionRunsRequest
+     * @return ListInstanceInspectionRunsResponse
+     */
+    public ListInstanceInspectionRunsResponse listInstanceInspectionRuns(String instanceId, ListInstanceInspectionRunsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listInstanceInspectionRunsWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询已配置的实例诊断；仅返回配置摘要</p>
+     * 
+     * @param request ListInstanceInspectionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInstanceInspectionsResponse
+     */
+    public ListInstanceInspectionsResponse listInstanceInspectionsWithOptions(ListInstanceInspectionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListInstanceInspections"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/monitoring/instance-inspections"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstanceInspectionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询已配置的实例诊断；仅返回配置摘要</p>
+     * 
+     * @param request ListInstanceInspectionsRequest
+     * @return ListInstanceInspectionsResponse
+     */
+    public ListInstanceInspectionsResponse listInstanceInspections(ListInstanceInspectionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listInstanceInspectionsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the IP address whitelists of an instance.</p>
      * 
      * @param request ListInstanceIpWhitelistRequest
@@ -2325,11 +3129,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * <p>Notice: The OpenAPI operations provided by Alibaba Cloud are management API operations that are used to manage and query resources of Alibaba Cloud services. Integrate OpenAPI operations only into the management data link. Do not use OpenAPI operations in the core data link for sending and receiving messages. Otherwise, risks may occur on the data link.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries all ApsaraMQ for RocketMQ instances in a specific region.</p>
+     * <p>Queries the list of all ApsaraMQ for RocketMQ instances in a specified region.</p>
      * 
      * @param tmpReq ListInstancesRequest
      * @param headers map
@@ -2394,11 +3198,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * <p>Notice: The OpenAPI operations provided by Alibaba Cloud are management API operations that are used to manage and query resources of Alibaba Cloud services. Integrate OpenAPI operations only into the management data link. Do not use OpenAPI operations in the core data link for sending and receiving messages. Otherwise, risks may occur on the data link.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries all ApsaraMQ for RocketMQ instances in a specific region.</p>
+     * <p>Queries the list of all ApsaraMQ for RocketMQ instances in a specified region.</p>
      * 
      * @param request ListInstancesRequest
      * @return ListInstancesResponse
@@ -2411,7 +3215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries messages.</p>
+     * <p>Queries a list of messages.</p>
      * 
      * @param request ListMessagesRequest
      * @param headers map
@@ -2473,7 +3277,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries messages.</p>
+     * <p>Queries a list of messages.</p>
      * 
      * @param request ListMessagesRequest
      * @return ListMessagesResponse
@@ -2537,7 +3341,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of migration operations.</p>
+     * <p>Queries the list of migration operations.</p>
      * 
      * @param tmpReq ListMigrationOperationsRequest
      * @param headers map
@@ -2605,7 +3409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of migration operations.</p>
+     * <p>Queries the list of migration operations.</p>
      * 
      * @param request ListMigrationOperationsRequest
      * @return ListMigrationOperationsResponse
@@ -2618,7 +3422,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries migration tasks.</p>
+     * <p>Queries the list of migration tasks.</p>
      * 
      * @param request ListMigrationsRequest
      * @param headers map
@@ -2668,7 +3472,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries migration tasks.</p>
+     * <p>Queries the list of migration tasks.</p>
      * 
      * @param request ListMigrationsRequest
      * @return ListMigrationsResponse
@@ -2681,7 +3485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries regions in which ApsaraMQ for RocketMQ is available.</p>
+     * <p>Queries the list of regions.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2707,7 +3511,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries regions in which ApsaraMQ for RocketMQ is available.</p>
+     * <p>Queries the list of regions.</p>
      * @return ListRegionsResponse
      */
     public ListRegionsResponse listRegions() throws Exception {
@@ -2822,7 +3626,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Topic List</p>
+     * <p>Queries the list of topics in a specified instance.</p>
      * 
      * @param tmpReq ListTopicsRequest
      * @param headers map
@@ -2874,7 +3678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Topic List</p>
+     * <p>Queries the list of topics in a specified instance.</p>
      * 
      * @param request ListTopicsRequest
      * @return ListTopicsResponse
@@ -2887,7 +3691,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the message traces of a specific topic.</p>
+     * <p>Queries the list of message traces under a specified topic.</p>
      * 
      * @param request ListTracesRequest
      * @param headers map
@@ -2949,7 +3753,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the message traces of a specific topic.</p>
+     * <p>Queries the list of message traces under a specified topic.</p>
      * 
      * @param request ListTracesRequest
      * @return ListTracesResponse
@@ -3013,6 +3817,185 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>响应 Agent 诊断交互</p>
+     * 
+     * @param request RespondAgentConversationActionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RespondAgentConversationActionResponse
+     */
+    public RespondAgentConversationActionResponse respondAgentConversationActionWithOptions(String conversationId, String actionId, RespondAgentConversationActionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.answers)) {
+            body.put("answers", request.answers);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.decision)) {
+            body.put("decision", request.decision);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.note)) {
+            body.put("note", request.note);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RespondAgentConversationAction"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/conversations/" + com.aliyun.openapiutil.Client.getEncodeParam(conversationId) + "/actions/" + com.aliyun.openapiutil.Client.getEncodeParam(actionId) + "/respond"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RespondAgentConversationActionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>响应 Agent 诊断交互</p>
+     * 
+     * @param request RespondAgentConversationActionRequest
+     * @return RespondAgentConversationActionResponse
+     */
+    public RespondAgentConversationActionResponse respondAgentConversationAction(String conversationId, String actionId, RespondAgentConversationActionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.respondAgentConversationActionWithOptions(conversationId, actionId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>立即执行实例巡检</p>
+     * 
+     * @param request RunInstanceInspectionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RunInstanceInspectionResponse
+     */
+    public RunInstanceInspectionResponse runInstanceInspectionWithOptions(String instanceId, RunInstanceInspectionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("clientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.itemOverrides)) {
+            body.put("itemOverrides", request.itemOverrides);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RunInstanceInspection"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/monitoring/instance-inspections/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/runs"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RunInstanceInspectionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>立即执行实例巡检</p>
+     * 
+     * @param request RunInstanceInspectionRequest
+     * @return RunInstanceInspectionResponse
+     */
+    public RunInstanceInspectionResponse runInstanceInspection(String instanceId, RunInstanceInspectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.runInstanceInspectionWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>发送 Agent 诊断消息</p>
+     * 
+     * @param request SendAgentConversationMessageRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SendAgentConversationMessageResponse
+     */
+    public SendAgentConversationMessageResponse sendAgentConversationMessageWithOptions(String conversationId, SendAgentConversationMessageRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.attachments)) {
+            body.put("attachments", request.attachments);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientContext)) {
+            body.put("clientContext", request.clientContext);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.images)) {
+            body.put("images", request.images);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.message)) {
+            body.put("message", request.message);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.messageType)) {
+            body.put("messageType", request.messageType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ticketRequestId)) {
+            body.put("ticketRequestId", request.ticketRequestId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SendAgentConversationMessage"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/conversations/" + com.aliyun.openapiutil.Client.getEncodeParam(conversationId) + "/messages"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "string")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SendAgentConversationMessageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>发送 Agent 诊断消息</p>
+     * 
+     * @param request SendAgentConversationMessageRequest
+     * @return SendAgentConversationMessageResponse
+     */
+    public SendAgentConversationMessageResponse sendAgentConversationMessage(String conversationId, SendAgentConversationMessageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.sendAgentConversationMessageWithOptions(conversationId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Starts a topic mapping of a Global Replicator task.</p>
      * 
      * @param headers map
@@ -3046,6 +4029,98 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.startDisasterRecoveryItemWithOptions(planId, itemId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>引导 Agent 诊断会话执行</p>
+     * 
+     * @param request SteerAgentConversationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SteerAgentConversationResponse
+     */
+    public SteerAgentConversationResponse steerAgentConversationWithOptions(String conversationId, SteerAgentConversationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.commandId)) {
+            body.put("commandId", request.commandId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.message)) {
+            body.put("message", request.message);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SteerAgentConversation"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/conversations/" + com.aliyun.openapiutil.Client.getEncodeParam(conversationId) + "/actions/steer"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SteerAgentConversationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>引导 Agent 诊断会话执行</p>
+     * 
+     * @param request SteerAgentConversationRequest
+     * @return SteerAgentConversationResponse
+     */
+    public SteerAgentConversationResponse steerAgentConversation(String conversationId, SteerAgentConversationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.steerAgentConversationWithOptions(conversationId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止 Agent 诊断会话执行</p>
+     * 
+     * @param request StopAgentConversationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopAgentConversationResponse
+     */
+    public StopAgentConversationResponse stopAgentConversationWithOptions(String conversationId, StopAgentConversationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopAgentConversation"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/conversations/" + com.aliyun.openapiutil.Client.getEncodeParam(conversationId) + "/actions/stop"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopAgentConversationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止 Agent 诊断会话执行</p>
+     * 
+     * @param request StopAgentConversationRequest
+     * @return StopAgentConversationResponse
+     */
+    public StopAgentConversationResponse stopAgentConversation(String conversationId, StopAgentConversationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.stopAgentConversationWithOptions(conversationId, request, headers, runtime);
     }
 
     /**
@@ -3245,13 +4320,111 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>重命名 Agent 诊断会话</p>
+     * 
+     * @param request UpdateAgentConversationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAgentConversationResponse
+     */
+    public UpdateAgentConversationResponse updateAgentConversationWithOptions(String conversationId, UpdateAgentConversationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("clientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
+            body.put("title", request.title);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAgentConversation"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/conversations/" + com.aliyun.openapiutil.Client.getEncodeParam(conversationId) + ""),
+            new TeaPair("method", "PATCH"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAgentConversationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>重命名 Agent 诊断会话</p>
+     * 
+     * @param request UpdateAgentConversationRequest
+     * @return UpdateAgentConversationResponse
+     */
+    public UpdateAgentConversationResponse updateAgentConversation(String conversationId, UpdateAgentConversationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateAgentConversationWithOptions(conversationId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新 Agent 诊断会话分享范围</p>
+     * 
+     * @param request UpdateAgentConversationShareScopeRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAgentConversationShareScopeResponse
+     */
+    public UpdateAgentConversationShareScopeResponse updateAgentConversationShareScopeWithOptions(String conversationId, UpdateAgentConversationShareScopeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.shareScope)) {
+            body.put("shareScope", request.shareScope);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAgentConversationShareScope"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/conversations/" + com.aliyun.openapiutil.Client.getEncodeParam(conversationId) + "/share-scope"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAgentConversationShareScopeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新 Agent 诊断会话分享范围</p>
+     * 
+     * @param request UpdateAgentConversationShareScopeRequest
+     * @return UpdateAgentConversationShareScopeResponse
+     */
+    public UpdateAgentConversationShareScopeResponse updateAgentConversationShareScope(String conversationId, UpdateAgentConversationShareScopeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateAgentConversationShareScopeWithOptions(conversationId, request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management API used for managing and querying related resources of Alibaba Cloud services. It is recommended to integrate it only in the management chain. It is strictly prohibited to rely on OpenAPI implementation in the core data chain of message sending and receiving, otherwise it may lead to risks in the chain.</p>
+     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query resources of Alibaba Cloud services. It is recommended only for integration in management and control links. Do not use OpenAPI in the core data link for sending and receiving messages. Otherwise, risks may occur on the data link.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Update ConsumerGroup</p>
+     * <p>Updates the basic information and consumption retry policy of a consumer group.</p>
      * 
      * @param request UpdateConsumerGroupRequest
      * @param headers map
@@ -3298,11 +4471,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management API used for managing and querying related resources of Alibaba Cloud services. It is recommended to integrate it only in the management chain. It is strictly prohibited to rely on OpenAPI implementation in the core data chain of message sending and receiving, otherwise it may lead to risks in the chain.</p>
+     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query resources of Alibaba Cloud services. It is recommended only for integration in management and control links. Do not use OpenAPI in the core data link for sending and receiving messages. Otherwise, risks may occur on the data link.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Update ConsumerGroup</p>
+     * <p>Updates the basic information and consumption retry policy of a consumer group.</p>
      * 
      * @param request UpdateConsumerGroupRequest
      * @return UpdateConsumerGroupResponse
@@ -3430,11 +4603,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query resources of Alibaba Cloud services. It is recommended only for integration in management and control paths. Do not use OpenAPI in the core data link for sending and receiving messages. Otherwise, risks may occur on the link.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Updates the basic information and specifications of an ApsaraMQ for RocketMQ instance.</p>
+     * <p>Updates the basic information and specification configurations of an ApsaraMQ for RocketMQ instance.</p>
      * 
      * @param request UpdateInstanceRequest
      * @param headers map
@@ -3485,11 +4658,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query resources of Alibaba Cloud services. It is recommended only for integration in management and control paths. Do not use OpenAPI in the core data link for sending and receiving messages. Otherwise, risks may occur on the link.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Updates the basic information and specifications of an ApsaraMQ for RocketMQ instance.</p>
+     * <p>Updates the basic information and specification configurations of an ApsaraMQ for RocketMQ instance.</p>
      * 
      * @param request UpdateInstanceRequest
      * @return UpdateInstanceResponse
@@ -3502,7 +4675,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the information about a specific account in a specific instance.</p>
+     * <p>Updates the information of a specified account under a specified instance.</p>
      * 
      * @param request UpdateInstanceAccountRequest
      * @param headers map
@@ -3544,7 +4717,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the information about a specific account in a specific instance.</p>
+     * <p>Updates the information of a specified account under a specified instance.</p>
      * 
      * @param request UpdateInstanceAccountRequest
      * @return UpdateInstanceAccountResponse
@@ -3620,7 +4793,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update Topic</p>
+     * <p>修改实例巡检配置</p>
+     * 
+     * @param request UpdateInstanceInspectionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateInstanceInspectionResponse
+     */
+    public UpdateInstanceInspectionResponse updateInstanceInspectionWithOptions(String instanceId, UpdateInstanceInspectionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("clientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.items)) {
+            body.put("items", request.items);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceScope)) {
+            body.put("resourceScope", request.resourceScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.revision)) {
+            body.put("revision", request.revision);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schedule)) {
+            body.put("schedule", request.schedule);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateInstanceInspection"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/monitoring/instance-inspections/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateInstanceInspectionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改实例巡检配置</p>
+     * 
+     * @param request UpdateInstanceInspectionRequest
+     * @return UpdateInstanceInspectionResponse
+     */
+    public UpdateInstanceInspectionResponse updateInstanceInspection(String instanceId, UpdateInstanceInspectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateInstanceInspectionWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the remarks for a topic.</p>
      * 
      * @param request UpdateTopicRequest
      * @param headers map
@@ -3662,7 +4904,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update Topic</p>
+     * <p>Updates the remarks for a topic.</p>
      * 
      * @param request UpdateTopicRequest
      * @return UpdateTopicResponse
@@ -3671,6 +4913,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateTopicWithOptions(instanceId, topicName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>上传 Agent 会话客户端日志</p>
+     * 
+     * @param request UploadAgentConversationLogRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UploadAgentConversationLogResponse
+     */
+    public UploadAgentConversationLogResponse uploadAgentConversationLogWithOptions(String conversationId, UploadAgentConversationLogRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.contentGzipB64)) {
+            body.put("contentGzipB64", request.contentGzipB64);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
+            body.put("fileName", request.fileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeRangeEnd)) {
+            body.put("timeRangeEnd", request.timeRangeEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeRangeStart)) {
+            body.put("timeRangeStart", request.timeRangeStart);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UploadAgentConversationLog"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/conversations/" + com.aliyun.openapiutil.Client.getEncodeParam(conversationId) + "/logs"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UploadAgentConversationLogResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>上传 Agent 会话客户端日志</p>
+     * 
+     * @param request UploadAgentConversationLogRequest
+     * @return UploadAgentConversationLogResponse
+     */
+    public UploadAgentConversationLogResponse uploadAgentConversationLog(String conversationId, UploadAgentConversationLogRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.uploadAgentConversationLogWithOptions(conversationId, request, headers, runtime);
     }
 
     /**
@@ -3726,7 +5027,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Verifies the message sending feature of a specific topic on a specific instance.</p>
+     * <p>Tests whether messages can be sent to a specified topic in an instance.</p>
      * 
      * @param request VerifySendMessageRequest
      * @param headers map
@@ -3784,7 +5085,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Verifies the message sending feature of a specific topic on a specific instance.</p>
+     * <p>Tests whether messages can be sent to a specified topic in an instance.</p>
      * 
      * @param request VerifySendMessageRequest
      * @return VerifySendMessageResponse
