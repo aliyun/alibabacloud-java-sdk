@@ -1188,6 +1188,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.callableAgentsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.callableAgents, "CallableAgents", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.expertSuites)) {
+            request.expertSuitesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.expertSuites, "ExpertSuites", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.metadata)) {
             request.metadataShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.metadata, "Metadata", "json");
         }
@@ -1221,6 +1225,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DisplayName", request.displayName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.expertSuitesShrink)) {
+            body.put("ExpertSuites", request.expertSuitesShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.metadataShrink)) {
             body.put("Metadata", request.metadataShrink);
         }
@@ -1231,6 +1239,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.publishImmediately)) {
+            body.put("PublishImmediately", request.publishImmediately);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.skillsShrink)) {
@@ -9333,6 +9345,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAgentResponse getAgentWithOptions(GetAgentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentVersion)) {
+            body.put("AgentVersion", request.agentVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             body.put("Name", request.name);
         }
@@ -22968,6 +22984,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UnTagDataAssetsResponse unTagDataAssets(UnTagDataAssetsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.unTagDataAssetsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>修改当前身份可访问的 Agent 会话标题，不改变任务执行状态。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>修改Agent会话标题</p>
+     * 
+     * @param tmpReq UpdateAgentSessionTitleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAgentSessionTitleResponse
+     */
+    public UpdateAgentSessionTitleResponse updateAgentSessionTitleWithOptions(UpdateAgentSessionTitleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateAgentSessionTitleShrinkRequest request = new UpdateAgentSessionTitleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.params)) {
+            request.paramsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.params, "Params", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jsonrpc)) {
+            body.put("Jsonrpc", request.jsonrpc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paramsShrink)) {
+            body.put("Params", request.paramsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAgentSessionTitle"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAgentSessionTitleResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>修改当前身份可访问的 Agent 会话标题，不改变任务执行状态。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>修改Agent会话标题</p>
+     * 
+     * @param request UpdateAgentSessionTitleRequest
+     * @return UpdateAgentSessionTitleResponse
+     */
+    public UpdateAgentSessionTitleResponse updateAgentSessionTitle(UpdateAgentSessionTitleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAgentSessionTitleWithOptions(request, runtime);
     }
 
     /**

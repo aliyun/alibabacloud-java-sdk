@@ -40,6 +40,74 @@ public class ListAgentSessionsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListAgentSessionsResponseBodyJsonRpcResponseError extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>400</p>
+         */
+        @NameInMap("Code")
+        public Integer code;
+
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("Data")
+        public Object data;
+
+        /**
+         * <strong>example:</strong>
+         * <p>SESSION_FILTER_REQUIRED</p>
+         */
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
+        /**
+         * <strong>example:</strong>
+         * <p>SESSION_FILTER_REQUIRED</p>
+         */
+        @NameInMap("Message")
+        public String message;
+
+        public static ListAgentSessionsResponseBodyJsonRpcResponseError build(java.util.Map<String, ?> map) throws Exception {
+            ListAgentSessionsResponseBodyJsonRpcResponseError self = new ListAgentSessionsResponseBodyJsonRpcResponseError();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAgentSessionsResponseBodyJsonRpcResponseError setCode(Integer code) {
+            this.code = code;
+            return this;
+        }
+        public Integer getCode() {
+            return this.code;
+        }
+
+        public ListAgentSessionsResponseBodyJsonRpcResponseError setData(Object data) {
+            this.data = data;
+            return this;
+        }
+        public Object getData() {
+            return this.data;
+        }
+
+        public ListAgentSessionsResponseBodyJsonRpcResponseError setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        public ListAgentSessionsResponseBodyJsonRpcResponseError setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+    }
+
     public static class ListAgentSessionsResponseBodyJsonRpcResponseResultAgentSessionsMetaSessionTagList extends TeaModel {
         /**
          * <p>The session tag. You can filter sessions based on session tags. For example, if you use a fixed RAM user to call OpenAPI but the calling system has its own account system, you can filter the session list based on an account ID. In this case, set this parameter to the account ID of the calling system.</p>
@@ -66,6 +134,9 @@ public class ListAgentSessionsResponseBody extends TeaModel {
     }
 
     public static class ListAgentSessionsResponseBodyJsonRpcResponseResultAgentSessionsMeta extends TeaModel {
+        @NameInMap("Archived")
+        public Boolean archived;
+
         /**
          * <p>The session source.</p>
          * 
@@ -98,6 +169,14 @@ public class ListAgentSessionsResponseBody extends TeaModel {
         public static ListAgentSessionsResponseBodyJsonRpcResponseResultAgentSessionsMeta build(java.util.Map<String, ?> map) throws Exception {
             ListAgentSessionsResponseBodyJsonRpcResponseResultAgentSessionsMeta self = new ListAgentSessionsResponseBodyJsonRpcResponseResultAgentSessionsMeta();
             return TeaModel.build(map, self);
+        }
+
+        public ListAgentSessionsResponseBodyJsonRpcResponseResultAgentSessionsMeta setArchived(Boolean archived) {
+            this.archived = archived;
+            return this;
+        }
+        public Boolean getArchived() {
+            return this.archived;
         }
 
         public ListAgentSessionsResponseBodyJsonRpcResponseResultAgentSessionsMeta setSessionSource(String sessionSource) {
@@ -307,6 +386,9 @@ public class ListAgentSessionsResponseBody extends TeaModel {
     }
 
     public static class ListAgentSessionsResponseBodyJsonRpcResponse extends TeaModel {
+        @NameInMap("Error")
+        public ListAgentSessionsResponseBodyJsonRpcResponseError error;
+
         /**
          * <p>The ID passed in by the requester. The value is returned as-is.</p>
          * 
@@ -334,6 +416,14 @@ public class ListAgentSessionsResponseBody extends TeaModel {
         public static ListAgentSessionsResponseBodyJsonRpcResponse build(java.util.Map<String, ?> map) throws Exception {
             ListAgentSessionsResponseBodyJsonRpcResponse self = new ListAgentSessionsResponseBodyJsonRpcResponse();
             return TeaModel.build(map, self);
+        }
+
+        public ListAgentSessionsResponseBodyJsonRpcResponse setError(ListAgentSessionsResponseBodyJsonRpcResponseError error) {
+            this.error = error;
+            return this;
+        }
+        public ListAgentSessionsResponseBodyJsonRpcResponseError getError() {
+            return this.error;
         }
 
         public ListAgentSessionsResponseBodyJsonRpcResponse setId(String id) {

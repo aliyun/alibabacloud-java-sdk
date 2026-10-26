@@ -376,6 +376,10 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
     }
 
     public static class ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasks extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>45238</p>
+         */
         @NameInMap("DataSourceId")
         public Long dataSourceId;
 

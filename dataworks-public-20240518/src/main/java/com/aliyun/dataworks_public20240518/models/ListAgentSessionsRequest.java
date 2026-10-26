@@ -68,6 +68,12 @@ public class ListAgentSessionsRequest extends TeaModel {
         public String agentName;
 
         /**
+         * <p>true仅返回归档会话；false或省略仅返回未归档会话。</p>
+         */
+        @NameInMap("Archived")
+        public Boolean archived;
+
+        /**
          * <p>The number of entries per page. Default value: 50.</p>
          * 
          * <strong>example:</strong>
@@ -126,6 +132,14 @@ public class ListAgentSessionsRequest extends TeaModel {
         }
         public String getAgentName() {
             return this.agentName;
+        }
+
+        public ListAgentSessionsRequestParams setArchived(Boolean archived) {
+            this.archived = archived;
+            return this;
+        }
+        public Boolean getArchived() {
+            return this.archived;
         }
 
         public ListAgentSessionsRequestParams setMaxResults(Integer maxResults) {

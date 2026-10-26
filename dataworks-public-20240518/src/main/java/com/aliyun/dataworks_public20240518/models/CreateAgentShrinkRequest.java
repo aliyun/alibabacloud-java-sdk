@@ -34,6 +34,15 @@ public class CreateAgentShrinkRequest extends TeaModel {
     public String displayName;
 
     /**
+     * <p>Agent 绑定的已发布专家套件。个人或企业套件使用 SuiteId，可选 Version；官方套件必须显式指定 Source=OFFICIAL 和官方目录中的 SuiteId，不传 Version。未传时创建为空，不会默认加载所有官方套件。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;Source&quot;:&quot;OFFICIAL&quot;,&quot;SuiteId&quot;:&quot;dataworks-data-analysis-extension&quot;},{&quot;SuiteId&quot;:&quot;suite_example&quot;,&quot;Version&quot;:1}]</p>
+     */
+    @NameInMap("ExpertSuites")
+    public String expertSuitesShrink;
+
+    /**
      * <p>The extended metadata in key-value pairs.</p>
      * 
      * <strong>example:</strong>
@@ -62,6 +71,15 @@ public class CreateAgentShrinkRequest extends TeaModel {
      */
     @NameInMap("Name")
     public String name;
+
+    /**
+     * <p>是否在创建 Agent 后立即发布。true 发布创建的版本；false 或省略保持原有仅创建草稿行为。保存与发布不是原子操作，发布失败时草稿可能已存在；重试前应先查询 Agent，避免重复创建。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("PublishImmediately")
+    public Boolean publishImmediately;
 
     /**
      * <p>The list of skills.</p>
@@ -141,6 +159,14 @@ public class CreateAgentShrinkRequest extends TeaModel {
         return this.displayName;
     }
 
+    public CreateAgentShrinkRequest setExpertSuitesShrink(String expertSuitesShrink) {
+        this.expertSuitesShrink = expertSuitesShrink;
+        return this;
+    }
+    public String getExpertSuitesShrink() {
+        return this.expertSuitesShrink;
+    }
+
     public CreateAgentShrinkRequest setMetadataShrink(String metadataShrink) {
         this.metadataShrink = metadataShrink;
         return this;
@@ -163,6 +189,14 @@ public class CreateAgentShrinkRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateAgentShrinkRequest setPublishImmediately(Boolean publishImmediately) {
+        this.publishImmediately = publishImmediately;
+        return this;
+    }
+    public Boolean getPublishImmediately() {
+        return this.publishImmediately;
     }
 
     public CreateAgentShrinkRequest setSkillsShrink(String skillsShrink) {

@@ -178,6 +178,13 @@ public class CreateAgentSessionRequest extends TeaModel {
         public String mode;
 
         /**
+         * <strong>example:</strong>
+         * <p>qwen3.7-max(openai)</p>
+         */
+        @NameInMap("Model")
+        public String model;
+
+        /**
          * <p>The DataWorks workspace ID. Used to initialize the session project context. If omitted, the session is treated as having no project context. You can later correct or switch the project context by using PromptAgentSession.</p>
          * 
          * <strong>example:</strong>
@@ -185,6 +192,13 @@ public class CreateAgentSessionRequest extends TeaModel {
          */
         @NameInMap("ProjectId")
         public String projectId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>none</p>
+         */
+        @NameInMap("ReasoningEffort")
+        public String reasoningEffort;
 
         /**
          * <p>The ID of the resource group used for initialization.</p>
@@ -225,12 +239,28 @@ public class CreateAgentSessionRequest extends TeaModel {
             return this.mode;
         }
 
+        public CreateAgentSessionRequestParamsMetaInitialConfigOptions setModel(String model) {
+            this.model = model;
+            return this;
+        }
+        public String getModel() {
+            return this.model;
+        }
+
         public CreateAgentSessionRequestParamsMetaInitialConfigOptions setProjectId(String projectId) {
             this.projectId = projectId;
             return this;
         }
         public String getProjectId() {
             return this.projectId;
+        }
+
+        public CreateAgentSessionRequestParamsMetaInitialConfigOptions setReasoningEffort(String reasoningEffort) {
+            this.reasoningEffort = reasoningEffort;
+            return this;
+        }
+        public String getReasoningEffort() {
+            return this.reasoningEffort;
         }
 
         public CreateAgentSessionRequestParamsMetaInitialConfigOptions setResourceGroupId(String resourceGroupId) {

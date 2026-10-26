@@ -41,12 +41,24 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
     }
 
     public static class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsDetails extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100.0</p>
+         */
         @NameInMap("CheckedValue")
         public String checkedValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0</p>
+         */
         @NameInMap("ReferencedValue")
         public String referencedValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Passed</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -82,12 +94,25 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
     }
 
     public static class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsCritical extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>$checkValue &gt; 0.01</p>
+         */
         @NameInMap("Expression")
         public String expression;
 
+        /**
+         * <strong>example:</strong>
+         * <blockquote>
+         * </blockquote>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100.0</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -123,12 +148,25 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
     }
 
     public static class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsExpected extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>$checkValue &gt; 0.01</p>
+         */
         @NameInMap("Expression")
         public String expression;
 
+        /**
+         * <strong>example:</strong>
+         * <blockquote>
+         * </blockquote>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100.0</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -164,12 +202,25 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
     }
 
     public static class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsWarned extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>$checkValue &gt; 0.01</p>
+         */
         @NameInMap("Expression")
         public String expression;
 
+        /**
+         * <strong>example:</strong>
+         * <blockquote>
+         * </blockquote>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100.0</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -246,12 +297,20 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
     }
 
     public static class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</p>
+         */
         @NameInMap("ReferencedSamplesFilter")
         public String referencedSamplesFilter;
 
         @NameInMap("Thresholds")
         public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholds thresholds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Fixed</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -287,9 +346,17 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
     }
 
     public static class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleErrorHandlers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>SELECT * FROM tb_api_log WHERE id IS NULL</p>
+         */
         @NameInMap("ErrorDataFilter")
         public String errorDataFilter;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SaveErrorData</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -317,15 +384,31 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
     }
 
     public static class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleSamplingConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Min</p>
+         */
         @NameInMap("Metric")
         public String metric;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{ &quot;Columns&quot;: [ &quot;id&quot;, &quot;name&quot; ] }</p>
+         */
         @NameInMap("MetricParameters")
         public String metricParameters;
 
+        /**
+         * <strong>example:</strong>
+         * <p>id IS NULL</p>
+         */
         @NameInMap("SamplingFilter")
         public String samplingFilter;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SET odps.sql.udf.timeout=600s;</p>
+         */
         @NameInMap("SettingConfig")
         public String settingConfig;
 
@@ -369,12 +452,24 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
     }
 
     public static class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleTarget extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>maxcompute</p>
+         */
         @NameInMap("DatabaseType")
         public String databaseType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>odps.unit_test.tb_unit_test</p>
+         */
         @NameInMap("TableGuid")
         public String tableGuid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Table</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -413,6 +508,10 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
         @NameInMap("CheckingConfig")
         public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfig checkingConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>this is a odps _sql task</p>
+         */
         @NameInMap("Description")
         public String description;
 
@@ -422,24 +521,44 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
         @NameInMap("ErrorHandlers")
         public java.util.List<GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleErrorHandlers> errorHandlers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100001</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>表不能为空</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 
         @NameInMap("SamplingConfig")
         public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleSamplingConfig samplingConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>High</p>
+         */
         @NameInMap("Severity")
         public String severity;
 
         @NameInMap("Target")
         public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleTarget target;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SYSTEM:user_defined_sql</p>
+         */
         @NameInMap("TemplateCode")
         public String templateCode;
 
@@ -539,24 +658,44 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
     }
 
     public static class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResults extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1708284916414</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
         @NameInMap("Details")
         public java.util.List<GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsDetails> details;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
         @NameInMap("Id")
         public Long id;
 
         @NameInMap("Rule")
         public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRule rule;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[   {     &quot;gender&quot;: &quot;male&quot;,     &quot;_count&quot;: 100   }, {     &quot;gender&quot;: &quot;female&quot;,     &quot;_count&quot;: 100   } ]</p>
+         */
         @NameInMap("Sample")
         public String sample;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Passed</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20001</p>
+         */
         @NameInMap("TaskInstanceId")
         public Long taskInstanceId;
 

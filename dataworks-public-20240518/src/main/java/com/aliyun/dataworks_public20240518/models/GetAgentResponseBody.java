@@ -118,6 +118,144 @@ public class GetAgentResponseBody extends TeaModel {
 
     }
 
+    public static class GetAgentResponseBodyAgentExpertSuites extends TeaModel {
+        /**
+         * <p>套件已删除、发布快照缺失或调用者无权查看时，不返回套件摘要，仅保留 ID 和版本号。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>数据分析专家能力集合</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <strong>example:</strong>
+         * <p>数据分析专家套件</p>
+         */
+        @NameInMap("DisplayName")
+        public String displayName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>analysis-suite</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        /**
+         * <p>显式查询 Agent 已发布版本时返回固定的官方制品版本；查询草稿或自定义套件时不返回。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1.0.202610211408</p>
+         */
+        @NameInMap("PackageVersion")
+        public String packageVersion;
+
+        /**
+         * <p>可选套件摘要字段，当前新 DataAgent 应用不返回；缺省不表示版本 0。不可作为 UpdateAgent 的 Version，回写引用时必须省略。官方制品的固定版本请读取 PackageVersion。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.0</p>
+         */
+        @NameInMap("SemanticVersion")
+        public String semanticVersion;
+
+        /**
+         * <p>OFFICIAL 表示官方目录资源；省略或 DB 表示个人或企业资源。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OFFICIAL</p>
+         */
+        @NameInMap("Source")
+        public String source;
+
+        /**
+         * <strong>example:</strong>
+         * <p>suite_example</p>
+         */
+        @NameInMap("SuiteId")
+        public String suiteId;
+
+        /**
+         * <p>仅个人或企业套件在引用明确指定版本或读取发布快照时返回；官方套件不返回。未返回不是 0；SDK 若将缺省整数初始化为 0，回写时必须省略。官方项只回写 Source 和 SuiteId，不传 Version、SemanticVersion 或 PackageVersion。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
+        @NameInMap("Version")
+        public Integer version;
+
+        public static GetAgentResponseBodyAgentExpertSuites build(java.util.Map<String, ?> map) throws Exception {
+            GetAgentResponseBodyAgentExpertSuites self = new GetAgentResponseBodyAgentExpertSuites();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAgentResponseBodyAgentExpertSuites setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetAgentResponseBodyAgentExpertSuites setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        public GetAgentResponseBodyAgentExpertSuites setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetAgentResponseBodyAgentExpertSuites setPackageVersion(String packageVersion) {
+            this.packageVersion = packageVersion;
+            return this;
+        }
+        public String getPackageVersion() {
+            return this.packageVersion;
+        }
+
+        public GetAgentResponseBodyAgentExpertSuites setSemanticVersion(String semanticVersion) {
+            this.semanticVersion = semanticVersion;
+            return this;
+        }
+        public String getSemanticVersion() {
+            return this.semanticVersion;
+        }
+
+        public GetAgentResponseBodyAgentExpertSuites setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
+        }
+
+        public GetAgentResponseBodyAgentExpertSuites setSuiteId(String suiteId) {
+            this.suiteId = suiteId;
+            return this;
+        }
+        public String getSuiteId() {
+            return this.suiteId;
+        }
+
+        public GetAgentResponseBodyAgentExpertSuites setVersion(Integer version) {
+            this.version = version;
+            return this;
+        }
+        public Integer getVersion() {
+            return this.version;
+        }
+
+    }
+
     public static class GetAgentResponseBodyAgentModel extends TeaModel {
         /**
          * <p>Additional configuration for the model.</p>
@@ -239,6 +377,31 @@ public class GetAgentResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>指定 AgentVersion 查询已发布快照时返回固定的官方制品版本；查询草稿或自定义 Skill 时不返回。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.6.0.202608201110</p>
+         */
+        @NameInMap("PackageVersion")
+        public String packageVersion;
+
+        /**
+         * <strong>example:</strong>
+         * <p>dataworks-semantic</p>
+         */
+        @NameInMap("SkillId")
+        public String skillId;
+
+        /**
+         * <p>OFFICIAL 表示官方目录资源；省略或 DB 表示原有个人或企业资源。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OFFICIAL</p>
+         */
+        @NameInMap("Source")
+        public String source;
+
+        /**
          * <p>The skill version.</p>
          * 
          * <strong>example:</strong>
@@ -260,6 +423,30 @@ public class GetAgentResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetAgentResponseBodyAgentSkills setPackageVersion(String packageVersion) {
+            this.packageVersion = packageVersion;
+            return this;
+        }
+        public String getPackageVersion() {
+            return this.packageVersion;
+        }
+
+        public GetAgentResponseBodyAgentSkills setSkillId(String skillId) {
+            this.skillId = skillId;
+            return this;
+        }
+        public String getSkillId() {
+            return this.skillId;
+        }
+
+        public GetAgentResponseBodyAgentSkills setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
         }
 
         public GetAgentResponseBodyAgentSkills setVersion(Integer version) {
@@ -383,6 +570,15 @@ public class GetAgentResponseBody extends TeaModel {
 
     public static class GetAgentResponseBodyAgent extends TeaModel {
         /**
+         * <p>本次读取的定义版本。更新当前定义时，将该值作为 UpdateAgent 的 ExpectedVersion，可拒绝覆盖其他调用者已提交的新版本。读取历史快照的版本不代表当前版本。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("AgentVersion")
+        public Integer agentVersion;
+
+        /**
          * <p>A list of callable sub-agents.</p>
          */
         @NameInMap("CallableAgents")
@@ -414,6 +610,12 @@ public class GetAgentResponseBody extends TeaModel {
          */
         @NameInMap("DisplayName")
         public String displayName;
+
+        /**
+         * <p>Agent 定义绑定的专家套件及固定发布版本。</p>
+         */
+        @NameInMap("ExpertSuites")
+        public java.util.List<GetAgentResponseBodyAgentExpertSuites> expertSuites;
 
         /**
          * <p>The creation time, as a Unix timestamp in milliseconds.</p>
@@ -515,6 +717,14 @@ public class GetAgentResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetAgentResponseBodyAgent setAgentVersion(Integer agentVersion) {
+            this.agentVersion = agentVersion;
+            return this;
+        }
+        public Integer getAgentVersion() {
+            return this.agentVersion;
+        }
+
         public GetAgentResponseBodyAgent setCallableAgents(java.util.List<GetAgentResponseBodyAgentCallableAgents> callableAgents) {
             this.callableAgents = callableAgents;
             return this;
@@ -545,6 +755,14 @@ public class GetAgentResponseBody extends TeaModel {
         }
         public String getDisplayName() {
             return this.displayName;
+        }
+
+        public GetAgentResponseBodyAgent setExpertSuites(java.util.List<GetAgentResponseBodyAgentExpertSuites> expertSuites) {
+            this.expertSuites = expertSuites;
+            return this;
+        }
+        public java.util.List<GetAgentResponseBodyAgentExpertSuites> getExpertSuites() {
+            return this.expertSuites;
         }
 
         public GetAgentResponseBodyAgent setGmtCreateTime(String gmtCreateTime) {

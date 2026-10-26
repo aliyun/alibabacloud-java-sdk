@@ -246,6 +246,10 @@ public class CreateFileRequest extends TeaModel {
     @NameInMap("InputParameters")
     public String inputParameters;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dw_project.ods_user_info_d</p>
+     */
     @NameInMap("OutputList")
     public String outputList;
 

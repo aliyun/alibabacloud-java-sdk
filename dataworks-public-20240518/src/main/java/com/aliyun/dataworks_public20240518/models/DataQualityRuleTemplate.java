@@ -54,6 +54,9 @@ public class DataQualityRuleTemplate extends TeaModel {
 
     /**
      * <p>The DataWorks tenant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TenantId")
     public Long tenantId;

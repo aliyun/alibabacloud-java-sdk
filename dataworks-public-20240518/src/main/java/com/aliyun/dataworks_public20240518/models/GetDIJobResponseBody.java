@@ -1131,6 +1131,10 @@ public class GetDIJobResponseBody extends TeaModel {
         @NameInMap("MigrationType")
         public String migrationType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3726346</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
